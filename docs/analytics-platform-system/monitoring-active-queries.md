@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538704"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Мониторинг активных запросов - Parallel Data Warehouse
 В этой статье показано, как использовать консоль администрирования и системных представлений SQL Server PDW для наблюдения за активных запросов. В разделе [отслеживать устройства с помощью консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md) и [системных представлений](tsql-system-views.md) сведения об этих средствах.  

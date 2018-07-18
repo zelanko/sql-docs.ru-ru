@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -28,11 +27,12 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2607af48ae1f542ce314a0aebca1ec3463921fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6edd8536c3ebf8b0a312cb8aa71b20ab8a6a92b7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359886"
 ---
 # <a name="replication-agent-administration"></a>Администрирование агента репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="replication-maintenance-jobs"></a>Задания обслуживания репликации  
  Следующие задания используются службой репликаций для выполнения обслуживания по расписанию или обслуживания по требованию.  
   
-|Задание очистки|Description|Расписание по умолчанию|  
+|Задание очистки|Описание|Расписание по умолчанию|  
 |------------------|-----------------|----------------------|  
 |Очистка журнала агента: распространитель|Удаляется журнал агента репликации из базы данных распространителя.|Запускается каждые десять минут|  
 |Очистка распространения: распространитель|Удаляются реплицированные транзакции из базы данных распространителя. |Запускается каждые десять минут|  

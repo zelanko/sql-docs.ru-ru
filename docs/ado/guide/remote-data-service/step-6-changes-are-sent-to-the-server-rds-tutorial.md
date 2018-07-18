@@ -1,11 +1,8 @@
 ---
 title: 'Шаг 6: Изменения будут отправлены на сервер (учебник служб удаленных рабочих СТОЛОВ) | Документы Microsoft'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6be2159907d58f6799a2ca7b4ffb685f524baacc
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: dd14dcfa918afc5bc252822ceacccfe10ddd7302
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274733"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Шаг 6: Изменения будут отправлены на сервер (учебник служб удаленных рабочих СТОЛОВ)
 Если **записей** редактирования объекта, любые изменения (строк, которые будут добавлены, изменены или удалены) могут отправляться на сервер.  

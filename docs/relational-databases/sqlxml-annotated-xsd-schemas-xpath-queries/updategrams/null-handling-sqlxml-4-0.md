@@ -1,5 +1,5 @@
 ---
-title: (SQLXML 4.0) обработкой значений NULL | Документы Microsoft
+title: NULL (SQLXML 4.0) обработка | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,16 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b53c3516dbe0ee87e23e9cb13ec441ef82a499c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031422"
 ---
 # <a name="null-handling-sqlxml-40"></a>Обработка значений NULL (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Синтаксис XML определяет значение NULL как отсутствие. (Например, если значение атрибута или элемента равно NULL, считается, что он отсутствует в XML-документе.) В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, **updg: nullValue** атрибут позволяет задать значение NULL в качестве значения элемента или атрибута.  
+  Синтаксис XML определяет значение NULL как отсутствие. (Например, если значение атрибута или элемента равно NULL, считается, что он отсутствует в XML-документе.) В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, **updg: nullValue** атрибут позволяет задать значение NULL для значения элемента или атрибута.  
   
- Например, следующая диаграмма обновления гарантирует, что **заголовок** для контакта с **ContactID** 64 имеет значение NULL, а затем обновляет **заголовок** значение на «Mr.» для этого контакта.  
+ Например, следующая диаграмма обновления гарантирует, что **Title** значение для контакта с **ContactID** равным 64, равно NULL, а затем обновляет **Title** значение «Mr.» для этого контакта.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 </ROOT>  
 ```  
   
- Когда параметры передаются диаграмме обновления, значение NULL может передаваться как значение параметра. Это делается путем указания **nullvalue** атрибута в  **\<updg:header >** блока. Пример см. в разделе [передача параметров в диаграммах обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md).  
+ Когда параметры передаются диаграмме обновления, значение NULL может передаваться как значение параметра. Это делается путем указания **nullvalue** атрибут в  **\<updg:header >** блока. Например, см. в разделе [передача параметров в диаграммы обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md).  
   
 ## <a name="see-also"></a>См. также  
  [Вопросы безопасности диаграмм обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_getfilterinfo (Transact-SQL) | Документы Microsoft
+title: sys.fn_trace_getfilterinfo (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1f55c02dfd91edbb964b87e74e2d413f9066501d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971879"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +61,11 @@ fn_trace_getfilterinfo ( trace_id )
 |-----------------|---------------|-----------------|  
 |**columnid**|**int**|Идентификатор столбца, к которому применяется фильтр.|  
 |**logical_operator**|**int**|Указывает, какой применяется оператор: AND или OR.|  
-|**оператор_сравнения**|**int**|Задает тип сравнения.<br /><br /> 0 = равны.<br /><br /> 1 = не равны.<br /><br /> 2 = больше чем.<br /><br /> 3 = меньше чем.<br /><br /> 4 = больше или равно.<br /><br /> 5 = меньше или равно.<br /><br /> 6 = схожи.<br /><br /> 7 = не схожи.|  
-|**value**|**sql_variant**|Задает значение, к которому применяется фильтр.|  
+|**comparison_operator**|**int**|Задает тип сравнения.<br /><br /> 0 = равны.<br /><br /> 1 = не равны.<br /><br /> 2 = больше чем.<br /><br /> 3 = меньше чем.<br /><br /> 4 = больше или равно.<br /><br /> 5 = меньше или равно.<br /><br /> 6 = схожи.<br /><br /> 7 = не схожи.|  
+|**Значение**|**sql_variant**|Задает значение, к которому применяется фильтр.|  
   
-## <a name="remarks"></a>Замечания  
- Наборы пользователей *trace_id* значение для определения, изменения и управления трассировкой. Идентификатор конкретной трассировки **fn_trace_getfilterinfo** возвращает сведения о любой фильтр к данной трассировке. Если к указанной трассировке не применяются фильтры, функция возвращает пустой набор строк. Если передать недопустимый идентификатор, эта функция вернет пустой набор строк. Аналогичные сведения о трассировках см. в разделе [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+## <a name="remarks"></a>Примечания  
+ Пользователь задает *trace_id* значение для определения, изменения и управления трассировкой. Идентификатор конкретной трассировки, **fn_trace_getfilterinfo** возвращает сведения о любой фильтр к данной трассировке. Если к указанной трассировке не применяются фильтры, функция возвращает пустой набор строк. Если передать недопустимый идентификатор, эта функция вернет пустой набор строк. Аналогичные сведения о трассировках см. в разделе [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER TRACE на сервере.  

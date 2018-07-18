@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235848"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>Что такое [!INCLUDE[name-sos](../includes/name-sos.md)]?
 

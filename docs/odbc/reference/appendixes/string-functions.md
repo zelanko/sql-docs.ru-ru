@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914049"
 ---
 # <a name="string-functions"></a>Строковые функции
 В следующей таблице перечислены функции обработки строк. Приложение может определить, какие строковые функции поддерживаются драйвером путем вызова **SQLGetInfo** с *типу информации* из SQL_STRING_FUNCTIONS.  

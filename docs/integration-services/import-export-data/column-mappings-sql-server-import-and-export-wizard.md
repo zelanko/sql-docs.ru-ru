@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d61bad35eaf48be5567bdb258e819c477390ada
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdafb729fcdc18b50f2a88a42c2bd4cf9b98adf2
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332938"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Сопоставления столбцов (мастер импорта и экспорта SQL Server)
   Если выбрав существующие таблицы и представления, которые нужно скопировать, или просмотрев свой запрос, вы нажмете **Изменить сопоставления**, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется диалоговое окно **Сопоставления столбцов** . На этой странице можно указать и настроить конечные столбцы, в которые будут отправляться данные, копируемые из исходных столбцов. Зачастую на этой странице не нужно ничего менять.
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
  
  В этом примере демонстрируется создание целевой таблицы, так как выбран параметр **Создать целевую таблицу** . По умолчанию мастер присваивает каждому столбцу в новой конечной таблице то же имя, тип данных и те же свойства, что и у соответствующего столбца в исходной таблице. 
   
- ![Страница "Сопоставления столбцов" в мастере импорта и экспорта](../../integration-services/import-export-data/media/column-mappings.png "Страница "Сопоставления столбцов" в мастере импорта и экспорта")  
+ ![Страница "Сопоставления столбцов" в мастере импорта и экспорта](../../integration-services/import-export-data/media/column-mappings.png "Страница \"Сопоставления столбцов\" в мастере импорта и экспорта")  
   
 ## <a name="review-the-source-and-destination"></a>Просмотр источника и назначения 
 ![Страница "Сопоставления столбцов", раздел источника и назначения](../../integration-services/import-export-data/media/column-mappings-page-source-and-destination-section.png)

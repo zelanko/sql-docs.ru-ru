@@ -5,25 +5,25 @@ ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 72b20d4d42517555449f639cee398db4363d5735
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: d52568b59540ed5a3c4a1111ebf1759f5bdd77f8
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36261979"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure-with-sql-server-management-studio-ssms"></a>Планирование выполнения пакета SQL Server Integration Services в Azure с помощью SQL Server Management Studio (SSMS)
+# <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Планирование выполнения пакетов SQL Server Integration Services, развернутых в Azure, с помощью SQL Server Management Studio (SSMS)
 
-Среда SQL Server Management Studio (SSMS) предоставляет функцию для планирования выполнения пакетов SQL Server Integration Services, развернутых в базе данных SQL Azure. В локальной системе SQL Server и управляемом экземпляре базы данных SQL Azure (предварительная версия) в качестве полноценных планировщиков заданий SQL Server Integration Services используются агент SQL Server и агент управляемого экземпляра соответственно. В свою очередь, база данных SQL Azure не имеет полноценного встроенного планировщика заданий SQL Server Integration Services. Функция SSMS, описываемая в этой статье, предоставляет пользовательский интерфейс для планирования выполнения пакетов, развернутых в базе данных SQL, который похож на аналогичный интерфейс агента SQL Server.
+С помощью SQL Server Management Studio (SSMS) можно планировать выполнение пакетов SQL Server Integration Services, развернутых в базе данных SQL Azure. В локальной системе SQL Server и управляемом экземпляре базы данных SQL Azure (предварительная версия) в качестве полноценных планировщиков заданий SQL Server Integration Services используются агент SQL Server и агент управляемого экземпляра соответственно. В свою очередь, база данных SQL Azure не имеет полноценного встроенного планировщика заданий SQL Server Integration Services. Функция SSMS, описываемая в этой статье, предоставляет пользовательский интерфейс для планирования выполнения пакетов, развернутых в базе данных SQL, который похож на аналогичный интерфейс агента SQL Server.
 
-Если база данных каталога SQL Server Integration Services (`SSISDB`) размещается в базе данных SQL, с помощью этой функции SSMS можно создать конвейеры, действия и триггеры фабрики данных, необходимые для планирования пакетов SQL Server Integration Services. Затем можно изменять и расширять эти объекты в фабрике данных.
+Если каталог SQL Server Integration Services (`SSISDB`) размещается в базе данных SQL, с помощью этой функции SSMS можно создать конвейеры, действия и триггеры фабрики данных, необходимые для планирования пакетов SQL Server Integration Services. Затем можно при необходимости изменять и расширять эти объекты в фабрике данных.
 
 При планировании выполнения пакета в среде SSMS она автоматически создает три объекта фабрики данных, имена которых зависят от выбранного пакета и метки времени. Например, если пакет SQL Server Integration Services имеет имя **MyPackage**, SSMS создает в фабрике данных такие объекты:
 

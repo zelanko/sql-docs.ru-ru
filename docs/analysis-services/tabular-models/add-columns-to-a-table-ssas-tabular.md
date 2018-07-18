@@ -1,5 +1,5 @@
 ---
-title: Добавление столбцов в таблицу | Документы Microsoft
+title: Добавление столбцов в таблицу | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991476"
 ---
 # <a name="add-columns-to-a-table"></a>Добавление столбцов в таблицу
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  Щелкните верхнюю ячейку, введите имя и нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Изменить диалоговое окно «Свойства таблицы»](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [Изменение сопоставлений фильтров таблиц, столбцов и строк](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   

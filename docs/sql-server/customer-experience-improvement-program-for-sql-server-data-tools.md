@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 84313f1bedd406c39a862c57bdc94436eb0c7cbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563802"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Программа улучшения качества SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,23 +60,25 @@ ms.lasthandoff: 05/03/2018
   
  Ниже приведены соответствующие разделы и параметры реестра:  
   
- Раздел = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
-  
- Имя RegEntry = OptIn  
-  
- Тип записи DWORD:  
-  
--   0 — не участвовать  
-  
--   1 — участвовать  
+- 64-разрядная ОС, раздел — HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
+- 32-разрядная ОС, раздел — HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM
+
+Если групповая политика включена, раздел — HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+
+Запись — OptIn
+
+Значение — (DWORD)
+- 0 исключается (отключение VSCEIP)
+- 1 используется (включение VSCEIP)
+
   
 > [!CAUTION]  
 >  Неправильное изменение реестра может привести к серьезным неполадкам системы. Перед внесением изменений в реестр рекомендуется создать резервную копию всех важных данных. В случае возникновения неполадок после внесения изменений вручную можно использовать параметр запуска «Загрузка последней удачной конфигурации».  
   
  Дополнительные сведения о данных, собираемых, обрабатываемых или передаваемых в рамках программы CEIP, см. в статье [Заявление о конфиденциальности для программы улучшения качества программного обеспечения](http://go.microsoft.com/fwlink/?LinkId=52143).  
  
-### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Выбор вариантов и управление участием в программе улучшения качества программного обеспечения (CEIP) для SQL Server Data Tools для Visual Studio 2015  
- SSDT для Visual Studio 2015 — это средство моделирования данных, поставляемое с SQL Server 2016. SSDT использует стандартные параметры CEIP, встроенные в Visual Studio 2015. Дополнительные сведения о том, как отправить отзыв о программе CEIP в Visual Studio 2015, см. в [справочной документации по Visual Studio](http://go.microsoft.com/fwlink/?LinkId=517102).  
+### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Выбор вариантов и управление участием в программе улучшения качества программного обеспечения (CEIP) для SQL Server Data Tools для Visual Studio 2015  
+ SSDT для Visual Studio 2015 — это средство моделирования данных, поставляемое с SQL Server 2016. SSDT использует стандартные параметры CEIP, встроенные в Visual Studio 2015. Дополнительные сведения о том, как отправить отзыв через программу CEIP в Visual Studio 2015, см. в следующем [справочном документе по Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
   
  В предварительных версиях SQL Server 2016 участие пользователя в программе улучшения качества программного обеспечения предусмотрено по умолчанию. Вы можете изменять эту настройку в соответствии с приведенными ниже инструкциями.  
   

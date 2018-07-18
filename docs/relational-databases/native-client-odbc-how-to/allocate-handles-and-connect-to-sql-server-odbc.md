@@ -1,13 +1,12 @@
 ---
-title: Выделение дескрипторов и подключитесь к SQL Server (ODBC) | Документы Microsoft
+title: Выделение дескрипторов и подключение к SQL Server (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - handles [ODBC], connection
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 58eac1839471709926630e5fe256ba21704887c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e8264b5206268dd6112083fd57eb847e28e6ea2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417483"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Выделение дескрипторов и соединение с SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,19 +36,19 @@ ms.lasthandoff: 05/03/2018
   
 2.  Включите зависящий от драйвера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл заголовка Odbcss.h.  
   
-3.  Вызовите [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) с **HandleType** установленным в значение sql_handle_env для инициализации ODBC и выделить дескриптор среды.  
+3.  Вызовите [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) с **HandleType** из SQL_HANDLE_ENV, для инициализации ODBC и выделить дескриптор среды.  
   
-4.  Вызовите [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) с **атрибута** значение SQL_ATTR_ODBC_VERSION и **ValuePtr** присвоено значение SQL_OV_ODBC3 для указания того, приложение будет использовать функции ODBC 3.x формата вызовы.  
+4.  Вызовите [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) с **атрибут** значение SQL_ATTR_ODBC_VERSION и **ValuePtr** присвоено значение SQL_OV_ODBC3 для указания, то приложение будет использовать функции ODBC 3.x-format вызовы.  
   
-5.  При необходимости вызовите [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) задать среду другие параметры, либо вызовите [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) для их получения.  
+5.  Можно также вызвать [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) задать другой среде, параметры или вызов [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) для их получения.  
   
-6.  Вызовите [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) с **HandleType** из SQL_HANDLE_DBC, чтобы выделить дескриптор подключения.  
+6.  Вызовите [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) с **HandleType** из SQL_HANDLE_DBC выделить дескриптор соединения.  
   
-7.  При необходимости вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) для установки параметров соединения, либо вызовите [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) для получения параметров подключения.  
+7.  Можно также вызвать [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) для установки параметров соединения, или вызов [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) для их получения.  
   
 8.  Вызовите SQLConnect для использования существующего источника данных для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Или  
+     либо  
   
      Вызовите [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) использовать строку подключения для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -64,23 +63,23 @@ ms.lasthandoff: 05/03/2018
   
      \- или -  
   
-     Вызовите [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) несколько раз итеративно для создания строки подключения и подключения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Вызовите [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) несколько раз в итеративно для создания строки подключения и подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-9. При необходимости вызовите [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) получение атрибутов драйвера и поведение для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных.  
+9. Можно также вызвать [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) для получения атрибутов и поведения для драйвера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных.  
   
 10. Выделите и используйте инструкции.  
   
-11. Вызовите SQLDisconnect для отключения от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и сделать дескриптор соединения доступным для нового соединения.  
+11. Вызовите SQLDisconnect отключиться от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и сделать дескриптор соединения доступным для нового соединения.  
   
-12. Вызовите [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) с **HandleType** установленным в значение sql_handle_dbc для освобождения дескриптора соединения.  
+12. Вызовите [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) с **HandleType** из SQL_HANDLE_DBC для освобождения дескриптора соединения.  
   
-13. Вызовите **SQLFreeHandle** с **HandleType** установленным в значение sql_handle_env для освобождения дескриптора среды.  
+13. Вызовите **SQLFreeHandle** с **HandleType** из SQL_HANDLE_ENV, для освобождения дескриптора среды.  
   
 > [!IMPORTANT]  
->  По возможности используйте проверку подлинности Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Пример  
- В этом примере показан вызов **SQLDriverConnect** для подключения к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без использования существующего источника данных ODBC. Путем передачи незавершенной строки соединения для **SQLDriverConnect**, он заставляет драйвер ODBC предложить пользователю ввести недостающие данные.  
+ В этом примере показан вызов **SQLDriverConnect** для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без использования существующего источника данных ODBC. Путем передачи незавершенной строки соединения для **SQLDriverConnect**, он заставляет драйвер ODBC для запроса пользователя на ввод отсутствующих сведений.  
   
 ```  
 #define MAXBUFLEN   255  

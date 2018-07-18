@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups (Transact-SQL) | Документы Microsoft
+title: managed_backup.fn_available_backups (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7899bdcc0ef397534a723abae15d7263d371d5ee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040362"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 |last_recovery_fork_id|UNIQUEIDENTIFIER|Идентификационный номер для конечной вилки восстановления.|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|Идентификатор начальной вилки восстановления. Для резервного копирования данных параметр first_recovery_fork_guid равен last_recovery_fork_guid.|  
 |fork_point_lsn|NUMERIC(25, 0)|Если значение first_recovery_fork_id не равно значению last_recovery_fork_id, данный параметр представляет собой регистрационный номер транзакции в журнале для вилки. В противном случае - значение NULL.|  
-|availability_group_guid|UNIQUEIDENTIFIER|Если база данных базы данных AlwaysOn, это идентификатор GUID группы доступности. В противном случае — значение NULL.|  
+|availability_group_guid|UNIQUEIDENTIFIER|Если базы данных является базой данных Always On, это идентификатор GUID группы доступности. В противном случае — значение NULL.|  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -75,7 +76,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 ## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется **ВЫБЕРИТЕ** разрешения на эту функцию.  
+ Требуется **ВЫБЕРИТЕ** разрешения для данной функции.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере перечисляются все доступные резервные копии, созданные посредством [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных «MyDB».  

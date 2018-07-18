@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3922b2e80e4597ed01f49c5766fce34c0d338e77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f29b9614d13e0d438e5fc0f2d850f3d6b77f6e1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401246"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server)
   Если на странице **Сохранение и запуск пакета** вы указали, что хотите сохранить параметры в виде пакета служб SQL Server Integration Services (SSIS), мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выводит окно **Сохранение пакета служб SSIS**. На этой странице можно указать дополнительные параметры для сохранения пакета, создаваемого мастером.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 
  На приведенном ниже снимке экрана показана страница **Сохранение пакета служб SSIS** мастера, отображаемая при выборе параметра **SQL Server** на странице **Сохранение и запуск пакета**. 
   
-![Страница "Сохранение пакета служб SSIS" в мастере импорта и экспорта](../../integration-services/import-export-data/media/save-package2.png "Страница "Сохранение пакета служб SSIS" в мастере импорта и экспорта")  
+![Страница "Сохранение пакета служб SSIS" в мастере импорта и экспорта](../../integration-services/import-export-data/media/save-package2.png "Страница \"Сохранение пакета служб SSIS\" в мастере импорта и экспорта")  
 
 ## <a name="options-to-specify-target--sql-server"></a>Указываемые параметры (цель — SQL Server) 
 
@@ -76,7 +75,7 @@ ms.lasthandoff: 05/03/2018
  
 На приведенном ниже снимке экрана показана страница **Сохранение пакета служб SSIS** мастера, отображаемая при выборе параметра **Файловая система** на странице **Сохранение и запуск пакета**. 
   
-![Страница "Сохранение пакета служб SSIS" в мастере импорта и экспорта](../../integration-services/import-export-data/media/save-package1.png "Страница "Сохранение пакета служб SSIS" в мастере импорта и экспорта")  
+![Страница "Сохранение пакета служб SSIS" в мастере импорта и экспорта](../../integration-services/import-export-data/media/save-package1.png "Страница \"Сохранение пакета служб SSIS\" в мастере импорта и экспорта")  
 
 ## <a name="options-to-specify-target--file-system"></a>Указываемые параметры (цель — файловая система)
 

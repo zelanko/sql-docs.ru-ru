@@ -2,7 +2,6 @@
 title: Уровни сбора (ADO MD) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6756b6faecca40f7d284a4bbf9425ba7affcc3fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cf86fc546dfa1bb6af1e121b2f539a5785643ce
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284053"
 ---
 # <a name="levels-collection-ado-md"></a>Коллекция уровней (ADO MD)
 Содержит [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекты, составляющие иерархии.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Уровни** — это обычная коллекция ADO. С помощью свойства и методы коллекции, можно выполнить следующее:  
   
 -   Получить число объектов в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  

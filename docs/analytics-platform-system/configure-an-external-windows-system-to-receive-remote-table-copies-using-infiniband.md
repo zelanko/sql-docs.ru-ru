@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538774"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Настройка внешней системы Windows для получения копии удаленной таблицы с помощью InfiniBand - Parallel Data Warehouse
 Описывает, как приобрести и настроить систему Windows не является специализированным, подключенных с помощью сети InfiniBand для использования с функцией копирования удаленной таблицы в SQL Server PDW. Система Windows будет размещаться база данных SQL Server, который получает копию удаленной таблицы из базы данных SQL Server PDW. Он приобретается отдельно от устройства, подключен к сети InfiniBand устройства.  

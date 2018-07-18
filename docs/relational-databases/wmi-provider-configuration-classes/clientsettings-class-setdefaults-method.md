@@ -1,5 +1,5 @@
 ---
-title: Метод SetDefaults (класс ClientSettings) | Документы Microsoft
+title: Метод SetDefaults (класс ClientSettings) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bedc2c0b326b0007c3a4d3edbc6301090fd709d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989116"
 ---
-# <a name="clientsettings-class---setdefaults-method"></a>Класс ClientSettings - SetDefaults, метод
+# <a name="clientsettings-class---setdefaults-method"></a>Класс ClientSettings — метод SetDefaults
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Задает все значения по умолчанию для экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиента с параметром перезаписи существующих данных.  
   
@@ -41,7 +42,7 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объект*  
+ *object*  
  Объект **ClientSettings** , представляющий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр клиента.  
   
 #### <a name="parameters"></a>Параметры  
@@ -53,5 +54,5 @@ object.SetDefaults(OverwriteAll)
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   

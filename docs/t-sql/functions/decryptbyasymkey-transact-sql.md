@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - decryption [SQL Server], asymmetric keys
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98b08c914c0eb74e55d2d3c8a9e032432391a054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e002b65eb3136947e3785d6068b695001338447
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791045"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Дешифрует данные асимметричным ключом.  
+Эта функция расшифровывает зашифрованные данные с помощью асимметричного ключа.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,28 +47,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Аргументы  
  *Asym_Key_ID*  
- Идентификатор асимметричного ключа в базе данных. Аргумент *Asym_Key_ID* имеет тип **int**.  
+Идентификатор асимметричного ключа в базе данных. *Asym_Key_ID* имеет тип данных **int**.  
   
  *ciphertext*  
- Строка данных, которая была зашифрована асимметричным ключом.  
+Строка данных, зашифрованная с помощью асимметричного ключа.  
   
  @ciphertext  
- Переменная типа **varbinary**, содержащая данные, которые были зашифрованы с помощью асимметричного ключа.  
+Переменная типа **varbinary**, содержащая данные, зашифрованные с помощью асимметричного ключа.  
   
  *Asym_Key_Password*  
- Пароль, который был использован при шифровке асимметричного ключа в базе данных.  
+Пароль, используемый для шифрования асимметричного ключа в базе данных.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Переменная типа **varbinary** с максимальным размером 8000 байт.  
+Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
 ## <a name="remarks"></a>Remarks  
- Шифрование и дешифрование асимметричным ключом являются очень дорогостоящими по сравнению с шифрованием и дешифрованием симметричным ключом. Рекомендуется использовать асимметричный ключ при работе с большими наборами данных, например с данными пользователей в таблицах.  
+По сравнению с симметричным шифрованием или расшифровкой шифрование или расшифровка с помощью асимметричного ключа является более дорогостоящей. При работе с большими наборами данных (например, с данными пользователей, хранящимися в таблицах) разработчикам не рекомендуется использовать асимметричный ключ для шифрования или расшифровки.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение CONTROL на асимметричный ключ.  
+`DECRYPTBYASYMKEY` требуется разрешение CONTROL на асимметричный ключ.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример расшифровывает текст, зашифрованный асимметричным ключом `JanainaAsymKey02`, хранящимся в таблице `AdventureWorks2012.ProtectedData04`. Возвращаемые данные зашифрованы асимметричным ключом `JanainaAsymKey02`, который был дешифрован паролем `pGFD4bb925DGvbd2439587y`. Открытый текст приводится к типу **nvarchar**.  
+В этом примере расшифровывается зашифрованный текст, изначально зашифрованный с помощью асимметричного ключа `JanainaAsymKey02`. Этот асимметричный ключ хранится в таблице `AdventureWorks2012.ProtectedData04`. В этом примере возвращаемые данные расшифровываются с помощью асимметричного ключа `JanainaAsymKey02`. Для расшифровки асимметричного ключа используется пароль `pGFD4bb925DGvbd2439587y`. Возвращаемый открытый текст приводится к типу **nvarchar**.  
   
 ```  
 SELECT CONVERT(nvarchar(max),  

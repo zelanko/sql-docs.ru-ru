@@ -1,5 +1,5 @@
 ---
-title: sys.server_principals (Transact-SQL) | Документы Microsoft
+title: sys.server_principals (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 503ae5f7918edabd609e6176eeb0fa5c1238dd77
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039038"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/04/2018
 |**default_language_name**|**sysname**|Язык участника по умолчанию.|  
 |**credential_id**|**int**|Идентификатор учетных данных, связанный с участником. Если с участником не связаны никакие учетные данные, идентификатор credential_id будет иметь значение NULL.|  
 |**owning_principal_id**|**int**|**Principal_id** владельца роли сервера. NULL, если участник не является ролью сервера.|  
-|**is_fixed_role**|**бит**|Возвращает 1, если участник является одной из предопределенных ролей сервера. Дополнительные сведения см. в статье [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md).|  
+|**is_fixed_role**|**bit**|Возвращает 1, если участник является одной из предопределенных ролей сервера. Дополнительные сведения см. в статье [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## <a name="permissions"></a>Разрешения  
  Любое имя входа может видеть собственное имя входа, системные имена входа и предопределенные роли сервера. Для просмотра других имен входа требуется разрешение ALTER ANY LOGIN или разрешение на имя входа. Для просмотра определяемых пользователем ролей сервера необходимо иметь разрешение ALTER ANY SERVER ROLE или быть членом роли.  
@@ -74,7 +75,7 @@ JOIN sys.server_permissions AS pe
 ## <a name="see-also"></a>См. также  
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Иерархия разрешений (компонент Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

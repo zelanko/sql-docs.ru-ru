@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c795635de7aad15099cb490bf621329a23fcd26
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331228"
 ---
 # <a name="dtutil-utility"></a>dtutil, программа
   Программа командной строки **dtutil** предназначена для управления пакетами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Программа может копировать, перемещать, удалять пакет или проверять его существование. Эти действия могут выполняться с любым из пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] , который хранится в любом из трех мест: база данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и файловая система. Если программа имеет доступ к пакету, хранимому в **msdb**, в командной строке может быть необходимо ввести имя пользователя и пароль. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в командной строке необходимо ввести и имя пользователя, и пароль. Если имя пользователя отсутствует, **dtutil** попытается войти на сервер [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используя проверку подлинности Windows. Тип хранилища пакета определяется параметрами **/SQL**, **/FILE**и **/DTS** .  
@@ -88,7 +87,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |/?|Отображает параметры командной строки.|  
 |/C[opy] *location;destinationPathandPackageName*|Указывает операцию копирования для пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Для использования этого параметра следует сначала указать расположение пакета с помощью параметра **/FI**, **/SQ**или **/DT** . Затем нужно указать место назначения и имя целевого пакета. Аргумент *destinationPathandPackageName* указывает, куда будет скопирован пакет служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Если местом назначения *location* является **SQL**, в команде должны также быть указаны аргументы *DestUser*, *DestPassword* и *DestServer* .<br /><br /> Если операция **Copy** обнаруживает существующий пакет в месте назначения, программа **dtutil** запрашивает у пользователя подтверждение удаления пакета. Ответ **Y** приводит к перезаписи пакета, а ответ **N** — к завершению программы. Если команда содержит аргумент *Quiet* , никаких запросов не появится, а любой существующий пакет будет перезаписан.|  
@@ -121,7 +120,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>Коды завершения программы dtutil  
  Если обнаружены синтаксические ошибки, указаны неправильные аргументы или недопустимые сочетания параметров, программа**dtutil** возвращает код завершения, который создает соответствующие предупреждения. В противном случае программа выдает сообщение "Операция успешно завершена". В следующей таблице перечислены значения, которые программа **dtutil** может возвращать при завершении.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|Программа выполнена успешно.|  
 |1|Программа завершилась с ошибкой.|  

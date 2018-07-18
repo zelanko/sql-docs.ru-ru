@@ -25,11 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 769bb9418b3d631648f6f493aeb084b5fea0a619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324438"
 ---
 # <a name="logging-in-to-sql-server"></a>Вход в систему SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 |Соединение с экземпляром по умолчанию, который не прослушивает TCP-порт по умолчанию, с указанием используемого порта, в данном случае 2828. (Это не является обязательным, если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] прослушивает порт по умолчанию 1433.)|APPHOST, 2828|  
 |Соединение с именованным экземпляром на назначенный TCP порт, в данном случае 2828. (Это часто необходимо, если служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера не выполняется на главном компьютере.)|APPHOST, 2828|  
 |Соединение с экземпляром по умолчанию, который не прослушивает TCP-порт по умолчанию, с указанием IP-адреса и TCP-порта, в данном случае 2828.|192.168.17.28,2828|  
-|Соединение с именованным экземпляром, с указанием IP-адреса и TCP-порта, в данном случае 2828.|192.168.17.28,2828|  
+|Соединение с именованным экземпляром, с указанием IP-адреса и TCP-порта, в данном случае 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Соединение с экземпляром по умолчанию по имени при форсировании соединения TCP.|tcp:APPHOST|  
 |Соединение с именованным экземпляром по имени, с принудительным TCP-соединением.|tcp:APPHOST\SQLEXPRESS|  
 |Соединение с экземпляром по умолчанию, с указанием имени именованного канала.|\\\APPHOST\pipe\unit\app|  
@@ -91,7 +92,7 @@ WHERE session_id = @@SPID;
 -   [Шаги для устранения неполадок с подключением SQL](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
 ## <a name="related-content"></a>См. также  
- [Выбор режима аутентификации](../../relational-databases/security/choose-an-authentication-mode.md)  
+ [Выбор режима проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md)  
   
  [Использование программы sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   

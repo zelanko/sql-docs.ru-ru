@@ -1,5 +1,5 @@
 ---
-title: Выполнение запросов XPath (поставщик SQLXMLOLEDB) | Документы Microsoft
+title: Выполнение запросов XPath (поставщик SQLXMLOLEDB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a5cad9cb9284353aa856b45bad2fa6a14ad126d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049961"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Выполнение запросов XPath (поставщик SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 </xsd:schema>  
 ```  
   
- Свойство схемы сопоставления предоставляет схему сопоставления, по которой выполняется запрос XPath. Схема сопоставления может являться схемой XSD или XDR. Свойство Path базы предоставляет путь к схеме сопоставления.  
+ Свойство схемы сопоставления предоставляет схему сопоставления, по которой выполняется запрос XPath. Схема сопоставления может являться схемой XSD или XDR. Свойство базового пути содержит путь к схеме сопоставления.  
   
  ClientSideXML, свойство имеет значение True. Поэтому XML-документ формируется на клиенте.  
   

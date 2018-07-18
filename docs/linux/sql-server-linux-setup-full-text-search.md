@@ -1,5 +1,5 @@
 ---
-title: Установка SQL Server Full-Text Search в Linux | Документы Microsoft
+title: Установка SQL Server Full-Text Search в Linux | Документация Майкрософт
 description: В этой статье описывается установка SQL Server Full-Text Search в Linux.
 author: rothja
 ms.author: jroth
@@ -13,27 +13,28 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 401eb2569a1da86964543f9122d213398f39eff4
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021210"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Установка SQL Server Full-Text Search в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Следующие шаги установки [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-fts**) в Linux. Компонент Full-Text Search позволяет выполнять полнотекстовые запросы к символьным данным в таблицах SQL Server. Известные проблемы в этом выпуске см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
+Следующие шаги, чтобы установить [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-fts**) на платформе Linux. Компонент Full-Text Search позволяет выполнять полнотекстовые запросы к символьным данным в таблицах SQL Server. Известные проблемы в этом выпуске см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
 
 > [!NOTE]
-> Перед установкой SQL Server Full-Text Search, сначала [Установка SQL Server](sql-server-linux-setup.md#platforms). Это настраивает ключи и репозиториев, которые используются при установке **mssql-server-fts** пакета.
+> Перед установкой SQL Server Full-Text Search, сначала [Установка SQL Server](sql-server-linux-setup.md#platforms). Это позволит настроить ключи и репозитории, которые можно использовать при установке **mssql-server-fts** пакета.
 
-Установка SQL Server Full-Text Search для вашей платформы:
+Установите SQL Server Full-Text Search для вашей платформы:
 
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Установите на RHEL</a>
+## <a name="RHEL">Установка в RHEL</a>
 
 Используйте следующие команды для установки **mssql-server-fts** в Red Hat Enterprise Linux. 
 
@@ -41,55 +42,55 @@ ms.lasthandoff: 05/19/2018
 sudo yum install -y mssql-server-fts
 ```
 
-Если у вас уже есть **mssql-server-fts** установлены, можно обновить до последней версии с помощью следующих команд:
+Если у вас уже есть **mssql-server-fts** установлен, можно обновить до последней версии, выполнив следующие команды:
 
 ```bash
 sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Если вам требуется автономной установки, найдите загрузки пакета компонент Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем используйте те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономной установки, найдите то загрузка пакета Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Установите на Ubuntu</a>
+## <a name="ubuntu">Установка в Ubuntu</a>
 
-Используйте следующие команды для установки **mssql-server-fts** на Ubuntu. 
+Используйте следующие команды для установки **mssql-server-fts** в Ubuntu. 
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts
 ```
 
-Если у вас уже есть **mssql-server-fts** установлены, можно обновить до последней версии с помощью следующих команд:
+Если у вас уже есть **mssql-server-fts** установлен, можно обновить до последней версии, выполнив следующие команды:
 
 ```bash
 sudo apt-get update 
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Если вам требуется автономной установки, найдите загрузки пакета компонент Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем используйте те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономной установки, найдите то загрузка пакета Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Установите на SLES</a>
 
-Используйте следующие команды для установки **mssql-server-fts** на SUSE Linux Enterprise Server. 
+Используйте следующие команды для установки **mssql-server-fts** в SUSE Linux Enterprise Server. 
 
 ```bash
 sudo zypper install mssql-server-fts
 ```
 
-Если у вас уже есть **mssql-server-fts** установлены, можно обновить до последней версии с помощью следующих команд:
+Если у вас уже есть **mssql-server-fts** установлен, можно обновить до последней версии, выполнив следующие команды:
 
 ```bash
 sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Если вам требуется автономной установки, найдите загрузки пакета компонент Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем используйте те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономной установки, найдите то загрузка пакета Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Поддерживаемые языки
 
-Компонент Full-Text Search использует [средства разбиения по словам](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) , определяющие, как определить отдельные слова на основе языка. Можно получить список средств разбиения по словам, зарегистрированных с помощью запроса к **sys.fulltext_languages** представления каталога. Средства разбиения по словам для следующих языков устанавливаются вместе с SQL Server 2017 г.:
+Использует компонент Full-Text Search [разбиения по словам](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) , определяющие, как определить отдельные слова, в зависимости от языка. Список зарегистрированных разбиения по словам можно получить путем запроса **sys.fulltext_languages** представления каталога. Средства разбиения по словам для следующих языков устанавливаются вместе с SQL Server 2017:
 
-| Язык | КОД языка |
+| Язык | Идентификатор языка |
 |---|---|
 | Нейтральный | 0 |
 | Арабский | 1025 |
@@ -108,7 +109,7 @@ sudo zypper update mssql-server-fts
 | Нидерландский | 1043 |
 | Английский | 1033 |
 | Французский | 1036 |
-| Немецкий | 1031 |
+| German | 1031 |
 | Greek | 1032 |
 | Гуджарати | 1095 |
 | Hebrew | 1037 |
@@ -147,13 +148,13 @@ sudo zypper update mssql-server-fts
 
 ## <a id="filters"></a> Фильтры
 
-Компонент Full-Text Search также работает с текстом, хранящихся в двоичные файлы. Но в этом случае требуется установленный фильтр для обработки файла. Дополнительные сведения о фильтрах см. в разделе [Настройка и управление фильтрами для поиска](../relational-databases/search/configure-and-manage-filters-for-search.md).
+Компонент Full-Text Search также работает с текста, хранящегося в двоичные файлы. Но в этом случае для обработки файла требуется установленный фильтр. Дополнительные сведения о фильтрах см. в разделе [Настройка и управление фильтрами для поиска](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Можно просмотреть список установленных фильтров, вызвав **sp_help_fulltext_system_components «фильтр»**. Для SQL Server 2017 г устанавливаются следующие фильтры:
+Можно просмотреть список установленных фильтров, вызвав **sp_help_fulltext_system_components «фильтр»**. Для SQL Server 2017 устанавливаются следующие фильтры:
 
 | Название компонента | Идентификатор класса | Версия |
 |---|---|---|
-|площадь | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ANS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ASC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ascx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
@@ -166,12 +167,12 @@ sudo zypper update mssql-server-fts
 |.bcp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.c | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.CC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.CLS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.cmd | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|заменах | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|CMD-файл | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.CSA | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|CSS-файлах | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.CSS | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |CSV-файл | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.cxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.DBS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -180,7 +181,7 @@ sudo zypper update mssql-server-fts
 |.DOS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.DSP | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.рсш | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.FAQ | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.FKY | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
@@ -211,7 +212,7 @@ sudo zypper update mssql-server-fts
 |.log | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.MAK | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|перенесен | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.MK | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |ODC | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.odh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -223,12 +224,12 @@ sudo zypper update mssql-server-fts
 |.rc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.RC2 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.rct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.reg | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|файл с расширением REG | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.RGS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.RTF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.SCC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|файлы | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.shtm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.shtml | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.snippet | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -236,7 +237,7 @@ sudo zypper update mssql-server-fts
 |.sor | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.srf | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.stm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.TAB | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|вкладке | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.TDL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |TLH-файлы | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.TLI | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -259,11 +260,11 @@ sudo zypper update mssql-server-fts
 |XML | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Семантический поиск
-[Семантический поиск](../relational-databases/search/semantic-search-sql-server.md) лежит компонент Full-Text Search для извлечения и индексирования статистически соответствующих *ключевых фраз*. Это позволяет запрашивать значения в документах в базе данных. Это также позволяет найти документы, которые похожи.
+[Семантический поиск](../relational-databases/search/semantic-search-sql-server.md) основан на компонент Full-Text Search для извлечения и индексирования статистически релевантных *ключевых фраз*. Это позволяет запрашивать значения в документах базы данных. Это также помогает определить документов, которые похожи.
 
-Для использования семантического поиска, необходимо сначала восстановить базу данных семантической статистики языка на компьютере.
+Чтобы использовать семантический поиск, необходимо сначала восстановить базу данных семантической статистики языка на вашем компьютере.
 
-1. С помощью средства, такие как [sqlcmd](sql-server-linux-setup-tools.md), для выполнения следующей команды Transact-SQL на экземпляре SQL Server для Linux. Эта команда восстанавливает базу данных статистики языка.
+1. Используйте это средство, например [sqlcmd](sql-server-linux-setup-tools.md), выполните следующую команду Transact-SQL в экземпляре SQL Server для Linux. Эта команда восстанавливает базу данных статистики языка.
 
    ```sql
    RESTORE DATABASE [semanticsdb] FROM
@@ -274,7 +275,7 @@ sudo zypper update mssql-server-fts
    ```
 
    > [!NOTE]
-   > При необходимости измените пути в предыдущей команды RESTORE для настройки конфигурации.
+   > При необходимости обновите пути в предыдущей команде восстановления для настройки конфигурации.
 
 1. Выполните следующую команду Transact-SQL, чтобы зарегистрировать базу данных статистики семантики языка.
 
@@ -285,4 +286,4 @@ sudo zypper update mssql-server-fts
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Сведения о функциях полнотекстового поиска см. в разделе [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md). 
+Сведения о Full-Text Search, см. в разделе [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md). 

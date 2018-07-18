@@ -1,5 +1,5 @@
 ---
-title: 'SQL: variable() (XQuery) | Документы Microsoft'
+title: 'SQL: variable() (XQuery) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 66e71e9748d143eb338d612046f97c50db014107
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018205"
 ---
-# <a name="xquery-extension-functions---sqlvariable"></a>Функции расширения XQuery - функции SQL: variable()
+# <a name="xquery-extension-functions---sqlvariable"></a>Функции расширения XQuery — SQL: variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Представляет переменную, которая содержит реляционное значение SQL внутри выражения XQuery.  
@@ -41,21 +42,21 @@ ms.lasthandoff: 05/03/2018
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Замечания  
- Как описано в разделе [Привязка реляционных данных внутри XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), эту функцию можно использовать при использовании [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md) для предоставления к реляционному значению внутри XQuery.  
+## <a name="remarks"></a>Примечания  
+ Как описано в разделе [Привязка реляционных данных внутри XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), эту функцию можно использовать при использовании [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md) на доступ к реляционному значению внутри XQuery.  
   
  Например [метода query()](../t-sql/xml/query-method-xml-data-type.md) используется для указания запроса к экземпляру XML, который хранится в **xml** переменной или столбце типа данных. Иногда, если нужно одновременно передавать реляционные и XML-данные, может также потребоваться использовать в запросе значения из переменных или параметров [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы сделать это, используйте **SQL: variable** функции.  
   
- Значение SQL будет сопоставлено с соответствующим значением XQuery и типом будет присвоен базовый тип XQuery, эквивалентный соответствующему типу SQL.  
+ Значение SQL будет сопоставлено с соответствующим значением XQuery, и его тип будет присвоен базовый тип XQuery, которое эквивалентно значению в соответствующий тип SQL.  
   
- Может ссылаться только на **xml** инструкция insert экземпляр в контексте исходного выражения XML DML; в противном случае нельзя ссылаться на значения, которые относятся к типу **xml** или общеязыковая среда выполнения (CLR) определяемый пользователем тип.  
+ Может ссылаться только на **xml** инструкция insert экземпляр в контексте исходного выражения XML DML; в противном случае нельзя ссылаться на значения, которые относятся к типу **xml** или среда CLR (CLR) определяемый пользователем тип.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. Передача переменной Transact-SQL в XML с помощью функции sql:variable()  
  Следующий пример показывает создание экземпляра XML, в котором содержатся следующие данные:  
   
--   Значение (`ProductID`) из реляционного столбца. [Функции SQL: column()](../xquery/xquery-extension-functions-sql-column.md) используется для связывания этого значения в XML.  
+-   Значение (`ProductID`) из реляционного столбца. [Функция SQL: column()](../xquery/xquery-extension-functions-sql-column.md) используется для привязки этого значения в XML.  
   
 -   Значение (`ListPrice`) из реляционного столбца другой таблицы. В этом случае функция `sql:column()` также используется для связывания этого значения с XML.  
   
@@ -100,7 +101,7 @@ WHERE ProductID=771
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функции расширения запросов XQuery в SQL Server](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [Функции расширения XQuery для SQL Server](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [Создание экземпляров XML-данных](../relational-databases/xml/create-instances-of-xml-data.md)   

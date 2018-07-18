@@ -1,5 +1,5 @@
 ---
-title: Выполнение массовой загрузки XML-данных (SQLXML 4.0) | Документы Microsoft
+title: Выполнение массовой загрузки XML-данных (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4087c97debb92415c9a4e72a4fc29ffeaf81713
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708182"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032492"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Выполнение массовой загрузки XML-данных (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Массовая загрузка XML является самостоятельным объектом COM, который позволяет загрузить частично структурированные XML-данные в таблицы Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Введение в массовую загрузку XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/introduction-to-xml-bulk-load-sqlxml-4-0.md)  
+ [Общие сведения о массовой загрузке XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/introduction-to-xml-bulk-load-sqlxml-4-0.md)  
  Содержит основные сведения о массовой загрузке XML-данных при помощи программы XML Bulk Load. Разделы включают в себя описание потоковых XML-данных, а также синхронные и асинхронные операции массовой загрузки.  
   
  [Процесс создания записей &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/record-generation-process-sqlxml-4-0.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "34708182"
  Содержит описание того, как массовая загрузка XML интерпретирует заметки в схемах XSD и XDR.  
   
  [Модель объектов массовой загрузки SQL Server XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)  
- Описывает свойство sqlxmlbulkload и его методы и свойства.  
+ Описывает свойство sqlxmlbulkload и его методам и свойствам.  
   
  [Примеры массовой загрузки XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
  Содержит пример кода, использующего массовую загрузку XML.  
@@ -54,7 +54,7 @@ ms.locfileid: "34708182"
  [Типы данных и XML массового поведение при загрузке &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
  Содержит описание поведения массовой загрузки XML при различных типах в XSD и XDR.  
   
- [Рекомендации и ограничения XML-Массовая загрузка &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
+ [Рекомендации и ограничения XML-кода, выполнить массовую загрузку &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
  Содержит список проблем, которые необходимо учитывать при работе с массовой загрузкой XML.  
   
   

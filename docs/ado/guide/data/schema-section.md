@@ -2,7 +2,6 @@
 title: Раздел схемы | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf1d4edb2e7a79b7db8c7e0ab9c8767e603ec1f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae6bf8cf6fed293864ccebc6a9e7c80e48d23184
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272503"
 ---
 # <a name="schema-section"></a>Раздел схемы
 Раздел схемы является обязательным. Как показано в предыдущем примере, ADO записывает подробные метаданные о каждом столбце, чтобы сохранить семантику значений данных, насколько возможно, для обновления. Тем не менее для загрузки в XML, ADO требуется только имена столбцов и строк, к которому они принадлежат. Ниже приведен пример минимальной схемой:  
@@ -102,7 +102,7 @@ ms.lasthandoff: 05/03/2018
  Аналогичным образом, так как отсутствует псевдоним не определен для `CompanyName` в предыдущем примере `CompanyName` должен постоянно использоваться во всем документе.  
   
 ## <a name="data-types"></a>Типы данных  
- Тип данных можно применить к столбцу, атрибут dt: Type. Полное руководство по разрешенных типов XML, см в разделе типы данных [спецификации W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Тип данных можно указать двумя способами: указать атрибут dt: Type непосредственно на само определение столбца или используйте конструкцию s:datatype как вложенный элемент определения столбца. Например:  
+ Тип данных можно применить к столбцу, атрибут dt: Type. Полное руководство по разрешенных типов XML, см в разделе типы данных [спецификации W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Тип данных можно указать двумя способами: указать атрибут dt: Type непосредственно на само определение столбца или используйте конструкцию s:datatype как вложенный элемент определения столбца. Например,  
   
 ```  
 <s:AttributeType name="Phone" >  

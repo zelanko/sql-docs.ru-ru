@@ -1,5 +1,5 @@
 ---
-title: Элемент SPID (XML для Аналитики) | Документы Microsoft
+title: Элемент SPID (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 39f4391ef919ad3de5233df078535b34691e1424
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577486"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036692"
 ---
 # <a name="spid-element-xmla"></a>Элемент SPID (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Определяет активный идентификатор серверного процесса (SPID), на котором выполняется родительский [отменить](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) элемента.  
+  Определяет активный идентификатор серверного процесса (SPID), в котором должен выполняться родительский [отменить](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34577486"
 </Cancel>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34577486"
 |Значение по умолчанию|None|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34577486"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- **SPID** элемент представляет процесс сервера идентификатор (SPID) для конкретного сеанса в экземпляре служб Analysis Services.  
+ **SPID** элемент представляет процесс сервера идентификатор (SPID), используемый в данном сеансе в экземпляре служб Analysis Services.  
   
 ## <a name="see-also"></a>См. также
  [Элемент CancelAssociated &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)   

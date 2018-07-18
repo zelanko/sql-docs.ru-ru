@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0877a6de516ccc95b6b2ad403525437592f4d82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b241a695b63bd7de59e490bb67686d7e53e3f625
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403086"
 ---
 # <a name="data-flow-task"></a>Задача потока данных
   В состав задачи потока данных входит подсистема обработки потока данных, перемещающая данные между источником и назначением и позволяющая пользователю преобразовывать, очищать и изменять данные в процессе перемещения. Добавление задачи потока данных в поток управления пакета позволяет пакету извлекать, преобразовывать и загружать данные.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="log-entries"></a>Записи журнала  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют несколько событий журнала, которые доступны всем задачам. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют также пользовательские записи журнала. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md). Задача потока данных содержит следующие пользовательские записи журнала.  
   
-|Запись журнала|Description|  
+|Запись журнала|Описание|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Указывает, что задача потока данных изменила размер буфера. Эта запись журнала описывает причины изменения размера и фиксирует новый временный размер буфера.|  
 |**OnPipelinePostEndOfRowset**|Означает, что компонент получил сигнал конца набора строк, который устанавливается при последнем вызове метода **ProcessInput** . Запись делается для каждого компонента в потоке данных, который обрабатывает ввод. Запись включает имя компонента.|  
@@ -93,7 +92,7 @@ ms.lasthandoff: 05/03/2018
   
  Например, следующая таблица содержит сообщение «В качестве входных данных компоненту потока данных были предоставлены строки. :  : 1185 : выход источника OLE DB : 1180 : сортировка : 1181 : вход сортировки : 76", разделенное на столбцы. Сообщение записано событием **OnPipelineRowsSent** , когда строки были отправлены из источника «OLE DB» в преобразование «Сортировка».  
   
-|Столбец|Description|Значение|  
+|Столбец|Описание|Значение|  
 |------------|-----------------|-----------|  
 |**PathID**|Значение свойства **ID** пути между источником «OLE DB» и преобразованием «Сортировка».|1185|  
 |**PathName**|Значение свойства **Name** пути.|Выход данных источника «OLE DB»|  

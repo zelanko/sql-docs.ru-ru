@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -23,11 +22,12 @@ caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81d4d5da90f6e1309b156cc80628a40bcb519775
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3300d9e72d3f59da05359fb8ebe3af709e460e74
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410446"
 ---
 # <a name="attributes-master-data-services"></a>Атрибуты (службы Master Data Services)
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="attribute-examples"></a>Примеры атрибутов  
  В следующем примере сущность имеет атрибуты: Name, Code, Subcategory, StandardCost, ListPrice и FilePhoto. Эти атрибуты описывают элементы. Каждый элемент представлен отдельной строкой значений атрибута.  
   
- ![Таблица продукта "Велосипед"](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта "Велосипед"")  
+ ![Таблица продукта "Велосипед"](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта \"Велосипед\"")  
   
  В следующем примере сущность Product содержит:  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
  Сущность Subcategory используется в качестве атрибута на основе домена сущности Product. Сущность Category используется в качестве атрибута на основе домена сущности Subcategory. Как и сущность Product, сущности Category и Subcategory по умолчанию содержат атрибуты Name и Code.  
   
- ![Древовидная структура сущности "Продукт"](../master-data-services/media/mds-conc-entity-ui.gif "Древовидная структура сущности "Продукт"")  
+ ![Древовидная структура сущности "Продукт"](../master-data-services/media/mds-conc-entity-ui.gif "Древовидная структура сущности \"Продукт\"")  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

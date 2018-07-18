@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +19,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 991c8ab81340b5ab9b03b79174e7a60e33b505cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52edda77eb537fb6962a183cc37591b457d33b6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355136"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Доставка моментального снимка через FTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/03/2018
  По возможности запрашивайте у пользователей учетные данные в среде выполнения приложения. Если учетные данные хранятся в файле скрипта, необходимо защитить этот файл.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- После настройки FTP-сервера укажите каталог и сведения безопасности для этого сервера в диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ После настройки FTP-сервера укажите каталог и сведения безопасности для этого сервера в диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-ftp-information"></a>Указание сведений FTP  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **@ftp_password** — пароль для имени входа (необязательно).  
   
-     Таким образом создается публикация, использующая протокол FTP. Дополнительные сведения см. в статье [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+     Таким образом создается публикация, использующая протокол FTP. Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Включение доставки моментальных снимков по протоколу FTP для публикации слиянием  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **@ftp_password** — пароль для имени входа (необязательно).  
   
-     Таким образом создается публикация, использующая протокол FTP. Дополнительные сведения см. в статье [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+     Таким образом создается публикация, использующая протокол FTP. Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>Создание подписки по запросу на публикацию моментальных снимков или публикацию транзакций, использующую доставку моментальных снимков по протоколу FTP  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
     -   На подписчике в базе данных подписки выполните хранимую процедуру [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Укажите параметр **@publisher**, **@publisher_db**, **@publication**, учетные данные [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, с которыми агент распространителя на подписчике выполняется для параметров **@job_login** и **@job_password**, а также значение **true** в параметре **@use_ftp**.  
   
-2.  Чтобы зарегистрировать подписку по запросу, выполните на издателе в базе данных публикации хранимую процедуру [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) . Дополнительные сведения см. в статье [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+2.  Чтобы зарегистрировать подписку по запросу, выполните на издателе в базе данных публикации хранимую процедуру [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) . Дополнительные сведения см. в статье [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>Создание подписки по запросу на публикацию слиянием, использующую доставку моментальных снимков по протоколу FTP  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Укажите параметр **@publisher**, **@publisher_db**, **@publication**, учетные данные Windows, с которыми агент распространителя на подписчике выполняется для параметров **@job_login** и **@job_password**, а также значение **true** в параметре **@use_ftp**.  
   
-3.  Чтобы зарегистрировать подписку по запросу, выполните на издателе в базе данных публикации хранимую процедуру [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) . Дополнительные сведения см. в статье [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+3.  Чтобы зарегистрировать подписку по запросу, выполните на издателе в базе данных публикации хранимую процедуру [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) . Дополнительные сведения см. в статье [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>Изменение одной или нескольких доставок моментальных снимков по протоколу FTP для публикации моментальных снимков или публикации транзакций  
   

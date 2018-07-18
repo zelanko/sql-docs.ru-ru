@@ -1,5 +1,5 @@
 ---
-title: Функция false (XQuery) | Документы Microsoft
+title: Функция false (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1e39e7774961cdf141bb3495dba067e6b3c26c40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037392"
 ---
-# <a name="boolean-constructor-functions---false-xquery"></a>Функции логического конструктора - значение false (XQuery)
+# <a name="boolean-constructor-functions---false-xquery"></a>Функции логического конструктора — false (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает значение False типа xs:boolean. Это равносильно `xs:boolean("0")`.  
@@ -41,7 +42,7 @@ fn:false() as xs:boolean
 ```  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** столбцов типа в базе данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
   
 ### <a name="a-using-the-false-xquery-boolean-function"></a>A. Использование логической функции XQuery false()  
  Работающий пример см. в разделе [значение true, функция &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  

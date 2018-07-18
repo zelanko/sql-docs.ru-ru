@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921849"
 ---
 # <a name="odbc-function-summary"></a>Сводка по функциям ODBC
 В следующей таблице перечислены функции ODBC, сгруппированные по типу задачи и включает обозначение соответствия и краткое описание назначения каждой функции. Дополнительные сведения о совместимости назначения в разделе [ODBC и стандартная CLI](../../../odbc/reference/odbc-and-the-standard-cli.md). Дополнительные сведения о синтаксисе и семантику для каждой функции см. в разделе [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  

@@ -18,10 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709032"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Средства и программы для SQL Server, база данных Azure SQL и хранилище данных Azure SQL SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>Средства для выполнения запросов и управления базами данных  
 
-| Инструмент | Description |
+| Инструмент | Описание |
 |:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] — это бесплатная, упрощенная средство для управления базами данных везде, где они выполняются. Эта предварительная версия предоставляет возможности управления базы данных, включая расширенного редактора Transact-SQL и настраиваемые представление о работоспособности баз данных. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] выполняется на Windows, Linux и macOS**.|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Используйте SQL Server Management Studio (SSMS) для запроса, проектирования и управления SQL Server, базы данных SQL Azure и хранилище данных SQL Azure. **Среда SSMS запущена на Windows**.|
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="additional-tools"></a>Дополнительные средства
 
-| Инструмент | Description |
+| Инструмент | Описание |
 |:--|:--|
 | [Диспетчер конфигураций](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Используйте диспетчер конфигурации SQL Server для настройки служб SQL Server и настройки сетевых подключений. Configuration Manager выполняется в Windows|
 |[MSSQL conf](../linux/sql-server-linux-configure-mssql-conf.md)|Mssql conf используется для настройки SQL Server на ОС Linux.|

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023611"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Основные понятия разработки отчетов (построитель отчетов и службы SSRS)
   В этом разделе кратко определены некоторые основные понятия, используемые в документации по построителю отчетов и конструктору отчетов для описания отчетов с разбиением на страницы. Определения отдельных слов и терминов см. в разделе [Глоссарий (построитель отчетов)](../../reporting-services/report-builder/glossary-report-builder.md).  

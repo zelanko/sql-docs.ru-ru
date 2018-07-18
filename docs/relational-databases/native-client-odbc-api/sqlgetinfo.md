@@ -1,13 +1,12 @@
 ---
-title: SQLGetInfo | Документы Microsoft
+title: SQLGetInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -19,19 +18,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5279fcdb04a83508d45a77155125917206ed1ec8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10f47bc9d185835931afa8a80a7759f33cd79b55
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432773"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  В таблице приведены значения, возвращаемые методом **SQLGetInfo**. Эти значения могут меняться в зависимости от номера версии сервера, с которым установлено соединение.  
+  В таблице показаны значения, возвращаемые методом **SQLGetInfo**. Эти значения могут меняться в зависимости от номера версии сервера, с которым установлено соединение.  
   
- **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client отличается от **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвера ODBC (SQLSRV32. Библиотека DLL) при **SQLGetInfo** вызывается с SQL_KEYWORDS и длиной буфера 0.  Драйвер собственного клиента Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS, но драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS_WITH_INFO.  Тем не менее, при вызове с ненулевым значением длины буфера меньше выходной строки ключевого слова, **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент возвращает SQL_SUCCESS_WITH_INFO и SQLState 01004.  
+ **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента отличается от **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC (SQLSRV32. Библиотека DLL) при **SQLGetInfo** вызывается с SQL_KEYWORDS и длиной буфера 0.  Драйвер собственного клиента Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS, но драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS_WITH_INFO.  Тем не менее, при вызове с ненулевым значением длины буфера, меньше, чем выходной строки ключевого слова, **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент возвращает SQL_SUCCESS_WITH_INFO и SQLState 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -56,11 +56,11 @@ ms.lasthandoff: 05/03/2018
 |SQL_COLLATION_SEQ|Текущая назначенная последовательность параметров сортировки для соединения и сервера.|  
 |SQL_COLUMN_ALIAS|«Y»|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|Преобразование типа данных ODBC SQL_BIGINT не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** с типом данных ODBC введите SQL_DECIMAL. См. раздел SQL_CONVERT_DECIMAL далее.|  
+|SQL_CONVERT_BIGINT|Преобразование типа данных ODBC SQL_BIGINT не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддерживает драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** SQL_DECIMAL введите тип данных ODBC. См. раздел SQL_CONVERT_DECIMAL далее.|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|Преобразование типа данных ODBC SQL_TYPE_DATE не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** с типом данных ODBC введите SQL_TYPE_TIMESTAMP. См. раздел SQL_CONVERT_TIMESTAMP далее.|  
+|SQL_CONVERT_DATE|Преобразование типа данных ODBC SQL_TYPE_DATE не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддерживает драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** тип данных, как ODBC тип SQL_TYPE_TIMESTAMP. См. раздел SQL_CONVERT_TIMESTAMP далее.|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_DOUBLE|Преобразование типа данных ODBC SQL_DOUBLE не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента поддерживает тип данных ODBC SQL_DOUBLE как SQL_FLOAT. См. раздел SQL_CONVERT_FLOAT далее.|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|Преобразование типа данных ODBC SQL_TYPE_TIME не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** с типом данных ODBC введите SQL_TYPE_TIMESTAMP. См. раздел SQL_CONVERT_TIMESTAMP далее.|  
+|SQL_CONVERT_TIME|Преобразование типа данных ODBC SQL_TYPE_TIME не поддерживается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддерживает драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** тип данных, как ODBC тип SQL_TYPE_TIMESTAMP. См. раздел SQL_CONVERT_TIMESTAMP далее.|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_SENSITIVE|  
-|SQL_DATA_SOURCE_NAME|Имя текущего источника данных. Задает значение, на который указывает *StringLengthPtr* значение 0, если соединение не было указано имя источника данных.|  
+|SQL_DATA_SOURCE_NAME|Имя текущего источника данных. Задает значение, на которые указывают *StringLengthPtr* 0, если соединение не указали имя источника данных.|  
 |SQL_DATA_SOURCE_READ_ONLY|Зависит от установки атрибута соединения SQL_ATTR_ACCESS_MODE.|  
 |SQL_DATABASE_NAME|Текущая база данных соединения.|  
 |SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  
@@ -124,7 +124,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_IDENTIFIER_QUOTE_CHAR|" (символ двойной кавычки)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|Запрос не поддерживается драйвером.|  
-|SQL_INFO_SS_NETLIB_NAME|Атрибут, относящийся к драйверу Native Client ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Имя сетевой библиотеки, используемой соединением.<br /><br /> По умолчанию возвращается DBNETLIB.  В этом случае DBNETLIB относится к сетевой библиотеке и не связан с dbnetlib.dll.|  
+|SQL_INFO_SS_NETLIB_NAME|Атрибут, относящийся к драйверу Native Client ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Имя сетевой библиотеки, используемой соединением.<br /><br /> По умолчанию возвращается DBNETLIB.  В этом случае DBNETLIB относится к сетевой библиотеке и не связано с dbnetlib.dll.|  
 |SQL_INTEGRITY|«Y»|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  
@@ -216,6 +216,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также  
  [SQLGetInfo, функция](http://go.microsoft.com/fwlink/?LinkId=59354)   
- [Сведения о реализации API-интерфейса ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

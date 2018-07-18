@@ -1,13 +1,11 @@
 ---
-title: Вызов определяемых пользователем агрегатных функций CLR | Документы Microsoft
+title: Вызов определяемых пользователем агрегатных функций CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -23,13 +21,14 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 967475fc3c9781a999fe3d4dabc2f79d6324a492
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca243bc1961b703839ff72e5b559349e3a4c3e36
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355376"
 ---
-# <a name="clr-user-defined-aggregate---invoking-functions"></a>Среда CLR определяемого пользователем агрегата - вызов функций
+# <a name="clr-user-defined-aggregate---invoking-functions"></a>Определяемые пользователем Агрегатная функция CLR - вызов функций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT можно вызывать определяемые пользователем статистические функции CLR, на которые распространяются те же правила, что и на системные агрегатные функции.  
   
@@ -39,9 +38,9 @@ ms.lasthandoff: 05/03/2018
   
 -   Определяемые пользователем статистические функции должны вызываться с помощью двухкомпонентное имя в виде *имя_схемы.имя_функции*.  
   
--   Тип аргумента определяемой пользователем статистической функции должно соответствовать или неявно преобразовываться в *input_type* агрегатной функции, как определено в **CREATE AGGREGATE** инструкции.  
+-   Тип аргумента определяемую пользователем агрегатную функцию должен совпадать или иметь могут быть неявно преобразованы *input_type* агрегатной функции, как определено в **CREATE AGGREGATE** инструкции.  
   
--   Тип возвращаемого значения определяемой пользователем статистической функции должно соответствовать *тип_возврата* в **CREATE AGGREGATE** инструкции.  
+-   Тип возвращаемого значения пользовательского статистического выражения должен соответствовать *return_type* в **CREATE AGGREGATE** инструкции.  
   
 ## <a name="example-1"></a>Пример 1  
  Ниже приводится пример определяемой пользователем агрегатной функции, объединяющей набор строковых значений из столбца таблицы.  
@@ -213,7 +212,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  Управляемые объекты базы данных Visual C++, такие как скалярные функции, скомпилированные с помощью параметра компиляции /clr:pure, не поддерживаются для выполнения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Как и большинство статистических функций, основная логика в **Accumulate** метод. В данном случае — строка, передается в качестве параметра **Accumulate** добавляется метод **StringBuilder** объект, который был инициализирован в **Init** метод. Предположим, что это не первый раз **Accumulate** был вызван метод, также присоединяется запятая **StringBuilder** перед добавлением переданной строки. По завершении вычислительных задач **Terminate** вызывается метод, который возвращает **StringBuilder** как строка.  
+ Так как для большинства статистических функций, основная логика **Accumulate** метод. В данном случае — строка, которая передается в качестве параметра **Accumulate** добавляется метод **StringBuilder** объект, который был инициализирован в **Init** метод. Предположим, что это не в первый раз **Accumulate** был вызван метод, запятая, также присоединяется к **StringBuilder** перед добавлением переданной строки. По завершении вычислительных задач **Terminate** вызывается метод, который возвращает **StringBuilder** как строка.  
   
  Предположим, что таблица имеет следующую схему:  
   
@@ -447,6 +446,6 @@ go
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Определяемые пользователем статистические функции CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
+ [Определяемые пользователем агрегатные функции среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
   
   

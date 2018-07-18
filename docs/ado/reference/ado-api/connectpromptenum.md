@@ -2,7 +2,6 @@
 title: ConnectPromptEnum | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f01de20cabf1ec5d7cefdb645fb1fc08b69d31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62b1bb38789dcfb2fd15b80501315d9c1be38a66
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277243"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Указывает, следует ли отображать диалоговое окно для запроса отсутствуют параметры при открытии соединения с источником данных.  

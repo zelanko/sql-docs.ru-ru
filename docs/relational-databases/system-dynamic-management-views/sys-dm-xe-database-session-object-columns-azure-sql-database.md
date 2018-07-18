@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_session_object_columns (база данных SQL Azure) | Документы Microsoft
+title: sys.dm_xe_database_session_object_columns (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,10 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 863b6d2c274c76919455a4ea68ba0e944d64f16e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029410"
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/23/2018
   
 ||  
 |-|  
-|**Применяется к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 и все более поздние версии.|  
+|**Применяется к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 12 и любые более поздние версии.|  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/23/2018
 |column_name|**nvarchar(60)**|Имя значения конфигурации. Не допускает значение NULL.|  
 |column_id|**int**|Идентификатор столбца. Уникален в пределах объекта. Не допускает значение NULL.|  
 |column_value|**nvarchar(2048)**|Установленное значение столбца. Допускает значение NULL.|  
-|object_type|**nvarchar(60)**|Тип объекта.  Не является nullable.object_type является одним из следующих:<br /><br /> event<br /><br /> target;|  
+|object_type|**nvarchar(60)**|Тип объекта.  Отсутствует nullable.object_type является одним из:<br /><br /> event<br /><br /> target;|  
 |object_name|**nvarchar(60)**|Имя объекта, которому принадлежит столбец. Не допускает значение NULL.|  
 |object_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, в котором содержится объект. Не допускает значение NULL.|  
   

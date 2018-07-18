@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32796517"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO динамических свойств индекса
 Поставщики данных, поставщики служб и компонентов службы можно добавить все динамические свойства **свойства** коллекции Неоткрытое [подключения](../../../ado/reference/ado-api/connection-object-ado.md) и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты. Заданный поставщик также может вставить дополнительные свойства, при открытии этих объектов. Некоторые из этих свойств, перечислены в [динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) раздела. Несколько отображаются в отдельных поставщиков в [приложение A: поставщики](../../../ado/guide/appendixes/appendix-a-providers.md) раздела.  

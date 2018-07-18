@@ -1,5 +1,5 @@
 ---
-title: sp_validate_redirected_publisher (Transact-SQL) | Документы Microsoft
+title: sp_validate_redirected_publisher (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 89bb592d13d395bff62a09668efb9a3d0ecae60c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978946"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/03/2018
  Имя опубликованной базы данных. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@redirected_publisher** =] **"***redirected_publisher***"**  
- Цель перенаправления, заданный при **sp_redirect_publisher** был вызван для пары «издатель-база данных». *redirected_publisher* — **sysname**, не имеет значения по умолчанию.  
+ Цель перенаправления указываться, если **sp_redirect_publisher** был вызван для пары «издатель/база данных». *redirected_publisher* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если не существует запись для издателя и базы данных публикации, **sp_validate_redirected_publisher** возвращает значение null в выходном параметре *@redirected_publisher*. Если запись существует, происходит ее возврат в выходном параметре как в случае успеха, так и в случае неудачи.  
   
  Если проверка прошла успешно, **sp_validate_redirected_publisher** Возвращает указание на успех.  
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/03/2018
  Если проверка завершается неудачно, формируются ошибки, описывающие неудачу.  
   
 ## <a name="permissions"></a>Разрешения  
- Вызывающий объект должен быть либо членом **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа публикации для определенной публикации связанные с базой данных издателя.  
+ Вызывающий объект должен быть либо членом **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа публикации для определенной публикации связанные с базой данных издателя.  
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

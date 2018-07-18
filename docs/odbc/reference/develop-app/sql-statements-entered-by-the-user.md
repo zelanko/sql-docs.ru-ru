@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911399"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Инструкции SQL, введенный пользователем
 Приложения, которые также часто выполнять нерегламентированный анализ разрешить пользователю прямого ввода инструкций SQL. Например:  

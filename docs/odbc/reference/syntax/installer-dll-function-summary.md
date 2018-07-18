@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917392"
 ---
 # <a name="installer-dll-function-summary"></a>Сводка по функциям DLL установщика
 Ниже перечислены функции в программе установки библиотеки DLL. Дополнительные сведения о синтаксисе и семантику для каждой функции см. в разделе [Справочник по API библиотеки DLL установщика](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  

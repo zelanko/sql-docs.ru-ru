@@ -1,9 +1,8 @@
 ---
 title: Динамические свойства ADO | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
+ms.prod_service: connectivity
 ms.service: ''
-ms.component: reference
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93d699a75045afde3b03a9f977657d0d6db87933
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5aa6d237b16c6ac24c0e921d51f19a26c36e3bbe
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275453"
 ---
 # <a name="ado-dynamic-properties"></a>Динамические свойства ADO
 Динамические свойства, которые могут добавляться в [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [команда](../../../ado/reference/ado-api/command-object-ado.md), или [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объектов. Источник для этих свойств — либо поставщик данных, таких как [поставщик OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), или поставщика услуг, таких как [службы курсора для OLE DB Microsoft](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Ссылаться на подходящий поставщик данных или документации по поставщику службы Дополнительные сведения о конкретных динамических свойств.  

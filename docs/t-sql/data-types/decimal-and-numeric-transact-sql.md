@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,16 @@ helpviewer_keywords:
 - numeric data type, about numeric data type
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2c86af3c5e32a92b3210327881cdc140f6fe7d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5086284cd266b2bccdc83f44c9e486f988399b0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417385"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal и numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ p (точность)
 >  В Informatica поддерживаются только 16 значащих разрядов независимо от указанных точности и масштаба.  
   
 *s* (масштаб)  
-Максимальное количество хранимых десятичных разрядов числа справа от десятичной запятой. Это число отнимается от *p* для определения максимального количества цифр слева от десятичной запятой. Максимальное количество десятичных разрядов числа справа от десятичной запятой. Масштаб должен иметь значение от 0 до *p*. Масштаб может быть указан только совместно с точностью. По умолчанию масштаб имеет значение 0, поэтому 0 <= *s* \<= *p*. Максимальный размер хранилища зависит от точности.
+Максимальное количество хранимых десятичных разрядов числа справа от десятичной запятой. Это число отнимается от *p* для определения максимального количества цифр слева от десятичной запятой. Масштаб должен иметь значение от 0 до *p*. Масштаб может быть указан только совместно с точностью. По умолчанию масштаб имеет значение 0, поэтому 0 <= *s* \<= *p*. Максимальный размер хранилища зависит от точности.
   
 |Точность|Байты хранилища|  
 |---|---|

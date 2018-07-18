@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 035775f1d8fdb146e1334ff73de38800de3c1d6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02785d03d4ca31881b76af7badd97b693dcd2b48
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334608"
 ---
 # <a name="data-flow"></a>Поток данных
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет три различных типа компонентов потока данных: источники, преобразования и назначения. Источники извлекают данные из хранилищ, таких как таблицы и представления реляционных баз данных, файлы и базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Преобразования изменяют, объединяют и очищают данные. Целевые объекты загружают данные в хранилища или создают наборы данных в памяти.  
@@ -102,7 +101,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="sources-available-for-download"></a>Источники, доступные для загрузки  
  В приведенной ниже таблице перечислены дополнительные источники, которые можно загрузить с веб-сайта [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Source|Description|  
+|Source|Описание|  
 |------------|-----------------|  
 |Источник Oracle|Источник Oracle — это компонент-источник соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384)(Соединители Майкрософт для Oracle и Teradata от компании Attunity).|  
 |Источник SAP BI|Источник SAP BI — это компонент-источник соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Кроме того, в состав соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft SQL Server Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft SQL Server).|  
@@ -163,7 +162,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="destinations-available-for-download"></a>Назначения, доступные для загрузки  
  В следующей таблице перечислены дополнительные назначения, которые можно скачать на веб-сайте [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Source|Description|  
+|Source|Описание|  
 |------------|-----------------|  
 |Назначение Oracle|Назначение Oracle — компонент назначения соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Соединитель для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity также включает диспетчер подключений и источник. Дополнительные сведения см. на странице скачивания [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384) (Соединители Майкрософт для Oracle и Teradata от компании Attunity).|  
 |Назначение SAP BI|Назначение SAP BI — компонент назначения соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Соединитель для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) также включает диспетчер подключений и источник. Дополнительные сведения см. на странице скачивания [Microsoft SQL Server Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft SQL Server).|  

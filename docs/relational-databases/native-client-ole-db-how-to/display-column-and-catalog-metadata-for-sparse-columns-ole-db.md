@@ -1,13 +1,12 @@
 ---
-title: Отображение метаданных столбца и каталога для разреженных столбцов (OLE DB) | Документы Microsoft
+title: Отображение метаданных столбца и каталога для разреженных столбцов (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
@@ -16,11 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dba6b80c34ecec1b2ecf5cb6832e5a39f0c09b8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da3bc80c8b8b0303cbfe760c66c215a3559cbb99
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421103"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Отображение метаданных столбца и каталога для разреженных столбцов (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 
   В этом примере создается таблица, состоящая из трех столбцов: разреженного столбца, столбца, не являющегося разреженным, и столбца, представляющего собой набор столбцов. Затем образец отображает флаги OLE DB, показывающие метаданные столбца и каталога для неразреженного столбца и столбца, представляющего собой набор столбцов.  
   
- Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Дополнительные сведения о разреженных столбцах см. в разделе [Поддержка разреженных столбцов в собственном клиенте SQL Server](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Дополнительные сведения о разреженных столбцах см. в разделе [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Пример  
  Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  

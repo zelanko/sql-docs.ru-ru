@@ -3,8 +3,6 @@ title: Устранение неполадок (SybaseToSQL) | Документ�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,22 +18,23 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0a7870ca60e9ddd0ff8870745f85f82af0f8a996
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38f374290f7580a25e0be38ba4921476fd821e7e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779430"
 ---
 # <a name="troubleshooting-sybasetosql"></a>Устранение неполадок (SybaseToSQL)
 Довольно часто для запуска в выполнении консоли скрипты или команды, посередине проблемы миграции.  
   
 Могут быть исправлены ошибки может быть связана с:  
   
-1.  Функция  
+1.  Компонент  
   
 2.  Процедура  
   
-3.  Просмотр  
+3.  Представление  
   
 4.  Триггер  
   

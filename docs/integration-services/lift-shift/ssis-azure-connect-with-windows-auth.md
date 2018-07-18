@@ -1,25 +1,26 @@
 ---
-title: Подключение к источникам данных и общим папкам с помощью проверки подлинности Windows | Microsoft Docs
+title: Подключение к данным и общим папкам с помощью проверки подлинности Windows | Документы Майкрософт
+description: Узнайте, как настроить каталог служб SQL Server Integration Services в базе данных SQL Azure для запуска пакетов, которые используют проверку подлинности Windows для подключения к источникам данных и общим папкам.
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a0f1b6936644f2cae9cee469cb763696786a628
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: cca5deecf90fbbe28399d33ac2038bc2264b1ae6
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332688"
 ---
-# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication-in-ssis"></a>Подключение к локальным источникам данных и общим папкам Azure с помощью проверки подлинности Windows в SQL Server Integration Services
-В этой статье описывается, как настроить каталог служб SQL Server Integration Services в базе данных SQL Azure для запуска пакетов, которые используют проверку подлинности Windows для подключения к локальным источникам данных и общим папкам Azure. С помощью проверки подлинности Windows можно подключаться к источникам данных в той же виртуальной сети, в которой размещена среда Azure SSIS Integration Runtime. Источники могут находиться в локальной среде, в виртуальных машинах Azure и в службе файлов Azure.
+# <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-in-ssis-packages-in-azure"></a>Подключение к источникам данных и общим папкам с помощью проверки подлинности Windows в пакетах SQL Server Integration Services в Azure
+
+В этой статье описывается, как настроить каталог служб SQL Server Integration Services в базе данных SQL Azure для запуска пакетов, которые используют проверку подлинности Windows для подключения к источникам данных и общим папкам. С помощью проверки подлинности Windows можно подключаться к источникам данных в той же виртуальной сети, в которой размещена среда Azure SSIS Integration Runtime. Источники могут находиться в локальной среде, в виртуальных машинах Azure и в службе файлов Azure.
 
 > [!WARNING]
 > Если вы не указали допустимые учетные данные домена для проверки подлинности Windows, выполнив `catalog`.`set_execution_credential`, как описано в этой статье, пакеты, которые зависят от проверки подлинности Windows, не смогут подключиться к источникам данных и завершатся ошибкой во время выполнения.
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/15/2018
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Указание учетных данных домена для проверки подлинности Windows
 Чтобы задать учетные данные домена, с помощью которых пакеты смогут подключаться к локальным источникам данных, используя проверку подлинности Windows, выполните указанные ниже действия.
 
-1.  С помощью SQL Server Management Studio (SSMS) или другого средства подключитесь к базе данных SQL, в которой размещается база данных каталога SSIS (SSISDB). Дополнительные сведения см. в разделе [Подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md).
+1.  С помощью SQL Server Management Studio (SSMS) или другого средства подключитесь к базе данных SQL, в которой размещается база данных каталога SSIS (SSISDB). Дополнительные сведения см. в статье [Подключение к каталогу SSIS (SSISDB) в Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  Откройте окно запроса для текущей базы данных SSISDB.
 
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/15/2018
 
 1.  В диспетчере конфигурации SQL Server включите протокол TCP/IP.
 2.  Разрешите доступ с помощью брандмауэра Windows. Дополнительные сведения см. в статье [Configure the Windows Firewall to Allow SQL Server Access](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access) (Настройка брандмауэра Windows для разрешения доступа к SQL Server).
-3.  Чтобы подключаться с использованием проверки подлинности Windows, убедитесь, что среда Integration Runtime для Azure-SSIS принадлежит к виртуальной сети, в которой также находится локальный сервер SQL Server.  Дополнительные сведения см. в разделе [Присоединение среды выполнения интеграции Azure SSIS к виртуальной сети](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Затем используйте `catalog.set_execution_credential`, чтобы указать учетные данные, как описано в этой статье.
+3.  Чтобы подключаться с использованием проверки подлинности Windows, убедитесь в том, что среда Integration Runtime для Azure-SSIS принадлежит к виртуальной сети, в которой также находится локальный сервер SQL Server.  Дополнительные сведения см. в разделе [Присоединение среды выполнения интеграции Azure SSIS к виртуальной сети](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Затем используйте `catalog.set_execution_credential`, чтобы указать учетные данные, как описано в этой статье.
 
 ## <a name="connect-to-an-on-premises-file-share"></a>Подключение к локальной общей папке
 Чтобы проверить возможность подключения к локальной общей папке, выполните указанные ниже действия.
@@ -138,4 +139,4 @@ ms.lasthandoff: 05/15/2018
 ## <a name="next-steps"></a>Следующие шаги
 - Разверните пакет. Дополнительные сведения см. в разделе [Развертывание проекта служб SSIS с помощью SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
 - Запустите пакет. Дополнительные сведения см. в разделе [Выполнение пакета служб SSIS с помощью SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
-- Создайте расписание для пакета. Дополнительные сведения см. в разделе [Планирование выполнения пакета служб SSIS в Azure](ssis-azure-schedule-packages.md).
+- Создайте расписание для пакета. Дополнительные сведения см. в разделе [Планирование выполнения пакетов служб SSIS в Azure](ssis-azure-schedule-packages.md).

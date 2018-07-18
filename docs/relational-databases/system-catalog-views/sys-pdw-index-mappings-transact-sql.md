@@ -1,39 +1,38 @@
 ---
-title: sys.pdw_index_mappings (Transact-SQL) | Документы Microsoft
+title: sys.pdw_index_mappings (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f4641d07b6222ee50183948e7730c01f93ac4fe4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 3dc440c4ab814b83d4398733ae9629e6639f0be7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772029"
 ---
 # <a name="syspdwindexmappings-transact-sql"></a>sys.pdw_index_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Сопоставляет логических индексов физическое имя используется на вычислительных узлах, которые отображаемому уникальное сочетание **object_id** из таблицей, содержащей индекс и **index_id** определенного индекса в этом домене Таблица.  
+  Сопоставляет физическое имя, используемый на вычислительных узлах, как отражаемый уникальное сочетание логических индексов **object_id** из таблицей, содержащей индекс и **index_id** конкретный индекс, в который Таблица.  
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|Идентификатор объекта для логической таблицы, на котором размещен этот индекс. В разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** и **object_id** формируют ключ для этого представления.||  
-|index_id|**nvarchar(32)**|Идентификатор индекса. В разделе [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).||  
+|object_id|**int**|Идентификатор объекта для логическую таблицу, в которой существует этот индекс. См. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** и **object_id** формируют ключ для этого представления.||  
+|index_id|**nvarchar(32)**|Идентификатор индекса. См. в разделе [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).||  
 |physical_name|**nvarchar(36)**|Имя индекса в базах данных на вычислительных узлах.<br /><br /> **physical_name** и **object_id** формируют ключ для этого представления.||  
   
 ## <a name="see-also"></a>См. также  

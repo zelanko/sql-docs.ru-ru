@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,18 +17,19 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8700ed08ca5b13d32bec5e93f03a837ade2fe9d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75eda47457093b62cbb5806f9b8b63f927655a3a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331038"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Активировав в задаче XML свойство **ValidationDetails** , вы сможете получить подробные результаты проверки XML-документа.  
   
  На следующем снимке экрана показано окно **редактора задачи XML** с необходимыми параметрами для проверки XML, позволяющими настроить вывод подробных сведений об ошибках.  
   
- ![Свойства задачи "XML" в редакторе задачи "XML"](../../integration-services/control-flow/media/xmltaskproperties.jpg "Свойства задачи "XML" в редакторе задачи "XML"")  
+ ![Свойства задачи "XML" в редакторе задачи "XML"](../../integration-services/control-flow/media/xmltaskproperties.jpg "Свойства задачи \"XML\" в редакторе задачи \"XML\"")  
   
  До появления свойства **ValidationDetails** проверка XML в задачах XML возвращала информацию только о том, есть ошибка в документе или нет. Сведения о самих ошибках и их расположении были недоступны. Теперь, если для свойства **ValidationDetails** задать значение True, выходной файл будет содержать подробные сведения обо всех ошибках, включая номера строк и позиции. Эти сведения можно использовать для анализа, поиска и исправления ошибок в XML-документах.  
   

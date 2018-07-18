@@ -1,5 +1,5 @@
 ---
-title: expanded-QName (XQuery) | Документы Microsoft
+title: expanded-QName (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b76f85fae2f01322838c40b79227da896fabd01c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039625"
 ---
-# <a name="functions-related-to-qnames---expanded-qname"></a>Функции, связанные с QNames - expanded-QName
+# <a name="functions-related-to-qnames---expanded-qname"></a>Функции, связанные с QName — expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает значение типа xs: QName с пространством имен URI, заданный в *$paramURI* и локального имени, указанного в *$paramLocal*. Если *$paramURI* является пустой строкой или пустой последовательностью, он не представляет никакого пространства имен.  
+  Возвращает значение типа xs: QName с URI, заданный в пространство имен *$paramURI* и локальное имя, указанное в *$paramLocal*. Если *$paramURI* является пустой строкой или пустой последовательностью, он не представляет никакого пространства имен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,14 +48,14 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Часть локального имени QName.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Приведенные ниже сведения относятся к **expanded-QName()** функции:  
   
 -   Если *$paramLocal* указано недопустимое значение в правильной лексической формой для типа xs: NCName, возвращается пустая последовательность и отображается динамическая ошибка.  
   
--   Преобразование данных типа xs:QName type к любому другому типу не поддерживается в приложении [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. По этой причине **expanded-QName()** функцию нельзя использовать в конструкции XML. Например при создании узла, такого как `<e> expanded-QName(…) </e>`, значение должно быть нетипизированным. Это потребовало бы преобразования значения типа xs:QName, возвращаемого функцией `expanded-QName()` к типу xdt:untypedAtomic. Однако это не поддерживается. Решение приведено далее в примере в этом же подразделе.  
+-   Преобразование данных типа xs:QName type к любому другому типу не поддерживается в приложении [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. По этой причине **expanded-QName()** функция не может использоваться в XML-конструкции. Например при создании узла, такого как `<e> expanded-QName(…) </e>`, значение должно быть нетипизированным. Это потребовало бы преобразования значения типа xs:QName, возвращаемого функцией `expanded-QName()` к типу xdt:untypedAtomic. Однако это не поддерживается. Решение приведено далее в примере в этом же подразделе.  
   
--   Можно модифицировать или сравнить существующие значения типа QName. Например `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` сравнивает значение элемента <`e`>, с QName, возвращаемым функцией **expanded-QName()** функции.  
+-   Можно модифицировать или сравнить существующие значения типа QName. Например `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` сравнивает значение элемента <`e`>, с QName, возвращаемым **expanded-QName()** функции.  
   
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбцов в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных.  
@@ -105,7 +106,7 @@ go
 </Root>   
 ```  
   
- В следующем запросе <`ElemQN`> заменяется значение элемента, с помощью **modify()** метода типа данных xml и замещает значение XML DML, как показано.  
+ В следующем запросе <`ElemQN`> заменяется значение элемента, с помощью **modify()** метод типа данных xml и замещает значение XML DML, как показано.  
   
 ```  
 -- the value.  
@@ -139,7 +140,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>Б. Работа с ограничениями при использовании функции expanded-QName()  
- **Expanded-QName** функцию нельзя использовать в конструкции XML. Это показано в следующем примере. Чтобы обойти это ограничение пример сначала вставляет узел, затем изменяет его.  
+ **Expanded-QName** функция не может использоваться в XML-конструкции. Это показано в следующем примере. Чтобы обойти это ограничение пример сначала вставляет узел, затем изменяет его.  
   
 ```  
 -- if exists drop the table T  
@@ -193,7 +194,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- Можно сравнить значение QName, как показано в следующем запросе. Запрос возвращает только <`root`> другие элементы, значения которых соответствуют QName типа значения, возвращенного **expanded-QName()** функции.  
+ Можно сравнить значение QName, как показано в следующем запросе. Запрос возвращает только <`root`> элементы, значения которых соответствуют QName типа значения, возвращенного **expanded-QName()** функции.  
   
 ```  
 SELECT xmlCol.query('  
@@ -207,9 +208,9 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>Ограничения реализации  
- Существует одно ограничение: **expanded-QName()** функция принимает пустую последовательность в качестве второго аргумента и возвращает пустой не вызывает ошибку времени выполнения, если второй аргумент недопустимый.  
+ Существует одно ограничение: **expanded-QName()** функция принимает пустую последовательность в качестве второго аргумента и возвращает пустой не вызывает ошибку времени выполнения, если второй аргумент являются неверными.  
   
 ## <a name="see-also"></a>См. также  
- [Функции, связанные с QNames &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [Функции, связанные с QName &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

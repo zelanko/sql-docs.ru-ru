@@ -14,6 +14,7 @@
 ## [Архитектура задач и потоков](thread-and-task-architecture-guide.md)
 ## [Руководство по архитектуре журналов транзакций и управлению ими](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [Руководство по блокировке и управлению версиями строк транзакций](sql-server-transaction-locking-and-row-versioning-guide.md)
+## [Процесс очистки фантомных записей](ghost-record-cleanup-process-guide.md)
 
 # [Архивация и восстановление](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Большие двоичные объекты](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)

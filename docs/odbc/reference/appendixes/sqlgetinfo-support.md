@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912489"
 ---
 # <a name="sqlgetinfo-support"></a>Поддержка SQLGetInfo
 Когда ODBC 2. *x* приложение вызывает **SQLGetInfo** ODBC 3 *.x* драйвера, *свойство* должен поддерживаться аргументы в следующей таблице.  

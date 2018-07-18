@@ -2,7 +2,6 @@
 title: PositionEnum | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a98867fa73aaa3f59361e0d52ebe6099b625115b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d32d2e507b8ca7214eb142160c65f953771f4527
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280751"
 ---
 # <a name="positionenum"></a>PositionEnum
 Задает текущее положение указателя записи в [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -2,7 +2,6 @@
 title: Для подготовки и выполнения команд | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4d0736e2c4f0a09ec43f2e910cc7fd8c9263fc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92b63916bd6dfdc8d61fa2c8b3a9bbfba9f3224a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272243"
 ---
 # <a name="preparing-and-executing-commands"></a>Для подготовки и выполнения команд
 Команды, инструкции для поставщика для выполнения некоторых операций, выполняемых в источнике данных. Инструкция SQL, например, — команда поставщика данных Microsoft SQL. В ADO, обычно представлены команды **команда** объектов, несмотря на то, что простых команд могут выдаваться через **подключения** или **записей** объектов.  

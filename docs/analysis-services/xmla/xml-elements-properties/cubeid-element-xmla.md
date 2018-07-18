@@ -1,5 +1,5 @@
 ---
-title: Элемент CubeID (XML для Аналитики) | Документы Microsoft
+title: Элемент CubeID (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57c8075b87fbd71bdafcb6f8116dd067e62e722d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579096"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973043"
 ---
 # <a name="cubeid-element-xmla"></a>Элемент CubeID (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34579096"
 </Object>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "34579096"
 |[Цель](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|1-1: обязательный элемент, который встречается ровно один раз.|  
 |Все остальные|0-1: необязательный элемент, который может встречаться только один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  

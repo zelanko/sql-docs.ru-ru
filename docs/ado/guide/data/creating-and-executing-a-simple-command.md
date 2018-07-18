@@ -2,7 +2,6 @@
 title: Создание и выполнение простой команды | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3937908031c72940d44dd45331fa0d534b853d89
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ea6ec81992ba286d589f83bcd1c23f751249f89
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270913"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Создание и выполнение простой команды
 Простая команда является та, которая не является параметризованным и сохраняемость не требуется. Существует три способа для создания и выполнения простой команды.  

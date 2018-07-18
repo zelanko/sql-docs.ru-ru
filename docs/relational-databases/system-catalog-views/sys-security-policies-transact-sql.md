@@ -1,5 +1,5 @@
 ---
-title: sys.security_policies (Transact-SQL) | Документы Microsoft
+title: sys.security_policies (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33221135"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993806"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ ms.locfileid: "33221135"
 |is_enabled|**bit**|Состояние спецификации политики безопасности.<br /><br /> 0 = отключен<br /><br /> 1 = включен|  
 |is_not_for_replication|**bit**|Политика была создана с параметром NOT FOR REPLICATION.|  
 |uses_database_collation|**bit**|Использует те же параметры сортировки, что и база данных.|  
-|is_schemabinding_enabled|**bit**|Состояние предложения SCHEMABINDING для политики безопасности:<br /><br /> 0 или NULL = включено<br /><br /> 1 = отключено|  
+|is_schemabinding_enabled|**bit**|Состояние привязки к схеме для политики безопасности:<br /><br /> 0 или NULL = включено<br /><br /> 1 = отключено|  
   
 ## <a name="permissions"></a>Разрешения  
- Участники **ALTER ANY SECURITY POLICY** разрешение имеют доступ ко всем объектам в этом представлении каталога, а также все, кто имеет **VIEW DEFINITION** в объекте.  
+ Участники с **ALTER ANY SECURITY POLICY** разрешение имеют доступ ко всем объектам в этом представлении каталога, а также любой пользователь с **VIEW DEFINITION** в объекте.  
   
 ## <a name="see-also"></a>См. также  
  [Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)   

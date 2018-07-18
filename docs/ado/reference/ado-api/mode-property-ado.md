@@ -2,7 +2,6 @@
 title: Свойство режима (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1aa3910a07fd1e24aeab7429234c1d7211eb6f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5122d4587674e643090b4291fb3487322d9f71c0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279353"
 ---
 # <a name="mode-property-ado"></a>Свойство режима (ADO)
 Указывает имеющиеся права на изменение данных в [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [запись](../../../ado/reference/ado-api/record-object-ado.md), или [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) значение. Значение по умолчанию для **подключения** — **adModeUnknown**. Значение по умолчанию для **запись** объект **adModeRead**. Значение по умолчанию для **поток** связанные с базового источника (открыть URL-адрес как источник или как значение по умолчанию **поток** из **запись**) —  **adModeRead**. Значение по умолчанию для **поток** не связан с основной источник (экземпляр в памяти) — **adModeUnknown**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **режим** свойство, чтобы задать или получить разрешения на доступ используется поставщиком для текущего соединения. Можно задать **режим** свойства только если **подключения** объект закрыт.  
   
  Для **поток** объекта, если режим доступа не указано, оно наследуется из источника, используемую для открытия **поток** объекта. Например если **поток** открывается из **запись** объекта по умолчанию, он открыт в том же режиме как **записи**.  

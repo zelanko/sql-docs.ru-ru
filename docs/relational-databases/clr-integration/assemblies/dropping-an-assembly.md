@@ -1,14 +1,11 @@
 ---
-title: При удалении сборки | Документы Microsoft
+title: При удалении сборки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -20,11 +17,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 46be0c285631013e3847e7ad7c0e8f03a543ad8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6efb9fe4c000e0fccf221a365c8c7cd5bc8050e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356926"
 ---
 # <a name="dropping-an-assembly"></a>Удаление сборки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Функции, хранимые процедуры или триггеры, которые используют переменные или параметры определяемого пользователем типа и созданы в базе данных с помощью предложения WITH SCHEMABINDING.  
   
 ### <a name="finding-udt-dependencies"></a>Поиск зависимостей определяемого пользователем типа  
- Сначала необходимо удалить все зависимые объекты, а затем выполнить инструкцию DROP TYPE. Следующие [!INCLUDE[tsql](../../../includes/tsql-md.md)] запрос находит все столбцы и параметры, используемые определяемого пользователем ТИПА в **AdventureWorks** базы данных.  
+ Сначала необходимо удалить все зависимые объекты, а затем выполнить инструкцию DROP TYPE. Следующие [!INCLUDE[tsql](../../../includes/tsql-md.md)] запрос находит все столбцы и параметров, которые используют определяемый пользователем тип в **AdventureWorks** базы данных.  
   
 ```  
 USE Adventureworks;  
@@ -74,8 +72,8 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [Создание сборки](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
  [DROP FUNCTION (Transact-SQL)](../../../t-sql/statements/drop-function-transact-sql.md)   
- [DROP PROCEDURE & #40; Transact-SQL & #41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE (Transact-SQL)](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER (Transact-SQL)](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [Тип удаления &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [Тип ПЕРЕНОСА &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

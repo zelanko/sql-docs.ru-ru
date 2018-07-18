@@ -1,5 +1,5 @@
 ---
-title: Элемент AssociationSet (CSDLBI) | Документы Microsoft
+title: Элемент AssociationSet (CSDLBI) | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2ae4f565a2383284421bb433ed5cc98371196d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968985"
 ---
 # <a name="associationset-element-csdlbi"></a>Элемент AssociationSet (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -24,10 +25,10 @@ ms.lasthandoff: 05/10/2018
 ## <a name="applicable-attributes"></a>Применимые атрибуты  
  В следующей таблице перечислены элементы и атрибуты, определяющие элемент **AssociationSet** .  
   
-|Название|Обязателен|Описание|  
+|Имя|Обязателен|Описание|  
 |----------|-----------------|-----------------|  
 |Состояние|Да|Строка, которая указывает, активна ассоциация или нет. Значение определяется элементом State.|  
-|Скрыта|Нет|Логическое значение, определяющее, является ли связь видимой. По умолчанию значение Hidden — **false**, т. е. все связи видимы в модели.|  
+|Скрытый|Нет|Логическое значение, определяющее, является ли связь видимой. По умолчанию значение Hidden — **false**, т. е. все связи видимы в модели.|  
   
 ## <a name="state-element"></a>Элемент State  
  Элемент **State** — простой тип, который описывает, активна ли связь, должен использоваться в вычислениях или оставаться неактивным, но ссылаться на него в вычислениях следует явно.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/10/2018
 |Неактивный|Взаимосвязь активна.|  
   
 ## <a name="example"></a>Пример  
- **Табличные**  
+ **Табличный**  
   
  В следующем примере показана связь в табличной модели AdventureWorks для CSDLBI версии 1.1. Взаимосвязь помечена как неактивная, так как связь уже существует (между OrderKey и Date).  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
 ```  
   
 ## <a name="example"></a>Пример  
- **Многомерные**  
+ **Multidimensional**  
   
  В следующем примере показана связь, определенная между таблицами Sales и Currency в кубе операций Contoso.  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/10/2018
 </AssociationSet>  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Технический справочник по заметки бизнес-Аналитики для языка CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+## <a name="see-also"></a>См. также  
+ [Технический справочник по аннотациям бизнес-аналитики для языка CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

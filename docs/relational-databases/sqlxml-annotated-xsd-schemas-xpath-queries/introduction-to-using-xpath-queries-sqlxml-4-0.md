@@ -1,5 +1,5 @@
 ---
-title: Общие сведения об использовании запросов XPath (SQLXML 4.0) | Документы Microsoft
+title: Общие сведения об использовании запросов XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,17 +21,18 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e620b704f7678a9af8510e7b1d81321aec6ba061
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982556"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Основные сведения об использовании запросов XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Запрос на языке XPath может быть указан как часть URL-адреса или внутри шаблона. Схема сопоставления определяет структуру этого результирующего фрагмента, а значения извлекаются из базы данных. Этот процесс имеет сходные концепции с созданием представлений при помощи инструкции CREATE VIEW и написания SQL-запросов к ним.  
   
 > [!NOTE]  
->  Чтобы получить представление о запросах XPath в SQLXML 4.0, необходим опыт работы с XML-представлениями и другими связанными основными понятиями — шаблонами и схемами сопоставления. Дополнительные сведения см. в разделе [введение в схемы XSD с заметками &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)и в стандарте XPath определен консорциумом World Wide Web (W3C).  
+>  Чтобы получить представление о запросах XPath в SQLXML 4.0, необходим опыт работы с XML-представлениями и другими связанными основными понятиями — шаблонами и схемами сопоставления. Дополнительные сведения см. в разделе [введение в схемы XSD с заметками &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)и в стандарте XPath определен консорциумом World Wide Web Consortium (W3C).  
   
  XML-документ состоит из узлов, таких как узел элемента, узел атрибута, текстовый узел и т. д. Например, рассмотрим следующий XML-документ:  
   
@@ -51,11 +52,11 @@ ms.lasthandoff: 05/03/2018
 </root>  
 ```  
   
- В этом документе  **\<клиента >** является узлом элемента **cid** является узлом атрибута и **«Важно!»** является текстовым узлом.  
+ В этом документе  **\<клиента >** является узлом элемента **cid** — это узел атрибута и **«Важное»** является текстовым узлом.  
   
- XPath — это язык навигации графа, используемый для выбора набора узлов из XML-документа. Каждый оператор XPath выбирает набор узлов на основе набора узлов, выбранных предыдущим оператором XPath. Например, имея набор  **\<клиента >** узлов, XPath может выбрать все  **\<порядок >** узлов с **даты** значениеатрибута**«7/14/1999»**. Результирующий набор узлов содержит все заказы с датой заказа 7/14/1999.  
+ XPath — это язык навигации графа, используемый для выбора набора узлов из XML-документа. Каждый оператор XPath выбирает набор узлов на основе набора узлов, выбранных предыдущим оператором XPath. Например, имея набор  **\<клиента >** узлов, XPath может выбрать все  **\<порядок >** узлов с **даты** значениеатрибута **«7/14/1999»**. Результирующий набор узлов содержит все заказы с датой заказа 7/14/1999.  
   
- Язык XPath определен консорциумом W3C (World Wide Web Consortium) как стандартный язык навигации. SQLXML 4.0 реализует часть спецификации XPath консорциума W3C, расположенный в http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Язык XPath определен консорциумом W3C (World Wide Web Consortium) как стандартный язык навигации. SQLXML 4.0 реализует часть спецификации XPath консорциума W3C, которая находится в каталоге http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Далее приведены ключевые отличия реализации XPath консорциума W3C и реализации SQLXML 4.0.  
   
@@ -63,18 +64,18 @@ ms.lasthandoff: 05/03/2018
   
      SQLXML 4.0 не поддерживает корневой запрос (/). Каждый запрос XPath должен начинать с высшего уровня  **\<ElementType >** в схеме.  
   
--   **Сообщать об ошибках**  
+-   **Отчет об ошибках**  
   
      Спецификация XPath консорциума W3C не определяет условия ошибки. Запросы XPath, которые не смогли выбрать какой-либо узел, возвращают пустой набор узлов. В SQLXML 4.0 запрос может вернуть несколько типов ошибок.  
   
 -   **Порядок документа**  
   
-     В SQLXML 4.0 порядок документа не всегда определен. Таким образом, числовые предикаты и оси, использующие порядок документа (такие как **следующие**) не реализуются.  
+     В SQLXML 4.0 порядок документа не всегда определен. Таким образом, числовые предикаты и оси, использующие порядок документа (такие как **следующие**), не реализованы.  
   
      Отсутствие порядка документа также означает, что строковое значение узла может быть вычислено, только когда этот узел соответствует одному столбцу в одной строке. Элемент с дочерними элементами, или узел IDREFS, или узел NMTOKENS не могут быть преобразованы в строку.  
   
     > [!NOTE]  
-    >  В некоторых случаях **поля ключа** заметки или ключи из **связь** заметка может привести к детерминированному порядку документа. Однако это не является главным образом используется эти заметки для получения дополнительной информации см. в разделе [идентификации ключевых столбцов с помощью SQL: Key-поля &#40;SQLXML 4.0&#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) и [указание связей при помощи sql: связь &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
+    >  В некоторых случаях **полей ключей** заметки или ключи из **связь** заметка может привести к детерминированному порядку документа. Тем не менее, это не Главная цель этих заметок, Дополнительные сведения, см. в разделе [идентификации ключевых столбцов с использованием SQL: Key-поля &#40;SQLXML 4.0&#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) и [указание связей с помощью sql: связь &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
   
 -   **Типы данных**  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|----------|----------------------------|  
 |Оси|**атрибут**, **дочерних**, **родительского**, и **self** осей|[Указание осей в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Предикаты с логическими значениями, включая последовательные и вложенные предикаты.||[Задание арифметических операторов в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Все реляционные операторы|=, !=, <, \<=, >, >=|[Применение реляционных операторов в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Все реляционные операторы|=, !=, <, \<=, >, >=|[Указание реляционных операторов в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |арифметические операторы;|+, -, *, div|[Задание арифметических операторов в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Явные функции преобразования|**Number()**, **string()**, **Boolean()**|[Определение явных функций преобразования в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |логические операторы|AND, OR|[Указание логических операторов в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -111,11 +112,11 @@ ms.lasthandoff: 05/03/2018
   
 |Компонент|Элемент|  
 |-------------|----------|  
-|Оси|**предок**, **ancestor-or-self**, **потомков**, **descendant-or-self (/ /)**, **следующие**,  **следующий одноуровневый**, **имен**, **выше**, **предшествующий одноуровневый**|  
+|Оси|**предок**, **предка or-self**, **потомков**, **descendant-or-self (/ /)**, **следующие**,  **следующий одноуровневый**, **пространства имен**, **выше**, **предыдущему**|  
 |Предикаты с числовыми значениями||  
 |арифметические операторы;|mod|  
-|Функции узлов|**предок**, **ancestor-or-self**, **потомков**, **descendant-or-self (/ /)**, **следующие**,  **следующий одноуровневый**, **имен**, **выше**, **предшествующий одноуровневый**|  
-|Строковые функции|**String()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**,  **SUBSTRING-AFTER()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
+|Функции узлов|**предок**, **предка or-self**, **потомков**, **descendant-or-self (/ /)**, **следующие**,  **следующий одноуровневый**, **пространства имен**, **выше**, **предыдущему**|  
+|Строковые функции|**String()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**,  **SUBSTRING-AFTER()**, **substring()**, **string-length() языка**, **normalize()**, **translate()**|  
 |логические функции|**lang()**|  
 |Числовые функции|**SUM()**, **floor()**, **ceiling()**, **round()**|  
 |Оператор Union|&#124;|  

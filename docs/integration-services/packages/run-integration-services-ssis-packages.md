@@ -1,14 +1,12 @@
 ---
 title: Запуск пакетов служб Integration Services (SSIS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,18 +25,20 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe9d96b588130d1b4bab8e611dc2e0143ab457c9
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: ee4b75d609690535d80331c3437cdf9ecbd9de9e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455607"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411136"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Запуск пакетов служб Integration Services (SSIS)
   Чтобы запустить пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , можно воспользоваться одним из предостовляемых средств. Выбор средства зависит от места хранения пакета. Эти средства приведены в следующей таблице.  
 
 > [!NOTE]
-> В выпуске SQL Server для Linux можно выполнять пакеты SSIS в Linux. Дополнительные сведения см. в разделе [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+> В этой статье приводятся общие сведения о выполнении пакетов служб SSIS, а также содержится информация о выполнении пакетов в локальной среде. Выполнять пакеты служб SSIS можно на следующих платформах:
+> - **облако Microsoft Azure**. Дополнительные сведения см. в статьях [Перенос рабочих нагрузок SQL Server Integration Services в облако](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) и [Выполнение пакета служб SSIS в Azure](../lift-shift/ssis-azure-run-packages.md).
+> - **Linux**. Дополнительные сведения см. в разделе [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](../../linux/sql-server-linux-migrate-ssis.md).
   
  Чтобы сохранить пакет на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , используется модель развертывания проекта. Сведения см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   

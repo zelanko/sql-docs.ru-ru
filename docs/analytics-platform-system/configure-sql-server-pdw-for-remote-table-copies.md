@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539534"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Настройка для удаленной таблицы копии Parallel Data Warehouse
 Описывает, как настроить SQL Server PDW для использования функции копирования удаленной таблицы копирование таблиц базы данных SMP SQL Server на серверах, отличных от устройства.  

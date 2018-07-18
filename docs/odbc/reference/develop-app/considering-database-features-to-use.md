@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911909"
 ---
 # <a name="considering-database-features-to-use"></a>При рассмотрении возможности базы данных для использования
 Выяснив базовый уровень совместимости, необходимо учитывать функции базы данных, используемых приложением. Например какие инструкции SQL приложение выполнит? Будет ли приложение использовать Прокручиваемые курсоры? Транзакции? Процедуры? Длинные данные? Идей, о возможностях может поддерживаться не все СУБД, см. в разделе [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), и [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) описаний функций и [ Приложение в. грамматику SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Функции, необходимые для приложения может решить некоторые СУБД из списка целевой СУБД. Они также показывают, что приложение может легко ориентироваться большинства СУБД.  

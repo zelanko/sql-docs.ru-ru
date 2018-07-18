@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036441"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
 
@@ -129,7 +130,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  В списке **Шаблоны** выберите значение **Проект сервера отчетов**. На следующей диаграмме показано, как шаблоны проекта выглядят в диалоговом окне.  
   
-     ![Диалоговое окно "Новый шаблон проекта"](../../reporting-services/tools/media/rs-ui-newrsproject.gif "Диалоговое окно "Новый шаблон проекта"")  
+     ![Диалоговое окно "Новый шаблон проекта"](../../reporting-services/tools/media/rs-ui-newrsproject.gif "Диалоговое окно \"Новый шаблон проекта\"")  
   
 5.  Введите имя и местоположение проекта или нажмите кнопку **Обзор** и выберите местоположение.  
   

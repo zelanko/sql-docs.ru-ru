@@ -19,6 +19,7 @@ ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34052104"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Драйвер ODBC для Linux и macOS поддержку высокого уровня доступности и аварийного восстановления
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

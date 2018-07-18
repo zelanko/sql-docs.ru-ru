@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899409"
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Список зарезервированных слов Jet 4.0 использует SQL-92 при ExtendedAnsiSQL_Set
 При включении флаг ExtendedAnsiSQL Jet 4.0 использует список зарезервированных слов SQL-92. Попытка использовать SQL-92 зарезервированным словом, как имя объекта, не заключенные в кавычки приведет к синтаксической ошибки. При отключении флаг ExtendedAnsiSQL новые зарезервированные слова можно использовать как имена объектов в виде до.

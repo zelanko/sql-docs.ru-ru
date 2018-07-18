@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539410"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Настройка System Center Operations Manager (SCOM) для наблюдения за система платформы аналитики
 Выполните следующие действия для настройки пакетов управления System Center Operations Manager (SCOM) для Analytics Platform System. Необходимые пакеты управления для отслеживания система платформы аналитики из SCOM.  

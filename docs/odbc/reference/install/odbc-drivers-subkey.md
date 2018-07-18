@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914959"
 ---
 # <a name="odbc-drivers-subkey"></a>Подраздел драйверы ODBC
 Значения в подразделе драйверы ODBC списка установленных драйверов. В следующей таблице показан формат этих значений.  

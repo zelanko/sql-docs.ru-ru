@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022011"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Управление отображением области данных табликса на странице отчетов
 Ознакомьтесь со свойствами, которые можно задать в отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для таблицы, матрицы или области данных списка, чтобы изменить отображение этих компонентов в отчете.  

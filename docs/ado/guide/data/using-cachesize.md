@@ -2,7 +2,6 @@
 title: С помощью CacheSize | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 043634736f9ad5f26ced4707349405793ff6e556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f15c7ba0e954f6214670a3ba687094131e90a57
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273263"
 ---
 # <a name="using-cachesize"></a>С помощью CacheSize
 Используйте **CacheSize** свойства, сколько записей следует извлекать за один раз в локальную память от поставщика. Например если **CacheSize** равно 10, после первого открытия **записей** объекта, поставщик возвращает первые 10 записей в локальную память. При перемещении по **записей** объекта, поставщик возвращает данные из буфера локальной памяти. После перемещения за последней записью в кэше, поставщик извлекает следующие 10 записей из источника данных в кэш.  

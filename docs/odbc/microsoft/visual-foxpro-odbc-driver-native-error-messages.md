@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914159"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Сообщения собственной ошибки драйвера ODBC Visual FoxPro
 В следующих таблицах перечислены сообщения об ошибках Visual FoxPro драйвер ODBC собственного.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910209"
 ---
 # <a name="data-buffer-length"></a>Длина буфера данных
 Приложение передает байтовая длина буфера данных к драйверу в аргумент с именем *BufferLength* или же именем. Например, в вызове **SQLBindCol**, приложение указывает длину *ValuePtr* буфера (**sizeof (***ValuePtr***)**):  

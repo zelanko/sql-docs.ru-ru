@@ -1,8 +1,6 @@
 ---
 title: Создание файлов подключения сервера (AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 79ae67368911f4535a320f87fec29a25b686c456
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6e46ab77966f6f6f392de64c076c4560c7885ab
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773630"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>При создании сервера файлы подключения (AccessToSQL)
 Сведения о сервере может быть указано либо в разделе серверы файла скрипта. Сведения о сервере также можно указать в файле подключения отдельный сервер. Параметр командной строки файла подключения к серверу `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера в файлы подключения скрипта и сервера отсутствует, то считается определение сервера в файле скрипта.  
@@ -74,6 +73,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в работе консоли — [выполнение консоли SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Выполнение консоли SSMA (Access)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

@@ -2,7 +2,6 @@
 title: Изменение данных | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 915e96df957b3f81c1b9a6d6731ca942b69e8f1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80e6fe9c0e615311bfbc7ee9602aae9ed929a38d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270273"
 ---
 # <a name="editing-data"></a>Редактирование данных
 Было показано, как использовать ADO для подключения к источнику данных, выполнить команду, получить результаты в **набора записей** объекта и перемещение в **набора записей**. В этом разделе рассматриваются основные след ADO: изменения данных.  

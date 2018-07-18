@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,14 +27,15 @@ helpviewer_keywords:
 - estimated execution information [SQL Server]
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 11bdddd82efcbc4f0e97b8b33d99961caa9dcfd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeb752920a1d3cab1be4a52e2b9abf213b7b119
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788895"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  Инструкция SET SHOWPLAN_TEXT возвращает данные в виде набора строк, формирующего иерархическое дерево, которое представляет последовательность шагов, выполняемых обработчиком запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по ходу выполнения каждой инструкции. Каждой инструкции, отраженной в выходных данных, соответствует одна строка с текстом инструкции, за которой следуют несколько строк с подробными описаниями шагов выполнения. Следующая таблица содержит описание столбцов вывода.  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**StmtText**|Для строк, имеющих отличный от PLAN_ROW тип, этот столбец содержит текст инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. В строках типа PLAN_ROW этот столбец содержит описание операции. Этот столбец содержит физический оператор и может также, при необходимости, содержать логический оператор. За этим столбцом также может следовать описание, определяемое физическим оператором. Дополнительные сведения о физических операторах см. в описании столбца **Argument** в разделе [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
   

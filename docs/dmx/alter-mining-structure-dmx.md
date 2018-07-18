@@ -1,36 +1,20 @@
 ---
 title: ИЗМЕНЕНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ALTER_MINING_STRUCTURE
-- ALTER MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- mining structures [DMX], creating
-- WITH DRILLTHROUGH clause
-- column definition lists [DMX]
-- parameter lists [DMX]
-- ALTER MINING STRUCTURE statement
-ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 05d1a7c0d1e28ae380be05058661221a4952228c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ca56d141e7a010119dfd9d218398c9e165ed65d8
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842697"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -75,12 +59,12 @@ USING <algorithm> [(<parameter list>)]
 >  Список алгоритмов, поддерживаемых текущим поставщиком можно получить с помощью [строк DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Для просмотра алгоритмы, поддерживаемые в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], в разделе [свойства интеллектуального анализа данных](../analysis-services/server-properties/data-mining-properties.md).  
   
  *Список параметров*  
- Необязательно. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
+ Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
   
  *условия фильтра*  
  Критерий фильтра, применяющийся к столбцам таблицы вариантов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если структура интеллектуального анализа данных содержит составные ключи, то модель интеллектуального анализа данных должна включать в себя все ключевые столбцы, определенные в структуре.  
   
  Если модель не требуется прогнозируемый столбец, например, модели, построенные с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] кластеризации и [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритма кластеризации последовательностей, не нужно включать определение столбца в инструкции. Все атрибуты в создаваемой модели будут рассматриваться как входы.  
@@ -218,8 +202,8 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции обработки данных](../dmx/dmx-statements-data-manipulation.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

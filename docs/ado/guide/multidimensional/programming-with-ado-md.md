@@ -2,7 +2,6 @@
 title: Программирование с использованием ADO MD | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5aa8b55b5a473acd87e9d9db6d0127c88cdc6ad7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cd763f210b97c749dc14c3a37ebbce8e1a20dab
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273462"
 ---
 # <a name="programming-with-ado-md"></a>Программирование с использованием ADO MD
 Использование ADO MD с вашим инструментом разработки, то необходимо установить ссылку на библиотеку типов ADO MD. Описание библиотеки ADO MD является Microsoft ActiveX Data Objects (многомерный) библиотеки. Имя файла библиотеки ADO MD msadomd.dll, который программа идентификатор (ProgID) «ADOMD». Дополнительные сведения о том, как установить ссылки на библиотеки см. в документации средства разработки.  

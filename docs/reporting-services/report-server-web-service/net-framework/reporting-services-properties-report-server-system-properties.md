@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028631"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Свойства служб Reporting Services — свойства системы сервера отчетов
   Следующие имена системных свойств являются зарезервированными. Нельзя создавать определяемые пользователем свойства с такими именами. Многие из этих свойств можно считывать или изменять с помощью методов веб-службы.  

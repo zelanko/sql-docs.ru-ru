@@ -1,7 +1,7 @@
 ---
-title: Печать отчетов (построитель отчетов и службы SSRS) | Документы Майкрософт
+title: Печать отчетов (службы SSRS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-builder
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f5e5e9cd47e550db2e4c68739832c6815d4ec660
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5973ae6180a138a56c6c130755c699a7b23c918
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709052"
 ---
-# <a name="print-reports-report-builder-and-ssrs"></a>Печать отчетов (построитель отчетов и службы SSRS)
-  После сохранения отчета на сервере отчетов его можно просмотреть и распечатать из браузера, диспетчера отчетов или любого приложения, использующегося для просмотра экспортированных отчетов. Перед сохранением отчета его можно напечатать во время просмотра.  
+# <a name="print-reports---reporting-services-ssrs"></a>Печать отчетов — службы Reporting Services (SSRS)
+  После сохранения отчета на сервере отчетов его можно просмотреть и распечатать с веб-портала или из любого приложения, используемого для просмотра экспортированных отчетов. Перед сохранением отчета его можно напечатать во время просмотра.  
   
  Вся обработка печати выполняется по требованию и на компьютере клиента. Нельзя отправить задание на печать непосредственно с сервера отчетов на принтер, подключенный к веб-серверу. Пользователи отчета самостоятельно выбирают принтеры и параметры печати в стандартном диалоговом окне **Печать** .  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Печать отчетов из браузера с помощью элемента управления печатью (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
- Описывает, как печатать отчеты на стороне клиента из веб-браузера или диспетчера отчетов.  
+ Описывает, как печатать отчеты на стороне клиента с веб-портала.  
   
  [Печать отчетов из других приложений (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  Описывает, как напечатать отчеты, экспортированные в другое приложение.  

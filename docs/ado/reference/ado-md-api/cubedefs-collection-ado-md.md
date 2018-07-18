@@ -2,7 +2,6 @@
 title: Коллекция CubeDefs (ADO MD) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d5cafccd076687e832cceed21c34f561a72c7e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 652d4c9f73c19a839609899a98e7c418b1501232
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283623"
 ---
 # <a name="cubedefs-collection-ado-md"></a>Коллекция CubeDefs (ADO MD)
 Содержит [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) из объектов, представляющих кубе многомерным каталога.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **CubeDefs** — это обычная коллекция ADO. С помощью свойств и методов в коллекции можно сделать следующее:  
   
 -   Получить число объектов в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  

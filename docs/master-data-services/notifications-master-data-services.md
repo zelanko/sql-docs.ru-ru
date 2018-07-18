@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2e3add4e4316cbf3568384ca5c1c356cbc7aba47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75df838645e9fa708d8baa27f3f35b07229044e7
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331558"
 ---
 # <a name="notifications-master-data-services"></a>Уведомления (службы Master Data Services)
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="when-notifications-are-sent"></a>Время отправки уведомлений  
  После настройки уведомлений автоматические уведомления могут отправляться по электронной почте в следующие экземпляры.  
   
-|Экземпляр|Description|  
+|Экземпляр|Описание|  
 |--------------|-----------------|  
 |Проверка данных на соответствие бизнес-правилам завершилась с ошибкой|Если значение атрибута не прошло проверку на соответствие бизнес-правилам, то для отправки почтовых сообщений потребуется настроить бизнес-правила по отдельности. В уведомлении содержатся следующие сведения:<br /><br /> Модель<br /><br /> Версия<br /><br /> Сущность<br /><br /> Код элемента<br /><br /> Проверка бизнес-правила завершилась сбоем<br /><br /> Ссылка на элемент, для которого значение атрибута не соответствует бизнес-правилу<br /><br /> Время выдачи уведомления<br /><br /> Дополнительные сведения см. в разделе [Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
 |Изменения состояния версии модели|Пользователи, являющиеся администраторами модели, автоматически получают уведомления о каждом изменении состояния версии модели. В уведомлении содержатся следующие сведения:<br /><br /> Модель<br /><br /> Версия<br /><br /> Предыдущее и новое состояние версии<br /><br /> Время выдачи уведомления<br /><br /> Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).|  

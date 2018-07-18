@@ -1,13 +1,12 @@
 ---
-title: Журнал долго выполняющихся запросов (ODBC) | Документы Microsoft
+title: Журнал длительных запросов (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,20 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93ddcef7631a18528ada3a0dda1eedec52e9a15f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79bfcc0eb68dd60752078e001c805083d111181f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431813"
 ---
-# <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Профилирования данных производительности драйвера ODBC - журнала длительно выполняющихся запросов
+# <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Профилирования данных производительности драйвера ODBC - журнал длительных запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В этом образце демонстрируются параметры ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], относящиеся к драйверу, для долго выполняемых запросов. При запуске этот образец создает файл журнала Odbcqry.log, содержащий список запросов, время выполнения которых превысило интервал, установленный приложением. Этот образец не поддерживается на архитектуре IA64. Этот образец разработан для ODBC версии 3.0 или более поздней.  
   
 > [!IMPORTANT]  
->  По возможности используйте проверку подлинности Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Ведение журнала длительно выполняющихся запросов с помощью администратора ODBC  
   
@@ -45,13 +45,13 @@ ms.lasthandoff: 05/03/2018
   
 5.  В Microsoft SQL Server DSN мастер настройки, перейдите на страницу с **сохранять длительные запросы в файл журнала**.  
   
-6.  Выберите **сохранять длительные запросы в файл журнала**. В текстовое поле введите имя файла журнала для запросов длительного выполнения. При необходимости щелкните **Обзор** для просмотра файловой системы для журнала запросов.  
+6.  Выберите **сохранять длительные запросы в файл журнала**. В текстовое поле введите имя файла журнала для запросов длительного выполнения. При необходимости щелкните **Обзор** чтобы просматривать файловую систему для журнала запросов.  
   
-7.  Задать интервал времени ожидания запроса, в миллисекундах, в **длительность запроса (в миллисекундах)** поле.  
+7.  Задайте интервал времени ожидания запроса, в миллисекундах, в **длительность запроса (в миллисекундах)** поле.  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Ведение журнала длительно выполняющихся запросов программным образом  
   
-1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG и полный путь и имя файла журнала долго выполняющихся запросов. Например:  
+1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG и полный путь и имя файла журнала долго выполняющегося запроса. Например:  
   
     ```  
     C:\\Odbcqry.log  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром SQL_COPT_SS_PERF_QUERY_INTERVAL и задайте интервал времени ожидания в миллисекундах.  
   
-3.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметрами SQL_COPT_SS_PERF_QUERY и SQL_PERF_START для начала ведения журнала для длительных запросов.  
+3.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметрами SQL_COPT_SS_PERF_QUERY и SQL_PERF_START для начала ведения журнала долго выполняющихся запросов.  
   
 4.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметрами SQL_COPT_SS_PERF_QUERY и SQL_PERF_STOP, чтобы остановить запись в журнал долго выполняющихся запросов.  
   
@@ -224,6 +224,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Профилирование разделы руководства по производительности драйвера ODBC & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Профилирование разделы руководства по производительности драйвера ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

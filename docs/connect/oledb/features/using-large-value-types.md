@@ -2,7 +2,7 @@
 title: Использование типов больших значений | Документы Microsoft
 description: Использование типов больших значений с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6c610ff761a2b1af3ee4f0feda402346efc1dcd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e41b35c8ea552708aa53f3cb8810bbaae06ca680
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612099"
 ---
 # <a name="using-large-value-types"></a>Использование типов больших значений
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   До выхода [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] работа с типами данных больших значений требовала особой обработки. Типы данных больших значений являются типы, которые превышают максимальный размер строки 8 КБ. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] представленные **max** описатель **varchar**, **nvarchar**, и **varbinary** типы данных, чтобы разрешить хранение значений размером до 2 ^ 31 -1 байт. Столбцы таблицы и [!INCLUDE[tsql](../../../includes/tsql-md.md)] указать переменные **varchar(max)**, **nvarchar(max)**, или **varbinary(max)** типов данных.  
   

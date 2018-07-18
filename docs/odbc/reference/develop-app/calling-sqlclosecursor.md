@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909308"
 ---
 # <a name="calling-sqlclosecursor"></a>Вызов SQLCloseCursor
 Поскольку **SQLCloseCursor** практически совпадает **SQLFreeStmt** с SQL_CLOSE, диспетчер драйверов не соответствует этой функции. Функции замены сопоставлены, чтобы существующие ODBC 2 *.x* приложения можно легко переместить в ODBC 3. *x* с помощью новых функций. Это решение упрощает для таких приложений начать использовать новые ODBC 3. *x* функциональность внутри условного кода в модульном варианте. **SQLCloseCursor** не представляет никаких новых функциональных возможностей. Приложения не смогут получить все преимущества, переместив **SQLCloseCursor** из **SQLFreeStmt** с SQL_CLOSE.

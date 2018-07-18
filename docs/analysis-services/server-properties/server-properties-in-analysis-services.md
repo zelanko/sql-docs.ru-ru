@@ -1,6 +1,6 @@
 ---
-title: Свойства сервера в службах Analysis Services | Документы Microsoft
-ms.date: 05/03/2018
+title: Свойства сервера в службах Analysis Services | Документация Майкрософт
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,22 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dd37fd44c7bfaff5b338602eb18b0d779ee9e777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975102"
 ---
 # <a name="server-properties-in-analysis-services"></a>Свойства сервера в службах Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Администратор служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может изменить по умолчанию свойства конфигурации сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . У всех экземпляров имеются собственные свойства конфигурации, которые можно задать независимо от других экземпляров на том же сервере.  
   
- Для настройки сервера используйте среду SQL Server Management Studio или измените файл msmdsrv.ini соответствующего экземпляра.  
+ Для настройки сервера, используйте SQL Server Management Studio или измените файл msmdsrv.ini соответствующего экземпляра SQL Server Analysis Services.  
  
 На страницах свойств в среде SQL Server Management Studio отображается подмножество свойств, которые, скорее всего, будут изменены. Полный список свойств содержится в файле msmdsrv.ini.   
   
 > [!NOTE]  
->  В установке по умолчанию файл msmdsrv.ini находится в папке \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config.
+>  При установке SQL Server Analysis Services по умолчанию можно найти в \Program Files\Microsoft SQL Server\MSAS13 msmdsrv.ini. Папка MSSQLSERVER\OLAP\Config.
 > 
 > В число других свойств, влияющих на конфигурацию сервера, входят свойства конфигурации развертывания в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения об этих свойствах см. в разделе [Указание настроек конфигурации для развертывания решения](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
@@ -61,7 +63,7 @@ ms.lasthandoff: 05/10/2018
   
  Следующие подразделы содержат описание различных свойств конфигурации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Общие свойства](../../analysis-services/server-properties/general-properties.md)|К общим свойствам относятся основные и расширенные свойства, а так же свойства, которые определяют каталог данных, каталог резервного копирования и другие характеристики сервера.|  
 |[Свойства интеллектуального анализа данных](../../analysis-services/server-properties/data-mining-properties.md)|Свойства интеллектуального анализа данных позволяют включать или отключать различные алгоритмы интеллектуального анализа. По умолчанию все алгоритмы включены.| 
@@ -79,6 +81,6 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>См. также  
  [Управление экземплярами служб Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Задание параметров конфигурации для развертывания решения](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [Указание настроек конфигурации для развертывания решения](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

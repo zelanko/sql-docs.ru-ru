@@ -3,12 +3,9 @@ title: Ограничения вычислительной емкости для
 ms.custom: ''
 ms.date: 11/06/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,15 @@ helpviewer_keywords:
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d197350d9dc209a18f7913ec9c6e27ef91b40a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 392a895cdedfc48cb759471b89e3e95a02699617
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36806649"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Ограничения вычислительной емкости для разных выпусков SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
  Эта таблица поясняет обозначения из предыдущей схемы.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0..1|Ноль или один|  
 |1|Ровно один|  

@@ -16,7 +16,7 @@ ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585196"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail и оповещения по электронной почте с агентом SQL Server в Linux

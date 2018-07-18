@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544666"
 ---
 # <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Конфигурация часового пояса устройства - система платформы аналитики
 **Часовой пояс** страница позволяет задать часовой пояс для всех узлов на устройстве Analytics Platform System (APS).  

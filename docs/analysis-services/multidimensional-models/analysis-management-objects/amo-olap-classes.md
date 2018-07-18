@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024761"
 ---
 # <a name="amo-olap-classes"></a>Классы OLAP объектов AMO
   Классы OLAP объектов AMO позволяют создавать, изменять, удалять и обрабатывать кубы, измерения и связанные с ними объекты, например ключевые показатели эффективности, действия и упреждающее кэширование.  

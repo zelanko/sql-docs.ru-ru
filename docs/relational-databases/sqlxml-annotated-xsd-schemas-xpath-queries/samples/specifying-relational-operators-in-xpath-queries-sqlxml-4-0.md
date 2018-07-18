@@ -1,5 +1,5 @@
 ---
-title: Применение реляционных операторов в запросах XPath (SQLXML 4.0) | Документы Microsoft
+title: Указание реляционных операторов в запросах XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 71d17e2b77670ec02e345bfd30211d92ca3ab556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032442"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Применение реляционных операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующих примерах показано, как задаются реляционные операторы в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующих примерах показано, как задаются реляционные операторы в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Предикат, указанный в фильтрах квадратные скобки  **\<клиента >** элементов. Только  **\<клиента >** элементы, которые имеют по крайней мере один  **\<OrderDetail >** внучатый элемент с атрибутом OrderQty, значение больше 3 возвращаются.  
+ Предикат, указанный в квадратных скобках фильтры  **\<клиента >** элементов. Только  **\<клиента >** элементов, которые имеют по крайней мере  **\<OrderDetail >** внучатый элемент с атрибутом OrderQty, значение больше 3 возвращаются.  
   
  **Дочерних** оси используется по умолчанию. Поэтому запрос можно определить следующим образом.  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен результирующий набор, полученный в результате выполнения этого шаблона.  
   
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/03/2018
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
 ```  
   
- Ярлык для **атрибута** оси (@) может быть указан, а потому, что **дочерних** оси используется по умолчанию, его можно исключить из запроса:  
+ Ярлык для **атрибут** оси (@) можно указать и поскольку **дочерних** оси используется по умолчанию, его можно исключить из запроса:  
   
 ```  
 /Customer/Order[(@SalesPersonID < 270)=true()]  
@@ -122,7 +123,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен частичный результирующий набор, полученный в результате выполнения этого шаблона.  
   

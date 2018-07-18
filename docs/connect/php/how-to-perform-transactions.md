@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe11037ad2b7a5ae0f927a0880537adf67594899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307663"
 ---
 # <a name="how-to-perform-transactions"></a>Практическое руководство. Выполнение транзакций
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 В оставшейся части этой статьи объясняется и демонстрируется, как использовать драйвер SQLSRV для выполнения транзакций.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 Шаги по выполнению транзакции можно обобщить следующим образом.  
   
 1.  Начните транзакцию с помощью **sqlsrv_begin_transaction**.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 <?php  

@@ -1,31 +1,30 @@
 ---
-title: Поддержка типов данных для ODBC даты и времени усовершенствования | Документы Microsoft
+title: Поддержка типов данных ODBC Дата и время улучшениях | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], data type support
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 46cbe54743926a3633c32cb40931436cae1dedc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c7ff2ba90e04165649bf30087cf1d4e8e9aae0f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431293"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Поддержка типов данных для ODBC Дата и время усовершенствования
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Поддержка типов данных ODBC Дата и время улучшениях
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 |Тип данных SQL Server|Тип данных SQL|Значение|  
 |--------------------------|-------------------|-----------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Дата|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
 |Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
@@ -65,11 +64,11 @@ ms.lasthandoff: 05/03/2018
   
 |Тип данных SQL Server|Тип данных ODBC|Формат строки для клиентских преобразований|  
 |--------------------------|--------------------|------------------------------------------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'гггг-мм-дд чч:мм:сс:[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типа Datetime поддерживает значения долей секунды, состоящие из не более чем трех цифр.|  
+|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'гггг-мм-дд чч:мм:сс:[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типа Datetime поддерживает значения долей секунды, состоящие из не более чем трех цифр.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> Точность этого типа данных составляет одну минуту. При выводе данных секунды будут равны нулю, а при вводе данных они округляются сервером.|  
 |Дата|SQL_TYPE_DATE<br /><br /> SQL_DATE|'гггг-мм-дд'|  
 |Time|SQL_SS_TIME2|'чч:мм:сс[.9999999]'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|«гггг мм дд чч [.9999999]»<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|«гггг мм дд чч: мм: [.9999999]»<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
   
  В escape-последовательностях ODBC для литералов даты и времени изменений нет.  
@@ -141,9 +140,9 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- Если **timezone_hour** отрицательное, **timezone_minute** должно быть отрицательным или равняться нулю. Если **timezone_hour** положительное, **timezone_minute** должно быть положительным или равняться нулю. Если **timezone_hour** равен нулю, s**timezone_minute** может иметь любое значение в диапазоне от -59 до + 59.  
+ Если **timezone_hour** отрицательное, **timezone_minute** должно быть отрицательным или ноль. Если **timezone_hour** положительно, **timezone_minute** должно быть положительным или нулем. Если **timezone_hour** равен нулю, s**timezone_minute** может иметь любое значение в диапазоне от-59 до + 59.  
   
 ## <a name="see-also"></a>См. также  
- [Дата и время усовершенствования & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Дата и время улучшения &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

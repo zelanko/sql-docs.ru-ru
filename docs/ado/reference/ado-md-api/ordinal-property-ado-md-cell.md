@@ -1,11 +1,8 @@
 ---
 title: Порядковый номер свойства (ADO MD ячейка) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f0e483f0d2154902c56e36cbbaf1962f2dc3d6a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: cbcbfce4a4d4fe8b5603cada49a224d7ea0b8992
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284733"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Порядковый номер свойства (ADO MD ячейка)
 Уникально идентифицирует [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) по его положению в наборе ячеек.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **длинные** целое число со знаком и доступно только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Порядковый номер ячейки уникально определена ячейка внутри набора ячеек. По существу, ячейки нумеруются в наборе ячеек так, будто набора ячеек *p*-мерный массив, где *p* число [осей](../../../ado/reference/ado-md-api/axes-collection-ado-md.md). Ячейки нумеруются, начиная с нуля в строках заказа. Вот формула для вычисления порядкового номера ячейки.  
   
  Порядковый номер ячейки, которые можно использовать с [элемент](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) свойство [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объекта для быстрого извлечения [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  

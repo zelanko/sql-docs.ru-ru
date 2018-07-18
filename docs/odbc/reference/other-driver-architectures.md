@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916879"
 ---
 # <a name="other-driver-architectures"></a>Других архитектур драйвера
 Некоторые драйверы ODBC не полностью соответствуют архитектуры, описанной выше. Возможно, драйверы выполнять свои задачи, отличного от традиционных драйвера ODBC, или не являются драйверами устройств в обычном смысле.  

@@ -1,31 +1,20 @@
 ---
-title: PredictNodeId (расширения интеллектуального анализа данных) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictNodeId
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictNodeId function
-ms.assetid: fb236645-ad7e-4c54-9c4c-1af47cad7ad5
-caps.latest.revision: 31
-author: Minewiskan
+title: PredictNodeId (расширения интеллектуального анализа данных) | Документация Майкрософт
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 02b8e6e014a7f30635acef982e8d176e7b5f18a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 5202662b1bd41671905379272b2a52ba87510ecc
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037362"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +62,7 @@ WHERE NODE_UNIQUE_NAME= '00000000100'
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
  [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
   

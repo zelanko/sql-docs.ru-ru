@@ -1,14 +1,12 @@
 ---
 title: Задание свойств для надстройки Master Data Services для Excel | Документы Майкрософт
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f0afa753c2439eb55236d25bf518b6069c31750d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b6d9615762bb81ed883276bfe442831c837795b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335098"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Задание свойств надстройки Master Data Services для Excel
 
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ||||  
 |-|-|-|  
-|Вкладка и раздел|Настройка|Description|  
+|Вкладка и раздел|Настройка|Описание|  
 |Параметры: Публикация|Показывать диалоговое окно **Публикация и заметки** при публикации|Выберите параметр для отображения диалогового окна **Публикация и заметки** после нажатия кнопки **Опубликовать**. В этом окне можно ввести общую заметку для всех изменений или ввести по одной заметке для каждого из изменений.<br /><br /> Снимите флажок, чтобы выбрать инициацию процесса публикации без отображения диалогового окна **Публикация и заметки** . В этом случае нельзя ввести заметки.|  
 |Параметры: Версия|Выбор версии|Выберите версию основных данных, которые будут загружены в надстройку Excel. Возможны следующие варианты:<br /><br /> **Нет** , чтобы по умолчанию не использовалась ни одна версия.<br /><br /> **Самая старая** для использования по умолчанию самой старой версии. **Самая новая** для использования по умолчанию последней версии.|  
 |Параметры: Ведение журнала|Включение ведения подробного журнала|Позволяет включить ведение журнала для загрузки основных данных из служб MDS в надстройку Excel (например, регистрируя в журнале результаты всех команд, выполняемых в службе).|  

@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 37c18633c5532079a92feae4dd06533dc50a5ee7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c73042d6e85c0682a94b83833c5ba00bfffbf10d
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262378"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,8 +39,8 @@ ms.lasthandoff: 05/04/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Задает класс, для которого существует свойство.<br /><br /> 1 = Объект или столбец|  
-|**class_desc**|**nvarchar(60)**|Описание класса, для которого существует свойство.<br /><br /> OBJECT_OR_COLUMN|  
+|**class**|**tinyint**|Задает класс, для которого существует свойство.<br /><br /> 1 = Объект или столбец<br /> 5 = Сборка|  
+|**class_desc**|**nvarchar(60)**|Описание класса, для которого существует свойство.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|Идентификатор предмета, для которого существует свойство, интерпретируемое согласно классу|  
 |**Отпечаток**|**varbinary(32)**|Хэш SHA-1 используемого сертификата или асимметричного ключа.|  
 |**crypt_type**|**char(4)**|Тип шифрования.<br /><br /> SPVC = Зашифрован закрытым ключом сертификата<br /><br /> SPVC = Зашифрован асимметричным закрытым ключом<br /><br /> CPVC = Подпись закрытым ключом сертификата<br /><br /> CPVA = Подпись закрытым асимметричным ключом|  

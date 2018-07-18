@@ -2,7 +2,6 @@
 title: Свойство ParentSameAsPrev (ADO MD) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3827d8caf756113406af0bb7ec26613252fde5ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1b4934a36522c6b7c8a444e2e3b88eb9ee89845
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284813"
 ---
 # <a name="parentsameasprev-property-ado-md"></a>Свойство ParentSameAsPrev (ADO MD)
 Указывает ли родительский этой позиции [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) совпадает со значением родителем непосредственно предшествующего элемента.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **логическое** значение и доступно только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Это свойство поддерживается только в [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объектов, принадлежащих [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) объекта. Произошла ошибка при обращении к этому свойству из **член** объектов, принадлежащих [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта.  
   
 ## <a name="applies-to"></a>Объект применения  

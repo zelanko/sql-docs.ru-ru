@@ -2,7 +2,6 @@
 title: Пример свойства ActiveConnection (Visual Basic) в каталог | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc353766a68dc32a96842a9102434511740f34c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 078d5bad66b0f50f0baae63b0c0aeab8313207c7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285233"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Пример свойства ActiveConnection каталога (Visual Basic)
 Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства на допустимое, откройте подключение» открывает» каталог. Из открытых каталога доступ к схеме объектов, содержащихся в каталоге.  

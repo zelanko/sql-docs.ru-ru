@@ -2,7 +2,6 @@
 title: Поставщик Microsoft OLE DB для службы индексирования Microsoft | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271313"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Поставщик Microsoft OLE DB для индексирования Обзор службы Microsoft
 Поставщик Microsoft OLE DB для службы индексирования Microsoft предоставляет программный доступ только для чтения к файловая система и веб-данных службой индексирования Microsoft. Приложения ADO могут выдавать запросы SQL для извлечения содержимого и файл сведений.
@@ -70,7 +70,7 @@ MSIDXS
 
  **Доступность стандартных свойств набора записей ADO:**
 
-|property|Доступность|
+|Свойство|Доступность|
 |--------------|------------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|чтение/запись|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|чтение/запись|
@@ -105,7 +105,7 @@ MSIDXS
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Нет|
 |[Клон](../../../ado/reference/ado-api/clone-method-ado.md)|Да|
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|
+|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|
 |[Получение строк](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|

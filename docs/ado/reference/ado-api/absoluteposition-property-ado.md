@@ -2,7 +2,6 @@
 title: Свойство AbsolutePosition (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc46a659ea191e6bb1437cb16b0e7704cf8e5ba0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 615bbf4f771d6d3b12edfec3184ef0ee091fbe08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274993"
 ---
 # <a name="absoluteposition-property-ado"></a>Свойство AbsolutePosition (ADO)
 Указывает порядковый номер [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта текущей записи.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  Для 64-разрядного кода используйте тип данных, который обеспечивает хранение 64-разрядное значение. Например, можно использовать долго или другой значение, представляющее длину 64-разрядной, например DBORDINAL. Не используйте **PositionEnum** значения, так как они ограничены длиной 32 бит.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Чтобы задать **AbsolutePosition** свойства, ADO требуется реализовать, поставщик OLE DB, который вы используете [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) интерфейса.  
   
  Доступ к **AbsolutePosition** свойство **записей** , был открыт с помощью последовательным или динамический курсор вызывает ошибку **adErrFeatureNotAvailable**. Для других типов курсоров правильное положение будут возвращены при условии, что поставщик OLE DB поддерживает **IRowsetScroll:IRowsetLocate** интерфейса. Если поставщик не поддерживает **IRowsetScroll** интерфейс, является свойство **adPosUnknown**. См. в документации для поставщика определить, поддерживает ли он **IRowsetScroll**.  

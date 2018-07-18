@@ -33,11 +33,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MTE
+ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582136"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -185,7 +186,7 @@ sqlcmd
  Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если параметр **-K** не указан, то программа sqlcmd не будет поддерживать возможность подключения к вторичной реплике в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [Активные вторичные реплики: вторичные реплики для чтения (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-M** *отработка_отказа_в_сети_с_подсетями*  
- Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности SQL Server или экземпляром отказоустойчивого кластера SQL Server. **-M** обеспечивает более быстрое обнаружение активного (в данный момент) сервера и соединение с ним. Если параметр **-M** не указан, значит **-M** отключен. Дополнительные сведения о [! ВКЛЮЧИТЬ[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Создание и Настройка групп доступности &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [отказоустойчивой кластеризации и всегда групп доступности (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx, а [ Активные вторичные реплики: вторичные реплики для чтения (для групп доступности AlwaysOn)] (https://msdn.microsoft.com/library/ff878253.aspx.  
+ Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности SQL Server или экземпляром отказоустойчивого кластера SQL Server. **-M** обеспечивает более быстрое обнаружение активного (в данный момент) сервера и соединение с ним. Если параметр **-M** не указан, значит **-M** отключен. Дополнительные сведения о [! ВКЛЮЧИТЬ[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Создание и Настройка групп доступности &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [отказоустойчивой кластеризации и всегда групп доступности (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), и [активные вторичные реплики: вторичные реплики для чтения (для групп доступности AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx).  
   
  **-N**  
  С помощью этого переключателя клиент запрашивает шифрованное соединение.  

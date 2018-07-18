@@ -2,7 +2,6 @@
 title: Open-метод (запись ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 432f2a821bd276efd46f61497f4ef7ae95502bf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa486265426f52dfd5986c6d173bcd1ffdb45210
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280513"
 ---
 # <a name="open-method-ado-record"></a>Метод Open (ADO запись)
 Открывает существующий [запись](../../../ado/reference/ado-api/record-object-ado.md) объект или создает новый элемент, представленный **записи**, таких как файл или каталог.  
@@ -39,27 +39,27 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Параметры  
  *Source*  
- Необязательно. Объект **Variant** , может представлять URL-адрес сущности, представляемый этим экземпляром **записи** объекта, **команда**, открытый [записей](../../../ado/reference/ado-api/recordset-object-ado.md) или другой **записи** объект, строка, содержащая инструкцию SQL SELECT или имя таблицы.  
+ Необязательный параметр. Объект **Variant** , может представлять URL-адрес сущности, представляемый этим экземпляром **записи** объекта, **команда**, открытый [записей](../../../ado/reference/ado-api/recordset-object-ado.md) или другой **записи** объект, строка, содержащая инструкцию SQL SELECT или имя таблицы.  
   
  *ActiveConnection*  
- Необязательно. Объект **Variant** , представляющее строку подключения или открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
+ Необязательный параметр. Объект **Variant** , представляющее строку подключения или открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
   
  *Режим*  
- Необязательно. Объект [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) значение, указывающее режим доступа для результирующего **записи** объекта. Значение по умолчанию — **adModeUnknown**.  
+ Необязательный параметр. Объект [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) значение, указывающее режим доступа для результирующего **записи** объекта. Значение по умолчанию — **adModeUnknown**.  
   
  *CreateOptions*  
- Необязательно. Объект [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) значение, указывающее, следует открыть существующий файл или каталог, или необходимо создать новый файл или каталог. Значение по умолчанию — **adFailIfNotExists**. Если задано значение по умолчанию, режим доступа будет получен из [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойство. Этот параметр учитывается при *источника* параметр не содержит URL-адрес.  
+ Необязательный параметр. Объект [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) значение, указывающее, следует открыть существующий файл или каталог, или необходимо создать новый файл или каталог. Значение по умолчанию — **adFailIfNotExists**. Если задано значение по умолчанию, режим доступа будет получен из [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойство. Этот параметр учитывается при *источника* параметр не содержит URL-адрес.  
   
  *Параметры*  
- Необязательно. Объект [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) значение, указывающее параметры для открытия **записи**. Значение по умолчанию — **adOpenRecordUnspecified**. Эти значения могут быть объединены.  
+ Необязательный параметр. Объект [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) значение, указывающее параметры для открытия **записи**. Значение по умолчанию — **adOpenRecordUnspecified**. Эти значения могут быть объединены.  
   
  *UserName*  
- Необязательно. Объект **строка** значение, содержащее идентификатор пользователя, если это необходимо, дающая право на доступ к *источника*.  
+ Необязательный параметр. Объект **строка** значение, содержащее идентификатор пользователя, если это необходимо, дающая право на доступ к *источника*.  
   
  *Пароль*  
- Необязательно. Объект **строка** значение, содержащее пароль, если это требуется, проверяет *UserName*.  
+ Необязательный параметр. Объект **строка** значение, содержащее пароль, если это требуется, проверяет *UserName*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  *Источник* может быть:  
   
 -   URL-АДРЕС. Если протокол для URL-адрес http, будет вызван поставщика Интернета по умолчанию. Если URL-адрес указывает на узел, содержащий исполняемый скрипт (такие как. ASP-странице), **записи** , содержащий источник вместо выполненной открытии содержимое по умолчанию. Используйте *параметры* аргумент, чтобы изменить это поведение.  

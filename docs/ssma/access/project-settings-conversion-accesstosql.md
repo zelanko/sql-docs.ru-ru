@@ -1,8 +1,6 @@
 ---
 title: Параметры (преобразование) (AccessToSQL) проекта | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f5e2bb08277adfcb2a4d609a92a726db6220552d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d910b3d32f9ff05571fd965d29ac3028cc43144
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774570"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Параметры проекта (преобразование) (AccessToSQL)
 Параметры преобразования проекта позволяют настраивать преобразование объектов из объектов базы данных доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты базы данных SQL Azure.  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70bc35baf6121a7a9339064f68d8252b48db22e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 717657cabc469488565985e3e37d111bb9d592b8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308163"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ $*statement*: строка, содержащая инструкцию SQL.
 ## <a name="return-value"></a>Возвращаемое значение  
 В случае успеха возвращает объект PDOStatement. В случае сбоя возвращает объект PDOException или значение false в зависимости от значения PDO::ATTR_ERRMODE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Не оценивает подготовленную инструкцию до самого выполнения.  
   
 В следующей таблице перечислены возможные *key_pair* значения.  
@@ -54,7 +54,7 @@ $*statement*: строка, содержащая инструкцию SQL.
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|При значении true задает выполнение прямого запроса. Значение false указывает на выполнение подготовленной инструкции. Дополнительные сведения о PDO::SQLSRV_ATTR_DIRECT_QUERY см. в разделе [выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Дополнительные сведения см. в статье [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|  
   
-При использовании PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL можно использовать PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE. Например:  
+При использовании PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL можно использовать PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE. Например,  
   
 ```  
 array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_DYNAMIC));  

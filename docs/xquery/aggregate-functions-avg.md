@@ -1,5 +1,5 @@
 ---
-title: Функция AVG (XQuery) | Документы Microsoft
+title: Функция AVG (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6c347eb78dd3ac8e58075cc91edeee87b3a4418d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983463"
 ---
-# <a name="aggregate-functions---avg"></a>Агрегатные функции — среднее
+# <a name="aggregate-functions---avg"></a>Агрегатные функции — avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает среднее значение для последовательности чисел.  
@@ -43,23 +44,23 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Последовательность атомарных значений, для которых вычисляется среднее значение.  
   
-## <a name="remarks"></a>Замечания  
- Все типы атомарных значений, передаваемые **avg()** должны быть подтипами только одного из трех встроенных базовых числовых типов или типа xdt: untypedAtomic. Они не могут быть смешанными. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Результат **avg()** Получает базовый тип переданных типов, например xs: double в случае использования xdt: untypedAtomic.  
+## <a name="remarks"></a>Примечания  
+ Все типы атомарных значений, которые передаются **avg()** должны быть подтипами только одного из трех встроенных базовых числовых типов или типа xdt: untypedAtomic. Они не могут быть смешанными. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Результат **avg()** Получает базовый тип переданных типов, например xs: double в случае xdt: untypedAtomic.  
   
  Если входное значение статически пусто, подразумевается пустое значение и возвращается статическая ошибка.  
   
- **Avg()** функция возвращает среднее значение чисел вычисляется. Например:  
+ **Avg()** функция возвращает среднее значение вычисляется чисел. Например:  
   
  **SUM (** *$arg* **) число div (** *$arg* **)**  
   
  Если *$arg* представляет собой пустую последовательность, возвращается пустая последовательность.  
   
- Если значение xdt: untypedAtomic не может быть приведен к типу xs: double, это значение игнорируется во входной последовательности *$arg*.  
+ Если значение xdt: untypedAtomic не может быть приведен к типу xs: double, значение игнорируется во входной последовательности, *$arg*.  
   
  Во всех прочих случаях функция возвращает статическую ошибку.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** столбцов типа в базе данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
   
 ### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Использование функции XQuery avg() для поиска на производстве расположения цехов, время работы в которых превышает среднее значение для всех цехов.  
  Можно переписать запрос, приведенный в [функция min (XQuery)](../xquery/aggregate-functions-min.md) использовать **avg()** функции.  

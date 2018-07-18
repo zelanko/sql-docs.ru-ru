@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538954"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Настройка внешнего сервера SMP SQL для получения копии удаленной таблицы - Parallel Data Warehouse
 Описывает, как настроить внешние экземпляр SQL Server для получения копии удаленной таблицы из параллельного хранилища данных.  

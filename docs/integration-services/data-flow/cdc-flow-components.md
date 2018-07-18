@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
@@ -16,11 +14,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a95bd32614faeb7cade10a701819b3109d72dca4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c453a98b91e001fbb15ec608513a8803981a26e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334918"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
@@ -174,7 +173,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="cdc-state"></a>CDC State  
  С каждой группой CDC связано состояние, которое представляется строкой особого формата. Дополнительные сведения см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md). В следующей таблице показаны возможные значения состояния CDC.  
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |-----------|-----------------|  
 |0-(INITIAL)|Состояние, которое имеет место до выполнения пакетов в текущей группе CDC. Это состояние также имеет место, если состояние CDC пусто.<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (начало начальной загрузки)|Это состояние, которое имеет место при запуске пакета начальной загрузки. Это происходит после вызова операции **MarkInitialLoadStart** в задаче «Управление CDC».<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  

@@ -1,34 +1,23 @@
 ---
 title: Leaves (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- LEAVES
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Leaves function
-ms.assetid: 09f908aa-1b2d-4af9-8c8d-c023915241b2
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2bdbf8b6c116efb305f27c048254c227918d1a26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b18f283dce1ed5d0d3099dbdc26e27e8aff39ffc
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741253"
 ---
 # <a name="leaves-mdx"></a>Leaves (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Возвращает набор, состоящий из всех атрибутов (при необходимости, принадлежащих конкретному измерению). Для каждого атрибута x в результирующем наборе, если x является атрибутом гранулярности или напрямую или косвенно связан с атрибутом гранулярности, гранулярность устанавливается на атрибут x, не влияя на срез. **Оставляет** функция предназначена для использования внутри инструкции SCOPE или в левой части назначения.  
   
@@ -43,7 +32,7 @@ Leaves( [ Dimension_expression ] )
  *Аргумент Dimension_Expression*  
  Допустимое многомерное выражение, возвращающее измерение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Конечные элементы являются кортежами, которые образуются при перекрестном соединении самых нижних уровней всех иерархий атрибутов. Вычисляемые элементы исключаются.  
   
 -   Если имя измерения указано, **оставляет** функция возвращает набор, содержащий конечные элементы ключевого атрибута для заданного измерения.  
@@ -59,6 +48,6 @@ Leaves( [ Dimension_expression ] )
     >  Если не все атрибуты имеют одинаковую гранулярность в группе мер в текущей области действия, функция возвращает ошибку.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

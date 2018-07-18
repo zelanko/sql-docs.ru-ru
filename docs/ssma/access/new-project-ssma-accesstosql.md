@@ -1,8 +1,6 @@
 ---
 title: Новый проект (SSMA) (AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 706c40049ce8c506b18b45c8c2fb88f7802e3d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d819ecae91a1c5438e678ab3c62206c3fe76c785
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774720"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Новый проект (SSMA) (AccessToSQL)
 Используйте **новый проект** диалоговое окно «» для создания нового проекта SSMA. Чтобы получить доступ к **новый проект** в диалоговом **файл** меню, нажмите кнопку **новый проект**.  

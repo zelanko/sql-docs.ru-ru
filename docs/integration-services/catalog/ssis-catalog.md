@@ -1,14 +1,12 @@
 ---
 title: Каталог служб SSIS | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: service
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,15 +18,21 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1589f037fd8c44e3daba9116dbc576353a0fed59
+ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37872824"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
   Каталог **SSISDB** служит центральным пунктом для работы с проектами служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS), развернутыми на сервере служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
-  
+ 
+> [!NOTE]
+> В этой статье содержатся общие сведения о каталоге служб SSIS и о каталоге служб SSIS, который запущен в локальной среде. Можно также создать каталог служб SSIS в базе данных SQL Azure и развертывать и выполнять пакеты служб SSIS в Azure. Дополнительные сведения см. в разделе [Перенос рабочих нагрузок SQL Server Integration Services в облако](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Несмотря на то что пакеты служб SSIS можно выполнять в Linux, каталог служб SSIS не поддерживается на платформе Linux. Дополнительные сведения см. в разделе [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+ 
  Объекты, которые хранятся в каталоге **SSISDB** , включают проекты, пакеты, параметры, среды и журнал операций.  
   
  Для просмотра объектов, параметров и рабочих данных, которые хранятся в каталоге **SSISDB** , создайте запрос к представлениям в базе данных **SSISDB** . Для управления объектами вызывайте хранимые процедуры в базе данных **SSISDB** или используйте пользовательский интерфейс каталога **SSISDB** . Во многих случаях одну и ту же задачу можно выполнить и в пользовательском интерфейсе, и путем вызова хранимой процедуры.  
@@ -221,7 +225,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [catalog.get_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
   
--   [catalog.move_project (база данных SSISDB)](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
+-   [catalog.move_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
   
 -   [catalog.restore_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
   
@@ -381,7 +385,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="options"></a>Параметры  
  В следующей таблице описаны некоторые свойства, определенные в диалоговом окне, а также соответствующие свойства в представлении catalog.catalog_property.  
   
-|Имя свойства (диалоговое окно свойств каталога)|Имя свойства (представление catalog.catalog_property)|Description|  
+|Имя свойства (диалоговое окно свойств каталога)|Имя свойства (представление catalog.catalog_property)|Описание|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Имя алгоритма шифрования|ENCRYPTION_CLEANUP_ENABLED|Указывает тип шифрования, который используется при шифровании значений конфиденциальных параметров каталога. Допустимы следующие значения:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (по умолчанию)|  
 |Время ожидания проверки (в секундах)|VALIDATION_TIMEOUT|Задайте максимальное время в секундах, в течение которого может выполняться операция проверки проекта или пакета до того, как будет остановлена. Значение по умолчанию — 300 секунд.<br /><br /> Выполнение проверки является асинхронной операцией. Чем больше проект или пакет, тем больше времени необходимо для проверки.<br /><br /> Дополнительные сведения о проверке проектов и пакетов см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).|  

@@ -2,10 +2,10 @@
 title: Наборы строк | Документы Microsoft
 description: Наборы строк в драйвер OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,18 +20,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d3f187118cd273712ed8145bbfef3af712091028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ffead535df47ea3f6937e11fa16f5e32318ecf3
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690177"
 ---
 # <a name="rowsets"></a>Наборы строк
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Набор строк — это несколько строк, содержащих столбцы данных. Наборы строк — это основные объекты, позволяющие всем поставщикам данных OLE DB представлять данные результирующих наборов в виде таблиц.  
   
- После создания сеанса с помощью **IDBCreateSession::CreateSession** метод, потребитель может использовать либо **IOpenRowset** или **IDBCreateCommand** интерфейс для сеанса, чтобы создать набор строк. Драйвер OLE DB для SQL Server поддерживает оба интерфейса. Оба эти метода описаны здесь.  
+ После создания сеанса с помощью **IDBCreateSession::CreateSession** метод, потребитель может использовать либо **IOpenRowset** или **IDBCreateCommand** интерфейс для создания набора строк в сеансе. Драйвер OLE DB для SQL Server поддерживает оба интерфейса. Оба эти метода описаны здесь.  
   
 -   Создать набор строк путем вызова **IOpenRowset::OpenRowset** метод.  
   
@@ -49,19 +52,19 @@ ms.lasthandoff: 05/03/2018
   
  Потребители освобождают наборы строк с **IRowset::Release** метод. При освобождении набора строк освобождаются все дескрипторы строк, удерживаемые потребителем для данного набора строк. При освобождении набора строк методы доступа не освобождаются. Если у вас есть **IAccessor** интерфейс, он по-прежнему имеет освобождается.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [Создание набора строк с IOpenRowset](../../oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
+-   [Создание набора строк с помощью интерфейса IOpenRowset](../../oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
--   [Создание наборов строк с ICommand::Execute](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
+-   [Создание наборов строк с помощью метода ICommand::Execute](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
--   [Свойства набора строк и поведение](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
+-   [Свойства и поведение наборов строк](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
 -   [Наборы строк и курсоры SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
   
 -   [Выборка строк](../../oledb/ole-db-rowsets/fetching-rows.md)  
   
--   [Выборка одной строки при помощи интерфейса IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+-   [Выборка одной строки с помощью интерфейса IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
 -   [Закладки](../../oledb/ole-db-rowsets/bookmarks.md)  
   

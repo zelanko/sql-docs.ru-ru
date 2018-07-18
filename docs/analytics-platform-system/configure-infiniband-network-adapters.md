@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539024"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Настройка сетевых адаптеров InfiniBand для система платформы аналитики
 Описываются способы настройки сетевых адаптеров InfiniBand на сервере не является специализированным клиента для подключения к узлу на параллельные хранилища данных (PDW). Используйте эти инструкции для базовых соединений и для обеспечения высокой доступности, чтобы загрузка, резервного копирования и другие процессы автоматически подключаться к сети InfiniBand active.  

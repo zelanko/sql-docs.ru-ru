@@ -1,8 +1,6 @@
 ---
 title: Выбор и настройка затронутые объекты (OracleToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4593830a2cc22b04977f117502bb14118b1b31a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0db1a6e426c7ca889b9805850ec81f5de120b0a5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777990"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Выбор и настройка затронутые объекты (OracleToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения в которой следует сравнивать при SSMA проверяет результаты выполнения для объектов, выбранным в предыдущем шаге. Кроме того можно настроить параметры проверки.  

@@ -1,8 +1,6 @@
 ---
 title: Новые возможности графического пользовательского интерфейса в SSMA для Oracle (OracleToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4fdbb359f9c8ebd9d1ecd4133b115c7700a6cda5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24bdabbdc3dfd436c745ceec086af71f5cb1d663
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777570"
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Новые возможности графического пользовательского интерфейса в SSMA для Oracle (OracleToSQL)
 В этой главе Описание новых возможностей пользовательского интерфейса SSMA.  

@@ -2,7 +2,6 @@
 title: Взаимоблокировки с уровнем изоляции повторяющегося чтения | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6fc1621022758189925587e32059a3e26a1de4a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c871d2786202c74945aeec84c3de06a361d54801
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273983"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Взаимоблокировки с уровнем изоляции повторяющегося чтения
 Если пользовательский бизнес-объект использует уровне изоляции read repeatable для доступа к SQL Server и бизнес-объекта одновременно вызывается двух клиентов, которые отправляют запрос и обновление в той же транзакции, возможна взаимоблокировка. Удаленной службы данных позволяет один из процессов истечения времени ожидания для освобождения взаимоблокировки, но обновление не будет работать для этого клиента.  

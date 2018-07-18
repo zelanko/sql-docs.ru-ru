@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +20,12 @@ caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed2f8686381e57dbac0b171ba28a2d1aaab77f11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1bca3b8acd26a4e2527b8e721a7da3a073ee4c0
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358156"
 ---
 # <a name="replication-log-reader-agent"></a>Агент чтения журнала репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ logread [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Уровень шифрования по протоколу SSL, который используется агентом чтения журнала при установлении соединений.  
   
-|Значение EncryptionLevel|Description|  
+|Значение EncryptionLevel|Описание|  
 |---------------------------|-----------------|  
 |**0**|Указывает, что SSL не используется.|  
 |**1**|Указывает, что SSL используется, но агент не проверяет, подписан ли сертификат сервера SSL надежным издателем.|  
@@ -115,7 +115,7 @@ logread [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  Указывает объем данных, заносимых в журнал во время операции чтения журнала. Влияние на производительность, оказываемое ведением журнала, можно максимально уменьшить, выбрав значение **1**.  
   
-|Значение HistoryVerboseLevel|Description|  
+|Значение HistoryVerboseLevel|Описание|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|По умолчанию. Всегда обновлять предыдущее сообщение журнала с таким же состоянием (запуск, выполнение, успех и т. д.). Если предыдущих сообщений с таким состоянием нет, то вставить новую запись.|  
@@ -147,7 +147,7 @@ logread [-?]
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Указывает, должны ли выводимые данные быть подробными.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Выводятся только сообщения об ошибках.|  
 |**1**|Выводятся все сообщения о ходе выполнения агента.|  

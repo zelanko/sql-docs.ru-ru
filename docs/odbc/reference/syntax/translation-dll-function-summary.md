@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916730"
 ---
 # <a name="translation-dll-function-summary"></a>Сводка по функциям DLL перевода
 Ниже перечислены функции преобразования DLL. Дополнительные сведения о синтаксисе и семантику для каждой функции см. в разделе [ссылка на функцию DLL перевода](../../../odbc/reference/syntax/translation-dll-api-reference.md).  

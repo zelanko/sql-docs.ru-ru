@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900699"
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>Число строк SQL (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  

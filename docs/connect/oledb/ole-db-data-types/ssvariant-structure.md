@@ -2,10 +2,10 @@
 title: Структура SSVARIANT | Документы Microsoft
 description: Структура SSVARIANT в драйвер OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,20 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: eb977dbe9ef7bed4e6c98ef612bd6e2bb67bf159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9afd7d6ce87ac49c060347287d4b7a081ea5bb41
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666384"
 ---
 # <a name="ssvariant-structure"></a>Структура SSVARIANT
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **SSVARIANT** структуру, которая определена в msoledbsql.h, соответствует значению DBTYPE_SQLVARIANT в драйвер OLE DB для SQL Server.  
   
  **SSVARIANT** представляет собой Избирательное соединение. В зависимости от значения элемента vt потребитель может определить, какой элемент следует считывать. значения VT соответствуют [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных. Таким образом **SSVARIANT** структуру может содержать любой тип SQL Server. Дополнительные сведения о структуре данных для стандартных типов OLE DB см. в разделе [индикаторов типа](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если DataTypeCompat == 80, несколько **SSVARIANT** подтипы становятся строками. Например, следующие значения vt будут отображаться в **SSVARIANT** виде VT_SS_WVARSTRING:  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -82,7 +85,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |UnknownType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
 |BLOBType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
   
-## <a name="see-also"></a>См. также:  
- [Типы данных & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+## <a name="see-also"></a>См. также  
+ [Типы данных &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_db_increased_partitions | Документы Microsoft
+title: sp_db_increased_partitions | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b63255e4f15505dc75dfdf92f550a1d6d4149028
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970416"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sp_dp_increased_partitions
  Имя базы данных. *DBName* — **sysname** со значением по умолчанию NULL. Если *dbname* не указан, используется текущая база данных.  
   
  [ @increased_partitions=] '*increased_partitions*"  
- Включает или выключает поддержку 15 000 секций для указанной базы данных. *increased_partitions* — **varchar(6)** значение по умолчанию NULL. Для включения поддержки используются значения ON или TRUE, а для выключения — OFF или FALSE. Если *increased_partitions* не указан, процедура возвращает 1, чтобы указать, предназначенного для указанной базы данных, или 0 для указания поддержки отключена.  
+ Включает или выключает поддержку 15 000 секций для указанной базы данных. *increased_partitions* — **varchar(6)** значение по умолчанию NULL. Для включения поддержки используются значения ON или TRUE, а для выключения — OFF или FALSE. Если *increased_partitions* не указан, процедура возвращает 1, чтобы указать, включена поддержка для указанной базы данных, или 0, чтобы указать поддержку отключен.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

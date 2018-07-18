@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910409"
 ---
 # <a name="batch-processing"></a>Пакетная обработка
 Поддержка пакетов инструкций SQL не широко, поэтому взаимодействующие приложения должны использовать их условно или вообще не. Дополнительные сведения см. в разделе [выполнение пакетов](../../../odbc/reference/develop-app/executing-batches.md).

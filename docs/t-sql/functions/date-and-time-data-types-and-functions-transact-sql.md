@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,27 +21,28 @@ helpviewer_keywords:
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 caps.latest.revision: 79
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a92f42a693c99c213815fdb1a14395becb3e9054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a0796d43bd0f17a65a0144591c7e2f27c0b22e8
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784180"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Типы данных и функции даты и времени (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-В следующих разделах представлен обзор всех типов данных и функций даты и времени [!INCLUDE[tsql](../../includes/tsql-md.md)].
+В разделах этой статьи представлен обзор всех типов данных и функций даты и времени [!INCLUDE[tsql](../../includes/tsql-md.md)].
 -   [Типы данных даты и времени](#DateandTimeDataTypes)  
 -   [Функции даты и времени](#DateandTimeFunctions)  
-    -   [Функции, получающие значения системной даты и времени](#GetSystemDateandTimeValues)  
-    -   [Функции, получающие компоненты даты и времени](#GetDateandTimeParts)  
-    -   [Функции, получающие значения даты и времени из их компонентов](#fromParts)  
-    -   [Функции, получающие разность даты и времени](#GetDateandTimeDifference)  
+    -   [Функции, возвращающие значения системной даты и времени](#GetSystemDateandTimeValues)  
+    -   [Функции, возвращающие компоненты даты и времени](#GetDateandTimeParts)  
+    -   [Функции, возвращающие значения даты и времени из их компонентов](#fromParts)  
+    -   [Функции, возвращающие значения разности даты и времени](#GetDateandTimeDifference)  
     -   [Функции, изменяющие значения даты и времени](#ModifyDateandTimeValues)  
-    -   [Функции, устанавливающие или получающие формат сеанса](#SetorGetSessionFormatFunctions)  
+    -   [Функции, устанавливающие или возвращающие функции формата сеанса](#SetorGetSessionFormatFunctions)  
     -   [Функции, проверяющие значения даты и времени](#ValidateDateandTimeValues)  
 -   [Дата и время — см. также](#DateandTimeRelatedTopics)  
   
@@ -62,39 +62,39 @@ ms.lasthandoff: 05/03/2018
 >  Тип данных [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) не относится к типам данных даты и времени. Тип данных **timestamp** является устаревшим синонимом **rowversion**.  
   
 ##  <a name="DateandTimeFunctions"></a> Функции даты и времени  
-Функции даты и времени [!INCLUDE[tsql](../../includes/tsql-md.md)] перечислены в следующих таблицах. Дополнительные сведения о детерминизме см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+В следующих таблицах приводятся функции даты и времени [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения о детерминизме см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
-###  <a name="GetSystemDateandTimeValues"></a> Функции, получающие значения системной даты и времени 
-Все значения системной даты и времени наследуется от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+###  <a name="GetSystemDateandTimeValues"></a> Функции, возвращающие значения системной даты и времени 
+[!INCLUDE[tsql](../../includes/tsql-md.md)] наследует все значения системной даты и времени от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 #### <a name="higher-precision-system-date-and-time-functions"></a>Высокоточные функции системной даты и времени  
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] получает значения даты и времени с помощью функции GetSystemTimeAsFileTime() Windows API. Точность зависит от физического оборудования и версии Windows, в которой запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точность возвращаемых значений этого API-интерфейса задана равной 100 нс. Точность может быть определена с помощью метода GetSystemTimeAdjustment() интерфейса API Windows.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] получает значения даты и времени с помощью функции GetSystemTimeAsFileTime() Windows API. Точность зависит от физического оборудования и версии Windows, в которой запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точность возвращаемых значений этого API-интерфейса задана равной 100 нс. Точность может быть определена с помощью метода GetSystemTimeAdjustment() API-интерфейса Windows.
   
 |Компонент|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
-|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|Возвращает значение типа **datetime2(7)**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Смещение часового пояса не включается.|**datetime2(7)**|Недетерминированная|  
-|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|Возвращает значение типа **datetimeoffset(7)**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Смещение часового пояса включается.|**datetimeoffset(7)**|Недетерминированная|  
-|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|Возвращает значение типа **datetime2(7)**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возвращаемые дата и время отображаются в формате UTC.|**datetime2(7)**|Недетерминированная|  
+|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|Возвращает значение типа **datetime2(7)**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возвращаемое значение не содержит смещение часового пояса.|**datetime2(7)**|Недетерминированная|  
+|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|Возвращает значение типа **datetimeoffset(7)**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возвращаемое значение содержит смещение часового пояса.|**datetimeoffset(7)**|Недетерминированная|  
+|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|Возвращает значение типа **datetime2(7)**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция возвращает значения даты и времени в формате UTC.|**datetime2(7)**|Недетерминированная|  
   
-#### <a name="lower-precision--system-date-and-time-functions"></a>Функции системной даты и времени меньшей точности
+#### <a name="lower-precision-system-date-and-time-functions"></a>Функции системной даты и времени меньшей точности
   
 |Компонент|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
-|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|Возвращает значение типа **datetime**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Смещение часового пояса не включается.|**datetime**|Недетерминированная|  
-|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|Возвращает значение типа **datetime**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Смещение часового пояса не включается.|**datetime**|Недетерминированная|  
-|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|Возвращает значение типа **datetime**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возвращаемые дата и время отображаются в формате UTC.|**datetime**|Недетерминированная|  
+|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|Возвращает значение типа **datetime**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возвращаемое значение не содержит смещение часового пояса.|**datetime**|Недетерминированная|  
+|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|Возвращает значение типа **datetime**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возвращаемое значение не содержит смещение часового пояса.|**datetime**|Недетерминированная|  
+|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|Возвращает значение типа **datetime**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция возвращает значения даты и времени в формате UTC.|**datetime**|Недетерминированная|  
   
-###  <a name="GetDateandTimeParts"></a> Функции, получающие компоненты даты и времени
+###  <a name="GetDateandTimeParts"></a> Функции, возвращающие компоненты даты и времени
   
 |Компонент|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |--------------|------------|------------------|----------------------|-----------------|  
-|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|Возвращает строку символов, представляющую указанную часть *datepart* заданной даты.|**nvarchar**|Недетерминированная|  
-|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Возвращает целое число, представляющее указанную часть *datepart* указанной даты *date*.|**int**|Недетерминированная|  
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Возвращает целое число, представляющее день указанной даты *date*.|**int**|Детерминированное|  
-|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Возвращает целое число, представляющее месяц указанной даты *date*.|**int**|Детерминированное|  
-|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Возвращает целое число, представляющее год указанной даты *date*.|**int**|Детерминированное|  
+|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|Возвращает строку символов, представляющую указанную часть *datepart* заданного типа date.|**nvarchar**|Недетерминированная|   
+|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Возвращает целое число, представляющее указанную часть *datepart* заданного типа *date*.|**int**|Недетерминированная|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Возвращает целое число, представляющее часть дня указанного типа *date*.|**int**|Детерминированное|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Возвращает целое число, представляющее часть месяца указанного типа *date*.|**int**|Детерминированное|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Возвращает целое число, представляющее часть года указанного типа *date*.|**int**|Детерминированное|  
   
-###  <a name="fromParts"></a> Функции, получающие значения даты и времени из их компонентов
+###  <a name="fromParts"></a> Функции, возвращающие значения даты и времени из их компонентов
   
 |Компонент|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
@@ -105,7 +105,7 @@ ms.lasthandoff: 05/03/2018
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|Возвращает значение **smalldatetime**, соответствующее указанной дате и времени.|**smalldatetime**|Детерминированное|  
 |[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Возвращает значение **time**, соответствующее указанному времени с заданной точностью.|**time(** *precision* **)**|Детерминированное|  
   
-###  <a name="GetDateandTimeDifference"></a> Функции, получающие разность даты и времени
+###  <a name="GetDateandTimeDifference"></a> Функции, возвращающие значения разности даты и времени
   
 |Компонент|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
@@ -117,18 +117,18 @@ ms.lasthandoff: 05/03/2018
 |Компонент|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
 |[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|Возвращает новое значение **datetime**, добавляя интервал к указанной части *datepart* заданной даты *date*.|Тип данных аргумента *date*|Детерминированное|  
-|[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|Возвращает последний день месяца, содержащего указанную дату, с необязательным смещением.|Возвращаемое значение имеет тип *start_date* или **date**.|Детерминированное|  
-|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCH*OFFSET* (*DATETIMEOFFSET* , *time_zone*)|Функция SWITCH*OFFSET* изменяет смещение часового пояса для значения DATETIMEOFFSET и сохраняет значение UTC.|Значение **datetimeoffset** с точностью в долях секунд, заданной в аргументе *DATETIMEOFFSET*|Детерминированное|  
-|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET преобразует значение типа datetime2 в значение типа datetimeoffset. Значение datetime2 преобразуется в местное время для указанного time_zone.|Значение **datetimeoffset** с точностью в долях секунд, заданной в аргументе *datetime*|Детерминированное|  
+|[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|Возвращает последний день месяца, содержащего указанную дату, с необязательным смещением.|Тип возвращаемого значения — это тип аргумента *start_date* или тип данных **date**.|Детерминированное|  
+|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET*, *time_zone*)|Функция SWITCHOFFSET изменяет смещение часового пояса для значения DATETIMEOFFSET и сохраняет значение UTC.|Значение **datetimeoffset** с точностью в долях секунд, заданной в аргументе *DATETIMEOFFSET*|Детерминированное|  
+|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET преобразует значение типа datetime2 в значение типа datetimeoffset. Функция *TODATETIMEOFFSET* преобразует значение datetime2 в местное время для указанного time_zone.|Значение **datetimeoffset** с точностью в долях секунд, заданной в аргументе *datetime*|Детерминированное|  
   
-###  <a name="SetorGetSessionFormatFunctions"></a> Функции, устанавливающие или получающие формат сеанса
+###  <a name="SetorGetSessionFormatFunctions"></a> Функции, устанавливающие или возвращающие функции формата сеанса
   
 |Компонент|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Возвращает текущее значение параметра SET DATEFIRST для сеанса.|**tinyint**|Недетерминированная|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|Устанавливает первый день недели в виде числа от 1 до 7.|Неприменимо|Неприменимо|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@***format_var* }|Задает порядок составляющих даты (месяц/день/год) для ввода данных типа **datetime** или **smalldatetime**.|Неприменимо|Неприменимо|  
-|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Возвращает название используемого в данный момент языка. Функция @@LANGUAGE не является функцией даты или времени. Однако на данные, выводимые функциями даты, могут повлиять настройки языка.|Неприменимо|Неприменимо|  
+|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Возвращает название использующегося в настоящий момент языка. Функция @@LANGUAGE не является функцией даты или времени. Однако на данные, выводимые функциями даты, могут повлиять настройки языка.|Неприменимо|Неприменимо|  
 |[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'***language***'** &#124; **@***language_var* }|Устанавливает языковую среду сеанса и системных сообщений. SET LANGUAGE не является функцией даты или времени. Однако на данные, выводимые функциями даты, влияет параметр языка.|Неприменимо|Неприменимо|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|Возвращает сведения о формате даты всех поддерживаемых языков. **sp_helplanguage** не является хранимой процедурой даты или времени. Однако на данные, выводимые функциями даты, влияет параметр языка.|Неприменимо|Неприменимо|  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="DateandTimeRelatedTopics"></a> Дата и время — см. также 
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)|Предоставляет сведения о преобразовании значений даты и времени в строковые литералы и обратно, а также в другие форматы даты и времени.|  
 |[Написание инструкций Transact-SQL, адаптированных к международному использованию](../../relational-databases/collations/write-international-transact-sql-statements.md)|Предоставляет рекомендации относительно переносимости баз данных и приложений баз данных, использующих инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], с одного языка на другой или в многоязычную среду.|  

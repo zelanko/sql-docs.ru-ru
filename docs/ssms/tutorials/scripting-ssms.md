@@ -26,6 +26,7 @@ ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33988812"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Учебник. Создание скриптов для объектов в среде SQL Server Management Studio
 В этом учебнике вы научитесь создавать скрипты Transact-SQL (T-SQL) для различных объектов, доступных в SQL Server Management Studio (SSMS). В нем приводятся примеры создания скриптов для следующих объектов:

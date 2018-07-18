@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906718"
 ---
 # <a name="c-interval-structure"></a>Структура интервала C
 Каждый из типов данных C интервал перечисленные в [типы данных C](../../../odbc/reference/appendixes/c-data-types.md) раздел использует ту же структуру для хранения данных интервала. Когда **SQLFetch**, **SQLFetchScroll**, или **SQLGetData** является именем, драйвер возвращает данные в структуру SQL_INTERVAL_STRUCT, используется значение, указанное в параметре приложение для типов данных C (в вызове **SQLBindCol**, **SQLGetData**, или **SQLBindParameter**) интерпретировать содержимое SQL_INTERVAL_STRUCT и заполняет *interval_type* поля структуры с *перечисления* значение, соответствующее типу C. Обратите внимание, что драйверы не читают *interval_type* поле, чтобы определить тип интервала; они извлекают значения поля дескриптора SQL_DESC_CONCISE_TYPE. При использовании структуры данных параметра, драйвер использует значение, указанное для приложения в поле SQL_DESC_CONCISE_TYPE в APD интерпретировать содержимое SQL_INTERVAL_STRUCT, даже если приложение устанавливает значение  *interval_type* поле другое значение.  

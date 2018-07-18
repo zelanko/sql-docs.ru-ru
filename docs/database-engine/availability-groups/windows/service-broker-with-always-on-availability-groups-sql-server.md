@@ -3,7 +3,6 @@ title: Компонент Service Broker с группами доступнос�
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1febefd8e60b0ff054f1e556f23665da14b29320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 540ecf6bef4dc74d8052a58c96543c5c9b159b5b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770740"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Компонент Service Broker с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,11 @@ ms.lasthandoff: 05/03/2018
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     Дополнительные сведения см. в статье [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).  
-  
+     Дополнительные сведения см. в разделе [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).  
+
+    > [!NOTE]  
+    Компонент SQL Server Broker не поддерживает несколько подсетей. Обязательно используйте параметр registerallprovidersip со значением 0 и проверьте, не используете ли вы статические IP-адреса в системе DNS, предоставив необходимое разрешение кластеру в DNS, как определено в https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. При попытке использовать отключенный IP-адрес компонент Broker может отложить сообщение с состоянием CONVERSING.
+
 3.  **Предоставьте разрешение CONNECT на конечную точку.**  
   
      Предоставьте разрешение CONNECT на конечную точку компонента Service Broker роли PUBLIC или некоторому имени входа.  

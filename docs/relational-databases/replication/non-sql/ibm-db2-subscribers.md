@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +21,12 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 452c82ff5fb19f90b3c20ad030c77b40f6de33d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0af7787982a49f82edafe1a39878e9e9f581356b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349856"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Не публикуйте таблицы для подписчиков DB2 с использованием репликации транзакций, если один или более первичных ключевых столбцов в таблице относится к типу данных DECIMAL(32-38, 0-38) или NUMERIC(32-38, 0-38). Репликация транзакций идентифицирует строки, используя первичный ключ, что может привести к сбою, так как эти типы данных сопоставлены с VARCHAR(41) на подписчике. Таблицы с первичными ключами, которые используют эти типы данных, могут публиковаться с помощью репликации моментальных снимков.  
   
--   Если хотите предварительно создать таблицы на подписчике вместо того, чтобы они были созданы репликацией, используйте параметр только поддержка репликации. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   Если хотите предварительно создать таблицы на подписчике вместо того, чтобы они были созданы репликацией, используйте параметр только поддержка репликации. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] допускает наличие более длинных имен таблиц и столбцов, чем DB2:  
   

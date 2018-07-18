@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015981"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services)
   В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]настройки сведений об устройстве используются для передачи параметров подготовки к просмотру модуля подготовки отчетов. Каждый модуль подготовки отчетов принимает определенный набор параметров.  

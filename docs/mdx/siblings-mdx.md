@@ -1,6 +1,6 @@
 ---
 title: SIBLINGS (многомерные Выражения) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9f292a67116fad324a3a4b2706698febc7713f59
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a4414e134d3b837406c3cb72566084029cf522c9
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582226"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742853"
 ---
 # <a name="siblings-mdx"></a>Siblings (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Возвращает элементы, имеющие общего родителя с указанным элементом, включая сам элемент.  
   

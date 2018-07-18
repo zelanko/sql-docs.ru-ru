@@ -2,7 +2,6 @@
 title: Свойство IndexNulls (ADOX) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9200df4424126c06c36aa31b648787035c799486
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d32b88053acacbcd9a7c184668f46ee6660022b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286004"
 ---
 # <a name="indexnulls-property-adox"></a>Свойство IndexNulls (ADOX)
 Указывает ли записи, имеющие значения null в полях индекса индексные записи.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает [AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md) значение. Значение по умолчанию — **adIndexNullsDisallow**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Это свойство доступно только для чтения на [индекс](../../../ado/reference/adox-api/index-object-adox.md) объектов уже добавлен в коллекцию.  
   
 ## <a name="applies-to"></a>Объект применения  

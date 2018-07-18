@@ -1,8 +1,6 @@
 ---
 title: Новые возможности SSMA для Access(AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 03/01/2018
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cdd8f3f3898dcfd2f3233132ba7ecb4ea7861ab3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3040ae9d8d73f45dc5e2128d411054e527278ab1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774300"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Новые возможности SSMA для Access (AccessToSQL)
 В этом разделе перечислены SSMA для Access изменения в каждом выпуске.  

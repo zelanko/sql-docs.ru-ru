@@ -1,14 +1,12 @@
 ---
-title: bcp_setbulkmode | Документы Microsoft
+title: bcp_setbulkmode | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,17 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e0b8bdab13a6a937c6e97cec3ece700a685deb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f60428506e4581cbb04bee8522748aba38d2716b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432713"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  bcp_setbulkmode позволяет задать формат столбца в операции массового копирования, установив все атрибуты столбца в одном вызове функции.  
+  bcp_setbulkmode позволяет указывать формат столбца в операции массового копирования, установив все атрибуты столбца в одном вызове функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,7 +48,7 @@ RETCODE bcp_setbulkmode (
  *HDBC*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
- *Свойство*  
+ *property*  
  Константа типа BYTE. Список констант см. в таблице в подразделе «Примечания».  
   
  *pField*  
@@ -67,27 +66,27 @@ RETCODE bcp_setbulkmode (
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL  
   
-## <a name="remarks"></a>Замечания  
- bcp_setbulkmode можно использовать для массового копирования из запроса или таблицы. Bcp_setbulkmode используется для массового копирования из инструкции запроса, должен вызываться перед вызовом bcp_control с подсказкой BCP_HINT.  
+## <a name="remarks"></a>Примечания  
+ bcp_setbulkmode можно использовать для массового копирования из таблицы или запроса. Когда bcp_setbulkmode используется для массового копирования из инструкции запроса, он должен вызываться перед вызовом bcp_control с подсказкой BCP_HINT.  
   
- bcp_setbulkmode является альтернативой использованию [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) и [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), позволяя указать формат одного столбца на вызов функции.  
+ bcp_setbulkmode является альтернативой использованию [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) и [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), позволяя указать формат для одного столбца на вызов функции.  
   
  В следующей таблице перечислены константы для параметра *property* .  
   
 |property|Описание|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP. EXE-файла и чтобы bcp_setcolfmt с **BCP_FMT_TYPE** свойство **SQLCHARACTER**.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. Exe-ФАЙЛ и bcp_setcolfmt с **BCP_FMT_TYPE** свойство **SQLNCHAR**.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру – N в BCP. Exe-ФАЙЛ и bcp_setcolfmt с **BCP_FMT_TYPE** свойство **SQLNCHAR** Если типом столбца является строка (по умолчанию не строка).|  
-|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру – n в BCP. Exe-ФАЙЛ и bcp_setcolfmt с **BCP_FMT_TYPE** свойства, значение по умолчанию.|  
+|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру – c в BCP. EXE-файла и чтобы bcp_setcolfmt с **BCP_FMT_TYPE** свойство значение **SQLCHARACTER**.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE-файла и bcp_setcolfmt с **BCP_FMT_TYPE** свойство значение **SQLNCHAR**.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру – N в BCP. EXE-файла и bcp_setcolfmt с **BCP_FMT_TYPE** свойство значение **SQLNCHAR** Если типом столбца является строка (значение по умолчанию не строка).|  
+|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру – n в BCP. EXE-файла и bcp_setcolfmt с **BCP_FMT_TYPE** свойство, значение по умолчанию.|  
   
- Не следует использовать bcp_setbulkmode, включающий bcp_setcolfmt, bcp_control и bcp_readfmt последовательностью вызовов функций. Например не следует вызывать bcp_control(BCPTEXTFILE) и bcp_setbulkmode.  
+ Не следует использовать bcp_setbulkmode с последовательностью вызовов функций, которая включает в себя bcp_setcolfmt bcp_control и bcp_readfmt. Например не следует вызывать bcp_control(BCPTEXTFILE) и bcp_setbulkmode.  
   
  Можно вызвать bcp_control и bcp_setbulkmode bcp_control параметров, которые не конфликтуют с bcp_setbulkmode. Например можно вызвать bcp_control(BCPFIRST) и bcp_setbulkmode.  
   
- При попытке вызвать bcp_setbulkmode с последовательностью вызовов функций, включающий bcp_setcolfmt, bcp_control и bcp_readfmt, один из вызовов функций вернет ошибку последовательности. Если вы решили Устраните причину сбоя, вызовите bcp_init, чтобы сбросить все параметры и начать заново.  
+ Если попытаться вызвать bcp_setbulkmode с последовательностью вызовов функций, которая включает в себя bcp_setcolfmt bcp_control и bcp_readfmt, один из вызовов функций вернет ошибку последовательности. Если вы решили исправить ошибку, вызовите bcp_init, чтобы сбросить все параметры и начать заново.  
   
- Ниже приведены некоторые примеры вызовов функции, которые вызовут ошибку последовательности.  
+ Ниже приведены некоторые примеры вызовов функций, которые приводят к ошибка последовательности функций.  
   
 ```  
 bcp_init(“table”, DB_IN);  
@@ -290,7 +289,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

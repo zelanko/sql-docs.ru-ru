@@ -2,7 +2,7 @@
 title: Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия) | Документы Microsoft
 description: Заметки о выпуске Microsoft SQL Studio операций (Предварительная версия)
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,15 +13,43 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271015"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Заметки о выпуске Studio операций SQL (Предварительная версия)
 
-**[Загрузите мая общедоступной предварительной версии](download.md)**
+**[Скачать предварительную версию Public июня](download.md)**
+
+
+## <a name="june-2018-june-public-preview"></a>Июнь 2018 (июнь общедоступную предварительную версию.)
+
+Дата выпуска: 20 июня 2018  
+версия: 0.30.6
+
+*Общедоступной предварительной версии июня* содержит следующие основные особенности:  
+
+- **SQL Server Profiler для операций SQL Studio *предварительного просмотра***  расширения первоначального выпуска.
+- Новый **хранилище данных SQL** расширение включает широкий настраиваемой панели мониторинга мини-приложения распределение результатов аналитики к хранилищу данных. Это разблокирует основные сценарии вокруг управление и Настройка хранилища данных, чтобы убедиться, что он оптимизирован для стабильной работы.
+- **Изменение данных, «Фильтрация и сортировка»** поддержки.
+- **Агент SQL Server для операций SQL Studio *предварительного просмотра***  усовершенствования расширения для задания и журнал заданий представления.
+- Улучшенная **мастер & платформа построитель пользовательского интерфейса диалогового окна** API-интерфейсов расширения.
+- Обновление кода платформы VS исходного кода интеграции [марта 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) и [2018 апреля (1,23)](https://code.visualstudio.com/updates/v1_23) освобождает.
+- Устранение неполадок GitHub:
+  - Запрос функции ([выдачи 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): создание результаты ширина Автоподбор размера столбцов сетки данных и запомнить изменения вручную, если тот же запрос запускается повторно.
+  - Исправьте [выдавать 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): сообщение и добавьте кнопку учетной записи учетную запись при пустом связанной учетной записи добавьте Показать.
+  - Исправьте [выдачи 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): вкладка связанной учетной записи разрывается, если свернутое представление.
+  - Исправьте [выдавать 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): служба SQL средств аварийно завершает работу при открытии SQL-файл с диска.
+  - Исправьте [выдавать 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): SQL отсутствует ключевое слово «BETWEEN».
+  - Исправьте [выдача 1 395](https://github.com/Microsoft/sqlopsstudio/issues/1395): ключевое слово «MATCH» служба средств SQL аварийно завершает работу.
+  - Исправьте [выдавать 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): «Новый профилировщик» контекстного меню в обозревателе объектов не выполняет никаких действий.
+  - Исправьте [выдавать 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): разрывается план запроса «Объяснение» редактора запросов.
+
+
+Дополнительные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 ## <a name="may-2018-may-public-preview"></a>2018 мая (май общедоступной предварительной версии)
@@ -46,8 +74,6 @@ ms.lasthandoff: 05/24/2018
    - Исправьте [выдачи 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): расширение агента SQL и строка состояния
    - Исправьте [выдачи 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): изменение размера не агента SQL после изменения размера windows
 
-
-Дополнительные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 

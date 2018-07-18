@@ -1,14 +1,11 @@
 ---
-title: Среда CLR Integration Общие | Документы Microsoft
+title: Обзор интеграции (CLR) среды CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - managed code [SQL Server]
@@ -23,11 +20,12 @@ caps.latest.revision: 64
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5462a7407a06364ddc4a1587271d6987c233acf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d79fe5e7d56e58e48ae92a6f934b11f8b3b42b67
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352656"
 ---
 # <a name="common-language-runtime-integration-overview"></a>Обзор интеграции среды CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +43,16 @@ ms.lasthandoff: 05/03/2018
   
 -   **Возможность определять типы данных и агрегатные функции.** Определяемые пользователем типы данных и статистические функции — два новых вида объектов в базе данных, расширяющие возможности запросов и хранения данных СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Упрощение процесса разработки в стандартизированной среде.** Разработка базы данных интегрирована в будущие версии среды разработки [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET. Для разработки и отладки объектов и скриптов баз данных разработчики используют те же инструментальные средства, что и для разработки компонентов и служб платформы .NET Framework клиентского и среднего уровня.  
+-   **Упрощение процесса разработки в результате стандартизации среды.** Разработка базы данных интегрирована в будущие версии среды разработки [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET. Для разработки и отладки объектов и скриптов баз данных разработчики используют те же инструментальные средства, что и для разработки компонентов и служб платформы .NET Framework клиентского и среднего уровня.  
   
--   **Возможности для повышения производительности и масштабируемости.** Во многих случаях средства компиляции и модели выполнения платформы .NET Framework предоставляют выигрыш в производительности по сравнению с Transact-SQL.  
+-   **Возможность повышения производительности и масштабируемости.** Во многих случаях средства компиляции и модели выполнения платформы .NET Framework предоставляют выигрыш в производительности по сравнению с Transact-SQL.  
   
  В следующей таблице перечислены подразделы этого раздела.  
   
  [Общие сведения об интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md)  
  Описание видов объектов, которые можно построить с помощью интеграции со средой CLR, и обзор требований к построению объектов баз данных с помощью интеграции со средой CLR.  
   
- [Новые возможности интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
+ [Новые возможности в интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  Описывает новые возможности в данном выпуске.  
   
  [Архитектура интеграции со средой CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  

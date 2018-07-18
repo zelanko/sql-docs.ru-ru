@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538594"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Импорт пакета управления SCOM - система платформы аналитики
 Выполните следующие действия для импорта пакетов управления System Center Operations Manager (SCOM) Analytics Platform System (APS). Необходимые пакеты управления для отслеживания Parallel Data Warehouse из SCOM. 

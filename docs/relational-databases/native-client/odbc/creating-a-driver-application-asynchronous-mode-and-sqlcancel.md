@@ -1,5 +1,5 @@
 ---
-title: Асинхронный режим и команда SQLCancel | Документы Microsoft
+title: Асинхронный режим и команда SQLCancel | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f6f0e96ff0344a084b84098339687374ba18335
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b81d9c0716a0bda54bdeab3c7d2b347a505e0ce2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409153"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Создание приложения драйвера - асинхронный режим и команда SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,9 +54,9 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Когда приложение проверяет завершение выполнения команды, делается тот же вызов функции с теми же параметрами для драйвера. Если драйвер еще не получил ответ от сервера, он опять вернет значение SQL_STILL_EXECUTING. Приложение должно проверять команду периодически до тех пор, пока код возврата не станет отличен от SQL_STILL_EXECUTING. Когда приложение получает любой другой код возврата, даже SQL_ERROR, оно может определить, что выполнение команды завершено.  
   
- Иногда команда остается необработанной долгое время. Если приложение должно отменить команду без ожидания ответа, его можно сделать, вызвав **SQLCancel** с той же инструкции обработки необработанных командой. Это единственный случай **SQLCancel** следует использовать. Некоторые программисты используют **SQLCancel** если они обработка части результирующего набора и нужно отменить оставшуюся часть результирующего набора. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) или [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) следует использовать для отмены оставшейся части необработанного результирующего набора, не **SQLCancel**.  
+ Иногда команда остается необработанной долгое время. Если приложение должно отменить команду без ожидания ответа, это можно сделать, вызвав **SQLCancel** с той же инструкции обработки как необработанные команды. Это единственный случай, когда **SQLCancel** следует использовать. Некоторые программисты используют **SQLCancel** когда они обработка части результирующего набора и нужно отменить оставшуюся часть результирующего набора. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) или [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) следует использовать для отмены оставшейся части необработанного результирующего набора, не **SQLCancel**.  
   
 ## <a name="see-also"></a>См. также  
- [Создание драйвера приложение ODBC собственного клиента SQL Server](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
+ [Создание драйвера ODBC для собственного клиента SQL Server](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
   

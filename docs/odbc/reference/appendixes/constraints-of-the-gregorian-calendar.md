@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905439"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Ограничения григорианского календаря
 Типы данных даты и даты и времени, а также конечные поля типов данных интервала должны соответствовать ограничениям по григорианскому календарю. Ниже приведены эти ограничения.  

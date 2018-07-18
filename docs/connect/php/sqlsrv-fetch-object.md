@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b753000c255d6c07777c94e8fb61c847ab10d0c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309153"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,7 +70,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 Для значения в возвращенном объекте используется тип данных PHP по умолчанию. Дополнительные сведения о типах данных PHP по умолчанию см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 Если имя класса указано с помощью необязательного параметра *$className* , создается экземпляр объекта этого типа класса. Если класс имеет свойства, имена которых совпадают с именами полей результирующего набора, к свойствам применяются соответствующие значения результирующего набора. Если имя поля результирующего набора не соответствует свойству класса, к объекту добавляется свойство с именем поля результирующего набора, а к этому свойству применяется значение результирующего набора.  
   
 При указании класса с помощью параметра *$className* применяются следующие правила:  

@@ -1,1 +1,1 @@
-SQL Server в\-Memory OLTP
+SQL Server в\-памяти OLTP

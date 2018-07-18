@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026847"
 ---
 # <a name="create-a-linked-report"></a>Создание связанного отчета
   Связанный отчет является элементом сервера отчетов, обеспечивающим точку доступа к существующему отчету. Концептуально связанный отчет можно сравнить с ярлыком, который используется для запуска программы или открытия файла.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
      Значок связанного отчета отличается от других элементов, управляемых сервером отчетов. Следующий значок указывает на связанный отчет:  
   
-     ![Значок "Связанный отчет"](../../reporting-services/report-server/media/hlp-16linked.gif "Значок "Связанный отчет"")  
+     ![Значок "Связанный отчет"](../../reporting-services/report-server/media/hlp-16linked.gif "Значок \"Связанный отчет\"")  
   
 ## <a name="see-also"></a>См. также:  
  [Открытие и закрытие отчетов (диспетчер отчетов)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   

@@ -1,10 +1,9 @@
 ---
 title: OBJECT_SCHEMA_NAME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,17 +22,18 @@ helpviewer_keywords:
 - OBJECT_SCHEMA_NAME function
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e616434a72eb7c19d831874e475fcfed2ef57668
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b14711117e766e8ee4bdf4596b9b5ed6a75c645
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788425"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Возвращает имя схемы базы данных в области действия схемы. Список объектов области схемы см. в статье [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
@@ -71,7 +71,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  Если аргумент *database_id* не указан, то в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] предполагается, что аргумент *object_id* находится в контексте текущей базы данных. Запрос, ссылающийся на *object_id* в другой базе данных, возвращает значение NULL или неправильные результаты. Например, в следующем запросе текущий контекст базы данных — база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытается возвратить имя схемы объекта для заданного идентификатора объекта в этой базе данных, а не в базе данных, указанной в предложении FROM запроса. Поэтому возвращаются неверные сведения.  
   
-```  
+```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
 FROM master.sys.objects;  
   
@@ -79,7 +79,7 @@ FROM master.sys.objects;
   
  Следующий пример указывает идентификатор базы данных для базы данных `master` в базе данных в функции `OBJECT_SCHEMA_NAME` и приводит к правильным результатам.  
   
-```  
+```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
 FROM master.sys.objects;  
   
@@ -90,7 +90,7 @@ FROM master.sys.objects;
 ### <a name="a-returning-the-object-schema-name-and-object-name"></a>A. Возвращение имени схемы объекта и имени объекта  
  Следующий пример возвращает имя схемы объекта, имя объекта и SQL-текст для всех кэшированных планов запроса, которые не являются нерегламентированными или подготовленными инструкциями.  
   
-```  
+```sql
 SELECT DB_NAME(st.dbid) AS database_name,   
     OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  
     OBJECT_NAME(st.objectid, st.dbid) AS object_name,   
@@ -104,7 +104,7 @@ GO
 ### <a name="b-returning-three-part-object-names"></a>Б. Возвращение трехсоставных имен объекта  
  Следующий пример возвращает имя базы данных, схемы и объекта вместе со всеми остальными столбцами в динамическом административном представлении `sys.dm_db_index_operational_stats` для всех объектов во всех базах данных.  
   
-```  
+```sql
 SELECT QUOTENAME(DB_NAME(database_id))   
     + N'.'   
     + QUOTENAME(OBJECT_SCHEMA_NAME(object_id, database_id))   
@@ -120,6 +120,4 @@ GO
  [OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md)   
  [OBJECT_NAME (Transact-SQL)](../../t-sql/functions/object-name-transact-sql.md)   
- [Защищаемые объекты](../../relational-databases/security/securables.md)  
-  
-  
+ [Защищаемые объекты](../../relational-databases/security/securables.md)

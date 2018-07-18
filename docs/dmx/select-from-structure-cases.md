@@ -1,33 +1,20 @@
 ---
 title: SELECT FROM &lt;структуры&gt;. СЛУЧАИ | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- CASES
-- FROM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SELECT FROM <structure> statements
-ms.assetid: 36f50213-14dc-42da-b899-20240b781e1a
-caps.latest.revision: 15
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ea905e78ee2e1c86882981ed54defca0d8ac65d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842107"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;структуры&gt;. ВАРИАНТЫ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +40,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>Аргументы  
  *n*  
- Необязательно. Целое число, указывающее количество возвращаемых строк.  
+ Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
  Список выражений с разделителями-запятыми.  
@@ -67,9 +54,9 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
- Необязательно. Выражение, возвращающее скалярное значение.  
+ Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если детализация включена как для модели, так и для структуры, то любой член роли, обладающей разрешениями на структуру или модель интеллектуального анализа данных, может возвращать столбцы структуры, которые не были включены в модель. Это делается с помощью следующего синтаксиса:  
   
 ```  
@@ -104,8 +91,8 @@ WHERE IsTestCase();
   
 ## <a name="see-also"></a>См. также  
  [ВЫБЕРИТЕ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/select-dmx.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции обработки данных](../dmx/dmx-statements-data-manipulation.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

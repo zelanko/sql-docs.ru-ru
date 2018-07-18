@@ -1,5 +1,5 @@
 ---
-title: sp_dbfixedrolepermission (Transact-SQL) | Документы Microsoft
+title: sp_dbfixedrolepermission (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 32ca47ff848d735c9310d894eff46c94b0c8da92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037812"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Отображает разрешения предопределенной роли базы данных. **sp_dbfixedrolepermission** возвращает правильные сведения в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Изменения в иерархии разрешений, реализованные в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], не отражаются. Дополнительные сведения см. в разделе[разрешений &#40;СУБД&#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Отображает разрешения предопределенной роли базы данных. **sp_dbfixedrolepermission** возвращает правильные сведения в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Изменения в иерархии разрешений, реализованные в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], не отражаются. Дополнительные сведения см. в разделе[разрешения &#40;СУБД&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -46,7 +47,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@rolename =** ] **"***роль***"**  
+ [  **@rolename =** ] **"***роли***"**  
  Имя допустимой предопределенной роли базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *роль* — **sysname**, значение по умолчанию NULL. Если *роли* не указан, отображаются разрешения для всех предопределенных ролей базы данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -59,8 +60,8 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|Имя предопределенной роли базы данных|  
 |**Разрешение**|**nvarchar(70)**|Разрешения, связанные с **DbFixedRole**|  
   
-## <a name="remarks"></a>Замечания  
- Чтобы отобразить список предопределенных ролей базы данных, выполните **sp_helpdbfixedrole**. В следующей таблице представлены предопределенные роли базы данных.  
+## <a name="remarks"></a>Примечания  
+ Для отображения списка предопределенных ролей базы данных выполните процедуру **sp_helpdbfixedrole**. В следующей таблице представлены предопределенные роли базы данных.  
   
 |Предопределенная роль базы данных|Описание|  
 |-------------------------|-----------------|  
@@ -74,7 +75,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_denydatareader**|Модули чтения данных из базы данных, которым отказано в доступе|  
 |**db_denydatawriter**|Модули записи данных в базу данных, которым отказано в доступе|  
   
- Члены **db_owner** предопределенной роли базы данных имеют разрешения всех других предопределенных ролей базы данных. Для отображения разрешений предопределенных ролей сервера, выполните **sp_srvrolepermission**.  
+ Членами **db_owner** предопределенной роли базы данных имеют разрешения всех других предопределенных ролей базы данных. Для отображения разрешения для предопределенных ролей сервера выполните процедуру **sp_srvrolepermission**.  
   
  В результирующий набор входят инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], которые могут быть выполнены, и другие особые действия, которые могут быть выполнены членами роли базы данных.  
   
@@ -92,7 +93,7 @@ GO
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
  [sp_srvrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

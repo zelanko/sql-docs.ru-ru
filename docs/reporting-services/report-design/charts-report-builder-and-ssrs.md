@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022801"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Диаграммы (построитель отчетов и службы SSRS)
 Узнайте, как использовать области данных на диаграммах, чтобы помочь читателям ваших отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы в восприятии больших объемов статистических данных.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="SimilarMatrix"></a> Сходство диаграммы с матрицей  
  Один из способов понять работу диаграммы — это сравнить ее с матрицей.  
   
- ![Элемент "Новая матрица" добавлен с панели элементов и выделен](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Элемент "Новая матрица" добавлен с панели элементов и выделен")  
+ ![Элемент "Новая матрица" добавлен с панели элементов и выделен](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Элемент \"Новая матрица\" добавлен с панели элементов и выделен")  
   
  По сути они устроены идентично.  
   

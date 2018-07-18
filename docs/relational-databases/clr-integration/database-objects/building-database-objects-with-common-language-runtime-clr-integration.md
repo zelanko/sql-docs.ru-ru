@@ -1,14 +1,11 @@
 ---
-title: Построение объектов базы данных среды CLR интеграции со средой | Документы Microsoft
+title: Построение объектов базы данных, интеграции среды выполнения (CLR) со средой | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -22,15 +19,16 @@ caps.latest.revision: 48
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 597645c52f37034ba4f294784cbde2a7489516d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bd6cbf88b471af8d80f61f65ac0903a740a9675
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358966"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Создание объектов базы данных с интеграцией со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Объекты базы данных можно создавать с помощью интеграции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] со средой CLR платформы .NET Framework. Управляемый код, выполняющийся в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] называется «подпрограмма CLR». Эти подпрограммы включают:  
+  Объекты базы данных можно создавать с помощью интеграции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] со средой CLR платформы .NET Framework. Управляемый код, выполняющийся в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] называется «подпрограммы среды CLR». Эти подпрограммы включают:  
   
 -   определяемые пользователем функции, возвращающие скалярное значение (скалярные определяемые пользователем функции);  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 05/03/2018
  [Ограничения модели программирования на основе интеграции со средой CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  
  Содержит сведения об ограничениях модели программирования интеграции со средой CLR.  
   
- [Типы данных SQL Server в .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+ [Типы данных SQL Server в платформе .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  Общие сведения о типах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и их эквивалентах в .NET Framework.  
   
  [Общие сведения о пользовательских атрибутах интеграции со средой CLR](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
@@ -67,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  [Определяемые пользователем функции среды CLR](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Описывает реализацию и использование различных типов функций CLR: возвращающих табличное значение, скалярных и определяемых пользователем агрегатных функций.  
   
- [Определяемые пользователем типы среды CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Определяемые пользователем типы в CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Показывает, как реализовать и использовать определяемые пользователем типы данных CLR.  
   
  [Хранимые процедуры CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
@@ -77,6 +75,6 @@ ms.lasthandoff: 05/03/2018
  Показывает, как реализовать и использовать триггеры CLR.  
   
 ## <a name="see-also"></a>См. также  
- [Общеязыковая среда выполнения & #40; Среда CLR & #41; Общие сведения об интеграции](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Среда CLR &#40;CLR&#41; Общие сведения об интеграции](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

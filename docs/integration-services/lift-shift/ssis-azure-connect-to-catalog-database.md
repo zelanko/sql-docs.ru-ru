@@ -1,32 +1,32 @@
 ---
-title: Подключение к базе данных каталога SSIS (SSISDB) в Azure | Документы Майкрософт
+title: Подключение к каталогу SSIS (SSISDB) в Azure | Документы Майкрософт
+description: Получите сведения, необходимые для подключения к каталогу SSIS (SSISDB), размещенному на сервере базы данных SQL Azure.
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405676"
 ---
-# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Подключение к базе данных каталога SSIS (SSISDB) в Azure
+# <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Подключение к каталогу SSIS (SSISDB) в Azure
 
-Получите сведения, необходимые для подключения к базе данных каталога SSISDB, размещенной на сервере базы данных SQL Azure. Для подключения вам потребуется следующее:
+Получите сведения, необходимые для подключения к каталогу SSIS (SSISDB), размещенному на сервере базы данных SQL Azure. Для подключения вам потребуется следующее:
 - Полное имя сервера
 - Имя базы данных
 - Данные для входа 
 
 > [!IMPORTANT]
-> В настоящее время невозможно создать базу данных каталога SSISDB в базе данных SQL Azure независимо от создания среды выполнения интеграции (IR) Azure-SSIS в фабрике данных Azure версии 2. Среда Azure-SSIS IR необходима для выполнения пакетов SSIS в Azure. Дополнительные сведения см. в разделе [Развертывание пакетов SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> В настоящее время невозможно создать базу данных каталога SSISDB в базе данных SQL Azure независимо от создания среды выполнения интеграции (IR) Azure-SSIS в фабрике данных Azure версии 2. Среда Azure-SSIS IR — это среда выполнения, в которой выполняются пакеты SSIS в Azure. Пошаговые инструкции см. в статье [Развертывание и запуск пакета служб SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>предварительные требования
 Прежде чем начать, убедитесь в наличии SQL Server Management Studio (SSMS) версии 17.2 или более поздней. Если база данных каталога SSISDB размещается в управляемом экземпляре базы данных SQL (предварительная версия), убедитесь в наличии SSMS версии 17.6 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -71,4 +71,4 @@ ms.lasthandoff: 05/23/2018
 ## <a name="next-steps"></a>Следующие шаги
 - Разверните пакет. Дополнительные сведения см. в разделе [Развертывание проекта служб SSIS с помощью SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
 - Запустите пакет. Дополнительные сведения см. в разделе [Выполнение пакета служб SSIS с помощью SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
-- Создайте расписание для пакета. Дополнительные сведения см. в разделе [Планирование выполнения пакета служб SSIS в Azure](ssis-azure-schedule-packages.md).
+- Создайте расписание для пакета. Дополнительные сведения см. в разделе [Планирование выполнения пакетов служб SSIS в Azure](ssis-azure-schedule-packages.md).

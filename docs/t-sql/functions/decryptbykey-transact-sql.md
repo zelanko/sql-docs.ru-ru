@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,19 +21,20 @@ helpviewer_keywords:
 - DECRYPTBYKEY function
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 57a2175b3c4096ab9af7203d7f7d3733947f8e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61e984a45f2f5a7b2d675ec574fda255c4747642
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783065"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Расшифровывает данные с помощью симметричного ключа.  
+Эта функция расшифровывает данные с помощью симметричного ключа.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,38 +47,36 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ciphertext*  
- Данные, зашифрованные с помощью ключа. Аргумент *ciphertext* имеет тип **varbinary**.  
+*ciphertext*  
+Переменная типа **varbinary**, содержащая данные, зашифрованные с помощью ключа.  
   
- **@ciphertext**  
- Переменная типа **varbinary**. Содержит данные, которые были зашифрованы с помощью ключа.  
+**@ciphertext**  
+Переменная типа **varbinary**, содержащая данные, зашифрованные с помощью ключа.  
   
  *add_authenticator*  
- Указывает, была ли структура проверки подлинности зашифровано вместе с неформатированным текстом. Должно быть равно значению, переданному функции EncryptByKey при шифровании данных. Аргумент *add_authenticator* имеет тип **int**.  
+Указывает, включен ли исходный процесс шифрования и зашифрована ли структура проверки подлинности вместе с данными в виде открытого текста. Значение должно соответствовать значению, переданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) во время шифрования данных. *add_authenticator* имеет тип данных **int**.  
   
  *authenticator*  
- Данные, для которых формируется средство проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey. Аргумент *authenticator* имеет тип **sysname**.  
-  
- **@authenticator**  
- Переменная, содержащая сведения, из которых формируются данные для проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey.  
-  
+Данные, используемые в качестве основы для создания структуры проверки подлинности. Значение должно соответствовать значению, заданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* имеет тип данных **sysname**.  
+
+**@authenticator**  
+Переменная, содержащая данные, из которых формируется структура проверки подлинности. Значение должно соответствовать значению, заданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* имеет тип данных **sysname**.  
+
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Переменная типа **varbinary** с максимальным размером 8000 байт.
- 
-Возвращает NULL, если симметричный ключ, используемый для шифрования данных, не является открытым или если *ciphertext* имеет значение NULL.
+Переменная типа **varbinary** с максимальным размером 8000 байт. `DECRYPTBYKEY` возвращает NULL, если симметричный ключ, используемый для шифрования данных, не является открытым или если *ciphertext* имеет значение NULL.  
   
 ## <a name="remarks"></a>Remarks  
- В функции DecryptByKey используется симметричный ключ. Этот симметричный ключ должен быть открыт уже в базе данных. Одновременно могут быть открыты несколько ключей. Открывать ключ непосредственно перед раскодированием необязательно.  
+`DECRYPTBYKEY` использует симметричный ключ. Этот ключ уже должен быть открыт в базе данных. `DECRYPTBYKEY` допускает несколько одновременно открытых ключей. Открывать ключ непосредственно перед расшифровкой зашифрованного текста необязательно.  
   
- Симметричное кодирование и декодирование осуществляется относительно быстро и подходит для работы с большими объемами данных.  
+Симметричные шифрование и расшифровка обычно выполняются относительно быстро и хорошо подходят для операций, связанных с большими объемами данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо, чтобы симметричный ключ был открыт в текущем сеансе. Дополнительные сведения см. в статье [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+Симметричный ключ уже должен быть открыт в текущем сеансе. Дополнительные сведения см. в статье [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. Декодирование с помощью симметричного ключа  
- Следующий пример иллюстрирует декодирование зашифрованного текста с помощью симметричного ключа.  
+В этом примере зашифрованный текст расшифровывается с помощью симметричного ключа.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data.  
@@ -98,7 +96,7 @@ GO
 ```  
   
 ### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>Б. Декодирование с помощью симметричного ключа и цифровой подписи  
- Следующий пример иллюстрирует расшифровку данных, зашифрованных с помощью средства проверки подлинности.  
+В этом примере расшифровываются данные, изначально зашифрованные вместе со структурой проверки подлинности.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data  

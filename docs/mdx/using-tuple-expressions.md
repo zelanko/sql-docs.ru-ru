@@ -1,36 +1,23 @@
 ---
 title: Использование кортежных выражений | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- single-member tuples [MDX]
-- expressions [MDX], tuples
-- one-member tuples
-- tuples
-- implicit tuples
-ms.assetid: 0b802b76-9123-405e-ae43-d438754724ba
-caps.latest.revision: 27
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: fba6675213e513806f27c85fe881fc3efdeb0166
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743693"
 ---
 # <a name="using-tuple-expressions"></a>Использование кортежных выражений
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Кортеж включает по одному элементу из каждого измерения, содержащегося в кубе.  Поэтому любой кортеж однозначно определяет одну единственную ячейку в пределах этого куба.  
   
@@ -59,6 +46,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также  
  [Выражения &#40;многомерных Выражений&#41;](../mdx/expressions-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

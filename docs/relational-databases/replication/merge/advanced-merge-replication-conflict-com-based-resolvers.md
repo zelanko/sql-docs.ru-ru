@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4e4696c7e3e98b227ae6489762e4e8202719672
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 56fc50cfa8f60385f2050d757df6b99f0b17261b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356826"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Конфликт расширенной репликации слиянием: сопоставители на базе технологии COM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице описываются атрибуты конкретных сопоставителей.  
   
-|Имя|Требуемые входные данные|Description|Комментарии|  
+|Имя|Требуемые входные данные|Описание|Комментарии|  
 |----------|--------------------|-----------------|--------------|  
 |Арбитр конфликтов[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , использующий суммирование|Имя суммируемого столбца. Столбец должен относиться к арифметическому типу данных (например, **int**, **smallint**, **numeric**и т. д.).|Победитель в конфликте определяется по значению приоритета. Указанные значения столбца устанавливаются равными сумме значений исходного столбца и целевого столбца. Если одно из значений — NULL, итоговое значение устанавливается равным значению другого столбца.|Поддерживает конфликты обновления, и только отслеживание столбцов.|  
 |Арбитр конфликтов[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , использующий усреднение|Имя усредняемого столбца. Столбец должен относиться к арифметическому типу данных (например, **int**, **smallint**, **numeric**и т. д.).|Победитель в конфликте определяется по значению приоритета. Значения результирующего столбца устанавливаются равными среднему значению от значений исходного и целевого столбца. Если одно из значений — NULL, итоговое значение устанавливается равным значению другого столбца.|Поддерживает конфликты обновления, и только отслеживание столбцов.|  

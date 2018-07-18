@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +21,12 @@ caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a008570306da0413e4a71fbc5fc2576e66129b1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fde84d7da5df42bc2f9d5c37edc8f56935fd0a4
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355646"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Одноранговая репликация транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Публикация должна быть доступна для одноранговой репликации до создания подписок.  
   
--   Подписки должны быть инициализированы с помощью резервного копирования или параметра **только поддержка репликации** . Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   Подписки должны быть инициализированы с помощью резервного копирования или параметра **только поддержка репликации** . Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 -   Не рекомендуется использовать столбцы идентификаторов. При использовании идентификаторов необходимо вручную управлять диапазонами, назначенными таблицам, в каждой участвующей базе данных. Дополнительные сведения см. в разделе "Назначение диапазонов для управления диапазонами идентификаторов вручную" статьи [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md) (Репликация столбцов идентификаторов).  
   

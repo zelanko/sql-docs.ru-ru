@@ -3,7 +3,6 @@ title: Установка служб SQL Server Reporting Services (2017 или
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.custom: ''
@@ -13,11 +12,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3504d97184804512f70c35c36c5c1c0e528c30ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 868c812a854c39b1c75a3bc89d792eabe04483f8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322573"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Установка служб SQL Server Reporting Services (2017 или более поздней версии)
 
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
 
 Резервирование URL-адреса состоит из префикса, имени узла, номера порта и имени виртуального каталога.
 
-|Часть|Description|
+|Часть|Описание|
 |----------|-----------------|
 |Prefix|Префиксом по умолчанию является HTTP. Если сертификат SSL уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|
 |Имя узла|Именем узла по умолчанию является строгий шаблон (+). Он указывает, что сервер отчетов принимает все HTTP-запросы в заданном порте для любого имени узла, который соответствует компьютеру, включая `http://<computername>/reportserver`, `http://localhost/reportserver` или `http://<IPAddress>/reportserver.`|

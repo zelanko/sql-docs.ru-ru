@@ -1,8 +1,6 @@
 ---
 title: Оценка схемы DB2 для преобразования (DB2ToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 03cf4d47e980c481df2353572a1c52d2868e214f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93ca9f22df0bf6e458676bd2de76f10009f67d44
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774400"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Оценка схемы DB2 для преобразования (DB2ToSQL)
 Прежде чем загружать объекты и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], следует определить быть сложность миграции и о том, сколько времени займет миграции. SSMA можно создать отчет об оценки, который показывает процент объекты, которые будут преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие ошибки преобразования.  

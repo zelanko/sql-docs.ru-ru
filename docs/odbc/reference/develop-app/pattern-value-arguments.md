@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912989"
 ---
 # <a name="pattern-value-arguments"></a>Значения аргументов шаблона
 Функции несколько аргументов в каталоге, например *TableName* аргумент в **SQLTables**, поддерживает шаблоны из поиска. Эти аргументы принять шаблонов поиска, если атрибут инструкции SQL_ATTR_METADATA_ID имеет значение SQL_FALSE; Это идентификатор аргументы, которые не принимают шаблону поиска, если этот атрибут имеет значение SQL_TRUE.  

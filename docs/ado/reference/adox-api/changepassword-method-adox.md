@@ -2,7 +2,6 @@
 title: Метод ChangePassword (ADOX) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 111f549f419404b8174d90e3d1298a7c3789913d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 224dd233d774781e5d902a952848587a543baee4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285199"
 ---
 # <a name="changepassword-method-adox"></a>Метод ChangePassword (ADOX)
 Изменяет пароль для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) учетной записи.  
@@ -44,7 +44,7 @@ User.ChangePassword OldPassword, NewPassword
  *newPassword*  
  Объект **строка** значение, указывающее новый пароль.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  По соображениям безопасности помимо новый пароль необходимо указать старый пароль.  
   
  Если поставщик не поддерживает администрирование свойств доверенное лицо, произойдет ошибка.  

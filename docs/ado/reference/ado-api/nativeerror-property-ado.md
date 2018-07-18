@@ -2,7 +2,6 @@
 title: Свойство NativeError (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd8b2962e460606da23ac207daa0e5e2ad3d465
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74fb46aca8127901ffea10be1e5a587324ea5d53
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279593"
 ---
 # <a name="nativeerror-property-ado"></a>Свойство NativeError (ADO)
 Указывает код ошибки поставщика для данного [ошибка](../../../ado/reference/ado-api/error-object.md) объекта.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **длинные** значение, указывающее код ошибки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **NativeError** свойства, чтобы получить сведения об ошибке в конкретной базе данных для какого-либо **ошибка** объекта. Например, при использовании поставщика Microsoft ODBC для OLE DB с базой данных Microsoft SQL Server, коды собственных ошибок, возникших в SQL Server проходить через ODBC и поставщик ODBC ADO **NativeError** свойство.  
   
 ## <a name="applies-to"></a>Объект применения  

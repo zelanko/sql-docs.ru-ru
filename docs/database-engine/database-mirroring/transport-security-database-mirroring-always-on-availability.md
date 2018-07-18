@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -24,11 +23,12 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88bbb9d536694df7e33ea0190c91319e4c2bbe37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29f7f6b3e0537c1c13f11389adf95c3d35736d8e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312613"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как службы под разными учетными записями домена (одного и того же или доверенных доменов), вам нужно создать имя входа для каждой учетной записи в базе данных **master** на каждом экземпляре сервера, а затем предоставить этому имени входа разрешение CONNECT для конечной точки.  
   
--   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как учетные записи сетевой службы, вам нужно создать в базе данных**master** на каждом из остальных серверов имя входа для каждой учетной записи главного компьютера (*имя_домена***\\*** имя_компьютера$*), а затем предоставить этому имени входа разрешение CONNECT для конечной точки. Это обусловлено тем, что экземпляр сервера, выполняемый под учетной записью Network Service, выполняет проверку подлинности с помощью учетной записи домена главного компьютера.  
+-   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как учетные записи сетевой службы, вам нужно создать в базе данных**master** на каждом из остальных серверов имя входа для каждой учетной записи главного компьютера (*имя_домена***\\***имя_компьютера$*), а затем предоставить этому имени входа разрешение CONNECT для конечной точки. Это обусловлено тем, что экземпляр сервера, выполняемый под учетной записью Network Service, выполняет проверку подлинности с помощью учетной записи домена главного компьютера.  
   
 > [!NOTE]  
 >  Пример установки сеанса для зеркального отображения базы данных с помощью проверки подлинности Windows см. в разделе [Пример. Настройка зеркального отображения базы данных с помощью проверки подлинности Windows (язык Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
  При необходимости пользователь обладает возможностью управлять алгоритмом шифрования, который может быть использован конечной точкой, путем определения одного из следующих значений для параметра ALGORITHM в инструкции CREATE ENDPOINT или в инструкции ALTER ENDPOINT:  
   
-|Значение параметра ALGORITHM|Description|  
+|Значение параметра ALGORITHM|Описание|  
 |---------------------|-----------------|  
 |RC4|Указывает на то, что конечная точка должна использовать алгоритм RC4. Это значение по умолчанию.<br /><br /> **\*\* Предупреждение. \*\*** Алгоритм RC4 использовать не рекомендуется. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.|  
 |AES|Указывает на то, что конечная точка должна использовать алгоритм AES.|  

@@ -13,5 +13,6 @@ ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30257957"
 ---
 **ОБЛАСТЬ ПРИМЕНЕНИЯ ЭТОГО РАЗДЕЛА:**

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033271"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Разрешения в задачах на уровне элемента
   Задача уровня элемента представляет собой коллекцию разрешений, связанных с отчетом, папкой, моделью отчета, ресурсом или общим источником данных. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также располагают задачами на уровне системы, которые применяются к сайту сервера отчетов в целом. Дополнительные сведения см. в разделе [Задачи уровня системы](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Дополнительные сведения о задачах и правах в целом см. в разделе [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  

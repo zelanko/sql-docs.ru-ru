@@ -1,5 +1,6 @@
 # [Управление экземплярами](analysis-services-instance-management.md)  
 # [Установка](../../analysis-services/instances/install-windows/install-analysis-services.md)
+# [Проверка версии сборки накопительного пакета обновления служб Analysis Services](analysis-services-component-version.md)
 # [Настройка после установки](post-install-configuration-analysis-services.md)  
 ## [Настройка брандмауэра Windows](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 ## [Настройка учетной записи службы](configure-service-accounts-analysis-services.md)  

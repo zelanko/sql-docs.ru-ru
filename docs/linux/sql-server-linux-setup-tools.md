@@ -1,6 +1,6 @@
 ---
-title: Установка средств командной строки SQL Server в Linux | Документы Microsoft
-description: В этой статье описывается установка средства SQL Server в Linux.
+title: Установка программ командной строки SQL Server в Linux | Документация Майкрософт
+description: В этой статье описывается установка средств SQL Server в Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,66 +13,67 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.openlocfilehash: 6a5625563e32923abefe3dee3bcb29a694303d42
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981745"
 ---
-# <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установите sqlcmd и bcp средства командной строки SQL Server в Linux
+# <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установка sqlcmd и bcp средства командной строки SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Следующие шаги установки программы командной строки, драйверы Microsoft ODBC и их зависимости. **Mssql средства** пакет содержит:
+Средства командной строки, драйверы Microsoft ODBC и их зависимости, установите следующие действия. **Mssql-tools** пакет содержит:
 
 - **sqlcmd**: программа командной строки запроса.
-- **BCP**: массового импорта экспорта программы.
+- **BCP**: массового импорта и экспорта служебной программы.
 
-Установите средства для вашей платформы.
+Установите средства для выбранной платформы:
 
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
-- [MacOS](#macos)
+- [macOS](#macos)
 - [Docker](#docker)
 
-В этой статье описывается установка средства командной строки. Если вам нужны дополнительные примеры использования **sqlcmd** или **bcp**, в разделе [ссылки](#next-steps) в конце этого раздела.
+В этой статье описывается установка средств командной строки. Если вы ищете примеры использования **sqlcmd** или **bcp**, см. в разделе [ссылки](#next-steps) в конце этого раздела.
 
-## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Установить средства на RHEL 7
+## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Установите средства на RHEL 7
 
-Выполните следующие действия для установки **mssql средства** в Red Hat Enterprise Linux. 
+Выполните следующие действия для установки **mssql-tools** в Red Hat Enterprise Linux. 
 
-1. Перейдите в режим суперпользователя.
+1. Перейти в режим суперпользователя.
 
    ```bash
    sudo su
    ```
 
-1. Загрузите файл конфигурации Microsoft Red Hat репозитория.
+1. Скачайте файл конфигурации репозитория Microsoft Red Hat.
 
    ```bash
    curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
-1. Выход из режима суперпользователя.
+1. Выйти из режима суперпользователя.
 
    ```bash
    exit
    ```
 
-1. При наличии предыдущей версии **mssql средства** установлены, удалите старую unixODBC пакеты.
+1. При наличии предыдущей версии **mssql-tools** установлен, удалите старые пакеты unixODBC.
 
    ```bash
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
-1. Выполните следующие команды для установки **mssql средства** комплект разработчика unixODBC.
+1. Выполните следующие команды для установки **mssql-tools** с пакетом разработчика unixODBC.
 
    ```bash
    sudo yum install mssql-tools unixODBC-devel
    ```
 
    > [!Note] 
-   > Для обновления до последней версии **mssql средства** выполните следующие команды:
+   > Для обновления до последней версии **mssql-tools** выполните следующие команды:
    >    ```bash
    >   sudo yum check-update
    >   sudo yum update mssql-tools
@@ -80,36 +81,36 @@ ms.lasthandoff: 05/19/2018
 
 1. **Необязательный**: добавление `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
 
-   Чтобы сделать **sqlcmd и bcp** доступны в оболочке bash для сеансов входа изменения вашей **путь** в **~/.bash_profile** файл с помощью следующей команды:
+   Чтобы сделать **sqlcmd и bcp** доступен из оболочки bash для сеансов входа изменить ваш **путь** в **~/.bash_profile** файл с помощью следующей команды:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Чтобы сделать **sqlcmd и bcp** доступен в оболочке bash для интерактивной и не-сеансы входа в систему, изменить **путь** в **~/.bashrc** файл с помощью следующей команды:
+   Чтобы сделать **sqlcmd и bcp** доступен из оболочки bash для интерактивного/сеансов без входа, изменить **путь** в **~/.bashrc** файл с помощью следующей команды:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Установить средства на Ubuntu 16.04
+## <a id="ubuntu"></a>Установите средства на Ubuntu 16.04
 
-Выполните следующие действия для установки **mssql средства** на Ubuntu. 
+Выполните следующие действия для установки **mssql-tools** в Ubuntu. 
 
-1. Импорт ключей GPG общедоступный репозиторий.
+1. Импорт общедоступного репозитория ключей GPG.
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Регистрация репозитория Ubuntu корпорации Майкрософт.
+1. Зарегистрируйте репозиторий Microsoft Ubuntu.
 
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Обновление списка источников и выполните команду установки пакета разработчика unixODBC.
+1. Обновите список источников и запустите команду установки с пакетом разработчика unixODBC.
 
    ```bash
    sudo apt-get update 
@@ -117,7 +118,7 @@ ms.lasthandoff: 05/19/2018
    ```
 
    > [!Note] 
-   > Для обновления до последней версии **mssql средства** выполните следующие команды:
+   > Для обновления до последней версии **mssql-tools** выполните следующие команды:
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
@@ -125,22 +126,22 @@ ms.lasthandoff: 05/19/2018
 
 1. **Необязательный**: добавление `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
 
-   Чтобы сделать **sqlcmd и bcp** доступны в оболочке bash для сеансов входа изменения вашей **путь** в **~/.bash_profile** файл с помощью следующей команды:
+   Чтобы сделать **sqlcmd и bcp** доступен из оболочки bash для сеансов входа изменить ваш **путь** в **~/.bash_profile** файл с помощью следующей команды:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Чтобы сделать **sqlcmd и bcp** доступен в оболочке bash для интерактивной и не-сеансы входа в систему, изменить **путь** в **~/.bashrc** файл с помощью следующей команды:
+   Чтобы сделать **sqlcmd и bcp** доступен из оболочки bash для интерактивного/сеансов без входа, изменить **путь** в **~/.bashrc** файл с помощью следующей команды:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>Установить средства на SLES 12
+## <a id="SLES"></a>Установка средств в SLES 12
 
-Выполните следующие действия для установки **mssql средства** на SUSE Linux Enterprise Server. 
+Выполните следующие действия для установки **mssql-tools** в SUSE Linux Enterprise Server. 
 
 1. Добавьте репозиторий Microsoft SQL Server Zypper.
 
@@ -149,14 +150,14 @@ ms.lasthandoff: 05/19/2018
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. Установка **mssql средства** комплект разработчика unixODBC.
+1. Установка **mssql-tools** с пакетом разработчика unixODBC.
 
    ```bash
    sudo zypper install mssql-tools unixODBC-devel
    ```
 
    > [!Note] 
-   > Для обновления до последней версии **mssql средства** выполните следующие команды:
+   > Для обновления до последней версии **mssql-tools** выполните следующие команды:
    >    ```bash
    >   sudo zypper refresh
    >   sudo zypper update mssql-tools
@@ -164,28 +165,28 @@ ms.lasthandoff: 05/19/2018
 
 1. **Необязательный**: добавление `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
 
-   Чтобы сделать **sqlcmd и bcp** доступны в оболочке bash для сеансов входа изменения вашей **путь** в **~/.bash_profile** файл с помощью следующей команды:
+   Чтобы сделать **sqlcmd и bcp** доступен из оболочки bash для сеансов входа изменить ваш **путь** в **~/.bash_profile** файл с помощью следующей команды:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Чтобы сделать **sqlcmd и bcp** доступен в оболочке bash для интерактивной и не-сеансы входа в систему, изменить **путь** в **~/.bashrc** файл с помощью следующей команды:
+   Чтобы сделать **sqlcmd и bcp** доступен из оболочки bash для интерактивного/сеансов без входа, изменить **путь** в **~/.bashrc** файл с помощью следующей команды:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
 
-## <a id="macos"></a> Установить средства на macOS
+## <a id="macos"></a> Установите средства на macOS
 
-Предварительный просмотр **sqlcmd** и **bcp** теперь доступен на macOS. Дополнительные сведения см. в разделе [объявления](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
+Предварительный просмотр **sqlcmd** и **bcp** теперь доступен в Mac OS. Дополнительные сведения см. в разделе [объявления](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
-*Установка [Homebrew](https://brew.sh) при отсутствии уже:*
+*Установка [Homebrew](https://brew.sh) Если у вас его еще нет:*
 
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-Чтобы установить средства для Mac El Capitan и Сьерра, используйте следующие команды:
+Чтобы установить средства для Mac El Capitan и Sierra, используйте следующие команды:
 
 ```
 # brew untap microsoft/mssql-preview if you installed the preview version 
@@ -198,22 +199,22 @@ brew install --no-sandbox mssql-tools
 
 ## <a id="docker"></a> Docker
 
-Начиная с SQL Server 2017 г CTP 2.0, средства командной строки SQL Server включаются в образе Docker. При присоединении к образу с интерактивной командной строки средства можно выполнять локально.
+Начиная с SQL Server 2017 CTP 2.0, средства командной строки SQL Server включены в образ Docker. При подключении к образу с интерактивной командной строке средства можно запустить локально.
 
 ## <a name="offline-installation"></a>Автономная установка
 
 [!INCLUDE[SQL Server Linux offline package installation](../includes/sql-server-linux-offline-package-install-intro.md)]
 
-В следующей таблице приведены расположение для последних пакетов средств:
+В следующей таблице приведены расположение последних пакетов средств:
 
 | Пакет средств | Версия | Загрузить |
 |-----|-----|-----|
-| Пакет средств Red Hat об/мин | 14.0.5.0-1 | [пакет средств MSSQL об/мин](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| Пакет средств SLES об/мин | 14.0.5.0-1 | [пакет средств MSSQL об/мин](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian средств пакета | 14.0.5.0-1 | [пакет Debian MSSQL средства](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian средств пакета | 14.0.5.0-1 | [пакет Debian MSSQL средства](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
+| Пакет средств Red Hat RPM | 14.0.5.0-1 | [пакет RPM MSSQL-tools](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
+| Пакет средств SLES RPM | 14.0.5.0-1 | [пакет RPM MSSQL-tools](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian средств пакета | 14.0.5.0-1 | [пакет Debian MSSQL-tools](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
+| Ubuntu 16.10 Debian средств пакета | 14.0.5.0-1 | [пакет Debian MSSQL-tools](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
 
-Эти пакеты зависят от **msodbcsql**, который необходимо сначала установить. **Msodbcsql** пакет также имеет зависимость от либо **unixODBC devel** (RPM) или **unixodbc-dev** (Debian). Расположение **msodbcsql** пакетов, перечислены в следующей таблице:
+Эти пакеты зависят от **msodbcsql**, который необходимо сначала установить. **Msodbcsql** пакет также имеет зависимость от либо **unixODBC разраб** (RPM) или **unixodbc-dev** (Debian). Расположение **msodbcsql** пакетов, перечислены в следующей таблице:
 
 | пакет msodbcsql | Версия | Загрузить |
 |-----|-----|-----|
@@ -222,37 +223,37 @@ brew install --no-sandbox mssql-tools
 | Пакет Debian msodbcsql Ubuntu 16.04 | 13.1.6.0-1 | [пакет Debian msodbcsql](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
 | Пакет Debian msodbcsql Ubuntu 16.10 | 13.1.6.0-1 | [пакет Debian msodbcsql](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
 
-Чтобы вручную установить эти пакеты, выполните следующие действия:
+Чтобы вручную установить эти пакеты, используйте следующие действия:
 
-1. **Переместить загруженные пакеты на компьютер Linux**. Если используется другой компьютер для загрузки пакетов, один из способов перемещения пакетов на компьютер Linux связана с **scp** для команды.
+1. **Переместить скачанные пакеты на компьютер Linux**. Если вы использовали другую машину, чтобы скачать пакеты, один из способов перемещения пакетов на компьютер Linux, — с **scp** команда.
 
-1. **Установить пакеты и**: Установка **mssql средства** и **msodbc** пакетов. Если возникли ошибки зависимостей, их необходимо игнорировать до следующего шага.
+1. **Установка пакетов и**: Установка **mssql-tools** и **msodbc** пакетов. Если все ошибки зависимостей, их можно пропустите до следующего шага.
 
-    | Платформа | Команды установки пакета |
+    | Платформа | Команды для установки пакета |
     |-----|-----|
     | Red Hat | `sudo yum localinstall msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo yum localinstall mssql-tools-14.0.5.0-1.x86_64.rpm` |
     | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
 
-1. **Разрешить отсутствующие зависимости**: возможно, на этом этапе отсутствующих зависимостей. В противном случае этот шаг можно пропустить. В некоторых случаях необходимо вручную найти и установить эти зависимости.
+1. **Разрешить отсутствующие зависимости**: возможно, отсутствуют зависимости на этом этапе. В противном случае этот шаг можно пропустить. В некоторых случаях необходимо вручную найти и установить эти зависимости.
 
-    Для пакетов RPM вы можете проверить необходимые зависимости с помощью следующих команд:
+    Для пакетов RPM можно проверить необходимые зависимости, выполнив следующие команды:
 
     ```bash
     rpm -qpR msodbcsql-13.1.6.0-1.x86_64.rpm
     rpm -qpR mssql-tools-14.0.5.0-1.x86_64.rpm
     ```
 
-    Debian пакеты, если у вас есть доступ для утвержденных репозиториев, содержащий эти зависимости, простейшим решением является использование **apt get** команды:
+    Для пакетов Debian, если у вас есть доступ для утвержденных репозиториев, содержащий эти зависимости, самым простым решением является использование **apt-get** команды:
 
     ```bash
     sudo apt-get -f install
     ```
 
     > [!NOTE]
-    > Эта команда завершает установку пакетов SQL Server также.
+    > Эта команда завершает установку пакетов, а также SQL Server.
 
-    Если это не сработает для Debian пакета, можно проверить необходимые зависимости с помощью следующих команд:
+    Если это не работает для Debian пакета, можно проверить необходимые зависимости, выполнив следующие команды:
 
     ```bash
     dpkg -I msodbcsql_13.1.6.0-1_amd64.deb | grep "Depends:"
@@ -261,11 +262,11 @@ brew install --no-sandbox mssql-tools
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Пример использования **sqlcmd** для подключения к SQL Server и создать базу данных, см. следующие примеры использования:
+Пример использования **sqlcmd** для подключения к SQL Server и создать базу данных, см. в одном из следующих кратких руководств:
 
 - [Установите на Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Установите на Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Запустите на Docker](quickstart-install-connect-ubuntu.md)
+- [Установка на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Установка в Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Запустить в Docker](quickstart-install-connect-ubuntu.md)
 
-Пример использования **bcp** для массового импорта и экспорта данных, в разделе [массового копирования данных в SQL Server в Linux](sql-server-linux-migrate-bcp.md).
+Пример использования **bcp** для массового импорта и экспорта данных, см. в разделе [массовое копирование данных в SQL Server в Linux](sql-server-linux-migrate-bcp.md).

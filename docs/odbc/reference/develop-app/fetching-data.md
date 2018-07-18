@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909109"
 ---
 # <a name="fetching-data"></a>Выборка данных
 Процесс извлечения строк из результирующего набора и их возврата в приложение называется *выборка*. В этом разделе описывается выборки данных.  

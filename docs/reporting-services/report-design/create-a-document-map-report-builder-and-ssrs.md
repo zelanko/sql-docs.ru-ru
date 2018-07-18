@@ -1,7 +1,7 @@
 ---
 title: Создание схемы документа (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 237c1aedf1400dfa7aaa5a380030d81ed93b2f85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d417f39deeb44e38eba83ca6a3f34c4dd6e822c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550415"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Создание схемы документа (построитель отчетов и службы SSRS)
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Скрытие схемы документа при просмотре отчета  
   
-1.  В диспетчере отчетов перейдите к отчету, имеющему схему документа.  
+1.  На веб-портале перейдите к отчету, имеющему схему документа.  
   
      Например, в образцах отчетов [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] следующий URL-адрес указывает отчет с именем «Каталог продуктов».  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
      Чтобы использовать данный URL-адрес, скопируйте его и удалите все разрывы строк.  
   
-4.  Вставьте URL-адрес в диспетчер отчетов и нажмите клавишу ВВОД. Отчет будет запущен со скрытой схемой документа.  
+4.  Вставьте URL-адрес на веб-портале и нажмите клавишу ВВОД. Отчет будет запущен со скрытой схемой документа.  
   
 > [!NOTE]  
 >  Дополнительные сведения о скачивании образцов отчетов см. в статье [(Примеры отчетов построителя отчетов и конструктора отчетов)](http://go.microsoft.com/fwlink/?LinkId=198283).  

@@ -1,0 +1,146 @@
+---
+title: Настройка параметров модулей подготовки отчетов в RSReportServer.Config | Документы Майкрософт
+ms.custom: ''
+ms.date: 03/08/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- configuration options [Reporting Services]
+- DeviceInfo settings
+- rendering extensions [Reporting Services], overriding behaviors
+- parameters [Reporting Services], report rendering
+- overriding report rendering behavior
+- extensions [Reporting Services], rendering
+ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
+caps.latest.revision: 31
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1734710832b6c064aa2d2a76eec0a1dda7a9b6b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150245"
+---
+# <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Настройка параметров модулей подготовки отчетов в RSReportServer.Config
+  В файле конфигурации RSReportServer можно указать параметры модулей подготовки отчетов, чтобы изменить заданный по умолчанию способ подготовки к просмотру отчетов, запускаемых на сервере отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Изменять параметры модуля подготовки отчетов можно для достижения следующих целей.  
+  
+-   Изменение имени модуля подготовки отчетов в списке «Экспорт» панели инструментов отчета (например, чтобы заменить «Веб-архив» на «MHTML») или отображение этого имени на другом языке.  
+  
+-   Создание нескольких экземпляров одного модуля подготовки отчетов для обеспечения различных вариантов представления отчета (например, варианты модуля подготовки изображений портретной и альбомной ориентации).  
+  
+-   Изменение параметров по умолчанию модуля подготовки отчетов на другие значения (например, в модуле подготовки изображений в качестве формата вывода по умолчанию используется TIFF; параметры можно изменить таким образом, чтобы вместо этого использовался формат EMF).  
+  
+ Изменение параметров модуля подготовки отчетов влияет только на операции подготовки к просмотру на сервере отчетов. Невозможно изменить настройки модуля подготовки отчетов, используемые для предварительного просмотра отчета в конструкторе отчетов.  
+  
+ Указание параметров модуля подготовки отчетов в файлах конфигурации влияет на все модули подготовки к просмотру. Настройки в файлах конфигурации используются вместо значений по умолчанию всегда, когда применяется определенный модуль подготовки к просмотру. Если требуется задать параметры модуля подготовки отчетов для определенного отчета или операции подготовки к просмотру, следует указать сведения об устройстве программно с помощью метода <xref:ReportExecution2005.ReportExecutionService.Render%2A> или указав настройки сведений об устройстве в URL-адресе отчета. Дополнительные сведения об указании настроек сведений об устройстве для операции подготовки к просмотру, а также полный список этих настроек см. в разделе [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+  
+## <a name="finding-and-modifying-rsreportserverconfig"></a>Поиск и изменение файла RSReportServer.config  
+ Параметры конфигурации форматов вывода для отчета указывается в виде параметров модуля подготовки отчетов в файле конфигурации RSReportServer.config. Чтобы указать в файлах конфигурации параметры модуля подготовки отчетов, необходимо знать, как определить XML-структуры, задающие параметры подготовки к просмотру. Существует две XML-структуры, которые можно изменять.  
+  
+-   `OverrideNames` Элемент определяет отображаемое имя и язык модуля подготовки отчетов.  
+  
+-   `DeviceInfo` Структура XML определяет настройки сведений об устройстве, используемые модулем подготовки отчетов. Большинство параметров модуля подготовки отчетов определены как настройки сведений об устройстве.  
+  
+ Для изменения этого файла можно использовать текстовый редактор. Файл RSReportServer.config находится в папке \Reporting Services\Report Server\Bin. Дополнительные сведения об изменении файлов конфигурации см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+  
+## <a name="changing-the-display-name"></a>Изменение отображаемого имени  
+ Отображаемое имя модуля подготовки отчетов указывается в списке «Экспорт» панели инструментов отчета. Среди примеров отображаемых имен по умолчанию есть веб-архив, TIFF-файл и файл Acrobat (PDF-файл). Отображаемое имя по умолчанию можно заменить пользовательским значением, указав `OverrideNames` элемент в файлах конфигурации. Кроме того, если пользователь определяет два экземпляра одного модуля подготовки отчетов, элемент `OverrideNames` можно использовать, чтобы различать эти экземпляры в списке «Экспорт».  
+  
+ Поскольку отображаемые имена локализованы, необходимо задать `Language` атрибут при замене отображаемое имя по умолчанию пользовательским значением. Иначе любое указанное имя не будет обрабатываться. Указанное значение языка должно быть допустимым для компьютера, на котором выполняется сервер отчетов. Например, если сервер отчетов выполняется под управлением французской операционной системы, в качестве значения атрибута следует указать «fr-FR».  
+  
+ В следующем примере показано, как задать пользовательское имя на сервере отчетов английской версии.  
+  
+```  
+<Extension Name="XML" Type="Microsoft.ReportingServices.Rendering.DataRenderer.XmlDataReport,Microsoft.ReportingServices.DataRendering">  
+   <OverrideNames>  
+     <Name Language="en-US">My Custom Display Name for XML Rendering</Name>  
+   </OverrideNames>  
+</Extension>  
+```  
+  
+## <a name="changing-device-information-settings"></a>Изменение настроек сведений об устройстве  
+ Чтобы изменить настройки сведений об устройстве, используемые по умолчанию уже развернутым на сервере отчетов модулем подготовки отчетов, следует ввести в файлы конфигурации XML-структуру `DeviceInfo`. Для каждого модуля подготовки к просмотру существуют уникальные для него настройки сведений об устройстве. Чтобы просмотреть полный список настроек сведений об устройстве, см. в разделе [передача настроек сведений об устройстве модулям подготовки отчетов](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+  
+ В следующем примере показано, как выглядит структура и синтаксис XML-кода, изменяющего значения по умолчанию для модуля подготовки изображений:  
+  
+```  
+<Render>  
+    <Extension Name="IMAGE (EMF)" Type="Microsoft.ReportingServices.Rendering.ImageRenderer.ImageRenderer,Microsoft.ReportingServices.ImageRendering">  
+        <OverrideNames>  
+            <Name Language="en-US">Image (EMF)</Name>  
+        </OverrideNames>  
+        <Configuration>  
+            <DeviceInfo>  
+                <ColorDepth>32</ColorDepth>  
+                <DpiX>300</DpiX>  
+                <DpiY>300</DpiY>  
+                <OutputFormat>EMF</OutputFormat>  
+            </DeviceInfo>  
+        </Configuration>  
+    </Extension>  
+</Render>  
+```  
+  
+## <a name="configuring-multiple-entries-for-a-rendering-extension"></a>Настройка нескольких записей для модуля подготовки к просмотру  
+ Чтобы поддерживать возможность работы с различными представлениями отчета, можно создать несколько экземпляров одного модуля подготовки отчетов. Сочетание значений параметров может быть разным для каждого из определенных экземпляров. Определяя новые экземпляры существующего модуля подготовки отчетов, необходимо выполнить следующие действия.  
+  
+-   Указать уникальное имя для модуля.  
+  
+     Каждый экземпляр должен иметь уникальное значение для `Name` атрибута. В следующем примере для того, чтобы экземпляры можно было различить, им присвоены имена «IMAGE (EMF Landscape)» и «IMAGE (EMF Portrait)».  
+  
+     Соблюдайте осторожность при изменении имени уже развернутого модуля подготовки отчетов. Разработчики, указывающие модули подготовки отчетов программно, используют имена модулей, чтобы обозначить, какой экземпляр нужен для определенной операции подготовки к просмотру. Если на сервере отчетов работают пользовательские приложения служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , убедитесь, что разработчику известно об изменениях, вносимых в существующие имена модулей, или о добавлении нового имени.  
+  
+-   Укажите такое уникальное отображаемое имя, чтобы пользователи могли понять, каковы различия между любыми форматами вывода.  
+  
+     При настройке нескольких версий одного модуля, каждая версия можно присвоить уникальное имя, указав значение для `OverrideNames`. В противном случае в списке возможных режимов экспорта на панели инструментов отчета все версии этого модуля будут отображаться под одним и тем же именем.  
+  
+ В следующем образце показано, как добиться, чтобы используемый по умолчанию модуль подготовки к просмотру изображений (осуществляющий вывод в формате TIFF) выводил отчет в формате EMF в портретной ориентации наряду со вторым экземпляром, выводящим отчеты в формате EMF в альбомной ориентации. Обратите внимание, что каждое имя модуля уникально. Помните, что при тестировании этого образца следует выбирать отчеты, не содержащие таких интерактивных возможностей, как скрытие/отображение параметров, матрицы или ссылки на детализированные отчеты (в модуле подготовки к просмотру изображений интерактивные возможности не работают):  
+  
+```  
+<Render>  
+    <Extension Name="IMAGE (EMF Landscape)" Type="Microsoft.ReportingServices.Rendering.ImageRenderer.ImageRenderer,Microsoft.ReportingServices.ImageRendering">  
+        <OverrideNames>  
+            <Name Language="en-US">EMF in Landscape Mode</Name>  
+        </OverrideNames>  
+        <Configuration>  
+            <DeviceInfo>  
+                <OutputFormat>EMF</OutputFormat>  
+                <PageHeight>8.5in</PageHeight>  
+                <PageWidth>11in</PageWidth>  
+            </DeviceInfo>  
+        </Configuration>  
+    </Extension>  
+    <Extension Name="IMAGE (EMF Portrait)" Type="Microsoft.ReportingServices.Rendering.ImageRenderer.ImageRenderer,Microsoft.ReportingServices.ImageRendering">  
+        <OverrideNames>  
+            <Name Language="en-US">EMF in Portait Mode</Name>  
+        </OverrideNames>  
+        <Configuration>  
+            <DeviceInfo>  
+                <OutputFormat>EMF</OutputFormat>  
+                <PageHeight>11in</PageHeight>  
+                <PageWidth>8.5in</PageWidth>  
+            </DeviceInfo>  
+        </Configuration>  
+    </Extension>  
+</Render>  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Файл конфигурации RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
+ [Файл конфигурации RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   
+ [Настройки сведений об устройстве CSV](csv-device-information-settings.md)   
+ [Настройки сведений об устройстве Excel](excel-device-information-settings.md)   
+ [Настройки сведений об устройстве HTML](html-device-information-settings.md)   
+ [Настройки сведений об устройстве вывода изображений](image-device-information-settings.md)   
+ [Настройки сведений об устройстве MHTML](mhtml-device-information-settings.md)   
+ [Настройки сведений об устройстве PDF](pdf-device-information-settings.md)   
+ [Настройки сведений об устройстве XML](xml-device-information-settings.md)  
+  
+  

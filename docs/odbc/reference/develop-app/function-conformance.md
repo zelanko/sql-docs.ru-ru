@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914259"
 ---
 # <a name="function-conformance"></a>Функция соответствия
 Следующая таблица указывает уровень соответствия каждой функции ODBC, в которой это является правильно определенным.  

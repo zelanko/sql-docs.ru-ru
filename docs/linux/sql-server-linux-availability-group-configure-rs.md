@@ -1,5 +1,5 @@
 ---
-title: Настройка группы доступности SQL Server для чтения шкалы для Linux | Документы Microsoft
+title: Настройка группы доступности SQL Server для чтения и масштабирования в Linux | Документация Майкрософт
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,28 +12,29 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e406248118933eb60e95e101c6812d61b72ad7a7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d29bd3e2f86a824dadef1f9886c96b28547fbf03
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37891065"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Настройка группы доступности SQL Server для чтения шкалы в Linux
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Настройка группы доступности SQL Server для чтения и масштабирования в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Можно настроить SQL Server всегда в группе доступности (AG) для рабочих нагрузок чтения масштабирования на платформе Linux. Существует два типа архитектур для групп доступности. Архитектура высокого уровня доступности использует диспетчер кластеров для обеспечения Улучшенная непрерывность бизнеса. Эта архитектура также могут включать шкалы чтения реплик. Создание архитектуры высокого уровня доступности — [настройки SQL Server группы доступности AlwaysOn для обеспечения высокой доступности в Linux](sql-server-linux-availability-group-configure-ha.md). Другие архитектура поддерживает только чтение шкалы рабочих нагрузок. В этой статье описывается создание группы Доступности без диспетчер кластеров для рабочих нагрузок чтения шкалы. Эта архитектура предоставляет чтения масштабирования только. Он не обеспечивает высокий уровень доступности.
+Вы можете настроить SQL Server всегда в группе доступности (AG) для рабочих нагрузок чтения и масштабирования в Linux. Существует два типа архитектур для групп доступности. Архитектура для обеспечения высокой доступности диспетчер кластеров использует для предоставления Улучшенная непрерывность работы. Эта архитектура также могут включать реплик для чтения и масштабирования. Чтобы создать архитектура высокого уровня доступности, см. в разделе [настроить SQL Server группы доступности AlwaysOn для обеспечения высокой доступности в Linux](sql-server-linux-availability-group-configure-ha.md). Другая архитектура поддерживает только рабочие нагрузки для чтения и масштабирования. В этой статье описывается создание группы доступности для рабочих нагрузок чтения и масштабирования без диспетчера кластеров. Эта архитектура обеспечивает только чтение и масштабирование. Она не поддерживает высокий уровень доступности.
 
 >[!NOTE]
->Группа доступности с `CLUSTER_TYPE = NONE` могут включать реплики, размещенные на платформах операционных систем. Он не может поддерживать высокий уровень доступности. 
+>В группу доступности с `CLUSTER_TYPE = NONE` могут входить реплики, размещенные на различных платформах операционных систем. Она не поддерживает высокий уровень доступности. 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
-## <a name="create-the-ag"></a>Создание группы Доступности
+## <a name="create-the-ag"></a>Создание группы доступности
 
-Создание группы Доступности. Set `CLUSTER_TYPE = NONE`. Кроме того, задать каждой реплики с `FAILOVER_MODE = NONE`. Клиентские приложения, аналитики и отчетности рабочих нагрузок может напрямую подключаться к баз данных-получателей. Также можно создать список маршрутизации только для чтения. Подключения к первичной реплике вперед чтения запросов на подключение к каждой из вторичных реплик в списке маршрутизации в циклического перебора.
+Создайте группу доступности. Задайте `CLUSTER_TYPE = NONE`. Кроме того, задайте для каждой реплики `FAILOVER_MODE = MANUAL`. Клиентские приложения с рабочими нагрузками в области аналитики и отчетности могут напрямую подключаться к базам данных-получателям. Также можно создать список маршрутизации только для чтения. Подключения к первичной реплике будут переадресовывать запросы на подключение для чтения к каждой из содержащихся в нем вторичных реплик по принципу циклического перебора.
 
-Следующий сценарий Transact-SQL создает группы Доступности с именем `ag1`. Сценарий настраивает реплик группы Доступности с `SEEDING_MODE = AUTOMATIC`. Этот параметр задан, то SQL Server для автоматического создания базы данных на каждом сервере-получателе после его добавления к группе Доступности. Обновите следующий сценарий для вашей среды. Замените `<node1>` и `<node2>` значения с именами экземпляров SQL Server, на которых размещены реплики. Замените `<5022>` значение с портом, задать для конечной точки. Запустите следующий сценарий Transact-SQL в первичной реплике SQL Server:
+Следующий сценарий Transact-SQL создает группу доступности `ag1`. Сценарий настраивает реплики группы доступности с параметром `SEEDING_MODE = AUTOMATIC`. Если этот параметр задан, SQL Server будет автоматически создавать базы данных на каждом сервере-получателе после его добавления в группу доступности. Обновите следующий сценарий для своей среды. Замените значения `<node1>` и `<node2>` на имена экземпляров SQL Server, где размещаются реплики. Замените значение `<5022>` на порт, заданный для конечной точки. Выполните следующий сценарий Transact-SQL на первичной реплике SQL Server:
 
 ```SQL
 CREATE AVAILABILITY GROUP [ag1]
@@ -57,9 +58,9 @@ CREATE AVAILABILITY GROUP [ag1]
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-### <a name="join-secondary-sql-servers-to-the-ag"></a>Присоединение дополнительных серверов SQL к группе Доступности
+### <a name="join-secondary-sql-servers-to-the-ag"></a>Присоединение дополнительных серверов SQL к группе доступности
 
-Следующий сценарий Transact-SQL сервер присоединяет к группе Доступности с именем `ag1`. Обновите скрипт для вашей среды. На каждой из вторичных реплик SQL Server выполните следующий сценарий Transact-SQL для присоединения группы Доступности:
+Следующий сценарий Transact-SQL создает группу доступности `ag1`. Обновите сценарий для своей среды. На каждой вторичной реплике SQL Server выполните следующий сценарий Transact-SQL для присоединения группы доступности:
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE);
@@ -69,16 +70,16 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-Этой группы Доступности не конфигурации высокой доступности. Если требуется высокий уровень доступности, следуйте инструкциям в [Настройка группы доступности AlwaysOn для SQL Server в Linux](sql-server-linux-availability-group-configure-ha.md). В частности, создание группы Доступности с `CLUSTER_TYPE=WSFC` (в Windows) или `CLUSTER_TYPE=EXTERNAL` (в Linux). Затем интеграция с диспетчером кластера с помощью отказоустойчивых либо Windows Server в Windows или Pacemaker в Linux.
+У этой группы доступности нет конфигурации высокого уровня доступности. Если требуется высокий уровень доступности, следуйте инструкциям в [Настройка группы доступности AlwaysOn для SQL Server в Linux](sql-server-linux-availability-group-configure-ha.md). В частности, для создания группы Доступности с `CLUSTER_TYPE=WSFC` (в Windows) или `CLUSTER_TYPE=EXTERNAL` (в Linux). Затем интеграция с диспетчером кластера с помощью либо отказоустойчивому кластеру Windows на Windows или Pacemaker в Linux.
 
-## <a name="connect-to-read-only-secondary-replicas"></a>Подключения к вторичным репликам только для чтения
+## <a name="connect-to-read-only-secondary-replicas"></a>Подключение к вторичным репликам только для чтения
 
-Существует два способа подключения к вторичным репликам только для чтения. Приложения могут подключаться непосредственно к экземпляру SQL Server, на котором размещена вторичная реплика и запросы к базам данных. Они также могут использовать маршрутизацию только для чтения, которая требует прослушивателя.
+Существует два способа подключения к вторичным репликам только для чтения. Приложения могут подключаться непосредственно к экземпляру SQL Server, на котором размещена вторичная реплика, и отправлять запросы к базам данных. Они также могут использовать маршрутизацию только для чтения, для которой требуется прослушиватель.
 
-* [Вторичные реплики для чтения](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
+* [Доступные для чтения вторичные реплики](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
 * [Маршрутизация только для чтения](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)
 
-## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Отработку отказа первичной реплики в группе доступности чтения шкалы
+## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Отработка отказа первичной реплики в группе доступности для чтения и масштабирования
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
@@ -86,5 +87,5 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 * [Настройка распределенной группы доступности](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
 * [Дополнительные сведения о группах доступности](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
-* [Выполнить принудительную отработку отказа вручную](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
+* [Выполнение принудительного перехода на другой ресурс вручную](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
 

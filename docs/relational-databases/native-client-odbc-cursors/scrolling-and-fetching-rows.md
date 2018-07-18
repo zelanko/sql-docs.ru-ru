@@ -1,13 +1,12 @@
 ---
-title: Прокрутка и выборка строк | Документы Microsoft
+title: Прокрутка и выборка строк | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c7b0d1f850ad554d507a63513d12992c0281c88
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5377e0bd603d6233ba99ddacb53c8113e580fa8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421553"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Прокрутка и выборка строк
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +42,15 @@ ms.lasthandoff: 05/03/2018
   
 -   Открытие курсора с помощью **SQLExecute** или **SQLExecDirect**.  
   
--   Выполнить прокрутку и выборку строк с помощью **SQLFetch** или [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
+-   Прокрутку и выборку строк с помощью **SQLFetch** или [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
   
- Оба **SQLFetch** и **SQLFetchSroll** можно извлекать блоки строк за один раз. Число строк, возвращенных задается с помощью **SQLSetStmtAttr** для параметра SQL_ATTR_ROW_ARRAY_SIZE.  
+ Оба **SQLFetch** и **SQLFetchSroll** можно извлекать блоки строк за один раз. Число возвращаемых строк задается с помощью **SQLSetStmtAttr** установить параметр SQL_ATTR_ROW_ARRAY_SIZE.  
   
- Приложения ODBC могут использовать **SQLFetch** производить выборку однонаправленный курсор.  
+ Приложения ODBC могут использовать **SQLFetch** производить выборку однопроходный курсор.  
   
- **SQLFetchScroll** используется для прокрутки по курсору. **SQLFetchScroll** поддерживает выборку следующего, предыдущего, первого и последнего набора строк помимо относительной (набора строк, *n* строк от начала текущего набора строк) и абсолютной (набора строк выборки начиная со строки *n*). Если *n* имеет отрицательное значение при абсолютной выборке, то строки отсчитываются с конца результирующего набора. Абсолютная выборка строки -1 означает, что будет возвращен набор строк, начинающийся с последней строки результирующего набора.  
+ **SQLFetchScroll** используется для прокрутки по курсору. **SQLFetchScroll** поддерживает выборку следующего, предыдущего, первого и последнего наборов строк, помимо относительной (набора строк, *n* строк с начала текущего набора строк) и абсолютной (fetch набор строк начиная со строки *n*). Если *n* имеет отрицательное значение в абсолютная выборка, строки отсчитываются с конца результирующего набора. Абсолютная выборка строки -1 означает, что будет возвращен набор строк, начинающийся с последней строки результирующего набора.  
   
- Приложения, использующие **SQLFetchScroll** только для своего блока возможности курсора, таких как отчеты, обычно просматривают результирующий набор только один раз, используя только параметр для получения следующего набора строк. На экране приложений, с другой стороны, можно воспользоваться преимуществами все возможности **SQLFetchScroll**. Если приложение задает размер набора строк на число строк, отображаемых на экране и привязывает буферы экранов к результирующему набору, оно может преобразовывать операции полосы прокрутки непосредственно в вызовы **SQLFetchScroll**.  
+ Приложения, использующие **SQLFetchScroll** только для своего блока возможности курсора, такие как отчеты, скорее всего для передачи из результирующего набора, один раз, только в режиме для получения следующего набора строк. На экране приложений, с другой стороны, можно воспользоваться преимуществами все возможности **SQLFetchScroll**. Если приложение задает размер набора строк, равное количеству строк, отображаемых на экране и привязывает буферы экранов к результирующему набору, то оно может преобразовывать операции полосы прокрутки непосредственно в вызовы **SQLFetchScroll**.  
   
 |Операция полосы прокрутки|Параметр прокрутки SQLFetchScroll|  
 |--------------------------|-------------------------------------|  
@@ -62,11 +62,11 @@ ms.lasthandoff: 05/03/2018
 |Ползунок вниз|SQL_FETCH_LAST|  
 |Случайное положение ползунка|SQL_FETCH_ABSOLUTE|  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Создание закладок строк в ODBC](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
 ## <a name="see-also"></a>См. также  
- [С помощью курсоров & #40; ODBC & #41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Использование курсоров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

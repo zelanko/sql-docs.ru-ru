@@ -2,7 +2,6 @@
 title: Исходное свойство (набора записей ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fff874c34b527adc976b608e6b1594427245de24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ee46e4f0af37fd28a6e45f48e31bab7e868821f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281880"
 ---
 # <a name="source-property-ado-recordset"></a>Свойство Source (набора записей ADO)
 Указывает источник данных для [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Наборы **строка** значение или [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта ссылки; возвращает только **строка** значение, указывающее источник **записей**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **источника** свойство, чтобы указать источник данных для **записей** с помощью одного из следующих действий: **команда** объекта переменной, инструкции SQL, хранимая процедура, или имя таблицы.  
   
  Если задать **источника** свойства **команды** объекта, [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойство **записей** объект будет наследовать значение **ActiveConnection** свойства для указанного **команда** объекта. Тем не менее, чтении **источника** свойство не возвращает **команда** объекта; вместо этого он возвращает [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство **команда** объект, который позволяет определить **источника** свойство.  

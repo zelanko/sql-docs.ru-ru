@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029982"
 ---
 # <a name="configurationsetting-method---getadminsiteurl"></a>Метод ConfigurationSetting — GetAdminSiteUrl
   Возвращает абсолютный URL-адрес веб-сайта центра администрирования фермы Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , с которой интегрирован сервер отчетов.  

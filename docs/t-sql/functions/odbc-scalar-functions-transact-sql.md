@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -53,15 +52,16 @@ helpviewer_keywords:
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b17a85709bbb7a60badadabc1f18ff5fd688188d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc12292f373e1028e37050020dfcccff74e90ade
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783966"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Скалярные функции ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="string-functions"></a>Строковые функции  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |--------------|-----------------|  
 |BIT_LENGTH( строковое_выражение ) (ODBC 3.0)|Возвращает длину строкового выражения в битах.<br /><br /> Не работает только для строковых типов данных. Поэтому неявное преобразование string_exp в string выполняться не будет, а вместо этого будет возвращен (внутренний) размер заданного типа данных.|  
 |CONCAT( строковое_выражение1,строковое_выражение2) (ODBC 1.0)|Возвращает символьную строку, являющуюся результатом сцепления строк строковое_выражение2 и строковое_выражение1. Полученная в результате строка зависит от СУБД. Например, если столбец, представленный строкой строковое_выражение1, объединяется со значением NULL, DB2 возвратит NULL, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвратит строку со значением, отличным от NULL.|  
@@ -84,13 +84,13 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="numeric-function"></a>Числовые функции  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |--------------|-----------------|  
 |TRUNCATE( числовое_выражение, целое_выражение) (ODBC 2.0)|Возвращает выражение «числовое_выражение», усеченное до целого числа позиций «целое_выражение» справа от десятичной запятой. Если значение "целое_выражение" отрицательное, выражение "числовое_выражение" усекается до &#124;целое_выражение&#124; позиций слева от десятичной запятой.|  
   
 ### <a name="time-date-and-interval-functions"></a>Функции даты, времени и интервалов  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Возвращает текущую дату.|  
 |CURDATE( ) (ODBC 3.0)|Возвращает текущую дату.|  

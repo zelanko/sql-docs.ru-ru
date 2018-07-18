@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016761"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Настройка параметров модулей подготовки отчетов в RSReportServer.Config
   В файле конфигурации RSReportServer можно указать параметры модулей подготовки отчетов, чтобы изменить заданный по умолчанию способ подготовки к просмотру отчетов, запускаемых на сервере отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Изменять параметры модуля подготовки отчетов можно для достижения следующих целей.  

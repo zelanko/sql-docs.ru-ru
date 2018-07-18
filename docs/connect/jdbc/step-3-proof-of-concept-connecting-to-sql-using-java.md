@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32851799"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Шаг 3: Эксперимент подключение к SQL с помощью Java
   

@@ -1,6 +1,6 @@
 ---
-title: Свойства DAX | Документы Microsoft
-ms.date: 05/03/2018
+title: Свойства DAX | Документация Майкрософт
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e683c5b99bee1b19e7d57e31b65983bb27561537
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9150eb13b6c39f74f1e65743b6a79aca0a07676a
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033534"
 ---
 # <a name="dax-properties"></a>Свойства DAX
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
    Раздел DAX файла msmdsrv.ini содержит параметры, используемые для управления поведением запросов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], такие как верхний предел числа строк, возвращаемых в результирующем наборе запроса DAX.
 
   Для очень крупных наборов строк, например тех, которые возвращаются в моделях DirectQuery, значения по умолчанию, равного одному миллиону строк, может быть недостаточно. На необходимость корректировки предела указывает появление следующей ошибки: "Набор результатов запроса к внешнему источнику данных превышает максимально допустимое количество строк: 1000000".

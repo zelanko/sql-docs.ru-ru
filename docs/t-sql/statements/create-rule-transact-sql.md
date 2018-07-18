@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -31,14 +30,15 @@ helpviewer_keywords:
 - rules [SQL Server], creating
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c495cabda9c94fb5b0e32b7df0474501d2307353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e0ef2de168411dbd4662a7fabd88ec0b6ad141f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781715"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AS condition_expression
 ## <a name="remarks"></a>Примечания  
  Инструкцию CREATE RULE нельзя объединять с другими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] в одном пакете. Правила не распространяются на данные, существовавшие в базе данных на момент создания правил, и не могут быть привязаны к системным типам данных.  
   
- Правило может быть создано только в текущей базе данных. После создания правила необходимо выполнить хранимую процедуру **sp_bindrule** для привязки правила к столбцу или псевдониму типа данных. Правило должно быть совместимо с типом столбца. Например, правило "@value LIKE A%" не может быть привязано к численному столбцу. Правило не может быть привязано к **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, определяемому пользователем типу CLR или столбцу **timestamp**. Правило не может быть привязано к вычисляемому столбцу.  
+ Правило может быть создано только в текущей базе данных. После создания правила необходимо выполнить хранимую процедуру **sp_bindrule** для привязки правила к столбцу или псевдониму типа данных. Правило должно быть совместимо с типом столбца. Например, правило "\@value LIKE A%" не может быть привязано к числовому столбцу. Правило не может быть привязано к **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, определяемому пользователем типу CLR или столбцу **timestamp**. Правило не может быть привязано к вычисляемому столбцу.  
   
  Символьные константы и константы-даты следует заключать в одиночные кавычки ('), а двоичные константы — предварять знаками 0x. Если правило несовместимо со столбцом, к которому оно привязано, компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает сообщение об ошибке при попытке вставки значения в столбец, но не во время привязки правила.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 841f4d7bf5b77ccc91731276510b1b3186c1bb90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f3b42dd7df892f2e6c281ae5fec651823e99d4c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406006"
 ---
 # <a name="set-package-properties"></a>Установка свойств пакета
   При создании пакета в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] с помощью графического интерфейса, который предоставляется службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , свойства объекта пакета задаются в окне «Свойства».  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Checkpoints"></a> Контрольные точки  
  Свойства этой категории позволяют перезапускать пакет с точки сбоя в его потоке управления без необходимости перезапуска с самого начала потока управления. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**CheckpointFileName**|Имя файла для записи сведений о контрольных точках, которые позволяют перезапускать пакет. При успешном завершении пакета этот файл удаляется.|  
 |**CheckpointUsage**|Определяет, когда пакет может быть перезапущен. Допустимые значения — **Never**, **IfExists**и **Always**. Значение этого свойства по умолчанию равно **Never**, что означает невозможность перезапуска пакета. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>.|  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Execution"></a> Выполнение  
  Свойства этой категории позволяют настраивать поведение объекта пакета во время выполнения.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**DelayValidation**|Указывает, откладывается ли проверка пакета до того момента, как он будет запущен. Значение этого свойства по умолчанию — **False**.|  
 |**Отключить**|Указывает, отключен ли пакет. Это свойство имеет значение по умолчанию **False**.|  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="ForcedExecutionValue"></a> Значение параметра «Принудительное выполнение»  
  Свойства этой категории позволяют настраивать значение необязательного выполнения для пакета.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**ForcedExecutionValue**|Если свойство ForceExecutionValue имеет значение **True**, то данное значение определяет возвращаемое пакетом значение необязательного выполнения. Значение этого свойства по умолчанию равно **0**.|  
 |**ForcedExecutionValueType**|Тип данных свойства ForcedExecutionValue. Значение по умолчанию этого свойства равно **Int32**.|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Identification"></a> Идентификация  
  Свойства этой категории содержат такие данные, как уникальный идентификатор и имя пакета.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**CreationDate**|Дата создания пакета.|  
 |**CreatorComputerName**|Имя компьютера, на котором был создан пакет.|  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Misc"></a> Разное  
  Свойства этой категории используются для доступа к конфигурациям и выражениям, используемым пакетом, а также для указания сведений о локали и режиме записи в журнал пакета. Дополнительные сведения см. в разделе [Использование выражений свойств в пакетах](../integration-services/expressions/use-property-expressions-in-packages.md).  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**Конфигурации**|Коллекция конфигураций, используемых пакетом. Нажмите кнопку обзора **(…)** для просмотра и настройки конфигурации пакета.|  
 |**Выражения**|Нажмите кнопку обзора **(…)** , чтобы создать выражения для свойств пакета.<br /><br /> Обратите внимание, что выражения свойств можно создавать для всех свойств пакета, включенных в объектную модель, а не только для перечисленных в окне "Свойства".<br /><br /> Дополнительные сведения см. в разделе [Использование выражений свойств в пакетах](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Для просмотра существующих выражений свойств раскройте список **Expressions**. Нажмите кнопку обзора **(…)** в текстовом поле выражения, чтобы изменить и вычислить это выражение.|  
@@ -134,7 +133,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Security"></a> безопасность  
  Свойства этой категории используются для установки уровня защиты пакета. Дополнительные сведения см. в разделе [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**PackagePassword**|Пароль для уровней защиты пакета (**EncryptSensitiveWithPassword** и **EncryptAllWithPassword**), требующих использование пароля.|  
 |**ProtectionLevel**|Уровень защиты пакета. Допустимые значения — **DontSaveSensitive**, **EncryptSensitiveWithUserKey**, **EncryptSensitiveWithPassword**, **EncryptAllWithPassword**и **ServerStorage**. Значение по умолчанию этого свойства равно **EncryptSensitiveWithUserKey**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
@@ -142,7 +141,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Transactions"></a> Transactions  
  Свойства этой категории позволяют настраивать уровень изоляции и параметр транзакции для пакета. Дополнительные сведения см. в разделе [Транзакции служб Integration Services](../integration-services/integration-services-transactions.md).  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**IsolationLevel**|Уровень изоляции транзакции пакета. Допустимые значения — **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**и **Snapshot**. Значение по умолчанию этого свойства равно **Serializable**.<br /><br /> Примечание. Значение **Snapshot** для свойства **IsolationLevel** несовместимо с пакетными транзакциями. Поэтому нельзя использовать свойство **IsolationLevel** для задания уровня изоляции транзакций пакета **Shapshot**. Для задания транзакциям пакета значения **Snapshot**следует использовать SQL-запрос. Дополнительные сведения см. в разделе [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).<br /><br /> Система применяет свойство **IsolationLevel** к транзакциям пакета только в случае, если свойство **TransactionOption** имеет значение **Required**.<br /><br /> Значение свойства **IsolationLevel** , запрашиваемое дочерним контейнером, не учитывается, если выполняются следующие условия.<br />Свойство **TransactionOption** дочернего контейнера имеет значение **Supported**.<br />Дочерний контейнер присоединяется к транзакции родительского контейнера.<br /><br /> Значение свойства **IsolationLevel** , запрашиваемое контейнером, учитывается только в случае, когда контейнер запускает новую транзакцию. Контейнер запускает новую транзакцию, если выполняются следующие условия.<br />Свойство **TransactionOption** контейнера имеет значение **Required**.<br />Родительский пакет еще не запустил транзакцию.<br /><br /> <br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |**TransactionOption**|Участие пакета в транзакции. Допустимые значения — **NotSupported**, **Supported**, **Required**. Значение по умолчанию этого свойства равно **Supported**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
@@ -150,7 +149,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Version"></a> Версия  
  Свойства этой категории содержат сведения о версии объекта пакета.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**VersionBuild**|Номер версии сборки пакета.|  
 |**VersionComments**|Примечания к версии пакета.|  

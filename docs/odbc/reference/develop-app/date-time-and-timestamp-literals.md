@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913389"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Даты, времени и отметок времени литералы
 Escape-последовательность для литералов даты, времени и отметок времени  

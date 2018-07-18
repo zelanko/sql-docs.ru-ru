@@ -1,19 +1,21 @@
 ---
-title: Занятие 4 создайте данных компонентов, с помощью T-SQL | Документы Microsoft
+title: Занятие 4 создайте данных компонентов, с помощью функции T-SQL (SQL Server машинного обучения) | Документы Microsoft
+description: Руководство для внедрения в SQL Server R хранимые процедуры и функции T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7007d418b14e2c965252ca2a4f7bc3c529e63173
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249547"
 ---
-# <a name="lesson-4-create-data-features-using-t-sql"></a>Занятие 4: Создание компонентов данных, с помощью T-SQL
+# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>Занятие 4: Создание компонентов данных, с помощью T-SQL и R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье является частью учебника для разработчиков SQL по использованию R в SQL Server.
@@ -125,4 +127,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
-[Занятие 3: Анализ и визуализация данных](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[Занятие 3: Анализ и визуализация данных с помощью R и хранимые процедуры](../tutorials/sqldev-explore-and-visualize-the-data.md)

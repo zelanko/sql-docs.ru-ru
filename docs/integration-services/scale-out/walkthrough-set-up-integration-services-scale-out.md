@@ -1,26 +1,25 @@
 ---
 title: Пошаговое руководство. Настройка SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт
-ms.description: This article walks you through the setup and configuration of SSIS Scale Out
-ms.custom: ''
+description: В этой статье приводятся пошаговые инструкции по установке и настройке SSIS Scale Out.
+ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 2efde7cc992e9f8b439ac3419ab8141f144e20ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a3d2c0725035e4a985d44a8e06c69b47b3e2009
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401186"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Пошаговое руководство. Настройка Integration Services (SSIS) Scale Out
 Чтобы настроить [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out, выполните указанные ниже задачи. 

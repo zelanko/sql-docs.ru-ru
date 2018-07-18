@@ -2,7 +2,6 @@
 title: Подготовить свойство (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a5f02d8c1536192832622e26fa4e128a7c04c66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70557d20239eedef30abc280de563a03b39b4a81
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280583"
 ---
 # <a name="prepared-property-ado"></a>Свойства подготовленный (ADO)
 Указывает, следует ли сохранить скомпилированную версию [команда](../../../ado/reference/ado-api/command-object-ado.md) перед выполнением.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **логическое** значение, если значение **True**, указывает, что команда должно быть подготовлено.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **Готово** свойство, чтобы сохранить запрос, указанный в подготовленную (скомпилированную) версию поставщика [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойства перед [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта первого выполнения. Это может привести к снижению первого выполнения команды, но после поставщик компилирует команду, поставщик будет использовать скомпилированная версия команды для любого последующего выполнения, что приведет к повышению производительности.  
   
  Если свойство **False**, поставщик будет выполняться **команда** объекта непосредственно, без создания скомпилированная версия.  

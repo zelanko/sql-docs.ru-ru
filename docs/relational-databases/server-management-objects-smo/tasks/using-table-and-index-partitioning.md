@@ -1,5 +1,5 @@
 ---
-title: Используя секционирование таблиц и индексов | Документы Microsoft
+title: Используя секционирование таблиц и индексов | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,10 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c6dca91e1be799d4fd666432820a7839718d3e28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039072"
 ---
 # <a name="using-table-and-index-partitioning"></a>Использование секционирования таблиц и индексов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,15 +36,15 @@ ms.lasthandoff: 05/03/2018
 ## <a name="index-and-table-partitioning"></a>Секционирование таблиц и индексов  
  Эта функция позволяет распространять данные индексов и таблиц по нескольким файловым группам в секциях. Функция секционирования на основе значений некоторых столбцов, называемых столбцами секционирования, определяет, каким образом строки таблицы или индекса сопоставляются секциям. Схема секционирования сопоставляет каждую из секций, определенных функцией секционирования, с файловой группой. Это дает возможность разрабатывать стратегии архивирования, позволяющие масштабировать таблицы по файловым группам и, следовательно, по физическим устройствам.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> Объект содержит коллекцию <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> объектов, представляющих реализованные функции секционирования и коллекцию <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> объектов, описывающих способ сопоставления данных группам файлов.  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> Объект содержит коллекцию <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> объектов, представляющих реализованные функции секционирования и коллекция <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> объектов, описывающих способ сопоставления данных группам файлов.  
   
  Каждый из объектов <xref:Microsoft.SqlServer.Management.Smo.Table> и <xref:Microsoft.SqlServer.Management.Smo.Index> указывает в свойстве <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>, какую схему секционирования он использует, а в свойстве <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> ─ столбцы.  
   
 ## <a name="example"></a>Пример  
- В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Настройка схемы секционирования для таблицы на языке Visual C#  
- В примере кода показано, как создать функцию секционирования и схемы секционирования для `TransactionHistory` в таблицу [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] образца базы данных. Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
+ В примере кода показано, как создать функцию секционирования и схему секционирования для `TransactionHistory` в таблицу [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] образца базы данных. Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
   
 ```csharp  
 {   
@@ -91,7 +92,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>Настройка схемы секционирования для таблицы в PowerShell  
- В примере кода показано, как создать функцию секционирования и схемы секционирования для `TransactionHistory` в таблицу [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] образца базы данных. Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
+ В примере кода показано, как создать функцию секционирования и схему секционирования для `TransactionHistory` в таблицу [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] образца базы данных. Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

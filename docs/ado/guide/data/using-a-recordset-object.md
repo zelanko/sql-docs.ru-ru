@@ -2,7 +2,6 @@
 title: С помощью объекта набора записей | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f72e3283e58276aca4846a81a63603ed9bac856
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05a2c989d1f14849ef39b4ec93f4677ebc52510e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273183"
 ---
 # <a name="using-a-recordset-object"></a>С помощью объекта набора записей
 Кроме того, можно использовать **Recordset.Open** неявно для подключения и команды по этому соединению в одной операции. Например в Visual Basic:  

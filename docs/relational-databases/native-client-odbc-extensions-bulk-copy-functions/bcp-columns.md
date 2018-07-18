@@ -1,14 +1,12 @@
 ---
-title: bcp_columns | Документы Microsoft
+title: bcp_columns | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,11 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0509823206c7e2b0062bd3587eb31aeee982369
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6242de14538df8897cc7230d04afd9a81de68e65
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413723"
 ---
 # <a name="bcpcolumns"></a>bcp_columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,15 +49,15 @@ RETCODE bcp_columns (
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *nColumns*  
- Общее количество столбцов в файле пользователя. Даже если планируется выполнить массовое копирование данных из файла пользователя в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы и скопировать все столбцы в файле пользователя не требуется, по-прежнему необходимо задать *nColumns* общего числа столбцов в файле пользователя.  
+ Общее количество столбцов в файле пользователя. Даже если планируется выполнить массовое копирование данных из пользовательского файла, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы и не планируется копировать все столбцы в файле пользователя, по-прежнему необходимо задать *nColumns* общего числа столбцов файла пользователя.  
   
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
- Эта функция может быть вызван только после [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) был вызван с недопустимым именем файла.  
+## <a name="remarks"></a>Примечания  
+ Эту функцию можно вызывать только после [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) был вызван с допустимым именем файла.  
   
- Эту функцию следует вызывать только в том случае, если планируется использовать формат файла пользователя, отличный от формата по умолчанию. Дополнительные сведения об описании формата файла пользователя по умолчанию см. в разделе **bcp_init**.  
+ Эту функцию следует вызывать только в том случае, если планируется использовать формат файла пользователя, отличный от формата по умолчанию. Дополнительные сведения об описании стандартного формата пользовательского файла см. в разделе **bcp_init**.  
   
  После вызова метода **bcp_columns**, необходимо вызвать [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) для каждого столбца в пользовательском файле, чтобы полностью описать нестандартный формат файла.  
   

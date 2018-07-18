@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a9ff7319403a724dcd1c2778a516114d6aef3e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 786d9b2e0d3a3f00d3f9e00496d8a11e9d2c18c1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402996"
 ---
 # <a name="define-a-state-variable"></a>Определение переменной состояния
   Эта процедура описывает, как определить переменную пакета, в которой хранится информация состояния CDC.  
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице приведено общее описание компонентов значения переменной состояния CDC.  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |---------------|-----------------|  
 |**\<state-name>**|Это имя текущего состояния CDC.|  
 |**CS**|Это обозначает точку начала текущего диапазона обработки (Current Start).|  
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице описаны возможные значения состояния CDC.  
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |-----------|-----------------|  
 |(INITIAL)|Это исходное состояние до выполнения какого-либо пакета в текущей группе CDC. Это состояние также имеет место, если состояние CDC пусто.|  
 |ILSTART (запуск начальной загрузки)|Это состояние, когда запускается начальная загрузка пакета после вызова задачи «Управление CDC» операцией **MarkInitialLoadStart** .|  

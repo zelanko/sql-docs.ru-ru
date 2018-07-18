@@ -2,7 +2,6 @@
 title: Атрибуты примера свойства (Visual Basic) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a275c6f39d2e16afcf53b753380e9f1ad20684a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa6c125a1d3e720647d06e7a33689e0c5e883946
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285383"
 ---
 # <a name="attributes-property-example-vb"></a>Пример свойства атрибутов (Visual Basic)
 В этом примере демонстрируется [атрибуты](../../../ado/reference/adox-api/attributes-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md). Значения этого свойства **adColNullable** позволяет пользователю задать значение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) [поле](../../../ado/reference/ado-api/field-object.md) на пустую строку. В этом случае пользователь может различать записи, когда данные не известен и записи, где данные не применяется.  

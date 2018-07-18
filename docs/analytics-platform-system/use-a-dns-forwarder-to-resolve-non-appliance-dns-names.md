@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544946"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Использовать DNS-сервер пересылки для разрешения имен DNS не является специализированным в система платформы аналитики
 DNS-сервер пересылки можно настроить на узлах доменных служб Active Directory (***appliance_domain *-AD01** и ***appliance_domain *-AD02**) вашего устройства Analytics Platform System, чтобы разрешить сценарии и приложения для доступа к внешним серверам.  

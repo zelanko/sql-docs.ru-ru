@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020961"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Интерактивные возможности различных модулей подготовки отчетов к просмотру
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет функции для взаимодействия с отчетом с разбиением на страницы во время выполнения. Не все выходные форматы отчета поддерживают полный диапазон интерактивных возможностей. Чтобы понять, как интерактивные возможности работают с конкретными выходными форматами, воспользуйтесь приведенной ниже таблицей.  

@@ -2,7 +2,6 @@
 title: Свойство ActiveCommand (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aa86180edc4117e89863bb232a2faa95d010272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e85286a885ab8edcfb08b029f7a1fd77c8d3f4a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274969"
 ---
 # <a name="activecommand-property-ado"></a>Свойство ActiveCommand (ADO)
 Указывает [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, который создан связанный [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **Variant** , содержащий **команда** объекта. Значение по умолчанию — пустая ссылка на объект.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **ActiveCommand** свойство доступно только для чтения.  
   
  Если **команда** объект не использовался для создания текущего **записей**, то **Null** возвращается ссылка на объект.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915215"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>Введение в SQL и ODBC
 Для предоставления доступа к системам управления разных или разнородные, базы данных (СУБД) универсальный метод был создан ODBC. В этой вводной статье обсуждаются основные понятия, связанные с разработкой ODBC.  

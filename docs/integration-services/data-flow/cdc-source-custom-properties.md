@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
@@ -16,16 +14,17 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcee03fe6f2f465df777d3124003c18a228bbf09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d32994082244c755937c5c076d8a4a4ed25aba92
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332408"
 ---
 # <a name="cdc-source-custom-properties"></a>Пользовательские свойства источника «CDC»
   В следующей таблице описаны пользовательские свойства источника «CDC». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Description|  
+|Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
 |Соединение|Соединение ADO.Net|Соединение ADO.NET с базой данных CDC [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для доступа к таблицам изменений.|  
 |StateVariable|String|Строковая переменная пакета служб SSIS, которая поддерживает состояние CDC текущего прогона CDC.|  

@@ -1,6 +1,6 @@
 ---
-title: Свойства компонента | Документы Microsoft
-ms.date: 05/03/2018
+title: Свойства компонента | Документация Майкрософт
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bec4d89fd1135ecc7bfdbc563547b9d3dbbdfa47
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8ee5a58d5c04cbfbb1f47f0d073ba6614490970c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033322"
 ---
 # <a name="feature-properties"></a>Свойства функций
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   Свойства функций служат для настройки возможностей продуктов, большинство из них являются расширенными, включая свойства, которые управляют связями между экземплярами сервера.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
@@ -25,7 +27,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="properties"></a>Свойства  
   
-|property|По умолчанию|Описание|  
+|Свойство|По умолчанию|Описание|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|Логическое свойство, показывающее, включены ли процедуры хранилища среды CLR.|  
 |**LinkInsideInstanceEnabled**|1|Логическое свойство, показывающее, может ли связанный объект быть создан в том же экземпляре сервера.|  
@@ -40,6 +42,6 @@ ms.lasthandoff: 05/10/2018
 ## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Используйте динамические административные представления & #40; динамических административных представлений & #41; для мониторинга служб Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Использование динамических административных представлений для мониторинга служб Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

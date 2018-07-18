@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,52 +23,50 @@ helpviewer_keywords:
 - CATCH block
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44745c0f27527872abd1b63c3fa5b3954328c1be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e7426aa1665bd6e8c7d5c0c9c9978a040a8c5a6
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784845"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает номер строки, в которой возникла ошибка, приведшая к активации блока CATCH конструкции TRY…CATCH.  
+Эта функция возвращает номер строки, в которой произошла ошибка, вызвавшая выполнение блока CATCH конструкции TRY…CATCH.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 ERROR_LINE ( )  
 ```  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- **int**  
+**int**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- При вызове в блоке CATCH:  
+При вызове в блоке CATCH функция `ERROR_LINE` возвращает:  
   
--   Возвращает номер строки, в которой возникла ошибка.  
-  
--   Возвращает номер строки в процедуре, если ошибка возникла в хранимой процедуре или триггере.  
-  
- Возвращает значение NULL в случае вызова вне блока CATCH.  
+-   номер строки, где произошла ошибка;    
+-   номер строки в подпрограмме, если ошибка возникла в хранимой процедуре или триггере;  
+-   значение NULL в случае вызова вне блока CATCH.  
   
 ## <a name="remarks"></a>Remarks  
- Эта функция может быть вызвана в любом месте в пределах блока CATCH.  
+Функцию `ERROR_LINE` можно вызывать в любом месте области действия блока CATCH.  
   
- Функция ERROR_LINE возвращает номер строки, в которой возникла ошибка, независимо от того, сколько раз или в какой области блока CATCH она была вызвана. В этом ее отличие от таких функций, как @@ERROR, которые возвращают номер ошибки в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку, или же в первой инструкции блока CATCH.  
+Функция `ERROR_LINE` возвращает номер строки, в которой возникла ошибка. Это происходит вне зависимости от места вызова `ERROR_LINE` в пределах блока CATCH от числа вызовов `ERROR_LINE`. В этом отличие данной функции от таких функций, как @@ERROR. Функция @@ERROR возвращает номер ошибки в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку, или же в первой инструкции блока CATCH.  
   
- Во вложенных блоках CATCH функция ERROR_LINE возвращает номер строки ошибки, связанной с тем блоком CATCH, в котором она была вызвана. Например, блок CATCH конструкции TRY…CATCH может содержать вложенную конструкцию TRY…CATCH. Внутри вложенного блока CATCH функция ERROR_LINE возвращает номер строки ошибки, вызвавшей вложенный блок CATCH. Если функция ERROR_LINE запущена во внешнем блоке CATCH, она возвращает номер строки ошибки, вызвавшей этот блок CATCH.  
+Во вложенных блоках CATCH функция `ERROR_LINE` возвращает номер строки ошибки, связанной с тем блоком CATCH, в котором она была вызвана. Например, блок CATCH конструкции TRY…CATCH может содержать вложенную конструкцию TRY…CATCH. Внутри вложенного блока CATCH функция `ERROR_LINE` возвращает номер строки ошибки, вызвавшей вложенный блок CATCH. Если функция `ERROR_LINE` выполняется во внешнем блоке CATCH, она возвращает номер строки ошибки, вызвавшей этот блок CATCH.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-errorline-in-a-catch-block"></a>A. Использование функции ERROR_LINE в блоке CATCH  
- В следующем примере кода приведена инструкция `SELECT`, формирующая ошибку деления на ноль. Возвращается номер строки, в которой возникла ошибка.  
+В приведенном ниже примере кода показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Функция `ERROR_LINE` возвращает номер строки, где произошла ошибка.  
   
 ```  
 BEGIN TRY  
@@ -81,9 +78,23 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+   
+```  
+Result 
+-----------
+
+(0 row(s) affected)
+
+ErrorLine
+-----------
+4
+
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-errorline-in-a-catch-block-with-a-stored-procedure"></a>Б. Использование функции ERROR_LINE в блоке CATCH с хранимой процедурой  
- В коде следующего примера приведена хранимая процедура, вызывающая ошибку деления на 0. `ERROR_LINE` возвращает номер строки хранимой процедуры, в которой возникла ошибка.  
+В приведенном ниже примере показана хранимая процедура, которая создает ошибку деления на 0. Функция `ERROR_LINE` возвращает номер строки, где произошла ошибка.  
   
 ```  
 -- Verify that the stored procedure does not already exist.  
@@ -91,7 +102,7 @@ IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL
     DROP PROCEDURE usp_ExampleProc;  
 GO  
   
--- Create a stored procedure that   
+-- Create a stored procedure that  
 -- generates a divide-by-zero error.  
 CREATE PROCEDURE usp_ExampleProc  
 AS  
@@ -106,10 +117,24 @@ BEGIN CATCH
     SELECT ERROR_LINE() AS ErrorLine;  
 END CATCH;  
 GO  
+``` 
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+   
 ```  
-  
+-----------
+
+(0 row(s) affected)
+
+ErrorLine
+-----------
+7
+
+(1 row(s) affected)  
+   
+```
+
 ### <a name="c-using-errorline-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование функции ERROR_LINE в блоке CATCH с другими средствами обработки ошибок  
- В следующем примере кода приведена инструкция `SELECT`, формирующая ошибку деления на ноль. Вместе с номером строки, в которой возникла ошибка, возвращаются сведения, касающиеся этой ошибки.  
+В приведенном ниже примере кода показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Функция `ERROR_LINE` возвращает номер строки, где произошла ошибка, и сведения, связанные с этой ошибкой.  
   
 ```  
 BEGIN TRY  
@@ -126,7 +151,21 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
+``` 
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+   
 ```  
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState ErrorProcedure ErrorLine ErrorMessage
+----------- ------------- ---------- -------------- --------- ---------------------------------
+8134        16            1          NULL           3         Divide by zero error encountered.
+
+(1 row(s) affected)
+  
+```
   
 ## <a name="see-also"></a>См. также:  
  [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)   

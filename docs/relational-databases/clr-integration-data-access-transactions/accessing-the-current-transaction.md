@@ -1,13 +1,11 @@
 ---
-title: Доступ к текущей транзакции | Документы Microsoft
+title: Доступ к текущей транзакции | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,16 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b157a9c72533d6c92f71ddc93e7c8023eab6edc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66d123ca233bc71ce401fb7d76fe5b1fc29e0870
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358756"
 ---
 # <a name="accessing-the-current-transaction"></a>Доступ к текущей транзакции
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Если транзакция является активной в той точке, в которой кода среды CLR (CLR) на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — введены, транзакция предоставляется с помощью **System.Transactions.Transaction** класса. Для доступа к текущей транзакции используется свойство **Transaction.Current** . В большинстве случаев в получении явного доступа к транзакции нет необходимости. Что касается подключений к базам данных, то в ADO.NET автоматически происходят проверка **Transaction.Current** при вызове метода **Connection.Open** и явное прикрепление соединения к этой транзакции (если только в строке соединения ключевое слово **Enlist** не задано равным false).  
+  Если транзакция является активной в точке, в какие кода среды CLR (CLR) под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — введено, то транзакция становится доступной через **System.Transactions.Transaction** класса. Для доступа к текущей транзакции используется свойство **Transaction.Current** . В большинстве случаев в получении явного доступа к транзакции нет необходимости. Что касается подключений к базам данных, то в ADO.NET автоматически происходят проверка **Transaction.Current** при вызове метода **Connection.Open** и явное прикрепление соединения к этой транзакции (если только в строке соединения ключевое слово **Enlist** не задано равным false).  
   
  Необходимость в непосредственном использовании объекта **Transaction** может возникнуть в следующих случаях:  
   
@@ -46,9 +45,9 @@ ms.lasthandoff: 05/03/2018
 ## <a name="canceling-an-external-transaction"></a>Отмена внешней транзакции  
  Внешнюю транзакцию можно отменить из управляемой процедуры или функции следующими способами.  
   
--   Управляемая процедура или функция может возвратить какое-либо значение с помощью выходного параметра. Вызывающий [!INCLUDE[tsql](../../includes/tsql-md.md)] процедуры можно проверить возвращаемое значение и, при необходимости, выполнить **ROLLBACK TRANSACTION**.  
+-   Управляемая процедура или функция может возвратить какое-либо значение с помощью выходного параметра. Вызывающий [!INCLUDE[tsql](../../includes/tsql-md.md)] процедуры можно проверка возвращаемого значения и, при необходимости выполнить **ROLLBACK TRANSACTION**.  
   
--   Управляемая процедура или функция может активизировать пользовательское исключение. Вызывающий [!INCLUDE[tsql](../../includes/tsql-md.md)] может перехватывать исключения, управляемой процедуры или функции в блок try/catch и выполнять процедуры **ROLLBACK TRANSACTION**.  
+-   Управляемая процедура или функция может активизировать пользовательское исключение. Вызывающий [!INCLUDE[tsql](../../includes/tsql-md.md)] можно перехватить исключение, активизируемое управляемой процедурой или функцией в блоке try/catch и выполнить процедуру **ROLLBACK TRANSACTION**.  
   
 -   Управляемая процедура или функция может отменить текущую транзакцию путем вызова метода **Transaction.Rollback** , если соблюдается определенное условие.  
   

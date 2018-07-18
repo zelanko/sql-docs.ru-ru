@@ -1,31 +1,20 @@
 ---
-title: PredictCaseLikelihood (расширения интеллектуального анализа данных) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictCaseLikelihood
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictCaseLikelihood function
-ms.assetid: b00180e5-b2eb-49e2-891d-e39fb378f50a
-caps.latest.revision: 39
-author: Minewiskan
+title: PredictCaseLikelihood (расширения интеллектуального анализа данных) | Документация Майкрософт
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3d9cbe8c92be301fa56c2d5a9f78e741ef5765f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: d8159af8ac4b3c9bf21dcdc68a0cfb30c46e33e5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040312"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,8 +41,8 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Число с плавающей запятой двойной точности в диапазоне от 0 до 1. Число, более близкое к 1, обозначает большую вероятность вхождения варианта в модель; число, близкое к 0, обозначает меньшую вероятность вхождения варианта в модель.  
   
-## <a name="remarks"></a>Замечания  
- По умолчанию, результат **PredictCaseLikelihood** нормализовать функции. Нормализованные значения, как правило, более эффективны, поскольку в варианте увеличивается число атрибутов и разница между необработанными вероятностями двух вариантов существенно уменьшается.  
+## <a name="remarks"></a>Примечания  
+ По умолчанию результат **PredictCaseLikelihood** нормализуется функции. Нормализованные значения, как правило, более эффективны, поскольку в варианте увеличивается число атрибутов и разница между необработанными вероятностями двух вариантов существенно уменьшается.  
   
  Следующее уравнение используется для вычисления нормализованных значений при заданных x и y:  
   
@@ -63,7 +52,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 -   Z = Exp( log(x) – Log(Y))  
   
- Нормализованная = (z / (1 + z))  
+ Нормализовать = (z / (1 + z))  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается правдоподобие вхождения указанного варианта в модель кластеризации, основанную на базе данных [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW.  
@@ -89,11 +78,11 @@ NATURAL PREDICTION JOIN
 |-------------------------|----------------------------|---------------------|  
 |6.30672792729321E-08|6.30672792729321E-08|9.5824454056846E-48|  
   
- Разница между результатами демонстрирует влияние нормализации. Необработанное значение **CaseLikelihood** предполагает, что вероятность варианта примерно на 20 процентов; Однако при нормализации результатов становится ясно, что вероятность варианта является очень низким.  
+ Разница между результатами демонстрирует влияние нормализации. Необработанное значение **CaseLikelihood** предполагает, что вероятность варианта примерно на 20 процентов; тем не менее при нормализации результатов становится ясно, что вероятность варианта, очень мала.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
  [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
   

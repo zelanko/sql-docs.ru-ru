@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907849"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Переопределение первое значение по умолчанию и точность секунды для типа данных Interval
 Если поле SQL_DESC_TYPE Отменить равно C тип datetime или интервал, с помощью вызова **SQLBindCol** или **SQLSetDescField**, поле SQL_DESC_PRECISION (который содержит интервал в секундах следующие значения по умолчанию задано точность):  

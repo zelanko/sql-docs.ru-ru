@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c26a495f590d7543401edceee6438bc7c84da384
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd7665da936022d4e9dc184b7b5ff5fbfa5b3665
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335528"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Диалоговое окно «Создание профиля электронной почты и учетной записи базы данных»
 
@@ -36,14 +36,14 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Нельзя использовать [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] как для обновления существующего профиля или учетной записи компонента Database Mail, так и для настройки больше чем одной учетной записи в профиле. Для выполнения более сложных задач с компонентом Database Mail можно использовать среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или скрипты Transact-SQL. Дополнительные сведения см. в разделе [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md) электронной документации по SQL Server.  
   
-|Имя элемента управления|Description|  
+|Имя элемента управления|Описание|  
 |------------------|-----------------|  
 |**Имя профиля**|Введите имя нового профиля компонента Database Mail. Это имя должно быть уникальным среди всех профилей компонентов Database Mail, настроенных для базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> После создания профиля можно выбрать страницу **База данных** в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].|  
 |**Имя учетной записи**|Введите имя новой учетной записи компонента Database Mail, связанной с этим профилем. Это имя должно быть уникальным среди всех учетных записей компонентов Database Mail, настроенных для базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Эта учетная запись не соответствует учетной записи [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или учетной записи пользователя Windows.|  
   
 ## <a name="outgoing-smtp-mail-server"></a>Исходящий (SMTP) почтовый сервер  
   
-|Имя элемента управления|Description|  
+|Имя элемента управления|Описание|  
 |------------------|-----------------|  
 |**Адрес электронной почты**|Введите адрес электронной почты для этой учетной записи. Это адрес электронной почты, с которого отправляются электронные письма, и он должен соответствовать формату *имя_электронной_почты*@*имя_домена*. Пример адреса электронной почты: sales@contoso.com.|  
 |**Отображаемое имя**|Необязательный параметр. Введите имя, которое необходимо отображать в электронных сообщениях, отправляемых от имени этой учетной записи. Пример такого отображаемого имени: Contoso Sales Group.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="smtp-authentication"></a>Проверка подлинности SMTP  
  Почту компонента Database Mail можно отправлять с использованием учетных данных [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], других предоставленных учетных данных или анонимно. Рекомендуется создать специальную учетную запись для компонента Database Mail, если сервер электронной почты запрашивает проверку подлинности. У этой учетной записи пользователя должны быть минимальные разрешения, и она не должна использоваться в других целях.  
   
-|Имя элемента управления|Description|  
+|Имя элемента управления|Описание|  
 |------------------|-----------------|  
 |**Проверка подлинности Windows с использованием учетных данных службы компонента Database Engine**|Укажите компонент Database Mail, который должен использовать учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для проверки подлинности на SMTP-сервере.|  
 |**обычная проверка подлинности**|Укажите, что компонент Database Mail будет использовать отдельные имя пользователя и пароль для проверки подлинности на SMTP-сервере. Эта информация будет использоваться только для проверки подлинности на почтовом сервере, при этом учетная запись не обязана соответствовать пользователю [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или пользователю компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  

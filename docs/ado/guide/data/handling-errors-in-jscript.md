@@ -2,7 +2,6 @@
 title: Обработка ошибок в JScript | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a1e965f08a9176da74724b549dd411065ca549c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcebaef8a36961a5c28af4eee80fca4d088b9ed5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270873"
 ---
 # <a name="handling-errors-in-jscript"></a>Обработка ошибок в JScript
 Ваш Microsoft® JScript® код должен проверить **число** свойство **подключения** объекта **ошибки** коллекции. Если значение больше 0, прохода по коллекции и вывода значений, как и в любом другом языке.  

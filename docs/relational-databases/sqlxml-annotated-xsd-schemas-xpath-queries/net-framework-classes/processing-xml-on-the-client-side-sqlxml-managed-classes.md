@@ -1,5 +1,5 @@
 ---
-title: Обработка XML на стороне клиента (управляемые классы SQLXML) | Документы Microsoft
+title: Обработка XML-кода на стороне клиента (управляемые классы SQLXML) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ea74968bc1776aecab380f5566abbe9a1e64ac5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972047"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Обработка XML-кода на стороне клиента (управляемые классы SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В этом примере показано использование свойства ClientSideXml. Приложение выполняет хранимую процедуру на сервере. Результат хранимой процедуры (набор строк из двух столбцов) обрабатывается на стороне клиента для создания XML-документа.  
   
- Следующие GetContacts хранимая процедура возвращает **FirstName** и **LastName** сотрудников в таблице Person.Contact в базе данных AdventureWorks.  
+ Следующие GetContacts хранимая процедура возвращает **FirstName** и **LastName** сотрудников из таблицы Person.Contact в базе данных AdventureWorks.  
   
 ```  
 USE AdventureWorks  
@@ -44,7 +45,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Это приложение C# выполняет хранимую процедуру с параметром FOR XML AUTO при указании значений CommandText. В приложении, ClientSideXml объекта SqlXmlCommand свойству значение true. Это позволяет выполнять существующие хранимые процедуры, возвращающие наборы строк, и применить к ним преобразование XML на стороне клиента.  
+ Это приложение C# выполняет хранимую процедуру и задает параметр FOR XML AUTO при указании значение CommandText. В приложении, ClientSideXml SqlXmlCommand объекта свойству значение true. Это позволяет выполнять существующие хранимые процедуры, возвращающие наборы строк, и применить к ним преобразование XML на стороне клиента.  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения.  

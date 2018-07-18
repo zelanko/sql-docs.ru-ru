@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b01efe6bb6e98aef009349175cd73a90353e4e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4feb5d83ff4d149e16fc6ad7538b76f5275bdf3b
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401446"
 ---
 # <a name="integration-services-user-interface"></a>Пользовательский интерфейс служб Integration Services
   Дополнительно к областям конструктора на вкладках конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] пользовательский интерфейс предоставляет доступ к следующим окнам и диалоговым окнам для добавления возможностей в пакеты и задания настроек объектов пакета.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020751"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
   Перейдите на вкладку **Настройки** в диалоговом окне **Свойства набора данных** , чтобы изменить параметры данных для запроса, такие как параметры сортировки и обработка промежуточных итогов как подробных данных. Дополнительные сведения о параметрах сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md) в [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  

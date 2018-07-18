@@ -2,7 +2,6 @@
 title: Использование ADO для публикации в Интернете | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4adf31cd66246cd078bb31dc99ac5e8025f04636
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3261fc8eb910fb0b7b627b11a3bc89bb682f01bb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273213"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Использование ADO для публикации в Интернете
 [Поставщик OLE DB для публикаций в Интернете](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) показывает конкретный пример обращения к разнородных данных с помощью ADO. Несмотря на то, что в примерах этого раздела будет характерно использование службу публикации в Интернете, принципы показано должна быть одинаковой при использовании ADO с другими поставщиками для разнородных данных, такого как поставщик хранилища электронной почты.  

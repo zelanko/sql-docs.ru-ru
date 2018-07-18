@@ -1,14 +1,13 @@
 ---
-title: sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Документы Microsoft
+title: sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -19,27 +18,28 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cfc242de943ef2f4cf88b86a789fa88f84a6dd51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: cd8793713fafdaa6a92785eecd9c269c42fae307
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36785209"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Содержит по одной строке для каждой физической базы данных на вычислительном узле. Статистические данные физической базы данных, чтобы получить подробные сведения о базах данных. Для объединения данных, присоединение `sys.pdw_nodes_pdw_physical_databases` для `sys.pdw_database_mappings` и `sys.databases` таблицы.  
+  Содержит по строке для каждой физической базы данных на вычислительном узле. Статистические сведения о физической базы данных, чтобы получить подробные сведения о базах данных. Для объединения данных, присоединить `sys.pdw_nodes_pdw_physical_databases` для `sys.pdw_database_mappings` и `sys.databases` таблицы.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|Идентификатор объекта для базы данных. Обратите внимание, что это значение не совпадает с database_id в [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представления.|  
-|physical_name|**sysname**|Физическое имя базы данных на консоль и вычислительных узлах. Это значение является такой же, как значение в столбце physical_name [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) представления.|  
+|database_id|**int**|Идентификатор объекта для базы данных. Обратите внимание, что это значение не то же, что database_id в [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представления.|  
+|physical_name|**sysname**|Физическое имя базы данных на оболочки/вычислительных узлов. Это значение совпадает с значение в столбце physical_name [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) представления.|  
 |pdw_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.|  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-returning"></a>A. Возврат  
- Следующий запрос возвращает имя и идентификатор каждой базы данных в master и соответствующее имя базы данных на каждом вычислительном узле.  
+ Следующий запрос возвращает имя и идентификатор каждой базы данных в master и имя соответствующей базы данных на каждом вычислительном узле.  
   
 ```  
 SELECT D.database_id AS DBID_in_master, D.name AS UserDatabaseName,   
@@ -52,8 +52,8 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>Б. Использование sys.pdw_nodes_pdw_physical_databases для сбора объекта подробные сведения  
- Следующий запрос отображает сведения об индексах и содержит полезные сведения о базе данных объекты принадлежат объекты в базе данных.  
+### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>Б. С помощью sys.pdw_nodes_pdw_physical_databases для сбора информации подробные объекта  
+ Следующий запрос отображает сведения об индексах и включает полезные сведения о базе данных, что объекты принадлежат объекты в базе данных.  
   
 ```  
 SELECT D.name AS UserDatabaseName, D.database_id AS DBIDinMaster,  
@@ -69,8 +69,8 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>В. Определение состояния шифрования с помощью sys.pdw_nodes_pdw_physical_databases  
- Следующий запрос выдает состояние шифрования базы данных AdventureWorksPDW2012.  
+### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>В. С помощью sys.pdw_nodes_pdw_physical_databases определение состояния шифрования  
+ Следующий запрос предоставляет состояние шифрования базы данных AdventureWorksPDW2012.  
   
 ```  
 WITH dek_encryption_state AS   

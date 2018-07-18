@@ -2,7 +2,6 @@
 title: HelpContext, HelpFile свойства | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0fdd4316a0d1ca1e75b074590755a65267e93ca0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 708ce57e129ed84dcbafa837916c299a76739e0d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278913"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext HelpFile свойства
 Указывает файл справки и раздел, связанный с [ошибка](../../../ado/reference/ado-api/error-object.md) объекта.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **HelpFile** возвращает **строка** значение, результатом которого является полностью разрешенной путь к файлу справки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если файл справки указан в **HelpFile** свойства **HelpContext** свойство используется для автоматического отображения раздела справки, он определяет. Если отсутствует соответствующий раздел справки отсутствует, **HelpContext** свойство возвращает ноль и **HelpFile** свойство возвращает строку нулевой длины (»»).  
   
 ## <a name="applies-to"></a>Объект применения  

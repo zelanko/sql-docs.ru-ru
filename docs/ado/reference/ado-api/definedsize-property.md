@@ -2,7 +2,6 @@
 title: Свойство DefinedSize | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b84eb083ba442fc214d63b518c8bab0c001aa229
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b060258acc6e267ff9e518aa4591bdfd0eef69e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277563"
 ---
 # <a name="definedsize-property"></a>Свойство DefinedSize
 Показывает объем данных [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  Для типов данных, которые имеют длину, он равен ~ 0 (Побитовый оператор, значение не 0; все биты устанавливаются в 1).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **DefinedSize** свойства, чтобы определить объем данных **поле** объекта.  
   
  **DefinedSize** и [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) свойства отличаются. Например, рассмотрим **поле** объект с объявленным типом **adVarChar** и **DefinedSize** значение свойства 50, содержащей один символ. **ActualSize** он возвращает значение свойства — это длина в байтах один символ.  

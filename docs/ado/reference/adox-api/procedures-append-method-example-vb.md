@@ -2,7 +2,6 @@
 title: Процедуры добавления пример метода (Visual Basic) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46af14e62769073be33f891bc11a7bf012c8924b
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 6cd39f90ccd8aef159cfd88c5dc921b802a54bae
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "32802597"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286633"
 ---
 # <a name="procedures-append-method-example-vb"></a>Процедуры добавления пример метода (Visual Basic)
 Следующий код демонстрирует использование [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md) коллекции [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) метод для создания новой процедуры в базовом источнике данных.  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 28e930f597be51900f1dc21315403eee14e6c58b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5212637d347b2ad85d94e9bcbcb84fb935469b0
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328858"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Производные иерархии (Master Data Services)
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
  В производной иерархии можно выделить связь между «Продуктом» и «Подкатегорией» и затем между «Подкатегорией» и «Категорией». При просмотре элементов в этой иерархии каждый уровень дерева содержит элементы из одной сущности.  
   
- ![Пример производной иерархии от узла "Горный велосипед"](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Пример производной иерархии от узла "Горный велосипед"")  
+ ![Пример производной иерархии от узла "Горный велосипед"](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Пример производной иерархии от узла \"Горный велосипед\"")  
   
  Иерархия такого типа предотвращает перемещение элемента на недопустимый уровень. Например, можно переместить велосипед Road-650 из одной подкатегории, «Дорожные велосипеды», в другую, «Горные велосипеды». Нельзя перенести Road-650 напрямую внутри категории, например 1 {велосипеды}. Каждый раз при перемещении элемента в дереве иерархии значение атрибута на основе домена для элемента изменяется, отражая это перемещение.  
   

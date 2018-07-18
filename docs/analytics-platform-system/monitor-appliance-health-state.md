@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539054"
 ---
 # <a name="monitor-appliance-health-state"></a>Монитор состояния работоспособности устройства
 В этой статье объясняется, как осуществлять мониторинг состояния устройства система платформы аналитики с помощью консоли администрирования, или путем непосредственного запроса к динамическим административным представлениям Parallel Data Warehouse. 

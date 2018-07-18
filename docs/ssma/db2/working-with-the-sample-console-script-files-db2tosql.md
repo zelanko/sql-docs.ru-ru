@@ -1,8 +1,6 @@
 ---
 title: Работа с файлами скриптов образца консоли (DB2ToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a756a39a82a607eadd26601006f70dba36391c0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff200ae57ecbfe426b0ccdf7e9ed71af4cfc8bc2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775470"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Работа с файлами скриптов образца консоли (DB2ToSQL)
 Несколько файлов образец предоставляется вместе с продуктом использования и справочник по пользовательскому. Этот раздел описывает способ легко настроить эти сценарии, в соответствии с потребностями пользователя.  
@@ -77,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  **ConversionAndDataMigrationSample.xml:** в этом примере пользователь может выполнить миграцию комплексных преобразование для переноса данных. Список значения обязательных атрибутов, которые потребуется изменить перечисленные ниже.  
   
-    |Имя команды|Описание|Attribute|  
+    |Имя команды|Описание|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Сопоставление схемы базы данных-источника в целевую схему.|`source-schema:` Указывает, требуется для преобразования базы данных-источника.<br /><br />`sql-server-schema`: Указывает, перемещаются в целевой базе данных|  
     |`convert-schema`|Выполняет преобразование схемы из источника в целевую схему.<br /><br />Если пользователь имеет для оценки нескольких объектов и баз данных, он можно указать несколько `metabase-object` узлов, как показано в `convert-schema` 4 пример команды консоли образца файла скрипта.|`object-name`Для указания базы данных-источника или имя, которое требуется для преобразования объекта. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в `object-name`|  

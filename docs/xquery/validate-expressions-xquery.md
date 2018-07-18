@@ -1,5 +1,5 @@
 ---
-title: Проверка выражений (XQuery) | Документы Microsoft
+title: Проверка выражений (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc8f8006679709e7ea8f9d73aed1f3757072ad53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036702"
 ---
 # <a name="validate-expressions-xquery"></a>Проверка выражений (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  В этой реализации **проверки** выражение не поддерживается. Результаты выражений конструкции XQuery всегда нетипизированы. Если результат выражения XQuery должен быть определен, используется выражение SQL CAST для приведения результата для **xml** тип данных с предпочтительной коллекцией схемы.  
+  В данном случае **проверки** выражение не поддерживается. Результаты выражений конструкции XQuery всегда нетипизированы. Если результат выражения XQuery должен быть определен, используется выражение SQL CAST для приведения результата к **xml** тип данных с предпочтительной коллекцией схемы.  
   
 ## <a name="see-also"></a>См. также  
  [Выражения пути &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   

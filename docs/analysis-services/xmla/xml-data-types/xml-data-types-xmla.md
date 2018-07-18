@@ -1,5 +1,5 @@
 ---
-title: Типы данных XML (XML для Аналитики) | Документы Microsoft
+title: Типы данных XML (XML для Аналитики) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c52717a6f061f4708b2d3e46c6d34f837b2039af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34573786"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981136"
 ---
 # <a name="xml-data-types-xmla"></a>Типы данных XML (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34573786"
 |----------------|-----------------|  
 |Логическое значение|Стандартный тип данных XML **boolean** .|  
 |Decimal|Стандартный тип данных XML **decimal** .|  
-|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|Пространство имен элемента **root** . Это пространство имен возвращается в том случае, когда команды XML для Аналитики не возвращающие результатов, так как команда XMLA обычно не возвращающие результатов или произошла ошибка на экземпляре служб Analysis Services при выполнении команды XML для Аналитики.|  
+|[EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)|Пространство имен элемента **root** . Это пространство имен возвращается в том случае, если команды XML для Аналитики не возвращающие результатов, так как команда XMLA обычно не возвращает результат или произошла ошибка на экземпляре служб Analysis Services при обработке команды XMLA.|  
 |[EnumString](../../../analysis-services/xmla/xml-data-types/enumstring-data-type-xmla.md)|Набор именованных строковых констант для данного перечислителя.|  
 |Целочисленный|Стандартный тип данных XML **int** .|  
 |[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|Многомерные данные, возвращаемые *результат* параметр [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.|  
@@ -38,7 +38,7 @@ ms.locfileid: "34573786"
  Полные описания стандартных типов данных XML см. в соответствующей рекомендации консорциума World Wide Web (WC3).  
   
 ## <a name="see-also"></a>См. также
- [XML-элементы &#40;XML для Аналитики&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+ [XML-элементов &#40;XML для Аналитики&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [XML для аналитики &#40;XMLA&#41; ссылки](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   
   

@@ -1,13 +1,12 @@
 ---
-title: Установление подключения к источнику данных | Документы Microsoft
+title: Подключения к источнику данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-provider
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,28 +16,28 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5e8cb2a3d78fabb44f661b3b16883377464bc99c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c11867c12a05656c74fa01ebc05a7a805bdac71
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425973"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Устанавливает соединение с источником данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Чтобы получить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента потребитель сначала необходимо создать экземпляр объекта источника данных путем вызова **CoCreateInstance** метод. Каждый поставщик OLE DB определяется уникальным идентификатором класса (CLSID). Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, идентификатор класса — CLSID_SQLNCLI10. Можно также использовать символ SQLNCLI_CLSID, который разрешает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, который используется в файле sqlncli.h, на которую ссылается.  
+  Чтобы получить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, потребитель сначала необходимо создать экземпляр объекта источника данных путем вызова **CoCreateInstance** метод. Каждый поставщик OLE DB определяется уникальным идентификатором класса (CLSID). Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, идентификатор класса — CLSID_SQLNCLI10. Можно также использовать символ SQLNCLI_CLSID, который будет решать задачи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, который используется в файле sqlncli.h, на которую есть ссылки.  
   
- Объект источника данных предоставляет **IDBProperties** интерфейс, который потребитель использует обычную проверку подлинности данные, такие как имя сервера, имя базы данных, идентификатор пользователя и пароль. **IDBProperties::SetProperties** метод вызывается для установки этих свойств.  
+ Объект источника данных предоставляет **IDBProperties** интерфейс, который потребитель использует для предоставления данных обычной проверки подлинности, такие как имя сервера, имя базы данных, идентификатор пользователя и пароль. **IDBProperties::SetProperties** метод вызывается для установки этих свойств.  
   
  Если на компьютере выполняется несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имя сервера указывается как «Имя_Сервера\Имя_Экземпляра».  
   
- Объект источника данных также предоставляет **IDBInitialize** интерфейса. После задания свойства подключения к источнику данных устанавливается посредством вызова **IDBInitialize::Initialize** метод. Например:  
+ Объект источника данных также предоставляет **IDBInitialize** интерфейс. После установки свойств подключения к источнику данных устанавливается посредством вызова **IDBInitialize::Initialize** метод. Например:  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   
@@ -48,7 +47,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- Этот вызов **CoCreateInstance** создает единственный объект класса, связанного с идентификатором CLSID_SQLNCLI10 (идентификатор CLSID, связанный с данными и код, который будет использоваться для создания объекта). IID_IDBInitialize представляет собой ссылку на идентификатор интерфейса (**IDBInitialize**) для связи с объектом.  
+ Этот вызов **CoCreateInstance** создает единственный объект класса, связанного с идентификатором CLSID_SQLNCLI10 (идентификатор CLSID, связанный с данными и кодом, который будет использоваться для создания объекта). IID_IDBInitialize представляет собой ссылку на идентификатор интерфейса (**IDBInitialize**) для взаимодействия с объектом.  
   
  Далее приведен образец функции, которая проводит инициализацию и устанавливает соединение с источником данных.  
   
@@ -111,6 +110,6 @@ void InitializeAndEstablishConnection() {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание приложения поставщика OLE DB для собственного клиента SQL Server](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
+ [Создание приложения поставщика OLE DB для SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

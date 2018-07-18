@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_tables (Transact-SQL) | Документы Microsoft
+title: sp_help_fulltext_tables (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 855a9a5bde98703909a01b44721c5972c1eefff2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019882"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   Возвращает список таблиц, зарегистрированных для полнотекстового индексирования.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте **sys.fulltext_indexes** представления каталога. Дополнительные сведения см. в разделе [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте **sys.fulltext_indexes** вместо этого представление каталога. Дополнительные сведения см. в разделе [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +49,10 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
   
 ## <a name="arguments"></a>Аргументы  
  [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- Имя полнотекстового каталога. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL. Если *fulltext_catalog_name* опущен или имеет значение NULL, возвращаются все таблицы индексированных полнотекстового, связанные с базой данных. Если *fulltext_catalog_name* указан, но *table_name* опущен или имеет значение NULL, данные полнотекстового индекса извлекаются для каждого полнотекстового индексированного таблицы, связанной с этим каталогом. Если оба *fulltext_catalog_name* и *table_name* указано, возвращается строка, если *table_name* связан с *fulltext_catalog_name*; в противном случае возникает ошибка.  
+ Имя полнотекстового каталога. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL. Если *fulltext_catalog_name* опущен или имеет значение NULL, возвращаются все таблицы индексированных полнотекстового поиска, связанный с базой данных. Если *fulltext_catalog_name* указан, но *table_name* опущен или имеет значение NULL, данные полнотекстового индекса извлекаются для каждой таблицы индексом полнотекстового поиска, связанный с этим каталогом. Если оба *fulltext_catalog_name* и *table_name* указаны, строка возвращается в том случае, если *table_name* связан с *fulltext_catalog_name*; в противном случае возникает ошибка.  
   
  [  **@table_name=**] **"***table_name***"**  
- Одно- или двухкомпонентное имя таблицы, для которой запрашиваются полнотекстовые метаданные. *имя_таблицы* — **nvarchar(517)**, значение по умолчанию NULL. Если только *table_name* указано, только строки, относящиеся к *table_name* возвращается.  
+ Одно- или двухкомпонентное имя таблицы, для которой запрашиваются полнотекстовые метаданные. *TABLE_NAME* — **nvarchar(517)**, со значением по умолчанию NULL. Если только *table_name* указано, только строка, соответствующая аргументу *table_name* возвращается.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

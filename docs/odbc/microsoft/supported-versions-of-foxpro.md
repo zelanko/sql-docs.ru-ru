@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905479"
 ---
 # <a name="supported-versions-of-foxpro"></a>Поддерживаемые версии FoxPro
 Можно использовать Microsoft® Visual FoxPro® ODBC Driver для доступа к данным, которые хранятся в таблицах FoxPro. Поддерживаются следующие версии FoxPro данных:  

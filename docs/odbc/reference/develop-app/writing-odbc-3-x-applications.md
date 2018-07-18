@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919150"
 ---
 # <a name="writing-odbc-3x-applications"></a>Написание ODBC 3.x приложений
 Когда ODBC 2. *x* обновить приложение ODBC 3. *x*, должны быть написаны таким образом, что она работает с обоих ODBC 2. *x* и 3. *x* драйверы. Приложение должно учитываться код условия, чтобы воспользоваться всеми преимуществами ODBC 3. *x* функции.  

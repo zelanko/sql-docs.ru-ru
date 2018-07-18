@@ -1,5 +1,5 @@
 ---
-title: sys.trace_event_bindings (Transact-SQL) | Документы Microsoft
+title: sys.trace_event_bindings (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,17 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 287f5cb11acb3ddf23b0a1f77f4039a97b9da9ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981436"
 ---
 # <a name="systraceeventbindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Sys.trace_event_bindings** представление каталога содержит список всех используемых сочетаний событий и столбцов. Для каждого события, перечисленные в **trace_event_id** столбца, все доступные столбцы перечислены в **trace_column_id** столбца. При наступлении того или иного события не все доступные столбцы заполнены данными. Для данной версии компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] указанные ниже значения не изменяются.  
+  **Sys.trace_event_bindings** представление каталога содержит список всех используемых сочетаний событий и столбцов. Для каждого события, перечисленные в **trace_event_id** столбец, все доступные столбцы перечислены в **trace_column_id** столбца. При наступлении того или иного события не все доступные столбцы заполнены данными. Для данной версии компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] указанные ниже значения не изменяются.  
   
- Полный список поддерживаемых событий трассировки см. в разделе [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Полный список поддерживаемых событий трассировки, см. в разделе [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представления каталога расширенных событий.  

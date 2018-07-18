@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035571"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>Элементы MSReportServer_ConfigurationSetting
   Класс MSReportServer_ConfigurationSetting содержит указанные ниже свойства и методы.  

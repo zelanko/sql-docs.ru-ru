@@ -2,10 +2,10 @@
 title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Документы Microsoft
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 057e677242ad12cb9df8a669c129b75c3cb67f2c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 936924540c5c55f8e333a64d794e54af098f7279
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690197"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Возвращает указатель на драйвер OLE DB для SQL Server SSERRORINFO структура, содержащая [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сведения об ошибке.  
   
@@ -60,7 +63,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  Драйвер OLE DB для SQL Server не удалось выделить достаточно памяти для выполнения запроса.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Драйвер OLE DB для SQL Server выделяет память для строк SSERRORINFO и olechar, КОТОРЫЕ возвращаются переданными пользователем указателями. Потребитель должен освободить эту память с помощью **IMalloc::Free** метод, когда он больше не требуется доступ к данным ошибки.  
   
  Структура SSERRORINFO определена следующим образом.  
@@ -79,7 +82,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Член|Description|  
+|Член|Описание|  
 |------------|-----------------|  
 |*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Это сообщение возвращается через **IErrorInfo::GetDescription** метод.|  
 |*pwszServer*|Имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], где произошла ошибка.|  
@@ -91,8 +94,8 @@ SSERRORINFO;
   
  Указатели в структуре ссылаться адреса в строке, возвращенной в *ppErrorStrings* аргумент.  
   
-## <a name="see-also"></a>См. также:  
- [ISQLServerErrorInfo & #40; OLE DB & #41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
- [Инструкция RAISERROR & #40; Transact-SQL & #41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [RAISERROR (Transact-SQL)](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

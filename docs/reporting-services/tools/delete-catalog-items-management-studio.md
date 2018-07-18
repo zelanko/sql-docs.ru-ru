@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030031"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Удаление объектов из каталога (среда Management Studio)
   Используйте эту страницу для удаления общих расписаний и определений ролей.  

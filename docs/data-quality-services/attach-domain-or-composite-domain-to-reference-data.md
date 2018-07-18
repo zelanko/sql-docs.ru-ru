@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d3a0e0e800fde25fcb2c7bc982e9d1a0490bd81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d45174da7a0d8792229051a9f6cdb486b64e8343
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309823"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Добавление домена или составного домена к ссылочным данным
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
     3.  Нажмите кнопку **ОК** , чтобы сохранить изменения и закрыть диалоговое окно **Каталог поставщиков ссылочных данных в сети** .  
   
-         ![Диалоговое окно "Каталог поставщиков эталонных данных в сети"](../data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Диалоговое окно "Каталог поставщиков эталонных данных в сети"")  
+         ![Диалоговое окно "Каталог поставщиков эталонных данных в сети"](../data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Диалоговое окно \"Каталог поставщиков эталонных данных в сети\"")  
   
         > [!NOTE]  
         >  -   В диалоговом окне **Каталог поставщиков ссылочных данных в сети** в узле **DataMarket Data Quality Services** содержатся все поставщики служб ссылочных данных, на которые пользователь подписан в Windows Azure Marketplace. Если в DQS настроены непосредственные сетевые сторонние поставщики служб ссылочных данных, они включены в другой узел с именем **Сторонние непосредственные сетевые поставщики** (в данный момент этот узел недоступен, так как в DQS прямые сетевые сторонние поставщики служб ссылочных данных не настроены).  

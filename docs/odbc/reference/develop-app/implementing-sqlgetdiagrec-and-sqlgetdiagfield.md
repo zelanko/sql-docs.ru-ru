@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911197"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Реализация SQLGetDiagRec и SQLGetDiagField
 **SQLGetDiagRec** и **SQLGetDiagField** реализуются диспетчера драйверов и каждого драйвера. Диспетчер драйверов драйверу Ведение диагностические записи для каждой среды, подключения, инструкции и дескриптора и освободить эти записи только в том случае, если будет вызвана другая функция с дескриптором или дескриптор освобождается.  

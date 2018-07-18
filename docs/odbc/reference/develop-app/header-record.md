@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908959"
 ---
 # <a name="header-record"></a>Запись заголовка
 Поля в заголовочной записи содержат общие сведения о выполнении функции, включая код возврата, число строк, число записей состояния и тип выполняемой инструкции. Заголовочная запись создается всегда, если функция возвращает SQL_INVALID_HANDLE. Полный список полей в заголовочной записи см. в разделе [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) описание функции.

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026221"
 ---
 # <a name="programming-amo-fundamental-objects"></a>Программирование фундаментальных объектов AMO
   Фундаментальные объекты, как правило, являются простыми и понятными. Чаще всего пользователь создает эти объекты и их экземпляры, а затем, когда они больше не нужны, отключается от них. К фундаментальным классам относятся следующие объекты: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, и <xref:Microsoft.AnalysisServices.DataSourceView>. Единственным сложным объектом среди фундаментальных объектов AMO является <xref:Microsoft.AnalysisServices.DataSourceView>, которому необходимы подробные данные для построения абстрактной модели, которая является представлением источника данных.  

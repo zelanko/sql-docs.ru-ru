@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905079"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Функции ODBC и драйвер ODBC Visual FoxPro
 Подразделы данного раздела предоставляют краткое описание функций ODBC API и все подробности Visual FoxPro, определяемые.  

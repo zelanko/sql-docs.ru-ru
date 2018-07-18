@@ -1,13 +1,12 @@
 ---
-title: Обработка результатов инструкции (OLE DB) | Документы Microsoft
+title: Результаты инструкции (OLE DB) по обработке | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8162c57738ee978289a90f2898198c9fd6c05d06
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 2f34853f4074eb8436200d6ce13f5666a2ee3434
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34707272"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420573"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Инструкции по обработке результатов (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,13 +32,13 @@ ms.locfileid: "34707272"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Выполнение хранимой процедуры &#40;Using ODBC CALL Syntax&#41; и Обработка кодов возврата и выходных параметров &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [Выполнение хранимой процедуры &#40;Using ODBC CALL Syntax&#41; и Обработка кодов возврата и выходные параметры &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [Выполнение хранимой процедуры &#40;с использованием синтаксиса RPC&#41; и Обработка кодов возврата и выходных параметров &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [Выполнение хранимой процедуры &#40;с использованием синтаксиса RPC&#41; и Обработка кодов возврата и выходные параметры &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [Выполнение определяемой пользователем функции и Обрабатывание кода возврата &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [Выполнение определяемые пользователем функции и Обрабатывание кода возврата &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [Выбор строк из результирующего набора &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
+-   [Выборка строк из результирующего набора &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>См. также  
  [Инструкции по OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

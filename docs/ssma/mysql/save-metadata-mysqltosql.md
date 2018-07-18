@@ -1,8 +1,6 @@
 ---
 title: Сохранение метаданных (MySQLToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f38df2f57bbc8c5e96b77f6883a16c7325cb445
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71431697ed50b56fd3e9867239a4e294146c052a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776600"
 ---
 # <a name="save-metadata--mysqltosql"></a>Сохранение метаданных (MySQLToSQL)
 **Сохранить метаданные** диалоговом окне будет предложено загрузить метаданные в проект SSMA перед сохранением. Это позволяет иметь полный файл проекта, который можно использовать в автономном режиме и отправить другим пользователям, например, сотрудники службы технической поддержки.  

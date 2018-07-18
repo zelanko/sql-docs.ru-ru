@@ -1,5 +1,5 @@
 ---
-title: sys.extended_properties (Transact-SQL) | Документы Microsoft
+title: sys.extended_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,12 +26,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: fb0a4c9692b88ccc895d9aa97f4520cc2d5aea4a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031472"
 ---
-# <a name="extended-properties-catalog-views---sysextendedproperties"></a>Расширенные свойства представления каталога - sys.extended_properties
+# <a name="extended-properties-catalog-views---sysextendedproperties"></a>Расширенные представления каталога свойства — sys.extended_properties
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Возвращает по одной строке для каждого из расширенных свойств в текущей базе данных.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
 |class_desc|**nvarchar(60)**|Описание класса элемента, для которого определено расширенное свойство. Возможен один из следующих вариантов.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> Параметр<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|Идентификатор элемента, для которого определено расширенное свойство, интерпретируемый в соответствии с его классом. Для большинства элементов этот идентификатор отражает сущность, которую представляет класс. Большинство нестандартных идентификаторов интерпретируются следующим образом:<br /><br /> Если столбец class равен 0, то столбец major_id всегда равен 0.<br /><br /> Если столбец class равен 1, 2 или 7, то столбец major_id равен столбцу object_id.|  
 |minor_id|**int**|Вторичный идентификатор элемента, для которого определено расширенное свойство, интерпретируемый в соответствии с его классом. Для большинства элементов содержит 0. В противном случае интерпретируется следующим образом:<br /><br /> Если столбец class = 1, то столбец minor_id равен столбцу column_id для столбцов и 0 для объектов.<br /><br /> Если столбец class = 2, то столбец minor_id равен столбцу parameter_id.<br /><br /> Если столбец class = 7, то столбец minor_id равен столбцу index_id.|  
-|имя|**sysname**|Имя свойства, уникальное в пределах столбцов class, major_id и minor_id.|  
+|name|**sysname**|Имя свойства, уникальное в пределах столбцов class, major_id и minor_id.|  
 |value|**sql_variant**|Значение расширенного свойства.|  
   
 ## <a name="permissions"></a>Разрешения  

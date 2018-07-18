@@ -1,5 +1,5 @@
 ---
-title: sp_help_maintenance_plan (Transact-SQL) | Документы Microsoft
+title: sp_help_maintenance_plan (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979056"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +53,10 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
  Задает идентификатор плана обслуживания. *plan_id* — **UNIQUEIDENTIFIER**. Значение по умолчанию — NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если *plan_id* указано, **sp_help_maintenance_plan** возвращает три таблицы: плана и базы данных, а также задание.  
+ Если *plan_id* указано, **sp_help_maintenance_plan** возвращает три таблицы: план, базы данных и заданий.  
   
 ### <a name="plan-table"></a>Таблица Plan  
   
@@ -83,13 +84,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 |Имя столбца|Описание|  
 |-----------------|-----------------|  
-|**job_id**|Идентификатор всех заданий, связанных с планом обслуживания. *Аргумент job_id* — **uniqueidentifier**.|  
+|**job_id**|Идентификатор всех заданий, связанных с планом обслуживания. *job_id* — **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_help_maintenance_plan** в **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_help_maintenance_plan**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_help_maintenance_plan**.  
   
 ## <a name="examples"></a>Примеры  
  В этом примере возвращаются сведения описательного характера о плане обслуживания FAD6F2AB-3571-11D3-9D4A-00C04FB925FC.  

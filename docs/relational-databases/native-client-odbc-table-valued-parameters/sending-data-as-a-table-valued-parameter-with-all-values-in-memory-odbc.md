@@ -1,34 +1,33 @@
 ---
-title: Отправка данных в виде возвращающих табличные значения параметра со всеми значениями в памяти (ODBC) | Документы Microsoft
+title: Отправка данных в виде табличное значение параметра со всеми значениями в памяти (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee213454caff486478eba22042dbeb04d32eec09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 038a507b3a5fc67c80903fce3691755ad4aac1e2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411053"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  В этом разделе описывается передача данных хранимой процедуре в виде возвращающего табличное значение параметра, когда все значения хранятся в памяти. Еще один пример, демонстрирующий табличное значение параметров см. в разделе [использование возвращающих табличные значения параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  В этом разделе описывается передача данных хранимой процедуре в виде возвращающего табличное значение параметра, когда все значения хранятся в памяти. Другой пример, демонстрирующий возвращающих табличные значения параметров, см. в разделе [параметров, возвращающих &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Предварительные требования  
  Эта процедура предполагает, что на сервере выполнен следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -94,7 +93,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  Второй этап процесса привязки параметра состоит в связывании столбцов для возвращающего табличное значение параметра. Первоначально фокус устанавливается на порядковом номере возвращающего табличное значение параметра. Затем столбцы табличного значения связываются с помощью SQLBindParameter так же, как если бы они были параметрами хранимой процедуры, но с порядковыми номерами столбцов для ParameterNumber. Если бы имелось большее число возвращающих табличное значение параметров, мы бы по очереди передавали фокус каждому из них и связывали их столбцы. В заключение фокус параметра сбрасывается в 0.  
+3.  Второй этап процесса привязки параметра состоит в связывании столбцов для возвращающего табличное значение параметра. Первоначально фокус устанавливается на порядковом номере возвращающего табличное значение параметра. Затем столбцы табличного значения связываются с помощью SQLBindParameter так же, как если бы они были параметрами хранимой процедуры, но также указываются порядковые номера столбцов для ParameterNumber. Если бы имелось большее число возвращающих табличное значение параметров, мы бы по очереди передавали фокус каждому из них и связывали их столбцы. В заключение фокус параметра сбрасывается в 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -134,6 +133,6 @@ from @Items
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Примеры программирования с использованием ODBC табличное значение параметра](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
+ [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

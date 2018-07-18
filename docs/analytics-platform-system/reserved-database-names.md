@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539454"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>Имена баз данных зарезервированные в параллельное хранилище данных
 Зарезервированное имя базы данных — это имя, которое не может быть назначен пользовательской базы данных в SQL Server PDW.  

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_drop_trusted_assembly (Transact-SQL) | Документы Microsoft
+title: sys.sp_drop_trusted_assembly (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ffdc0c87a798b23ce25e544b26ea63132495b53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971856"
 ---
 # <a name="sysspdroptrustedassembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +49,9 @@ sp_drop_trusted_assembly
 ## <a name="arguments"></a>Аргументы
 
 [ @hash =] '*значение*"  
-Хэш-значение SHA2_512 сборки, которую необходимо удалить из списка доверенных сборок для сервера. Доверенные сборки могут загружаться при включении строгой безопасности среды clr, даже если сборка не подписана или база данных не помечена как заслуживающая доверия.
+Хэш-значение SHA2_512 сборки, которую следует удалить из списка доверенных сборок для сервера. Загружает доверенных сборок при включении строгая безопасность среды clr, даже в том случае, если сборка не имеет знака или база данных не помечена как заслуживающая доверия.
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 
 Эта процедура удаляет сборку из [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
@@ -68,7 +69,7 @@ EXEC sp_drop_trusted_assembly
 ```  
 
 ## <a name="see-also"></a>См. также  
-  [sys.sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+  [sys.sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [инструкция DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

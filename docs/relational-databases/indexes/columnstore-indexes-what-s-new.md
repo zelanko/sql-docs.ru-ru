@@ -13,11 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65999c781c4e13dc42b40c6e47ecd82a18a5fead
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8965d870164a146156031232d050bbee0a35e9ad
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812158"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,15 +26,15 @@ ms.lasthandoff: 05/03/2018
   Сводка функций индексов columnstore, доступных для каждой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и для последних выпусков [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] индексы columnstore доступны на уровнях "Премиум" для базы данных SQL, уровнях "Стандартный" (S3 и более поздние версии) и всех уровнях "Виртуальное ядро". Для SQL Server (2016 с пакетом обновления 1 (SP1) и более поздних версий) индексы columnstore доступны во всех выпусках. Для SQL Server (2016 с пакетом обновления 1 (SP1) и более ранних версий) индексы columnstore доступны только в выпуске Enterprise Edition.
+ > Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] индексы columnstore доступны на уровнях "Премиум", уровнях "Стандартный" (S3 и выше) и всех уровнях "Виртуальное ядро" для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) и более поздних версий индексы columnstore доступны во всех выпусках. Для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (до пакета обновления 1 (SP1)) и более ранних версий индексы columnstore доступны только в выпуске Enterprise Edition.
  
 ## <a name="feature-summary-for-product-releases"></a>Сводка функций по выпускам  
  В следующей таблице перечислены основные функции для индексов columnstore и продукты, в которых они доступны.  
 
 |Функция индекса columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|Пакетное выполнение для многопоточных запросов.|да|да|да|да|да|да| 
-|Пакетное выполнение для однопоточных запросов.|||да|да|да|да|  
+|Пакетный режим выполнения для многопоточных запросов|да|да|да|да|да|да| 
+|Пакетный режим выполнения для однопоточных запросов|||да|да|да|да|  
 |Параметр сжатия архивации||да|да|да|да|да|  
 |Изоляция моментальных снимков и изоляция моментальных снимков read committed.|||да|да|да|да| 
 |Указание индекса columnstore при создании таблицы|||да|да|да|да|  

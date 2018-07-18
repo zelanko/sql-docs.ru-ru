@@ -3,8 +3,6 @@ title: Удаление SSMA для Sybase компонентов (SybaseToSQL) 
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d59d3d18b4eb5b5ec81cb12422cc16cf64592731
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5a9434f0fbaab5188a275af279626832df528b6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779316"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Удаление SSMA для Sybase компонентов (SybaseToSQL)
 После завершения миграции баз данных из Sybase адаптивной Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], может потребоваться удалить компоненты SSMA. Клиентские компоненты можно удалить в любое время, но не рекомендуется удалять пакет расширения из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Если вы уверены, что перенесенной базы данных больше не использовать функции в **ssma_syb** схему **sysdb** базы данных.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024181"
 ---
 # <a name="performing-batch-operations-xmla"></a>Выполнение пакетных операций (XMLA)
   Можно использовать [пакета](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) в XML для аналитики (XMLA) для выполнения нескольких команд XML для Аналитики с помощью одного XMLA команда [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) метод. Можно выполнять несколько команд, содержащихся в **пакета** команду, либо как одна транзакция или в отдельные транзакции для каждой команды, последовательно или параллельно. Можно также указать ожидания привязок и другие свойства в **пакета** для обработки нескольких [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов.  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/30/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,19 +16,20 @@ helpviewer_keywords:
 - DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d2b965d3177be06b46bb51b8f5238f5a4b21dee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c2eb8c020127211b25b762d96e6e376be7e234c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792145"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Распаковывает входное выражение с использованием алгоритма GZIP. Результатом сжатия является массив байтов (типа VARBINARY(MAX)).  
+Эта функция распаковывает значение входного выражения с использованием алгоритма GZIP. `DECOMPRESS` возвращает массив байтов (тип VARBINARY(MAX)).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +41,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
- Выражение типа **varbinary(***n***)**, **varbinary(max)** или **binary(***n***)**. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
+Значение **varbinary(***n***)**, **varbinary(max)** или **binary(***n***)**. Дополнительные сведения см. в статье [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Возвращает тип данных **varbinary(max)**. Входной аргумент распаковывается с использованием алгоритма ZIP. Пользователю необходимо явно привести результат к требуемому конечному типу.  
+Значение типа данных **varbinary(max)**. Для распаковки входного аргумента `DECOMPRESS` использует алгоритм ZIP. При необходимости пользователю следует явно привести результат к требуемому конечному типу.  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-decompress-data-at-query-time"></a>A. Распаковка данных во время выполнения запроса  
- В приведенном ниже примере показано, как сжать данные в таблице.  
+В этом примере показано возвращение сжатых данных таблицы.  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -60,10 +60,10 @@ FROM player;
 ```  
   
 ### <a name="b-display-compressed-data-using-computed-column"></a>Б. Отображение сжатых данных с помощью вычисляемого столбца  
- В приведенном ниже примере показано создание таблицы для хранения распакованных данных.  
+В этом примере показано создание таблицы для хранения распакованных данных.  
   
 ```  
-CREATE TABLE (  
+CREATE TABLE example_table (  
     _id int primary key identity,  
     name nvarchar(max),  
     surname nvarchar(max),  

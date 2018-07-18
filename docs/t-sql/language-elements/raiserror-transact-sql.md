@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -34,11 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d9e89081eadae06a6dd14ae9a4d5e273657146f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f835fc61aea7474d9c31f33b070d96da1afa3033
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36241066"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Код, определяющий промежутки и выравнивание подставляемого значения.  
   
-|Код|Префикс или выравнивание|Description|  
+|Код|Префикс или выравнивание|Описание|  
 |----------|-----------------------------|-----------------|  
 |- (знак «минус»)|Выравнивать слева|Выравнивает значение аргумента по левой границе поля заданной ширины.|  
 |+ (знак «плюс»)|Префикс знака|Добавляет перед значением аргумента знак «плюс» (+) или «минус» (-), если значение принадлежит к типу со знаком.|  
@@ -161,7 +161,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *Параметр*  
  Настраиваемый параметр для ошибки может принимать одно из значений, находящихся в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |LOG|Записывает сообщения об ошибках в журнал ошибок и журнал приложения экземпляра компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Сообщения об ошибках в журнале ошибок ограничены размером в 440 байт. Только члены предопределенной роли сервера sysadmin или пользователи с разрешениями ALTER TRACE могут указывать ключевое слово WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Немедленно посылает сообщения клиенту.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

@@ -1,1 +1,1 @@
-В\-Memory OLTP
+В\-памяти OLTP

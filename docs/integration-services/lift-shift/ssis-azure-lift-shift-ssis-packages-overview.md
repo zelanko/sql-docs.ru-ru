@@ -1,27 +1,26 @@
 ---
-title: Перенос рабочих нагрузок SQL Server Integration Services в облако | Документы Майкрософт
-ms.date: 05/22/2018
+title: Развертывание и выполнение пакетов служб SSIS в Azure | Документы Майкрософт
+description: Узнайте, как перенести проекты, пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) в облако Microsoft Azure.
+ms.date: 06/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3c8b39ac59f3ac6bddd985de12602f498e1ed97
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 0fa7a72e86f596cd0e5d18a0c0dbeb1015233f20
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455468"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403296"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Перенос рабочих нагрузок SQL Server Integration Services в облако
-Пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure.
--   Храните проекты и пакеты служб SSIS и управляйте ими в базе данных каталога SSIS (SSISDB), размещенной в базе данных SQL Azure или в управляемом экземпляре базы данных SQL (предварительная версия).
+Проекты, пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure.
+-   Храните проекты и пакеты служб SSIS и управляйте ими в каталоге SSIS (SSISDB), размещенном в базе данных SQL Azure или в управляемом экземпляре базы данных SQL (предварительная версия).
 -   Запускайте пакеты в экземпляре Azure-SSIS Integration Runtime, компоненте фабрики данных Azure.
 -   Используйте привычные вам инструменты, такие как SQL Server Management Studio (SSMS), для решения типичных задач.
 
@@ -52,23 +51,23 @@ Azure-SSIS IR достаточно подготовить только один 
 
 Для развертывания пакетов SSIS в Azure нужна одна из следующих версий SQL Server Data Tools (SSDT):
 -   Для Visual Studio 2017 — 15.3 или более поздняя версия.
--   Для Visual Studio 2015 — 17.2 или более поздняя версия.
+-   для Visual Studio 2015 версия 17.2 или более поздняя.
 
-Сведения о необходимых компонентах Azure-SSIS Integration Runtime: [Развертывание пакетов SQL Server Integration Services в Azure — предварительные требования](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure#prerequisites).
+Сведения о необходимых компонентах Azure-SSIS Integration Runtime см. в статье [Развертывание и выполнение пакета служб SSIS — предварительные требования](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure#prerequisites).
 
 > [!NOTE]
 > На этапе общедоступной предварительной версии среда Azure-SSIS Integration Runtime доступна не во всех регионах. Сведения о поддерживаемых регионах см. на странице [Доступность продуктов по регионам — Microsoft Azure](https://azure.microsoft.com/regions/services/).
 
 ## <a name="provision-ssis-on-azure"></a>Подготовка служб SSIS к работе в Azure
 
-Перед тем как развертывать и выполнять пакеты SSIS в Azure, необходимо подготовить базу данных каталога SSIS (SSISDB) и среду Azure-SSIS Integration Runtime. Выполните подготовку согласно инструкциям в следующей статье: [Развертывание пакетов SQL Server Integration Services в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+**Подготовка**. Перед тем как развертывать и выполнять пакеты SSIS в Azure, необходимо подготовить каталог SSIS (SSISDB) и среду Azure-SSIS Integration Runtime. Следуйте инструкциям по подготовке в этой статье: [Развертывание и запуск пакета служб SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
-При подготовке среды Azure-SSIS IR вы можете осуществлять вертикальное и горизонтальное масштабирование, указывая значения для следующих параметров:
+**Вертикальное и горизонтальное масштабирование**. При подготовке среды Azure-SSIS IR вы можете осуществлять вертикальное и горизонтальное масштабирование, указывая значения для следующих параметров:
 -   размер узла (включая число ядер) и число узлов в кластере;
 -   существующий экземпляр базы данных SQL Azure для размещения базы данных каталога SSIS (SSISDB) и уровень обслуживания базы данных;
 -   максимальное число параллельных выполнений в каждом узле.
 
-Дополнительные сведения о производительности: [Настройка высокого уровня производительности в Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
+**Повышение производительности**. Дополнительные сведения см. в статье [Настройка высокого уровня производительности в Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance).
 
 ## <a name="design-packages"></a>Проектирование пакетов
 
@@ -76,15 +75,15 @@ Azure-SSIS IR достаточно подготовить только один 
 
 ### <a name="connect-to-data-sources"></a>Подключение к источникам данных
 
-Дополнительные сведения о подключении к локальным источникам данных из облака с использованием **проверки подлинности Windows** см. в разделе [Подключение к локальным источникам данных и общим папкам Azure с помощью проверки подлинности Windows](ssis-azure-connect-with-windows-auth.md).
+Сведения о подключении к локальным источникам данных из облака с использованием **проверки подлинности Windows** см. в статье [Подключение к локальным источникам данных и общим папкам Azure с помощью проверки подлинности Windows](ssis-azure-connect-with-windows-auth.md).
 
-Дополнительные сведения о подключении к файлам и общим папкам см. в разделе [Хранение файлов в общих папках в локальной среде и в Azure с SSIS и их извлечение](ssis-azure-files-file-shares.md).
+Сведения о подключении к файлам и общим папкам см. в статье [Открытие и сохранение файлов с помощью пакетов SSIS, развернутых в Azure](ssis-azure-files-file-shares.md).
 
 ### <a name="available-ssis-components"></a>Доступные компоненты SSIS
 
 При подготовке экземпляра базы данных SQL для размещения базы данных SSISDB также устанавливаются пакет дополнительных компонентов Azure для служб SSIS и распространяемый компонент Access. Эти компоненты обеспечивают подключение к различным источникам данных **Azure**, файлам **Excel и Access**, а также источникам данных, поддерживаемым встроенными компонентами.
 
-Также можно установить дополнительные компоненты. Дополнительные сведения см. в разделе [Выборочная установка среды выполнения интеграции Azure-SSIS](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md).
+Можно также установить дополнительные компоненты. Например, можно установить драйвер, который не устанавливается по умолчанию. Дополнительные сведения см. в разделе [Выборочная установка среды выполнения интеграции Azure-SSIS](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 Если вы независимый поставщик программного обеспечения, вы можете обновить установку лицензированных компонентов, чтобы сделать их доступными в Azure. Дополнительные сведения: [Разработка платных или лицензируемых пользовательских компонентов для Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components).
 
@@ -96,18 +95,33 @@ Azure-SSIS IR достаточно подготовить только один 
 
 ## <a name="deploy-and-run-packages"></a>Развертывание и запуск пакетов
 
-**Модель развертывания**. Для проектов, развертываемых в базе данных SSISDB в Azure, необходимо использовать **модель развертывания проектов**, а не модель развертывания пакетов.
+Сначала ознакомьтесь со статьей [Развертывание и запуск пакета служб SSIS в Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
-**Параметры развертывания и выполнения**. Для развертывания проектов и запуска пакетов в Azure можно использовать одно из знакомых средств и скриптов:
+### <a name="connect-to-ssisdb"></a>Подключение к SSISDB
+
+**Имя базы данных SQL**, в которой размещается база данных SSISDB, станет первой частью четырехкомпонентного имени, которое применяется при развертывании и запуске пакетов из SSDT и SSMS в следующем формате: `<sql_database_name>.database.windows.net`. Сведения о подключении к базе данных каталога SSIS в Azure см. в статье [Подключение к каталогу SSIS (SSISDB) в Azure](ssis-azure-connect-to-catalog-database.md).
+
+### <a name="deploy-projects-and-packages"></a>Развертывание проектов и пакетов
+
+Для проектов, развертываемых в базе данных SSISDB в Azure, необходимо использовать **модель развертывания проектов**, а не модель развертывания пакетов.
+
+Для развертывания проектов в Azure можно использовать одно из знакомых средств и скриптов:
 -   SQL Server Management Studio (SSMS)
 -   Transact-SQL (в SSMS, Visual Studio Code или другом средстве)
 -   Программа командной строки
--   PowerShell
--   C# и объектная модель управления служб SSIS
+-   PowerShell или C# и объектная модель управления служб SSIS
 
-**Подключение к SSISDB**. **Имя базы данных SQL**, в которой размещается база данных SSISDB, станет первой частью четырехкомпонентного имени, которое применяется при развертывании и запуске пакетов из SSDT и SSMS в следующем формате: `<sql_database_name>.database.windows.net`. Дополнительные сведения о подключении к базе данных каталога SSIS в Azure: [Подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md).
+Пример развертывания с использованием служб SSMS и мастера развертывания служб Integration Services см. в статье [Развертывание и запуск пакета служб SSIS в Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
-Чтобы приступить к работе, ознакомьтесь со статьей [Развертывание, запуск и отслеживание пакета служб SSIS в Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+### <a name="run-packages"></a>Выполнение пакетов
+
+Обзор методов, которые можно использовать для запуска пакетов служб SSIS, развернутых в Azure, см. в статье [Выполнение пакета служб SSIS в Azure](ssis-azure-run-packages.md).
+
+## <a name="pass-runtime-values-with-environments"></a>Передача значений времени выполнения с помощью сред
+
+Чтобы передать одно значение времени выполнения или несколько в пакеты, запускаемые в составе конвейера фабрики данных Azure, создайте среды выполнения служб SSIS в SSISDB с помощью SQL Server Management Studio (SSMS). В каждой среде создайте переменные и присвойте значения, которые соответствуют параметрам для проектов или пакетов. Настройте пакеты служб SSIS в среде SSMS, чтобы связать эти переменные среды с параметрами проекта или пакета. Если пакеты выполняются в конвейере фабрики данных, переключайтесь между средами, указывая пути к разным средам на вкладке "Параметры" пользовательского интерфейса действия "Выполнение пакета служб SSIS".
+
+Дополнительные сведения о средах SSIS см. в статье [Создание и сопоставление серверной среды](../packages/deploy-integration-services-ssis-projects-and-packages.md#create-and-map-a-server-environment). Сведения о выполнении пакета в составе конвейера фабрики данных Azure см. в статье [Выполнение пакета служб SSIS с помощью действия "Выполнение пакета служб SSIS" в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
 ## <a name="monitor-packages"></a>Мониторинг пакетов
 Для отслеживания запускаемых пакетов в SSMS вы можете использовать следующие аналитические средства.
@@ -117,9 +131,9 @@ Azure-SSIS IR достаточно подготовить только один 
 Сведения о мониторинге Azure-SSIS Integration Runtime: [Мониторинг Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ## <a name="schedule-packages"></a>Планирование выполнения пакетов
-Запланировать запуск пакетов, хранящихся в базе данных SQL Azure, можно разными средствами. Дополнительные сведения см. в разделе [Планирование выполнения пакета служб SSIS в Azure](ssis-azure-schedule-packages.md).
+Запланировать запуск пакетов, хранящихся в базе данных SQL Azure, можно разными средствами. Дополнительные сведения см. в разделе [Планирование выполнения пакетов служб SSIS в Azure](ssis-azure-schedule-packages.md).
 
 ## <a name="next-steps"></a>Следующие шаги
 Чтобы приступить к работе с рабочими нагрузками служб SSIS в Azure, ознакомьтесь со следующими статьями:
 -   [Развертывание пакетов SQL Server Integration Services в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
--   [Развертывание, запуск и отслеживание пакета служб SSIS в Azure](ssis-azure-deploy-run-monitor-tutorial.md)
+-   [Развертывание и запуск пакета служб SSIS в Azure](ssis-azure-deploy-run-monitor-tutorial.md)

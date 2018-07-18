@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539584"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Получить и настроить резервный сервер для параллельного хранилища данных
 В этой статье описывается настройка системы Windows не является специализированным как резервный сервер для использования с функциями резервного копирования и восстановления в Analytics Platform System (APS) и параллельные хранилища данных (PDW).  

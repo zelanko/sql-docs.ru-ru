@@ -1,5 +1,5 @@
 ---
-title: Комментарии в XQuery | Документы Microsoft
+title: Комментарии в XQuery | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 459507805f8b1a1803382e400722d910c802605b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042332"
 ---
 # <a name="comments-in-xquery"></a>Комментарии в XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Ниже приведен еще один пример, в котором запрос определяется для столбца инструкции с из **xml** типа:  
+ Ниже приведен еще один пример, в котором запрос определяется для столбца инструкции с **xml** типа:  
   
 ```  
 SELECT Instructions.query('  

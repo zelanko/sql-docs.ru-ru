@@ -2,7 +2,6 @@
 title: Введите пример свойства (свойство) (VC ++) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2b9ad60d89b7feff377c76f58bb1a45f395ab4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b62b3db629cabd77cea270cf41e76bd36c5b1cb4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282745"
 ---
 # <a name="type-property-example-property-vc"></a>Пример типа свойства (свойство) (VC ++)
 В этом примере демонстрируется [тип](../../../ado/reference/ado-api/type-property-ado.md) свойства. Это модель программы для перечисления с именами и типами коллекции, например [свойства](../../../ado/reference/ado-api/properties-collection-ado.md), [поля](../../../ado/reference/ado-api/fields-collection-ado.md)и т. д.  

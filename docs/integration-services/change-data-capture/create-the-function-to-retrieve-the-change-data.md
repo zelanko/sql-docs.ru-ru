@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c2305d2224147d463ef70fcb1b1055cf5751856
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 288d57ef9d9c02698d0f402a97356c18f0b7fd87
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408376"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Создание функции для получения информации об изменениях
   После завершения потока управления для пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняющего добавочную загрузку информации об изменениях, нужно выполнить следующую задачу: создать функцию с табличным значением, которая получает измененные данные. Создавать эту функцию необходимо только один раз — перед первой добавочной загрузкой.  
@@ -211,7 +210,7 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>Получение дополнительных метаданных с помощью информации об изменениях  
  Показанная ранее пользовательская функция с табличным значением использует только столбец **__$operation**, но функция **cdc.fn_cdc_get_net_changes_<capture_instance>** возвращает четыре столбца метаданных для каждой строки изменений. Если нужно использовать эти значения в потоке данных, можете возвратить их как дополнительные столбцы с помощью возвращающей табличное значение функции оболочки.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Номер LSN, связанный с фиксацией транзакции изменения.<br /><br /> Все изменения, зафиксированные в одной транзакции, имеют общий номер LSN фиксации. Например, если операция обновления в исходной таблице изменяет две различные строки, таблица изменений будет содержать четыре строки (две со старыми значениями и две с новыми), каждая с одним и тем же значением **__$start_lsn** .|  
 |**__$seqval**|**binary(10)**|Значение последовательности, используемое для упорядочивания изменений строк в пределах транзакции.|  

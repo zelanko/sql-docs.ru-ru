@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Документы Microsoft
+title: sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/02/2018
 ms.suite: sql
@@ -22,25 +22,26 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 9e28e848c7a95e8c29558cb6ee77056d47a955e7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028842"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Возвращает сведения о текущем состоянии пула внешних ресурсов, текущую конфигурацию пулов ресурсов и статистику пула ресурсов. 
+Возвращает сведения о текущее состояние пула внешних ресурсов, текущую конфигурацию пулов ресурсов и статистики пула ресурсов. 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 |Имя столбца      |Тип данных      |Описание|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|Идентификатор пула ресурсов. Не допускает значение NULL. |
-| имя|**sysname**|Имя пула ресурсов. Не допускает значение NULL. 
+| name|**sysname**|Имя пула ресурсов. Не допускает значение NULL. 
 | pool_version|**int**|номер версии внутреннего.|
 | max_cpu_percent|**int**|Текущая конфигурация максимальной средней пропускной способности ЦП, разрешенной для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. Не допускает значение NULL. |
-| max_processes|**int**|Максимальное число параллельных внешних процессов. Значение по умолчанию равно 0 и означает отсутствие ограничений. Не допускает значение NULL.|
+| max_processes|**int**|Максимальное количество параллельных внешних процессов. Значение по умолчанию равно 0 и означает отсутствие ограничений. Не допускает значение NULL.|
 | max_memory_percent|**int**|Текущая конфигурация процентной доли от общего объема памяти сервера, которая может использоваться для запросов в данном пуле ресурсов. Не допускает значение NULL. |
 | statistics_start_time|**datetime**|Время, когда была очищена статистика для данного пула. Не допускает значение NULL. 
 | peak_memory_kb|**bigint**|он максимальный объем используемой памяти, в килобайтах, для пула ресурсов. Не допускает значение NULL. |

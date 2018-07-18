@@ -2,7 +2,6 @@
 title: Метод GetRows (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efe7a21a26e99d089c64fcd3a627c693c5f7de09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4df52f5ebc2fee80017f284c78cb49e4cb36667b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278803"
 ---
 # <a name="getrows-method-ado"></a>Метод GetRows (ADO)
 Возвращает множество записей, имеющих [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект в массив.  
@@ -42,15 +42,15 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>Параметры  
  *Строки*  
- Необязательно. Объект [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) значение, указывающее число получаемых записей. Значение по умолчанию — **adGetRowsRest**.  
+ Необязательный параметр. Объект [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) значение, указывающее число получаемых записей. Значение по умолчанию — **adGetRowsRest**.  
   
  *Запуск*  
- Необязательно. Объект **строка** значение или **Variant** , результатом которого является закладка для записи из которого **GetRows** должна начаться операция. Можно также использовать [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) значение.  
+ Необязательный параметр. Объект **строка** значение или **Variant** , результатом которого является закладка для записи из которого **GetRows** должна начаться операция. Можно также использовать [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) значение.  
   
  *Fields*  
- Необязательно. Объект **Variant** , представляющий одно поле имя или порядковый номер или массив имен полей или номера порядковый номер. ADO возвращает только данные в этих полях.  
+ Необязательный параметр. Объект **Variant** , представляющий одно поле имя или порядковый номер или массив имен полей или номера порядковый номер. ADO возвращает только данные в этих полях.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **GetRows** метод копирования записей из **записей** в двухмерный массив. Первый индекс определяет поля, а второй определяет номер записи. *Массива* переменной автоматически измеренных правильный размер при **GetRows** метод возвращает данные.  
   
  Если не указать значение для *строк* аргумент, **GetRows** метод автоматически получает все записи в **записей** объекта. Если запрос больше записей, чем доступно, **GetRows** возвращает число доступных записей.  

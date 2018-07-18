@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910839"
 ---
 # <a name="initialization-of-descriptor-fields"></a>Инициализация поля дескриптора
 Когда выделяется дескриптор строк приложения, его полей получать начальные значения, как указано в [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Начальное значение поля SQL_DESC_TYPE — SQL_DEFAULT. Это обеспечивает для стандартной обработки базы данных для представления в приложение. Приложение может задать другой способ обработки данных, поля дескриптора записи.  

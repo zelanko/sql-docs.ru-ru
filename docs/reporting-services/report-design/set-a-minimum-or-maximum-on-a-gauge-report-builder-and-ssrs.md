@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024871"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)
   В отличие от диаграммы в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , где определяется несколько групп, датчики выводят только одно значение. Поскольку построитель отчетов и конструктор отчетов определяют контекст или относительную значимость значения, отображаемого на датчике, необходимо определить минимум и максимум шкалы.   

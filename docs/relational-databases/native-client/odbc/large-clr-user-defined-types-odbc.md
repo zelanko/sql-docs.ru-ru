@@ -1,5 +1,5 @@
 ---
-title: Определяемые пользователем типы больших значений CLR (ODBC) | Документы Microsoft
+title: Определяемые пользователем типы больших значений CLR (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ec957ad4bc1ea32c885b51a940a793f84dbc6b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14dcac32a0e8e6af89cf3f9dc87b2458a986a2ef
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414423"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Определяемые пользователем типы данных больших значений CLR (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +32,9 @@ ms.lasthandoff: 05/03/2018
 
   В этом разделе обсуждаются изменения ODBC в собственном клиенте SQL Server для поддержки определяемых пользователем типов данных CLR.  
   
- Пример, демонстрирующий поддержку ODBC для больших определяемых пользователем типов CLR см. в разделе [поддержка больших определяемых пользователем типов](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
+ Пример, демонстрирующий поддержку ODBC для больших определяемых пользователем типов CLR, см. в разделе [поддержка больших определяемых пользователем типов](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в собственном клиенте SQL Server см. в разделе [Large CLR User-Defined типов](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в SQL Server Native Client см. в разделе [Large CLR User-Defined типы](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
   
 ## <a name="data-format"></a>Формат данных  
  Собственный клиент SQL Server использует значение SQL_SS_LENGTH_UNLIMITED для обозначения того, что размер столбца больше чем 8000 байт для типов больших объектов. Начиная с SQL Server 2008, при размере столбца больше 8000 байт для определяемых пользователем типов данных больших значений CLR используется такое же значение.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 |--------------------------|-------------------|-----------|  
 |определяемый пользователем тип среды CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- В следующей таблице обсуждается соответствующая структура и тип ODBC C. По существу, определяемого пользователем ТИПА CLR является **varbinary** с дополнительными метаданными.  
+ В следующей таблице обсуждается соответствующая структура и тип ODBC C. По сути, определяемый пользователем тип среды CLR поддерживает **varbinary** тип, с дополнительными метаданными.  
   
 |Тип данных SQL|Организация памяти|Тип данных C|Значение (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_CA_SS_UDT_TYPE_NAME|Имя определяемого пользователем типа.|Имя определяемого пользователем типа.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|Полное имя определяемого пользователем типа.|Полное имя определяемого пользователем типа.|  
   
- Для параметров UDT SQL_CA_SS_UDT_TYPE_NAME всегда должны быть заданы через **SQLSetDescField**. Значения SQL_CA_SS_UDT_CATALOG_NAME и SQL_CA_SS_UDT_SCHEMA_NAME не обязательны.  
+ Для параметров определяемого пользователем ТИПА, SQL_CA_SS_UDT_TYPE_NAME всегда должны быть установлены с помощью **SQLSetDescField**. Значения SQL_CA_SS_UDT_CATALOG_NAME и SQL_CA_SS_UDT_SCHEMA_NAME не обязательны.  
   
  Если определяемый пользователем тип и таблица определяются в одной базе данных, но с разными схемами, необходимо установить SQL_CA_SS_UDT_SCHEMA_NAME.  
   

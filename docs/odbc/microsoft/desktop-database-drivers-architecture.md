@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904979"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Архитектура драйверов для настольных баз данных
 Эти драйверы предназначены для использования в Microsoft Windows 95 и более поздних версиях или Windows NT 4.0 и Windows 2000. Поддерживаются только 32-разрядных приложений, в Windows 95 или более поздней версии; 16-разрядных и 32-разрядные приложения, поддерживаются в Windows NT 4.0 и Windows 2000.  

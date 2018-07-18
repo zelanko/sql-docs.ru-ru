@@ -2,7 +2,6 @@
 title: Поставщик Microsoft OLE DB для публикации в Интернете | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3dbcc73d88669a6787151770d97b3921ae43f2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8d3caac3bd857b790372bd6b41fc818090210a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271223"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Поставщик Microsoft OLE DB для Общие сведения о публикации в Интернете
 Поставщик Microsoft OLE DB для публикаций в Интернете позволяет ADO для доступа к ресурсам, обслуживаемых Microsoft FrontPage или Microsoft Internet Information Server. Ресурсы включают web исходные файлы, например HTML-файлы или веб-папок Windows 2000.

@@ -3,8 +3,6 @@ title: Подключение к базе данных Azure SQL (SybaseToSQL) |
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dc13a12e706faf8151c3bdea586533a97a9e71fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb395aeb1a408701a9677b879f139d3538ae7fee
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778500"
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Подключение к базе данных Azure SQL (SybaseToSQL)
 Для переноса баз данных Sybase в базе данных SQL Azure, необходимо подключиться к целевому экземпляру базы данных SQL Azure. При подключении SSMA получает метаданные обо всех базах данных в экземпляре базы данных SQL Azure и отображает метаданные базы данных в обозревателе метаданных базы данных SQL Azure. SSMA хранит сведения о экземпляра базы данных SQL Azure подключены, но не хранит пароли.  

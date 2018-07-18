@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903319"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Драйверы Microsoft ODBC для настольных баз данных
 ODBC — это API, использует язык SQL (Structured Query) в качестве языка базы данных access. Можно получить доступ к разнообразных систем управления базами данных (СУБД) с тем же кодом источника ODBC, которые непосредственно встроены в исходном коде приложения. Драйверы базы данных Microsoft ODBC рабочий стол пользователя приложения с поддержкой ODBC можно открыть запрос и обновления с помощью системной базы данных через интерфейс ODBC.  

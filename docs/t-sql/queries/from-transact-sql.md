@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -39,11 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f9df0c2da8892d380635f8949f10625baf9fda3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aff3c18d4f005a2f28260abac561596da96fc07
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36247926"
 ---
 # <a name="from-transact-sql"></a>Предложение FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -367,7 +367,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  Псевдоним выходной таблицы. Аргумент *pivot_table_alias* должен быть указан.  
   
- UNPIVOT \< unpivot_clause >  
+ UNPIVOT \<unpivot_clause>  
  Указывает, что входная таблица сведена из нескольких столбцов в *column_list* в один столбец под названием *pivot_column*. Дополнительные сведения о PIVOT и UNPIVOT см. в разделе [Использование операторов PIVOT и UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  AS OF \<date_time>  

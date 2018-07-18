@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8209b848bb2434fd157c83f1e5aaa32783fb8402
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d010e7c37b8bd297fce1ec06288f77904700031e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333398"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Добавление задачи или контейнера в поток управления или удалить их из него
   При работе в конструкторе потока управления окно «Область элементов» конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержит задачи, которые службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют для построения потока управления в пакете. Дополнительные сведения об области элементов см. в разделе [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  

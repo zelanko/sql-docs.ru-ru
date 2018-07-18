@@ -2,7 +2,6 @@
 title: Find-метод (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 953398f5ed01cc3e0f7c0da1fee769d5e64209af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6569d6c65698738025267de0d97001eb041573e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278723"
 ---
 # <a name="find-method-ado"></a>Find-метод (ADO)
 Поиск [записей](../../../ado/reference/ado-api/recordset-object-ado.md) для строки, который удовлетворяет указанным критериям. При необходимости можно указать направление поиска, начальную строку и смещение от начала строки. При соблюдении заданных условий текущей позиции строки имеет значение на найдено записи; в противном случае — значение позиции (начала или конца) из **записей**.  
@@ -48,9 +48,9 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Необязательный *.* Объект [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) значение, указывающее начало поиска в текущей строке или следующую доступную строку в направление поиска. Неудачных поиск останавливается в конце **записей** при значениях **adSearchForward**. Неудачных поиск останавливается в начале **записей** при значениях **adSearchBackward**.  
   
  *Запуск*  
- Необязательно. Объект **Variant** закладка, которая действует как начальная позиция для поиска.  
+ Необязательный параметр. Объект **Variant** закладка, которая действует как начальная позиция для поиска.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Только один столбец имени могут быть указаны в *критерии*. Этот метод не поддерживает поиск нескольких столбцов.  
   
  Оператор сравнения в *критерии* может быть "**>**«(больше),»**\<**» (меньше), «=» (равно), «> =» (больше или равно) «< =» (меньше или равно) (не равно), «<>» или «мне нравится» (соответствие шаблону).  

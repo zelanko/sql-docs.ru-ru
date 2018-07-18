@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_diag_event_properties (Transact-SQL) | Документы Microsoft
+title: sys.pdw_diag_event_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,15 +19,16 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a8219d8a60a08815ee11a8e80015956007f0638f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987327"
 ---
 # <a name="syspdwdiageventproperties-transact-sql"></a>sys.pdw_diag_event_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Содержит сведения о том, какие свойства связаны с событиями диагностики.  
+  Содержит сведения о том, какие свойства связаны с события диагностики.  
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  

@@ -2,7 +2,6 @@
 title: Иерархические наборы записей в формате XML | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64be59db3e65386eaaa267e954f63d0cf063e146
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 697305c34e1906c95b20a2f33866bc57c1a1d019
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272063"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Иерархические наборы записей в формате XML
 ADO обеспечивает сохраняемость иерархических данных, представляющий объекты в XML. С объектами иерархических записей значение поля в родительском объекте набора записей — другой набор записей. Такие поля, представляются в виде дочерних элементов в XML-потока, а не атрибут.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  В следующем примере демонстрируется в данном случае:  
   
 ```  

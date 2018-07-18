@@ -2,7 +2,6 @@
 title: Заголовок расширений Visual C++ | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bc42c7ca15c94a6b1ac9acc9711f9b755610ba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d4b5c823cb992d6b3895740d4c227ae82b30c06
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270153"
 ---
 # <a name="visual-c-extensions-header"></a>Заголовок расширений Visual C++
 Следующий заголовок **icrsint.h**, интерфейс, который позволяет клиентам извлекать поля из сведений о **записей** в переменные, определенные в классе, производном от **CADORecordBinding**. Необходимо указать макрос ADO привязки для каждого поля, которое необходимо будет получить доступ.  

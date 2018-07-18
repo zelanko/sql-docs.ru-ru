@@ -1,5 +1,5 @@
 ---
-title: Импорт данных с помощью собственного запроса (службы Analysis Services) | Документы Microsoft
+title: Импорт данных с помощью собственного запроса (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,40 +10,41 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1716b3b6e5794d8dbb8d9ee0195ed642db6df054
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981106"
 ---
-# <a name="import-data-by-using-a-native-query"></a>Импорт данных при помощи собственного запроса
+# <a name="import-data-by-using-a-native-query"></a>Импорт данных с помощью собственного запроса
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
-Для табличных моделей 1400 новые возможности получения данных в проектах Visual Studio Analysis Services обеспечивает огромную гибкость в том, как можно объединять данные во время импорта. Эта статья описывает создание подключения к источнику данных и последующего создания собственного SQL-запрос для задания импорта данных.
+Для табличных моделей 1400 новый интерфейс получения данных в проектах Visual Studio Analysis Services обеспечивает огромную гибкость при способы комбинирования данных во время импорта. В этой статье описывается создание подключения к источнику данных, а затем создать собственный запрос SQL для задания импорта данных.
 
-Для выполнения задач, описанных в этой статье, убедитесь, что вы используете последнюю версию SSDT. Если вы используете Visual Studio 2017 г., убедитесь, что вы загрузили и установили сентября 2017 г. или более поздней версии Microsoft Analysis Services проекты VSIX.
+Для выполнения задач, описанных в этой статье, убедитесь, что вы используете последнюю версию SSDT. Если вы используете Visual Studio 2017, убедитесь, что вы загрузили и установили сентября 2017 или более поздней версии Microsoft Analysis Services проекты VSIX.
 
-[Загрузите и установите SSDT](../../ssdt/download-sql-server-data-tools-ssdt.md)
+[Скачать и установить SSDT](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
-[Загрузить проекты служб Microsoft Analysis Services VSIX](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
+[Загрузите проекты служб Microsoft Analysis Services VSIX](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
 
-## <a name="create-a-datasource-connection"></a>Создание подключения источника данных
+## <a name="create-a-datasource-connection"></a>Создание подключения к источнику данных
 Если у вас нет подключения к источнику данных, необходимо создать его.
 
-1. В Visual Studio > **обозреватель табличной модели**, щелкните правой кнопкой мыши **источники данных**, а затем нажмите кнопку **новый источник данных**.
+1. В Visual Studio > **обозреватель табличных моделей**, щелкните правой кнопкой мыши **источников данных**, а затем нажмите кнопку **новый источник данных**.
 2. В **получить данные**, выберите тип источника данных и нажмите кнопку **Connect**. Выполните какие дополнительные шаги, необходимые для подключения к источнику данных.
 
 
-## <a name="enter-a-query-as-a-named-expression"></a>Введите запрос в качестве именованного выражения
-1. В **обозреватель табличной модели**, щелкните правой кнопкой мыши **выражений** > **редактирование выражений**.
+## <a name="enter-a-query-as-a-named-expression"></a>Введите запрос как именованное выражение
+1. В **обозреватель табличных моделей**, щелкните правой кнопкой мыши **выражения** > **изменить выражения**.
 2. В **редактора запросов**, нажмите кнопку **запроса** > **новый запрос** > **пустое окно запроса**
 3. В строке формул введите
     ```
     = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM …")
     ```
-4. Чтобы создать таблицу, в **запросы**, щелкните правой кнопкой мыши запрос и выберите **создать таблицу**. Новая таблица будет иметь имя, совпадающее с именем запроса.
+4. Чтобы создать таблицу, в **запросы**, щелкните правой кнопкой мыши запрос и затем выберите **создать таблицу**. Новая таблица будет иметь то же имя, что запрос.
 
 
 ## <a name="example"></a>Пример
-Этот собственный запрос создает таблицу Employee в модель, включающую все столбцы из таблицы Dimension.Employee в источнике данных.
+Этот собственный запрос создает таблицу Employee в модели, которая включает в себя все столбцы из таблицы Dimension.Employee в источнике данных.
 
 ```
 = Value.NativeQuery(#"SQL/myserver;WideWorldImportersDW", "SELECT * FROM Dimension.Employee")
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/10/2018
 ![Редактор запросов](media/ssas-import-query-example-table.png)
 
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Value.NativeQuery](https://msdn.microsoft.com/library/mt736917.aspx)   
  [Олицетворение](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
 

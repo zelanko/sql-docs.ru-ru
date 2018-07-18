@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,19 +18,20 @@ helpviewer_keywords:
 - DECRYPTBYKEYAUTOASYMSKEY function
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7378e62b4cf30697ca69868602dc7483649abcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5e036e7c80218750161ffc2322a5969dcbd6e1e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784585"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Проводит расшифровку с применением симметричного ключа, который автоматически расшифровывается с помощью асимметричного ключа.  
+Эта функция расшифровывает зашифрованные данные. Для этого она сначала расшифровывает симметричный ключ с помощью отдельного асимметричного ключа, а затем расшифровывает зашифрованные данные с помощью симметричного ключа, извлеченного на первом шаге.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,41 +47,49 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   
 ## <a name="arguments"></a>Аргументы  
  *akey_ID*  
- Идентификатор асимметричного ключа, используемого для защиты симметричного ключа. Аргумент *akey_ID* имеет тип **int**.  
+Идентификатор асимметричного ключа, используемого для шифрования симметричного ключа. *akey_ID* имеет тип данных **int**.  
   
  *akey_password*  
- Пароль, защищающий закрытый ключ асимметричного ключа. Может принимать значение NULL, если закрытый ключ защищен главным ключом базы данных. Аргумент *akey_password* имеет тип **nvarchar**.  
+Пароль, защищающий асимметричный ключ. *akey_password* может иметь значение NULL, если главный ключ базы данных защищает асимметричный закрытый ключ. *akey_password* имеет тип данных **nvarchar**.  
   
- '*ciphertext*'  
- Данные, зашифрованные с помощью ключа. Аргумент *ciphertext* имеет тип **varbinary**.  
+ *ciphertext* Данные, зашифрованные с помощью ключа. *ciphertext* имеет тип данных **varbinary**.  
   
  @ciphertext  
- Переменная типа **varbinary**. Содержит данные, которые были зашифрованы с помощью ключа.  
+Переменная типа **varbinary**, содержащая данные, зашифрованные с помощью симметричного ключа.  
   
  *add_authenticator*  
- Указывает, была ли структура проверки подлинности зашифровано вместе с неформатированным текстом. Значение этого аргумента должно быть равно значению, переданному функции EncryptByKey при шифровании данных. Имеет значение 1, если было использована структура проверки подлинности. Аргумент *add_authenticator* имеет тип **int**.  
+Указывает, включен ли исходный процесс шифрования и зашифрована ли структура проверки подлинности вместе с данными в виде открытого текста. Значение должно соответствовать значению, переданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) во время шифрования данных. *add_authenticator* имеет значение 1, если в процессе шифрования использовалась структура проверки подлинности. *add_authenticator* имеет тип данных **int**.  
   
  @add_authenticator  
- Указывает, была ли структура проверки подлинности зашифровано вместе с неформатированным текстом. Значение этого аргумента должно быть равно значению, переданному функции EncryptByKey при шифровании данных.  
+Переменная, указывающая, включен ли исходный процесс шифрования и зашифрована ли структура проверки подлинности вместе с данными в виде открытого текста. Значение должно соответствовать значению, переданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) во время шифрования данных. *@add_authenticator* имеет тип данных **int**.
   
  *authenticator*  
- Данные, из которых создается структура проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey. Аргумент *authenticator* имеет тип **sysname**.  
+Данные, используемые в качестве основы для создания структуры проверки подлинности. Значение должно соответствовать значению, заданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* имеет тип данных **sysname**.  
   
  @authenticator  
- Переменная, содержащая сведения, из которых формируются данные для проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey.  
+Переменная, содержащая данные, из которых формируется структура проверки подлинности. Значение должно соответствовать значению, заданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* имеет тип данных **sysname**.  
   
+@add_authenticator  
+Переменная, указывающая, включен ли исходный процесс шифрования и зашифрована ли структура проверки подлинности вместе с данными в виде открытого текста. Значение должно соответствовать значению, переданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) во время шифрования данных. *@add_authenticator* имеет тип данных **int**.  
+
+*authenticator*  
+Данные, используемые в качестве основы для создания структуры проверки подлинности. Значение должно соответствовать значению, заданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* имеет тип данных **sysname**.
+
+@authenticator  
+Переменная, содержащая данные, из которых формируется структура проверки подлинности. Значение должно соответствовать значению, заданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* имеет тип данных **sysname**.  
+
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Переменная типа **varbinary** с максимальным размером 8000 байт.  
+Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKeyAutoAsymKey сочетает функциональные возможности OPEN SYMMETRIC KEY и DecryptByKey. За одну операцию проводится расшифровка симметричного ключа и последующая расшифровка зашифрованного текста с его применением.  
+Функция `DECRYPTBYKEYAUTOASYMKEY` объединяет функциональность `OPEN SYMMETRIC KEY` и `DECRYPTBYKEY`. За одну операцию она сначала расшифровывает симметричный ключ, а затем с его помощью расшифровывает зашифрованный текст.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо разрешение VIEW DEFINITION на симметричный ключ и разрешение CONTROL на асимметричный ключ.  
+Необходимо разрешение `VIEW DEFINITION` на симметричный ключ и разрешение `CONTROL` на асимметричный ключ.  
   
-## <a name="examples"></a>Примеры  
- В следующем примере показано, как с помощью функции `DecryptByKeyAutoAsymKey` можно упростить код, отвечающий за расшифровку. Этот код должен быть выполнен в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], для которой еще не задан главный ключ базы данных.  
-  
+## <a name="examples"></a>Примеры
+В этом примере показано, как `DECRYPTBYKEYAUTOASYMKEY` может упростить код расшифровки. Этот код должен быть выполнен в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], для которой еще не задан главный ключ базы данных.  
+
 ```  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  

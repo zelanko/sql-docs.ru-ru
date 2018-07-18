@@ -1,5 +1,5 @@
 ---
-title: Безопасности SQLXML 4.0 | Документы Microsoft
+title: Безопасности SQLXML 4.0 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f4a7e0ea6b195f4b77c844eba2fce133e1f8b21
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708482"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035312"
 ---
 # <a name="sqlxml-40-security-considerations"></a>Проблемы безопасности SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "34708482"
  [Вопросы безопасности диаграмм обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
  Содержит рекомендации по безопасности для использования диаграмм обновления с SQLXML 4.0.  
   
- [Вопросы безопасности схемы с заметками &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [С заметками о безопасности схемы &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
  Содержит рекомендации по безопасности для использования аннотированных схем с SQLXML 4.0.  
   
  [Вопросы безопасности FOR XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)  
  Содержит рекомендации по безопасности для использования FOR XML с SQLXML 4.0.  
   
- [Массовая загрузка вопросы безопасности &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/bulk-load-security-considerations-sqlxml-4-0.md)  
+ [Вопросы безопасности загрузки массового &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/bulk-load-security-considerations-sqlxml-4-0.md)  
  Содержит рекомендации по безопасности для использования массовой загрузки XML с SQLXML 4.0.  
   
   

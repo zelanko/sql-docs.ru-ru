@@ -2,7 +2,6 @@
 title: Что такое блокировки? | Документы Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97d36e1fdfa054de01862d8978c8efdae8cadb86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 396faecd122eef7ad6e40f790252a0902a508ba8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273293"
 ---
 # <a name="what-is-a-lock"></a>Что такое блокировки?
 Блокировка — это процесс, с помощью которого СУБД ограничивает доступ к строке в многопользовательской среде. При режиме монопольной блокировки строки или столбца, другим пользователям не разрешается доступ к заблокированным данным, пока блокировка снимается. Это гарантирует, что два пользователя не может одновременно обновить же столбец в строке.  

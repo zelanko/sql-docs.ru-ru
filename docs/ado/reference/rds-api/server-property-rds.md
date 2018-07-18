@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6015f19a003148dbe12d6489b23a33848aa0ca29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efe8323ac57dda7d1405777e3be0dc997f955556
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288463"
 ---
 # <a name="server-property-rds"></a>Свойства сервера (RDS)
 Указывает протокол, имя и обмен данными службы Internet Information Services (IIS).  
@@ -115,12 +115,12 @@ DataControl.Server=""
  Объект **строка** значение, содержащее Интернета или интрасети путь или имя компьютера, если сервер находится на удаленном компьютере, или пустая строка, если сервер находится на локальном компьютере.  
   
  *port*  
- Необязательно. Порт, используемый для подключения к серверу, на котором запущены службы IIS. Номер порта задается в Internet Explorer (на **представление** меню, нажмите кнопку **параметры**и выберите **подключения** вкладку) или в службах IIS.  
+ Необязательный параметр. Порт, используемый для подключения к серверу, на котором запущены службы IIS. Номер порта задается в Internet Explorer (на **представление** меню, нажмите кнопку **параметры**и выберите **подключения** вкладку) или в службах IIS.  
   
  *DataControl*  
  Объектную переменную, которая представляет **RDS. DataControl** объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Сервер находится где **RDS. DataControl** обработки запроса (то есть запрос или обновление). По умолчанию, все запросы обрабатываются [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) объекта, [MSDFMAP. Обработчик](../../../ado/guide/remote-data-service/datafactory-customization.md) компонента, и [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) файлу на указанном сервере. Следует помнить, что при изменении серверов для согласования параметров в старой и новой **MSDFMAP. INI** файлов. Проблемы совместимости может привести к запросы, которые завершаются успешно на одном сервере сбой на другом. Если свойство установлено в пустую строку «», эти объекты будут использоваться на локальном компьютере.  
   
 ## <a name="applies-to"></a>Объект применения  

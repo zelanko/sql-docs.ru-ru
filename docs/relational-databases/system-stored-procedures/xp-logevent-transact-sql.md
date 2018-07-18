@@ -1,5 +1,5 @@
 ---
-title: xp_logevent (Transact-SQL) | Документы Microsoft
+title: xp_logevent (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 251dfca05a27d78618a4f3dbff5cbecd02ee5813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ce0b2c462148cfb75da52897f2b453158284fea3
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582036"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854266"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Заносит в журнал определенное пользователем сообщение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файла журнала и в средстве просмотра событий Windows. xp_logevent может использоваться для отправки предупреждения без посылки сообщения клиенту.  
+  Заносит в журнал определяемых пользователем сообщение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл журнала и в средстве просмотра событий Windows. xp_logevent может использоваться для отправки предупреждения без посылки сообщения клиенту.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  Символьная строка, которая может содержать не более 2048 символов.  
   
  **"** *серьезность* **"**  
- Является одним из трех символьных строк: ИНФОРМАЦИОННЫЕ, ПРЕДУПРЕЖДЕНИЯ или ошибки. *Серьезность* является необязательным, значение по умолчанию информационное сообщение.  
+ Является одним из трех символьных строк: ИНФОРМАЦИОННОЕ, предупреждение или ошибка. *уровень серьезности* является необязательным и по умолчанию — INFORMATIONAL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -62,7 +62,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>Примечания  
- При отправке сообщений от [!INCLUDE[tsql](../../includes/tsql-md.md)] процедур, триггеров, пакетов и т. д., использовать инструкцию RAISERROR вместо процедуры xp_logevent. xp_logevent не вызывает обработчик сообщений клиента и не задавайте@ERROR. Чтобы записывать сообщения в средство просмотра событий Windows и в файл журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует выполнить инструкцию RAISERROR.  
+ При отправке сообщений из [!INCLUDE[tsql](../../includes/tsql-md.md)] процедур, триггеров, пакетов и т. д., использовать инструкцию RAISERROR вместо процедуры xp_logevent. xp_logevent не вызывает обработчик сообщений клиента и не задает@ERROR. Чтобы записывать сообщения в средство просмотра событий Windows и в файл журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует выполнить инструкцию RAISERROR.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner в базе данных master или членство в предопределенной роли сервера sysadmin.  
@@ -71,7 +71,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  Следующий пример записывает в журнал сообщение с переменными, переданными в сообщение, в средство просмотра событий Windows.  
   
 ```  
-DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30),DECLARE @@MESSAGE varchar(255);  
+DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30), @@MESSAGE varchar(255);  
 SET @@TABNAME = 'customers';  
 SET @@USERNAME = USER_NAME();  
 SELECT @@MESSAGE = 'The table ' + @@TABNAME + ' is not owned by the user   

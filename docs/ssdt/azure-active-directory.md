@@ -1,7 +1,7 @@
 ---
-title: Поддержка Azure Active Directory в SQL Server Data Tools (SSDT) | Документация Майкрософт
+title: Azure Active Directory в SQL Server Data Tools (SSDT) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 05/31/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -11,66 +11,83 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 906bd42a1a4143217a974dd114adf82fa41e7270
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: af9fc2f5eeeb65a14a227e52d2fe6e9380b6cafb
+ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37093288"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Поддержка Azure Active Directory в SQL Server Data Tools (SSDT)
 
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md.md](../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-SQL Server Data Tools предоставляет несколько методов проверки подлинности [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis).
+SQL Server Data Tools (SSDT) предоставляет несколько методов проверки подлинности [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis).
 
 ![Диалоговое окно подключения SSDT](media/azure-active-directory/interactive.png)
 
+#### <a name="which-azure-sql-products"></a>Какие продукты SQL Azure?
+
+В этой статье рассматривается Azure AD для следующего списка *продуктов SQL Azure*  в [облаке Azure](https://azure.microsoft.com/).
+
+- База данных SQL Azure
+- Хранилище данных SQL Azure
+
 ## <a name="active-directory-password-authentication"></a>Проверка подлинности с помощью пароля Active Directory
 
-Проверка пароля Active Directory — это механизм подключения к базе данных Azure SQL с помощью удостоверений в Azure Active Directory (Azure AD).  Используйте этот метод для подключения, если вы вошли в Windows с учетными данными из домена, не включенного в федерацию с Azure, или если применяется проверка подлинности Azure AD на базе первоначального домена или домена клиента. Дополнительные сведения см. в статье [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
+*Проверка подлинности с помощью пароля Active Directory* — это механизм подключения к перечисленным ранее продуктам SQL Azure. Механизм использует удостоверения Azure Active Directory (Azure AD). Используйте этот метод для подключения, если:
+
+- вы вошли в Windows с помощью учетных данных из домена, не включенного в федерацию с Azure; или
+- вы используете проверку подлинности Azure AD с Azure AD на базе первоначального домена или домена клиента.
+
+Дополнительные сведения см. в статье [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
 
 ## <a name="active-directory-integrated-authentication"></a>Интегрированная проверка подлинности Active Directory
 
-Интегрированная проверка подлинности Active Directory — это механизм подключения к базе данных Azure SQL с помощью удостоверений в Azure Active Directory. Используйте этот метод для подключения, если вы вошли в Windows с учетными данными Azure Active Directory из федеративного домена. Дополнительные сведения см. в статье [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+*Интегрированная проверка подлинности Active Directory* — это механизм подключения к перечисленным продуктам SQL Azure с помощью удостоверений в Azure Active Directory (Azure AD). Используйте этот метод для подключения, если вы вошли в Windows с учетными данными Azure Active Directory из федеративного домена. Дополнительные сведения см. в статье [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
 
 ## <a name="active-directory-interactive-authentication"></a>Интерактивная проверка подлинности Active Directory
 
-В SSDT предусмотрен новый метод проверки подлинности для подключения к базе данных Azure SQL — **интерактивная проверка подлинности Active Directory**.
+*Интерактивная проверка подлинности Active Directory* доступна при подключении к перечисленным продуктам SQL Azure с помощью SSDT, но только с [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) или более поздней версии.
 
+- [Скачайте и установите для .NET Framework (любую версию)](https://www.microsoft.com/net/download/all).
+- [Visual Studio 2017 версия 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) или более поздняя.
 
-> [!NOTE]
-> Этот метод проверки подлинности доступен при подключении к SSDT в [Visual Studio 2017 версии 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes). Для него нужно [скачать и установить .NET Framework 4.7.2](https://www.microsoft.com/net/download/all) на компьютере, где работают инструменты SSDT. Если платформа [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) не установлена, интерактивная проверка подлинности Active Directory не будет доступна.
+#### <a name="multi-factor-authentication-mfa"></a>Многофакторная идентификация (MFA)
 
+Интерактивная проверка подлинности Active Directory поддерживает интерактивную проверку подлинности, что позволяет применять многофакторную идентификацию (MFA) Azure Active Directory (AD) для проверки подлинности перечисленных продуктов SQL Azure. Этот метод поддерживается для пользователей Azure AD из собственного и федеративного домена, гостевых пользователей из других учетных записей. Другие типы учетных записей:
 
-Этот метод поддерживает интерактивную проверку подлинности, что позволяет применять многофакторную идентификацию (MFA) Azure Active Directory (AD) для проверки подлинности в базе данных Azure SQL. Он поддерживается для пользователей Azure AD из собственного и федеративного домена, гостевых пользователей из других учетных записей (включая пользователей B2B, а также пользователей с учетными записями Майкрософт и сторонними учетными записями, например @outlook.com, @hotmail.com, @live.com и @gmail.com). Если выбран этот метод, нужно указать **имя пользователя**. Поле пароля поле будет отключено. 
+- пользователи Azure AD B2B;
+- учетные записи Майкрософт, такие как @outlook.com, @hotmail.com, @live.com;
+- сторонние учетные записи, такие как @gmail.com.
+
+Если выбран метод MFA, нужно указать **имя пользователя**. Поле **Пароль** будет отключено. 
+
+#### <a name="password-entry"></a>Ввод пароля
 
 При *интерактивной проверке подлинности Active Directory* откроется окно проверки подлинности, в котором пользователи должны ввести пароль вручную.
 
 ![Диалоговое окно входа](media/azure-active-directory/sign-in.png)
 
-Принудительное применение MFA реализуется Azure AD через это дополнительное всплывающее окно MFA при проверке подлинности.
+Принудительное применение MFA реализуется Azure AD через это дополнительное всплывающее окно MFA.
 
 > [!NOTE]
-> Так как при *интерактивной проверке подлинности Active Directory* пользователи должны вручную (интерактивно) вводить свой пароль, этот метод не рекомендуется для автоматических рабочих процессов.
-
+> Использование *интерактивной проверки подлинности Active Directory* приведет к блокировке автоматических рабочих процессов. При такой проверке подлинности пользователь должен вручную (интерактивно) вводить свой пароль.
 
 ## <a name="known-issues-and-limitations"></a>Известные проблемы и ограничения
 
-- *Интерактивная проверка подлинности Active Directory* поддерживается только при подключении к базе данных Azure SQL. Она не поддерживается для SQL Server (в локальной среде или на виртуальной машине) или хранилища данных SQL Azure.
+- *Интерактивная проверка подлинности Active Directory* поддерживается только при подключении к продуктам SQL Azure, которые были перечислены в начале этой статьи. Она не поддерживается для SQL Server (в локальной среде или на виртуальной машине).
 - *Интерактивная проверка подлинности Active Directory* не поддерживается в диалоговом окне подключения в *обозревателе сервера*. Вам нужно подключиться к *обозревателю объектов SQL Server* с помощью SSDT.
 - Интеграция единого входа с текущей учетной записью Visual Studio, которая использовалась для входа, не поддерживается для SSDT.
-- Пакет SQLPackage.exe, установленный в каталоге Extensions во время установки Visual Studio, не предназначен для использования в этом расположении. Чтобы использовать SQLpackage.exe с AAD, перейдите по адресу https://www.microsoft.com/en-us/download/details.aspx?id=55088 
-- SSDT Data Compare не поддерживается для проверки подлинности AAD, включая новый метод проверки подлинности.  
-
-
-
+- Пакет SQLPackage.exe, установленный в каталоге Extensions во время установки Visual Studio, не предназначен для использования в этом расположении. Чтобы использовать SQLpackage.exe с AAD, перейдите по адресу [https://www.microsoft.com/download/details.aspx?id=55088](https://www.microsoft.com/download/details.aspx?id=55088). 
+- Сравнение данных SSDT не поддерживается для проверки подлинности Azure AD.  
 
 
 ## <a name="see-also"></a>См. также:  
+
 [Универсальная проверка подлинности для Базы данных SQL и хранилища данных SQL (поддержка SSMS для MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [Настройка аутентификации Azure Active Directory и управление ею с использованием базы данных SQL или хранилища данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
-[SQL Server Data Tools в Visual Studio](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [Форум MSDN по SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [Блог группы разработчиков SSDT](http://blogs.msdn.com/b/ssdt/)  
 [Справочник по API DACFx](https://msdn.microsoft.com/library/dn645454.aspx)  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021111"
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>Получение данных из источника аналитических данных
   Установив соединение и создав запрос, можно начать извлечение данных. В ADOMD.NET можно получить с помощью трех разных объектов данных (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, и <xref:System.Xml.XmlReader>) путем вызова одного из **Execute** методы <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> объекта.  

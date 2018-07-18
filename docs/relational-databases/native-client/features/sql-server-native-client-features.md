@@ -1,13 +1,11 @@
 ---
-title: Компоненты собственного клиента SQL Server | Документы Microsoft
+title: Компоненты собственного клиента SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
-caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aa19218cfcb20bf4b696edfcdbffd4925d46aff8
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 12c021047650a7bfe24df6d354fa5fc545f2bfe5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708402"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416913"
 ---
 # <a name="sql-server-native-client-features"></a>Компоненты собственного клиента SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "34708402"
  Описание изменения поведения, реализованного с версии Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012.  
   
  [Использование зеркального отображения базы данных](../../../relational-databases/native-client/features/using-database-mirroring.md)  
- Рассматриваются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client поддерживает использование зеркальных баз данных, — это возможность сохранять копию или зеркальную из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных на резервном сервере.  
+ Рассматриваются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client поддерживает использование зеркальных баз данных, который является возможность хранить копию или зеркальную из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных на резервном сервере.  
   
  [Выполнение асинхронных операций](../../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] асинхронных операций, то есть способности немедленно возвращать управление, не блокируя вызывающий поток.  
@@ -51,7 +48,7 @@ ms.locfileid: "34708402"
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типа данных XML (представляющего собой тип данных на основе XML), который можно использовать как тип столбца, переменной, параметра или значения, возвращаемого функцией.  
   
  [Использование определяемых пользователем типов](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- Рассматриваются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client поддерживает определяемые пользователем типы (UDT), который расширяет систему типов SQL, позволяя хранить объекты и пользовательские структуры данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных.  
+ Рассматриваются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client поддерживает определяемые пользователем типы (UDT), который расширяет систему типов SQL, позволяя сохранять объекты и настраиваемые структуры данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных.  
   
  [Использование типов больших значений](../../../relational-databases/native-client/features/using-large-value-types.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных больших значений, то есть типов данных больших объектов (LOB).  
@@ -66,7 +63,7 @@ ms.locfileid: "34708402"
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] уведомления потребителя об изменении набора строк.  
   
  [Выполнение операций массового копирования](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
- Рассматриваются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client поддерживает операции массового копирования, обеспечивающие передачу больших объемов данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицу или представление.  
+ Рассматриваются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client поддерживает операции массового копирования, обеспечивающие передачу больших объемов данных, в который или из которого [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы или представления.  
   
  [Использование шифрования без проверки](../../../relational-databases/native-client/features/using-encryption-without-validation.md)  
  Обсуждение использования собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для шифрования данных, передаваемых на сервер, без проверки сертификата.  
@@ -78,7 +75,7 @@ ms.locfileid: "34708402"
  Обсуждение поддержки определяемых пользователем типов данных среды CLR.  
   
  [Поддержка FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md)  
- Описывает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержка собственного клиента улучшенной функции FILESTREAM.  
+ Обсуждаются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержка Native Client для улучшенной функции FILESTREAM.  
   
  [Имя участника-службы &#40;имени участника-службы&#41; поддержка в клиентских соединениях](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  Обсуждение расширенной поддержки имен участника-службы (SPN) для проведения взаимной проверки подлинности по всем протоколам.  
@@ -93,10 +90,10 @@ ms.locfileid: "34708402"
  Обсуждение улучшений в механизме обнаружения метаданных, внесенных в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Поддержка UTF-16 в SQL Server Native Client 11.0](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
- Рассматривает изменение поведения, появившееся в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Если при привязке результата столбца или выходного параметра указывается буфер фиксированной длины и **wchar** символ, записываемый в буфер перед завершающим символом, является старшим суррогатной пары, а также если следующего **wchar** символ является младшим символом-заместителем кодом, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не будет добавлять старшим буфера.  
+ Рассматривает изменение поведения, появившееся в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Если при привязке результата столбца или выходного параметра указывается буфер фиксированной длины и **wchar** символ, записываемый в буфер перед завершающим символом, является кодовую точку Старший суррогат суррогатной пары, а также если следующей **wchar** символом, является младшим символом-заместителем кода, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не будет добавлять старшая замещающая кодовая точка в буфере.  
   
  [Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- Описывает, как можно настроить приложение, чтобы воспользоваться преимуществами высокого уровня доступности, аварийного восстановления, появившихся в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+ Описывает, как можно настроить приложение, чтобы воспользоваться преимуществами высокого уровня доступности и аварийного восстановления, появившихся в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Доступ к диагностическим сведениям в журнале расширенных событий](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  Описывает улучшения, реализованные в клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, и функции отслеживания данных, которые дают доступ к диагностическим данным в кольцевом буфере и журналах XEvents.  
@@ -107,7 +104,7 @@ ms.locfileid: "34708402"
 ## <a name="see-also"></a>См. также  
  [Программирование собственного клиента SQL Server](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Инструкции по ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Разделы руководства по OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   
+ [Инструкции по OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   
  [Установка SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

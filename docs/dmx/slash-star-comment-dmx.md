@@ -1,36 +1,25 @@
 ---
-title: Косая черта звезда (комментарий) (расширения интеллектуального анализа данных) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- commenting characters
-- forward slash-asterisk character pairs
-- /*...*/ (comment)
-ms.assetid: 163976cc-aa47-4eda-bd98-03c1a397f80e
-caps.latest.revision: 15
-author: Minewiskan
+title: Косая черта-звездочка (комментарий) (расширения интеллектуального анализа данных) | Документация Майкрософт
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 37858f818ec35e6eb68c13034fc8ca7e56dc0150
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1d96c65ea1dd187d5678987447415ca419ad10d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020752"
 ---
 # <a name="slash-star-comment-dmx"></a>Косая черта-звездочка (комментарий) (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Указывает строку текста, которая не должна выполняться службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Сервер не обрабатывает текст между символами комментария / * и \*/. Комментарии внутри инструкции языка расширений интеллектуального анализа данных могут быть вложенными, их можно включать в конце строки кода или вставлять отдельной строкой.  
+  Указывает строку текста, которая не должна выполняться службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Сервер не обрабатывает текст между символами комментариев / * и \*/. Комментарии внутри инструкции языка расширений интеллектуального анализа данных могут быть вложенными, их можно включать в конце строки кода или вставлять отдельной строкой.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +32,7 @@ ms.lasthandoff: 05/03/2018
  *Comment_Text*  
  Строка, содержащая текст комментария.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Многострочные комментарии необходимо отмечать сочетаниями символов /* и \*/.  
   
  Длина комментариев не ограничена.  

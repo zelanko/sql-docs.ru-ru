@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11b084df985c6a81e2f5171c4bf79d34b5b27726
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26507d69e601d09b60ef8b794f755d24efceebcb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312113"
 ---
 # <a name="database-mirroring-operating-modes"></a>Режимы работы зеркального отображения базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -251,7 +251,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="ViewWitness"></a> Просмотр установки безопасности и состояния следящего сервера  
  Для просмотра настройки безопасности и состояния следящего сервера для базы данных используется представление каталога **sys.database_mirroring** . Соответствующие данные отображаются в следующих столбцах:  
   
-|Фактор|Столбцы|Description|  
+|Фактор|Столбцы|Описание|  
 |------------|-------------|-----------------|  
 |Безопасность транзакций|**mirroring_safety_level** или **mirroring_safety_level_desc**|Установка безопасности транзакций для обновления на зеркальной базе данных. Может принимать одно из следующих значений:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL = база данных находится не в режиме в сети.|  
 |Существует ли следящий сервер?|**mirroring_witness_name**|Имя следящего сервера зеркального отображения базы данных или значение NULL, означающее, что следящий сервер не существует.|  

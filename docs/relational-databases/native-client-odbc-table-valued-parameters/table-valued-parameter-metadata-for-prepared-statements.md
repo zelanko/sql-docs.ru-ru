@@ -1,36 +1,35 @@
 ---
-title: Метаданные табличное значение параметра для подготовленных инструкций | Документы Microsoft
+title: Метаданные возвращающего табличное значение параметра для подготовленных инструкций | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), metadata for prepared statements
 ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dffa739b237de06d81d62c649c991e9bb54c775
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b25c1b075b731d909545abe5f67fa6472477f7f6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427303"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>Метаданные возвращающего табличное значение параметра для подготовленных инструкций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Приложение может получить метаданные для заготовленного вызова процедуры через SQLNumParams и SQLDescribeParam. Для возвращающих табличное значение параметров *DataTypePtr* устанавливается в значение SQL_SS_TABLE. Дополнительные метаданные доступна через SQLGetDescField для SQL_CA_SS_TYPE_NAME, sql_ca_ss_type_catalog_name и sql_ca_ss_type_schema_name.  
+  Приложение может получить метаданные для заготовленного вызова процедуры через SQLNumParams и SQLDescribeParam. Для возвращающих табличные значения параметров *DataTypePtr* устанавливается в значение SQL_SS_TABLE. Дополнительные метаданные доступна через SQLGetDescField для SQL_CA_SS_TYPE_NAME, sql_ca_ss_type_catalog_name и sql_ca_ss_type_schema_name.  
   
- SQL_CA_SS_TYPE_NAME, sql_ca_ss_type_catalog_name и sql_ca_ss_type_schema_name могут использоваться с SQLColumns для получения метаданных столбца для табличных типов, связанных с параметрами, возвращающих табличные значения. В этом случае SQL_SOPT_SS_NAME_SCOPE необходимо задать значение SQL_SS_NAME_SCOPE_TABLE_TYPE, перед вызовом SQLColumns. После получения метаданных столбца, соответствующего возвращающему табличное значение параметру, параметр SQL_SOPT_SS_NAME_SCOPE необходимо установить обратно в значение по умолчанию — SQL_SS_NAME_SCOPE_TABLE.  
+ SQL_CA_SS_TYPE_NAME, sql_ca_ss_type_catalog_name и sql_ca_ss_type_schema_name могут использоваться с SQLColumns для получения метаданных столбца для табличных типов, связанных с возвращающих табличное значение параметрами. В этом случае SQL_SOPT_SS_NAME_SCOPE необходимо установить в значение SQL_SS_NAME_SCOPE_TABLE_TYPE перед вызовом SQLColumns. После получения метаданных столбца, соответствующего возвращающему табличное значение параметру, параметр SQL_SOPT_SS_NAME_SCOPE необходимо установить обратно в значение по умолчанию — SQL_SS_NAME_SCOPE_TABLE.  
   
  Параметры SQL_CA_SS_TYPE_NAME, SQL_CA_SS_TYPE_CATALOG_NAME и SQL_CA_SS_TYPE_SCHEMA_NAME также могут использоваться с параметрами определяемых пользователем типов данных CLR.  
   

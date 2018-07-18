@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029681"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Добавление в проект отчета новый или существующий отчет (службы SSRS)
   В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно добавить в проект новый отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы либо с помощью мастера отчетов, либо добавив пустой отчет. Кроме того, можно добавить в проект существующий отчет. После добавления отчета его имя появляется в папке **Отчеты** проекта.  

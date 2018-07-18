@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919049"
 ---
 # <a name="transaction-isolation-levels"></a>Уровни изоляции транзакций
 *Уровни изоляции транзакций* — это мера степень изоляции для транзакций выполняется успешно. Уровни изоляции транзакций, в частности, определяются с наличие или отсутствие следующих явлений.  

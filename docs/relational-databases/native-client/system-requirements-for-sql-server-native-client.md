@@ -1,10 +1,8 @@
 ---
-title: Требования к системе для собственного клиента SQL Server | Документы Microsoft
+title: Требования к системе для собственного клиента SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3480390a74154abb3414070ac1afe6d77ababbbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18d13f5d539d00818111d5854dc29a6785b13af1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413923"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Системные требования для собственного клиента SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +35,13 @@ ms.lasthandoff: 05/03/2018
   
 -   экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере.  
   
- Собственному клиенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется установщик Windows версии 3.0. Установщик Windows версии 3.0 уже установлен в ОС [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Для всех других платформ необходимо его установить явно. Дополнительные сведения см. в разделе [3.0 свободно распространяемый установщик Windows](http://go.microsoft.com/fwlink/?LinkId=46459).  
+ Собственному клиенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется установщик Windows версии 3.0. Установщик Windows версии 3.0 уже установлен в ОС [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Для всех других платформ необходимо его установить явно. Дополнительные сведения см. в разделе [Windows 3.0 свободно распространяемый установщик](http://go.microsoft.com/fwlink/?LinkId=46459).  
   
 > [!NOTE]  
 >  Перед установкой данного программного обеспечения убедитесь, что вы вошли в систему с правами администратора.  
   
 ## <a name="operating-system-requirements"></a>Требования к операционной системе  
- Список операционных систем, поддерживающих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client см. в разделе [политики поддержки для собственного клиента SQL Server](../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md).  
+ Список операционных систем, поддерживающих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, см. в разделе [политики поддержки для собственного клиента SQL Server](../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md).  
   
 ## <a name="sql-server-requirements"></a>Требования к SQL Server  
  Чтобы использовать собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для доступа к данным из баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо иметь установленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -66,27 +64,27 @@ ms.lasthandoff: 05/03/2018
 ## <a name="data-type-compatibility-for-client-versions"></a>Совместимость типов данных для версий клиента  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставляют новые типы данных со старыми, которые совместимы с клиентами низкого уровня, как показано в таблице ниже.  
   
- Приложения OLE DB и ADO могут использовать **DataTypeCompatibility** ключевое слово строки подключения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента для работы со старыми типами данных. Когда **DataTypeCompatibility = 80**, клиенты OLE DB соединятся с помощью [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] потока табличных данных (TDS) версии, а не потока табличных данных. Это значит, что для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних типов данных преобразование низкого уровня будет выполнено сервером, а не собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это также означает, что функции, доступные при соединении, будут ограничиваться набором функций [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Попытки использовать новые типы данных или функций быстро определяются по вызовам API-интерфейса и ошибкам, возвращаемым вызывающему приложению, а не по попыткам передать недопустимые запросы на сервер.  
+ Приложения OLE DB и ADO могут использовать **DataTypeCompatibility** ключевое слово строки подключения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента для работы со старыми типами данных. Когда **DataTypeCompatibility = 80**, OLE DB клиенты будут подключаться с помощью [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] поток табличных данных (TDS) версии, а не версию TDS. Это значит, что для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних типов данных преобразование низкого уровня будет выполнено сервером, а не собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это также означает, что функции, доступные при соединении, будут ограничиваться набором функций [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Попытки использовать новые типы данных или функций быстро определяются по вызовам API-интерфейса и ошибкам, возвращаемым вызывающему приложению, а не по попыткам передать недопустимые запросы на сервер.  
   
- Имеется не **DataTypeCompatibility** управления для ODBC.  
+ Существует не **DataTypeCompatibility** управления для ODBC.  
   
- IDBInfo::GetKeywords всегда будет возвращать список ключевых слов, который соответствует версии сервера для соединения и не зависит от **DataTypeCompatibility**.  
+ IDBInfo::GetKeywords всегда будет возвращать список ключевых слов, который соответствует версии сервера для подключения и не зависит от **DataTypeCompatibility**.  
   
 |Тип данных|собственный клиент SQL Server<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Компоненты доступа к данным Windows, компоненты MDAC и<br /><br /> приложения OLE DB собственного клиента SQL Server со свойством DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|Определяемый пользователем тип CLR (\<= 8 КБ)|определяемый пользователем тип|Udt|Varbinary|  
+|CLR UDT (\<= 8 КБ)|определяемый пользователем тип|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|Текст|  
-|nvarchar(max)|nvarchar|nvarchar|Ntext|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|Ntext|  
 |CLR UDT (> 8 КБ)|определяемый пользователем тип|varbinary|image|  
-|date|date|varchar|Varchar|  
+|Дата|Дата|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
 ## <a name="see-also"></a>См. также  
  [Программирование собственного клиента SQL Server](../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [Установка собственного клиента SQL Server](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
+ [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

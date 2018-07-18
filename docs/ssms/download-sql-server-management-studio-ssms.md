@@ -1,7 +1,7 @@
 ---
 title: Загрузка SQL Server Management Studio (SSMS) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 06/13/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 20ede2e4e67c7d3d5e3925e041d0baceda5446e5
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334905"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612229"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -78,6 +78,7 @@ SQL Server Management Studio 17.7:<br>
 
 > [!NOTE]
 > Модуль PowerShell для SQL Server теперь устанавливается отдельно, из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
+
 ## <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio
 
 
@@ -138,7 +139,8 @@ SSMS 17.7 — это новейшая версия SQL Server Management Stud
 
 Ниже перечислены проблемы и ограничения в выпуске 17.7.
 
-При работе с новыми выпусками базы данных SQL Azure (*общего назначения* или *критически важный для бизнеса*) в некоторых диалоговых окнах выводится сообщение о недопустимом выпуске.
+- При работе с новыми выпусками базы данных SQL Azure (*общего назначения* или *критически важный для бизнеса*) в некоторых диалоговых окнах выводится сообщение о недопустимом выпуске.
+- В средстве просмотра XEvents могут наблюдаться задержки. Это [известная проблема .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Рекомендуем установить версию NetFx 4.7.2.
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>Удаление и повторная установка SSMS

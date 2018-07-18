@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20ce53ebc4de2694039019857264b5821f3c6f2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d27f27154fe4faa1f028c53aafd7db40f20e938
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333278"
 ---
 # <a name="integration-services-containers"></a>Контейнеры служб Integration Services
   Контейнеры в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] представляют собой объекты, содержащие структуру пакетов и службы для задач. Они поддерживают повторение потоков управления в пакетах, а также группируют задачи и контейнеры в единые рабочие объекты. Кроме задач контейнеры могут включать другие контейнеры.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="container-types"></a>Типы контейнеров  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживают четыре типа контейнеров для построения пакетов. В следующей таблице перечислены типы контейнеров.  
   
-|Контейнер|Description|  
+|Контейнер|Описание|  
 |---------------|-----------------|  
 |[Контейнер «цикл по каждому элементу»](../../integration-services/control-flow/foreach-loop-container.md)|Повторяет запуск потока управления для каждого элемента, используя перечислитель.|  
 |[Контейнер «цикл по элементам»](../../integration-services/control-flow/for-loop-container.md)|Повторяет запуск потока управления с проверкой условия.|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="summary-of-container-properties"></a>Сводка свойств контейнера  
  Все типы контейнеров имеют набор общих свойств. При создании пакетов с помощью графических средств, предоставляемых службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , в окне «Свойства» перечисляются следующие свойства контейнеров «цикл по каждому элементу», «цикл по элементам» и контейнеров последовательности. Настройка свойств контейнера сервера задач является частью настройки задачи, которую инкапсулирует сервер задач. При настройке задачи настраиваются и свойства сервера задачи.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**DelayValidation**|Логическое значение, указывающее, откладывается ли проверка контейнера до времени выполнения. Значение этого свойства по умолчанию — **False**.<br /><br /> Дополнительные сведения см. в статье <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
 |**Описание**|Описание контейнера. Свойство содержит строку, но может быть пустым.<br /><br /> Дополнительные сведения см. в статье <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  

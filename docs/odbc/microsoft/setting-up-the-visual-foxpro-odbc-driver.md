@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903489"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Настройка драйвера ODBC Visual FoxPro
 Сведения о загрузке и установке драйвера Visual FoxPro ODBC см. в разделе [драйвера ODBC для Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318) на загрузки MSDN.  

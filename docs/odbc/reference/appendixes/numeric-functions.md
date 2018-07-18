@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914379"
 ---
 # <a name="numeric-functions"></a>Числовые функции
 В следующей таблице описаны числовые функции, включенные в набор скалярные функции ODBC. Путем вызова **SQLGetInfo** с *типу информации* из SQL_NUMERIC_FUNCTIONS, приложение может определить числовые функции, которые поддерживаются драйвером.  

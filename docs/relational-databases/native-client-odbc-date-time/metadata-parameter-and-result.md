@@ -1,30 +1,29 @@
 ---
-title: Метаданные параметров и результатов | Документы Microsoft
+title: Метаданные параметров и результатов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b724f1dfa28bcfeb3119291a8904515e7bfeb592
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de1c9e3a1f0969cfe3e17f08c3e5242f73e27909
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423423"
 ---
-# <a name="metadata---parameter-and-result"></a>Метаданные - параметров и результатов
+# <a name="metadata---parameter-and-result"></a>Метаданные — параметры и результаты
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="information-returned-in-ipd-fields"></a>Информация, возвращаемая в полях IPD  
  В полях IPD происходит возврат следующей информации:  
   
-|Тип параметра|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Тип параметра|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
@@ -52,11 +51,11 @@ ms.lasthandoff: 05/03/2018
   
  Иногда возникают нарушения непрерывности значений диапазона. Например, в диапазоне 8,10...16 отсутствует 9. Это следствие добавления десятичной запятой, когда точность в долях секунды выше нуля.  
   
- **datetime2** возвращается в виде имя типа для **smalldatetime** и **datetime** так, как драйвер использует его как тип данных для передачи всех **SQL_TYPE_TIMESTAMP** значения на сервер.  
+ **datetime2** возвращается в виде имя типа для **smalldatetime** и **datetime** так, как драйвер использует его как тип для передачи всех **SQL_TYPE_TIMESTAMP** значений на сервер.  
   
- SQL_CA_SS_VARIANT_SQL_TYPE — это новое поле дескриптора. Это поле было добавлено в IPD и IRD для приложений можно указать тип значения, связанные с **sqlvariant** (SQL_SSVARIANT) столбцов и параметров  
+ SQL_CA_SS_VARIANT_SQL_TYPE — это новое поле дескриптора. Это поле было добавлено в IPD и IRD для включения приложений указать тип значения, связанные с **sqlvariant** (SQL_SSVARIANT) столбцы и параметры  
   
- SQL_CA_SS_SERVER_TYPE — это новое поле (только для IPD), позволяющее в приложениях управлять способом привязки в качестве SQL_TYPE_TYPETIMESTAMP (или в качестве SQL_SS_VARIANT с типом SQL_C_TYPE_TIMESTAMP языка C) параметров, передаваемых на сервер. Если SQL_DESC_CONCISE_TYPE является SQL_TYPE_TIMESTAMP (или SQL_SS_VARIANT — и типом C — SQL_C_TYPE_TIMESTAMP) при вызове SQLExecute или SQLExecDirect значение SQL_CA_SS_SERVER_TYPE определяет потока табличных данных (TDS) тип значения параметра , как показано ниже:  
+ SQL_CA_SS_SERVER_TYPE — это новое поле (только для IPD), позволяющее в приложениях управлять способом привязки в качестве SQL_TYPE_TYPETIMESTAMP (или в качестве SQL_SS_VARIANT с типом SQL_C_TYPE_TIMESTAMP языка C) параметров, передаваемых на сервер. Если SQL_DESC_CONCISE_TYPE является SQL_TYPE_TIMESTAMP (или — SQL_SS_VARIANT, типом C — SQL_C_TYPE_TIMESTAMP) при вызове SQLExecute или SQLExecDirect, то значение SQL_CA_SS_SERVER_TYPE определяет поток табличных данных (TDS) тип значения параметра , как показано ниже:  
   
 |Значение SQL_CA_SS_SERVER_TYPE|Допустимые значения для SQL_DESC_PRECISION|Допустимые значения для SQL_DESC_LENGTH|Тип потока табличных данных|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -70,16 +69,16 @@ ms.lasthandoff: 05/03/2018
   
 -   Во время подготовки или выполнения (при вызове функций SQLExecute, SQLExecDirect, SQLSetPos или SQLBulkOperations).  
   
--   Отложенное приложение принудительно неотложенную подготовку путем вызова функции SQLPrepare с Подготовка отключена или путем вызова SQLNumResultCols, SQLDescribeCol или SQLDescribeParam для инструкции, которая подготовлена, но не выполняется.  
+-   При заставляет приложение неотложенную подготовку путем вызова функции SQLPrepare с отложенной подготовки отключено или путем вызова SQLNumResultCols, SQLDescribeCol или SQLDescribeParam для инструкции, которая подготовлена, но не выполняется.  
   
- Если параметр SQL_CA_SS_SERVER_TYPE был установлен с помощью вызова SQLSetDescField, его значение должно быть равно SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME или SQL_SS_TYPE_DATETIME. В противном случае происходит возврат значения SQL_ERROR, и в журнал вносится диагностическая запись с кодом SQLState (равным HY092) и сообщением «Неверный атрибут или идентификатор параметра».  
+ Если с помощью вызова SQLSetDescField имеет значение SQL_CA_SS_SERVER_TYPE, его значение должно быть равно SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME или SQL_SS_TYPE_DATETIME. В противном случае происходит возврат значения SQL_ERROR, и в журнал вносится диагностическая запись с кодом SQLState (равным HY092) и сообщением «Неверный атрибут или идентификатор параметра».  
   
- Атрибут SQL_CA_SS_SERVER_TYPE можно использовать в приложениях, зависящих от функциональных возможностей, поддерживаемых **datetime** и **smalldatetime**, но не **datetime2**. Например **datetime2** требует использования **dateadd** и **datediif** функций, тогда как **datetime** и  **smalldatetime** также позволяют арифметические операторы. В большинстве приложений необходимость в этом атрибуте отсутствует, поэтому следует избегать его применения.  
+ Атрибут SQL_CA_SS_SERVER_TYPE можно использовать в приложениях, которые зависят от функциональных возможностей, поддерживаемых **datetime** и **smalldatetime**, но не **datetime2**. Например **datetime2** требует использования **dateadd** и **datediif** функции, тогда как **datetime** и  **smalldatetime** также позволяют арифметические операторы. В большинстве приложений необходимость в этом атрибуте отсутствует, поэтому следует избегать его применения.  
   
 ## <a name="information-returned-in-ird-fields"></a>Информация, возвращаемая в полях IRD  
  В полях IRD возвращаются следующие сведения:  
   
-|Тип столбца|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Тип столбца|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

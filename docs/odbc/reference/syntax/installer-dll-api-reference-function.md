@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916919"
 ---
 # <a name="installer-dll-api-reference-function"></a>Справочник по API функции установщика DLL
 В этом разделе описывается синтаксис функций в установщик API библиотеки DLL. Установщик DLL API состоит из 20 функций. Три из этих функций **SQLGetTranslator**, **SQLRemoveDSNFromIni**, и **SQLWriteDSNToIni**, вызываются только программой установки библиотеки DLL. Другие функции вызываются программ установки и администрирования.  

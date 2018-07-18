@@ -2,7 +2,6 @@
 title: Метод CreateObject (RDS) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5759c1b1b9faaaa9262879a614913a5fcf16c42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0307edbf2e9b5a6495dd84c45c8dc647fe5bdefd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287573"
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (RDS)
 Создает прокси для целевого бизнес-объекта и возвращает указатель на него. Прокси-сервер пакеты и выполняет маршалинг данные заглушки стороне сервера для взаимодействия с бизнес-объект для отправки запросов и данных через Интернет. Для объектов в работе компонента без прокси-серверы используются, и предоставляется только указатель на объект.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
  *awebsrvr* или *computername*  
  Объект **строка** значение, представляющее URL-адрес, идентифицирующий Internet Information Services (IIS) веб-сервере, где создается экземпляр бизнес-объекта сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  *Протокол HTTP* — стандартные веб-протокол; *HTTPS* — безопасное веб-протокол. Используйте *протокол DCOM* при выполнении локальной сети без HTTP. *В процессе* протоколом является локальной библиотеки динамической компоновки (DLL); он не использует сеть.  
   
 ## <a name="applies-to"></a>Объект применения  

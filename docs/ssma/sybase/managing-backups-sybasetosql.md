@@ -3,8 +3,6 @@ title: Управление резервными копиями (SybaseToSQL) | 
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 85ccefaddf6e8f0bad35d3a01d1b355f0482db9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ca7901e604bfce6649211e87cc7909730640842
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778960"
 ---
 # <a name="managing-backups-sybasetosql"></a>Управление резервными копиями (SybaseToSQL)
 Sybase управления резервным копированием позволяет резервного копирования и восстановления таблицы данных до или после выполнения теста. Можно также управлять содержимое резервной копии с помощью диалогового окна управления содержимое резервной копии.  

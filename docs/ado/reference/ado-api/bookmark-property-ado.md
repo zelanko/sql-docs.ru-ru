@@ -2,7 +2,6 @@
 title: Bookmark-свойство (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e8b73c3d31886877702cadfca0194fd628bf6172
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e645300f604e1880f98fd8d99cea8599062f72f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276203"
 ---
 # <a name="bookmark-property-ado"></a>Свойство закладка (ADO)
 Указывает закладка, которая однозначно определяет текущую запись в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта или задает текущую запись **записей** объект для записи, определяемый допустимую закладку.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **Variant** выражение, результатом которого является допустимое закладка.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **закладки** свойство, чтобы сохранить позицию текущей записи и вернуться на эту запись в любое время. Закладки, доступны только в **записей** объектов, которые поддерживают функцию закладок.  
   
  При открытии **записей** объектов, каждый из него записей имеет уникальный закладки. Чтобы сохранить закладку в текущей записи, присвойте значение **закладки** свойства переменной. Чтобы быстро вернуться к этой записи в любое время после перемещения в другой записи, задайте **записей** объекта **закладки** значение этой переменной.  

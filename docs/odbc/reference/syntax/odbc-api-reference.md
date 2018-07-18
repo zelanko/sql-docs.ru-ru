@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921949"
 ---
 # <a name="odbc-api-reference"></a>Справочник по API-интерфейса ODBC
 В этом разделе описываются каждой функции ODBC в алфавитном порядке. Каждая функция определяется как C, функция языка программирования. Следующие описания.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02790fb579d3b899444834eee526da8fc852d569
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca90530dbce46d98f3fbaa9faeaa744426e4843f
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333438"
 ---
 # <a name="precedence-constraints"></a>Управление очередностью
   Элементы управления очередностью связывает исполняемые объекты, контейнеры и задачи в пакетах в поток управления и задают условия, которые определяют, выполняются ли исполняемые объекты. В качестве исполняемого объекта могут быть контейнеры «цикл по элементам» и «цикл по каждому элементу», контейнеры последовательности, задача или обработчик события. Обработчики событий также используют управление очередностью для связывания своих исполняемых объектов в поток управления.  
@@ -153,7 +152,7 @@ ms.lasthandoff: 05/03/2018
   
     |Свойство, доступное для чтения-записи|Действие настройки|  
     |--------------------------|--------------------------|  
-    |Description|Введите описание.|  
+    |Описание|Введите описание.|  
     |EvalOp|Выберите операцию вычисления. Если выбрана одна из операций **Expression**, **ExpressionAndConstant**или **ExpressionOrConstant** , можно указать выражение.|  
     |Выражение|Если операция вычисления включает в себя выражение, введите выражение. Выражение должно иметь логическое значение. Дополнительные сведения о языке выражений см. в разделе [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Установите значение **LogicalAnd** , чтобы указать, должно ли оцениваться управление очередностью совместно с другими элементами управлениями очередностью, когда несколько исполняемых объектов предшествуют исполняемому объекту с ограничениями и связаны с ним.|  

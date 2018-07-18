@@ -2,7 +2,6 @@
 title: Написание собственного настраиваемого обработчика | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b780e2027e64f7832fd622e66e1d908696d24b0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b9cb903d276357e46489dbdcd316d4f3974087a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274703"
 ---
 # <a name="writing-your-own-customized-handler"></a>Написание собственного настраиваемого обработчика
 Вы можете написать собственный обработчик, если вы являетесь администратором сервера IIS, желающему Поддержка служб удаленных рабочих СТОЛОВ, по умолчанию, но больший контроль над запросы пользователей и права доступа.  

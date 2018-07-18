@@ -1,33 +1,22 @@
 ---
-title: Инструкции управления данными расширений интеллектуального анализа данных | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- statements [DMX], data manipulation statements
-- DML [DMX]
-- data manipulation statements [DMX]
-ms.assetid: 68fe9efd-487f-4aa5-952c-bd7d80a3dac0
-caps.latest.revision: 26
-author: Minewiskan
+title: Инструкции управления данными расширений интеллектуального анализа данных | Документация Майкрософт
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6683906b0d9f48e4ffcc05531b828ec0e5266a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968186"
 ---
-# <a name="dmx-statements---data-manipulation"></a>Инструкции расширений интеллектуального анализа данных — управление данными
+# <a name="dmx-statements---data-manipulation"></a>Инструкции расширений интеллектуального анализа данных — обработка данных
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   В следующей таблице перечислены инструкции, являющиеся частью языка обработки данных (DML) в расширениях интеллектуального анализа данных.  
@@ -35,13 +24,13 @@ ms.lasthandoff: 05/03/2018
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[УДАЛИТЬ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/delete-dmx.md)|Позволяет удалить содержимое обучения из модели интеллектуального анализа данных.|  
-|[ВСТАВЬТЕ В &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/insert-into-dmx.md)|Служит для обучения модели интеллектуального анализа данных.|  
+|[ВСТАВЬТЕ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/insert-into-dmx.md)|Служит для обучения модели интеллектуального анализа данных.|  
 |[ВЫБЕРИТЕ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/select-dmx.md)|Служит для обзора модели интеллектуального анализа данных.|  
-|[&#60;запрос источника данных&#62;](../dmx/source-data-query.md)|Запрашивает источники данных для обоих **INSERT INTO** и **ВЫБЕРИТЕ** инструкции.|  
+|[&#60;запрос источника данных&#62;](../dmx/source-data-query.md)|Запрашивает источники данных для обоих **INSERT INTO** и **ВЫБЕРИТЕ** инструкций.|  
 |[ОБНОВЛЕНИЕ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/update-dmx.md)|Позволяет изменить содержимое модели интеллектуального анализа данных.|  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

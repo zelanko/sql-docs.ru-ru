@@ -1,0 +1,49 @@
+---
+title: Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel | Документация Майкрософт
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
+caps.latest.revision: 5
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 319ef37cd831d7bcce3d428e6c82624147b175e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167625"
+---
+# <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services
+  MSOLAP.5 относится к поставщику OLE DB служб Analysis Services для SQL Server 2012. Этот поставщик должен быть доверенным для служб Excel перед запросом на соединение, который обеспечивает доступность данных PowerPivot на сервере.  
+  
+ Если PowerPivot для SharePoint настроено с помощью средства настройки PowerPivot, то MSOLAP.5 уже может быть доверенным поставщиком, поскольку это средство содержит действие, удовлетворяющее данному требованию. Однако если используется PowerShell или центр администрирования либо доверенный поставщик не включен в средство конфигурации, то поставщик может отсутствовать и его нужно добавить на этом этапе как часть настройки фермы для доступа к данным PowerPivot.  
+  
+ Этот шаг нужно выполнить только один раз для каждого приложения служб Excel Services.  
+  
+ На каждом физическом сервере, обрабатывающем запросы к данным PowerPivot, например сервере PowerPivot для SharePoint или сервере служб Excel Services, должен быть установлен поставщик OLE DB. Установка PowerPivot для SharePoint всегда включает поставщик OLE DB, однако если службы Excel работают на компьютере без PowerPivot для SharePoint, то поставщик следует установить вручную. Дополнительную информацию см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
+  
+## <a name="add-a-trusted-provider-to-excel-services"></a>Добавление надежного поставщика в службы Excel Services  
+  
+1.  В центре администрирования выберите **Управление приложениями служб**и щелкните приложение служб Excel Services.  
+  
+2.  Щелкните **Надежные поставщики данных**.  
+  
+3.  Убедитесь, что в списке отображается MSOLAP.5. MSOLAP.5 уже может быть надежным поставщиком, в зависимости от настройки PowerPivot для SharePoint.  
+  
+4.  Если его нет в списке, щелкните **Добавить надежный поставщик данных**.  
+  
+5.  В качестве идентификатора поставщика введите `MSOLAP.5`.  
+  
+6.  В качестве типа поставщика необходимо указать OLE DB.  
+  
+7.  В поле "Описание поставщика" введите **Поставщик Microsoft OLE DB для OLAP Services 11.0**.  
+  
+  

@@ -1,42 +1,23 @@
 ---
 title: Инструкция CREATE ACTION (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE ACTION
-- Action
-- CREATE
-- CREATE_ACTION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- invocation types [MDX]
-- dimensions [Analysis Services], actions
-- CREATE ACTION statement
-- cubes [Analysis Services], actions
-- actions [MDX]
-- hierarchies [Analysis Services], actions
-ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dbb6e815e1cc9c66706641c16a9e169bb217ad6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741293"
 ---
 # <a name="mdx-data-definition---create-action"></a>Определения данных многомерных Выражений — Создание действия
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Создает действие, которое можно связать с кубом, измерением, иерархией или подчиненным объектом.  
   
@@ -91,14 +72,14 @@ FOR
  *String_Expression*  
  Допустимое строковое выражение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Возможна ситуация, когда клиентские приложения создают и запускают небезопасные действия или используют ненадежные функции. Чтобы избежать таких ситуаций, используйте **Safety Options** свойство. Дополнительные сведения см. в разделе «Свойство параметров безопасности».  
   
 > [!NOTE]  
->  Данная инструкция включена для обеспечения обратной совместимости. Новые действия [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], например действия детализации или отчета, не поддерживаются.  
+>  Данная инструкция включена для обеспечения обратной совместимости. Новые действия [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], например действия детализации или отчета, не поддерживаются.  
   
 ## <a name="action-types"></a>Типы действий  
- В следующей таблице описаны различные типы действий, доступных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ В следующей таблице описаны различные типы действий, доступных в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 |Тип действия|Описание|  
 |-----------------|-----------------|  

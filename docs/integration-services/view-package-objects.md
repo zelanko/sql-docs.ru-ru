@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 08b2d74a86e6afd2d4acbe8ca4b907b01e10ece5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eab989b90704ce0127bdd6f7826c8f70deea1c93
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403256"
 ---
 # <a name="view-package-objects"></a>просмотр объектов пакета
   В конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] вкладка **Обозреватель пакетов** предоставляет режим обозревателя. В данном режиме отображается иерархия контейнеров архитектуры [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Контейнер пакетов стоит на самом верху иерархии. При разворачивании пакета можно просмотреть все соединения, исполняемые объекты, обработчики событий, регистраторы, объекты управления очередностью и переменные.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
  На следующей диаграмме показана древовидная структура простого пакета.  
   
- ![Снимок экрана: вкладка "Обозреватель пакетов"](../integration-services/media/packageexplorer.gif "Снимок экрана: вкладка "Обозреватель пакетов"")  
+ ![Снимок экрана: вкладка "Обозреватель пакетов"](../integration-services/media/packageexplorer.gif "Снимок экрана: вкладка \"Обозреватель пакетов\"")  
   
 ## <a name="view-the-package-structure-and-content"></a>Просмотр структуры и содержимого пакета  
   

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -24,11 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5038ad98858e3fa5e94864286af043ff432cc0a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65e1d7d8e984ca65f72646da72f2908f6b9d2b3d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357346"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Реализация обработчика бизнес-логики для статьи публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Использование обработчика бизнес-логики со статьей в новой таблице  
   
-1.  Чтобы определить статью, запустите хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), указав понятное имя обработчика бизнес-логики в параметре **@article_resolver**. Дополнительные сведения см. в статье [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+1.  Чтобы определить статью, запустите хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), указав понятное имя обработчика бизнес-логики в параметре **@article_resolver**. Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Использование обработчика бизнес-логики со статьей в существующей таблице  
   
@@ -208,7 +208,7 @@ ms.lasthandoff: 05/03/2018
   
     -   Понятное имя обработчика бизнес-логики (<xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>) в свойстве <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Дополнительные сведения см. в статье [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Использование обработчика бизнес-логики со статьей в существующей таблице  
   

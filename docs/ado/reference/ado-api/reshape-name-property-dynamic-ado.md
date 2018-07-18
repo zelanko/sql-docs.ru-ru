@@ -1,11 +1,8 @@
 ---
 title: Изменить имя свойства динамические (ADO) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3e4509aa15755839c9b199427a9026d86dbf8d0
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 4752609469ecad3a3a6631584e120de8cc4a7575
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281413"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Изменить имя свойства динамические (ADO)
 Указывает имя для [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строка** значение, представляющее имя **записей**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Имена сохраняются во время соединения, или пока не **записей** закрыт.  
   
  **Изменить имя** свойство предназначено для использования с функцией повторного формирования [службы Microsoft Data Shaping Service для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) поставщика услуг. Имена должны быть уникальными для участия в повторного формирования.  

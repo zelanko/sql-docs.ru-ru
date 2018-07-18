@@ -1,5 +1,5 @@
 ---
-title: Хранимые процедуры (Transact-SQL) в хранилище запросов | Документы Microsoft
+title: Query Store хранимые процедуры (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -23,19 +23,20 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3778acbe0fdfcbb05eec3318daf007799322e410
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978256"
 ---
-# <a name="query-store-stored-procedures-transact-sql"></a>Хранимые процедуры (Transact-SQL) в хранилище запросов
+# <a name="query-store-stored-procedures-transact-sql"></a>Query Store хранимые процедуры (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Этот раздел содержит следующие хранимые процедуры, используемые для настройки хранилища запросов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [sp_query_store_flush_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
+-   [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
   
 -   [sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)  
   

@@ -1,0 +1,8 @@
+# [Справочник по языку ASSL](analysis-services-scripting-language-assl-for-xmla.md)
+# [Иерархия элементов XML в языке ASSL](analysis-services-scripting-language-xml-element-hierarchy-assl.md)
+# [Иерархия типов данных XML в языке ASSL](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)
+# [Элементы XML в языке ASSL](analysis-services-scripting-language-xml-elements-assl.md)
+## [Объекты +](objects/objects-assl.md)
+## [Коллекции +](collections/collections-assl.md)
+## [Свойства +](properties/properties-assl.md)
+# [Типы данных XML в языке ASSL +](data-type/analysis-services-scripting-language-xml-data-types-assl.md)

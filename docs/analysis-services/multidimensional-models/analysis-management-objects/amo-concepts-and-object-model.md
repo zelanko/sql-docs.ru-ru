@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024261"
 ---
 # <a name="amo-concepts-and-object-model"></a>Основные понятия и модель объектов AMO
   Этот раздел содержит определения для анализа Management объекты AMO, как они связаны с другими средствами и библиотеками из архитектуры [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]и общие сведения обо всех основных объектах AMO.  

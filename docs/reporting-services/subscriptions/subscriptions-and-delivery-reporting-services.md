@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036921"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представляет собой конфигурацию, создающую отчет в определенное время или в ответ на конкретное событие. Отчет выводится в указанном формате файла. Например, каждую среду отчет MonthlySales.rdl можно сохранять в виде документа Microsoft Word на общем файловом ресурсе. С помощью подписок можно планировать и автоматизировать создание отчетов, в которых будет использоваться заданный набор значений параметров.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 96
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a5ebd644020b4c2bb6e07aff74e11e4e2474338
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a9f320bd5f88b91b3807b440db82ab2f6a76e3e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330808"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Выбор исходных таблиц и представлений (мастер импорта и экспорта SQL Server)
   После того как вы укажете, хотите ли вы скопировать всю таблицу, или после определения запроса в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Выбор исходных таблиц и представлений**. На этой странице выберите существующие таблицы и представления, которые нужно скопировать. Затем следует сопоставить исходные таблицы с новыми или существующими целевыми таблицами. При необходимости можно проверить, правильно ли сопоставлены отдельные столбцы, и открыть предпросмотр образца данных.

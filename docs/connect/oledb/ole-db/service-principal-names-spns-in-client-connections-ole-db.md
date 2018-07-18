@@ -2,10 +2,10 @@
 title: Имена участника-службы (SPN) в клиентских соединениях (OLE DB) | Документы Microsoft
 description: Имена участника-службы (SPN) в клиентских соединениях (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b03f6f44cd23679e3b60ce03410a9582020d84ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4afff2d6f742d1e11791963822d76f075104836b
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611719"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>Имена участника-службы в клиентских соединениях (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
   В этом разделе описываются свойства OLE DB и функции элементов, поддерживающие имена участника-службы (SPN) в клиентских приложениях. Дополнительные сведения об именах SPN в клиентских приложениях см. в разделе [имени участника-службы &#40;имени участника-службы&#41; поддержка в клиентских соединениях](../../oledb/features/service-principal-name-spn-support-in-client-connections.md). Пример см. в разделе [встроенную проверку подлинности Kerberos &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
@@ -37,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="data-source-initialization-properties"></a>Свойства инициализации источника данных  
  Следующие свойства набора свойств **DBPROPSET_SQLSERVERDBINIT** позволяют приложениям указывать имена участников-служб.  
   
-|Название|Тип|Использование|  
+|Имя|Тип|Использование|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR, чтение и запись|Задает имя участника-службы для сервера. Значение по умолчанию — пустая строка, вследствие чего драйвер OLE DB для SQL Server по умолчанию, сформированное поставщиком имя участника-службы.|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, чтение и запись|Указывает имя участника-службы для партнера по обеспечению отработки отказа. Значение по умолчанию — пустая строка, вследствие чего драйвер OLE DB для SQL Server по умолчанию, сформированное поставщиком имя участника-службы.|  
@@ -45,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="data-source-properties"></a>Свойства источника данных  
  Следующие свойства набора свойств **DBPROPSET_SQLSERVERDATASOURCEINFO** позволяют приложениям распознавать метод проверки подлинности.  
   
-|Название|Тип|Использование|  
+|Имя|Тип|Использование|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, только для чтения|Возвращает метод проверки подлинности, используемый для соединения. Значение, возвращаемое в приложение является значением, которое Windows возвращает драйвер OLE DB для SQL Server. Возможные следующие значения. <br />Значение «NTLM», которое возвращается в том случае, если соединение установлено с использованием проверки подлинности NTLM.<br />Значение «Kerberos», которое возвращается в том случае, если соединение установлено с использованием проверки подлинности Kerberos.<br /><br /> Если при открытом соединении нельзя определить метод проверки подлинности, то возвращается значение VT_EMPTY.<br /><br /> Это свойство доступно для чтения только в том случае, если инициализирован источник данных. При попытке считывания свойства до инициализации источника данных IDBProperties::GetProperies возвращает DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURRED, соответствующим образом и атрибута будет установлено в DBPROPSET_PROPERTIESINERROR для этого свойства. Это поведение соответствует основной спецификации OLE DB.|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, только для чтения|Если при соединении серверов была выполнена взаимная проверка подлинности, возвращает значение VARIANT_TRUE. В противном случае возвращает VARIANT_FALSE.<br /><br /> Это свойство доступно для чтения только в том случае, если инициализирован источник данных. При попытке считывания свойства до инициализации источника данных IDBProperties::GetProperies возвращает DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURRED, соответствующим образом и атрибута будет установлено в DBPROPSET_ PROPERTIESINERROR для этого свойства. Это поведение соответствует основной спецификации OLE DB.<br /><br /> Если этот атрибут запрашивается соединением, не использующим проверку подлинности Windows, возвращается значение VARIANT_FALSE.|  

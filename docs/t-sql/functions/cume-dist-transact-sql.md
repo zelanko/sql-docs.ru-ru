@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - analytic functions, CUME_DIST
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08d38d1d876ee5b39498e6a28247b20c6cb6cab9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c36751e413f00db9da9d6987e496d93ce323bd5d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788715"
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -56,7 +56,7 @@ OVER **(**[ *partition_by_clause* ] *order_by_clause*)
 ## <a name="remarks"></a>Remarks  
 `CUME_DIST` возвращает диапазон значений, которые больше 0 и меньше или равны 1. Для равных значений всегда вычисляется одно и то же значение накопительного распределения. `CUME_DIST` включает значения NULL по умолчанию и рассматривает их как наименьшие из возможных значений.
   
-Функция `CUME_DIST` не детерминирована. Дополнительные сведения см. в статье[Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+Функция `CUME_DIST` не детерминирована. Дополнительные сведения см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Примеры  
 В этом примере с помощью функции `CUME_DIST` выполняется вычисление процентиля заработной платы для каждого сотрудника указанного отдела. Значение, возвращаемое функцией `CUME_DIST`, представляет процент сотрудников, заработная плата которых меньше или равна заработной плате текущего сотрудника этого отдела. Функция `PERCENT_RANK` вычисляет процент заработной платы сотрудника в рамках отдела. Для секционирования строк результирующего набора по отделам в примере указывается значение *partition_by_clause*. Предложение ORDER BY в предложении OVER логически упорядочивает строки в каждой секции. Предложение ORDER BY в инструкции SELECT определяет порядок отображения результирующего набора.

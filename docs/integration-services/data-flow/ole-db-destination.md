@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dfed499dd91ae4113671bf88f23e5ac1b0d8792
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91ef4d0595ea468f9b6fdd2bfb43bbd9dacad6ed
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406916"
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
   Назначение «OLE DB» загружает данные в различные OLE DB-совместимые базы данных при помощи таблицы базы данных или представления, или команды SQL. Например, источник OLE DB может загрузить данные в таблицы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access и базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  Помимо параметров быстрой загрузки, отображенных в диалоговом окне **Редактор назначения "OLE DB"** , можно настроить назначение "OLE DB" для использования параметров массовой загрузки. Для этого введите параметры в свойство FastLoadOptions в диалоговом окне **Расширенный редактор** .  
   
-|Параметры быстрой загрузки|Description|  
+|Параметры быстрой загрузки|Описание|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Устанавливает размер в килобайтах для вставки. Параметр имеет форму **KILOBYTES_PER_BATCH** = \<целое положительное число**>**.|  
 |FIRE_TRIGGERS|Устанавливает запуск триггеров при вставке таблицы. Параметр имеет форму **FIRE_TRIGGERS**. Наличие параметра означает, что триггер запускается.|  
@@ -141,7 +140,7 @@ ms.lasthandoff: 05/03/2018
  **Режим доступа к данным**  
  Укажите метод загрузки данных в назначение. Загрузка данных с двухбайтовой кодировкой (DBCS) требует одного из режимов быстрой загрузки. Дополнительные сведения о режимах доступа для быстрой загрузки данных, оптимизированных для массовой вставки, см. в разделе [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Таблица или представление|Загрузка данных в таблицу или представление назначения «OLE DB».|  
 |Быстрая загрузка таблицы или представления|Загрузка данных в таблицу или представление назначения «OLE DB» и использование параметра быстрой загрузки. Дополнительные сведения о режимах доступа для быстрой загрузки данных, оптимизированных для массовой вставки, см. в разделе [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  

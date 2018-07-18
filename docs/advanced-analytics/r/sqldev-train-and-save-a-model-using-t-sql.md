@@ -1,24 +1,26 @@
 ---
-title: Занятие 5 обучение и сохранить модель с помощью T-SQL | Документы Microsoft
+title: Занятие 5 обучение и сохранить модель, с помощью R и T-SQL (SQL Server машинного обучения) | Документы Microsoft
+description: Руководство для внедрения в SQL Server R хранимые процедуры и функции T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4d8bedd65e150d94c6030ea6c9c9fc6483bdaafd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd5bdc7d256a22dbab6662a74dc39073892dbb4d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250067"
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>Занятие 5: Обучения и сохранить модель с помощью T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье является частью учебника для разработчиков SQL по использованию R в SQL Server.
 
-На этом занятии вы узнаете, как для обучения модели машинного обучения с помощью R. Будет обучения модели с помощью функции данных в только что создали, а затем сохраните обученной модели в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы. В этом случае R-пакеты уже установлены с [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], поэтому все, что можно сделать из SQL.
+На этом занятии вы узнаете, как для обучения модели машинного обучения с помощью R. Будет обучения модели с помощью функции данных, созданный на предыдущем занятии, а затем сохраните обученной модели в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы. В этом случае R-пакеты уже установлены с [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], поэтому все, что можно сделать из SQL.
 
 ## <a name="create-the-stored-procedure"></a>Создайте хранимую процедуру
 
@@ -80,7 +82,7 @@ ms.lasthandoff: 04/16/2018
     EXEC TrainTipPredictionModel
     ```
 
-2. Контрольное значение **сообщений** окно [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для сообщений, которые может быть выведен R **stdout** потока, как это внесению: 
+2. Контрольное значение **сообщений** окно [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для сообщений, которые может быть выведен R **stdout** потока, как это сообщение: 
 
     «Сообщения STDOUT из внешнего скрипта: считано строк: 1193025, Всего обработано строк: 1193025, общее время блока: 0.093 секунд»
 
@@ -104,5 +106,5 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
-[Занятие 4: Создание компонентов данных, с помощью T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[Занятие 4: Создание компонентов данных, с помощью функции T-SQL и R](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

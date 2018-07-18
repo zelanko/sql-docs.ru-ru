@@ -1,14 +1,12 @@
 ---
-title: bcp_init | Документы Microsoft
+title: bcp_init | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,11 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 174c487c16f9e76fec6493dac0c77db15394df8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcfd732bd71d623cd1d21f3559f85b6a79b9a41b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421993"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,14 +52,14 @@ RETCODE bcp_init (
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *szTable*  
- Имя таблицы базы данных, в которую (или из которой) выполняется копирование. Это имя также может включать имя базы данных или владельца. Например **pubs.gracie.titles**, **pubs... заголовки**, **gracie.titles**, и **заголовки** являются допустимыми именами таблиц.  
+ Имя таблицы базы данных, в которую (или из которой) выполняется копирование. Это имя также может включать имя базы данных или владельца. Например **pubs.gracie.titles**, **pubs.. заголовки**, **gracie.titles**, и **заголовки** являются допустимыми именами таблиц.  
   
  Если *eDirection* имеет значение DB_OUT, *szTable* также может быть именем представления базы данных.  
   
- Если *eDirection* имеет значение DB_OUT, и инструкция SELECT указывается с помощью [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) перед [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) вызове **bcp_init** *szTable* должен иметь значение NULL.  
+ Если *eDirection* имеет значение DB_OUT, и инструкция SELECT указывается с помощью [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) перед [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) вызове **bcp_init** *szTable* должно быть присвоено значение NULL.  
   
- *szDataFile*  
- Имя пользовательского файла, в который или из которого выполняется копирование. Если при копировании данных напрямую из переменных с помощью [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), задайте *szDataFile* значение NULL.  
+ *szdatafile функции*  
+ Имя пользовательского файла, в который или из которого выполняется копирование. Если данные копируются напрямую из переменных с помощью [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), задайте *szDataFile* значение NULL.  
   
  *szErrorFile*  
  Имя файла ошибок, заполняемого сообщениями о ходе работы, сообщениями об ошибках и копиями строк, которые по каким-либо причинам не могут быть скопированы из пользовательского файла в таблицу. Если NULL передается как *szErrorFile*, файл ошибок не используется.  
@@ -71,16 +70,16 @@ RETCODE bcp_init (
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Вызовите **bcp_init** перед вызовом любой другой функции массового копирования. **bcp_init** выполняет необходимую инициализацию массового копирования данных между рабочей станцией и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Bcp_init** функции должен быть предоставлен с дескриптором соединения ODBC для использования с функциями массового копирования. Чтобы включить дескриптор, используйте [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром sql_copt_ss_bcp, установленным в значение SQL_BCP_ON, для дескриптора соединения выделенного, но не подключен. Попытка назначения атрибута для подключенного дескриптора приведет к ошибке.  
+ **Bcp_init** функции должно быть указано с дескриптором соединения ODBC, который включен для использования с функциями массового копирования. Чтобы включить дескриптор, используйте [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром SQL_COPT_SS_BCP, в значение SQL_BCP_ON, для подключения выделенного, но не подключенного дескриптора. Попытка назначения атрибута для подключенного дескриптора приведет к ошибке.  
   
  Если указан файл данных, **bcp_init** проверяет структуру базы данных исходной или целевой таблицы, не файл данных. **bcp_init** определяет формат данных для файла данных, на основе каждого столбца в таблице базы данных, представления или результирующего набора инструкции SELECT. Эта спецификация включает тип данных каждого столбца, присутствие или отсутствие длины и допустимости значений NULL и строки байтов признака конца, а также ширину для типов данных с фиксированной длиной. **bcp_init** устанавливает эти значения следующим образом:  
   
--   Указанный тип данных представляет собой тип данных столбца в таблице базы данных, представлении или результирующем наборе SELECT. Тип данных ограничивается собственными типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], указанными в файле sqlncli.h. Сами данные представляются в машинной форме. То есть данные из столбца **целое число со знаком** представлены четырехбайтовой последовательностью с большой тип данных — или обратным порядком байтов на компьютере, который создан файл данных.  
+-   Указанный тип данных представляет собой тип данных столбца в таблице базы данных, представлении или результирующем наборе SELECT. Тип данных ограничивается собственными типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], указанными в файле sqlncli.h. Сами данные представляются в машинной форме. То есть данные из столбца **целое число** тип данных представляется с помощью последовательности размером 4 байта, велик- или обратным порядком байтов на используемом компьютере, который создан файл данных.  
   
--   Если тип данных базы данных имеет фиксированную длину, то для данных файла данных также задается фиксированная длина. Функции массового копирования, обрабатывающие данные (например, [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)) анализируют строки данных, ожидая, что длина данных в файле данных будет идентична длине данных, указанных в таблице базы данных, представление или список ВЫБИРАЕМЫХ столбцов. Например, данные для столбца базы данных, определенных как **char(13)** должны быть представлены с 13 символов для каждой строки данных в файле. Данные фиксированной длины могут быть обозначены префиксом с признаком значения NULL, если столбец базы данных допускает значения NULL.  
+-   Если тип данных базы данных имеет фиксированную длину, то для данных файла данных также задается фиксированная длина. Функции массового копирования, которые обрабатывают данные (например, [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)) анализируют строки данных, ожидая, что длина данных в файле данных будет идентична длине данных, указанных в таблице базы данных, представления или списка столбцов SELECT. Например, данные для базы данных столбец, определенный как **char(13)** должны быть представлены с 13 символов для каждой строки данных в файле. Данные фиксированной длины могут быть обозначены префиксом с признаком значения NULL, если столбец базы данных допускает значения NULL.  
   
 -   После определения последовательности байт, служащей признаком конца, ее длина устанавливается в значение 0.  
   
@@ -88,11 +87,11 @@ RETCODE bcp_init (
   
 -   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] порядковый номер столбца в файле данных должен совпадать с порядковым номером столбца таблицы базы данных. При копировании из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** помещает данные, основанные на порядковый номер столбца в таблице базы данных.  
   
--   Если тип данных базы данных имеет переменную длину (например, **varbinary(22)**) или если столбец базы данных может содержать значения null, данные в файле данных предваряются признаком длины и допустимости значений null. Ширина признака изменяется в зависимости от типа данных и версии массового копирования.  
+-   Если тип данных базы данных имеет переменную длину (например, **varbinary(22)**) или если столбец базы данных может содержать значения null, данные в файле данных в качестве префикса Признак длины, null. Ширина признака изменяется в зависимости от типа данных и версии массового копирования.  
   
- Чтобы изменить формат данных, заданного для файла данных, вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) и [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
+ Чтобы изменить значения форматов данных, указанный для файла данных, вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) и [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   
- Массовое копирование в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть оптимизировано для таблиц, не содержащих индексов, путем установки модели восстановления базы данных в значение SIMPLE или BULK_LOGGED. Дополнительные сведения см. в разделе [необходимые условия для минимального протоколирования массового импорта](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md) и [инструкции ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
+ Массовое копирование в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть оптимизировано для таблиц, не содержащих индексов, путем установки модели восстановления базы данных в значение SIMPLE или BULK_LOGGED. Дополнительные сведения см. в разделе [необходимые условия для минимального протоколирования массового импорта](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md) и [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Если файл данных не используется, необходимо вызвать [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) Чтобы задать формат и местоположение в памяти данных для каждого столбца, затем скопировать строки данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   

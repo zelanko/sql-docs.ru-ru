@@ -3,12 +3,9 @@ title: Указание первого и последнего триггеро�
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,16 +15,16 @@ helpviewer_keywords:
 - INSTEAD OF triggers
 - AFTER triggers
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
-caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d38429267ba3a147df7450835947aebbca6493e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a6e8816746eba64bc1c6673cc81fd819494a38d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431913"
 ---
 # <a name="specify-first-and-last-triggers"></a>Указание первого и последнего триггеров
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  Задать порядок срабатывания для триггера AFTER можно с помощью хранимой процедуры **sp_settriggerorder** . Хранимая процедура**sp_settriggerorder** имеет следующие параметры.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**Первая**|Указывает, что триггер DML является первым триггером AFTER, срабатывающим для запускающего действия.|  
 |**Последняя**|Указывает, что триггер DML является последним триггером AFTER, срабатывающим для запускающего действия.|  

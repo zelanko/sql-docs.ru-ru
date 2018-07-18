@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015291"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Занятие 7. Добавление операции детализации к родительскому отчету
 После добавления элемента управления ReportViewer в приложение веб-сайта далее необходимо добавить действие детализации в родительский отчет.  

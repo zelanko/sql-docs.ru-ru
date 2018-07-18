@@ -2,10 +2,10 @@
 title: Драйвер OLE DB для SQL Server программирования | Документы Microsoft
 description: Драйвер OLE DB для SQL Server программирования
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ad7e7f4f62e66e5d72cd939fb37b4335a45932d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 53b88cb2ecd2b74d8ea1a4670a5fbd34abbb1723
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612189"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Драйвер OLE DB для SQL Server программирования
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -39,11 +40,11 @@ ms.lasthandoff: 05/03/2018
   
  Драйвер OLE DB для SQL Server является поставщика версии 2.0, совместимое с OLE DB.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Создание приложения с драйвером OLE DB для SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [Объекты источника данных & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Объекты источников данных &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Команды](../../oledb/ole-db-commands/commands.md)  
   
@@ -55,19 +56,19 @@ ms.lasthandoff: 05/03/2018
   
 -   [Таблицы и индексы](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Типы данных & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [Типы данных &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [Поддержка наборов строк схемы &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
 -   [Возвращающие табличные значения параметров &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Дата и время усовершенствования & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Дата и время улучшениях &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [Определяемые пользователем типы больших значений CLR &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
 -   [Поддержка FILESTREAM](../../oledb/features/filestream-support.md)  
   
--   [Транзакции](../../oledb/ole-db-transactions/transactions.md)  
+-   [Transactions](../../oledb/ole-db-transactions/transactions.md)  
   
 -   [ошибки](../../oledb/ole-db-errors/errors.md)  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Драйвер OLE DB для SQL Server &#40;OLE DB&#41; ссылки](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
--   [Разделы руководства по OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Инструкции по OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также  
  [Драйвер OLE DB для SQL Server](../../oledb/oledb-driver-for-sql-server.md)  

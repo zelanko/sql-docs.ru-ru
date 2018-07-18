@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c1a75f5d3c6f4a9f9eadcec5ad6f48e809f9f3e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 000322cdd3178c08e08a4bf6c7db47ecffbb5882
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401326"
 ---
 # <a name="administrators-master-data-services"></a>Администраторы (службы Master Data Services)
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="comparing-administrator-types"></a>Сравнение типов администраторов  
   
-|Тип администратора|Description|  
+|Тип администратора|Описание|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Суперпользователь|Разрешения, назначенные в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , не влияют на доступ администратора.<br /><br /> Может быть суперпользователем на основе разрешений функциональной области, назначенных ему явно, либо на основе разрешений, полученных в результате членства в некоторой группе.<br /><br /> Автоматически имеет все разрешения на все модели.<br /><br /> Автоматически имеет доступ ко всем функциональным областям.|  
 |Администратор модели|Может быть администратором модели на основе разрешений администратора, назначенных ему явно, либо на основе разрешений, полученных в результате членства в некоторой группе.<br /><br /> Имеет доступ только к тем функциональным областям, к которым разрешен доступ.<br /><br /> Автоматически имеет все разрешения на все объекты и элементы в конкретной модели.|  

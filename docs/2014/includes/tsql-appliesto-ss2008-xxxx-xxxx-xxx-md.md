@@ -1,1 +1,1 @@
-**ПРИМЕНЯЕТСЯ к:** ![Да](media/yes.png "Да")SQL Server \(начиная с 2008\) ![не](media/no.png "не")База данных azure SQL ![не](media/no.png "не")хранилище данных Azure SQL ![не](media/no.png "не")параллельные хранилища данных
+**Эта статья ОТНОСИТСЯ к:** ![Да](media/yes.png "Да")SQL Server \(начиная с версии 2008\) ![не](media/no.png "не")База данных azure SQL ![не](media/no.png "не")хранилище данных Azure SQL ![не](media/no.png "не")Parallel Data Warehouse

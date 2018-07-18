@@ -1,1 +1,1 @@
-СУБД SQL Server 2014
+Ядро СУБД SQL Server 2014

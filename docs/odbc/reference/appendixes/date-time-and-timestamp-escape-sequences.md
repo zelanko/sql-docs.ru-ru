@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905570"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Даты, времени и отметок времени Escape-последовательность
 ODBC определяет управляющие последовательности для даты, времени и отметок времени литералы. Используется следующий синтаксис escape-последовательностей:  

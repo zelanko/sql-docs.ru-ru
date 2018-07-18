@@ -2,7 +2,6 @@
 title: Принципы работы ADOX | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d2798c3d8cfeaa2680a794ceb79dfa26f32fbdb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8807daf163515780aa7f514a6145c4035ed3afc6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273433"
 ---
 # <a name="adox-fundamentals"></a>Принципы работы ADOX
 Модули Microsoft® ActiveX® данных объекты для языка определения данных и безопасности (ADOX) — это расширение объектов ADO и модель программирования. ADOX включает объекты для создания схем и изменения, а также безопасности. Поскольку объектно ориентированный подход для операций со схемой, можно написать код, который будет работать с различными данными источников независимо от различий в их собственном синтаксисов.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016091"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Занятие 4. Добавление таблицы в отчет (службы Reporting Services)
 После определения набора данных вы можете приступать к конструированию отчета. Макет отчета создается путем перетаскивания в область конструктора областей данных, текстовых полей, изображений и других элементов, которые необходимо включить в отчет.  

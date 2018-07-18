@@ -1,5 +1,5 @@
 ---
-title: sp_validate_replica_hosts_as_publishers (Transact-SQL) | Документы Microsoft
+title: sp_validate_replica_hosts_as_publishers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 408d6c239afd528deeae25f925b8626968dff6bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037752"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_validate_replica_hosts_as_publishers** является расширением **sp_validate_redirected_publisher** , позволяющий все вторичные реплики для проверки, а не только текущей первичной реплики. **sp_validate_replicat_hosts_as_publisher** проверяет всю всегда в топологии репликации. **sp_validate_replica_hosts_as_publishers** должна выполняться прямо для распространителя с помощью сеансов удаленного рабочего стола для предотвращения ошибок безопасности двойного прыжка (21892).  
+  **sp_validate_replica_hosts_as_publishers** является расширением **sp_validate_redirected_publisher** , позволяющий все вторичные реплики для проверки, а не только текущей первичной реплики. **sp_validate_replicat_hosts_as_publisher** проверяет всю Always On репликации топологию. **sp_validate_replica_hosts_as_publishers** должна выполняться прямо для распространителя с помощью сеанса удаленного рабочего стола, чтобы избежать ошибки безопасности двойного прыжка (21892).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,12 +63,12 @@ sp_validate_replica_hosts_as_publishers
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Замечания  
- Если не существует запись для издателя и базы данных публикации, **sp_validate_redirected_publisher** возвращает значение null для параметра вывода *@redirected_publisher*. В противном случае происходит возврат связанного перенаправленного издателя как в случае успеха, так и в случае неудачи.  
+## <a name="remarks"></a>Примечания  
+ Если не существует запись для издателя и базы данных публикации, **sp_validate_redirected_publisher** возвращает значение null, если для параметра вывода *@redirected_publisher*. В противном случае происходит возврат связанного перенаправленного издателя как в случае успеха, так и в случае неудачи.  
   
  Если проверка прошла успешно, **sp_validate_redirected_publisher** Возвращает указание на успех.  
   
- Если проверка завершается неудачно, формируются соответствующие ошибки.  **sp_validate_redirected_publisher** делает все возможное для вызова все проблемы, а не только на первой обнаружена.  
+ Если проверка завершается неудачно, формируются соответствующие ошибки.  **sp_validate_redirected_publisher** делает обнаружил максимум усилий для вызова обо всех проблемах и не только первый.  
   
 > [!NOTE]  
 >  Работа**sp_validate_replica_hosts_as_publishers** завершится сбоем со следующей ошибкой при проверке узлов вторичной реплики, которые не допускают доступ для чтения либо требуют указания намерения чтения.  
@@ -79,7 +80,7 @@ sp_validate_replica_hosts_as_publishers
 >  Произошла одна или несколько ошибок проверки издателя для узла реплики «MyReplicaHostName».  
   
 ## <a name="permissions"></a>Разрешения  
- Вызывающий объект должен быть либо членом **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа публикации для определенной публикации связанные с базой данных издателя.  
+ Вызывающий объект должен быть либо членом **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа публикации для определенной публикации связанные с базой данных издателя.  
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

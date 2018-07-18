@@ -2,7 +2,6 @@
 title: BeginTrans CommitTrans и методы RollbackTrans (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -27,11 +26,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80ae8b47737573aa7ff0c81bafd882ca162a157f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42f43c3dfc508ac6885f0e42811af26d89cd6692
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275983"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans CommitTrans и методы RollbackTrans (ADO)
 Эти методы транзакции управление обработки в пределах транзакций [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта следующим образом:  
@@ -56,7 +56,7 @@ object.RollbackTrans
  **BeginTrans** можно вызывать как функцию, возвращающую **длинные** переменной, показывающей, уровень вложенности транзакции.  
   
 #### <a name="parameters"></a>Параметры  
- *объект*  
+ *object*  
  Объект **подключения** объекта.  
   
 ## <a name="connection"></a>Соединение  

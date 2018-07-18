@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,14 +23,15 @@ helpviewer_keywords:
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5257fc78e43295131685d2fbdededa2f71d2b7de
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 486715799d2fee564c51336bd958eb603cd1b490
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789701"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Инструкции RESTORE — REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,8 +88,6 @@ FROM <backup_device> [ ,...n ]
  Означает автоматическую перемотку и выгрузку ленты по завершении инструкции RESTORE. При запуске нового сеанса пользователя выполнение параметра UNLOAD задано по умолчанию. Оно остается заданным до тех пор, пока не будет задан параметр NOUNLOAD. Этот параметр применяется только с ленточными устройствами. Если при выполнении инструкции RESTORE используется другой тип устройств резервного копирования, то этот параметр не учитывается.  
   
  NOUNLOAD  
- Указывает, что по выполнении инструкции RESTORE лента из ленточного устройства автоматически не выгружается. NOUNLOAD остается установленным до тех пор, пока указано UNLOAD.  
-  
  Указывает, что по выполнении инструкции RESTORE лента из ленточного устройства автоматически не выгружается. NOUNLOAD остается установленным до тех пор, пока указано UNLOAD.  
   
 ## <a name="general-remarks"></a>Общие замечания  

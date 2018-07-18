@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901221"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>Файлы для использования с драйверами для настольных баз данных
 Драйверы ODBC системной базы данных используются с базы данных Microsoft Jet, устанавливаемый ISAM файлы и файлы Microsoft ODBC. Не все они необходимы для распространения продукта, и не все основные компоненты.  

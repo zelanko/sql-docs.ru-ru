@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912189"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Объявление приложения&#39;s версия ODBC
 Перед приложение выделяет соединения, его необходимо задать атрибут SQL_ATTR_ODBC_VERSION среды. Этот атрибут состояний, что приложение следует ODBC 2. *x* или ODBC 3. *x* спецификации при использовании следующих элементов:  

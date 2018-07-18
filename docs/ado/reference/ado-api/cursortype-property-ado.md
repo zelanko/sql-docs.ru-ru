@@ -2,7 +2,6 @@
 title: Свойство CursorType (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83302f195c18aee51f0f7fb4c5bfe2d59ae4e882
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e516d185e1d143033003cd82d11273f2908ad12c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277363"
 ---
 # <a name="cursortype-property-ado"></a>Свойство CursorType (ADO)
 Указывает тип курсора, используемого в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) значение. Значение по умолчанию — **adOpenForwardOnly**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **CursorType** свойство, чтобы указать тип курсора, который должен использоваться при открытии **записей** объекта.  
   
  Только если параметр **adOpenStatic** поддерживается, если [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству **adUseClient**. Если задано недопустимое значение, ошибка не приведет к; ближайшее поддерживается **CursorType** вместо него будет использоваться.  

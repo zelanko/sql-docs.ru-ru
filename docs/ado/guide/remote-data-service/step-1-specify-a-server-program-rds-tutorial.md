@@ -2,7 +2,6 @@
 title: 'Шаг 1: Укажите программу Server (учебник служб удаленных рабочих СТОЛОВ) | Документы Microsoft'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dca4476288c3fb6a65f245f6fcd3380aec47666f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68468c97d870f103260c8a5ee1b7914c2ecc378a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274563"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>Шаг 1: Укажите программу Server (служб удаленных рабочих СТОЛОВ учебник)
 В общем случае использовать [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) объекта [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) метод, чтобы указать программу по умолчанию сервера [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), или собственную программу на другой сервер (бизнес-объекта). Программа server создается на сервере и ссылку на программу сервера или *прокси-сервера*, возвращается.  

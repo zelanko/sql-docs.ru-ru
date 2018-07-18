@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c77fbac34f82244e5807fec40820639f91de5b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e9416662ecd61636bd39f64f529575b2be30d70d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328508"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Выполнение операции (мастер импорта и экспорта SQL Server)
 После того как вы проверите значения, выбранные в мастере, и нажмете кнопку **Готова** на странице **Завершение работы мастера** , в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Выполнение операции**. На этой странице отображается ход выполнения и результат операции, настроенной на предыдущих страницах. На этой странице никакие действия не требуются.
@@ -30,12 +29,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="screen-shot---operation-in-progress"></a>Снимок экрана: выполнение операции 
  На следующем снимке экрана показана страница **Выполнение операции** мастера в процессе выполнения операции.  
   
- ![Страница "Выполнение операции" в мастере импорта и экспорта](../../integration-services/import-export-data/media/performing-operation1.png "Страница "Выполнение операции" в мастере импорта и экспорта")  
+ ![Страница "Выполнение операции" в мастере импорта и экспорта](../../integration-services/import-export-data/media/performing-operation1.png "Страница \"Выполнение операции\" в мастере импорта и экспорта")  
 
 ## <a name="screen-shot---operation-completed"></a>Снимок экрана: операция завершена 
  На следующем снимке экрана показана страница **Выполнение операции** мастера после завершения операции. Щелкните элемент в столбце **Сообщение** , чтобы получить дополнительные сведения о соответствующем этапе.  
   
- ![Страница "Выполнение операции" в мастере импорта и экспорта](../../integration-services/import-export-data/media/performing-operation2.png "Страница "Выполнение операции" в мастере импорта и экспорта")  
+ ![Страница "Выполнение операции" в мастере импорта и экспорта](../../integration-services/import-export-data/media/performing-operation2.png "Страница \"Выполнение операции\" в мастере импорта и экспорта")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Просмотр хода выполнения операции
  **Действие**  

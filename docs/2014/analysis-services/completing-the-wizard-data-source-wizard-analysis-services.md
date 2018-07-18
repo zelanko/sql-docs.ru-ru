@@ -1,0 +1,41 @@
+---
+title: Завершение работы мастера (мастер источников данных) (службы Analysis Services) | Документация Майкрософт
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql12.asvs.datasourcewizard.completion.f1
+ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
+caps.latest.revision: 19
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 594e28807eb33e28a74102681bc867ebbe5b7b9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279870"
+---
+# <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Завершение работы мастера (мастер источников данных) (службы Analysis Services)
+  Используйте страницу мастера **Завершение работы мастера** , чтобы просмотреть строку соединения и указать имя нового источника данных.  
+  
+## <a name="options"></a>Параметры  
+ **Имя источника данных**  
+ Введите имя или используйте имя по умолчанию, предусмотренное для источника данных.  
+  
+ **Предварительный просмотр**  
+ Отображает строку соединения для источника данных. Нажмите кнопку **Назад** , чтобы изменить эти параметры настройки.  
+  
+## <a name="see-also"></a>См. также  
+ [Справка F1 мастера источников данных &#40;служб Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+ [Источники данных в многомерных моделях](multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [Источники данных, поддерживаемые &#40;многомерные службы SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+  
+  

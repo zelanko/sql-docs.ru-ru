@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42a983e599e68873950444317db0f1ecae941a3e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f8c57d8e8a024fc70a5ed55de08add886d9c065
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311203"
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) содержит два компонента: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** и **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
   
-|Компонент DQS|Description|  
+|Компонент DQS|Описание|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] устанавливается поверх компонента [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] Database Engine и включает три базы данных: DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA. База данных DQS_MAIN содержит хранимые процедуры DQS, ядро DQS и опубликованные базы знаний. База данных DQS_PROJECTS содержит сведения о проекте служб DQS. DQS_STAGING_DATA представляет собой промежуточную область для копирования источника данных с целью выполнения операций DQS и последующего экспорта обработанных данных.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] — это автономное приложение, которое позволяет подключаться к [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]и имеет наглядный графический пользовательский интерфейс, используемый в операциях обеспечения качества данных и выполнения других административных задач служб DQS.|  

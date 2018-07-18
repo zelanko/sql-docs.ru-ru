@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020021"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Добавление действия детализации в отчет (построитель отчетов и службы SSRS)
   Отчеты, открывающиеся при щелчке ссылки в основном отчете, называются *детализированными отчетами*. Данная ссылка детализации активирует действие детализации.  

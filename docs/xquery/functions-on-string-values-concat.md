@@ -1,5 +1,5 @@
 ---
-title: Функция concat (XQuery) | Документы Microsoft
+title: Функция concat (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8be65777bb65ad54735ad6bdf43ea88608355c5b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981936"
 ---
-# <a name="functions-on-string-values---concat"></a>Строковые функции - concat
+# <a name="functions-on-string-values---concat"></a>Функции со строковыми значениями — concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Принимает от нуля и более строк и возвращает строку, содержащую результат сцепления переданных аргументов.  
@@ -47,11 +48,11 @@ fn:concat ($string as xs:string?
  *$string*  
  Необязательная строка для сцепления.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Функции требуется как минимум два аргумента. Если в качестве аргумента передана пустая последовательность, она трактуется как строка нулевой длины.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
- Поведение суррогатных пар в функциях XQuery зависит от уровня совместимости базы данных и, в некоторых случаях, от URI-кода пространства имен по умолчанию для функций. Дополнительные сведения см. в подразделе «XQuery функции учитывают суррогаты» раздела [критические изменения в функциях ядра СУБД в SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). См. также [уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) и [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Поведение суррогатных пар в функциях XQuery зависит от уровня совместимости базы данных и, в некоторых случаях, от URI-кода пространства имен по умолчанию для функций. Дополнительные сведения см. в подразделе «XQuery функций учитывают суррогаты» раздела [критические изменения в функциях ядра СУБД в SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Также см. в разделе [уровень совместимости ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) и [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** столбцов типа в базе данных AdventureWorks.  
@@ -80,9 +81,9 @@ WHERE  PD.ProductModelID=28
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   В предложении SELECT CatalogDescription является **xml** тип столбца. Таким образом [метода query() (тип данных XML)](../t-sql/xml/query-method-xml-data-type.md), есть Instructions.Query(). Инструкция XQuery задана как аргумент метода query.  
+-   В предложении SELECT CatalogDescription является **xml** столбец типа. Таким образом [метода query() (тип данных XML)](../t-sql/xml/query-method-xml-data-type.md), то есть Instructions.Query(). Инструкция XQuery задана как аргумент метода query.  
   
--   Запрос к документу выполняется при использовании пространства имен,  Таким образом **имен** ключевое слово используется для определения префикса для пространства имен. Дополнительные сведения см. в разделе [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
+-   Запрос к документу выполняется при использовании пространства имен,  Таким образом **пространства имен** ключевое слово используется для определения префикса пространства имен. Дополнительные сведения см. в разделе [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
   
  Результат:  
   
@@ -90,7 +91,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- Приведенный запрос получает сведения об указанном изделии. Следующий запрос получает те же сведения по всем изделиям, для которых имеются описания каталога XML. **Exist()** метод **xml** типа данных в предложении WHERE возвращает True, если XML-документ в строках <`ProductDescription`> элемент.  
+ Приведенный запрос получает сведения об указанном изделии. Следующий запрос получает те же сведения по всем изделиям, для которых имеются описания каталога XML. **Exist()** метод **xml** типа данных в предложении WHERE возвращает True, если XML-документ в строках <`ProductDescription`> элемента.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -112,7 +113,7 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 ```  
   
- Обратите внимание, что логическое значение, возвращаемое **exist()** метод **xml** сравнивается со значением 1.  
+ Обратите внимание, что логическое значение, возвращаемое функцией **exist()** метод **xml** сравнивается со значением 1.  
   
 ### <a name="implementation-limitations"></a>Ограничения реализации  
  Существуют следующие ограничения:  

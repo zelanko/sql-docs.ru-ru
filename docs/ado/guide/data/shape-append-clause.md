@@ -2,7 +2,6 @@
 title: Формирование предложении APPEND | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7c54daeed05260bd7e6abd804830ce8dac1807d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272583"
 ---
 # <a name="shape-append-clause"></a>Предложение APPEND фигуры
 В предложении APPEND фигуры команда добавляет столбец или столбцы для **записей**. Часто эти столбцы — это столбцы главе, относящихся к дочерним **записей**.  
@@ -68,7 +68,7 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  *дочерних записей*  
  -   Команды поставщика, заключенный в фигурные скобки («{}»), возвращающий **записей** объекта. Команды для базового поставщика данных, и его синтаксис зависит от требований этого поставщика. Обычно это будет языка SQL, несмотря на то, что ADO не требует любой язык для конкретного запроса.  
   
@@ -99,7 +99,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  Предложение после ДОБАВЛЕНИЯ ключевое слово представляет собой список, где каждое предложение разделены точкой с запятой и определяет другой столбец для добавления к родительскому элементу.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  При создании поставщика команд из введенных пользователем данных в команде ФИГУРЫ ФИГУРЫ обрабатывает предоставленное пользователем команды поставщика как непрозрачная строка и передать их точно поставщика. Например в следующую команду ФИГУРЫ  
   
 ```  

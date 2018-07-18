@@ -2,10 +2,10 @@
 title: Создание набора строк возвращающего табличное значение параметра | Документы Microsoft
 description: Статические и динамические создания набора строк возвращающего табличное значение параметра
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-table-valued-parameters
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0bfd6f54e374c77268641e151f738efa8a2385b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8879c56eae2f5691a27a6261cc12ca3ad9c4cebc
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690257"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Создание набора строк возвращающего табличное значение параметра
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Несмотря на то, что потребители могут предоставить для возвращающих табличные значения параметров любой объект набора строк, типичные объекты наборов строк реализуются для конечных хранилищ данных и таким образом предоставляют ограниченную производительность. По этой причине драйвер OLE DB для SQL Server разрешает пользователям создавать специализированный объект набора строк на основе данных в памяти. Этот специальный объект набора данных в памяти является новым COM-объектом, называемым набором строк возвращающего табличное значение параметра. Он предлагает функциональные возможности, аналогичные набору параметров.  
   
@@ -55,6 +58,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также  
  [Возвращающие табличные значения параметров &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Использование возвращающих табличные значения параметры & #40; OLE DB & #41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538794"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Задачи управления рабочей нагрузки в система платформы аналитики
 Задачи управления рабочей нагрузки в Analytics Platform System.

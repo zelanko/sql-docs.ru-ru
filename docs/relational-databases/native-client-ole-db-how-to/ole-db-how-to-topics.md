@@ -1,13 +1,12 @@
 ---
-title: Разделы руководства по OLE DB | Документы Microsoft
+title: Инструкции по OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 59beaa60325dbab18db0e0abedd63c098b0d6fb8
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 60a4113f849a150ed0e639559fb93ae5d22fb1f3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708112"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407723"
 ---
 # <a name="ole-db-how-to-topics"></a>Инструкции по OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, необходимо понять, как создать подключение к серверу и выполните команду обработки результатов.  
+  Чтобы использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, необходимо понять, как создать подключение к серверу и выполнить команду обработки результатов.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -45,13 +44,13 @@ ms.locfileid: "34708112"
   
 -   [Получение строк с помощью закладок &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
   
--   [Выборка столбцов с помощью IRow::GetColumns &#40;или IRow::Open&#41; и ISequentialStream](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
+-   [Выбор столбцов с помощью метода IRow::GetColumns &#40;или IRow::Open&#41; и интерфейса ISequentialStream](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
   
--   [Выборка столбцов с помощью IRow::GetColumns &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
+-   [Выбор столбцов с помощью метода IRow::GetColumns &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
   
--   [Изменение пароля пользователя проверки подлинности SQL Server &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
+-   [Изменение пароля проверки подлинности пользователя SQL Server &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [Использовать расширенный функций даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
+-   [Используйте улучшенные функции даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
 -   [Filestream и OLE DB](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
   

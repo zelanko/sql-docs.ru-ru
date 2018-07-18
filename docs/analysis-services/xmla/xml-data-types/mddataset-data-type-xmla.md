@@ -13,7 +13,7 @@ ms.openlocfilehash: 986fade6d9db3d6170d47181ac960d15febdf260
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573926"
 ---
 # <a name="mddataset-data-type-xmla"></a>Тип данных MDDataSet (XML для аналитики)

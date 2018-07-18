@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
@@ -16,18 +14,19 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abe282c6f6aab9ddeee082cad9af6c0b566e43f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef78bf43e09f277873303336630da37bc01f3fd5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405296"
 ---
 # <a name="sql-server-destination-custom-properties"></a>Пользовательские свойства назначения «SQL Server»
   Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
   
  В следующей таблице описаны пользовательские свойства назначения « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Description|  
+|Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
 |AlwaysUseDefaultCodePage|Логическое значение|Принудительно использует значение свойства DefaultCodePage. Это свойство имеет значение по умолчанию **False**.|  
 |BulkInsertCheckConstraints|Логическое значение|Значение, указывающее, будут ли во время операции массовой вставки применяться проверочные ограничения. Значение по умолчанию этого свойства равно **True**.|  

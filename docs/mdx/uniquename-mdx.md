@@ -1,34 +1,23 @@
 ---
 title: UniqueName (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- UNIQUENAME
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- UniqueName function
-ms.assetid: f186094e-670c-401c-a82f-6b634b3f71f5
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 9a3902d9bce46d33b7c61c787cc06affa82439d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 41642dc8bcaed03faaffdf9a16d8fc465aa2d360
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743933"
 ---
 # <a name="uniquename-mdx"></a>UniqueName (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Возвращает уникальное имя указанного измерения, иерархии, уровня или элемента.  
   
@@ -62,7 +51,7 @@ Member_Expression.UniqueName
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **UniqueName** функция возвращает уникальное имя объекта, а не имя, возвращаемое функцией [имя](../mdx/name-mdx.md) функции. Возвращаемое имя не включает имя куба. Возвращаемые результаты зависят от параметров сервера или от свойства многомерных выражений, задающего уникальную строку подключения.  
   
 ## <a name="example"></a>Пример  
@@ -87,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

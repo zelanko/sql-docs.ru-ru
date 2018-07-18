@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1afc0e84acaf044a7271f0d46d599f4422c650b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37ac91100876f9519e7f7ec2de1c9a375567d392
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288543"
 ---
 # <a name="readystate-property-rds"></a>Состояние готовности свойство (RDS)
 Индикатор выполнения [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта, поскольку он получает данные в его [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  Каждый клиентский исполняемый файл, который использует эти константы должен предоставить их объявления. Можно вырезать и вставить объявления констант из файла Adcvbs.inc, расположенный в папке установки по умолчанию для библиотеки служб удаленных рабочих СТОЛОВ.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) событий для отслеживания изменений в **состояние готовности** свойства во время выполнения операции асинхронного запроса. Это более эффективно, чем периодически проверки значения свойства.  
   
  При возникновении ошибки во время асинхронной операции, **состояние готовности** изменения свойств **adcReadyStateComplete**, [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство изменяется с **adStateExecuting** для **adStateClosed**и **записей** объекта [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство остается *Nothing* .  

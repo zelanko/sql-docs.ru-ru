@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74298d97ec386225cd47c354454d27ec95c22737
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c79ed326ac9553dfa756ab639b8689c2067c548c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332398"
 ---
 # <a name="ado-net-destination"></a>Назначение «ADO.NET»
   Назначение ADO NET загружает данные в различные базы данных, совместимые с [!INCLUDE[vstecado](../../includes/vstecado-md.md)], которые используют таблицу или представление базы данных. Можно загрузить эти данные в существующую таблицу или представление либо создать новую таблицу и загрузить в нее данные.  
@@ -70,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  На вкладке **Поток данных** дважды щелкните назначение "ADO.NET".  
   
-3.  В окне **Редактор назначения «ADO.NET»**нажмите кнопку **Диспетчер соединений**.  
+3.  В окне **Редактор назначения «ADO.NET»** нажмите кнопку **Диспетчер соединений**.  
   
 ### <a name="static-options"></a>Статические параметры  
  **Connection manager**  
@@ -122,7 +121,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  На вкладке **Поток данных** дважды щелкните назначение "ADO.NET".  
   
-3.  В окне **Редактор назначения «ADO.NET»**нажмите кнопку **Сопоставления**.  
+3.  В окне **Редактор назначения «ADO.NET»** нажмите кнопку **Сопоставления**.  
   
 ### <a name="options"></a>Параметры  
  **Доступные входные столбцы**  
@@ -146,7 +145,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  На вкладке **Поток данных** дважды щелкните назначение "ADO.NET".  
   
-3.  В окне **Редактор назначения «ADO.NET»**нажмите кнопку **Вывод ошибок**.  
+3.  В окне **Редактор назначения «ADO.NET»** нажмите кнопку **Вывод ошибок**.  
   
 ### <a name="options"></a>Параметры  
  **Вход или выход**  

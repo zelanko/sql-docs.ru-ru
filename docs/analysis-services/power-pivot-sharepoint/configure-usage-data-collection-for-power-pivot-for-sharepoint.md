@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026881"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Настройка сбора данных об использовании с PowerPivot для SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  В центре администрирования нажмите **Наблюдение**.  
   
-2.  В **разделе «Отчеты»**нажмите **Настроить сбор данных об использовании и исправности.**  
+2.  В **разделе «Отчеты»** нажмите **Настроить сбор данных об использовании и исправности.**  
   
 3.  Установите флажок **Включить сбор данных об использовании**.  
   

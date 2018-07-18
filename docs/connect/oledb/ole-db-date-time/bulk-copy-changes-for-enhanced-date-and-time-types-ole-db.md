@@ -2,10 +2,10 @@
 title: Массовое копирование изменения для расширенные типы даты и времени (OLE DB) | Документы Microsoft
 description: Изменения массового копирования для расширенные типы даты и времени (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 50917ad4c9d6184c32e8681c9b6bc455f5c61abc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f4ead57eb84257a4c57b345bd3a4857a85ded2e
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666404"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Изменения массового копирования для расширенные типы даты и времени (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   В этой статье описаны усовершенствования даты и времени для поддержки операций массового копирования в драйвер OLE DB для SQL Server.  
   
@@ -32,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 |Тип файла хранилища|Тип данных файла|Ответ на приглашение: «Введите тип файлового хранилища для поля < имя_поля > [\<по умолчанию >]:»|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DateTime|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Дата|SQLDATE|de|  
 |Time|SQLTIME|te|  
@@ -73,9 +76,9 @@ ms.lasthandoff: 05/03/2018
   
 |Тип файла хранилища|Объем памяти в байтах|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
+|Дата|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -86,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 |Тип файла хранилища|Тип данных файла|Введите в msoledbsql.h для использования с IBCPSession::BCPColFmt|Значение|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
 |Дата|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
@@ -98,12 +101,12 @@ ms.lasthandoff: 05/03/2018
   
  **Примечание для OLE DB** IBCPSession выполняются следующие преобразования. IRowsetFastLoad использует преобразования OLE DB, как определено в [преобразования, выполняемые от клиента к серверу](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md). Следует заметить, что значения даты-времени округляются до 1/300 секунды, а в значениях типа smalldatetime после выполнения клиентских преобразований, описанных ниже, значение секунд становится равным нулю. Округление даты-времени распространяется на часы и минуты, но не на дату.  
   
-|Кому --><br /><br /> От|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char;|wchar|  
+|Кому --><br /><br /> От|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char;|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Дата|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
 |Time|Недоступно|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  
 |Smalldatetime|1, 2|1, 4, 10|1|1|1, 10|1, 5, 10|1, 11|1, 11|  
-|DateTime|1, 2|1, 4, 10|1, 12|1|1, 10|1, 5, 10|1, 11|1, 11|  
+|DATETIME|1, 2|1, 4, 10|1, 12|1|1, 10|1, 5, 10|1, 11|1, 11|  
 |Datetime2|1, 2|1, 4, 10|1, 12|1, 10|1, 10|1, 5, 10|1, 3|1, 3|  
 |Datetimeoffset|1, 2, 8|1, 4, 8, 10|1, 8, 10|1, 8, 10|1, 8, 10|1, 10|1, 3|1, 3|  
 |Char/wchar (date)|9|-|9, 6, 12|9, 6, 12|9, 6|9, 5, 6|Недоступно|Недоступно|  
@@ -131,6 +134,6 @@ ms.lasthandoff: 05/03/2018
 |Недоступно|Существующий способ работы [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более ранних версий сохранен.|  
   
 ## <a name="see-also"></a>См. также     
- [Дата и время усовершенствования & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Дата и время улучшениях &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

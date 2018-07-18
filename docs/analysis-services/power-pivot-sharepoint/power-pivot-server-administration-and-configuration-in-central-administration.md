@@ -1,5 +1,5 @@
 ---
-title: Power Pivot Администрирование и настройка сервера в центре администрирования | Документы Microsoft
+title: Power Pivot Администрирование и настройка сервера в центре администрирования | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd681ec1859195219f73f6aacc6fd1f8665681a6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 87e2903607b476b04c44ac81ba337ea38e68a58b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983496"
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>Настройка и администрирование сервера PowerPivot в центре администрирования
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/10/2018
   
  [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Ссылка|Тип|Описание задачи|  
 |----------|----------|----------------------|  
@@ -52,10 +53,10 @@ ms.lasthandoff: 05/10/2018
 |[Создание и настройка приложения службы PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|Обязательно|На этом шаге выполняется подготовка системной службы [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
 |[Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|Обязательно|На этом шаге выполняется включение функций [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] на уровне коллекций сайтов.|  
 |[Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Обязательно|На этом шаге поставщик OLE DB служб Analysis Services добавляется как надежный поставщик в службах Excel.|  
-|[Обновление данных Power Pivot в SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|Рекомендуемая|Использование обновления данных необязательно, но рекомендуется. Это позволяет задать расписание автоматических обновлений данных [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] в опубликованных книгах Excel.|  
-|[Настройка учетной записи автоматического обновления данных Power Pivot (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)|Рекомендуемая|На этом шаге заводится специальная учетная запись, которая может быть использована для запуска заданий обновления данных на сервере.|  
+|[Обновление данных Power Pivot в SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|Рекомендуемая|Использование обновления данных необязательно, но рекомендуется. Это позволяет задать расписание автоматических обновлений данных [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] в опубликованных книгах Excel.|  
+|[Настройка Power Pivot (Power Pivot для SharePoint) учетной записи автоматического обновления](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)|Рекомендуемая|На этом шаге заводится специальная учетная запись, которая может быть использована для запуска заданий обновления данных на сервере.|  
 |[Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Необязательно|Сбор данных об использовании настраивается по умолчанию. Эти шаги можно использовать для изменения настроек по умолчанию.|  
-|[Настройка выделенного обновления данных или обработки только запросов (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/5e027605-1086-4941-bb01-f315df8f829b)|Необязательно|Можно выделить экземпляр [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] только для заданий или запросов обновления данных. Кроме того, можно изменить настройки по умолчанию для параллельных заданий обновления данных.|  
+|[Настройка выделенного обновления данных или обработки только запросов (Power Pivot для SharePoint)](http://msdn.microsoft.com/5e027605-1086-4941-bb01-f315df8f829b)|Необязательно|Можно выделить экземпляр [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] только для заданий или запросов обновления данных. Кроме того, можно изменить настройки по умолчанию для параллельных заданий обновления данных.|  
 |[Настройка учетных записей служб Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)|Необязательно|Пояснение для обновления паролей или для изменения учетных записей, используемых службами.|  
 |[Подключение приложения службы PowerPivot к веб-приложению SharePoint в центре администрирования](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Необязательно|В этом разделе приведено описание изменения служебных параметров.|  
 |[Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Необязательно|В этой статье описано, как добавить коллекцию [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] в качестве надежного расположения.|  
@@ -65,8 +66,8 @@ ms.lasthandoff: 05/10/2018
 |[Добавление типа содержимого соединения для семантической модели бизнес-аналитики в библиотеку (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|Необязательно|Описывает, как следует расширить библиотеку документов так, чтобы она поддерживала создание файлов связи семантической модели.|  
   
 ## <a name="see-also"></a>См. также  
- [Установка Power Pivot для SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [Power Pivot для SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Справочник по параметрам конфигурации (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Аварийное восстановление PowerPivot для SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Аварийное восстановление Power PIVOT для SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

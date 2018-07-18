@@ -1,5 +1,5 @@
 ---
-title: Настройка Power Pivot и развертывание решений (SharePoint 2016) | Документы Microsoft
+title: Настройка Power Pivot и развертывание решений (SharePoint 2016) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58315c0a956a4d9ecadfdfee8e9c1a0adbbc2c22
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984066"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Настройка Power Pivot и развертывание решений (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/10/2018
   
 -   Дополнительные сведения о серверных службах и установке сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] см. в разделе [Установка служб Analysis Services в режиме Power Pivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
- Дополнительные сведения об установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства настройки SharePoint 2016, в разделе [Установка или удаление надстройки Power Pivot для надстройки SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
+ Дополнительные сведения об установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства настройки SharePoint 2016, см. в разделе [Установка или удаление Power Pivot для надстройки SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Запуск настройки Power Pivot для SharePoint 2016  
  **Примечание.** Для выполнения следующих шагов нужно быть администратором фермы. Если вы появится примерно следующее сообщение об ошибке:  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/10/2018
   
     4.  В левом окне выберите **Создание семейства веб-сайтов** . Запишите **URL-адрес сайта** для ссылок на него на следующих шагах. Если сервер SharePoint еще не настроен, мастер настройки по умолчанию выбирает веб-приложение, а для URL-адресов семейства веб-сайтов назначается корень `http://[ServerName]`. Чтобы изменить значения по умолчанию, просмотрите следующие страницы в левом окне: **Создание веб-приложения по умолчанию** и **Развертывание решения веб-приложения**.  
   
-5.  При необходимости просмотрите остальные входные значения, которые использовались для завершения каждого действия. Для просмотра подробных сведений о действии выберите его в левом окне. Дополнительные сведения о каждом из них см. в подразделе "Вводимые значения для настройки сервера" раздела [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) в этом разделе.  
+5.  При необходимости просмотрите остальные входные значения, которые использовались для завершения каждого действия. Для просмотра подробных сведений о действии выберите его в левом окне. Дополнительные сведения о каждом из них см. в подразделе "Вводимые значения для настройки сервера" раздела [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) в этом разделе.  
   
 6.  При необходимости удалите действия, которые не нужно выполнять на данном этапе. Например, если вы хотите настроить службу Secure Store позже, щелкните **Настроить службу Secure Store**и снимите флажок **Включить данное действие в список задач**.  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
   
 8.  Выберите **Выполнить** , чтобы выполнить все действия из списка задач. Обратите внимание, что кнопка **Выполнить** становится доступной только после проверки действий. Если кнопка **Выполнить** недоступна, сначала выберите **Проверить** .  
   
- Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Проверка конфигурации Power Pivot  
  **Службы.**  
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  Нажмите кнопку **ОК**.  
   
- Дополнительные сведения об устранении неполадок обновления данных см. в разделе [Устранение неполадок обновления данных Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Дополнительные сведения о устранении неполадок обновления данных, см. в разделе [Устранение неполадок обновления данных PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
  Дополнительные сведения о средстве настройки см. в разделе [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

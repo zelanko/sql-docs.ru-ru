@@ -1,40 +1,25 @@
 ---
 title: Идентификаторы (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- formats [Analysis Services]
-- Multidimensional Expressions [Analysis Services], identifiers
-- identifiers [MDX]
-- MDX [Analysis Services], identifiers
-- delimited identifiers [MDX]
-- regular identifiers [MDX]
-- formats [Analysis Services], identifiers
-ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a04d387c0ee40d825fddf3c50f02793e722cdbc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740813"
 ---
 # <a name="identifiers-mdx"></a>Идентификаторы (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Идентификатор — это имя [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] объекта. Каждый объект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] должен иметь идентификатор. Это относится к кубам, измерениям, иерархиям, уровням, элементам и т.п. Идентификатор можно использовать для обращения к объекту в инструкциях многомерных выражений.  
+
+  Идентификатором является имя объекта служб Analysis Services. Каждый объект может и должен иметь идентификатор. Это относится к кубам, измерениям, иерархиям, уровням, элементам и т.п. Идентификатор можно использовать для обращения к объекту в инструкциях многомерных выражений.  
   
  В зависимости от имени объекта его идентификатор будет либо обычным, либо с разделителем.  
   
@@ -95,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Если в имени или в части имени объекта используется зарезервированное слово.  
   
-     Рекомендуется не использовать зарезервированные ключевые слова в качестве имен объектов. Баз данных, обновленных из предыдущих версий [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут содержать идентификаторы, которые включают слова, не зарезервированные в ранней версии, но являются зарезервированными словами для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. До изменения идентификатора можно обращаться к объекту по идентификатору с разделителем.  
+     Рекомендуется не использовать зарезервированные ключевые слова в качестве имен объектов. Баз данных, обновленных из предыдущих версий [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут содержать идентификаторы, которые включают слова, не зарезервированные в ранней версии, но теперь зарезервированы. До изменения идентификатора можно обращаться к объекту по идентификатору с разделителем.  
   
 -   Если в имени объекта присутствуют символы, недопустимые для использования в идентификаторах.  
   
@@ -139,8 +124,8 @@ ms.lasthandoff: 05/03/2018
  Помимо этого, в предыдущем примере выделен идентификатор Measures, чтобы продемонстрировать разделение нескольких идентификаторов.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по языку многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-language-reference-mdx.md)   
- [Основные принципы запросов многомерных Выражений & #40; Службы Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Справочник по языку многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Основные принципы запросов многомерных Выражений &#40;служб Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Синтаксис элементов &#40;многомерных Выражений&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

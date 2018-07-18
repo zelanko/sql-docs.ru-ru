@@ -1,6 +1,6 @@
 ---
 title: Инструкции CALL (многомерные Выражения) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b8610a0ed7fc0c90fb3e8c684b33b466eb3858f9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4052134e9fd7d3c6877894c61480897e40982b59
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580106"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741963"
 ---
 # <a name="mdx-data-manipulation---call"></a>Управление данными MDX - ВЫЗОВ
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Выполняет хранимую процедуру, которая возвращает значение void в текущей области или (по желанию) в указанном кубе.  
   
@@ -48,7 +48,7 @@ CALL SP_Name
  Если куб не указан, инструкция выполняет хранимую процедуру над текущим кубом.  
   
 > [!NOTE]  
->  Если хранимая процедура не зарегистрирована на компьютере клиента, **вызвать** оператор пытается вызвать хранимую процедуру из экземпляра [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+>  Если хранимая процедура не зарегистрирована на компьютере клиента, **вызвать** оператор пытается вызвать хранимую процедуру из экземпляра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также  
  [Инструкции языка манипулирования данными &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   

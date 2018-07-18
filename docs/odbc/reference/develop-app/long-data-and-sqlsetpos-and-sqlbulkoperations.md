@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913939"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Большие объемы данных и SQLSetPos и SQLBulkOperations
 Как и в случае с параметрами в инструкции SQL, большие объемы данных могут отправляться при обновлении строки со **SQLBulkOperations** или **SQLSetPos** или при вставке строк с **SQLBulkOperations**. Данные отправляются в частях с несколькими вызовами в **SQLPutData**. Столбцы, для которых данные передаются во время выполнения, называются *столбцов данных времени выполнения*.  

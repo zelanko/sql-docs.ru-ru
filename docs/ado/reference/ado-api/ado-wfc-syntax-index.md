@@ -6,8 +6,7 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 128e34bad797477fdeadbb18e241fc4d5981e3a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 355a32f2e37aca0202c803cde7c527a47bfe1905
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275643"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC синтаксис индекса
 Справочник по языку ADO используется Microsoft Visual Basic язык программирования для демонстрации синтаксиса метода или свойства ADO. Этот индекс лучше перекрестной ссылки на разделы Справочник по языку ADO, исходя из ADO ввода для Windows Foundation Classes (ADO и WFC). В случае возникновения различия в синтаксисе, используйте сигнатур функций в этот индекс, в отличие от синтаксиса вхождений в раздел справочника по языку.  

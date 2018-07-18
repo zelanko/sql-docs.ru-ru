@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 789afb1973a38b877c8fec60b1603d23166acaec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d94bc1ba7a11f9d934118ba649bff58e84b9fb3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787095"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Расшифровывает данные при помощи закрытого ключа сертификата.  
+Эта функция расшифровывает зашифрованные данные с помощью закрытого ключа сертификата.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,32 +47,32 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Аргументы  
  *certificate_ID*  
- Идентификатор сертификата в базе данных. Аргумент *certificate_ID* имеет тип **int**.  
+Идентификатор сертификата в базе данных. *certificate_ID* имеет тип данных **int**.  
   
  *ciphertext*  
- Строка данных, которая была зашифрована при помощи открытого ключа сертификата.  
+Строка данных, зашифрованная с помощью открытого ключа сертификата.  
   
  @ciphertext  
- Переменная типа **varbinary**. Содержит данные, которые были зашифрованы с помощью сертификата.  
+Переменная типа **varbinary**, содержащая данные, зашифрованные с помощью сертификата.  
   
  *cert_password*  
- Пароль, который использовался для шифрования закрытого ключа сертификата. Должна быть в Юникоде.  
+Пароль, используемый для шифрования закрытого ключа сертификата. *cert_password* должен иметь формат данных Юникода.  
   
  @cert_password  
- Переменная типа **nchar** или **nvarchar**, содержащая пароль, который использовался для шифрования закрытого ключа сертификата. Должна быть в Юникоде.  
-  
+Переменная типа **nchar** или **nvarchar**, содержащая пароль, используемый для шифрования закрытого ключа сертификата. *@cert_password* должен иметь формат данных Юникода.  
+
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Переменная типа **varbinary** с максимальным размером 8000 байт.  
+Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
 ## <a name="remarks"></a>Remarks  
- Эта функция расшифровывает данные при помощи закрытого ключа сертификата. Криптографические преобразования с использованием асимметричных ключей требуют значительных ресурсов. Поэтому функции EncryptByCert и DecryptByCert не подходят для операций шифрования пользовательских данных.  
-  
+Эта функция расшифровывает данные при помощи закрытого ключа сертификата. Криптографические преобразования с использованием асимметричных ключей требуют значительных ресурсов. Поэтому мы не рекомендуем разработчикам использовать функции [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) и DECRYPTBYCERT для шифрования и расшифровки обычных данных пользователей.  
+
 ## <a name="permissions"></a>Разрешения  
- Требует разрешения CONTROL для сертификата.  
+`DECRYPTBYCERT` требует разрешения CONTROL для сертификата.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере производится выборка строк из таблицы `[AdventureWorks2012].[ProtectedData04]`, помеченных как `data encrypted by certificate JanainaCert02`. Пример дешифрует зашифрованный текст с помощью закрытого ключа сертификата `JanainaCert02`, который сначала дешифруется с помощью пароля сертификата, `pGFD4bb925DGvbd2439587y`. Расшифрованные данные преобразуются из типа **varbinary** в тип **nvarchar**.  
-  
+В этом примере выбираются строки из `[AdventureWorks2012].[ProtectedData04]`, помеченного как данные, изначально зашифрованные с помощью сертификата `JanainaCert02`. Сначала выполняется расшифровка закрытого ключа сертификата `JanainaCert02` с помощью пароля сертификата `pGFD4bb925DGvbd2439587y`. Затем с помощью этого закрытого ключа расшифровывается зашифрованный текст. Расшифрованные данные преобразуются из типа **varbinary** в тип **nvarchar**.  
+
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
     ProtectedData, N'pGFD4bb925DGvbd2439587y'))  

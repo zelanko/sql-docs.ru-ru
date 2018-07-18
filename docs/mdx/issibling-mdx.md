@@ -1,6 +1,6 @@
 ---
 title: IsSibling (многомерные Выражения) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0db66d425acbcf24636e5db78a3a825b62a4fbef
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d86c96686357533aa1217571f3c199ec8ddff508
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578816"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739643"
 ---
 # <a name="issibling-mdx"></a>IsSibling (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Возвращает значение, сообщающее, имеет ли указанный элемент общего родителя с другим указанным элементом.  
   

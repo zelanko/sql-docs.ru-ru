@@ -1,5 +1,5 @@
 ---
-title: Обработка событий SMO | Документы Microsoft
+title: Обработка событий SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,10 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6ce6066af6508215ebe84fc3e8f5680c06a246ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988216"
 ---
 # <a name="handling-smo-events"></a>Обработка событий SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,12 +43,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="event-subscription"></a>Подписка на событие  
  Для обработки некоторого события пишется класс обработчика этого события, создается его экземпляр, этот обработчик события назначается родительскому объекту, затем производится подписка на данное событие.  
   
- Для обработки событий необходимо написать класс обработчика события. Класс обработчика события может содержать более одной функции обработки события, и его надо установить для обрабатываемых событий. Функции обработчика события получают сведения о событии из *ServerEventNotificatificationArgs* параметр, который можно использовать для предоставления сведений о событии.  
+ Для обработки событий необходимо написать класс обработчика события. Класс обработчика события может содержать более одной функции обработки события, и его надо установить для обрабатываемых событий. Функции обработчика события получают информацию о событии из *ServerEventNotificatificationArgs* параметр, который может использоваться для передачи сведений о событии.  
   
- Типы событий сервера и базы данных, которые можно обрабатывать, перечислены в <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> класса и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>класса.  
+ Типы событий базы данных и сервера, которые могут быть обработаны, перечислены в <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> класс и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>класса.  
   
 ## <a name="example"></a>Пример  
-Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>Регистрация обработчиков событий и подписка на обработку событий на языке Visual Basic  

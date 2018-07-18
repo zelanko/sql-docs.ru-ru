@@ -1,39 +1,25 @@
 ---
 title: СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_MINING_STRUCTURE
-- CREATE MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- CREATE MINING STRUCTURE statement
-- mining structures [DMX], creating
-- RELATED TO column
-ms.assetid: c0dec39c-e90f-4afd-aeaf-a9c3e1d1a5e0
-caps.latest.revision: 45
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: be83f470de9f72c74d5dc00403684a9ca6aa66f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842757"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Создает в базе данных новую структуру интеллектуального анализа данных и при необходимости определяет обучающую и проверочную секции. После создания структуры интеллектуального анализа данных можно использовать [ALTER MINING STRUCTURE &#40; расширений интеллектуального анализа данных &#41;](../dmx/alter-mining-structure-dmx.md) инструкции для добавления моделей к структуре интеллектуального анализа данных.  
+  Создает в базе данных новую структуру интеллектуального анализа данных и при необходимости определяет обучающую и проверочную секции. После создания структуры интеллектуального анализа данных можно использовать [ALTER MINING STRUCTURE &#40;расширений интеллектуального анализа данных&#41; ](../dmx/alter-mining-structure-dmx.md) инструкции для добавления моделей к структуре интеллектуального анализа данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -76,7 +62,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  По умолчанию: REPEATABLE(0)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Пользователь определяет структуру интеллектуального анализа данных, указывая список столбцов, при необходимости задавая иерархические связи между столбцами, а также при необходимости выполняя секционирование структуры интеллектуального анализа данных на обучающий и проверочный наборы данных.  
   
  Необязательное ключевое слово SESSION показывает, что структура является временной и ее можно использовать только в течение текущего сеанса. После завершения сеанса структура и любые модели на ее основе удаляются. Для создания временных структур и моделей, необходимо сначала установить AllowSessionMiningModels, свойство базы данных. Дополнительные сведения см. в статье [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
@@ -110,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Сведения о типах данных, типах содержимого, распределениях столбцов и флагах моделирования, используемых для определения столбца структуры, приведены в следующих разделах.  
   
--   [Типы данных &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Типы данных &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Содержимого типы &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Типы содержимого &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Распределения столбцов &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Распределения столбцов &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Моделирование флаги &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Флаги моделирования &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Для столбца можно определить несколько значений флагов модели. Однако каждому столбцу может соответствовать только один тип содержимого и тип данных.  
   
@@ -152,7 +138,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  В следующих примерах показано создание структуры интеллектуального анализа данных с контрольными данными с помощью расширений интеллектуального анализа данных.  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>Пример 1: Добавление структуры без набора обучающих данных  
- В следующем примере создается структура интеллектуального анализа данных с именем `New Mailing`, при этом не создаются связанные с ней модели интеллектуального анализа данных или контрольные данные. Узнайте, как добавить к структуре модель интеллектуального анализа данных, в разделе [ALTER MINING STRUCTURE &#40; расширений интеллектуального анализа данных &#41;](../dmx/alter-mining-structure-dmx.md).  
+ В следующем примере создается структура интеллектуального анализа данных с именем `New Mailing`, при этом не создаются связанные с ней модели интеллектуального анализа данных или контрольные данные. Узнайте, как добавить к структуре модель интеллектуального анализа данных, в разделе [ALTER MINING STRUCTURE &#40;расширений интеллектуального анализа данных&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -193,8 +179,8 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции обработки данных](../dmx/dmx-statements-data-manipulation.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

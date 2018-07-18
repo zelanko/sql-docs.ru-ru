@@ -2,7 +2,7 @@
 title: Использование типов данных XML | Документы Microsoft
 description: Использование типов данных XML с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -34,16 +34,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f36165da3be9c540166486059cdc0ee150532657
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6ec0009a986e2abd56ac00c1e01826f3ed001f7
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612179"
 ---
 # <a name="using-xml-data-types"></a>Использование типов данных XML
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]представленные **xml** тип данных, который позволяет хранить XML-документы и фрагменты в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных. **Xml** тип данных является встроенным типом данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и в чем-то напоминающий другие встроенные типы, такие как **int** и **varchar**. Как и другие встроенные типы можно использовать **xml** как тип столбца при создании таблицы, как тип переменной, тип параметра или типа возвращаемого функцией значения; или в функциях CAST и CONVERT типа данных.  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] представленные **xml** тип данных, который позволяет хранить XML-документы и фрагменты в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных. **Xml** тип данных является встроенным типом данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и в чем-то напоминающий другие встроенные типы, такие как **int** и **varchar**. Как и другие встроенные типы можно использовать **xml** как тип столбца при создании таблицы, как тип переменной, тип параметра или типа возвращаемого функцией значения; или в функциях CAST и CONVERT типа данных.  
   
 ## <a name="programming-considerations"></a>Замечания по программированию  
  Язык XML может описывать сам себя в том смысле, что он может по желанию включать заголовок XML, описывающий кодировку документа, например:  
@@ -87,15 +90,15 @@ ms.lasthandoff: 05/03/2018
 |Тип данных|На сервер<br /><br /> **XML**|На сервер<br /><br /> **Отличном от XML**|С сервера<br /><br /> **XML**|С сервера<br /><br /> **Отличном от XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Пропуск<sup>6,7</sup>|Ошибка<sup>1</sup>|ОК<sup>11, 6</sup>|Ошибка<sup>8</sup>|  
-|DBTYPE_BYTES|Пропуск<sup>6,7</sup>|N/A<sup>2</sup>|ОК <sup>11, 6</sup>|N/A <sup>2</sup>|  
-|DBTYPE_WSTR|Пропуск<sup>6,10</sup>|N/A <sup>2</sup>|ОК<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|Пропуск<sup>6,10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
-|DBTYPE_STR|ОК<sup>6, 9, 10</sup>|N/A <sup>2</sup>|ОК<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Байтовый поток через **ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|Байтовый поток через **ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Пропуск<sup>6,7</sup>|N/A <sup>2</sup>|Недоступно|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Пропуск<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BYTES|Пропуск<sup>6,7</sup>|Н/Д<sup>2</sup>|ОК <sup>11, 6</sup>|Н/Д <sup>2</sup>|  
+|DBTYPE_WSTR|Пропуск<sup>6,10</sup>|Н/Д <sup>2</sup>|ОК<sup>4, 6, 12</sup>|Н/Д <sup>2</sup>|  
+|DBTYPE_BSTR|Пропуск<sup>6,10</sup>|Н/Д <sup>2</sup>|ОК <sup>3</sup>|Н/Д <sup>2</sup>|  
+|DBTYPE_STR|ОК<sup>6, 9, 10</sup>|Н/Д <sup>2</sup>|ОК<sup>5, 6, 12</sup>|Н/Д <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Байтовый поток через **ISequentialStream**<sup>7</sup>|Н/Д <sup>2</sup>|Байтовый поток через **ISequentialStream**<sup>11</sup>|Н/Д <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Пропуск<sup>6,7</sup>|Н/Д <sup>2</sup>|Недоступно|Н/Д <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Пропуск<sup>6,10</sup>|Н/Д <sup>2</sup>|ОК<sup>3</sup>|Н/Д <sup>2</sup>|  
   
- <sup>1</sup>Если сервера тип, отличный от DBTYPE_XML, указанном с помощью **ICommandWithParameters::SetParameterInfo** и типом метода доступа задан DBTYPE_XML, при выполнении инструкции возникает ошибка (DB_E_ERRORSOCCURRED, состояние параметра будет DBSTATUS_E_BADACCESSOR); в противном случае данные отправляются на сервер, но сервер возвращает ошибку, указывающую, что имеется не неявное преобразование из XML в тип данных параметра.  
+ <sup>1</sup>Если сервера тип, отличный от DBTYPE_XML, указанном с помощью **ICommandWithParameters::SetParameterInfo** и типом метода доступа задан DBTYPE_XML, при выполнении инструкции возникает ошибка (DB_E_ERRORSOCCURRED, состояние параметра — DBSTATUS_E_BADACCESSOR); в противном случае данные отправляются на сервер, но сервер возвращает ошибку, указывающую, что имеется не неявное преобразование из XML в тип данных параметра.  
   
  <sup>2</sup>выходит за рамки данной статьи.  
   
@@ -140,7 +143,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Наборы строк схем COLUMNS и PROCEDURE_PARAMETERS  
  Дополнения к наборам строк схемы COLUMNS и PROCEDURE_PARAMETERS добавлены следующие столбцы:  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Имя каталога, в котором определена коллекция схем XML. Имеет значение NULL для столбца не XML или нетипизированный XML-столбец.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Имя схемы, в которой определена коллекция схем XML. Имеет значение NULL для столбца не XML или нетипизированный XML-столбец.|  
@@ -152,7 +155,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-ssxmlschema-schema-rowset"></a>Набор строк схемы SS_XMLSCHEMA  
  Для клиентов добавлен новый набор строк схемы SS_XMLSCHEMA для получения информации о схеме XML. Набор строк SS_XMLSCHEMA содержит следующие столбцы:  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Каталог, которому принадлежит коллекция XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Схема, которой принадлежит коллекция XML.|  
@@ -172,7 +175,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Набор свойств DBPROPSET_SQLSERVERPARAMETER  
  Чтобы обеспечить поддержку **xml** драйвер OLE DB для SQL Server через OLE DB, тип данных реализует новый набор свойств DBPROPSET_SQLSERVERPARAMETER, который содержит следующие значения.  
   
-|Название|Тип|Description|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Имя каталога (базы данных), где определена коллекция схем XML. Часть идентификатора трехкомпонентного имени SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Имя схемы XML в коллекции схемы XML. Часть идентификатора трехкомпонентного имени SQL.|  
@@ -181,7 +184,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Набор свойств DBPROPSET_SQLSERVERCOLUMN  
  Для поддержки создания таблиц в **ITableDefinition** интерфейс, драйвер OLE DB для SQL Server добавляет к набору свойств DBPROPSET_SQLSERVERCOLUMN три новых столбца.  
   
-|Название|Тип|Description|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Для типизированных столбцов XML данное свойство содержит строку, представляющую имя каталога, где хранится схема XML. Для других типов столбцов это свойство возвращает пустую строку.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Для типизированных столбцов XML данное свойство содержит строку, представляющую имя схемы XML, задающей этот столбец.|  
@@ -201,7 +204,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-icolumnsrowset-interface"></a>Интерфейс IColumnsRowset  
  Драйвер OLE DB для SQL Server добавляет следующие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-определенные столбцы в наборе строк, возвращенных **IColumnRowset::GetColumnsRowset** метод. Эти столбцы содержат трехчастное имя коллекции схем XML. Для столбцов не в формате XML и нетипизированных столбцов XML все три данных столбца по умолчанию имеют значение NULL.  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Каталог, которому принадлежит коллекция схем XML.<br /><br /> В противном случае — значение NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Схема, которой принадлежит коллекция схем XML. В противном случае — значение NULL.|  
@@ -232,6 +235,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также  
  [Драйвер OLE DB для компонентов SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

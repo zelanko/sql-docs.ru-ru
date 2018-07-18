@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_class_type_map (Transact-SQL) | Документы Microsoft
+title: sys.dm_audit_class_type_map (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,20 +22,21 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a40f06ca9d012553556c68fca238f6f9a609f04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 8eba7e0e1e949883f2af30999b93b290e00e07f2
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968948"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Возвращает таблицу, которая сопоставляет поле class_type в журнале аудита с полем class_desc в представлении sys.dm_audit_actions. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аудита, в разделе [подсистемы аудита SQL Server &#40;СУБД&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Возвращает таблицу, которая сопоставляет поле class_type в журнале аудита с полем class_desc в представлении sys.dm_audit_actions. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аудита, см. в разделе [Подсистема аудита SQL Server &#40;СУБД&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|Тип класса сущности, для которой был проведен аудит. Сопоставляется class_type, записываются в журнал аудита и возвращенный **get_audit_file()** функции. Не допускает значение NULL.|  
+|**class_type**|**char(2)**|Тип класса сущности, для которой был проведен аудит. Сопоставляется class_type, для которого записываются в журнал аудита и возвращенный **get_audit_file()** функции. Не допускает значение NULL.|  
 |**class_type_desc**|**nvarchar(120)**|Имя сущности, для которой выполняется аудит. Не допускает значение NULL.|  
 |**securable_class_desc**|**nvarchar(120)**|Защищаемый объект, сопоставляемый class_type, для которого выполняется аудит. Принимает значение NULL, если class_type не сопоставляется с защищаемым объектом. Может быть связан с class_desc в sys.dm_audit_actions.|  
   

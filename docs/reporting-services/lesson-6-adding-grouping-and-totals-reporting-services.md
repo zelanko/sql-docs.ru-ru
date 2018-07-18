@@ -17,11 +17,12 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f069b1f4303566aed0bcb486717b7f254691553d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6da904a6bcc7f70ca5185c0e59a6075b651ce1b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550805"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 На этом занятии вы добавите группирование и итоги к отчету [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для организации и суммирования данных.  
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="bkmk_publishreport"></a>Публикация отчета на сервере отчетов (не обязательно)  
   
-1.  Необязательным шагом является публикация готового отчета на сервере отчетов, работающем в собственном режиме, с тем чтобы его можно было просматривать из диспетчера отчетов.  
+1.  Необязательным шагом будет публикация готового отчета на сервере отчетов, работающем в собственном режиме; так его можно будет просматривать на веб-портале.  
   
 2.  Откройте меню **Проект** и выберите пункт **Свойства учебника...**.  
   

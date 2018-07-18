@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909911"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>Соединение с помощью SQLBrowseConnect
 **SQLBrowseConnect**, таких как **SQLDriverConnect**, использует строку подключения. Однако с помощью **SQLBrowseConnect**, приложение может создать полную строку подключения во время выполнения. Это позволяет приложению:  

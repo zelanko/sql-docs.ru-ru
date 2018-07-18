@@ -1,13 +1,11 @@
 ---
-title: Обновление столбцов определяемого пользователем ТИПА с помощью DataAdapter | Документы Microsoft
+title: Обновление столбцов определяемого пользователем ТИПА с помощью DataAdapter | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -28,18 +26,19 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 216f02f0d7abde7f2f2afc12bb1acc4b476de47b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8bdb8993d93c438dcfc47dd28c3ac90cfd5fcc0d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358226"
 ---
-# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Доступ к определяемых пользователем типов - обновление столбцов определяемого пользователем ТИПА с помощью DataAdapter
+# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Доступ к определяемым пользователем типам — обновление столбцов определяемого пользователем ТИПА с помощью DataAdapter
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Определяемые пользователем типы (UDT) поддерживаются с помощью **System.Data.DataSet** и **System.Data.SqlClient.SqlDataAdapter** для извлечения и изменения данных.  
   
 ## <a name="populating-a-dataset"></a>Заполнение набора данных  
- Инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT можно использовать для выбора значений столбцов определяемых пользователем типов, чтобы заполнить набор данных с помощью адаптера обработки данных. В следующем примере предполагается, что имеется **точки** таблицу, определенную со следующей структурой и данными. Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции создают **точки** таблицы и вставить несколько строк.  
+ Инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT можно использовать для выбора значений столбцов определяемых пользователем типов, чтобы заполнить набор данных с помощью адаптера обработки данных. В следующем примере предполагается, что у вас есть **точек** таблицы, определенные со следующей структурой и данными. Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции создают **точек** и вставить несколько строк.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -70,14 +69,14 @@ da.Fill(datTable);
 ## <a name="updating-udt-data-in-a-dataset"></a>Обновление данных определяемых пользователем типов в наборе данных  
  Можно использовать два метода для обновления столбца определяемого пользователем ТИПА в **набора данных**:  
   
--   Предоставить пользовательские **InsertCommand**, **UpdateCommand** и **DeleteCommand** объектов для **SqlDataAdapter** объекта.  
+-   Предоставлять пользовательскую **InsertCommand**, **UpdateCommand** и **DeleteCommand** объектов для **SqlDataAdapter** объекта.  
   
 -   Использовать построитель команд (**System.Data.SqlClient.SqlCommandBuilder**) для автоматического создания команд INSERT, UPDATE и DELETE для вас. Чтобы обнаруживать конфликты, добавьте **timestamp** столбца (псевдоним **rowversion**) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы, содержащей определяемый пользователем тип. **Timestamp** тип данных позволяет отмечать версии строк в таблице и гарантированно будет уникальным в пределах базы данных. Если значение в таблице изменяется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически обновляет 8-байтовое двоичное число для строки, затронутой изменением.  
   
- Обратите внимание, что **SqlCommandBuilder** не учитывает определяемый пользователем тип для обнаружения конфликтов, при отсутствии **timestamp** столбца в базовой таблице. Определяемые пользователем типы могут быть несопоставимы, поэтому они не включаются в предложение WHERE, если для формирования команды используется режим сравнения с первоначальными значениями.  
+ Обратите внимание, что **SqlCommandBuilder** не учитывает определяемый пользователем тип для обнаружения конфликтов при отсутствии **timestamp** столбца в базовой таблице. Определяемые пользователем типы могут быть несопоставимы, поэтому они не включаются в предложение WHERE, если для формирования команды используется режим сравнения с первоначальными значениями.  
   
 ### <a name="example"></a>Пример  
- В следующем примере требуется создать вторую таблицу, содержащую **точки** столбец определяемого пользователем ТИПА, а также **timestamp** столбца. Обе таблицы используются для иллюстрации того, как создать пользовательские командные объекты для обновления данных и как выполнить обновление с помощью **timestamp** столбца. Запустите следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], чтобы создать вторую таблицу и заполнить ее образцами данными.  
+ В следующем примере требуется создать вторую таблицу, содержащую **точки** столбец определяемого пользователем ТИПА, а также **timestamp** столбца. Обе таблицы используются для иллюстрации, как создать пользовательские командные объекты для обновления данных и как выполнить обновление с помощью **timestamp** столбца. Запустите следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], чтобы создать вторую таблицу и заполнить ее образцами данными.  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
@@ -90,7 +89,7 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  В следующем примере ADO.NET используются два метода.  
   
--   **UserProvidedCommands**, который показывает, как предоставить **InsertCommand**, **UpdateCommand**, и **DeleteCommand** объекты для обновления  **Точка** определяемого пользователем ТИПА в **точки** таблицы (который не содержит **timestamp** столбца).  
+-   **UserProvidedCommands**, который показывает, как предоставить **InsertCommand**, **UpdateCommand**, и **DeleteCommand** объекты для обновления  **Точка** определяемого пользователем ТИПА в **точки** таблицы (которая не содержит **timestamp** столбца).  
   
 -   **CommandBuilder**, который показывает, как использовать **SqlCommandBuilder** в **Points_ts** таблицу, содержащую **timestamp** столбца.  
   
@@ -375,6 +374,6 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Доступ к определяемых пользователем типов в ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+ [Доступ к определяемым пользователем типам в ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

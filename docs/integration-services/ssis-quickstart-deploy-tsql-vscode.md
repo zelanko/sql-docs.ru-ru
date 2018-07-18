@@ -1,23 +1,21 @@
 ---
 title: Развертывание проекта служб SSIS с помощью Transact-SQL (Visual Studio Code) | Документы Майкрософт
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4611b711b9f220af26a7f629480fa9f7b4c071c
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 44d41b54ff2b422b66e0be2bfe42497fa1ff458e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455447"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329258"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Развертывание проекта служб SSIS из Visual Studio Code с помощью Transact-SQL
 В этом кратком руководстве демонстрируется подключение к базе данных каталога SSIS в Visual Studio Code и развертывание проекта SSIS в каталоге SSIS с помощью инструкций Transact-SQL.

@@ -2,7 +2,6 @@
 title: 'Шаг 5: DataControl годным внесенные (учебник служб удаленных рабочих СТОЛОВ) | Документы Microsoft'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 564c9b1984226c02ab1cb960ff6e4ed32b5527d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd2d73a97e8ba4b3e2c052bb5fa0e08fa7c2d941
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274573"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Шаг 5: DataControl годным внесенные (учебник служб удаленных рабочих СТОЛОВ)
 Возвращенный **записей** объект доступен для использования. Проверьте, перехода или изменить его, как и любой другой **записей**. Что делать с **записей** зависит от среды. Visual Basic и Visual C++ имеют визуальные элементы управления, которые могут использовать **записей** прямо или косвенно с помощью элемента управления Включение данных.  

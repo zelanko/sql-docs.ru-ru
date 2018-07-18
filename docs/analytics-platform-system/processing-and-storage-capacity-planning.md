@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539604"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Мощность обработки и хранения в система платформы аналитики
 Бизнес-требований определите число единиц масштабирования данных и размер дисков узел вычислений, необходимых в устройстве Analytics Platform System (APS). Используйте эти вычисления, обработки и хранения емкость приобретение и решения по планированию.  

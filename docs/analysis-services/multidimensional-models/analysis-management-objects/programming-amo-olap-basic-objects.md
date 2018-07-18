@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024671"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Программирование основных объектов AMO OLAP
   Процесс создания сложных объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] является простым и понятным, но требует внимания к деталям. В этом разделе подробно описывается программирование базовых объектов OLAP. Этот раздел состоит из следующих подразделов.  

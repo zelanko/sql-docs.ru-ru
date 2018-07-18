@@ -1,5 +1,5 @@
 ---
-title: sys.database_usage (база данных SQL Azure) | Документы Microsoft
+title: sys.database_usage (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,34 +28,35 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: affdc08bb7ae507ca30edfa986cd68a81ba564f2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038822"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Примечание: Это относится только к V11 базы данных SQL Azure.**  
+  **Примечание: Это относится только к базе данных SQL Azure версии 11.**  
   
- Возвращает количество, тип и длительность существования баз данных на [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера.  
+ Выводит количество, тип и длительность существования баз данных на [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера.  
   
  **Sys.database_usage** представление содержит следующие столбцы.  
   
 |Имя столбца|Описание|  
 |-----------------|-----------------|  
 |time|Дата возникновения событий использования.|  
-|sku|Тип уровня обслуживания для базы данных: **Web**, **Business**, **основные**, **Стандартная**, **Premium**|  
+|sku|Тип уровня службы для базы данных: **Web**, **бизнеса**, **основные**, **стандартный**, **уровня "премиум"**|  
 |quantity|Максимальное число баз данных номера SKU, который существовал в течение этого дня.|  
   
 ## <a name="permissions"></a>Разрешения  
- Доступ только для чтения к этому представлению доступен для всех пользователей с разрешениями на подключение к **master** базы данных.  
+ Доступ только для чтения к этому представлению доступна для всех пользователей с разрешениями на подключение к **master** базы данных.  
   
-## <a name="remarks"></a>Замечания  
- **Sys.database_usage** представление возвращает по одной строке для каждого дня подписки.  
+## <a name="remarks"></a>Примечания  
+ **Sys.database_usage** представление возвращает одну строку за каждый день вашей подписки.  
   
 ## <a name="see-also"></a>См. также  
- [Сведения о ценах базы данных SQL](http://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Сведения о ценах на базы данных SQL](http://go.microsoft.com/fwlink/?LinkID=394978)   
  [Учетные записи и выставление счетов в базе данных Azure SQL для Windows](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

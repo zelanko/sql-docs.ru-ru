@@ -1,5 +1,5 @@
 ---
-title: Count, функция (XQuery) | Документы Microsoft
+title: Count, функция (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fc9e161196787413b6c4fe3a3943ff197f0b5d79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987486"
 ---
 # <a name="aggregate-functions---count"></a>Агрегатные функции — count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +46,11 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  Подсчитываемые элементы.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Возвращает 0, если *$arg* представляет собой пустую последовательность.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** столбцов типа в базе данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Использование функции XQuery count() для подсчета количества различных географических расположений цехов, участвующих в производстве определенной модели продукта  
  Следующий запрос подсчитывает количество цехов, участвующих в производстве продукта определенной модели (ProductModelID=7).  
@@ -69,11 +70,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   **Имен** ключевое слово в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет префикс пространства имен. Затем этот префикс используется в теле запроса XQuery.  
+-   **Пространства имен** ключевое слово в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет префикс пространства имен. Затем этот префикс используется в теле запроса XQuery.  
   
 -   Запрос создает XML, включающий элемент <`NoOfWorkStations`>.  
   
--   **Count()** функционировать в теле запроса XQuery подсчитывает число <`Location`> элементов.  
+-   **Count()** работать в теле запроса XQuery подсчитывает количество <`Location`> элементы.  
   
  Результат:  
   

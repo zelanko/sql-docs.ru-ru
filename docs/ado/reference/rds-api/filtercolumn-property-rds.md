@@ -2,7 +2,6 @@
 title: Свойство FilterColumn (RDS) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 013511cbcb2455909a02b8c142f1dc15a7aa4b06
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fb8c194319931a5bf6ef48d5264a8e791eeb229
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288159"
 ---
 # <a name="filtercolumn-property-rds"></a>Свойство FilterColumn (RDS)
 Указывает столбец, в котором для оценки критериев фильтра.  
@@ -44,7 +44,7 @@ DataControl.FilterColumn = String
  *Строковые значения*  
  Объект **строка** значение, указывающее столбец, в котором для оценки критериев фильтра. Указанные в критерии фильтра [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md) свойство.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), и **FilterColumn**свойства предоставляют сортировки и фильтрации функциональность на стороне клиента кэша. Функциональные возможности сортировки упорядочивает записи по значения из одного столбца. Функцию фильтра отображает подмножество записей на основе критериев поиска, при полной [записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. [Сброс](../../../ado/reference/rds-api/reset-method-rds.md) метод будет выполнять критерии и заменить текущую **записей** с обновляемым **записей**.  
   
 ## <a name="applies-to"></a>Объект применения  

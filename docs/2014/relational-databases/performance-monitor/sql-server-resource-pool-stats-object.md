@@ -1,0 +1,62 @@
+---
+title: SQL Server, объект статистики пула ресурсов | Документация Майкрософт
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-cross-instance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Reosurce Pool Stats object
+- 'SQLServer: Resource Pool Stats object'
+ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
+caps.latest.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a996ff8faa6fa1bf4f907282462b4e6df6598afd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252126"
+---
+# <a name="sql-server-resource-pool-stats-object"></a>SQL Server, объект Resource Pool Stats
+  Объект SQLServer:Resource Pool Stats содержит счетчики производительности, сообщающие основные данные статистики пула ресурсов регулятора ресурсов.  
+  
+ Каждый активный пул ресурсов создает экземпляр объекта производительности SQLServer:Resource Pool Stats, при этом имя экземпляра совпадает с именем пула ресурсов в регуляторе ресурсов. В следующей таблице описываются счетчики, поддерживаемые этим экземпляром.  
+  
+|Имя счетчика|Описание|  
+|------------------|-----------------|  
+|Загрузка ЦП, %|Использование пропускной способности ЦП всеми группами рабочей нагрузки, принадлежащими данному пулу. Измеряется относительно рабочего компьютера и нормализуется по всем процессорам системы. Это значение будет изменено при изменении количества ЦП, доступных для процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Оно не нормализовано по отношению к значению, получаемому процессом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|CPU usage target %|Целевое значение параметра загрузки ЦП для пула ресурсов, рассчитанное на основании параметров конфигурации пула ресурсов и загрузки системы.|  
+|CPU control effect %|Воздействие регулятора ресурсов на пул ресурсов. Рассчитывается по формуле: (Загрузка ЦП, %)/(Загрузка ЦП, %, без регулятора ресурсов).|  
+|Compile memory target (KB)|Текущее значение целевого брокера памяти для компиляции запросов, в килобайтах (КБ).|  
+|Cache memory target (KB)|Текущее значение целевого брокера памяти для кэширования, в килобайтах (КБ).|  
+|Query exec memory target (KB)|Текущее значение целевого брокера памяти для предоставления памяти на выполнение запросов, в килобайтах (КБ). Эта информация также доступна в представлении [sys.dm_exec_query_memory_grants](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql).|  
+|Memory grants/sec|Число операций предоставления памяти, выполняемых в данном пуле ресурсов за одну секунду.|  
+|Active memory grants count|Текущее общее количество операций по предоставлению памяти. Эта информация также доступна в представлении [sys.dm_exec_query_memory_grants](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql).|  
+|Memory grant timeouts/sec|Количество операций предоставления памяти с истекшим временем ожидания за секунду.|  
+|Active memory grant amount (KB)|Текущий суммарный объем предоставленной памяти, в килобайтах (КБ). Эта информация также доступна в представлении [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
+|Pending memory grant count|Число запросов на предоставление памяти, ожидающих в очереди. Эта информация также доступна в представлении [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
+|Max memory (KB)|Максимальный объем памяти в килобайтах (КБ), которым может располагать пул ресурсов; рассчитывается на основе заданных параметров пула ресурсов и состояния сервера.|  
+|Used memory (KB)|Объем используемой памяти в пуле ресурсов, в килобайтах (КБ).|  
+|Target memory (KB)|Целевой объем памяти, в килобайтах (КБ), который пул ресурсов пытается получить. Рассчитывается на основе заданных параметров пула ресурсов и состояния сервера.|  
+|Операций чтения с диска/с|Количество операций чтения с диска в течение последней секунды.|  
+|Регулированных операций ввода-вывода чтения с диска/с|Количество операций чтения, регулированных в течение последней секунды.|  
+|Байтов прочитано с диска/с|Число байтов, прочитанных с диска в течение последней секунды.|  
+|Ср. вр. чт. с диска (мс)|Среднее время (в миллисекундах) операции чтения с диска.|  
+|Операции записи на диск/с|Количество операций записи на диск в течение последней секунды.|  
+|Регулированные операции ввода-вывода записи на диск/с|Количество операций записи, регулированных в течение последней секунды.|  
+|Скорость записи на диск (байт/сек)|Число байтов, записанных на диск в течение последней секунды.|  
+|Ср. вр. записи на диск (мс)|Среднее время (мс) операции записи на диск.|  
+  
+## <a name="see-also"></a>См. также  
+ [Наблюдение за использованием ресурсов (системный монитор)](monitor-resource-usage-system-monitor.md)   
+ [SQL Server, объект Workload Group Stats](sql-server-workload-group-stats-object.md)   
+ [Регулятор ресурсов](../resource-governor/resource-governor.md)  
+  
+  

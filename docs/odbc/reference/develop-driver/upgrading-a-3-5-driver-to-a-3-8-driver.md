@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919131"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Обновление драйвера 3.5 3.8 драйверу
 Данный раздел содержит рекомендации и замечания по обновлению с драйвером ODBC 3.5 с драйвером ODBC 3.8.  

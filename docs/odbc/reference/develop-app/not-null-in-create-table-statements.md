@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910449"
 ---
 # <a name="not-null-in-create-table-statements"></a>NOT NULL в инструкции CREATE TABLE
 Некоторые и особенно системной базы данных, не поддерживают **NOT NULL** ограничение столбца в **CREATE TABLE** инструкции. Дополнительные сведения см. в разделе параметр SQL_NON_NULLABLE_COLUMNS в [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) описание функции.

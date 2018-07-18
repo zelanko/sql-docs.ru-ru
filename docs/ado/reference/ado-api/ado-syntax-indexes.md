@@ -2,7 +2,6 @@
 title: Синтаксис индексов ADO | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d685b68c9ff400b2a702ecddcc7a475389534e7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de0ee4141e1c8d57a58a94b29866c764cb86a056
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275603"
 ---
 # <a name="ado-syntax-indexes"></a>Синтаксис индексов ADO
 Синтаксис вызова ADO методы и свойства отличается в зависимости от среды разработки. Остальная часть справочнике по языку ADO использует Microsoft Visual Basic язык программирования для демонстрации синтаксиса метода или свойства ADO. Тем не менее см. в разделах Подробные примеры синтаксиса в зависимости от языка программирования и методологии:  

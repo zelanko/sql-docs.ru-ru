@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028451"
 ---
 # <a name="soapexception-errors-table"></a>Таблица ошибок SoapException
   Сервер отчетов формирует ошибки и сообщения об ошибках в исключении SOAP на базе ошибок, которые возникают в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. В приведенной ниже таблице показаны ошибки, доступ к которым можно получить из методов с помощью исключения **SoapException** в веб-службе сервера отчетов. Таблица отсортирована по методам, активизирующим конкретное исключение.  

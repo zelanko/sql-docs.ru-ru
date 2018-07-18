@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914099"
 ---
 # <a name="what-the-driver-does"></a>Что делает драйвер
 В следующей таблице перечислены какие функции и инструкции атрибутов ODBC 3 *.x* для блока и Прокручиваемые курсоры следует реализовывать драйвера.  

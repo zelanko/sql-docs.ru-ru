@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_statistics_xml (Transact-SQL) | Документы Microsoft
+title: sys.dm_exec_query_statistics_xml (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -21,10 +21,11 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: ba01e7876c174cc73697628c3b46219ff674f9a7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987246"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 ## <a name="arguments"></a>Аргументы 
 *session_id*  
- Идентификатор сеанса, выполняет поиск пакета. *session_id* — **smallint**. *session_id* можно получить из следующих объектов DMO:  
+ Идентификатор сеанса выполнения пакета выполняется поиск. *session_id* — **smallint**. *session_id* можно получить из следующих объектов DMO:  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -53,36 +54,36 @@ sys.dm_exec_query_statistics_xml(session_id)
 |session_id|**smallint**|Идентификатор сеанса. Не допускает значения NULL.|
 |request_id|**int**|Идентификатор запроса. Не допускает значения NULL.|
 |sql_handle|**varbinary(64)**|Карта хэширования SQL-текста запроса. Допускает значение NULL.|
-|plan_handle|**varbinary(64)**|Хэш-карта плана запроса. Допускает значение NULL.|
+|plan_handle|**varbinary(64)**|Карта хэширования плана запроса. Допускает значение NULL.|
 |query_plan|**xml**|Showplan XML с частичной статистики. Допускает значение NULL.|
 
 ## <a name="remarks"></a>Примечания
-Эта функция доступна, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+Этой системной функции доступен, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1.
 
-Эта функция работает как в **Стандартная** и **упрощенных** инфраструктуры профилирования статистику выполнения запросов.  
+Это системная функция работает при обоих **стандартный** и **упрощенных** инфраструктуру профилирования статистики выполнения запросов.  
   
-**Стандартная** статистики инфраструктуры профилирования можно включить с помощью:
+**Стандартный** инфраструктуру профилирования статистики можно включить с помощью:
   -  [SET STATISTICS XML НА](../../t-sql/statements/set-statistics-xml-transact-sql.md)
   -  [SET STATISTICS PROFILE НА](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  `query_post_execution_showplan` расширенных событий.  
   
-**Упрощенный** статистики инфраструктуры профилирования доступна в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и может быть включен:
+**Упрощенный** инфраструктуру профилирования статистики доступен в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и может быть включен:
   -  Глобально с помощью трассировки флаг 7412.
   -  С помощью [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113) расширенных событий.
   
 > [!NOTE]
-> После включения флага трассировки 7412 упрощенных профилирование будет разбит на любой потребитель статистику выполнения запросов, профилирование инфраструктуры вместо обычного профилирования, таких как динамическое административное Представление [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> Однако обычного профилирования по-прежнему используется для инструкции SET STATISTICS XML, *Включить действительный план* действия в [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], и `query_post_execution_showplan` xEvent.
+> После включения флаг трассировки 7412 упрощенных профилирование будет включено для любой потребитель статистику о выполнении запросов инфраструктуры вместо обычного профилирования, например динамического административного Представления профилирования [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
+> Тем не менее, обычного профилирования по-прежнему используется для инструкции SET STATISTICS XML, *Включить действительный план* действие в [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], и `query_post_execution_showplan` xEvent.
 
 > [!IMPORTANT]
-> В TPC-C, как рабочая нагрузка Включение профилирования инфраструктуру статистики упрощенных добавляет издержки 1,5 до 2 процентов. Напротив инфраструктуру стандартные статистики профилирования можно добавить до 90 процентов затраты для того же сценарий рабочей нагрузки.
+> TPC-c, как рабочая нагрузка Включение инфраструктуру профилирования статистики упрощенных добавляет издержки 1,5 – 2 процента. Напротив инфраструктуру профилирования статистики standard можно добавить на 90 процентов затраты для один и тот же сценарий рабочей нагрузки.
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
 
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Просмотр динамических запросов плана и Статистика выполнения для выполнения пакета  
+### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Просмотрев активных запросов плана и Статистика выполнения для выполнения пакета  
  В следующем примере запрос **sys.dm_exec_requests** для поиска необходимого запроса и копирования его `session_id` из выходных данных.  
   
 ```sql  
@@ -90,7 +91,7 @@ SELECT * FROM sys.dm_exec_requests;
 GO  
 ```  
   
- Затем, чтобы получить динамическую планирования и выполнения статистику запросов, использовать скопированный `session_id` с помощью системной функции **sys.dm_exec_query_statistics_xml**.  
+ Затем, чтобы получить динамическую план и выполнения статистику запросов, использовать скопированный `session_id` с помощью системной функции **sys.dm_exec_query_statistics_xml**.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.
@@ -98,7 +99,7 @@ SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);
 GO  
 ```   
 
- Или их комбинация для всех запущенных запросов.  
+ Или их комбинация для всех выполняющихся запросов.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.

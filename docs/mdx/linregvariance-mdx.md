@@ -1,6 +1,6 @@
 ---
 title: LinRegVariance (многомерные Выражения) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 314937dce7f423e2ca57183a9686c0059b2d2970
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: b3ae56238623c41d29ccb388a5aaa178352af196
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579236"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741233"
 ---
 # <a name="linregvariance-mdx"></a>LinRegVariance (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Вычисляет линейную регрессию набора и возвращает дисперсию, связанную с линией регрессии y = ax + b.  
   

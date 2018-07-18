@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +22,12 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9be3105dc5264a655487b650eeda270331d4df63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 04f54ae25b010577e43309f7932a0b8eef78e57d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355396"
 ---
 # <a name="secure-the-publisher"></a>Организация безопасности издателя
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,13 +66,13 @@ ms.lasthandoff: 05/03/2018
  Управление списками доступа к публикации описано в статье [Управление именами входа в списке доступа к публикации](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md).  
   
 ## <a name="snapshot-agent"></a>агент моментальных снимков  
- Для каждой публикации существует один агент моментальных снимков. Дополнительные сведения см. в статье [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+ Для каждой публикации существует один агент моментальных снимков. Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ## <a name="ftp-snapshot-delivery"></a>Доставка моментальных снимков по FTP  
  Если указать, что моментальные снимки должны быть доступны через общий FTP-ресурс, а не через общий UNC-ресурс, при настройке доступа по FTP необходимо будет указать имя входа и пароль. Дополнительные сведения см. в статье [Доставка моментального снимка через FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 ## <a name="log-reader-agent"></a>Агент чтения журнала.  
- У каждой базы данных, опубликованной для репликации транзакций, может быть только один агент чтения журнала. Дополнительные сведения см. в статье [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+ У каждой базы данных, опубликованной для репликации транзакций, может быть только один агент чтения журнала. Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ## <a name="queue-reader-agent"></a>Агент чтения очереди.  
  Для всех издателей и публикаций (допускающих подписки, обновляемые посредством очередей), связанных с определенным распространителем, существует один агент чтения очереди. Дополнительные сведения см. в статье [Включение обновляемых подписок для публикации транзакций](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  

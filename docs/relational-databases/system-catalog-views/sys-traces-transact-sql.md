@@ -1,5 +1,5 @@
 ---
-title: sys.traces (Transact-SQL) | Документы Microsoft
+title: sys.traces (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,17 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8cabef6e979c613c977d7e5636f46a10b447fbbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981530"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Sys.traces** представление каталога содержит текущие запущенные трассировки системы. Это представление предназначено для замены **fn_trace_getinfo** функции.  
   
- Полный список поддерживаемых событий трассировки см. в разделе [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Полный список поддерживаемых событий трассировки, см. в разделе [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представления каталога расширенных событий.  
@@ -48,10 +49,10 @@ ms.lasthandoff: 05/04/2018
 |**max_size**|**bigint**|Верхний предел размера файла трассировки в мегабайтах (МБ). Значение NULL, если трассировка является трассировкой наборов строк.|  
 |**stop_time**|**datetime**|Время окончания выполняющейся трассировки.|  
 |**max_files**|**int**|Максимальное количество файлов продолжения. Значение NULL, если максимальное количество файлов не установлено.|  
-|**is_rowset**|**бит**|1 = трассировка набора строк.|  
-|**is_rollover**|**бит**|1 = параметр продолжения включен.|  
-|**is_shutdown**|**бит**|1 = параметр завершения включен.|  
-|**is_default**|**бит**|1 = трассировка по умолчанию.|  
+|**is_rowset**|**bit**|1 = трассировка набора строк.|  
+|**is_rollover**|**bit**|1 = параметр продолжения включен.|  
+|**is_shutdown**|**bit**|1 = параметр завершения включен.|  
+|**is_default**|**bit**|1 = трассировка по умолчанию.|  
 |**buffer_count**|**int**|Количество внутренних буферов памяти, используемых трассировкой.|  
 |**buffer_size**|**int**|Размер каждого буфера (КБ).|  
 |**file_position**|**bigint**|Положение последнего файла трассировки. Значение NULL, если трассировка является трассировкой наборов строк.|  

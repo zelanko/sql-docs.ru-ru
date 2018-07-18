@@ -1,5 +1,5 @@
 ---
-title: Создание трассировки приложения Profiler для воспроизведения (службы Analysis Services) | Документы Microsoft
+title: Создание трассировок Profiler для воспроизведения (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5928325ffe5b0b98da2058529b1cbb036a445be
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031642"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>Создание трассировки приложения Profiler для воспроизведения (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 -   Класс событий Audit Login со всеми его столбцами данных. Этот класс событий предоставляет сведения о каждом пользователе, вошедшем в систему, а также о параметрах сеанса. SPID предоставляет ссылку на пользовательский сеанс. Дополнительные сведения см. в статье [Security Audit Data Columns](../../analysis-services/trace-events/security-audit-data-columns.md).  
   
--   Класс событий Discover Begin со всеми его столбцами данных. Столбец TextData предоставляет \<RequestType > предоставляет часть запроса распознавания, а столбец RequestProperties \<свойства > часть запроса распознавания. Столбец EventSubclass предоставляет тип обнаружения. Дополнительные сведения см. в статье [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md).  
+-   Класс событий Discover Begin со всеми его столбцами данных. Столбец TextData предоставляет \<RequestType > часть запроса открытия, а столбец RequestProperties предоставляет \<свойства > часть запроса распознавания. Столбец EventSubclass предоставляет тип обнаружения. Дополнительные сведения см. в статье [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md).  
   
 -   Класс событий Discover End со всеми его столбцами данных. Этот класс событий проверяет состояние запроса открытия. Дополнительные сведения см. в статье [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md).  
   
@@ -47,6 +48,6 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>См. также  
  [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)   
- [Введение в мониторинг служб Analysis Services в SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)  
+ [Введение в мониторинг служб Analysis Services при помощи приложения SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)  
   
   

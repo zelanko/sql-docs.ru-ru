@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 763c75a0b098dd76fe650dce2628ee5450be0be7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 705b1ef1cad19886848cd383fecb20e46074f5d1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288843"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize-метод (RDS)
 Синхронизировать заданного набора записей с базой данных, указанной в строке подключения для использования в ADO 2.5 и более поздней версии.  
@@ -67,7 +67,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pInformation*  
  Указатель на сведения ошибки, возвращенной **Execute**. Если значение равно NULL, возвращается информация об ошибках.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  *HandlerString* параметр может иметь значение null. Что происходит в этом случае зависит от того, как настроен сервер служб удаленных рабочих СТОЛОВ. Обработчик строку «MSDFMAP.handler» указывает, что обработчик предоставленный корпорацией Майкрософт (Msdfmap.dll) следует использовать. Обработчик строку «MASDFMAP.handler,sample.ini» указывает, должны использоваться обработчик Msdfmap.dll и, аргумент «sample.ini» должен передаваться обработчику. Затем Msdfmap.dll интерпретирует аргумент как направление использования sample.ini для проверки строк соединения и запроса.  
   
 ## <a name="applies-to"></a>Объект применения  

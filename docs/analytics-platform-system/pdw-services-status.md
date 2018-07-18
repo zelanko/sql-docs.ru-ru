@@ -1,6 +1,6 @@
 ---
-title: PDW служб состояния — Analytics Platform System | Документы Microsoft
-description: Состояние служб хранилища параллельных данных (PDW) для Analytics Platform System.
+title: Состояние - служб на PDW, Analytics Platform System | Документация Майкрософт
+description: Состояние служб Parallel Data Warehouse (PDW) для Analytics Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,28 +9,29 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e2252bb821f9522515f1625b0fc118323cb50d1f
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 6892bfcca05e0f85039dddee65a54b485a7ed433
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909894"
 ---
-# <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Параллельное хранилище данных состояния службы для система платформы аналитики
-Parallel Data Warehouse **состояние служб** текущее состояние всех служб SQL Server PDW страницы в Microsoft Analytics платформы System Configuration Manager, а также предоставляет возможность останавливать и запускать службы PDW. Это единственный поддерживаемый способ запуска и остановки службы PDW. Обратите внимание, что отдельные компоненты и службы не может запускаться независимо друг от друга.  
+# <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Состояние служб Parallel Data Warehouse для Analytics Platform System
+Parallel Data Warehouse **состояние служб** страницы в Microsoft Analytics платформы System Configuration Manager показано текущее состояние всех служб SQL Server PDW, а также предоставляет возможность останавливать и запускать службы PDW. Это единственный поддерживаемый способ запуска и остановки службы PDW. Обратите внимание на то, что отдельные компоненты или службы не может запускаться независимо друг от друга.  
   
-#### <a name="to-start-or-stop-the-appliance-services"></a>Чтобы запустить или остановить службы устройства  
+#### <a name="to-start-or-stop-the-appliance-services"></a>Для запуска или остановки служб устройства  
   
-1.  Для запуска служб устройство, нажмите кнопку **запуска устройства**.  
+1.  Запуск служб устройство, нажмите кнопку **запустить устройство**.  
   
 2.  Чтобы остановить службы устройство, нажмите кнопку **остановить устройство**.  
   
-Нет необходимости щелкните **применить** при запуске и остановке службы устройства с помощью **запуска устройства** и **остановить устройство**.  
+Нет необходимости щелкните **применить** при запуске и остановке службы устройство с помощью **запустить устройство** и **остановить устройство**.  
   
-![Службы PDW DWConfig](./media/pdw-services-status/SQL_Server_PDW_DWConfig_ApplPDWServices.png "SQL_Server_PDW_DWConfig_ApplPDWServices")  
+![Службы PDW устройств DWConfig](./media/pdw-services-status/SQL_Server_PDW_DWConfig_ApplPDWServices.png "SQL_Server_PDW_DWConfig_ApplPDWServices")  
   
 > [!NOTE]  
-> Остановка регион PDW также приводит к прекращению агента PDW (sqldwagent) на узлах область HDInsight. Область HDInsight по-прежнему работает, однако наблюдение за работоспособностью, будут недоступны. (Агент PDW требуется узла управления PDW для наблюдения за работоспособностью.)  
+> Остановка регион PDW, также прекращается агент PDW (sqldwagent) на узлах. Агент PDW требует от узла управления PDW отчетов наблюдение за работоспособностью.  
   
 ## <a name="see-also"></a>См. также  
-[Питание устройства APS об отключении &#40;система платформы аналитики&#41;](power-the-aps-appliance-on-or-off.md)  
+[Питания устройства APS, включить или отключить &#40;Analytics Platform System&#41;](power-the-aps-appliance-on-or-off.md)  
   

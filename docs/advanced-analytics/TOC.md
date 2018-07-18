@@ -21,7 +21,7 @@
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-# Установка 
+# Установить 
 
 ## [Аналитика в базе данных](install/sql-machine-learning-services-windows-install.md)
 ## [Отдельный сервер](install/sql-machine-learning-standalone-windows-install.md)
@@ -69,13 +69,13 @@
 #### [Анализ данных в локальном контексте вычисления](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [Перенос данных между SQL Server и файлом XDF](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [Создание простого моделирования](tutorials/deepdive-create-a-simple-simulation.md)
-### [R. Дополнительные аналитические функции в базе данных для разработчиков SQL](tutorials/sqldev-in-database-r-for-sql-developers.md)
-#### [Шаг 1. Скачивание образца данных](tutorials/sqldev-download-the-sample-data.md)
-#### [Шаг 2. Импорт данных в SQL Server с помощью PowerShell](r/sqldev-import-data-to-sql-server-using-powershell.md)
-#### [Шаг 3. Анализ и визуализация данных](tutorials/sqldev-explore-and-visualize-the-data.md)
-#### [Шаг 4. Создание функций данных с помощью T-SQL](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [Шаг 5. Обучение и сохранение модели с помощью T-SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [Шаг 6. Ввод модели в эксплуатацию](tutorials/sqldev-operationalize-the-model.md)
+### [Код на R в хранимых процедурах](tutorials/sqldev-in-database-r-for-sql-developers.md)
+#### [1. Получение данных и скриптов](tutorials/sqldev-download-the-sample-data.md)
+#### [2. Настройка среды](r/sqldev-import-data-to-sql-server-using-powershell.md)
+#### [3. Визуализация данных](tutorials/sqldev-explore-and-visualize-the-data.md)
+#### [4. Создание характеристик данных](tutorials/sqldev-create-data-features-using-t-sql.md)
+#### [5. Обучение и сохранение в SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [6. Прогнозирование результатов](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python. Запуск Python с помощью T-SQL](tutorials/run-python-using-t-sql.md)
@@ -105,7 +105,7 @@
 ##### [Включение удаленного управления пакетами R](r/r-package-how-to-enable-or-disable.md)
 ##### [Синхронизация пакетов R](r/package-install-uninstall-and-sync.md)
 #### [Создание репозитория miniCRAN](r/create-a-local-package-repository-using-minicran.md)
-#### [Советы по использованию пакетов r.](r/packages-installed-in-user-libraries.md)
+#### [Советы по использованию пакетов R](r/packages-installed-in-user-libraries.md)
 
 ## Изучение данных и моделирование
 ### [Библиотеки и типы данных R](r/r-libraries-and-data-types.md)
@@ -134,7 +134,7 @@
 ### [Изменение пула учетных записей пользователей для служб машинного обучения SQL Server](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 ### [Добавление SQLRUserGroup в качестве пользователя базы данных](r/add-sqlrusergroup-to-database.md)
 ### [Развертывание и использование моделей с помощью веб-служб](operationalization-with-mrsdeploy.md)
-### [Решения управления и мониторинга](r/managing-and-monitoring-r-solutions.md
+### [Решения для управления и мониторинга](r/managing-and-monitoring-r-solutions.md)
 ### [Известные проблемы в службах машинного обучения](r/resource-governance-for-r-services.md)
 ### [Создание пула ресурсов для машинного обучения](r/how-to-create-a-resource-pool-for-r.md)
 ### [Расширенные события для служб машинного обучения](r/extended-events-for-sql-server-r-services.md)
@@ -159,9 +159,9 @@
 ## [Настройка виртуальной машины](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ## [Устранение неполадок](machine-learning-troubleshooting-faq.md)
 ### [Сбор данных](data-collection-ml-troubleshooting-process.md)
-### [Установка и обновление ошибки](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [Панель запуска и внешних ошибки выполнения скрипта](common-issues-external-script-execution.md)
-### [Ошибок создания скриптов R](r-script-execution-errors.md)
+### [Ошибки при установке и обновлении](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [Ошибки в работе панели запуска и при выполнении внешнего скрипта](common-issues-external-script-execution.md)
+### [Ошибки скрипта R](r-script-execution-errors.md)
 
 ## Блоги
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
@@ -170,4 +170,4 @@
 
 ## Форумы
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Машинного обучения сервера](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

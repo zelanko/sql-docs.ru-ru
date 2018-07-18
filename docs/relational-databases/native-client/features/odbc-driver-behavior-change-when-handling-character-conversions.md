@@ -1,26 +1,24 @@
 ---
-title: Изменение поведения драйвера ODBC при обработке преобразования символов | Документы Microsoft
+title: Изменение поведения драйвера ODBC при обработке преобразования символов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8745bee5b2357b9e6d268198195a815e32767bb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 752c824b77da90c80620387cbdf2d42aa626367c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408179"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Изменение поведения драйвера ODBC при обработке преобразования символов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +37,7 @@ pBuffer = new BYTE[iSize];   // Allocate buffer
 GetMyFavoriteAPI(pBuffer, &iSize);   // Retrieve actual data  
 ```  
   
- Тем не менее **SQLGetData** не должны использоваться в этом сценарии. Не следует использовать следующий вариант.  
+ Тем не менее **SQLGetData** не следует использовать в этом сценарии. Не следует использовать следующий вариант.  
   
 ```  
 // bad  
@@ -50,7 +48,7 @@ pBuffer = new WCHAR[(iSize/sizeof(WCHAR)) + 1];   // Allocate buffer
 SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // Retrieve data  
 ```  
   
- **SQLGetData** может быть вызван только для получения фрагментов фактических данных. С помощью **SQLGetData** для получения размера данных не поддерживается.  
+ **SQLGetData** может вызываться только для получения фрагментов фактических данных. С помощью **SQLGetData** для получения размера данных не поддерживается.  
   
  Далее показано влияние изменения драйвера, которое проявляется при использовании неверного варианта. Это приложение запрашивает **varchar** столбец и привязку в кодировке Юникод (SQL_UNICODE/SQL_WCHAR):  
   
@@ -63,7 +61,7 @@ SQLGetData(hstmt, SQL_WCHAR, ….., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
 |Версия драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Итоговая длина или индикатор|Описание|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |Native Client [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] или более ранняя версия|6|Драйвер ошибочно предположил, что преобразование CHAR в WCHAR можно было выполнить как умножение длины на 2.|  
-|Native Client [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (версия 11.0.2100.60) или более поздняя версия|-4 (SQL_NO_TOTAL)|Драйвер больше не предполагается, что преобразование из CHAR в WCHAR или из WCHAR в CHAR (умножение) \*2 или (деления) / 2 действия.<br /><br /> Вызов **SQLGetData** больше не возвращает длина ожидаемого преобразования. Драйвер обнаруживает преобразование из CHAR в WCHAR или обратное преобразование и возвращает (-4) SQL_NO_TOTAL вместо *2 или /2, что могло быть неверным.|  
+|Native Client [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (версия 11.0.2100.60) или более поздняя версия|-4 (SQL_NO_TOTAL)|Драйвер больше не предполагается, что преобразование из CHAR в WCHAR или из WCHAR в CHAR (умножение) \*2 или (деления) / 2 действия.<br /><br /> Вызов **SQLGetData** больше не возвращает длину ожидаемого преобразования. Драйвер обнаруживает преобразование из CHAR в WCHAR или обратное преобразование и возвращает (-4) SQL_NO_TOTAL вместо *2 или /2, что могло быть неверным.|  
   
  Используйте **SQLGetData** для получения фрагментов данных. (Показан псевдокод).  
   
@@ -91,8 +89,8 @@ SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecti
   
 |Версия драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Итоговая длина или индикатор|Описание|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|Native Client [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] или более ранняя версия|20|**SQLFetch** сообщает, что усечения с правой стороны данных.<br /><br /> Длина является длиной возращенных данных, а не того, что было сохранено (предполагается преобразование CHAR в WCHAR при помощи операции *2, что может быть неверным для глифов).<br /><br /> В буфере хранятся следующие данные: 123\0. Буфер гарантированно заканчивается на NULL.|  
-|Native Client [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (версия 11.0.2100.60) или более поздняя версия|-4 (SQL_NO_TOTAL)|**SQLFetch** сообщает, что усечения с правой стороны данных.<br /><br /> Длина указывает -4 (SQL_NO_TOTAL), поскольку остальные данные не были преобразованы.<br /><br /> В буфере хранятся следующие данные: 123\0. - Буфер гарантированно заканчивается на NULL.|  
+|Native Client [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] или более ранняя версия|20|**SQLFetch** сообщает о наличии усечения с правой стороны данных.<br /><br /> Длина является длиной возращенных данных, а не того, что было сохранено (предполагается преобразование CHAR в WCHAR при помощи операции *2, что может быть неверным для глифов).<br /><br /> В буфере хранятся следующие данные: 123\0. Буфер гарантированно заканчивается на NULL.|  
+|Native Client [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (версия 11.0.2100.60) или более поздняя версия|-4 (SQL_NO_TOTAL)|**SQLFetch** сообщает о наличии усечения с правой стороны данных.<br /><br /> Длина указывает -4 (SQL_NO_TOTAL), поскольку остальные данные не были преобразованы.<br /><br /> В буфере хранятся следующие данные: 123\0. - Буфер гарантированно заканчивается на NULL.|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter (поведение параметра OUTPUT)  
  Запрос:  `create procedure spTest @p1 varchar(max) OUTPUT`  

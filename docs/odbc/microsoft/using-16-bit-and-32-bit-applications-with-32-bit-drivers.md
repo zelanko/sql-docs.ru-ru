@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908919"
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>Использование 16-разрядных и 32-разрядных приложений с 32-разрядными драйверами
 > [!IMPORTANT]  

@@ -1,34 +1,33 @@
 ---
-title: sys.pdw_nodes_partitions (Transact-SQL) | Документы Microsoft
+title: sys.pdw_nodes_partitions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
-caps.latest.revision: 11
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f05d5ce80bf7ca286050a160d5cfbc41a689e67e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 697c602b41c1225202f12cae52297009ae1e99dc
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798219"
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Содержит по одной строке для каждой секции всех таблиц и большинства типов индексов в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] базы данных. Все таблицы и индексы содержат хотя бы одна секция ли явным образом секционированы.  
+  Содержит по одной строке для каждой секции всех таблиц и большинства типов индексов в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] базы данных. Все таблицы и индексы содержат по крайней мере одну секцию, независимо от того, имеется ли явно разбиения на разделы.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -47,17 +46,17 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Пример а. Отображение строки в каждой секции в пределах каждого распределения 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Пример а. Отображение строк в каждой секции в пределах каждого распределения 
 
 Применимо к: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
-Чтобы отобразить число строк в каждой секции в пределах каждого распределения, используйте [PDW_SHOWPARTITIONSTATS DBCC (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
+Чтобы отобразить число строк в каждой секции в пределах каждого распределения, используйте [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Пример б. Использование системных представлений для просмотра строк в каждой секции каждой распределения таблицы
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Пример б использует системные представления для просмотра строк в каждой секции каждой распределения таблицы
 
 Применимо к: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
-Этот запрос возвращает количество строк в каждой секции каждой распределения таблицы `myTable`.  
+Этот запрос возвращает количество строк в каждой секции каждого распределения таблицы `myTable`.  
  
 ```  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   

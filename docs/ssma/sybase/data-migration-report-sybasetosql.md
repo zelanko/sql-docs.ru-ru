@@ -3,8 +3,6 @@ title: Отчет о миграции данных (SybaseToSQL) | Докуме�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ac2b50c622d276ae87ba063248160702dd99b54f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e4f2e50603b970a2b1ec5c1eec4e258e80cfb3b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778511"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Отчет о миграции данных (SybaseToSQL)
 **Отчет о миграции данных** диалоговое окно после переноса данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

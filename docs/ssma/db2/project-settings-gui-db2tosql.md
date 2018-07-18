@@ -1,8 +1,6 @@
 ---
 title: Параметры (GUI) (DB2ToSQL) проекта | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6c8b6a1457777b026f7fc3e6f48e9bafa5a4438f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ae2bb7c816dbabb827ab9813792849bca25725e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775100"
 ---
 # <a name="project-settings-gui-db2tosql"></a>Параметры проекта (GUI) (DB2ToSQL)
 Параметры проекта графического пользовательского интерфейса позволяют настроить способ отображения данных на **данные** вкладку и необходимость отображения отчета оценки после преобразования, или нет.  

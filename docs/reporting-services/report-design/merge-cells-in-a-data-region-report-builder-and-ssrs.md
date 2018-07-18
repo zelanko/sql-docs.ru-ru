@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024331"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Объединение ячеек в области данных (построитель отчетов и службы SSRS)
 В отчете с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно объединить ячейки в области данных, чтобы соединить их, улучшить внешний вид области данных или сформировать метки для групп столбцов и строк.  

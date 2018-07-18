@@ -1,34 +1,20 @@
 ---
-title: Идентификаторы (расширения интеллектуального анализа данных) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], identifiers
-- delimited identifiers [DMX]
-- DMX [Analysis Services], identifiers
-- identifiers [DMX]
-- regular identifiers [DMX]
-- names [DMX]
-ms.assetid: fbb487a7-1b89-482a-977e-f079379d44fc
-caps.latest.revision: 35
-author: Minewiskan
+title: Идентификаторы (расширения интеллектуального анализа данных) | Документация Майкрософт
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4db8e03ca5267941cca1f909e88afa7ceec7e96c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978613"
 ---
 # <a name="identifiers-dmx"></a>Идентификаторы (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,13 +41,13 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  Первым символом обычного идентификатора должен быть один из следующих:  
   
-    -   Буква в соответствии с определением стандарта Юникод 2.0. Под этим подразумеваются буквы как верхнего, так и нижнего регистра латинского алфавита («а» — «z» и «A» — «Z»), а также буквенные символы других языков.  
+    -   Буква согласно определению стандарта Юникод 2.0. Под этим подразумеваются буквы как верхнего, так и нижнего регистра латинского алфавита («а» — «z» и «A» — «Z»), а также буквенные символы других языков.  
   
     -   Подчеркивание (_).  
   
 2.  Далее могут идти следующие символы:  
   
-    -   Буквы, определенные стандартом Юникод 2.0.  
+    -   Буквы, как определено в стандарте Юникод 2.0.  
   
     -   Десятичные цифры из набора символов Basic Latin или другого набора символов национального языка.  
   
@@ -90,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   При использовании зарезервированных слов для имен объектов или их частей.  
   
-     Не рекомендуется использование зарезервированных ключевых слов в качестве имен объектов. Базы данных, обновление с предыдущих версий [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут содержать идентификаторы, которые включают слова, незарезервированные в ранней версии [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , но являющиеся зарезервированными словами для[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Идентификатор с разделителем может использоваться для ссылки на подобный объект до изменения его имени.  
+     Не рекомендуется использование зарезервированных ключевых слов в качестве имен объектов. Базы данных, обновленные с более ранних версиях [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут содержать идентификаторы, которые включают слова, незарезервированные в ранней версии [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , но являющиеся зарезервированными словами для[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Идентификатор с разделителем может использоваться для ссылки на подобный объект до изменения его имени.  
   
 -   Использование символов, которые не указаны в качестве сложных идентификаторов.  
   
@@ -111,14 +97,14 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  При использовании уточненных имен объектов может понадобиться выделить несколько идентификаторов, составляющих имя объекта. Необходимо выделить каждый идентификатор по отдельности.  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Ссылка](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; элементы синтаксиса](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; синтаксические обозначения](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Структура и использовании прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Общие сведения об инструкции SELECT в расширении интеллектуального анализа данных](../dmx/understanding-the-dmx-select-statement.md)  
   
   

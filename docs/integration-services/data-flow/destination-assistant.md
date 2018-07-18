@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2167b2baba2c1dd866808fc190690b862e9d9e04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 218958cb1cc21aeca393b44a337640e64d918a41
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332878"
 ---
 # <a name="destination-assistant"></a>Помощник назначения
   Компонент помощника назначения помогает создавать компонент назначения и диспетчер соединений. Компонент расположен в разделе **Избранное** панели инструментов служб SSIS.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="add-new-destination-dialog-box"></a>Диалоговое окно "Добавление нового назначения"
 В следующей таблице приведен список параметров, доступных в диалоговом окне **Добавление нового назначения**.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Типы|Выберите тип назначения, к которому нужно подключиться.|  
 |Диспетчеры соединений|Выберите существующий диспетчер подключений или щелкните **\<Создать>**, чтобы создать его.|  

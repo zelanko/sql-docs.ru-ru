@@ -1,0 +1,54 @@
+---
+title: Свойства именованных каналов | Документация Майкрософт
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- configmgr-client
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- pipes [SQL Server]
+- listening [SQL Server], pipes
+- pipes [SQL Server], listening on pipes
+- Named Pipes [SQL Server], listening on pipes
+ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
+caps.latest.revision: 31
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 706345a7d0860f217ac23a7359c8afe83fb2c484
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220564"
+---
+# <a name="named-pipes-properties"></a>Свойства именованных каналов
+  Используйте страницу **Протокол**в диалоговом окне **Свойства именованных каналов** , чтобы просмотреть или изменить именованный канал, который прослушивается [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , во время использования протокола именованных каналов.  
+  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть перезапущен, чтобы включить протокол, отключить протокол или изменить именованный канал.  
+  
+## <a name="options"></a>Параметры  
+ **Enabled**  
+ Возможные значения: **Да** и **Нет**.  
+  
+ **Имя канала**  
+ Указывает именованный канал, который прослушивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает `\\.\pipe\sql\query` для экземпляра по умолчанию и `\\.\pipe\MSSQL$<instancename>\sql\query` для именованного экземпляра. Длина этого поля ограничена 2047 символами.  
+  
+## <a name="creating-an-alternate-named-pipe"></a>Создание альтернативного именованного канала  
+ Чтобы изменить именованный канал, введите новое имя канала в поле **Имя канала** , а затем остановите и перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Так как **sql\query** хорошо известен в качестве именованного канала, используемого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], изменение канала может помочь сократить риск проведения атак вредоносными программами.  
+  
+### <a name="example"></a>Пример  
+ Введите **\\\\.\pipe\unit\app** , чтобы прослушивать канал **unit\app** .  
+  
+ Введите **\\\\.\pipe\acct** , чтобы прослушивать канал **acct** .  
+  
+## <a name="see-also"></a>См. также  
+ [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
+ [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [Создание допустимой строки подключения, использующей протокол именованных каналов](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
+  
+  

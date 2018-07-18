@@ -2,7 +2,6 @@
 title: Как работают обработчики событий | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ef9af3c4ba076048e0d04d31601b20e9d9ca321
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a50612e9bd16eafc2afb74c39ba2e5de7285e5a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271973"
 ---
 # <a name="how-event-handlers-work-together"></a>Как работают обработчики событий
 Если при программировании в Visual Basic, все обработчики событий для **подключения** и **записей** события должен быть реализован, независимо от того, возможность вы фактически обработать все события. Объем работы реализацию, что нужно сделать зависит от используемого языка программирования. Дополнительные сведения см. в разделе [ADO экземпляр события в языке](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

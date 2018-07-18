@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,20 +18,21 @@ helpviewer_keywords:
 - DECRYPTBYKEYAUTOCERT function
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3bf53e51d3896953e66e3360aaa810a5c13c51ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7541b3f935ab66997315f04f43980beae24698d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790215"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Расшифровка с помощью симметричного ключа, который автоматически расшифровывается с помощью сертификата.  
-  
+Эта функция расшифровывает данные с помощью симметричного ключа. Симметричный ключ автоматически расшифровывается с помощью сертификата.  
+
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -47,40 +47,40 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   
 ## <a name="arguments"></a>Аргументы  
  *cert_ID*  
- Идентификатор сертификата, используемого для защиты симметричного ключа. Аргумент *cert_ID* имеет тип **int**.  
+Идентификатор сертификата, используемого для защиты симметричного ключа. *cert_ID* имеет тип данных **int**.  
   
- *cert_password*  
- Пароль, защищающий закрытый ключ сертификата. Может принимать значение NULL, если закрытый ключ защищен главным ключом базы данных. Аргумент *cert_password* имеет тип **nvarchar**.  
+*cert_password*  
+Пароль, используемый для шифрования закрытого ключа сертификата. Может иметь значение `NULL`, если главный ключ базы данных защищает закрытый ключ. *cert_password* имеет тип данных **nvarchar**.  
+
+'*ciphertext*'  
+Строка данных, зашифрованная с помощью ключа. *ciphertext* имеет тип данных **varbinary**.  
+
+@ciphertext  
+Переменная типа **varbinary**, содержащая данные, зашифрованные с помощью ключа.  
+
+*add_authenticator*  
+Указывает, включен ли исходный процесс шифрования и зашифрована ли структура проверки подлинности вместе с данными в виде открытого текста. Значение должно соответствовать значению, переданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) во время шифрования данных. *add_authenticator* имеет значение 1, если в процессе шифрования использовалась структура проверки подлинности. *add_authenticator* имеет тип данных **int**.  
   
- '*ciphertext*'  
- Данные, зашифрованные с помощью ключа. Аргумент *ciphertext* имеет тип **varbinary**.  
+@add_authenticator  
+Переменная, указывающая, включен ли исходный процесс шифрования и зашифрована ли структура проверки подлинности вместе с данными в виде открытого текста. Значение должно соответствовать значению, переданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) во время шифрования данных. *@add_authenticator* имеет тип данных **int**.  
   
- @ciphertext  
- Переменная типа **varbinary**. Содержит данные, которые были зашифрованы с помощью ключа.  
+*authenticator*  
+Данные, используемые в качестве основы для создания структуры проверки подлинности. Значение должно соответствовать значению, заданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* имеет тип данных **sysname**.  
   
- *add_authenticator*  
- Указывает, была ли структура проверки подлинности зашифровано вместе с неформатированным текстом. Значение этого аргумента должно быть равно значению, переданному в функцию EncryptByKey при шифровании данных. Имеет значение **1**, если была использована структура проверки подлинности. Аргумент *add_authenticator* имеет тип **int**.  
-  
- @add_authenticator  
- Указывает, была ли структура проверки подлинности зашифровано вместе с неформатированным текстом. Значение этого аргумента должно быть равно значению, переданному функции EncryptByKey при шифровании данных.  
-  
- *authenticator*  
- Данные, из которых создается структура проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey. Аргумент *authenticator* имеет тип **sysname**.  
-  
- @authenticator  
- Переменная, содержащая сведения, из которых формируются данные для проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey.  
+@authenticator  
+Переменная, содержащая данные, из которых формируется структура проверки подлинности. Значение должно соответствовать значению, заданному функции [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* имеет тип данных **sysname**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Переменная типа **varbinary** с максимальным размером 8000 байт.  
+Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
 ## <a name="remarks"></a>Remarks  
- Функция DecryptByKeyAutoCert объединяет функциональность OPEN SYMMETRIC KEY и DecryptByKey. В отдельной операции она расшифровывает симметричный ключ и использует его для расшифровки текста.  
+Функция `DECRYPTBYKEYAUTOCERT` объединяет функциональность `OPEN SYMMETRIC KEY` и `DECRYPTBYKEY`. За одну операцию она сначала расшифровывает симметричный ключ, а затем с его помощью расшифровывает зашифрованный текст.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо разрешение VIEW DEFINITION на симметричный ключ и разрешение CONTROL на сертификат.  
+Необходимо разрешение `VIEW DEFINITION` для симметричного ключа и разрешение `CONTROL` для сертификата.   
   
 ## <a name="examples"></a>Примеры  
- В следующем примере показано, как с помощью функции `DecryptByKeyAutoCert` можно упростить код, отвечающий за расшифровку. Этот код должен быть выполнен в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], для которой еще не задан главный ключ базы данных.  
+В этом примере показано, как `DECRYPTBYKEYAUTOCERT` может упростить код расшифровки. Этот код должен быть выполнен в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], для которой еще не задан главный ключ базы данных.  
   
 ```  
 --Create the keys and certificate.  

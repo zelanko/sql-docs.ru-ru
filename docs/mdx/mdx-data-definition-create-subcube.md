@@ -1,6 +1,6 @@
 ---
 title: Инструкция CREATE SUBCUBE (многомерные Выражения) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 730d6f3b1445017cc1b1988c49bda176c6ba4ced
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580746"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742543"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Определения данных многомерных Выражений — Создание вложенного КУБА
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Переопределяет пространство заданного куба или вложенного куба на указанный вложенный куб. Изменяет видимое пространство куба для последующих операций.  
   

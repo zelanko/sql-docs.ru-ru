@@ -21,11 +21,12 @@ caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76498c4abdc226194f71648cae49640bdae2dfcc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689222"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Создание управляемой данными подписки (учебник по службам SSRS)
 В этом учебнике по [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] рассматриваются концепции управляемых данными подписок на основе простого примера, в котором создается управляемая данными подписка для создания и сохранения отфильтрованных выходных данных отчета в общую папку. 
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 
  На приведенной ниже схеме иллюстрируется базовый рабочей процесс, описываемый в учебнике.
 
-Шаг  |Description 
+Шаг  |Описание 
 ---------|---------
 (1)     |  В конфигурации подписки указываются исходный отчет, расписание и сопоставление полей с базой данных подписчиков.        
 (2)     | Таблица OrderInfo содержит 4 номера заказа для фильтрации (по одному на файл). Таблица также содержит форматы файлов для создаваемых отчетов.

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901059"
 ---
 # <a name="native-error"></a>Собственной ошибки
 Положительное собственной ошибки коды драйверами системной базы данных. Отрицательными кодами создаются Microsoft Jet. Дополнительные сведения см. в разделе *Microsoft Jet базы данных подсистемы Руководство программиста*.

@@ -2,7 +2,6 @@
 title: Объект члена (ADO MD) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6629f860fb8043387526019ec17c0e1775915a66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee79dc5a17ebbce35a8543a0ed2351ca65f03374
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284043"
 ---
 # <a name="member-object-ado-md"></a>Объект члена (ADO MD)
 Представляет элемент в кубе, уровня дочерних элементов элемента уровня или членом положение вдоль оси набора ячеек.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Свойства **член** различаются в зависимости от контекста, в котором он используется. Объект **член** из [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) в [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) имеет [дочерних](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойство, которое возвращает **члены** на уровень ниже по иерархии из текущего **член**. Для **член** из [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md), **дочерних** всегда возвращается пустая коллекция. Кроме того [тип](../../../ado/reference/ado-md-api/type-property-ado-md.md) свойство применяется только к **элементы** из **уровень**.  
   
  Объект **член** из **позиции** имеет два свойства, которые могут быть полезны при отображении [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) и [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Ошибка возникает в том случае, если эти свойства доступны на **член** из **уровень**.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
  **Свойства** коллекция содержит указанный поставщик свойства. В следующей таблице перечислены свойства, которые могут быть доступны. Фактическое свойство списка могут различаться в зависимости от реализации поставщика. См. в документации для поставщика более полный список доступных свойств.  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, к которому принадлежит этот куб.|  
 |ChildrenCardinality|Количество потомков элемента.|  

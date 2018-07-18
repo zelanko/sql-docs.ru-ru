@@ -1,5 +1,5 @@
 ---
-title: Определяемые пользователем типы больших значений CLR (OLE DB) | Документы Microsoft
+title: Определяемые пользователем типы больших значений CLR (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,11 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6959f7e6993a6d9f024a8201056f57c0b85b54f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36a553d8c9117289d1c20174fe3c7f1a4a70511a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408363"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 
   В этом разделе описываются изменения OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], связанные с поддержкой больших определяемых пользователем типов данных среды CLR.  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client см. в разделе [Large CLR User-Defined типов](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Пример см. в разделе [использования больших определяемых пользователем типов CLR &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, см. в разделе [Large CLR User-Defined типы](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Пример, см. в разделе [использования больших определяемых пользователем типов CLR &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Формат данных  
  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует значение ~0 для представления значений с неограниченным размером типа больших объектов. Значение ~0 также представляет размер определяемых пользователем типов данных CLR, превышающий 8 000 байт.  
@@ -41,13 +42,13 @@ ms.lasthandoff: 05/03/2018
 |--------------------------|----------------------|-------------------|-----------|  
 |определяемый пользователем тип среды CLR|DBTYPE_UDT|BYTE [] (массив байтов\)|132 (oledb.h)|  
   
- Значения определяемых пользователем типов представляются в виде массивов байт. Поддерживается преобразование данных в шестнадцатеричные строки и из шестнадцатеричных строк. Литеральные значения представляются в виде шестнадцатеричных строк с префиксом «0x». Шестнадцатеричная строка является текстовым представлением двоичных данных с основанием 16. Одним из примеров является преобразование из серверного типа **varbinary(10)** в тип DBTYPE_STR, что приводит к шестнадцатеричное представление 20 символов, где каждая пара символов представляет один байт.  
+ Значения определяемых пользователем типов представляются в виде массивов байт. Поддерживается преобразование данных в шестнадцатеричные строки и из шестнадцатеричных строк. Литеральные значения представляются в виде шестнадцатеричных строк с префиксом «0x». Шестнадцатеричная строка является текстовым представлением двоичных данных с основанием 16. Например, при преобразовании из серверного типа **varbinary(10)** в тип DBTYPE_STR, что приводит к шестнадцатеричное представление 20 символов, где каждая пара символов представляет один байт.  
   
 ## <a name="parameter-properties"></a>Свойства параметра  
- Набор свойств DBPROPSET_SQLSERVERPARAMETER поддерживает определяемый пользователем тип через OLE DB. Дополнительные сведения см. в разделе [Using User-Defined типов](~/relational-databases/native-client/features/using-user-defined-types.md).  
+ Набор свойств DBPROPSET_SQLSERVERPARAMETER поддерживает определяемый пользователем тип через OLE DB. Дополнительные сведения см. в разделе [Using User-Defined типы](~/relational-databases/native-client/features/using-user-defined-types.md).  
   
 ## <a name="column-properties"></a>Свойства столбца  
- Набор свойств DBPROPSET_SQLSERVERCOLUMN поддерживает создание таблиц через OLE DB. Дополнительные сведения см. в разделе [Using User-Defined типов](~/relational-databases/native-client/features/using-user-defined-types.md).  
+ Набор свойств DBPROPSET_SQLSERVERCOLUMN поддерживает создание таблиц через OLE DB. Дополнительные сведения см. в разделе [Using User-Defined типы](~/relational-databases/native-client/features/using-user-defined-types.md).  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Сопоставление типов данных в методе ITableDefinition::CreateTable  
  Следующие сведения используются в **DBCOLUMNDESC** структуры, используемые ITableDefinition::CreateTable, когда необходимы столбцы определяемого пользователем ТИПА:  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_UDT|Не учитывается|определяемый пользователем тип|Должен включать набор свойств DBPROPSET_SQLSERVERCOLUMN.|  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- Сведения, возвращаемые в структуру DBPARAMINFO через **prgParamInfo** выглядит следующим образом:  
+ Сведения возвращаются в структуре DBPARAMINFO через **prgParamInfo** выглядит следующим образом:  
   
 |Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* флаг DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|не учитывается|не учитывается|не учитывается|  
   
 ## <a name="isscommandwithparameters"></a>ISSCommandWithParameters  
- Приложения используют **ISSCommandWithParameters** для получения и задания свойства параметра, определенного в разделе свойств параметров.  
+ Приложения используют **ISSCommandWithParameters** для получения и задания свойства параметров, определенные в разделе свойств параметров.  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
  Возвращаются следующие столбцы.  
@@ -131,25 +132,25 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_BSTR|Поддерживается (2), (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
 |DBTYPE_STR|Поддерживается (2), (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
 |DBTYPE_IUNKNOWN|Поддерживаемые (6)|Недоступно|Поддерживаемые (6)|Недоступно|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
 |DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Недоступно|Недоступно|Недоступно|  
   
 ### <a name="key-to-symbols"></a>Расшифровка символов  
   
 |Символ|Значение|  
 |------------|-------------|  
-|1|Если тип сервера, отличный от DBTYPE_UDT, указывается с **ICommandWithParameters::SetParameterInfo** и типом метода доступа является DBTYPE_UDT, при выполнении инструкции возникает ошибка.  Будет возвращена ошибка DB_E_ERRORSOCCURRED, и состояние параметра будет DBSTATUS_E_BADACCESSOR.<br /><br /> Ошибкой является указание параметра определяемого пользователем типа для серверного параметра, тип которого отличен от определяемого пользователем типа.|  
+|1|Если тип сервера, отличный от DBTYPE_UDT, указывается с помощью **ICommandWithParameters::SetParameterInfo** и типом метода доступа является DBTYPE_UDT, при выполнении инструкции возникает ошибка.  Будет возвращена ошибка DB_E_ERRORSOCCURRED, и состояние параметра будет DBSTATUS_E_BADACCESSOR.<br /><br /> Ошибкой является указание параметра определяемого пользователем типа для серверного параметра, тип которого отличен от определяемого пользователем типа.|  
 |2|Данные преобразуются из шестнадцатеричной строки в двоичные данные.|  
 |3|Данные преобразуются из двоичных данных в шестнадцатеричную строку.|  
 |4|Проверка может происходить при использовании **CreateAccessor** или **GetNextRows**. Ошибка DB_E_ERRORSOCCURRED. Состояние привязки установлено в значение DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
 |5|Может использоваться BY_REF.|  
-|6|Параметры определяемого пользователем типа могут быть привязаны в структуре DBBINDING как DBTYPE_IUNKNOWN. Привязка к DBTYPE_IUNKNOWN показывает, что приложению для обработки данных в виде потока с помощью интерфейса ISequentialStream. Если потребитель указывает *wType* в привязке как тип DBTYPE_IUNKNOWN и соответствующий столбец или выходной параметр хранимой процедуры имеет определяемый пользователем тип, собственный клиент SQL Server возвратит ISequentialStream. Для входного параметра, будет запрашивать собственный клиент SQL Server для интерфейса ISequentialStream.<br /><br /> В случае больших определяемых пользователем типов можно не привязывать длину данных определяемого пользователем типа при использовании привязки DBTYPE_IUNKNOWN. Однако для маленьких определяемых пользователем типов необходимо выполнять привязку длины. Для параметра DBTYPE_UDT можно указать большой определяемый пользователем тип, если выполняется одно или более из следующих условий.<br />*ulParamParamSize* — ~ 0.<br />В структуре DBPARAMBINDINFO установлен флаг DBPARAMFLAGS_ISLONG.<br /><br /> Для строковых данных привязка DBTYPE_IUNKNOWN разрешена только для больших определяемых пользователем типов. Можно определить ли столбец большой определяемый Пользователем тип, используя метод флагов для набора строк или интерфейса IColumnsInfo объекта команды. Столбец DBTYPE_UDT имеет большой определяемый пользователь тип, если выполняется по крайней мере одно из следующих условий.<br />Установлен флаг DBCOLUMNFLAGS_ISLONG *dwFlags* член структуры DBCOLUMNINFO. <br />*ulColumnSize* является членом DBCOLUMNINFO ~ 0.|  
+|6|Параметры определяемого пользователем типа могут быть привязаны в структуре DBBINDING как DBTYPE_IUNKNOWN. Привязка к DBTYPE_IUNKNOWN показывает, что приложению для обработки данных в виде потока с помощью интерфейса ISequentialStream. Если потребитель указывает *wType* в привязке как тип DBTYPE_IUNKNOWN и соответствующий столбец или выходной параметр хранимой процедуры имеет определяемый пользователем тип, собственный клиент SQL Server возвратит ISequentialStream. Для входного параметра, будет запрашивать собственный клиент SQL Server для интерфейса ISequentialStream.<br /><br /> В случае больших определяемых пользователем типов можно не привязывать длину данных определяемого пользователем типа при использовании привязки DBTYPE_IUNKNOWN. Однако для маленьких определяемых пользователем типов необходимо выполнять привязку длины. Для параметра DBTYPE_UDT можно указать большой определяемый пользователем тип, если выполняется одно или более из следующих условий.<br />*ulParamParamSize* — ~ 0.<br />В структуре DBPARAMBINDINFO установлен флаг DBPARAMFLAGS_ISLONG.<br /><br /> Для строковых данных привязка DBTYPE_IUNKNOWN разрешена только для больших определяемых пользователем типов. Можно выяснить, является ли столбец большой определяемый Пользователем тип, используя метод флагов для набора строк или команда IColumnsInfo интерфейса объекта. Столбец DBTYPE_UDT имеет большой определяемый пользователь тип, если выполняется по крайней мере одно из следующих условий.<br />Установлен флаг DBCOLUMNFLAGS_ISLONG *dwFlags* член структуры DBCOLUMNINFO. <br />*ulColumnSize* является членом DBCOLUMNINFO ~ 0.|  
   
  Типы DBTYPE_NULL и DBTYPE_EMPTY могут быть привязаны только для входных параметров. Они не могут быть привязаны для выходных параметров или результатов. Если они привязаны для входных параметров, состояние должно быть установлено в значение DBSTATUS_S_ISNULL для типа DBTYPE_NULL или DBSTATUS_S_DEFAULT для типа DBTYPE_EMPTY. DBTYPE_BYREF невозможно использовать с типом DBTYPE_NULL или DBTYPE_EMPTY.  
   
  Тип DBTYPE_UDT может также быть преобразован в тип DBTYPE_EMPTY или DBTYPE_NULL. Однако типы DBTYPE_NULL и DBTYPE_EMPTY невозможно преобразовать в тип DBTYPE_UDT. Это правило обеспечивает согласование с DBTYPE_BYTES. **ISSCommandWithParameters** используется для обработки определяемых пользователем типов в качестве параметров.  
   
- Преобразование данных основными службами OLE DB (**IDataConvert**) не могут применяться к DBTYPE_UDT.  
+ Преобразование данных, основными службами OLE DB (**IDataConvert**) не применяются к DBTYPE_UDT.  
   
  Другие привязки не поддерживаются.  
   

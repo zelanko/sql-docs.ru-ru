@@ -2,7 +2,6 @@
 title: Выполнить метод (соединение ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f99015571bd7abdad402dc0f779c04fd546a79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27d3f5318d093d18312dd531421f5c32755aeaf1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278143"
 ---
 # <a name="execute-method-ado-connection"></a>Выполнить метод (соединение ADO)
 Выполняет указанный запрос, инструкции SQL, хранимая процедура или поставщика текста.  
@@ -46,10 +46,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Объект **строка** значение, содержащее инструкцию SQL, хранимая процедура, URL-адрес или поставщика текста для выполнения. **При необходимости**, имена таблиц можно использовать только, если поставщик является поставщиком SQL виду. Для примера Если имя таблицы «Заказчики» используется, ADO автоматически вставляет стандартный синтаксис SQL Select для формирования и передачи «ВЫБЕРИТЕ * из заказчики» как [!INCLUDE[tsql](../../../includes/tsql_md.md)] инструкции для поставщика.  
   
  *RecordsAffected*  
- Необязательно. Объект **длинные** переменной, в которой поставщик возвращает количество записей, затронутых операцию.  
+ Необязательный параметр. Объект **длинные** переменной, в которой поставщик возвращает количество записей, затронутых операцию.  
   
  *Параметры*  
- Необязательно. Объект **длинные** значение, указывающее, как поставщик должен оценить аргумент CommandText. Может быть битовой маской, одного или нескольких [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения.  
+ Необязательный параметр. Объект **длинные** значение, указывающее, как поставщик должен оценить аргумент CommandText. Может быть битовой маской, одного или нескольких [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения.  
   
  **Примечание** используйте **ExecuteOptionEnum** значение **adExecuteNoRecords** для повышения производительности путем минимизации внутренней обработки и для приложений, которые перенос приложений из Visual Basic 6.0.  
   
@@ -57,7 +57,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  Не используйте значения CommandTypeEnum adCmdFile или adCmdTableDirect с Execute. Эти значения можно использовать только как параметры с [метода Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Requery-метод](../../../ado/reference/ado-api/requery-method.md) методы **записей**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  С помощью **Execute** метод [объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) объекта выполняет любой запрос, который передается методу в качестве аргумента CommandText для указанного подключения. Если аргумент CommandText указывает, возвращающей строки запроса, все результаты, приводит к возникновению ошибки выполнения хранятся в новый **записей** объекта. Если команда не является возвращать результаты (например, запрос SQL UPDATE) поставщик возвращает **ничего** , пока параметр **adExecuteNoRecords** указан; в противном случае выполняется возвращает Закрыто **записей**.  
   
  Возвращенный **записей** объект всегда является только для чтения, однонаправленный курсор. При необходимости **записей** объекта с более широкими функциональными возможностями, сначала создайте **записей** объекта с параметрами нужное свойство, а затем использовать **записей** объекта [ Open-метод (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод для выполнения запроса и возвращения требуемого типа курсора.  

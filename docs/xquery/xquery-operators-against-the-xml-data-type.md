@@ -1,5 +1,5 @@
 ---
-title: Сравнение операторов XQuery с xml-данных | Документы Microsoft
+title: Операторы XQuery для типа данных xml | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 62c4875c74d6ff67e8d1760a29ac48672fc7765a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988183"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Сравнение операторов XQuery с XML-данными
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- Имеется еще один способ определения того, как работает описанный запрос: каждый значение телефонного номера получаться **AdditionalContactInfo** столбца сравнивается с набором из двух телефонных номеров. Если значение входит в набор, в результате запроса возвращается этот заказчик.  
+ Есть еще один способ определения того, как работает описанный запрос: каждый значение телефонного номера полученную **AdditionalContactInfo** столбца сравнивается с набором из двух телефонных номеров. Если значение входит в набор, в результате запроса возвращается этот заказчик.  
   
 ### <a name="b-using-a-numeric-operator"></a>Б. Использование числового оператора  
  Оператор + в данном запросе является оператором значения, так как он применяется к одному объекту. К примеру, значение 1 добавляется к размеру лота, возвращаемому этим запросом.  

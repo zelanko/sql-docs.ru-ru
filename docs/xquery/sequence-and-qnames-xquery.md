@@ -1,5 +1,5 @@
 ---
-title: Последовательность и QNames (XQuery) | Документы Microsoft
+title: Последовательность и QNames (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990013"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Последовательность и QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  Любой идентификатор в XQuery является именем QName. Имя QName состоит из префикса пространства имен и локального имени. В этой реализации имена переменных в XQuery являются именами QName и не могут иметь префиксов.  
   
- Рассмотрим следующий пример, в котором указан запрос к нетипизированной **xml** переменной:  
+ Рассмотрим следующий пример, в котором указывается запрос к нетипизированной **xml** переменной:  
   
 ```  
 DECLARE @x xml;  
@@ -150,10 +151,10 @@ WHERE ProductModelID=7;
 |xml|`http://www.w3.org/XML/1998/namespace`|  
 |(без префикса)|`http://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- Любая созданная база данных имеет **sys** коллекции XML-схем. Эти схемы зарезервированы, поэтому к ним можно обратиться из любой пользовательской коллекции XML-схем.  
+ У всех создаваемых баз данных **sys** коллекции XML-схем. Эти схемы зарезервированы, поэтому к ним можно обратиться из любой пользовательской коллекции XML-схем.  
   
 > [!NOTE]  
->  Эта реализация не поддерживает `local` префикса, как описано в спецификации XQuery в http://www.w3.org/2004/07/xquery-local-functions.  
+>  Эта реализация не поддерживает `local` префикса, как описано в спецификации XQuery на http://www.w3.org/2004/07/xquery-local-functions.  
   
 ## <a name="see-also"></a>См. также  
  [Основы XQuery](../xquery/xquery-basics.md)  

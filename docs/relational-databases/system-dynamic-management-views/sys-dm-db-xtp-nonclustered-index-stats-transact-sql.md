@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7bec37b0223f2384ebdfc2898717bd937bb0b046
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978126"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,12 +42,12 @@ ms.lasthandoff: 05/23/2018
   
  Большое количество повторных попыток указывает на проблему с параллелизмом. Обратитесь в службу поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Дополнительные сведения об оптимизированных для памяти некластеризованных индексах см. в разделе [Обзор SQL Server In-Memory OLTP внутренние компоненты](http://t.co/T6zToWc6y6), страница 17.  
+ Дополнительные сведения о некластеризованных индексах оптимизированных для памяти, см. в разделе [Обзор SQL Server In-Memory OLTP Internals](http://t.co/T6zToWc6y6), стр. 17.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта.|  
-|xtp_object_id|**bigint**|Идентификатор таблицы, оптимизированные для памяти.|  
+|xtp_object_id|**bigint**|Идентификатор таблицы, оптимизированной для памяти.|  
 |index_id|**int**|Идентификатор индекса.|  
 |delta_pages|**bigint**|Общее число разностных страниц для этого индекса в дереве.|  
 |internal_pages|**bigint**|Для внутреннего использования. Общее число внутренних страниц для этого индекса в дереве.|  

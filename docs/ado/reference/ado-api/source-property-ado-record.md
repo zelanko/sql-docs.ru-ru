@@ -2,7 +2,6 @@
 title: Исходное свойство (запись ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,11 +24,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bff992c2c2406c7ea6df95ca92f67da3bf52e3fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d7ac5eb7a467109af4b1a8d3665436159f3f609
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281983"
 ---
 # <a name="source-property-ado-record"></a>Свойство Source (ADO запись)
 Указывает источник данных или объекта, представленного [записи](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **Variant** значение, указывающее, сущности, представленной **записи**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Источника** возвращает *источника* аргумент **запись** объекта [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) метод. Он может содержать строку абсолютный или относительный URL-адрес. Абсолютный URL-адрес может быть использован без параметра [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойства, чтобы открыть непосредственно **записи** объекта. Неявный **подключения** в этом случае создается объект.  
   
  **Источника** свойство также может содержать ссылку на уже открыта **набора записей**, чтобы открыть **записи** объект, представляющий текущую строку в  **Набор записей**.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539544"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Подключения к узлам устройства система платформы аналитики
 В этой статье рассматриваются различные способы для подключения к каждому узлу в устройстве Analytics Platform System.  

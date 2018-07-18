@@ -2,7 +2,6 @@
 title: Отфильтровать свойства | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9dc176d7c64d1845ddb863cd58fd41313967ccce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72efa7b9a70bdfdf141c32d5487cc2a5b9776d16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278763"
 ---
 # <a name="filter-property"></a>Свойства фильтра
 Указывает фильтр для данных в [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Объект [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) значение.  
   
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Используйте **фильтра** свойство, чтобы выборочно отсеять записей в **записей** объекта. Отфильтрованные **записей** становится текущий курсор. Другие свойства, которые возвращают значения на основе текущего **курсор** повреждены, таких как [AbsolutePosition свойство (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage свойство (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), и [PageCount свойство (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Установка **фильтра** конкретных новое значение свойства перемещает текущей записи к первой записи, которая удовлетворяет новое значение.
   

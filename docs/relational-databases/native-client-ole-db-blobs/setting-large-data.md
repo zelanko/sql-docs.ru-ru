@@ -1,13 +1,12 @@
 ---
-title: Присваивание больших данных | Документы Microsoft
+title: Присваивание больших данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,22 +16,22 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e23fa666cda37c573d55071739ecfe3df7c7c6d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09c23da09502d9b5f9b1d91cdcdb06e9c09dabc8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421973"
 ---
 # <a name="setting-large-data"></a>Присваивание больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  С [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента позволяет передавать данные BLOB по указателю на объект хранилища потребителя.  
+  С помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента позволяет передавать данные BLOB по указателю на объект хранилища потребителя.  
   
  Потребитель создает объект хранилища, содержащий эти данные, и передает поставщику указатель на этот объект. Поставщик считывает данные из объекта в хранилище поставщика и записывает их в столбец BLOB.  
   
@@ -49,17 +48,17 @@ ms.lasthandoff: 05/03/2018
 ## <a name="how-to-set-large-data"></a>Как сохранить большой объем данных  
  Для передачи указателя на свой собственный объект хранения потребитель создает метод доступа, который привязывает значение столбца BLOB, а затем вызывает метод **IRowsetChange::SetData** или **IRowsetChange::InsertRow** . Сохранение данных BLOB происходит следующим образом.  
   
-1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задать *dwFlag* элемент структуры DBOBJECT STGM_READ, а *iid* равным IID_ISequentialStream (интерфейс должен быть предоставлен).  
+1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задайте *dwFlag* элементом структуры DBOBJECT значение STGM_READ, а *iid* равным IID_ISequentialStream (интерфейс должен быть предоставлен).  
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
-3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Задать *wType* элемента в структуре DBBINDING значение DBTYPE_IUNKNOWN и *pObject* элемент, чтобы она указывала на созданную структуру DBOBJECT.  
+3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Задайте *wType* элемент структуры DBBINDING значение DBTYPE_IUNKNOWN, а *pObject* элемент, чтобы он указывал на созданную структуру DBOBJECT.  
   
 4.  Создайте метод доступа на основе сведений о привязках в массиве структур DBBINDINGS.  
   
 5.  Вызовите функцию **GetNextRows** для выборки следующих строк из набора строк. Вызовите функцию **GetData** для чтения данных набора строк.  
   
-6.  Создайте объект хранилища, содержащий данные (и признак длины), а затем вызвать **IRowsetChange::SetData** (или **IRowsetChange::InsertRow**) с методом доступа, привязывающим столбец BLOB к набору данных.  
+6.  Создайте объект хранилища, содержащий данные (а также индикатор длины), а затем вызвать **IRowsetChange::SetData** (или **IRowsetChange::InsertRow**) с помощью доступа, привязывающим столбец BLOB к набору данные.  
   
 ## <a name="example"></a>Пример  
  Следующий пример показывает получение данных BLOB. В примере создается таблица, добавляется образец записи, эта запись выбирается из набора строк, а затем устанавливается значение поля BLOB.  
@@ -725,7 +724,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   

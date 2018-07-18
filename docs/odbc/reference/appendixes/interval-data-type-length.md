@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906186"
 ---
 # <a name="interval-data-type-length"></a>Длина типа данных Interval
 Следующие правила используются для определения длины типа данных интервал в символах. Длина выражается в символах. Число байтов зависит от набора символов. Включает сложением следующих значений:  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -40,15 +38,16 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1a99af7b5758f77883da3f2a755aaa4bdfdd1a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41bd67d9005d5862bdb24d8112b2a04d023f4141
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943160"
 ---
 # <a name="database-level-roles"></a>Роли уровня базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице представлены предопределенные роли базы данных и их возможности. Эти роли существуют во всех базах данных. За исключением **открытой** роли базы данных разрешения, назначенные предопределенным ролям базы данных изменять нельзя.   
   
-|Имя предопределенной роли базы данных|Description|  
+|Имя предопределенной роли базы данных|Описание|  
 |-------------------------------|-----------------|  
 |**db_owner**|Члены предопределенной роли базы данных **db_owner** могут выполнять все действия по настройке и обслуживанию базы данных, а также удалять базу данных в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (В [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]некоторые операции по обслуживанию требуют наличие разрешений на уровне сервера и не может быть выполнены членами **db_owner**.)|  
 |**db_securityadmin**|Элементы предопределенной роли базы данных **db_securityadmin** могут изменять членство в роли и управлять разрешениями. Добавление участников к этой роли может привести к непреднамеренному повышению прав доступа.|  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 
 Эти роли базы данных существуют только в виртуальной базе данных master. Их разрешения ограничены действиями, выполняемыми в базе данных master. В эти роли можно добавить только пользователей из базы данных master. Для этих ролей нельзя добавить имена входа, однако можно создать пользователей на основе имен входа, а затем добавить этих пользователей в роли. Кроме того, в эти роли можно добавить пользователей автономной базы данных из базы данных master.
 
-|Имя роли|Description|  
+|Имя роли|Описание|  
 |--------------------|-----------------|
 **dbmanager** | Может создавать и удалять базы данных. Член роли dbmanager, который создает базу данных, становится ее владельцем, что позволяет ему подключиться к этой базе данных в качестве пользователя dbo. Пользователь dbo имеет все разрешения в этой базе данных. Члены роли dbmanager необязательно обладают разрешениями для доступа к базам данных, которые им не принадлежат.
 **loginmanager** | Может создать и удалять имена входа в виртуальной базе данных master.  
@@ -105,7 +104,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="msdb-roles"></a>Роли базы данных msdb  
  База данных msdb содержит специальные роли, показанные в следующей таблице.  
   
-|Имя роли базы данных msdb|Description|  
+|Имя роли базы данных msdb|Описание|  
 |--------------------|-----------------|  
 |**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Члены этих ролей базы данных могут администрировать и использовать службы [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], обновленные с предыдущей версии, могут содержать более старую версию роли, имя которой присвоено с помощью служб DTS, а не служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Дополнительные сведения см. в разделе [Роли служб Integration Services (службы SSIS)](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Члены этих ролей базы данных могут администрировать и использовать сборщик данных. Дополнительные сведения см. в разделе [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
@@ -122,7 +121,7 @@ ms.lasthandoff: 05/03/2018
 
 При установке служб R Services доступны дополнительные роли базы данных для управления пакетами. Дополнительные сведения см. в разделе [Управление пакетами R для SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
 
-|Имя роли |Description|  
+|Имя роли |Описание|  
 |-------------|-----------------|
 |**rpkgs-users** |Позволяет пользователям использовать любые общие пакеты, установленные членами роли rpkgs-shared.|
 |**rpkgs-private** |Предоставляет доступ к общим пакетам с такими же разрешениями, как и роль rpkgs-users. Члены этой роли также могут устанавливать, удалять и использовать пакеты, относящиеся к частной области.|
@@ -131,7 +130,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="working-with-database-level-roles"></a>Работа с ролями уровня базы данных  
  В следующей таблице описаны команды, представления и функции, предназначенные для работы с ролями уровня баз данных.  
   
-|Компонент|Тип|Description|  
+|Компонент|Тип|Описание|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|Метаданные|Возвращает список всех предопределенных ролей базы данных.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|Метаданные|Отображает разрешения предопределенной роли базы данных.|  

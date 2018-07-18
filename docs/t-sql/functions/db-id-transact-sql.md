@@ -28,16 +28,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cb7e49f0ebd4746ccad1a9647ac2f35d61efcdc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24b4ecf201ad5b805cd55693cfe8e4aa2d9dd619
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239314"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает идентификационный номер базы данных.
+Эта функция возвращает идентификационный номер указанной базы данных.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,21 +50,21 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="arguments"></a>Аргументы  
 '*database_name*'  
-Имя базы данных, используемое для возврата соответствующего идентификатора базы данных. Аргумент *database_name* имеет тип **sysname**. Если аргумент *database_name* не указан, возвращается идентификатор текущей базы данных.
+Имя базы данных, идентификационный номер которой вернет функция `DB_ID`. Если в вызове `DB_ID` аргумент *database_name* не указан, функция `DB_ID` возвращает идентификатор текущей базы данных.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
 **int**
   
 ## <a name="permissions"></a>Разрешения  
-Если участник, вызывающий **DB_ID**, не является владельцем базы данных, а база данных не является базой данных **master** или **tempdb**, минимально необходимыми разрешениями для просмотра соответствующей строки являются разрешения уровня сервера ALTER ANY DATABASE или VIEW ANY DATABASE либо разрешение CREATE DATABASE для базы данных **master**. Узнать базу данных, к которой подключен участник, можно в представлении каталога **sys.databases**.
+Если участник, вызывающий `DB_ID`, не является владельцем конкретной базы данных, отличной от базы данных **master** или **tempdb**, то минимальными разрешениями, необходимыми для просмотра соответствующей строки `DB_ID`, являются разрешения уровня сервера `ALTER ANY DATABASE` или `VIEW ANY DATABASE`. Для базы данных **master** функция `DB_ID` требует по крайней мере разрешения `CREATE DATABASE`. База данных, к которой подключается вызывающий участник, всегда отображается в представлении **sys.databases**.
   
 > [!IMPORTANT]  
->  По умолчанию общедоступная роль имеет разрешение VIEW ANY DATABASE, что позволяет всем именам для входа просматривать информацию в базе данных. Чтобы лишить имя для входа возможности обнаруживать базу данных, отзовите общедоступное разрешение VIEW ANY DATABASE с помощью инструкции REVOKE или отмените разрешение VIEW ANY DATABASE для отдельных имен для входа с помощью инструкции DENY.  
+>  По умолчанию общедоступная роль имеет разрешение `VIEW ANY DATABASE`, что позволяет всем именам для входа просматривать информацию в базе данных. Чтобы имя для входа не могло обнаруживать базу данных, отзовите общедоступное разрешение `VIEW ANY DATABASE` с помощью инструкции `REVOKE` или отмените разрешение `VIEW ANY DATABASE` для отдельных имен для входа с помощью инструкции `DENY`.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-returning-the-database-id-of-the-current-database"></a>A. Возвращение идентификатора текущей базы данных  
-Следующий пример демонстрирует возврат идентификатора текущей базы данных.
+В приведенном ниже примере возвращается идентификатор текущей базы данных.
   
 ```sql
 SELECT DB_ID() AS [Database ID];  
@@ -79,7 +80,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>В. Использование DB_ID для указания значения параметра системной функции  
-В приведенном ниже примере `DB_ID` используется для получения идентификатора базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] в системной функции `sys.dm_db_index_operational_stats`. Эта функция принимает идентификатор базы данных в качестве первого параметра.
+В приведенном ниже примере функция `DB_ID` используется для получения идентификатора базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] в системной функции `sys.dm_db_index_operational_stats`. Эта функция принимает идентификатор базы данных в качестве первого параметра.
   
 ```sql
 DECLARE @db_id int;  
@@ -104,7 +105,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-return-the-id-of-the-current-database"></a>Г. Получение идентификатора текущей базы данных  
-Следующий пример демонстрирует возврат идентификатора текущей базы данных.
+В приведенном ниже примере возвращается идентификатор текущей базы данных.
   
 ```sql
 SELECT DB_ID();  

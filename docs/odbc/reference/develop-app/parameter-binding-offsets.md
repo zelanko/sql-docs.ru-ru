@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913519"
 ---
 # <a name="parameter-binding-offsets"></a>Привязка параметров смещения
 Приложение может указать, что смещение добавляется связанный параметр буфера адресов и соответствующие длины/индикатора буфера адреса при **SQLExecDirect** или **SQLExecute** вызывается. Результат этих дополнений определяет адреса, используемые в этих операциях.  

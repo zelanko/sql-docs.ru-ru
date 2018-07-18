@@ -1,5 +1,5 @@
 ---
-title: dbo.server_quotas (база данных SQL Azure) | Документы Microsoft
+title: dbo.server_quotas (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: ''
@@ -26,16 +26,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ada6f943e451e6c468adaed27bfe4618407d2dc7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029672"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> **ВАЖНО!** Это относится к  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]только V11!**  
+> **ВАЖНО!** Это относится к  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]версии 11 только!**  
 >   
 >  Этот компонент доступен в состоянии предварительной версии. Не полагайтесь на конкретную реализацию этого компонента, так как он может быть изменен или удален в следующей версии.  
   
@@ -43,13 +44,13 @@ ms.lasthandoff: 05/04/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|quota_name|**nvarchar**|Тип квоты для сервера. Тип **Premium_database** эквивалентны базам данных с резервированием ресурса.|  
+|quota_name|**nvarchar**|Тип квоты для сервера. Тип **Premium_database** эквивалентен базам данных с резервированием ресурса.|  
 |quota_value|**int**|Количество типов квот, допустимое на сервере.|  
   
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к виртуальной **master** базы данных.  
   
 ## <a name="see-also"></a>См. также  
- [Управление расширенными базами данных](http://go.microsoft.com/fwlink/?LinkID=311927)  
+ [Управление базами данных уровня "премиум"](http://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

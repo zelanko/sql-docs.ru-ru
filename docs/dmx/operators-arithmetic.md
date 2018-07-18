@@ -1,31 +1,22 @@
 ---
-title: Арифметические операторы (расширения интеллектуального анализа данных) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- arithmetic operators
-ms.assetid: befe4f0c-e5dd-4ae1-b88e-6ac7aab2181a
-caps.latest.revision: 17
-author: Minewiskan
+title: Арифметические операторы (расширения интеллектуального анализа данных) | Документация Майкрософт
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 10894ee5f3ab7d0a7defecf324a297b4bd3ad6ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: edbe8a3404217f330b5b62a9d433c7d560b28656
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989657"
 ---
-# <a name="operators---arithmetic"></a>Операторы — арифметические операции
+# <a name="operators---arithmetic"></a>Операторы — арифметические
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Арифметические операторы можно использовать в расширений интеллектуального анализа (DMX) для арифметических вычислений в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], в том числе сложения, вычитания, умножения и деления.  
@@ -36,8 +27,8 @@ ms.lasthandoff: 05/03/2018
 |--------------|-----------------|  
 |[+ &#40;Добавить&#41; &#40;расширений интеллектуального анализа данных&#41;](../dmx/add-dmx.md)|Складывает два числа.|  
 |[- &#40;Вычесть&#41; &#40;расширений интеллектуального анализа данных&#41;](../dmx/subtract-dmx.md)|Вычитает одно число из другого.|  
-|[&#42;&#40;Умножить&#41; &#40;расширений интеллектуального анализа данных&#41;](../dmx/multiply-dmx.md)|Умножает одно число на другое.|  
-|[&#40;Разделите&#41; &#40;расширений интеллектуального анализа данных&#41;](../dmx/divide-dmx.md)|Делит одно число на другое.|  
+|[&#42;&#40;Умножение&#41; &#40;расширений интеллектуального анализа данных&#41;](../dmx/multiply-dmx.md)|Умножает одно число на другое.|  
+|[&#40;Разделить&#41; &#40;расширений интеллектуального анализа данных&#41;](../dmx/divide-dmx.md)|Делит одно число на другое.|  
   
  Следующие правила определяют очередность выполнения арифметических операторов в выражении расширений интеллектуального анализа данных:  
   
@@ -48,16 +39,16 @@ ms.lasthandoff: 05/03/2018
 -   Выражения, находящиеся внутри скобок, имеют наибольший приоритет.  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Ссылка](../dmx/data-mining-extensions-dmx-reference.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; функции ссылки](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; синтаксические обозначения](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; элементы синтаксиса](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Выражения &#40;расширений интеллектуального анализа данных&#41;](../dmx/expressions-dmx.md)   
  [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-dmx.md)   
- [Структура и использовании прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Общие сведения об инструкции SELECT в расширении интеллектуального анализа данных](../dmx/understanding-the-dmx-select-statement.md)  
   
   

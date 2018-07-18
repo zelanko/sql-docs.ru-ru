@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910729"
 ---
 # <a name="data-types-in-odbc"></a>Типы данных в ODBC
 ODBC использует два набора типов данных: SQL типы данных и типы данных C. В источнике данных используются типы данных SQL, а в коде C в приложении используются типы данных C.  

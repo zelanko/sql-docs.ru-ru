@@ -2,7 +2,6 @@
 title: Свойство ActiveConnection (ADOX) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 420b6b26c38582c20bbc224ebcc53551967f1c4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5afb815a3e4701dc769f600d3a8d014d5a5cd25
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284583"
 ---
 # <a name="activeconnection-property-adox"></a>Свойство ActiveConnection (ADOX)
 Указывает ADO [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, к которому [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) принадлежит.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Наборы **подключения** объекта или **строка** содержится определение для подключения. Возвращает активное **подключения** объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Значение по умолчанию — пустая ссылка на объект.  
   
 ## <a name="applies-to"></a>Объект применения  

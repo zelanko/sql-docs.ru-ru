@@ -1,34 +1,23 @@
 ---
 title: Levels (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Levels
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Levels function
-ms.assetid: 1a989cc9-8aa8-4ec3-b5e9-795d6fa84983
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3e50783a6d59315441f76549f32607d17a2100c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 6e8edfdc3c6888c34dd789c521bc42c6b919e1a4
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741193"
 ---
 # <a name="levels-mdx"></a>Levels (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Возвращает уровень, положение которого в измерении или иерархии указано числовым выражением или имя которого указано строковым выражением.  
   
@@ -53,7 +42,7 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Name*  
  Допустимое строковое выражение, указывающее имя уровня.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если указан номер уровня, **уровни** функция возвращает уровень, связанный с указанной позиции (с нуля).  
   
  Если указано имя уровня **уровни** функция возвращает указанный уровень.  
@@ -72,7 +61,7 @@ SELECT [Geography].[Geography].Levels(1) ON 0
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>Строковые значения  
+### <a name="string"></a>String  
  Следующий пример возвращает уровень Сountry.  
   
 ```  
@@ -81,6 +70,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,11 +13,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86bda1fa1b55800b39d0f116661f1ef52477e37f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b0da9ba4ee3aab602615bb4d495f737cacddf3d
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307213"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 - [5.2 драйверы Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
 - [4.3 драйверы Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Начало работы с драйверы Майкрософт для PHP для SQL Server](getting-started-with-the-php-sql-driver.md)
 

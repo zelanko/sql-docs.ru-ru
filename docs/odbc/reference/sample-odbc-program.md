@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914919"
 ---
 # <a name="sample-odbc-program"></a>Образец программы на ODBC
 [Пример кода ODBC](http://go.microsoft.com/fwlink/?LinkId=244831) с предложением ввести имя источника данных ODBC.  Затем быть запрос для ввода запроса и в образце выводятся результаты запроса.

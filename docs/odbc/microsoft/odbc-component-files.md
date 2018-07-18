@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903109"
 ---
 # <a name="odbc-component-files"></a>Файлы компонентов ODBC
 Каждый компонент базы данных драйверы ODBC Desktop 4.0 необходимы файлы драйвера ODBC.  

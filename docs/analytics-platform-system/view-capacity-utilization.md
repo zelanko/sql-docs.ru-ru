@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539224"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>Просмотр использования емкости в система платформы аналитики
 В этом разделе описывается просмотр степень использования производительности в SQL Server PDW appliance.  

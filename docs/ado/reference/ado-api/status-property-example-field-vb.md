@@ -1,11 +1,8 @@
 ---
 title: Пример свойства состояния (поле) (Visual Basic) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12a6e80c42b8f560874d3b22802f57c1b7384570
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 58c71c4f69cdd25de960eacba7370aa64b67bfb7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282043"
 ---
 # <a name="status-property-example-field-vb"></a>Пример свойства состояния (поле) (Visual Basic)
 В следующем примере открывается документ из папки/Чтение с помощью [публикации поставщика услуг Интернета](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). [Состояние](../../../ado/reference/ado-api/status-property-ado-field.md) свойство [поле](../../../ado/reference/ado-api/field-object.md) объект [запись](../../../ado/reference/ado-api/record-object-ado.md) сначала устанавливается **adFieldPendingInsert**, обновляться для **adFieldOk**.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907009"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Переопределение по умолчанию точность и масштаб для числовых типов данных
 Если поле SQL_DESC_TYPE в Отменить равно SQL_C_NUMERIC, с помощью вызова **SQLBindCol** или **SQLSetDescField**, поле SQL_DESC_SCALE в Отменить имеет значение 0, и задано поле SQL_DESC_PRECISION с точностью по умолчанию, определяемым драйвером. Это также имеет значение true, если поле SQL_DESC_TYPE в APD равно SQL_C_NUMERIC, с помощью вызова **SQLBindParameter** или **SQLSetDescField**. Это верно для входных данных, ввода вывода или выходных параметров.  

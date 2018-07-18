@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_system_components (Transact-SQL) | Документы Microsoft
+title: sp_help_fulltext_system_components (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 849f2bbd004c47992c6b6faecf06b5abe5bcc9ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019992"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -50,7 +51,7 @@ sp_help_fulltext_system_components
  Возвращает сведения для всех полнотекстовых компонентов.  
   
  [  **@component_type=** ] *component_type*  
- Указывает тип компонента. *component_type* может принимать одно из следующих действий:  
+ Указывает тип компонента. *component_type* может принимать одно из следующих:  
   
 -   **средство разбиения по словам**  
   
@@ -75,7 +76,7 @@ sp_help_fulltext_system_components
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> фильтр<br /><br /> обработчик протокола<br /><br /> разделитель слов|  
 |**componentname**|**sysname**|Имя компонента.|  
-|**Идентификатор CLSID**|**uniqueidentifier**|Идентификатор класса компонента.|  
+|**CLSID**|**uniqueidentifier**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом **serveradmin** предопределенной роли сервера.|  
 |**version**|**nvarchar(30)**|Версия компонента.|  
 |**Изготовитель**|**sysname**|Имя производителя компонента.|  
@@ -90,7 +91,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **открытый** роли; тем не менее, пользователи могут видеть только сведения о полнотекстовых каталогах, для которых у них есть разрешение VIEW DEFINITION. Значения столбца **fullpath** могут просматривать только члены предопределенной роли сервера **serveradmin** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Этот метод очень важен при подготовке к обновлению. Запустите хранимую процедуру в определенной базе данных и используйте результаты, чтобы определить, будет ли определенный каталог затронут обновлением.  
   
 ## <a name="examples"></a>Примеры  
@@ -142,7 +143,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Просмотр или изменение зарегистрированных фильтры и средства разбиения по словам](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
+ [Просмотр или изменение зарегистрированных фильтров и разбиения по словам](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка поисковых фильтров и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Компонент Full-Text Search и семантический поиск хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  

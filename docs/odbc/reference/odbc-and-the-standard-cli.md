@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916869"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC и стандартная CLI
 ODBC выравнивает со следующими спецификации и стандарты, которые имеют дело с интерфейс уровня вызова (CLI). (Функции ODBC являются подмножеством каждого из этих стандартов).  

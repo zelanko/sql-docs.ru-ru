@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900459"
 ---
 # <a name="functions-accepting-string-parameters"></a>Принимать параметры строки функции
 Все функции, которые принимают параметры строки преобразуются в Юникод. (Будут экспортированы форму «W» функции.) Число байт, преобразуется в число символов для тех применимые интерфейсов API ODBC. Это относится к следующим функциям:  

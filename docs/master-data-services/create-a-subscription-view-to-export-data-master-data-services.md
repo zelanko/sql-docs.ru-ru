@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a10e3133f9f865d02d90070d6304d098461bd02a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 86015ca5563e15bdac6f41b76f2d824bc7079b70
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409446"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Создание представления подписки для экспорта данных (службы Master Data Services)
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="view-information"></a>Сведения о представлении  
  Для всех созданных представлений в сетке создается строка с 10 столбцами. В следующей таблице приводятся описания этих столбцов.  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |Состояние|Состояние представления.<br /><br /> Когда вы нажимаете **Сохранить**, появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление атрибута.<br /><br /> Если при создании или редактировании атрибута произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
 |Имя|Имя представления подписки.|  

@@ -3,8 +3,6 @@ title: Глобальные параметры (в окне выходных д�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0876ccab078387c2c9a4486b44a68a9e63baacd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b29bec97e3a53d4b2053e0922bc81125dff4eebb
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779230"
 ---
 # <a name="global-settings-output-window--sybasetosql"></a>Глобальные параметры (в окне выходных данных) (SybaseToSQL)
 Используйте **глобальные параметры** диалоговое окно «», чтобы указать параметры для SSMA.  

@@ -1,5 +1,5 @@
 ---
-title: sp_changedbowner (Transact-SQL) | Документы Microsoft
+title: sp_changedbowner (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: cb7d6df77a581b82ca79e1962c80df827ffd1718
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038832"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   Изменяет владельца текущей базы данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) вместо этого.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,22 +49,22 @@ sp_changedbowner [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Аргументы  
  [ @loginame=] '*входа*"  
- Идентификатор имени входа нового владельца текущей базы данных. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* должен быть уже существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или пользователя Windows. *Имя входа* не может стать владельцем текущей базы данных, если он уже имеет доступ к базе данных через существующую учетную запись безопасности пользователя в базе данных. Чтобы избежать этой ситуации, сначала удалите данного пользователя в текущей базе данных.  
+ Идентификатор имени входа нового владельца текущей базы данных. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* должен быть уже существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа или пользователя Windows. *Имя входа* не может стать владельцем текущей базы данных, если он уже имеет доступ к базе данных с помощью существующей учетной записи безопасности в базе данных. Чтобы избежать этой ситуации, сначала удалите данного пользователя в текущей базе данных.  
   
  [ @map=] *remap_alias_flag*  
- *Remap_alias_flag* параметр является устаревшим, поскольку псевдонимы имени входа были удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. С помощью *remap_alias_flag* параметр не вызывает ошибку, но не влияет.  
+ *Remap_alias_flag* параметр является устаревшим, поскольку псевдонимы имени входа были удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. С помощью *remap_alias_flag* параметр не вызывает ошибку, но не оказывает влияния.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  После выполнения процедуры sp_changedbowner новый владелец становится известным в базе данных как пользователь dbo. Пользователь dbo имеет неявные разрешения на выполнение любых действий в базе данных.  
   
  Владельца системных баз данных master, model или tempdb нельзя изменить.  
   
  Чтобы отобразить список допустимых *входа* значения, выполните хранимую процедуру sp_helplogins.  
   
- Выполнение процедуры sp_changedbowner только с *входа* параметр изменения владельца базы данных на *входа*.  
+ Выполнение sp_changedbowner только с *входа* параметр изменения владельца базы данных на *входа*.  
   
  Можно изменить владельца любого защищаемого объекта с помощью инструкции ALTER AUTHORIZATION. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  
   

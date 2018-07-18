@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,20 +18,21 @@ helpviewer_keywords:
 - EOMONTH function
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f9ef67d87b628f53b9bb97d6cf32ecb79aa3befb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8673bee6caab516628bd6914221947503cd887d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785985"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Возвращает последний день месяца, содержащего указанную дату, с необязательным смещением.  
+Эта функция возвращает последний день месяца, содержащего указанную дату, с необязательным смещением.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,19 +43,19 @@ EOMONTH ( start_date [, month_to_add ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *start_date*  
- Выражение даты, задающее дату, для которой необходимо возвратить последний день месяца.  
+*start_date*  
+Выражение даты, задающее дату, для которой необходимо возвратить последний день месяца.  
   
- *month_to_add*  
- Необязательное целочисленное выражение, задающее количество месяцев, добавляемых к параметру *start_date*.  
+*month_to_add*  
+Необязательное целочисленное выражение, задающее количество месяцев, добавляемых к параметру *start_date*.  
   
- Если этот аргумент указан, то **EOMONTH** добавляет указанное число месяцев к значению *start_date* и возвращает последний день месяца, соответствующего полученной дате. Если при таком сложении происходит выход за пределы допустимого диапазона дат, возникает ошибка.  
+Если аргумент *month_to_add* имеет значение, то `EOMONTH` добавляет указанное число месяцев к значению *start_date* и возвращает последний день месяца, соответствующего полученной дате. Если при таком сложении происходит выход за пределы допустимого диапазона дат, функция `EOMONTH` вызывает ошибку.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **date**  
   
 ## <a name="remarks"></a>Remarks  
- Данная функция может быть удаленной для серверов [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. Она не может быть удаленной для серверов с версией ниже [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+Функция `EOMONTH` поддерживает удаленное взаимодействие с серверами [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. Она не может быть удаленной для серверов с версией ниже [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Примеры  
   
@@ -66,8 +66,7 @@ DECLARE @date DATETIME = '12/1/2011';
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
 ```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 Result  
@@ -76,7 +75,7 @@ Result
   
 (1 row(s) affected)  
 ```  
-  
+
 ### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>Б. EOMONTH со строковым параметром и неявным преобразованием  
   
 ```  
@@ -97,6 +96,14 @@ Result
   
 ### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>В. Функция EOMONTH с параметром month_to_add и без него  
   
+Примечание. Значения в этих результирующих наборах отражают дату выполнения в следующем диапазоне (включительно):
+        
+        12/01/2011
+        
+        and
+        
+        12/31/2011
+
 ```sql  
 DECLARE @date DATETIME = GETDATE();  
 SELECT EOMONTH ( @date ) AS 'This Month';  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913479"
 ---
 # <a name="procedure-parameters"></a>Параметры процедуры
 Параметры в вызове процедуры могут быть входными, ввода вывода или выходных параметров. Это отличается от параметров в все другие инструкции SQL, которые всегда являются входными параметрами.  

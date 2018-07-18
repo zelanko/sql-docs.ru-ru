@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10f340ee0cc9d8184c612e80de7b872356b0e962
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b5c14308dfe28c103e60d136a1aa7c137bf73cd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404276"
 ---
 # <a name="integration-services-transformations"></a>Преобразования служб Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] являются компонентами потока данных пакета, которые выполняют статистическую обработку данных, а также соединяют, распространяют и изменяют данные. Преобразования могут также выполнять операции поиска и формировать образцы наборов данных. В этом разделе описываются преобразования, которые содержат службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , и поясняется работа этих преобразований.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="business-intelligence-transformations"></a>Преобразования бизнес-аналитики  
  Следующие преобразования реализуют такие операции бизнес-аналитики, как очистка данных, выполнение интеллектуального анализа текста и выполнение запросов прогнозов интеллектуального анализа данных.  
   
-|Преобразование|Description|  
+|Преобразование|Описание|  
 |--------------------|-----------------|  
 |[Преобразование «Медленно изменяющееся измерение»](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|Преобразование, которое настраивает обновление медленно изменяющегося измерения.|  
 |[Преобразование «Нечеткое группирование»](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Преобразование, стандартизирующее значения данных столбца.|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="row-transformations"></a>Преобразования строк  
  Следующие преобразования обновляют значения столбцов и создают новые столбцы. Преобразование применяется к каждой входной строке преобразования.  
   
-|Преобразование|Description|  
+|Преобразование|Описание|  
 |--------------------|-----------------|  
 |[Преобразование «Таблица символов»](../../../integration-services/data-flow/transformations/character-map-transformation.md)|Преобразование, которое применяет строковые функции к символьным данным.|  
 |[Преобразование «Копирование столбца»](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|Преобразование, которое добавляет копии входных столбцов к выходу преобразования.|  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rowset-transformations"></a>Преобразования набора строк  
  Следующие преобразования создают новые наборы строк. Набор строк может включать в себя значения статистических функций и сортировки, образцы наборов строк или несведенные наборы строк.  
   
-|Преобразование|Description|  
+|Преобразование|Описание|  
 |--------------------|-----------------|  
 |[Преобразование «Статистическая обработка»](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|Преобразование, которое выполняет статистические функции, такие как AVERAGE, SUM и COUNT.|  
 |[Преобразование «Сортировка»](../../../integration-services/data-flow/transformations/sort-transformation.md)|Преобразование, которое сортирует данные.|  
@@ -78,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="split-and-join-transformations"></a>Преобразования «Разбиение» и «Соединение»  
  Следующие преобразования распределяют строки по различным выходам, создают копии входных данных преобразования, соединяют несколько входов в один выход и выполняют операции поиска.  
   
-|Преобразование|Description|  
+|Преобразование|Описание|  
 |--------------------|-----------------|  
 |[Преобразование «Условное разбиение»](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|Преобразование, направляющее строки данных по различным выходам.|  
 |[Преобразование «Многоадресная доставка»](../../../integration-services/data-flow/transformations/multicast-transformation.md)|Преобразование, распределяющее наборы данных по различным выходам.|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="auditing-transformations"></a>Преобразования аудита  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] включают следующие преобразования для добавления данных аудита и подсчета количества строк.  
   
-|Преобразование|Description|  
+|Преобразование|Описание|  
 |--------------------|-----------------|  
 |[Преобразование «Аудит»](../../../integration-services/data-flow/transformations/audit-transformation.md)|Преобразование, которое формирует информацию о среде, доступной потоку данных в пакете.|  
 |[Преобразование «Подсчет строк»](../../../integration-services/data-flow/transformations/row-count-transformation.md)|Преобразование, подсчитывающее строки в процессе их прохождения через преобразование и сохраняющее результат подсчета в переменной.|  

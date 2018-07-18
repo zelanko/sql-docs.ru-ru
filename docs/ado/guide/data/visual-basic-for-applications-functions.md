@@ -2,7 +2,6 @@
 title: Visual Basic для приложений функций | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20d9f7f726ac705ebdf93484c5e7ecef5f3ad54d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2849bd9164ca145b38aa05aa0357cbc42f2719f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273233"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic для приложений функций
 Следующие Visual Basic для приложений функции можно использовать в выражениях CALC формирования данных:  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |PPmt|PV|QBColor|репликации|RGB|Справа|  
 |Функция RightB|Right$|Функция RightB$|Rnd|RTrim|RTrim$|  
 |Вторая|Sgn|Sin|SLN|Пробел|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|Строковые значения|  
+|Sqr|Str|Str$|StrComp|StrConv|String|  
 |String$|SYD|Tan|Time|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|День недели|Год||  

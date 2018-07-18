@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: t-sql|statements
@@ -64,11 +64,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b6b4aca07714a7153cc0b6920daca92667e0dff6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744133"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -260,7 +261,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
       } 
     | { SPLIT | MERGE } RANGE (boundary_value)  
     | SWITCH [ PARTITION source_partition_number  
-        TO target_table_name [ PARTITION target_partition_number ]  
+        TO target_table_name [ PARTITION target_partition_number ] [ WITH ( TRUNCATE_TARGET_PARTITION = ON | OFF )
 }  
 [;]  
   
@@ -318,7 +319,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   Связано с определением по умолчанию. Однако если тип данных не изменен, то длина, точность или масштаб столбца могут быть изменены.  
   
-Тип данных столбцов **text**, **ntext** и **image** может быть изменен только следующими способами:  
+Тип данных в столбцах **text**, **ntext и **image** может быть изменен только следующими способами:  
   
 -   **text** на **varchar(max)**, **nvarchar(max)** или **xml**;  
   
@@ -326,7 +327,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   **image** на **varbinary(max)**.  
   
-Некоторые изменения типов данных могут повлечь за собой изменения в данных. Например, изменение столбца типа **nchar** или типа **nvarchar** на **char** или **varchar** может вызвать преобразование символов национальных алфавитов. Дополнительные сведения см. в разделе [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). Снижение точности или масштаба столбца может привести к усечению данных.  
+Некоторые изменения типов данных могут повлечь за собой изменения в данных. Например, изменение столбца типа nchar** или **nvarchar** на **char** или **varchar** может вызвать преобразование символов национального алфавита. Дополнительные сведения см. в разделе [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). Снижение точности или масштаба столбца может привести к усечению данных.  
   
 > [!NOTE]
 > Нельзя изменять тип данных столбца секционированной таблицы.  

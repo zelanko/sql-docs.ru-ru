@@ -1,28 +1,27 @@
 ---
-title: Поддержку потоковой передачи большого двоичного ОБЪЕКТА выходные параметры | Документы Microsoft
+title: Поддержка потоков для больших двоичных ОБЪЕКТОВ выходных параметров | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 822c7da502e5aa7dce6d6964048314918de7f656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6a00b9f21fcbd6e83844f727c4352d9a890c94d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415512"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Поддержка потоков для выходных параметров BLOB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>Пример  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 // blob_out_param.cpp  
@@ -515,7 +514,7 @@ _Exit:
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
   

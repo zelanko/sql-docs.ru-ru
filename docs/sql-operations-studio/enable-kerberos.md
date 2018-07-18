@@ -1,6 +1,6 @@
 ---
-title: Использование проверки подлинности Active Directory (Kerberos) при соединении с SQL Studio операций (Предварительная версия) | Документы Microsoft
-description: Включение Kerberos для использования проверки подлинности Active Directory для операций SQL Studio (Предварительная версия)
+title: Использовать проверку подлинности Active Directory (Kerberos) при соединении с SQL Operations Studio (Предварительная версия) | Документация Майкрософт
+description: Узнайте, как включить Kerberos для использования проверки подлинности Active Directory для SQL Operations Studio (Предварительная версия)
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql
@@ -13,33 +13,34 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: 847638bc0693d83ba38dec6c8fec5e4ca030e01f
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 30ca6a2286102933243542b5bebcbd82030b952c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981376"
 ---
-# <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Подключение [!INCLUDE[name-sos](../includes/name-sos-short.md)] к экземпляру SQL Server с использованием проверки подлинности Windows — Kerberos 
+# <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Подключение [!INCLUDE[name-sos](../includes/name-sos-short.md)] к серверу SQL Server, использование проверки подлинности Windows — Kerberos 
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] поддерживает подключение к SQL Server с помощью Kerberos.
 
-Чтобы использовать встроенную проверку подлинности (проверка подлинности Windows) на macOS или Linux, необходимо настроить **билета Kerberos** связывание текущего пользователя с учетной записью домена Windows. 
+Чтобы использовать встроенную проверку подлинности (проверка подлинности Windows) в macOS или Linux, необходимо настроить **билет Kerberos** связывание текущего пользователя для учетной записи домена Windows. 
 
 ## <a name="prerequisites"></a>предварительные требования
 
-- Доступ к компьютером присоединенных к домену Windows, чтобы выполнять запросы к контроллеру домена Kerberos.
-- Необходимо настроить SQL Server для проверки подлинности Kerberos. Для драйвера клиента под управлением Unix встроенная проверка подлинности поддерживается только с помощью Kerberos. Дополнительные сведения о настройке Sql Server для проверки подлинности с помощью Kerberos, можно найти [здесь](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Должна существовать имен SPN, зарегистрированных для каждого экземпляра Sql Server, вы пытаетесь подключиться. Представлены сведения о формате имен участников-служб SQL Server [здесь](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- Доступ к домену компьютере Windows для отправки запросов контроллера домена Kerberos.
+- SQL Server должен позволять проводить проверку подлинности Kerberos. Для драйвера клиента под управлением Unix встроенная проверка подлинности поддерживается только с помощью Kerberos. Дополнительные сведения о настройке Sql Server для проверки подлинности с помощью Kerberos можно найти [здесь](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Должно быть зарегистрированы для каждого экземпляра Sql Server, вы пытаетесь подключиться к SPN. Подробные сведения о формате имен участников-служб SQL Server указаны [здесь](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Проверка наличия установки Kerberos в Sql Server
 
-Имя входа на хост-компьютер Sql Server. Из командной строки в Windows, используйте `setspn -L %COMPUTERNAME%` для просмотра списка всех имен участника-службы для узла. Вы увидите записи, которые начинаются с MSSQLSvc/HostName.Domain.com это означает, что Sql Server зарегистрировал имени участника-службы и готов к приему проверки подлинности Kerberos. 
-- Если нет доступа к узлу Sql Server, то из любой другой ОС Windows соединяется с одной службой Active Directory, можно использовать команду `setspn -L <SQLSERVER_NETBIOS>` где < SQLSERVER_NETBIOS > — имя компьютера узла Sql Server.
+Войдите в хост-компьютере Sql Server. Из командной строки в Windows, используйте `setspn -L %COMPUTERNAME%` Чтобы получить список всех имен субъекта-службы для узла. Вы увидите записи, которые начинаются с MSSQLSvc/HostName.Domain.com это означает, что Sql Server зарегистрировал SPN и готова к приему проверки подлинности Kerberos. 
+- Если у вас нет доступа к узлу сервера Sql Server, а затем из любой другой Windows ОС, присоединены к одной Active Directory, можно использовать команду `setspn -L <SQLSERVER_NETBIOS>` где < SQLSERVER_NETBIOS > — имя компьютера узла сервера Sql Server.
 
 
-## <a name="get-the-kerberos-key-distribution-center"></a>Получить центра распространения ключей Kerberos
+## <a name="get-the-kerberos-key-distribution-center"></a>Получение центра распространения ключей Kerberos
 
-Найдите значение конфигурации центра распространения КЛЮЧЕЙ Kerberos (центр распространения ключей). На компьютере Windows, который присоединен к домену Active Directory, выполните следующую команду: 
+Найдите значение конфигурации Kerberos KDC (центр распространения ключей). На компьютере Windows, которая соединяется с доменом Active Directory, выполните следующую команду: 
 
 Запуск `cmd.exe` и запустите `nltest`.
 
@@ -52,16 +53,16 @@ Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
 ...
 The command completed successfully
 ```
-Скопируйте имя контроллера домена, необходимо указать значение конфигурации KDC в этом вариантов 33.domain.company.com контроллера домена
+Скопируйте имя контроллера домена, требуется значение конфигурации KDC в этот вариантов 33.domain.company.com контроллера домена
 
-## <a name="join-your-os-to-the-active-directory-domain-controller"></a>Присоедините ОС к контроллеру домена Active Directory
+## <a name="join-your-os-to-the-active-directory-domain-controller"></a>Присоедините своей операционной системы к контроллеру домена Active Directory
 
 ### <a name="ubuntu"></a>Ubuntu
 ```bash
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-Изменить `/etc/network/interfaces` так, чтобы контроллер домена AD IP-адрес указан в качестве dns имен. Например: 
+Изменить `/etc/network/interfaces` файл таким образом, чтобы контроллер домена AD IP-адрес указан в качестве dns-имени сервера. Например: 
 
 ```/etc/network/interfaces
 <...>
@@ -73,15 +74,15 @@ dns-search **<AD domain name>**
 ```
 
 > [!NOTE]
-> Сетевой интерфейс (eth0) может отличаться для разных компьютерах. Чтобы узнать, какой из них используется, запустите ifconfig и скопируйте интерфейс, который имеет IP-адрес и отправленных и полученных байт.
+> Сетевой интерфейс (eth0) могут отличаться для разных компьютерах. Чтобы узнать, какой из них, вы используете, выполнения ifconfig и скопировать интерфейсе с IP-адресом и отправленных и полученных байтов.
 
-После изменения этого файла, перезапустите сетевую службу:
+Изменив этот файл, перезапустите сетевую службу:
 
 ```bash
 sudo ifdown eth0 && sudo ifup eth0
 ```
 
-Убедитесь, что теперь ваш `/etc/resolv.conf` файл содержит строку следующего вида:  
+Теперь убедитесь, что ваш `/etc/resolv.conf` файл содержит строку следующего вида:  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -93,12 +94,12 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 * Success
 ```
    
-### <a name="redhat-enterprise-linux"></a>RedHat Enterprise Linux
+### <a name="redhat-enterprise-linux"></a>Red Hat Enterprise Linux
 ```bash
 sudo yum install realmd krb5-workstation
 ```
 
-Изменить `/etc/sysconfig/network-scripts/ifcfg-eth0` файла (или другие конфигурации интерфейса соответствующим образом файла), чтобы контроллер домена AD IP-адрес указан в качестве DNS-сервера:
+Изменить `/etc/sysconfig/network-scripts/ifcfg-eth0` файл (или другой интерфейс конфигурации, в файл соответствующим образом), чтобы контроллер домена AD IP-адрес указан в качестве DNS-сервера:
 
 ```/etc/sysconfig/network-scripts/ifcfg-eth0
 <...>
@@ -106,13 +107,13 @@ PEERDNS=no
 DNS1=**<AD domain controller IP address>**
 ```
 
-После изменения этого файла, перезапустите сетевую службу:
+Изменив этот файл, перезапустите сетевую службу:
 
 ```bash
 sudo systemctl restart network
 ```
 
-Убедитесь, что теперь ваш `/etc/resolv.conf` файл содержит строку следующего вида:  
+Теперь убедитесь, что ваш `/etc/resolv.conf` файл содержит строку следующего вида:  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -125,9 +126,9 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-- Присоединение к macOS к контроллеру домена Active Directory [описанные ниже] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
+- Присоединяйтесь к macOS к контроллеру домена Active Directory [описанным ниже] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
 
 
 
@@ -147,10 +148,10 @@ DOMAIN.COMPANY.COM = {
 }
 ```
 
-Затем сохраните файл krb5.conf и выход
+Затем сохраните файл krb5.conf и выхода
 
 > [!NOTE]
-> Домен должен быть в все прописные
+> Домен должен быть прописными буквами
 
 
 ## <a name="test-the-ticket-granting-ticket-retrieval"></a>Тестовые извлечение билет предоставления билета
@@ -161,7 +162,7 @@ DOMAIN.COMPANY.COM = {
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-Просмотр доступных билеты, с помощью kinit. При успешном выполнении kinit, вы увидите, что билет. 
+Просмотр доступных билеты, с помощью kinit. При успешном выполнении kinit вы увидите, что запрос в службу. 
 
 ```bash
 klist
@@ -171,10 +172,10 @@ krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 ## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Подключение с использованием [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-* Создание нового профиля подключения
+* Создать новый профиль подключения
 
 * Выберите **проверки подлинности Windows** как тип проверки подлинности
 
-* Завершить профиля подключения, нажмите кнопку **Connect**
+* Завершить профиль подключения, нажмите кнопку **Connect**
 
-После успешного подключения сервера отображается в *серверы* боковой панели.
+После успешного подключения сервер появится в *серверы* боковой панели.

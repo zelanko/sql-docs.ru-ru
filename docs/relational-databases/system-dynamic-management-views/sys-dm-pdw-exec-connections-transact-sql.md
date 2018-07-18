@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_exec_connections (Transact-SQL) | Документы Microsoft
+title: sys.dm_pdw_exec_connections (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
@@ -7,22 +7,22 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 27da4f1be0b2a63e74ef64ad5eae63a17275ec9f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 7bafa5e91cbf8237b1e0b20ea40d79a471ca7978
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36886590"
 ---
 # <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,10 +33,10 @@ ms.lasthandoff: 05/23/2018
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Идентифицирует сеанс, связанный с данным соединением. Используйте `SESSION_ID()` для возврата `session_id` текущего соединения.|  
 |connect_time|**datetime**|Метка времени установления соединения. Не допускает значение NULL.|  
-|encrypt_option|**nvarchar(40)**|Указывает значение TRUE (соединение зашифровано) или ЛОЖЬ (соединение не enctypred).|  
+|encrypt_option|**nvarchar(40)**|Возвращает значение true (соединение зашифровано) или FALSE (соединение не enctypred).|  
 |auth_scheme|**nvarchar(40)**|Указывает схему проверки подлинности ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows), используемую с данным соединением. Не допускает значение NULL.|  
-|client_id|**varchar(48)**|IP-адрес клиента, подключающегося к серверу. Допускает значение NULL.|  
-|sql_spid|**int**|Идентификатор серверного процесса соединения. Используйте `@@SPID` для возврата `sql_spid` текущего соединения. Для наиболее одновременно, используйте `session_id` вместо него.|  
+|client_id|**varchar(48)**|IP-адрес клиента, подключающегося к этому серверу. Допускает значение NULL.|  
+|sql_spid|**int**|Идентификатор процесса сервера соединения. Используйте `@@SPID` для возврата `sql_spid` текущего соединения. Для наиболее применять для других целей, используйте `session_id` вместо этого.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется **VIEW SERVER STATE** разрешение на сервере.  
@@ -63,7 +63,7 @@ WHERE c.session_id = SESSION_ID();
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранилище данных SQL и параллельные хранилища данных динамических административных представлений &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Хранилище данных SQL и параллельные хранилища данных динамические административные представления &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
 

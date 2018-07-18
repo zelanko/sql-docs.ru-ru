@@ -21,18 +21,30 @@ caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d3b40219a412b498e891d0550a10a99e23b7adf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c25b54f30a9e8c0ce66c1a833aef4c5daf35e6b8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771460"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612259"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Просмотр и чтение файлов журналов программы установки SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Программа установки SQL Server по умолчанию создает файлы журналов в папке с меткой времени в %programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log. Формат папки журналов с меткой времени — ГГГГММДД_ччммсс. При запуске программы установки в автоматическом режиме журналы создаются по пути %temp%\sqlsetup*.log. Все файлы в папке журналов архивируются в файле Log\*.cab в соответствующей папке журналов.  
+Программа установки SQL Server по умолчанию создает файлы журналов в папке с датой и меткой времени в **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log**, где *nnn* — это число, соответствующее устанавливаемой версии SQL. Формат папки журналов с меткой времени — ГГГГММДД_ччммсс. При запуске программы установки в автоматическом режиме журналы создаются по пути %temp%\sqlsetup*.log. Все файлы в папке журналов архивируются в файле Log\*.cab в соответствующей папке журналов.  
+
+   | Файл           | Путь |
+   | :------        | :----------------------------- |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<имя_компьютера>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс|
+   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс\Datastore
+   | **Файлы журнала MSI** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс\\\<имя>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\ГГГГММДД_ччммсс |
+   | **Для автоматической установки** | %temp%\sqlsetup*.log |
+
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
@@ -46,9 +58,9 @@ ms.locfileid: "34771460"
 3.  запрошенное пользователем действие: позволяет пользователю выбрать и настроить компоненты.
   
 
-В результате этого процесса создается один сводный журнал, а также один подробный журнал для установки RTM или два подробных журнала в случае интегрированного носителя.
+В результате этого процесса создается один сводный журнал, а также один подробный журнал для базовой установки SQL Server или два подробных журнала в случае установки обновления, например пакета обновления, одновременно с базовой установкой. 
   
-В файлах хранилища данных содержится моментальный снимок состояния всех объектов конфигурации, отслеживаемых процессом установки; эти файлы могут пригодиться при диагностике ошибок конфигурации. Для каждого этапа выполнения создаются XML-файлы дампа, которые сохраняются во вложенной папке в папке журнала с меткой времени в хранилище данных. 
+Кроме того, имеются файлы хранилища данных, в которых содержится моментальный снимок состояния всех объектов конфигурации, отслеживаемых процессом установки; эти файлы могут пригодиться при диагностике ошибок конфигурации. Для каждого этапа выполнения создаются XML-файлы дампа, которые сохраняются во вложенной папке в папке журнала с меткой времени в хранилище данных. 
 
 В следующих разделах описываются файлы журналов установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -130,6 +142,8 @@ ms.locfileid: "34771460"
   
 ### <a name="location"></a>Местоположение  
 Файл SystemConfigurationCheck_Report.htm находится в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.
+
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## <a name="see-also"></a>См. также раздел  
  [Установка SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)

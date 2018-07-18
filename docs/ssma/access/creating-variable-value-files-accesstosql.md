@@ -1,8 +1,6 @@
 ---
 title: Создание файлов значение переменной (AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 44c317d773df9027f5c485f417941544ff17c6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3865c268ef4da360b5e21cba96e88ddf6028ae6a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773810"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Создание файлов значение переменной (AccessToSQL)
 Файл значение переменной является XML-файл, состоящий из значений параметра команд (например, имя сервера источника или назначения), которые часто изменяются в разных миграция сервера. При возникновении большое количество миграции базы данных, несколько файлов переменной для хранения значения каждого исходного сервера создаются и на которые ссылается файл сценария master **– v** переключения командной строки. Это помогает в поддержании статических значений в несколько файлов скриптов, если значения переменных в нескольких файлах переменной.  
@@ -101,6 +100,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в работе консоли — [Создание файлов подключения сервера &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создание файлов подключения сервера (Access)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

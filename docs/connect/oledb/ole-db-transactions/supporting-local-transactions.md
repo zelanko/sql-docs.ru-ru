@@ -2,10 +2,10 @@
 title: Поддержка локальных транзакций | Документы Microsoft
 description: Локальные транзакции в драйвер OLE DB для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: de00c4aac3125209bb56a1867f07b1f395804cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25d6c98c17c139a1658d0711bcff0c1c8f3f1d18
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689367"
 ---
 # <a name="supporting-local-transactions"></a>Поддержка локальных транзакций
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Сеанс ограничивает область транзакции для драйвера OLE DB для SQL Server локальной транзакции. Когда в направлении потребителя, драйвер OLE DB для SQL Server отправляет запрос на подключенный экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], этот запрос представляет собой единицу работы драйвера OLE DB для SQL Server. Локальные транзакции всегда содержат одну или несколько единиц работы на один драйвер OLE DB для SQL Server сеанса.  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
  Драйвер OLE DB для SQL Server поддерживает **ITransactionLocal::StartTransaction** параметры следующим образом.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*isoLevel*[in]|Уровень изоляции, который должен использоваться с этой транзакцией. В локальной транзакции драйвер OLE DB для SQL Server поддерживает следующие функции:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Примечание: Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ISOLATIONLEVEL_SNAPSHOT допустим для *isoLevel* аргумент, включено ли управление версиями для базы данных. Однако произойдет ошибка, если пользователь попытается выполнить инструкцию, когда управление версиями не включено, а база данных предназначена не только для чтения. Кроме того, ошибка XACT_E_ISOLATIONLEVEL возникнет, если задано как *isoLevel* при подключении к версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] более раннюю, чем [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
 |*isoFlags*[in]|Драйвер OLE DB для SQL Server возвращает ошибку для ненулевых значений.|  
@@ -47,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  Для локальных транзакций реализует драйвер OLE DB для SQL Server **ITransaction::Abort** параметры следующим образом.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*pboidReason*[in]|При установке не учитывается. Может иметь значение NULL.|  
 |*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если задано значение FALSE, драйвер OLE DB для SQL Server переходит в режим автоматической фиксации для данного сеанса.|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  Для локальных транзакций реализует драйвер OLE DB для SQL Server **ITransaction::Commit** параметры следующим образом.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если задано значение FALSE, драйвер OLE DB для SQL Server переходит в режим автоматической фиксации для данного сеанса.|  
 |*grfTC*[in]|Асинхронная и возвращает одно для фазы не поддерживаются драйвером OLE DB для SQL Server. Драйвер OLE DB для SQL Server возвращает xact_e_notsupported, если значение не равно XACTTC_SYNC.|  
@@ -130,8 +133,8 @@ if (FAILED(hr))
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Транзакции](../../oledb/ole-db-transactions/transactions.md)   
- [Работа с изоляцией моментальных снимков](../../oledb/features/working-with-snapshot-isolation.md)  
+ [Работа с изоляцией моментального снимка](../../oledb/features/working-with-snapshot-isolation.md)  
   
   

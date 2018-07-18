@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a154155683bff4521a088552e299d34f72c3632e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11df6b02f0c90516727c86d687897ff1a04c0118
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331638"
 ---
 # <a name="system-variables"></a>Системные переменные
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют набор системных переменных, в которые записываются данные о запуске пакета и его объектах. Эти переменные можно использовать в выражениях и в выражениях свойств для настройки пакетов, контейнеров, задач и обработчиков событий.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-packages"></a>Системные переменные для пакетов  
  В следующей таблице описываются системные переменные, предоставляемые службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для пакетов.  
   
-|Системная переменная|Тип данных|Description|  
+|Системная переменная|Тип данных|Описание|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Дескриптор объекта Windows Event, с помощью которого задача может показать, что выполнение задачи должно быть остановлено.|  
 |**ContainerStartTime**|DateTime|Время запуска контейнера.|  
@@ -64,14 +63,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-containers"></a>Системные переменные для контейнеров  
  В следующей таблице описаны системные переменные, предоставляемые службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для контейнеров "цикл по каждому элементу", "цикл по элементам" и контейнеров последовательности.  
   
-|Системная переменная|Тип данных|Description|Контейнер|  
+|Системная переменная|Тип данных|Описание|Контейнер|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|Локаль, используемый контейнером.|Контейнер «цикл по элементам»<br /><br /> Контейнер «цикл по каждому элементу»<br /><br /> контейнер последовательности|  
   
 ## <a name="system-variables-for-tasks"></a>Системные переменные для задач  
  В следующей таблице описаны системные переменные, предоставляемые службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для задач.  
   
-|Системная переменная|Тип данных|Description|  
+|Системная переменная|Тип данных|Описание|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|Имя данной задачи.|  
 |**LocaleId**|Int32|Локаль, используемый задачей.|  
@@ -82,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-event-handlers"></a>Системные переменные для обработчиков событий  
  В следующей таблице описаны системные переменные, предоставляемые службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для обработчиков событий. Не все переменные доступны для всех обработчиков событий.  
   
-|Системная переменная|Тип данных|Description|Обработчик событий|  
+|Системная переменная|Тип данных|Описание|Обработчик событий|  
 |---------------------|---------------|-----------------|-------------------|  
 |**Отмена**|Логическое значение|Указывает, должен ли обработчик события останавливать задачу при возникновении ошибки, предупреждения или отмены запроса.|Обработчик события OnError<br /><br /> Обработчик события OnWarning<br /><br /> Обработчик события OnQueryCancel|  
 |**ErrorCode**|Int32|Идентификатор ошибки.|Обработчик события OnError<br /><br /> Обработчик события OnInformation<br /><br /> Обработчик события OnWarning|  

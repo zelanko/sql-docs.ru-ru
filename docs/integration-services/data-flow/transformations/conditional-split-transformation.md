@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbb3488bcd17087caf11096a788312fdfa147df7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da8653f0e3b3080e4cbab0baa60d1eb2d9f79b5d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332978"
 ---
 # <a name="conditional-split-transformation"></a>преобразование «Условное разбиение»
   Преобразование «Условное разбиение» может направлять строки данных в различные выходы в зависимости от содержимого данных. Применение преобразования «Условное разбиение» похоже на применение структур выбора CASE в языке программирования. Преобразование производит оценку выражений и на основе результатов направляет строку данных на указанный выход. Это преобразование также предоставляет выход по умолчанию, так что если строка не имеет совпадений, то она направляется в выход по умолчанию.  

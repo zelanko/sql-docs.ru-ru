@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024981"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Задание свойства Url для веб-службы
   В приложениях [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] можно в любое время изменить базовый URL-адрес веб-службы сервера отчетов, для использования которой приложение настроено в настоящее время. Для этого необходимо просто задать свойство **Url** объекта службы. Пример:  

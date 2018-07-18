@@ -1,5 +1,5 @@
 ---
-title: Обратная совместимость в SMO | Документы Microsoft
+title: Обратная совместимость в SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d262a96a0da1fa0eec9bac446d7b22df2a1bc6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989426"
 ---
 # <a name="backward-compatibility-in-smo"></a>Обратная совместимость в SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -63,6 +64,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  Если данный код использует передачу объектов непосредственно, необходимо установить связь с пространством имен Microsoft.SqlServer.Management.SmoExtended.  
   
- В случае выполнения миграции кода, может понадобиться изменение кода. Это происходит потому, что некоторые функции [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устарели. Дополнительные сведения об устаревших средствах см. в разделе [устаревшие функции компонента Database Engine в SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] электронной документации.  
+ В случае выполнения миграции кода, может понадобиться изменение кода. Это происходит потому, что некоторые функции [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устарели. Дополнительные сведения об устаревших средствах см. в разделе [нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Books Online.  
   
   

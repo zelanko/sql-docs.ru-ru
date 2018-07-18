@@ -2,7 +2,6 @@
 title: Метод макрокоманду УдалитьЗапись (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca7b2a425e24a115b8572f26ec7b2efb103ba9ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 168b53d0ad68f55656e005f7523a0c09ba599004
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277643"
 ---
 # <a name="deleterecord-method-ado"></a>Метод макрокоманду УдалитьЗапись (ADO)
 Удаление сущности, представленной [записи](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -39,12 +39,12 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Параметры  
  *Source*  
- Необязательно. Объект **строка** значение, содержащее URL-адрес идентифицирует сущность (например, файл или каталог) для удаления. Если *источника* опущен или указывает на пустую строку, сущности, представленной текущим [записи](../../../ado/reference/ado-api/record-object-ado.md) удаляется. Если запись является записью коллекции ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) из **adCollectionRecord**, такие как каталог) также будут удалены все дочерние элементы (например, вложенные папки).  
+ Необязательный параметр. Объект **строка** значение, содержащее URL-адрес идентифицирует сущность (например, файл или каталог) для удаления. Если *источника* опущен или указывает на пустую строку, сущности, представленной текущим [записи](../../../ado/reference/ado-api/record-object-ado.md) удаляется. Если запись является записью коллекции ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) из **adCollectionRecord**, такие как каталог) также будут удалены все дочерние элементы (например, вложенные папки).  
   
  *Асинхронный*  
- Необязательно. Объект **логическое** значением, которое при **True**, указывает, что асинхронная операция удаления.  
+ Необязательный параметр. Объект **логическое** значением, которое при **True**, указывает, что асинхронная операция удаления.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Операции на объект, представленный этим **записи** может завершиться ошибкой после завершения этого метода. После вызова метода **макрокоманду УдалитьЗапись**, **запись** должен быть закрыт, поскольку поведение **записи** могут стать непредсказуемыми зависимости при обновлении поставщика **Записи** с источником данных.  
   
  Если этот **запись** были получены из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md), а затем результаты этой операции не будут отражены немедленно, в **набора записей**. Обновить **записей** , закрытия и повторного открытия или выполнив **записей** [Requery](../../../ado/reference/ado-api/requery-method.md) метод, [обновления](../../../ado/reference/ado-api/update-method.md) метод, или [Resync](../../../ado/reference/ado-api/resync-method.md) метод.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909969"
 ---
 # <a name="sql-minimum-grammar"></a>Минимальную грамматику SQL
 В этом разделе описывается минимальный синтаксис SQL, драйвер ODBC должен поддерживать. Синтаксис, описанный в этом разделе — это подмножество запись уровня синтаксиса SQL-92.  

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_helpcollations (Transact-SQL) | Документы Microsoft
+title: sys.fn_helpcollations (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c6b16defc5c6ffc11fc13f59d014502ee37f8398
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989376"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -50,7 +51,7 @@ fn_helpcollations ()
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|Название|**sysname**|Имя стандартных параметров сортировки|  
+|Имя|**sysname**|Имя стандартных параметров сортировки|  
 |Описание|**nvarchar(1000)**|Описание параметров сортировки|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает параметры сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также поддерживает ограниченное число параметров сортировки (<80), которые называются параметрами сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и были разработаны до появления параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по-прежнему поддерживаются для обеспечения обратной совместимости, но их не следует использовать при разработке новых программ. Дополнительные сведения о параметрах сортировки Windows см. в статье [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md). Дополнительные сведения о параметрах сортировки см. в разделе [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  

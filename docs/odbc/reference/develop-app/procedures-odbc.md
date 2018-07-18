@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910129"
 ---
 # <a name="procedures-odbc"></a>Процедуры ODBC
 Объект *процедура* представляет собой исполняемый объект, хранящиеся в источнике данных. Обычно процедурой является одна или несколько заранее скомпилированных инструкций SQL.  

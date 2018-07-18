@@ -1,26 +1,26 @@
 ---
 title: Развертывание и запуск пакета служб SSIS в Azure | Документы Майкрософт
+description: Узнайте, как развернуть проект служб SQL Server Integration Services (SSIS) в каталоге SSIS в базе данных SQL Azure и выполнить пакет.
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 3bd32f6f60342a0224ebf353de6cda15696d8900
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455478"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262498"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Развертывание и запуск пакета служб SSIS в Azure
-Этот учебник рассказывает, как развернуть проект служб SQL Server Integration Services в базе данных каталога SSISDB, расположенной в базе данных SQL Azure, запустить пакет в среде Integration Runtime для Azure-SSIS и отслеживать его выполнение.
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Учебник. Развертывание и выполнение пакета служб SQL Server Integration Services (SSIS) в Azure
+В этом учебнике рассказывается, как развернуть проект служб SQL Server Integration Services (SSIS) в каталоге SSISDB, расположенном в базе данных SQL Azure, запустить пакет в среде Azure-SSIS Integration Runtime и отслеживать его выполнение.
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -42,7 +42,7 @@ ms.locfileid: "34455478"
 С помощью SQL Server Management Studio подключитесь к каталогу служб SSIS на сервере базы данных SQL Azure. Дополнительные сведения и снимки экрана см. в статье [Подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md).
 
 Ниже описаны два важных момента, о которых нужно помнить. Эти шаги описаны в следующей процедуре:
--   Введите полное доменное имя сервера базы данных Azure SQL в формате **mysqldbserver.database.windows.net**.
+-   Введите полное доменное имя сервера базы данных SQL Azure в формате **mysqldbserver.database.windows.net**.
 -   Выберите `SSISDB` в качестве базы данных для подключения.
 
 > [!IMPORTANT]
@@ -102,7 +102,8 @@ ms.locfileid: "34455478"
     -   Вы можете изменить выбранные параметры, нажав кнопку **Назад** или кнопку любого из шагов на левой панели.
     -   Щелкните **Развернуть**, чтобы начать развертывание.
 
-    > ![ПРИМЕЧАНИЕ] Если появляется сообщение об ошибке **Нет активного агента рабочей роли (поставщик данных .Net SqlClient)**, убедитесь в том, что запущена среда выполнения интеграции Azure и служб SSIS. Эта ошибка возникает при попытке выполнить развертывание, когда среда выполнения интеграции Azure и служб SSIS остановлена.
+    > [!NOTE]
+    > Если появляется сообщение об ошибке **Нет активного агента рабочей роли (поставщик данных .Net SqlClient)**, убедитесь, что запущена среда выполнения интеграции Azure и служб SSIS. Эта ошибка возникает при попытке выполнить развертывание, когда среда выполнения интеграции Azure и служб SSIS остановлена.
 
 5.  После завершения развертывания появится страница **Результаты**. На ней отображается состояние выполнения каждого действия.
     -   Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки.
@@ -191,9 +192,17 @@ Write-Host "All done."
 
 Дополнительные сведения о том, как отслеживать выполнение запущенных пакетов в SSMS, см. в разделе [Наблюдение за выполнением пакетов и других операций](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
+## <a name="monitor-the-execute-ssis-package-activity"></a>Отслеживание действия "Выполнение пакета служб SSIS"
+
+Если пакет запускается как часть конвейера фабрики данных Azure с помощью действия "Выполнение пакета служб SSIS", можно отслеживать выполнение конвейера в пользовательском интерфейсе фабрики данных. Затем в выходных данных выполнения действия вы можете получить идентификатор выполнения SSISDB и использовать его для проверки более подробных журналов выполнения и сообщений об ошибках в среде SSMS.
+
+![Получение идентификатора выполнения пакета в фабрике данных](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)
+
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Мониторинг среды Integration Runtime для Azure-SSIS
 
-Чтобы получить сведения о состоянии среды Azure-SSIS Integration Runtime, где запускаются пакеты, используйте следующие команды PowerShell. Для каждой команды предоставьте имена фабрики данных, среды Azure-SSIS Integration Runtime и группы ресурсов. См. дополнительные сведения о [Мониторинге среды выполнения интеграции Azure-SSIS](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+Чтобы получить сведения о состоянии среды Azure-SSIS Integration Runtime, где запускаются пакеты, используйте следующие команды PowerShell. Для каждой команды предоставьте имена фабрики данных, среды Azure-SSIS Integration Runtime и группы ресурсов.
+
+См. дополнительные сведения о [Мониторинге среды выполнения интеграции Azure-SSIS](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Получение метаданных о среде Integration Runtime для Azure-SSIS
 

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -17,11 +16,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5bc15384a80a29bed2b70ba9036f354fb0d11693
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69a1e38fe5b14bc67af8e156d3f88fa0a6d7b3dc
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322763"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложений в файле RSReportServer.config. В этом файле содержатся как URL-адреса, так и резервирование URL-адресов. Эти параметры имеют различные предназначения и подчиняются различным правилам изменения. Пользователям, имеющим опыт изменения настройки системы через файлы конфигурации, этот раздел поможет узнать назначение каждого из параметров URL-адресов.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице кратко перечислены все URL-адреса, которые могут быть заданы в файле конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-|Настройка|Использование|Description|  
+|Настройка|Использование|Описание|  
 |-------------|-----------|-----------------|  
 |**ReportServerUrl**|Необязательный параметр. Этот элемент отсутствует в файле конфигурации RSReportServer.config, его необходимо добавить вручную.<br /><br /> Этот элемент задается только при настройке по одному из следующих сценариев.<br /><br /> [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] предоставляет клиентский доступ к веб-службам сервера отчетов, работающих на другом компьютере или другом экземпляре на том же компьютере.<br /><br /> Если сервер отчетов имеет несколько URL-адресов, а [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] должен быть доступен по конкретному URL-адресу.<br /><br /> Существует конкретный URL-адрес сервера отчетов, по которому должны производиться все соединения [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] .<br /><br /> Например, можно разрешить доступ к [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] для всех компьютеров в сети, но потребовать, чтобы [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] соединялся с сервером отчетов по локальному соединению. В этом случае можно указать для параметра **ReportServerUrl** значение "`http://localhost/reportserver`".|Это значение указывает URL-адрес веб-службы сервера отчетов. Это значение считывается приложением [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] при запуске. Если значение задано, [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] соединяется с сервером отчетов, указанным в URL-адресе.<br /><br /> По умолчанию [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] обеспечивает доступ клиентов к веб-службе сервера отчетов, работающей на том же экземпляре сервера отчетов, что и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Однако если необходимо использовать [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] совместно с веб-службой сервера отчетов, который является частью другого экземпляра или работает на другом компьютере, то можно указать его URL-адрес, чтобы [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] соединялся с внешними веб-службами сервера отчетов.<br /><br /> Если на сервере отчетов, с которым проводится соединение, установлен сертификат SSL, то параметр **ReportServerUrl** должен содержать имя сервера, зарегистрированного для данного сертификата. Если возникло сообщение об ошибке "Базовое соединение закрыто: не удалось установить доверительные отношения для защищенного канала SSL/TLS", задайте в качестве значения параметра **ReportServerUrl** полное доменное имя сервера, для которого был выдан сертификат SSL. Например, если сертификат зарегистрирован для **https://adventure-works.com.onlinesales**, URL-адрес сервера отчетов будет **https://adventure-works.com.onlinesales/reportserver**.|  
 |**ReportServerExternalUrl**|Необязательный параметр. Этот элемент отсутствует в файле конфигурации RSReportServer.config, его необходимо добавить вручную.<br /><br /> Этот элемент следует указывать только при использовании веб-частей SharePoint 2.0, если необходимо предоставлять пользователям возможность получения и открытия отчетов в новом окне браузера.<br /><br /> Внутри элемента \<**ReportServerExternalUrl**> добавьте элемент \<**ReportServerUrl**>, указав в нем полное имя сервера отчетов, которое разрешается до экземпляра сервера отчетов при обращении из отдельного окна браузера. Не удаляйте элемент \<**ReportServerUrl**>.<br /><br /> В следующем примере показан синтаксис:<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|Это значение используется веб-частями SharePoint 2.0.<br /><br /> В предыдущих версиях это значение рекомендовалось задавать при развертывании построителя отчетов на сервере отчетов, доступном из Интернета. Этот сценарий развертывания не тестировался. Если в прошлом этот параметр использовался для поддержки доступа к построителю отчетов через Интернет, следует рассмотреть альтернативную стратегию.|  

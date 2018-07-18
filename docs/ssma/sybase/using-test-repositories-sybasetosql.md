@@ -3,8 +3,6 @@ title: С помощью репозиториев теста (SybaseToSQL) | Д�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b367c2e29949b0dcf6960eeacc501d308b131ff1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 880262cf0342c66a91a1f88e50477e0685e1d1e0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779540"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>С помощью репозиториев теста (SybaseToSQL)
 Хранилище тестов SSMA хранилищ инженер-испытатель SSMA тестовые случаи и результаты теста для последующего использования. Репозиторий данных сохраняются в таблицах SQL Server **TestCaseRepository** и **RunTestCaseResultRepository** в схеме **ssma_sybase_utilities** из **ssmatesterdb_syb** базы данных.  

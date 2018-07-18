@@ -2,7 +2,6 @@
 title: MoveFirst, MoveLast, MoveNext и MovePrevious методов (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -30,11 +29,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b127303e4b74a60e6ef839922bc911c31b360914
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cd50b23dbe8fb73b327db7f75ee25b062ee447c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279613"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst, MoveLast, MoveNext и MovePrevious методов (ADO)
 Переходит к первой, последней, следующей или предыдущей записи в указанном [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта и делает этот запись текущей записи.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **MoveFirst** метод для перемещения положения текущей записи к первой записи в **записей**.  
   
  Используйте **MoveLast** метод для перемещения положения текущей записи к последней записи в **записей**. **Записей** объект должен поддерживать закладки или перемещение назад курсора; в противном случае вызов метода приведет к ошибке.  

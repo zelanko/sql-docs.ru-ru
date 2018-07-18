@@ -1,13 +1,12 @@
 ---
-title: Выполните хранимую процедуру с ODBC ВЫЗОВА и обработки выходных данных | Документы Microsoft
+title: Выполнение хранимой процедуры с использованием ODBC CALL и обработка выходных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,20 +18,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3017b23b08b1051625b5753c9ccb4070304b6fc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3e04f2d636887b943b99cab234af3f00b7b4cbf
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427623"
 ---
-# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Выполните хранимую процедуру с ODBC ВЫЗОВА и обработки выходных данных
+# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Выполнение хранимой процедуры с использованием ODBC CALL и обработка выходных данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Хранимые процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются с сервера в последнем пакете и потому недоступны приложению до полного освобождения набора строк. Если команда возвращает несколько результатов, выходные данные параметр доступен, если **IMultipleResults::GetResult** возвратит значение DB_S_NORESULT или **IMultipleResults** полностью освободится интерфейс какое событие происходит раньше.  
+  Хранимые процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются с сервера в последнем пакете и потому недоступны приложению до полного освобождения набора строк. Если команда возвращает несколько результатов, выходные данные параметр доступен, если **IMultipleResults::GetResult** вернул значение DB_S_NORESULT или **IMultipleResults** полном освобождении интерфейса что произойдет раньше.  
   
 > [!IMPORTANT]  
->  По возможности используйте проверку подлинности Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Обработка кодов возврата и выходных параметров  
   
@@ -40,13 +40,13 @@ ms.lasthandoff: 05/03/2018
   
 2.  Создайте набор привязок (по одной для каждого маркера параметра) с помощью массива структур DBBINDING.  
   
-3.  Создайте метод доступа для определенных параметров с помощью **IAccessor::CreateAccessor** метод. **CreateAccessor** создает метод доступа из набора привязок.  
+3.  Создайте метод доступа для определенных параметров с помощью **IAccessor::CreateAccessor** метод. **CreateAccessor** создает метод доступа на основе набора привязок.  
   
 4.  Заполните структуру DBPARAMS.  
   
-5.  Вызовите **Execute** (в данном случае вызов хранимой процедуры).  
+5.  Вызовите **Execute** команду (в данном случае вызов хранимой процедуры).  
   
-6.  Обработка набора строк и освободите его с помощью **IRowset::Release** метод.  
+6.  Обработайте набор строк и освободите его с помощью **IRowset::Release** метод.  
   
 7.  Обработайте значения кода возврата и выходного параметра, полученные от хранимой процедуры.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  Выполните первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы создать хранимую процедуру, используемую приложением.  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы подключиться к именованному экземпляру, измените строку подключения из L"(local)» для L"(local)\\\name», где имя — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
  Выполните третий листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы удалить хранимую процедуру, используемую приложением.  
   
@@ -362,6 +362,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Инструкции по обработке результатов & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Результаты инструкции по обработке &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018261"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Создание макета мобильного отчета служб Reporting Services для телефона или планшета
 После [создания мобильного отчета служб Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) в [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]можно скомпоновать его версию для телефона и планшета.  

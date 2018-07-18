@@ -3,8 +3,6 @@ title: Выполнение консоли SSMA (SybaseToSQL) | Документ
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -27,11 +25,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbad5207581a713327112b9d319c69f706ad2f61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c208784d3399b0ab37a046b1452320544f143163
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778570"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Выполнение консоли SSMA (SybaseToSQL)
 Корпорация Майкрософт предоставляет широкий набор сценариев файл команд для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -238,7 +237,7 @@ ms.lasthandoff: 05/03/2018
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <generate-assessment-report  
@@ -303,7 +302,7 @@ ms.lasthandoff: 05/03/2018
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <convert-schema  
@@ -359,7 +358,7 @@ ms.lasthandoff: 05/03/2018
   
 </migrate-data>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <migrate-data  
@@ -438,7 +437,7 @@ fail-script>" (optional)
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target  
@@ -447,7 +446,7 @@ fail-script>" (optional)
   
   object-type="<object-category>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target>  
@@ -499,7 +498,7 @@ fail-script>" (optional)
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database  
@@ -508,7 +507,7 @@ fail-script>" (optional)
   
   object-type="<object-category>" />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database>  
@@ -553,7 +552,7 @@ fail-script>" (optional)
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <save-as-script  
@@ -627,7 +626,7 @@ fail-script>" (optional)
   
 </convert-sql-statement>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  
@@ -652,7 +651,7 @@ fail-script>" (optional)
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  

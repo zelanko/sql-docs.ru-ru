@@ -31,6 +31,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222075"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/04/2018
 |Эстонский|1061|1061|  
 |Латышский|1062|1062|  
 |Литовский|1063|1063|  
-|Бразильский португальский|1046|1046|  
+|Португальский (Бразилия)|1046|1046|  
 |Китайский (традиционный)|1028|1028|  
 |Корейский|1042|1042|  
 |Китайский (упрощенный)|2052|2052|  

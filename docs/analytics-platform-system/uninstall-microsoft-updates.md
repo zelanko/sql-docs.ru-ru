@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538554"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Удаление обновлений Майкрософт в система платформы аналитики
 В этой статье описан процесс удаления ранее установленного обновления Майкрософт на устройстве, Analytics Platform System.  

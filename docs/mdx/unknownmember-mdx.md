@@ -1,6 +1,6 @@
 ---
 title: UnknownMember (многомерные Выражения) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b74454c00f48a36b963e6c7f5b7b1bdf4e2ea44e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582216"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743363"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Возвращает неизвестный элемент, связанный с уровнем или элементом.  
   
@@ -40,7 +40,7 @@ Hierarchy_Expression.UnknownMember
  Допустимое многомерное выражение, возвращающее иерархию.  
   
 ## <a name="remarks"></a>Примечания  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Создает неизвестный элемент для связи данных таблицы фактов с иерархией, если иерархия неизвестна. Неизвестный элемент может быть на одном из следующих уровней.  
+ Службы Analysis Services создает неизвестный элемент для связи данных таблицы фактов с иерархией, если иерархия неизвестна. Неизвестный элемент может быть на одном из следующих уровней.  
   
 -   На верхнем уровне для иерархий атрибутов, которые нельзя статистически вычислить.  
   

@@ -2,7 +2,6 @@
 title: Поиск метода и пример свойства индекса (VB) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0fb30723fb55c7e33de4f841eb64b0be5dcafef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f9b13fa707cd1b44621b3c3dd74b7649f25b5f7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281553"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Поиск метода и пример свойства индекса (Visual Basic)
 В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [Seek](../../../ado/reference/ado-api/seek-method.md) метод и [индекс](../../../ado/reference/ado-api/index-property.md) свойства в сочетании с заданной ***идентификатор сотрудника***, чтобы найти Имя сотрудника в ***сотрудников*** Nwind.mdb базы данных.  

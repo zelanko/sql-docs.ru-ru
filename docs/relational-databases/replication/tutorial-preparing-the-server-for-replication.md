@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b6651f84ac219330b2b236f3ee6537cc754b45c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 672b5c5f8011572994c6c611430f72982c418101
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350386"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Руководство по подготовке SQL Server для репликации (издатель, распространитель, подписчик)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="what-you-will-learn"></a>Новые знания  
 В этом учебнике описывается, как подготовить сервер для безопасного выполнения репликации с минимальным числом привилегий.  
 
-В этом руководстве рассматривается следующее:
+В этом учебнике рассматривается следующее.
 > [!div class="checklist"]
 > * создание учетных записей Windows для репликации;
 > * подготовка папки моментальных снимков;
@@ -52,14 +52,14 @@ ms.lasthandoff: 05/03/2018
    - Любой выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме SQL Server Express или SQL Server Compact. Эти выпуски не могут быть издателями репликации.   
    - Образец базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются.  
   
-- На сервере-подписчике (целевом) установите любой выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] не может быть подписчиком в репликации транзакций.  
+- На сервере-подписчике (целевом) установите любой выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] не может быть подписчиком при репликации транзакций.  
   
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Скачайте [образец базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Инструкции по восстановлению базы данных в среде SSMS см. [здесь](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). См. дополнительные сведения о [восстановлении базы данных в среде SSMS](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
     
 >[!NOTE]
-> - Репликация не поддерживается в экземплярах SQL Server, которые отличаются друг от друга больше, чем на две версии. Дополнительные сведения см. в статье о [поддерживаемых версиях SQL Server в топологии репликации](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
+> - Репликация не поддерживается в экземплярах SQL Server, которые отличаются друг от друга больше, чем на две версии. См. дополнительные сведения о [поддерживаемых версиях SQL Server в топологии репликации](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
 > - В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо подключиться к издателю и подписчику с помощью имени входа, которое является членом предопределенной роли сервера **sysadmin**. Дополнительные сведения о роли см. в статье [Роли уровня сервера](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
 
 

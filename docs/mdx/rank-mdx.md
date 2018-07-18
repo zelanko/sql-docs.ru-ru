@@ -1,6 +1,6 @@
 ---
 title: Rank (многомерные Выражения) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac8b41545063caa123eb678e5b2b0bda3b3a1e09
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: b1d234f02c8dfcd36073059210c1999cb95f5ab0
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580996"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742733"
 ---
 # <a name="rank-mdx"></a>Rank (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Возвращает позицию, начиная с единицы, заданного кортежа в указанном множестве.  
   

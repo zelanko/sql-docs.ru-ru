@@ -1,13 +1,12 @@
 ---
-title: Отправить данные FILESTREAM - ISequentialStream с привязкой к ICommandText | Документы Microsoft
+title: Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
@@ -16,22 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bfbf716214543b8a5a1823e87a1732edd576a10b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e15ea6d968aef52c41c325bebfc6898f28050050
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407625"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Отправить данные FILESTREAM - ISequentialStream с привязкой к ICommandText
+# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   В этом образце используется интерфейс ISequentialStream, связанный с параметром ICommandText, для передачи от 4 МБ до 4 ГБ данных в столбец файлового потока.  
   
- Дополнительные сведения о функции filestream см. в разделе [поддержка FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Дополнительные сведения о функции filestream, см. в разделе [поддержка FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Пример  
- Чтобы скомпилировать и запустить этот образец, включите поддержку FILESTREAM ([Включение и настройка FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Перед компиляцией и запуском этого образца, включите поддержку FILESTREAM ([Включение и настройка FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   

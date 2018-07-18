@@ -2,7 +2,6 @@
 title: Каталога объектов (ADO MD) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c85ae92757056243f513b23696d29fb2c21bc4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cda7947458e9183323de5c3879dd27bf2d1f131
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283383"
 ---
 # <a name="catalog-object-ado-md"></a>Объект каталога (ADO MD)
 Сведения многомерной схемой (т. е кубы и базового измерения, иерархии, уровни и элементы) поставщикам многомерных данных (MDP).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  С коллекциями и свойствами **каталога** объекта, можно сделать следующее:  
   
 -   Открыть каталог, задав [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) свойства стандартных ADO [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта или допустимую строку соединения.  

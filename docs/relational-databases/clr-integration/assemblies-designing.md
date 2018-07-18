@@ -1,14 +1,11 @@
 ---
-title: Конструирование сборок | Документы Microsoft
+title: Конструирование сборок | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
@@ -18,13 +15,14 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33519a8494be8f6a062227b81999f58c4f053071
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c26b6d0671feaf1638fecf9afe60744c5a2d1da
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353516"
 ---
-# <a name="assemblies---designing"></a>Сборки - Разработка
+# <a name="assemblies---designing"></a>Конструирование сборок
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом подразделе описываются факторы, которые следует принять во внимание при конструировании сборок:  
   
@@ -39,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  При компоновке кода в сборку надо учитывать следующее.  
   
--   Определяемые пользователем типы данных CLR и индексы, зависящие от определяемых пользователем функций среды CLR, могут вызвать появление в базе данных материализованных данных, зависящих от сборки. Часто изменение кода сборки является более сложным, если в базе данных присутствуют материализованные данные, зависящие от сборки. Таким образом, в общем случае лучше отделять код, от которого зависят материализованные данные (такие как определяемые пользователем типы и индексы, использующие определяемые пользователем функции), от кода, от которого не зависят никакие материализованные данные. Дополнительные сведения см. в разделе [реализации сборки](../../relational-databases/clr-integration/assemblies-implementing.md) и [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   Определяемые пользователем типы данных CLR и индексы, зависящие от определяемых пользователем функций среды CLR, могут вызвать появление в базе данных материализованных данных, зависящих от сборки. Часто изменение кода сборки является более сложным, если в базе данных присутствуют материализованные данные, зависящие от сборки. Таким образом, в общем случае лучше отделять код, от которого зависят материализованные данные (такие как определяемые пользователем типы и индексы, использующие определяемые пользователем функции), от кода, от которого не зависят никакие материализованные данные. Дополнительные сведения см. в разделе [реализация сборок](../../relational-databases/clr-integration/assemblies-implementing.md) и [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
 -   Если часть управляемого кода требует разрешения более высокого уровня, лучше поместить данный код в отдельную сборку, отдельно от кода, не требующего этого разрешения.  
   
@@ -88,7 +86,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>Неразрешенные API-интерфейсы платформы .NET Framework  
- Любой [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API, который содержит один из недопустимых **HostProtectionAttributes** может быть вызван из сборок SAFE и EXTERNAL_ACCESS.  
+ Любой [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API, который содержит один из **HostProtectionAttributes** может быть вызван из сборок SAFE и EXTERNAL_ACCESS.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -122,7 +120,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Сборки & #40; компонент Database Engine & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Сборки &#40;компонент Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Безопасность интеграции со средой CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

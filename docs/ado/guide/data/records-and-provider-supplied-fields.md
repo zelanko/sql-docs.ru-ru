@@ -2,7 +2,6 @@
 title: Записи и поля поставщик предоставил | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d929238274b5b92e9bdf7b89a369e7988c06b3fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8b27e7f5ed6f4bc658c590ab8ea05bcd4c46d7a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272573"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Записи и поля поставщик предоставил
 При [запись](../../../ado/reference/ado-api/record-object-ado.md) объект открыт, его источник может быть текущей строки открытого [записей](../../../ado/reference/ado-api/recordset-object-ado.md), абсолютный URL-адрес или относительный URL-адрес в сочетании с открытым [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта .  
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 |RESOURCE_ISCOLLECTION|adBoolean|Только для чтения. Значение true, если ресурс находится в коллекции, например каталог. Значение false, если ресурс является простой файл.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|Значение true, если ресурс является структурированный документ. Значение false, если ресурс не является структурированный документ. Это может быть коллекция или простой файл.|  
 |DEFAULT_DOCUMENT|AdVarWChar|Только для чтения. Указывает, что этот ресурс содержит URL-адрес простой документ по умолчанию, папки или структурированного документа. Используется при запросе потока по умолчанию из ресурса. Это свойство имеет пустое значение для простого файла.|  
-|CHAPTERED_CHILDREN|AdChapter|Только для чтения. Необязательно. Указывает главе строк, который содержит дочерние элементы ресурса. ( *Поставщик OLE DB для публикаций в Интернете* не использует этот столбец.)|  
+|CHAPTERED_CHILDREN|AdChapter|Только для чтения. Необязательный параметр. Указывает главе строк, который содержит дочерние элементы ресурса. ( *Поставщик OLE DB для публикаций в Интернете* не использует этот столбец.)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|Только для чтения. Указывает отображаемое имя ресурса.|  
 |RESOURCE_ISROOT|adBoolean|Только для чтения. Значение true, если ресурс является корневым элементом коллекции или структурированного документа.|  
   

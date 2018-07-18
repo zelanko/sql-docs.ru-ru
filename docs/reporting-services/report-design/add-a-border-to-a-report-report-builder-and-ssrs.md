@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019851"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Добавление в отчет границы (построитель отчетов и службы SSRS)
   К отчету [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы можно добавить границу, добавив границу к верхним или нижним колонтитулам либо к тексту отчета и не добавляя линии или прямоугольники.    

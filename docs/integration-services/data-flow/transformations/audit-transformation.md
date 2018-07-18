@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7479bfd0d246bf3e70f7dc65a089844362f9b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be17c584af2fc584be7d95ebcc4069fc9f545b97
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331078"
 ---
 # <a name="audit-transformation"></a>преобразование «Аудит»
   Преобразование «Аудит» позволяет включать поток данных в пакет для передачи данных о среде, в которой запускается этот пакет. Например, в поток данных можно добавлять имя пакета, компьютера и оператора. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предусмотрены системные переменные, предоставляющие эти сведения.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables"></a>Системные переменные  
  В приведенной ниже таблице описаны системные переменные, применяемые в преобразовании «Аудит».  
   
-|Системная переменная|Индекс |Description|  
+|Системная переменная|Индекс |Описание|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|Идентификатор GUID, определяющий экземпляр выполнения пакета.|  
 |**PackageID**|1|Уникальный идентификатор пакета.|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **Тип аудита**  
  Выберите доступную системную переменную для предоставления данных аудита.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Идентификатор GUID экземпляра выполнения**|Укажите идентификатор GUID, который уникально идентифицирует экземпляр выполнения пакета.|  
 |**Идентификатор пакета**|Укажите идентификатор GUID, который уникально идентифицирует пакет.|  

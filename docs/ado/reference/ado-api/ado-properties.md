@@ -2,7 +2,6 @@
 title: Свойства ADO | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faf6f2c0bee80ae3f8b59a9b8241226facc89edb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d8df3fdea1c8e5666593dfa63666ed2c051c3b4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275583"
 ---
 # <a name="ado-properties"></a>Свойства ADO
 |||  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Указывает тип **команда** объекта.|  
 |[Свойство ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Указывает сведения, используемые для установления соединения с источником данных.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Указывает время ожидания при установлении подключения, по истечении которого попытка завершается и создается ошибка.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
+|[Счетчик](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Указывает расположение службы курсора.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Указывает тип курсора, используемого в **записей** объекта.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Указывает имя элемента данных, которые будут извлечены из объекта, на который указывает **DataSource** свойство.|  

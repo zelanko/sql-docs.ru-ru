@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c86b1de022402bf4802da644977cc0e07532c345
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96b9c897ddb8cb508d4ce95ee133a8060ec818e0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411106"
 ---
 # <a name="source-assistant"></a>Помощник источника
   Компонент «Помощник по источнику» позволяет создать компонент источника и диспетчер соединений. Компонент расположен в разделе **Избранное** панели инструментов служб SSIS.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="add-new-source-dialog-box"></a>Диалоговое окно "Добавление нового источника"
 В таблице ниже приведен список параметров, доступных в диалоговом окне **Добавление нового источника**.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Типы|Выберите тип источника, к которому нужно подключиться.|  
 |Диспетчеры соединений|Выберите существующий диспетчер подключений или щелкните **\<Создать>**, чтобы создать его.|  

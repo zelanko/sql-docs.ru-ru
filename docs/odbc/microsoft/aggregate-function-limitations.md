@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897299"
 ---
 # <a name="aggregate-function-limitations"></a>Агрегатная функция ограничения
 Агрегатная функция и ссылку на столбец не является статистическим нельзя оба использоваться как аргументы в одной инструкции SQL.

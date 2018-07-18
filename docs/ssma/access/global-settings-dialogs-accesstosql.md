@@ -1,8 +1,6 @@
 ---
 title: Глобальные параметры (диалоговые окна) (AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f7d514991dc7af4ef7c030b47ed471d0eb4cddeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f561631a965704f6c3eea05365db2249b42d5bf4
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774140"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>Глобальные параметры (диалоговые окна) (AccessToSQL)
 Используйте диалоговые окна страницу **глобальные параметры** для указания действий пользователя по умолчанию и параметры предупреждения для SSMA.  

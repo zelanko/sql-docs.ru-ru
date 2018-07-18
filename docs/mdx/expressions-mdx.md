@@ -1,6 +1,6 @@
 ---
 title: Выражения (MDX) | Документы Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 79909f574d818a599f30ad051be9cf6a980430a9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579486"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740843"
 ---
 # <a name="expressions-mdx"></a>Выражения (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Выражение представляет собой сочетание идентификаторов, значений и операторов, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно вычислить для получения результата. Данные могут использоваться в разных местах для доступа и изменения данных. Например, выражение можно использовать как часть данных, извлекаемых в запросе, либо как условие поиска для отбора данных, отвечающих набору критериев.  
+
+  Выражение представляет собой сочетание идентификаторов, значений и операторов, которые можно вычислить для получения результата. Данные могут использоваться в разных местах для доступа и изменения данных. Например, выражение можно использовать как часть данных, извлекаемых в запросе, либо как условие поиска для отбора данных, отвечающих набору критериев.  
   
 ## <a name="simple-and-complex-expressions"></a>Простые и сложные выражения  
  Многомерные выражения могут быть простыми или сложными.  

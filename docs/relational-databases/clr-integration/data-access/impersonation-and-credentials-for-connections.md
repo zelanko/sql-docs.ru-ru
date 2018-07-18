@@ -1,14 +1,11 @@
 ---
-title: Олицетворение и учетные данные для подключения | Документы Microsoft
+title: Олицетворение и учетные данные для подключений | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -24,11 +21,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 09e9a65b9a6be2e1dc9de9153054f9b024818d0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 828357e883ddcf1b1aa1792878d1aedc52105f99
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358896"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Олицетворение и учетные данные для соединений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +34,11 @@ ms.lasthandoff: 05/03/2018
   
  По умолчанию процесс SQL Server, который подключается к Windows, приобретает контекст безопасности учетной записи службы Windows SQL Server. Однако возможно также сопоставить функцию CLR с удостоверением-посредником, чтобы у исходящих соединений был контекст безопасности, отличный от учетной записи службы Windows.  
   
- В некоторых случаях может потребоваться олицетворять вызывающий объект, с помощью **SqlContext.WindowsIdentity** свойство вместо запуск в качестве учетной записи службы. **WindowsIdentity** экземпляр представляет удостоверение клиента, запустившего вызывающий код, который доступен, только если клиент использовал проверку подлинности Windows. После получения **WindowsIdentity** экземпляр, можно вызвать **Impersonate** изменить токен безопасности потока и затем открыть соединения ADO.NET от имени клиента.  
+ В некоторых случаях может потребоваться олицетворять вызывающий объект с помощью **SqlContext.WindowsIdentity** свойству, а не выполняется как учетная запись службы. **WindowsIdentity** экземпляр представляет удостоверение клиента, запустившего вызывающий код, который доступен, только если клиент использовал проверку подлинности Windows. После получения **WindowsIdentity** экземпляр, можно вызвать **Impersonate** изменить токен безопасности потока и затем открыть соединения ADO.NET от имени клиента.  
   
- После вызова SQLContext.WindowsIdentity.Impersonate, получить доступ к локальным данным и не доступ к системным данным. Для доступа к данным, необходимо вызвать WindowsImpersonationContext.Undo.  
+ После вызова SQLContext.WindowsIdentity.Impersonate, не может получить доступ к локальным данным и не может получить доступ к системных данных. Для доступа к данным, необходимо вызвать WindowsImpersonationContext.Undo.  
   
- В следующем примере показано, как олицетворять вызывающий объект, с помощью **SqlContext.WindowsIdentity** свойство.  
+ В следующем примере показано, как олицетворять вызывающий объект с помощью **SqlContext.WindowsIdentity** свойство.  
   
  Visual C#  
   
@@ -78,7 +76,7 @@ catch
 > [!NOTE]  
 >  Сведения об изменениях поведения при олицетворении см. в разделе [критические изменения в функциях ядра СУБД в SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
- Более того, если был получен экземпляр идентификатора [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, то по умолчанию нельзя перенести этот экземпляр на другой компьютер; по умолчанию инфраструктура безопасности Windows не позволяет делать этого. Однако существует механизм под названием «делегирование», который позволяет распространять идентификаторы Windows на несколько доверенных компьютеров. Дополнительные сведения о делегировании в статье TechNet «[переход протокола Kerberos и ограниченное делегирование](http://go.microsoft.com/fwlink/?LinkId=50419)».  
+ Более того, если был получен экземпляр идентификатора [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, то по умолчанию нельзя перенести этот экземпляр на другой компьютер; по умолчанию инфраструктура безопасности Windows не позволяет делать этого. Однако существует механизм под названием «делегирование», который позволяет распространять идентификаторы Windows на несколько доверенных компьютеров. Дополнительные сведения о делегировании в статье TechNet «[передачу протокола Kerberos и ограниченное делегирование](http://go.microsoft.com/fwlink/?LinkId=50419)«.  
   
 ## <a name="see-also"></a>См. также  
  [Объект SqlContext](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

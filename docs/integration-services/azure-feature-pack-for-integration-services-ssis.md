@@ -1,14 +1,12 @@
 ---
 title: Пакет дополнительных компонентов Azure для служб Integration Services (SSIS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/22/2017
+ms.date: 05/24/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ce10711bd2ce6872928b320e86d65369bbbd011
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f30a22035e141a7a10bc6069a8d1b6eb26818029
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405056"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)
 Пакет дополнительных компонентов Azure для служб SQL Server Integration Services (SSIS) — это дополнение, которое предоставляет перечисленные на этой странице компоненты для подключения служб SSIS к Azure, передачи данных между Azure и локальными источниками данных и обработки данных, хранящихся в Azure.
@@ -34,6 +33,8 @@ ms.lasthandoff: 05/03/2018
 - Для SQL Server 2016: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2016 для Azure](https://www.microsoft.com/download/details.aspx?id=49492)
 - Для SQL Server 2014: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2014 для Azure](https://www.microsoft.com/download/details.aspx?id=47366)
 - Для SQL Server 2012: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2012 для Azure](https://www.microsoft.com/download/details.aspx?id=47367)
+
+На страницах скачивания также приведены сведения о необходимых компонентах. SQL Server необходимо установить перед установкой пакета дополнительных компонентов Azure на сервере. В противном случае компоненты в составе пакета могут оказаться недоступными при развертывании пакетов в базе данных каталога служб SSIS (SSISDB) на сервере.
 
 ## <a name="components-in-the-feature-pack"></a>Компоненты в составе пакета дополнительных компонентов
 -   Диспетчеры соединений
@@ -77,18 +78,6 @@ ms.lasthandoff: 05/03/2018
     -   [Цель Azure Data Lake Store](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
 -   Перечислитель BLOB-объектов Azure и файлов ADLS. См. раздел [Контейнер "цикл по каждому элементу"](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
-
-## <a name="download-the-feature-pack"></a>Скачивание пакета дополнительных компонентов
- Скачайте пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure.
- 
-- [Пакет дополнительных компонентов SSIS для Azure](http://go.microsoft.com/fwlink/?LinkID=626967) для SQL Server 2016
-- [Пакет дополнительных компонентов SSIS для Azure](https://www.microsoft.com/download/details.aspx?id=54798) для [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
-
-## <a name="prerequisites"></a>предварительные требования
- Перед установкой этого пакета необходимо установить следующие компоненты:
-
--   Службы SQL Server Integration Services
--   .NET Framework 4.5.
 
 ## <a name="scenario-processing-big-data"></a>Сценарий: обработка больших данных
  Используйте соединитель Azure для выполнения следующих задач по обработке больших данных:

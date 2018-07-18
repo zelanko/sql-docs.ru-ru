@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_unforce_plan (Transact-SQL) | Документы Microsoft
+title: sp_query_store_unforce_plan (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,15 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 13525b0f1c77a3c570f35f1a745b4402f6ef9cbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036162"
 ---
 # <a name="spquerystoreunforceplan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Включает unforcing определенного плана для определенного запроса.  
+  Включает unforcing конкретного плана для конкретного запроса.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,18 +49,18 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
   
 ## <a name="arguments"></a>Аргументы  
  [  **@query_id =** ] *query_id*  
- — Идентификатор запроса. *query_id* — **bigint**, не имеет значения по умолчанию.  
+ Это идентификатор запроса. *query_id* — **bigint**, не имеет значения по умолчанию.  
   
  [  **@plan_id =** ] *plan_id*  
- — Это идентификатор плана запроса, который больше не будут применяться. *plan_id* — **bigint**, не имеет значения по умолчанию.  
+ — Идентификатор плана запроса, который больше не будут применяться. *plan_id* — **bigint**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется **EXECUTE** разрешения в базе данных и **вставить**, **обновление**, и **удалить** разрешения для каталога хранилища запросов Представления.  
+ Требуется **EXECUTE** разрешений в базе данных, и **вставить**, **обновление**, и **удалить** разрешение для каталога хранилища запросов Представления.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает сведения о запросах в хранилище запросов.  
@@ -73,7 +74,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- После определения query_id и plan_id, который требуется отменить, используйте следующий пример для отмены принудительного выполнения плана.  
+ После определения query_id и plan_id, который вы хотите отменить принудительное использование, используйте следующий пример для отмены принудительного выполнения плана.  
   
 ```  
 EXEC sp_query_store_unforce_plan 3, 3;  

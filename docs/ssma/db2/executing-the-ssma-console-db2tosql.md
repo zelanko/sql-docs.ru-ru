@@ -1,8 +1,6 @@
 ---
 title: Выполнение консоли SSMA (DB2ToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6d9625334272ee1e5addd8838055ff57f56635d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abfd3a12482d71f808887b1f3f987d0bd1582c76
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774810"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Выполнение консоли SSMA (DB2ToSQL)
 Корпорация Майкрософт предоставляет широкий набор сценариев файл команд для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми. В консольном приложении используется определенных команд файла стандартный сценарий как перечисленные в этом разделе.  
@@ -166,7 +165,7 @@ Force нагрузки-/ target-базы данных источника
   
   metabase="<source/target>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <force-load>  
@@ -279,7 +278,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <generate-assessment-report  
@@ -351,7 +350,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <convert-schema  
@@ -417,7 +416,7 @@ Force нагрузки-/ target-базы данных источника
   
 </migrate-data>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <migrate-data  
@@ -527,7 +526,7 @@ map-schema
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target  
@@ -536,7 +535,7 @@ map-schema
   
    object-type="<object-category>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target>  
@@ -592,7 +591,7 @@ map-schema
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database  
@@ -601,7 +600,7 @@ map-schema
   
    object-type="<object-category>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database>  
@@ -651,7 +650,7 @@ map-schema
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <save-as-script  
@@ -727,7 +726,7 @@ map-schema
   
 </convert-sql-statement>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  
@@ -750,7 +749,7 @@ map-schema
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  

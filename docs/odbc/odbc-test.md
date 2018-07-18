@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914509"
 ---
 # <a name="odbc-test"></a>Тест ODBC
 Microsoft® ODBC теста — приложение включен ODBC, можно использовать для тестирования драйверов ODBC и диспетчер драйверов ODBC. ODBC 3.51 включает ANSI и Юникод версии ODBC теста. Ниже приведены соответствующие файлы.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539614"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Системные представления для Analytics платформы системы Parallel Data Warehouse
 Системные представления для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).

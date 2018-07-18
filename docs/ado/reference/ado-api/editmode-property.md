@@ -2,7 +2,6 @@
 title: Свойство EditMode | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e31414c353a1157d25da420428502772872cb35e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fd943679fc15cde9a3349b455decc778889b0c6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277933"
 ---
 # <a name="editmode-property"></a>Свойство EditMode
 Указывает состояние редактирования текущей записи.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  ADO поддерживает редактирования буфера, связанное с текущей записью. Это свойство указывает ли были внесены изменения в этот буфер или ли создана новая запись. Используйте **EditMode** свойства, чтобы определить состояние редактирования текущей записи. Можно проверить для ожидающих изменений, если был прерван процесс редактирования и определить, следует ли использовать [обновление](../../../ado/reference/ado-api/update-method.md) или [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) метод.  
   
  В *режим немедленного обновления* **EditMode** свойства сбрасывается до **как таковые** после успешного вызова **обновление** вызывается метод . При вызове [удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md) не удаляет успешно записи или записи в источнике данных (например, из-за нарушения ссылочной целостности), [записей](../../../ado/reference/ado-api/recordset-object-ado.md) остается в режиме редактирования (**EditMode** = **adEditInProgress**). Таким образом **CancelUpdate** должен вызываться перед перемещением текущей записи (например, с [переместить](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), или [закрыть](../../../ado/reference/ado-api/close-method-ado.md) ).  

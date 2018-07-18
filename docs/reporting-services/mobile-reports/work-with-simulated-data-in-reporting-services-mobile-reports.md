@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018481"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Work with simulated data in Reporting Services mobile reports
 При размещении элемента коллекции в область конструктора [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] немедленно генерирует смоделированные данные для этого элемента. Эти данные служат для достижения нескольких полезных целей при создании мобильных отчетов.   

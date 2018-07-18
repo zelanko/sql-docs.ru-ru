@@ -1,13 +1,12 @@
 ---
-title: Поддержка типов OLE DB табличное значение параметра | Документы Microsoft
+title: Поддержка типов табличное значение параметра OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,11 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c5e3643eb70e25a9725c439c2375fe4c633aa760
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73d391bcd0cd5476c9c494606e8215e6a96afb42
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421953"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Поддержка типа возвращающего табличное значение параметра OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   Этот раздел содержит описание поддержки типа параметра OLE DB для параметров, возвращающих табличное значение.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Объект набора строк параметра, возвращающего табличное значение  
- Можно создать специальный объект набора строк для параметров, возвращающих табличное значение. Создание объекта набора строк возвращающего табличное значение параметра с помощью ITableDefinitionWithConstraints::CreateTableWithConstraints или IOpenRowset::OpenRowset. Чтобы сделать это, задайте *eKind* членом *pTableID* параметр в значение DBKIND_GUID_NAME и укажите CLSID_ROWSET_INMEMORY как *guid* член. Имя типа сервера для возвращающих табличные значения параметра необходимо указать в *pwszName* членом *pTableID* при использовании в идентификаторах. Объект набора строк параметра, возвращающего табличное значение, действует так же, как объект поставщика OLE DB собственного клиента для SQL Server.  
+ Можно создать специальный объект набора строк для параметров, возвращающих табличное значение. Создание объекта набора строк возвращающего табличное значение параметра с помощью ITableDefinitionWithConstraints::CreateTableWithConstraints или идентификаторах. Чтобы сделать это, установите *eKind* членом *pTableID* параметр в значение DBKIND_GUID_NAME и укажите CLSID_ROWSET_INMEMORY как *guid* член. Имя типа сервера для возвращающих табличные значения параметра необходимо указать в *pwszName* членом *pTableID* при использовании IOpenRowset::OpenRowset. Объект набора строк параметра, возвращающего табличное значение, действует так же, как объект поставщика OLE DB собственного клиента для SQL Server.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -57,18 +57,18 @@ CoType RowsetTVP
 #define DBTYPE_TABLE (143)  
 ```  
   
- DBTYPE_TABLE имеет такой же формат, что и DBTYPE_IUNKNOWN. Представляет собой указатель на объект в буфере данных. Определить полную спецификацию в привязках, пользователь заполняет буфер DBOBJECT *iid* задать один из интерфейсов объекта набора строк (IID_IRowset). Если DBOBJECT не указан в привязках, будет считаться IID_IRowset.  
+ DBTYPE_TABLE имеет такой же формат, что и DBTYPE_IUNKNOWN. Представляет собой указатель на объект в буфере данных. Полную спецификацию в привязках, пользователь заполняет буфер DBOBJECT, с помощью *iid* присвоено одно из интерфейсов объекта набора строк (значение IID_IRowset). Если нет объектов базы данных, указанные в привязках, будет считаться значение IID_IRowset.  
   
- Прямые и обратные преобразования в тип DBTYPE_TABLE для каких-либо других типов не поддерживаются. IConvertType::CanConvert возвращает значение S_FALSE для неподдерживаемого преобразования применительно к любому запросу, отличному от преобразования DBTYPE_TABLE. Это предполагает использование параметра DBCONVERTFLAGS_PARAMETER объекта команды.  
+ Прямые и обратные преобразования в тип DBTYPE_TABLE для каких-либо других типов не поддерживаются. IConvertType::CanConvert возвращает значение S_FALSE для неподдерживаемого преобразования для любого запроса, DBTYPE_TABLE в DBTYPE_TABLE преобразование. При этом предполагается использование параметра DBCONVERTFLAGS_PARAMETER объекта команды.  
   
 ## <a name="methods"></a>Методы  
- Сведения о методах OLE DB, которые поддерживают возвращающие табличные значения параметров см. в разделе [OLE DB Table-Valued параметр типа поддерживает &#40;методы&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
+ Сведения о методах OLE DB, которые поддерживают возвращающие табличные значения параметры, см. в разделе [OLE DB Table-Valued параметр типа поддержки &#40;методы&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Свойства  
- Сведения о свойствах свойства OLE DB, которые поддерживают возвращающие табличные значения параметров, в разделе [OLE DB Table-Valued параметр типа поддерживает &#40;свойства&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Infornation о свойствах OLE DB, которые поддерживают возвращающие табличные значения параметры, см. в разделе [OLE DB Table-Valued параметр типа поддержки &#40;свойства&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>См. также  
  [Возвращающие табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Использование возвращающих табличные значения параметры & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

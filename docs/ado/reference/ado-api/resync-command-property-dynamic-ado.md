@@ -2,7 +2,6 @@
 title: Повторная синхронизация команды свойство динамические (ADO) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 240c4d6ce4aa392f01ebb27a4a52fd73c684b981
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37896464c8c9387cb0d68da8bf9bc561e29602d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281379"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Повторная синхронизация команды свойство динамические (ADO)
 Указывает команду, предоставленные пользователем строкой, которую [Resync](../../../ado/reference/ado-api/resync-method.md) проблем метода для обновления данных в таблице, указанной в [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) динамических свойств.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** равное командной строки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект является результат операции СОЕДИНЕНИЯ, выполняется на нескольких базовых таблицах. Зависит от строк, затронутых *AffectRecords* параметр [Resync](../../../ado/reference/ado-api/resync-method.md) метод. Стандартные **Resync** метод выполняется в том случае, если [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) и **Resync команда** свойства не установлены.  
   
  Строка команды **Resync команда** свойство параметризированную команду или хранимую процедуру, которая однозначно определяет строку, на время обновления и возвращает одну строку, содержащую одно и то же количество и порядок столбцов в виде строки таблицы, обновляются. Командная строка содержит параметр для каждого столбца первичного ключа в **уникальной таблицы**; в противном случае возвращается ошибка во время выполнения. Параметры автоматически заполняется значений первичного ключа из строки для обновления.  

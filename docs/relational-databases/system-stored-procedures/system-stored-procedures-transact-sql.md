@@ -1,5 +1,5 @@
 ---
-title: Системные хранимые процедуры (Transact-SQL) | Документы Microsoft
+title: Системные хранимые процедуры (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 481b0c451f5161231cf64402c5c758870a07be62
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708642"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979466"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Системные хранимые процедуры (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "34708642"
   
 |Категория|Описание|  
 |--------------|-----------------|  
-|[Активная Георепликация хранимых процедур](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Используется для управления для управления конфигурациями активная Георепликация в базе данных SQL Azure|  
+|[Активная Георепликация хранимых процедур](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Используется для управления для управления конфигурациями активной Георепликации в базе данных SQL Azure|  
 |[Хранимые процедуры каталога](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Используются для реализации функций словаря данных ODBC и изоляции ODBC-приложений от изменений во внутренних системных таблицах.|  
 |[Хранимые процедуры системы отслеживания измененных данных](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Используются для включения, отключения или подготовки отчетов об объектах системы отслеживания измененных данных.|  
-|[Хранимые процедуры для работы с курсорами](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Используются для реализации переменной функциональности курсоров.|  
+|[Хранимые процедуры курсора](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Используются для реализации переменной функциональности курсоров.|  
 |[Хранимые процедуры сборщика данных](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|Используется для работы со сборщиком данных и следующими компонентами: наборами элементов сбора, элементами коллекций и типами коллекций.|  
-|[Компонент Database Engine хранимых процедур](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|Используются для выполнения общих задач по обслуживанию компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
+|[Хранимым процедурам ядра СУБД](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|Используются для выполнения общих задач по обслуживанию компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Используются для работы с электронной почтой в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Хранимые процедуры плана обслуживания базы данных](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Используются для выполнения основных задач, необходимых для управления производительностью базы данных.|  
 |[Хранимые процедуры распределенных запросов](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Используются для реализации распределенных запросов и управления ими.|  
@@ -62,25 +62,25 @@ ms.locfileid: "34708642"
 |[Хранимые процедуры хранилища данных управления &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Используется для настройки хранилища данных управления.|  
 |[OLE Automation хранимых процедур](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Используются, чтобы включить стандартные объекты OLE-автоматизации использования в стандартном пакете [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Хранимые процедуры управления на основе политик](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Используется для управления на основе политики.|  
-|[Хранимые процедуры PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Добавить или удалить компьютер из группы горизонтального масштабирования PolyBase.|  
-|[Хранимые процедуры в хранилище запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Используется для настройки производительности.|  
+|[Хранимые процедуры PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Добавление или удаление компьютера из группы горизонтального масштабирования PolyBase.|  
+|[Query Store хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Используется для настройки производительности.|  
 |[Хранимые процедуры репликации](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Используются для управления репликацией.|  
 |[Безопасность хранимых процедур](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Используются для управления безопасностью.|  
-|[Моментальный снимок резервной копии хранимых процедур](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Использовать удалять архивацию FILE_SNAPSHOT вместе со всеми моментальными снимками или для удаления отдельных файла резервной копии моментальных снимков.|  
-|[Хранимые процедуры пространственного индекса](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Используется для анализа и повышения производительности индексирования пространственных индексов.|  
-|[Хранимые процедуры агента SQL Server](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Используются приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для наблюдения за производительностью и активностью.|  
-|[Приложение SQL Server Profiler хранимых процедур](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Используются агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для управления запланированных или зависящих от событий действий.|  
-|[Растяжение базы данных, сохраненной процедуры](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Используется для переноса баз данных управления.|  
-|[Хранимые процедуры временных таблиц](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Используйте для временных таблиц|  
+|[Моментальный снимок резервной копии хранимых процедур](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Используется для удаления резервной копии FILE_SNAPSHOT, а также все его моментальные снимки или удаления отдельных файла резервной копии моментальных снимков.|  
+|[Хранимые процедуры пространственного индекса](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Используется для анализа и улучшения производительности индексирования пространственных индексов.|  
+|[Агент SQL Server хранимых процедур](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Используются приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для наблюдения за производительностью и активностью.|  
+|[SQL Server Profiler хранимых процедур](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Используются агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для управления запланированных или зависящих от событий действий.|  
+|[Stretch Database хранимых процедур](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Используется для управления базами данных stretch.|  
+|[Темпоральные таблицы хранимых процедур](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Используйте для темпоральных таблиц|  
 |[Хранимые процедуры XML](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|Используются для работы с текстом в формате XML.|  
   
 > [!NOTE]  
 >  Если не оговорено другое, все системные хранимые процедуры возвращают значение 0, что означает успешное выполнение процедуры. Для сигнализации об ошибке возвращается ненулевое значение.  
   
 ## <a name="api-system-stored-procedures"></a>Системные хранимые процедуры для работы с API  
- Пользователи, запускающие приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для приложений ADO, OLE DB и ODBC, могут заметить, что эти приложения используют системные хранимые процедуры, не описанные в справочнике по [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эти хранимые процедуры используются [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщиком Native Client OLE DB и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента для реализации функциональности API базы данных. Эти хранимые процедуры — всего лишь механизм, задействованный поставщиком или драйвером для передачи запросов пользователя экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они предназначены только для внутреннего использования поставщиком или драйвером. Вызов их явно из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-приложения не поддерживается.  
+ Пользователи, запускающие приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для приложений ADO, OLE DB и ODBC, могут заметить, что эти приложения используют системные хранимые процедуры, не описанные в справочнике по [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эти хранимые процедуры используются [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный поставщик OLE DB клиента и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента для реализации функциональности API базы данных. Эти хранимые процедуры — всего лишь механизм, задействованный поставщиком или драйвером для передачи запросов пользователя экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они предназначены только для внутреннего использования поставщиком или драйвером. Вызывать их явным образом из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-приложения на основе не поддерживается.  
   
- Sp_createorphan и sp_droporphans хранимые процедуры используются для ODBC **ntext**, **текст**, и **изображения** обработки.  
+ Sp_createorphan и sp_droporphans хранимые процедуры используются для ODBC **ntext**, **текст**, и **изображение** обработки.  
   
  Хранимая процедура sp_reset_connection используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для поддержки вызовов в транзакциях удаленных хранимых процедур. Кроме того, эта хранимая процедура инициирует события Audit Login и Audit Logout при повторном использовании соединения из пула соединений.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "34708642"
  [Хранимые процедуры (ядро СУБД)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [Выполнение хранимых процедур &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [Выполнение хранимых процедур](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Выполнение хранимых процедур](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

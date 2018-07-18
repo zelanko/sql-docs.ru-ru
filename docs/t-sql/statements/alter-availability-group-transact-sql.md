@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,11 +26,12 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: ecced10240ac5cc0f14ca64a2f2e2582edb1c01e
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36257266"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,8 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
+   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
    | REMOVE LISTENER ‘dns_name’  
@@ -129,7 +130,7 @@ ALTER AVAILABILITY GROUP group_name
 <modify_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER = 'TCP://system-address:port'  
+       LISTENER_URL = 'TCP://system-address:port'  
        | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
        | SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
@@ -473,15 +474,15 @@ ALTER AVAILABILITY GROUP group_name
 >  NetBIOS распознает только первые 15 символов в dns_name. При наличии двух кластеров WSFC, которые управляются одной службой Active Directory, и попытке создать в обоих кластерах прослушивателей группы доступности с именами, содержащими более 15 символов, и одинаковым префиксом из 15 символов возникнет ошибка, указывающая, что не удалось подключиться к ресурсу с именем виртуальной сети. Дополнительные сведения о правилах именования префиксов для имен DNS см. в разделе [Присвоение имен доменов](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  JOIN AVAILABILITY GROUP ON  
- Присоединение к *распределенной группе доступности*. Когда вы создаете распределенную группу доступности, группа доступности в кластере, где она создана, является первичной группой доступности. Группа доступности, которая соединяется с распределенной группой доступности, является вторичной группой доступности.  
+ Присоединение к *распределенной группе доступности*. Когда вы создаете распределенную группу доступности, группа доступности в кластере, где она создана, является первичной группой доступности. При выполнении JOIN группа доступности на экземпляре локального сервера является вторичной группы доступности.  
   
  \<ag_name>  
  Указывает имя группы доступности, составляющей половину распределенной группы доступности.  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER_URL **='** TCP **://***system-address***:***port***'**  
  Указывает URL-адрес пути для прослушивателя, связанного с группой доступности.  
   
- Требуется предложение LISTENER.  
+ Требуется предложение LISTENER_URL.  
   
  **'** TCP **://***system-address***:***port***'**  
  Указывает URL-адрес для прослушивателя, связанного с группой доступности. Параметры URL-адреса:  
@@ -490,7 +491,7 @@ ALTER AVAILABILITY GROUP group_name
  Это строка, такая как имя системы, полное доменное имя или IP-адрес, однозначно идентифицирующая прослушивателя.  
   
  *port*  
- Номер порта, связанный с конечной точкой зеркального отображения группы доступности. Это не порт прослушивателя.  
+ Номер порта, связанный с конечной точкой зеркального отображения группы доступности. Обратите внимание, что это не порт для клиентского подключения, который настроен на прослушивателе.  
   
  AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  Указывает, должна ли первичная реплика ждать подтверждения фиксации (записи) записей журнала на диск от вторичной группы доступности перед тем, как фиксировать транзакцию в указанной базе данных.  

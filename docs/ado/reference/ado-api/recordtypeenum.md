@@ -2,7 +2,6 @@
 title: RecordTypeEnum | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f84fecc2ecac03ba6d8a18588d2f0163930b701
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c583db7cb8d91090357a26f027478485d087d9f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281223"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 Указывает тип [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта.  

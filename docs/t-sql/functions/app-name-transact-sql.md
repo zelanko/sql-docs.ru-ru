@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,22 +22,23 @@ helpviewer_keywords:
 - APP_NAME function
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d9652c25875fb1edb5d09e4e283fd7393b523a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46e34f32e26c847abb4ad30b1bc41aabd0c10f28
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785875"
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Функция, возвращающая имя приложения для текущего сеанса, если оно задано приложением.
+Эта функция возвращает имя приложения для текущего сеанса, если оно задано приложением.
   
 > [!IMPORTANT]  
->  Имя приложения указывается клиентом и не проверяется. Не используйте **APP_NAME** как часть проверки безопасности.  
+>  Имя приложения указывается клиентом и `APP_NAME` никак не проверяет его значение. Не используйте `APP_NAME` как часть проверки безопасности.  
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,12 +53,12 @@ APP_NAME  ( )
 **nvarchar(128)**
   
 ## <a name="remarks"></a>Remarks  
-Используйте **APP_NAME**, чтобы различать приложения, когда нужно выполнить разные действия для разных приложений. Например, с помощью **APP_NAME** можно различить приложения, чтобы использовать разный формат даты для каждого из них. Эта функция также позволяет возвратить информационное сообщение для некоторых приложений.
+Используйте `APP_NAME`, чтобы различать приложения, когда нужно выполнить разные действия для разных приложений. Например, с помощью `APP_NAME` можно различить приложения, чтобы использовать разный формат даты для каждого из них. Эта функция также позволяет возвратить информационное сообщение для некоторых приложений.
   
 Чтобы задать имя приложения в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], щелкните элемент **Параметры** в диалоговом окне **Подключение к ядру СУБД**. На вкладке **Дополнительные параметры подключения** укажите атрибут **app** в формате `;app='application_name'`.
   
 ## <a name="example"></a>Пример  
-Этот пример проверяет, является ли клиентское приложение, инициировавшее процесс, сеансом `SQL Server Management Studio` и предоставляет ли оно дату в формате US или ANSI.
+В следующем примере проверяется, является ли клиентское приложение, запустившее процесс, сеансом среды `SQL Server Management Studio`. Затем значение даты предоставляется в формате US или ANSI.
   
 ```sql
 USE AdventureWorks2012;  

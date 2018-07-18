@@ -1,5 +1,5 @@
 ---
-title: Использование приложения SQL Server Profiler для мониторинга служб Analysis Services | Документы Microsoft
+title: Использование SQL Server Profiler для мониторинга служб Analysis Services | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e9e4407abe5565931994d9dcca4cd0326577dbf4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034670"
 ---
 # <a name="use-sql-server-profiler-to-monitor-analysis-services"></a>Use SQL Server Profiler to Monitor Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/10/2018
   
  В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
@@ -31,6 +32,6 @@ ms.lasthandoff: 05/10/2018
 |[События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)|Содержит описание классов событий служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти классы событий соответствуют действиям, формируемым службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , и используются для воспроизведения трассировок.|  
   
 ## <a name="see-also"></a>См. также  
- [Мониторинг экземпляра служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+ [Мониторинг экземпляра Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

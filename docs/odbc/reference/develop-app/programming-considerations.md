@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913420"
 ---
 # <a name="programming-considerations"></a>Замечания по программированию
 В этом разделе кратко описывает несколько разделов, связанных с разработкой приложений ODBC и драйверами.  

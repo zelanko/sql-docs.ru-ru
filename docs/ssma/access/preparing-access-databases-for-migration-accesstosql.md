@@ -1,8 +1,6 @@
 ---
 title: Подготовка базы данных Access для миграции (AccessToSQL) | Документы Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
@@ -29,11 +27,12 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1862e57551ccbc4a41c14c58b1fb0f9de43998d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eca76e8b1a585c4d97528792cef161ef68771f7e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774200"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Подготовка к миграции (AccessToSQL) базы данных Access
 Перед переносом базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], необходимо определить, какие базы данных для миграции и убедитесь, что эти базы данных все готово для миграции.  
@@ -82,6 +81,6 @@ SSMA теперь можно использовать для переноса к
 ### <a name="documenting-databases"></a>Документирование баз данных  
 Можно также описываются свойства, такие как списки объектов базы данных, размер файла и разрешений баз данных Access. Для создания этой документации в режиме доступа на **средства** последовательно выберите пункты **анализ**, а затем нажмите кнопку **Documented**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Связывание приложения Access в SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)

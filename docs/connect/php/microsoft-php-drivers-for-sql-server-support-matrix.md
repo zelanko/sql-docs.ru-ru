@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,11 +13,12 @@ caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: b8f1fad66e906b71ff5ea247ba4615e7be774f63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aae3c88e1460304cf4b2bea7dbc529f31393bde
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307923"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Драйверы Microsoft PHP для SQL Server Support Matrix
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 |Управляемый экземпляр Azure SQL<br/> (Расширенный набор личной предварительной версии)|Да|Да| | | | | |
 |Хранилище данных SQL Azure|Да|Да| | | | | |
 |SQL Server 2017   |Да|Да| | | | | |
-|SQL Server 2016   |Да|Да|Да| | | | |
+|SQL Server 2016   |Да|Да|Да| | | | |
 |SQL Server 2014   |Да|Да|Да|Да|Да| | |
 |SQL Server 2012   |Да|Да|Да|Да|Да|Да| |
 |SQL Server 2008 R2|Да|Да|Да|Да|Да|Да|Да|

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544716"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>Сеансы пользователей в система платформы аналитики
 Имя входа с помощью соответствующих разрешений для управления сеансами всех имен входа в SQL Server PDW appliance, включая выполнение следующих действий.  

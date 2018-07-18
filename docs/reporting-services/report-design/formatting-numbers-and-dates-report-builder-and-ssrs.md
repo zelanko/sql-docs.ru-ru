@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023551"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Форматирование чисел и дат (построитель отчетов и службы SSRS)
   Формат чисел и дат в областях данных можно задать, выбрав формат на странице **Число** в диалоговом окне **Свойства** соответствующей области данных.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32847119"
 ---
 # <a name="step-2-create-a-sql-database-for-java-development"></a>Шаг 2: Создание базы данных SQL для разработки приложений Java
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

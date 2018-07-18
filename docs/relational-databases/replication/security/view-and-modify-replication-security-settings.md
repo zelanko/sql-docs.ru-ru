@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +21,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74bd2e6330318f73258279ea4c849f497baf1d82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f48e91774c0d0d59994a06a77895ec605f8ac74
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350536"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  В диалоговом окне **Обновление паролей репликации** , которое доступно из папки **Репликация** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. При изменении пароля для учетной записи [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или учетной записи Windows на сервере в топологии репликации, нужно использовать это диалоговое окно, а не обновлять пароль для каждого агента, использующего эту учетную запись. Если агенты на нескольких серверах используют одну и ту же учетную запись, то нужно подключиться к каждому из этих серверов и изменить пароль. Обновление пароля осуществляется везде, где его использует репликация. В других местах, например на связанных серверах, обновление пароля не происходит.  
   
-2.  Страница **Безопасность агентов** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+2.  Страница **Безопасность агентов** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 3.  Диалоговое окно **Свойства подписки — \<подписка>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделах [Просмотр и изменение свойств принудительной подписки](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) и [Просмотр и изменение свойств подписки по запросу](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   

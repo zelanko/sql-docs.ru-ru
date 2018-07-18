@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904199"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (драйверы для настольных баз данных)
 Инструкции, подготовленных с неверным числом столбцов возвращает ошибку во время выполнения, а не при подготовке инструкции.

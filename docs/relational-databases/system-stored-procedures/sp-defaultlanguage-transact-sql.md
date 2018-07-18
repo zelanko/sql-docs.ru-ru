@@ -1,5 +1,5 @@
 ---
-title: sp_defaultlanguage (Transact-SQL) | Документы Microsoft
+title: sp_defaultlanguage (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a382ceab3491cfbcd1b8d6dad564f6d8826c2d13
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049502"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   Изменяет установленный по умолчанию язык для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) вместо этого.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,16 +49,16 @@ sp_defaultlanguage [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Аргументы  
  [  **@loginame =** ] **"***входа***"**  
- Имя входа. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* может быть существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или пользователя Windows или группы.  
+ Имя входа. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* может представлять собой существующее [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа или пользователя Windows или группы.  
   
  [  **@language =** ] **"***языка***"**  
- Язык по умолчанию для имени входа. *Язык* — **sysname**, значение по умолчанию NULL. *Язык* должен быть языком, допустимым на сервере. Если *язык* не указан, *язык* задано значение по умолчанию язык сервера; язык по умолчанию определяется **sp_configure** переменной конфигурации **язык по умолчанию**. Изменение заданного по умолчанию языка сервера не изменяет язык, заданный по умолчанию для существующих имен входа.  
+ Язык по умолчанию для имени входа. *Язык* — **sysname**, значение по умолчанию NULL. *Язык* должен быть действительным языком на сервере. Если *языка* не указан, *языка* имеет значение по умолчанию язык сервера; язык по умолчанию определяется **sp_configure** переменную конфигурации **язык по умолчанию**. Изменение заданного по умолчанию языка сервера не изменяет язык, заданный по умолчанию для существующих имен входа.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_defaultlanguage** вызывает инструкцию ALTER LOGIN, которая поддерживает дополнительные параметры. Сведения об изменении других значений по умолчанию для имени входа см. в разделе [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
+## <a name="remarks"></a>Примечания  
+ **sp_defaultlanguage** вызывает инструкцию ALTER LOGIN, которая поддерживает дополнительные параметры. Сведения об изменении других значений по умолчанию для имени входа, см. в разделе [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
  Для изменения языка текущего сеанса воспользуйтесь инструкцией SET LANGUAGE. Используйте @@LANGUAGE функции для отображения текущих языковых параметров.  
   
@@ -78,8 +79,8 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
+ [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)   
+ [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

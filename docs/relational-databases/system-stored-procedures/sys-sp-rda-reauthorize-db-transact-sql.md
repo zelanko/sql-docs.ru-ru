@@ -1,14 +1,11 @@
 ---
-title: sys.sp_rda_reauthorize_db (Transact-SQL) | Документы Microsoft
+title: sys.sp_rda_reauthorize_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,20 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b387bbd432eb01df84661a61b1f9528857cd74c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9991ad7e43ffa367387392b40a22a1bea9aed37c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407513"
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Восстанавливает подключение с проверкой подлинности между локальной базы данных включена для Stretch и удаленной базе данных.  
+  Восстановление соединения с проверкой подлинности между локальной базой данных Stretch и удаленной базе данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +42,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
   
 ## <a name="arguments"></a>Аргументы  
  @credential = *@credential*  
- Представляет учетные данные уровня базы данных, связанные с локальной базы данных с включенным Stretch.  
+ — Учетные данные уровня базы данных, связанный с локальной базы данных с поддержкой Stretch.  
   
  @with_copy = *@with_copy*  
  Указывает, следует ли сделать копию удаленных данных и подключиться к копии (рекомендуется). *@with_copy* имеет тип bit.  
@@ -54,7 +51,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  Указывает имя сервера Azure, который содержит удаленные данные. *@azure_servername* имеет тип sysname.  
   
  @azure_databasename = *@azure_databasename*  
- Указывает имя базы данных Azure, которая содержит удаленные данные. *@azure_databasename* имеет тип sysname.  
+ Задает имя базы данных Azure, которая содержит удаленные данные. *@azure_databasename* имеет тип sysname.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или >0 (неуспешное завершение)  
@@ -62,11 +59,11 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>Разрешения  
  Требуются права db_owner.  
   
-## <a name="remarks"></a>Замечания  
- При запуске [sys.sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) для повторного подключения к удаленной базе данных Azure, эта операция автоматически восстанавливает режим запроса LOCAL_AND_REMOTE, что является поведением по умолчанию для базы данных Stretch. То есть запросы возвращают результаты из локальных и удаленных данных.  
+## <a name="remarks"></a>Примечания  
+ При запуске [sys.sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) для повторного подключения к удаленной базе данных Azure, эта операция автоматически восстанавливает режим запроса LOCAL_AND_REMOTE, что является поведением по умолчанию для Stretch Database. То есть запросы возвращают результаты из локальных и удаленных данных.  
   
 ## <a name="example"></a>Пример  
- В следующем примере восстанавливается подключение с проверкой подлинности между локальной базы данных включена для Stretch и удаленной базе данных. Он создает копию удаленных данных (рекомендуется) и подключается к новой копии.  
+ В следующем примере восстанавливается соединения с проверкой подлинности между локальной базой данных Stretch и удаленной базе данных. Он создает копию удаленных данных (рекомендуется) и подключается к новой копии.  
   
 ```sql  
 DECLARE @credentialName nvarchar(128);   

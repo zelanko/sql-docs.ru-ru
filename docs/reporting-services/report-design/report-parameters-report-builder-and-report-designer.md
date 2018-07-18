@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028291"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Параметры отчета (Построитель отчетов и Конструктор отчетов)
   В этом разделе описываются распространенные варианты применения параметров отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , доступные свойства и многое другое. Параметры отчета позволяют управлять данными отчета, объединять связанные отчеты и изменять внешний вид отчетов. Параметры отчета можно использовать в отчетах с разбиением на страницы, создаваемых с помощью таких средств, как [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] и конструктор отчетов, а также в мобильных отчетах, которые создаются, используя [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. Дополнительные сведения о параметрах отчета см. в разделе [Понятия параметров отчета](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  

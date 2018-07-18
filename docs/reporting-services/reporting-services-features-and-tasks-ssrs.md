@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026151"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Функции и задачи служб Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] упорядочивается с помощью отчетов и функций отчетов, функций сервера отчетов и функций продукта [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

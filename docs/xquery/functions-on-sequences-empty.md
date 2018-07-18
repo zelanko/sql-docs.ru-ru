@@ -1,5 +1,5 @@
 ---
-title: пустые функция (XQuery) | Документы Microsoft
+title: пустая функция (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f312276737406070eb07f371d5fb1c807b8e24b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040502"
 ---
-# <a name="functions-on-sequences---empty"></a>Функции над последовательностями - пустой
+# <a name="functions-on-sequences---empty"></a>Функции с последовательностями — пустой
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает значение True, если значение *$arg* представляет собой пустую последовательность. В противном случае функция возвращает значение False.  
@@ -45,14 +46,14 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  Последовательность элементов. Если последовательность пуста, функция возвращает значение True. В противном случае функция возвращает значение False.  
   
-## <a name="remarks"></a>Замечания  
- **Fn: EXISTS()** функция не поддерживается. В качестве альтернативы **not()** можно использовать функцию.  
+## <a name="remarks"></a>Примечания  
+ **Fn: EXISTS()** функция не поддерживается. Кроме того **not()** функция может использоваться.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** столбцов типа в базе данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Использование функции XQuery empty() для определения наличия атрибута  
- В процессе производства модели продукта 7 этот запрос возвращает всех цехов, не имеющих **MachineHours** атрибута.  
+ В процессе производства модели продукта 7, этот запрос возвращает всех расположений цехов, у которых нет **MachineHours** атрибута.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  

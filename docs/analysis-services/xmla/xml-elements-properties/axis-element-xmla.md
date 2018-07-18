@@ -13,7 +13,7 @@ ms.openlocfilehash: 50d2694db85b1391602c6f8d9d9307da4e79b65b
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574426"
 ---
 # <a name="axis-element-xmla"></a>Элемент Axis (XML для аналитики)

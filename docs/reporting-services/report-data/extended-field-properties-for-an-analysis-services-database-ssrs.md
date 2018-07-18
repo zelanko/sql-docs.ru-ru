@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022811"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)
   Модуль обработки данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает расширенные свойства полей. Расширенные свойства полей — это дополнительные свойства, доступные для конкретного источника данных, помимо свойств **Value** и **IsMissing** , и поддерживаемые модулем обработки данных. Расширенные свойства не отображаются в области данных отчетах как часть коллекции полей для набора данных отчета. Значения расширенных свойств полей можно включить в отчет с помощью выражений, которые указывают их по именам во встроенной коллекции **Fields** .  

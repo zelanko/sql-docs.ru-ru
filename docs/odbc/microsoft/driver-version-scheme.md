@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900509"
 ---
 # <a name="driver-version-scheme"></a>Схема версии драйвера
 > [!IMPORTANT]  

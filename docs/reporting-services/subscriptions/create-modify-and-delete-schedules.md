@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035221"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   В этом подразделе представлены сведения о создании, изменении и удалении общих расписаний [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Для управления общими расписаниями для собственного режима используйте страницу "Расписания" на веб-портале или папку "Общие расписания" в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Для режима интеграции с SharePoint используйте страницы управления для приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

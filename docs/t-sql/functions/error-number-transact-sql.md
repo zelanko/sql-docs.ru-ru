@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,21 +22,22 @@ helpviewer_keywords:
 - CATCH block
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45ad8be1da81b29b446ed18dd0c4688013a18875
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff6f4b95b1d1dd982344d8fac9ae131c7ba57eec
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783555"
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает номер ошибки, вызвавшей блок CATCH конструкции TRY…CATCH.  
-  
+Эта функция возвращает номер ошибки, которая вызвала выполнение блока CATCH конструкции TRY…CATCH.  
+
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -50,21 +50,21 @@ ERROR_NUMBER ( )
  **int**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- При вызове в блоке CATCH возвращает номер ошибки из сообщения об ошибке, запустившего блок CATCH.  
-  
- Возвращает значение NULL в случае вызова вне блока CATCH.  
+При вызове в блоке CATCH функция `ERROR_NUMBER` возвращает номер ошибки, вызвавшей выполнение блока CATCH.  
+
+Функция `ERROR_NUMBER` возвращает значение NULL в случае вызова вне блока CATCH.  
   
 ## <a name="remarks"></a>Remarks  
- Эта функция может быть вызвана в любом месте в пределах блока CATCH.  
+Функцию `ERROR_NUMBER` можно вызывать в любом месте области действия блока CATCH.  
   
- ERROR_NUMBER возвращает номер ошибки вне зависимости от числа запусков и места запуска в пределах блока CATCH. Этим данная функция отличается от функции @@ERROR, которая только возвращает номер ошибки в инструкции сразу после ее возникновения либо в первой инструкции блока CATCH.  
-  
- Во вложенных блоках CATCH функция ERROR_NUMBER возвращает номер ошибки, связанной с тем блоком CATCH, в котором она была вызвана. Например, блок CATCH внешней конструкции TRY...CATCH может содержать вложенную конструкцию TRY...CATCH. Внутри вложенного блока CATCH функция ERROR_NUMBER возвращает номер ошибки, вызвавшей вложенный блок CATCH. Если функция ERROR_NUMBER запущена во внешнем блоке CATCH, она возвращает номер ошибки, вызвавшей этот блок CATCH.  
+Функция `ERROR_NUMBER` возвращает соответствующий номер ошибки независимо от количества ее выполнений или от места ее вызова в области действия блока `CATCH`. В этом ее отличие от таких функций, как @@ERROR, которые возвращают номер ошибки только в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку.  
+
+Во вложенном блоке `CATCH` функция `ERROR_NUMBER` возвращает номер ошибки, соответствующий области действия блока `CATCH`, который ссылался на данный блок `CATCH`. Например, блок `CATCH` внешней конструкции TRY...CATCH может содержать внутреннюю конструкцию `TRY...CATCH`. Во внутреннем блоке `CATCH` функция `ERROR_NUMBER` возвращает номер ошибки, вызвавшей внутренний блок `CATCH`. Если функция `ERROR_NUMBER` выполняется во внешнем блоке `CATCH`, она возвращает номер ошибки, вызвавшей внешний блок `CATCH`.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-errornumber-in-a-catch-block"></a>A. Использование функции ERROR_NUMBER в блоке CATCH  
- В следующем примере кода приведена инструкция `SELECT`, формирующая ошибку деления на ноль. Возвращается номер ошибки.  
+В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Блок `CATCH` возвращает номер ошибки.  
   
 ```  
 BEGIN TRY  
@@ -75,11 +75,22 @@ BEGIN CATCH
     SELECT ERROR_NUMBER() AS ErrorNumber;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber
+-----------
+8134
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_NUMBER в блоке CATCH с другими средствами обработки ошибок  
- В следующем примере кода приведена инструкция `SELECT`, формирующая ошибку деления на ноль. Вместе с номером ошибки возвращаются сведения, касающиеся этой ошибки.  
-  
+В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с номером ошибки блок `CATCH` возвращает сведения о ней.  
+
 ```  
   
 BEGIN TRY  
@@ -96,28 +107,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование функции ERROR_NUMBER в блоке CATCH с другими средствами обработки ошибок  
- В следующем примере кода приведена инструкция `SELECT`, формирующая ошибку деления на ноль. Вместе с номером ошибки возвращаются сведения, касающиеся этой ошибки.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorLine  ErrorMessage
+----------- ------------- ----------- ---------------  ---------- ----------------------------------
+8134        16            1           NULL             4          Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>См. также:  

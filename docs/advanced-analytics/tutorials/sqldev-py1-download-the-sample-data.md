@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 541066ac00efc1b15f8cae838097cfd8ee49df3d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 754140cbc1c2b35338794b6919076b99c3052562
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249737"
 ---
 # <a name="step-1-download-the-sample-data"></a>Шаг 1: Загрузите образец данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/16/2018
 
 3. В зависимости от подключения к Интернету загрузка может занять некоторое время. 
 
-## <a name="view-the-results"></a>Просмотр результатов
+## <a name="view-results"></a>Просмотр результатов
 
 После скачивания всех файлов скрипт PowerShell откроет папку, указанную в параметре  *DestDir*. 
 

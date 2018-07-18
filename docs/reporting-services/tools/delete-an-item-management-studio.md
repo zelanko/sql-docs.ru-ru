@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029171"
 ---
 # <a name="delete-an-item-management-studio"></a>удалить элемент (среда Management Studio)
   При подключении к экземпляру сервера отчетов в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно удалять определения ролей и общие расписания. Нельзя удалять отчеты, модели и другие элементы на сервере отчетов. Для удаления содержимого сервера отчетов используется диспетчер отчетов. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, используйте функции управления в библиотеке SharePoint, в которой хранится нужное содержимое.  

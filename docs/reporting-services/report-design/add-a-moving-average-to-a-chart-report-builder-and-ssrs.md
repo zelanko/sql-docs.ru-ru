@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020001"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)
 Скользящее среднее — это среднее по данным в ряде, вычисленное за определенный период времени. В отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы скользящее среднее можно отобразить в диаграмме для определения важных трендов.  

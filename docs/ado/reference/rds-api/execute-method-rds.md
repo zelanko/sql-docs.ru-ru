@@ -2,7 +2,6 @@
 title: Выполнить метод (RDS) | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c050ef685d6e3ef566d78307db2c10c2c01c23e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 488b4056ca768cfae943558aefc9922bd1a16368
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288196"
 ---
 # <a name="execute-method-rds"></a>Выполнить метод (RDS)
 Выполняет запрос и создает набор записей ADO для использования в ADO 2.5 и более поздней версии.  
@@ -81,7 +81,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Указатель на сведения ошибки, возвращенной Execute. Если значение равно NULL, возвращается информация об ошибках.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  *HandlerString* параметр может иметь значение null. Что происходит в этом случае зависит от того, как настроен сервер служб удаленных рабочих СТОЛОВ. Обработчик строку «MSDFMAP.handler» указывает, что обработчик предоставленный корпорацией Майкрософт (Msdfmap.dll) следует использовать. Обработчик строку «MASDFMAP.handler,sample.ini» указывает, должны использоваться обработчик Msdfmap.dll и, аргумент «sample.ini» должен передаваться обработчику. Аргумент MSDFMAP.dll интерпретирует как направление использования sample.ini для проверки строк соединения и запроса.  
   
 ## <a name="applies-to"></a>Объект применения  

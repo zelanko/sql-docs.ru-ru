@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913129"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Позиционированное обновление и удаление операторов
 Приложения могут обновить или удалить текущую строку в результирующем наборе с позиционированного обновления или инструкция delete. Располагается update и delete операторы поддерживаются некоторые источники данных, но не все из них. Чтобы определить, является ли поддерживает источник данных расположен инструкции update и delete, приложение вызывает **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 или SQL_STATIC_CURSOR_ATTRIBUTES1 *свойство* (в зависимости от типа курсора). Обратите внимание, что библиотека курсоров ODBC имитирует располагается инструкции update и delete.  

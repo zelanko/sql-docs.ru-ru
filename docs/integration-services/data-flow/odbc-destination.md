@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aeaf5354106c548a8c0b107a99a9b0778be8006d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f9255f356347e0bcfb7a35bbe17b9c8ec6468b4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409986"
 ---
 # <a name="odbc-destination"></a>Назначение ODBC
   Назначение ODBC выполняет массовую загрузку данных в таблицы базы данных с поддержкой ODBC. Назначение ODBC использует диспетчер соединений ODBC для подключения к источнику данных.  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="data-access-mode"></a>Режим доступа к данным  
  Выберите метод загрузки данных в назначение. Доступные параметры показаны в следующей таблице.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Имя таблицы — пакетом|Выберите этот параметр, чтобы настроить назначение ODBC для работы в пакетном режиме. Если выбран этот параметр, становятся доступны следующие параметры.|  
 ||**Имя таблицы или представления**: выберите доступную таблицу или представление из списка.<br /><br /> Этот список содержит только первые 1000 таблиц. Если база данных содержит больше 1000 таблиц, можно ввести начальную часть имени таблицы или воспользоваться подстановочным знаком (\*), чтобы ввести любую часть имени для вывода нужных таблиц.<br /><br /> **Размер пакета**: введите размер пакета для массовой загрузки. Это количество строк, загружаемых в виде одного пакета.|  
@@ -165,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="truncation"></a>Усечение  
  Выберите порядок обработки усечений в потоке назначением ODBC: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Просмотрите описание ошибки.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Присвоить указанное значение выбранным ячейкам  

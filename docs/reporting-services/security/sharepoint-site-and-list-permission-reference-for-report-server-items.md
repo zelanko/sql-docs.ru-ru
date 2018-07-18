@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032921"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов
   В этом разделе содержится список разрешений в SharePoint, которые могут быть использованы для предоставления доступа к операциям сервера отчетов, работающего в режиме интеграции с SharePoint. Данный раздел может использоваться в качестве справки при создании пользовательских уровней разрешений.  

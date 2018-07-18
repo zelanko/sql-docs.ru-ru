@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906035"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Приложение ж драйвер рекомендации для обеспечения обратной совместимости
 В этом приложении сведения для модулей записи драйвера, работа в ODBC 3. *x* драйверы, которые должны поддерживать ODBC 2. *x* приложений. Дополнительные сведения об обратной совместимости см. в разделе [обратной совместимости и соответствия стандартам](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  

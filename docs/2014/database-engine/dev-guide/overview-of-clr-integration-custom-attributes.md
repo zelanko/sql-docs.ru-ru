@@ -1,0 +1,99 @@
+---
+title: Общие сведения о пользовательских атрибутах интеграции со средой CLR | Документация Майкрософт
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- custom attributes [CLR integration]
+- attributes [CLR integration]
+- common language runtime [SQL Server], attributes
+- database objects [CLR integration], custom attributes
+- building database objects [CLR integration], custom attributes
+ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
+caps.latest.revision: 39
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2153277cbb0592b808fde3e0a8bec3a8ca582455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324944"
+---
+# <a name="overview-of-clr-integration-custom-attributes"></a>Общие сведения о пользовательских атрибутах интеграции со средой CLR
+  В среде CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] допускается использование описательных ключевых слов, именуемых атрибутами. Эти атрибуты содержат дополнительную информацию по многим элементам, таким как методы и классы. Эти атрибуты сохраняются в сборке с метаданными объекта и могут быть использованы для описания кода другим инструментальным средствам разработки или для изменения поведения на этапе выполнения внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ При регистрации подпрограммы среды CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает набор свойств этой подпрограммы. Эти свойства подпрограммы определяют возможности подпрограммы и в частности указывают на то, может ли она быть индексирована. Так, если свойству `DataAccess` задается значение `DataAccessKind.Read`, тем самым открывается возможность обращения к данным из пользовательских таблиц [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутри функции CLR. В следующем примере показано простой пример, в котором `DataAccess` свойство задается для упрощения доступа к данным из пользовательской таблицы **table1**.  
+  
+```csharp  
+using System;  
+using System.Data;  
+using System.Data.Sql;  
+using System.Data.SqlTypes;  
+using Microsoft.SqlServer.Server;  
+using System.Data.SqlClient;  
+  
+public partial class UserDefinedFunctions  
+{  
+    [SqlFunction(DataAccess = DataAccessKind.Read)]  
+    public static string func1()  
+    {  
+        // Open a connection and create a command  
+        SqlConnection conn = new SqlConnection("context connection = true");  
+        conn.Open();  
+        SqlCommand cmd = conn.CreateCommand();  
+        cmd.CommandText = "SELECT str_val FROM table1 WHERE int_val = 10";  
+        // where table1 is a user table  
+        // Execute this command   
+        SqlDataReader rd = cmd.ExecuteReader();  
+        // Set string ret_val to str_val returned from the query  
+        string ret_val = rd.GetValue(0).ToString();  
+        rd.Close();  
+        return ret_val;  
+    }  
+}  
+```  
+  
+```vb  
+Imports System  
+Imports System.Data  
+Imports System.Data.Sql  
+Imports System.Data.SqlTypes  
+Imports Microsoft.SqlServer.Server  
+Imports System.Data.SqlClient  
+  
+Public partial Class UserDefinedFunctions  
+    <SqlFunction(DataAccess = DataAccessKind.Read)> _   
+    Public Shared Function func1() As String  
+        ' Open a connection and create a command  
+        Dim conn As SqlConnection = New SqlConnection("context connection = true")   
+        conn.Open()  
+        Dim cmd As SqlCommand =  conn.CreateCommand()   
+        cmd.CommandText = "SELECT str_val FROM table1 WHERE int_val = 10"  
+        ' where table1 is a user table  
+        ' Execute this command   
+        Dim rd As SqlDataReader =  cmd.ExecuteReader()   
+        ' Set string ret_val to str_val returned from the query  
+        Dim ret_val As String =  rd.GetValue(0).ToString()   
+        rd.Close()  
+        Return ret_val  
+    End Function  
+End Class  
+```  
+  
+ Что же касается подпрограмм [!INCLUDE[tsql](../../includes/tsql-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает свойства подпрограмм непосредственно из их определений. Сервер не анализирует тексты подпрограмм CLR для получения этих свойств. Вместо этого можно использовать пользовательские атрибуты для классов и членов классов, реализованных в языке [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+  
+ Пользовательские атрибуты, необходимые для подпрограмм CLR, пользовательских типов и агрегатов, определяются в пространстве имен `Microsoft.SqlServer.Server`.  
+  
+## <a name="see-also"></a>См. также  
+ [Пользовательские атрибуты для процедур CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
+  
+  

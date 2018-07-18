@@ -61,6 +61,7 @@
 ### [Настройка резервного копирования в репликах](configure-backup-on-availability-replicas-sql-server.md)  
 ### [Настройка распределенных групп доступности](configure-distributed-availability-groups.md)
 ### [Настройка распределенных транзакций](configure-availability-group-for-distributed-transactions.md)
+### [Настройка группы доступности для чтения и масштабирования](configure-read-scale-availability-groups.md)
 ### [Настройка реплики с доступом только для чтения](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [Настройка маршрутизации только для чтения](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [Удаление прослушивателя](remove-an-availability-group-listener-sql-server.md)  

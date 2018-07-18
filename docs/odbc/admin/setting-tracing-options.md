@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899979"
 ---
 # <a name="setting-tracing-options"></a>Настройка параметров трассировки
 **Трассировки** вкладке **администратор источников данных ODBC** диалоговое окно позволяет настроить способ управления трассируются вызовы функций ODBC.  

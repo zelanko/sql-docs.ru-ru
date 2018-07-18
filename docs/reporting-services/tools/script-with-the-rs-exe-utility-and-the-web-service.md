@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029428"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Создание скриптов с помощью программы rs.exe и веб-службы
   Разработчики и администраторы сервера отчетов могут выполнять на сервере отчетов операции с помощью программы **rs** (RS.exe). Эта программа позволяет управлять сервером отчетов программно с помощью скриптов на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  

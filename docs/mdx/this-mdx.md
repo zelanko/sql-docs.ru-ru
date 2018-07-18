@@ -1,34 +1,23 @@
 ---
 title: This (многомерные Выражения) | Документы Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- THIS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- This function [MDX]
-ms.assetid: 87acddee-ae54-49ee-8923-1b760606e8b7
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 87d902437558a4637d4f67c8338d40c3c3a361b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 77db403ee016283a565a6bc86d2f6857de0eff45
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743253"
 ---
 # <a name="this-mdx"></a>This (многомерные выражения)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Возвращает текущий вложенный куб для использования в назначениях в скрипте вычисления многомерных выражений.  
   
@@ -39,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 This   
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Это** функцию можно использовать вместо любого выражения вложенного куба для предоставления к текущему вложенному кубу в текущей области в скрипте вычисления многомерного Выражения. **Это** необходимо использовать функцию в левой части назначения.  
   
 ## <a name="examples"></a>Примеры  
@@ -86,7 +75,7 @@ This
  `End Scope;`  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Вычисления](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

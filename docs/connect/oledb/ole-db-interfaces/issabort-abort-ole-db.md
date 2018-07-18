@@ -2,10 +2,10 @@
 title: ISSAbort::Abort (OLE DB) | Документы Microsoft
 description: ISSAbort::Abort (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 444d51aeae49e9e626b0666904584bae8e2de6b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39f56dd6c058c82783c8cff786e210884cd3bf0c
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690267"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Отменяет текущий набор строк и любые пакетные команды, ассоциированные с текущей командой.  
   
@@ -42,16 +45,16 @@ ms.lasthandoff: 05/03/2018
 HRESULT Abort(void);  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если команда выполняется прерывание в хранимой процедуре, а также пакета команд, который содержит вызов хранимой процедуры прекращается выполнение хранимой процедуры (и все процедуры, которые процедуры). Если сервер находится в процессе передачи результирующего набора для клиента, передача будет остановлен. Если клиент не хочет получать результирующий набор, перед освобождением набора строк можно вызвать метод **ISSAbort::Abort** ; это ускорит высвобождение набора строк, но если в это время существует открытая транзакция и ее свойство XACT_ABORT имеет значение ON, при вызове **ISSAbort::Abort** произойдет откат транзакции.  
   
  После **ISSAbort::Abort** возвращает значение S_OK, связанный с ним **IMultipleResults** интерфейс переходит в нерабочем состоянии и возвращает результат DB_E_CANCELED все вызовы методов (за исключением методов, определенных **IUnknown** интерфейса) до освобождения. Если из интерфейса **IMultipleResults** до вызова метода **Abort** был получен интерфейс **IRowset**, он также входит в непригодное к использованию состояние и в ответ на любые вызовы методов возвращает результат DB_E_CANCELED (кроме методов, определенных для интерфейсов **IUnknown** и **IRowset::ReleaseRows**), пока не будет освобожден успешным вызовом метода **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], если параметр сервера XACT_ABORT имеет значение ON, вызов метода **ISSAbort::Abort** при подключении к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]прекратит все транзакции, явные и неявные, и совершит их откат. Более ранние версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не прекратят текущих транзакций.  
+>  Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], если параметр сервера XACT_ABORT имеет значение ON, выполнение **ISSAbort::Abort** завершить работу и откат текущей неявные или явные транзакции, при подключении к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Более ранние версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не прекратят текущих транзакций.  
   
 ## <a name="arguments"></a>Аргументы  
- Отсутствуют.  
+ Нет.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  

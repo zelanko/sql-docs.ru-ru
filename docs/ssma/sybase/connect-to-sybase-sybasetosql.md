@@ -3,8 +3,6 @@ title: Подключиться к Sybase (SybaseToSQL) | Документы Mic
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2152c6a02a7c02d7aea5fb5ab01c2aa5b74dfad4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1302d7e57d7ef2559d107039648e813e1292efa
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778407"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Подключиться к Sybase (SybaseToSQL)
 Используйте **соединиться Sybase** диалоговое окно подключения к экземпляру Sybase адаптивной Server Enterprise (ASE), которые требуется перенести.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
     |Настройка|Параметр Sybase 12,5|Параметр Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Имя сервера|Имя сервера|Server|  
+    |Имя сервера|Имя сервера|Сервер|  
     |Порт|Адрес порта сервера|Порт|  
     |Имя пользователя|Идентификатор пользователя|Идентификатор пользователя|  
     |Пароль|Пароль|Пароль|  
@@ -78,7 +77,7 @@ ms.lasthandoff: 05/03/2018
     |Настройка|Параметр Sybase 12,5-15|  
     |-----------|-----------------------------|  
     |Имя драйвера|Драйвер|  
-    |Имя сервера|Server|  
+    |Имя сервера|Сервер|  
     |Имя пользователя|UID|  
     |Пароль|PWD|  
     |Номер порта|Порт|  
@@ -91,7 +90,7 @@ ms.lasthandoff: 05/03/2018
   
     |Настройка|Параметр Sybase 12,5-15|  
     |-----------|-----------------------------|  
-    |Имя сервера|Server|  
+    |Имя сервера|Сервер|  
     |Имя пользователя|UID|  
     |Пароль|PWD|  
     |Номер порта|Порт|  

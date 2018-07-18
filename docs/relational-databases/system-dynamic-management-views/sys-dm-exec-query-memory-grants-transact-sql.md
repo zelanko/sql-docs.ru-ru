@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ad96038b59e283053b944f4bb88a7b0fdd0406f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: f783df6df249f5ce045454070771566b59ba0bba
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812058"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/23/2018
  Динамические административные представления в среде [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Чтобы избежать предоставления этих сведений, все строки, содержащие данные, не принадлежащие к подключенному клиенту, фильтруются. Кроме того, значения в столбцах **scheduler_id**, **wait_order**, **pool_id**, **group_id** фильтруются; задайте значение столбца значение NULL.  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_exec_query_memory_grants**.  
+> Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_exec_query_memory_grants**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/23/2018
 |**resource_semaphore_id**|**smallint**|Неуникальный идентификатор семафора ресурса, которого ожидает данный запрос.<br /><br /> **Примечание:** этот идентификатор уникален в версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Данное изменение может повлиять на устранение проблем в запросах. Дополнительные сведения см. в подразделе «Замечания» далее в этом разделе.|  
 |**queue_id**|**smallint**|Идентификатор ожидающей очереди, в которой данный запрос ожидает предоставления памяти. Значение NULL, если память уже предоставлена.|  
 |**wait_order**|**int**|Последовательный порядок ожидающих запросов в указанной **queue_id**. Это значение может изменяться для заданного запроса, если другие запросы отказываются от предоставления памяти или получают ее. Значение NULL, если память уже предоставлена.|  
-|**is_next_candidate**|**бит**|Является следующим кандидатом на предоставление памяти.<br /><br /> 1 = да<br /><br /> 0 = нет<br /><br /> NULL = память уже предоставлена.|  
+|**is_next_candidate**|**bit**|Является следующим кандидатом на предоставление памяти.<br /><br /> 1 = да<br /><br /> 0 = нет<br /><br /> NULL = память уже предоставлена.|  
 |**wait_time_ms**|**bigint**|Время ожидания в миллисекундах. Значение NULL, если память уже предоставлена.|  
 |**plan_handle**|**varbinary(64)**|Идентификатор для данного плана запроса. Используйте **sys.dm_exec_query_plan** чтобы извлечь фактический план XML.|  
 |**sql_handle**|**varbinary(64)**|Идентификатор текста [!INCLUDE[tsql](../../includes/tsql-md.md)] для данного запроса. Используйте **sys.dm_exec_sql_text** Чтобы получить фактический [!INCLUDE[tsql](../../includes/tsql-md.md)] текста.|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/23/2018
 ## <a name="permissions"></a>Разрешения  
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+На [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
    
 ## <a name="remarks"></a>Примечания  
  Обычный сценарий отладки для времени ожидания запроса может выглядеть следующим образом:  
@@ -80,47 +81,46 @@ ms.lasthandoff: 05/23/2018
   
 -   Проверьте резервирование памяти выполнения запроса в **sys.dm_os_memory_clerks** где `type = 'MEMORYCLERK_SQLQERESERVATIONS'`.  
   
--   Проверьте запросы, ожидающие предоставления памяти с помощью **sys.dm_exec_query_memory_grants**.  
+-   Проверьте запросы, ожидающие<sup>1</sup> предоставления памяти с помощью **sys.dm_exec_query_memory_grants**.  
   
-    ```  
+    ```sql  
     --Find all queries waiting in the memory queue  
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
+    
+    <sup>1</sup> в этом сценарии тип ожидания обычно является RESOURCE_SEMAPHORE. Дополнительные сведения см. в разделе [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
--   Поиск кэша для запросов с помощью выделения памяти[sys.dm_exec_cached_plans &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) и [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   Поиск кэша для запросов с помощью выделения памяти [sys.dm_exec_cached_plans &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) и [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
-    ```  
+    ```sql  
     -- retrieve every query plan from the plan cache  
     USE master;  
     GO  
     SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
     GO  
-  
     ```  
   
 -   Дополнительно изучите требующие много памяти запросы с помощью [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
   
-    ```  
+    ```sql  
     --Find top 5 queries by average CPU time  
     SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-    Plan_handle, query_plan   
+      plan_handle, query_plan   
     FROM sys.dm_exec_query_stats AS qs  
     CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
     ORDER BY total_worker_time/execution_count DESC;  
     GO  
-  
     ```  
   
 -   Если неконтролируемый запрос подозрителен, изучите план выполнения из [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) и текст пакета из [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
- Запросы, использующие динамические административные представления и содержащие предложение ORDER BY или статистические функции, могут увеличить потребление памяти и таким образом усугубить проблему, которую призваны устранить.  
+ Запросы, использующие динамические административные представления, которые включают `ORDER BY` или статистические выражения могут увеличить потребление памяти и таким образом устранить проблемы устранения неполадок.  
   
  Регулятор ресурсов позволяет администратору базы данных распределять ресурсы сервера между пулами ресурсов, используя до 64 пулов. Начиная с версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], каждый пул ведет себя как небольшой независимый экземпляр сервера и требует двух семафоров. Число строк, возвращаемых из **sys.dm_exec_query_resource_semaphores** может быть до 20 раз, чем количество строк, возвращаемых в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
-
-

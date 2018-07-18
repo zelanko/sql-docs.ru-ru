@@ -2,7 +2,6 @@
 title: Метод SaveToFile | Документы Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9beb8a1e2bfcc307c93b293a35dcac26cf0847a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dda2aaf0d73889ac74e171c48ed3bb3d320ddc4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281603"
 ---
 # <a name="savetofile-method"></a>Метод SaveToFile
 Сохраняет двоичное содержимое [поток](../../../ado/reference/ado-api/stream-object-ado.md) в файл.  
@@ -47,7 +47,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  Если перезаписать существующий файл (если **adSaveCreateOverwrite** имеет значение), **SaveToFile** усекает все байты из существующего исходного файла, выполните новый [электрической ПЕРЕГРУЗКИ](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **SaveToFile** может использоваться для копирования содержимого **поток** объекта в локальный файл. Нет изменений в содержимое или свойства **поток** объекта. **Поток** объект должен быть открыт перед вызовом метода **SaveToFile**.  
   
  Этот метод не изменяет связь **поток** объекта его источнику. **Поток** объект по-прежнему будут связаны с исходный URL-адрес или **записи** был при открытии источника.  

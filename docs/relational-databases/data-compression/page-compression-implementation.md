@@ -17,11 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a66084e2020225bc54a2b5b4419d6221db9c5814
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2e66e391c5d30097f714962d1f114fa2b324a5c0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999900"
 ---
 # <a name="page-compression-implementation"></a>Реализация сжатия страниц
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,18 +52,18 @@ ms.lasthandoff: 05/19/2018
   
  Следующая иллюстрация показывает образец страницы таблицы перед сжатием префикса.  
   
- ![Страница до сжатия префикса](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "Страница до сжатия префикса")  
+ ![Страница до сжатия префикса](media/skt-tblcompression1c.gif "Страница до сжатия префикса")  
   
  Следующая иллюстрация содержит эту же страницу после сжатия префикса. Префикс перемещается к заголовку, а значения столбца изменяются ссылками на данный префикс.  
   
- ![Страница после сжатия префикса](../../relational-databases/data-compression/media/tblcompression2.gif "Страница после сжатия префикса")  
+ ![Страница после сжатия префикса](media/tblcompression2.gif "Страница после сжатия префикса")  
   
  В первом столбце первой строки значение 4b указывает, что первые четыре символа префикса (aaab) присутствуют для этой строки вместе с символом b. Это делает результирующим значение aaabb, которое представляет собой исходное значение.  
   
 ## <a name="dictionary-compression"></a>сжатие словаря.  
  После завершения сжатия префикса применяется сжатие словаря. При сжатии словаря выполняется поиск на странице повторяющихся значений и сохранение их в области CI. В отличие от сжатия префикса, сжатие словаря не ограничено одним столбцом. При сжатии словаря можно заменить повторяющиеся значения, встречающиеся в любом месте страницы. Следующая иллюстрация содержит эту же страницу после сжатия словаря.  
   
- ![Страница после сжатия словаря](../../relational-databases/data-compression/media/tblcompression3.gif "Страница после сжатия словаря")  
+ ![Страница после сжатия словаря](media/tblcompression3.gif "Страница после сжатия словаря")  
   
  Обратите внимание, что ссылки на значение 4b существуют в различных столбцах страницы.  
   

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 451273b019c91d7bf92ae2f277bb4a7b69e668b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e150652a335175dce388d7cd0f5c40a79e61391
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352986"
 ---
 # <a name="publication-properties-subscription-options"></a>Свойства публикации, параметры подписки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
  Определяет, создаются ли файлы моментальных снимков каждый раз при запуске агента моментальных снимков (требует **Независимого агента распространителя**). Данный параметр доступен только для чтения; он устанавливается равным **True** , если выбран пункт **Создать моментальный снимок немедленно и обеспечить доступ к нему для инициализации подписок** на странице **Агент моментальных снимков** мастера создания публикаций (значение по умолчанию). Дополнительные сведения см. в статье [Создание и применение моментального снимка](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
   
  **Разрешать инициализацию из файлов резервных копий**  
- Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, разрешить ли использование файлов резервных копий для инициализации подписок. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+ Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, разрешить ли использование файлов резервных копий для инициализации подписок. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Разрешать подписчиков, отличных от подписчиков SQL Server**  
  Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, поддерживает ли публикация подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Установка данного параметра равным **True** определяет другие свойства публикации для поддержки подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При наличии подписок этот параметр доступен только для чтения; его нельзя установить равным **True** , если параметры **Разрешать немедленное обновление подписок**, **Разрешить обновляемые посредством очередей подписки**или **Разрешать одноранговые подписки** установлены равными **True**. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20e28e6b02aeacb4404f8d060137b1ed8d66e234
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e691d352507bddb75ba6db0986cc05a75eb6d858
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329078"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Завершение работы мастера (мастер импорта и экспорта SQL Server)
 После того как вы укажете, нужно ли выполнить операцию копирования незамедлительно, и при необходимости сохраните созданный мастером пакет, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Завершение работы мастера**. На этой странице просмотрите параметры, выбранные в мастере, и нажмите кнопку **Готово** , чтобы запустить операцию копирования.
@@ -30,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>Снимок экрана: страница "Завершение работы мастера" 
  На следующем снимке экрана приведен простой пример страницы **Завершение работы мастера**.  
   
- ![Страница "Завершение работы мастера" в мастере импорта и экспорта](../../integration-services/import-export-data/media/complete.png "Страница "Завершение работы мастера" в мастере импорта и экспорта")  
+ ![Страница "Завершение работы мастера" в мастере импорта и экспорта](../../integration-services/import-export-data/media/complete.png "Страница \"Завершение работы мастера\" в мастере импорта и экспорта")  
   
 ## <a name="review-the-options-you-selected"></a>Просмотр выбранных параметров  
  
