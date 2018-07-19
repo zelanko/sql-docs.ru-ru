@@ -1,2 +1,2 @@
-<Token>**ПРИМЕНЯЕТСЯ к:**![Да](media/yes.png)SQL Server (начиная с 2008)![Да](media/yes.png)базы данных SQL Azure (только управляемый экземпляр)![не](media/no.png)хранилище данных SQL Azure ![не](media/no.png)параллельные хранилища данных </Token>
+<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ ЭТОЙ СТАТЬИ:**![да](media/yes.png)SQL Server (начиная с версии 2008)![да](media/yes.png)База данных SQL Azure (только управляемый экземпляр)![нет](media/no.png)Хранилище данных SQL Azure![нет](media/no.png)Parallel Data Warehouse </Token>
 

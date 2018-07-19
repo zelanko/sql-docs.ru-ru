@@ -21,6 +21,7 @@
 
 ## [Репликация на подписчиков оптимизированных для памяти таблиц](replication-to-memory-optimized-table-subscribers.md)  
 ## [Репликация в базу данных SQL](replication-to-sql-database.md)  
+## [Репликация с помощью базы данных SQL](replication-with-sql-database-managed-instance.md)
 ## [Повторная публикация данных](republish-data.md)  
 ## [Репликация через Интернет](replication-over-the-internet.md)  
 ### [Публикация данных через Интернет с помощью виртуальных частных сетей](publish-data-over-the-internet-using-vpn.md)  
