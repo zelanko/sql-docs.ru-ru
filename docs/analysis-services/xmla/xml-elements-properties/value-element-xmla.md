@@ -1,5 +1,5 @@
 ---
-title: Значение элемента (XMLA) | Документы Microsoft
+title: Значение элемента (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2ecaaf902ee1f29700b2d6333bbccd549d9c2193
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576796"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062855"
 ---
 # <a name="value-element-xmla"></a>Value, элемент (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Содержит необходимое значение параметра [атрибута](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) элемента, который требуется добавить, [вставить](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) команды, или [ячейки](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) элемент будет обновлен [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)команды.  
+  Содержит необходимое значение параметра [атрибут](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) элемент могут добавить [вставить](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) команды, или [ячейки](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) элемента должны обновляться с [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576796"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34576796"
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34576796"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Для **атрибута** элементов, **значение** элемент содержит нужное значение, которое должен содержать элемент после **вставить** команда фиксируется. Дополнительные сведения о вставке элементов см. в разделе [Вставка, обновление и удаление членов &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
+ Для **атрибут** элементов, **значение** элемент содержит нужное значение, которое должен содержать элемент после **вставить** команда фиксируется. Дополнительные сведения о вставке элементов см. в разделе [Вставка, обновление и удаление членов &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
  Для **ячейки** элементов, **значение** элемент содержит нужное значение, которое должна содержать ячейка после **UpdateCells** команда фиксируется. Фактическое значение, хранящееся в таблице обратной записи для этой ячейки, представляет собой разность исходного значения ячейки и ее нужного значения.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34576796"
   
 ## <a name="see-also"></a>См. также
  [Элемент CellOrdinal &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/cellordinal-element-xmla.md)   
- [Элемент INSERT &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Вставка элемента &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Элемент UpdateCells &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

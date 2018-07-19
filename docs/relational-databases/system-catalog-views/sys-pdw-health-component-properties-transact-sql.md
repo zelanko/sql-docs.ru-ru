@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_health_component_properties (Transact-SQL) | Документы Microsoft
+title: sys.pdw_health_component_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,23 +17,24 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 60e82089b66ff4a8a4263dd56b9ec2871a92869a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058192"
 ---
 # <a name="syspdwhealthcomponentproperties-transact-sql"></a>sys.pdw_health_component_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Содержит свойства, описывающие устройства. Некоторые свойства отображения состояния устройства и некоторые свойства описания само устройство.  
+  Сохраняет свойства, описывающие устройства. Некоторые свойства отображения состояния устройства и некоторые свойства описания само устройство.  
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |property_id|**int**|Уникальный идентификатор свойства компонента.<br /><br /> идентификатором и идентификатор_компонента формируют ключ для этого представления.|NOT NULL|  
-|идентификатор_компонента|**int**|Идентификатор компонента. В разделе [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> идентификатором и идентификатор_компонента формируют ключ для этого представления.|NOT NULL|  
+|идентификатор_компонента|**int**|Идентификатор компонента. См. в разделе [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> идентификатором и идентификатор_компонента формируют ключ для этого представления.|NOT NULL|  
 |property_name|**nvarchar(255)**|Имя свойства.|NOT NULL|  
-|physical_name|**nvarchar(32)**|Имя свойства в соответствии с определением производителя.|NOT NULL|  
-|is_key|**бит**|Определяет, является ли экземпляр устройства уникальным или неуникальным.|NOT NULL<br /><br /> 0 — экземпляр устройства уникален.<br /><br /> 1 — устройства экземпляр не является уникальным.|  
+|physical_name|**nvarchar(32)**|Имя свойства, как определено производителем.|NOT NULL|  
+|is_key|**bit**|Определяет, является ли экземпляр устройство уникальным или неуникальным.|NOT NULL<br /><br /> 0 — экземпляр устройства является уникальным.<br /><br /> 1 — экземпляр устройство не является уникальным.|  
   
 ## <a name="see-also"></a>См. также  
  [Хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

@@ -1,5 +1,5 @@
 ---
-title: Создание скриптов служб Analysis Services в среде Management Studio | Документы Microsoft
+title: Создание скриптов служб Analysis Services в среде Management Studio | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28b1b0068f9ddd9bf47bc2fe93177db469c8b4f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016821"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057822"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Создание скриптов служб Analysis Services в среде Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживает функции создания скриптов, шаблоны и редакторы, используемые для разработки скриптов с объектами и задачами служб Analysis Services.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживает функции создания скриптов, шаблоны и редакторы, используемые для разработки скриптов с объектами и задачами служб Analysis Services.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Создание скриптов для задач служб Analysis Services в среде Management Studio  
  Создание скриптов для задач в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] осуществляется выбором одного из параметров "Скрипт" в диалоговом окне, соответствующем задаче. Все диалоговые окна, используемые для выполнения задач, таких как резервное копирование и восстановление базы данных, обработка объекта или создание агрегата, содержат параметр «Скрипт» в верхней части. Если выбрать один из этих параметров, создается скрипт XMLA на основе сведений и параметров в диалоговом окне.  
@@ -62,6 +62,6 @@ ms.locfileid: "34016821"
     >  Если требуется создать несколько различных версий файла, выберите пункт **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [Редактор запросов XMLA & #40; Analysis Services — многомерные данные & #41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [Редактор запросов XMLA &#40;службы Analysis Services — многомерные данные&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

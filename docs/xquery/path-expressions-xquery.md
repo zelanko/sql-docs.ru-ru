@@ -1,5 +1,5 @@
 ---
-title: Выражения пути (XQuery) | Документы Microsoft
+title: Выражения пути (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b964a11fe7e726abf1e5342641171aa11f583cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063987"
 ---
 # <a name="path-expressions-xquery"></a>Выражения пути (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   Выражения пути XQuery определяют местонахождение узлов, например элементов, атрибутов и текстовых узлов, в документе. Результат выражения пути всегда возвращается согласно порядку расположения узлов в документе, и узлы в результирующей последовательности не дублируются. Указывая путь, можно использовать полный или сокращенный синтаксис. Далее рассматривается полный синтаксис. Сокращенный синтаксис описывается ниже в этом разделе.  
   
 > [!NOTE]  
->  Так как образцы запросов в этом разделе приводятся **xml** типа столбцов **CatalogDescription** и **инструкции**в  **ProductModel** таблицы, следует ознакомиться с содержимым и структурой XML-документов, хранящихся в этих столбцах.  
+>  Так как образцы запросов в этом разделе указаны по отношению к **xml** типа столбцов **CatalogDescription** и **инструкции**в  **ProductModel** таблицы, следует ознакомиться с содержимым и структурой XML-документов, хранящихся в этих столбцах.  
   
  Путь в выражении может быть относительным или абсолютным. Ниже приведено описание обоих типов.  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Выражение относительного пути, `child::root/child::Location[attribute::LocationID=10]`, содержит два шага, разделенных косой чертой. Первый шаг определяет ось (`child`) и проверку узла (`root`). Второй шаг содержит все три компонента шага оси: ось (child), проверку узлов (`Location`) и предикат (`[attribute::LocationID=10]`).  
   
- Дополнительные сведения о компонентах шага оси см. в разделе [Указание оси в шаге выражения пути](../xquery/path-expressions-specifying-axis.md), [указания проверки узла в шаге выражения пути](../xquery/path-expressions-specifying-node-test.md), и [указании предикатов в Шаге выражения пути](../xquery/path-expressions-specifying-predicates.md).  
+ Дополнительные сведения о компонентах шага оси см. в разделе [Указание оси в шаге выражения пути](../xquery/path-expressions-specifying-axis.md), [указание проверки узла в шаге выражения пути](../xquery/path-expressions-specifying-node-test.md), и [указание предикатов в Шаге выражения пути](../xquery/path-expressions-specifying-predicates.md).  
   
 ## <a name="general-step"></a>Основной шаг  
  Основной шаг представляет собой обычное выражение, значением которого должна быть последовательность узлов.  
@@ -86,9 +87,9 @@ ms.lasthandoff: 05/03/2018
 id(/a/b)  
 ```  
   
- Дополнительные сведения о функции id см [идентификатор функции &#40;XQuery&#41;](../xquery/functions-on-sequences-id.md).  
+ Дополнительные сведения о функции id см [функция id &#40;XQuery&#41;](../xquery/functions-on-sequences-id.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Указание оси в шаге выражения пути](../xquery/path-expressions-specifying-axis.md)  
  Описывает работу с шагом оси в выражениях пути.  
   

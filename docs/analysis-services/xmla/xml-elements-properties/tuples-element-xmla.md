@@ -1,5 +1,5 @@
 ---
-title: Элемент Tuples (XML для Аналитики) | Документы Microsoft
+title: Элемент Tuples (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c0578c541c39bdaceede6bff8afdea3d642abcef
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576866"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062548"
 ---
 # <a name="tuples-element-xmla"></a>Элемент Tuples (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Содержит набор [кортежа](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) объектов для [оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) элемент, который использует [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
+  Содержит набор [кортежа](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) объектов для [оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) элемент, использующий [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34576866"
 </Axis>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "34576866"
 |Значение по умолчанию|None|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  

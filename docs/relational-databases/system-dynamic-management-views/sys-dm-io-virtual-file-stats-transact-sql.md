@@ -1,5 +1,5 @@
 ---
-title: sys.dm_io_virtual_file_stats (Transact-SQL) | Документы Microsoft
+title: sys.dm_io_virtual_file_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2720aba7dc9b3d8c1a6e34db5a588829245ed97a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465960"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066835"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34465960"
   Возвращает статистику ввода-вывода для данных и файлов журнала. Это динамическое административное представление заменяет [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) функции.  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], используйте имя **sys.dm_pdw_nodes_io_virtual_file_stats**. 
+>  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], используйте имя **sys.dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -73,13 +73,13 @@ sys.dm_pdw_nodes_io_virtual_file_stats
  
 Идентификатор файла. *file_id* имеет тип int и не имеет значения по умолчанию. Правильные значения — идентификационный номер файла или значение NULL. Когда указывается значение NULL, возвращаются все файлы базы данных.  
   
- Встроенная функция [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) можно указать и указывает на файл в текущей базе данных.  
+ Встроенная функция [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) можно указать и ссылается на файл в текущей базе данных.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Имя базы данных.</br></br>Хранилище данных SQL это имя базы данных, хранящихся на узле, который определяется pdw_node_id. Каждый узел имеет одну базу данных tempdb, 13 файлы. Каждый узел имеет одной базы данных на распространения, и каждую базу данных распространителя содержит 5 файлов. Например если каждый узел содержит 4 распределения, результаты показывают 20 файлов базы данных распространителя на pdw_node_id. 
+|**database_name**|**sysname**|Имя базы данных.</br></br>Для хранилища данных SQL это имя базы данных, хранящиеся на этом узле, который определяется pdw_node_id. Каждый узел имеет одной базы данных tempdb, с 13 файлов. Каждый узел также имеет одну базу данных на распределение, и каждую базу данных распространителя содержит 5 файлов. Например если каждый узел содержит 4 дистрибутивов, результаты показывают 20 файлов базы данных распространителя на pdw_node_id. 
 |**database_id**|**smallint**|Идентификатор базы данных.|  
 |**file_id**|**smallint**|Идентификатор файла.|  
 |**sample_ms**|**bigint**|Число миллисекунд, прошедших со времени запуска компьютера. Этот столбец может быть использован для сравнения различных вариантов выполнения этой функции.</br></br>Тип данных является **int** для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -125,7 +125,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Я O связанные динамические административные представления и функции &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Ввод-вывод связанные динамические административные представления и функции &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Элемент capability (XML для Аналитики) | Документы Microsoft
+title: Элемент capability (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 ms.openlocfilehash: dca8f668f64ab8ced157cf817be1f9f8f6390133
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574986"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062982"
 ---
 # <a name="capability-element-xmla"></a>Элемент Capability (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34574986"
 </ProtocolCapabilities>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34574986"
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34574986"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- **Возможность** элемент указывает, что определенные возможности, например двоичные операции или сжатие, поддерживается любое приложение, которое включено **ProtocolCapabilities** элемент заголовка в Заголовок SOAP SOAP-запроса или в экземпляре служб Analysis Services, которое включено **ProtocolCapabilities** элемент заголовка в заголовке SOAP SOAP-ответа. Значением элемента **Capability** является имя поддерживаемой возможности.  
+ **Возможность** элемент указывает, что определенные возможности, например двоичные операции или сжатие, поддерживаются либо приложением, которое включено **ProtocolCapabilities** элемент заголовка в Заголовке SOAP SOAP-запроса, либо в экземпляре служб Analysis Services, которое включено **ProtocolCapabilities** элемент заголовка в заголовке SOAP SOAP-ответа. Значением элемента **Capability** является имя поддерживаемой возможности.  
   
  В следующей таблице перечислены возможности, поддерживаемые службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_cluster_properties (Transact-SQL) | Документы Microsoft
+title: sys.dm_os_cluster_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 617f40a71074c8480d38e2eb5f59e108ee2d6ff7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464600"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058238"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,14 @@ ms.locfileid: "34464600"
  Данные свойства используются для задания значений, которые влияют на обнаружение отказов, время реакции на отказ и ведение журнала для мониторинга состояния работоспособности экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 
-|Имя столбца|property|Описание|  
+|Имя столбца|Свойство|Описание|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|Уровень ведения журнала для отказоустойчивого кластера SQL Server. Для записи дополнительных сведений в журналы ошибок с целью последующего устранения неполадок можно включить подробный уровень ведения журнала. Одно из следующих значений:<br /><br /> 0 — ведение журнала отключено (по умолчанию)<br /><br /> 1 — только ошибки<br /><br /> 2 — ошибки и предупреждения<br /><br /> Дополнительные сведения см. в разделе [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
-|SqlDumperDumpFlags|bigint|Флаги дампа SQLDumper определяют тип файлов дампа, созданных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение по умолчанию — 0.|  
+|VerboseLogging|BIGINT|Уровень ведения журнала для отказоустойчивого кластера SQL Server. Для записи дополнительных сведений в журналы ошибок с целью последующего устранения неполадок можно включить подробный уровень ведения журнала. Одно из следующих значений:<br /><br /> 0 — ведение журнала отключено (по умолчанию)<br /><br /> 1 — только ошибки<br /><br /> 2 — ошибки и предупреждения<br /><br /> Дополнительные сведения см. в разделе [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|SqlDumperDumpFlags|BIGINT|Флаги дампа SQLDumper определяют тип файлов дампа, созданных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение по умолчанию — 0.|  
 |SqlDumperDumpPath|nvarchar(260)|Место, в котором программа SQLDumper создает файлы дампа.|  
-|SqlDumperDumpTimeOut|bigint|Значение тайм-аута в миллисекундах, отведенное программе SQLDumper для создания дампа в случае возникновения сбоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение по умолчанию — 0.|  
-|FailureConditionLevel|bigint|Задает условия, при которых отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен отказать или перезапуститься. Значение по умолчанию равно 3. Подробное описание или изменить значения свойств, см. в [Настройка параметров свойства FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
-|HealthCheckTimeout|bigint|Время, в течение которого библиотека ресурсов компонента SQL Server Database Engine будет ждать сведений о состоянии сервера, прежде чем сервер переводится в категорию неотвечающих. Время ожидания указывается в миллисекундах. По умолчанию — 60 000. Дополнительные сведения или изменить значение этого свойства, в разделе [Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
+|SqlDumperDumpTimeOut|BIGINT|Значение тайм-аута в миллисекундах, отведенное программе SQLDumper для создания дампа в случае возникновения сбоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение по умолчанию — 0.|  
+|FailureConditionLevel|BIGINT|Задает условия, при которых отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен отказать или перезапуститься. Значение по умолчанию равно 3. Подробное объяснение или изменить значения свойств, см. в разделе [Настройка параметров свойства FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).|  
+|HealthCheckTimeout|BIGINT|Время, в течение которого библиотека ресурсов компонента SQL Server Database Engine будет ждать сведений о состоянии сервера, прежде чем сервер переводится в категорию неотвечающих. Время ожидания указывается в миллисекундах. По умолчанию — 60 000. Дополнительные сведения или изменить значение этого свойства, см. в разделе [Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md).|  
   
 ## <a name="permissions"></a>Разрешения  
  Требует разрешения VIEW SERVER STATE на экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

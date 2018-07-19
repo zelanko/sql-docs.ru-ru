@@ -1,5 +1,5 @@
 ---
-title: Синтаксические обозначения в SMO | Документы Microsoft
+title: Синтаксические обозначения в SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 623117b4906e00096788fc1f7746a7fe715c7379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966449"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062105"
 ---
 # <a name="smo-syntax-conventions"></a>Синтаксические обозначения в SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Условные обозначения Management Objects (SMO) основаны на тех, которые используются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET справочные материалы.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Условные обозначения Management Objects (SMO) основаны на тех, которые используются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] справочные материалы по Visual Studio .NET.  
   
 |Обозначение|Используется для|  
 |----------------|--------------|  

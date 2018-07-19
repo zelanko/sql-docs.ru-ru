@@ -1,5 +1,5 @@
 ---
-title: Подключение к экземпляру SQL Server | Документы Microsoft
+title: Подключение к экземпляру SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,15 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b1e22218bc0d30bcb06b5d170c2403e4e5785e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058862"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Соединение с экземпляром SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Первым шагом в программировании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] управляющих объектов (SMO) приложения является создание экземпляра <xref:Microsoft.SqlServer.Management.Smo.Server> объекта и его подключения к экземпляру компонента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Первым шагом в программировании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] управляющих объектов (SMO) приложения является создание экземпляра <xref:Microsoft.SqlServer.Management.Smo.Server> объект и установление его соединения с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Создать экземпляр <xref:Microsoft.SqlServer.Management.Smo.Server> и установить соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно тремя способами. Первый способ — использовать переменную объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection> для задания информации о соединении. Второй способ — задать информацию о соединении в явном виде, присвоив соответствующие значения свойствам объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Третий способ — передать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в конструктор объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. 
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
  Преимущество использования переменной объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection> в том, что заданную информацию о соединении можно применять многократно. Объявите переменную объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Затем объявите объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> и задайте для его свойств значения информации соединения, такие как имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и режим проверки подлинности. Затем передайте переменную объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection> в качестве параметра конструктору объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Не рекомендуется использование одного соединения несколькими серверными объектами одновременно. Чтобы получить копию настроек существующего соединения, вызовите метод <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A>.  
   
- **Настройка свойств серверного объекта явно**  
+ **Настройка свойств серверного объекта явным образом**  
   
  Другая возможность — объявить переменную объекта <xref:Microsoft.SqlServer.Management.Smo.Server> и вызвать конструктор по умолчанию. Объект <xref:Microsoft.SqlServer.Management.Smo.Server> попытается соединиться с экземпляром по умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используя все настройки соединения по умолчанию.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>Соединение с экземпляром SQL Server для RMO  
  Объекты RMO используют несколько отличный от SMO подход для соединения с сервером репликации.  
   
- Программные объекты RMO требуют, соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] производится с использованием <xref:Microsoft.SqlServer.Management.Common.ServerConnection> объекта, реализуемый **Microsoft.SqlServer.Management.Common** пространства имен. Это соединение с сервером производится независимо от программного объекта RMO. Затем оно передается объекту RMO либо во время создания экземпляра, либо присвоением его свойству <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> объекта. Это позволяет создать экземпляр объекта программирования RMO независимо от объекта соединения и разделить задачи их управления. Один объект соединения можно использовать с несколькими объектами программирования RMO. Для соединений с сервером репликации действуют следующие правила.  
+ Программных объектов RMO требуется, подключение к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] было выполнено с использованием <xref:Microsoft.SqlServer.Management.Common.ServerConnection> объект, реализуемый **Microsoft.SqlServer.Management.Common** пространства имен. Это соединение с сервером производится независимо от программного объекта RMO. Затем оно передается объекту RMO либо во время создания экземпляра, либо присвоением его свойству <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> объекта. Это позволяет создать экземпляр объекта программирования RMO независимо от объекта соединения и разделить задачи их управления. Один объект соединения можно использовать с несколькими объектами программирования RMO. Для соединений с сервером репликации действуют следующие правила.  
   
 -   Все свойства соединения определяются для конкретного объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
@@ -68,12 +69,12 @@ ms.lasthandoff: 05/03/2018
 -   До передачи соединения любому объекту программирования RMO следует вызвать метод <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A>.  
   
 ## <a name="examples"></a>Примеры  
-Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Соединение с локальным экземпляром SQL Server с использованием проверки подлинности Windows на языке Visual Basic  
  Для соединения с локальным экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не нужно писать много программного кода. Вместо этого для метода проверки подлинности и сервера используются настройки по умолчанию. Первая операция, требующая получения данных, вызовет создание соединения.  
  
-Данный пример является код Visual Basic .NET, который подключается к локальному экземпляру SQL Server с помощью проверки подлинности Windows. 
+В этом примере приведен код Visual Basic .NET, который подключается к локальному экземпляру SQL Server с использованием проверки подлинности Windows. 
 
 ```VBNET
 'Connect to the local, default instance of SQL Server.

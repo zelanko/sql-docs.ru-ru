@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_space_usage (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_log_space_usage (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
@@ -25,19 +25,19 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9bedbe8d5aa7b4e50ce4f486f2f3dbbf84e48a9c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464170"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061442"
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает пространства сведения об использовании для журнала транзакций. 
+Возвращает пространство сведения об использовании для журнала транзакций. 
   
 > [!NOTE]
-> Все файлы журнала транзакций будут объединены.  
+> Объединяются все файлы журнала транзакций.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "34464170"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Определение объема свободного журнала пространства в базе данных tempdb   
-Следующий запрос возвращает общего свободного пространства журнала в мегабайтах (МБ), доступных в базе данных tempdb.
+Следующий запрос возвращает общее свободное пространство журнала в мегабайтах (МБ), доступных в базе данных tempdb.
 
 ```sql
 USE tempdb;  

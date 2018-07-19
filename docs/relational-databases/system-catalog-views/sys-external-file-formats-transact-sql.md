@@ -1,5 +1,5 @@
 ---
-title: sys.external_file_formats (Transact-SQL) | Документы Microsoft
+title: sys.external_file_formats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,10 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f834434e2e03bad82df9221b1d66db6f4f1e300a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059131"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>sys.external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -34,15 +35,15 @@ ms.lasthandoff: 05/04/2018
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|Идентификатор объекта для формата внешнего файла.||  
-|имя|**sysname**|Имя формата файла. в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], является уникальным для базы данных. В [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], он уникален для сервера.||  
-|format_type|**tinyint**|Тип формата файла.|DELIMITEDTEXT, RCFILE, ORC, PARQUET.|  
-|признак_конца_поля|**nvarchar(10)**|Format_type = DELIMITEDTEXT, признак конца поля.||  
+|name|**sysname**|Имя формата файла. в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], является уникальным для базы данных. В [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], он уникален для сервера.||  
+|format_type|**tinyint**|Тип формата файла.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
+|признак_конца_поля|**nvarchar(10)**|Format_type = DELIMITEDTEXT, это признак конца поля.||  
 |string_delimiter|**nvarchar(10)**|Format_type = DELIMITEDTEXT, это разделитель строк.||  
 |date_format|**nvarchar(50)**|Format_type = DELIMITEDTEXT, это определяемые пользователем формат даты и времени.||  
-|use_type_default|**бит**|Format_type = текста с ЗАПЯТЫМИ, указывает способ обработки отсутствующих значений при PolyBase, импорт данных из текстовых файлов HDFS в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 — сохранение отсутствующих значений строку «NULL».<br /><br /> 1 — сохранить отсутствующие значения как значение столбца по умолчанию.|  
-|serde_method|**nvarchar(255)**|Format_type = RCFILE, метод сериализации или десериализации.||  
-|признак_конца_строки|**nvarchar(10)**|Format_type = DELIMITEDTEXT, это строка символов, завершает каждой строки в файле внешних Hadoop.|Всегда «\n».|  
-|кодировка|**nvarchar(10)**|Format_type = DELIMITEDTEXT, этот способ кодировки для внешнего файла Hadoop.|Всегда «UTF-8».|  
+|use_type_default|**bit**|Format_type = текста с разделителями, указывает способ обработки отсутствующих значений, когда PolyBase Импорт данных из текстовых файлов HDFS в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 — хранения отсутствующих значений в строку «NULL».<br /><br /> 1 — сохраните отсутствующие значения как значение столбца по умолчанию.|  
+|serde_method|**nvarchar(255)**|Format_type = RCFILE, метод сериализации/десериализации.||  
+|признак_конца_строки|**nvarchar(10)**|Format_type = DELIMITEDTEXT, это символьная строка, которая завершает каждой строки во внешнем файле Hadoop.|Всегда «\n».|  
+|кодировка|**nvarchar(10)**|Format_type = DELIMITEDTEXT, этот способ кодирования для внешнего файла Hadoop.|Всегда 'UTF8'.|  
 |data_compression|**nvarchar(255)**|Метод сжатия данных для внешних данных.|Format_type = DELIMITEDTEXT:<br /><br /> -«org.apache.hadoop.io.compress.DefaultCodec»<br />-«org.apache.hadoop.io.compress.GzipCodec»<br /><br /> Format_type = RCFILE:<br /><br /> -«org.apache.hadoop.io.compress.DefaultCodec»<br /><br /> Format_type = ORC:<br /><br /> -«org.apache.hadoop.io.compress.DefaultCodec»<br />-«org.apache.hadoop.io.compress.SnappyCodec»<br /><br /> Format_type = PARQUET:<br /><br /> -«org.apache.hadoop.io.compress.GzipCodec»<br />-«org.apache.hadoop.io.compress.SnappyCodec»|  
   
 ## <a name="permissions"></a>Разрешения  

@@ -1,5 +1,5 @@
 ---
-title: xp_grantlogin (Transact-SQL) | Документы Microsoft
+title: xp_grantlogin (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 0fd1ba37422fa5491d6dd834bc35cdd536830b97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258851"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058792"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33258851"
   Предоставляет группе или пользователю Windows доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) вместо этого.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,16 +48,16 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
   
 ## <a name="arguments"></a>Аргументы  
  [  **@loginame =** ] **"***входа***"**  
- Имя добавляемого пользователя или группы Windows. Пользователь или группа Windows должны быть дополнены именем домена Windows в виде *домена*\\*пользователя*. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
+ Имя добавляемого пользователя или группы Windows. Windows пользователь или группа должны быть дополнены именем домена Windows в виде *домена*\\*пользователя*. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@logintype =** ] **"***logintype***"**  
- Уровень безопасности входного имени, которому предоставляется доступ. *logintype* — **varchar(5)**, значение по умолчанию NULL. Только **администратора** можно указать. Если **администратора** указано, *входа* предоставляется доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и добавлен в качестве члена **sysadmin** предопределенной роли сервера.  
+ Уровень безопасности входного имени, которому предоставляется доступ. *Тип учетных данных* — **varchar(5)**, значение по умолчанию NULL. Только **администратора** можно указать. Если **администратора** указано, *входа* к предоставлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и добавляется как член **sysadmin** предопределенной роли сервера.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **xp_grantlogin** теперь системной хранимой процедурой, а не расширенной хранимой процедуры. **xp_grantlogin** вызовы **sp_grantlogin** и **sp_addsrvrolemember**.  
+## <a name="remarks"></a>Примечания  
+ **xp_grantlogin** является в настоящее время системной хранимой процедуры, а не расширенной хранимой процедуры. **xp_grantlogin** вызовы **sp_grantlogin** и **sp_addsrvrolemember**.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **securityadmin** предопределенной роли сервера. При изменении *logintype*, требуется членство в **sysadmin** предопределенной роли сервера.  
@@ -70,6 +70,6 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
  [xp_enumgroups &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md)   
  [xp_loginconfig &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
  [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)  
+ [Хранимая процедура sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)  
   
   

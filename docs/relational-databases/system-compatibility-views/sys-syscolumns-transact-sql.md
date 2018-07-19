@@ -1,5 +1,5 @@
 ---
-title: sys.syscolumns (Transact-SQL) | Документы Microsoft
+title: sys.syscolumns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,10 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ab6fb39894c7cbe10be6d00d5fc74e782ca5650e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061953"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
 |**xtype**|**tinyint**|Тип физического хранилища из **sys.types**.|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Идентификатор расширенного пользовательского типа. Вызывает переполнение или возвращает значение NULL, если количество типов данных превышает 32 767.|  
-|**длина**|**smallint**|Максимальная длина физического хранилища из **sys**. **типы**.|  
+|**Длина**|**smallint**|Максимальная длина физического хранилища из **sys**. **типы**.|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**XScale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**идентификатора столбца**|**smallint**|Идентификатор столбца или параметра.|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/04/2018
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Идентификатор значения по умолчанию для данного столбца.|  
 |**Домен**|**int**|Идентификатор правила или ограничения CHECK для данного столбца.|  
-|**number**|**smallint**|Номер подпроцедуры, если процедура сгруппирована:<br /><br /> 0 = Непроцедурные элементы.|  
+|**номер**|**smallint**|Номер подпроцедуры, если процедура сгруппирована:<br /><br /> 0 = Непроцедурные элементы.|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**smallint**|Смещение в строке, по которому находится данный столбец.|  
@@ -67,11 +68,11 @@ ms.lasthandoff: 05/04/2018
 |**usertype**|**smallint**|Идентификатор определяемого пользователем типа из **sys.types**. Вызывает переполнение или возвращает значение NULL, если количество типов данных превышает 32 767.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Уровень точности для данного столбца:<br /><br /> -1 = **xml** или тип больших значений.|  
-|**масштаб**|**int**|Масштаб для данного столбца.<br /><br /> NULL = данные не числовые.|  
+|**Масштаб**|**int**|Масштаб для данного столбца.<br /><br /> NULL = данные не числовые.|  
 |**iscomputed**|**int**|Флаг, обозначающий, является ли столбец вычисляемым:<br /><br /> 0 = невычисляемый;<br /><br /> 1 = вычисляемый.|  
 |**isoutparam**|**int**|Указывает, относится ли параметр процедуры к выходным параметрам:<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |**IsNullable**|**int**|Указывает, допускает ли столбец значения NULL:<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|**Параметры сортировки**|**sysname**|Имя параметров сортировки для данного столбца. Содержит NULL, если столбец не относится к символьному типу.|  
+|**параметры сортировки**|**sysname**|Имя параметров сортировки для данного столбца. Содержит NULL, если столбец не относится к символьному типу.|  
   
 ## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

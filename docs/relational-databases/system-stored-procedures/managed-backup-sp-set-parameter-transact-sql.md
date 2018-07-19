@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (Transact-SQL) | Документы Microsoft
+title: managed_backup.sp_set_parameter (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a9f1d5eeec1fc5b24fbc1974d27e9f4b5efd00d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238341"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058832"
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> Аргументы  
  @parameter_name  
- Имя параметра, для которого требуется установить значение. @parameter_name — Это NVARCHAR(128). Доступные имена параметров, **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**, и **StorageOperationDebugXevent**.  
+ Имя параметра, для которого требуется установить значение. @parameter_name — Это NVARCHAR(128). Доступные имена параметров — **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**, и **StorageOperationDebugXevent**.  
   
  @parameter_value  
- Задаваемое значение параметра. @parameter значение — это NVARCHAR(128).  Ниже приведены разрешенные пары имен и значений параметров.  
+ Задаваемое значение параметра. @parameter Value — это NVARCHAR(128).  Ниже приведены разрешенные пары имен и значений параметров.  
   
--   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = «электронная почта»  
+-   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = «email»  
   
 -   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy': @parameter_value = {'true' | 'false'}  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_addlogin (Transact-SQL) | Документы Microsoft
+title: sp_addlogin (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 5f9458c1459aef35bcf9d6e47963025f87000c32
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239924"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060159"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33239924"
   Создает новое имя входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], позволяющее пользователю подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с применением проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) вместо этого.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -69,10 +69,10 @@ sp_addlogin [ @loginame = ] 'login'
  База данных, используемая по умолчанию именем входа (база данных, к которой подключается пользователь с этим именем после входа в систему). *База данных* — **sysname**, значение по умолчанию **master**.  
   
  [ @deflanguage=] '*языка*"  
- Язык по умолчанию для имени входа. *Язык* — **sysname**, значение по умолчанию NULL. Если *язык* не указан, значение по умолчанию *языка* нового имени входа установлена на текущий язык по умолчанию сервера.  
+ Язык по умолчанию для имени входа. *Язык* — **sysname**, значение по умолчанию NULL. Если *языка* не указан, значение по умолчанию *языка* новое имя входа имеет значение текущий язык по умолчанию сервера.  
   
  [ @sid=] '*sid*"  
- Идентификатор безопасности (SID). *SID* — **varbinary(16)**, значение по умолчанию NULL. Если *sid* имеет значение NULL, система сама формирует SID для нового имени входа. Несмотря на использование **varbinary** тип данных значения, отличные от NULL должно быть ровно 16 байт и не должен существовать. Указание *sid* может быть полезным, например, когда скриптах или переносе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имена входа с одного сервера на другой, нужно, чтобы иметь тот же SID на разных серверах.  
+ Идентификатор безопасности (SID). *SID* — **varbinary(16)**, значение по умолчанию NULL. Если *sid* имеет значение NULL, система сама формирует SID для нового имени входа. Несмотря на использование **varbinary** тип данных значения, отличные от NULL должно быть ровно 16 байт и не должен существовать. Указание *sid* полезно, например, при перемещении или сценариев [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имена входа с одного сервера на другой, нужно, чтобы иметь тот же SID на разных серверах.  
   
  [ @encryptopt=] '*encryption_option*"  
  Этот аргумент определяет, передается ли пароль в виде открытого текста или в виде его хэша. Шифрование при этом не выполняется. Слово «шифрование» используется в этом контексте для обратной совместимости. Если в процедуру передан открытый пароль, он хэшируется. Хэш сохраняется. *encryption_option* — **varchar(20)**, и может принимать одно из следующих значений.  
@@ -86,16 +86,16 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена входа не может содержать обратную косую черту (\\); быть зарезервированными именами, такими как sa или public, или уже существует; или иметь значение NULL или пустая строка (`''`).  
+## <a name="remarks"></a>Примечания  
+ Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена входа не может содержать обратную косую черту (\\); быть зарезервированное имя, например sa или public, или уже существует; или иметь значение NULL или пустую строку (`''`).  
   
- Если предоставлено имя базы данных по умолчанию, к ней можно подключиться, не выполняя инструкцию USE. Тем не менее, нельзя использовать базу данных по умолчанию, пока вы получают доступ к этой базе данных владельцем базы данных (с помощью [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) или [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) или [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
+ Если предоставлено имя базы данных по умолчанию, к ней можно подключиться, не выполняя инструкцию USE. Тем не менее, нельзя использовать базу данных по умолчанию, пока вам предоставляется доступ к базе данных, владелец базы данных (с помощью [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) или [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) или [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
   
  Номер SID — это идентификатор GUID, однозначно определяющий имя входа на сервере.  
   
  Изменение языка по умолчанию на сервере не приводит к изменению языка по умолчанию существующих имен входа. Чтобы изменить язык по умолчанию сервера, используйте [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- С помощью **skip_encryption** отключение пароля хэширования полезно, если пароль уже хэширован при добавлении имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если пароль был хэширован более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте **skip_encryption_old**.  
+ С помощью **skip_encryption** для подавления пароль хэширования полезно, если пароль уже хэширован при добавлении имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если пароль был хэширован более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], использовать **skip_encryption_old**.  
   
  Хранимая процедура sp_addlogin не может быть выполнена в пользовательской транзакции.  
   
@@ -144,7 +144,7 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ```  
   
 ## <a name="see-also"></a>См. также  
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_droplogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Хранимая процедура sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

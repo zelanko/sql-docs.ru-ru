@@ -1,5 +1,5 @@
 ---
-title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Документы Microsoft
+title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a109d7f23ad475fa9d8f1229be5011495f94354f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060372"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Возвращает **stmt_sql_handle** для [!INCLUDE[tsql](../../includes/tsql-md.md)] оператор в указанный тип параметризации (простую или принудительную). Это позволяет ссылаться на запросах, хранимых в хранилище запросов с помощью их **stmt_sql_handle** Если известен их текст.  
+  Получает **stmt_sql_handle** для [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции в разделе указанный тип параметризации (простую или принудительную). Это позволяет ссылаться на запросах, хранимых в Store запроса с помощью их **stmt_sql_handle** когда вы знаете их текст.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,20 +47,20 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  — Текст запроса в хранилище запросов, требуется дескриптор. *query_sql_text* — **nvarchar(max)**, не имеет значения по умолчанию.  
   
  *query_param_type*  
- Представляет тип параметра запроса. *query_param_type* — **tinyint**. Возможны следующие значения:  
+ Является типом параметра запроса. *query_param_type* — **tinyint**. Возможны следующие значения:  
   
--   NULL — по умолчанию равно 0  
+-   NULL — значение по умолчанию — 0  
   
--   0 — нет  
+-   0 — none  
   
--   1 — пользователя  
+-   1 — пользователь  
   
 -   2 — простой  
   
 -   3 — принудительно  
   
 ## <a name="columns-returned"></a>Возвращаемые столбцы  
- В следующей таблице перечислены столбцы, sys.fn_stmt_sql_handle_from_sql_stmt возвращает.  
+ В следующей таблице перечислены столбцы этого sys.fn_stmt_sql_handle_from_sql_stmt возвращает.  
   
 |Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
@@ -70,20 +71,20 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется **EXECUTE** разрешения в базе данных и **удалить** разрешения на представления каталога хранилища запросов.  
+ Требуется **EXECUTE** разрешений в базе данных, и **удалить** разрешения на представления каталога хранилища запросов.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример выполняет инструкцию, а затем использует `sys.fn_stmt_sql_handle_from_sql_stmt` чтобы возвращать дескриптор SQL этого оператора.  
+ Следующий пример выполняет инструкцию, а затем использует `sys.fn_stmt_sql_handle_from_sql_stmt` будет возвращен дескриптор этой инструкции SQL.  
   
 ```  
 SELECT * FROM sys.databases;   
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- Функция для согласования с другими динамическими административными представлениями данных в хранилище запросов. Следующий пример:  
+ Функция для сопоставления данных Store запроса с помощью других динамических административных представлений. Следующий пример:  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  

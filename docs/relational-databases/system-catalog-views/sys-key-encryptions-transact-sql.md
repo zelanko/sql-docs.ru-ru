@@ -1,5 +1,5 @@
 ---
-title: sys.key_encryptions (Transact-SQL) | Документы Microsoft
+title: sys.key_encryptions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 160c4852299ff710c4c281dc93231a6385194376
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061532"
 ---
 # <a name="syskeyencryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +41,9 @@ ms.lasthandoff: 05/04/2018
 |Имена столбцов|Типы данных|Описание|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|Идентификатор зашифрованного ключа.|  
-|**Отпечаток**|**varbinary(32)**|Хэш SHA-1 сертификата, с помощью которого был зашифрован ключ, или идентификатор GUID симметричного ключа, которым был зашифрован этот ключ.|  
+|**отпечаток**|**varbinary(32)**|Хэш SHA-1 сертификата, с помощью которого был зашифрован ключ, или идентификатор GUID симметричного ключа, которым был зашифрован этот ключ.|  
 |**crypt_type**|**char(4)**|Тип шифрования:<br /><br /> ESKS = зашифровано симметричным ключом<br /><br /> ESKP, ESP2 или ESP3 = зашифровано паролем<br /><br /> EPUC = зашифровано сертификатом<br /><br /> EPUA = зашифровано асимметричным ключом<br /><br /> ESKM = зашифровано главным ключом|  
-|**crypt_type_desc**|**nvarchar(60)**|Описание типа шифрования:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(Начиная с версии [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)], включает номер версии для использования CSS.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Примечание: Для защиты главного ключа службы используется Windows DPAPI.|  
+|**crypt_type_desc**|**nvarchar(60)**|Описание типа шифрования:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(Начиная с версии [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)], включает номер версии для использования в CSS.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Примечание: Windows DPAPI используется для защиты главного ключа службы.|  
 |**crypt_property**|**varbinary(max)**|Подписанные или зашифрованные биты.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -52,6 +53,6 @@ ms.lasthandoff: 05/04/2018
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
+ [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.assembly_modules (Transact-SQL) | Документы Microsoft
+title: sys.assembly_modules (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,15 +26,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d457f00cdab5d8b7e6584c895c9a9070a1d9e395
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062029"
 ---
 # <a name="sysassemblymodules-transact-sql"></a>sys.assembly_references (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Возвращает по одной строке для каждой функции, процедуры или триггера, которые определены сборкой среды CLR. Это представление каталога сопоставляет хранимые процедуры, триггеры или функции среды CLR с их базовой реализацией. Объекты типов TA, AF, PC, FS и FT имеют связанный с ними модуль сборки. Чтобы найти взаимосвязь между объектом и сборкой, можно соединить это представление каталога с другими представлениями каталога. Например, при создании хранимой процедурой CLR она представлена одной строкой в **sys.objects**по одной строке в **sys.procedures** (наследуется от класса **sys.objects**), и одна строка в **sys.assembly_modules**. Сама хранимая процедура представлена метаданными **sys.objects** и **sys.procedures**. Ссылки на процедуры базовой реализацией среды CLR можно найти на **sys.assembly_modules**.  
+  Возвращает по одной строке для каждой функции, процедуры или триггера, которые определены сборкой среды CLR. Это представление каталога сопоставляет хранимые процедуры, триггеры или функции среды CLR с их базовой реализацией. Объекты типов TA, AF, PC, FS и FT имеют связанный с ними модуль сборки. Чтобы найти взаимосвязь между объектом и сборкой, можно соединить это представление каталога с другими представлениями каталога. Например, при создании хранимую процедуру CLR, он отображается одна строка в **sys.objects**по одной строки в **sys.procedures** (который наследуется от **sys.objects**), и одна строка в **sys.assembly_modules**. Сама хранимая процедура представлена метаданными **sys.objects** и **sys.procedures**. Ссылки на процедуры базовой реализацией среды CLR можно найти в **sys.assembly_modules**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -42,8 +43,8 @@ ms.lasthandoff: 05/04/2018
 |**assembly_id**|**int**|Идентификатор той сборки, откуда был создан этот модуль.|  
 |**assembly_class**|**sysname**|Имя класса в сборке, определяющее этот модуль.|  
 |**assembly_method**|**sysname**|Имя метода в рамках **assembly_class** , определяющее этот модуль.<br /><br /> Для агрегатных функций (AF) имеет значение NULL.|  
-|**null_on_null_input**|**бит**|Модуль выдает выходные значения NULL при любых входных значениях NULL.|  
-|**execute_as_principal_id**|**int**|Идентификатор участника базы данных, в контексте которого производится выполнение, как указано в предложении EXECUTE AS функции, хранимой процедуры или триггера среды CLR. <br /><br /> NULL = EXECUTE AS CALLER. Это значение по умолчанию.<br /><br /> Идентификатор указанного участника базы данных = EXECUTE AS SELF, EXECUTE AS *имя_пользователя*, или EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**null_on_null_input**|**bit**|Модуль выдает выходные значения NULL при любых входных значениях NULL.|  
+|**execute_as_principal_id**|**int**|Идентификатор участника базы данных, в контексте которого производится выполнение, как указано в предложении EXECUTE AS функции, хранимой процедуры или триггера среды CLR. <br /><br /> NULL = EXECUTE AS CALLER. Это значение по умолчанию.<br /><br /> Идентификатор указанного участника базы данных = EXECUTE AS SELF, EXECUTE AS *user_name*, или EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -1,5 +1,5 @@
 ---
-title: sys.sysobjects (Transact-SQL) | Документы Microsoft
+title: sys.sysobjects (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 45a2efd58090fa6b319c092f433b45b8b9a50d41
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221865"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061672"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "33221865"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|имя|**sysname**|Имя объекта|  
+|name|**sysname**|Имя объекта|  
 |идентификатор|**int**|Идентификатор объекта|  
 |xtype|**char(2)**|Тип объекта. Может быть одним из следующих типов объекта:<br /><br /> AF = агрегатная функция (среда CLR)<br /><br /> C = ограничение CHECK<br /><br /> D = ограничение по умолчанию или DEFAULT<br /><br /> F = ограничение FOREIGN KEY<br /><br /> L = журнал<br /><br /> FN = скалярная функция<br /><br /> FS = скалярная функция сборки (среда CLR)<br /><br /> FT = функция сборки (среда CLR) с табличным значением<br /><br /> IF = подставляемая табличная функция<br /><br /> IT = внутренняя таблица<br /><br /> P = хранимая процедура<br /><br /> PC = хранимая процедура сборки (среда CLR)<br /><br /> PK = ограничение PRIMARY KEY (тип K)<br /><br /> RF = хранимая процедура фильтра репликации<br /><br /> S = системная таблица<br /><br /> SN = синоним<br /><br /> SQ = очередь обслуживания<br /><br /> TA = триггер DML сборки (среда CLR)<br /><br /> TF = табличная функция<br /><br /> TR = триггер DML SQL<br /><br /> TT = табличный тип<br /><br /> U = пользовательская таблица<br /><br /> UQ = ограничение UNIQUE (тип K)<br /><br /> V = представление<br /><br /> X = расширенная хранимая процедура|  
-|uid|**smallint**|Идентификатор схемы владельца объекта. Для баз данных, обновленных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентификатор схемы эквивалентен идентификатору владельца. Вызывает переполнение или возвращает значение NULL, если количество пользователей и ролей превышает 32 767.<br /><br /> **\*\* Важные \* \***  при использовании одного из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции DDL, необходимо использовать [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) представления вместо sys.Objects каталога.<br /><br /> СОЗДАНИЕ &AMP;#124; ALTER &AMP;#124; УДАЛЕНИЯ ПОЛЬЗОВАТЕЛЯ<br /><br /> СОЗДАНИЕ &AMP;#124; ALTER &AMP;#124; УДАЛЕНИЯ РОЛИ<br /><br /> СОЗДАНИЕ &AMP;#124; ALTER &AMP;#124; УДАЛЕНИЯ РОЛИ ПРИЛОЖЕНИЯ<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**smallint**|Идентификатор схемы владельца объекта. Для баз данных, обновленных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентификатор схемы эквивалентен идентификатору владельца. Вызывает переполнение или возвращает значение NULL, если количество пользователей и ролей превышает 32 767.<br /><br /> **\*\* Важные \* \***  при использовании одного из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции DDL, необходимо использовать [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) представления вместо sys.Objects каталога.<br /><br /> СОЗДАНИЕ &AMP;#124; ALTER &AMP;#124; DROP USER<br /><br /> СОЗДАНИЕ &AMP;#124; ALTER &AMP;#124; DROP ROLE<br /><br /> СОЗДАНИЕ &AMP;#124; ALTER &AMP;#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |сведения|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

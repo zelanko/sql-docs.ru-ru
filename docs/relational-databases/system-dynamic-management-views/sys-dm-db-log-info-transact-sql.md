@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_info (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_log_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e2b99ce1a417c31b4ca81eb9f538acda0edfc517
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464660"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061522"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Возвращает [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) сведения журнала транзакций. Обратите внимание, что все файлы журнала транзакций, объединяются в выходной таблице. Каждая строка в выходных данных представляет VLF в журнале транзакций и предоставляет сведения, относящиеся к этой виртуального файла Журнала в журнале.
+Возвращает [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) сведения журнала транзакций. Обратите внимание, что все файлы журнала транзакций, объединяются в выходной таблице. Каждая строка в выходных данных представляет VLF в журнале транзакций и предоставляет сведения, относящиеся к этой VLF в журнале.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,10 +42,10 @@ sys.dm_db_log_info ( database_id )
 ``` 
 
 ## <a name="arguments"></a>Аргументы  
- *database_id* | ЗНАЧЕНИЕ NULL | ПО УМОЛЧАНИЮ  
- Идентификатор базы данных. Аргумент *database_id* имеет тип **int**. Допустимыми входными значениями являются идентификатор базы данных, NULL или по умолчанию. Значение по умолчанию — NULL. Значение NULL по умолчанию значения и эквивалентны в контексте текущей базы данных.
+ *database_id* | NULL | ПО УМОЛЧАНИЮ  
+ Идентификатор базы данных. Аргумент *database_id* имеет тип **int**. Допустимыми входными значениями являются Идентификационный номер базы данных, значение NULL или значение по умолчанию. Значение по умолчанию — NULL. Значение NULL и значение по умолчанию — это эквивалент значения в контексте текущей базы данных.
  
- Укажите значение NULL для возврата сведений о VLF текущей базы данных.
+ Укажите значение NULL для возврата сведений о виртуальных файлах Журнала текущей базы данных.
 
  Встроенная функция [DB_ID](../../t-sql/functions/db-id-transact-sql.md) можно указать. При использовании `DB_ID` без указания имени базы данных, уровень совместимости текущей базы данных должен быть равен 90 или выше.  
 
@@ -56,11 +56,11 @@ sys.dm_db_log_info ( database_id )
 |database_id|**int**|Идентификатор базы данных.|
 |file_id|**smallint**|Идентификатор файла журнала транзакций.|  
 |vlf_begin_offset|**bigint** |Смещение расположения [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) от начала файла журнала транзакций.|
-|vlf_size_mb |**float** |[виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) размер в МБ, округляется до 2 десятичных разряда.|     
+|vlf_size_mb |**float** |[виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) размер в МБ, округленное до 2 десятичных разряда.|     
 |vlf_sequence_number|**bigint** |[виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) порядковый номер в созданного заказа. Используется для уникальной идентификации VLF в файле журнала.|
-|vlf_active|**бит** |Указывает, является ли [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) уже используется или не. <br />0 — виртуального файла Журнала не используется.<br />1 — VLF активен.|
-|vlf_status|**int** |Состояние [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Возможные значения: <br />0 — неактивные VLF <br />1 — VLF инициализирована, но неиспользуемого <br /> 2 - VLF активен.|
-|vlf_parity|**tinyint** |Четность [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Используется внутренним образом для определения конца журнала в пределах виртуального файла Журнала.|
+|vlf_active|**bit** |Указывает, является ли [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) уже используется или нет. <br />0 — виртуального файла Журнала не используется.<br />1 - VLF активна.|
+|vlf_status|**int** |Состояние [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Возможные значения: <br />0 — VLF неактивна <br />1 - VLF инициализирован, но неиспользуемого <br /> 2 - VLF активна.|
+|vlf_parity|**tinyint** |Четность [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Используется внутренним образом для определения конца журнала в VLF.|
 |vlf_first_lsn|**nvarchar(48)** |[Регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) первой записи журнала в [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar(48)** |[Регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) записи журнала, созданные [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 
@@ -72,8 +72,8 @@ sys.dm_db_log_info ( database_id )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. Определение баз данных в экземпляре SQL Server с большим количеством VLF
-Следующий запрос определяет базы данных с более чем 100 VLF в файлы журналов, которые могут повлиять на время запуска, восстановления и восстановления базы данных.
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. Определение баз данных в экземпляре SQL Server с большое количество виртуальных файлов журнала
+Следующий запрос определяет баз данных с более чем 100 виртуальных файлов журнала в файлах журналов, которые могут повлиять на время запуска, восстановления и восстановления базы данных.
 
 ```sql
 SELECT [name], COUNT(l.database_id) AS 'vlf_count' 
@@ -83,9 +83,9 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>Б. Определение позиции последней `VLF` в журнале транзакций до при сжатии файла журнала
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>Б. Определить положение последнего `VLF` в журнале транзакций, прежде чем при сжатии файла журнала
 
-Следующий запрос используется для определения позиции из последнего активного виртуального файла Журнала перед выполнением процедуры SHRINKFILE модуля на журнал транзакций, чтобы определить, если журнал транзакций можно сжать.
+Следующий запрос может использоваться для определения позиции последнем виртуальном файле Журнала active перед запуском shrinkfile на журнал транзакций, чтобы определить, если журнал транзакций можно сжать.
 
 ```sql
 USE AdventureWorks2016

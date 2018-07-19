@@ -1,6 +1,6 @@
 ---
-title: Установка служб интеграции SQL Server в Linux | Документы Microsoft
-description: В этой статье описывается установка служб SQL Server Integration Services (SSIS) для Linux.
+title: Установка SQL Server Integration Services в Linux | Документация Майкрософт
+description: В этой статье описывается установка SQL Server Integration Services (SSIS) в Linux.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -13,33 +13,33 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: d2e72c77ad5f200c07a6e71025a3461d6397032a
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323395"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062053"
 ---
-# <a name="install-sql-server-integration-services-ssis-on-linux"></a>Установка SQL Server Integration Services (SSIS) для Linux
+# <a name="install-sql-server-integration-services-ssis-on-linux"></a>Установка SQL Server Integration Services (SSIS) в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Выполните действия в этой статье, чтобы установить SQL Server Integration Services (`mssql-server-is`) в Linux. Сведения о функции, поддерживаемые в этом выпуске служб Integration Services для Linux см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
+Выполните действия, описанные в этой статье, чтобы установить SQL Server Integration Services (`mssql-server-is`) на платформе Linux. Сведения о функциях, поддерживаемых в этом выпуске служб Integration Services для Linux, см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
 
-Установка серверов интеграции SQL Server для вашей платформы:
+Установка интеграции серверов SQL Server для вашей платформы:
 
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a> Установка служб SSIS для Ubuntu
+## <a name="ubuntu"></a> Установка служб SSIS в Ubuntu
 Чтобы установить `mssql-server-is` пакет в Ubuntu, выполните следующие действия:
 
-1. Импорт ключей GPG общедоступный репозиторий.
+1. Импорт общедоступного репозитория ключей GPG.
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. Регистрация в Microsoft SQL Server Ubuntu репозиторий.
+2. Зарегистрируйте репозиторий Microsoft SQL Server Ubuntu.
 
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
@@ -52,20 +52,20 @@ ms.locfileid: "34323395"
    sudo apt-get install -y mssql-server-is
    ```
 
-4. После установки служб Integration Services, запустите `ssis-conf`. Дополнительные сведения см. в разделе [настройки служб SSIS в Linux с помощью служб ssis conf](sql-server-linux-configure-ssis.md).
+4. После установки служб Integration Services, запустите `ssis-conf`. Дополнительные сведения см. в разделе [Настройка служб SSIS в Linux с помощью служб ssis-conf](sql-server-linux-configure-ssis.md).
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
    ```
 
-5. После завершения конфигурации задайте путь.
+5. После завершения конфигурации, задайте путь.
 
    ```bash
    export PATH=/opt/ssis/bin:$PATH
    ```
 
-### <a name="update-ssis"></a>Обновление служб SSIS
-Если у вас уже есть `mssql-server-is` установлены, можно обновить до последней версии с помощью следующей команды:
+### <a name="update-ssis"></a>Обновления служб SSIS
+Если у вас уже есть `mssql-server-is` установлен, можно обновить до последней версии, выполнив следующую команду:
 
 ```bash
 sudo apt-get install mssql-server-is
@@ -78,9 +78,9 @@ sudo apt-get remove mssql-server-is
 ```
 
 ## <a name="RHEL"></a> Установка служб SSIS на RHEL
-Чтобы установить `mssql-server-is` пакет в RHEL, выполните следующие действия:
+Чтобы установить `mssql-server-is` пакет на RHEL, выполните следующие действия:
 
-1. Загрузите файл конфигурации Microsoft SQL Server Red Hat репозитория.
+1. Скачайте файл конфигурации репозитория Microsoft SQL Server Red Hat.
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
@@ -93,20 +93,20 @@ sudo apt-get remove mssql-server-is
    ```
 
 
-1. После установки, выполните `ssis-conf`. Дополнительные сведения см. в разделе [настройки служб SSIS в Linux с помощью служб ssis conf](sql-server-linux-configure-ssis.md).
+1. После установки, запустите `ssis-conf`. Дополнительные сведения см. в разделе [Настройка служб SSIS в Linux с помощью служб ssis-conf](sql-server-linux-configure-ssis.md).
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
    ```
 
-1. После завершения конфигурации задайте путь.
+1. После завершения конфигурации, задайте путь.
 
    ```bash
    export PATH=/opt/ssis/bin:$PATH
    ```
 
-### <a name="update-ssis"></a>Обновление служб SSIS
-Если у вас уже есть `mssql-server-is` установлены, можно обновить до последней версии с помощью следующей команды:
+### <a name="update-ssis"></a>Обновления служб SSIS
+Если у вас уже есть `mssql-server-is` установлен, можно обновить до последней версии, выполнив следующую команду:
 
 ```bash
 sudo yum update mssql-server-is
@@ -119,15 +119,15 @@ sudo yum remove mssql-server-is
 ```
 
 ## <a name="unattended-installation"></a>Автоматическая установка
-Для выполнения автоматической установки при запуске `ssis-conf setup`, выполните следующие действия:
-1.  Укажите `-n` (без запроса) параметра.
+Для выполнения автоматической установки при запуске `ssis-conf setup`, выполните указанные ниже действия:
+1.  Укажите `-n` (без запроса) параметр.
 2.  Укажите необходимые значения, задав переменные среды.
 
 Следующий пример выполняет следующие действия:
 -   Установка служб SSIS.
 -   Указывает выпуск Developer edition, указав значение для `SSIS_PID` переменной среды.
 -   Принимает условия лицензионного соглашения, указав значение для `ACCEPT_EULA` переменной среды.
--   Запускает автоматическую установку, указав `-n` (без запроса) параметра.
+-   Запускает автоматическую установку, указав `-n` (без запроса) параметр.
 
 ```
 sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
@@ -137,18 +137,18 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 | Переменная среды | Описание |
 |---|---|
-| **ACCEPT_EULA** | Принимает лицензионного соглашения SQL Server, если задано любое значение (например, `Y`).|
-| **SSIS_PID** | Задает ключ, выпуск или продукта SQL Server. Ниже приведены возможные значения:<br/>Ознакомительная версия<br/>Разработчик<br/>Express <br/>Web Edition <br/>Standard Edition<br/>Enterprise <br/>Ключ продукта<br/><br/>Если указать ключ продукта, ключ продукта должен быть в форме `#####-#####-#####-#####-#####`, где `#` является буквой или цифрой.  |
+| **ACCEPT_EULA** | Принимает лицензионное соглашение SQL Server, если задано любое значение (например, `Y`).|
+| **SSIS_PID** | Задает ключ SQL Server edition или продукта. Ниже приведены возможные значения:<br/>Ознакомительная версия<br/>Разработчик<br/>Express <br/>Web Edition <br/>Standard<br/>Enterprise <br/>Ключ продукта<br/><br/>Если указать ключ продукта, ключ продукта должен быть в форме `#####-#####-#####-#####-#####`, где `#` является буквой или цифрой.  |
 | | |
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Выполнение пакетов служб SSIS в Linux, см. [извлечения, преобразования и загрузки данных для SQL Server в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md).
+Для запуска пакетов служб SSIS в Linux, см. в разделе [извлечения, преобразования и загрузки данных для SQL Server в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md).
 
-Чтобы настроить дополнительные параметры служб SSIS в Linux, в разделе [настройки SQL Server Integration Services в Linux с помощью служб ssis conf](sql-server-linux-configure-ssis.md).
+Чтобы настроить дополнительные параметры служб SSIS в Linux, см. в разделе [настроить SQL Server Integration Services в Linux с помощью служб ssis-conf](sql-server-linux-configure-ssis.md).
 
-## <a name="related-content-about-ssis-on-linux"></a>См. также о служб SSIS в Linux
+## <a name="related-content-about-ssis-on-linux"></a>См. также сведения о службах SSIS на платформе Linux
 -   [Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
--   [Настройка служб интеграции SQL Server в Linux с conf служб ssis](sql-server-linux-configure-ssis.md)
+-   [Настройка SQL Server Integration Services в Linux с помощью служб ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Ограничения и известные проблемы для служб SSIS в Linux](sql-server-linux-ssis-known-issues.md)
--   [Выполнение в Linux с cron пакетов служб интеграции SQL Server расписание](sql-server-linux-schedule-ssis-packages.md)
+-   [Расписание SQL Server Integration Services выполнения пакета в Linux с помощью cron](sql-server-linux-schedule-ssis-packages.md)

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Документы Microsoft
+title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 58377295a7bccadd1a1d273ba45469e817408949
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464800"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058265"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34464800"
   
 -   [sys.dm_fts_index_keywords (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
   
- **Просмотр сведений о содержимом уровня свойств, связанных со свойством документа**  
+ **Чтобы просмотреть сведения о содержимом уровня свойств, связанных со свойством документа**  
   
 -   [sys.dm_fts_index_keywords_by_property (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)  
   
@@ -73,7 +73,7 @@ sys.dm_fts_index_keywords_by_document
 |display_term|**nvarchar(4000)**|Ключевое слово в понятном формате. Этот формат является производным от внутреннего формата хранения полнотекстового индекса.<br /><br /> Примечание: OxFF представляет собой специальный символ, который указывает конец файла или набора данных.|  
 |column_id|**int**|Идентификатор столбца, содержащий данное ключевое слово, индексированное полнотекстовым индексом.|  
 |document_id|**int**|Идентификатор документа или строки, содержащей текущий термин, индексированный полнотекстовым индексом. Данный идентификатор соответствует значению полнотекстового ключа этого документа или строки.|  
-|occurrence_count|**int**|Число вхождений текущего ключевого слова в документе или строку, которая обозначается **document_id**. Когда "*search_property_name*" указано, occurrence_count отображает только число вхождений текущего ключевого слова в указанном свойстве поиска в документе или строке.|  
+|occurrence_count|**int**|Число вхождений текущего ключевого слова в документе или строку, которая обозначается **document_id**. Когда "*search_property_name*" указывается, occurrence_count отображает только число вхождений текущего ключевого слова в указанном свойстве поиска в пределах документа или строки.|  
   
 ## <a name="remarks"></a>Примечания  
  Данные, возвращаемые функцией sys.dm_fts_index_keywords_by_document, позволяют, в частности, выяснить следующее:  
@@ -84,7 +84,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   сколько раз ключевое слово встречается во всем полнотекстовом индексе, а именно:  
   
-     ([Сумма](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) ГДЕ **ключевое слово**=*keyword_value* )  
+     ([SUM](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) ГДЕ **ключевое слово**=*keyword_value* )  
   
 -   сколько раз ключевое слово встречается в данном документе или строке;  
   
@@ -94,7 +94,7 @@ sys.dm_fts_index_keywords_by_document
   
  Если полнотекстовый ключевой столбец, как и рекомендовано, имеет тип данных integer, значение document_id прямо сопоставляется со значением полнотекстового ключа базовой таблицы.  
   
- Напротив, если полнотекстовый ключевой столбец имеет тип данных, отличный от integer, значение document_id не представляет значение полнотекстового ключа базовой таблицы. В этом случае для идентификации данной строки в базовой таблице, возвращаемой функцией dm_fts_index_keywords_by_document, необходимо присоединить это представление с результатами, возвращенными процедурой [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Чтобы выполнить соединение, нужно сохранить выход хранимой процедуры во временной таблице. После этого можно соединить столбец document_id, возвращенный функцией dm_fts_index_keywords_by_document, со столбцом DocId, возвращенным хранимой процедурой sp_fulltext_keymappings. Обратите внимание, что **timestamp** столбец не может принимать значения во время операции вставки, так как они создаются автоматически по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Таким образом **timestamp** должен быть преобразован столбец **varbinary(8)** столбцов. Следующий пример показывает эти шаги. В этом примере *table_id* идентификатор таблицы, *имя_базы_данных* — имя базы данных, и *table_name* является именем таблицы.  
+ Напротив, если полнотекстовый ключевой столбец имеет тип данных, отличный от integer, значение document_id не представляет значение полнотекстового ключа базовой таблицы. Таким образом, чтобы идентифицировать строку базовой таблицы, возвращаемой функцией dm_fts_index_keywords_by_document, вам потребуется присоединить это представление с результатами, возвращенными процедурой [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Чтобы выполнить соединение, нужно сохранить выход хранимой процедуры во временной таблице. После этого можно соединить столбец document_id, возвращенный функцией dm_fts_index_keywords_by_document, со столбцом DocId, возвращенным хранимой процедурой sp_fulltext_keymappings. Обратите внимание, что **timestamp** столбец не может принимать значения во время операции вставки, так как они автоматически формируются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Таким образом **timestamp** должен быть преобразован столбец **varbinary(8)** столбцов. Следующий пример показывает эти шаги. В этом примере *table_id* идентификатор таблицы, *имя_базы_данных* — имя базы данных, и *table_name* имя таблицы.  
   
 ```  
 USE database_name;  
@@ -133,7 +133,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Компонент Full-Text Search и семантический поиск динамические административные представления и функции &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Компонент Full-Text Search](../../relational-databases/search/full-text-search.md)   
+ [Компонент Full-text Search](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
  [sys.dm_fts_index_keywords_by_property (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   

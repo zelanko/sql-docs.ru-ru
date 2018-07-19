@@ -1,5 +1,5 @@
 ---
-title: Целевой элемент (XMLA) | Документы Microsoft
+title: Целевой элемент (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53cf0589cff69dab21c07979ba89e84e35f30d11
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576526"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064141"
 ---
 # <a name="target-element-xmla"></a>Элемент Target (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34576526"
 </MergePartitions>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "34576526"
 |Значение по умолчанию|None|  
 |Количество элементов|1-N: обязательный элемент, который может встречаться несколько раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "34576526"
 |Дочерние элементы|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md), [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- **Целевой** элемент является ссылкой на объект для одной секции, в которой содержимое исходных секций, определяемое [источников](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md) родителя **MergePartitions** элемент, объединяемые.  
+ **Целевой** элемент – ссылка объекта в одну секцию, в которой содержимое исходных секций, определяемое [источников](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md) родителя **MergePartitions** элемент, объединяемые.  
   
 ## <a name="example"></a>Пример  
  В следующем примере все четыре секции группы мер Internet Sales объединяются в целевую секцию `Internet_Sales_2004`. В этом примере используется куб [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] из образца базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

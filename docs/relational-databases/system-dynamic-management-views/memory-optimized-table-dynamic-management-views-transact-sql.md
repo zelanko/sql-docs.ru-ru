@@ -1,5 +1,5 @@
 ---
-title: Оптимизированные для памяти таблицы динамические административные представления (Transact-SQL) | Документы Microsoft
+title: Оптимизированные для памяти динамические административные представления таблиц (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: da3bf7189d2fb4455b8186a41a24c7d5f546a348
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465530"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061572"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>Оптимизированные для памяти динамические административные представления таблиц (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Следующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] динамические административные представления (DMV) используются с In-Memory OLTP:  
+  Следующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с In-Memory OLTP используются динамические административные представления (DMV):  
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
@@ -49,11 +49,11 @@ ms.locfileid: "34465530"
 
 |||  
 |-|-|   
-|[sys.hash_indexes & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
+|[sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
 ### <a name="internal-dmvs"></a>Внутренняя динамических административных представлений
 
-Существуют дополнительные динамические административные представления, которые предназначены для внутреннего использования только и для которой мы предоставляем нет прямого документации. В области таблиц, оптимизированных для памяти недокументированные динамических административных представлений следующие:
+Существуют дополнительные DMV, которые предназначены для внутреннего использования, только и для которого мы предоставляем нет прямого документации. В области таблиц, оптимизированных для памяти недокументированные динамических административных представлений следующее:
 
 - sys.dm_xtp_threads
 - sys.dm_xtp_transaction_recent_rows
