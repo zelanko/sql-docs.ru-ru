@@ -1,5 +1,5 @@
 ---
-title: Создание, изменение и удаление правил | Документы Microsoft
+title: Создание, изменение и удаление правил | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,10 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2e46039c71863f6cfb60f63c8e1e926f8f68231d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046182"
 ---
 # <a name="creating-altering-and-removing-rules"></a>Создание, изменение и удаление правил
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,12 +33,12 @@ ms.lasthandoff: 05/03/2018
  Определение в свойстве <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> должно содержать переменную, ссылающуюся на введенное значение данных. Для представления значения при создании правила можно использовать любое имя или символ, но первым знаком должен быть знак «@».  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>Создание, изменение и удаление правила на языке Visual Basic  
  Данный образец кода показывает, как создать правило, добавить его в столбец, изменить свойства объекта <xref:Microsoft.SqlServer.Management.Smo.Rule>, отсоединить его от столбца и удалить его.  
   
- **Dim** инструкции для <xref:Microsoft.SqlServer.Management.Smo.Rule> объект указан с полным путем к сборке, чтобы избежать неоднозначности с <xref:Microsoft.SqlServer.Management.Smo.Rule> объект в сборке System.Data.  
+ **Dim** инструкции для <xref:Microsoft.SqlServer.Management.Smo.Rule> указывается с полным путем к сборке, чтобы избежать неоднозначности с <xref:Microsoft.SqlServer.Management.Smo.Rule> объект в сборке System.Data.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -69,7 +70,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>Создание, изменение и удаление правила на языке Visual C#  
  Данный образец кода показывает, как создать правило, добавить его в столбец, изменить свойства объекта <xref:Microsoft.SqlServer.Management.Smo.Rule>, отсоединить его от столбца и удалить его.  
   
- **Dim** инструкции для <xref:Microsoft.SqlServer.Management.Smo.Rule> объект указан с полным путем к сборке, чтобы избежать неоднозначности с <xref:Microsoft.SqlServer.Management.Smo.Rule> объект в сборке System.Data.  
+ **Dim** инструкции для <xref:Microsoft.SqlServer.Management.Smo.Rule> указывается с полным путем к сборке, чтобы избежать неоднозначности с <xref:Microsoft.SqlServer.Management.Smo.Rule> объект в сборке System.Data.  
   
 ```csharp  
 {  
@@ -102,7 +103,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>Создание, изменение и удаление правила в PowerShell  
  Данный образец кода показывает, как создать правило, добавить его в столбец, изменить свойства объекта <xref:Microsoft.SqlServer.Management.Smo.Rule>, отсоединить его от столбца и удалить его.  
   
- **Dim** инструкции для <xref:Microsoft.SqlServer.Management.Smo.Rule> объект указан с полным путем к сборке, чтобы избежать неоднозначности с <xref:Microsoft.SqlServer.Management.Smo.Rule> объект в сборке System.Data.  
+ **Dim** инструкции для <xref:Microsoft.SqlServer.Management.Smo.Rule> указывается с полным путем к сборке, чтобы избежать неоднозначности с <xref:Microsoft.SqlServer.Management.Smo.Rule> объект в сборке System.Data.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

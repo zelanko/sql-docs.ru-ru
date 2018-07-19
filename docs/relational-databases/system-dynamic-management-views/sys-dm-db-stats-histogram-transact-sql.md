@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_stats_histogram (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_stats_histogram (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,19 +25,19 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: af1930b1cd5f8536c9e9f196a8ea739538042ca0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464240"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042772"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Возвращает гистограммы статистики для указанного объекта (таблицы или индексированного представления) в текущем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных. Аналогично `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
+Возвращает гистограмму статистики для указанного объекта (таблицы или индексированного представления) в текущем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных. Аналогичную `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
-> Это DMF доступен, начиная с [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
+> Данной функции DMF доступен, начиная с [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,7 +58,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id |**int**|Идентификатор объекта (таблицы или индексированного представления), для которого возвращаются свойства объекта статистики.|  
 |stats_id |**int**|Идентификатор объекта статистики. Является уникальным в пределах таблицы или индексированного представления. Дополнительные сведения см. в статье [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|step_number |**int** |Номер шага гистограммы. |
+|step_number |**int** |Номер шага в гистограмме. |
 |range_high_key |**sql_variant** |Верхнее граничное значение столбца для шага гистограммы. Это значение столбца называется также ключевым значением.|
 |range_rows |**real** |Предполагаемое количество строк, значение столбцов которых находится в пределах шага гистограммы, исключая верхнюю границу. |
 |equal_rows |**real** |Предполагаемое количество строк, значение столбцов которых равно верхней границе шага гистограммы. |
@@ -69,7 +69,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
  
  Результирующий набор для `sys.dm_db_stats_histogram` возвращает информацию, аналогичную `DBCC SHOW_STATISTICS WITH HISTOGRAM` , а также `object_id`, `stats_id`, и `step_number`.
 
- Так как столбец `range_high_key` является данных sql_variant тип, может потребоваться использовать `CAST` или `CONVERT` , если предикат не сравнения с константой не являющегося строкой.
+ Так как столбец `range_high_key` является данных sql_variant типа, может потребоваться использовать `CAST` или `CONVERT` Если предикат выполняет сравнение с константой, не являющегося строкой.
 
 ### <a name="histogram"></a>Гистограмма
   
@@ -98,7 +98,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 ## <a name="examples"></a>Примеры  
 
 ### <a name="a-simple-example"></a>A. Простой пример    
-Следующий пример создает и заполняет простой таблицы. Затем создает статистику по `Country_Name` столбца.
+Следующий пример создает и заполняет простую таблицу. Затем создает статистику по `Country_Name` столбца.
 
 ```sql
 CREATE TABLE Country
@@ -124,14 +124,14 @@ WHERE s.[name] = N'<statistic_name>';
 ```
 
 ### <a name="c-useful-query"></a>В. Удобный запрос:
-В следующем примере выбираются из таблицы `Country` с предикатом столбца `Country_Name`.
+В следующем примере выбираются из таблицы `Country` с помощью предиката по столбцу `Country_Name`.
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-Следующий пример просматривает ранее созданной статистики для таблицы `Country` и столбец `Country_Name` для шага гистограммы, соответствующие предикату в приведенном выше запросе.
+Следующий пример проверяет ранее созданный статистический показатель в таблице `Country` и столбец `Country_Name` для шага гистограммы, соответствующие предикату в приведенном выше запросе.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 

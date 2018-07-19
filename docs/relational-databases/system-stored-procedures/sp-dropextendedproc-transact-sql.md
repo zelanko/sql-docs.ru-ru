@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproc (Transact-SQL) | Документы Microsoft
+title: sp_dropextendedproc (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 23361e6f28bdb87ab35a39ec68b448a60ad677d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244939"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049392"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,24 +47,24 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@functname =**] **"***процедура***"**  
+ [  **@functname =**] **"***процедуры***"**  
  Имя расширенной хранимой процедуры, которую необходимо удалить. *процедура* — **nvarchar(517)**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
- Выполнение **sp_dropextendedproc** удаляет имя пользовательской расширенной хранимой процедуры из [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) представления каталога и удаляет запись из [sys.extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) представления каталога. Эта хранимая процедура может выполняться только в **master** базы данных.  
+## <a name="remarks"></a>Примечания  
+ Выполнение **sp_dropextendedproc** удаляет имя пользовательской расширенной хранимой процедуры из [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) представления каталога и удаляет запись из [sys.extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) представления каталога. Эта хранимая процедура может быть запущена только в **master** базы данных.  
   
-**sp_dropextendedproc** не удаляет Системные расширенные хранимые процедуры. Вместо этого системный администратор должен запретить разрешение EXECUTE на расширенную хранимую процедуру, чтобы **открытый** роли.  
+**sp_dropextendedproc** не удаляет Системные расширенные хранимые процедуры. Вместо этого системный администратор должен запретить разрешение EXECUTE на расширенную хранимую процедуру для **открытый** роли.  
   
  **sp_dropextendedproc** не может быть выполнена внутри транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_dropextendedproc**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_dropextendedproc**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляется расширенная хранимая процедура `xp_hello`.  

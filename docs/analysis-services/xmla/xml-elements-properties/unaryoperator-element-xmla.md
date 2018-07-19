@@ -1,5 +1,5 @@
 ---
-title: Элемент UnaryOperator (XML для Аналитики) | Документы Microsoft
+title: Элемент UnaryOperator (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 062cf977e04eabfc09e6598167bc7530f1254436
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051582"
 ---
 # <a name="unaryoperator-element-xmla"></a>Элемент UnaryOperator (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34576726"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34576726"
 |Значение по умолчанию|None|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -49,10 +49,10 @@ ms.locfileid: "34576726"
 ## <a name="remarks"></a>Примечания  
  Элемент **UnaryOperator** содержит многомерное выражение, определяющее унарный оператор для элемента атрибута, определенного родительским элементом **Attribute** .  
   
- Дополнительные сведения о Многомерных выражениях см. в разделе [выражений &#40;многомерных Выражений&#41;](../../../mdx/expressions-mdx.md).  
+ Дополнительные сведения о Многомерных выражениях см. в разделе [выражения &#40;многомерных Выражений&#41;](../../../mdx/expressions-mdx.md).  
   
 ## <a name="see-also"></a>См. также
- [Элемент INSERT &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Вставка элемента &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Элемент Update &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
  [Свойства &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

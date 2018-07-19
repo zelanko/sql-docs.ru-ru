@@ -1,5 +1,5 @@
 ---
-title: sp_dbremove (Transact-SQL) | Документы Microsoft
+title: sp_dbremove (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 518ffebe8638292ee1b6bd4aa63a7f5e5f19a4d3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255649"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042718"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33255649"
   Удаляет базу данных и все связанные с ней файлы.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Мы рекомендуем использовать [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Мы рекомендуем использовать [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) вместо этого.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@dbname=** ] **"***базы данных***"**  
- Имя удаляемой базы данных. *База данных* — **sysname**, значение по умолчанию NULL.  
+ Имя удаляемой базы данных. *База данных* — **sysname**, со значением по умолчанию NULL.  
   
  [  **@dropdev=** ] **"***dropdev***"**  
  Флаг, предоставляемый только для обратной совместимости и в данный момент игнорируемый. *dropdev* имеет значение **dropdev**.  
@@ -57,7 +57,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  

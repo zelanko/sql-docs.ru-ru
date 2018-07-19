@@ -1,5 +1,5 @@
 ---
-title: sys.sp_add_trusted_assembly (Transact-SQL) | Документы Microsoft
+title: sys.sp_add_trusted_assembly (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: thmullan
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1a3791d82f0970ec6ed3e04ede69492abbcddb59
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055779"
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +47,17 @@ sp_add_trusted_assembly
     [ , [ @description = ] 'description' ]
 ```  
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 
 Эта процедура добавляет сборку [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="arguments"></a>Аргументы
 
 [ @hash =] '*значение*"  
-Хэш-значение SHA2_512 сборки, которую необходимо добавить в список доверенных сборок для сервера. Доверенные сборки могут загружаться при [строгой безопасности CLR](../../database-engine/configure-windows/clr-strict-security.md) включена, даже если сборка не подписана или база данных не помечена как заслуживающая доверия.
+SHA2_512 хэш-значение сборку для добавления в список доверенных сборок для сервера. Доверенные сборки загружаются [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md) включена, даже в том случае, если сборка не имеет знака или база данных не помечена как заслуживающая доверия.
 
 [ @description =] '*описание*"  
-Необязательное пользовательское описание сборки. Корпорация Майкрософт рекомендует использовать каноническое имя, кодирующая простое имя, номер версии, язык и региональные параметры, открытый ключ и архитектуру сборки для доверия. Это значение уникально идентифицирует сборку среды выполнения (CLR) стороны выполнения и совпадает со значением clr_name значение sys.assemblies. 
+Необязательное пользовательское описание сборки. Корпорация Майкрософт рекомендует использовать каноническое имя, кодирующая простое имя, номер версии, язык и региональные параметры, открытый ключ и архитектуру сборки для доверия. Это значение уникально идентифицирует сборку среды выполнения (CLR) стороны выполнения и совпадает со значением значение clr_name sys.assemblies. 
 
 ## <a name="permissions"></a>Разрешения
 
@@ -75,7 +76,7 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
   [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
   [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)  
-  [Строгой безопасности среды CLR](../../database-engine/configure-windows/clr-strict-security.md)  
+  [Строгая безопасность среды CLR](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

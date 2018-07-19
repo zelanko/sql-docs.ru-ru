@@ -1,5 +1,5 @@
 ---
-title: Объект SqlXmlAdapter (управляемые классы SQLXML) | Документы Microsoft
+title: Объект SqlXmlAdapter (управляемые классы SQLXML) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f797a5d869416fc0b9619e2f8256026690516cb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968909"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046132"
 ---
-# <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>Управляемые классы - SQLXML SqlXmlAdapter, объект
+# <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>Управляемые классы SQLXML — объект SqlXmlAdapter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В этом объекте реализованы методы, облегчающие взаимодействие с набором данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Работающий пример см. в разделе [доступ к функциональным возможностям SQLXML в среде .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
@@ -59,8 +59,8 @@ public SqlXmlAdapter(
                      )   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект SqlXmlCommand & #40; SQLXML управляемые классы & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [Объект SqlXmlParameter & #40; SQLXML управляемые классы & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
+## <a name="see-also"></a>См. также  
+ [Объект SqlXmlCommand &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [Объект SqlXmlParameter &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
   
   

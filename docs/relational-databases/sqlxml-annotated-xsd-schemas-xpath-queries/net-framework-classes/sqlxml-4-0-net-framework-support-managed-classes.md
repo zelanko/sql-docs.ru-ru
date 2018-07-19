@@ -1,5 +1,5 @@
 ---
-title: Управляемые классы SQLXML | Документы Microsoft
+title: Управляемые классы SQLXML | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,13 +29,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 13212c73e4f12ed83e6677a8c819b3306eab3118
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046162"
 ---
-# <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0 поддержка платформы .NET Framework — управляемые классы
+# <a name="sqlxml-40-net-framework-support---managed-classes"></a>Поддержка SQLXML 4.0 .NET Framework — управляемые классы
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 поддерживает функции для создания приложений, которые обращаются к XML-данным в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], переводят данные в среду [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, обрабатывают данные и отправляют обновления назад в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
   
@@ -46,15 +46,15 @@ ms.locfileid: "34708502"
 > [!NOTE]  
 >  Платформа .NET Framework включает поставщик данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET. Этот поставщик может использоваться для доступа к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из платформы .NET. Однако он может обрабатывать только стандартные запросы SQL (то есть запросы реляционных баз данных, за исключением запросов FOR XML). В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] нельзя выполнять XML-шаблоны или запросы XPath со стороны сервера.  
 
- Сведения о доступе и изменении данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, а также об использовании дельт для обновления данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы, см. [доступ к функциональным возможностям SQLXML в среде .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+ Сведения о доступе и изменении данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework и об использовании дельт для обновления данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблиц, см. в разделе [доступ к функциональным возможностям SQLXML в среде .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
 > [!NOTE]  
 >  Можно также составить приложения [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio для массовой загрузки XML-документов с использованием массовой загрузки XML. Дополнительные сведения см. в разделе [выполнении массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md). Необходимо добавить в приложение ссылку на DLL-библиотеку массовой загрузки XML (Xblkld4.dll). Это DLL-библиотека COM, для которой Visual Studio .NET автоматически создает библиотеку-упаковщик.  
   
-  Этот раздел содержит образцы приложений, которые демонстрируют использование [!INCLUDE[msCoName](../../../includes/msconame-md.md)] управляемых классов SQLXML:  
+  В этом разделе содержатся примеры приложений, демонстрирующие способы использования [!INCLUDE[msCoName](../../../includes/msconame-md.md)] управляемых классов SQLXML:  
  [Выполнение запросов SQL &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)  
   [Выполнение запросов SQL с использованием метода ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)  
-  [Обработка XML на стороне клиента &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  
+  [Обработка XML-кода на стороне клиента &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  
   [Выполнение запросов XPath &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-sqlxml-managed-classes.md)  
   [Выполнение запросов XPath с пространствами имен &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md)  
   [Выполнение файлов шаблонов с использованием свойства CommandText](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)  

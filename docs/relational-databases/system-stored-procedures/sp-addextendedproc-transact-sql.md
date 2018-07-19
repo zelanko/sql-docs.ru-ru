@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproc (Transact-SQL) | Документы Microsoft
+title: sp_addextendedproc (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 2083d370479fa19049a083ef401574f21740929c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239794"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046092"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@functname =** ] **"***процедура***"**  
+ [  **@functname =** ] **"***процедуры***"**  
  Имя функции, вызываемой из динамически подключаемой библиотеки (DLL). *процедура* — **nvarchar(517)**, не имеет значения по умолчанию. *процедура* может также включать имя владельца в форме *owner.function*.  
   
  [  **@dllname =** ] **"***dll***"**  
@@ -58,20 +58,20 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
- После создания расширенной хранимой процедуры, его необходимо добавить к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **sp_addextendedproc**. Дополнительные сведения см. в разделе [Добавление расширенную хранимую процедуру SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
+## <a name="remarks"></a>Примечания  
+ После создания расширенной хранимой процедуры, его необходимо добавить к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **sp_addextendedproc**. Дополнительные сведения см. в разделе [Добавление расширенную хранимую процедуру в SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
   
- Эта процедура может быть запущена только в **master** базы данных. Для выполнения расширенной хранимой процедуры из базы данных, отличный от **master**, используйте в имени расширенной хранимой процедуры с **master**.  
+ Эта процедура может выполняться только в **master** базы данных. Для выполнения расширенной хранимой процедуры из базы данных, отличных от **master**, используйте в имени расширенной хранимой процедуры с **master**.  
   
- **sp_addextendedproc** добавляет записи [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) представления каталога, регистрация имени новой расширенной хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он также добавляет запись в [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) представления каталога.  
+ **sp_addextendedproc** добавляет записи в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) представление каталога, регистрация имени новой расширенной хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он также добавляет запись в [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) представления каталога.  
   
 > [!IMPORTANT]  
->  Существующие DLL-библиотеки, которые зарегистрированы без указания полного пути, перестанут работать после обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Чтобы устранить проблему, используйте **sp_dropextendedproc** для отмены регистрации библиотеки DLL, а затем зарегистрируйте его с **sp_addextendedproc**, указав полный путь.  
+>  Существующие DLL-библиотеки, которые зарегистрированы без указания полного пути, перестанут работать после обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Чтобы устранить проблему, используйте **sp_dropextendedproc** для отмены регистрации библиотеки DLL, а затем выполните их повторную регистрацию с помощью **sp_addextendedproc**, указав полный путь.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_addextendedproc**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_addextendedproc**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере добавляется **xp_hello** расширенной хранимой процедуры.  

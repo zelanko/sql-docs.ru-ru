@@ -1,5 +1,5 @@
 ---
-title: Элемент Password (XML для Аналитики) | Документы Microsoft
+title: Элемент Password (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f82fbcfecff5e6d216c3758ce442d82591a24d78
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576086"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050425"
 ---
 # <a name="password-element-xmla"></a>Элемент Password (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Определяет пароль, который будет использоваться родительской [резервного копирования](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) или [восстановить](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) команду для шифрования или расшифрования файла резервной копии.  
+  Определяет пароль, который будет использоваться родительский [резервного копирования](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) или [восстановить](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) команду для шифрования или расшифрования файла резервной копии.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576086"
 </Backup>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34576086"
 |Значение по умолчанию|None|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "34576086"
   
  Если при выполнении команды **Restore** не был включен элемент **Password** или он содержит пустую строку, то при попытке восстановления зашифрованного файла резервной копии возникнет ошибка.  
   
- Если при выполнении команды **Location** или **Backup** был включен элемент **Restore** , то для обычного и удаленного файлов резервной копии будет использован один и тот же элемент **Password** . Дополнительные сведения об удаленных файлах резервных копий см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Если при выполнении команды **Location** или **Backup** был включен элемент **Restore** , то для обычного и удаленного файлов резервной копии будет использован один и тот же элемент **Password** . Дополнительные сведения об удаленных файлах резервных копий см. в разделе [резервного копирования, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>См. также
  [Элемент Location &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)   

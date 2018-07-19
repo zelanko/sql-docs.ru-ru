@@ -1,5 +1,5 @@
 ---
-title: Создание, изменение и удаление таблиц | Документы Microsoft
+title: Создание, изменение и удаление таблиц | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,17 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3b4c41e6a6a0151767d2ad76fdff4fab5777ba20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050107"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Создание, изменение и удаление таблиц
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   В управляющих объектах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO) таблицы представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Table>. В иерархии объектов SMO объект <xref:Microsoft.SqlServer.Management.Smo.Table> расположен ниже объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду программирования, шаблон и язык, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду программирования, шаблон и язык, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Создание, изменение и удаление таблицы на языке Visual Basic  
  В этом примере кода создается таблица с несколькими столбцами разных типов и предназначений. В этом коде также приведены примеры того, как создать поле идентификаторов, как создать первичный ключ и как изменить свойства таблицы.  

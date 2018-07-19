@@ -1,5 +1,5 @@
 ---
-title: Другие заметки (SQLXML 4.0) | Документы Microsoft
+title: Другие заметки (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,12 +28,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6f3941965ceadbc98f4215d646dda4e87fea752b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053978"
 ---
-# <a name="annotation-interpretation---other-annotations"></a>Интерпретация заметки - других заметок
+# <a name="annotation-interpretation---other-annotations"></a>Интерпретация заметки — другие аннотации
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Помимо заметок, описанных в предыдущих подразделах этого раздела, массовая загрузка XML интерпретирует ниже приведенные заметки.  
   
@@ -56,6 +57,6 @@ ms.lasthandoff: 05/03/2018
  Массовая загрузка XML никогда не обрабатывает эту заметку.  
   
 ## <a name="see-also"></a>См. также  
- [Интерпретация заметки & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [Интерпретация заметки &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

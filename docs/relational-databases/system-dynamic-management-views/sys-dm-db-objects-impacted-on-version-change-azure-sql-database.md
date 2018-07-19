@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_objects_impacted_on_version_change (база данных SQL Azure) | Документы Microsoft
+title: sys.dm_db_objects_impacted_on_version_change (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -27,11 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ae5daae796ba134c883cb074ffd4130c67e0aba1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465130"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051292"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ ms.locfileid: "34465130"
 |class|**int** NOT NULL|Класс объекта, который будет затронут:<br /><br /> **1** = ограничение<br /><br /> **7** = индексы и кучи|  
 |class_desc|**nvarchar(60)** NOT NULL|Описание класса:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** NOT NULL|Код объекта ограничения или код объекта таблицы, содержащей индекс или кучу.|  
-|minor_id|**int** значение NULL|**Значение NULL** для ограничений<br /><br /> Index_id для индексов и куч|  
-|dependency|**nvarchar(60)** NOT NULL|Описание зависимости, которая вызывает применение затрагиваемого ограничения или индекса. Такое же значение используется для предупреждений, созданных во время обновления.<br /><br /> Примеры:<br /><br /> **место** (для встроенных)<br /><br /> **Geometry** (для системы определяемого пользователем ТИПА)<br /><br /> **Geography::Parse** (для системы метод определяемого пользователем ТИПА)|  
+|minor_id|**int** NULL|**NULL** для ограничений<br /><br /> Index_id для индексов и куч|  
+|dependency|**nvarchar(60)** NOT NULL|Описание зависимости, которая вызывает применение затрагиваемого ограничения или индекса. Такое же значение используется для предупреждений, созданных во время обновления.<br /><br /> Примеры:<br /><br /> **пространство** (для встроенных)<br /><br /> **Geometry** (для системы определяемого пользователем ТИПА)<br /><br /> **Geography::Parse** (для системы метод определяемого пользователем ТИПА)|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано запрос на **sys.dm_db_objects_impacted_on_version_change** для поиска объектов, затрагиваемых обновление до следующей версии  
+ В следующем примере показано использование запроса к **sys.dm_db_objects_impacted_on_version_change** для нахождения объектов, затрагиваемых обновлением для следующей версии  
   
 ```  
 SELECT * FROM sys.dm_db_objects_disabled_on_version_change;  
@@ -73,7 +73,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |Порядок|Затрагиваемый объект|Действие по исправлению|  
 |-----------|---------------------|-----------------------|  
-|1|**Индексы**|Перестроить индекс, определенный **sys.dm_db_objects_impacted_on_version_change** например:  `ALTER INDEX ALL ON <table> REBUILD`<br />либо<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Объект**|Все ограничения, определенные **sys.dm_db_objects_impacted_on_version_change** необходимо выполнить повторную после данных geometry и geography в базовой таблице. Для ограничений выполните проверку с помощью инструкции ALTER TABLE. <br />Например: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />либо<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Индексы**|Перестройте любой индекс, определенный **sys.dm_db_objects_impacted_on_version_change** например:  `ALTER INDEX ALL ON <table> REBUILD`<br />или диспетчер конфигурации служб<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Объект**|Все ограничения, определенные **sys.dm_db_objects_impacted_on_version_change** должно быть проверено повторно после геометрических и географических данных в базовой таблице вычисляется заново. Для ограничений выполните проверку с помощью инструкции ALTER TABLE. <br />Например: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />или диспетчер конфигурации служб<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Выполнение запросов SQL (поставщик SQLXMLOLEDB) | Документы Microsoft
+title: Выполнение запросов SQL (поставщик SQLXMLOLEDB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b14c8101d7d7ef5266f63cf8a278f82ff985d40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968039"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050032"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>Выполнение запросов SQL (поставщик SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32968039"
   
 -   xml root  
   
- В этом образце клиентского приложения ADO на стороне клиента выполняется простой SQL-запрос. Поскольку ClientSideXML, свойство имеет значение True, на сервер отправляется инструкция SELECT без предложения FOR XML. Сервер выполняет запрос и возвращает клиенту набор строк. Затем клиент применяет к набору строк преобразование FOR XML и создает XML-документ.  
+ В этом образце клиентского приложения ADO на стороне клиента выполняется простой SQL-запрос. Так как ClientSideXML, свойство имеет значение True, на сервер отправляется инструкция SELECT без предложения FOR XML. Сервер выполняет запрос и возвращает клиенту набор строк. Затем клиент применяет к набору строк преобразование FOR XML и создает XML-документ.  
   
  Корневое свойство xml предоставляет единый корневой элемент для XML-документа, который создается.  
   

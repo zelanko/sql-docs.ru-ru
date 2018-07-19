@@ -1,5 +1,5 @@
 ---
-title: Системные функции трассировки | Документы Microsoft
+title: Системные функции трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +18,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7e8a5fda5a10cf5e1604fe8beb3c1fe3dc501b7c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051382"
 ---
 # <a name="system-trace-functions"></a>Системные функции трассировки
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет следующие системные функции трассировки.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [fn_trace_geteventinfo](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)  
   
  [fn_trace_getfilterinfo](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)  

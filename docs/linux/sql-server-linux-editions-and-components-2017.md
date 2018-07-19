@@ -1,5 +1,5 @@
 ---
-title: Выпуски и поддерживаемых функций SQL Server 2017 ~ Linux | Документы Microsoft
+title: Выпуски и поддерживаемые функции SQL Server 2017 ~ Linux | Документация Майкрософт
 ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql
@@ -31,37 +31,37 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8222c0a58c1dbaeeaa5bd3dffedcca254728aae6
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324035"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045112"
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Выпуски и поддерживаемых функций 2017 г. SQL Server в Linux
+# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2017 в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Эта статья содержит сведения о функциях, поддерживаемых различными выпусками SQL Server 2017 г. в Linux. Выпуски и поддерживаемых функций SQL Server в Windows см. в разделе [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
+В этой статье подробно описаны функции, поддерживаемые различными выпусками SQL Server 2017 в Linux. Выпуски и поддерживаемые функции SQL Server в Windows, см. в разделе [SQL Server 2017 — Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 Требования для установки сильно зависят от потребностей приложения. Различные выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] удовлетворяют индивидуальным требованиям каждой организации или отдельного лица к производительности, среде выполнения и цене. Набор устанавливаемых компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] зависит от потребностей конкретного пользователя. В следующих разделах содержатся сведения, на основе которых из множества выпусков и компонентов, доступных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], можно сделать наилучший выбор.  
 
 Актуальные заметки о выпуске и сведения о новых возможностях содержатся в следующих разделах:
 - [Заметки о выпуске для SQL Server в Linux](sql-server-linux-release-notes.md)
-- [Новые возможности SQL Server в Linux](sql-server-linux-whats-new.md)
+- [Новые возможности в SQL Server в Linux](sql-server-linux-whats-new.md)
 
-Список функции SQL Server, недоступные в Linux см. в разделе [неподдерживаемые функции и службы](sql-server-linux-release-notes.md#Unsupported).
+Список компонентов SQL Server недоступен в Linux, см. в разделе [неподдерживаемых компонентах и службах](sql-server-linux-release-notes.md#Unsupported).
 
 ### <a name="try-sql-server"></a>Попробуйте SQL Server!    
     
-[Загрузка SQL Server 2017 г.](http://www.microsoft.com/sql-server/sql-server-2017)
+[Скачать SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)], выпуски  
+## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] , выпуски  
  Эти выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]описаны в следующей таблице. 
   
 |Выпуск[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Определение|  
 |---------------------------------------|----------------|  
-|Enterprise|Предложение premium [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition обеспечивает полный высоким быстродействием набор возможностей ЦОД с исключительно высокой производительностью, включение высокого уровня обслуживания для критически важных рабочих нагрузок.|  
-|Standard Edition|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Выпуск Standard обеспечивает основные функции управления данными для отделах и небольших организациях работать с приложениями и поддерживаются распространенные средства разработки для локальных и облачных — Включение эффективное управление базами данных с минимальными затратами ИТ-ресурсов.|  
+|Enterprise|Предложение уровня "премиум", [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition предоставляет возможности комплексное высшего класса центра обработки данных с молниеносно производительность, позволяя более высокого уровня обслуживания для критически важных рабочих нагрузок.|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition предоставляет основные функции управления данными для отделах и небольших организациях для выполнения их приложений и поддерживаются распространенные средства разработки для локальных и облачных — Включение эффективное управление базами данных с минимальными затратами ИТ-ресурсов.|  
 |Web Edition|Выпуск[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition — это вариант с низкой совокупной стоимостью владения, предназначенный для размещения веб-сайтов и дополнительных веб-услуг, который по доступной цене обеспечивает масштабируемость и функции управления для небольших и крупномасштабных веб-проектов.|  
 |Разработчик|Выпуск[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition позволяет разработчикам создавать приложения любого типа на базе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Он включает все функциональные возможности выпуска Enterprise Edition, однако лицензируется как система для разработки и тестирования, а не для применения в качестве рабочего сервера. Выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition является идеальным выбором для тех, кто создает и тестирует приложения.|  
 |Express|Выпуск Express является бесплатной базой данных начального уровня и идеально подходит для обучения, а также для создания приложений на основе данных, работающих на настольных компьютерах и небольших серверах. Этот выпуск — лучший выбор для независимых поставщиков программного обеспечения, непрофессиональных разработчиков и любителей, создающих клиентские приложения. Если необходимы дополнительные функции базы данных, выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express можно легко обновить до версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]более высокого класса.|  
@@ -72,20 +72,20 @@ ms.locfileid: "34324035"
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>составные части компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
-2017 г. SQL Server в Linux поддерживает SQL Server database engine. Ниже перечислены функции в компоненте database engine.   
+SQL Server 2017 в Linux поддерживает компонент SQL Server database engine. Ниже перечислены возможности в ядре СУБД.   
   
 |Компоненты сервера|Описание|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] включает в себя [!INCLUDE[ssDE](../includes/ssde-md.md)], основная служба для хранения, обработки и защиты данных, репликации, полнотекстового поиска, средства для управления реляционными и XML-данных, а также в интеграции analytics базы данных.|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] включает в себя [!INCLUDE[ssDE](../includes/ssde-md.md)], основная служба для хранения, обработки и защиты данных, репликации, полнотекстового поиска, средств управления реляционными и XML-данных, а также в интеграции базы данных аналитики.|  
 
-**Выпуски Developer, Enterprise Core и оценки**  
-Компоненты для SQL Server Enterprise edition в следующих таблицах перечислены возможности, поддерживаемые различными Developer, Enterprise Core и выпусках Evaluation Edition, см.
+**Выпусков Developer, Enterprise Core и оценки**  
+Функции, поддерживаемые выпуски Evaluation, Enterprise Core и Developer см. в разделе функций, указанных для SQL Server Enterprise edition в следующих таблицах.
 
 Выпуск Developer по-прежнему поддерживает только 1 клиент для [распределенного воспроизведения SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Ограничения масштабирования  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express| 
+|Компонент|Enterprise|Standard|Web Edition|Express| 
 |-------------|----------------|--------------|---------|------------------------|
 |Максимальная вычислительная мощность, используемая одним экземпляром, — [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Максимальное значение, поддерживаемое операционной системой|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер| 
 |Максимальная вычислительная мощность, используемая одним экземпляром, — [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Максимальное значение, поддерживаемое операционной системой|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|
@@ -94,18 +94,18 @@ ms.locfileid: "34324035"
 |Максимальный размер данных, оптимизированных для памяти, на базу данных в [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ| 16 ГБ| 352 МБ|
 |Максимальный размер реляционной базы данных|524 ПБ|524 ПБ|524 ПБ|10 ГБ|  
   
-<sup>1</sup> Enterprise edition с сервера и клиентских лицензий (CAL) на основе лицензирования (недоступно для новых соглашений) ограничено максимум 20 ядрами в расчете на экземпляр SQL Server. В модели лицензирования по числу ядер никаких ограничений нет. Дополнительные сведения см. в разделе [ограничениями вычислительной мощности в выпуске SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+<sup>1</sup> Enterprise edition с сервера и клиентскую лицензию (CAL) на основе лицензирования (недоступно для новых соглашений) ограничено максимум 20 ядрами в расчете на экземпляр SQL Server. В модели лицензирования по числу ядер никаких ограничений нет. Дополнительные сведения см. в разделе [ограничениями вычислительной мощности в выпуске SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
 ##  <a name="RDBMSHA"></a> Высокий уровень доступности реляционной СУБД  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express|  
+|Компонент|Enterprise|Standard|Web Edition|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
 |доставка журналов;|Да|Да|Да|Нет|  
 |Сжатие резервных копий|Да|Да|Нет|Нет| 
 |Моментальный снимок базы данных|Да|Нет|Нет|Нет|
-|Всегда в экземпляр отказоустойчивого кластера<sup>1</sup>|Да|Да|Нет|Нет| 
-|Группы доступности AlwaysOn<sup>2</sup>|Да|Нет|Нет|Нет|
-|Основные группы доступности <sup>3</sup>|Нет|Да|Нет|Нет|
+|Always On экземпляр отказоустойчивого кластера<sup>1</sup>|Да|Да|Нет|Нет| 
+|Группы доступности Always On<sup>2</sup>|Да|Нет|Нет|Нет|
+|Базовые группы доступности <sup>3</sup>|Нет|Да|Нет|Нет|
 |Группа доступности с минимальным числом реплик для фиксации|Да|Да|Нет|Нет|
 |Группа доступности без кластеров|Да|Да|Нет|Нет|
 |Восстановление страниц и файлов в режиме «в сети»|Да|Нет|Нет|Нет|
@@ -118,15 +118,15 @@ ms.locfileid: "34324035"
 |Зашифрованная резервная копия|Да|Да|Нет|Нет|
 |Гибридное резервное копирование в Microsoft Azure (резервное копирование на URL-адрес)|Да|Да|Нет|Нет|
   
-<sup>1</sup> в выпуске Enterprise edition, количество узлов равно максимум операционной системы. В выпуске Standard поддерживается два узла. 
+<sup>1</sup> в выпуске Enterprise edition, число узлов, которое является операционной системой. В выпуске Standard поддерживается два узла. 
 
-<sup>2</sup> на Enterprise edition поддерживает до 8 вторичных реплик — включая 2 синхронные вторичные реплики. 
+<sup>2</sup> на Enterprise edition поддерживает до 8 вторичных реплик, включая 2 синхронные вторичные реплики. 
 
-<sup>3</sup> standard edition поддерживает основные группы доступности. Базовая группа доступности поддерживает две реплики с одной базой данных. Дополнительные сведения о базовых группах доступности см. в разделе [Базовые группы доступности](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> standard edition поддерживает базовые группы доступности. Базовая группа доступности поддерживает две реплики с одной базой данных. Дополнительные сведения о базовых группах доступности см. в разделе [Базовые группы доступности](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
 ##  <a name="RDBMSSP"></a> Масштабируемость и производительность реляционных СУБД  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express|  
+|Компонент|Enterprise|Standard|Web Edition|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Да|Да|Да|Да|  
 |Большие двоичные объекты в кластеризованных индексах columnstore|Да|Да|Да|Да|  
@@ -147,11 +147,11 @@ ms.locfileid: "34324035"
 |Улучшения массовой вставки|Да|Да|Да|Да|
 
 
-<sup>1</sup> Размер данных выполняющейся в памяти OLTP и кэша сегмента Columnstore ограничены объемом памяти, указанным в выпуске в разделе "Ограничения масштабирования". Максимальная степень параллелизма ограничена. Степень процесса параллелизма (DOP) для построения индекса ограничен 2 DOP для выпуска Standard edition и 1 DOP для выпусков Web и Express. Это относится к индексам columnstore, созданным на основе таблиц на диске и оптимизированных для памяти таблиц.
+<sup>1</sup> Размер данных выполняющейся в памяти OLTP и кэша сегмента Columnstore ограничены объемом памяти, указанным в выпуске в разделе "Ограничения масштабирования". Максимальная степень параллелизма ограничена. Степень параллелизма процесса (DOP) для построения индекса ограничена значением 2 для выпуска Standard и 1 для выпусков Web и Express. Это относится к индексам columnstore, созданным на основе таблиц на диске и оптимизированных для памяти таблиц.
 
 ##  <a name="RDBMSS"></a> Безопасность реляционных СУБД  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express|
+|Компонент|Enterprise|Standard|Web Edition|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
 |Безопасность на уровне строк|Да|Да|Да|Да|  
 |Постоянное шифрование|Да|Да|Да|Да| 
@@ -165,7 +165,7 @@ ms.locfileid: "34324035"
 
 ##  <a name="RDBMSM"></a> Использование реляционных СУБД  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express|   
+|Компонент|Enterprise|Standard|Web Edition|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
 |Выделенное административное соединение|Да|Да|Да|Да, с помощью флага трассировки|Да, с помощью флага трассировки|   
 |Поддержка скриптов PowerShell|Да|Да|Да|Да| 
@@ -184,7 +184,7 @@ ms.locfileid: "34324035"
 
 ##  <a name="Programmability"></a> Programmability  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express 
+|Компонент|Enterprise|Standard|Web Edition|Express 
 |-------------|----------------|--------------|---------|------------------------|  
 |JSON|Да|Да|Да|Да|   
 |Хранилище запросов|Да|Да|Да|Да|   
@@ -205,11 +205,11 @@ ms.locfileid: "34324035"
 
 ## <a name="IS"></a> Службы Integration Services
 
-Сведения о функции Integration Services (SSIS), поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], в разделе [функций служб Integration Services, поддерживаемые различными выпусками SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
+Сведения о функциях Integration Services (SSIS), поддерживаемых различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], см. в разделе [возможности служб Integration Services, поддерживаемые различными выпусками SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
 ##  <a name="SLS"></a> Пространственные службы и службы расположения  
   
-|Имя функции|Enterprise|Standard Edition|Web Edition|Express|  
+|Имя функции|Enterprise|Standard|Web Edition|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
 |Пространственные индексы|Да|Да|Да|Да|   
 |Плоский и геодезический типы данных|Да|Да|Да|Да| 
@@ -218,9 +218,9 @@ ms.locfileid: "34324035"
 
   
 ## <a name="next-steps"></a>Следующие шаги 
- [Выпуски и поддерживаемых функций для SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
- [Выпуски и поддерживаемых функций для SQL Server 2016 — Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Выпуски и поддерживаемых функций для SQL Server 2014 — Windows](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
+ [Выпуски и поддерживаемые функции для SQL Server 2017 — Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
+ [Выпуски и поддерживаемые функции для SQL Server 2016 — Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
+ [Выпуски и поддерживаемые функции для SQL Server 2014 — Windows](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [Спецификации SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
 

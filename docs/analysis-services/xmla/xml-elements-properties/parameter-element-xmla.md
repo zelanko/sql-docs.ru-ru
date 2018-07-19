@@ -1,5 +1,5 @@
 ---
-title: Элемент Parameter (XML для Аналитики) | Документы Microsoft
+title: Элемент Parameter (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e361215425c1e7b0e54b2e8a92b2987d30b00790
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575956"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050362"
 ---
 # <a name="parameter-element-xmla"></a>Элемент Parameter (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34575956"
 </Parameters>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "34575956"
 |Значение по умолчанию|None|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  

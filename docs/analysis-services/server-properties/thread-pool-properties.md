@@ -1,5 +1,5 @@
 ---
-title: Свойства пула потоков | Документы Microsoft
+title: Свойства пула потоков | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239254"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050605"
 ---
 # <a name="thread-pool-properties"></a>Свойства пула потоков
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -189,13 +189,13 @@ ms.locfileid: "35239254"
   
  Узлы NUMA не учитываются. Будет присутствовать только один пул потоков IOProcess, и все потоки в этом пуле будут привязаны ко всем логическим процессорам. Это значение будет использоваться по умолчанию (при PerNumaNode=-1), если компьютер имеет менее 4 узлов NUMA.  
   
- ![NUMA, процессора и пула потоков](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, процессора и пула потоков")  
+ ![NUMA, процессора и пула ошибке отправки корреспонденции](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, процессора и пула ошибке отправки корреспонденции")  
   
  **Задание PerNumaNode=1**  
   
  Пулы потоков IOProcess создаются для каждого узла NUMA. Наличие отдельных пулов потоков способствует улучшению координируемого доступа к локальным ресурсам, например к локальному кэшу на узле NUMA.  
   
- ![NUMA, процессора и пула потоков](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, процессора и пула потоков")  
+ ![NUMA, процессора и пула ошибке отправки корреспонденции](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, процессора и пула ошибке отправки корреспонденции")  
   
  **Задание PerNumaNode=2**  
   
@@ -203,7 +203,7 @@ ms.locfileid: "35239254"
   
  В следующем примере в системе с 4 узлами NUMA и 32 логическими процессорами задание параметру **PerNumaNode** значения 2 приведет к созданию 32 пулов потоков IOProcess. Потоки в первых 8 пулах будут привязаны ко всем логическим процессорам в узле 0, но идеальный процессор будет назначен для 0, 1, 2... до 7. Следующие 8 пулов потоков будут привязаны ко всем логическим процессорам в узле 1 NUMA, идеальный процессор будет назначен для 8, 9, 10... до 15 и т. д.  
   
- ![NUMA, процессора и пула потоков](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, процессора и пула потоков")  
+ ![NUMA, процессора и пула ошибке отправки корреспонденции](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, процессора и пула ошибке отправки корреспонденции")  
   
  На этом уровне соответствия планировщик всегда сначала пытается использовать идеально подходящий логический процессор в предпочитаемом узле NUMA. Если логический процессор недоступен, то планировщик выбирает один процессор в том же узле или в той же группе процессоров, если другие потоки недоступны. Дополнительные сведения и примеры см. в статье [Параметры конфигурации служб Analysis Services 2012 (блог Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   
@@ -275,9 +275,9 @@ ms.locfileid: "35239254"
  [О процессах и потоках](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [Несколько процессоров](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [Группы процессоров](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
- [Изменения пула потоков служб анализа в SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Службы Analysis Services изменения пула потоков в SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Параметры анализа конфигурации Services 2012 (блог Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [Поддержка систем, оснащенных более 64 процессоров](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
- [Руководстве SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
+ [Поддержка систем, оснащенных более чем 64 процессорами](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [Руководстве по использованию SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

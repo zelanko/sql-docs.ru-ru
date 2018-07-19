@@ -1,5 +1,5 @@
 ---
-title: Выполнение файлов шаблонов через свойство CommandStream | Документы Microsoft
+title: Выполнение файлов шаблонов с помощью свойства CommandStream | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,16 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d51834522bf6f6d3b8e3243340406d95376aac54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051542"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Выполнение файлов шаблонов через свойство CommandStream
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath, используя свойство CommandStream SqlXmlCommand, объект. В этом приложении FileStreamobject открывается для командного файла и файловый поток устанавливается как CommandStream, который выполняется.  
+  В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath, используя свойство CommandStream объект SqlXmlCommand. В этом приложении FileStreamobject открывается для командного файла и файловый поток устанавливается как CommandStream, который выполняется.  
   
- В следующем примере Если свойство CommandType задается как SqlXmlCommandType.Template (не как TemplateFile).  
+ В следующем примере свойство CommandType указываются в виде SqlXmlCommandType.Template (не как TemplateFile).  
   
  Образец XML-шаблона:  
   

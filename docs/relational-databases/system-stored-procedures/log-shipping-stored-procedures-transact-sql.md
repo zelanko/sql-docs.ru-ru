@@ -1,5 +1,5 @@
 ---
-title: Доставка журналов хранимые процедуры (Transact-SQL) | Документы Microsoft
+title: Доставка журналов хранимые процедуры (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81a208679f0b3d0ba9f420eb0d987acb6a0b3aeb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240314"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056132"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>Хранимые процедуры доставки журналов (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и более поздние версии поддерживают следующие системные хранимые процедуры, используемые для настройки, изменения и отслеживания конфигураций доставки журналов.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и более поздние версии поддерживают следующие системные хранимые процедуры, которые используются для настройки, изменения и отслеживания конфигураций доставки журналов.  
   
 |||  
 |-|-|  
@@ -48,7 +48,7 @@ ms.locfileid: "33240314"
 |[sp_delete_log_shipping_primary_secondary, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)||  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

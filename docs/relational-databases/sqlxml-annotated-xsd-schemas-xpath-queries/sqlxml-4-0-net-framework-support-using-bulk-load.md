@@ -1,5 +1,5 @@
 ---
-title: Использование массовой загрузки SQLXML в среде .NET | Документы Microsoft
+title: Использование массовой загрузки SQLXML в среде .NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,19 +22,20 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 270abbb40bdf6081b7409cf76a97925a1cd2b3d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053742"
 ---
-# <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 поддержка платформы .NET Framework — использование массовой загрузки.
+# <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 поддержка .NET Framework — использование массовой загрузки
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В этом разделе объясняется, как можно использовать функциональность массовой загрузки XML в среде .NET. Подробные сведения о массовой загрузке XML см. в разделе [выполнении массовой загрузки XML-данных & #40; SQLXML 4.0 & #41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
+  В этом разделе объясняется, как можно использовать функциональность массовой загрузки XML в среде .NET. Подробные сведения о массовой загрузке XML см. в разделе [выполнении массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
   
  Для использования объекта COM массовой загрузки SQLXML в управляемой среде необходимо добавить в этот объект ссылку на проект. Это сформирует управляемый интерфейс оболочки объекта массовой загрузки COM.  
   
 > [!NOTE]  
->  Управляемая массовая загрузка XML не работает с управляемыми потоками и требует оболочки собственных потоков. Компонент массовой загрузки SQLXML не будет запущен в многопоточной среде (атрибут '[MTAThread]'). При попытке запустить компонент массовой загрузки в многопоточной среде, вы получаете исключение InvalidCastException с следующие дополнительные сведения: «Ошибка QueryInterface для интерфейса sqlxmlbulkloadlib.isqlxmlbulkload завершился с». Необходимо создать объект, который содержит Массовая загрузка объекта одним потоком доступ (например, с помощью **[STAThread]** атрибута, как показано в образце).  
+>  Управляемая массовая загрузка XML не работает с управляемыми потоками и требует оболочки собственных потоков. Компонент массовой загрузки SQLXML не будет запущен в многопоточной среде (атрибут '[MTAThread]'). При попытке запустить компонент массовой загрузки в многопоточной среде, вы получаете исключение InvalidCastException со следующими дополнительными сведениями: «Ошибка QueryInterface для интерфейса SQLXMLBULKLOADLib.ISQLXMLBulkLoad». Обойти это можно сделать объект, содержащий Массовая загрузка объекта одним потоком доступ (например, с помощью **[STAThread]** атрибута, как показано в примере).  
   
  Этот раздел содержит образец реализации приложения на языке C# для массовой загрузки XML-данных в базу данных. Чтобы создать образец реализации, выполните следующие шаги.  
   
@@ -117,11 +118,11 @@ ms.lasthandoff: 05/03/2018
   
 5.  Создайте приложение командной строки на языке C#.  
   
-6.  Из **проекта** последовательно выберите пункты **добавить ссылку**.  
+6.  Из **проекта** меню, выберите **добавить ссылку**.  
   
 7.  В **COM** выберите **тип массовой загрузки SQLXML 4.0 библиотеке** (xblkld4.dll) и нажмите кнопку **ОК**. Вы увидите **Interop.SQLXMLBULKLOADLib** сборке, созданной в проекте.  
   
-8.  Замените метод Main() на следующий код. Обновление **ConnectionString** свойство и длина пути к файлам схемы и данных.  
+8.  Замените метод Main() на следующий код. Обновление **ConnectionString** свойство и путь к файлу в файлы схемы и данных.  
   
     ```  
     [STAThread]  
@@ -153,7 +154,7 @@ ms.lasthandoff: 05/03/2018
   
      Это средство создает DLL-библиотеку управляемой оболочки (SQLXMLBULKLOADLib.dll), которую можно использовать в проекте платформы .NET Framework. В .NET Framework ссылка на проект добавляется к вновь созданной DLL-библиотеке.  
   
-## <a name="see-also"></a>См. также:  
- [Выполнение массовой загрузки XML-данных & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>См. также  
+ [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

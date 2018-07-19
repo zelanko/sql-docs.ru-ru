@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Документы Microsoft
+title: sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ba68c331ee4fea313bd0186516d5cc9675758c20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049612"
 ---
 # <a name="sysfnhadrdistributedagreplica-transact-sql"></a>sys.fn_hadr_distributed_ag_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +47,10 @@ sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )
   
 ## <a name="arguments"></a>Аргументы  
  '*lag_Id*'  
- — Это идентификатор распределенной группы доступности. *lag_Id* — тип **uniqueidentifier**.  
+ — Это идентификатор распределенной группы доступности. *lag_Id* является типом **uniqueidentifier**.  
   
  "*replica_id*"  
- — Это идентификатор реплики в распределенной группы доступности. *replica_id* — тип **uniqueidentifier**.  
+ — Идентификатор реплики в распределенной группе доступности. *replica_id* является типом **uniqueidentifier**.  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  Возвращает следующие данные.  
@@ -73,9 +74,9 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Функции групп доступности AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [Группы доступности AlwaysOn & #40; SQL Server & #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Распределенные группы доступности &#40;группы доступности AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
- [Создание группы ДОСТУПНОСТИ & #40; Transact-SQL & #41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER AVAILABILITY GROUP & #40; Transact-SQL & #41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
+ [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_memory_clerks (Transact-SQL) | Документы Microsoft
+title: sys.dm_os_memory_clerks (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 00fad2477b9dd6bd25f998d3d741bcb63c364d05
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467720"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052362"
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34467720"
   Возвращает набор всех клерков памяти, активных в данный момент в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_memory_clerks**.  
+>  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_memory_clerks**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -45,9 +45,9 @@ ms.locfileid: "34467720"
 |**type**|**nvarchar(60)**|Указывает тип клерка памяти. Каждый клерк принадлежит к определенному типу, такому как CLR Clerks MEMORYCLERK_SQLCLR. Не допускает значение NULL.|  
 |**name**|**nvarchar(256)**|Указывает внутреннее имя, назначенное данному клерку памяти. Компонент может иметь несколько клерков памяти определенного типа. Компонент может использовать определенные имена для идентификации клерков памяти одного и того же типа. Не допускает значение NULL.|  
 |**memory_node_id**|**smallint**|Указывает идентификатор узла памяти. Не допускает значения NULL.|  
-|**single_pages_kb**|**bigint**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
-|**pages_kb**|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Устанавливает объем страничной памяти (в килобайтах), выделяемый для этого клерка памяти. Не допускает значение NULL.|  
-|**multi_pages_kb**|**bigint**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Объем выделенной многостраничной памяти в КБ. Это объем памяти, выделенной с помощью механизма распределения множества страниц узлов памяти. Эта память выделена вне буферного пула и использует преимущества виртуального блока распределения узлов памяти. Не допускает значение NULL.|  
+|**single_pages_kb**|**bigint**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
+|**pages_kb**|**bigint**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Устанавливает объем страничной памяти (в килобайтах), выделяемый для этого клерка памяти. Не допускает значение NULL.|  
+|**multi_pages_kb**|**bigint**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Объем выделенной многостраничной памяти в КБ. Это объем памяти, выделенной с помощью механизма распределения множества страниц узлов памяти. Эта память выделена вне буферного пула и использует преимущества виртуального блока распределения узлов памяти. Не допускает значение NULL.|  
 |**virtual_memory_reserved_kb**|**bigint**|Указывает объем виртуальной памяти, зарезервированной клерком памяти. Не допускает значение NULL.|  
 |**virtual_memory_committed_kb**|**bigint**|Указывает объем виртуальной памяти, зафиксированной клерком памяти. Объем зафиксированной памяти должен всегда быть меньше объема зарезервированной памяти. Не допускает значение NULL.|  
 |**awe_allocated_kb**|**bigint**|Указывает объем физической памяти (в КБ), заблокированной в физической памяти и не выгруженной операционной системой. Не допускает значение NULL.|  
@@ -55,8 +55,8 @@ ms.locfileid: "34467720"
 |**shared_memory_committed_kb**|**bigint**|Указывает объем общей памяти, зафиксированной клерком памяти. Не допускает значение NULL.|  
 |**page_size_in_bytes**|**bigint**|Указывает гранулярность выделения страниц для этого клерка памяти. Не допускает значение NULL.|  
 |**page_allocator_address**|**varbinary(8)**|Указывает адрес средства выделения страниц. Этот адрес уникален для клерка памяти и может использоваться в **sys.dm_os_memory_objects** для поиска объектов памяти, связанных с данным клерком. Не допускает значение NULL.|  
-|**host_address**|**varbinary(8)**|Указывает адрес памяти, по которому размещается данный клерк памяти. Дополнительные сведения см. в разделе [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Компоненты, такие как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ресурсов памяти через интерфейс узла.<br /><br /> 0x00000000 = Клерк памяти принадлежит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Не допускает значение NULL.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|**host_address**|**varbinary(8)**|Указывает адрес памяти, по которому размещается данный клерк памяти. Дополнительные сведения см. в разделе [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Компоненты, такие как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, доступ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ресурсов памяти через интерфейс узла.<br /><br /> 0x00000000 = Клерк памяти принадлежит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Не допускает значение NULL.|  
+|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения 
 

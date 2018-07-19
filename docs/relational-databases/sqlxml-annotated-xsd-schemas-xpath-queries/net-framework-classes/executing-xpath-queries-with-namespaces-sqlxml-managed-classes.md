@@ -1,5 +1,5 @@
 ---
-title: Выполнение запросов XPath с пространствами имен (управляемые классы SQLXML) | Документы Microsoft
+title: Выполнение запросов XPath с пространствами имен (управляемые классы SQLXML) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b068d1d9848a7c462833d54fa6e92268fc83433f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051495"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Выполнение запросов XPath с пространствами имен (управляемые классы SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,13 +37,13 @@ ms.lasthandoff: 05/03/2018
   
  Поскольку символ-шаблон (*) в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 не поддерживается, запрос XPath нужно задавать с указанием префикса пространства имен. Для разрешения префикса, свойство пространства имен для указания привязки пространства имен.  
   
- В следующем примере запрос XPath задает пространства имен с помощью подстановочного знака (\*) и функции XPath local-name() и namespace-uri(). Этот запрос XPath возвращает все элементы, где — имя локального **сотрудника** и пространства имен, URI **urn: myschema:Contacts**:  
+ В следующем примере запрос XPath задает пространства имен с помощью подстановочного знака (\*) и функции XPath local-name() и namespace-uri(). Этот запрос XPath возвращает все элементы, в котором локальное имя **сотрудника** и пространство имен URI является **urn: myschema:Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- В SQLXML 4.0 этот запрос XPath необходимо указывать с префиксом пространства имен. Например, **x: контактная**, где **x** префикс пространства имен. Рассмотрим следующую схему XSD.  
+ В SQLXML 4.0 этот запрос XPath необходимо указывать с префиксом пространства имен. Например, **x: контакт**, где **x** префикса пространства имен. Рассмотрим следующую схему XSD.  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
  Поскольку эта схема задает целевое пространство имен, запрос XPath к этой схеме (например, «Employee») должен содержать пространство имен.  
   
- Следующие образец приложения на C# исполняет запрос XPath к предыдущей схеме XSD (MySchema.xml). Для разрешения префикса, укажите привязку пространств имен с помощью свойства объекта SqlXmlCommand пространства имен.  
+ Следующие образец приложения на C# исполняет запрос XPath к предыдущей схеме XSD (MySchema.xml). Для разрешения префикса, указываете привязку пространства имен с помощью пространства имен свойства объекта SqlXmlCommand.  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения.  

@@ -1,5 +1,5 @@
 ---
-title: Round-функция (XQuery) | Документы Microsoft
+title: Round-функция (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,21 +24,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 69c9e11d9cb6dda3aa50a2d49e3eb9c55b99a57b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055132"
 ---
-# <a name="numeric-values-functions---round"></a>Округление числовых значений функций-
+# <a name="numeric-values-functions---round"></a>Функции с числовыми значениями — round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает ближайшее к аргументу целое значение. Если таких значений несколько, то возвращается набольшее из них. Например:  
   
- Если аргумент равен 2,5, **round()** возвращает 3.  
+ Если аргумент равен 2,5, **round()** возвращает значение 3.  
   
  Если аргумент является 2.4999, **round()** возвращает 2.  
   
- Если аргумент равен -2,5, **round()** возвращает значение -2.  
+ Если аргумент – 2,5, **round()** возвращает значение -2.  
   
  Если аргумент представляет собой пустую последовательность, **round()** возвращает пустую последовательность.  
   
@@ -53,24 +54,24 @@ fn:round ( $arg as numeric?) as numeric?
  *$arg*  
  Число, к которому применяется функция.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если тип *$arg* является одним из трех базовых числовых типов, **xs: float**, **xs: double**, или **xs: decimal**, тип возвращаемого значения совпадает с *$arg* типа. Если тип *$arg* — тип, который является производным от одного из числовых типов, тип возвращаемого значения будет иметь базовый числовой тип.  
   
- Если входные данные **fn: FLOOR**, **fn: CEILING**, или **fn: Round** функции является **xdt: untypedAtomic**, нетипизированных данных, оно неявно приводится к **xs: double**.  
+ Если входные данные для **fn: FLOOR**, **fn: CEILING**, или **fn: Round** "функции" — **xdt: untypedAtomic**, нетипизированных данных, оно неявно приводится к **xs: double**.  
   
  Использование любого другого типа вызовет статическую ошибку.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных **xml** столбцов типа в базе данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных **xml** -столбец базы данных AdventureWorks.  
   
- Можно использовать пример в [функция ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) для **round()** функции языка XQuery. Все, нужно сделать, — заменить **ceiling()** функции в запрос с **round()** функции.  
+ Можно использовать пример в [функция ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) для **round()** функции языка XQuery. Все, что необходимо сделать это заменить **ceiling()** функция в запросе с **round()** функции.  
   
 ## <a name="implementation-limitations"></a>Ограничения реализации  
  Существуют следующие ограничения:  
   
 -   **Round()** функция сопоставляет целочисленные значения типу xs: decimal.  
   
--   **Round()** функция значений xs: double и xs: float в промежутке от - 0, 5e0 до - 0e0 значение 0e0 вместо - 0e0.  
+-   **Round()** функцию xs: double и xs: float значений от - 0, 5e0 до - 0e0 возвращает значение 0e0 вместо - 0e0.  
   
 ## <a name="see-also"></a>См. также  
  [Функция FLOOR &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   

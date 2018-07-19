@@ -1,5 +1,5 @@
 ---
-title: sp_delete_backup (Transact-SQL) | Документы Microsoft
+title: sp_delete_backup (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/03/2015
 ms.prod: sql
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2955570ee99eaa05d9a689ccbe62973af3208d80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054451"
 ---
 # <a name="spdeletebackup-transact-sql"></a>sp_delete_backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет все моментальные снимки и файл резервной копии, составляют набор из указанной базы данных резервной копии моментального снимка. Данная системная хранимая процедура рекомендуется только для управления резервных наборов данных снимков. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  Удаление всех моментальных снимков и файл резервной копии, составляющие моментальный снимок резервного набора данных из указанной базы данных. Этой системной хранимой процедуры рекомендуется только для управления наборами данных резервного копирования моментальных снимков. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sys.sp_delete_backup
   
 ## <a name="arguments"></a>Аргументы  
  *[ @backup_url = ] backup_meta_file_url*  
- URL-адрес в резервной копии для удаления, который удаляет все снимки, из которых состоит указанный резервный набор, включая файл резервной копии.  
+ URL-адрес резервного копирования для удаления, который удаляет все моментальные снимки, составляющие указанный резервный набор, включая файл резервной копии.  
   
  *[ @db_name =] имя_базы_данных*  
- Имя базы данных, содержащей моментальный снимок для удаления. Если имя базы данных не предоставлен, система проверяет, что URL-адрес резервного копирования предоставлен резервного копирования URL-адрес для указанной базы данных и использует [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) удалить каждый моментальный снимок. Если имя базы данных не указано, эта проверка базы данных не выполняется.  
+ Имя базы данных, содержащей ждет удаления снимка. Если имя базы данных предоставляется, система проверяет, что URL-адрес архива предоставленные резервного копирования URL-адрес для указанной базы данных и использует [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) для удаления каждого моментального снимка. Если имя базы данных не указано, эта проверка базы данных не выполняется.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение ALTER ANY DATABASE или разрешение ALTER в указанной базе данных.  
+ Требуется разрешение ALTER ANY DATABASE или разрешение ALTER для указанной базы данных.  
   
 ## <a name="see-also"></a>См. также  
  [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   

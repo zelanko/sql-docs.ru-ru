@@ -1,5 +1,5 @@
 ---
-title: Запросы XQuery, использующие иерархию | Документы Microsoft
+title: Запросы XQuery с использованием иерархии | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,10 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048294"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Запросы XQuery, использующие иерархию
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Получение сведений о размещении цехов и о первом этапе производства в этих цехах из документов инструкций производства  
- Для модели продукта 7 запрос создает XML, включающий <`ManuInstr`> элемент, с **ProductModelID** и **ProductModelName** атрибутов и один или несколько <`Location`> дочерние элементы.  
+ Для продукта модели 7 запрос создает XML, включающий <`ManuInstr`> элемент, с помощью **ProductModelID** и **ProductModelName** атрибуты и один или несколько <`Location`> дочерние элементы.  
   
  Каждый элемент <`Location`> имеет свой собственный набор атрибутов и один дочерний элемент <`step`>. Этот дочерний элемент <`step`> соответствует первому этапу производства в данном цехе:  
   
@@ -62,7 +63,7 @@ WHERE ProductModelID=7
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   **Имен** ключевое слово в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет префикс пространства имен. Затем данный префикс используется в теле запроса.  
+-   **Пространства имен** ключевое слово в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет префикс пространства имен. Затем данный префикс используется в теле запроса.  
   
 -   Токены переключения контекста, {) и (}, используются для переключения запроса из режима построения XML в режим вычисления.  
   
@@ -70,7 +71,7 @@ WHERE ProductModelID=7
   
 -   При формировании элемента <`Location`>, $wc/@* возвращает все атрибуты размещения цехов.  
   
--   **String()** функция возвращает строковое значение из <`step`> элемент.  
+-   **String()** функция возвращает строковое значение из <`step`> элемента.  
   
  Частичный результат:  
   
@@ -122,7 +123,7 @@ WHERE ContactID = 1
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы языка XQuery](../xquery/xquery-basics.md)   
  [Построение XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: процедура sp_depends (Transact-SQL) | Документы Microsoft
+title: sp_depends (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: cc84911c1280ef3a4d82c8ba291073eca75d89a9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261290"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049452"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33261290"
   Отображает сведения о зависимостях объектов базы данных, таких как представления и процедуры, зависящие от таблицы или представления, а также таблицы и представления, зависящие от представления или процедуры. О ссылках на объекты вне текущей базы данных не сообщается.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) и [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) и [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) вместо этого.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,19 +66,19 @@ sp_depends [ @objname = ] '<object>'
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- **процедура sp_depends** отображает два результирующих набора.  
+ **sp_depends** отображает два результирующих набора.  
   
- Следующий результирующий набор отображает объекты, от которых  *\<объекта >* зависит от обстоятельств.  
+ Следующий результирующий набор отображает объекты, от которого  *\<объекта >* зависит.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Имя элемента, для которого существует зависимость.|  
 |**type**|**nvarchar(16) в формате**|Тип элемента.|  
-|**обновлен**|**nvarchar(7)**|Был ли элемент обновлен.|  
+|**обновлены**|**nvarchar(7)**|Был ли элемент обновлен.|  
 |**Выбранные**|**nvarchar(8)**|Используется ли объект в инструкции SELECT.|  
 |**column**|**sysname**|Столбец или параметр, от которого существует зависимость.|  
   
- Следующий результирующий набор отображает объекты, которые зависят от  *\<объекта >*.  
+ Следующий результирующий набор отображает объекты, зависящие от  *\<объекта >*.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -107,7 +107,7 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

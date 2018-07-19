@@ -1,5 +1,5 @@
 ---
-title: Диаграмма модели объектов SMO | Документы Microsoft
+title: Диаграмма модели объектов SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,10 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7e23c88851afef3d990c3dcac8d83bd7091a72f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046222"
 ---
 # <a name="smo-object-model-diagram"></a>Диаграмма модели объектов SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,10 +32,10 @@ ms.lasthandoff: 05/03/2018
   
  ![Схема, показывающая иерархические связи](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "схема, показывающая иерархические связи")  
   
- ![Объектную модель, иерархическое представление в виде иерархии](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "объектную модель, иерархическое представление в виде иерархии")  
+ ![Объектная модель, иерархическое представление в иерархии](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "объектную модель, иерархическое представление в иерархии")  
   
- ![Объектную модель, иерархическое представление в виде иерархии](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "объектную модель, иерархическое представление в виде иерархии")  
+ ![Объектная модель, иерархическое представление в иерархии](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "объектную модель, иерархическое представление в иерархии")  
   
- ![Объектную модель, иерархическое представление в виде иерархии](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "объектную модель, иерархическое представление в виде иерархии")  
+ ![Объектная модель, иерархическое представление в иерархии](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "объектную модель, иерархическое представление в иерархии")  
   
   

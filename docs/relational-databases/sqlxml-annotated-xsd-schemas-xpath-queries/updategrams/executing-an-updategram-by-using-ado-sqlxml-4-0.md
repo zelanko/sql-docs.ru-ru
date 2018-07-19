@@ -1,5 +1,5 @@
 ---
-title: Выполнение диаграммы обновления с помощью ADO (SQLXML 4.0) | Документы Microsoft
+title: Выполнение диаграммы обновления с помощью ADO (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 95272db4677cafad6f1e3c84f14b5705dd5f4718
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051462"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Выполнение диаграммы обновления при помощи ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
  В этом образце приложения происходит следующее.  
   
--   **Conn** объекта (**ADODB. Подключение**) устанавливает подключение к запущенному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на заданном сервере.  
+-   **Conn** объекта (**ADODB. Подключение**) подключается к запущенному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на заданном сервере.  
   
 -   **Cmd** объекта (**ADODB.Command**) выполняется в рамках установленного подключения.  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Диаграмма обновления копируется в поток команды (**strmIn**).  
   
--   Выходной поток команды задано значение **StrmOut** объекта (**ADODB. Поток**) который получает все возвращенные данные.  
+-   Выходной поток команды присваивается **StrmOut** объекта (**ADODB. Stream**), который получает все возвращаемых данных.  
   
 -   Наконец выполняется команда (диаграмма обновления).  
   

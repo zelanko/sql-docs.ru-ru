@@ -1,5 +1,5 @@
 ---
-title: sp_helpextendedproc (Transact-SQL) | Документы Microsoft
+title: sp_helpextendedproc (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a7e9cc50f543232dea6b5ce39153eee2292284ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248058"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052252"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@funcname =**] **"***процедура***"**  
+ [  **@funcname =**] **"***процедуры***"**  
  Имя расширенной хранимой процедуры, сведения о которой сообщаются. *процедура* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -60,8 +60,8 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**name**|**sysname**|Имя расширенной хранимой процедуры.|  
 |**библиотеки DLL**|**nvarchar(255)**|Имя DLL.|  
   
-## <a name="remarks"></a>Замечания  
- Когда *процедура* указано, **sp_helpextendedproc** сообщает сведения об указанной расширенной хранимой процедуры. Если этот параметр не задан, **sp_helpextendedproc** принадлежит возвращает все расширенные хранимые процедуры, имена и имена библиотек DLL, в котором каждый расширенной хранимой процедуры.  
+## <a name="remarks"></a>Примечания  
+ Когда *процедуры* указано, **sp_helpextendedproc** сообщает сведения об указанной расширенной хранимой процедуры. Если этот параметр не задан, **sp_helpextendedproc** принадлежит возвращает все расширенные хранимые процедуры, имена и имена библиотек DLL, в котором каждый расширенной хранимой процедуры.  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешение на выполнение **sp_helpextendedproc** предоставляется **открытый**.  

@@ -1,5 +1,5 @@
 ---
-title: Файлы и номера версий | Документы Microsoft
+title: Файлы и номера версий | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -23,22 +23,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 10e11076ce023a3d969b4ba95a30c15de43eafa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046232"
 ---
 # <a name="files-and-version-numbers"></a>Файлы и номера версий
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Все необходимые компоненты управляющих объектов SQL Server (SMO) входят в пакет Microsoft.SqlServer.SqlManagementObjects NuGet. Объекты SMO реализованы в нескольких управляемых сборках. Можно разрабатывать приложения объектов SMO либо на клиенте, либо на сервере.  
+  Все необходимые компоненты объектов управления SQL Server (SMO) помещаются в пакет Microsoft.SqlServer.SqlManagementObjects NuGet. Объекты SMO реализованы в нескольких управляемых сборках. Можно разрабатывать приложения объектов SMO либо на клиенте, либо на сервере.  
 
 >>[!Important]
-Версия файла сборки объектов SMO отображается как основной. **0**. Build.Revision. Но версия внедренную сборку основной. **100**. Build.Revision. Это позволяет отделить версия объектов SMO, используемые в каждом приложении, поэтому одного обновления не влияют на других.
+Версия файла сборки объектов SMO отображается как основной. **0**. Build.Revision. Но версия embedded сборки основной номер. **100**. Build.Revision. Это позволяет отделить версия объектов SMO, используемые в каждом приложении, чтобы обновления одного не влияют на любые другие.
 >>
->>По этой причине следует **не** установить эти версии сборок в глобальный кэш сборок (GAC). Это может привести к другим приложениям, например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, чтобы приостановить выполнение. 
+>>По этой причине следует **не** установить эти версии сборок в глобальный кэш сборок (GAC). Это может привести к другим приложениям, такие как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, чтобы прервать. 
   
-|Файл|Description|  
+|Файл|Описание|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|Содержит поддержку для соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|Содержит поддержку программирования компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker. Это требуется только в программах, которые используют компонент Service Broker.|  

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Документы Microsoft
+title: sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ce8af4df2491d6b80acf931ae769b1a0299504b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056092"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
 ## <a name="messages"></a>Сообщения  
  При возникновении ошибки `sp_xtp_bind_db_resource_pool` возвращает одно из этих сообщений.  
   
- **База данных не существует.**  
+ **База данных не существует**  
  Database_name должен ссылаться на существующую базу данных. Если база данных с указанным идентификатором не существует, возвращается следующее сообщение:   
 *Базы данных с Идентификатором %d не существует.  Используйте допустимый идентификатор базы данных для этой привязки.*  
   
@@ -77,7 +78,7 @@ Msg 41371, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, L
 Binding to a resource pool is not supported for system database 'master'. This operation can only be performed on a user database.  
 ```  
   
-**Пул ресурсов не существует.**  
+**Пул ресурсов не существует**  
  Пул ресурсов, определяемый resource_pool_name, должен существовать до выполнения `sp_xtp_bind_db_resource_pool`.  Если пул с указанным идентификатором не существует, возвращается следующая ошибка:  
 *Пул ресурсов %s не существует.  Введите допустимое имя пула ресурсов.*  
   
@@ -96,7 +97,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **База данных уже привязана к другому пулу ресурсов**  
- База данных может быть привязана только к одному пулу ресурсов в любой момент времени. Привязки баз данных к пулам ресурсов необходимо явно удалить перед тем, как они могут быть привязаны к другому пулу. В разделе [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
+ База данных может быть привязана только к одному пулу ресурсов в любой момент времени. Привязки баз данных к пулам ресурсов необходимо явно удалить перед тем, как они могут быть привязаны к другому пулу. См. в разделе [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
 *База данных %s уже привязана к пулу ресурсов %s.  Необходимо отменить привязку перед созданием новой привязки.*  
   
 ```  
@@ -119,7 +120,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  Привязка вступит в силу при следующем переводе базы данных в режим «в сети».  
  
- Б. Расширенный пример выше примере, который включает некоторые основные проверки.  Выполните следующий [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ Б. Расширенный пример выше пример, включающий некоторые основные проверки.  Выполните указанные ниже команды [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -156,7 +157,7 @@ END
 -   Необходимо разрешение CONTROL SERVER.  
   
 ## <a name="see-also"></a>См. также  
- [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_unbind_db_resource_pool & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [привязать базу данных с таблицами, оптимизированными для памяти, к пулу ресурсов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

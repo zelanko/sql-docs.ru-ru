@@ -1,5 +1,5 @@
 ---
-title: Элемент WritebackTableCreation (XML для Аналитики) | Документы Microsoft
+title: Элемент WritebackTableCreation (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e04f44d9caa3ae51ea141997e83de54524000fee
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576856"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046734"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>Элемент WritebackTableCreation (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34576856"
 </Process>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34576856"
 |Значение по умолчанию|None|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34576856"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о параметрах обработки, доступных для объектов в экземпляре служб Analysis Services см. в разделе [обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Дополнительные сведения о параметрах обработки, доступных для объектов в экземпляре служб Analysis Services, см. в разделе [обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  Значением элемента **WritebackTableCreation** может быть только одна из строк в следующей таблице.  
   

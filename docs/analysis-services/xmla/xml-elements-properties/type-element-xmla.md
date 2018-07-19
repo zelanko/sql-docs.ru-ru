@@ -1,5 +1,5 @@
 ---
-title: Введите элемент (XMLA) | Документы Microsoft
+title: Введите элемент (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a080a1af46df731befc8ab66ce925b961be9b16
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576716"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051602"
 ---
 # <a name="type-element-xmla"></a>Элемент Type (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Определяет тип обработки, выполняемой по [процесс](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) элемента.  
+  Определяет тип обработки, которые будут произведены методом [процесс](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576716"
 </Process>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34576716"
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34576716"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о параметрах обработки, доступных для объектов в экземпляре служб Analysis Services см. в разделе [обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Дополнительные сведения о параметрах обработки, доступных для объектов в экземпляре служб Analysis Services, см. в разделе [обработка многомерной модели &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
- Значение **тип** элемента ограничивается одной из строк, перечисленных в следующей таблице.  
+ Значение **тип** может быть только одна из строк, перечисленных в следующей таблице.  
   
 |Значение|Описание|  
 |-----------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_wait_stats (база данных SQL Azure) | Документы Microsoft
+title: sys.dm_db_wait_stats (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
@@ -27,11 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: af54ac9890cf903e0646d9b6d8eefe031924ffce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467870"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051408"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "34467870"
   
  Хотя поток больше не находится в ожидании, он необязательно будет запущен немедленно. Дело в том, что такой поток сначала помещается в очередь работоспособных исполнителей и должен ожидать такта для запуска по расписанию.  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] счетчики времени ожидания **bigint** значений и поэтому не вероятно, как переполнение соответствующих счетчиков в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] счетчики времени ожидания **bigint** значений и поэтому не вероятно, как переполнение соответствующих счетчиков в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  В следующей таблице перечислены типы ожиданий, с которыми могут сталкиваться задачи.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34467870"
 |AUDIT_ON_DEMAND_TARGET_LOCK|Имеет место, когда существует ожидание блокировки, используемой для обеспечения одиночной инициализации связанных с аудитом целей расширенного события.|  
 |AUDIT_XE_SESSION_MGR|Имеет место, когда существует ожидание блокировки, используемой для синхронизации запуска и остановки, связанных с аудитом сеансов расширенного события.|  
 |BACKUP|Имеет место, когда задача блокируется как часть процесса резервного копирования.|  
-|BACKUP_OPERATOR|Имеет место при ожидании задачей монтирования ленты. Для просмотра состояния ленты служит запрос [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). Если операция монтирования не назначена к выполнению, этот тип ожидания может указывать на аппаратную проблему накопителя на магнитной ленте.|  
+|BACKUP_OPERATOR|Имеет место при ожидании задачей монтирования ленты. Для просмотра состояния ленты, запрос [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). Если операция монтирования не назначена к выполнению, этот тип ожидания может указывать на аппаратную проблему накопителя на магнитной ленте.|  
 |BACKUPBUFFER|Имеет место при ожидании задачей резервного копирования данных или буфера для их записи. Этот тип встречается редко, преимущественно при ожидании задачей монтирования магнитной ленты.|  
 |BACKUPIO|Имеет место при ожидании задачей резервного копирования данных или буфера для их записи. Этот тип встречается редко, преимущественно при ожидании задачей монтирования магнитной ленты.|  
 |BACKUPTHREAD|Имеет место, когда для своего завершения задача ожидает завершения задачи резервного копирования. Время ожидания может быть длительным, от нескольких минут до нескольких часов. Если задача, выполнение которой ожидается, находится в процессе ввода-вывода, этот тип не указывает на проблему.|  
@@ -199,27 +199,27 @@ ms.locfileid: "34467870"
 |LATCH_SH|Имеет место при ожидании кратковременной блокировки SH (коллективной). Не включает в себя буферные кратковременные блокировки или кратковременные блокировки меток транзакции. Список ожиданий LATCH_* доступен в представлении sys.dm_os_latch_stats. Обратите внимание на то, что в представлении sys.dm_os_latch_stats ожидания LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX и LATCH_DT сгруппированы.|  
 |LATCH_UP|Имеет место при ожидании кратковременной блокировки UP (обновления). Не включает в себя буферные кратковременные блокировки или кратковременные блокировки меток транзакции. Список ожиданий LATCH_* доступен в представлении sys.dm_os_latch_stats. Обратите внимание на то, что в представлении sys.dm_os_latch_stats ожидания LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX и LATCH_DT сгруппированы.|  
 |LAZYWRITER_SLEEP|Имеет место при приостановке задач средства отложенной записи. Представляет собой показатель времени, затраченного ожидающими фоновыми задачами. Не следует учитывать это состояние при исследовании пользовательских простоев.|  
-|LCK_M_BU|Имеет место, когда задача ожидает получения блокировки для массового обновления (BU). Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IS|Имеет место, когда задача ожидает получения блокировки с намерением коллективного доступа (IS). Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IU|Имеет место, когда задача ожидает получения блокировки с намерением обновления (IU). Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IX|Имеет место, когда задача ожидает получения блокировки с намерением монопольного доступа (IX). Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_NL|Имеет место, когда задача ожидает получения блокировки типа NULL на текущее ключевое значение и блокировки вставки диапазона между текущим и предыдущим ключами. Блокировка типа NULL на ключ — это блокировка с немедленным снятием. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_S|Имеет место, когда задача ожидает получения совмещаемой блокировки на текущее ключевое значение и блокировки вставки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_U|Задача ожидает получения блокировки на обновление текущего ключевого значения и блокировки вставки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_X|Имеет место, когда задача ожидает получения монопольной блокировки на текущее ключевое значение и блокировки вставки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_S|Имеет место, когда задача ожидает получения совмещаемой блокировки на текущее ключевое значение и совмещаемой блокировки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_U|Имеет место, когда задача ожидает получения блокировки обновления текущего ключевого значения и блокировки обновления диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_S|Имеет место, когда задача ожидает получения совмещаемой блокировки на текущее ключевое значение и монопольной блокировки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_U|Имеет место, когда задача ожидает получения блокировки на обновление текущего ключевого значения и монопольной блокировки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_X|Имеет место, когда задача ожидает получения монопольной блокировки на текущее ключевое значение и монопольной блокировки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_S|Имеет место, когда задача ожидает получения совмещаемой блокировки. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_M|Имеет место, когда задача ожидает получения блокировки на изменение схемы. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_S|Имеет место, когда задача ожидает получения совмещаемой блокировки схемы. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIU|Имеет место, когда задача ожидает получения совмещаемой блокировки с намерением обновления. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIX|Имеет место, когда задача ожидает получения совмещаемой блокировки с намерением монопольного доступа. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_U|Имеет место, когда задача ожидает получения блокировки на обновление. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_UIX|Имеет место, когда задача ожидает получения блокировки на обновление с намерением монопольного доступа. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_X|Имеет место, когда задача ожидает получения блокировки на монопольный доступ. Матрицу совместимости блокировок см [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_BU|Имеет место, когда задача ожидает получения блокировки для массового обновления (BU). Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IS|Имеет место, когда задача ожидает получения блокировки с намерением коллективного доступа (IS). Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IU|Имеет место, когда задача ожидает получения блокировки с намерением обновления (IU). Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IX|Имеет место, когда задача ожидает получения блокировки с намерением монопольного доступа (IX). Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_NL|Имеет место, когда задача ожидает получения блокировки типа NULL на текущее ключевое значение и блокировки вставки диапазона между текущим и предыдущим ключами. Блокировка типа NULL на ключ — это блокировка с немедленным снятием. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_S|Имеет место, когда задача ожидает получения совмещаемой блокировки на текущее ключевое значение и блокировки вставки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_U|Задача ожидает получения блокировки на обновление текущего ключевого значения и блокировки вставки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_X|Имеет место, когда задача ожидает получения монопольной блокировки на текущее ключевое значение и блокировки вставки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_S|Имеет место, когда задача ожидает получения совмещаемой блокировки на текущее ключевое значение и совмещаемой блокировки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_U|Имеет место, когда задача ожидает получения блокировки обновления текущего ключевого значения и блокировки обновления диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_S|Имеет место, когда задача ожидает получения совмещаемой блокировки на текущее ключевое значение и монопольной блокировки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_U|Имеет место, когда задача ожидает получения блокировки на обновление текущего ключевого значения и монопольной блокировки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_X|Имеет место, когда задача ожидает получения монопольной блокировки на текущее ключевое значение и монопольной блокировки диапазона между текущим и предыдущим ключами. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_S|Имеет место, когда задача ожидает получения совмещаемой блокировки. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_M|Имеет место, когда задача ожидает получения блокировки на изменение схемы. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_S|Имеет место, когда задача ожидает получения совмещаемой блокировки схемы. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIU|Имеет место, когда задача ожидает получения совмещаемой блокировки с намерением обновления. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIX|Имеет место, когда задача ожидает получения совмещаемой блокировки с намерением монопольного доступа. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_U|Имеет место, когда задача ожидает получения блокировки на обновление. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_UIX|Имеет место, когда задача ожидает получения блокировки на обновление с намерением монопольного доступа. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_X|Имеет место, когда задача ожидает получения блокировки на монопольный доступ. Матрицу совместимости блокировок см. в разделе [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
 |LOG_RATE_GOVERNOR|Возникает, когда БД ожидает записи квоты в журнал.|  
 |LOGBUFFER|Имеет место, когда задача ожидает освобождения пространства в буфере журнала для сохранения записи в журнал. Последовательные высокие значения могут указывать на то, что устройства записи в журнал не справляются с объемом записей, формируемых сервером.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -257,16 +257,16 @@ ms.locfileid: "34467870"
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|Происходит, если планировщик SQLOS переключается в режим с вытеснением, чтобы закрыть виртуальное устройство резервного копирования.|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Происходит, если планировщик SQLOS переключается в режим с вытеснением, чтобы выполнить операции отказоустойчивого кластера Windows.|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|Происходит, если планировщик SQLOS переключается в режим с вытеснением, чтобы создать COM-объект.|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Группы доступности AlwaysOn арендует диспетчер расписания для диагностики CSS.|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|Планирование для диагностики CSS диспетчера аренды групп доступности AlwaysOn.|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PRINT_ROLLBACK_PROGRESS|Применяется при ожидании завершения пользовательских процессов в базе данных, измененной с помощью заключительного предложения ALTER DATABASE. Дополнительные сведения см. в статье [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
+|PRINT_ROLLBACK_PROGRESS|Применяется при ожидании завершения пользовательских процессов в базе данных, измененной с помощью заключительного предложения ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Возникает, когда фоновая задача ожидает завершения фоновой задачи, которая получает уведомления WSFC (путем опроса).  Только для внутреннего применения.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Операция добавления, замены или удаления ожидает получения блокировки записи на всегда на внутренний список (например, список сетей, сетевых адресов или прослушивателей группы доступности).  Только для внутреннего применения.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Добавления, замены или удаления ожидает получения блокировки на Always On внутренний список (например, список сетей, сетевых адресов или прослушивателей группы доступности) запись операции.  Только для внутреннего применения.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Always On операция удаления группы доступности ожидает целевая группа доступности в автономный режим перед удалением объектов отказоустойчивой кластеризации Windows Server.|  
-|PWAIT_HADR_ONLINE_COMPLETED|Всегда на создание или операция группы доступности перехода на другой ресурс находится в состоянии ожидания целевая группа доступности перейдет в оперативный режим.|  
+|PWAIT_HADR_ONLINE_COMPLETED|Always On создайте или операция группы доступности перехода на другой ресурс ожидает целевая группа доступности перешел в оперативный режим.|  
 |PWAIT_HADR_POST_ONLINE_COMPLETED|Always On операция удаления группы доступности ожидает завершения любой фоновой задачи, которая была запланирована во время выполнения предыдущей команды. Например, это может быть фоновая задача, которая превращает базы данных доступности в основные базы данных. Команда DROP AVAILABILITY GROUP языка DDL должна дождаться завершения этой фоновой задачи во избежание взаимоблокировки.|  
 |PWAIT_HADR_WORKITEM_COMPLETED|Внутреннее ожидание: поток ожидает завершения асинхронной рабочей задачи. Такое ожидание предусмотрено и используется в CSS.|  
 |PWAIT_MD_LOGIN_STATS|Происходит во время внутренней синхронизации метаданных статистики входа в систему.|  
@@ -283,7 +283,7 @@ ms.locfileid: "34467870"
 |QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX|Имеет место в процессе синхронизации состояния транзакций в уведомлениях о запросах.|  
 |QUERY_NOTIFICATION_TABLE_MGR_MUTEX|Имеет место в процессе внутренней синхронизации диспетчера уведомлений о запросах.|  
 |QUERY_NOTIFICATION_UNITTEST_MUTEX|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|QUERY_OPTIMIZER_PRINT_MUTEX|Имеет место в процессе синхронизации диагностического выхода оптимизатора запросов. Этот тип ожидания происходит, только если были включены настройки диагностики под руководством службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] технической поддержки.|  
+|QUERY_OPTIMIZER_PRINT_MUTEX|Имеет место в процессе синхронизации диагностического выхода оптимизатора запросов. Этот тип ожидания происходит, только если были включены настройки диагностики под руководством [!INCLUDE[msCoName](../../includes/msconame-md.md)] технической поддержки.|  
 |QUERY_TRACEOUT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |QUERY_WAIT_ERRHDL_SERVICE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |RECOVER_CHANGEDB|Имеет место в процессе синхронизации состояния базы данных в режиме «горячего» резервирования.|  

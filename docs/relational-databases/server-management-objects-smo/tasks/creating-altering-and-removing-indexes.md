@@ -1,5 +1,5 @@
 ---
-title: Создание, изменение и удаление индексов | Документы Microsoft
+title: Создание, изменение и удаление индексов | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c376209c269456614e133b5e2726620835fb6888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970779"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049742"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Создание, изменение и удаление индексов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "32970779"
  Создать индекс для XML-столбца можно путем указания свойства <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Создание некластеризованного составного индекса на языке Visual Basic  
- Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задать <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **False** для некластеризованного индекса.  
+ Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **False** для некластеризованного индекса.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -93,7 +93,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Создание некластеризованного составного индекса на языке Visual C#  
- Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задать <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **False** для некластеризованного индекса.  
+ Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **False** для некластеризованного индекса.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -151,7 +151,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Создание некластеризованного составного индекса в PowerShell  
- Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задать <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **False** для некластеризованного индекса.  
+ Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **False** для некластеризованного индекса.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  
@@ -192,7 +192,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Создание XML-индекса на языке Visual Basic  
- Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML, именем MySampleCollection, которая была создана в [XML-схем с помощью](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
+ Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML, именем MySampleCollection, которая создается в [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -255,7 +255,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Создание XML-индекса на языке Visual C#  
- Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML, именем MySampleCollection, которая была создана в [XML-схем с помощью](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
+ Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML, именем MySampleCollection, которая создается в [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -318,7 +318,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>Создание XML-индекса в PowerShell  
- Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML, именем MySampleCollection, которая была создана в [XML-схем с помощью](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
+ Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML, именем MySampleCollection, которая создается в [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

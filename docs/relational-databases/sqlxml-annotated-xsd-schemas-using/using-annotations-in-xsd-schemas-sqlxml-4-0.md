@@ -1,5 +1,5 @@
 ---
-title: Использование заметок в схемах XSD (SQLXML 4.0) | Документы Microsoft
+title: Использование заметок в схемах XSD (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f3e44d91a958441e421259b7257df49f14883eb0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707543"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054002"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Использование заметок в схемах XSD (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,27 +53,27 @@ ms.locfileid: "34707543"
  Рассказ о сопоставлении по умолчанию и примеры задач, использующих такое сопоставление.  
   
  [Явное сопоставление элементов и атрибутов с таблицами и столбцами XSD &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
- Содержит объяснение явного сопоставления с **SQL: Relation** и **SQL: field** заметки, а также примеры.  
+ Содержит объяснение явного сопоставления с **SQL: Relation** и **SQL: field** заметки и приводятся примеры.  
   
- [Задание связей с помощью SQL: Relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
+ [Указание связей с помощью SQL: Relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
  Описание и примеры **SQL: Relationship** заметки.  
   
- [Указание sql:inverse атрибут для SQL: Relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
- Описывает **sql:inverse** заметки.  
+ [Указание значения атрибута SQL: inverse для SQL: Relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
+ Описывает **значения SQL: inverse** заметки.  
   
  [Создание постоянных элементов при помощи sql: является константа &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
  Описание и примеры **sql: является константа** заметки.  
   
- [Исключение элементов схемы из результирующего XML-документа при помощи sql: сопоставленный &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
- Описание и примеры **sql: сопоставленный** заметки.  
+ [Исключение элементов схемы из итоговый документ XML с помощью sql: сопоставлены &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
+ Описание и примеры **sql: сопоставлены** заметки.  
   
  [Фильтрация значений при помощи SQL: Limit-поля и SQL: Limit-значение &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)  
  Описание и примеры **SQL: Limit-поле** и **SQL: Limit-значение** заметок.  
   
- [Определение ключевых столбцов с помощью SQL: Key-поля &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
+ [Идентификация ключевых столбцов с использованием SQL: Key-поля &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
  Описание и примеры **SQL: Key-поля** заметки.  
   
- [Указание целевого пространства имен с помощью атрибута targetNamespace &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
+ [Задание целевого пространства имен с помощью атрибута targetNamespace &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
  Описание и примеры **targetNamespace** атрибута.  
   
  [Создание допустимый идентификатор, IDREF и IDREFS атрибуты типа с помощью SQL: prefix &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
@@ -82,28 +82,28 @@ ms.locfileid: "34707543"
  [Приведение типов данных и заметка SQL: DataType &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
  Описание и примеры **SQL: DataType** заметки.  
   
- [Сопоставление типов данных XSD в типы данных XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)  
+ [Сопоставление типов данных XSD с типами данных XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)  
  Содержит таблицу сравнения типов данных XSD, XDR и XPath с перечислением соответствующих преобразований [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Создание разделов CDATA с использованием SQL: USE-cdata &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
  Описание и примеры **SQL: USE-данных** заметки.  
   
- [Запрос URL-ссылки на данные BLOB с помощью sql: encode &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
- Описание и примеры **sql: encode** заметки.  
+ [Получение URL-адрес ссылок на данные BLOB с использованием sql: кодирование &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
+ Описание и примеры **sql: кодирование** заметки.  
   
- [Получение невостребованных данных при помощи SQL: Overflow-поле &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md)  
+ [Получение невостребованных данных с помощью SQL: Overflow-поле &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md)  
  Описание и примеры **SQL: Overflow-поле** заметки.  
   
  [Скрытие элементов и атрибутов с помощью sql:hide](../../relational-databases/sqlxml-annotated-xsd-schemas-using/hiding-elements-and-attributes-by-using-sql-hide.md)  
  Описание и примеры **SQL: hide** заметки.  
   
  [Использование заметок sql:identity и sql:guid](../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md)  
- Описание и примеры **: Identity** и **SQL: GUID** заметок.  
+ Описание и примеры **: Identity** и **sql:guid** заметок.  
   
  [Задание глубины рекурсивных связей с использованием sql:max-depth](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)  
  Описание и примеры **SQL: max-depth** заметки.  
   
 ## <a name="see-also"></a>См. также  
- [Вопросы безопасности схемы с заметками &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [С заметками о безопасности схемы &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
   
   
