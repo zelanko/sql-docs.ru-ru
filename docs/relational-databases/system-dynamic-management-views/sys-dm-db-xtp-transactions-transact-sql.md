@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_transactions (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_xtp_transactions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd5be6e6617172755f1ac293d94ddfe406b11a04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464960"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997846"
 ---
 # <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "34464960"
 |state|**int**|Состояние транзакции:<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|Описание состояния транзакции.|  
 |набор по|**int**|Результат транзакции. Допустимы следующие значения:<br /><br /> 0 — ВЫПОЛНЯЕТСЯ<br /><br /> 1 — УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> 2 — ОШИБКА<br /><br /> 3 — ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> 4 — ПРОВЕРКА ЗАВЕРШЕНА С ОШИБКОЙ (RR)<br /><br /> 5 — ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> 6 — ОТКАТ|  
-|result_desc|**nvarchar**|Результат транзакции. Допустимы следующие значения:<br /><br /> ВЫПОЛНЯЕТСЯ<br /><br /> УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> ERROR<br /><br /> ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (RR)<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> ROLLBACK|  
+|result_desc|**nvarchar**|Результат транзакции. Допустимы следующие значения:<br /><br /> ВЫПОЛНЯЕТСЯ<br /><br /> УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> Ошибка<br /><br /> ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (RR)<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|Только для внутреннего применения|  
-|is_speculative|**бит**|Только для внутреннего применения|  
-|is_prepared|**бит**|Только для внутреннего применения|  
-|is_delayed_durability|**бит**|Только для внутреннего применения|  
+|is_speculative|**bit**|Только для внутреннего применения|  
+|is_prepared|**bit**|Только для внутреннего применения|  
+|is_delayed_durability|**bit**|Только для внутреннего применения|  
 |memory_address|**varbinary**|Только для внутреннего применения|  
 |database_address|**varbinary**|Только для внутреннего применения|  
 |thread_id|**int**|Только для внутреннего применения|  

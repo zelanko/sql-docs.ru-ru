@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_flush_db (Transact-SQL) | Документы Microsoft
+title: sp_query_store_flush_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0dca89f1d5876d437ccce2009db77614ba04ce4c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247040"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993634"
 ---
 # <a name="spquerystoreflushdb-transact-sql"></a>sp_query_store_flush_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Часть данных в хранилище запросов в памяти записывается на диск.  
+  Часть данных Store запроса в памяти записывается на диск.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,13 +50,13 @@ sp_query_store_flush_db [;]
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется **EXECUTE** разрешения в базе данных и **удалить** разрешения на представления каталога хранилища запросов.  
+ Требуется **EXECUTE** разрешений в базе данных, и **удалить** разрешения на представления каталога хранилища запросов.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример часть данных в хранилище запросов в памяти записывается на диск.  
+ Следующий пример записывает часть данных Store запроса в памяти на диск.  
   
 ```  
 EXEC sp_query_store_flush_db;  

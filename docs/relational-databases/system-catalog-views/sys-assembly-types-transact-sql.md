@@ -1,5 +1,5 @@
 ---
-title: sys.assembly_types (Transact-SQL) | Документы Microsoft
+title: sys.assembly_types (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,22 +26,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d519c57b76e45a297598b6821658c640e8e97989
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998186"
 ---
 # <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Содержит строку для каждого определяемого пользователем типа, определенного сборкой CLR. Следующие **sys.assembly_types** отображаются в списке наследуемых столбцов (в разделе [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) после **rule_object_id**.  
+  Содержит строку для каждого определяемого пользователем типа, определенного сборкой CLR. Следующие **sys.assembly_types** отображаются в списке наследуемых столбцов (см. в разделе [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) после **rule_object_id**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|Идентификатор сборки, из которой был создан данный тип.|  
 |**assembly_class**|**sysname**|Имя класса в сборке, которая определяет данный тип.|  
-|**is_binary_ordered**|**бит**|Сортировка байтов данного типа эквивалентна сортировке с применением к типу операторов сравнения.|  
-|**is_fixed_length**|**бит**|Длина типа всегда такая же, как и max_length.|  
+|**is_binary_ordered**|**bit**|Сортировка байтов данного типа эквивалентна сортировке с применением к типу операторов сравнения.|  
+|**is_fixed_length**|**bit**|Длина типа всегда такая же, как и max_length.|  
 |**prog_id**|**nvarchar(40)**|Идентификатор ProgID типа, передаваемый в COM.|  
 |**assembly_qualified_name**|**nvarchar(4000)**|Имя типа с указанием сборки. Имя указано в формате, подходящем для передачи методу Type.GetType().|  
   

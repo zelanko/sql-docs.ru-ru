@@ -1,5 +1,5 @@
 ---
-title: Элемент Properties (XMLA) | Документы Microsoft
+title: Элемент Properties (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c72d367944a79e86d9bfa251121e8589cbc0e86
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576126"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994556"
 ---
 # <a name="properties-element-xmla"></a>Элемент Properties (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34576126"
 </Discover>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "34576126"
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34576126"
 |Дочерние элементы|[PropertyList](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- **Свойства** элемент представляет свойства XMLA, используемые для управления разными аспектами **Discover** и **Execute** методов, например определением сведений, необходимых для подключиться к источнику данных, указанием формата результирующего набора или локали, в которой форматируются данные.  
+ **Свойства** элемент представляет свойства XMLA, используемые для управления аспектами **Discover** и **Execute** методы, например определением сведений, необходимых для подключения к источнику данных, указанием формата результирующего набора или локали, в которой форматируются данные.  
   
  Доступные свойства и их значения можно получить, используя метод **Discover** с типом запроса DISCOVER_PROPERTIES.  
   

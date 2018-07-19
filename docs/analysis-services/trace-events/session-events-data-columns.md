@@ -1,5 +1,5 @@
 ---
-title: Столбцы данных о событиях сеанса | Документы Microsoft
+title: Столбцы данных событий сеанса | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e3a0287edc3081273f2a3c3075f355e9b2b2493
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007246"
 ---
 # <a name="session-events-data-columns"></a>Столбцы данных о событиях сеанса
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
-|Длительность|5|2|Длительность события (в миллисекундах).|  
+|Duration|5|2|Длительность события (в миллисекундах).|  
 |CPUTime|6|2|Объем времени ЦП (в миллисекундах), использованного событием.|  
 |ConnectionID|25|1|Уникальный идентификатор соединения.|  
 |DatabaseName|28|8|Имя базы данных, в которой выполняется инструкция пользователя.|  

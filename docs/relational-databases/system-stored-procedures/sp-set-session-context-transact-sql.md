@@ -1,5 +1,5 @@
 ---
-title: sp_set_session_context (Transact-SQL) | Документы Microsoft
+title: sp_set_session_context (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2d1396ef79eb69b96a40f075c50cd38b6ad77d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248357"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015010"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,27 +57,27 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
  Значение для указанного ключа, типа **sql_variant**. При установке значения NULL освобождает память. Максимальный размер 8 000 байт.  
   
  [ @read_only= ] { 0 | 1 }  
- Флаг типа **бит**. Если значение равно 1, затем значение для указанного ключа нельзя добавить снова на это логическое соединение. Если 0 (по умолчанию), то значение может быть изменен.  
+ Флаг типа **бит**. Если значение равно 1, затем значение для указанного ключа невозможно еще раз на этом логическое соединение. Если 0 (по умолчанию), то значение может быть изменен.  
   
 ## <a name="permissions"></a>Разрешения  
- Любой пользователь может задать контекст сеанса для сеанса.  
+ Любой пользователь может установить контекст сеанса своего сеанса.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Как и другие хранимые процедуры только литералы и переменные (не выражения или вызовы функций) могут передаваться как параметры.  
   
- Общий размер контекста сеанса ограничена 256 КБ. Если установить значение, которое вызывает этот предел превышен, то инструкция завершается ошибкой. Можно отслеживать общее использование памяти в [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ Общий размер контекста сеанса может превышать 256 КБ. Если установить значение, которое вызывает этот предел превышен, инструкция завершается неудачно. Вы можете отслеживать общее использование памяти в [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
- Общее использование памяти можно отслеживать с помощью запроса к [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) следующим образом: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ Можно отслеживать общее использование памяти, запросив [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) следующим образом: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>Примеры  
- Приведенный ниже показано, как задать и возвращать сеансы ключ контекста с именем языка со значением английского языка.  
+ Приведенный ниже показано, как задать и затем вернуть ключ сеансы контекста с именем языка со значением на английском языке.  
   
 ```  
 EXEC sp_set_session_context 'language', 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
- В следующем примере показано использование необязательный флаг только для чтения.  
+ Следующий пример демонстрирует использование необязательный флаг только для чтения.  
   
 ```  
 EXEC sp_set_session_context 'user_id', 4, @read_only = 1;  

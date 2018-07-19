@@ -1,6 +1,6 @@
 ---
-title: Восстановление базы данных SQL Server в Docker | Документы Microsoft
-description: Этот учебник показывает способ восстановления резервной копии базы данных SQL Server в новый контейнер Linux Docker.
+title: Восстановление базы данных SQL Server в Docker | Документация Майкрософт
+description: В этом учебнике показано, как восстановить резервную копию базы данных SQL Server в новом контейнере Docker в Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,24 +12,24 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842817"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041212"
 ---
-# <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнер Linux Docker
+# <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнере Docker в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Этот учебник посвящен перемещения и восстановления файла резервной копии SQL Server в Linux 2017 г. SQL Server образ контейнера, запущенного на Docker.
+Этом руководстве показано, как переместить и восстановите файл резервной копии SQL Server в образ контейнера Linux с SQL Server 2017, запуск в Docker.
 
 > [!div class="checklist"]
-> * По запросу и запустите последний образ контейнера Linux 2017 г. SQL Server.
+> * Извлечение и запуск последней версии образа контейнера Linux с SQL Server 2017.
 > * Скопируйте файл базы данных World Wide Importers в контейнер.
 > * Восстановите базу данных в контейнере.
-> * Выполните инструкции Transact-SQL для просмотра и изменения базы данных.
-> * Создайте резервную копию базы данных.
+> * Выполнение инструкций Transact-SQL для просмотра и изменения базы данных.
+> * Резервное копирование с измененной базой данных.
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -40,7 +40,7 @@ ms.locfileid: "34842817"
 
 ## <a name="pull-and-run-the-container-image"></a>Извлечение и запуск образа контейнера
 
-1. Откройте терминал bash на Linux или Mac или сеанс PowerShell с повышенными правами в Windows.
+1. Откройте окно терминала bash в Linux или Mac или сеанс PowerShell с повышенными правами в Windows.
 
 1. Извлеките образ контейнера Linux с SQL Server 2017 из центра Docker.
 
@@ -53,7 +53,7 @@ ms.locfileid: "34842817"
     ```
 
     > [!TIP]
-    > В этом учебнике примеров команд docker заданы для команд bash (Linux или Mac) и PowerShell (Windows).
+    > В этом руководстве примерах команд docker предоставляется для оболочки bash (Linux или Mac) и PowerShell (Windows).
 
 1. Чтобы запустить образ контейнера с помощью Docker, можно использовать следующую команду:
 
@@ -71,10 +71,10 @@ ms.locfileid: "34842817"
        -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    Эта команда создает контейнер 2017 г. SQL Server с выпуска Developer edition (по умолчанию). Порт SQL Server **1433** предоставляется на узле в качестве порта **1401**. Необязательный `-v sql1data:/var/opt/mssql` параметр создает контейнер томов данных с именем **sql1ddata**. Используется для хранения данных, созданный на сервере SQL Server.
+    Эта команда создает контейнер SQL Server 2017 с Developer edition (по умолчанию). Порт SQL Server **1433** предоставляется на узле, что порт **1401**. Необязательный `-v sql1data:/var/opt/mssql` параметр создает контейнер томов данных с именем **sql1ddata**. Это позволяет сохранить данные, созданные SQL Server.
 
    > [!NOTE]
-   > Процесс запуска выпусков SQL Server производства в контейнерах немного отличается. Дополнительные сведения см. в разделе [Запуск образов контейнеров с производственными выпусками](sql-server-linux-configure-docker.md#production). Если вы используете те же имена контейнеров и порты, пошаговым руководством по-прежнему работает с контейнерами в рабочей среде.
+   > Процесс запуска производственными выпусками SQL Server в контейнерах, немного отличается. Дополнительные сведения см. в разделе [Запуск образов контейнеров с производственными выпусками](sql-server-linux-configure-docker.md#production). Если вы используете те же имена контейнеров и порты, остальной части этого пошагового руководства по-прежнему работает с контейнерами в рабочей среде.
 
 1. Для просмотра ваших контейнеров Docker используйте команду `docker ps`.
 
@@ -101,9 +101,9 @@ ms.locfileid: "34842817"
 
 ## <a name="copy-a-backup-file-into-the-container"></a>Скопируйте файл резервной копии в контейнер
 
-В этом учебнике используется [образца базы данных Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Для загрузки и скопируйте файл резервной копии базы данных Wide World Importers контейнера SQL Server, выполните следующие действия.
+В этом руководстве используется [образца базы данных Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Следуйте инструкциям ниже, чтобы загрузить и скопировать файл резервной копии базы данных Wide World Importers в контейнер SQL Server.
 
-1. Во-первых, используйте **docker exec** создать папку резервного копирования. Следующая команда создает **/var/opt/mssql/backup** каталог в контейнере SQL Server.
+1. Во-первых, используйте **docker exec** для создания папки резервного копирования. Следующая команда создает **/var/opt/mssql/backup** каталог внутри контейнера SQL Server.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -113,7 +113,7 @@ ms.locfileid: "34842817"
    docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. Затем загрузить [WideWorldImporters Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) файла на хост-компьютер. Следующие команды, перейдите в папку home, пользователей и загружает файл резервной копии как **wwi.bak**.
+1. Теперь скачайте [WideWorldImporters Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) файл хост-компьютер. Следующие команды, перейдите в каталог home/user и загружает файл резервной копии как **wwi.bak**.
 
    ```bash
    cd ~
@@ -136,12 +136,12 @@ ms.locfileid: "34842817"
 
 ## <a name="restore-the-database"></a>Восстановление базы данных
 
-Файл резервной копии теперь находится внутри контейнера. Перед восстановлением резервной копии, важно знать логических имен файлов и типов файлов в резервной копии. Следующие команды Transact-SQL проверки резервной копии и выполнить восстановление с помощью **sqlcmd** в контейнере.
+Файл резервной копии теперь находится внутри контейнера. Перед восстановлением резервной копии, важно знать логических имен файлов и типов файлов в резервной копии. Следующие команды Transact-SQL, проверять резервную копию и выполнять восстановление, используя **sqlcmd** в контейнере.
 
 > [!TIP]
-> В этом учебнике используется **sqlcmd** внутри контейнера, так как контейнер поставляется с предварительно установлено это средство. Тем не менее, можно выполнять также инструкции Transact-SQL с другими клиентами средств вне контейнера, таких как [кода Visual Studio](sql-server-linux-develop-use-vscode.md) или [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Чтобы подключиться, используйте порт узла, который был сопоставлен порт 1433 в контейнере. В этом примере это **localhost, 1401** на хост-компьютере и **Host_IP_Address 1401** удаленно.
+> В этом руководстве используется **sqlcmd** внутри контейнера, так как контейнер поставляется с предварительно установлено это средство. Тем не менее, также средства можно запустить инструкции Transact-SQL совместно с другими клиентами вне контейнера, такие как [Visual Studio Code](sql-server-linux-develop-use-vscode.md) или [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Чтобы подключиться, используйте порт узла, который был сопоставлен с портом 1433 в контейнере. В этом примере это **localhost, 1401** на хост-компьютере и **Host_IP_Address 1401** удаленно.
 
-1. Запустите **sqlcmd** внутри контейнера, в список логических имен файлов и путей внутри резервной копии. Это делается с **RESTORE FILELISTONLY** инструкции Transact-SQL.
+1. Запустите **sqlcmd** внутри контейнера, чтобы вывести список логических имен файлов и путей внутри резервной копии. Это делается с помощью **RESTORE FILELISTONLY** инструкции Transact-SQL.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost \
@@ -156,7 +156,7 @@ ms.locfileid: "34842817"
       -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/wwi.bak'"
    ```
 
-   Вы увидите результат, аналогичный приведенному ниже:
+   Вы должны увидеть результат, аналогичный приведенному ниже:
 
    ```
    LogicalName   PhysicalName
@@ -167,7 +167,7 @@ ms.locfileid: "34842817"
    WWI_InMemory_Data_1   D:\Data\WideWorldImporters_InMemory_Data_1
    ```
 
-1. Вызовите **RESTORE DATABASE** команду, чтобы восстановить базу данных внутри контейнера. Укажите новые пути для каждого файла на предыдущем шаге.
+1. Вызовите **RESTORE DATABASE** команду, чтобы восстановить базу данных внутри контейнера. Укажите новые пути для каждого из файлов на предыдущем шаге.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -181,7 +181,7 @@ ms.locfileid: "34842817"
       -Q "RESTORE DATABASE WideWorldImporters FROM DISK = '/var/opt/mssql/backup/wwi.bak' WITH MOVE 'WWI_Primary' TO '/var/opt/mssql/data/WideWorldImporters.mdf', MOVE 'WWI_UserData' TO '/var/opt/mssql/data/WideWorldImporters_userdata.ndf', MOVE 'WWI_Log' TO '/var/opt/mssql/data/WideWorldImporters.ldf', MOVE 'WWI_InMemory_Data_1' TO '/var/opt/mssql/data/WideWorldImporters_InMemory_Data_1'"
    ```
 
-   Вы увидите результат, аналогичный приведенному ниже:
+   Вы должны увидеть результат, аналогичный приведенному ниже:
 
    ```
    Processed 1464 pages for database 'WideWorldImporters', file 'WWI_Primary' on file 1.
@@ -225,9 +225,9 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    -Q "SELECT Name FROM sys.Databases"
 ```
 
-Вы увидите **WideWorldImporters** в список баз данных.
+Вы должны увидеть **WideWorldImporters** в список баз данных.
 
-## <a name="make-a-change"></a>Изменить
+## <a name="make-a-change"></a>Изменения
 
 Следующие шаги внести изменения в базе данных.
 
@@ -245,7 +245,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID"
    ```
 
-   Вы увидите список имена и идентификаторы элементов:
+   Вы должны увидеть список имена и идентификаторы элементов:
 
    ```
    StockItemID StockItemName
@@ -262,7 +262,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
             10 USB food flash drive - chocolate bar
    ```
 
-1. Обновите Описание первого элемента со следующими **обновление** инструкции:
+1. Обновите Описание первого элемента со следующими **обновления** инструкции:
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -276,7 +276,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
    ```
 
-   Вы увидите выходные данные, аналогичные следующим текстом:
+   Вы должны увидеть результат, аналогичный приведенному ниже:
 
    ```
    (1 rows affected)
@@ -287,9 +287,9 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="create-a-new-backup"></a>Создание резервной копии
 
-После восстановления базы данных в контейнер может также потребоваться регулярно создавать резервные копии баз данных внутри запущенного контейнера. Действия выполните той же модели, к предыдущим шагам, но в обратном порядке.
+После восстановления базы данных в контейнер может также потребоваться регулярно создавать резервные копии базы данных внутри запущенного контейнера. Действия имеют схожий шаблон к предыдущим шагам, но в обратном порядке.
 
-1. Используйте **резервной копии базы данных** команды Transact-SQL для создания резервной копии базы данных в контейнере. Данный учебник создает новый файл резервной копии, **wwi_2.bak**, в созданном ранее **/var/opt/mssql/backup** каталога.
+1. Используйте **резервное копирование базы данных** команды Transact-SQL для создания резервной копии базы данных в контейнере. Это руководство позволяет создать новый файл резервной копии, **wwi_2.bak**, в ранее созданный **/var/opt/mssql/backup** каталога.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -303,7 +303,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "BACKUP DATABASE [WideWorldImporters] TO DISK = N'/var/opt/mssql/backup/wwi_2.bak' WITH NOFORMAT, NOINIT, NAME = 'WideWorldImporters-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
    ```
 
-   Вы увидите результат, аналогичный приведенному ниже:
+   Вы должны увидеть результат, аналогичный приведенному ниже:
 
    ```
    10 percent processed.
@@ -322,7 +322,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    BACKUP DATABASE successfully processed 59099 pages in 25.056 seconds (18.427 MB/sec).
    ```
 
-1. Скопируйте файл резервной копии из контейнера, а также на хост-компьютере.
+1. Затем скопируйте файл резервной копии за пределы контейнера, а также на хост-компьютере.
 
    ```bash
    cd ~
@@ -338,7 +338,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="use-the-persisted-data"></a>Использовать сохраненные данные
 
-Кроме подсчета резервные копии баз данных для защиты данных, можно также использовать контейнеры томов данных. В начале этого учебника создан **sql1** контейнер с `-v sql1data:/var/opt/mssql` параметра. **Sql1data** контейнер томов данных сохраняется **/var/opt/mssql** данных даже после удаления контейнера. Следующие шаги полностью удалить **sql1** контейнера, а затем создать новый контейнер **sql2**, с материализованных данных.
+В дополнение к создание резервных копий базы данных для защиты данных, можно также использовать контейнеры томов данных. Начало работы с этим руководством создан **sql1** контейнер с `-v sql1data:/var/opt/mssql` параметра. **Sql1data** контейнер томов данных сохранится **/var/opt/mssql** данные даже после удаления контейнера. Следующие шаги полностью удалить **sql1** контейнера, а затем создать новый контейнер, **sql2**, с помощью материализованных данных.
 
 1. Остановить **sql1** контейнера.
 
@@ -350,7 +350,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker stop sql1
    ```
 
-1. Удалите контейнер. Это действие не удаляет ранее созданный **sql1data** контейнер томов данных и сохраненные данные в нем.
+1. Удалите контейнер. При этом не удаляются ранее созданный **sql1data** контейнер томов данных и сохраненные данные в нем.
 
    ```bash
    sudo docker rm sql1
@@ -360,7 +360,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker rm sql1
    ```
 
-1. Создайте контейнер, **sql2**и повторно использовать **sql1data** контейнер томов данных.
+1. Создать контейнер, **sql2**и повторно использовать **sql1data** контейнер томов данных.
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -374,7 +374,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
        -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
     ```
 
-1. Базы данных Wide World Importers теперь находится в новый контейнер. Выполните запрос для проверки предыдущего внесенные изменения.
+1. Базы данных Wide World Importers теперь находится в новый контейнер. Выполните запрос для проверки предыдущих внесенные изменения.
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -389,19 +389,19 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > Пароль учетной записи SA не пароль, указанный для **sql2** контейнера, `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Все данные SQL Server была восстановлена из **sql1**, включая измененные пароли из ранее в этом учебнике. В действительности из-за восстановления данных в /var/opt/mssql игнорируются некоторые параметры следующим образом. По этой причине, что пароль указан `<YourNewStrong!Passw0rd>` как показано ниже.
+   > Пароль системного Администратора не пароль, указанный для **sql2** контейнера, `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Все данные SQL Server была восстановлена из **sql1**, включая измененные пароли из ранее в этом руководстве. По сути из-за восстановления данных в /var/opt/mssql пропускаются некоторые параметры следующим образом. По этой причине пароль — `<YourNewStrong!Passw0rd>` следующим образом.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-В этом учебнике вы узнали, как для резервного копирования базы данных в Windows и переместите его на сервер Linux, под управлением SQL Server, RC2 2017 г. Узнать, как для:
+В этом руководстве вы узнали, как резервное копирование базы данных на Windows и переместите его на сервер Linux, под управлением SQL Server 2017 RC2. Вы узнали, как для:
 > [!div class="checklist"]
-> * Создание образов контейнеров Linux 2017 г. SQL Server.
-> * Скопируйте резервные копии баз данных SQL Server в контейнер.
-> * Выполнять инструкции Transact-SQL внутри контейнера с **sqlcmd**.
-> * Создание и извлеките файлы резервных копий из контейнера.
-> * Использование контейнеров томов с данными в Docker для сохранения данных SQL Server.
+> * Создание образов контейнеров Linux с SQL Server 2017.
+> * Скопируйте резервные копии базы данных SQL Server в контейнере.
+> * Выполните инструкции Transact-SQL внутри контейнера с **sqlcmd**.
+> * Создание и извлечение файлов резервных копий из контейнера.
+> * Используйте контейнеры томов данных в Docker для сохранения данных SQL Server.
 
-Далее необходимо Проверьте другие конфигурации Docker и устранения неполадок:
+Затем просмотрите другие конфигурации Docker и устранение неполадок в сценариях:
 
 > [!div class="nextstepaction"]
->[Руководство по конфигурации для SQL Server 2017 г. для Docker](sql-server-linux-configure-docker.md)
+>[Руководство по настройке для SQL Server 2017 в Docker](sql-server-linux-configure-docker.md)

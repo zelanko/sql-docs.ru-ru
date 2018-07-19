@@ -1,5 +1,5 @@
 ---
-title: пространство имен uri с-имя QName (XQuery) | Документы Microsoft
+title: пространство имен uri-from-QName (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 67475f0f7e10f8d49e4adefab8b44c2d4cefc272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077491"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999806"
 ---
-# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Функции, связанные с QNames - uri пространства имен из QName
+# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Функции, связанные с QName — uri пространства имен из QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает строку, представляющую пространство имен uri QName, заданное *$arg*. Результатом является пустая последовательность, если *$arg* представляет собой пустую последовательность.  
+  Возвращает строку, представляющую пространство имен uri QName, заданное *$arg*. Результатом является пустая последовательность, если *$arg* является пустая последовательность.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,10 +46,10 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  QName, для которого возвращается URI-код пространство имен.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** столбцов типа в базе данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. Получение URI-адреса пространства имен из QName  
- Работающий пример см. в разделе [локального имени из QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
+ Работающий пример см. в разделе [local-name-from-QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
   
 ### <a name="implementation-limitations"></a>Ограничения реализации  
  Существуют следующие ограничения:  
@@ -57,6 +57,6 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
 -   **Namespace-uri-from-QName()** функция возвращает экземпляры xs: String вместо xs: anyURI.  
   
 ## <a name="see-also"></a>См. также  
- [Функции, связанные с QNames &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [Функции, связанные с QName &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

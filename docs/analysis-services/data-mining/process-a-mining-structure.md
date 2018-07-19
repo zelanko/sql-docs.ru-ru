@@ -1,5 +1,5 @@
 ---
-title: Обработать структуру интеллектуального анализа данных | Документы Microsoft
+title: Обработать структуру интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017131"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999736"
 ---
 # <a name="process-a-mining-structure"></a>обработать структуру интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,6 +45,6 @@ ms.locfileid: "34017131"
 4.  Нажмите кнопку **закрыть** в **Обработка структуры интеллектуального анализа данных — \<структуры >** диалоговое окно.  
   
 ## <a name="see-also"></a>См. также  
- [Интеллектуального анализа данных структуры задачи и инструкции](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

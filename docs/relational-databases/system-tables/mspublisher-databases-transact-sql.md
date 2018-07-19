@@ -1,5 +1,5 @@
 ---
-title: MSpublisher_databases (Transact-SQL) | Документы Microsoft
+title: MSpublisher_databases (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,23 +26,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 130a176655a7574903e85aa6cfa55037ca977448
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004781"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993506"
 ---
 # <a name="mspublisherdatabases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSpublisher_databases** содержит по одной строке для каждой пары издатель базы данных, обслуживаемых распространителем. Эта таблица хранится в базе данных распространителя.  
+  **MSpublisher_databases** таблица содержит по одной строке для каждой пары издатель базы данных, обслуживаемой локальным распространителем. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Идентификатор издателя.|  
 |**publisher_db**|**sysname**|Имя базы данных издателя.|  
 |**идентификатор**|**int**|Идентификатор строки.|  
-|**publisher_engine_edition**|**int**|Выпуск издателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который может иметь следующие значения.<br /><br /> **10** = personal Edition<br /><br /> **11** = desktop Engine (MSDE)<br /><br /> **20** = standard<br /><br /> **21** = рабочей группы<br /><br /> **30** = Enterprise (оценки)<br /><br /> **31** = разработчика<br /><br /> **40** = express (Express не может быть издателем. Это значение вставлено для обеспечения полноты.)|  
+|**publisher_engine_edition**|**int**|Выпуск издателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который может иметь следующие значения.<br /><br /> **10** = personal Edition<br /><br /> **11** = desktop Engine (MSDE)<br /><br /> **20** = standard<br /><br /> **21** = рабочей группы<br /><br /> **30** = Enterprise (вычисления)<br /><br /> **31** = разработчика<br /><br /> **40** = express (Express не может быть издателем. Это значение вставлено для обеспечения полноты.)|  
   
 ## <a name="see-also"></a>См. также  
  [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

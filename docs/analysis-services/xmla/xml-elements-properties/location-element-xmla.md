@@ -1,5 +1,5 @@
 ---
-title: Элемент Location (XML для Аналитики) | Документы Microsoft
+title: Элемент Location (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4953981e7657706a986e9a2407f6786ff676a854
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575606"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004496"
 ---
 # <a name="location-element-xmla"></a>Элемент Location (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34575606"
 </Backup>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -53,7 +53,7 @@ ms.locfileid: "34575606"
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -67,9 +67,9 @@ ms.locfileid: "34575606"
 |[Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md), [DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md), [DataSourceType](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md), [папки](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- Для **резервного копирования** команд, **расположение** элемент предоставляет сведения о создании удаленного файла резервной копии на удаленном экземпляре служб Analysis Services.  
+ Для **резервного копирования** команды, **расположение** элемент содержит сведения о создании удаленного файла резервной копии для удаленного экземпляра служб Analysis Services.  
   
- Для **восстановить** команд, **расположение** элемент предоставляет сведения об идентификации и соединении с удаленным [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра, а также использовать для восстановления удаленных удаленного файла резервной копии секций на этом удаленном экземпляре.  
+ Для **восстановить** команды, **расположение** предоставляет информацию об идентификации и подключения к удаленному [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра, а также удаленного файла резервной копии, используемый для восстановления удаленных секций на этом экземпляре.  
   
  Для команд **Synchronize** элемент **Location** описывает либо источник данных, который будет использоваться целевым экземпляром, либо удаленный экземпляр, определенный на экземпляре источника, который должен быть синхронизирован с целевым экземпляром, в зависимости от значения элемента **DataSourceType** для родительской команды **Synchronize** .  
   

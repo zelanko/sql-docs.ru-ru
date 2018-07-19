@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_incremental_stats_properties (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_incremental_stats_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6dd64a9c7b4171ad8024f2b86c07cb318fa81ad8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466240"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997876"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  Это поведение позволяет безопасно использовать представление `sys.dm_db_incremental_stats_properties` при перекрестном применении к строкам в таких представлениях, как `sys.objects` и `sys.stats`. Этот метод может возвращать для статистики свойства, соответствующие каждой секции. Чтобы просмотреть свойства по всем секциям для объединенной статистики, используйте вместо этого sys.dm_db_stats_properties. 
 
-Дата обновления статистики хранится в [большом двоичном объекте статистики](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) вместе с [гистограммой](../../relational-databases/statistics/statistics.md#histogram) и [вектором плотности](../../relational-databases/statistics/statistics.md#density), а не в метаданных. При чтении нет данных для создания статистических данных, статистические данные большого двоичного объекта не создается, дата не доступен и *last_updated* столбец имеет значение NULL. Это происходит с отфильтрованной статистикой, для которой предикат не возвращает ни одной строки, или с новыми пустыми таблицами.
+Дата обновления статистики хранится в [большом двоичном объекте статистики](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) вместе с [гистограммой](../../relational-databases/statistics/statistics.md#histogram) и [вектором плотности](../../relational-databases/statistics/statistics.md#density), а не в метаданных. Если нет данных для создания статистических данных, большой двоичный объект статистики не создается, дата недоступна и *last_updated* столбец имеет значение NULL. Это происходит с отфильтрованной статистикой, для которой предикат не возвращает ни одной строки, или с новыми пустыми таблицами.
 
 ## <a name="permissions"></a>Разрешения  
  Требуется наличие у пользователя разрешения на выбор столбцов статистики либо то, чтобы пользователь был владельцем таблицы или членом предопределенной роли сервера `sysadmin`, предопределенной роли базы данных `db_owner` или предопределенной роли базы данных `db_ddladmin`.  

@@ -1,5 +1,5 @@
 ---
-title: Резервное копирование и восстановление баз данных и журналы транзакций | Документы Microsoft
+title: Резервное копирование и восстановление баз данных и журналов транзакций | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -26,23 +26,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4cc609f6325f46e7e34a2806cbdc897a71ef6507
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707472"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001317"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Резервное копирование и восстановление баз данных и журналов транзакций
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  В SMO классы <xref:Microsoft.SqlServer.Management.Smo.Backup> и <xref:Microsoft.SqlServer.Management.Smo.Restore> являются служебными классами, которые предоставляют средства для выполнения конкретных задач резервного копирования и восстановления из копий. Объект <xref:Microsoft.SqlServer.Management.Smo.Backup> представляет конкретную задачу резервного копирования, которая требуется вместо [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] объекта на экземпляре сервера.  
+  В SMO классы <xref:Microsoft.SqlServer.Management.Smo.Backup> и <xref:Microsoft.SqlServer.Management.Smo.Restore> являются служебными классами, которые предоставляют средства для выполнения конкретных задач резервного копирования и восстановления из копий. Объект <xref:Microsoft.SqlServer.Management.Smo.Backup> представляет конкретную задачу резервного копирования, которая требуется вместо объекта [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] объекта на экземпляре сервера.  
   
  При потере или повреждении данных резервная копия полностью или частично должна быть восстановлена. Частичное восстановление использует коллекцию <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> для разбиения восстанавливаемых данных. При резервном восстановлении журнала транзакций, с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Restore> можно восстановить данные до определенного момента времени. Также данные можно проверить с помощью метода <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. Рекомендуемой процедурой резервного копирования является проверка целостности резервной копии путем выполнения операции восстановления и проверки данных в базе данных на регулярной основе.  
   
- Как <xref:Microsoft.SqlServer.Management.Smo.Backup> объекта, <xref:Microsoft.SqlServer.Management.Smo.Restore> объекта не должны быть созданы с помощью **создать** метода, так как он не представляет любой объект в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объект <xref:Microsoft.SqlServer.Management.Smo.Restore> является набором свойств и методов, используемых для восстановления базы данных.  
+ Как и <xref:Microsoft.SqlServer.Management.Smo.Backup> объекта, <xref:Microsoft.SqlServer.Management.Smo.Restore> объекта не должны быть созданы с помощью **создать** метод, так как он не представляет любой объект в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объект <xref:Microsoft.SqlServer.Management.Smo.Restore> является набором свойств и методов, используемых для восстановления базы данных.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Резервное копирование баз данных и журналов транзакций на языке Visual Basic  
  Данный пример кода показывает, как создать резервную копию существующей базы данных в виде файла и как ее затем восстанавливать.  

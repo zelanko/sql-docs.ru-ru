@@ -1,5 +1,5 @@
 ---
-title: = (Равно) (расширения интеллектуального анализа данных) | Документы Microsoft
+title: = (Равно) (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d67db384747ff0ea57fea1604282d55a6709fec0
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841717"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041242"
 ---
 # <a name="-equal-to-dmx"></a>= (Равно) (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

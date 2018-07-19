@@ -1,5 +1,5 @@
 ---
-title: значение true, функция (XQuery) | Документы Microsoft
+title: значение true, функция (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 349b2f99f5db35ca9d44e3ac8459030b7f7ba55f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014034"
 ---
-# <a name="boolean-constructor-functions---true-xquery"></a>Функции логического конструктора - true (XQuery)
+# <a name="boolean-constructor-functions---true-xquery"></a>Функции логического конструктора — true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает значение True типа xs:boolean. Это равносильно `xs:boolean("1")`.  
@@ -41,10 +42,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** столбцов типа в базе данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. Применение логической функции XQuery true()  
- В следующем примере запрашивается Нетипизированная **xml** переменной. Выражение в **value()** возвращает логическое значение **true()** Если значение атрибута «aaa». **Value()** метод **xml** тип данных преобразует логическое значение в бит и возвращает его.  
+ В следующем примере запрашивается Нетипизированная **xml** переменной. Выражение в **value()** метод возвращает логическое значение **true()** Если «aaa» является значением атрибута. **Value()** метод **xml** тип данных преобразует логическое значение в бит и возвращает его.  
   
 ```  
 DECLARE @x XML  

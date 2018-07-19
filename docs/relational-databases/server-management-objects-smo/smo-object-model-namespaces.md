@@ -1,5 +1,5 @@
 ---
-title: Пространства имен объектов SMO | Документы Microsoft
+title: Пространства имен объектов SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 66e6dfd0bd563dfc43fa1bbb44c4042159f0608a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967409"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005958"
 ---
 # <a name="smo-object-model-namespaces"></a>Пространства имен модели объектов SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "32967409"
 ## <a name="namespaces"></a>Пространства имен  
  Пространства имен объектов SMO приведены ниже.  
   
-|Class|Функция|  
+|Class|Компонент|  
 |-----------|--------------|  
 |<xref:Microsoft.SqlServer.Management.Smo>|Содержит классы экземпляров, вспомогательные классы и перечисления, которые используются для программного управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |<xref:Microsoft.SqlServer.Management.Common>|Содержит классы, общие для объектов RMO и SMO, например классы соединений.|  

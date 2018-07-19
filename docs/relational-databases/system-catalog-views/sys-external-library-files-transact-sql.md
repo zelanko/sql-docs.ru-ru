@@ -1,5 +1,5 @@
 ---
-title: sys.external_library_files (Transact-SQL) | Документы Microsoft
+title: sys.external_library_files (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: sql
@@ -24,25 +24,26 @@ ms.author: jeannt
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: febfe235bd7f4711e8192ab7625491b72ac050ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001176"
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Содержит строку для каждого файла, составляющее внешней библиотеки.
+Перечислены строки для каждого файла, составляющего внешней библиотеки.
 
 |Имя столбца |Тип данных |Описание|
 |------|------|-----|
-|external_library_id | int |Идентификатор объекта, внешние библиотеки. |
-|content |varbinary(max) |Содержимое файла артефакта внешней библиотеки. |
-|Платформа |tinyint |Идентификатор платформы узла, на котором установлен SQL Server. |
+|external_library_id | ssNoversion |Идентификатор объекта внешней библиотеки. |
+|content |varbinary(max) |Содержимое файла артефакта внешнюю библиотеку. |
+|Платформы |TINYINT |Идентификатор платформы узла, на котором установлен SQL Server. |
 |platform_desc | nvarchar(60) |Имя платформы узла. Допустимые значения: «WINDOWS», «LINUX». |
 
-### <a name="see-also"></a>См. также:  
+### <a name="see-also"></a>См. также  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
-[СОЗДАНИЕ ВНЕШНЕЙ БИБЛИОТЕКИ](../../t-sql/statements/create-external-library-transact-sql.md)  
-[Пакет управления для службы SQL Server машины обучения](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
+[Управление пакетами для службы машинного обучения SQL Server](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

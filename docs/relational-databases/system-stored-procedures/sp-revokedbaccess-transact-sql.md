@@ -1,5 +1,5 @@
 ---
-title: sp_revokedbaccess (Transact-SQL) | Документы Microsoft
+title: sp_revokedbaccess (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3cd5e5b13d8451ffa064783fdb27dd7cb42b0406
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250519"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005394"
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33250519"
   Удаляет пользователя из текущей базы данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) вместо этого.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,15 +48,15 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
   
 ## <a name="arguments"></a>Аргументы  
  [  **@name_in_db =** ] **"***имя***"**  
- Имя удаляемого пользователя базы данных. *имя* — **sysname** без значения по умолчанию. *имя* может быть именем входа сервера, имя входа Windows или группы Windows и должен существовать в текущей базе данных. При указании имени входа Windows или группы Windows задавайте имя, известное в базе данных.  
+ Имя удаляемого пользователя базы данных. *имя* — **sysname** не имеет значения по умолчанию. *имя* может быть именем входа сервера, имя входа Windows или группу Windows и должен существовать в текущей базе данных. При указании имени входа Windows или группы Windows задавайте имя, известное в базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  При удалении пользователя базы данных также удаляются разрешения и псевдонимы этого пользователя.  
   
- **sp_revokedbaccess** можно удалить пользователя только из текущей базы данных. Перед удалением пользователя базы данных, которому принадлежат объекты в текущей базе данных, необходимо передать принадлежность этих объектов или удалить их из базы данных. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ **sp_revokedbaccess** можно удалить только пользователи базы данных из текущей базы данных. Перед удалением пользователя базы данных, которому принадлежат объекты в текущей базе данных, необходимо передать принадлежность этих объектов или удалить их из базы данных. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  **sp_revokedbaccess** не может выполняться внутри пользовательской транзакции.  
   
@@ -74,7 +74,7 @@ GO
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [УДАЛИТЬ пользователя & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

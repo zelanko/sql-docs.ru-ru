@@ -1,5 +1,5 @@
 ---
-title: Функция (XQuery) | Документы Microsoft
+title: Функция (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3da41971a8af3fe92fc8c7034fa6cd749a68ac8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077661"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999816"
 ---
-# <a name="functions-on-boolean-values---not-function"></a>Функции над значениями типа Boolean - not, функция 
+# <a name="functions-on-boolean-values---not-function"></a>Функции над значениями типа Boolean - not-функция 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает значение TRUE, если действительное логическое значение *$arg* имеет значение false и возвращает значение FALSE, если действительное логическое значение *$arg* имеет значение true.  
+  Возвращает значение TRUE, если действительное логическое значение *$arg* значение false, а значение FALSE, если действительное логическое значение *$arg* имеет значение true.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,9 +49,9 @@ fn:not($arg as item()*) as xs:boolean
  Последовательность элементов, которым соответствует действительное логическое значение.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** столбцов типа в базе данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Использование функции not() XQuery для поиска моделей продуктов, описания которых в каталоге не включают \<спецификации > элемент.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Использование функции not() XQuery для поиска моделей продуктов, описания которых в каталоге не включают \<спецификации > элемента.  
  В результате выполнения приведенного ниже запроса создается XML-документ, содержащий идентификаторы моделей продуктов, не содержащие элемент <`Specifications`>.  
   
 ```  
@@ -69,18 +69,18 @@ WHERE CatalogDescription.exist('
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   Так как в документе используются пространства имен, то в образце применяется инструкция WITH NAMESPACES. Другой вариант — использовать **объявления пространства имен** ключевое слово в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) для определения префикса.  
+-   Так как в документе используются пространства имен, то в образце применяется инструкция WITH NAMESPACES. Другой вариант — использовать **объявить пространство имен** ключевое слово в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) для определения префикса.  
   
--   После этого запрос создает XML, который включает <`Product`> элемент и его **ProductModelID** атрибута.  
+-   Запрос создает XML, который включает <`Product`> элемент и его **ProductModelID** атрибута.  
   
--   В предложении WHERE используется [метод exist() (тип данных XML)](../t-sql/xml/exist-method-xml-data-type.md) для фильтрации строк. **Exist()** метод возвращает значение True, если \<ProductDescription > элементов, которые не имеют \<спецификация > дочерних элементов. Обратите внимание на использование **not()** функции.  
+-   Предложение WHERE использует [метод exist() (тип данных XML)](../t-sql/xml/exist-method-xml-data-type.md) для фильтрации строк. **Exist()** метод возвращает значение True, если \<ProductDescription > элементов, у которых нет \<спецификации > дочерних элементов. Обратите внимание на использование **not()** функции.  
   
- Этот результирующий набор пуст, так как каждый описания каталога моделей продуктов включает \<спецификации > элемент.  
+ Этот результирующий набор пуст, так как каждый описания каталога моделей продуктов включает \<спецификации > элемента.  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>Б. Использование функции XQuery not() для получения информации о расположении цехов, не имеющих атрибута «MachineHours»  
  Следующий запрос адресован столбцу «Инструкции». В указанном столбце хранятся производственные инструкции для моделей продуктов.  
   
- Для любой модели продукта запрос извлекает информацию о расположении цехов, для которых не задан атрибут "MachineHours". То есть атрибут **MachineHours** не указан для \<расположение > элемент.  
+ Для любой модели продукта запрос извлекает информацию о расположении цехов, для которых не задан атрибут "MachineHours". То есть атрибут **MachineHours** не указано для \<расположение > элемента.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -99,7 +99,7 @@ WHERE ProductModelID=7
   
 -   **Declarenamespace** в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет Adventure Works, производственные инструкции префикс пространства имен. Здесь представлено пространство имен, используемое в документе производственных инструкций.  
   
--   В запросе **не (@MachineHours)** предикат возвращает True, если не **MachineHours** атрибута.  
+-   В запросе **не (@MachineHours)** предикат возвращает значение True, если не **MachineHours** атрибута.  
   
  Результат:  
   

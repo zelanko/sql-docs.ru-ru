@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_external_operations (Transact-SQL) | Документы Microsoft
+title: sys.dm_exec_external_operations (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 75ea1d3250c88ae40abcf34280a68c7384f6557e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463220"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997966"
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "34463220"
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Уникальный идентификатор запроса связанных с запросом PolyBase|КОД в разделе [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Индекс действия запроса|В разделе step_index в [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|execution_id|**nvarchar(32)**|Уникальный идентификатор запроса, связанный с запросом PolyBase|См. в разделе с кодом в [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|Индекс этапа запроса|См. в разделе step_index в [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
 |Тип ошибка_|**nvarchar(128)**|Описывает операцию Hadoop или другие внешние операции|«Операция внешних Hadoop»|  
-|Имя ошибка_|**nvarchar(4000)**|Указывает, как состояние задания в процентах (занятого потребляет входных данных)|0-1 – умножается на коэффициент 100 («завершено»)|  
-|Ход выполнения map_|**float**|Указывает, как состояние reduce задания в процентах, при наличии|0-1 – умножается на коэффициент 100 («завершено»)|  
+|Имя ошибка_|**nvarchar(4000)**|Указывает, как состояние задания в процентах (сколько является входными данными потребления)|0-1 — умножается на коэффициент 100 («завершено»)|  
+|Ход выполнения map_|**float**|Указывает, как состояние reduce задания в процентах, если таковые имеются|0-1 — умножается на коэффициент 100 («завершено»)|  
   
 ## <a name="see-also"></a>См. также  
  [PolyBase, устранение неполадок с помощью динамических административных представлений](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

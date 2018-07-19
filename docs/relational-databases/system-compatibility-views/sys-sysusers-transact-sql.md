@@ -1,5 +1,5 @@
 ---
-title: sys.sysusers (Transact-SQL) | Документы Microsoft
+title: sys.sysusers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0561ed37fa705f0952ae2a6e7cfd012d81364432
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223159"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000966"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "33223159"
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Вызывает переполнение или возвращает значение NULL, если количество пользователей и ролей превышает 32 767.|  
 |**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**gid**|**smallint**|Идентификатор группы, к которой принадлежит пользователь. Если **uid** совпадает со значением **gid**, эта запись определяет группу. Вызывает переполнение или возвращает значение NULL, если общее количество групп и пользователей превышает 32 767.|  
-|**Environ**|**varchar(255)**|Зарезервировано.|  
+|**Environ-**|**varchar(255)**|Зарезервировано.|  
 |**hasdbaccess**|**int**|1 = учетная запись обладает правами доступа к базе данных.|  
 |**islogin**|**int**|1 = учетная запись входа представляет группу Windows, пользователя Windows или пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обладающего учетной записью для входа.|  
 |**Isntname**|**int**|1 = учетная запись представляет группу или пользователя Windows.|  

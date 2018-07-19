@@ -1,5 +1,5 @@
 ---
-title: sys.database_role_members (Transact-SQL) | Документы Microsoft
+title: sys.database_role_members (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ac347dbb4748c575b8f4388952a45315f28a5b01
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179240"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001296"
 ---
 # <a name="sysdatabaserolemembers-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает одну строку для каждого члена каждой роли базы данных.  Пользователи базы данных, роли приложений и других ролей базы данных может быть членами роли базы данных. Чтобы добавить членов роли, используйте [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) инструкции с `ADD MEMBER` параметр. Соединения с [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) для возвращения имен `principal_id` значения.
+  Возвращает одну строку для каждого члена каждой роли базы данных.  Пользователей базы данных, роли приложений и других ролей базы данных могут быть членами роли базы данных. Чтобы добавить членов роли, используйте [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) инструкции с `ADD MEMBER` параметр. Присоединяетесь к программе [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) для возвращения имен `principal_id` значения.
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "33179240"
 |**member_principal_id**|**int**|Идентификатор участника базы данных члена.|  
   
 ## <a name="permissions"></a>Разрешения  
- Любой пользователь может просматривать данные о своем членстве в роли. Для просмотра других ролей членства требует членства в `db_securityadmin` предопределенной роли базы данных или `VIEW DEFINITION` в базе данных.  
+ Любой пользователь может просматривать данные о своем членстве в роли. Чтобы просмотреть другие роли в группах требуется членство в `db_securityadmin` предопределенной роли базы данных или `VIEW DEFINITION` в базе данных.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -64,9 +64,9 @@ ORDER BY DP1.name;
   
 ## <a name="see-also"></a>См. также  
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-[Изменение РОЛИ (Transact-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      
+[ALTER ROLE (Transact-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      
 [sys.server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
   
 

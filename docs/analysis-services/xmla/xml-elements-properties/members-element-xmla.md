@@ -1,5 +1,5 @@
 ---
-title: Элемент Members (XMLA) | Документы Microsoft
+title: Элемент Members (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34579106"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994716"
 ---
 # <a name="members-element-xmla"></a>Элемент Members (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Содержит коллекцию [член](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) элементов, содержащихся в родительском [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) элемента.  
+  Содержит коллекцию [член](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) элементов, содержащихся в родительском [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34579106"
 </CrossProduct>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "34579106"
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -54,10 +54,10 @@ ms.locfileid: "34579106"
 |Иерархия|Обязательный атрибут типа **String** . Имя иерархии, к которому элементы, содержащиеся в **члены** принадлежит элемент.|  
   
 ## <a name="remarks"></a>Примечания  
- Когда клиентское приложение задает **AxisFormat** свойства *ClusterFormat*, элементы на каждой оси разделяются на кластеры, в которых каждый кластер представляет перекрестное произведение упорядоченных наборов элементов из каждой иерархии. Каждый **оси** элемент состоит из одного или нескольких **CrossProduct** элементов. Каждый **CrossProduct** элемент содержит **члены** элемента каждой иерархии на оси. **Элементы** , в свою очередь, содержит один **член** элемент для каждого элемента указанной иерархии, включенной в перекрестное произведение.  
+ Когда клиентское приложение устанавливает **AxisFormat** свойства *ClusterFormat*, элементы на каждой оси разделяются на кластеры, в которых каждый кластер представляет перекрестное произведение упорядоченных множеств элементы из каждой иерархии. Каждый **оси** элемент состоит из одного или нескольких **CrossProduct** элементов. Каждый **CrossProduct** элемент содержит **члены** элемента каждой иерархии на оси. **Члены** , в свою очередь, содержит один **член** элемент для каждого элемента указанной иерархии, включенной в перекрестного произведения.  
   
 ## <a name="example"></a>Пример  
- Следующий пример иллюстрирует структуру **элементы** элемент, если клиент указывает *ClusterFormat* для **AxisFormat** свойства XMLA, учитывая следующие элементы для оси:  
+ Следующий пример иллюстрирует структуру **члены** элемент, если клиент указывает *ClusterFormat* для **AxisFormat** XMLA-свойства следующие члены для оси:  
   
 ||||||  
 |-|-|-|-|-|  

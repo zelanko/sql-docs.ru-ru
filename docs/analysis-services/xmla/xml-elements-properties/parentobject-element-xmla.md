@@ -1,5 +1,5 @@
 ---
-title: Элемент ParentObject (XML для Аналитики) | Документы Microsoft
+title: Элемент ParentObject (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ff9ebc460691d9f97e5cfe64783574b00eab6915
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576006"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007038"
 ---
 # <a name="parentobject-element-xmla"></a>Элемент ParentObject (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Содержит идентификатор родительского объекта, для которого создаются объекты, определенные в родительском [создать](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) элемента.  
+  Содержит идентификатор родительского объекта которого создаются объекты, определенные в родительском [создать](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) элемент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34576006"
 </Create>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -41,18 +41,18 @@ ms.locfileid: "34576006"
 |Значение по умолчанию|None|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
 |Родительские элементы|[Создание](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
-|Дочерние элементы|Обязательные элементы языка ASSL. Указывается перечислением элементов ID объекта и его предков (исключая **сервера** объекта.) Например, следующая **ParentObject** определяет секцию:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
+|Дочерние элементы|Обязательные элементы языка ASSL. Указывается перечислением элементов ID объекта и его предков (исключая **Server** объекта.) Например, следующая **ParentObject** элемент определяет секцию:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
 ## <a name="remarks"></a>Примечания  
  Порядок следования идентификаторов неважен.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается **Покупательского** структуры интеллектуального анализа данных, включенных в [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] образца базы данных служб Analysis Services.  
+ В следующем примере создается **Market Basket** структуры интеллектуального анализа данных, включенных в [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] образца базы данных служб Analysis Services.  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

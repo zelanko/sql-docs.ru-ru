@@ -28,11 +28,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 55408f62c8e66c33bcb58682831970312c51130d
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791475"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998176"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

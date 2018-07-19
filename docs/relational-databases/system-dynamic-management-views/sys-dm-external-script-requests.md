@@ -1,5 +1,5 @@
 ---
-title: sys.dm_external_script_requests | Документы Microsoft
+title: sys.dm_external_script_requests | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/24/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc6db4816e4ba890e132600874d5db21aa190c02
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467491"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005686"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34467491"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Уникальный идентификатор**|Идентификатор процесса, который отправил запрос на внешний скрипт. Соответствует идентификатору процесса как полученных [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**Уникальный идентификатор**|Идентификатор процесса, который отправил запрос на внешний скрипт. Это соответствует идентификатору процесса, получаемому [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|Ключевое слово, которое представляет поддерживаемый язык скриптов. Сейчас поддерживается только `R` .|  
 |degree_of_parallelism|**int**|Число, указывающее количество созданных параллельных процессов. Это значение может отличаться от количества запрошенных параллельных процессов.|  
 |external_user_name|**nvarchar**|Рабочая учетная запись Windows, под которой был выполнен скрипт.|  
@@ -88,7 +88,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   

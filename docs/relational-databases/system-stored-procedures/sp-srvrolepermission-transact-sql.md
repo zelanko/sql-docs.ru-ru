@@ -1,5 +1,5 @@
 ---
-title: sp_srvrolepermission (Transact-SQL) | Документы Microsoft
+title: sp_srvrolepermission (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db6b3367b1d1a048bb47e4d30b96970557f48939
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014765"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@srvrolename =** ] **"***роль***"**  
+ [  **@srvrolename =** ] **"***роли***"**  
  Имя предопределенной роли сервера, для которой добавляются разрешения. *роль* — **sysname**, значение по умолчанию NULL. Если роль не указана, возвращаются разрешения для всех предопределенных ролей сервера. *роль* может иметь одно из следующих значений.  
   
 |Значение|Описание|  
@@ -67,10 +68,10 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**ServerRole**|**sysname**|Имя предопределенной роли сервера|  
+|**"Роли сервера"**|**sysname**|Имя предопределенной роли сервера|  
 |**Разрешение**|**sysname**|Разрешение, связанное с **ServerRole**|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Перечисляемые разрешения включают допустимые к выполнению инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], а также другие специальные действия, которые могут выполняться членами предопределенных ролей сервера. Чтобы отобразить список предопределенных ролей сервера, выполните процедуру **sp_helpsrvrole**.  
   
  **Sysadmin** предопределенной роли сервера, имеет разрешения всех других предопределенных ролей сервера.  

@@ -1,5 +1,5 @@
 ---
-title: Приступая к работе в модели объектов SMO | Документы Microsoft
+title: Приступая к работе в модели объектов SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 76596e07a7d99f725f7c6b6f0c0f25b498aab729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966429"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005991"
 ---
 # <a name="getting-started-in-smo"></a>Приступая к работе с объектами SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-Эта страница содержит ссылки на разделы, которые помогут вам приступить к работе с помощью управляющих объектов SQL Server (SMO). Перечислены титульных иерархию объектов SMO, написанию программ в SMO, SMO и языков программирования и конкретные задачи программирования.  
+Эта страница содержит ссылки на разделы, которые помогут вам приступить к работе с помощью объектов управления SQL Server (SMO). Перечислены титульной иерархии объектов SMO, написанию программ в SMO, SMO и языков программирования и конкретных задач программирования.  
  
 ##<a name="installing-smo"></a>Установка SMO
 [Установка SMO](installing-smo.md) инструкции по установке и ссылки на сборки объектов SMO.
@@ -41,9 +41,9 @@ ms.locfileid: "32966429"
 [Языки программирования](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) описывает среду программирования и включает подробные процедуры, чтобы начать программирование объекта SMO на языке C#.  
   
 ## <a name="general-programming-in-smo"></a>Общие вопросы программирования в модели объектов SMO  
-[Общие вопросы программирования в модели объектов SMO](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md) является вводные сведения о программировании с использованием объектов SMO. В этом разделе описывается, как подключиться к экземпляру SQL Server, а также способы использования свойств, методов и коллекций. В разделах, посвященных более сложным темам, описываются типы данных, транзакции, переход в режим сбора, а также вопросы обработки событий и исключений.  
+[Общие вопросы программирования в модели объектов SMO](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md) является введение в программирование с использованием объектов SMO. Здесь описывается, как подключиться к экземпляру SQL Server, а также как использовать методы, свойства и коллекции. В разделах, посвященных более сложным темам, описываются типы данных, транзакции, переход в режим сбора, а также вопросы обработки событий и исключений.  
   
 ## <a name="programming-specific-tasks"></a>Задачи, связанные с программированием  
-[Конкретные задачи программирования](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md) включает в себя концепции и процедуры, посвященные решению конкретных задач с использованием объектов SMO. Здесь также описываются завершения программного управления SQL Server.  
+[Конкретные задачи программирования](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md) включает в себя основные понятия и процедуры, посвященные решению конкретных задач, с помощью объектов SMO. Здесь также описываются полный программного управления SQL Server.  
   
   

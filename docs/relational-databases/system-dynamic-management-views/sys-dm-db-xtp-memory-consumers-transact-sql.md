@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -25,16 +25,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 05632eebe6bd329815016da40db4705be0b935ed
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467680"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015179"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Сообщает о потребителях памяти уровня базы данных в компоненте Database Engine [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Представление возвращает по строке для каждого потребителя памяти, используемого компонентом Database Engine. Используйте это динамическое административное Представление, чтобы узнать, как память распределяется между разные внутренние объекты.  
+  Сообщает о потребителях памяти уровня базы данных в компоненте Database Engine [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Представление возвращает по строке для каждого потребителя памяти, используемого компонентом Database Engine. Используйте это динамическое административное Представление, чтобы увидеть, как память распределяется между различных внутренних объектов.  
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34467680"
 |memory_consumer_type_desc|**nvarchar(64)**|Тип потребителя памяти: VARHEAP, HASH или PGPOOL.<br /><br /> 0 — (Он не должен отображаться.)<br /><br /> 2 — VARHEAP<br /><br /> 3 — HASH<br /><br /> 5 — PGPOOL|  
 |memory_consumer_desc|**nvarchar(64)**|Описание экземпляра потребителя памяти.<br /><br /> VARHEAP: <br />Куча базы данных. Используется для выделения данных пользователя для базы данных (строк).<br />Куча системы базы данных. Используется для выделения данных базы данных, которые будут включены в дампы памяти и не содержат пользовательских данных.<br />Куча индекса диапазона. Частная куча, используемая индексом диапазона для выделения страниц BW.<br /><br /> ХЭШ: Описание отсутствует, поскольку object_id указывает таблицу, а index_id сам хэш-индекс.<br /><br /> PGPOOL: Для базы данных имеется только одна страница пула пул страниц Database 64K.|  
 |object_id|**bigint**|Идентификатор объекта, к которому относится выделенная память. Для системных объектов значение отрицательное.|  
-|xtp_object_id|**bigint**|Идентификатор объекта для таблицы, оптимизированные для памяти.|  
+|xtp_object_id|**bigint**|Идентификатор объекта для таблицы, оптимизированной для памяти.|  
 |index_id|**int**|Идентификатор индекса потребителя (если применимо). Значение NULL для базовых таблиц.|  
 |allocated_bytes|**bigint**|Число байтов, зарезервированных для этого потребителя памяти.|  
 |used_bytes|**bigint**|Число байтов, используемых этим потребителем. Относится только к varheap.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34467680"
  Системные таблицы возвращаются только для пользователей с разрешением VIEW DATABASE STATE.  
   
 ## <a name="general-remarks"></a>Общие замечания  
- Если оптимизированной для памяти таблица имеет индекс columnstore, система использует некоторые внутренние таблицы, которые занимают некоторый объем памяти, для отслеживания данных для индекса columnstore. Дополнительные сведения об этих внутренних таблицах и примеры запросов, показывающий их потребления памяти см. [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+ Когда оптимизированных для памяти таблица имеет индекс columnstore, система использует некоторые из внутренних таблиц, которые используют определенный объем памяти, для отслеживания данных для индекса columnstore. Дополнительные сведения об этих внутренних таблицах и примеры запросов, отображающий их показатель потребления памяти см. [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
 ## <a name="examples"></a>Примеры  
@@ -115,7 +115,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- Общий объем памяти выделенная и используемая из данного динамического административного Представления совпадает с уровнем объекта в [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ Общий объем памяти выделенного и используемого из этого динамического административного Представления совпадает с уровнем объекта в [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   

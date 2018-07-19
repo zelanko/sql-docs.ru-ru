@@ -1,5 +1,5 @@
 ---
-title: Развертывание решений модели с использованием XML для Аналитики | Документы Microsoft
+title: Развертывание решений модели с использованием XML для Аналитики | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ce0f50d158d715ddbbc689c47a012a4e92ba7c4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022071"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994936"
 ---
 # <a name="deploy-model-solutions-using-xmla"></a>Развертывание решений модели с помощью XMLA
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34022071"
 >  XML-скрипт не будет содержать пароль, если он указан в строке соединения для источника данных или для олицетворения. Поскольку в данном скрипте пароль требуется для обработки, его нужно добавить вручную в скрипт перед запуском либо добавить в XML после выполнения скрипта.  
   
 ## <a name="see-also"></a>См. также  
- [Развертывание решений модели с помощью мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)   
- [Синхронизация баз данных Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
+ [Развертывание решений модели с использованием мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)   
+ [Синхронизация баз данных служб Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
   

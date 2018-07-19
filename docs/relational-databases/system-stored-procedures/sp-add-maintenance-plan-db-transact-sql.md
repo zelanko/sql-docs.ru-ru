@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan_db (Transact-SQL) | Документы Microsoft
+title: sp_add_maintenance_plan_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 980bb14800bb346471cacb75e52022dde67b5d99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237802"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003047"
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,14 +59,14 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_add_maintenance_plan_db** должна запускаться из **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_add_maintenance_plan_db**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_add_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Примеры  
- В этом примере добавляется **AdventureWorks2012** базы данных для плана обслуживания, созданного в **sp_add_maintenance_plan**.  
+ В этом примере добавляется **AdventureWorks2012** базы данных к плану обслуживания, созданному в **sp_add_maintenance_plan**.  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',N'AdventureWorks2012';  

@@ -1,5 +1,5 @@
 ---
-title: Конкретные задачи программирования | Документы Microsoft
+title: Программирование конкретных задач | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6878e0e429bf826d4dc3f6b57f8df42645f22dd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998127"
 ---
 # <a name="programming-specific-tasks"></a>Задачи, связанные с программированием
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,6 +59,6 @@ ms.lasthandoff: 05/03/2018
 |[Реализация полнотекстового поиска](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|Содержит описание реализации каталогов полнотекстового поиска и индексов в объектах SMO.|  
 |[Реализация конечных точек](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|Содержит описание создания конечных точек для обработки полезных данных для зеркального отображения баз данных, SOAP-запросов и компонента Service Broker.|  
 |[Создание и обновление статистики](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|Содержит описание установки и наблюдения за статистическими данными в базе данных при помощи объектов SMO.|  
-|[Трассировка и воспроизведение событий](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Описывает использование **трассировки** и **воспроизведения** в объектах SMO события трассировки и воспроизведения.|  
+|[Трассировка и воспроизведение событий](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Описывает использование **трассировки** и **воспроизведения** в объектах SMO для трассировки и воспроизведения событий.|  
   
   

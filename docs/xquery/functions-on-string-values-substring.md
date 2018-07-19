@@ -1,5 +1,5 @@
 ---
-title: substring, функция (XQuery) | Документы Microsoft
+title: substring, функция (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4bf01599d3144ca6eb3ebbfa74435ab16b25176a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995076"
 ---
-# <a name="functions-on-string-values---substring"></a>Строковые функции - подстроки
+# <a name="functions-on-string-values---substring"></a>Функции со строковыми значениями — substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает часть значение *$sourceString*, начиная с позиции, указываемой параметром значение *$startingLoc,* и продолжает число символов, определяется значением из *$ Длина*.  
+  Возвращает часть значение *$sourceString*, начиная с позиции, указанной значением *$startingLoc,* и продолжается число символов, указанной значением из *$ Длина*.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,22 +57,22 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  Количество получаемых символов [дополнительно]. Если не указан, он возвращает все символы из местоположения, указанного в *$startingLoc* до конца строки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Версия этой функции с тремя аргументами возвращает символы строки `$sourceString`, позиции которых `$p` удовлетворяют следующим условиям:  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
   
- Значение *$length* может быть больше, чем количество символов в значении *$sourceString* после начальной позиции. В этом случае подстрока возвращает символы до конца *$sourceString*.  
+ Значение *$length* может быть больше, чем количество символов в значении параметра *$sourceString* аргументом. В этом случае подстрока возвращает символы до конца *$sourceString*.  
   
  Первый символ строки расположен в позиции 1.  
   
- Если значение *$sourceString* представляет собой пустую последовательность, она обрабатывается как строка нулевой длины. В противном случае, если параметр *$startingLoc* или *$length* представляет собой пустую последовательность, возвращается пустая последовательность.  
+ Если значение *$sourceString* представляет пустую последовательность, она обрабатывается как строка нулевой длины. В противном случае, если параметр *$startingLoc* или *$length* представляет пустую последовательность, возвращается пустая последовательность.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
- Поведение суррогатных пар в функциях XQuery зависит от уровня совместимости базы данных и, в некоторых случаях, от URI-кода пространства имен по умолчанию для функций. Дополнительные сведения см. в подразделе «XQuery функции учитывают суррогаты» раздела [критические изменения в функциях ядра СУБД в SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). См. также [уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) и [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Поведение суррогатных пар в функциях XQuery зависит от уровня совместимости базы данных и, в некоторых случаях, от URI-кода пространства имен по умолчанию для функций. Дополнительные сведения см. в подразделе «XQuery функций учитывают суррогаты» раздела [критические изменения в функциях ядра СУБД в SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Также см. в разделе [уровень совместимости ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) и [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="implementation-limitations"></a>Ограничения реализации  
- SQL Server требует *$startingLoc* и *параметры $length* имели тип xs: decimal вместо xs: double.  
+ SQL Server требуется *$startingLoc* и *параметры $length* имели тип xs: decimal, а не xs: double.  
   
  SQL Server позволяет *$startingLoc* и *$length* быть пустую последовательность, потому что пустая последовательность может быть результатом динамических ошибок с ().  
   
@@ -92,7 +93,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   **String()** функция возвращает строковое значение <`Summary`> элемент. Эту функцию необходимо использовать, потому что элемент <`Summary`> содержит как текст, так и вложенные элементы (элементы в формате html), которые нужно пропустить и вернуть весь текст.  
+-   **String()** функция возвращает строковое значение <`Summary`> элемента. Эту функцию необходимо использовать, потому что элемент <`Summary`> содержит как текст, так и вложенные элементы (элементы в формате html), которые нужно пропустить и вернуть весь текст.  
   
 -   **Substring()** функция возвращает первые 50 символов из строкового значения, получаемого по **string()**.  
   

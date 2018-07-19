@@ -1,5 +1,5 @@
 ---
-title: Создание, изменение и удаление определяемых пользователем функций | Документы Microsoft
+title: Создание, изменение и удаление определяемых пользователем функций | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,26 +19,27 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 70176012dc61676a9c6b2193c8ca9034aa871284
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001421"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Создание, изменение и удаление определяемых пользователем функций
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> Объект предоставляет функциональные возможности, разрешающие пользователям программно управлять определяемых пользователем функций в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Определяемые пользователем функции поддерживают входные и выходные параметры, а также прямые ссылки на столбцы таблицы.  
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> Предоставляет функциональные возможности, разрешающие пользователям программно управлять определяемых пользователем функций в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Определяемые пользователем функции поддерживают входные и выходные параметры, а также прямые ссылки на столбцы таблицы.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы сборки были зарегистрированы внутри базы данных, прежде чем они могут использоваться внутри хранимой процедуры, определяемые пользователем функции, триггеры и определяемые пользователем типы данных. SMO поддерживает эту функцию при помощи объекта <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы сборки были зарегистрированы внутри базы данных перед ними может использоваться внутри хранимой процедуры, определяемые пользователем функции, триггеры и определяемые пользователем типы данных. SMO поддерживает эту функцию при помощи объекта <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
   
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> Объект ссылается на сборку .NET со <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A>, и <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A> свойства.  
   
- При <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> объект ссылается на сборку .NET, необходимо зарегистрировать сборку путем создания <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> объекта и его добавления в <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> объекта, который принадлежит <xref:Microsoft.SqlServer.Management.Smo.Database> объекта.  
+ Когда <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> объект ссылается на сборку .NET, необходимо зарегистрировать сборку, создав <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> объекта и добавления его в <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> объект, который принадлежит <xref:Microsoft.SqlServer.Management.Smo.Database> объекта.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Создание определяемой пользователем скалярной функции на языке Visual Basic  
- Данный пример кода показано, как создавать и удалять скалярной определяемой пользователем функции, имеющую входной <xref:System.DateTime> параметр объекта и целое возвращаемый тип [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Определяемая пользователем функция создается на [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] базы данных. Пример создает определяемую пользователем функцию ISOweek, которая получает в качестве аргумента дату и вычисляет номер недели по ISO. Для правильной работы этой функции перед ее вызовом параметр базы данных DATEFIRST должен быть установлен в значение 1.  
+ Данный пример кода показано, как создавать и удалять скалярной определяемой пользователем функции, имеющую входной <xref:System.DateTime> параметр объекта и целое число возвращаемый тип [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Определяемая пользователем функция создается на [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] базы данных. Пример создает определяемую пользователем функцию ISOweek, которая получает в качестве аргумента дату и вычисляет номер недели по ISO. Для правильной работы этой функции перед ее вызовом параметр базы данных DATEFIRST должен быть установлен в значение 1.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -69,7 +70,7 @@ udf.Drop()
 ``` 
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>Создание определяемой пользователем скалярной функции на языке Visual C#  
- Данный пример кода показано, как создавать и удалять скалярной определяемой пользователем функции, имеющую входной <xref:System.DateTime> параметр объекта и целое возвращаемый тип [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. Определяемая пользователем функция создается на [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] базы данных. В примере показано создание определяемой пользователем функции `ISOweek`. Эта функция получает в качестве аргумента дату и вычисляет номер недели по ISO. Для правильной работы этой функции перед ее вызовом параметр базы данных `DATEFIRST` должен быть установлен в значение `1` .  
+ Данный пример кода показано, как создавать и удалять скалярной определяемой пользователем функции, имеющую входной <xref:System.DateTime> параметр объекта и целое число возвращаемый тип [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. Определяемая пользователем функция создается на [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] базы данных. В примере показано создание определяемой пользователем функции `ISOweek`. Эта функция получает в качестве аргумента дату и вычисляет номер недели по ISO. Для правильной работы этой функции перед ее вызовом параметр базы данных `DATEFIRST` должен быть установлен в значение `1` .  
   
 ```csharp  
 {  
@@ -105,7 +106,7 @@ udf.Drop()
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>Создание определяемой пользователем скалярной функции в PowerShell  
- Данный пример кода показано, как создавать и удалять скалярной определяемой пользователем функции, имеющую входной <xref:System.DateTime> параметр объекта и целое возвращаемый тип [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. Определяемая пользователем функция создается на [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] базы данных. В примере показано создание определяемой пользователем функции `ISOweek`. Эта функция получает в качестве аргумента дату и вычисляет номер недели по ISO. Для правильной работы этой функции перед ее вызовом параметр базы данных `DATEFIRST` должен быть установлен в значение `1` .  
+ Данный пример кода показано, как создавать и удалять скалярной определяемой пользователем функции, имеющую входной <xref:System.DateTime> параметр объекта и целое число возвращаемый тип [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. Определяемая пользователем функция создается на [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] базы данных. В примере показано создание определяемой пользователем функции `ISOweek`. Эта функция получает в качестве аргумента дату и вычисляет номер недели по ISO. Для правильной работы этой функции перед ее вызовом параметр базы данных `DATEFIRST` должен быть установлен в значение `1` .  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

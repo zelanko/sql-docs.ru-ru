@@ -1,5 +1,5 @@
 ---
-title: sys.partition_schemes (Transact-SQL) | Документы Microsoft
+title: sys.partition_schemes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 710a39957a01d2846dfa940230f350538ac4353d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001077"
 ---
 # <a name="syspartitionschemes-transact-sql"></a>sys.partition_schemes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -38,13 +39,13 @@ ms.lasthandoff: 05/04/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Унаследованные столбцы >**||Наследует столбцы из [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
+|**\<наследуемые столбцы >**||Наследует столбцы из [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
 |**function_id**|**int**|Идентификатор функции секционирования, применяемой в схеме.|  
   
- Список столбцов, наследуемых этим представлением см. в разделе [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ Список столбцов, наследуемых этим представлением, см. в разделе [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public** . Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

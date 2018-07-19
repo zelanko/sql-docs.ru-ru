@@ -1,5 +1,5 @@
 ---
-title: Функция ID (XQuery) | Документы Microsoft
+title: Функция ID (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b31e1dc2894511d56cf8809396853dbb0a2e8329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077851"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004626"
 ---
-# <a name="functions-on-sequences---id"></a>Функции над последовательностями - идентификатор
+# <a name="functions-on-sequences---id"></a>Функции с последовательностями — id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает последовательность узлов элемента со значениями xs: ID, которые совпадают со значениями из одного или нескольких значений xs: IDREF, предоставленное в *$arg*.  
+  Возвращает последовательность узлов элемента со значениями xs: ID, которые совпадают со значениями из одного или нескольких значений xs: IDREF, указанных в *$arg*.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +46,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Одно или несколько значений xs:IDREF.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Результатом функции является последовательность элементов в экземпляре XML, в порядке документов, имеющих значение xs:ID, равное одному или нескольким значениям xs:IDREF в списке кандидатов xs:IDREF.  
   
  Если значение xs:IDREF не совпадает ни с одним элементом, функция возвращает пустую последовательность.  
@@ -57,7 +57,7 @@ fn:id($arg as xs:IDREF*) as element()*
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Получение элементов, основанных на значении атрибута IDREF  
  В следующем примере используется функция fn:id для получения элементов <`employee`>, основанных на атрибуте управляющего IDREF. В данном примере атрибут управляющего является атрибутом типа IDREF, а атрибут eid — атрибутом типа ID.  
   
- Для определенного значения атрибута управляющего **id()** функция находит <`employee`> идентификатор типа атрибута значение которого совпадает с входным значением IDREF. Другими словами, для определенного сотрудника **id()** функция возвращает менеджера сотрудника.  
+ Для значения атрибута иному менеджеру **id()** функция находит <`employee`> элемент, значение атрибута ID совпадает с входным значением IDREF. Другими словами, для указанного работника **id()** функция возвращает менеджера сотрудника.  
   
  Вот что происходит в примере:  
   
@@ -65,7 +65,7 @@ fn:id($arg as xs:IDREF*) as element()*
   
 -   Типизированный **xml** переменная создается с помощью коллекции XML-схем.  
   
--   Запрос возвращает элемент, имеющий значение атрибута ID, который ссылается **manager** атрибута IDREF <`employee`> элемент.  
+-   Запрос извлекает элемент, имеющий значение атрибута ID, который ссылается **manager** атрибута IDREF <`employee`> элемента.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -184,9 +184,9 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Ограничения реализации  
  Существуют следующие ограничения:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не поддерживает версии с двумя аргументами **id()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не поддерживает версию двумя аргументами **id()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Аргумент типа требуется **id()** быть подтипом xs:IDREF*.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] требуется тип аргумента **id()** быть подтипом xs:IDREF*.  
   
 ## <a name="see-also"></a>См. также  
  [Функции над последовательностями](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  

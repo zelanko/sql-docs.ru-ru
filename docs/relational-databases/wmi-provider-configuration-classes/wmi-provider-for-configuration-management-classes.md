@@ -1,5 +1,5 @@
 ---
-title: Поставщик WMI для классов управления конфигурацией | Документы Microsoft
+title: Поставщик WMI для классов управления конфигурацией | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,16 +24,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 967d26b76a75da27a5b4df98ecf5cd53d2cb9950
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005245"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Поставщик WMI для классов управления конфигурацией
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Поставщик инструментария управления Windows (WMI) для управления конфигурациями предоставляет возможности для следующих классов.  
   
- [Класс Cinstance](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  
+ [Класс CInstance](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  
   
  [Класс ClientNetLibInfo](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)  
   
@@ -55,13 +56,13 @@ ms.lasthandoff: 05/03/2018
   
  [Класс ServerSettings](../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)  
   
- [Класс Serversettingsgeneralflag](../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md)  
+ [Класс ServerSettingsGeneralFlag](../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md)  
   
  [Класс SInstance](../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)  
   
- [SqlErrorLogEvent, класс](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
+ [Класс SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
   
- [SqlErrorLogFile, класс](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)  
+ [Класс SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)  
   
  [Класс SqlServerAlias](../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)  
   

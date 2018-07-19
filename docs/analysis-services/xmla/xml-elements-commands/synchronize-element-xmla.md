@@ -1,5 +1,5 @@
 ---
-title: Синхронизировать элемент (XMLA) | Документы Microsoft
+title: Синхронизировать элемент (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 11804b9b6ca9ac430bdb47c0b9050b8c6995cf7f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574566"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007185"
 ---
 # <a name="synchronize-element-xmla"></a>Элемент Synchronize (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34574566"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "34574566"
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -62,12 +62,12 @@ ms.locfileid: "34574566"
   
  Во время выполнения команды **Synchronize** на базу данных-источник ставится блокировка на чтение, а на целевую базу данных — блокировка на запись. Обе блокировки снимаются после выполнения команды **Synchronize** .  
   
- Дополнительные сведения о синхронизации баз данных см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Дополнительные сведения о синхронизации баз данных, см. в разделе [резервного копирования, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>См. также
  [Резервное копирование элемента &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Элемент Batch &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Параллельные элемент &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
+ [Элемент Parallel &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
  [Элемент RESTORE &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
  [Команды &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   

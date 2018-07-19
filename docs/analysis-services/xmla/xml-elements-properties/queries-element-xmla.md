@@ -1,5 +1,5 @@
 ---
-title: Запрашивает элемент (XMLA) | Документы Microsoft
+title: Запрашивает элемент (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae9da22e9afe449eecd0d173fbf998401ca6a7d4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577866"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994656"
 ---
 # <a name="queries-element-xmla"></a>Элемент Queries (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34577866"
 </DesignAggregations>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "34577866"
 |Значение по умолчанию|None|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  

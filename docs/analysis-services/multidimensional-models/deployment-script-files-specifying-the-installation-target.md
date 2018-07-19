@@ -1,5 +1,5 @@
 ---
-title: Указание целевого объекта установки | Документы Microsoft
+title: Указание целевого объекта установки | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a9a075c5afdc4132058a0356a172edd6d68a5e5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022441"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002236"
 ---
 # <a name="deployment-script-files---specifying-the-installation-target"></a>Файлы скриптов развертывания — Указание целевого объекта установки
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает сведения о целевом установки из \< *имя проекта*> .deploymenttargets файла. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]создает этот файл при построении [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует базу данных и сервер, указанные на **развертывания** страница  *\<имя проекта >* **страницы свойств** диалоговое окно «» для создания \< *имя проекта*> TARGETS-файл.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает сведения о целевом установки из \< *имя_проекта*> .deploymenttargets файл. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает этот файл при построении проекта служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует базу данных и сервер, указанные на **развертывания** странице  *\<имя проекта >* **страницы свойств** диалоговое окно, чтобы создать \< *имя_проекта*> TARGETS-файле.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>Измерение целевого объекта установки для развертывания  
  В некоторых ситуациях может быть необходимо развернуть проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в базу данных или экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , отличающийся от указанного на странице **Развертывание** . Например может быть необходимо развернуть проект на сервер для тестирования перед развертыванием, а затем развернуть его на производственный сервер после окончания тестирования. Может также быть необходимо развернуть завершенный и протестированный проект на несколько производственных серверов в кластере балансирования сетевой нагрузки, или на промежуточный сервер и производственный сервер.  
@@ -36,11 +36,11 @@ ms.locfileid: "34022441"
   
      —или—  
   
--   Изменить \< *имя проекта*> .deploymenttargets файл, используя любой текстовый редактор.  
+-   Изменить \< *имя_проекта*> файл .deploymenttargets, используя любой текстовый редактор.  
   
 ## <a name="see-also"></a>См. также  
- [Указание параметров развертывания ролей и секций](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
- [Задание параметров конфигурации для развертывания решения](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)   
+ [Указание параметров развертывания секций и ролей](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
+ [Указание настроек конфигурации для развертывания решения](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)   
  [Указание параметров обработки](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
   

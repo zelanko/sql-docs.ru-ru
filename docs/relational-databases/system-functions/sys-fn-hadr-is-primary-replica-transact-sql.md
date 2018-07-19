@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_is_primary_replica (Transact-SQL) | Документы Microsoft
+title: sys.fn_hadr_is_primary_replica (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebfd66acdc93f1a5148981e06f8adf1c507e1705
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240514"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995634"
 ---
 # <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## <a name="returns"></a>Возвращает  
  Возвращаемое значение равно 1, если база данных в текущем экземпляре является первичной. В противном случае возвращается 0.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте эту функцию, чтобы определить, размещается ли первичная реплика указанной базы данных доступности в локальном экземпляре. Образец кода должен быть аналогичен следующему.  
   
 ```  
@@ -77,8 +77,8 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Функции групп доступности AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [Группы доступности AlwaysOn & #40; SQL Server & #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Создание группы ДОСТУПНОСТИ & #40; Transact-SQL & #41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [Представления каталога групп доступности AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
   

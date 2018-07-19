@@ -1,5 +1,5 @@
 ---
-title: Элемент RoleID (ASSL) | Документы Microsoft
+title: Элемент RoleID (ASSL) | Документация Майкрософт
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,10 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 710306c1a31a188bea19b7bf53e7ac2c7324c00d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007226"
 ---
 # <a name="roleid-element-assl"></a>Элемент RoleID (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
@@ -46,9 +47,9 @@ ms.lasthandoff: 05/10/2018
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- Элементы, соответствующие родителям элемента **RoleID** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.CubePermission>, <xref:Microsoft.AnalysisServices.DatabasePermission>, <xref:Microsoft.AnalysisServices.DimensionPermission>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, <xref:Microsoft.AnalysisServices.MiningStructurePermission>, и <xref:Microsoft.AnalysisServices.Permission>.  
+ Элементы, соответствующие родителям элемента **RoleID** в модели объектов объекты управления Analysis AMO — это <xref:Microsoft.AnalysisServices.CubePermission>, <xref:Microsoft.AnalysisServices.DatabasePermission>, <xref:Microsoft.AnalysisServices.DimensionPermission>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, <xref:Microsoft.AnalysisServices.MiningStructurePermission>, и <xref:Microsoft.AnalysisServices.Permission>.  
   
 ## <a name="see-also"></a>См. также  
- [Свойства & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Свойства &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

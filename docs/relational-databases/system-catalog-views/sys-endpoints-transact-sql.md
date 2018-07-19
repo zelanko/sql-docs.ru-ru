@@ -1,5 +1,5 @@
 ---
-title: sys.Endpoints (Transact-SQL) | Документы Microsoft
+title: sys.Endpoints (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 929cbba80469c80bd7384d97ae22abacda501a8a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180770"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998156"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "33180770"
 |**name**|**sysname**|Имя конечной точки. Уникален в пределах сервера. Не допускает значение NULL.|  
 |**endpoint_id**|**int**|Идентификатор конечной точки. Уникален в пределах сервера. Конечная точка с идентификатором менее 65536 — системная конечная точка. Не допускает значение NULL.|  
 |**principal_id**|**int**|Идентификатор сервера-участника, создавшего данную конечную точку и владеющего ей. Допускает значение NULL.|  
-|**Протокол**|**tinyint**|Протокол конечной точки.<br /><br /> 1 = HTTP.<br /><br /> 2 = TCP.<br /><br /> 3 = именованные каналы.<br /><br /> 4 = общая память.<br /><br /> 5 = адаптер виртуального интерфейса (Virtual Interface Adapter, VIA).<br /><br /> Не допускает значение NULL.|  
-|**protocol_desc**|**nvarchar(60)**|Описание протокола конечной точки. Допускает значение NULL. Одно из следующих значений:<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **ЧЕРЕЗ** Примечание: протокол VIA является устаревшим. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|**протокол**|**tinyint**|Протокол конечной точки.<br /><br /> 1 = HTTP.<br /><br /> 2 = TCP.<br /><br /> 3 = именованные каналы.<br /><br /> 4 = общая память.<br /><br /> 5 = адаптер виртуального интерфейса (Virtual Interface Adapter, VIA).<br /><br /> Не допускает значение NULL.|  
+|**protocol_desc**|**nvarchar(60)**|Описание протокола конечной точки. Допускает значение NULL. Одно из следующих значений:<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **С помощью** Примечание: протокол VIA является устаревшим. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|Тип полезных данных конечной точки.<br /><br /> 1 = SOAP.<br /><br /> 2 = TSQL.<br /><br /> 3 = SERVICE_BROKER.<br /><br /> 4 = DATABASE_MIRRORING.<br /><br /> Не допускает значение NULL.|  
 |**type_desc**|**nvarchar(60)**|Описание типа полезных данных конечной точки. Допускает значение NULL. Одно из следующих значений:<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
 |**state**|**tinyint**|Состояние конечной точки.<br /><br /> 0 = запущена: прослушивает и обрабатывает запросы.<br /><br /> 1 = остановлена: прослушивает, но не обрабатывает запросы.<br /><br /> 2 = отключена: не прослушивает.<br /><br /> Состояние по умолчанию — 1. Допускает значение NULL.|  
 |**state_desc**|**nvarchar(60)**|Описание состояния конечной точки.<br /><br /> Запущена: прослушивает и обрабатывает запросы.<br /><br /> Остановлена: прослушивает, но не обрабатывает запросы.<br /><br /> Отключена: не прослушивает.<br /><br /> По умолчанию конечная точка остановлена.<br /><br /> Допускает значение NULL.|  
-|**is_admin_endpoint**|**бит**|Указывает, является ли конечная точка административной.<br /><br /> 0 = конечная точка не является административной.<br /><br /> 1 = административная конечная точка.<br /><br /> Не допускает значение NULL.|  
+|**is_admin_endpoint**|**bit**|Указывает, является ли конечная точка административной.<br /><br /> 0 = конечная точка не является административной.<br /><br /> 1 = административная конечная точка.<br /><br /> Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

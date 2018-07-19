@@ -1,5 +1,5 @@
 ---
-title: Реализация конечных точек | Документы Microsoft
+title: Реализация конечных точек | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5bd1f57ee89138dca4354d1a558d605784cb3310
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042012"
 ---
 # <a name="implementing-endpoints"></a>Реализация конечных точек
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Конечная точка представляет собой службу, в функции которой входит прослушивание запросов. Объекты SMO поддерживаются разные типы конечных точек с помощью <xref:Microsoft.SqlServer.Management.Smo.Endpoint> объекта. Для обработки конкретного типа полезных данных можно создать службу конечной точки, которая будет использовать указанный протокол, создав экземпляр объекта <xref:Microsoft.SqlServer.Management.Smo.Endpoint> и настроив его свойства.  
+  Конечная точка представляет собой службу, в функции которой входит прослушивание запросов. SMO поддерживаются разные типы конечных точек с помощью <xref:Microsoft.SqlServer.Management.Smo.Endpoint> объекта. Для обработки конкретного типа полезных данных можно создать службу конечной точки, которая будет использовать указанный протокол, создав экземпляр объекта <xref:Microsoft.SqlServer.Management.Smo.Endpoint> и настроив его свойства.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> Свойство <xref:Microsoft.SqlServer.Management.Smo.Endpoint> объект может использоваться для указания следующих типов полезных данных:  
   
@@ -46,16 +46,16 @@ ms.locfileid: "32970189"
   
 -   протокол TCP.  
   
- Указав тип полезных данных, фактически применяемые полезные данные можно задать с помощью <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> свойство объекта. Свойство объекта <xref:Microsoft.SqlServer.Management.Smo.Payload> обеспечивает ссылку на объект полезных данных указанного типа, свойства которого можно изменить.  
+ Указан тип полезных данных, фактически применяемые полезные данные можно установить с помощью <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> свойство объекта. Свойство объекта <xref:Microsoft.SqlServer.Management.Smo.Payload> обеспечивает ссылку на объект полезных данных указанного типа, свойства которого можно изменить.  
   
- Для объекта <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> необходимо указать роль для зеркального отображения и отметить, включать ли шифрование. <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> Объекта требуются сведения о перенаправлении сообщений, максимальное число соединений, разрешенных и режим проверки подлинности. Для объекта <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> надо указать множество устанавливаемых свойств, включая свойство <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> объекта, которое указывает доступные клиентам методы полезных данных SOAP (хранимые процедуры и определяемые пользователем функции).  
+ Для объекта <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> необходимо указать роль для зеркального отображения и отметить, включать ли шифрование. <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> Объекта требуются сведения о перенаправлении сообщений, максимальное число разрешенных подключений и режим проверки подлинности. Для объекта <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> надо указать множество устанавливаемых свойств, включая свойство <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> объекта, которое указывает доступные клиентам методы полезных данных SOAP (хранимые процедуры и определяемые пользователем функции).  
   
  Аналогично этому фактически применяемый протокол можно установить с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> объекта, которое ссылается на объект протокола типа, указанного в свойстве <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. Объекту <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> требуется список ограниченных IP-адресов, а также сведения о порте, веб-сайте и проверке подлинности. <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> Объекта также необходим список ограниченных IP-адресов и сведения о порте.  
   
  После того как конечная точка будет создана и полностью определена, можно предоставлять, отменять и запрещать доступ к ней пользователям базы данных, группам, ролям и именам входа.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>Создание конечной точки зеркального отображения базы данных на языке Visual Basic  
  Этот пример кода показывает, как создать конечную точку зеркального отображения базы данных в SMO. Это надо сделать до того, как будет формироваться зеркальное отображение базы данных. Воспользуйтесь свойством <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> и другими свойствами объекта <xref:Microsoft.SqlServer.Management.Smo.Database> для создания зеркального отображения базы данных.  

@@ -1,5 +1,5 @@
 ---
-title: Управление компонентом Service Broker | Документы Microsoft
+title: Управление компонентом Service Broker | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1d3bb44a64386329570d78e8b3ce436b9573f63f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967959"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000946"
 ---
 # <a name="managing-service-broker"></a>Управление компонентом Service Broker
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  В SMO [!INCLUDE[ssSB](../../../includes/sssb-md.md)] объекты, включенные в **Microsoft.SqlServer.Management.Smo.Broker** пространства имен, которое требуется ссылка на сборку Microsoft.SqlServer.SMO.dll. Кроме того, необходима ссылка на сборку Microsoft.SqlServer.ServiceBrokerEnum.dll для поддержки сведений о классах.  
+  В SMO [!INCLUDE[ssSB](../../../includes/sssb-md.md)] объекты, включенные в **Microsoft.SqlServer.Management.Smo.Broker** пространства имен, которое требует ссылки на сборку Microsoft.SqlServer.SMO.dll. Кроме того, необходима ссылка на сборку Microsoft.SqlServer.ServiceBrokerEnum.dll для поддержки сведений о классах.  
   
  SMO предоставляет набор объектов компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)], которые допускают программное управление (DDL) реализацией [!INCLUDE[ssSB](../../../includes/sssb-md.md)]. Оно включает определение типов сообщений, контрактов, очередей и служб. Так как SMO является средством управления, которое не предназначено для работы с данными, SMO не поддерживает отправку и получение сообщений компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)].  
   

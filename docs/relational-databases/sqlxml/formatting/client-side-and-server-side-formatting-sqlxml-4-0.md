@@ -1,5 +1,5 @@
 ---
-title: Клиентские и серверные форматирование (SQLXML 4.0) | Документы Microsoft
+title: Клиентские и серверные форматирование (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a387f27bee5a4325709b3268c7e2deb6157768e3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708462"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003388"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Форматирование XML-кода на клиенте и на сервере (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

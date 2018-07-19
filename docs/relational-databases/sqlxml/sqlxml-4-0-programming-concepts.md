@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 основные понятия о программировании | Документы Microsoft
+title: SQLXML 4.0 основные понятия программирования | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,10 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0071c9f56d118c3d80a92d556c29b813a25cdee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003396"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Основные понятия о программировании для SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,16 +58,16 @@ ms.lasthandoff: 05/03/2018
  [Использование запросов XPath в SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  Описывает, как пользоваться подмножеством языка XPath для выполнения запросов к XML-представлениям, создаваемым на основе аннотированной XSD-схемы. Кроме этого, содержит примеры.  
   
- [Изменение данных в SQLXML 4.0 с помощью диаграммы обновления](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Использование диаграмм обновления для изменения данных в SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Содержит сведения о диаграммах обновления, которые изменяют данные в базе данных применительно к XML-представлениям на основе аннотированных схем XSD (или XDR).  
   
- [Выполнение массовой загрузки XML-данных & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Описывает процесс массовой загрузки XML в SQLXML 4.0.  
   
- [SQLXML 4.0 компонентов MDAC](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
+ [Компоненты доступа к данным SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  Содержит документацию по поставщику SQLXMLOLEDB и ссылки на другие компоненты доступа к данным SQLXML 4.0.  
   
- [SQLXML 4.0 на платформе .NET Framework поддержки](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [Поддержка SQLXML 4.0 на платформе .NET Framework](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  Описывает поддержку SQLXML 4.0 для .NET Framework.  
   
  [Кэширование шаблонов, XSL и схем &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  

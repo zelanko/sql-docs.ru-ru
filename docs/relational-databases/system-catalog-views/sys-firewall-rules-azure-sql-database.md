@@ -1,5 +1,5 @@
 ---
-title: sys.firewall_rules (база данных SQL Azure) | Документы Microsoft
+title: sys.firewall_rules (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
@@ -28,11 +28,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 090ec967e25fff1fac3761298214e0366c0f2478
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33180260"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000907"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,20 +46,20 @@ ms.locfileid: "33180260"
 |идентификатор|**INT**|Идентификатор параметра брандмауэра на уровне сервера.|  
 |name|**NVARCHAR(128)**|Имя, выбранное для описания и определения параметров брандмауэра на уровне сервера.|  
 |start_ip_address|**VARCHAR(50)**|Наименьший IP-адрес в диапазоне параметра брандмауэра на уровне сервера. IP-адреса, которые больше этого адреса или равны ему, могут попытаться подключиться к серверу [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наименьший возможный IP-адрес: `0.0.0.0`.|  
-|end_ip_address|**VARCHAR(50)**|Наибольший IP-адрес в диапазоне параметра брандмауэра на уровне сервера. IP-адреса, которые меньше этого адреса или равны ему, могут попытаться подключиться к серверу [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наибольший возможный IP-адрес: `255.255.255.255`.<br /><br /> Примечание: Windows попытки подключения к Azure разрешены, если это поле и **start_ip_address** содержат значение `0.0.0.0`.|  
-|create_date|**ДАТЫ И ВРЕМЕНИ**|Дата и время создания параметра брандмауэра на уровне сервера в формате UTC.<br /><br /> Примечание: В формате UTC — сокращение от время по Гринвичу.|  
+|end_ip_address|**VARCHAR(50)**|Наибольший IP-адрес в диапазоне параметра брандмауэра на уровне сервера. IP-адреса, которые меньше этого адреса или равны ему, могут попытаться подключиться к серверу [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наибольший возможный IP-адрес: `255.255.255.255`.<br /><br /> Примечание: Windows попытки подключения к Azure разрешены, если это поле и **start_ip_address** поле equals `0.0.0.0`.|  
+|create_date|**ДАТЫ И ВРЕМЕНИ**|Дата и время создания параметра брандмауэра на уровне сервера в формате UTC.<br /><br /> Примечание: В формате UTC — это сокращение от формате UTC.|  
 |modify_date|**ДАТЫ И ВРЕМЕНИ**|Дата и время последнего изменения параметра брандмауэра на уровне сервера в формате UTC.|  
   
 ## <a name="remarks"></a>Примечания  
- Чтобы удалить правило брандмауэра базы данных, используйте [sp_delete_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). Чтобы настроить правило брандмауэра для одной базы данных, см. [sys.database_firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). Чтобы получить сведения о существующих правилах брандмауэра, запросите sys.firewall_rules (база данных SQL Azure).  
+ Чтобы удалить правило брандмауэра базы данных, используйте [sp_delete_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). Чтобы задать правило брандмауэра для отдельной базы данных, см. в разделе [sys.database_firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). Чтобы получить сведения о существующих правилах брандмауэра, запросите sys.firewall_rules (база данных SQL Azure).  
   
 ## <a name="permissions"></a>Разрешения  
- Доступ только для чтения к этому представлению доступен для всех пользователей с разрешением на подключение к **master** базы данных.  
+ Доступ только для чтения к этому представлению доступна для всех пользователей с разрешением на подключение к **master** базы данных.  
   
 ## <a name="see-also"></a>См. также  
  [sys.database_firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
  [sp_set_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
+ [Настройка брандмауэра Windows для доступа к ядру СУБД](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [Настройка брандмауэра для доступа к данным FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)   
  [Настройка брандмауэра для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [Практическое руководство. Настройка параметров брандмауэра для базы данных SQL с помощью портала Azure](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  

@@ -1,5 +1,5 @@
 ---
-title: Варианты использования XQuery Общие | Документы Microsoft
+title: Варианты использования XQuery Общие | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9a28080c682d40d1e08aaa96e594c96496d79026
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999836"
 ---
 # <a name="general-xquery-use-cases"></a>Общие способы применения запросов XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ WHERE CatalogDescription is not null
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   **Имен** ключевое слово в прологе XQuery определяет префикс пространства имен, который используется в теле запроса.  
+-   **Пространства имен** слово в прологе XQuery определяет префикс пространства имен, который используется в теле запроса.  
   
 -   Текст запроса формирует требуемый XML.  
   
@@ -78,7 +79,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- Следующий запрос получает те же сведения, но лишь для моделей продукции, описания которых в каталоге включают значение веса (элемент <`Weight`>) в спецификациях (элемент <`Specifications`>). В данном примере для объявления префикса pd и привязки пространства имен используется предложение WITH XMLNAMESPACES. Таким образом, Описание привязки отсутствует как в **query()** метод и в **exist()** метод.  
+ Следующий запрос получает те же сведения, но лишь для моделей продукции, описания которых в каталоге включают значение веса (элемент <`Weight`>) в спецификациях (элемент <`Specifications`>). В данном примере для объявления префикса pd и привязки пространства имен используется предложение WITH XMLNAMESPACES. Таким образом, привязки отсутствует как в **query()** метод и в **exist()** метод.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -93,7 +94,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- В предыдущем запросе **exist()** метод **xml** типа данных в предложении WHERE проверяет, существует ли <`Weight`> элемента <`Specifications`> элемент.  
+ В предыдущем запросе **exist()** метод **xml** типа данных в предложении WHERE проверяет, имеется ли <`Weight`> элемента <`Specifications`> элемент.  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>Б. Поиск идентификаторов моделей продукции, описания которых в каталоге имеют фронтальные и малоразмерные изображения.  
  Описание в каталоге продукции формата XML включает рисунки товаров — элемент <`Picture`>. Каждый рисунок обладает несколькими свойствами, среди которых угол рисунка (элемент <`Angle`>) и размер (элемент <`Size`>).  
@@ -124,9 +125,9 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   В предложении WHERE **exist()** метод используется для получения только тех строк, которые содержат описания каталога продукции с <`Picture`> элемент.  
+-   В предложении WHERE **exist()** метод используется для получения только тех строк, которые содержат описания каталога продукции с <`Picture`> элемента.  
   
--   В предложении WHERE используется **value()** дважды для сравнения значений <`Size`> и <`Angle`> элементов.  
+-   Предложение WHERE использует **value()** метод двух раз, чтобы сравнить значения <`Size`> и <`Angle`> элементы.  
   
  Частичный результат:  
   
@@ -142,7 +143,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>В. Создание списка продукта пар имен и характеристик моделей, где каждая пара заключена в \<функции > элемент  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>В. Создание неструктурированного списка продукта пар имен и характеристик моделей, где каждая пара заключена в \<функции > элемент  
  В описании каталога моделей продукции XML содержит несколько характеристик продукта. Все эти характеристики включены в элемент <`Features`>. В запросе используется [построение XML (XQuery)](../xquery/xml-construction-xquery.md) для формирования требуемого XML. Выражение в фигурных скобках заменяется результатом.  
   
 ```  
@@ -193,8 +194,8 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>Г. В описании каталога моделей продукции, список продукта модели идентификатор, имя, модели и сгруппированных функции в \<продукта > элемент  
- С помощью сведений, хранящихся в описании каталога моделей продукции, следующий запрос возвращает имя модели продукции, идентификатор модели, а также функции группировки внутри \<продукта > элемент.  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>Г. В описании каталога модели продукта, список продукта модели имя, модель идентификатора и функции сгруппированных в \<продукта > элемент  
+ Используя информацию, хранящуюся в описании каталога модели продукта, следующий запрос возвращает имя модели продукции, идентификатор модели, и функции сгруппированных в \<продукта > элемента.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -230,7 +231,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>Д. Получение описаний характеристик для модели продукции.  
- Следующий запрос создает XML, включающий <`Product`> элемент, имеющий **ProducModelID**, **ProductModelName** атрибуты и первые две характеристики продукта. Следует уточнить, что первые две характеристики продукта являются первыми двумя дочерними элементами элемента <`Features`>. При наличии большего числа характеристик данный запрос возвращает пустой элемент <`There-is-more/`>.  
+ Следующий запрос создает XML, включающий <`Product`> элемент, имеющий **ProducModelID**, **ProductModelName** атрибутов и первые две характеристики продукта. Следует уточнить, что первые две характеристики продукта являются первыми двумя дочерними элементами элемента <`Features`>. При наличии большего числа характеристик данный запрос возвращает пустой элемент <`There-is-more/`>.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -308,9 +309,9 @@ WHERE CatalogDescription.value('
   
 -   Предложение WHERE используется для получения лишь тех строк, которые содержат слово «Aerodynamic» в элементе <`Summary`> описания каталога.  
   
--   **Contains()** функция используется для проверки, если указан в тексте.  
+-   **Contains()** функция используется для просмотра, если указан в тексте.  
   
--   **Value()** метод **xml** тип данных сравнивает значение, возвращаемое **contains()** значение 1.  
+-   **Value()** метод **xml** тип данных сравнивает значение, возвращаемое **contains()** 1.  
   
  Результат:  
   
@@ -341,16 +342,16 @@ AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   Если **exist()** метод в предложении WHERE возвращает значение False (0), возвращается код модели продукта. В противном случае идентификатор не извлекается.  
+-   Если **exist()** метод в предложении WHERE возвращает значение False (0), возвращается идентификатор модели продукта. В противном случае идентификатор не извлекается.  
   
 -   В данном случае результирующий набор пуст, поскольку все описания продукции содержат элемент <`Picture`>.  
   
 ## <a name="see-also"></a>См. также  
- [Запросы XQuery, использующие иерархию](../xquery/xqueries-involving-hierarchy.md)   
- [Запросы XQuery, использующие упорядочивание](../xquery/xqueries-involving-order.md)   
+ [Запросы XQuery с использованием иерархии](../xquery/xqueries-involving-hierarchy.md)   
+ [Запросы XQuery с использованием порядка](../xquery/xqueries-involving-order.md)   
  [Запросы XQuery, обрабатывающие реляционные данные](../xquery/xqueries-handling-relational-data.md)   
- [Поиск строки в XQuery](../xquery/string-search-in-xquery.md)   
- [Поддержка пространств имен в XQuery](../xquery/handling-namespaces-in-xquery.md)   
+ [Поиск по строкам в XQuery](../xquery/string-search-in-xquery.md)   
+ [Обработка пространств имен в XQuery](../xquery/handling-namespaces-in-xquery.md)   
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.external_data_sources (Transact-SQL) | Документы Microsoft
+title: sys.external_data_sources (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 944a8096c20d6ab825503d4db9f824ba0bbe208e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181800"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001236"
 ---
 # <a name="sysexternaldatasources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "33181800"
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |data_source_id|**int**|Идентификатор объекта для внешнего источника данных.||  
-|имя|**sysname**|Имя внешнего источника данных.||  
-|location|**nvarchar(4000)**|Строка подключения, включая протокола, IP-адрес и порт для внешнего источника данных.||  
+|name|**sysname**|Имя внешнего источника данных.||  
+|location|**nvarchar(4000)**|Строка подключения, которая включает в себя протокол, IP-адрес и порт для внешнего источника данных.||  
 |type_desc|**nvarchar(255)**|Тип источника данных отображается в виде строки.|HADOOP, реляционной СУБД, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
-|Тип|**tinyint**|Тип источника данных отображается в виде числа.|0 — HADOOP<br /><br /> 1 — СУРБД<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
-|resource_manager_location|**nvarchar(4000)**|Введите HADOOP, IP-адрес и порт расположение диспетчера ресурсов Hadoop. Это используется для отправки заданий на источнике данных Hadoop.<br /><br /> Значение NULL для других типов внешних источников данных.||  
-|credential_id|**int**|Идентификатор объекта базы данных в области видимости учетные данные, используемые для подключения к внешнему источнику данных.||  
-|database_name|**sysname**|Для типа реляционной СУБД, имя удаленной базы данных. Для типа, SHARD_MAP_MANAGER, имя базы данных диспетчера карты сегментов. Значение NULL для других типов внешних источников данных.||  
-|shard_map_name|**sysname**|Для типа SHARD_MAP_MANAGER имя карты сегментов. Значение NULL для других типов внешних источников данных.||  
+|Тип|**tinyint**|Тип источника данных отображается в виде числа.|0 — HADOOP<br /><br /> 1 - РЕЛЯЦИОННОЙ СУБД<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
+|resource_manager_location|**nvarchar(4000)**|Введите HADOOP, IP-адрес и порт расположение диспетчера ресурсов Hadoop. Используется для отправки задания на источнике данных Hadoop.<br /><br /> Значение NULL для других типов внешних источников данных.||  
+|credential_id|**int**|Идентификатор объекта базы данных учетных данных для подключения к внешнему источнику данных.||  
+|database_name|**sysname**|Для типа реляционной СУБД, имя удаленной базы данных. Для типа SHARD_MAP_MANAGER, имя базы данных диспетчера карты сегментов. Значение NULL для других типов внешних источников данных.||  
+|shard_map_name|**sysname**|Для типа SHARD_MAP_MANAGER, имя карты сегментов. Значение NULL для других типов внешних источников данных.||  
   
 ## <a name="permissions"></a>Разрешения  
  Видимость метаданных в представлениях каталогов ограничивается защищаемыми объектами, которыми пользователь владеет или на которые ему были предоставлены разрешения. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

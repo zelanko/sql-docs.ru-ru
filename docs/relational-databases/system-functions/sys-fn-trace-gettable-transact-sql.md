@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_gettable (Transact-SQL) | Документы Microsoft
+title: sys.fn_trace_gettable (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,10 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e8c573a9995ee8ca0d23cd89ab2e032a88c6f9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014932"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +54,10 @@ fn_trace_gettable ( 'filename' , number_files )
  *number_files*  
  Указывает число считываемых файлов продолжения. Это число включает и файл, указанный в *filename*. *number_files* — **int**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если *number_files* указывается как **по умолчанию**, **fn_trace_gettable** считывает файлы продолжения, пока не достигнет конца трассировки. **fn_trace_gettable** возвращает таблицу, содержащую все столбцы, допустимые для указанной трассировки. Дополнительные сведения см. в разделе [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- Имейте в виду, что функция fn_trace_gettable не будет загружать файлы продолжения (Если этот параметр указан с помощью *number_files* аргумент) которых имя исходного файла трассировки завершается подчеркиванием и числовым значением. (Это не относится к подчеркиваниям и числам, которые автоматически добавляются, когда выполняется переключение на файл продолжения.) В качестве временного решения можно переименовать файлы трассировки, исключив подчеркивания из имени исходного файла. Например, если исходный файл имеет имя **Trace_Oct_5.trc** и файл продолжения имеет имя **Trace_Oct_5_1.trc**, можно переименовать файлы **TraceOct5.trc** и  **TraceOct5_1.trc**.  
+ Имейте в виду, что функция fn_trace_gettable не будет загружать файлы продолжения (Если этот параметр указан с помощью *number_files* аргумент) которых имя исходного файла трассировки завершается подчеркиванием и числовое значение. (Это не относится к подчеркиваниям и числам, которые автоматически добавляются, когда выполняется переключение на файл продолжения.) В качестве временного решения можно переименовать файлы трассировки, исключив подчеркивания из имени исходного файла. Например, если исходный файл имеет имя **Trace_Oct_5.trc** и файл продолжения имеет имя **Trace_Oct_5_1.trc**, можно переименовать файлы **TraceOct5.trc** и  **TraceOct5_1.trc**.  
   
  Эта функция может считывать трассировку, которая еще активна на экземпляре, на котором она выполняется.  
   

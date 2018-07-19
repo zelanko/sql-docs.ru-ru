@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_query (Transact-SQL) | Документы Microsoft
+title: sp_query_store_remove_query (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 803cd0f5df8d641eeb4119ea99b588571243dd0c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250106"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993656"
 ---
 # <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Удаляет из хранилища запросов запроса, а также все связанные планы и статистику времени выполнения.  
+  Удаляет запрос, а также все связанные планы и статистику времени выполнения из хранилища запросов.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,15 +49,15 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@query_id =** ] *query_id*  
- — Идентификатор запроса, который необходимо удалить из хранилища запросов. *query_id* — **bigint**, не имеет значения по умолчанию.  
+ Это идентификатор запроса, который необходимо удалить из хранилища запросов. *query_id* — **bigint**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется **EXECUTE** разрешения в базе данных и **удалить** разрешения на представления каталога хранилища запросов.  
+ Требуется **EXECUTE** разрешений в базе данных, и **удалить** разрешения на представления каталога хранилища запросов.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает сведения о запросах в хранилище запросов.  
@@ -71,7 +71,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- После определения идентификатором, который требуется удалить, используйте следующий пример удалить запрос.  
+ После определения query_id, который требуется удалить, используйте следующий пример, чтобы удалить запрос.  
   
  Следующий пример.  
   

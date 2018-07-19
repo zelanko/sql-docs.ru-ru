@@ -1,5 +1,5 @@
 ---
-title: Резервное копирование элемента (XMLA) | Документы Microsoft
+title: Резервное копирование элемент (XMLA) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e00a4991226779a91e16806dbe15973d946ec69
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574216"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007154"
 ---
 # <a name="backup-element-xmla"></a>Элемент Backup (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Создает резервную копию базы данных служб Analysis Services в файл резервной копии.  
+  Резервное копирование базы данных служб Analysis Services в файл резервной копии.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34574216"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элементов  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "34574216"
 |Значение по умолчанию|None|  
 |Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
-## <a name="element-relationships"></a>Связи элемента  
+## <a name="element-relationships"></a>Связи элементов  
   
 |Связь|Элемент|  
 |------------------|-------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "34574216"
 |Дочерние элементы|[AllowOverwrite](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md), [ApplyCompression](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md), [BackupRemotePartitions](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md), [файл](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md), [расположения](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md), [ Объект](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [пароль](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md), [безопасности](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
- **Резервного копирования** команда создает резервную копию [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, указанной в [объекта](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) файл резервной копии и при необходимости выполняет резервное копирование удаленных секций, удаленных файлов резервной копии элемента. Если **объекта** элемент ссылается на объект, отличный от [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, возникает ошибка.  
+ **Резервного копирования** команда создает резервную [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, указанной в [объект](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) файла резервной копии, и при необходимости создает резервные копии удаленных секций удаленных файлов резервной копии. Если **объект** элемент ссылается на объект, отличное от [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, возникает ошибка.  
   
  Данные, попадающие в резервную копию, создаваемую командой **Backup** , зависят от режима хранения, используемого объектами базы данных. В следующей таблице показано, резервная копия каких данных создается в каждом режиме хранения.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "34574216"
 |Гибридный OLAP (HOLAP)|Агрегаты и метаданные|  
 |Реляционный OLAP (ROLAP)|Метаданные|  
   
- Во время **резервного копирования** команды, совмещаемая блокировка на [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, указанной в **объекта** элемент. Совмещаемая блокировка снимается после выполнения команды **Backup** .  
+ Во время **резервного копирования** команды на устанавливается совмещаемая блокировка [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, указанной в **объекта** элемент. Совмещаемая блокировка снимается после выполнения команды **Backup** .  
   
  Несколько **резервного копирования** команды могут выполняться параллельно, если они включены в [параллельных](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) коллекцию [пакета](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) команды. Коллекция **Parallel** позволяет одновременно создавать несколько резервных копий базы данных.  
   
- Дополнительные сведения о резервном копировании и восстановлении баз данных см. в разделе [резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Дополнительные сведения о резервном копировании и восстановлении баз данных, см. в разделе [резервного копирования, восстановление и синхронизация баз данных &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 > [!IMPORTANT]  
 >  Пользователь, выполняющий команду резервного копирования, должен иметь разрешение на запись в папку резервного копирования, указанную для каждого копируемого файла. Кроме того, пользователь должен быть членом одной из следующих ролей: роль сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] или роль базы данных с разрешениями "Полный доступ (администратор)" в базе данных, для которой создается резервная копия.  

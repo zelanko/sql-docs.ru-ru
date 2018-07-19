@@ -1,5 +1,5 @@
 ---
-title: sys.security_predicates (Transact-SQL) | Документы Microsoft
+title: sys.security_predicates (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,10 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 539ca48e5c55485a5a4b3fdecb3044c1feae6826
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993856"
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,14 +46,14 @@ ms.lasthandoff: 05/04/2018
 |object_id|**int**|Идентификатор политики безопасности, содержащей этот предикат.|  
 |security_predicate_id|**int**|Идентификатор предиката в этой политике безопасности.|  
 |target_object_id|**int**|Идентификатор объекта, к которому привязан этот предикат безопасности.|  
-|predicate_definition|**nvarchar(max)**|Полное имя функции, которая будет использоваться в качестве предиката безопасности, включая аргументы. Обратите внимание, что `schema.function` может быть нормализовано (т. е. экранировано) как и любой другой элемент в тексте для обеспечения согласованности. Например:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
-|predicate_type|**int**|Тип предикат, используемый в соответствии с политикой безопасности:<br /><br /> 0 = ПРЕДИКАТ ФИЛЬТРА<br /><br /> 1 = ПРЕДИКАТА БЛОКИРОВКИ|  
-|predicate_type_desc|**nvarchar(60)**|Тип предикат, используемый в соответствии с политикой безопасности:<br /><br /> FILTER<br /><br /> БЛОК|  
-|операции|**int**|Тип операции, заданной для предиката:<br /><br /> NULL = всех применимых операций.<br /><br /> 1 = ПОСЛЕ ВСТАВКИ<br /><br /> 2 = ПОСЛЕ ОБНОВЛЕНИЯ<br /><br /> 3 = ДО ОБНОВЛЕНИЯ<br /><br /> 4 = ДО УДАЛЕНИЯ|  
-|operation_desc|**nvarchar(60)**|Тип операции, заданной для предиката:<br /><br /> NULL<br /><br /> ПОСЛЕ ВСТАВКИ<br /><br /> AFTER UPDATE<br /><br /> ПЕРЕД ОБНОВЛЕНИЕМ<br /><br /> ПРЕЖДЕ ЧЕМ УДАЛИТЬ|  
+|predicate_definition|**nvarchar(max)**|Полное имя функции, которая будет использоваться в качестве предиката безопасности, включая аргументы. Обратите внимание, что `schema.function` имя может быть нормализовано (т. е. экранировано) как и любой другой элемент в тексте для обеспечения согласованности. Например:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_type|**int**|Тип предикат, используемый с такой политикой безопасности:<br /><br /> 0 = ПРЕДИКАТА ФИЛЬТРА<br /><br /> 1 = ПРЕДИКАТ БЛОКИРОВКИ|  
+|predicate_type_desc|**nvarchar(60)**|Тип предикат, используемый с такой политикой безопасности:<br /><br /> FILTER<br /><br /> БЛОК|  
+|операции|**int**|Тип операции, заданной для предиката:<br /><br /> NULL = все применимые операции<br /><br /> 1 = ПОСЛЕ ВСТАВКИ<br /><br /> 2 = ПОСЛЕ ОБНОВЛЕНИЯ<br /><br /> 3 = ДО ОБНОВЛЕНИЯ<br /><br /> 4 = ДО УДАЛЕНИЯ|  
+|operation_desc|**nvarchar(60)**|Тип операции, заданной для предиката:<br /><br /> NULL<br /><br /> ПОСЛЕ ВСТАВКИ<br /><br /> AFTER UPDATE<br /><br /> ПЕРЕД ОБНОВЛЕНИЕМ<br /><br /> ДО УДАЛЕНИЯ|  
   
 ## <a name="permissions"></a>Разрешения  
- Участники **ALTER ANY SECURITY POLICY** разрешение имеют доступ ко всем объектам в этом представлении каталога, а также все, кто имеет **VIEW DEFINITION** в объекте.  
+ Участники с **ALTER ANY SECURITY POLICY** разрешение имеют доступ ко всем объектам в этом представлении каталога, а также любой пользователь с **VIEW DEFINITION** в объекте.  
   
 ## <a name="see-also"></a>См. также  
  [Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)   

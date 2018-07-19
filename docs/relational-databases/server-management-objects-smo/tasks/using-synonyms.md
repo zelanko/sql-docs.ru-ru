@@ -1,5 +1,5 @@
 ---
-title: Использование синонимов | Документы Microsoft
+title: Использование синонимов | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,20 +19,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d4971819e0731a5e72bd281f216a7afa4310dac1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000886"
 ---
 # <a name="using-synonyms"></a>Использование синонимов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Синоним — это альтернативное имя, которое дается объекту в области схемы. В SMO синонимы представлены <xref:Microsoft.SqlServer.Management.Smo.Synonym> объекта. Объект <xref:Microsoft.SqlServer.Management.Smo.Synonym> является дочерним для объекта <xref:Microsoft.SqlServer.Management.Smo.Database>. Это означает, что синонимы действительны только в пределах базы данных, в которой они определены. Однако синоним может относиться к объектам другой базы данных или на удаленном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Синоним — это альтернативное имя, которое дается объекту в области схемы. В SMO синонимы представлены <xref:Microsoft.SqlServer.Management.Smo.Synonym> объекта. Объект <xref:Microsoft.SqlServer.Management.Smo.Synonym> является дочерним для объекта <xref:Microsoft.SqlServer.Management.Smo.Database>. Это означает, что синонимы действительны только в пределах базы данных, в которой они определены. Однако синоним может относиться к объектам на другую базу данных или на удаленном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Объект, которому дано альтернативное имя, известен как базовый объект. Свойство имени объекта <xref:Microsoft.SqlServer.Management.Smo.Synonym> служит альтернативным именем базового объекта.  
   
 ## <a name="example"></a>Пример  
- В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [создать Visual C&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-synonym-in-visual-c"></a>Создание синонима на языке Visual C#  
  Этот пример кода показывает, как создать синоним или альтернативное имя для объекта из области схемы. Клиентские приложения для ссылки на базовый объект могут использовать одну ссылку на него через синоним вместо использования имени, состоящего из нескольких частей.  
