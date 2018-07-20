@@ -1,5 +1,5 @@
 ---
-title: MSmerge_current_partition_mappings | Документы Microsoft
+title: MSmerge_current_partition_mappings | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ helpviewer_keywords:
 - MSmerge_current_partition_mappings system table
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f5c88b885657dd6b33dd7678b8d4d7718afd6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23115c0996720c0eddb0d6b80ad4a82c80db303e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004471"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101162"
 ---
 # <a name="msmergecurrentpartitionmappings"></a>MSmerge_current_partition_mappings
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_current_partition_mappings** хранит по одной строке для каждого идентификатора секции принадлежит данная измененная строка. Эта таблица хранится в базе данных публикации.  
+  **MSmerge_current_partition_mappings** таблица хранит по одной строке для каждого идентификатора секции, к которому принадлежит данная измененная строка. Эта таблица хранится в базе данных публикации.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Номер публикации, который хранится в **sysmergepublications**.|  
 |**tablenick**|**int**|Псевдоним опубликованной таблицы.|  
-|**ROWGUID**|**uniqueidentifier**|Идентификатор данной строки.|  
+|**столбец ROWGUID**|**uniqueidentifier**|Идентификатор данной строки.|  
 |**partition_id**|**int**|Идентификатор секции, к которой принадлежит строка. Значение равняется –1, когда изменение строки имеет значение для всех подписчиков.|  
   
 ## <a name="see-also"></a>См. также  

@@ -1,5 +1,5 @@
 ---
-title: MSmerge_conflict_&lt;публикации&gt;_&lt;статьи&gt; (Transact-SQL) | Документы Microsoft
+title: MSmerge_conflict_&lt;публикации&gt;_&lt;статье&gt; (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - MSmerge_conflict_publication_article system table
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e873cf77753c4d3e210cd1238a1cfc6bd7aaca1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b5ec935f352e64678b98136953dfbb5041430a0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004861"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101202"
 ---
-# <a name="msmergeconflictltpublicationgtltarticlegt-transact-sql"></a>MSmerge_conflict_&lt;публикации&gt;_&lt;статьи&gt; (Transact-SQL)
+# <a name="msmergeconflictltpublicationgtltarticlegt-transact-sql"></a>MSmerge_conflict_&lt;публикации&gt;_&lt;статье&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_conflict_*публикации*_ * статьи*** таблица содержит сведения о конфликтующих строках либо об изменениях строк, которые были отменены для обеспечения конвергенции данных. Для каждой реплицируемой таблицы в публикации существует таблица конфликтов, при этом к имени таблицы конфликтов добавляется имя публикации и имя статьи. Таблицы конфликтов по статьям расположены в базе данных, которая используется для занесения в журнал конфликтов; обычно ею является база данных публикации, однако при децентрализованном занесении в журнал конфликтов ею может быть и база данных подписки.  
+  **MSmerge_conflict_*публикации*_ * статье*** таблица содержит сведения о конфликтующих строках или об изменениях строк, которые были отменены для обеспечения конвергенции данных. Для каждой реплицируемой таблицы в публикации существует таблица конфликтов, при этом к имени таблицы конфликтов добавляется имя публикации и имя статьи. Таблицы конфликтов по статьям расположены в базе данных, которая используется для занесения в журнал конфликтов; обычно ею является база данных публикации, однако при децентрализованном занесении в журнал конфликтов ею может быть и база данных подписки.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |***article_column_name***|**variable**|Представляет столбец в реплицируемой таблице. В данной системной таблице содержится по одному столбцу на каждый столбец статьи таблицы.|  
-|**ROWGUID**|**uniqueidentifier**|Идентификатор строки конфликта.|  
+|**столбец ROWGUID**|**uniqueidentifier**|Идентификатор строки конфликта.|  
 |**ModifiedDate**|**datetime**|Время возникновения конфликта.|  
 |**origin_datasource_id**|**uniqueidentifier**|Подписка, для которой изменение строк было отменено или конфликт был потерян.|  
   

@@ -1,5 +1,5 @@
 ---
-title: MSsnapshotdeliveryprogress (Transact-SQL) | Документы Microsoft
+title: MSsnapshotdeliveryprogress (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSsnapshotdeliveryprogress system table
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0989999080b57bf2f78b6a297df29a0ee8a32f35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc2e466ac2eeb91aed75703a8d0fd973f4033c5e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008791"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101272"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "33008791"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**session_token**|**nvarchar(260)**|Определяет путь к папке моментального снимка, откуда файл был успешно доставлен. Для публикаций, использующих параметризованные фильтры, строка **dynsnap** будет присоединена к значению.|  
-|**progress_token_hash**|**int**|Значение хэша, созданное на основе значения *progress_token* , используемый для увеличения эффективности данного *progress_token* значение.|  
+|**session_token**|**nvarchar(260)**|Определяет путь к папке моментального снимка, откуда файл был успешно доставлен. Для публикаций, использующих параметризованные фильтры, строка **dynsnap** будут добавляться на значение.|  
+|**progress_token_hash**|**int**|Значение хэша, созданное на основе значения из *progress_token* , используемый для увеличения эффективности заданного *progress_token* значение.|  
 |**progress_token**|**nvarchar(500)**|Определяет успешно доставленный файл; значение является сочетанием имени файла и пути.|  
 |**progress_timestamp**|**datetime**|**Datetime** значение, указывающее, когда файл моментального снимка был успешно доставлен.|  
   

@@ -1,5 +1,5 @@
 ---
-title: MSdynamicsnapshotviews (Transact-SQL) | Документы Microsoft
+title: MSdynamicsnapshotviews (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - MSdynamicsnapshotviews system table
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 587f5859f174e184d55d2fa297d76c0f07ffbdca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ca4e1ab1d13e88f54790205b2c3bad8e32a6b70
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102562"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdynamicsnapshotviews** таблица отслеживает все временные отфильтрованных данных представления моментальных снимков, созданные агентом моментальных снимков и используется системой для очистки представлений в случае аварийного завершения работы агента SQL Server или Агент моментальных снимков. Эта таблица хранится в базах данных публикации и подписки.  
+  **MSdynamicsnapshotviews** таблицы отслеживает все временные отфильтрованных данных представления моментального снимка, созданные агентом моментальных снимков и используется системой для очистки представлений в случае аварийного завершения работы агента SQL Server или Агент моментальных снимков. Эта таблица хранится в базах данных публикации и подписки.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

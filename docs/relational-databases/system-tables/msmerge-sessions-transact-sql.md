@@ -1,5 +1,5 @@
 ---
-title: MSmerge_sessions (Transact-SQL) | Документы Microsoft
+title: MSmerge_sessions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dded9db18b0a3048c3a4eb8a56869946fca8a1ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1b825cb12e7d95615120b1418061b6106047c46
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103332"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_sessions** содержит строки журнала с результатами предыдущих сеансов заданий агента слияния. При каждом запуске агента слияния к указанной таблице добавляется новая строка. Эта таблица хранится в базе данных распространителя.  
+  **MSmerge_sessions** таблица содержит строки журнала с результатами предыдущих сеансов заданий агента слияния. При каждом запуске агента слияния к указанной таблице добавляется новая строка. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 |**download_rows_retried**|**int**|Количество строк, повторно передаваемых подписчику.|  
 |**schema_changes**|**int**|Количество изменений, примененных в схеме в течение сеанса.|  
 |**metadata_rows_cleanedup**|**int**|Количество строк метаданных, очищенных за сеанс.|  
-|**runstatus**|**int**|Состояние выполнения:<br /><br /> **1** = выполнение начато.<br /><br /> **2** = успешно.<br /><br /> **3** = выполняется.<br /><br /> **4** = бездействует.<br /><br /> **5** = "Повторить".<br /><br /> **6** = неуспешное завершение.|  
+|**runstatus**|**int**|Состояние выполнения:<br /><br /> **1** = start.<br /><br /> **2** = успешно.<br /><br /> **3** = выполняется.<br /><br /> **4** = бездействует.<br /><br /> **5** = повторных попыток.<br /><br /> **6** = неуспешное завершение.|  
 |**estimated_upload_changes**|**int**|Предполагаемое количество изменений, которые необходимо применить на издателе.|  
 |**estimated_download_changes**|**int**|Предполагаемое количество изменений, которые необходимо применить на подписчике.|  
 |**connection_type**|**int**|Тип подключения, используемого для загрузки:<br /><br /> **1** = локальная сеть (LAN).<br /><br /> **2** = коммутируемое сетевое соединение.<br /><br /> **3** = веб-синхронизации.|  

@@ -1,5 +1,5 @@
 ---
-title: MSdistributiondbs (Transact-SQL) | Документы Microsoft
+title: MSdistributiondbs (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - MSdistributiondbs system table
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a616111951170d264e61bc40ff0691806ca2ebaf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92666ee39278f5305130579150aa36757a28fb0b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103292"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdistributiondbs** содержит по одной строке для каждой базы данных распространителя, определенных на локальном распространителе. Эта таблица хранится в **msdb** базы данных.  
+  **MSdistributiondbs** таблица содержит по одной строке для каждой базы данных распространителя, определенных на локальном распространителе. Эта таблица хранится в **msdb** базы данных.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

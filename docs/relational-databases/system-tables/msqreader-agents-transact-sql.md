@@ -1,5 +1,5 @@
 ---
-title: MSqreader_agents (Transact-SQL) | Документы Microsoft
+title: MSqreader_agents (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSqreader_agents system table
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6a45d843f4d7a69ccf238353a4d752812071cdb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a4a8292c326c79cb29dbc770a84edea08c9b893
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004741"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102882"
 ---
 # <a name="msqreaderagents-transact-sql"></a>MSqreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSqreader_agents** содержит по одной строке для каждого агента чтения очереди, запущенного на локальном распространителе. Эта таблица хранится в базе данных распространителя.  
+  **MSqreader_agents** таблица содержит по одной строке для каждого агента чтения очереди, запущенного на локальном распространителе. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: 0d7f2244a20f117d2886cdee59d54adfa4029721
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 6df990176c63efb6c42181d013a4e77c81f3c4b2
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020337"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083436"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Пошаговое руководство для реализации функций безопасности SQL Server в Linux
 
@@ -31,7 +31,7 @@ ms.locfileid: "38020337"
 
 ## <a name="create-a-login-and-a-database-user"></a>Создайте имя входа и пользователя базы данных 
 
-Предоставлять другим пользователям доступ к SQL Server путем создания имени входа в базе данных master с помощью [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) инструкции. Например:
+Предоставлять другим пользователям доступ к SQL Server путем создания имени входа в базе данных master с помощью [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) инструкции. Пример:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -52,7 +52,7 @@ GO
 - Учетной записью администратора SQL Server можно подключиться к любой базе данных и можно создать дополнительные имена входа и пользователи в любой базе данных.  
 - Когда пользователь создает базу данных они становятся владельцем базы данных, что можно подключиться к этой базе данных. Владельцы базы данных можно создать дополнительных пользователей.
 
-Позже вы можете проверять подлинность других имен входа, чтобы создать дополнительные имена входа, предоставив этому пользователю `ALTER ANY LOGIN` разрешение. В базе данных, можно обеспечить возможность создания большего числа пользователей, предоставив этому пользователю других пользователей `ALTER ANY USER` разрешение. Например:   
+Позже вы можете проверять подлинность других имен входа, чтобы создать дополнительные имена входа, предоставив этому пользователю `ALTER ANY LOGIN` разрешение. В базе данных, можно обеспечить возможность создания большего числа пользователей, предоставив этому пользователю других пользователей `ALTER ANY USER` разрешение. Пример:   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   

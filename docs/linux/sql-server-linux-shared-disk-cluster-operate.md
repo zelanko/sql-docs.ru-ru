@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e48f0e7150fa24361c8b854ced6f90b22448a68b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: d78162f149b96831d61ebcc0960db67887dc853c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001687"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087256"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Работать экземпляр отказоустойчивого кластера — SQL Server в Linux
 
@@ -60,7 +60,7 @@ ms.locfileid: "38001687"
 ## <a name = "#slesFailover"></a> На другой ресурс вручную (SLES)
 
 
-В Suse Linux Enterprise Server (SLES), используйте `migrate` команду, чтобы вручную выполните отработку отказа экземпляра отказоустойчивого Кластера SQL Server. Например:
+В Suse Linux Enterprise Server (SLES), используйте `migrate` команду, чтобы вручную выполните отработку отказа экземпляра отказоустойчивого Кластера SQL Server. Пример:
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>

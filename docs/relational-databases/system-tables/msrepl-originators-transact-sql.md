@@ -1,5 +1,5 @@
 ---
-title: MSrepl_originators (Transact-SQL) | Документы Microsoft
+title: MSrepl_originators (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSrepl_originators system table
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b09a8c577b0389702ada6c9b5372c3d10b9916a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7d0bb1049790123de504af1955e43807613e6db
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004851"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103042"
 ---
 # <a name="msreploriginators-transact-sql"></a>MSrepl_originators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSrepl_originators** содержит по одной строке на каждого обновляемого подписчика, из которой была начата транзакция. Эта таблица хранится в базе данных распространителя.  
+  **MSrepl_originators** таблица содержит по одной строке на каждого обновляемого подписчика, из которой была начата транзакция. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: MSdbms_datatype (Transact-SQL) | Документы Microsoft
+title: MSdbms_datatype (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSdbms_datatype system table
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5927d0c839793e58b2bc6422fa9f3646b0538699
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10e748d771414e9dee552a0e0f7ecdc643ba298a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004681"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103542"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdbms_datatype** таблица содержит полный список собственных типов данных для каждой поддерживаемой системе управления базами данных (СУБД) использовать в качестве издателя или подписчика в разнородной репликации базы данных. Эта таблица хранится в **msdb** базы данных.  
+  **MSdbms_datatype** таблица содержит полный список собственных типов данных для каждой поддерживаемой система управления базами данных (СУБД) используется в качестве издателя или подписчика в разнородной репликации базы данных. Эта таблица хранится в **msdb** базы данных.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -44,8 +44,8 @@ ms.locfileid: "33004681"
 |**type**|**sysname**|Имя типа данных (собственное).|  
 |**CreateParams**|**int**|Битовая карта, описывающая сочетание длины, точности и масштаба, применимое к каждому типу данных:<br /><br /> **0x1** = точность.<br /><br /> **0x2** = масштаб.<br /><br /> **0x4** = длина.|  
   
-## <a name="remarks"></a>Замечания  
- Эта таблица содержит записи для типов данных SQL Server, так как экземпляр SQL Server могут подписаться на базе SQL Server и публикации на подписчик, отличных от подписчика SQL Server.  
+## <a name="remarks"></a>Примечания  
+ Эта таблица содержит записи для типов данных SQL Server, так как экземпляр SQL Server могут подписываться на базу данных SQL Server и публикации на подписчик, отличных от подписчика SQL Server.  
   
 ## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

@@ -1,5 +1,5 @@
 ---
-title: sysreplicationalerts (Transact-SQL) | Документы Microsoft
+title: sysreplicationalerts (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6579b75ab8d8af66ed62bd9af021f65235423f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbc1aa2be529d00d2dfd453b181a72ea116809a2
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007261"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103012"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "33007261"
 |**time**|**datetime**|Время добавления записи.|  
 |**издатель**|**sysname**|Имя издателя, связанного с запустившим данное предупреждение агентом.|  
 |**publisher_db**|**sysname**|Имя базы данных издателя, связанной с запустившим данное предупреждение агентом.|  
-|**Публикации**|**sysname**|Имя публикации, связанной с запустившим данное предупреждение агентом.|  
+|**публикации**|**sysname**|Имя публикации, связанной с запустившим данное предупреждение агентом.|  
 |**publication_type**|**int**|Тип публикации:<br /><br /> **0** = моментальный снимок.<br /><br /> **1** = публикация транзакций.<br /><br /> **2** = публикация слиянием.|  
 |**подписчик**|**sysname**|Имя подписчика, связанного с запустившим данное предупреждение агентом.|  
 |**subscriber_db**|**sysname**|Имя базы данных подписчика, связанного с запустившим данное предупреждение агентом.|  
-|**В статье**|**sysname**|Имя статьи, связанной с агентом, запустившим данное предупреждение.|  
+|**Статья**|**sysname**|Имя статьи, связанной с агентом, запустившим данное предупреждение.|  
 |**destination_object**|**sysname**|Имя таблицы подписки, связанной с предупреждением.|  
 |**source_object**|**sysname**|Имя опубликованной таблицы, связанной с предупреждением.|  
 |**alert_error_text**|**ntext**|Текст предупреждения.|  

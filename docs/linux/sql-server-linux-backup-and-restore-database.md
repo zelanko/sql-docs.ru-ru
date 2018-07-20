@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/14/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 6e4699fb2ffadc3aaad73c4032073ff8567c856c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 707801b47258d48661a4f0725c2ee7062b1a40a0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006096"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086557"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Резервное копирование и восстановление баз данных SQL Server в Linux
 
@@ -33,7 +33,7 @@ ms.locfileid: "38006096"
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-При выполнении команды SQL Server предложит ввести пароль. После того как вы введете пароль, оболочка вернет результаты работы резервного копирования. Например:
+При выполнении команды SQL Server предложит ввести пароль. После того как вы введете пароль, оболочка вернет результаты работы резервного копирования. Пример:
 
 ```
 Password:

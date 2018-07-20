@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 6c136cfeb7a01671c76a8ddaf60451a7565ee6cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974499"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085476"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @tsql =] 'Transact-SQL_batch»  
+ [ \@tsql =] 'Transact-SQL_batch»  
  Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transact SQL_batch может быть nvarchar(n) или nvarchar(max).  
   
- [ @params =] N'parameters'  
- *@params* Определяет строку объявления параметров для пакета Transact-SQL, которая напоминает sp_executesql. Параметры могут быть nvarchar(n) или nvarchar(max).  
+ [ \@params =] N'parameters'  
+ *\@params* обеспечивает строку объявления параметров для пакета Transact-SQL, которая напоминает sp_executesql. Параметры могут быть nvarchar(n) или nvarchar(max).  
   
- Строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в инструкции должен быть определен в *@params*. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, *@params* не является обязательным. Значением по умолчанию для этого аргумента является NULL.  
+ Строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в инструкции должен быть определен в  *\@params*. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров,  *\@params* не является обязательным. Значением по умолчанию для этого аргумента является NULL.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  0 означает успешное завершение. Что-нибудь еще информируют о сбое.  
@@ -82,7 +82,7 @@ sp_describe_parameter_encryption
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|Идентификатор строки в результирующем наборе.|  
-|**parameter_name**|**sysname**|Имя одного из параметров, указанных в *@params* аргумент.|  
+|**parameter_name**|**sysname**|Имя одного из параметров, указанных в  *\@params* аргумент.|  
 |**column_encryption_algorithm**|**tinyint**|Код, указывающий на алгоритм шифрования, настроенным для столбца, параметра соответствует. В настоящее время поддерживаются значения: 2 для **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Код, указывающий тип шифрования, настроенным для столбца, параметра соответствует. Поддерживаемыми значениями являются:<br /><br /> 0 — в виде обычного текста (столбец не зашифрован)<br /><br /> 1 — случайное шифрование<br /><br /> 2 — детерминированного шифрования.|  
 |**column_encryption_key_ordinal**|**int**|Задать код строки в первый результат. Соответствующей строки описывает ключ шифрования столбца, настроенным для столбца, соответствующий параметр.|  
@@ -160,7 +160,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|@c1|1|1|  
+|1|\@C1|1|1|  
   
  (Результаты по-прежнему.)  
   

@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_helpdistpublisher (Transact-SQL) | Документы Microsoft
+title: sp_helpdistpublisher (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: c2944745c938fbeb3c36f37da950a6413c4fbde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4eed56a7e9356ac7f42c5f1bf2a5d55e85111523
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999591"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082416"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>Хранимая процедура sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=** ] **"***издатель***"**  
+ [  **@publisher=** ] **"***издателя***"**  
  Имя издателя, для которого возвращаются свойства. *издатель* — **sysname**, значение по умолчанию **%**.  
   
  [  **@check_user=** ] *check_user*  
@@ -60,24 +60,25 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**distribution_db**|**sysname**|База данных распространителя для указанного издателя.|  
 |**security_mode**|**int**|Режим безопасности, используемый агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности<br /><br /> **1** = проверка подлинности Windows|  
 |**Имя входа**|**sysname**|Имя входа, используемое агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**password**|**nvarchar(524)**|Возвращаемый пароль (в простой зашифрованной форме). Пароль равен NULL для пользователей, отличных от **sysadmin**.|  
-|**Активный**|**бит**|Использует ли удаленный издатель локальный сервер в качестве распространителя:<br /><br /> **0** = Нет<br /><br /> **1** = Да|  
+|**password**|**nvarchar(524)**|Возвращаемый пароль (в простой зашифрованной форме). Пароль равен NULL для пользователей, не являющихся **sysadmin**.|  
+|**Active**|**bit**|Использует ли удаленный издатель локальный сервер в качестве распространителя:<br /><br /> **0** = Нет<br /><br /> **1** = Да|  
 |**working_directory**|**nvarchar(255)**|Имя рабочего каталога.|  
-|**доверенные**|**бит**|Требуется ли пароль при подключении издателя к распространителю. Для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий всегда возвращается значение **0**, означающее, что пароль требуется.|  
-|**thirdparty_flag**|**бит**|Будет ли публикация включена [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или приложением стороннего разработчика:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oracle или издатель Oracle Gateway.<br /><br /> **1** = издатель интегрирован с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью приложения сторонних разработчиков.|  
+|**доверенные**|**bit**|Требуется ли пароль при подключении издателя к распространителю. Для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий всегда возвращается **0**, означающее, что пароль является обязательным.|  
+|**thirdparty_flag**|**bit**|Будет ли публикация включена [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или приложением стороннего разработчика:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oracle или издатель Oracle Gateway.<br /><br /> **1** = издатель интегрирован с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью стороннего приложения.|  
 |**publisher_type**|**sysname**|Тип издателя; возможны следующие варианты:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|Имя источника данных OLE DB на издателе.|  
+|**storage_connection_string**|**nvarchar(4000)**|Ключ доступа к хранилищу для рабочий каталог при распространитель или издатель в базе данных SQL Azure.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **Хранимая процедура sp_helpdistpublisher** используется во всех типах репликации.  
+## <a name="remarks"></a>Примечания  
+ **sp_helpdistpublisher** используется во всех типах репликации.  
   
- **Хранимая процедура sp_helpdistpublisher** не будет отображаться имя входа издателя или задать пароль в результате для не -**sysadmin** имена входа.  
+ **sp_helpdistpublisher** не будет отображаться имя для входа издателя, или пароль, в результате задания для отличных**sysadmin** имена входа.  
   
 ## <a name="permissions"></a>Разрешения  
- Члены **sysadmin** предопределенной роли сервера может выполняться **sp_helpdistpublisher** для любого издателя, используя локальный сервер в качестве распространителя. Члены **db_owner** предопределенной роли базы данных или **replmonitor** роли в базе данных распространителя могут выполнять **sp_helpdistpublisher** для любого издателя, используя который База данных распространителя. Список пользователей в списке доступа к публикации для публикации на указанном *издатель* может привести к выполнению **sp_helpdistpublisher**. Если *издатель* не указан, возвращаются сведения для всех издателей, что у пользователя есть права доступа.  
+ Членами **sysadmin** предопределенной роли сервера может выполняться **sp_helpdistpublisher** для любого издателя, используя локальный сервер как распространитель. Членами **db_owner** предопределенной роли базы данных или **replmonitor** роли в базе данных распространителя могут выполнять **sp_helpdistpublisher** для любого издателя, используя который База данных распространителя. Вывод списка пользователей в списке доступа к публикации для публикации на указанном *издателя* может выполняться **sp_helpdistpublisher**. Если *издателя* не указан, возвращаются сведения для всех издателей, что у пользователя есть права доступа.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

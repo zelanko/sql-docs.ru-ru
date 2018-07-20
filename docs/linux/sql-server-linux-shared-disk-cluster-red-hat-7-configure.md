@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 7ddd34e56d8f8499715c535de21ae6f23bd282b1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4ab3db647ea96ce926d51c7dcf94c2e17e633c22
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001636"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086446"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Настройка кластера общий диск Red Hat Enterprise Linux для SQL Server
 
@@ -141,7 +141,7 @@ NFS-сервера выполните следующие действия.
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Изменить `/etc/exports` для экспорта в каталог, нужно предоставить общий доступ. Вам нужна 1 строка для каждой общей папки, которые нужно. Например: 
+1.  Изменить `/etc/exports` для экспорта в каталог, нужно предоставить общий доступ. Вам нужна 1 строка для каждой общей папки, которые нужно. Пример: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

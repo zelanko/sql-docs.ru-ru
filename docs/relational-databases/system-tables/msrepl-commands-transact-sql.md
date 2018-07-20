@@ -1,5 +1,5 @@
 ---
-title: MSrepl_commands (Transact-SQL) | Документы Microsoft
+title: MSrepl_commands (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSrepl_commands system table
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a6725912ab05a7f4002d1130f38a1b4b09ba6b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7eec90fb29378f4cea3530093f2b505b87593fd8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006911"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102402"
 ---
 # <a name="msreplcommands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33006911"
 |**article_id**|**int**|Идентификатор статьи.|  
 |**originator_id**|**int**|Идентификатор инициатора.|  
 |**command_id**|**int**|Идентификатор команды.|  
-|**partial_command**|**бит**|Показывает, частичная эта команда или нет.|  
+|**partial_command**|**bit**|Показывает, частичная эта команда или нет.|  
 |**команда**|**varbinary(1024)**|Значение команды.|  
 |**hashKey**|**int**|Только для внутреннего использования.|  
 |**originator_lsn**|**varbinary(16)**|Определяет номер LSN для команды в порождающей публикации. Используется для одноранговой репликации транзакций.|  

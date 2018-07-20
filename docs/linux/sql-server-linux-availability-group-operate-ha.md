@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/01/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 6a24d1cb2e9bff3555aa24eb0df079bc2894ec79
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 8f2978533bb1e4006db9ebf2d2ed97a242a6f603
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984302"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086326"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Всегда работают с группами доступности в Linux
 

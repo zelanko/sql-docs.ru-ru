@@ -1,5 +1,5 @@
 ---
-title: MSmerge_agents (Transact-SQL) | Документы Microsoft
+title: "\"MSmerge_agents\" (Transact-SQL) | Документация Майкрософт"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2199793fc6bc8d7822468d1fc0984347946277c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23204288fc2bfb3358feb11ccb77c59a393c68b5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005901"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102313"
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_agents** содержит по одной строке для каждого агента слияния на подписчике. Эта таблица хранится в базе данных распространителя.  
+  **MSmerge_agents** таблица содержит по одной строке для каждого агента слияния на подписчике. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -43,22 +43,22 @@ ms.locfileid: "33005901"
 |**name**|**Nvarchar(100)**|Имя агента слияния.|  
 |**publisher_id**|**smallint**|Идентификатор издателя.|  
 |**publisher_db**|**sysname**|Имя базы данных издателя.|  
-|**Публикации**|**sysname**|Имя публикации.|  
+|**публикации**|**sysname**|Имя публикации.|  
 |**subscriber_id**|**smallint**|Идентификатор подписчика.|  
 |**subscriber_db**|**sysname**|Имя базы данных подписки.|  
-|**local_job**|**бит**|Показывает, есть ли задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на локальном распространителе.|  
+|**local_job**|**bit**|Показывает, есть ли задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на локальном распространителе.|  
 |**job_id**|**binary(16)**|Идентификационный номер задания.|  
 |**profile_id**|**int**|Идентификатор конфигурации из **MSagent_profiles** таблицы.|  
 |**anonymous_subid**|**uniqueidentifier**|Идентификатор анонимного агента.|  
 |**subscriber_name**|**sysname**|Имя подписчика.|  
 |**creation_date**|**datetime**|Дата и время, когда был создан агент распространителя или агент слияния.|  
-|**offload_enabled**|**бит**|Указывает на то, что агент может быть активирован удаленно.<br /><br /> **0** указывает агент не может быть активирован удаленно.<br /><br /> **1** указывает агент будет активирован удаленно и на удаленном компьютере, указанном в свойстве offload_server.|  
+|**offload_enabled**|**bit**|Указывает на то, что агент может быть активирован удаленно.<br /><br /> **0** указывает агент не может быть активирован удаленно.<br /><br /> **1** указывает, что агент будет активирован удаленно и на удаленном компьютере, указанном в свойстве offload_server.|  
 |**offload_server**|**sysname**|Указывает сетевое имя сервера, используемого для удаленной активации агента.|  
 |**ИД безопасности**|**varbinary(85)**|Идентификатор безопасности (SID) агента распространителя или агента слияния при первом выполнении.|  
-|**subscriber_security_mode**|**smallint**|Режим безопасности, используемый агентом при подключении к подписчику. Предусмотрены следующие режимы:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] проверку подлинности Windows.|  
+|**subscriber_security_mode**|**smallint**|Режим безопасности, используемый агентом при подключении к подписчику. Предусмотрены следующие режимы:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] проверки подлинности Windows.|  
 |**subscriber_login**|**sysname**|Имя входа для подключения к подписчику.|  
 |**subscriber_password**|**nvarchar(524)**|Зашифрованное значение пароля, используемого для подключения к подписчику.|  
-|**publisher_security_mode**|**smallint**|Режим безопасности, используемый агентом при подключении к издателю, может принимать одно из следующих значений:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] проверку подлинности Windows.|  
+|**publisher_security_mode**|**smallint**|Режим безопасности, используемый агентом при подключении к издателю, может принимать одно из следующих значений:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] проверки подлинности Windows.|  
 |**publisher_login**|**sysname**|Имя входа, используемое для соединения с издателем.|  
 |**publisher_password**|**nvarchar(524)**|Зашифрованное значение пароля, используемое для соединения с издателем.|  
 |**job_step_uid**|**uniqueidentifier**|Уникальный идентификатор шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором запущен агент.|  

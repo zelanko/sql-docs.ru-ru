@@ -1,5 +1,5 @@
 ---
-title: MSarticles (Transact-SQL) | Документы Microsoft
+title: MSarticles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,26 +22,27 @@ helpviewer_keywords:
 - MSarticles system table
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d25dfc3adb779e3ad1387783f7a057637b266a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a4dae91f62b763ae7f515b551be122b95e5ef1b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101322"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSarticles** содержит по одной строке для каждой статьи, реплицируемой издателем. Эта таблица хранится в базе данных распространителя.  
+  **MSarticles** таблица содержит по одной строке для каждой статьи, реплицируемой издателем. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Идентификатор издателя.|  
 |**publisher_db**|**sysname**|Имя базы данных издателя.|  
 |**publication_id**|**int**|Идентификатор публикации.|  
-|**В статье**|**sysname**|Имя статьи.|  
+|**Статья**|**sysname**|Имя статьи.|  
 |**article_id**|**int**|Идентификатор статьи.|  
 |**destination_object**|**sysname**|Имя таблицы, созданной на стороне подписчика.|  
 |**source_owner**|**sysname**|Имя владельца схемы исходной таблицы на стороне издателя.|  

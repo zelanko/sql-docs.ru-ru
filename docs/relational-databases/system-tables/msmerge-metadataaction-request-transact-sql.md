@@ -1,5 +1,5 @@
 ---
-title: MSmerge_metadataaction_request (Transact-SQL) | Документы Microsoft
+title: MSmerge_metadataaction_request (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - MSmerge_metadataaction_request system table
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a26726d6fb6bc38a79ab50f958f071301a841f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 951b42bb78d2b15d2d107e6a4de0291aa16c7693
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004171"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103232"
 ---
 # <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_metadataaction_request** хранит по одной строке для каждого компенсирующего действия. С помощью веб-синхронизации, если возникает ошибка и синхронизация должна быть повторена, вносится запись в **MSmerge_metadataaction_request**. Во время фазы передачи последующего слияния из этой таблицы извлекаются и выгружаются запросы для всех статей, принадлежащих синхронизируемой публикации. После успешного завершения синхронизации, соответствующая строка в **MSmerge_metadataaction_request** удалить таблицу. Эта таблица сохраняется на издателе в базе данных публикации и на подписчике в базе данных подписки.  
+  **MSmerge_metadataaction_request** таблица хранит по одной строке для каждого компенсирующего действия. С помощью веб-синхронизации, если возникает ошибка и синхронизация должна быть повторена, вносится в **MSmerge_metadataaction_request**. Во время фазы передачи последующего слияния из этой таблицы извлекаются и выгружаются запросы для всех статей, принадлежащих синхронизируемой публикации. После успешного завершения синхронизации, соответствующая строка в **MSmerge_metadataaction_request** таблица удаляется. Эта таблица сохраняется на издателе в базе данных публикации и на подписчике в базе данных подписки.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|Псевдоним опубликованной таблицы.|  
-|**ROWGUID**|**uniqueidentifier**|Идентификатор данной строки.|  
+|**столбец ROWGUID**|**uniqueidentifier**|Идентификатор данной строки.|  
 |**action**|**tinyint**|Идентифицирует необходимое действие по исправлению ошибок.|  
 |**Создание**|**bigint**|Значение поколения, для которого нужно действие по исправлению ошибок.|  
 |**изменено**|**int**|Только для внутреннего использования.|  

@@ -1,5 +1,5 @@
 ---
-title: MSpeer_response (Transact-SQL) | Документы Microsoft
+title: MSpeer_response (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - MSpeer_response system table
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9641b794b7ac71b0fc8fb555ba04b4fa5bc83a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 137fb38215788b030f1831a92ad85cec570e0421
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101962"
 ---
 # <a name="mspeerresponse-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSpeer_response** таблица используется в-одноранговой репликации для хранения ответа каждого узла с запросом состояния публикации. Эта таблица хранится в базе данных публикации.  
+  **MSpeer_response** таблица используется в репликации Peer-to-Peer для хранения ответа каждого узла с запросом состояния публикации. Эта таблица хранится в базе данных публикации.  
   
 ## <a name="definition"></a>Определение  
   

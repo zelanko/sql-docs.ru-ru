@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8ab408179388ca10821ad79e855e39fd3ec7eb01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
+ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968766"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39164215"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,6 @@ ms.locfileid: "37968766"
 Возвращает одну строку, описывающие конфигурацию объекта задания, управляющий процесс SQL Server, а также определенные статистику потребления ресурсов на уровне объекта задания. Возвращает пустой набор, если SQL Server не работает в объект задания. 
 
 Объект задания — это конструкция Windows, который реализует управление ресурсами Процессора, памяти и ввода-ВЫВОДА на уровне операционной системы. Дополнительные сведения о объекты заданий, см. в разделе [объекты заданий](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
-
-> [!NOTE]
-> Sys.dm_os_job_object динамического административного Представления в настоящее время может выглядеть как sys.dm_job_object. Это временная: `sys.dm_os_job_object` будет иметь постоянное имя это динамическое административное Представление. 
   
 |Столбцы|Тип данных|Описание|  
 |-------------|---------------|-----------------|  

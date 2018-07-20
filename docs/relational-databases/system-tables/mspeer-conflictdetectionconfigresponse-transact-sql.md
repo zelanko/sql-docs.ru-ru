@@ -1,5 +1,5 @@
 ---
-title: MSpeer_conflictdetectionconfigresponse (Transact-SQL) | Документы Microsoft
+title: MSpeer_conflictdetectionconfigresponse (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpeer_conflictdetectionconfigureresponse
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb1251432bed74cd95368dc02e61f1f42b6e1807
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65d192cbf84ab41c0ffe9ee6dee47f7a9468e45d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006381"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103552"
 ---
 # <a name="mspeerconflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,8 @@ ms.locfileid: "33006381"
 |peer_db|**sysname**|База данных подписки на одноранговом узле, сформировавшем ответ.|  
 |peer_version|**sysname**|Определяет номер версии издателя.|  
 |peer_db_version|**sysname**|Указывает номер версии одноранговой базы данных.|  
-|is_peer|**бит**|Указывает, является ли узел подписчиком, доступным только для чтения. Значение **0** указанный подписчик, доступный только для чтения.|  
-|conflict_detection_enabled|**бит**|Указывает, включено ли обнаружение конфликтов для топологии.|  
+|is_peer|**bit**|Указывает, является ли узел подписчиком, доступным только для чтения. Значение **0** указано подписчиком, доступным только для чтения.|  
+|conflict_detection_enabled|**bit**|Указывает, включено ли обнаружение конфликтов для топологии.|  
 |originator_id|**varbinary(16)**|Указывает каждый узел в топологии с целью обнаружения конфликтов. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |peer_conflict_retention|**int**|Срок (в днях), в течение которого метаданные хранятся в таблицах конфликтов.|  
 |peer_subscriptions|**XML**|Сведения об узле, сформировавшем ответ на запрос.|  

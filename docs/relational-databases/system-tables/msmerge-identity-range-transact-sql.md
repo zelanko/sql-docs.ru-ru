@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range (Transact-SQL) | Документы Microsoft
+title: MSmerge_identity_range (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - MSmerge_identity_range system table
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 026774d2eae738f8641c56f923bcabc981fded1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbd06dae4c34b2b5c77b81db64f9d12408539b01
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101232"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_identity_range** таблица используется для отслеживания числовых диапазонов, назначенных столбцам идентификаторов для подписок на публикации, репликация которых автоматически управляет этими назначениями диапазонов. Эта таблица хранится в базах данных публикации и подписки.  
+  **MSmerge_identity_range** таблица используется для отслеживания числовых диапазонов, назначенных столбцам идентификаторов для подписки на публикации, репликация которых автоматически управляет этими назначениями диапазонов. Эта таблица хранится в базах данных публикации и подписки.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 |**range_end**|**numeric(38)**|Значение идентификатора в конце текущего диапазона.|  
 |**next_range_begin**|**numeric(38)**|Значение идентификатора в начале следующего назначенного диапазона.|  
 |**next_range_end**|**numeric(38)**|Значение идентификатора в конце следующего назначенного диапазона.|  
-|**is_pub_range**|**бит**|Значение **1** Если диапазон идентификаторов назначен публикации.|  
+|**is_pub_range**|**bit**|Значение **1** Если диапазон идентификаторов назначен публикации.|  
 |**max_used**|**numeric(38)**|Максимальное значение идентификатора, которое может быть назначено.|  
   
 ## <a name="see-also"></a>См. также  

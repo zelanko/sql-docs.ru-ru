@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 968676f1d56299a720a85cee508fd860d7dc1d6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160920"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084086"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
   `SSISDB` Каталога служит центральным пунктом для работы с [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проектов (SSIS), которые вы развернули в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервера. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -64,7 +64,7 @@ ms.locfileid: "37160920"
   
 -   Имя не должно содержать начальных и конечных пробелов.  
   
--   Символ @ не допускается в качестве первого символа, но в последующих символах может использоваться.  
+-   \@ не допускается в качестве первого символа, но в последующих символах может использоваться \@.  
   
 -   Длина имени должна быть больше 0 и меньше или равна 128.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "37160920"
   
 -   Имя не должно содержать начальных и конечных пробелов.  
   
--   Символ @ не допускается в качестве первого символа, но в последующих символах может использоваться.  
+-   \@ не допускается в качестве первого символа, но в последующих символах может использоваться \@.  
   
 -   Длина имени должна быть больше 0 и меньше или равна 128.  
   
@@ -279,7 +279,7 @@ ms.locfileid: "37160920"
   
  Для проверки проектов и пакетов можно вызвать хранимые процедуры [catalog.validate_project (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database) и [catalog.validate_package (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database). Представление [catalog.validations (база данных SSISDB)](/sql/integration-services/system-views/catalog-validations-ssisdb-database) содержит сведения о таких проверках, как ссылки серверной среды, учитываемые при проверке, имеет ли место проверка зависимостей или полная проверка и используется ли при запуске пакета 32-разрядная или 64-разрядная среда выполнения.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Создание каталога служб SSIS](ssis-catalog.md)  
   

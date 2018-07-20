@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 996fad627cebc240a39337a0f0ae3a096e53901c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ed4731450111c49bfe3936ecda2e1400a09d173
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326184"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083966"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Выражения запросов и универсальные имена ресурсов
   В моделях объектов SMO [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и оснастках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell используется два типа строк выражений, которые похожи на выражения XPath. Выражения запроса — это строки, которые указывают набор условий, используемых для перечисления одного или нескольких объектов в иерархии объектной модели. Универсальное имя ресурса (URN) — это конкретный тип строки выражения запроса, который уникально определяет один объект.  
@@ -67,22 +67,22 @@ ms.locfileid: "37326184"
   
  Например, укажите имя Server для класса **ServerCollection** и имя Database для класса **DatabaseCollection** .  
   
- @*PropertyName*  
- Указывает имя одного из свойств класса, связанного с объектом, который задан в *Object*. Перед этим именем свойства должен стоять символ @. Например, укажите @IsAnsiNull для свойства **IsAnsiNull** класса **Database**.  
+ \@*PropertyName*  
+ Указывает имя одного из свойств класса, связанного с объектом, который задан в *Object*. Имя свойства должны иметь префикс \@ символ. Например, указать \@IsAnsiNull для **базы данных** свойства класса **IsAnsiNull**.  
   
- @*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*=true()  
  Перечисляет все объекты, где указанное логическое свойство имеет значение TRUE.  
   
- @*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*=false()  
  Перечисляет все объекты, где указанное логическое свойство имеет значение FALSE.  
   
- contains(@*StringPropertyName*, '*PatternString*')  
+ содержит (\@*StringPropertyName*, "*PatternString*")  
  Перечисляет все объекты, указанное строковое свойство которых содержит хотя бы одно вхождение набора символов, который указан в '*PatternString*'.  
   
- @*StringPropertyName*='*PatternString*'  
+ \@*StringPropertyName*='*PatternString*'  
  Перечисляет все объекты, значение указанного строкового свойства которых точно такое же, как комбинация символов, указанная в '*PatternString*'.  
   
- @*DatePropertyName*= datetime('*DateString*')  
+ \@*DatePropertyName*= datetime('*DateString*')  
  Перечисляет все объекты, значение указанного свойства даты которых соответствует дате, указанной в '*DateString*'. Значение*DateString* должно иметь формат гггг-мм-дд чч:ми:сс.ммм  
   
 |||  
@@ -97,11 +97,11 @@ ms.locfileid: "37326184"
   
  Даты, указанные в этом формате, можно вычислять с любым форматом даты, хранящимся в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_null(@*PropertyName*)  
+ is_null (\@*PropertyName*)  
  Перечисляет все объекты, где указанное свойство имеет значение NULL.  
   
  not(\<*PropertyExpression*>)  
- Инвертирует значение вычисленного выражения *PropertyExpression*, перечисляя все объекты, не соответствующие условию, заданному в *PropertyExpression*. Например, выражение not(contains(@Name, 'xyz')) перечисляет все объекты, в именах которых нет строки xyz.  
+ Инвертирует значение вычисленного выражения *PropertyExpression*, перечисляя все объекты, не соответствующие условию, заданному в *PropertyExpression*. Например не (содержит (\@Name, 'xyz')) перечисляет все объекты, у которых нет строки xyz в их именах.  
   
 ## <a name="remarks"></a>Примечания  
  Выражения запроса — это строки, которые перечисляют узлы в иерархии моделей SMO. У каждого узла есть критерий фильтра, задающий условие для определения того, какие объекты в этом узле будут перечисляться. Выражения запроса моделируются на языке выражений XPath. Выражения запроса представляют собой небольшое подмножество выражений XPath, кроме того, в них есть некоторые выражения, которых нет в XPath. Выражения XPath — это строки, которые указывают набор критериев, используемых для перечисления одного или нескольких тегов в XML-документе. Дополнительные сведения об XPath см. в разделе [Язык W3C XPath](http://www.w3.org/TR/xpath20/).  

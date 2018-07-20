@@ -1,5 +1,5 @@
 ---
-title: MSsubscription_articles (Transact-SQL) | Документы Microsoft
+title: MSsubscription_articles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSsubscription_articles system table
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5f1530091601cb241da7f1e4b1d48e02f699497
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff060482ddd1b9a678cdd37a9f4f2d1f26077272
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005011"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103162"
 ---
 # <a name="mssubscriptionarticles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33005011"
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|Идентификатор агента, обслуживающего данную статью.|  
 |**artid**|**int**|Идентификатор статьи из **sysarticles** таблицы.|  
-|**В статье**|**sysname**|Имя статьи из **sysarticles** таблицы.|  
+|**Статья**|**sysname**|Имя статьи из **sysarticles** таблицы.|  
 |**dest_table**|**sysname**|Имя целевой таблицы из **sysarticles** таблицы.|  
 |**Владелец**|**sysname**|Владелец подписки.|  
 |**cft_table**|**sysname**|Имя таблицы конфликтов для данной статьи, для типа репликации, обновляемого посредством очередей.|  

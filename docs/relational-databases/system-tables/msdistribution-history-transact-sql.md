@@ -1,5 +1,5 @@
 ---
-title: MSdistribution_history (Transact-SQL) | Документы Microsoft
+title: MSdistribution_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,26 +22,27 @@ helpviewer_keywords:
 - MSdistribution_history system table
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7196fcd36a995b0e1e8feb3f7436d1f634da375c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11e5be7e9f65c0df2cadc1d27ed0af85b214d7fc
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102762"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdistribution_history** содержит строки журнала агентов распространителя, связанных с локальным распространителем. Эта таблица хранится в базе данных распространителя.  
+  **MSdistribution_history** таблица содержит строки журнала агентов распространителя, связанных с локальным распространителем. Эта таблица хранится в базе данных распространителя.  
   
 ## <a name="definition"></a>Определение  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|Идентификатор агента распространителя.|  
-|**runstatus**|**int**|Состояние выполнения:<br /><br /> **1** = выполнение начато.<br /><br /> **2** = успешно.<br /><br /> **3** = выполняется.<br /><br /> **4** = бездействует.<br /><br /> **5** = "Повторить".<br /><br /> **6** = неуспешное завершение.|  
+|**runstatus**|**int**|Состояние выполнения:<br /><br /> **1** = start.<br /><br /> **2** = успешно.<br /><br /> **3** = выполняется.<br /><br /> **4** = бездействует.<br /><br /> **5** = повторных попыток.<br /><br /> **6** = неуспешное завершение.|  
 |**start_time**|**datetime**|Время для начала выполнения задания.|  
 |**time**|**datetime**|Время занесения сообщения в журнал.|  
 |**duration**|**int**|Продолжительность сеанса сообщения в секундах.|  
@@ -55,8 +56,8 @@ ms.lasthandoff: 05/03/2018
 |**delivery_rate**|**float**|Среднее число доставленных команд в секунду.|  
 |**delivery_latency**|**int**|Задержка между командой, подаваемой в базе данных распространителя и ее выполнением в базе данных подписчика. В миллисекундах.|  
 |**total_delivered_commands**|**bigint**|Общее число команд, доставленных за время жизни подписки.|  
-|**error_id**|**int**|Идентификатор ошибки в **MSrepl_error** системной таблицы.|  
-|**updateable_row**|**бит**|Значение **1** Если строки журнала может быть перезаписан.|  
+|**error_id**|**int**|Идентификатор ошибки в **MSrepl_error** системная таблица.|  
+|**updateable_row**|**bit**|Значение **1** Если строку журнала может быть перезаписана.|  
 |**timestamp**|**timestamp**|Столбец отметок времени этой таблицы.|  
   
 ## <a name="see-also"></a>См. также  

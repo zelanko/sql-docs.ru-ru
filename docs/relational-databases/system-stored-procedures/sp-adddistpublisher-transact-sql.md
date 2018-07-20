@@ -1,7 +1,7 @@
 ---
-title: sp_adddistpublisher (Transact-SQL) | Документы Microsoft
+title: sp_adddistpublisher (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,16 +23,17 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3ccd9c550df21ea904c4ff8d8c7a3941908e59a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75db58f4711b946eeceeb74dcbb3a34538ea97e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084296"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Настраивает издатель для использования указанной базы данных распространителя. Эта хранимая процедура выполняется на распространителе в любой базе данных. Обратите внимание, что хранимые процедуры [sp_adddistributor &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) и [sp_adddistributiondb &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) необходимо запустить перед тем, как эта хранимая процедура.  
+  Настраивает издатель для использования указанной базы данных распространителя. Эта хранимая процедура выполняется на распространителе в любой базе данных. Обратите внимание, что хранимые процедуры [sp_adddistributor &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) и [sp_adddistributiondb &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) должны были быть выполнены перед использованием Эта хранимая процедура.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,6 +47,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @working_directory= ] 'working_directory' ]   
+    [ , [ @storage_connection_string= ] 'storage_connection_string']
     [ , [ @trusted= ] 'trusted' ]   
     [ , [ @encrypted_password= ] encrypted_password ]   
     [ , [ @thirdparty_flag = ] thirdparty_flag ]  
@@ -53,7 +55,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"***издатель***"**  
+ [  **@publisher=**] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@distribution_db=**] **"***distribution_db***"**  
@@ -77,10 +79,17 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 >  Не используйте пустые пароли. Выбирайте надежные пароли.  
   
  [  **@working_directory=**] **"***working_directory***"**  
- Имя рабочего каталога, используемого для хранения файлов данных и схем для публикации. *working_directory* — **nvarchar(255)** и значения по умолчанию папке ReplData для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например «C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData». Имя должно быть задано в формате UNC.  
-  
+ Имя рабочего каталога, используемого для хранения файлов данных и схем для публикации. *working_directory* — **nvarchar(255)** и значения по умолчанию папке ReplData текущего для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Имя должно быть задано в формате UNC.  
+
+ Для базы данных SQL Azure, используйте `\\<storage_account>.file.core.windows.net\<share>`.
+
+ [  **@storage_connection_string =**] **"***storage_connection_string***"**  
+ Является обязательным для базы данных SQL. Используйте ключ доступа из портала Azure в группе хранения > Параметры.
+
+ > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
+
  [  **@trusted=**] **"***доверенных***"**  
- Этот параметр устарел и поддерживается только для обеспечения обратной совместимости. *доверенный* — **nvarchar(5)** и может только **false** приведет к ошибке.  
+ Этот параметр устарел и поддерживается только для обеспечения обратной совместимости. *доверенный* — **nvarchar(5)** и получает только значение **false** приведет к ошибке.  
   
  [  **@encrypted_password=**] *encrypted_password*  
  Установка *encrypted_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  
@@ -102,19 +111,19 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**ORACLE**|Задает стандартного издателя Oracle.|  
 |**ORACLE GATEWAY**|Используется издатель Oracle Gateway.|  
   
- Дополнительные сведения о различиях между издателем Oracle и издатель Oracle Gateway см. в разделе [настроить издатель Oracle](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+ Дополнительные сведения о различиях между издателями Oracle и издатель Oracle Gateway см. в разделе [настройка издателя Oracle](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_adddistpublisher** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_adddistpublisher**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_adddistpublisher**.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   

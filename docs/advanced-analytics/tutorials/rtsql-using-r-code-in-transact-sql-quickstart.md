@@ -1,55 +1,50 @@
 ---
-title: С помощью кода R в Transact-SQL (R в быстрый запуск SQL Server) | Документы Microsoft
+title: Краткое руководство для выполнения кода «Hello, World!» основные R в T-SQL (машинного обучения SQL Server) | Документация Майкрософт
+description: В этом кратком руководстве для скрипта R в SQL Server ознакомиться с основами системной хранимой процедуры sp_execute_external_script с упражнения hello world.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c11e2bba73cef8a8b6f59d5a92de22cddb19ccd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e738289b39f6d390bc4d6196606d242fa4803865
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203246"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086887"
 ---
-# <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>С помощью кода R в Transact-SQL (R в быстрый запуск SQL Server)
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>Краткое руководство: «Hello world» R-скриптов SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этом руководстве описаны основные принципы вызова скрипта R из хранимой процедуры T-SQL.
+SQL Server включает в себя поддержка функций языка R для анализа в базе данных в резидентных данных SQL Server. Функции R открытым исходным кодом, сторонних пакетов и встроенные пакеты Microsoft R можно использовать для прогнозной аналитики в нужном масштабе.
 
-**Вы узнаете**
-
-+ Как внедрить R в функцию T-SQL.
-+ Некоторые советы по работе с SQL и R данных типов и объектов данных
-+ Как создать простую модель и сохранить его в SQL Server
-+ Создание прогнозов и построения R, с помощью модели
-
-**Предполагаемое время**
-
-На прохождение этого руководства требуется 30 минут, не считая установки.
+В этом кратком руководстве вы узнаете основные понятия, выполнив «Hello World» R скрипт inT-SQL, представив Введение **sp_execute_external_script** системной хранимой процедуры. Выполнение скрипта R — посредством хранимых процедур. Вы можете использовать [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) хранимую процедуру и передайте R сценария в качестве входного параметра, как показано в этом кратком руководстве, или перенос R-скриптов [пользовательская хранимая процедура](sqldev-in-database-r-for-sql-developers.md). 
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Необходимо иметь доступ к экземпляру SQL Server с одним из уже установлены следующие компоненты:
+В этом упражнении требуется доступ к экземпляру SQL Server с помощью одного из уже установлены следующие компоненты:
 
-+ Службы SQL Server 2017 г машины обучения, с языком R
-+ SQL Server 2016 R Services
++ [Службы машинного обучения SQL Server 2017](../install/sql-machine-learning-services-windows-install.md), с языком R
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-Экземпляр SQL Server может быть в виртуальной машине Azure или локально. Просто Учтите, что внешние средства написания сценариев отключена по умолчанию, может потребоваться выполнить некоторые дополнительные действия для его запуска.
+  Экземпляр SQL Server может быть в виртуальной машине Azure или локально. Только Имейте в виду, что внешние средства написания сценариев отключен по умолчанию, поэтому может потребоваться [включить внешние сценарии](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедитесь, что **службы панели запуска SQL Server** запущен перед запуском.
 
-Для выполнения запросов SQL, включающие скрипты R, можно использовать любое приложение, можно подключиться к базе данных и выполнить код T-SQL. Специалисты SQL можно использовать Visual Studio или SQL Server Management Studio (SSMS).
++ Средство для выполнения запросов SQL. Можно использовать любое приложение, которое может подключаться к базе данных SQL Server и выполнять код T-SQL. Специалистов по SQL можно использовать Visual Studio или SQL Server Management Studio (SSMS).
 
-Для этого учебника, чтобы показать, как просто можно запускать в SQL Server, мы используем новый **mssql расширения для Visual Studio Code**. VS Code является бесплатной среды разработки, можно запустить в Windows, Linux или macOS. **Mssql** расширения представляют собой упрощенные расширение выполнение запросов T-SQL. Инструкции по ее установке см. в статье [Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode) (Использование Visual Studio Code для создания и выполнения скрипта Transact-SQL для SQL Server).
+Для этого учебника, чтобы показать, насколько это просто для запуска R внутри SQL Server, мы использовали новый **расширение mssql для Visual Studio Code**. Visual STUDIO Code — это бесплатная среда разработки, можно запустить на Linux, macOS или Windows. **Mssql** расширения — это упрощенный расширение для запуска запросов T-SQL. Чтобы скачать и установить Visual Studio Code, перейдите на [эту страницу](https://code.visualstudio.com/Download). Чтобы добавить **mssql** расширения, см. в статье: [с помощью расширения mssql для Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Подключение к базе данных и выполнение тестового скрипта Hello World
 
 1. В Visual Studio Code создайте текстовый файл с именем BasicRSQL.sql.
-2. В файле нажмите клавиши CTR+SHIFT+P (в операционной системе macOS нажмите COMMAND+P), введите **sql**, чтобы вывести список команд SQL, и выберите **Подключиться**. Код Visual Studio предложит создать профиль для использования при подключении к конкретной базе данных. Это не обязательно, но также облегчает переключение между базами данных и имена входа.
-    + Выберите сервер или экземпляр, в которую были установлены R в SQL Server.
+
+2. В файле нажмите клавиши CTR+SHIFT+P (в операционной системе macOS нажмите COMMAND+P), введите **sql**, чтобы вывести список команд SQL, и выберите **Подключиться**. Visual Studio Code предложит создать профиль для использования при подключении к конкретной базе данных. Это необязательно, но также облегчает переключение между базами данных и именами входа.
+    + Выберите сервер или экземпляр, где установлено R в SQL Server.
     + Используйте учетную запись, имеющую разрешения на создание базы данных, выполнение инструкций SELECT и просмотр определений таблиц.
+
 2. Если подключение успешно установлено, в строке состояния должны отобразиться имена сервера и базы данных, а также текущие учетные данные. В случае сбоя подключения убедитесь, что имена компьютера и сервера заданы правильно.
+
 3. Вставьте и выполните следующую инструкцию:
 
     ```sql
@@ -57,36 +52,34 @@ ms.locfileid: "31203246"
       @language =N'R',
       @script=N'OutputDataSet<-InputDataSet',
       @input_data_1 =N'SELECT 1 AS hello'
-      WITH RESULT SETS (([hello] int not null));
+      WITH RESULT SETS (([Hello World] int));
     GO
     ```
 
-    В Visual Studio Code выделите код, который необходимо выполнить, и нажмите клавиши CTRL+SHIFT+E. Если эту комбинацию трудно запомнить, вы можете ее изменить. Сведения см. в статье [Customize Keyboard Shortcuts](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts) (Настройка сочетаний клавиш).
+Входные данные для этой хранимой процедуры включают:
 
-    ![rsql basictut_hello1code](media/rsql-basictut-hello1code.PNG)
++ *@language* Определяет расширение языка для вызова, в этом случае R.
++ *@script* параметр определяет команды, передаваемые в среду выполнения R. Весь скрипт R должен быть заключен в этом аргументе в виде текста в Юникоде. Также можно добавить текст в переменную типа **nvarchar**, а затем вызвать ее.
++ *@input_data_1* данные, возвращенные запросом, переданный в среду выполнения R, которая возвращает данные в SQL Server в качестве кадра данных.
++ С РЕЗУЛЬТИРУЮЩИМИ НАБОРАМИ предложение определяет схему таблицы возвращаемых данных для SQL Server, добавив «Hello, World!» в качестве имени столбца, **int** для типа данных.
 
 **Результаты**
 
 ![rsql_basictut_hello1](media/rsql-basictut-hello1.PNG)
 
-## <a name="troubleshooting"></a>Устранение неполадок
+Если вы получаете все ошибки из этого запроса, исключить любые проблемы установки. После установки настроек не требуется, чтобы включить использование библиотек внешнего кода. См. в разделе [установить SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) или [Установка служб R SQL Server 2016](../install/sql-r-services-windows-install.md). Аналогичным образом Убедитесь, что запущена служба панели запуска. 
 
-+ Если возникли ошибки из данного запроса, установки могут быть неполными. После добавления компонента с помощью мастера установки SQL Server необходимо выполнить некоторые дополнительные действия, чтобы включить использование библиотек внешнего кода.  В разделе [установить SQL Server 2017 г машинного самообучения, службы](../install/sql-machine-learning-services-windows-install.md) или [Установка служб R SQL Server 2016](../install/sql-r-services-windows-install.md).
+В зависимости от конкретной среды может потребоваться включить рабочие учетные записи R для подключения к SQL Server, установить дополнительные сетевые библиотеки, включить удаленное выполнение кода или перезапустить экземпляр после настройки всех компонентов. Дополнительные сведения см. в разделе [установки служб R и часто задаваемые вопросы обновления](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-+ Убедитесь, что запущена служба панели запуска. В зависимости от конкретной среды может потребоваться включить рабочие учетные записи R для подключения к SQL Server, установить дополнительные сетевые библиотеки, включить удаленное выполнение кода или перезапустить экземпляр после настройки всех компонентов. См. сведения в статье [Часто задаваемые вопросы по обновлению и установке для служб R SQL Server](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+> [!TIP]
+> В Visual Studio Code выделите код, который необходимо выполнить, и нажмите клавиши CTRL+SHIFT+E. Если эту комбинацию трудно запомнить, вы можете ее изменить. Сведения см. в статье [Customize Keyboard Shortcuts](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts) (Настройка сочетаний клавиш).
+> 
+> ![rsql basictut_hello1code](media/rsql-basictut-hello1code.PNG)
+> 
 
-+ Чтобы скачать и установить Visual Studio Code, перейдите на [эту страницу](https://code.visualstudio.com/Download).
+## <a name="next-steps"></a>Следующие шаги
 
-## <a name="next-lesson"></a>Следующее занятие
+Теперь, когда вы убедитесь, что экземпляр готов для работы с R, внимательно ознакомьтесь структурирование входные и выходные данные.
 
-Теперь, когда экземпляр готов для работы с языком R, давайте начнем.
-
-Урок 1. [работа с входными и выходными данными](rtsql-working-with-inputs-and-outputs.md)
-
-Занятие 2. [SQL и R данных типов и объектов данных](rtsql-r-and-sql-data-types-and-data-objects.md)
-
-Занятие 3. [использование R функций с данными SQL Server](rtsql-using-r-functions-with-sql-server-data.md)
-
-Урок 4. [создать прогнозную модель](rtsql-create-a-predictive-model-r.md)
-
-Занятие 5. [Predict и построения из модели](rtsql-predict-and-plot-from-model.md)
+> [!div class="nextstepaction"]
+> [Краткое руководство: Обработка входных и выходных данных](rtsql-working-with-inputs-and-outputs.md)

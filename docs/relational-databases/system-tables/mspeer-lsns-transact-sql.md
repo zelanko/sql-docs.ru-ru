@@ -1,5 +1,5 @@
 ---
-title: MSpeer_lsns (Transact-SQL) | Документы Microsoft
+title: MSpeer_lsns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSpeer_lsns system table
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4c68b32d5b6c86fad158962deb360e64fa129d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de37f4de25bef419c67af1ff858251bec4b5e543
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006832"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102002"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Mspeer_lsns** таблица используется для сопоставления каждой транзакции с подпиской в топологии репликации для коллег. Эта таблица хранится в каждой базе данных публикации в одноранговой топологии репликации и в базе данных подписки всех подписчиков на одноранговую публикацию. Дополнительные сведения о данном типе топологии репликации транзакций см. в разделе [-одноранговой репликации транзакций](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md). Эта таблица хранится в базе данных публикации.  
+  **Mspeer_lsns** таблица используется для сопоставления каждой транзакции с подпиской в топологии репликации peer-to-peer. Эта таблица хранится в каждой базе данных публикации в одноранговой топологии репликации и в базе данных подписки всех подписчиков на одноранговую публикацию. Дополнительные сведения об этом типе топологии репликации транзакций см. в разделе [репликации транзакций Peer-to-Peer](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md). Эта таблица хранится в базе данных публикации.  
   
 ## <a name="definition"></a>Определение  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Определяет одноранговый номер LSN.|  
-|**last_updated**|**datetime**|**Datetime** , на котором выполнялось последнее обновление строки.|  
+|**last_updated**|**datetime**|**Datetime** на котором выполнялось последнее обновление строки.|  
 |**Инициатор**|**sysname**|Имя издателя, начавшего транзакцию.|  
 |**originator_db**|**sysname**|Имя базы данных, в которой была начата транзакция.|  
 |**originator_publication**|**sysname**|Имя публикации, в которой была начата транзакция.|  

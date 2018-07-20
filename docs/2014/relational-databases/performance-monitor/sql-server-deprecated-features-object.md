@@ -19,12 +19,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c96bcc524d3c9fc6a37f252b1221bbfaab36410
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227414"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084066"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
   Объект SQLServer:Deprecated Features в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчик для наблюдения за функциями, обозначенными как устаревшие. В каждом случае этот счетчик использования подсчитывает, сколько раз обнаружены устаревшие функции с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "37227414"
 |------------------------------------------------------|-----------------|  
 |Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|Обнаружен идентификатор, не содержащий других символов, кроме #. Используйте по крайней мере один дополнительный символ. Происходит один раз на каждую компиляцию.|  
 |синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените `SELECT column_list FROM`  *\< имя_функции >*`()`. Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)`на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
-|«@» и имена, начинающиеся с «@@» в качестве идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)] .|Обнаружен идентификатор, начинающийся с символов @ или @@. Не используйте в качестве идентификаторов @, @@ или имена, начинающиеся символами @@. Происходит один раз на каждую компиляцию.|  
+|"\@" и имена, начинающиеся с "\@\@", в качестве идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)]|Обнаружен идентификатор, начинающийся с символов \@ или \@\@. Не используйте в качестве идентификаторов \@ или \@\@, а также имена, начинающиеся символами \@\@. Происходит один раз на каждую компиляцию.|  
 |ADDING TAPE DEVICE|Нерекомендуемая функция sp_addumpdevice'`tape`"была обнаружена. Используйте процедуру sp_addumpdevice'`disk`' вместо этого. Происходит один раз на каждое выполнение.|  
 |Разрешение ALL.|Число раз, когда был обнаружен синтаксис GRANT ALL, DENY ALL или REVOKE ALL. Измените синтаксис, чтобы запретить конкретные разрешения. Происходит один раз для каждого запроса.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Общее число использований устаревшего параметра TORN_PAGE_DETECTION инструкции ALTER DATABASE с момента последнего запуска экземпляра сервера. Вместо этого параметра используйте синтаксис PAGE_VERIFY. Происходит один раз для каждой инструкции DDL.|  
@@ -174,7 +174,7 @@ ms.locfileid: "37227414"
 |sp_defaultlanguage|Обнаружена хранимая процедура sp_defaultlanguage. Используйте вместо нее инструкцию ALTER LOGIN. Происходит один раз на каждую компиляцию.|  
 |sp_denylogin|Обнаружена хранимая процедура sp_denylogin. Вместо нее используйте инструкцию ALTER LOGIN DISABLE. Происходит один раз для каждого запроса.|  
 |процедура sp_depends|Обнаружена хранимая процедура sp_depends. Вместо нее используйте динамические функции управления sys.dm_sql_referencing_entities и sys.dm_sql_referenced_entities. Происходит один раз для каждого запроса.|  
-|sp_detach_db @keepfulltextindexfile|Аргумент @keepfulltextindexfile обнаружен в инструкции sp_detach_db statement. Не используйте этот аргумент.|  
+|sp_detach_db \@keepfulltextindexfile|Обнаружен аргумент \@keepfulltextindexfile в инструкции sp_detach_db. Не используйте этот аргумент.|  
 |sp_dropalias|Обнаружена хранимая процедура sp_dropalias. Псевдонимы заменены сочетанием учетных записей пользователей и ролями базы данных. Удалите псевдонимы в обновленных базах данных с помощью хранимой процедуры sp_dropalias. Происходит один раз на каждую компиляцию.|  
 |sp_dropapprole, хранимая процедура|Обнаружена хранимая процедура sp_dropapprole. Вместо нее используйте инструкцию DROP APPLICATION ROLE. Происходит один раз для каждого запроса.|  
 |sp_dropextendedproc|Обнаружена хранимая процедура sp_dropextendedproc. Используйте вместо нее среду CLR. Происходит один раз на каждую компиляцию.|  
@@ -187,10 +187,10 @@ ms.locfileid: "37227414"
 |sp_fulltext_catalog|Обнаружена хранимая процедура sp_fulltext_catalog. Вместо нее используйте инструкцию CREATE/ALTER/DROP FULLTEXT CATALOG. Происходит один раз на каждую компиляцию.|  
 |sp_fulltext_column|Обнаружена хранимая процедура sp_fulltext_column. Используйте вместо нее инструкцию ALTER FULLTEXT INDEX. Происходит один раз на каждую компиляцию.|  
 |sp_fulltext_database, хранимая процедура|Обнаружена хранимая процедура sp_fulltext_database. Используйте вместо нее инструкцию ALTER DATABASE. Происходит один раз на каждую компиляцию.|  
-|sp_fulltext_service @action=clean_up|Обнаружен параметр clean_up хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
-|sp_fulltext_service @action=connect_timeout|Обнаружен параметр connect_timeout хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
-|sp_fulltext_service @action=data_timeout|Обнаружен параметр data_timeout хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
-|sp_fulltext_service @action=resource_usage|Обнаружен параметр «resource_usage» хранимой процедуры sp_fulltext_service. Этот параметр не действует. Происходит один раз для каждого запроса.|  
+|sp_fulltext_service \@action=clean_up|Обнаружен параметр clean_up хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
+|sp_fulltext_service \@action=connect_timeout|Обнаружен параметр connect_timeout хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
+|sp_fulltext_service \@action=data_timeout|Обнаружен параметр data_timeout хранимой процедуры sp_fulltext_service. Происходит один раз для каждого запроса.|  
+|sp_fulltext_service \@action=resource_usage|Обнаружен параметр «resource_usage» хранимой процедуры sp_fulltext_service. Этот параметр не действует. Происходит один раз для каждого запроса.|  
 |sp_fulltext_table|Обнаружена хранимая процедура sp_fulltext_table. Вместо нее используйте инструкцию CREATE/ALTER/DROP FULLTEXT INDEX. Происходит один раз на каждую компиляцию.|  
 |sp_getbindtoken|Обнаружена хранимая процедура sp_getbindtoken. Вместо нее используйте режим MARS или распределенные транзакции. Происходит один раз на каждую компиляцию.|  
 |sp_grantdbaccess|Обнаружена хранимая процедура sp_grantdbaccess. Вместо нее используйте инструкцию CREATE USER. Происходит один раз для каждого запроса.|  

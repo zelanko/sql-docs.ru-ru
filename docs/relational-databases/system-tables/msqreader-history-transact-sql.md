@@ -1,5 +1,5 @@
 ---
-title: MSqreader_history (Transact-SQL) | Документы Microsoft
+title: MSqreader_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c060cd85f1b4a36087f3d8756bf0d48c1976110f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 621b446ea1310becc626d35f53a1a9ff523c39d5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006021"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101862"
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSqreader_history** содержит строки журнала для агентов чтения очереди, связанные с локальным распространителем. Эта таблица хранится в базе данных распространителя.  
+  **MSqreader_history** таблица содержит строки журнала агентов чтения очереди, связанных с локальным распространителем. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|Идентификатор агента чтения очереди.|  
 |**publication_id**|**int**|Идентификатор публикации.|  
-|**runstatus**|**int**|Состояние выполнения агента:<br /><br /> **1** = выполнение начато.<br /><br /> **2** = успешно.<br /><br /> **3** = выполняется.<br /><br /> **4** = бездействует.<br /><br /> **5** = "Повторить".<br /><br /> **6** = неуспешное завершение.|  
+|**runstatus**|**int**|Состояние выполнения агента:<br /><br /> **1** = start.<br /><br /> **2** = успешно.<br /><br /> **3** = выполняется.<br /><br /> **4** = бездействует.<br /><br /> **5** = повторных попыток.<br /><br /> **6** = неуспешное завершение.|  
 |**start_time**|**datetime**|Дата и время начала сеанса агента.|  
 |**time**|**datetime**|Дата и время последнего сообщения, записанного в журнал.|  
 |**duration**|**int**|Продолжительность зарегистрированной активности сеанса в секундах.|  

@@ -1,5 +1,5 @@
 ---
-title: CDC.captured_columns (Transact-SQL) | Документы Microsoft
+title: CDC.captured_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - cdc.captured_columns
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51cd038691edf6a89382d4bb588646d70792678c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 144bf49651013b55ec1b515da1ecec156dd375c6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103282"
 ---
 # <a name="cdccapturedcolumns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +41,9 @@ ms.lasthandoff: 05/04/2018
 |**object_id**|**int**|Идентификатор исходной таблицы, которой принадлежит отслеживаемый столбец.|  
 |**column_name**|**sysname**|Имя отслеживаемого столбца.|  
 |**column_id**|**int**|Идентификатор отслеживаемого столбца в исходной таблице.|  
-|**column_type**|**sysname**|Тип отслеживаемого столбца.|  
+|**значением column_type, равным**|**sysname**|Тип отслеживаемого столбца.|  
 |**column_ordinal**|**int**|Порядковый номер столбца (начиная с 1) в исходной таблице. Метаданные столбца в исходной таблице исключаются. Порядковый номер 1 присваивается первому отслеживаемому столбцу.|  
-|**is_computed**|**бит**|Указывает, что отслеживаемый столбец является вычисляемым столбцом в исходной таблице.|  
+|**is_computed**|**bit**|Указывает, что отслеживаемый столбец является вычисляемым столбцом в исходной таблице.|  
   
 ## <a name="see-also"></a>См. также  
  [CDC.change_tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  

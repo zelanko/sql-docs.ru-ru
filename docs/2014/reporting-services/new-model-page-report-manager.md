@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 78ce09a93d36daf74150750f3f13ce6cbdb242a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5bc389fff162d5e04aabb1bd9e4be85590eaab30
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292194"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083256"
 ---
 # <a name="new-model-page-report-manager"></a>Страница «Создание модели» (диспетчер отчетов)
   Эта страница позволяет создать модель отчетов по умолчанию на основе общего источника данных. Модели отчетов можно создавать только из многомерных источников данных службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , реляционных источников данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и реляционных источников данных Oracle.  
@@ -45,7 +45,7 @@ ms.locfileid: "37292194"
  **Название**  
  Указывает имя модели. Имя должно содержать хотя бы одну букву или цифру. В него могут также входить пробелы и другие символы. При задании имени нельзя использовать следующие символы:  
   
- ; ? : @ & = +, $ / * \< > | " /  
+ ; ? : \@ & = +, $ / * \< > | " /  
   
  **Описание**  
  Показывает описание модели. Пользователям, просматривающим этот элемент с помощью диспетчера отчетов, это описание предоставляется при просмотре иерархии папок.  

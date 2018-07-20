@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 07/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
-ms.openlocfilehash: 433da2ba98a47ec5dc4be64cd1d6b1ea52068c04
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 420a7577a526ed07f564b762c48e6528db323f08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352756"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085876"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров SQL Server в Docker
 
@@ -40,7 +40,7 @@ ms.locfileid: "37352756"
 
 Краткое руководство, в предыдущем разделе выполняется разработчика бесплатная версия SQL Server из Docker Hub. Большая часть информации по-прежнему применяется, если вы хотите запуске производственных образов контейнера, например выпуски Enterprise, Standard или Web. Тем не менее существует ряд различий, которые здесь описаны.
 
-- SQL Server в рабочей среде можно использовать, только если у вас есть действительная лицензия. Можно получить бесплатную лицензию SQL Server Express рабочей [здесь](https://go.microsoft.com/fwlink/?linkid=857693). Лицензии SQL Server Standard и Enterprise Edition можно приобрести [корпоративного лицензирования Майкрософт](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
+- SQL Server в рабочей среде можно использовать, только если у вас есть действительная лицензия. Можно получить бесплатную лицензию SQL Server Express рабочей [здесь](https://go.microsoft.com/fwlink/?linkid=857693). Лицензии SQL Server Standard и Enterprise Edition можно приобрести [корпоративного лицензирования Майкрософт](https://www.microsoft.com/en-us/licensing/default.aspx).
 
 - Образы контейнеров SQL Server в рабочей среде необходимо извлечено из [Docker Store](https://store.docker.com). Если ее еще нет, создайте учетную запись на Docker Store.
 
@@ -414,7 +414,7 @@ sudo systemctl start docker
 
 Если контейнер SQL Server не удается выполнить, попробуйте выполните следующие тесты:
 
-- Если отобразится сообщение об ошибке **"не удалось создать конечную точку CONTAINER_NAME на сетевой мост. Ошибка при запуске прокси-сервера: прослушивания tcp 0.0.0.0:1433 привязки: адрес уже используется. "** , а затем вы пытаетесь сопоставления контейнера с портом 1433 в порт, который уже используется. Это может произойти, если вы используете SQL Server локально на хост-компьютере. Это также может произойти, если вы запустите два контейнера SQL Server и сопоставьте их обе на один и тот же порт узла. В этом случае используйте `-p` параметр для сопоставления с другой узел порт контейнера с портом 1433. Например: 
+- Если отобразится сообщение об ошибке **"не удалось создать конечную точку CONTAINER_NAME на сетевой мост. Ошибка при запуске прокси-сервера: прослушивания tcp 0.0.0.0:1433 привязки: адрес уже используется. "** , а затем вы пытаетесь сопоставления контейнера с портом 1433 в порт, который уже используется. Это может произойти, если вы используете SQL Server локально на хост-компьютере. Это также может произойти, если вы запустите два контейнера SQL Server и сопоставьте их обе на один и тот же порт узла. В этом случае используйте `-p` параметр для сопоставления с другой узел порт контейнера с портом 1433. Пример: 
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.

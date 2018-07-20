@@ -1,5 +1,5 @@
 ---
-title: sysmergesubscriptions (Transact-SQL) | Документы Microsoft
+title: sysmergesubscriptions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2af51b3b46c9e4a939106ed32ed378d0d5e6cee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcbe175a186b42c7bfb8e49290c7594e7b9e67d1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013111"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102502"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,18 +59,18 @@ ms.locfileid: "33013111"
 |schemaversion|**int**|Номер последней полученной схемы.|  
 |schemaguid|**uniqueidentifier**|Уникальный идентификатор последней полученной схемы.|  
 |last_validated|**datetime**|**Datetime** последней успешной проверки данных подписчика.|  
-|attempted_validate|**datetime**|Последний **datetime** , попытки проверки подписки.|  
+|attempted_validate|**datetime**|Последний **datetime** что попытки проверки подписки.|  
 |last_sync_date|**datetime**|**Datetime** синхронизации.|  
-|last_sync_status|**int**|Состояние подписки:<br /><br /> **0** = все задания ожидают запуска.<br /><br /> **1** = одно или более заданий запускаются.<br /><br /> **2** = все задания выполнены успешно.<br /><br /> **3** = по крайней мере одно задание выполняется.<br /><br /> **4** = все задания назначены по расписанию и бездействия.<br /><br /> **5** = по крайней мере одно задание производит попытку запуска после предыдущего сбоя.<br /><br /> **6** = по крайней мере одно задание завершилось неудачно.|  
+|last_sync_status|**int**|Состояние подписки:<br /><br /> **0** = все задания ожидают запуска.<br /><br /> **1** = одно или более заданий запускаются.<br /><br /> **2** = все задания выполнены успешно.<br /><br /> **3** = по крайней мере одно задание выполняется.<br /><br /> **4** = все задания запланированы и простоя.<br /><br /> **5** = по крайней мере одно задание производит попытку запуска после предыдущего сбоя.<br /><br /> **6** = по крайней мере одно задание завершилось неудачно.|  
 |last_sync_summary|**sysname**|Описание результатов последней синхронизации.|  
-|metadatacleanuptime|**datetime**|Последний **datetime** просроченных метаданных был удален из системных таблиц репликации слиянием.|  
+|metadatacleanuptime|**datetime**|Последний **datetime** истекшим сроком действия метаданных был удален из системных таблиц репликации слиянием.|  
 |partition_id|**int**|Идентифицирует предварительно вычисляемую секцию, которой принадлежит подписка.|  
-|cleanedup_unsent_changes|**бит**|Указывает, что метаданные для неотправленных изменений были удалены на стороне подписчика.|  
+|cleanedup_unsent_changes|**bit**|Указывает, что метаданные для неотправленных изменений были удалены на стороне подписчика.|  
 |replica_version|**int**|Идентифицирует версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] владельца данной подписки и может принимать одно из следующих значений:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |supportability_mode|**int**|Только для внутреннего применения.|  
 |application_name|**nvarchar(128)**|Только для внутреннего применения.|  
 |subscriber_number|**int**|Только для внутреннего применения.|  
-|last_makegeneration_datetime|**datetime**|Последний **datetime** , процесс makegeneration был запущен для издателя. Дополнительные сведения см. в разделе параметра - MakeGenerationInterval в [агент слияния репликации](../../relational-databases/replication/agents/replication-merge-agent.md).|  
+|last_makegeneration_datetime|**datetime**|Последний **datetime** , процесс makegeneration запущен для издателя. Дополнительные сведения см. в разделе параметра - MakeGenerationInterval в [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   
 ## <a name="see-also"></a>См. также  
  [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 290659402622ab04de85e81f05328778b0f0c1eb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 74a5d8b7ac8bd36a6ce76b895b2dde4a07f5ea96
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983016"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085356"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Развертывание модели R и использовать его в SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "38983016"
     END
     ```
 
-    + Используйте инструкцию SELECT для вызова хранимой модели из таблицы SQL. Модель извлекается из нее, как **varbinary(max)** данных, которые хранятся в переменной SQL _@lmodel2_и передается в качестве параметра *mod* в системе хранятся процедура [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Используйте инструкцию SELECT для вызова хранимой модели из таблицы SQL. Модель извлекается из нее, как **varbinary(max)** данных, которые хранятся в переменной SQL  _\@lmodel2_и передается в качестве параметра *mod* в систему Хранимая процедура [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Данные, используемые в качестве входных данных для оценки определяется как SQL-запрос и храниться в виде строки в переменной SQL _@input_. Данные извлекаются из базы данных, сохраняются в кадре данных *InputDataSet*, это просто имя по умолчанию для входных данных [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) процедуры; вы можете определить другое имя переменной, при необходимости с помощью параметра *_@input_data_1_name_*.
+    + Данные, используемые в качестве входных данных для оценки определяется как SQL-запрос и храниться в виде строки в переменной SQL  _\@ввода_. Данные извлекаются из базы данных, сохраняются в кадре данных *InputDataSet*, это просто имя по умолчанию для входных данных [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) процедуры; вы можете определить другое имя переменной, при необходимости с помощью параметра   *_\@input_data_1_name_*.
 
     + Для формирования оценок хранимая процедура вызывает функцию `rxPredict` из библиотеки **RevoScaleR** .
 

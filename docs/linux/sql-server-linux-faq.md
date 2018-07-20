@@ -4,19 +4,19 @@ description: В этой статье содержатся ответы на ч�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
-ms.topic: article
+ms.date: 07/17/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b0df550ee3489ba8c37ded47878096d75909343e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001796"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102232"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server в Linux, часто задаваемые вопросы (FAQ)
 
@@ -89,6 +89,9 @@ ms.locfileid: "38001796"
 1. **Какие средства доступны для мониторинга производительности SQL Server в Linux?**
 
    Можно использовать [системные динамические административные представления (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) собирать различные виды информации о SQL Server, включая сведения о процессе Linux. Можно использовать [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) для повышения производительности запросов. Другие инструменты, такие как встроенная [панели мониторинга производительности](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)работает удаленно в SQL Server Management Studio (SSMS) из Windows.
+
+   > [!TIP]
+   > Чтобы правильно настроить операционную систему Linux и insance SQL Server является одним из способов повышения производительности. Дополнительные сведения см. в разделе [рекомендации по производительности и рекомендации по конфигурации для SQL Server в Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a name="administration"></a>Администрирование
 

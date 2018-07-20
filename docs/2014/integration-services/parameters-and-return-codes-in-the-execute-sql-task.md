@@ -19,12 +19,12 @@ caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12739be23eb0a2104f73d9ad1c1240b3c235259c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 057d80ade08d7d5266208b2d417e08d530a8d8df
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252336"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083896"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Параметры и коды возврата в задаче «Выполнение SQL»
   Инструкции SQL и хранимых процедурах часто используются `input` параметров, `output` параметров и кодов возврата. В службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] задача «Выполнение SQL» поддерживает типы параметров `Input`, `Output` и `ReturnValue`. Использовании `Input` тип для входных параметров `Output` для выходных параметров и `ReturnValue` кодах возврата.  
@@ -49,16 +49,16 @@ ms.locfileid: "37252336"
 -   [Настройка параметров и кодов возврата в Execute SQL Task Editor](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> С помощью имен и маркеров параметров  
- В зависимости от типа соединения, который использует задача «Выполнение SQL», синтаксис команды SQL использует различные маркеры параметров. Например, тип диспетчера подключений [!INCLUDE[vstecado](../includes/vstecado-md.md)] требует, чтобы команда SQL использовала маркер параметра в формате **@varParameter**, в то время как тип соединения OLE DB требует в качестве маркера параметра символ вопросительного знака (?).  
+ В зависимости от типа соединения, который использует задача «Выполнение SQL», синтаксис команды SQL использует различные маркеры параметров. Например [!INCLUDE[vstecado](../includes/vstecado-md.md)] тип диспетчера соединений требует, чтобы команда SQL использовала маркер параметра в формате  **\@varParameter**, тогда как тип соединения OLE DB требует указания параметра вопросительный знак (?) маркер.  
   
- Имена, которые можно использовать как имена параметров в сопоставлениях между переменными и параметрами, также зависят от типа диспетчера соединений. Например, тип диспетчера соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] использует определенные пользователем имена, начинающиеся с префикса @, в то время как тип диспетчера соединений OLE DB требует использования числового значения (начинающегося с нуля) в качестве имени параметра.  
+ Имена, которые можно использовать как имена параметров в сопоставлениях между переменными и параметрами, также зависят от типа диспетчера соединений. Например [!INCLUDE[vstecado](../includes/vstecado-md.md)] тип диспетчера соединений используется определяемое пользователем имя с \@ префикса, тогда как тип диспетчера соединений OLE DB необходимо использовать числовое значение начинающегося с нуля как имя параметра.  
   
  В следующей таблице подведен итог требованиям для команд SQL для различных типов диспетчеров соединений, которые может использовать задача «Выполнение SQL».  
   
 |Тип соединений|Маркер параметра|Имя параметра|Пример команды SQL|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|@\<имя параметра>|@\<имя параметра>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<имя параметра>|\@\<имя параметра>|ВЫБЕРИТЕ FirstName, LastName, заголовок из Person.Contact ГДЕ ContactID = \@parmContactID|  
 |интерфейс ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL и OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -151,7 +151,7 @@ ms.locfileid: "37252336"
   
 -   Для типа соединения ADO можно использовать любые два имени параметра, такие как Param1 и Param2, но эти параметры должны быть сопоставлены со своими порядковыми номерами в списке параметров.  
   
--   Для типа соединения [!INCLUDE[vstecado](../includes/vstecado-md.md)] используются имена параметров @parmMinProductID и @parmMaxProductID.  
+-   [!INCLUDE[vstecado](../includes/vstecado-md.md)] Тип соединения используются имена параметров \@parmMinProductID и \@parmMaxProductID.  
   
 ##  <a name="Stored_procedures"></a> Использование параметров с хранимыми процедурами  
  В командах SQL, выполняющих хранимые процедуры, тоже может использоваться сопоставление параметров. Правила использования маркеров и имен параметров зависят от типа диспетчера соединений, который используется задачей «Выполнение SQL», точно так же, как и правила для параметризованных запросов.  
@@ -196,7 +196,7 @@ ms.locfileid: "37252336"
   
 -   [Задание свойств задач или контейнеров](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Задание свойств задач или контейнеров](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>См. также  

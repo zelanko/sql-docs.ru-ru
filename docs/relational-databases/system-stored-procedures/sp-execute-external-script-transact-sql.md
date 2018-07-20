@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 07/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -24,17 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5660860a3a03a268b0903a0222753f1ea9bc5382
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974096"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086176"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Выполняет скрипт, предложенный в качестве аргумента во внешнее расположение. Скрипт должен быть написан на языке поддерживаемых и зарегистрированных. Для выполнения **sp_execute_external_script**, необходимо сначала включить внешние скрипты с помощью инструкции, `sp_configure 'external scripts enabled', 1;`.  
+  Выполняет скрипт, предложенный в качестве аргумента во внешнее расположение. Скрипт должен быть написан на языке поддерживаемых и зарегистрированных (R или Python). Для выполнения **sp_execute_external_script**, необходимо сначала включить внешние скрипты с помощью инструкции, `sp_configure 'external scripts enabled', 1;`.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,28 +53,30 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>Аргументы
- @language = N "*языка*"  
+ \@Language = N'*языка*"  
  Указывает язык скрипта. *Язык* — **sysname**.  
 
  Допустимые значения: `Python` или `R`. 
   
- @script = N "*скрипт*"  
+ \@сценарий = N'*скрипт*"  
  Скрипт внешним языком, который указан в качестве входных данных литералом или переменной. *сценарий* — **nvarchar(max)**.  
   
- [ @input_data_1_name = N'*input_data_1_name*"]  
- Задает имя переменной, которая используется для представления запроса определяется @input_data_1. Тип данных переменной в внешних скриптов зависит от языка. В случае R Входная переменная — это блок данных. В случае Python входные данные должны быть табличных. *input_data_1_name* — **sysname**.  
+ [ \@input_data_1_name = N'*input_data_1_name*"]  
+ Задает имя переменной, которая используется для представления запроса определяется \@input_data_1. Тип данных переменной в внешних скриптов зависит от языка. В случае R Входная переменная — это блок данных. В случае Python входные данные должны быть табличных. *input_data_1_name* — **sysname**.  
   
  Значение по умолчанию — `InputDataSet`.  
   
- [ @input_data_1 = N'*input_data_1*"]  
+ [ \@input_data_1 = N'*input_data_1*"]  
  Указывает входные данные, используемые внешних скриптов в виде [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса. Тип данных *input_data_1* — **nvarchar(max)**.
   
- [ @output_data_1_name = N'*output_data_1_name*"]  
+ [ \@output_data_1_name = N'*output_data_1_name*"]  
  Указывает имя переменной в внешнего скрипта, содержащий данные, возвращаемые для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после завершения вызова хранимой процедуры. Тип данных переменной в внешних скриптов зависит от языка. R выходные данные должны быть кадр данных. Python выходные данные должны быть во фрейм данных pandas. *output_data_1_name* — **sysname**.  
   
  Значение по умолчанию — «OutputDataSet».  
   
- [ @parallel = 0 | 1] включите параллельное выполнение R-скриптов, задав `@parallel` параметр 1. Значение по умолчанию для этого параметра равно 0 (без параллелизма).  
+ [ \@параллельно = 0 | 1]
+
+ Включение параллельного выполнения R-скриптов, задав `@parallel` параметр 1. Значение по умолчанию для этого параметра равно 0 (без параллелизма).  
   
  Для скриптов R, не использующих функции RevoScaleR, с помощью `@parallel` параметр может быть полезным для обработки больших наборов данных, при условии, что скрипт можно просто распараллелить. Например, при использовании R `predict` функции с помощью модели, чтобы создать новые прогнозы, задайте `@parallel = 1` как подсказку для ядро запросов. Если запрос может выполняться параллельно, строки распределены в соответствии с **MAXDOP** параметр.  
   
@@ -82,10 +84,11 @@ sp_execute_external_script
   
  Для скриптов R, использующих функции RevoScaleR, параллельная обработка осуществляется автоматически и не следует указывать `@parallel = 1` для **sp_execute_external_script** вызова.  
   
- [ @params = N' *@parameter_name data_type* [OUT | Выходные данные] [,.. .n] "]  
+ [ \@params = N'*\@parameter_name data_type* [OUT | Выходные данные] [,.. .n] "]  
  Список объявлений входного параметра, которые используются в внешнего скрипта.  
   
- [ @parameter1 = "*значение1*" [OUT | Выходные данные] [,.. .n]]  
+ [ \@parameter1 = "*значение1*" [OUT | Выходные данные] [,.. .n]]  
+
  Список значений для входных параметров, используемых внешних скриптов.  
 
 ## <a name="remarks"></a>Примечания
@@ -119,7 +122,7 @@ sp_execute_external_script
 
 ### <a name="data-types"></a>Типы данных
 
-При использовании в входного запроса, или параметры не поддерживаются следующие типы данных `sp_execute_external_script` процедуры и возвращают ошибку неподдерживаемого типа.  
+При использовании в входного запроса, или параметры не поддерживаются следующие типы данных **sp_execute_external_script** процедуры и возвращают ошибку неподдерживаемого типа.  
 
 Обойти это ограничение **ПРИВЕДЕНИЯ** столбца или значение в поддерживаемый тип в [!INCLUDE[tsql](../../includes/tsql-md.md)] перед отправкой внешнего скрипта.  
   

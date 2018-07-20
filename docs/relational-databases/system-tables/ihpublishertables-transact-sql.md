@@ -1,5 +1,5 @@
 ---
-title: IHpublishertables (Transact-SQL) | Документы Microsoft
+title: IHpublishertables (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - IHpublishertables system table
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d4ed8a7ceaab4869eab483b8d3ff197db217683
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2b2abee0e4ff135e778360a7985f7fc89f02bfd
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003981"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103482"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishertables** системная таблица представляет метаданные, хранящиеся на издателе. Эта таблица содержит по одной строке для каждой исходной таблицы, опубликованные из SQL Server издателем с помощью текущего распространителя. Эта таблица хранится в базе данных распространителя.  
+  **IHpublishertables** системная таблица представляет метаданные, хранящиеся на издателе. Эта таблица содержит по одной строке для каждой исходной таблицы, опубликованные с отличным от SQL Server издателя с помощью текущего распространителя. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

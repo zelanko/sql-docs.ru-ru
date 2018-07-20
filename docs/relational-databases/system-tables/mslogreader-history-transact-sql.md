@@ -1,5 +1,5 @@
 ---
-title: MSlogreader_history (Transact-SQL) | Документы Microsoft
+title: MSlogreader_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8041a5c3dfdb216d939ef5b99e22b36c0781eda9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: def5bc1d69a3d5332f96752fcd5e6b1eaedff08e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005841"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103102"
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSlogreader_history** содержит строки журнала для агентов чтения журнала, связанные с локальным распространителем. Эта таблица хранится в базе данных распространителя.  
+  **MSlogreader_history** таблица содержит строки журнала агентов чтения журнала, связанных с локальным распространителем. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -52,9 +52,9 @@ ms.locfileid: "33005841"
 |**average_commands**|**int**|Среднее число команд, переданных за время сеанса.|  
 |**delivery_rate**|**float**|Среднее число доставленных команд в секунду.|  
 |**delivery_latency**|**int**|Задержка между попаданием команды в публикуемую базу данных и в базу данных распространителя. В миллисекундах.|  
-|**error_id**|**int**|Идентификатор ошибки в **MSrepl_error** системной таблицы.|  
+|**error_id**|**int**|Идентификатор ошибки в **MSrepl_error** системная таблица.|  
 |**timestamp**|**timestamp**|Столбец отметок времени этой таблицы.|  
-|**updateable_row**|**бит**|Значение **1** Если строки журнала может быть перезаписан.|  
+|**updateable_row**|**bit**|Значение **1** Если строку журнала может быть перезаписана.|  
   
 ## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200834"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084046"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Учебник. Создание детализированных и главных отчетов (построитель отчетов)
   Это учебник описывает создание отчетов двух типов: детализированного отчета и основного отчета. Образцы данных по продажам, использованные в этих отчетах, извлекаются из куба служб Analysis Services. На приведенной ниже иллюстрации показаны отчеты, которые предстоит создать.  
@@ -344,10 +344,10 @@ ms.locfileid: "37200834"
   
 1.  В области данных отчета разверните узел **Параметры**.  
   
-2.  Щелкните правой кнопкой мыши область @ProductProductCategoryName, а затем нажмите кнопку **Свойства параметра**.  
+2.  Щелкните правой кнопкой мыши \@ProductProductCategoryName, а затем нажмите кнопку **свойства параметра**.  
   
     > [!NOTE]  
-    >  Символ @ рядом с именем указывает на то, что это параметр.  
+    >  \@ Символ рядом с именем указывает, что это является параметром.  
   
 3.  На вкладке **Общие** установите флажок **Скрытый**.  
   

@@ -1,5 +1,5 @@
 ---
-title: MSreplication_subscriptions (Transact-SQL) | Документы Microsoft
+title: MSreplication_subscriptions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,26 +20,27 @@ helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74fed5b79386ae09b3733a23980d0a1b32bd1c39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caaedff89c120cc9607d06976f26a10d780a12c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103382"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplication_subscriptions** содержит по одной строке сведений о репликации для каждого агента распространителя, обслуживающего локальной базы данных подписчика. Эта таблица хранится в базе данных подписки.  
+  **MSreplication_subscriptions** таблица содержит по одной строке сведений о репликации для каждого агента распространителя, обслуживающего локальной базы данных подписчика. Эта таблица хранится в базе данных подписки.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**издатель**|**sysname**|Имя издателя.|  
 |**publisher_db**|**sysname**|Имя базы данных издателя.|  
-|**Публикации**|**sysname**|Имя публикации.|  
-|**independent_agent**|**бит**|Указывает, имеется ли для данной публикации изолированный агент распространителя.|  
+|**публикации**|**sysname**|Имя публикации.|  
+|**independent_agent**|**bit**|Указывает, имеется ли для данной публикации изолированный агент распространителя.|  
 |**subscription_type**|**int**|Тип подписки.<br /><br /> 0 = принудительная<br /><br /> 1 = по запросу<br /><br /> 2 = анонимная|  
 |**distribution_agent**|**sysname**|Имя агента распространителя.|  
 |**Time**|**smalldatetime**|Время последнего обновления агентом распространителя.|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |**agent_id**|**binary(16)**|Идентификатор агента.|  
 |**subscription_guid**|**binary(16)**|Глобальный идентификатор для версии подписки на эту публикацию.|  
 |**subid**|**binary(16)**|Глобальный идентификатор для анонимной подписки.|  
-|**immediate_sync**|**бит**|Указывает, создаются ли повторно файлы синхронизации при каждом запуске агента моментальных снимков.|  
+|**immediate_sync**|**bit**|Указывает, создаются ли повторно файлы синхронизации при каждом запуске агента моментальных снимков.|  
   
 ## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

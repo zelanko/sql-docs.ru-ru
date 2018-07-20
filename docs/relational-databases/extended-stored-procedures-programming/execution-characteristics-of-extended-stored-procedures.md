@@ -1,5 +1,5 @@
 ---
-title: Характеристики выполнения расширенных хранимых процедур | Документы Microsoft
+title: Характеристики выполнения расширенных хранимых процедур | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,11 +18,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 276efd6941012857820607d51e08ad309e581e94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11ce9088d6f6e9cde45eb080b1c12f3c4d434b18
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087896"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Характеристики выполнения расширенных хранимых процедур
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
  Выполнение расширенных хранимых процедур имеет следующие характеристики:  
   
--   Функция расширенная хранимая процедура выполняется в контексте безопасности [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Расширенная хранимая процедура выполняется в контексте безопасности [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   расширенная хранимая процедура выполняется в пространстве процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -  
   
- После расширенной хранимой процедуры загрузки библиотеки DLL, библиотеки DLL остается загруженной в адресном пространстве сервера до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлена или администратор явно не выгрузит библиотеки DLL с помощью инструкции DBCC *DLL_name* (FREE).  
+ После расширенной хранимой процедуры, при загрузке библиотеки DLL, библиотеки DLL остается загруженной в адресном пространстве сервера, пока [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлена или администратор явно выгружает библиотеку DLL с помощью инструкции DBCC *DLL_name* (FREE).  
   
  Расширенная хранимая процедура может выполняться в [!INCLUDE[tsql](../../includes/tsql-md.md)] как хранимая процедура с помощью инструкции EXECUTE:  
   
@@ -52,13 +53,13 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>Параметры  
- @ *retval*  
+ \@ *retval*  
  Возвращаемое значение.  
   
- @ *содержит param1*  
+ \@ *содержит param1*  
  Входной параметр.  
   
- @ *Param2*  
+ \@ *Param2*  
  Входной и (или) выходной параметр.  
   
 > [!CAUTION]  

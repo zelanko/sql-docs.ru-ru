@@ -18,12 +18,12 @@ caps.latest.revision: 208
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c268854800acdfa1e725b4d00b564c018dd70f94
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326404"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084076"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>Устаревшие функции компонента Database Engine в SQL Server 2014
   В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , которые по-прежнему доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
@@ -40,7 +40,7 @@ ms.locfileid: "37326404"
 |Объекты базы данных|Возможность возвращать результирующие наборы из триггеров.|None|Возврат результатов из триггера|12|  
 |Шифрование|Шифрование с использованием алгоритмов RC4 и RC4_128 является устаревшим. В следующей версии запланировано удаление его поддержки. Расшифровка с использованием алгоритмов RC4 и RC4_128 не является устаревшей.|Используйте другой алгоритм шифрования, например AES.|Устаревший алгоритм шифрования|253|  
 |Удаленные серверы|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|Замените удаленные серверы связанными серверами. Процедуру sp_addserver можно использовать только с параметром local.|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Удаленные серверы|@@remserver|Замените удаленные серверы связанными серверами.|None|None|  
+|Удаленные серверы|\@\@remserver|Замените удаленные серверы связанными серверами.|None|None|  
 |Удаленные серверы|SET REMOTE_PROC_TRANSACTIONS|Замените удаленные серверы связанными серверами.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Задание параметров|`SET ROWCOUNT` для инструкций `INSERT`, `UPDATE` и `DELETE`.|Ключевое слово TOP|SET ROWCOUNT|109|  
 |Табличные указания|Табличная подсказка HOLDLOCK без скобок.|Используйте HOLDLOCK со скобками.|Табличная подсказка HOLDLOCK без скобок.|167|  
@@ -117,7 +117,7 @@ ms.locfileid: "37326404"
 |безопасность|Алгоритмы шифрования RC4 и DESX|Используйте другой алгоритм, например AES.|Алгоритм DESX|238|  
 |Задание параметров|SET FMTONLY|[sys.dm_exec_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql), [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) и [sp_describe_undeclared_parameters (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql).|SET FMTONLY|250|  
 |Параметры конфигурации сервера|Параметр c2 audit<br /><br /> default trace enabled, параметр|[Параметр конфигурации сервера common criteria compliance enabled](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Расширенные события](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
-|Классы модели объектов SMO|`Microsoft.SQLServer.Management.Smo.Information` класс<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` класс<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` класс<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` Свойство|`Microsoft.SqlServer.Management.Smo.Server` класс<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` класс<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` класс<br /><br /> None|None|None|  
+|Классы модели объектов SMO|`Microsoft.SQLServer.Management.Smo.Information` Класс<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` Класс<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` Класс<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` Свойство|`Microsoft.SqlServer.Management.Smo.Server` Класс<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` Класс<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` Класс<br /><br /> None|None|None|  
 |Агент SQL Server|уведомление**net send** .<br /><br /> Уведомление по пейджеру<br /><br /> Подсистема ActiveX.|Уведомление по электронной почте.<br /><br /> Уведомление по электронной почте.<br /><br /> Скрипт Command или PowerShell.|None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Интеграция обозревателя решений в среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Интеграция системы управления версиями [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||Нет|None|  
 |Системные хранимые процедуры|sp_db_increased_partitions|Нет. Поддержка увеличенных секций в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]доступна по умолчанию|sp_db_increased_partitions|253|  
@@ -143,7 +143,7 @@ ms.locfileid: "37326404"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL в качестве имени столбца в инструкциях DML.|Используйте $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL в качестве имени столбца в инструкциях DML.|Используйте $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Использование # и ## в качестве имен временной таблицы и временной хранимой процедуры.|Используйте по крайней мере один дополнительный символ.|Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте @, @@ или @@ в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)] .|Не используйте в качестве идентификаторов @, @@ или имена, начинающиеся символами @@.|«@» и имена, начинающиеся с «@@» в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)] .|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте \@, \@\@ или \@\@ в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)].|Не используйте в качестве идентификаторов \@ или \@\@, а также имена, начинающиеся символами \@\@.|"\@" и имена, начинающиеся с "\@\@", в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте ключевое слово DEFAULT в качестве значения по умолчанию.|Не используйте слово DEFAULT в качестве значения по умолчанию.|Ключевое слово DEFAULT в качестве значения по умолчанию.|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Использование пробела в качестве разделителя табличных подсказок.|В качестве разделителя отдельных табличных подсказок используйте запятую.|Несколько табличных указаний без запятых|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Список выбора статистического индексированного представления должен содержать функцию COUNT_BIG (*) в режиме совместимости 90.|Вместо этого следует использовать функцию COUNT_BIG.|Список выбора индексированного представления без COUNT_BIG(*)|2|  

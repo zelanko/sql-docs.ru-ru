@@ -18,12 +18,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3d98354505e34e08da219e1dd9dc276ef6d59948
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8b0f8e2b720336deb008b47dc5041d5ece3f55c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313784"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084626"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Характеристики выполнения расширенных хранимых процедур
     
@@ -52,13 +52,13 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>Параметры  
- @ *retval*  
+ \@ *retval*  
  Возвращаемое значение.  
   
- @ *содержит param1*  
+ \@ *содержит param1*  
  Входной параметр.  
   
- @ *Param2*  
+ \@ *Param2*  
  Входной и (или) выходной параметр.  
   
 > [!CAUTION]  

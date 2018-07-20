@@ -1,5 +1,5 @@
 ---
-title: MSsubscriptions (Transact-SQL) | Документы Microsoft
+title: MSsubscriptions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSsubscriptions system table
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05f5100843227093cd11909adede12f449cf0051
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d580a5164595a12d96ae8f7b491bc896d451fa8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007761"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102972"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSsubscriptions** содержит по одной строке для каждой опубликованной статьи в подписке, предоставленной локальным распространителем. Эта таблица хранится в базе данных распространителя.  
+  **MSsubscriptions** таблица содержит по одной строке для каждой опубликованной статьи в подписке, предоставленной локальным распространителем. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -50,10 +50,10 @@ ms.locfileid: "33007761"
 |**sync_type**|**tinyint**|Тип синхронизации:<br /><br /> **1** = автоматическая.<br /><br /> **2** = нет синхронизации.|  
 |**status**|**tinyint**|Состояние подписки.<br /><br /> **0** = неактивно.<br /><br /> **1** = подписка.<br /><br /> **2** = активно.|  
 |**subscription_seqno**|**varbinary(16)**|Порядковый номер транзакции моментального снимка памяти.|  
-|**snapshot_seqno_flag**|**бит**|Указывает источник порядкового номера транзакции снимка, где значение **1** означает, что **subscription_seqno** имеет порядковый номер моментального снимка.|  
-|**independent_agent**|**бит**|Указывает, имеется ли для данной публикации изолированный агент распространителя.|  
+|**snapshot_seqno_flag**|**bit**|Указывает источник порядкового номера транзакции снимка, где значение **1** означает, что **subscription_seqno** — это порядковый номер моментального снимка.|  
+|**independent_agent**|**bit**|Указывает, имеется ли для данной публикации изолированный агент распространителя.|  
 |**subscription_time**|**datetime**|Только для внутреннего применения.|  
-|**loopback_detection**|**бит**|Применяется к подпискам, которые являются частью двунаправленной топологии репликации транзакций. Механизм распознавания обратной связи определяет, отправляет ли агент распространителя транзакции, созданные в подписчике, обратно подписчику:<br /><br /> **1** = не отправляет обратно.<br /><br /> **0** = отправляет обратно.<br /><br /> Примечание: Этот столбец поддерживается только для обратной совместимости с функциями двунаправленной репликации в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Для более поздних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следует использовать одноранговую репликацию. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**loopback_detection**|**bit**|Применяется к подпискам, которые являются частью двунаправленной топологии репликации транзакций. Механизм распознавания обратной связи определяет, отправляет ли агент распространителя транзакции, созданные в подписчике, обратно подписчику:<br /><br /> **1** = не отправляет обратно.<br /><br /> **0** = отправляет обратно.<br /><br /> Примечание: Этот столбец поддерживается только для обратной совместимости с функциями двунаправленной репликации в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Для более поздних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следует использовать одноранговую репликацию. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |**agent_id**|**int**|Идентификатор агента.|  
 |**update_mode**|**tinyint**|Тип обновления.|  
 |**publisher_seqno**|**varbinary(16)**|Последовательный номер транзакции на издателе для этой подписки.|  

@@ -1,5 +1,5 @@
 ---
-title: xp_enumgroups (Transact-SQL) | Документы Microsoft
+title: xp_enumgroups (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_enumgroups
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0ca84dd52786613e7489ae3272d014e819fe4f04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 844460db0fd4cec42b8b89bf70deb72098d3ce6a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257146"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101552"
 ---
 # <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +56,10 @@ xp_enumgroups [ 'domain_name' ]
 |**Группы**|**sysname**|Имя группы Windows|  
 |**Комментарий**|**sysname**|Описание группы Windows, предоставленное Windows|  
   
-## <a name="remarks"></a>Замечания  
- Если *имя_домена* имя компьютера под управлением Windows, экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находится под управлением, или имя домена не указано, **xp_enumgroups** перечисляет локальные группы с компьютера под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Примечания  
+ Если *имя_домена* — это имя компьютера на базе Windows, экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находится под управлением, или имя домена не указан, **xp_enumgroups** перечисляет локальные группы с компьютера на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **xp_enumgroups** не может использоваться при создании экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в Windows 98.  
+ **xp_enumgroups** не может использоваться при создании экземпляра класса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в операционной системе Windows 98.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **db_owner** предопределенной роли базы данных в **master** базы данных или членство в **sysadmin** предопределенной роли сервера.  

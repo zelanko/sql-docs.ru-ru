@@ -1,22 +1,21 @@
 ---
-title: Обновлено - SSMA для документации по SQL Server | Документы Microsoft
-description: Отображение фрагментов обновленное содержимое для последних измененных в документации для SQL Server Migration Assistant (SSMA) для Microsoft SQL Server.
+title: Обновлено - SSMA для SQL Server документация | Документация Майкрософт
+description: Отображение фрагментов обновленного содержимого для последних изменений в документации для SQL Server Migration Assistant (SSMA) для Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.component: ssma
 ms.date: 04/28/2018
-ms.openlocfilehash: c941c5ca367c579fd654c7c399520f371f3f59b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 97b48abd3e470703f72441006a3ecd92b635e913
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776970"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085466"
 ---
 # <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>Новые и недавно обновленные: SQL Server Migration Assistant (SSMA)
 
@@ -31,7 +30,7 @@ ms.locfileid: "34776970"
 
 
 - *Даты обновлений:* &nbsp; **02.03.2018**&nbsp;–&nbsp;**28.04.2018**
-- *Предметной области:* &nbsp; **SQL Server Migration Assistant**.
+- *Предметная область:* &nbsp; **SQL Server Migration Assistant**.
 
 
 

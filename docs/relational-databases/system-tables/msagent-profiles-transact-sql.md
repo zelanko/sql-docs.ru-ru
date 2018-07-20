@@ -1,5 +1,5 @@
 ---
-title: MSagent_profiles (Transact-SQL) | Документы Microsoft
+title: MSagent_profiles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,29 +22,29 @@ helpviewer_keywords:
 - MSagent_profiles system table
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38afed73fdee3817e632c02a0584d960d589fe8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3b246b0c174838529dd5e0c6c38bd633c0a90b8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004321"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101382"
 ---
 # <a name="msagentprofiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSagent_profiles** содержит по одной строке для каждой определенный профиль агента репликации. Эта таблица хранится в **msdb** базы данных.  
+  **MSagent_profiles** таблица содержит по одной строке для каждого определенный профиль агента репликации. Эта таблица хранится в **msdb** базы данных.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|Идентификатор профиля.|  
 |**profile_name**|**sysname**|Уникальное имя профиля для типа агента.|  
 |**agent_type**|**int**|Тип агента:<br /><br /> **1** = агент моментальных снимков<br /><br /> **2** = агент чтения журнала<br /><br /> **3** = агент распространителя<br /><br /> **4** = агент слияния<br /><br /> **9** = агент чтения очереди|  
-|**type**|**int**|Тип профиля:<br /><br /> **0** = системный**1** = пользовательский|  
+|**type**|**int**|Тип профиля:<br /><br /> **0** = system**1** = пользовательский|  
 |**Описание**|**nvarchar(3000)**|Описание профиля.|  
-|**def_profile**|**бит**|Указывает на использование профиля по умолчанию для данного типа агента.|  
+|**def_profile**|**bit**|Указывает на использование профиля по умолчанию для данного типа агента.|  
   
 ## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
