@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769680"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066004"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Создание или настройка прослушивателя группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "34769680"
 >  Перед созданием первого прослушивателя настоятельно рекомендуется прочитать раздел [Подключение клиента AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
 ###  <a name="DNSnameReqs"></a> Требования к имени DNS прослушивателя группы доступности  
- Для каждого прослушивателя группы доступности необходимо имя DNS-узла, уникальное в домене и в NetBIOS. Имя DNS является значением типа string. Это имя может содержать только буквы, цифры, дефисы (-) и знаки подчеркивания (_) в любом порядке. В именах узлов DNS учитывается регистр. Максимальная длина составляет 63 символа, однако в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]можно указать длину не более 15 символов.  
+ Для каждого прослушивателя группы доступности необходимо имя DNS-узла, уникальное в домене и в NetBIOS. Имя DNS является значением типа string. Это имя может содержать только буквы, цифры, тире и дефисы (-), а также знаки подчеркивания (_) в любом порядке. В именах узлов DNS учитывается регистр. Максимальная длина составляет 63 символа, однако в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]можно указать длину не более 15 символов.  
   
  Мы рекомендуем указывать строку, которая поддается толкованию. Например, для группы доступности с именем `AG1`понятным именем узла DNS будет `ag1-listener`.  
   

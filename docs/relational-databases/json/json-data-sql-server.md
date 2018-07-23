@@ -3,29 +3,25 @@ title: Работа с данными JSON в SQL Server | Документац�
 ms.custom: ''
 ms.date: 02/19/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: json
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 47
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a83e36e7f62f9b8ca38c11e5113dae1c8fc4f5d3
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
+ms.openlocfilehash: 6b81626832f6428969f86b179b06232b81d7326f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612219"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417543"
 ---
 # <a name="json-data-in-sql-server"></a>Данные JSON в SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -250,7 +246,7 @@ SQL Server предоставляет гибридную модель для х�
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>Хранение и индексирование данных JSON в SQL Server
 
-Поскольку JSON является текстовым форматом, документы JSON могут храниться в столбцах `NVARCHAR` в базе данных SQL. Тип `NVARCHAR` поддерживается во всех подсистемах SQL Server, благодаря чему вы можете помещать документы JSON в таблицы с индексами **CLUSTERED COLUMNSTORE**, **оптимизированные для операций в памяти** таблицы, а также во внешние файлы, которые могут считываться с помощью OPENROWSET или Polybase.
+JSON — это текстовый формат, следовательно, документы JSON могут храниться в столбцах `NVARCHAR` в Базе данных SQL. Тип `NVARCHAR` поддерживается во всех подсистемах SQL Server, благодаря чему вы можете помещать документы JSON в таблицы с индексами **CLUSTERED COLUMNSTORE**, **оптимизированные для операций в памяти** таблицы, а также во внешние файлы, которые могут считываться с помощью OPENROWSET или Polybase.
 
 Дополнительные сведения о возможностях хранения, индексирования и оптимизации данных JSON в SQL Server, см. в следующих статьях.
 -   [Хранение документов JSON в SQL Server или базе данных SQL](store-json-documents-in-sql-tables.md)

@@ -15,12 +15,12 @@ caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 047271007e5d0f6b9b5ef223696c4bfd8fc739df
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: e7d9b03347fb6ca83827854f4af0b75e8accc131
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34318525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190954"
 ---
 # <a name="mssqlserver33027"></a>MSSQLSERVER_33027
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "34318525"
 |Текст сообщения|Не удалось загрузить поставщик служб шифрования "%.*ls" из-за недействительной подписи Authenticode или недействительного пути к файлу. Проверьте наличие других ошибок в предыдущих сообщениях.|  
   
 ## <a name="explanation"></a>Объяснение  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не смог использовать поставщик служб шифрования, указанный в сообщении об ошибке, так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не смог загрузить DLL-библиотеку. Недействительное имя или подпись Authenticode.  
+Экземпляр SQL Server не смог использовать поставщик служб шифрования, указанный в сообщении об ошибке, так как экземпляр SQL Server не смог загрузить DLL-библиотеку. Недействительное имя или подпись Authenticode.  
   
 ## <a name="user-action"></a>Действие пользователя  
-Проверьте, что файл присутствует, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет разрешение на доступ к местоположению файла. Проверьте дополнительные связанные сообщения в журнале ошибок. Или обратитесь к поставщику служб шифрования за дополнительными сведениями.  
+Проверьте, что файл присутствует, а у экземпляра SQL Server есть разрешение на доступ к местоположению файла. Проверьте дополнительные связанные сообщения в журнале ошибок. Или обратитесь к поставщику служб шифрования за дополнительными сведениями.  
   

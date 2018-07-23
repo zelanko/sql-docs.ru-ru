@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -59,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34470295"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854346"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -246,7 +245,7 @@ ms.locfileid: "34470295"
  Значение SIMPLE дает оптимизатору запросов указание использовать простую параметризацию. Значение FORCED предписывает оптимизатору запросов использовать принудительную параметризацию. Дополнительные сведения см. в разделах [Принудительная параметризация](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) и [Простая параметризация](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) в руководстве по архитектуре обработки запросов.  
   
  RECOMPILE  
- Указывает компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] отбросить план, сформированный после выполнения запроса, заставляя оптимизатор запросов перекомпилировать план запроса при следующем выполнении этого запроса. Без указания подсказки RECOMPILE компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] кэширует планы запросов и использует их повторно. При компиляции планов запроса указание запроса RECOMPILE использует текущие значения всех локальных переменных в запросе и, если запрос находится внутри хранимой процедуры, текущие значения для всех параметров.  
+ Указывает [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] создать временный план для запроса, который будет немедленного удален после выполнения запроса. Созданный план запроса не заменяет план, хранимый в кэше, когда тот же запрос выполняется без указания RECOMPILE. Без указания подсказки RECOMPILE компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] кэширует планы запросов и использует их повторно. При компиляции планов запроса указание запроса RECOMPILE использует текущие значения всех локальных переменных в запросе и, если запрос находится внутри хранимой процедуры, текущие значения для всех параметров.  
   
  Подсказка RECOMPILE — это полезная альтернатива созданию хранимых процедур, использующих предложение WITH RECOMPILE, в тех случаях, когда нужно перекомпилировать лишь часть запросов в хранимой процедуре, а не всю хранимую процедуру. Дополнительные сведения см. в разделе [Перекомпиляция хранимой процедуры](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md). Подсказка RECOMPILE также полезна для создания структур планов.  
   

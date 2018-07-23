@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -60,16 +59,16 @@ helpviewer_keywords:
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 caps.latest.revision: 281
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5822dd89bbff8bb6982e65a310cce74324bd9fd7
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744133"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909584"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -512,7 +511,7 @@ WITH CHECK | WITH NOCHECK
   
  Невозможно удалить столбец, если он:  
   
--   используется в индексе;  
+-   Используется в индексе — как ключевой столбец или как INCLUDE.
   
 -   используется в ограничениях CHECK, FOREIGN KEY, UNIQUE или PRIMARY KEY;  
   
@@ -645,7 +644,7 @@ WITH CHECK | WITH NOCHECK
   
  Если указан аргумент *partition_scheme_name*, то применяются правила для [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Таблица должна быть уже секционирована для строк данных, а схема разделения должна использовать те же функции секционирования и столбцы, что используются в схеме секционирования FILESTREAM.  
   
- Аргумент *filestream_filegroup_name* указывает имя файловой группы FILESTREAM. В файловой группе должен быть определен один файл для файловой группы с помощью инструкции [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.  
+ Аргумент *filestream_filegroup_name* указывает имя файловой группы FILESTREAM. В файловой группе должен быть определен один файл для файловой группы с помощью инструкции [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.  
   
  **"** default **"** указывает файловую группу FILESTREAM с заданным свойством DEFAULT. При отсутствии файловой группы FILESTREAM возникает ошибка.  
   

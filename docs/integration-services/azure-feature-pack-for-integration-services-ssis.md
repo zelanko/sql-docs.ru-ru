@@ -1,7 +1,7 @@
 ---
 title: Пакет дополнительных компонентов Azure для служб Integration Services (SSIS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f30a22035e141a7a10bc6069a8d1b6eb26818029
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bc49dc5bd2375d52d3f8a849578bd5ac9ef74430
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405056"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934866"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)
 Пакет дополнительных компонентов Azure для служб SQL Server Integration Services (SSIS) — это дополнение, которое предоставляет перечисленные на этой странице компоненты для подключения служб SSIS к Azure, передачи данных между Azure и локальными источниками данных и обработки данных, хранящихся в Azure.
@@ -39,33 +39,37 @@ ms.locfileid: "35405056"
 ## <a name="components-in-the-feature-pack"></a>Компоненты в составе пакета дополнительных компонентов
 -   Диспетчеры соединений
 
+    -   [Диспетчер подключений Azure Data Lake Analytics](connection-manager/azure-data-lake-analytics-connection-manager.md)
+
+    -   [Диспетчер подключений Azure Data Lake Store](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
+    
+    -   [Диспетчер подключений Azure HDInsight](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
+
+    -   [Диспетчер подключений Azure Resource Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    
     -   [Диспетчер подключений службы хранилища Azure](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
     -   [Диспетчер подключений подписки Azure](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
-    -   [Диспетчер подключений Azure Data Lake Store](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-    
-    -   [Диспетчер подключений Azure Resource Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
-    
-    -   [Диспетчер подключений Azure HDInsight](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
-
 -   Задания
-
-    -   [Задача передачи больших двоичных объектов Azure](../integration-services/control-flow/azure-blob-upload-task.md)
 
     -   [Задача скачивания BLOB-объектов Azure](../integration-services/control-flow/azure-blob-download-task.md)
 
-    -   [Задача Hive для Azure HDInsight](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Задача передачи больших двоичных объектов Azure](../integration-services/control-flow/azure-blob-upload-task.md)
 
-    -   [Задача Pig для Azure HDInsight](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+    -   [Задание Azure Data Lake Analytics](control-flow/azure-data-lake-analytics-task.md)
+
+    -   [Задача «Файловая система» для Azure Data Lake](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 
     -   [Задача создания кластера Azure HDInsight](../integration-services/control-flow/azure-hdinsight-create-cluster-task.md)
 
     -   [Задача удаления кластера Azure HDInsight](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Задача отправки в хранилище данных Azure SQL](../integration-services/control-flow/azure-sql-dw-upload-task.md)
+    -   [Задача Hive для Azure HDInsight](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
-    -   [Задача «Файловая система» для Azure Data Lake](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+    -   [Задача Pig для Azure HDInsight](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+
+    -   [Задача отправки в хранилище данных Azure SQL](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
 -   Компоненты потока данных
 
@@ -77,7 +81,7 @@ ms.locfileid: "35405056"
     
     -   [Цель Azure Data Lake Store](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Перечислитель BLOB-объектов Azure и файлов ADLS. См. раздел [Контейнер "цикл по каждому элементу"](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
+-   Перечислитель файлов больших двоичных объектов и Azure Data Lake Store. См. раздел [Контейнер "цикл по каждому элементу"](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
 
 ## <a name="scenario-processing-big-data"></a>Сценарий: обработка больших данных
  Используйте соединитель Azure для выполнения следующих задач по обработке больших данных:

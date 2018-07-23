@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/03/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - SET QUOTED_IDENTIFIER statement
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b78a2ba8a3d9520376746da1810c4a2d64324781
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba68407344b9b5fe79d8230a9036b13dcb17eeae
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074081"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784615"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +82,7 @@ SET QUOTED_IDENTIFIER ON
   
  Также параметр SET QUOTED_IDENTIFIER связан с параметром QUOTED_IDENTIFER инструкции ALTER DATABASE. Дополнительные сведения о параметрах базы данных см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
- SET QUOTED_IDENTIFIER вступает в силу во время синтаксического анализа и влияет только на анализ, а не на выполнение запроса.  
+ SET QUOTED_IDENTIFIER применяется во время синтаксического анализа и влияет только на анализ, а не на выполнение запроса.  
   
  При анализе неструктурированных пакетов верхнего уровня используется текущий параметр сеанса для QUOTED_IDENTIFIER.  При анализе пакета все вхождения SET QUOTED_IDENTIFIER приведут к изменению поведения анализа с этой точки и сохранят этот параметр для сеанса.  Поэтому после анализа и выполнения пакета параметр QUOTED_IDENTIFER сеанса будет задан в соответствии с последним вхождением SET QUOTED_IDENTIFIER в пакете.  
  Статический SQL в хранимой процедуре анализируется с использованием параметра QUOTED_IDENTIFIER, действующего для пакета, создавшего или изменившего хранимую процедуру.  Параметр SET QUOTED_IDENTIFIER не работает, когда появляется в тексте хранимой процедуры в виде статического SQL.  
@@ -196,7 +195,7 @@ GO
  ```  
   
 ## <a name="see-also"></a>См. также:  
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   

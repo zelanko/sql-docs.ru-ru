@@ -3,11 +3,6 @@ title: Партнеры по мониторингу SQL Server | Докумен
 description: Списки сторонних партнеров, предлагающих решения для мониторинга сервера.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -15,14 +10,15 @@ ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: f9c0dbc7ddcd40f8dbd859711c32dc4f9ff79f71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: f5251195c95036abb741672c593dbd82e8817fca
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033641"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926215"
 ---
 # <a name="sql-server-monitoring-partners"></a>Партнеры по мониторингу SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ ms.locfileid: "33033641"
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Партнеры Майкрософт по решениям мониторинга
-| Партнер | Description | Ссылки |
+| Партнер | Описание | Ссылки |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager — это мощное решение для диагностики и мониторинга производительности, которое заранее предупреждает администраторов о проблемах с работоспособностью, производительностью и доступностью в средах SQL Server через централизованную консоль.<br><br>[Требования к системе][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Веб-сайт][idera_website]<br>[Twitter][idera_twitter]<br>[Видео][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Решение Spotlight on SQL Server позволяет круглосуточно обеспечивать максимальную производительность за счет непревзойденных возможностей мониторинга, диагностики и оптимизации сред SQL Server. Spotlight предоставляет доступ к сведениям, необходимым для оптимальной работы баз данных SQL Server. Воспользуйтесь интуитивно понятной функцией обзора работоспособности и производительности, возможностью автоматической выдачи предупреждений и автоматического выполнения действий, а также поддержкой мобильных устройств.|[Marketplace][quest_marketplace]<br>[Веб-сайт][quest_website]<br>[Видео][quest_video] | |
@@ -72,9 +68,7 @@ ms.locfileid: "33033641"
 [solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview 
-[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/--> [quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview [solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
 
 <!--Press links-->
 <!--[idera_press]:-->

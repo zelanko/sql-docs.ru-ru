@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,20 +23,20 @@ helpviewer_keywords:
 - file names [SQL Server], FILE_ID
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0857a8982fe64d2e2461f5420588ea4a9c527556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f7d7a1a8e585370353050abb508464ce0f1c0ed
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054011"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788475"
 ---
 # <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает идентификатор (ID) файла, соответствующий заданному логическому имени файла в текущей базе данных.  
+Для указанного логического имени файла компонента текущей базы данных эта функция возвращает идентификатор файла.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте вместо этого функцию [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md).  
@@ -47,25 +46,26 @@ ms.locfileid: "33054011"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 FILE_ID ( file_name )  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *file_name*  
- Выражение типа **sysname**, представляющее имя файла, для которого необходимо вернуть идентификатор файла.  
+*file_name*  
+Выражение типа **sysname**, представляющее имя файла, для которого будет возвращено значение идентификатора файла (`FILE_ID`).  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **smallint**  
+**smallint**  
   
 ## <a name="remarks"></a>Remarks  
- Аргумент *file_name* соответствует логическому имени файла, отображенному в столбце name в представлении каталога sys.master_files или sys.database_files.  
+*file_name* соответствует логическому имени файла, отображенному в столбце name в представлении каталога sys.master_files или sys.database_files.  
+
+`FILE_ID` возвращает `NULL`, если *имя_файла* не соответствует логическому имени файла компонента текущей базы данных.
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификационный номер файла, присваиваемый полнотекстовому каталогу, больше чем 32767. Так как возвращаемым типом функции FILE_ID является **smallint**, эта функция не может использоваться для полнотекстовых файлов. Используйте вместо этого функцию [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md).  
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификационный номер файла, присваиваемый полнотекстовым каталогам, превышает 32767. Так как функция `FILE_ID` имеет тип возвращаемого значения **smallint**, `FILE_ID` не будет поддерживать полнотекстовые файлы. Используйте вместо этого функцию [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример возвращает идентификатор файла `AdventureWorks_Data`.  
-  
+Этот пример возвращает значение идентификатора файла для файла `AdventureWorks_Data`, файла компонента из базы данных `ADVENTUREWORKS2012`.  
+
 ```sql  
 USE AdventureWorks2012;  
 GO  

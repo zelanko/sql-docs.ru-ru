@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - DATETIMEOFFSETFROMPARTS function
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09e705fd426963018eadae7351df1046d3d1ef0c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8fb64790887ea8e683f20e681d7e95211db1c2c5
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698275"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791157"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Эта функция возвращает значение **datetimeoffset** для указанных аргументов даты и времени. Точность возвращаемого значения определяется аргументом precision, а смещения определяются аргументами смещения часов и минут.
+Возвращает значение **datetimeoffset** для указанных аргументов даты и времени. Точность возвращаемого значения определяется аргументом precision, а смещение — аргументами offset.  
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,44 +43,46 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ```  
   
 ## <a name="arguments"></a>Аргументы  
+
 *year*  
-Целочисленное выражение, задающее год.
+Целочисленное выражение, задающее год.  
   
 *month*  
-Целочисленное выражение, задающее месяц.
+Целочисленное выражение, задающее месяц.  
   
 *day*  
-Целочисленное выражение, задающее день.
+Целочисленное выражение, задающее день.  
   
 *hour*  
-Целочисленное выражение, задающее часы.
+Целочисленное выражение, задающее часы.  
   
 *minute*  
-Целочисленное выражение, задающее минуты.
+Целочисленное выражение, задающее минуты.  
   
 *секунд*  
-Целочисленное выражение, задающее секунды.
+Целочисленное выражение, задающее секунды.  
   
 *fractions*  
-Целочисленное выражение, задающее дробное значение.
+Целочисленное выражение, задающее дробное значение секунд.  
   
 *hour_offset*  
-Целочисленное выражение, задающее часть смещения часового пояса в часах.
+Целочисленное выражение, задающее часть смещения часового пояса в часах.  
   
 *minute_offset*  
-Целочисленное выражение, задающее часть смещения часового пояса в минутах.
+Целочисленное выражение, задающее часть смещения часового пояса в минутах.  
   
 *precision*  
-Целочисленное литеральное значение, которое определяет точность значения **datetimeoffset**, возвращаемого функцией `DATETIMEOFFSETFROMPARTS`.
+Целочисленное литеральное значение, которое определяет точность значения **datetimeoffset**, возвращаемого функцией `DATETIMEOFFSETFROMPARTS`.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных
-**datetimeoffset(** *precision* **)**
+**datetimeoffset(** *precision* **)**  
   
 ## <a name="remarks"></a>Remarks  
-Функция `DATETIMEOFFSETFROMPARTS` возвращает полностью инициализированный тип данных **datetimeoffset**. Для представления смещения часового пояса в функции `DATETIMEOFFSETFROMPARTS` используются аргументы смещения. Если аргументы смещения пропущены, то в функции `DATETIMEOFFSETFROMPARTS` предполагается, что смещение часового пояса равно 00:00, то есть отсутствует. Если аргументы смещения указаны, функция `DATETIMEOFFSETFROMPARTS` требует наличия значений обоих аргументов, причем оба должны быть или положительными, или отрицательными. Если аргумент *minute_offset* указан без значения *hour_offset*, функция `DATETIMEOFFSETFROMPARTS` вызывает ошибку. Если другие аргументы имеют недопустимые значения, функция `DATETIMEOFFSETFROMPARTS` вызывает ошибку. Функция `DATETIMEOFFSETFROMPARTS` возвращает NULL, если по крайней мере один обязательный аргумент имеет значение NULL. Однако если аргумент *precision* имеет значение NULL, функция `DATETIMEOFFSETFROMPARTS` вызывает ошибку.
-  
-Аргумент *fractions* зависит от аргумента *precision*. Например, если значение *precision* равно 7, то каждая дробная часть представляет 100 наносекунд; если значение *precision* равно 3, то каждая дробная часть представляет миллисекунду. Если значение *precision* равно нулю, то значение *fractions* также должно быть равно нулю. В противном случае функция `DATETIMEOFFSETFROMPARTS` вызовет ошибку.
 
+Функция `DATETIMEOFFSETFROMPARTS` возвращает полностью инициализированный тип данных **datetimeoffset**. Аргументы смещения представляют смещение часового пояса. Если аргументы смещения пропущены, в `DATETIMEOFFSETFROMPARTS` предполагается, что смещение часового пояса равно `00:00`, то есть отсутствует. Если аргументы смещения указаны, `DATETIMEOFFSETFROMPARTS` требует наличия значений обоих аргументов, причем оба должны быть или положительными, или отрицательными. Если *minute_offset* указывается без значения *hour_offset*, `DATETIMEOFFSETFROMPARTS` вызывает ошибку. Если другие аргументы имеют недопустимые значения, `DATETIMEOFFSETFROMPARTS` вызывает ошибку. `DATETIMEOFFSETFROMPARTS` возвращает `NULL`, если хотя бы один обязательный аргумент имеет значение `NULL`. Но если *precision* имеет значение `NULL`, `DATETIMEOFFSETFROMPARTS` вызывает ошибку.  
+  
+Аргумент *fractions* зависит от аргумента precision. Например, если значение precision равно 7, каждая дробная часть представляет 100 наносекунд, а если значение precision равно 3, каждая дробная часть представляет миллисекунду. Если значение precision равно нулю, значение fractions также должно быть равно нулю. В противном случае `DATETIMEOFFSETFROMPARTS` вызывает ошибку.  
+  
 Эта функция поддерживает удаленное взаимодействие с серверами [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и более поздних версий. Она не поддерживает удаленное взаимодействие с серверами версий ниже [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Примеры  
@@ -96,17 +97,21 @@ SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Resu
   
 ```sql
 Result  
--------------------------------------------  
-2010-12-07 00:00:00.0000000 +00:00  
+----------------------------------
+2010-12-31 14:23:23.0000000 +12:00  
   
 (1 row(s) affected)  
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>Б. Пример с долями секунд  
-В этом примере показано использование параметров *fractions* и *precision*:
-1.   Если параметр *fractions* имеет значение 5, а параметр *precision* — значение 1, то значение параметра *fractions* представляет 5/10 секунды.  
-1.   Если параметр *fractions* имеет значение 50, а параметр *precision* — значение 2, то значение параметра *fractions* представляет 50/100 секунды.  
-1.   Если параметр *fractions* имеет значение 500, а параметр *precision* — значение 3, то значение параметра *fractions* представляет 500/1000 секунды.  
+
+В этом примере показано использование параметров *fractions* и *precision*:  
+
+1. Если параметр *fractions* имеет значение 5, а параметр *precision* — значение 1, то значение параметра *fractions* представляет 5/10 секунды.  
+
+2. Если параметр *fractions* имеет значение 50, а параметр *precision* — значение 2, то значение параметра *fractions* представляет 50/100 секунды.  
+
+3. Если параметр *fractions* имеет значение 500, а параметр *precision* — значение 3, то значение параметра *fractions* представляет 500/1000 секунды.  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  

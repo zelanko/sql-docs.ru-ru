@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: ee095bce32da1d663aee1ed1c38d2cda52187a31
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 91063b4895ee46c5bd1746348b37d6564a0d4b10
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409796"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964286"
 ---
 # <a name="troubleshoot-scale-out"></a>Устранение неполадок Scale Out
 
@@ -149,6 +149,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     Тип параметра: **REG_DWORD** 
 
     Значение параметра: **2**
+
+    > [!NOTE]
+    > Если у вас нет самозаверяющих сертификатов в корневом хранилище сертификатов, аутентификация клиентского сертификата клиента завершится сбоем. См. дополнительные сведения о том, как [службы Internet Information Services (IIS) 8 могут отклонять запросы клиентских сертификатов с ошибками HTTP 403.7 или 403.16](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ).
 
 ## <a name="http-request-error"></a>Ошибка HTTP-запроса
 

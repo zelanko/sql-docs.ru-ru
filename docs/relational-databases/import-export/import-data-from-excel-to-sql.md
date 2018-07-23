@@ -1,7 +1,7 @@
 ---
 title: Импорт данных из Excel в SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/15/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: import-export
@@ -15,48 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebd7a83bb1decc8c75dfdd11255f2b09b4ba7d49
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d4bbe4268e60408f5c362c2e68121a4f89b1d82f
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329785"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137923"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Импортировать данные из файлов Excel в SQL Server или базу данных SQL Azure можно несколькими способами. В этой статье приводятся общие сведения о каждом из этих способов и ссылки на более подробные инструкции.
+Импортировать данные из файлов Excel в SQL Server или базу данных SQL Azure можно несколькими способами. Некоторые методы позволяют импортировать данные за один шаг непосредственно из файлов Excel. Для других методов необходимо экспортировать данные Excel в виде текста, прежде чем их можно будет импортировать. В этой статье перечислены часто используемые методы и содержатся ссылки для получения дополнительных сведений.
 
-Этот список не дает полного описания таких сложных инструментов и служб, как SSIS или фабрика данных Azure. Дополнительные сведения об интересующем вас решении доступны по ссылкам ниже.
+## <a name="list-of-methods"></a>Список методов
 
 -   Вы можете импортировать данные напрямую из Excel в SQL за одно действие, используя одно из следующих средств:
-    -   мастер импорта и экспорта SQL Server;
-    -   Службы SQL Server Integration Services
-    -   функция OPENROWSET.
+    -   [мастер импорта и экспорта SQL Server](#wiz);
+    -   службы [SQL Server Integration Services (SSIS)] (#ssis);
+    -   функция [OPENROWSET](#openrowset).
 -   Вы можете импортировать данные в два этапа, сначала экспортировав их из Excel в виде текста, а затем импортировав текстовый файл с помощью одного из следующих средств:
-    -   инструкция BULK INSERT;
-    -   BCP;
-    -   Фабрика данных Azure
+    -   [мастер импорта неструктурированных файлов](#import-wiz);
+    -   инструкция [BULK INSERT](#bulk-insert);
+    -   [BCP](#bcp)
+    -   [мастер копирования (Фабрика данных Azure)](#adf-wiz);
+    -   [Фабрика данных Azure](#adf).
 
 Если вы хотите импортировать несколько листов из книги Excel, обычно нужно запускать каждое из этих средств отдельно для каждого листа.
+
+Этот список не дает полного описания таких сложных инструментов и служб, как SSIS или фабрика данных Azure. Дополнительные сведения об интересующем вас решении доступны по ссылкам ниже.
 
 > [!IMPORTANT]
 > Дополнительные сведения о подключении к файлам Excel, а также об ограничениях и известных проблемах, связанных с загрузкой данных в файлы этого приложения и из них, см. в разделе [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md).
 
-## <a name="sql-server-import-and-export-wizard"></a>мастер импорта и экспорта SQL Server
+## <a name="wiz"></a> Мастер импорта и экспорта SQL Server
 
-Импортируйте данные напрямую из файлов Excel, выполнив инструкции на страницах мастера импорта и экспорта SQL Server. При необходимости сохраните параметры в виде пакета служб SQL Server Integration Services (SSIS), доступного для настройки и многократного применения.
-
-![Подключение к источнику данных Excel](media/excel-connection.png)
-
-Пример использования мастера для импорта из Excel в SQL Server см. в разделе [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) (Начало работы с помощью простого примера использования мастера импорта и экспорта).
+Импортируйте данные напрямую из файлов Excel, выполнив инструкции на страницах мастера импорта и экспорта SQL Server. При необходимости сохраните параметры в виде пакета служб SQL Server Integration Services (SSIS), доступного для настройки и многократного применения в будущем.
 
 Сведения о том, как запустить мастер, см. в разделе [Запуск мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
-## <a name="sql-server-integration-services-ssis"></a>Службы SQL Server Integration Services
+Пример использования мастера для импорта из Excel в SQL Server см. в разделе [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) (Начало работы с помощью простого примера использования мастера импорта и экспорта).
+
+![Подключение к источнику данных Excel](media/excel-connection.png)
+
+## <a name="ssis"></a> Службы SQL Server Integration Services
 
 Если вы работали со службами SSIS и не хотите запускать мастер экспорта и импорта SQL Server, создайте пакет SSIS, который использует для потока данных источник Excel и назначение SQL Server.
-
-![Компоненты потока данных](media/excel-to-sql-data-flow.png)
 
 Дополнительные сведения о компонентах SSIS см. в указанных ниже статьях.
 -   [Источник Excel](../../integration-services/data-flow/excel-source.md)
@@ -64,7 +66,9 @@ ms.locfileid: "34329785"
 
 Чтобы научиться создавать пакеты SSIS, см. руководство [How to Create an ETL Package](../../integration-services/ssis-how-to-create-an-etl-package.md) (Как создать пакет ETL).
 
-## <a name="openrowset-and-linked-servers"></a>OPENROWSET и связанные серверы
+![Компоненты потока данных](media/excel-to-sql-data-flow.png)
+
+## <a name="openrowset"></a> OPENROWSET и связанные серверы
 
 > [!NOTE]
 > В Azure функции OPENROWSET и OPENDATASOURCE доступны только в управляемом экземпляре базы данных SQL (предварительная версия).
@@ -171,7 +175,15 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 > [!TIP]
 > Чтобы оптимизировать использование средств импорта, сохраняйте листы, которые содержат только заголовки столбцов и строки данных. Если сохраненные данные содержат заголовки страниц, пустые строки, заметки и пр., позже при импорте данных вы можете получить непредвиденные результаты.
 
-## <a name="bulk-insert-command"></a>Команда BULK INSERT
+## <a name="import-wiz"></a> Мастер импорта неструктурированных файлов
+
+Импортируйте данные, сохраненные как текстовые файлы, выполнив инструкции на страницах мастера импорта неструктурированных файлов.
+
+Как было описано выше в разделе [Предварительное требование](#prereq), необходимо экспортировать данные Excel в виде текста, прежде чем вы сможете импортировать их с помощью мастера импорта неструктурированных файлов.
+
+Дополнительные сведения о мастере импорта неструктурированных файлов см. в разделе [Мастер импорта неструктурированных файлов в SQL](import-flat-file-wizard.md).
+
+## <a name="bulk-insert"></a> Команда BULK INSERT
 
 `BULK INSERT` — это команда Transact-SQL, которую можно выполнить в SQL Server Management Studio. В приведенном ниже примере данные загружаются из файла `Data.csv` с разделителями-запятыми в существующую таблицу базы данных.
 
@@ -192,7 +204,7 @@ GO
 -   [Массовый импорт данных с помощью инструкции BULK INSERT или OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 -   [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
-## <a name="bcp-tool"></a>Средство BCP
+## <a name="bcp"></a> Средство BCP
 
 BCP — это программа, которая запускается из командной строки. В приведенном ниже примере данные загружаются из файла `Data.csv` с разделителями-запятыми в существующую таблицу базы данных `Data_bcp`.
 
@@ -207,8 +219,8 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 -   [Программа bcp](../../tools/bcp-utility.md)
 -   [Подготовка данных к массовому экспорту или импорту](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
-## <a name="copy-wizard-azure-data-factory"></a>Мастер копирования (фабрика данных Azure)
-Импортируйте данные, сохраненные как текстовые файлы, выполнив инструкции на страницах мастера копирования.
+## <a name="adf-wiz"></a> Мастер копирования (Фабрика данных Azure)
+Импортируйте данные, сохраненные как текстовые файлы, выполнив инструкции на страницах мастера копирования Фабрики данных Azure.
 
 Как было описано выше в разделе [Предварительное требование](#prereq), необходимо экспортировать данные Excel в виде текста, прежде чем вы сможете использовать фабрику данных Azure для их импорта. Фабрика данных не может считывать файлы Excel напрямую.
 
@@ -216,7 +228,7 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 -   [Мастер копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 -   [Руководство. Создание конвейера с действием копирования с помощью мастера копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
-## <a name="azure-data-factory"></a>Фабрика данных Azure
+## <a name="adf"></a> Фабрика данных Azure
 Если вы уже работали с фабрикой данных Azure и не хотите запускать мастер копирования, создайте конвейер с действием копирования из текстового файла в SQL Server или Базу данных SQL Azure.
 
 Как было описано выше в разделе [Предварительное требование](#prereq), необходимо экспортировать данные Excel в виде текста, прежде чем вы сможете использовать фабрику данных Azure для их импорта. Фабрика данных не может считывать файлы Excel напрямую.

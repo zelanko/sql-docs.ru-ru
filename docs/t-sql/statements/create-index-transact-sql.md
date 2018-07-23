@@ -1,10 +1,9 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/21/2017
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -55,16 +54,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 caps.latest.revision: 223
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b3e9f873046646b3c247cd2930c458da810d203
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0253d659a428b46aceee2b261f4b07e96983325b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582306"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782715"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,6 +142,8 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }  
   | DROP_EXISTING = { ON | OFF }  
   | ONLINE = { ON | OFF }  
+  | RESUMABLE = {ON | OF }
+  | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }  
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -309,7 +310,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Указывает размещение данных FILESTREAM для таблицы при создании кластеризованного индекса. Предложение FILESTREAM_ON позволяет перемещать данные FILESTREAM в другую файловую группу FILESTREAM или схему секционирования.  
   
- Аргумент *filestream_filegroup_name* указывает имя файловой группы FILESTREAM. В файловой группе должен быть определен один файл для файловой группы с помощью инструкции [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.  
+ Аргумент *filestream_filegroup_name* указывает имя файловой группы FILESTREAM. В файловой группе должен быть определен один файл для файловой группы с помощью инструкции [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) или [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md), иначе возникает ошибка.  
   
  Если таблица секционирована, должно быть включено предложение FILESTREAM_ON и указана схема секционирования файловых групп FILESTREAM, использующая те же функции и столбцы секционирования, что и схема секционирования для таблицы. В противном случае произойдет ошибка.  
   
@@ -461,7 +462,26 @@ ONLINE = { ON | **OFF** }
  Блокировки таблиц применяются во время выполнения операций с индексами. Блокировку изменения схемы (Sch-M) в таблице получает операция с индексами вне сети, которая создает, перестраивает или удаляет кластеризованный индекс либо перестраивает или удаляет некластеризованный индекс. Это предотвращает доступ к базовой таблице всех пользователей во время операции. Операция с индексами вне сети, создающая некластеризованный индекс, получает совмещаемую блокировку (S) в таблице. Это запрещает проводить обновления базовой таблицы, но разрешает проводить операции чтения, например инструкции SELECT.  
   
  Дополнительные сведения см. в разделе [Об операциях с индексами в режиме "в сети"](../../relational-databases/indexes/how-online-index-operations-work.md).  
-  
+ 
+RESUMABLE **=** { ON | **OFF**}
+
+**Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] в общедоступной предварительной версии
+
+ Указывает, является ли операция с индексами в режиме "в сети" возобновляемой.
+
+ Операция ON с индексами является возобновляемой.
+
+ Операция OFF с индексами является невозобновляемой.
+
+MAX_DURATION **=** *time* [**MINUTES**] используется с **RESUMABLE = ON** (требуется **ONLINE = ON**).
+ 
+**Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] в общедоступной предварительной версии 
+
+Указывает время (целочисленное значение минутах), в течение которого выполняется возобновляемая операция с индексами в сети до приостановки. 
+
+> [!WARNING]
+>  Более подробные сведения об операциях с индексами, которые можно выполнить в сети, см. в разделе [Рекомендации по операциям с индексами в сети](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
+
  Индексы, включая индексы глобальных временных таблиц, могут создаваться в режиме в сети со следующими исключениями:  
   
 -   XML-индекс  
@@ -648,7 +668,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Вычисляемые столбцы, производные от типов данных **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** и **xml**, могут индексироваться как ключевой или неключевой столбец, если тип данных вычисляемого столбца допускается в качестве ключевого или неключевого столбца индекса. Например, нельзя создать первичный XML-индекс для вычисляемого столбца типа **xml**. Если размер ключа индекса превышает 900 байт, выдается предупреждение.  
   
- Создание индекса на вычисляемом столбце может привести к ошибке в операциях вставки или обновления, которые до этого успешно выполнялись. Такое неуспешное завершение возможно, если вычисляемый столбец вызывает арифметическую ошибку. Например, вычисляемый столбец `c` в следующей таблице вызывает арифметическую ошибку, но инструкция `INSERT` работает.  
+ Создание индекса на вычисляемом столбце может привести к ошибке в операциях вставки или обновления, которые до этого успешно выполнялись. Такое неуспешное завершение возможно, если вычисляемый столбец вызывает арифметическую ошибку. Например, вычисляемый столбец `c` в следующей таблице приводит к арифметической ошибке, но инструкция INSERT работает нормально.  
   
 ```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
@@ -696,7 +716,50 @@ INSERT INTO t1 VALUES (1, 0);
 -   Обработка индексов в сети может выполняться для секционированных индексов, содержащих материализованные вычисляемые столбцы или включенные столбцы.  
   
  Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md).  
-  
+ 
+### <a name="resumable-indexes"></a> Возобновляемые операции с индексами
+
+**Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] в общедоступной предварительной версии.
+
+Следующие правила применяются к операциям с возобновляемыми индексами.
+
+- Для создаваемого в сети индекса указывается параметр возобновляемости: RESUMABLE=ON. 
+- Параметр RESUMABLE не сохраняется в метаданных для указанного индекса и применяется только на время выполнения текущей инструкции DDL. Таким образом, для включения возобновляемости предложение RESUMABLE=ON должно быть указано явным образом.
+- Параметр MAX_DURATION поддерживается только в том случае, если RESUMABLE=ON. 
+-  Параметр MAX_DURATION при включенном параметре RESUMABLE задает интервал времени для создания индекса. По истечении этого времени операция создания индекса приостанавливается или завершается. Пользователь решает, когда можно будет возобновить создание приостановленного индекса. Значение **time** в минутах для MAX_DURATION должно быть больше 0 минут и меньше или равно 1 неделе (7 * 24 * 60 = 10080 минут). Длинная пауза в операции с индексами может повлиять на производительность DML в конкретной таблице, а также на емкость диска базы данных, поскольку они оба индексируют исходное и только что созданное требуемое место на диске и должны быть обновлены во время операций DML. Если параметр MAX_DURATION пропускается, операция с индексами будет продолжаться вплоть до ее завершения или до момента возникновения сбоя. 
+- Чтобы немедленно приостановить операцию создания индекса, можно остановить текущую команду сочетанием клавиш CTRL+C либо выполнить команду [ALTER INDEX](alter-index-transact-sql.md) PAUSE или команду KILL `<session_id>`. Приостановленную команду можно возобновить командой [ALTER INDEX](alter-index-transact-sql.md). 
+- Повторное выполнение исходной инструкции CREATE INDEX для возобновляемого индекса автоматически возобновляет приостановленную операцию создания индекса.
+- Параметр SORT_IN_TEMPDB=ON для возобновляемых индексов не поддерживается. 
+- Команду DDL с параметром RESUMABLE=ON невозможно выполнить внутри явной транзакции (она не может быть частью блока BEGIN TRAN… COMMIT).
+- Чтобы прервать или возобновить создание либо перестроение индекса, используйте синтаксис T-SQL [ALTER INDEX](alter-index-transact-sql.md).
+
+> [!NOTE]
+> Команда DDL выполняется вплоть до завершения, приостанавливается или завершается ошибкой. Если команда приостанавливается, возникнет ошибка, указывающая на приостановку операции и невозможность завершения создания индекса. Дополнительные сведения о текущем состоянии индекса можно получить из [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Как и в случае выше, при сбое также будет выведено сообщение об ошибке. 
+
+Чтобы указать, что создание индекса выполняется как возобновляемая операция, и проверить текущее состояние выполнения, см. статью [index_resumable_operations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). В общедоступной предварительной версии в этом представлении следующие столбцы имеют значение 0:
+- total_execution_time;
+- percent_complete и page_count.
+
+**Ресурсы**. Для операции создания возобновляемого индекса в сети необходимы следующие ресурсы:
+- Дополнительное место для хранения создаваемого индекса, включая время, когда индекс будет приостановлен.
+- Дополнительная пропускная способность для журналов на период сортировки. Общее потребление пространства для журналов у возобновляемого индекса меньше по сравнению с обычной операцией создания индекса в сети. Кроме того, эта операция поддерживает усечение журнала во время выполнения.
+- Состояние DDL, запрещающее изменения DDL.
+  - Очистка фантомных записей блокируется для встроенных индексов на весь период операции, в том числе пока она приостановлена.
+
+**Существующие функциональные ограничения**
+
+> [!IMPORTANT]
+> **Возобновляемое создание индекса в сети** сейчас поддерживается только для некластеризованного индекса.
+
+Для возобновляемых операций создания индексов отключены следующие функциональные возможности:
+- Возобновляемое создание индексов в общедоступной предварительной версии не поддерживается для кластеризованных индексов.
+- После приостановки возобновляемой операции создания индекса в сети нельзя изменить исходное значение MAXDOP.
+- Предложение DROP EXISTING не поддерживается.
+- Создание индексов, которые содержат: 
+ - вычисляемые столбцы или столбцы TIMESTAMP в качестве ключевых столбцов;
+ - столбец LOB в качестве включенного столбца для создания возобновляемого индекса.
+- Фильтруемый индекс
+ 
 ## <a name="row-and-page-locks-options"></a>Параметры блокировок строк и страниц  
  Если заданы аргументы ALLOW_ROW_LOCKS = ON и ALLOW_PAGE_LOCK = ON, при обращении к индексу разрешены блокировки на уровне строк, страниц и таблиц. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выбирает соответствующую блокировку и может повышать уровень с блокировки строки или страницы до блокировки таблицы.  
   
@@ -983,11 +1046,53 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;  
 GO  
 ```  
-  
+### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>Н. Создание, возобновление, приостановка и прерывание операций с возобновляемыми индексами
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx1 on test_table PAUSE   
+ALTER INDEX test_idx2 on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx1 on test_table RESUME   
+ALTER INDEX test_idx2 on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx1 on test_table ABORT 
+ALTER INDEX test_idx2 on test_table ABORT 
+```
+
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="m-basic-syntax"></a>Н. Базовый синтаксис  
-  
+### <a name="n-basic-syntax"></a>О. Базовый синтаксис  
+  ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>Создание, возобновление, приостановка и прерывание операций с возобновляемыми индексами
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx on test_table ABORT 
+
 ```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
@@ -997,7 +1102,7 @@ CREATE INDEX IX_VendorID
     ON Purchasing..ProductVendor (VendorID);  
 ```  
   
-### <a name="n-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>О. Создание некластеризованного индекса для таблицы в текущей базе данных  
+### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>П. Создание некластеризованного индекса для таблицы в текущей базе данных  
  В следующем примере создается некластеризованный индекс для столбца `VendorID` таблицы `ProductVendor`.  
   
 ```sql  
@@ -1005,7 +1110,7 @@ CREATE INDEX IX_ProductVendor_VendorID
     ON ProductVendor (VendorID);   
 ```  
   
-### <a name="o-create-a-clustered-index-on-a-table-in-another-database"></a>П. Создание индекса для таблицы из другой базы данных  
+### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>Т. Создание индекса для таблицы из другой базы данных  
  В следующем примере создается некластеризованный индекс для столбца `VendorID` таблицы `ProductVendor` в базе данных `Purchasing`.  
   
 ```sql  

@@ -9,15 +9,13 @@ ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: sql-server
 ms.date: 04/28/2018
-ms.openlocfilehash: 9ccf32a232b501bb3184786af0c48dc7214b1936
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: f1e3d0fd2b63ac3eb9ab0d66b14df15dad0c15ee
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32686654"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926825"
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Новые и недавно обновленные документы для SQL Server
 
@@ -86,7 +84,7 @@ ms.locfileid: "32686654"
 
 ### <a name="1-nbsp-sql-server-2012-service-pack-release-notessql-server-2012-sp4-release-notesmd"></a>1. &nbsp; [Заметки о выпуске пакетов обновления для SQL Server 2012](sql-server-2012-sp4-release-notes.md)
 
-*Обновлено: 25.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Далее](#TitleNum_2))
+*Обновление: 25.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Далее](#TitleNum_2))
 
 <!-- Source markdown line 57.  ms.author= craigg.  -->
 
@@ -183,7 +181,7 @@ SQL Server 2016 с пакетом обновления 2 (SP2) включае�
 
 
 <!-- : : : m-r -->
-**Оцените SQL Server!**
+**Попробуйте SQL Server!**
 - Скачать из Evaluation Center: [скачать SQL Server для Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - Скачать из Evaluation Center: скачать SQL Server Management Studio (SSMS)
 - Скачать из Evaluation Center: скачать SQL Server Data Tools (SSDT)

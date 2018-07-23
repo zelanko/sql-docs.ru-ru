@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5c9763da1ea1f9bb3e1e0d92ff02fbfa48a22c46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f83f32c9afb33da154c94d1b8194e37bc04fdc6
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071631"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783806"
 ---
 # <a name="collations"></a>Параметры сортировки
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -162,16 +161,16 @@ Chiapas
 ```  
   
 ### <a name="b-additional-examples"></a>Б. Дополнительные примеры  
- Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе **Ж. Создание базы данных и назначение имени и параметров сортировки** статьи [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) и в разделе **Ф. Изменение параметров сортировки столбца** статьи [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md#alter_column).  
+ Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе **Ж. Создание базы данных и назначение имени и параметров сортировки** статьи [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples) и в разделе **Ф. Изменение параметров сортировки столбца** статьи [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).  
   
 ## <a name="see-also"></a>См. также:  
- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)    
+ [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
  [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)    
- [Очередность параметров сортировки (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [Константы (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md)     
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)     
- [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
- [table (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)     
+ [Очередность параметров сортировки](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [Константы](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)     
+ [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [Тип данных Table](../../t-sql/data-types/table-transact-sql.md)     
   
   

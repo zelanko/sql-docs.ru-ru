@@ -1,10 +1,9 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -37,15 +36,15 @@ helpviewer_keywords:
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 caps.latest.revision: 162
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2b6f3905029c6929f4c747f3d34fa54bfde0f07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c14264516a877a193e9fa076114f52a492985ca
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075181"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790405"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,10 @@ ms.locfileid: "33075181"
 -   Использование встроенной функции в качестве предиката фильтра для политики безопасности  
   
 > [!NOTE]  
->  В этом разделе рассматривается интеграция среды CLR .NET Framework с SQL Server. Интеграция со средой CLR не применяется к базе данных SQL Azure.  
+>  В этом разделе рассматривается интеграция среды CLR .NET Framework с SQL Server. Интеграция со средой CLR не применяется к базе данных SQL Azure.
+
+> [!NOTE]  
+>  См. дополнительные сведения об [использовании CREATE FUNCTION с Хранилищем данных SQL Azure](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016).
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -573,7 +575,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>Взаимодействие с вычисляемыми столбцами  
  Функции имеют перечисленные ниже свойства. Значения этих свойств определяют, может ли данная функция быть указана в вычисляемых столбцах, которые могут быть материализованными или индексированными.  
   
-|Свойство|Description|Примечания|  
+|Свойство|Описание|Примечания|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|Функция детерминированная или недетерминированная.|Для детерминированных функций разрешается доступ к локальным данным. Например, функция, которая при вызове с одними и теми же параметрами и в одном том же состоянии базы данных всегда возвращает один и тот же результат, называется детерминированной.|  
 |**IsPrecise**|Функция точная или неточная.|Неточные функции содержат такие операции, как операции с плавающей запятой.|  
@@ -649,7 +651,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Метаданные  
  В следующей таблице приводятся системные представления каталога, возвращающие метаданные об определяемых пользователем функциях.  
   
-|Системное представление|Description|  
+|Системное представление|Описание|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|См. пример Д, приведенный ниже в разделе с примерами.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Выводит сведения об определяемых пользователем функциях CLR.|  

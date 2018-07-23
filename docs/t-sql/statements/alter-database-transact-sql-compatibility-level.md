@@ -1,10 +1,9 @@
 ---
 title: Уровень совместимости инструкции ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,24 +24,23 @@ helpviewer_keywords:
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 caps.latest.revision: 89
-author: edmacauley
-ms.author: edmaca
-manager: craigg
-ms.openlocfilehash: 1a52042015340454ed33c4883a2b6efcd387b526
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg'
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6ec0fd8539a4d2a0f1c5a93ff6ed80d6fb95e5ef
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689142"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791515"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Настраивает определенное поведение баз данных для обеспечения совместимости с указанной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Другие параметры ALTER DATABASE см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+Дополнительные сведения о соглашениях о синтаксисе см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,12 +54,13 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
  Имя изменяемой базы данных.  
   
  COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
- Версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которой необходимо обеспечить совместимость базы данных. Можно настроить следующие значения уровня совместимости.  
+ Версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которой необходимо обеспечить совместимость базы данных. Можно настроить следующие значения уровня совместимости (не все версии поддерживают все перечисленные в списке выше уровни совместимости):  
   
 |Продукт|Версия ядра СУБД|Назначение уровня совместимости|Поддерживаемые значения уровня совместимости|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Логический сервер|12|130|140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Управляемый экземпляр|12|130|140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|  
@@ -136,11 +135,17 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Использование уровня совместимости для обеспечения обратной совместимости  
 *Уровень совместимости базы данных* влияет на поведение только указанных баз данных, а не всего сервера. Уровень совместимости базы данных обеспечивает лишь частичную обратную совместимость с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+
+> [!TIP]
+> Так как *уровень совместимости базы данных* — уровня базы данных параметр приложения, работающего на более новом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] при использовании более старом уровне совместимости базы данных, по-прежнему могут использовать усовершенствования на уровне сервера без каких-либо требование для внесения изменений в приложения.
+>
+> К ним относятся дополнительные улучшения возможностей мониторинга и устранения неполадок с помощью новых [системных динамических административных представлений](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) и [расширенных событий](../../relational-databases/extended-events/extended-events.md). А также улучшение масштабируемости, например, с возможностью автоматического использования [архитектура Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+
 Начиная с режима совместимости 130, новые возможности, влияющие на план запроса, намеренно добавлены только к новому режиму совместимости. Это сделано для того, чтобы свести к минимуму риск во время обновления, связанный со снижением производительности из-за изменения плана запросов.   
-С точки зрения приложения, целью по-прежнему должно являться обновление до последнего уровня совместимости в какой-то момент времени, позволяющее наследовать некоторые новые возможности и улучшения производительности в области оптимизатора запросов, но делать это необходимо под контролем. Используйте более низкий уровень совместимости в качестве более безопасного варианта в процессе устранения проблем, возникших из-за различий в поведении между версиями, которые определяются соответствующей настройкой уровня совместимости. Дополнительные сведения, включая рекомендуемую процедуру для повышения уровня совместимости базы данных, см. в разделе [Рекомендации по обновлению уровня совместимости базы данных](#best-practices-for-upgrading-database-compatibility-evel) далее в этой статье.  
+С точки зрения приложения, целью по-прежнему должно являться обновление до последнего уровня совместимости в какой-то момент времени, позволяющее наследовать некоторые новые возможности и улучшения производительности в области оптимизатора запросов, но делать это необходимо под контролем. Используйте более низкий уровень совместимости в качестве более безопасного варианта в процессе устранения проблем, возникших из-за различий в поведении между версиями, которые определяются соответствующей настройкой уровня совместимости. Дополнительные сведения, включая рекомендуемую процедуру для повышения уровня совместимости базы данных, см. в разделе [Рекомендации по обновлению уровня совместимости базы данных](#best-practices-for-upgrading-database-compatibility-level) далее в этой статье.  
   
 > [!IMPORTANT]
-> Нерекомендуемые функциональные возможности, представленные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не защищены уровнем совместимости. Это относится к функциональным возможностям, удаленным из [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
+> Нерекомендуемые функциональные возможности, представленные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не защищены уровнем совместимости. Это относится к возможностям, удаленным из [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > 
 > Например, указание `FASTFIRSTROW` больше не поддерживается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и заменено на указание `OPTION (FAST n )`. Если задать уровень совместимости базы данных 110, нерекомендуемое указание не будет восстановлено.
 > Дополнительные сведения о нерекомендуемых функциях см. в разделах [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Нерекомендуемые функции ядра СУБД в SQL Server 2014](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [Нерекомендуемые функции ядра СУБД в SQL Server 2012](http://msdn.microsoft.com/library/ms144262(v=sql.110)) и [Нерекомендуемые функции ядра СУБД в SQL Server 2008](http://msdn.microsoft.com/library/ms144262(v=sql.100)).
@@ -350,7 +355,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
-SET compatibility_level = 90;  
+SET compatibility_level = 110;  
 GO  
 USE AdventureWorks2012;  
 GO  
@@ -376,7 +381,7 @@ SELECT @v;
 ## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Зарезервированные ключевые слова (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1751c6c9b6a05cd4337bd376108ef8d7e3d84ea4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054229"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432243"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,8 +105,9 @@ SELECT select_list INTO table_variable;
   
 Запросы, изменяющие переменные **table**, не создают параллельных планов выполнения запроса. При изменении очень больших переменных **table** или переменных **table** в сложных запросах может снизиться производительность. В подобных случаях целесообразно рассмотреть возможность использования временных таблиц. Дополнительные сведения см. в разделе [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md). Запросы, которые считывают переменные **table**, не изменяя их, могут выполняться параллельно.
   
-Для переменных **table** нельзя создавать индексы и статистику. В некоторых случаях можно добиться повышения производительности за счет использования вместо табличных переменных временных таблиц, которые позволяют создавать индексы и вести статистический учет. Дополнительные сведения о временных таблицах см. в статье [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
-  
+Для переменных **table** нельзя создавать индексы и статистику. Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], реализован новый синтаксис, который позволяет создавать определенные встроенные типы индекса с использованием определения таблицы.  С помощью этого нового синтаксиса можно создавать индексы в переменной **table** как часть определения таблицы. В некоторых случаях можно добиться повышения производительности за счет использования временных таблиц, которые позволяют работать с индексами и статистикой. Дополнительные сведения о временных таблицах и создании встроенных индексов см. в руководстве по [использованию CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
+
+
 Ограничения CHECK, значения DEFAULT и вычисляемые столбцы в объявлении типа **table** не могут вызывать пользовательские функции.
   
 Операция присвоения между переменными **table** не допускается.

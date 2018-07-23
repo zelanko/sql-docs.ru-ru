@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405676"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798269"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Подключение к каталогу SSIS (SSISDB) в Azure
 
@@ -26,7 +27,7 @@ ms.locfileid: "35405676"
 - Данные для входа 
 
 > [!IMPORTANT]
-> В настоящее время невозможно создать базу данных каталога SSISDB в базе данных SQL Azure независимо от создания среды выполнения интеграции (IR) Azure-SSIS в фабрике данных Azure версии 2. Среда Azure-SSIS IR — это среда выполнения, в которой выполняются пакеты SSIS в Azure. Пошаговые инструкции см. в статье [Развертывание и запуск пакета служб SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> Сейчас невозможно создать базу данных каталога SSISDB в базе данных SQL Azure независимо от создания среды выполнения интеграции Azure-SSI в Фабрике данных Azure. Среда Azure-SSIS IR — это среда выполнения, в которой выполняются пакеты SSIS в Azure. Пошаговые инструкции см. в статье [Развертывание и запуск пакета служб SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>предварительные требования
 Прежде чем начать, убедитесь в наличии SQL Server Management Studio (SSMS) версии 17.2 или более поздней. Если база данных каталога SSISDB размещается в управляемом экземпляре базы данных SQL (предварительная версия), убедитесь в наличии SSMS версии 17.6 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

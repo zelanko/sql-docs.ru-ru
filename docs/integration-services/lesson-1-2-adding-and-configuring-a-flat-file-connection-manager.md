@@ -15,12 +15,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df45518dc367d3b2a2c980ba39cad09084c30ecf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d433843076a83c8a09319c118bbd44e7f89a24d1
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401266"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262308"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Занятие 1–2. Добавление и настройка диспетчера соединений с неструктурированными файлами
 В этом задании к только что созданному пакету будет добавлен диспетчер соединений с неструктурированными файлами. Диспетчер соединений с неструктурированными файлами позволяет пакету извлекать данные из неструктурированных файлов. С помощью диспетчера соединений с неструктурированными файлами можно указать имя и расположение файла, локали и кодовую страницу, а также формат файла, включая разделители столбцов. Эти данные будут использованы при извлечении пакета из неструктурированного файла. Кроме того, можно вручную указать тип данных для каждого столбца или в диалоговом окне **Предлагаемые типы столбцов** указать автоматическое сопоставление столбцов извлекаемых данных с типами данных в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -95,7 +95,7 @@ ms.locfileid: "35401266"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Дата|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-    Тип данных, предложенный для столбца **CurrencyID** , несовместим с типом данных поля целевой таблицы. Необходимо изменить тип данных столбца `DimCurrency.CurrencyAlternateKey` CurrencyID **со строкового [DT_STR] на строковый [DT_WSTR], так как типом данных поля** является nchar (3). Кроме того, поле `DimDate.FullDateAlternateKey` определяется в качестве типа данных date, поэтому необходимо изменить тип параметра **CurrencyDate** с типа даты [DT_Date] на тип даты базы данных [DT_DBDATE].  
+    Тип данных, предложенный для столбца **CurrencyID** , несовместим с типом данных поля целевой таблицы. Так как типом данных `DimCurrency.CurrencyAlternateKey` является nchar (3), значение **CurrencyID** нужно изменить со строки [DT_STR] на строку Unicode [DT_WSTR]. Кроме того, поле `DimDate.FullDateAlternateKey` определяется в качестве типа данных date, поэтому необходимо изменить тип параметра **CurrencyDate** с типа даты [DT_Date] на тип даты базы данных [DT_DBDATE].  
   
 2.  Выберите из списка столбец CurrencyID, после чего на панели свойств измените тип данных столбца **CurrencyID** со строкового [DT_STR] на тип строки в Юникоде [DT_WSTR].  
   
@@ -104,7 +104,7 @@ ms.locfileid: "35401266"
 4.  Нажмите кнопку **ОК**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
-[Шаг 3. Добавление и настройка диспетчера соединений OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+[Шаг 3. Добавление и настройка диспетчера подключений OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>См. также:  
 [Диспетчер соединений с неструктурированными файлами](../integration-services/connection-manager/flat-file-connection-manager.md)  

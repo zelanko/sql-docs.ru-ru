@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 caps.latest.revision: 105
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd4a3a77041a5c6cf1bb83f518791548dbc4b1c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fb9483e518da120f83d635dc3acc8de02435557
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075321"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787815"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,6 +243,7 @@ MAXDOP = *max_degree_of_parallelism*
 * Обновление статистики во внешних таблицах не поддерживается. Для обновления статистики во внешней таблице удалите и повторно создайте статистику.  
 * Каждый объект статистики может содержать до 64 столбцов.
 * Параметр MAXDOP несовместим с параметрами STATS_STREAM, ROWCOUNT и PAGECOUNT.
+* Параметр MAXDOP ограничивается параметром MAX_DOP группы рабочей нагрузки Resource Governor (если применимо).
   
 ## <a name="examples"></a>Примеры  
 

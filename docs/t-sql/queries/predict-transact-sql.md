@@ -1,10 +1,10 @@
 ---
 title: PREDICT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 02/25/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|queries
+ms.component: t-sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -17,19 +17,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: jeannt
-ms.author: jeannt
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: b027530565b9b138d5a8f9559e3e60e0331dd3af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: '>= sql-server-2017 || = azuresqldb-current || = sqlallproducts-allversions'
+ms.openlocfilehash: 4ec9f538c7506375adc74b4a0b2779b40bafab2f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708893"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408063"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Создает предсказанное значение или оценки на основе хранимой модели.  
 
@@ -99,7 +99,7 @@ MODEL = @model | model_literal
 
 ## <a name="remarks"></a>Remarks
 
-Функция `PREDICT` поддерживается во всех выпусках SQL Server, включая Linux, и в базе данных SQL Azure, независимо от того, доступны ли другие функции машинного обучения. Но требуется SQL Server 2017 или более поздней версии. 
+Функция `PREDICT` поддерживается во всех выпусках SQL Server 2017 и более поздних версий. Кроме того, реализована поддержка SQL Server 2017 в Linux. `PREDICT` также поддерживается в Базе данных SQL Azure в облаке. Поддержка включена независимо от того, доступны ли другие функции машинного обучения.
 
 Чтобы использовать функцию `PREDICT`, необязательно устанавливать на сервер R, Python или другой язык машинного обучения. Можно обучить модель в другой среде и сохранить ее в таблицу SQL Server для использования с `PREDICT` или вызвать модель из другого экземпляра SQL Server, где имеется сохраненная модель.
 

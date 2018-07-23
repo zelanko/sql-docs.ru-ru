@@ -1,7 +1,7 @@
 ---
 title: Среда SQL Server Management Studio (SSMS) — журнал изменений | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 06/26/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,23 +15,97 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619541"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957727"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 В этой статье приводятся подробные сведения об обновлениях, улучшениях и исправлениях ошибок в текущей и предыдущих версиях SQL Server Management Studio. Скачать [предыдущие версии SQL Server Management Studio можно ниже](#previous-ssms-releases).
 
 
-## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-Номер выпуска: 17.7<br>
+
+## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+*В версии 17.8 обнаружена ошибка, связанная с подготовкой баз данных SQL, поэтому версия 17.8 заменяется новой версией SSMS 17.8.1.*
+
+
+Номер сборки: 14.0.17277.0<br>
+Дата выпуска: 26 июня 2018 г.
+
+
+### <a name="whats-new"></a>новые возможности
+
+**Общие ошибки SSMS**
+
+Свойства базы данных
+
+- В этом улучшении предоставлен параметр конфигурации **AUTOGROW_ALL_FILES** для файловых групп. Этот новый параметр конфигурации добавлен в окно "Свойства базы данных" > "Файловые группы" в виде нового столбца (Автоматическое увеличение всех файлов) с флажками для каждой из доступных файловых групп (за исключением файловых групп Filestream и Memory Optimized). Пользователь может включить или отключить AUTOGROW_ALL_FILES для определенной файловой группы, установив или сняв соответствующий флажок Autogrow_All_Files. Соответственно, параметр **AUTOGROW_ALL_FILES** должным образом обрабатывается в скриптах базы данных для CREATE и при создании скриптов для базы данных (в SQL 2016 и более поздних версий).
+    
+Редактор SQL
+
+- Улучшена работа с Intellisense в Базе данных SQL Azure для ситуации, когда у пользователя нет доступа уровня master.
+
+Написание скриптов:
+
+- Общее повышение производительности, особенно при соединениях с высокой задержкой.
+    
+**Службы Analysis Services**
+
+- Клиентские библиотеки и поставщики данных Analysis Services обновлены до последней версии, в которой добавлена поддержка нового центра AAD Azure для государственных организаций (login.microsoftonline.us).
+
+
+
+### <a name="bug-fixes"></a>Исправления ошибок
+
+**Общие ошибки SSMS**
+    
+Планы обслуживания
+
+- Устранена проблема с изменением планов обслуживания с аутентификацией SQL. Из-за этой проблемы использование аутентификации SQL приводило к сбою задачи уведомления оператора.
+    
+Написание скриптов:
+
+- Устранена проблема, из-за которой действия PostProcess в объектах SMO приводили к исчерпанию ресурсов и сбоям входа в SQL.
+    
+SMO:
+
+- Устранена проблема, из-за которой операция Table.Alter() завершалась сбоем, если в непустую таблицу добавлялся столбец с ограничением по умолчанию. Дополнительные сведения об этой проблеме можно получить в [этой ветке форума](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
+    
+Always Encrypted:
+
+- Устранена проблема в DacFx, которая вызывала ошибку превышения времени ожидания блокировки при включении функции Always Encrypted для секционированной таблицы.
+    
+
+**Analysis Services**
+
+- Устранена проблема, которая возникала при изменении источника данных OAuth в табличных моделях Analysis Services с уровнем совместимости 1400 и блокировала обновление токенов OAuth в источнике данных.
+- Устранено аварийное завершение, которое могло происходить в SSMS при использовании недопустимых учетных данных для источника или при редактировании источников данных, которые не поддерживают миграцию с изменением источника данных в Power Query (например, Oracle) в табличных моделях Analysis Services с уровнем совместимости 1400.
+
+
+### <a name="known-issues"></a>Известные проблемы
+
+- Если после изменения любого свойства файловой группы в окне *Свойства* нажать кнопку *Скрипт*, создадутся два скрипта — один с инструкцией *USE <database>* и другой с инструкцией *USE master*.  Скрипт с инструкцией *USE master* формируется с ошибкой, и его необходимо отменить. Выполняйте только тот скрипт, который содержит инструкцию *USE <database>*.
+- При работе с новыми выпусками базы данных SQL Azure (*общего назначения* или *критически важный для бизнеса*) в некоторых диалоговых окнах выводится сообщение о недопустимом выпуске.
+- В средстве просмотра XEvents могут наблюдаться задержки. Это [известная проблема .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Рекомендуем установить версию NetFx 4.7.2.
+
+
+
+## <a name="previous-ssms-releases"></a>Предыдущие выпуски SSMS
+
+Чтобы скачать предыдущие версии SSMS, щелкните заголовки со ссылками в приведенных ниже разделах.
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![скачать](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
+
 Номер сборки: 14.0.17254.0<br>
 Дата выпуска: 9 мая 2018 г.
+
+[Китайский (КНР)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Китайский (Тайвань)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>новые возможности
 
@@ -178,9 +252,7 @@ Database Mail:
 > [!WARNING]
 > Существует известная проблема, из-за которой среда SSMS 17.6 работает нестабильно и происходит ее сбой при использовании [планов обслуживания](../relational-databases/maintenance-plans/maintenance-plans.md). Если вы используете планы обслуживания, не устанавливайте SSMS 17.6. Если вы уже установили версию 17.6 и эта проблема вас коснулась, перейдите на более раннюю версию SSMS 17.5. 
 
-## <a name="previous-ssms-releases"></a>Предыдущие выпуски SSMS
 
-Чтобы скачать предыдущие версии SSMS, щелкните заголовки со ссылками в приведенных ниже разделах.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![скачать](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 Общедоступная версия | Номер сборки: 14.0.17224.0
@@ -310,7 +382,7 @@ XE Profiler:
     - Устранена проблема, из-за которой программа SSMS аварийно завершала работу, если у пользователя не было разрешения *VIEW SERVER STATE*.
     - Устранена проблема, из-за которой после закрытия окна интерактивных данных XE Profiler соответствующий сеанс не останавливался.
 - Зарегистрированные серверы
-    - Устранена проблема, из-за которой команда перемещения прекращала работу. Дополнительные сведения см. на страницах [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) и [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
+    - Устранена проблема, из-за которой не работала команда "Переместить в..." — см. описания [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) и [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
 - SMO:
     - Устранена проблема, из-за которой метод TransferData на передавал объекты.
     - Устранена проблема, из-за которой базы данных сервера создавали исключение для приостановленных баз данных хранилища данных SQL.
@@ -427,7 +499,7 @@ XE Profiler:
 **Общие ошибки SSMS**
 
 - При использовании универсальной многофакторной проверки подлинности в Azure AD следующие функциональные возможности SSMS не поддерживаются.
-   - Для проверки подлинности Azure AD не поддерживается помощник по настройке ядра СУБД. Имеется известная проблема, когда пользователь получает довольно непонятное сообщение об ошибке "Не удалось загрузить файл или сборку Microsoft.IdentityModel.Clients.ActiveDirectory…" вместо ожидаемого сообщения "Помощник по настройке ядра СУБД не поддерживает базу данных SQL Microsoft Azure. (DTAClient)".
+   - Для проверки подлинности Azure AD не поддерживается помощник по настройке ядра СУБД. Имеется известная проблема, когда пользователь получает довольно непонятное сообщение об ошибке "Не удалось загрузить файл или сборку Microsoft.IdentityModel.Clients.ActiveDirectory…" вместо правильного сообщения "Помощник по настройке ядра СУБД не поддерживает Базу данных SQL Microsoft Azure. (DTAClient)".
 - При попытке проанализировать запрос в DTA появляется сообщение об ошибке "Объект должен реализовать IConvertible. (mscorlib)".
 - В списке отчетов хранилища запросов из обозревателя объектов отсутствуют *Регрессионные запросы*.
    - Обходное решение: щелкните правой кнопкой мыши узел **Хранилище запросов** и выберите **Просмотр регрессионных запросов**.
@@ -728,7 +800,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Ошибки Always Encrypted из-за обновления модулей после шифрования обрабатываются неправильно.
 - Время ожидания подключения по умолчанию для OLTP и OLAP изменено с 15 на 30 секунд для исправления ошибок вида "Подключение игнорируется". 
 - Исправлен сбой в SSMS при запуске пользовательского отчета. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
-- Исправлена ошибка, при которой "Создание сценария..." завершается сбоем для всех баз данных SQL Azure.
+- Устранена проблема, из-за которой операция "Сформировать скрипт…" завершалась ошибкой для баз данных SQL Azure.
 - Исправлены ошибки в разделах "Создать скрипт как" и "Мастер создания скриптов", которые приводили к добавлению лишних новых строк при создании таких объектов, как хранимые процедуры. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - Поставщик SQLAS PowerShell: добавлено свойство LastProcessed в папки Dimension и MeasureGroup. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
 - Статистика активных запросов: исправлена ошибка, при которой отображается только первый запрос в пакете. [Элемент Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  

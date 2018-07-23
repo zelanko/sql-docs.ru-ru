@@ -1,0 +1,1 @@
+<Token>**Область применения этой статьи:** ![Да](media/yes.png)SQL Server (начиная с версии 2017)![Да](media/yes.png)База данных SQL Azure![Да](media/yes.png)Хранилище данных SQL Azure![Нет](media/no.png)Хранилище параллельных данных</Token>

@@ -1,7 +1,7 @@
 ---
 title: Журнал изменений для SQL Server Data Tools (SSDT) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,42 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0f08b48b48570685a8b57bfbf76fd4a473604fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286270"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Это журнал изменений для [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Подробные сведения о новых и измененных возможностях см. в [блоге группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT для Visual Studio 2017 (15.7.1)
+Номер сборки: 14.0.16167.0  
+Дата выпуска: 2 июня 2018 г.  
+  
+### <a name="whats-new"></a>Новые возможности
+
+**SSIS**
+
+- Добавлена поддержка нового центра Azure AAD для государственных организаций (login.microsoftonline.us) для использования с задачами AS.
+- Устранена проблема, когда задача обработки AS отображает ошибку "Метод не найден" при использовании целевого сервера SQL Server версии 2016.
+- Устранена проблема, когда некоторые компоненты конвейера нельзя выполнить при использовании целевого сервера SQL Server версии 2012.
+
+**Установщик:**
+
+- Отфильтруйте список экземпляров VS, чтобы исключить экземпляры, не поддерживающие установку SSDT.
+
+### <a name="known-issues"></a>Известные проблемы:
+
+- Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
+- При установке SSDT в Windows 10 и выборе установки нового экземпляра SQL Server Data Tools для Visual Studio 2017 установка завершится ошибкой с сообщением о том, что требуемая операция для метафайлов не поддерживается. Перезагрузите компьютер и запустите установщик SSDT еще раз, чтобы продолжить установку.
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT для Visual Studio 2017 (15.7.0)
 Номер сборки: 14.0.16165.0  

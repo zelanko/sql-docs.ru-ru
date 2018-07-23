@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8c0f697cb84405cd84c2aa595a1d39f28f048474
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708032"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324488"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34708032"
   
 ##  <a name="glossary-of-backup-terms"></a>Глоссарий терминов, связанных с резервным копированием
  **создание резервных копий**  
- Копирование данных или записей журнала из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или журнала ее транзакций на устройство для резервного копирования, например на диск, на котором создается резервная копия данных или журнала.  
+ Процесс создания **резервной копии** путем копирования записей данных из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или записей журнала из ее журнала транзакций.  
   
  **резервная копия**  
  Копия данных, которая может использоваться для восстановления данных в случае возникновения ошибки. Резервные копии баз данных также могут использоваться для восстановления копии базы данных в новом расположении.  

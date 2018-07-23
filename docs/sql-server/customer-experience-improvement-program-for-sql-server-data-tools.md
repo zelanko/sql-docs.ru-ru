@@ -3,32 +3,29 @@ title: Программа улучшения качества для SQL Server 
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssdt
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bf04dde0c16f7f7782755db0583d9f64716471b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563802"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36886740"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Программа улучшения качества SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Узнайте, как программа улучшения качества программного обеспечения (CEIP) позволяет корпорации Майкрософт определять способы улучшения своей продукции.  Вы можете в любой момент согласиться на участие в программе или отказаться от него.  
   
 > [!NOTE]  
->  Описание методик сбора и использования данных в выпусках Microsoft SQL Server 2016, а также в других продуктах и службах см. в [заявлении о конфиденциальности компании Майкрософт](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
+> Описание методик сбора и использования данных в выпусках Microsoft SQL Server см. в [заявлении о конфиденциальности](http://go.microsoft.com/fwlink/?LinkID=868444).  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Согласие на участие в программе улучшения качества SQL Server Data Tools и отказ от него  
  Программа улучшения качества программного обеспечения разработана, чтобы помочь корпорации Майкрософт улучшать свои продукты. Эта программа собирает сведения об аппаратном обеспечении и способах использования продукта людьми, не вмешиваясь в ход выполнения пользовательских задач на компьютере. Собранные сведения помогают корпорации Майкрософт определить, что нужно доработать. В этом документе мы расскажем, как согласиться на участие в программе улучшения качества программного обеспечения SQL Server Data Tools (SSDT) для Visual Studio 2017, Visual Studio 2015 и Visual Studio 2013.  
@@ -75,7 +72,7 @@ ms.locfileid: "34563802"
 > [!CAUTION]  
 >  Неправильное изменение реестра может привести к серьезным неполадкам системы. Перед внесением изменений в реестр рекомендуется создать резервную копию всех важных данных. В случае возникновения неполадок после внесения изменений вручную можно использовать параметр запуска «Загрузка последней удачной конфигурации».  
   
- Дополнительные сведения о данных, собираемых, обрабатываемых или передаваемых в рамках программы CEIP, см. в статье [Заявление о конфиденциальности для программы улучшения качества программного обеспечения](http://go.microsoft.com/fwlink/?LinkId=52143).  
+ Дополнительные сведения о данных, собираемых, обрабатываемых или передаваемых в рамках программы CEIP, см. в [заявлении о конфиденциальности](http://go.microsoft.com/fwlink/?LinkID=868444).  
  
 ### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Выбор вариантов и управление участием в программе улучшения качества программного обеспечения (CEIP) для SQL Server Data Tools для Visual Studio 2015  
  SSDT для Visual Studio 2015 — это средство моделирования данных, поставляемое с SQL Server 2016. SSDT использует стандартные параметры CEIP, встроенные в Visual Studio 2015. Дополнительные сведения о том, как отправить отзыв через программу CEIP в Visual Studio 2015, см. в следующем [справочном документе по Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
@@ -117,7 +114,7 @@ ms.locfileid: "34563802"
 > [!CAUTION]  
 >  Неправильное изменение реестра может привести к серьезным неполадкам системы. Перед внесением изменений в реестр рекомендуется создать резервную копию всех важных данных. В случае возникновения неполадок после внесения изменений вручную можно использовать параметр запуска «Загрузка последней удачной конфигурации».  
   
- Дополнительные сведения о данных, собираемых, обрабатываемых или передаваемых в рамках программы CEIP, см. в статье [Заявление о конфиденциальности для программы улучшения качества программного обеспечения](http://go.microsoft.com/fwlink/?LinkId=52143).  
+ Дополнительные сведения о данных, собираемых, обрабатываемых или передаваемых в рамках программы CEIP, см. в [заявлении о конфиденциальности](http://go.microsoft.com/fwlink/?LinkID=868444).  
   
 ### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>Выбор вариантов и управление участием в программе CEIP для SQL Server Data Tools — BI (SSDT-BI)  
  Если вы используете SSDT-BI, вы сможете принять участие в программе улучшения качества программного обеспечения во время установки. Параметры участия в программе CEIP для SSDT-BI можно изменить позже с помощью клиентских средств или путем изменения параметров реестра.  

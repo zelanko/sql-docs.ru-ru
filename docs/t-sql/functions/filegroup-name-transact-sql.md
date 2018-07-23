@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,45 +25,44 @@ helpviewer_keywords:
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 877969369a9b18cd7b13db556078a5773b89c947
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5921a0d15230df4628d4dbb084bcbe964e39b46
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33052421"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782155"
 ---
 # <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает имя файловой группы, соответствующее ее идентификационному номеру.  
+Эта функция возвращает имя файловой группы для указанного идентификатора.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
 ## <a name="arguments"></a>Аргументы  
  *filegroup_id*  
- Идентификатор файловой группы, для которой возвращается имя файловой группы. Аргумент *filegroup_id* имеет тип **smallint**.  
+
+Идентификатор файловой группы, которую возвращает `FILEGROUP_NAME`. *filegroup_id* имеет тип данных **smallint**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- Аргумент *filegroup_id* соответствует столбцу **data_space_id** в представлении каталога **sys.filegroups**.  
+*filegroup_id* соответствует столбцу **data_space_id** в представлении каталога **sys.filegroups**.  
   
 ## <a name="examples"></a>Примеры  
- На следующем примере показано, как вернуть имя файловой группы для идентификатора файловой группы `1` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+В этом примере показано, как вернуть имя файловой группы для идентификатора файловой группы `1` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
-  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

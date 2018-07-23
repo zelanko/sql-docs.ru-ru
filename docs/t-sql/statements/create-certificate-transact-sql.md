@@ -1,10 +1,9 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 06/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,19 +27,19 @@ helpviewer_keywords:
 - CREATE CERTIFICATE statement
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 caps.latest.revision: 74
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: abd46332127b1b15280df0ec5bab5655da5a148a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074851"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942840"
 ---
 # <a name="create-certificate-transact-sql"></a>Инструкция CREATE CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Добавляет сертификат в базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -92,7 +91,7 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 CREATE CERTIFICATE certificate_name   
     { <generate_new_keys> | FROM <existing_keys> }  
@@ -184,7 +183,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 >  Встроенные функции шифрования и цифровой подписи не проверяют даты истечения срока действия сертификатов. Пользователи этих функций должны самостоятельно определять, когда следует проверять сроки действия сертификатов.  
   
- Двоичное описание сертификата можно создать с помощью функций [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) и [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md). Пример использования функций **CERTPRIVATEKEY** и **CERTENCODED** для копирования сертификата в другую базу данных см. в примере Б из раздела [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md).  
+ Двоичное описание сертификата можно создать с помощью функций [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) и [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md). Пример использования функций **CERTPRIVATEKEY** и **CERTENCODED** для копирования сертификата в другую базу данных см. в примере Б в руководстве по [использованию CERTENCODED в Transact-SQL](../../t-sql/functions/certencoded-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение CREATE CERTIFICATE в базе данных. Сертификаты могут принадлежать только именам входа Windows, именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и ролям приложений. Сертификаты не могут принадлежать группам и ролям.  
@@ -233,7 +232,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-self-signed-certificate"></a>Г. Создание самозаверяющего сертификата  
- В следующем примере создается сертификат `Shipping04` без указания пароля шифрования. Этот пример можно использовать с [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ В следующем примере создается сертификат `Shipping04` без указания пароля шифрования. Этот пример можно использовать с [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ```  
 CREATE CERTIFICATE Shipping04   

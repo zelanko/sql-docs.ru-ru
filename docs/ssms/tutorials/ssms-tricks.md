@@ -18,12 +18,15 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 80d50132c4e2b38ecda9d24b3c0f4c09b93ca4e6
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+- Find SQL Server Instance
+- find instance name
+- find sql server instance name
+ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455258"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080102"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Учебник: дополнительные советы и рекомендации по использованию SSMS
 В этом учебнике приводятся некоторые дополнительные советы по использованию SQL Server Management Studio (SSMS). В этой статье показано, как выполнить следующие действия: 
@@ -201,7 +204,7 @@ ms.locfileid: "34455258"
 
 6. Откройте файл errorlog.log в Блокноте. 
 
-## <a name="determine-sql-server-name"></a>Определение имени сервера SQL Server
+## <a name="determine-sql-server-name"></a>Поиск имени экземпляра SQL Server
 Определить имя сервера SQL Server до и после подключения к SQL Server можно различными способами.  
 
 ### <a name="before-you-connect-to-sql-server"></a>До подключения к SQL Server
