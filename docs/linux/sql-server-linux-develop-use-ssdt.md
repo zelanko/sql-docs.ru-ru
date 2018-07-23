@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 6f5a4b479c9ca217d0bde9535c28b301ea7715bc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: e9bd11aefb01b607e02f11ebecc5adae7acf70ea
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978906"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086976"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Использовать Visual Studio для создания баз данных для SQL Server в Linux
 
@@ -27,7 +27,7 @@ SQL Server Data Tools (SSDT) превращает Visual Studio в это мощ
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Установка Visual Studio и SQL Server Data Tools
 
-1. Если вы еще не установили Visual Studio на компьютере Windows, [Скачайте и установите Visual Studio]. Если у вас нет лицензии на Visual Studio, Visual Studio Community edition — это бесплатная полнофункциональная интегрированная среда разработки для учащихся, разработчиков открытого по и отдельных.
+1. Если вы еще не установили Visual Studio на компьютере Windows, [загрузки и установки Visual Studio]. Если у вас нет лицензии на Visual Studio, Visual Studio Community edition — это бесплатная полнофункциональная интегрированная среда разработки для учащихся, разработчиков открытого по и отдельных.
 
 2. Во время установки Visual Studio, выберите **Custom** для **выберите тип установки** параметр. Нажмите кнопку **Далее**
 
@@ -113,7 +113,7 @@ SQL Server 2017 в Linux поддерживается SSDT 17.0, версия-К
 
 Дополнительные сведения о разработке базы данных с помощью SQL Data Tools, см. в разделе [документы MSDN по SSDT]
 
-[Скачайте и установите Visual Studio]:https://www.visualstudio.com/downloads/
+[загрузки и установки Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [Документы MSDN по SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [Учебник. Составление инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx

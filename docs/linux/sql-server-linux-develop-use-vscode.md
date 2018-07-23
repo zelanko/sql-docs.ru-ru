@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: 3291767b4fa1f7b18e751661f9beeb0e061f8146
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: be5a40a904389979c1646aab9d8b4420ac71356a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984336"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084746"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Использование Visual Studio Code для создания и выполнения скриптов Transact-SQL для SQL Server
 
@@ -28,7 +28,7 @@ ms.locfileid: "37984336"
 Visual Studio Code — графический редактор кода для Linux, macOS и Windows, который поддерживает расширения. [ **Mssql** расширения для VS Code] позволяет подключиться к SQL Server, запрос с помощью Transact-SQL (T-SQL) и просмотреть результаты.
 
 ## <a name="install-vs-code"></a>Установка VS Code
-1. Если вы еще не установили VS Code, [Скачайте и установите Visual STUDIO Code] на вашем компьютере.
+1. Если вы еще не установили VS Code, [загрузки и установки VS Code] на вашем компьютере.
 
 2. Запустите VS Code.
 
@@ -50,7 +50,7 @@ Visual Studio Code — графический редактор кода для L
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > Для macOS необходимо установить OpenSSL. Это является необходимым условием для.Net Core, используемый с помощью расширения mssql. Выполните **установите компоненты** шагов в [Инструкции по.Net Core]. Или можно выполнить следующие команды в терминале macOS.
+   > Для macOS необходимо установить OpenSSL. Это является необходимым условием для.Net Core, используемый с помощью расширения mssql. Выполните **установите компоненты** шагов в [.Net Core инструкции]. Или можно выполнить следующие команды в терминале macOS.
    >
    >   ```bash
    >   brew update
@@ -259,8 +259,8 @@ Visual Studio Code — графический редактор кода для L
 Дополнительные сведения об использовании VS Code см. в разделе [документации Visual Studio Code](https://code.visualstudio.com/docs).
 
 [**mssql** расширения VS Code]:https://aka.ms/mssql-marketplace
-[Скачайте и установите Visual STUDIO Code]:https://code.visualstudio.com/Download
-[Инструкции по.Net Core]:https://www.microsoft.com/net/core
+[загрузки и установки VS Code]:https://code.visualstudio.com/Download
+[.Net Core инструкции]:https://www.microsoft.com/net/core
 [Управление профилями подключения]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [рекомендациями по устранению неполадок с подключением]:./sql-server-linux-troubleshooting-guide.md#connection
 [Настройка сочетания клавиш]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts

@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 090752fc93b3e5de531ef69983aa32846b3b05bf
-ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
+ms.openlocfilehash: d5c331fc8b9e95940e0aaca29efbada78083340f
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146804"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188960"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Заметки о выпуске SQL Operations Studio (Предварительная версия)
 
@@ -61,8 +61,6 @@ ms.locfileid: "39146804"
  - Исправить [выдавать 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): ошибка de Ortografia
  - Исправить [выдавать 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): задание iconPath в ButtonComponent после вызова component() не приводит к изменению значка
  - Исправить [выдавать 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): организации лучше таблицы
- - Исправить [выдавать 1845](https://github.com/Microsoft/sqlopsstudio/issues/1845): ошибки прокрутки изменить запрос на вкладке
- - Исправить [выдавать 1847](https://github.com/Microsoft/sqlopsstudio/issues/1847): многофакторной проверки Подлинности имени входа к базам данных SQL Azure
 
 
 Дополнительные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/sqlopsstudio/releases).
