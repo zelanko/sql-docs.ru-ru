@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d7a1ebfc178fb1c13f980a118d40ecb1e28908f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 85a5f5a6eda29264baee432a1b8c8b17dee8f6ae
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094895"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085576"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Использование условий теста в модульных тестах SQL Server
 В модульном тесте SQL Server выполняется один или несколько сценариев теста Transact\-SQL. Результаты можно проверить с помощью скрипта \- и предложений THROW или RAISERROR, которые используются для возвращения ошибки и сбоя теста. Также для проверки результатов можно задать условия теста. Тест возвращает экземпляр класса [SqlExecutionResult](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) . Экземпляр этого класса содержит один или несколько наборов данных, время выполнения и строки, затронутые скриптом. Все эти сведения собираются во время выполнения скрипта. Эти результаты можно оценить с помощью условий теста. SQL Server Data Tools предоставляет набор стандартных условий теста. Вы также можете создать и применить пользовательские условия, как описано в статье [Нестандартные условия теста для модульных тестов SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  

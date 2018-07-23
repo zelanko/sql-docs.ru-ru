@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95ab68dc1005b012b09777d9e9bf9eb05047a16d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 319abf02d87a12e8df96e6e22666da54ade16d1d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094839"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084506"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Как использовать объекты Microsoft SQL Server 2012 в своем проекте
 В этом примере мы добавим в проект базы данных объект последовательности, ориентированный на Microsoft SQL Server 2012.  
@@ -27,7 +27,7 @@ ms.locfileid: "37094839"
 Последовательности добавляются в Microsoft SQL Server 2012. Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией, с которой эта последовательность создавалась. Последовательность числовых значений формируется в возрастающем или убывающем порядке с определенным интервалом и может повторяться запрошенным образом.  Дополнительные сведения об объектах последовательности см. в статье [Sequence Numbers](htttp://msdn.microsoft.com/en-us/library/ff878058(SQL.110).aspx) (Порядковые номера). Дополнительные сведения о новых возможностях в Microsoft SQL Server 2012 см. в разделе [What's New in SQL Server 2012](http://msdn.microsoft.com/en-us/library/bb500435(SQL.110).aspx) (Новые возможности SQL Server 2012).  
   
 > [!WARNING]  
-> В следующих процедурах используются сущности, созданные в процедурах, которые описывались ранее в разделах [Разработка подключенной базы данных](../ssdt/connected-database-development.md) и [Разработка базы данных вне сети с учетом проекта](../ssdt/project-oriented-offline-database-development.md).  
+> В следующих процедурах используются сущности, созданные с помощью процедур, которые описывались ранее в разделах [Connected Database Development](../ssdt/connected-database-development.md) (Разработка подключенной базы данных) и [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) (Разработка базы данных вне сети с учетом проекта).  
   
 ### <a name="to-add-a-new-sequence-object-to-your-project"></a>Добавление нового объекта последовательности в проект  
   

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5409db44220e0c6b40b16752329c7df54bc54f0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ced224db1a1826effe84dd713abe64c3cddf1b94
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094732"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085936"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>Как выполнять построение и развертывание в локальной базе данных
 Microsoft SQL Server 2012 предоставляет локальный экземпляр сервера, доступного по запросу, который называется средой выполнения локальной базы данных SQL Server Express и активируется при отладке проекта базы данных SQL Server. Этот локальный экземпляр сервера может использоваться как песочница для сборки, тестирования и отладки проекта. Он никак не связан с любым из установленных экземпляров SQL Server и доступен только из SQL Server Data Tools (SSDT). Такой механизм является идеальным для разработчиков, которые имеют ограниченный доступ к производственным базам данных или вообще не имеют доступа, однако им необходимо тестировать проекты в локальном режиме перед тем, как авторизованный персонал выполнит их развертывание в производственной среде. Кроме того, при разработке решения базы данных для SQL Azure можно пользоваться удобными функциями разработки и тестирования проекта базы данных в локальном режиме, доступными на этом локальном сервере, перед развертыванием в облаке.  
@@ -28,7 +28,7 @@ Microsoft SQL Server 2012 предоставляет локальный экзе
 > База данных в узле локальных баз данных в обозревателе объектов SQL Server является отражением соответствующего проекта базы данных и не связана с одноименной базой данных в подключенном экземпляре сервера.  
   
 > [!WARNING]  
-> В следующих процедурах используются сущности, созданные в процедурах, которые описывались ранее в статьях [Connected Database Development](../ssdt/connected-database-development.md) (Разработка подключенной базы данных) и [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) (Разработка базы данных вне сети с учетом проекта).  
+> В следующих процедурах используются сущности, созданные с помощью процедур, которые описывались ранее в разделах [Connected Database Development](../ssdt/connected-database-development.md) (Разработка подключенной базы данных) и [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) (Разработка базы данных вне сети с учетом проекта).  
   
 ### <a name="to-use-the-local-database"></a>Использование локальной базы данных  
   

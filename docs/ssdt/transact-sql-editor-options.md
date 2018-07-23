@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
 - sql.data.tools.SqlExecutionAdvancedSettingsOption
@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e626e50cebf0aba8acde865bfcfd78f1023f978
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094935"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085946"
 ---
 # <a name="transact-sql-editor-options"></a>Параметры редактора Transact-SQL
 Этот раздел содержит сведения о некоторых параметрах редактора Transact-SQL. Чтобы настроить эти параметры, откройте меню **Средства/Параметры** и перейдите в диалоговое окно **Параметр**.  
@@ -66,10 +66,10 @@ ms.locfileid: "37094935"
 |**SET QUERY_GOVERNOR_COST_LIMIT**|Переопределяет текущее настроенное значение для текущего соединения. Дополнительные сведения см. в разделе [SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=238749).|  
 |**SET ANSI_DEFAULTS**|Управляет группой параметров Microsoft® SQL Server™, которая задает определенное поведение стандарта SQL-92. Дополнительные сведения см. в разделе [SET ANSI_DEFAULTS (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=238750).|  
 |**SET QUOTED_IDENTIFIER**|Предписывает Microsoft® SQL Server™ следовать правилам SQL-92 относительно разделения кавычками идентификаторов и строк-литералов. Идентификаторы, разделенные двойными кавычками, могут либо быть зарезервированными ключевыми словами Transact-SQL, либо содержать символы, которые обычно не допускаются правилами синтаксиса языка Transact-SQL для идентификаторов. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=238751).|  
-|**SET ANSI_NULL_DFLT_ON**|Изменяет поведение сеанса, чтобы переопределить допустимость значений NULL по умолчанию в новых столбцах, если параметр ANSI null базы данных по умолчанию имеет значение false. Дополнительные сведения см. в разделе [SET ANSI_NULL_DFLT_ON (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=238752).|  
+|**SET ANSI_NULL_DFLT_ON**|Изменяет поведение сеанса, чтобы переопределить допустимость значений NULL по умолчанию в новых столбцах, если параметр ANSI null базы данных по умолчанию имеет значение false. Дополнительные сведения см. в описании [SET ANSI_NULL_DFLT_ON](http://go.microsoft.com/fwlink/?LinkID=238752).|  
 |**SET IMPLICIT_TRANSACTIONS**|При значении **ON**задается соединение в режиме неявных транзакций. При значении **OFF**возвращается соединение в режим с автоматической фиксацией транзакций. Дополнительные сведения см. в разделе [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=238753).|  
-|**SET CURSOR_CLOSE_ON_COMMIT**|Управляет тем, закрывается ли курсор при фиксации транзакции. Дополнительные сведения см. в разделе [SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=238754).|  
-|**SET ANSI_PADDING**|Управляет способом хранения в столбце значений короче, чем определенный размер столбца, и способом хранения в столбце значений, имеющих замыкающие пробелы, в данных **char**, **varchar**, **binary**и **varbinary** . Дополнительные сведения см. в разделе [SET ANSI_PADDING (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=238755).|  
+|**SET CURSOR_CLOSE_ON_COMMIT**|Управляет тем, закрывается ли курсор при фиксации транзакции. Дополнительные сведения см. в описании [SET CURSOR_CLOSE_ON_COMMIT](http://go.microsoft.com/fwlink/?LinkId=238754).|  
+|**SET ANSI_PADDING**|Управляет способом хранения в столбце значений короче, чем определенный размер столбца, и способом хранения в столбце значений, имеющих замыкающие пробелы, в данных **char**, **varchar**, **binary**и **varbinary** . Дополнительные сведения см. в описании [SET ANSI_PADDING](http://go.microsoft.com/fwlink/?LinkId=238755).|  
 |**SET ANSI_WARNINGS**|Указывает поведение стандарта SQL-92 при некоторых ошибках. Дополнительные сведения см. в разделе [SET ANSI_WARNINGS (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=238758).|  
 |**SET ANSI_NULLS**|Задает совместимое со стандартом SQL-92 поведение операторов сравнения "равно" (**=**) и "не равно" (**<>**) при использовании со значениями NULL. Дополнительные сведения см. в разделе [SET ANSI_NULLS (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=238759).|  
   

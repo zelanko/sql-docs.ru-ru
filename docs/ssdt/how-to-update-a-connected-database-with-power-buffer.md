@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
@@ -16,12 +16,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37bd259c8f4925a222d5e4b5aac47ca882ed2a6e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4a9da9c532e20375581a425e8072280cf892ce67
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094756"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088066"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>Как обновлять подключенную базу данных с помощью Power Buffer
 Технология SQL Server Data Tools Power Buffer упрощает применение изменений к подключенной базе данных, сохраняя все изменения в текущем сеансе. Любые ошибки, вызванные внесением изменений в окне Power Buffer (в редакторе Transact\-SQL или в конструкторе таблиц), немедленно отображаются на панели **Список ошибок**, которая позволяет отслеживать ошибки, обозначенные как требующие устранения. Разработчик может проверять отложенные им изменения, пока не будет готов применить их к конкретной базе данных. В ходе этого процесса обновления в SSDT автоматически создается скрипт ALTER на основе конкретных изменений и выводятся предупреждения обо всех потенциальных проблемах. После этого можно применить все изменения, накопленные во всех открытых окнах Power Buffer, к одной и той же базе данных или сохранить скрипт ALTER, предназначенный для дальнейшего развертывания.  

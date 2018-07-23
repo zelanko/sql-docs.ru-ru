@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f6991e63b876f3a9d31b318907941e46a55d4a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046651"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981317"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Среда SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "33046651"
 [Обозреватель решений](../ssms/solution/solution-explorer.md)  
 Знакомство с обозревателем решений, который представляет в упорядоченном виде проекты и их файлы, а также дает возможность быстрого вызова команд для управления ими.  
   
-[Обозреватель решений системы управления версиями](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[Обозреватель решений системы управления версиями](https://msdn.microsoft.com/library/ms173879.aspx)  
 Описание интеграции среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] с продуктами для управления версиями.  
   

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5ef4c7f272cc66003051a395b93e119f153640a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 90e82370a658109ae6a8ccc653affc5e15614a55
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094740"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087176"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Практическое руководство. Создание условия теста для конструктора модульных тестов SQL Server
 Создавать условия теста можно с помощью расширяемого класса [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Например, можно создать новое условие теста, которое проверяет число столбцов или значений в результирующем наборе.  
@@ -35,9 +35,9 @@ ms.locfileid: "37094740"
   
 4.  В списке **Имя компонента** выберите **System.ComponentModel.Composition** и щелкните **ОК**.  
   
-5.  Добавьте необходимые ссылки на сборки. Щелкните правой кнопкой мыши узел проекта и выберите команду **Добавить ссылку**. Щелкните **Обзор** и перейдите к папке \\C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin. Выберите Microsoft.Data.Tools.Schema.Sql.dll и нажмите «Добавить», а затем нажмите кнопку «ОК».  
+5.  Добавьте необходимые ссылки на сборки. Щелкните правой кнопкой мыши узел проекта и выберите команду **Добавить ссылку**. Щелкните **Обзор** и перейдите к папке C:\Program Files (x86)\\Microsoft SQL Server\110\DAC\Bin. Выберите Microsoft.Data.Tools.Schema.Sql.dll и нажмите «Добавить», а затем нажмите кнопку «ОК».  
   
-6.  В меню **Проект** выберите пункт **Выгрузить проект**.  
+6.  В меню **Проект** выберите **Выгрузить проект**.  
   
 7.  Щелкните проект правой кнопкой мыши в **обозревателе решений** и выберите **Изменить <project name>.csproj**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "37094740"
   
 13. Чтобы новое условие теста можно было использовать, скопируйте подписанную сборку в папку "%Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions". Если такой папки не существует, создайте ее. Для копирования файлов в этот каталог пользователь должен обладать правами доступа администратора на компьютере.  
   
-14. Установите условие теста. Дополнительные сведения см. в статье [о пользовательских условиях для модульных тестов SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
+14. Установите условие теста. Дополнительные сведения см. в статье [о пользовательских условиях теста для модульных тестов SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
 15. Добавьте в проект новый модульный тест SQL Server, чтобы создать в проекте ссылку на условие теста, которое требуется добавить в проект. Можно вручную добавить ссылку на сборку условий теста в проекте. Перезагрузите конструктор после выполнения этого шага.  
   

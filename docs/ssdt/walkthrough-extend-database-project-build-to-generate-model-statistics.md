@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6433702a0b265053d8a6124adcca065b3f876f25
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4938666c0a8a23aca2760b55d94bc3d7e03947f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094940"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086286"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели
 Можно создать участников сборки для выполнения специализированных действий при сборке проекта базы данных. В ходе выполнения данного пошагового руководства будет создан участник сборки ModelStatistics, который будет выводить статистику из базы данных SQL при сборке проекта базы данных. Поскольку данный участник сборки при запуске принимает параметры, необходимо выполнить некоторые дополнительные действия.  

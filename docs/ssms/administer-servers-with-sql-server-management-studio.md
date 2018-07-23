@@ -18,12 +18,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 024175506b041ae9c62585dbdcc05da4b84bea02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0cabc48571c7b3656086d918b649bb5bb305e23
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039641"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985376"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Администрирование серверов при помощи среды SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33039641"
 В число средств среды [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] входят зарегистрированные серверы, обозреватель объектов, обозреватель решений, обозреватель шаблонов, страница сводки и окно документа. Чтобы отобразить средство, в меню **Вид** выберите его название. Для отображения редактора запросов нажмите кнопку **Создать запрос** на панели инструментов.  
   
 > [!IMPORTANT]  
-> По умолчанию сетевой трафик между [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] и [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] не шифруется. Не работайте в среде [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] с конфиденциальными данными (включая пароли), не установив шифруемого соединения. Дополнительные сведения см. в разделе [Практическое руководство. Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](http://msdn.microsoft.com/en-us/e1e55519-97ec-4404-81ef-881da3b42006).  
+> По умолчанию сетевой трафик между [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] и [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] не шифруется. Не работайте в среде [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] с конфиденциальными данными (включая пароли), не установив шифруемого соединения. Дополнительные сведения см. в разделе [Практическое руководство. Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006).  
   
 Используйте среду [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] для выполнения следующих действий:  
   
@@ -66,5 +66,5 @@ ms.locfileid: "33039641"
   
 ## <a name="see-also"></a>См. также:  
 [Использование среды SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Практическое руководство. Просмотр свойств сервера (среда SQL Server Management Studio)](http://msdn.microsoft.com/en-us/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[Практическое руководство. Просмотр свойств сервера (среда SQL Server Management Studio)](http://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

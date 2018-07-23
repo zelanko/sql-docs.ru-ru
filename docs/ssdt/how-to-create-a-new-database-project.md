@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.importschema
 - sql.data.tools.SqlProjectImportDatabaseDialog.dialog
@@ -21,12 +21,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2482967c3001377a803b87e6bcd46c3cc9183b82
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4fdaca995e96116b1268916d008b565454511489
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094844"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088486"
 ---
 # <a name="how-to-create-a-new-database-project"></a>Как создать новый проект базы данных
 Предусмотрена возможность создать новый проект базы данных и импортировать схему базы данных из существующей базы данных, SQL-файла скрипта или приложения уровня данных (DACPAC-файл). Затем можно вызвать те же средства программы проектирования с графическим интерфейсом (редактор Transact\-SQL, конструктор таблиц), которые доступны для разработки подключенной базы данных, чтобы внести изменения в проект базы данных вне сети и опубликовать изменения в базе данных в рабочей среде. Изменения могут быть также сохранены как скрипт, предназначенный для публикации в более позднее время. С помощью области **Свойства проекта** можно изменить целевую платформу на другие версии SQL Server (включая SQL Azure).  

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.publish.dialog
 - sql.data.tools.publishdacproject
@@ -17,12 +17,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91bb424e4bb9e3da25a53e5080db6fbe2e2a6e53
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 86b506d493b49e664062c704a4ebabf01e51b3a0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094780"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087556"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Как изменить целевую платформу и опубликовать проект базы данных
 В качестве целевой версии SQL Server для проекта базы данных SQL Server Data Tools (SSDT) можно указать любой поддерживаемый экземпляр SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 или SQL Azure). Это позволяет сосредоточить разработку базы данных в одном проекте, но при необходимости публиковать ее в нескольких экземплярах SQL Server.  
@@ -30,7 +30,7 @@ ms.locfileid: "37094780"
 Кроме того, SSDT упрощает эту задачу, учитывая сведения о целевой платформе и автоматически обнаруживая любые ошибки в коде (например, если используются неподдерживаемые функциональные средства в проекте, который должен быть опубликован в SQL Azure).  
   
 > [!WARNING]  
-> В следующих процедурах используются сущности, созданные в процедурах, которые описывались ранее в статьях [Connected Database Development](../ssdt/connected-database-development.md) (Разработка подключенной базы данных) и [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) (Разработка базы данных вне сети с учетом проекта).  
+> В следующих процедурах используются сущности, созданные с помощью процедур, которые описывались ранее в разделах [Connected Database Development](../ssdt/connected-database-development.md) (Разработка подключенной базы данных) и [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) (Разработка базы данных вне сети с учетом проекта).  
   
 ### <a name="to-change-a-projects-target-platform"></a>Изменение целевой платформы проекта  
   

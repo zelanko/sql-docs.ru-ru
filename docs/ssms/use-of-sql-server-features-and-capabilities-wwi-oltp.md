@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64ce1d99c60eb8863c0e149b8560d99d5d16ffeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047851"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980742"
 ---
 # <a name="arguments-for-external-tools"></a>Аргументы для внешних средств
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "33047851"
   
 В следующей таблице приведены возможные аргументы для внешних программ.  
   
-|Имя|Аргумент|Description|  
+|Имя|Аргумент|Описание|  
 |--------|------------|---------------|  
 |**Путь элемента**|$(ItemPath)|Полное имя файла текущего источника (определяемое как диск + путь + имя файла); пусто, если окно источника не активно.|  
 |**Каталог элемента**|$(ItemDir)|Каталог текущего источника (определяемое как диск + путь); пусто, если окно источника не активно.|  

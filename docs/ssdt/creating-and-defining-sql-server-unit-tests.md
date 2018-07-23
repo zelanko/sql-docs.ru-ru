@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.DatabaseMethodNameDialog
 - sql.data.tools.unittesting.designer
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e197b3aa5a5383a40e20e366edb4d5b9c6f98c4b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4b52fc60f3102e7b6a38d254fba682ab4321d804
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094735"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088336"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Создание и определение модульных тестов SQL Server
 Модульные тесты SQL Server позволяют убедиться, что внесенные в один или несколько объектов базы данных изменения схемы не нарушают существующую функциональность приложения, работающего с базой данных. Эти тесты дополняют модульные тесты, создаваемые разработчиками вашего ПО. Чтобы проверить поведение приложения, необходимо выполнять тесты обоих этих видов.  

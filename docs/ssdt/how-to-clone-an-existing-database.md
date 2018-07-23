@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1f46c4fd8164266394994260244dcbe81cde9c8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1037250907c897ce08f85da5af1c739849091338
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094724"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085926"
 ---
 # <a name="how-to-clone-an-existing-database"></a>Как клонировать существующую базу данных
 В этой задаче используются некоторые из рассмотренных ранее шагов для создания новой базы данных и переноса существующих данных. Кроме того, в ней используются шаги для синхронизации схемы исходной базы данных и базы данных проекта, которые описаны в статье [Как использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "37094724"
 Использование этих шагов позволяет создать базу данных для разработки или тестирования на основе производственной базы данных с идентичной схемой и данными. Затем можно продолжить разработку тестовой базы данных в подключенном режиме либо создать проект базы данных для разработки и тестирования вне сети, причем все это не нарушая работу производственной базы данных.  
   
 > [!WARNING]  
-> В следующих процедурах используются сущности, созданные в процедурах, которые описывались ранее в статье [Разработка подключенной базы данных](../ssdt/connected-database-development.md).  
+> В следующих процедурах используются сущности, созданные ранее с помощью руководства по [разработке подключенной базы данных](../ssdt/connected-database-development.md).  
   
 ### <a name="to-create-a-development-database"></a>Создание базы данных разработки  
   

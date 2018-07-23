@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8859458dfad88f729ace7b25ce7f050242990909
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: df35cb91b59e9ea4734864ee9f839b2eef983eaa
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094788"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086306"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Практическое руководство. Настройка запуска модульного теста SQL Server
 При настройке тестового проекта можно задать несколько параметров, управляющих аспектами выполнения модульных тестов SQL Server. Эти параметры конфигурации хранятся в файле app.config проекта тестов. При непосредственном изменении этого файла новые значения отображаются в диалоговом окне конфигурации проекта.  
@@ -39,7 +39,7 @@ ms.locfileid: "37094788"
   
 #### <a name="to-specify-database-connection-strings"></a>Указание строк подключения к базе данных  
   
-1.  В **обозревателе решений** правой кнопкой мыши щелкните проект модульных тестов и выберите **Конфигурация теста SQL Server**.  
+1.  В **обозревателе решений** щелкните проект модульных тестов правой кнопкой мыши и выберите **Конфигурация теста SQL Server**.  
   
     Откроется диалоговое окно **Конфигурация теста SQL Server — "<projectname>"**.  
   
@@ -87,5 +87,5 @@ ms.locfileid: "37094788"
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Verifying Database Code by Using SQL Server Unit Tests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md) (Проверка кода базы данных с помощью модульных тестов SQL Server)  
+[Проверка кода базы данных с помощью модульных тестов SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
   

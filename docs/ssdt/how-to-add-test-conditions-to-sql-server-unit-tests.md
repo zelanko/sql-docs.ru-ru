@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e341b085f4a7ca591e02328db1bda8fae75a4ed
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 86e450a6eb6c1e169d5c9dc6147f0ab3cc2a9fb6
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094743"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085436"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Практическое руководство. Добавление условий теста в модульные тесты SQL Server
 Условия теста можно добавить в модульный тест SQL Server с помощью **конструктора модульных тестов SQL Server**. При сохранении тестового класса условия теста автоматически сохраняются в тестовом проекте в виде файлов, содержащих исходный код на языке Visual C\# или Visual Basic. После сохранения условие теста можно изменить в **конструкторе модульных тестов SQL Server** или в файле с исходным кодом.  
@@ -33,7 +33,7 @@ ms.locfileid: "37094743"
 2.  На панели навигации выберите метод теста, к которому необходимо добавить условия теста, либо нажмите **Общие скрипты**.  
   
     > [!NOTE]  
-    > Общие скрипты не относятся ни к одному из модульных тестов. Они выполняются до или после запуска модульных тестов в классе тестов. Дополнительные сведения см. в статье [Скрипты в модульных тестах SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md).  
+    > Общие скрипты не относятся ни к одному из модульных тестов. Они выполняются до или после запуска модульных тестов в классе тестов. См. дополнительные сведения см. о [скриптах в модульных тестах SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md).  
   
 3.  На панели навигации выберите скрипт Transact\-SQL, к которому необходимо добавить условия теста. Условия теста можно добавить в скрипт, выполняемый до, во время или после тестирования.  
   

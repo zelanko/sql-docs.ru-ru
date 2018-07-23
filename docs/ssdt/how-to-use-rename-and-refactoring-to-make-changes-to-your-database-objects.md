@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
 - sql.data.tools.editor.howto.refactoring
@@ -20,18 +20,18 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 014e6399f63a45c60c73db1cb45007fef5b8aebd
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4ba39da9c13a1a2051f249942de86b18963eade8
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094884"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083366"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Как использовать переименование и рефакторинг для внесения изменений в объекты базы данных
 В контекстном меню "Рефакторинг" в редакторе Transact\-SQL можно переименовать объект или переместить его в другую схему, а также просмотреть все затрагиваемые области, прежде чем фиксировать изменение. Кроме того, с помощью меню "Рефакторинг" можно полностью указывать все ссылки на объекты базы данных либо развертывать подстановочные знаки в инструкциях `SELECT` проекта базы данных.  
   
 > [!NOTE]  
-> В следующих процедурах используются сущности, созданные в процедурах, которые описывались ранее в разделах [Разработка подключенной базы данных](../ssdt/connected-database-development.md) и [Разработка базы данных вне сети с учетом проекта](../ssdt/project-oriented-offline-database-development.md).  
+> В следующих процедурах используются сущности, созданные с помощью процедур, которые описывались ранее в разделах [Connected Database Development](../ssdt/connected-database-development.md) (Разработка подключенной базы данных) и [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) (Разработка базы данных вне сети с учетом проекта).  
   
 ### <a name="to-rename-a-type"></a>Переименование типа  
   

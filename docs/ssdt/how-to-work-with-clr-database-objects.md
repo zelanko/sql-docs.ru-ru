@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b57cfde8ec32945b61e46e2b1b6763d4707d97f4
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d4a2823e644e002dbb326ea98531d449377accac
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094900"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083816"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Как работать с объектами баз данных CLR
 Помимо языка программирования Transact\-SQL, вы можете использовать языки .NET Framework для создания объектов базы данных, которые извлекают и обновляют данные. Объекты базы данных, написанные в управляемом коде, называются CLR-объектами базы данных SQL Server. Описание преимуществ использования CLR-объектов базы данных, размещенных в SQL Server, а также рекомендации по выбору между Transact\-SQL и CLR, см. в статьях [CLR Integration - Overview](http://msdn.microsoft.com/en-us/library/ms131045.aspx) (Общие сведения об интеграции со средой CLR) и [Преимущества использования управляемого кода для создания объектов баз данных](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
@@ -39,7 +39,7 @@ ms.locfileid: "37094900"
   
 ### <a name="to-add-a-clr-database-object-to-your-project"></a>Добавление объекта базы данных CLR к вашему проекту  
   
-1.  Щелкните правой кнопкой мыши проект базы данных **TradeDev** в **обозревателе решений**, выберите **Добавить** и **Создать элемент**.  
+1.  Щелкните правой кнопкой мыши проект базы данных **TradeDev** в **обозревателе решений**, а затем последовательно выберите **Добавить** и **Создать элемент**.  
   
 2.  Выберите шаблон **C# SQL CLR** и пункт **SQL CLR User-Defined Function** (Определяемая пользователем функция CLR SQL). Сохраните имя по умолчанию и щелкните **Добавить**.  
   

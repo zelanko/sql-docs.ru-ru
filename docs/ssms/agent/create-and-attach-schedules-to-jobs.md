@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9aa5c92c0579fdcda7ca336e4893b1a5417dfaa0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e972f506f9b805d0cca28e0dfe3340e2ee28cd57
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979716"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Создание и присоединение расписаний к заданиям
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -92,9 +93,9 @@ ms.lasthandoff: 05/03/2018
   
 Прежде чем определить задания для выполнения во время простоя ЦП, определите загрузку ЦП во время нормальной обработки. Чтобы сделать это, используйте приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] или системный монитор для контроля над рабочей нагрузкой сервера и сбора статистики. Затем можно использовать собранные сведения, чтобы установить процентную долю и продолжительность времени простоя ЦП.  
   
-Определите условие простоя ЦП как процентную долю, ниже которой использование ЦП должно оставаться в течение указанного времени. Затем установите количество времени. Когда использование ЦП окажется ниже указанной процентной доли в течение указанного количества времени, агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] запускает выполнение всех заданий, имеющих расписание для времени простоя ЦП. Дополнительные сведения об использовании приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] или системного монитора для наблюдения за использованием ЦП см. в разделе [Контроль использования ЦП](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
+Определите условие простоя ЦП как процентную долю, ниже которой использование ЦП должно оставаться в течение указанного времени. Затем установите количество времени. Когда использование ЦП окажется ниже указанной процентной доли в течение указанного количества времени, агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] запускает выполнение всех заданий, имеющих расписание для времени простоя ЦП. Дополнительные сведения об использовании приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] или системного монитора для наблюдения за использованием ЦП см. в разделе [Контроль использования ЦП](http://msdn.microsoft.com/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |||  
 |-|-|  
@@ -104,6 +105,6 @@ ms.lasthandoff: 05/03/2018
 |Описывает задание условия простоя ЦП для сервера.|[Установка времени и длительности простоя ЦП (среда SQL Server Management Studio)](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>См. также:  
-[sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  
-[sysjobschedules](http://msdn.microsoft.com/en-us/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
+[sp_help_jobschedule](http://msdn.microsoft.com/2cded902-9272-4667-ac4b-a4f95a9f008e)  
+[sysjobschedules](http://msdn.microsoft.com/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
   

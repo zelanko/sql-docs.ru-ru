@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
@@ -17,12 +17,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab9468ad6bc1e8d29ce040ceb66392dff3764fe4
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 34430ec8b9da41806e86a0b7fa6de99057765aca
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094799"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088306"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Как создавать моментальный снимок проекта
 **Файл приложения уровня данных** представляет в доступном только для чтения виде схему базы данных на момент ее создания. Фактически он обрабатывается как схема базы данных, из которой можно импортировать объекты схемы обратно в проект. Можно также ее сравнить со схемой базы данных или проекта и обновить базу данных или проект в соответствии со схемой, определенной в моментальном снимке.  
@@ -30,7 +30,7 @@ ms.locfileid: "37094799"
 В случае если пользователь допустит ошибку в исходном проекте базы данных, можно вернуть исходный проект в состояние, в котором он был на момент создания моментального снимка. Кроме того, можно создавать моментальные снимки на различных этапах разработки для создания контрольного плана.  
   
 > [!WARNING]  
-> В следующих процедурах используются сущности, которые созданы в рамках процедур, описанных в руководствах по [разработке подключенной базы данных](../ssdt/connected-database-development.md) и [автономной разработке базы данных с учетом проекта](../ssdt/project-oriented-offline-database-development.md).  
+> В следующих процедурах используются сущности, созданные с помощью процедур, которые описывались ранее в разделах [Connected Database Development](../ssdt/connected-database-development.md) (Разработка подключенной базы данных) и [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) (Разработка базы данных вне сети с учетом проекта).  
   
 ### <a name="to-create-a-snapshot"></a>Создание моментального снимка  
   

@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 01eb7c21ff82d25e49982d5acd700ed9226f53bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046041"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971366"
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "33046041"
   
 ### <a name="sql-server-agent-tokens"></a>Токены агента SQL Server  
   
-|Токен|Description|  
+|Токен|Описание|  
 |---------|---------------|  
 |**(A-DBN)**|Имя базы данных. Если задание запускается в результате предупреждения, то имя базы данных автоматически замещает в шаге задания этот токен.|  
 |**(A-SVR)**|Имя сервера. Если задание запускается в результате предупреждения, то имя сервера автоматически замещает в шаге задания этот токен.|  
@@ -97,7 +97,7 @@ ms.locfileid: "33046041"
   
 ### <a name="sql-server-agent-escape-macros"></a>Экранирующие макросы агента SQL Server  
   
-|Экранирующие макросы|Description|  
+|Экранирующие макросы|Описание|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(***имя_токена***))**|Экранирует символы одинарных кавычек (') в строке замещения токена. Замещает символ одинарной кавычки двумя символами одинарной кавычки.|  
 |**$(ESCAPE_DQUOTE(***имя_токена***))**|Экранирует символы двойных кавычек (") в строке замещения токена. Замещает символ двойных кавычек двумя символами двойных кавычек.|  

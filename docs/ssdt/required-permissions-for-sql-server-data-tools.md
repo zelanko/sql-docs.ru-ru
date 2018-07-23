@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26cd1e1a9ac3a7c47cd8d748f115b15654e073d8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 82c0f19504b374afbd0df72cb887a57d858918d5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094879"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085066"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Разрешения, необходимые для запуска SQL Server Data Tools
 Чтобы выполнять действия с базой данных в Visual Studio, необходимо войти в систему с помощью учетной записи, предоставляющей определенные разрешения для этой базы данных. Требуемые разрешения зависят от того, какое действие требуется выполнить. В следующих разделах описываются все действия, которые вам может потребоваться выполнить, и соответствующие разрешения, которые нужны для их выполнения.  

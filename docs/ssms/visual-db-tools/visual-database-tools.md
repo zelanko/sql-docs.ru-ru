@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06d284ea40dfb2650edbe78f8aa8090d00dde55d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049941"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052972"
 ---
 # <a name="visual-database-tools"></a>Визуальные инструменты для баз данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] включает визуальные конструкторы для построения запросов [!INCLUDE[tsql](../../includes/tsql_md.md)] и таблиц, а также формирования диаграмм баз данных.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
 Воспользуемся следующими задачами, чтобы начать работу с визуальными инструментами для баз данных:  
   
 |**Описание**|**Раздел**|  

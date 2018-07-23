@@ -20,11 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fea501b8db8aad3118c7d915e9bb7fbabea6bfa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06edea33c572f0534e76a9425de56a73ebee53ae
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979106"
 ---
 # <a name="modify-a-job"></a>Изменение задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,21 +79,21 @@ ms.lasthandoff: 05/03/2018
   
 3.  В окне запроса используйте следующие системные хранимые процедуры для изменения задания.  
   
-    -   Выполните процедуру [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/en-us/cbdfea38-9e42-47f3-8fc8-5978b82e2623) , чтобы изменить атрибуты задания.  
+    -   Выполните процедуру [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623) , чтобы изменить атрибуты задания.  
   
-    -   Выполните процедуру [sp_update_schedule (Transact-SQL)](http://msdn.microsoft.com/en-us/97b3119b-e43e-447a-bbfb-0b5499e2fefe) , чтобы изменить сведения о планировании для определения задания.  
+    -   Выполните процедуру [sp_update_schedule (Transact-SQL)](http://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe) , чтобы изменить сведения о планировании для определения задания.  
   
-    -   Выполните процедуру [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755) , чтобы добавить новые шаги к заданию.  
+    -   Выполните процедуру [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755) , чтобы добавить новые шаги к заданию.  
   
-    -   Выполните процедуру [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/e158802c-c347-4a5d-bf75-c03e5ae56e6b) , чтобы изменить существующие шаги задания.  
+    -   Выполните процедуру [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b) , чтобы изменить существующие шаги задания.  
   
-    -   Выполните процедуру [sp_delete_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/421ede8e-ad57-474a-9fb9-92f70a3e77e3) , чтобы удалить шаг задания.  
+    -   Выполните процедуру [sp_delete_jobstep (Transact-SQL)](http://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3) , чтобы удалить шаг задания.  
   
     -   Дополнительные хранимые процедуры для изменения любого главного задания агента SQL Server.  
   
-        -   Выполните процедуру [sp_delete_jobserver (Transact-SQL)](http://msdn.microsoft.com/en-us/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) , чтобы удалить сервер, сопоставленный с заданием.  
+        -   Выполните процедуру [sp_delete_jobserver (Transact-SQL)](http://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) , чтобы удалить сервер, сопоставленный с заданием.  
   
-        -   Выполните процедуру [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/en-us/485252cc-0081-490a-9bd1-cbbd68eea286) , чтобы сопоставить сервер с текущим заданием.  
+        -   Выполните процедуру [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) , чтобы сопоставить сервер с текущим заданием.  
   
 ## <a name="SMO"></a>Использование управляющих объектов SQL Server  
 **Изменение задания**  
