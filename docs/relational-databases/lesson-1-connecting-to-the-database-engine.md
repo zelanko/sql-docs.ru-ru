@@ -16,17 +16,17 @@ caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1795e19eb13aaac59009ea610b0d261d3dc4d649
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd86be05457d2596d1b17e29bd093c050bef8822
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947119"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979826"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > Материалы по предыдущим версиям SQL Server см. в разделе [Урок 1. Соединение с компонентом Database Engine](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Урок 1. Соединение с компонентом Database Engine](https://msdn.microsoft.com/library/ms345332(SQL.120).aspx).
 
 Набор средств, устанавливаемых с компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], зависит от выпуска и от параметров, заданных при установке. На этом уроке рассматриваются важнейшие средства, а также показываются способы подключения и выполнения одной из базовых функций (разрешение входа дополнительным пользователям).  
 

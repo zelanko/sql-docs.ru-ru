@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 299f4837a54622370ff5c84e29e9a3db43db5510
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b3c95ce2b9d937a464fcc2ec3528084503b5025
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218164"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983856"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Возврат данных из хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Материалы по предыдущим версиям SQL Server см. в разделе [Возврат данных из хранимой процедуры](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Возврат данных из хранимой процедуры](https://msdn.microsoft.com/library/ms188655(SQL.120).aspx).
 
   Существует три способа возврата данных из процедуры в вызывающую программу: результирующие наборы, параметры вывода и коды возврата. Этот раздел содержит сведения по всем трем способам.  
   

@@ -17,12 +17,12 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 85c22b39e27a6e7f00773a6fcee0b5ac900cbb42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ab84785d74c876e67784d1781f0503a1771be18
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037001"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985136"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Учебник. Отчет-карта (построитель отчетов)
 Этот учебник по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] позволяет изучить функции карты, которые можно использовать для отображения данных отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы в географическом контексте. 
@@ -41,7 +41,7 @@ ms.locfileid: "33037001"
 Предполагаемое время для выполнения заданий данного учебника: 30 минут.  
   
 ## <a name="requirements"></a>Требования  
-Для работы с учебником сервер отчетов необходимо настроить для поддержки карт Bing в качестве фона. Дополнительные сведения см. в разделе [План поддержки отчетов-карт](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+Для работы с учебником сервер отчетов необходимо настроить для поддержки карт Bing в качестве фона. Дополнительные сведения см. в разделе [План поддержки отчетов-карт](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
 
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 7571742d0484065a90734ad9d9972e37076e20d3
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058673"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 *object_name* ([schema_name.]table_name.column_name)
 
 Имя столбца базы данных, для которого удаляются сведения. Сейчас поддерживается только классификация по столбцам.
-    - *schema_name* (необязательно) — имя схемы, которая содержит классифицируемый столбец.
+    - *schema_name* (необязательно) — имя схемы, которая содержит классифицированный столбец.
     - *table_name* — имя таблицы, которая содержит классифицируемый столбец.
     - *column_name* — имя столбца, для которого удаляется классификация.
 
@@ -68,7 +68,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 ## <a name="permissions"></a>Разрешения  
 
-Требуется разрешение ALTER ANY SENSITIVITY CLASSIFICATION. Разрешение ALTER ANY SENSITIVITY CLASSIFACTION содержится в разрешении ALTER для базы данных или CONTROL SERVER для сервера.
+Требуется разрешение ALTER ANY SENSITIVITY CLASSIFICATION. ALTER ANY SENSITIVITY CLASSIFACTION подразумевается в разрешении ALTER для базы данных или CONTROL SERVER для сервера.
 
 
 ## <a name="examples"></a>Примеры  

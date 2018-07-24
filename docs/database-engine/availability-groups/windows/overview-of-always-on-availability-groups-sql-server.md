@@ -19,17 +19,17 @@ caps.latest.revision: 121
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 849eeaa4b46712ba789f60f43e9c77c02eee6558
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 71d9b599a32351c3aac8bc3b40eb28d7434fb9cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769750"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984296"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Обзор групп доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx).
+ > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx).
 
  В этом разделе рассматриваются основные понятия [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , которые имеют большое значение для настройки групп доступности и управления группами доступности в среде [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Сводное описание преимуществ групп доступности и общие сведения по терминологии [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   

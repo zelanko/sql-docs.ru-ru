@@ -54,16 +54,16 @@ caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59306ab48061fe2c759b4cb2dac784e7a24cb325
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: c409047c510bb97c6e915140758a304e145747ad
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989362"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981356"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Материалы по предыдущим версиям SQL Server см. в статье [Настройка учетных записей службы Windows и разрешений](https://msdn.microsoft.com/en-US/library/ms143504(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в статье [Настройка учетных записей службы Windows и разрешений](https://msdn.microsoft.com/library/ms143504(SQL.120).aspx).
 
 
   Каждая служба в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляет собой процесс или набор процессов для управления проверкой подлинности при выполнении операций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в операционной системе Windows. В этом разделе описана конфигурация по умолчанию служб данного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также параметры конфигурации служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые можно настроить во время и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот раздел дает возможность опытным пользователям детальнее ознакомиться с учетными записями служб.  

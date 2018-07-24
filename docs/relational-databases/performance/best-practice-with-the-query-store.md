@@ -17,11 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6b667bf8be87561461c1ceec2543dcce051b93e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981426"
 ---
 # <a name="best-practice-with-the-query-store"></a>Рекомендации по хранилищу запросов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,9 +31,9 @@ ms.lasthandoff: 05/19/2018
   
 ##  <a name="SSMS"></a> Используйте последнюю версию [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] включает в себя набор пользовательских интерфейсов, предназначенных для настройки хранилища запросов, а также для использования собранных данных о рабочей нагрузке.  
-Скачайте последнюю версию [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [здесь](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
+Скачайте последнюю версию [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [здесь](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).  
   
- Краткое описание того, как использовать хранилище запросов в сценариях устранения неполадок, см. в [блогах @Azureпо хранилищу запросов в Azure](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
+ Краткое описание того, как использовать хранилище запросов в сценариях устранения неполадок, см. в [блогах @Azureпо хранилищу запросов в Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ##  <a name="Insight"></a> Используйте анализ производительности процессов в Базе данных SQL Azure  
  При запуске хранилища запросов в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] можно использовать **анализ производительности запросов** для анализа потребления DTU в динамике.  

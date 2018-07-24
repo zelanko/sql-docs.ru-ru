@@ -17,19 +17,19 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c04ca530ed9e01a7a5ec01e5fe7bcd31af78b41c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa6da6086cd5c1a0ebfd56394e5c79b2078ef82e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942569"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978936"
 ---
 # <a name="lesson-3-database-backup-to-url"></a>Занятие 3. резервное копирование базы данных по URL-адресу
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 На этом занятии выполняется резервное копирование базы данных AdventureWorks2014 в локальном экземпляре SQL Server 2016 в контейнер Azure, созданный на [занятии 1: создание хранимой политики доступа и подписанного URL-адреса в контейнере Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 > [!NOTE]  
-> Если необходимо выполнить резервное копирование базы данных SQL Server 2012 с пакетом обновления 1 (SP1) и накопительным пакетом обновления 2 или более поздней версии либо базы данных SQL Server 2014 в этот контейнер Azure, можно воспользоваться устаревшим синтаксисом, который описывается [здесь](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) . Таким образом можно выполнить резервное копирование по URL-адресу с помощью синтаксиса WITH CREDENTIAL.  
+> Если необходимо выполнить резервное копирование базы данных SQL Server 2012 с пакетом обновления 1 (SP1) и накопительным пакетом обновления 2 или более поздней версии либо базы данных SQL Server 2014 в этот контейнер Azure, можно воспользоваться устаревшим синтаксисом, который описывается [здесь](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) . Таким образом можно выполнить резервное копирование по URL-адресу с помощью синтаксиса WITH CREDENTIAL.  
   
 Чтобы выполнить резервное копирование в хранилище BLOB-объектов, выполните указанные ниже действия.  
   

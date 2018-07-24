@@ -20,18 +20,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 750bb45c40674b572af1ef7f4e9b3eaa83318478
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4627eeb473ba1b2075ea4de12b0b5770e4f44447
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353966"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983096"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Учебник. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Репликация слиянием является хорошим решением проблемы перемещения данных между центральным сервером и мобильными клиентами, не имеющими постоянного подключения. С помощью мастеров репликации можно легко настроить и администрировать топологию репликации слиянием. 
 
-В этом учебнике демонстрируется, как настроить топологию репликации для мобильных клиентов. Дополнительные сведения о репликации слиянием см. в разделе [Обзор репликации слиянием](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication).
+В этом учебнике демонстрируется, как настроить топологию репликации для мобильных клиентов. Дополнительные сведения о репликации слиянием см. в разделе [Обзор репликации слиянием](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
   
 ## <a name="what-you-will-learn"></a>Новые знания  
 В этом учебнике используется репликация слиянием, чтобы опубликовать данные из центральной базы данных для одного пользователя мобильного устройства или нескольких так, что каждый пользователь получит уникальным образом фильтрованное подмножество данных. 
@@ -54,14 +54,14 @@ ms.locfileid: "37353966"
   
 - На сервере-подписчике (целевом) установите любой выпуск SQL Server, кроме [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Публикация, созданная в этом учебнике, не поддерживает [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). См. дополнительные сведения о [восстановлении базы данных в среде SSMS](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). См. дополнительные сведения о [восстановлении базы данных в среде SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
  
   
 >[!NOTE]
 > - Репликация не поддерживается в экземплярах SQL Server, которые отличаются друг от друга больше, чем на две версии. См. дополнительные сведения о [поддерживаемых версиях SQL Server в топологии репликации](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
-> - В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо подключиться к издателю и подписчику с помощью имени входа, которое является членом предопределенной роли сервера **sysadmin**. Дополнительные сведения о роли см. в статье [Роли уровня сервера](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо подключиться к издателю и подписчику с помощью имени входа, которое является членом предопределенной роли сервера **sysadmin**. Дополнительные сведения о роли см. в статье [Роли уровня сервера](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
 **Предполагаемое время выполнения заданий этого учебника: 60 минут**  
@@ -97,7 +97,7 @@ ms.locfileid: "37353966"
    >
    > Если вы используете версию сборки, предшествующую SQL Server 2017, в нижней части экрана появится сообщение о риске потери данных при использовании этого столбца для двусторонней репликации. В рамках этого учебника данное сообщение можно игнорировать. Тем не менее, если вы не используете поддерживаемую сборку в рабочей среде, этот тип данных не должен участвовать в репликации.
    > 
-   > Дополнительные сведения о репликации типа данных **hierarchyid** см. в разделе [Использование столбцов Hierarchyid в репликации](https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
+   > Дополнительные сведения о репликации типа данных **hierarchyid** см. в разделе [Использование столбцов Hierarchyid в репликации](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
     
   
 7. На странице **Фильтрация строк таблицы** выберите команду **Добавить**, а затем щелкните пункт **Добавить фильтр**.  

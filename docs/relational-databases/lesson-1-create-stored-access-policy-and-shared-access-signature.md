@@ -17,16 +17,16 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e76820fc010a88e7bc276e028bd84bcddc981ba8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942009"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984686"
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Занятие 1. Создание хранимой политики доступа и подписанного URL-адреса
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-На этом занятии вы используете скрипт [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) , чтобы создать подписанный URL-адрес для контейнера BLOB-объектов Azure с помощью хранимой политики доступа.  
+На этом занятии вы используете скрипт [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) , чтобы создать подписанный URL-адрес для контейнера BLOB-объектов Azure с помощью хранимой политики доступа.  
   
 > [!NOTE]  
 > Этот скрипт написан с помощью Azure PowerShell 5.0.10586.  
@@ -139,7 +139,7 @@ ms.locfileid: "32942009"
 [Занятие 2. Создание учетных данных SQL Server с помощью подписанного URL-адреса](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Использование подписанных URL-адресов (SAS)](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Использование подписанных URL-адресов (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

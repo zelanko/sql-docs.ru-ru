@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5b6a5d6eafc76b80a169332f8c71309440c4ef0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d9419443e554c225bd2ee6708c8448787160b6de
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093318"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979178"
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault с помощью PowerShell и CLI
 
@@ -39,8 +39,8 @@ ms.locfileid: "37093318"
    - [Инструкции по использованию PowerShell для Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [Инструкции по использованию аппаратного модуля безопасности (HSM) и хранилища Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - Хранилище ключей, используемое для прозрачного шифрования данных, должно поддерживать следующее свойство:
-   - [обратимое удаление](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete).
-   - [Как использовать обратимое удаление в Key Vault с помощью PowerShell](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) 
+   - [обратимое удаление](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete).
+   - [Как использовать обратимое удаление в Key Vault с помощью PowerShell](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) 
 - Ключ, используемый для прозрачного шифрования данных, должен иметь следующие характеристики:
    - быть бессрочным;
    - не быть отключенным;
@@ -200,13 +200,13 @@ ms.locfileid: "37093318"
 
 - Требуется подписка Azure и права администратора этой подписки.
 - [Рекомендуется, но необязательно] Наличие аппаратного модуля безопасности (HSM) или локального хранилища ключей для создания локальной копии материала ключа средства защиты TDE.
-- Интерфейс командной строки версии 2.0 или более поздней. Чтобы установить последнюю версию и подключиться к подписке Azure, см. статью [Установка и настройка кроссплатформенного интерфейса командной строки Azure 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
+- Интерфейс командной строки версии 2.0 или более поздней. Чтобы установить последнюю версию и подключиться к подписке Azure, см. статью [Установка и настройка кроссплатформенного интерфейса командной строки Azure 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). 
 - Созданные Azure Key Vault и ключ для TDE.
-   - [Управление Key Vault с помощью CLI 2.0](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [Управление Key Vault с помощью CLI 2.0](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
    - [Инструкции по использованию аппаратного модуля безопасности (HSM) и хранилища Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - Хранилище ключей, используемое для прозрачного шифрования данных, должно поддерживать следующее свойство:
-   - [обратимое удаление](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete).
-   - [Как использовать обратимое удаление в Key Vault с помощью интерфейса командной строки](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli) 
+   - [обратимое удаление](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete).
+   - [Как использовать обратимое удаление в Key Vault с помощью интерфейса командной строки](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli) 
 - Ключ, используемый для прозрачного шифрования данных, должен иметь следующие характеристики:
    - быть бессрочным;
    - не быть отключенным;
@@ -264,11 +264,11 @@ ms.locfileid: "37093318"
 
 ## <a name="sql-cli-references"></a>Справочник по CLI SQL
 
-https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/tde-key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/db/tde?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/db/tde?view=azure-cli-latest 
 

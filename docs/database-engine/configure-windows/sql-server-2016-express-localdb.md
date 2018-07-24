@@ -20,16 +20,16 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870159"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984506"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Материалы по предыдущим версиям SQL Server см. в статье [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в статье [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
 **LocalDB** в Microsoft SQL Server 2016 Express — это компонент [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) , ориентированный на разработчиков. Он доступен в SQL Server 2016 Express с дополнительными службами.  
 
@@ -40,7 +40,7 @@ ms.locfileid: "32870159"
   
 -   Чтобы скачать и установить SQL Server 2016 Express, перейдите на страницу **[загрузок SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете носитель, выберите **Express Advanced** или пакет **LocalDB** . 
   
--   Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
+-   Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
   
 ## <a name="install-localdb"></a>Установка LocalDB  
  Установите **LocalDB** с помощью мастера установки или программы SqlLocalDB.msi. Параметр**LocalDB** применяется для установки [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
@@ -49,7 +49,7 @@ ms.locfileid: "32870159"
 
  Управление экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** осуществляется с помощью служебной программы **SqlLocalDB.exe** . [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** следует использовать вместо устаревшей функции пользовательского экземпляра [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] . 
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Программа установки **LocalDB** использует программу SqlLocalDB.msi для установки необходимых файлов на компьютере. После установки **LocalDB** становится экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , который способен создавать и открывать базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Файлы системной базы данных, как правило, хранятся в каталоге AppData пользователя, который обычно скрыт. Например, **C:\Users\\<пользователь\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Файлы пользовательской базы данных хранятся в месте, указанном пользователем, как правило, в папке **C:\Users\\<пользователь\>\Documents\\**.  
   
  Дополнительные сведения о включении **LocalDB** в приложение см. в документации [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Общие сведения о локальных данных](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Пошаговое руководство. Создание базы данных LocalDB SQL Server](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) и [Пошаговое руководство. Подключение к данным в базе данных LocalDB SQL Server (формы Windows)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  

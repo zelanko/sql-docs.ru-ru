@@ -35,18 +35,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d23489e55a793e63b6b3bfcb8c2a71708a2bb567
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d50d18d7e2fbcf2012c9faf1bfbe46f515547
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34154634"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981372"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Реорганизация и перестроение индексов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!NOTE]
-> Материалы по предыдущим версиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Реорганизация и перестроение индексов](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx).
+> Материалы по предыдущим версиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Реорганизация и перестроение индексов](https://msdn.microsoft.com/library/ms189858(SQL.120).aspx).
 
 В этом разделе описывается реорганизация или перестроение фрагментированного индекса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически изменяет индексы при вставке, обновлении или удалении базовых данных. Со временем эти изменения могут привести к тому, что данные в индексе окажутся разбросанными по базе данных (фрагментированными). Фрагментация имеет место в тех случаях, когда в индексах содержатся страницы, для которых логический порядок, основанный на значении ключа, не совпадает с физическим порядком в файле данных. Существенно фрагментированные индексы могут серьезно снижать производительность запросов и служить причиной замедления отклика приложения, особенно операций сканирования.  
   

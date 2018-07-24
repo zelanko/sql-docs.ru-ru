@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3651eca0e06a0c0b91ba8f12ca0e66a49c906037
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae4de7aad9a404b900c47c4067a8266410e44379
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278380"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981396"
 ---
 # <a name="create-a-stored-procedure"></a>Создание хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Материалы по предыдущим версиям SQL Server см. в разделе [Создание хранимой процедуры](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Создание хранимой процедуры](https://msdn.microsoft.com/library/ms345415(SQL.120).aspx).
 
   В этом разделе описывается, как можно создать хранимую процедуру [!INCLUDE[tsql](../../includes/tsql-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
   

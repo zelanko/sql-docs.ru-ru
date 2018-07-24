@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97480ae8c4b390250ae2007b7d1d03d0efccf472
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: a2be6888bcd358d5e8633801c79d4a994967d56f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332635"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979167"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Планирование освоения возможностей выполняющейся в памяти OLTP в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34332635"
 
 Для базы данных, размещенной в облачной службе базы данных SQL Azure, выбранный уровень службы повлияет на объем активной памяти, которую разрешено потреблять вашей базе данных. Необходимо спланировать мониторинг использования памяти вашей базой данных при помощи предупреждений. Подробная информация доступна в следующих статьях:
 
-- Проверьте ограничения хранилища In-Memory OLTP для вашей [ценовой категории](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels).
+- Проверьте ограничения хранилища In-Memory OLTP для вашей [ценовой категории](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels).
 - [Мониторинг хранилища OLTP в памяти](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Оптимизированные для памяти табличные переменные

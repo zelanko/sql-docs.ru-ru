@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ae0431d6f4d2463a419e593b17b5700c3e13041c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: ffe4d95cd82864445ce3a8223c18664b65641f10
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322313"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980356"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
 
@@ -66,7 +66,7 @@ ms.locfileid: "35322313"
 |Шаг|Описание и ссылка|  
 |----------|--------------------------|  
 |Добавление сервера SharePoint в ферму.|Для развертывания еще одного приложения служб Reporting Services потребуется установить SharePoint.<br/><br/>Инструкции для SharePoint 2013 см. в разделе [Добавление сервера SharePoint в ферму в SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>Инструкции для SharePoint 2016 см. в разделе [Добавление сервера SharePoint в ферму в SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
-|Установите и настройте службы Reporting Services в режиме интеграции с SharePoint.|Запустите установку SQL Server. Дополнительные сведения об установке режима SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).<br /><br /> Если сервер будет использоваться только в качестве сервера приложений и не будет служить в качестве WFE, то не нужно выбирать компонент **Надстройка служб Reporting Services для продуктов SharePoint**.<br /><br /> 1) На странице **Роль установки** выберите **Установка компонентов SQL Server**.<br /><br /> 2) На странице **Выбор компонентов** выберите компонент **Reporting Services — SharePoint**<br /><br /> 3) На странице **Конфигурация служб Reporting Services**  установите флажок **Только установка** для компонента **Службы Reporting Services в режиме интеграции с SharePoint**.|  
+|Установите и настройте службы Reporting Services в режиме интеграции с SharePoint.|Запустите установку SQL Server. Дополнительные сведения об установке режима SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).<br /><br /> Если сервер будет использоваться только в качестве сервера приложений и не будет служить в качестве WFE, то не нужно выбирать компонент **Надстройка служб Reporting Services для продуктов SharePoint**.<br /><br /> 1) На странице **Роль установки** выберите **Установка компонентов SQL Server**.<br /><br /> 2) На странице **Выбор компонентов** выберите компонент **Reporting Services — SharePoint**<br /><br /> 3) На странице **Конфигурация служб Reporting Services**  установите флажок **Только установка** для компонента **Службы Reporting Services в режиме интеграции с SharePoint**.|  
 |Убедитесь, что службы Reporting Services работают.|1) В центре администрирования SharePoint выберите пункт **Управление серверами на ферме** в группе **Параметры системы** .<br /><br /> 2) Проверьте службу **SQL Server Reporting Services**.<br /><br />Дополнительные сведения см. в разделе [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).|  
   
 ##  <a name="bkmk_additional"></a> Дополнительная настройка  
