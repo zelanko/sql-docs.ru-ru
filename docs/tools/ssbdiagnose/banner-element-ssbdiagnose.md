@@ -1,5 +1,5 @@
 ---
-title: Banner (программа ssbdiagnose) элемент | Документы Microsoft
+title: Баннер элемент (ssbdiagnose) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5119e483fc089c19782eb6287ea42a08c79c4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055119"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Элемент Banner (программа ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|attribute|Description|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |**title**|Определяет программу, сформировавшую выходной XML-файл **ssbdiagnose** .|  
 |**product**|Определяет продукт, сформировавший выходной XML-файл **ssbdiagnose** .|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

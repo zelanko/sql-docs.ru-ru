@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f95e9b831b21ab71053c04d2ab2bc27238906c4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072911"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048339"
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>Урок 1–1. Запуск помощника по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33072911"
   
 По умолчанию помощник по настройке ядра СУБД открывается в конфигурации, показанной на следующем рисунке.  
   
-![Окна по умолчанию помощник настройки ядра базы данных](../../tools/dta/media/defaultdtagui.gif "окна по умолчанию помощник по настройке ядра СУБД")  
+![Период по умолчанию помощник по настройке ядра базы данных](../../tools/dta/media/defaultdtagui.gif "окна по умолчанию помощник по настройке ядра СУБД")  
   
 > [!NOTE]  
 > На вкладке и в поле **Имя сеанса** отображается имя компьютера и экземпляра, к которому подключен пользователь. А также текущие дата и время.  

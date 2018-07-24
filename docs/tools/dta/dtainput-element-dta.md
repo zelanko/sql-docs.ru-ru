@@ -1,5 +1,5 @@
 ---
-title: Элемент DTAInput (DTA) | Документы Microsoft
+title: Элемент DTAInput (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e5de4ebe29049c40e3fd9b235062854722a1c3ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071441"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058565"
 ---
 # <a name="dtainput-element-dta"></a>Элемент DTAInput (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33071441"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристики|Description|  
+|Характеристики|Описание|  
 |---------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
