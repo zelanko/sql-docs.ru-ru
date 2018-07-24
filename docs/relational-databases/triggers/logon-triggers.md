@@ -17,15 +17,15 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fa1d89d7fa17fb09ffedd054524be178918796e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c12464c584e667e66dfdf3de3c13278ef1732e55
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423184"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108366"
 ---
 # <a name="logon-triggers"></a>Триггеры входа
-[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Триггеры входа вызывают срабатывание хранимых процедур в ответ на событие LOGON. Это событие вызывается при установке пользовательского сеанса с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Триггеры входа срабатывают после завершения этапа проверки подлинности при входе, но перед тем, как пользовательский сеанс реально устанавливается. Следовательно, все сообщения, которые возникают внутри триггера и обычно достигают пользователя, такие как сообщения об ошибках и сообщения от инструкции PRINT, перенаправляются в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если проверка подлинности завершается сбоем, триггеры входа не срабатывают.  
   
  Можно использовать триггеры входа для проверки и управления сеансами сервера, например для отслеживания входов в систему, ограничения входов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или ограничения числа сеансов для конкретного имени входа. Например, в следующем коде триггер входа запрещает попытки входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , инициированные под именем входа *login_test* , если уже созданы три пользовательских сеанса под этим именем входа.  
@@ -74,7 +74,7 @@ END;
 ## <a name="disabling-a-logon-trigger"></a>Отключение триггера входа  
  Триггер входа может эффективно запрещать подключения к службам [!INCLUDE[ssDE](../../includes/ssde-md.md)] для всех пользователей, в том числе членов предопределенной роли сервера **sysadmin** . Если триггер входа запрещает соединения, члены предопределенной роли сервера **sysadmin** могут подключаться с помощью выделенного административного соединения или путем вызова [!INCLUDE[ssDE](../../includes/ssde-md.md)] в режиме минимальной конфигурации (-f). Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Задача|Раздел|  
 |----------|-----------|  

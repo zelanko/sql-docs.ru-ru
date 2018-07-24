@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d688171b49697b785f571f7e08fee0bfe339858
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 50a8d11c653e7b31dd27a8705d925f60d795a7a0
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989098"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984096"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ ms.locfileid: "33989098"
 ###  <a name="intorkeyconcepts"></a> Введение в основные компоненты и понятия  
  В следующих двух разделах приводятся общие сведения о службе хранилища больших двоичных объектов Microsoft Azure, а также о компонентах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используются при резервном копировании в службу хранилища больших двоичных объектов Microsoft Azure или при восстановлении из нее. Чтобы выполнять резервное копирование или восстановление с помощью службы хранилища больших двоичных объектов Microsoft Azure, важно понимать компоненты и то, как они взаимосвязаны.  
   
- Первым шагом этого процесса является создание учетной записи хранения Microsoft Azure в подписке Azure. Эта учетная запись хранения является административной учетной записью, имеющей полные административные разрешения на все контейнеры и объекты, созданные с помощью этой учетной записи хранения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использовать имя учетной записи хранения Microsoft Azure и значение ее ключа доступа для проверки подлинности, а также записи и чтения больших двоичных объектов в службе хранения больших двоичных объектов Microsoft Azure или использовать токен подписанного URL-адреса (токен SAS), созданный в конкретных контейнерах, предоставляющих права на чтение и запись. Дополнительные сведения об учетных записях хранения Azure см. в разделе [Об учетных записях хранения Azure](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/) , а дополнительные сведения о подписанных URL-адресах (SAS) см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Учетные данные службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранят эту информацию для проверки подлинности и используются при выполнении операций резервного копирования или восстановления.  
+ Первым шагом этого процесса является создание учетной записи хранения Microsoft Azure в подписке Azure. Эта учетная запись хранения является административной учетной записью, имеющей полные административные разрешения на все контейнеры и объекты, созданные с помощью этой учетной записи хранения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использовать имя учетной записи хранения Microsoft Azure и значение ее ключа доступа для проверки подлинности, а также записи и чтения больших двоичных объектов в службе хранения больших двоичных объектов Microsoft Azure или использовать токен подписанного URL-адреса (токен SAS), созданный в конкретных контейнерах, предоставляющих права на чтение и запись. Дополнительные сведения об учетных записях хранения Azure см. в разделе [Об учетных записях хранения Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) , а дополнительные сведения о подписанных URL-адресах (SAS) см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Учетные данные службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранят эту информацию для проверки подлинности и используются при выполнении операций резервного копирования или восстановления.  
   
 ###  <a name="Blob"></a> Служба хранилища больших двоичных объектов Microsoft Azure  
- **Учетная запись хранения.** Учетная запись хранения является отправной точкой для всех служб хранилища. Для доступа к службе хранилища больших двоичных объектов Microsoft Azure необходимо сначала создать учетную запись хранения Microsoft Azure. Дополнительные сведения см. в разделе [Создание учетной записи хранения](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).  
+ **Учетная запись хранения.** Учетная запись хранения является отправной точкой для всех служб хранилища. Для доступа к службе хранилища больших двоичных объектов Microsoft Azure необходимо сначала создать учетную запись хранения Microsoft Azure. Дополнительные сведения см. в разделе [Создание учетной записи хранения](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
  **Контейнер.** Контейнер обеспечивает группирование набора больших двоичных объектов и может хранить их неограниченное количество. Для создания резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в службе хранилища больших двоичных объектов Microsoft Azure необходимо как минимум создать корневой контейнер. Вы можете создать токен SAS в контейнере и предоставить доступ к объектам только в определенном контейнере.  
   
@@ -276,7 +276,7 @@ ms.locfileid: "33989098"
 >  Руководство по использованию SQL Server 2016 со службой хранилища BLOB-объектов Microsoft Azure см. в статье [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases).  
   
 ###  <a name="SAS"></a> Создание подписанного URL-адреса  
- В следующих примерах создаются подписанные URL-адреса, которые можно использовать для создания учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в только что созданном контейнере. Этот скрипт создает подписанный URL-адрес, связанный с хранимой политикой доступа. Дополнительные сведения см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)(Shared Access Signatures, Part 1: Understanding the SAS Model). Кроме того, скрипт записывает команду T-SQL, необходимую для создания учетных данных в SQL Server. 
+ В следующих примерах создаются подписанные URL-адреса, которые можно использовать для создания учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в только что созданном контейнере. Этот скрипт создает подписанный URL-адрес, связанный с хранимой политикой доступа. Дополнительные сведения см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)(Shared Access Signatures, Part 1: Understanding the SAS Model). Кроме того, скрипт записывает команду T-SQL, необходимую для создания учетных данных в SQL Server. 
 
 > [!NOTE] 
 > Для этого примера требуется Microsoft Azure PowerShell. Сведения об установке и использовании Azure PowerShell см. в разделе [Установка и настройка Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  

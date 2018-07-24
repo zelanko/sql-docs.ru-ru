@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 57
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a704a8dc913a0931c628634493ff7e1239bb5550
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 8ac54250c72f7f29ccc714b05eb795d43bd26847
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941290"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109316"
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "36941290"
  Каждая база данных включает в себя пользователя `guest`. Разрешения, предоставленные пользователю `guest` , наследуются пользователями, которые имеют доступ к базе данных, но не обладают учетной записью пользователя в ней. Пользователя `guest` нельзя удалить, но его можно отключить, если отменить его разрешение CONNECT. Разрешение CONNECT можно отменить, выполнив инструкцию `REVOKE CONNECT FROM GUEST;` в любой базе данных, кроме `master` или `tempdb`.  
   
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
  Данный раздел электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит следующие подразделы.  

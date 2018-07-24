@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3e81a3b98bbfe6507c768e541ac0fc613d28d52e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032381"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055839"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Устранение проблем проектирования отчетов с помощью служб Reporting Services
 Проблемы проектирования отчетов могут возникать при создании макета отчета с помощью конструктора в приложении разработки отчетов. Этот раздел помогает устранять эти проблемы.   

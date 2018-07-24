@@ -18,12 +18,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2aef9476c254267156c5bbde4d777a2ed5ab570
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66a70e19399b04968d37a7b9b54b657e47bf6ab6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012404"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981476"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Учебник. Использование службы хранилища больших двоичных объектов Azure с базами данных SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33012404"
 Поддержка интеграции SQL Server со службой хранилища BLOB-объектов Microsoft Azure появилась в SQL Server 2012 с пакетом обновления 1 (SP1) и накопительным пакетом обновления  2 и в дальнейшем была улучшена в SQL Server 2014 и SQL Server 2016. Обзор функций и преимуществ использования этих функций см. в разделе [Файлы данных SQL Server в Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Работа функции показана в [видеоролике, посвященном восстановлению до точки во времени](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  
   
   
-**Загрузить**<br /><br />**>>**  Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.<br /><br />**>>**  Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
+**Загрузить**<br /><br />**>>**  Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.<br /><br />**>>**  Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
 ## <a name="what-you-will-learn"></a>Новые знания  
 В этом учебнике в ходе ряда занятий показано, как работать с файлами данных SQL Server в службе хранилища BLOB-объектов Microsoft Azure. В каждом занятии рассматривается определенная задача, и занятия следует выполнять по порядку. Сначала вы узнаете, как создать контейнер в хранилище BLOB-объектов с помощью хранимой политики доступа и подписанного URL-адреса. Затем вы узнаете, как создать учетные данные SQL Server, чтобы интегрировать SQL Server с хранилищем BLOB-объектов Azure. Далее вы выполните резервное копирование базы данных в хранилище BLOB-объектов и восстановите ее в виртуальной машине Azure. После этого вы используете резервную копию журнала транзакций SQL Server 2016 на основе моментального снимка файла, чтобы выполнить восстановление в новой базе данных на определенный момент времени. Наконец, в учебнике будет продемонстрировано использование хранимых процедур и функций системы метаданных, что позволит вам понять, как работать с резервными копиями моментальных снимков файлов.  
@@ -43,7 +43,7 @@ ms.locfileid: "33012404"
   
 -   У вас есть учетная запись хранения Azure.  
   
--   У вас есть по крайней мере одна виртуальная машина Azure с SQL Server 2016, которая подготовлена в соответствии с инструкциями в статье [Подготовка виртуальной машины SQL Server на портале Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-provision-sql-server/). Для выполнения сценария на [занятии 8 "Восстановление в качестве новой базы данных из резервной копии журнала"](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md) можно использовать вторую виртуальную машину.  
+-   У вас есть по крайней мере одна виртуальная машина Azure с SQL Server 2016, которая подготовлена в соответствии с инструкциями в статье [Подготовка виртуальной машины SQL Server на портале Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/). Для выполнения сценария на [занятии 8 "Восстановление в качестве новой базы данных из резервной копии журнала"](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md) можно использовать вторую виртуальную машину.  
   
 Этот учебник разделен на девять занятий, которые необходимо проходить по порядку.  
   

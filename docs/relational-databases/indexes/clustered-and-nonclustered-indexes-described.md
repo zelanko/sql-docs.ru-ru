@@ -18,17 +18,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8780ec7ab94ae66f4ba76133fcc884cad2456522
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5469eabd93c8d3124b7e6f6de3484006df47b0d0
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939739"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983326"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Описания кластеризованных и некластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
- > Материалы по предыдущим версиям SQL Server см. в разделе [Описание кластеризованных и некластеризованных индексов](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Описание кластеризованных и некластеризованных индексов](https://msdn.microsoft.com/library/ms190457(SQL.120).aspx).
 
   Индекс является структурой на диске, которая связана с таблицей или представлением и ускоряет получение строк из таблицы или представления. Индекс содержит ключи, построенные из одного или нескольких столбцов в таблице или представлении. Эти ключи хранятся в виде структуры сбалансированного дерева, которая поддерживает быстрый поиск строк по их ключевым значениям в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

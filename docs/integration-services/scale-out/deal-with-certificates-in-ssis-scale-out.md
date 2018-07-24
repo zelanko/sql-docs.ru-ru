@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: e602b89a44b5d26369973ef6f5ec8dc1f6d5c4eb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2af1f3f516c6cc13684ee67954017c5f5cb6a47c
+ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405136"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130590"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Управление сертификатами для SQL Server Integration Services Scale Out
 
@@ -45,12 +45,12 @@ ms.locfileid: "35405136"
 Создайте и установите SSL-сертификат в узле мастера с помощью следующей команды:
 
 ```dos
-MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 Пример:
 
 ```dos
-MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
+MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
 
 #### <a name="2-bind-the-certificate-to-the-master-port"></a>2. Привязка сертификата к порту мастера
@@ -92,7 +92,7 @@ A.  Установите SSL-сертификат клиента в корнев
 
 Б.  Обновите файл конфигурации для службы рабочей роли Scale Out.
 
-    Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
+Обновите файл конфигурации для службы рабочей роли Scale Out (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`) в узле рабочей роли. Обновите **MasterHttpsCertThumbprint**, используя отпечаток нового SSL-сертификата.
 
 в.  Перезапустите службу рабочей роли Scale Out.
 

@@ -1,5 +1,5 @@
 ---
-title: Хранимые процедуры | Документы Microsoft
+title: Хранимые процедуры | Документация Майкрософт
 description: Хранимые процедуры
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 248132d4afca731bb3715da83286a85dc6edc8ee
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 0c944c0e64fadf8f51af10f0e297b8d3654decd4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611549"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109766"
 ---
 # <a name="stored-procedures"></a>Хранимые процедуры
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Хранимая процедура ([хранимых процедур &#40;СУБД&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) представляет собой исполняемый объект в базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает:  
+  Хранимая процедура ([хранимые процедуры &#40;СУБД&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) представляет собой исполняемый объект из базы данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает:  
   
 -   Хранимые процедуры  
   
@@ -43,11 +43,11 @@ ms.locfileid: "35611549"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Выполнение хранимых процедур &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-running.md)  
+-   [Выполнение хранимых процедур](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [Вызов хранимой процедуры &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [Вызов хранимой процедуры](../../oledb/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

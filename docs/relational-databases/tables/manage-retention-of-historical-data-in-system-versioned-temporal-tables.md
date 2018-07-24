@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ea8eaee6227db90dcc6696cb60d09c7fa4261fb
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: cd599eb85988501d9d7919ecb40f7d080406d926
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239130"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985616"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Управление хранением данных журнала в темпоральных таблицах с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -504,7 +504,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 Превосходное сжатие данных и эффективная очистка хранилища делают кластеризованный индекс columnstore наиболее подходящим для случаев, когда рабочая нагрузка вызывает быстрое образование большого количества исторических данных. Подобная ситуация типична для интенсивных рабочих нагрузок по обработке транзакций, в которых темпоральные таблицы используются для контроля и аудита изменений, анализа тенденций и приема данных Интернета вещей.
 
-Дополнительные сведения см. в статье [Управление историческими данными в темпоральных таблицах с политикой хранения](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy).
+Дополнительные сведения см. в статье [Управление историческими данными в темпоральных таблицах с политикой хранения](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
 ## <a name="see-also"></a>См. также:  
  [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md)   

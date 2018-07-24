@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5517458968f64bab9a64b0692deaa973022d9109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062067"
 ---
 # <a name="sql-trace"></a>Трассировка SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "32974189"
 ## <a name="use-data-columns-to-describe-returned-events"></a>Использование столбцов данных для описания возвращаемых событий  
  Приложение трассировки SQL использует столбцы данных в результатах трассировки для описания событий, возвращенных во время работы трассировки. В следующей таблице приводится описание столбцов данных приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , совпадающих со столбцами данных, используемыми приложением трассировки SQL, а также описание столбцов по умолчанию.  
   
-|Столбец данных|Номер столбца|Description|  
+|Столбец данных|Номер столбца|Описание|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|  
 |**BigintData1**|52|Значение (типа**bigint** ), зависящее от класса событий, указанного при трассировке.|  
