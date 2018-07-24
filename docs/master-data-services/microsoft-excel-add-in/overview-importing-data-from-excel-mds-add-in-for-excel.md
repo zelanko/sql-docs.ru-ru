@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9af12b09b1bcfb74990fcfcd5471e4e9e0b74569
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328948"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051522"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Обзор импорта данных из Excel (надстройка MDS для Excel)
 
@@ -54,7 +54,7 @@ ms.locfileid: "35328948"
 ## <a name="business-rule-and-other-validation"></a>Проверка бизнес-правил и другие проверки  
  При публикации данных выполняется проверка, чтобы обеспечить точность данных перед их добавлением в репозиторий MDS. Если данные не соответствуют заданным условиям, то они не будут опубликованы. Дополнительные сведения см. в разделе [Проверка данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

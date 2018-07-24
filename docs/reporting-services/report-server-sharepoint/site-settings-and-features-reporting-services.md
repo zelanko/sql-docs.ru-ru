@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d376ca984ee2666c8f84a46d3a7895c911d0c719
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025781"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053342"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Страницы "Параметры сайта" и "Функции сайта" служб Reporting Services (режим интеграции с SharePoint)
 
@@ -31,7 +31,7 @@ ms.locfileid: "33025781"
 > [!NOTE]
 > Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
-|Параметр сайта|Description|  
+|Параметр сайта|Описание|  
 |------------------|-----------------|  
 |Параметры сайта служб Reporting Services|Параметры для всего сайта, описанные в этом разделе.|  
 |Управление оповещениями об изменении данных|Управление компонентом предупреждения об изменении данных.|  
@@ -45,7 +45,7 @@ ms.locfileid: "33025781"
   
 ## <a name="options-for-reporting-services-site-settings"></a>Параметры на странице "Параметры сайта служб Reporting Services"
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**Разрешить загрузку элемента управления RSClientPrint ActiveX**|Данный элемент управления отображает пользовательское диалоговое окно печати, в котором поддерживаются все стандартные функции: предварительный просмотр, указание отдельных страниц и их диапазонов, поля и ориентация страниц. Дополнительные сведения об этом элементе управления см. в разделе [Using the RSClientPrint Control in Custom Applications](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**Разрешить отслеживание удаленных ошибок в локальном режиме**|Показывать или скрывать подробные сообщения об ошибках, возникающих на удаленных компьютерах при работе в локальном режиме. При появлении сообщения об ошибке, аналогичного приведенному далее, может оказаться полезным включение отслеживания удаленных ошибок.<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

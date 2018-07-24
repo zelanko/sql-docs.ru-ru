@@ -19,10 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c69da5538488f1660dae8a3c1f56b1f7dff2e5ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052394"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Создание и управление полнотекстовыми индексами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/04/2018
 
 ##  <a name="view"></a> Просмотр свойств полнотекстового индекса
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Просмотр свойств полнотекстового индекса с помощью Transact-SQL
-|Каталог или динамическое административное представление|Description|  
+|Каталог или динамическое административное представление|Описание|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Возвращает строку для каждого полнотекстового каталога, ссылающегося на полнотекстовый индекс.|  
 |[sys.fulltext_index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Содержит по одной строке для каждого столбца, являющегося частью полнотекстового индекса.|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  На панели **Выбор страницы** можно выбрать любую из приведенных ниже страниц.  
   
-    |Страница|Description|  
+    |Страница|Описание|  
     |----------|-----------------|  
     |**Общие сведения**|Отображаются основные свойства полнотекстового индекса. Сюда относятся несколько изменяемых свойств и несколько неизменяемых, например имя базы данных, имя таблицы и имя полнотекстового ключевого столбца. Изменяемыми являются следующие свойства.<br /><br /> **Список стоп-слов полнотекстового индекса**.<br /><br /> **Полнотекстовое индексирование включено**.<br /><br /> **Отслеживание изменений**<br /><br /> **Поиск в списке свойств**.<br /><br />Дополнительные сведения см. в статье о [свойствах полнотекстового индекса (страница "Общие")](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
     |**Столбцы**|Отображаются столбцы таблицы, доступные для полнотекстового индексирования. Выбранные столбцы включаются в полнотекстовый индекс. Можно выбрать столько доступных столбцов, сколько нужно включить в полнотекстовый индекс. Дополнительные сведения см. в статье о [свойствах полнотекстового индекса (страница "Столбцы")](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/04/2018
   
  В следующей таблице перечислены свойства полнотекстового поиска, связанные с индексированными таблицами и столбцами, и относящиеся к ним функции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-|Свойство|Description|Компонент|  
+|Свойство|Описание|Компонент|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN в таблице, которая содержит информацию о типе документа столбца.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Указывает, включено ли в столбце полнотекстовое индексирование.|COLUMNPROPERTY|  

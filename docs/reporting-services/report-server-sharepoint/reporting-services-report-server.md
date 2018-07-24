@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028401"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053352"
 ---
 # <a name="reporting-services-report-server"></a>Сервер отчетов служб Reporting Services
 
@@ -103,7 +103,7 @@ ms.locfileid: "33028401"
   
  ![Функциональная архитектура служб SSRS SharePoint](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "Функциональная архитектура служб SSRS SharePoint")  
   
-||Description|  
+||Описание|  
 |-|-----------------|  
 |**(1)**|Веб-серверы или клиентские веб-интерфейсы (WFE). Надстройка служб Reporting Services должна быть установлена на каждом веб-сервере, функции веб-приложений которого придется использовать (просмотр отчетов и страниц управления Reporting Services для таких задач, как управление источниками данных и подписками).|  
 |**(2)**|Эта надстройка устанавливает конечные точки URL-адресов и SOAP для обеспечения связи клиентов с серверами приложений через прокси-сервер служб Reporting Services.|  

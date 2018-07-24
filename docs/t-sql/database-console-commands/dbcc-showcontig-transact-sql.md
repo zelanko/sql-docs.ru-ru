@@ -28,11 +28,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: d473c726aefc9f0f2975e975027bb8cfcd008d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263326"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040052"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице описаны сведения в результирующем наборе.
   
-|Статистика|Description|  
+|Статистика|Описание|  
 |---|---|
 |**Pages Scanned**|Количество страниц в таблице или индексе.|  
 |**Extents Scanned**|Количество экстентов в таблице или индексе.|  
@@ -114,7 +114,7 @@ DBCC SHOWCONTIG
   
 Если указан параметр TABLERESULTS, инструкция DBCC SHOWCONTIG возвращает следующие столбцы дополнительно к девяти столбцам, описанным в предыдущей таблице.
   
-|Статистика|Description|  
+|Статистика|Описание|  
 |---|---|
 |**Имени объекта**|Имя обработанной таблицы или представления.|  
 |**ObjectId**|Идентификатор объекта.|  

@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 842c02dfb20f6e39e186937bad25f07c40e7b533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027661"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049152"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Включение и отключение "песочницы" для языка определения отчетов для служб Reporting Services в режиме интеграции с SharePoint
 
@@ -71,7 +71,7 @@ ms.locfileid: "33027661"
 
  Сведения о параметрах настройки приведены в следующей таблице. Параметры представлены в том порядке, в котором они следуют в файле конфигурации.  
   
-|Настройка|Description|  
+|Настройка|Описание|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|Максимально допустимое число символов в выражении языка определения отчетов.<br /><br /> По умолчанию — 1000|  
 |**MaxResourceSize**|Максимально допустимый размер внешнего ресурса (КБ).<br /><br /> По умолчанию — 100|  

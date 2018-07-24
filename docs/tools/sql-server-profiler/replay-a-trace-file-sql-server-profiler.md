@@ -1,5 +1,5 @@
 ---
-title: Воспроизведение файла трассировки (приложение SQL Server Profiler) | Документы Microsoft
+title: Воспроизведение файла трассировки (SQL Server Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b0dc2625cfeae43ef4c524c460df5f2723130eb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035497"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>воспроизвести файл трассировки (приложение SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  Выберите либо **Воспроизвести события в порядке трассировки**, либо **Воспроизвести события, используя несколько потоков**. В нижеследующей таблице объясняются различия между этими параметрами.  
   
-    |Параметр|Description|  
+    |Параметр|Описание|  
     |------------|-----------------|  
     |**Воспроизвести события в порядке трассировки**|Воспроизводит события в том порядке, в котором они были записаны. Выбор этого параметра включает возможность отладки.|  
     |**Воспроизвести события, используя несколько потоков**|В этом варианте используются несколько потоков для воспроизведения каждого события независимо от последовательности. Выбор этого параметра способствует оптимальной производительности.|  
