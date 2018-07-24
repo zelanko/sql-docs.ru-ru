@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 537b5ed189edfb66b2842179ad44b2da81a064dc
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926105"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036022"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Автономная справка SQL Server и окно справки
 
@@ -94,7 +94,7 @@ ms.locfileid: "36926105"
 |Справочник по выражениям анализа данных (DAX) | Справочник по выражениям анализа данных (DAX)|
 |Справочник по расширениям интеллектуального анализа данных | Справочник по расширениям интеллектуального анализа данных|
 |Руководства разработчиков по SQL Server | Справочник разработчика для SQL Server|
-|Скачивание SQL Server Management Studio | Среда SQL Server Management Studio|
+|Скачивание SQL Server Management Studio | SQL Server Management Studio|
 |Начало работы с машинным обучением в SQL Server | Службы машинного обучения Майкрософт|
 |Справочник по Power Query M | Справочник по Power Query M|
 |Драйверы для SQL Server | Драйверы подключений SQL Server|

@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3e639f2f410584a4b9d1cefc991e9c6540f9ea7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036421"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969326"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Устранение неполадок с подключением к серверу и базе данных в Reporting Services
 Используйте этот раздел, чтобы решать проблемы, возникающие при подключении к серверу отчетов. Также в этом разделе описываются сообщения о непредвиденных ошибках. Дополнительные сведения о настройке источников данных и настройке данных о подключении сервера отчетов см. в разделах [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) и [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
