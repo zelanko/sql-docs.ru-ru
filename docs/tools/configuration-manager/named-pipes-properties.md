@@ -1,5 +1,5 @@
 ---
-title: Свойства именованных каналов | Документы Microsoft
+title: Свойства именованных каналов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6002657f6863f9ca5212516ab6f7afd37c2a348
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069371"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997156"
 ---
 # <a name="named-pipes-properties"></a>Свойства именованных каналов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,6 +50,6 @@ ms.locfileid: "33069371"
 ## <a name="see-also"></a>См. также:  
  [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Выбор сетевого протокола](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
- [Создание допустимой строки соединения, использующей протокол именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+ [Создание допустимой строки подключения, использующей протокол именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

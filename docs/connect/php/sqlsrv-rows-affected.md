@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_rows_affected | Документы Microsoft
+title: sqlsrv_rows_affected | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f416bf1633909e548572f8f90c7fac7e188ecf75
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309353"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991386"
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ sqlsrv_rows_affected( resource $stmt)
 Целое число, указывающее количество строк, измененных при выполнении последней инструкции. Если никакие строки не были изменены, возвращается нуль (0). Если данные о количестве измененных строк недоступны, возвращается минус единица (-1). Если при получении количества измененных строк произошла ошибка, возвращается значение **false** .  
   
 ## <a name="example"></a>Пример  
-Следующий пример отображает число строк, измененных инструкцией UPDATE. Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример отображает число строк, измененных инструкцией UPDATE. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -94,7 +94,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  

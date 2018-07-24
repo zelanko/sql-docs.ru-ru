@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 313ddda23b53fc0a4458ee2f12926a47cf0b3830
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995056"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Разрешения, необходимые для запуска приложения SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
  На следующей диаграмме показан процесс проверки разрешений во время воспроизведения трассировок:  
   
- ![Разрешения на воспроизведение трассировки приложения SQL Server Profiler](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "разрешения на воспроизведение трассировки приложения SQL Server Profiler")  
+ ![Разрешения на воспроизведение трассировки SQL Server Profiler](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "разрешения на воспроизведение трассировки SQL Server Profiler")  
   
 ## <a name="see-also"></a>См. также:  
  [Хранимые процедуры приложения SQL Server Profiler (Transact-SQL)](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   

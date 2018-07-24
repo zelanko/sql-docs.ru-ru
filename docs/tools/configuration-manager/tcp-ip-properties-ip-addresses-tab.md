@@ -1,5 +1,5 @@
 ---
-title: Свойства TCP/IP (вкладка IP адресов) | Документы Microsoft
+title: Свойства TCP/IP (вкладка IP адреса) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4371bbb3c202087b88bb5b29ce7ea5976cd6bdf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072451"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37986014"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Свойства TCP/IP (вкладка "IP-адреса")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

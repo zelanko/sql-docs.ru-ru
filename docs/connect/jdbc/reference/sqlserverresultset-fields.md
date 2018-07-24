@@ -1,5 +1,5 @@
 ---
-title: Поля SQLServerResultSet | Документы Microsoft
+title: Поля SQLServerResultSet | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f93a84e056726ffa5cf96ea05b9fd02933ed3c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847569"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036202"
 ---
 # <a name="sqlserverresultset-fields"></a>Поля SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Сведения о членах класса SQLServerResultSet см. в разделе [элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

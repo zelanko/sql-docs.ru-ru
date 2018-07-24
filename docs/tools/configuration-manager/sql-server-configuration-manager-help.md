@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 064d6fb77dad0dd906c8783ebe82f99c48b14f2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072376"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979980"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Справка диспетчера конфигурации SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы настроить службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и сетевые соединения. Для создания и управления объектами базы данных, настройки безопасности и создания запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] используйте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]см. в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
  > [!TIP]
- > Если необходимо настроить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Linux, используйте **mssql conf** средства. Дополнительные сведения см. в разделе [Настройка SQL Server в Linux с помощью средства mssql conf](../../linux/sql-server-linux-configure-mssql-conf.md).
+ > Если вам нужно настроить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Linux используйте **mssql-conf** средство. Дополнительные сведения см. в разделе [Настройка SQL Server в Linux с использованием средство mssql-conf](../../linux/sql-server-linux-configure-mssql-conf.md).
 
  В этом разделе содержатся разделы справки F1 диалоговых окон в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

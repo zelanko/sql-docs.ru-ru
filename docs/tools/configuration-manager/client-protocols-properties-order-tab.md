@@ -1,5 +1,5 @@
 ---
-title: (Вкладка «порядок») свойства клиентских протоколов | Документы Microsoft
+title: (Вкладка «порядок») свойства клиентских протоколов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 394e659a17fb4a27deac8fd62c342aa11bdac72f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069231"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987476"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Свойства клиентских протоколов (вкладка «Порядок»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33069231"
   
 ## <a name="options"></a>Параметры  
  **Отключенные протоколы**  
- Список протоколов, которые установлены, но сейчас не используется.  
+ Список протоколов, которые устанавливаются, но сейчас не используется.  
   
  **Включенные протоколы**  
  Список протоколов, доступных для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов на этом компьютере.  

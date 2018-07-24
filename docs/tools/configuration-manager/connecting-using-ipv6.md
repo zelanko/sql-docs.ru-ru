@@ -1,5 +1,5 @@
 ---
-title: Соединение с использованием IPv6 | Документы Microsoft
+title: Соединение с использованием IPv6 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0479ad79093f2de1e9eb0fa6f9ff59db70ec4060
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068961"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37986073"
 ---
 # <a name="connecting-using-ipv6"></a>Соединение с использованием IPv6
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

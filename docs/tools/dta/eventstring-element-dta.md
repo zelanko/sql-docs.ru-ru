@@ -1,5 +1,5 @@
 ---
-title: Элемент EventString (DTA) | Документы Microsoft
+title: Элемент EventString (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c90feb22a7850c024b355816a693542a417d31c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069021"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987416"
 ---
 # <a name="eventstring-element-dta"></a>Элемент EventString (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "33069021"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|attribute|Description|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |**Weight**|Необязательно. Задает весовой коэффициент запроса (коэффициент важности) для указанного события. Для указания весового коэффициента используется тип данных **float** . Например, **Weight**="100.01". Минимальное значение, которое можно задать для коэффициента **Weight** , равно 0.|  
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  

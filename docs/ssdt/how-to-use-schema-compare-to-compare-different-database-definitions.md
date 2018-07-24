@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
 - sql.data.tools.schemacompare.watermark.f1
@@ -20,12 +20,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b3b52f87fe2c144a71d5826cc66970c0f18e5d1
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b146c1dcd31cc6e45fbbd794392249aa9ffa0447
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094751"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088586"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Как использовать сравнение схем для сопоставления различных определений баз данных
 В SQL Server Data Tools (SSDT) входит программа сравнения схем, которая позволяет сравнивать два определения базы данных.  Источником и целью сравнения может быть любое сочетание подключенной базы данных, проекта базы данных SQL Server, файла моментального снимка и файла DACPAC.  Результаты сравнения выводятся в виде набора действий, которые необходимо выполнить с целевой базой, чтобы сделать ее идентичной исходной базе.  После завершения сравнения вы можете обновить целевую базу непосредственно (если это проект или база данных) или создать скрипт обновления, выполняющий те же действия.  
@@ -40,7 +40,7 @@ ms.locfileid: "37094751"
 > Если проект указан как целевой для сравнения, то максимальная поддерживаемая длина пути (не считая буквы диска, двоеточия и обратной косой черты) для проекта составляет 256 символов. Если путь к проекту превышает 256 символов, то все-таки есть возможность сравнить его схему со схемой базы данных или другого проекта. Однако в таком случае нельзя обновить его схему.  
   
 > [!WARNING]  
-> В следующих процедурах используются сущности, созданные в процедурах, которые описывались ранее в статьях [Разработка подключенной базы данных](../ssdt/connected-database-development.md) и [Разработка базы данных вне сети с учетом проекта](../ssdt/project-oriented-offline-database-development.md).  
+> В следующих процедурах используются сущности, созданные с помощью процедур, которые описывались ранее в разделах [Connected Database Development](../ssdt/connected-database-development.md) (Разработка подключенной базы данных) и [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) (Разработка базы данных вне сети с учетом проекта).  
   
 ### <a name="to-compare-database-definitions"></a>Сравнение определений баз данных  
   
