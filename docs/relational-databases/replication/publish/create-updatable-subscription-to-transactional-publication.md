@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d3e9eb6a8884de54c73f3edc4fb20352ff61b0a5
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352196"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992026"
 ---
 # <a name="create-updatable-subscription-to-transactional-publication"></a>Создание обновляемой подписки для публикации транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,10 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 100ec0e739dc397b8173259abcfaf7c8e6cdfd9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982416"
 ---
 # <a name="reporting-services-site-collection-features"></a>Компоненты семейства веб-сайтов служб Reporting Services
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 
  В представленной ниже таблице описываются компоненты семейства веб-сайтов служб Reporting Services.  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |-------------|-----------------|  
 |**Центр администрирования сервера отчетов**|Включает возможности для управления интеграцией с сервером отчетов служб Reporting Services. Этот компонент устанавливается и используется в семействе веб-сайтов центра администрирования SharePoint.<br /><br /> Компонент интеграции сервера отчетов автоматически активируется в семействе веб-сайтов центра администрирования SharePoint после установки надстройки служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для продуктов SharePoint. В некоторых ситуациях необходимо активировать этот компонент вручную. Чтобы активировать компонент сервера отчетов, используйте страницы служб Reporting Services на странице параметров сайта в центре администрирования SharePoint.<br /><br /> Версия служб [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services и более поздние версии надстройки для продуктов SharePoint активируют функцию интеграции сервера отчетов для всех семейств веб-сайтов, существующих на момент установки надстройки. Кроме того, эта функция автоматически активируется для новых семейств веб-сайтов.|  
 |**Компонент интеграции сервера отчетов**|Обеспечивает создание улучшенных отчетов с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services.<br /><br /> Этот компонент активен по умолчанию.|  

@@ -21,10 +21,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dcb886bee40d358bf0b2815e8fb669876f32d3a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978233"
 ---
 # <a name="thread-and-task-architecture-guide"></a>руководство по архитектуре потоков и задач
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +130,7 @@ SQL Server не начинает автоматически использова
 |Компонент Service Broker |Sb.exe |нет |  
 |Компонент Full-text Search   |Fts.exe    |нет |  
 |Агент SQL Server   |Sqlagent.exe   |нет |  
-|Среда SQL Server Management Studio   |Ssms.exe   |нет |  
+|SQL Server Management Studio   |Ssms.exe   |нет |  
 |программа установки SQL Server   |Setup.exe  |нет |  
 
 

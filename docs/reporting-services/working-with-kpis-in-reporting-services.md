@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 74c0cd02499ab10f2aeded7cc528c7db244cd2cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032941"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971706"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Работа с ключевыми показателями эффективности в службах Reporting Services
 
@@ -57,7 +57,7 @@ ms.locfileid: "33032941"
   
 Вы можете назначить статические значения или использовать данные из общего набора данных. При создании ключевой показатель эффективности будет заполняться случайным набором данных, обрабатываемых вручную.  
   
-|Поле|Description|  
+|Поле|Описание|  
 |---|---|  
 |Формат значения|  Используется для изменения формата отображаемого значения.|   
 |Значение|Значение ключевого показателя эффективности.|  

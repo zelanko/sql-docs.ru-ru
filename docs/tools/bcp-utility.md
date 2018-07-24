@@ -35,21 +35,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f54b14989ac5df37bbb8ee386c783c9721a32206
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974283"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Материалы по предыдущим версиям SQL Server см. в статье [Программа bcp](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
 
- > Последнюю версию программы bcp см. в разделе [14.0 служебные программы командной строки Microsoft для SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > Последнюю версию служебной программы bcp, см. в разделе [14.0 служебные программы командной строки Microsoft для SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
- > С помощью программы bcp в Linux, в разделе [установке sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
+ > С помощью программы bcp на платформе Linux, см. в разделе [Установка sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
 
- > Подробные сведения об использовании bcp с хранилищем данных SQL Azure см. в разделе [загрузки данных с помощью программы bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
+ > Подробные сведения об использовании программы bcp с хранилищем данных SQL Azure см. в разделе [загрузка данных с помощью bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
   Служебная программа **b**ulk **c**opy **p**rogram (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в пользовательском формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
   
@@ -149,7 +150,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > Рекомендуется указывать имя параметра сортировки для каждого столбца в файле форматирования, кроме случаев, когда параметр 65001 должен иметь приоритет над спецификацией параметров сортировки или кодовой страницы.
   
-|Значение кодовой страницы|Description|  
+|Значение кодовой страницы|Описание|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Кодовая страница, используемая клиентом по умолчанию. Это кодовая страница, используемая по умолчанию, если не указан параметр **-C** .|  
@@ -189,21 +190,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Параметр*first_row* может иметь положительное целое значение до 2^63-1. Аргумент **-F** *first_row* имеет нумерацию, которая начинается с 1.  
 
 **-G**<a name="G"></a>  
- Клиент использует этот переключатель при подключении к базе данных SQL Azure или хранилищу данных SQL Azure, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Требуется параметр -G [версии 14.0.3008.27 или более поздней версии](http://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните команду bcp -v. Дополнительные сведения см. в разделе [использование Azure проверки подлинности Active Directory для проверки подлинности в базе данных SQL или хранилище данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+ Клиент использует этот переключатель при подключении к базе данных SQL Azure или хранилищу данных SQL Azure, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Параметра -G требуется [версии 14.0.3008.27 или более поздней версии](http://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните команду bcp -v. Дополнительные сведения см. в разделе [использование аутентификации Azure Active Directory для аутентификации с помощью базы данных SQL или хранилище данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
 > [!TIP]
->  Для проверки, если ваша версия bcp поддерживает для типа проверки подлинности Active Directory Azure (AAD) **bcp--** (bcp\<пространства >\<тире >\<тире >) и убедитесь, что вы видите - G в списке Доступные аргументы.
+>  Для проверки, если ваша версия bcp поддерживает для типа проверки подлинности Active Directory Azure (AAD) **bcp--** (bcp\<пространства >\<dash >\<dash >) и убедитесь, что вы видите - G в списке Доступные аргументы.
 
 - **Имя пользователя и пароль Azure Active Directory** 
 
     Если вы хотите использовать имя пользователя и пароль Azure Active Directory, можно указать параметр **-G** , а также использовать имя пользователя и пароль, задав параметры **-U** и **-P** . 
 
-    В следующем примере экспортируется данных с помощью Azure AD пользователя и пароль, где имя пользователя и пароль учетных данных AAD. В примере выполняется экспорт таблицы `bcptest` из базы данных `testdb` с сервера Azure `aadserver.database.windows.net` и сохраняет данные в файле `c:\last\data1.dat`:
+    В следующем примере экспортируется данных с помощью имени пользователя Azure AD и пароль, где — это учетные данные AAD пользователя и пароль. В примере выполняется экспорт таблицы `bcptest` из базы данных `testdb` с сервера Azure `aadserver.database.windows.net` и сохраняет данные в файле `c:\last\data1.dat`:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    В следующем примере импортируется данных с использованием имени пользователя Azure AD и пароль, где имя пользователя и пароль учетных данных AAD. В примере выполняется импорт данных из файла `c:\last\data1.dat` в таблицу `bcptest` для базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью Azure AD и пароля пользователя:
+    Следующий пример импортирует данные с помощью имени пользователя Azure AD и пароль, где — это учетные данные AAD пользователя и пароль. В примере выполняется импорт данных из файла `c:\last\data1.dat` в таблицу `bcptest` для базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью Azure AD пользователя и пароль:
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -212,15 +213,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Встроенная проверка подлинности Azure Active Directory** 
  
-    Чтобы использовать встроенную проверку подлинности Azure Active Directory, укажите параметр **-G** без имени пользователя или пароля. Эта конфигурация предполагает, что Windows текущего пользователя (учетная запись, которой запущено команды bcp) включена в федерацию с Azure AD: 
+    Чтобы использовать встроенную проверку подлинности Azure Active Directory, укажите параметр **-G** без имени пользователя или пароля. Эта конфигурация предполагает, что Windows учетная запись текущего пользователя (учетная запись, которой выполняется команда bcp) входит в федерацию с Azure AD: 
 
-    В следующем примере экспортируется данных с использованием встроенной учетной записи Azure AD. В примере выполняется экспорт таблицы `bcptest` из базы данных `testdb` с помощью Azure AD Integrated с сервера Azure `aadserver.database.windows.net` и сохраняет данные в файле `c:\last\data2.dat`:
+    В следующем примере экспортируется данных с помощью встроенной учетной записи Azure AD. В примере выполняется экспорт таблицы `bcptest` из базы данных `testdb` с помощью Azure AD Integrated с сервера Azure `aadserver.database.windows.net` и сохраняет данные в файле `c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    В следующем примере импортируется данных с помощью встроенной проверки подлинности Azure AD В примере выполняется импорт данных из файла `c:\last\data2.txt` в таблицу `bcptest` для базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью встроенной проверки подлинности Azure AD:
+    Следующий пример импортирует данные с помощью встроенной проверки подлинности Azure AD В примере выполняется импорт данных из файла `c:\last\data2.txt` в таблицу `bcptest` для базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью встроенной проверки подлинности Azure AD:
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -335,7 +336,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-R**<a name="R"></a>  
  Указывает, что массовое копирование в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] данных в денежном формате, в формате даты и времени выполняется с помощью регионального формата, определенного настройками локали клиентского компьютера. По умолчанию региональные настройки не учитываются.  
   
- **-S** ***имя_сервера*** [\\***имя_экземпляра***]<a name="S"></a> — указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], к которому выполняется подключение. Если сервер не указан, программа **bcp** выполняет подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на локальном компьютере. Этот параметр необходим, если команда **bcp** выполняется с удаленного компьютера в сети или с локального именованного экземпляра. Чтобы подключиться к экземпляру по умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на сервере, укажите только *server_name*. Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите *server_name***\\*** instance_name*.  
+ **-S** ***имя_сервера*** [\\***имя_экземпляра***]<a name="S"></a> — указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], к которому выполняется подключение. Если сервер не указан, программа **bcp** выполняет подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на локальном компьютере. Этот параметр необходим, если команда **bcp** выполняется с удаленного компьютера в сети или с локального именованного экземпляра. Чтобы подключиться к экземпляру по умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на сервере, укажите только *server_name*. Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите *server_name***\\***instance_name*.  
   
  **-t** ***field_term***<a name="t"></a>  
  Указывает признак конца поля. Значением по умолчанию является **\t** (символ табуляции). Используйте этот параметр, чтобы переопределить признак конца поля по умолчанию. Дополнительные сведения см. в разделе [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  

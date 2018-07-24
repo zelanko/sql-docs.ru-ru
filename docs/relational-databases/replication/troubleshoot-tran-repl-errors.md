@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7fc5893c782794a69a1bcd5ac41bfb3dae693337
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611679"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989446"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Средство устранения неполадок: поиск ошибок, связанных с репликацией транзакций SQL Server 
 Без понимания того, как работает репликация транзакций, устранение ее ошибок может быть затруднительным. Первым шагом при создании публикации является создание моментального снимка агентом моментальных снимков и его сохранение в папке моментальных снимков. Затем агент распространения применяет моментальный снимок к подписчику. 

@@ -1,5 +1,5 @@
 ---
-title: Элемент OnlineIndexOperation (DTA) | Документы Microsoft
+title: Элемент OnlineIndexOperation (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6a75b7e17afb7f23a7840612adcb654a55714b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071171"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971096"
 ---
 # <a name="onlineindexoperation-element-dta"></a>Элемент OnlineIndexOperation (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33071171"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, без ограничения длины|  
 |**Допустимые значения**|**OFF**<br /> Рекомендованные структуры физического проектирования не могут быть созданы в оперативном режиме.<br /><br /> **ON**<br /> Все рекомендованные структуры физического проектирования могут быть созданы в режиме в сети.<br /><br /> **MIXED**<br /> Помощник по настройке ядра СУБД пытается рекомендовать структуры физического проектирования, которые могут быть созданы, по возможности, в режиме в сети.<br /><br /> Используйте с данным элементом одно из этих значений. Если индексы создаются в режиме в сети, то к их определению объекта добавляется ключевое слово **ONLINE = ON** .|  

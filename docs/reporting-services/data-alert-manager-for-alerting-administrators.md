@@ -19,10 +19,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b551310752346de912c6b38147b79473bbbaebea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987116"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Диспетчер предупреждений данных для оповещения администраторов
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="ViewingAlerts"></a> Просмотр сведений о предупреждениях об изменении данных  
  Если службы Reporting Services установлены и настроены в SharePoint, то на странице «Настройка сайта SharePoint» будут параметры **Службы Reporting Services** . Чтобы открыть диспетчер предупреждений об изменении данных, администратор предупреждений должен нажать кнопку **Управление предупреждениями об изменении данных** в службе Reporting Service. На следующем рисунке показано, как открыть диспетчер предупреждений об изменении данных со страницы «Настройки сайта».  
   
- ![Раздел служб Reporting Services на странице "Параметры сайта"](../reporting-services/media/rs-sitesettings.gif "Раздел служб Reporting Services на странице "Параметры сайта"")  
+ ![Раздел служб Reporting Services на странице "Параметры сайта"](../reporting-services/media/rs-sitesettings.gif "Раздел служб Reporting Services на странице \"Параметры сайта\"")  
   
  Диспетчер предупреждений об изменении данных содержит таблицу, в которой перечисляются имя предупреждения, имя отчета, имя владельца отчета, сколько раз предупреждающее сообщение было отправлено, время последнего запуска предупреждения, время последнего изменения определения предупреждения, а также состояние сообщения с предупреждением. Если предупреждение не удалось создать или отправить, в столбце «Состояние» содержатся сведения об ошибке, которые помогают устранить проблему. Дополнительные сведения см. в статье [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   

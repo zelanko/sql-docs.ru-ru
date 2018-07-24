@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 14f7dc1176ff57705775ae6c23e30b49202533f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181550"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001486"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Создание и управление полнотекстовыми каталогами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ GO
   
 В следующей таблице перечислены свойства, о которых сообщается в полнотекстовых каталогах. Эти сведения полезны для администрирования и устранения нарушений в работе средств полнотекстового поиска. 
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Настройка учета диакритических знаков:|
 |**ImportStatus**|Выполняется ли в настоящее время импорт полнотекстового каталога.|  

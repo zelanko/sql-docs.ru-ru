@@ -1,5 +1,5 @@
 ---
-title: Элемент Server (DTA) | Документы Microsoft
+title: Элемент Server (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3bd0fb4b152c253cff5351138dccc41b397b6c2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070281"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019702"
 ---
 # <a name="server-element-dta"></a>Элемент Server (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33070281"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

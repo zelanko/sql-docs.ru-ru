@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6a39ec170770aa51e8df02e765a793d11849839a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979436"
 ---
 # <a name="overview-exporting-data-master-data-services"></a>Обзор. Экспорт данных (службы Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "35333618"
 ## <a name="subscription-views-can-become-out-of-date"></a>Представления подписки могут устаревать  
  После создания представления подписки для сущности или иерархии изменения связанных объектов модели не будут автоматически отображаться в представлении. Может потребоваться повторное создание представления подписки в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , чтобы в ней отразились изменения в объектах модели. При изменении объектов модели значение в столбце **Изменено** на странице **Экспорт** меняется на **True** . Значение**True** указывает на необходимость изменить представление подписки и сохранить его, после чего оно будет создано повторно.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

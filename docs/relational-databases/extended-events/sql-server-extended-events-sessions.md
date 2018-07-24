@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f19c24999fb1005a312af5eba61664faa2cc2aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936160"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006036"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "32936160"
   
  Обратите внимание, что на предыдущем рисунке состояние сеанса меняется по мере того, как выполняются разные команды DDL. В следующей таблице описаны эти изменения состояния.  
   
-|Метка рисунка|Инструкция DDL|Description|  
+|Метка рисунка|Инструкция DDL|Описание|  
 |------------------------|-------------------|-----------------|  
 |Создание|CREATE EVENT SESSION|Процесс создает объект сеанса, содержащий метаданные, предоставленные инструкцией CREATE EVENT SESSION. Процесс проверяет определение сеанса, уровень разрешений пользователя и сохраняет метаданные в базе данных master. В этот момент сеанс неактивен.|  
 |Alter|ALTER EVENT SESSION, STATE=START|Процесс запускает сеанс. Процесс считывает сохраненные метаданные, проверяет определение сеанса, уровень разрешений пользователя и создает сеанс. Загружаются такие объекты сеанса, как события и цели, и сеанс становится активным.|  

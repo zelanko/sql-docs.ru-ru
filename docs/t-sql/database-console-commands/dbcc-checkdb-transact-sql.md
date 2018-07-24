@@ -39,11 +39,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 7f270fd58e58b7e6c850a520dff4cd37e2ddb4ec
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262947"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988498"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -217,7 +217,7 @@ DATA_PURITY
 ## <a name="understanding-dbcc-error-messages"></a>Основные сведения о сообщениях об ошибках DBCC    
 После завершения выполнения команды DBCC CHECKDB в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывается сообщение. Если команда DBCC выполнена успешно, сообщение указывает на успешное завершение и содержит время, в течение которого выполнялась команда. Если команда DBCC была остановлена из-за ошибки до завершения проверки, сообщение указывает на прекращение выполнения команды и содержит значение состояния и время, в течение которого выполнялась команда. В следующей таблице перечислены и описаны значения состояний, которые могут быть включены в сообщение.
     
-|Состояние|Description|    
+|Состояние|Описание|    
 |-----------|-----------------|    
 |0|Возникла ошибка с номером 8930. Указывает на повреждение в метаданных, приведшее к завершению команды DBCC.|    
 |1|Возникла ошибка с номером 8967. Внутренняя ошибка DBCC.|    

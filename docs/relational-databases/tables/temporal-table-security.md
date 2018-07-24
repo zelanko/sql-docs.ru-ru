@@ -16,10 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ee27537dd58803a79291ea75a47e51d1cd53936
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993516"
 ---
 # <a name="temporal-table-security"></a>Безопасность темпоральных таблиц
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="security-principles"></a>Принципы безопасности  
  В следующей таблице описаны принципы безопасности, применимые к темпоральным таблицам.  
   
-|Принцип|Description|  
+|Принцип|Описание|  
 |---------------|-----------------|  
 |Включение и отключение системного управления версиями требует наивысших прав на затронутые объекты|Для включения и отключения SYSTEM_VERSIONING необходимо разрешение CONTROL как для текущей, так и для прежней таблицы|  
 |Данные за прошедший период нельзя изменить напрямую|Если параметр SYSTEM_VERSIONING включен (ON), пользователи не могут изменять данные за прошедший период независимо от своих фактических разрешений для текущей или прежней таблицы. Это относится к изменениям как данных, так и схемы.|  

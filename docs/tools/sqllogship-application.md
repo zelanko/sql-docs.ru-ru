@@ -1,5 +1,5 @@
 ---
-title: Приложение sqllogship | Документы Microsoft
+title: Приложение sqllogship | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969090"
 ---
 # <a name="sqllogship-application"></a>Приложение sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Приложение **sqllogship** выполняет операции резервного копирования, обычного копирования и восстановления, а также связанные с ними задачи очистки для конфигурации доставки журналов. Операция выполняется на определенном экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для определенной базы данных.  
   
- ![Значок ссылки на раздел](../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") синтаксических обозначениях см. в разделе [Справка программы командной строки &#40;СУБД&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Значок ссылки на раздел](../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") о синтаксических обозначениях см. в разделе [Справочник по программе командной строки &#40;СУБД&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -59,7 +60,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  Определяет уровень сообщений, добавляемых в журнал доставки журналов. *level* может быть одним из следующих целочисленных значений:  
   
-|level|Description|  
+|level|Описание|  
 |-----------|-----------------|  
 |0|Не выводить сообщения трассировки и отладки.|  
 |1|Выводить сообщения обработки ошибок.|  

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 94fd34fa9224f7de468a6e89dd91c20903e96cb8
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985147"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Проверка данных (надстройка MDS для Excel)
 
@@ -58,7 +58,7 @@ ms.locfileid: "35335788"
 |Только для чтения|Вошедший в систему пользователь имеет разрешения «Только для чтения» на одно или несколько значений в строке, и значения нельзя обновить.|  
 |Без изменений|Ни одно значение в строке на листе не было изменено. Это не означает, что значения в хранилище не изменились. Чтобы получить последние данные на листе, в группе **Подключение и загрузка** нажмите кнопку **Загрузить или обновить**.<br /><br /> Это параметр по умолчанию для каждой строки.|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

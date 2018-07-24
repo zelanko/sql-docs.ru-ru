@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4819f8384c3d436827db1d6e31c32cb4ac1303ae
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333698"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990686"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Явные иерархии (службы основных данных)
 
@@ -88,7 +88,7 @@ ms.locfileid: "35333698"
   
  Консолидированные элементы можно использовать для группировки элементов на любом уровне, при этом консолидированные и конечные элементы сортируются в том порядке, который для них определен.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

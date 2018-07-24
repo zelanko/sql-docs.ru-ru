@@ -14,10 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969419"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице приведены все различия между внедренными и общими источниками данных.  
   
-|Description|Внедренный<br /><br /> Источник данных|Shared<br /><br /> Источник данных|  
+|Описание|Внедренный<br /><br /> Источник данных|Shared<br /><br /> Источник данных|  
 |-----------------|------------------------------|----------------------------|  
 |Подключение к данным внедрено в определение отчета.|![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")||  
 |Указатель на подключение к данным на сервере ответов внедрен в определение отчета.||![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")|  

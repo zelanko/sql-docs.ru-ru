@@ -1,5 +1,5 @@
 ---
-title: Программа tablediff | Документы Microsoft
+title: tablediff Utility | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: daf978c77bca856ebc380c95bdca7185bcdee836
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974126"
 ---
 # <a name="tablediff-utility"></a>tablediff, программа
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +87,7 @@ tablediff
  Возвращает список поддерживаемых параметров.  
   
  **-sourceserver** *имя_исходного_сервера*[**\\***имя_экземпляра*]  
- Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите *имя_исходного_сервера***\\*** имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите *имя_исходного_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *база_данных_источник*  
  Имя базы данных-источника.  
@@ -110,7 +111,7 @@ tablediff
  Исходная таблица блокируется в ходе сравнения при помощи табличных подсказок TABLOCK и HOLDLOCK.  
   
  **-destinationserver** *имя_целевого_сервера*[**\\***имя_экземпляра*]  
- Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите *имя_целевого_сервера***\\*** имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите *имя_целевого_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *база_данных_подписки*  
  Имя целевой базы данных.  
@@ -171,7 +172,7 @@ tablediff
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Успешно|  
 |**1**|Критическая ошибка|  

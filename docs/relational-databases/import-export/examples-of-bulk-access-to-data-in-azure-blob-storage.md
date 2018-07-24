@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5a70f15dde9eb705440e5324215845d904872574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936424"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992016"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Примеры массового доступа к данным в хранилище BLOB-объектов Azure
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 6f4893d2044676078d102cbd776de03815b8354e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017881"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968848"
 ---
 # <a name="branding-the-web-portal"></a>Фирменная символика на веб-портале
 
@@ -96,7 +96,7 @@ ms.locfileid: "33017881"
   
 Раздел интерфейса состоит из следующих разделов.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |---|---|  
 |primary|Цвета кнопок и цвета при наведении указателя мыши.|  
 |Вторичная|Заголовок, панель поиска, меню слева (если отображается) и цвет текста для этих элементов.|  

@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a69c538a1b24d0963542581cc27d4c2e935ec31b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311943"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969391"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
