@@ -43,6 +43,9 @@
    GO
    ```
 
+> [!TIP]
+> Подробнее о написании инструкций и запросов на языке Transact-SQL см. учебник [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
+
 ### <a name="insert-data"></a>Вставка данных
 
 Теперь создайте таблицу `Inventory` и вставьте две новых строки.
@@ -95,7 +98,21 @@
 QUIT
 ```
 
-## <a name="connect-from-windows"></a>Подключение из Windows
+## <a name="performance-best-practices"></a>Рекомендации по повышению производительности
+
+После установки SQL Server в Linux, советы и рекомендации по настройке, Linux и SQL Server для повышения производительности для рабочих сценариев. Дополнительные сведения см. в разделе [рекомендации по производительности и рекомендации по конфигурации для SQL Server в Linux](../linux/sql-server-linux-performance-best-practices.md).
+
+## <a name="cross-platform-data-tools"></a>Данные кросс платформенные средства
+
+В дополнение к **sqlcmd**, можно использовать следующие кросс платформенные средства для управления SQL Server:
+
+|||
+|---|---|
+| [SQL Server Operations Studio](../sql-operations-studio/index.md) | Кросс платформенных графического интерфейса пользователя базы данных управления служебной программы. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Кросс платформенного интерфейса командной строки для выполнения команд Transact-SQL. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md); | Редактор кода графического пользовательского интерфейса между различными платформами, выполните инструкции Transact-SQL с помощью расширения mssql. |
+
+## <a name="connecting-from-windows"></a>Подключение из Windows
 
 Инструменты SQL Server в Windows подключаются к экземплярам SQL Server в Linux так же, как они подключались бы к любому удаленному экземпляру SQL Server.
 
@@ -103,11 +120,11 @@ QUIT
 
 Другие инструменты, которые запускаются в Windows, но подключаются к SQL Server на Linux:
 
-- [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-manage-ssms.md)
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="additional-resources"></a>Дополнительные ресурсы
+## <a name="other-deployment-scenarios"></a>Другие сценарии развертывания
 
 По другим сценариям установки доступны следующие ресурсы.
 
@@ -118,21 +135,10 @@ QUIT
 | [Автоматическая установка](../linux/sql-server-linux-setup.md#unattended) | Узнайте, как создать сценарий для установки без каких-либо запросов |
 | [Автономная установка](../linux/sql-server-linux-setup.md#offline) | Узнайте, как вручную загрузить пакеты для установки в автономном режиме |
 
-Чтобы изучить другие способы подключения и управления SQL Server, исследовать следующие средства:
-
-|||
-|---|---|
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md); | Редактор кода кросс платформенных графического интерфейса пользователя, выполните инструкции Transact-SQL с расширением mssql. |
-| [Studio операций SQL Server](../sql-operations-studio/index.md) | Кросс платформенных графического интерфейса пользователя базы данных управления программы. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Межплатформенного интерфейса командной строки для выполнения команд Transact-SQL. |
-| [Среда SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) | Программа управления базы данных на ОСНОВЕ Windows, могут подключаться и управления экземплярами SQL Server в Linux. |
-
-Подробнее о написании инструкций и запросов на языке Transact-SQL см. учебник [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
-
 > [!TIP]
-> Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](../linux/sql-server-linux-faq.md).
+> Ответы на часто задаваемые вопросы см. в разделе [SQL Server на Linux часто задаваемые вопросы о](../linux/sql-server-linux-faq.md).
 
 ## <a name="next-steps"></a>Следующие шаги
 
 > [!div class="nextstepaction"]
-> [Просмотр учебники для SQL Server в Linux](../linux/sql-server-linux-migrate-restore-database.md)
+> [Ознакомьтесь с учебниками для SQL Server в Linux](../linux/sql-server-linux-migrate-restore-database.md)

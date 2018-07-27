@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 018c02c2348e14028a5cbb84ef30b2428ac9e9e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cf12e737a798e671797880667b5fb75930a85847
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061452"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278955"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -75,6 +75,9 @@ ms.locfileid: "38061452"
 |log_recovery_size_mb   |**float**  |   Размер журнала в МБ с момента восстановления журнала [регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
 |recovery_vlf_count |**bigint** |   Общее число [виртуальных файлов журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) для восстановления, если произошла отработка отказа или перезапуск сервера. |  
 
+
+## <a name="remarks"></a>Примечания
+При выполнении `sys.dm_db_log_stats` в базе данных, участвующих в группе доступности является вторичной, будет возвращаться только подмножество полей, описанных выше.  В настоящее время только `database_id`, `recovery_model`, и `log_backup_time` будет возвращаться при выполнении для базы данных-получателя.   
 
 ## <a name="permissions"></a>Разрешения  
 Требуется `VIEW DATABASE STATE` разрешение в базе данных.   

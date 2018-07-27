@@ -1,7 +1,7 @@
 ---
-title: sp_refreshsqlmodule (Transact-SQL) | Документы Microsoft
+title: sp_refreshsqlmodule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -31,16 +31,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b54f1410be78cc1be6095a1870fc5b6b9e5b694f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 80012f2172193a277053485ca763122d9ba1fe16
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278735"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Обновляет метаданные для указанной не привязанной к схеме хранимой процедуры, определяемой пользователем функции, представления, триггера DML, а также триггера DDL уровня базы данных или сервера в текущей базе данных. Непрерывные метаданные для этих объектов, такие как типы данных параметров, могут устаревать по причине изменений их базовых объектов.  
+  Обновляет метаданные для указанной не привязанной к схеме хранимой процедуры, определяемой пользователем функции, представления, триггера DML, а также триггера DDL уровня базы данных или сервера в текущей базе данных. Непрерывные метаданные для этих объектов, такие как типы данных параметров, могут устаревать по причине изменений их базовых объектов.
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,24 +61,24 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@name=** ] **"***имя_модуля***"**  
- Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *имя_модуля* не может быть общеязыковая среда выполнения (CLR) хранимая процедура или функция среды CLR. *имя_модуля* не может быть привязана к схеме. *имя_модуля* — **nvarchar**, не имеет значения по умолчанию. *имя_модуля* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.  
+ [  **@name=** ] **"***module_name***"**  
+ Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть общеязыковая среда выполнения (CLR) хранимая процедура или функция среды CLR. *module_name* не может быть привязана к схеме. *module_name* — **nvarchar**, не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.  
   
- [ **,** @**имен** =] **"** \<класса > **"**  
- Класс указанного модуля. Когда *имя_модуля* является триггером DDL \<класса > является обязательным. *\<Класс >* — **nvarchar**(20). Допустимые входные значения:  
+ [ **,** @**пространства имен** =] **"** \<класс > **"**  
+ Класс указанного модуля. Когда *module_name* является триггером DDL, \<класс > является обязательным. *\<Класс >* — **nvarchar**(20). Допустимые входные значения:  
   
 |||  
 |-|-|  
 |DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|SERVER_DDL_TRIGGER|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_refreshsqlmodule** следует запускать при изменении модуля базовых объектов, влияющих на его определение. В противном случае при обращении к модулю или при его вызове могут быть получены непредвиденные результаты. Чтобы обновить представление, можно использовать **sp_refreshsqlmodule** или **sp_refreshview** с теми же результатами.  
+## <a name="remarks"></a>Примечания  
+ **sp_refreshsqlmodule** должен выполняться при изменении объектов модуля, которые влияют на его определение. В противном случае при обращении к модулю или при его вызове могут быть получены непредвиденные результаты. Для обновления представления можно использовать любой **sp_refreshsqlmodule** или **sp_refreshview** с теми же результатами.  
   
- **sp_refreshsqlmodule** не влияет на все разрешения, расширенные свойства или параметры SET, связанные с объектом.  
+ **sp_refreshsqlmodule** не влияет на все разрешения, расширенные свойства или параметры SET, которые связаны с объектом.  
   
  Чтобы обновить триггер DDL уровня сервера, необходимо выполнить эту хранимую процедуру в контексте любой базы данных.  
   
@@ -164,7 +165,7 @@ GO
   
 ||  
 |-|  
-|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
 ```  
 USE master;  
@@ -176,6 +177,6 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [sp_refreshview (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

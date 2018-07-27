@@ -1,5 +1,5 @@
 ---
-title: sys.internal_tables (Transact-SQL) | Документы Microsoft
+title: sys.internal_tables (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,27 +25,27 @@ caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: fe0991279a517f10d3a00f56bc056aa6f0588ef7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 023f2b4a26a816ed31013aa20355593d0eda0faa
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181920"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216895"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает одну строку для каждого объекта какой-либо внутренней таблицы. Внутренние таблицы создаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически для поддержки различных функций. Например, при создании первичного XML-индекса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает внутреннюю таблицу для сохранения разобранных данных XML-документа. Внутренние таблицы отображаются в **sys** каждой базы данных и имеют уникальный, формируемый системой имена, указывающие на их функцию, например, **xml_index_nodes_2021582240_32001** или  **queue_messages_1977058079**  
+  Возвращает одну строку для каждого объекта какой-либо внутренней таблицы. Внутренние таблицы создаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически для поддержки различных функций. Например, при создании первичного XML-индекса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает внутреннюю таблицу для сохранения разобранных данных XML-документа. Внутренние таблицы отображаются в **sys** схеме каждой базы данных и имеют уникальный, формируемый системой имена, указывающие на их функцию, например, **xml_index_nodes_2021582240_32001** или  **queue_messages_1977058079**  
   
- Данные внутренних таблиц недоступны для пользователей, а их схема является жесткой и неизменной. Невозможно ссылаться на имена внутренних таблиц в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например, нельзя выполнить инструкцию SELECT \* FROM  *\<sys.internal_table_name >*. Однако можно обращаться с запросами к представлениям каталогов для просмотра метаданных внутренних таблиц.  
+ Данные внутренних таблиц недоступны для пользователей, а их схема является жесткой и неизменной. Невозможно ссылаться на имена внутренних таблиц в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например, невозможно выполнить инструкцию SELECT \* FROM  *\<sys.internal_table_name >*. Однако можно обращаться с запросами к представлениям каталогов для просмотра метаданных внутренних таблиц.  
   
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Столбцы, наследуемые из sys.objects >**||Список столбцов, наследуемых этим представлением см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|**internal_type**|**tinyint**|Тип внутренней таблицы:<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (например, пространственный индекс)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**|  
-|**internal_type_desc**|**nvarchar(60)**|Описание типа внутренней таблицы:<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS|  
-|**parent_ID**|**int**|Идентификатор родителя, независимо от того, находится он в пределах области видимости схемы или нет. Принимает значение 0, если родитель отсутствует.<br /><br /> **queue_messages** = **object_id** очереди<br /><br /> **xml_index_nodes** = **object_id** XML-индекса<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id** полнотекстового каталога<br /><br /> **fulltext_index_map** = **object_id** полнотекстового индекса<br /><br /> **query_notification**, или **service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id** расширенного индекса, например пространственного индекса<br /><br /> **object_id** таблицы, которые включено отслеживание таблицы = **change_tracking**|  
+|**\<Столбцы, наследуемые из sys.objects >**||Список столбцов, наследуемых этим представлением, см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**internal_type**|**tinyint**|Тип внутренней таблицы:<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (например, пространственный индекс)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 236 = **selective_xml_index_node_table**|  
+|**internal_type_desc**|**nvarchar(60)**|Описание типа внутренней таблицы:<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE|  
+|**parent_ID**|**int**|Идентификатор родителя, независимо от того, находится он в пределах области видимости схемы или нет. Принимает значение 0, если родитель отсутствует.<br /><br /> **queue_messages** = **object_id** очереди<br /><br /> **xml_index_nodes** = **object_id** XML-индекса<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id** полнотекстового каталога<br /><br /> **fulltext_index_map** = **object_id** полнотекстового индекса<br /><br /> **query_notification**, или **service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id** расширенного индекса, например пространственного индекса<br /><br /> **object_id** для таблицы, которые включено отслеживание таблицы = **change_tracking**|  
 |**parent_minor_id**|**int**|Вспомогательный идентификатор родителя.<br /><br /> **xml_index_nodes** = **index_id** XML-индекса<br /><br /> **extended_indexes** = **index_id** расширенного индекса, например пространственного индекса<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**,  **service_broker_map**, или **change_tracking**|  
 |**lob_data_space_id**|**int**|Ненулевое значение — идентификатор пространства данных (файловая группа или схема секционирования), хранящего данные больших объектов (LOB) для этой таблицы.|  
 |**filestream_data_space_id**|**int**|Зарезервировано для последующего использования.|  
@@ -53,14 +53,14 @@ ms.locfileid: "33181920"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Внутренние таблицы размещаются в той же файловой группе, что и родительская сущность. С помощью запроса к каталогу, проиллюстрированного далее в примере Е, можно узнать количество страниц, занимаемых внутренними таблицами под хранение данных «в строке», «вне строки» и данных больших объектов (LOB).  
   
- Можно использовать [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) системной процедуры для возврата данных об использовании места для внутренних таблиц. **sp_spaceused** возвращает пространство внутренних таблиц следующими способами:  
+ Можно использовать [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) системной процедуры для возврата данных об использовании места для внутренних таблиц. **sp_spaceused** сообщает место занимают внутренние таблицы следующим образом:  
   
 -   При указании имени запроса базовая внутренняя таблица, связанная с запросом, находится по ссылке и сообщается объем пространства, занятого ей.  
   
--   Страницы, используемые внутренними таблицами XML индексов, пространственных индексов и полнотекстовых индексов, включаются в **index_size** столбца. Если указано имя таблицы или индексированного представления, страницы XML-индексов, пространственных индексов и полнотекстовых индексов для этого объекта включаются в столбцах **зарезервированные** и **index_size**.  
+-   Страницы, используемые внутренними таблицами XML индексов, пространственных индексов и полнотекстовых индексов, включаются в **index_size** столбца. При указании имени таблицы или индексированного представления на страницах для XML-индексов, пространственных индексов и полнотекстовых индексов для этого объекта, включаются в столбцах **зарезервированные** и **index_size**.  
   
 ## <a name="examples"></a>Примеры  
  Следующие примеры демонстрируют, как обратиться с запросом к метаданным внутренней таблицы с помощью представлений каталога.  

@@ -1,5 +1,5 @@
 ---
-title: IHpublisherindexes (Transact-SQL) | Документы Microsoft
+title: IHpublisherindexes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,28 +22,28 @@ helpviewer_keywords:
 - IHpublisherindexes system table
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 427df96d3f6808cbaa00d079546ad766d42fb701
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 657d8d364d0691ec2c0150b4ca933fcd46ce8f9f
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004051"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103842"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublisherindexes** системная таблица содержит по одной строке на каждый индекс, реплицированный с отличных от издателей SQL Server с помощью текущего распространителя. Эта таблица хранится в базе данных распространителя.  
+  **IHpublisherindexes** системная таблица содержит по одной строке для каждого индекса, реплицируются из отличных от издателей SQL Server с помощью текущего распространителя. Эта таблица хранится в базе данных распространителя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publisherindex_id**|**int**|Идентифицирует опубликованный индекс.|  
-|**table_id**|**int**|Идентифицирует таблицу из [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) , которой принадлежит индекс.|  
-|**publisher_id**|**smallint**|Определяет, отличном от издателя SQL Server из которой публикуется индекс.|  
+|**table_id**|**int**|Идентифицирует таблицу из [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) , которому принадлежит индекс.|  
+|**publisher_id**|**smallint**|Определяет, отличном от издателя SQL Server из которого выполняется публикация индекс.|  
 |**name**|**sysname**|Имя опубликованного индекса.|  
-|**type**|**nvarchar(255)**|Поддерживаемый тип индекса из [IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md) системной таблицы.|  
+|**type**|**nvarchar(255)**|Поддерживаемый тип индекса из [IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md) системная таблица.|  
   
 ## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
