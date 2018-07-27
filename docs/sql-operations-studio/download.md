@@ -1,9 +1,9 @@
-﻿---
+---
 title: Загрузите и установите Microsoft SQL Operations Studio (Предварительная версия) | Документы Microsoft
-description: Загрузка и установка Microsoft SQL Operations Studio (Предварительная версия) для Windows, macOS или Linux
+description: >
   Загрузка и установка Microsoft SQL Operations Studio (Предварительная версия) для Windows, macOS или Linux
 ms.custom: tools|sos
-ms.date: 06/20/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -14,61 +14,61 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 421b22fd1489561ff04a69e23ecac15d1d52be5a
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: 1cd69a0dbc2399c4b16a656d20731e4548739505
+ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270995"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146824"
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Загрузите и установите SQL Operations Studio (Предварительная версия)
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] выполняется на Windows, macOS и Linux.
+[!INCLUDE[name-sos](../includes/name-sos.md)] выполняется в Windows, macOS и Linux.
 
-Загрузить и установить последний выпуск *общедоступной предварительной версии июня*:
+Скачайте и установите последний выпуск *общедоступной предварительной версии июля*:
 
 |Платформа|Загрузить|Дата выпуска| Версия |
 |:---|:---|:---|:---|
-|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=875602)<br>[.ZIP](https://go.microsoft.com/fwlink/?linkid=875603)|20 июня 2018 |0.30.6|
-|macOS|[.ZIP](https://go.microsoft.com/fwlink/?linkid=875604)|20 июня 2018 |0.30.6|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=875607)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=875606)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)|20 июня 2018 |0.30.6|
+|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=2005949)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2005950)|19 июля 2018 г. |0.31.4|
+|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2005959)|19 июля 2018 г. |0.31.4|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2006084)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=2006083)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2005960)|19 июля 2018 г. |0.31.4|
 
 Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes.md).
 
 ## <a name="get-sql-operations-studio-preview-for-windows"></a>Получение SQL Operations Studio (Предварительная версия) для Windows
 
 
-Этот выпуск [!INCLUDE[name-sos](../includes/name-sos-short.md)] включает стандартные возможности установщика Windows и .zip: 
+Этот выпуск [!INCLUDE[name-sos](../includes/name-sos-short.md)] включает в себя стандартные возможности установщика Windows и ZIP-файл: 
 
 **Установщик**
 
-1. Загрузите и запустите [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] установщик Windows](https://go.microsoft.com/fwlink/?linkid=875602).
+1. Скачайте и запустите [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] установщик Windows](https://go.microsoft.com/fwlink/?linkid=2005949).
 1. Запуск [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] приложения.
 
 
 **ZIP-файл**
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip для Windows](https://go.microsoft.com/fwlink/?linkid=875603).
-2. Найдите загруженный файл и извлеките его.
+1. Скачайте [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP-файл для Windows](https://go.microsoft.com/fwlink/?linkid=2005950).
+2. Найдите скачанный файл и извлеките его содержимое.
 3. Выполнить `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Получить для macOS SQL Operations Studio (Предварительная версия)
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=875604).
+1. Скачайте [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=2005959).
 2. Чтобы развернуть содержимое ZIP-файл, дважды щелкните его.
-3. Чтобы сделать [!INCLUDE[name-sos](../includes/name-sos-short.md)] в *запуска*, перетащите *sqlops.app* для *приложений* папки.
+3. Чтобы сделать [!INCLUDE[name-sos](../includes/name-sos-short.md)] в *панель запуска*, перетащите *sqlops.app* для *приложений* папки.
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Получить SQL Operations Studio (Предварительная версия) для Linux
 
-1. Загрузить [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux с помощью одного из установщиков или tar.gz архива:
-    - [.DEB](https://go.microsoft.com/fwlink/?linkid=875607)
-    - [.RPM](https://go.microsoft.com/fwlink/?linkid=875606)
-    - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)
-1. Чтобы извлечь файл и запустите [!INCLUDE[name-sos](../includes/name-sos-short.md)], откройте новое окно терминала и введите следующие команды:
+1. Скачайте [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux с помощью одного из установщиков или архива tar.gz:
+    - [.DEB](https://go.microsoft.com/fwlink/?linkid=2006084)
+    - [.RPM](https://go.microsoft.com/fwlink/?linkid=2006083)
+    - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=2005960)
+1. Чтобы извлечь файл и запустить [!INCLUDE[name-sos](../includes/name-sos-short.md)], откройте новое окно терминала и введите следующие команды:
 
-   **Debian установки:**
+   **Установка на Debian:**
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
@@ -95,7 +95,7 @@ ms.locfileid: "36270995"
    ``` 
 
    > [!NOTE]
-   > В Debian, Redhat и Ubuntu могут быть потеряны зависимости. Используйте следующие команды для установки этих зависимостей в зависимости от вашей версии Linux:
+   > В Debian, Redhat и Ubuntu возможно, отсутствуют зависимости. Чтобы установить эти зависимости, в зависимости от вашей версии Linux, используйте следующие команды:
    
 
    **Debian:** 
@@ -103,7 +103,7 @@ ms.locfileid: "36270995"
    sudo apt-get install libuwind8
    ```
 
-   **RedHat:** 
+   **Redhat:** 
    ```bash
    yum install libXScrnSaver
    ```
@@ -121,45 +121,45 @@ ms.locfileid: "36270995"
 ## <a name="uninstall-sql-operations-studio-preview"></a>Удаление SQL Operations Studio (Предварительная версия)
 
 
-Если вы установили [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] с помощью установщика Windows, удалите так же, как удалить любое другое приложение Windows.
+Если вы установили [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] с помощью установщика Windows, удалите это так же, как удалить любое приложение Windows.
 
-Если вы установили [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] с расширением ZIP или других архива, просто удалите файлы.
+Если вы установили [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] с ZIP-файл или других архива, просто удалите файлы.
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] выполняется на Windows, Linux и macOS и поддерживается на следующих платформах:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] работает в Windows, macOS и Linux и поддерживается на следующих платформах:
 
 ### <a name="windows"></a>Windows
 - Windows 10 (64-разрядная)
 - Windows 8.1 (64-разрядная)
 - Windows 8 (64-разрядная)
-- Требуется Windows 7 (SP1) (64-разрядная версия) - [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
+- Требуется Windows 7 (SP1) (64-разрядная версия) — [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
 - Windows Server 2016
 - Windows Server 2012 R2 (64-разрядная версия)
 - Windows Server 2012 (64-разрядная версия)
 - Windows Server 2008 R2 (64-разрядная версия)
 
 ### <a name="macos"></a>macOS
-- macOS 10.13 Сьерра высокого уровня
-- macOS 10.12 Сьерра
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
-- SUSE Linux Enterprise Server версии 12 SP2
+- SUSE Linux Enterprise Server версии 12 с пакетом обновления 2 (SP2)
 - Ubuntu 16.04
 
 ## <a name="check-for-updates"></a>Проверка обновлений
-Чтобы проверить наличие последних обновлений, щелкните значок шестеренки в левом нижнем углу окна и нажмите кнопку **проверять наличие обновлений**
+Чтобы проверить наличие последних обновлений, щелкните значок шестеренки в нижней левой части окна, а затем **проверять наличие обновлений**
 
 ## <a name="next-steps"></a>Следующие шаги
 
-См. один из следующих краткие руководства, чтобы приступить к работе:
-- [Подключиться & запрос SQL Server](quickstart-sql-server.md)
-- [Подключиться & запроса базы данных Azure SQL](quickstart-sql-database.md)
-- [Подключиться & запроса хранилища данных Azure](quickstart-sql-dw.md)
+Ознакомьтесь с одним из следующих кратких руководств, чтобы приступить к работе:
+- [Подключение и отправка запроса SQL Server](quickstart-sql-server.md)
+- [Подключение и отправка запроса база данных Azure SQL](quickstart-sql-database.md)
+- [Подключение и запросы к хранилищу данных Azure](quickstart-sql-dw.md)
 
-Участие в [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+Участие в разработке [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 - [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio) 
 
 [Заявление о конфиденциальности Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) и [сбора данных об использовании](usage-data-collection.md).

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_missing_index_group_stats (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_missing_index_group_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 65b019f8e7b1f9e82e288c9c53732db4e2c7a253
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 7b77b2a8df3d2f6f0afb47db519dae142baf2d13
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466430"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310221"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,10 @@ ms.locfileid: "34466430"
 |**avg_system_impact**|**float**|Средний процент выигрыша, который могли получить запросы системы, если создать эту группу отсутствующих индексов. Значение показывает, что стоимость запроса в среднем уменьшится на этот процент, если создать эту группу отсутствующих индексов.|  
   
 ## <a name="remarks"></a>Примечания  
- Сведения, возвращаемые функцией **sys.dm_db_missing_index_group_stats** , обновляются при каждом выполнении запроса, не при каждой компиляции или повторной компиляции запроса. Статистика использования не сохраняется и хранится только до перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторы базы данных должны периодически делать резервные копии сведений об отсутствующих индексах, если необходимо сохранить статистику использования после перезагрузки сервера.  
+ Сведения, возвращаемые функцией **sys.dm_db_missing_index_group_stats** обновляется при каждом выполнении запроса, а не по каждой или повторной компиляции запроса. Статистика использования не сохраняется и хранится только до перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторы базы данных должны периодически делать резервные копии сведений об отсутствующих индексах, если необходимо сохранить статистику использования после перезагрузки сервера.  
+
+  >[!NOTE]
+  >Результирующий набор для этого динамического административного Представления может использовать до 600 строк. Каждая строка содержит один отсутствующий индекс. При наличии более чем 600 отсутствующих индексов, следует устранить существующие отсутствующие индексы, после чего можно просмотреть более новые.
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения запроса к этому динамическому административному представлению пользователям должно быть предоставлено разрешение VIEW SERVER STATE или любое другое, подразумевающее разрешение VIEW SERVER STATE.  
@@ -87,12 +90,12 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- Этот запрос предоставляет имя базы данных, схемы и таблицы, в которой отсутствует индекс. Он также предоставляет имена столбцов, которые должны использоваться для ключа индекса. При записи инструкции CREATE INDEX DDL для создания отсутствующих индексов, вначале Перечислите столбцы равенства, а затем столбцы неравенства в предложении ON \< *table_name*> инструкции CREATE INDEX. Включенные столбцы должны быть перечислены в предложении INCLUDE инструкции CREATE INDEX. Чтобы определить эффективный порядок столбцов равенства, расположите их на основе их выборности, перечисляя наиболее выбираемые столбцы первыми (крайние левые в списке столбцов).  
+ Этот запрос предоставляет имя базы данных, схемы и таблицы, в которой отсутствует индекс. Он также предоставляет имена столбцов, которые должны использоваться для ключа индекса. При записи инструкции CREATE INDEX DDL для реализации отсутствующих индексов, вначале Перечислите столбцы равенства, а затем столбцы неравенства в ON \< *table_name*> предложения инструкции CREATE INDEX. Включенные столбцы должны быть перечислены в предложении INCLUDE инструкции CREATE INDEX. Чтобы определить эффективный порядок столбцов равенства, расположите их на основе их выборности, перечисляя наиболее выбираемые столбцы первыми (крайние левые в списке столбцов).  
   
 ## <a name="see-also"></a>См. также  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

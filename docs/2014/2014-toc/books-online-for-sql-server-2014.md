@@ -21,15 +21,15 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232541"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310201"
 ---
 # Электронная документация по SQL Server 2014
-  Добро пожаловать в [!INCLUDE[msCoName](../includes/msconame-md.md)]® документации для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Электронная документация содержит описание задач, а также справочная документация, в которых описывается выполнение рабочих данных и бизнес-аналитики с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Добро пожаловать на страницу электронной документации [!INCLUDE[msCoName](../includes/msconame-md.md)]® для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Электронная документация содержит описание задач, а также справочная документация, в которых описывается выполнение рабочих данных и бизнес-аналитики с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Попробуйте продукт:**  
  ![Маленький значок виртуальной машины Azure](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Есть ли учетная запись Azure?  Затем перейдите **[здесь](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** запустить виртуальную машину с SQL Server 2014 с пакетом обновления 1 (SP1) уже установлен. Дополнительные сведения о SQL Server 2014 (SP1), см. в разделе [сведения о выпуске пакета обновления 1 для SQL Server 2014 ](https://support.microsoft.com/en-us/kb/3058865). 

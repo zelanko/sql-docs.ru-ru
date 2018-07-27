@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9e28e848c7a95e8c29558cb6ee77056d47a955e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 80beafc8a281f7f4af71484acfa01ed0016b7de2
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38028842"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107666"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "38028842"
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|Идентификатор пула ресурсов. Не допускает значение NULL. |
 | name|**sysname**|Имя пула ресурсов. Не допускает значение NULL. 
-| pool_version|**int**|номер версии внутреннего.|
+| pool_version|**int**|Внутренний номер версии.|
 | max_cpu_percent|**int**|Текущая конфигурация максимальной средней пропускной способности ЦП, разрешенной для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. Не допускает значение NULL. |
 | max_processes|**int**|Максимальное количество параллельных внешних процессов. Значение по умолчанию равно 0 и означает отсутствие ограничений. Не допускает значение NULL.|
 | max_memory_percent|**int**|Текущая конфигурация процентной доли от общего объема памяти сервера, которая может использоваться для запросов в данном пуле ресурсов. Не допускает значение NULL. |
 | statistics_start_time|**datetime**|Время, когда была очищена статистика для данного пула. Не допускает значение NULL. 
-| peak_memory_kb|**bigint**|он максимальный объем используемой памяти, в килобайтах, для пула ресурсов. Не допускает значение NULL. |
+| peak_memory_kb|**bigint**|Максимальный объем используемой памяти, в килобайтах, для пула ресурсов. Не допускает значение NULL. |
 | write_io_count|**int**|Общая сумма выполненных операций ввода-вывода записи с момента сброса регулятора ресурсов. Не допускает значение NULL. |
 | read_io_count|**int**|Общая сумма выполненных операций ввода-вывода с момента сброса регулятора ресурсов. Не допускает значение NULL. |
-| total_cpu_kernel_ms|**bigint**|Совокупное время пользователя ЦП в миллисекундах с момента сброса статистики регулятора ресурсов. Не допускает значение NULL. |
+| total_cpu_kernel_ms|**bigint**|Совокупное пользователя ядра время ЦП в миллисекундах с момента сброса статистики регулятора ресурсов. Не допускает значение NULL. |
 | total_cpu_user_ms|**bigint**|Совокупное время пользователя ЦП в миллисекундах с момента сброса статистики регулятора ресурсов. Не допускает значение NULL. |
 | active_processes_count|**int**|Количество внешних процессов, запущенных в данный момент запроса. Не допускает значение NULL. |
 

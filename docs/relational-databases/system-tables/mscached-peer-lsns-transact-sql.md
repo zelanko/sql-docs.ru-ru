@@ -1,5 +1,5 @@
 ---
-title: MScached_peer_lsns (Transact-SQL) | Документы Microsoft
+title: MScached_peer_lsns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - MScached_peer_lsns system table
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c88be8f7ffd489fbc276b58f253819b2f1d9f7ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ee2580aa933108da5fce53ff74d67f6c4de2ea1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004221"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103852"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MScached_peer_lsns** таблица используется для отслеживания значений LSN в журнале транзакций, используемые для определения, какие команды возвращаются к данному подписчику в-одноранговая репликация. Эта таблица хранится в базе данных распространителя.  
+  **MScached_peer_lsns** таблица используется для отслеживания значений LSN в журнале транзакций, которые используются для определения, какие команды возвращаются к данному подписчику в peer-to-peer репликации. Эта таблица хранится в базе данных распространителя.  
   
 ## <a name="definition"></a>Определение  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33004221"
 |**originator_db_version**|**int**|Показывает номер версии исходной базы данных.|  
 |**originator_lsn**|**varbinary(16)**|LSN-номер транзакции.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Значения LSN используются немедленно после вставки и не имеют последующего значения для системы.  
   
 ## <a name="see-also"></a>См. также  
