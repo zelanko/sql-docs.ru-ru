@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fe22eaec4105f8b849bc3a582a131ab59e46446
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e7f44a11de210090ba9afaf734ceeb3353dbbe4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357826"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085136"
 ---
 # <a name="replication-to-sql-database"></a>Репликация в базу данных SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,8 @@ ms.locfileid: "37357826"
  -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенным локально, или экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенным на виртуальной машине Azure в облаке. Дополнительные сведения см. в статье [Обзор SQL Server на виртуальных машинах Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).  
  - База[!INCLUDE[ssSDS](../../includes/sssds-md.md)] должна быть подписчиком с принудительной подпиской издателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  -  База данных распространителя и агенты репликации не могут размещаться в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
- - Поддерживается односторонняя репликация транзакций и создание моментальных снимков. Одноранговая репликация транзакций и репликация слиянием не поддерживаются.  
+ - Поддерживается односторонняя репликация транзакций и создание моментальных снимков. Одноранговая репликация транзакций и репликация слиянием не поддерживаются.
+ - Управляемый экземпляр Базы данных SQL (предварительная версия) поддерживает базы данных издателя и распространителя. См. дополнительные сведения о [репликации с использованием Управляемого экземпляра Базы данных SQL](replication-with-sql-database-managed-instance.md).
  
  ## <a name="versions"></a>Версии  
  - Минимальные требования к версиям издателя и распространителя:  
