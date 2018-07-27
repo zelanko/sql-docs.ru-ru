@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf241911ce9befc7b42e8c84fd6fddb7dcd10374
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2ebaa1c922714413a29967d38aa8b60ebaa6c335
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323755"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086966"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Выражения запросов и универсальные имена ресурсов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,22 +77,22 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  Например, укажите имя Server для класса **ServerCollection** и имя Database для класса **DatabaseCollection** .  
   
- @*PropertyName*  
- Указывает имя одного из свойств класса, связанного с объектом, который задан в *Object*. Перед этим именем свойства должен стоять символ @. Например, укажите @IsAnsiNull для свойства **IsAnsiNull** класса **Database**.  
+ \@*PropertyName*  
+ Указывает имя одного из свойств класса, связанного с объектом, который задан в *Object*. Имя свойства должно начинаться с префикса \@. Например, укажите \@IsAnsiNull для свойства **IsAnsiNull** класса **Database**.  
   
- @*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*=true()  
  Перечисляет все объекты, где указанное логическое свойство имеет значение TRUE.  
   
- @*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*=false()  
  Перечисляет все объекты, где указанное логическое свойство имеет значение FALSE.  
   
- contains(@*StringPropertyName*, '*PatternString*')  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  Перечисляет все объекты, указанное строковое свойство которых содержит хотя бы одно вхождение набора символов, который указан в '*PatternString*'.  
   
- @*StringPropertyName*='*PatternString*'  
+ \@*StringPropertyName*='*PatternString*'  
  Перечисляет все объекты, значение указанного строкового свойства которых точно такое же, как комбинация символов, указанная в '*PatternString*'.  
   
- @*DatePropertyName*= datetime('*DateString*')  
+ \@*DatePropertyName*= datetime('*DateString*')  
  Перечисляет все объекты, значение указанного свойства даты которых соответствует дате, указанной в '*DateString*'. Значение*DateString* должно иметь формат гггг-мм-дд чч:ми:сс.ммм  
   
 |||  
@@ -107,11 +107,11 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  Даты, указанные в этом формате, можно вычислять с любым форматом даты, хранящимся в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_null(@*PropertyName*)  
+ is_null(\@*PropertyName*)  
  Перечисляет все объекты, где указанное свойство имеет значение NULL.  
   
  not(\<*PropertyExpression*>)  
- Инвертирует значение вычисленного выражения *PropertyExpression*, перечисляя все объекты, не соответствующие условию, заданному в *PropertyExpression*. Например, выражение not(contains(@Name, 'xyz')) перечисляет все объекты, в именах которых нет строки xyz.  
+ Инвертирует значение вычисленного выражения *PropertyExpression*, перечисляя все объекты, не соответствующие условию, заданному в *PropertyExpression*. Например, not(contains(\@Name, 'xyz')) перечисляет все объекты, в именах которых нет строки xyz.  
   
 ## <a name="remarks"></a>Remarks  
  Выражения запроса — это строки, которые перечисляют узлы в иерархии моделей SMO. У каждого узла есть критерий фильтра, задающий условие для определения того, какие объекты в этом узле будут перечисляться. Выражения запроса моделируются на языке выражений XPath. Выражения запроса представляют собой небольшое подмножество выражений XPath, кроме того, в них есть некоторые выражения, которых нет в XPath. Выражения XPath — это строки, которые указывают набор критериев, используемых для перечисления одного или нескольких тегов в XML-документе. Дополнительные сведения об XPath см. в разделе [Язык W3C XPath](http://www.w3.org/TR/xpath20/).  

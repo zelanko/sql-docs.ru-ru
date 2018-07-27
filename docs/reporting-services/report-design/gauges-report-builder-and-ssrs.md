@@ -163,11 +163,12 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a233668e2ec2f08d782dd25c242723908f18729f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c456c80e92a18128f3ad374769efbc13f4067f9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983236"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Датчики (построитель отчетов и службы SSRS)
   В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в области данных датчика отображается отдельное значение из набора данных. Отдельный датчик всегда располагается внутри панели датчиков, где можно добавить дочерние или соседние датчики. Панель датчиков также можно применить для создания нескольких датчиков, использующих одинаковые функции, например фильтрацию, группирование или сортировку.  
@@ -288,9 +289,9 @@ ms.lasthandoff: 05/03/2018
   
 -   [Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Установка интервала привязки в датчике (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
+-   [Установка интервала привязки в датчике (построитель отчетов и SSRS)](http://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
   
--   [Задание изображения для указателя на датчике (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [Выбор изображения ы качестве указателя на датчике (построитель отчетов и SSRS)](http://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
   
 ##  <a name="InThisSection"></a> в этом разделе  
  В следующих разделах представлены сведения о работе с датчиками.  

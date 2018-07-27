@@ -23,11 +23,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a8bbdb0f98dea26d73ec465d6fd9e226329345a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 535aa58c0bf17e78c47012ffaea42916d55c1818
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086026"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Использование результатов FOR XML в коде приложений
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +145,7 @@ ms.lasthandoff: 05/03/2018
  Результаты, сформированные в виде страниц HTML, будут выглядеть следующим образом:  
   
 ##### <a name="server-side-processing"></a>Обработка на стороне сервера  
- Page Generated @ 3/11/2006 3:36:02 PM  
+ Page Generated \@ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
   

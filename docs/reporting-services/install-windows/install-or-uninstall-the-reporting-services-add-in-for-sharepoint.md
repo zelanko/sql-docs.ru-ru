@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b60f861b889647f6cfe76472773539f8fa27495f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 8c68b455a8d37a7cb7b796a46a7ba1589100a54f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322493"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980986"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Установка или удаление надстройки служб Reporting Services для SharePoint
 
@@ -31,7 +31,7 @@ ms.locfileid: "35322493"
 > Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
 ##  <a name="bkmk_prereq"></a> Предварительные требования  
- Установка надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является одним из обязательных шагов интеграции сервера отчетов с экземпляром продукта SharePoint. Дополнительные сведения об установке и настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+ Установка надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является одним из обязательных шагов интеграции сервера отчетов с экземпляром продукта SharePoint. Дополнительные сведения об установке и настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в руководстве по [установке сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 -   При интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с фермой SharePoint, содержащей несколько приложений клиентского веб-интерфейса, установите надстройку на каждый компьютер фермы с сервером клиентского веб-интерфейса. Это необходимо сделать только для веб-серверов, обслуживающих клиентские запросы, которые будут производить доступ к содержимому сервера отчетов.  
   
@@ -83,7 +83,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
-3.  Настройте параметры сервера отчетов и включите нужные компоненты в центре администрирования SharePoint. , и делает это по-другому. Дополнительные сведения об установке и настройке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающих в режиме интеграции с SharePoint, см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+3.  Настройте параметры сервера отчетов и включите нужные компоненты в центре администрирования SharePoint. , и делает это по-другому. Дополнительные сведения об установке и настройке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающих в режиме интеграции с SharePoint, см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ###  <a name="bkmk_files_only_installation"></a> Установка только файлов  
  Чтобы установить файлы и пропустить этап пользовательских действий, запустите файл rssharepoint.msi из командной строки с параметром SKIPCA.  
@@ -271,11 +271,11 @@ Rssharepoint.msi /?
 |t|Только SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005. Переключение проверяет, имеет ли сервер отчетов рабочее соединение с базой данных сервера отчетов.|  
   
 ## <a name="configuring-reporting-services"></a>Настройка служб Reporting Services  
- После установки надстройки на все нужные компьютеры настройте сервер отчетов с помощью центра администрирования SharePoint. Необходимые действия зависят от порядка установки разных технологий. Дополнительные сведения см. в разделах [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538) and [Сервер отчетов служб Reporting Services (режим SharePoint)](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
+ После установки надстройки на все нужные компьютеры настройте сервер отчетов с помощью центра администрирования SharePoint. Необходимые действия зависят от порядка установки разных технологий. См. дополнительные сведения об [установке сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538) и [сервере отчетов Reporting Services (режим SharePoint)](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
   
 ## <a name="see-also"></a>См. также:
 
-[Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
+[Установка сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
 [Сервер отчетов служб Reporting Services (режим SharePoint)](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -23,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255516"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086746"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|По умолчанию используется **атрибутивная модель** сопоставления.|  
 |**1**|Использовать **атрибутивную модель** сопоставления. Может быть совмещено с XML_ELEMENTS. В этом случае **атрибутивная модель** сопоставления применяется в первую очередь, а потом сопоставление **с использованием элементов** применяется для всех столбцов, которые еще не были обработаны.|  
 |**2**|Использовать сопоставление **с использованием элементов**. Может быть совмещено с XML_ATTRIBUTES. В этом случае **атрибутивная модель** сопоставления применяется в первую очередь, а потом сопоставление **с использованием элементов** применяется для всех столбцов, которые еще не были обработаны.|  
-|**8**|Может быть совмещено (логическое OR) с XML_ATTRIBUTES или XML_ELEMENTS. В плане получения этот флаг указывает, что используемые данные не должны копироваться в свойство переполнения **@mp:xmltext**.|  
+|**8**|Может быть совмещено (логическое OR) с XML_ATTRIBUTES или XML_ELEMENTS. В контексте получения этот флаг указывает, что используемые данные не должны копироваться в свойство переполнения **\@mp:xmltext**.|  
   
  *SchemaDeclaration*  
  Определение схемы в следующем формате: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  

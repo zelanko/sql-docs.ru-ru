@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 401288bfde8caf4550260f7695d9bc13d07e468a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d7999de8fa0a00d6479483b3b352fe52622a00b1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322803"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983780"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить в один из двух режимов — в собственном режиме или в режиме интеграции с SharePoint. Шаги, которые необходимо выполнить для проверки установки, зависят от выбранного режима сервера отчетов.  
@@ -39,7 +39,7 @@ ms.locfileid: "35322803"
   
 2.  Убедитесь в том, что **Служба SQL Server Reporting Services** установлена и находится в состоянии **Выполняется** .  
   
-     Если вы не видите в списке службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , убедитесь, что служба установлена. Дополнительные сведения см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+     Если вы не видите в списке службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , убедитесь, что служба установлена. См. дополнительные сведения об [установке сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ### <a name="to-verify-the-service-application"></a>Проверка приложения службы  
   
@@ -71,7 +71,7 @@ ms.locfileid: "35322803"
   
 1.  В библиотеке документов SharePoint создайте базовый отчет служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который содержит только одно текстовое поле, например заголовок. Отчет не содержит никаких источников данных и наборов данных. Цель — проверить, что можно будет открыть построитель отчетов и просмотреть базовый отчет.  
   
-2.  Сохраните отчет в библиотеке документов и запустите отчет из библиотеки. Дополнительные сведения о создании отчетов с помощью построителя отчетов см. в разделе [Запуск построителя отчетов](http://msdn.microsoft.com/en-us/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
+2.  Сохраните отчет в библиотеке документов и запустите отчет из библиотеки. Дополнительные сведения о создании отчетов с помощью построителя отчетов см. в руководстве по [запуску построителя отчетов](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
   
 ### <a name="reporting-services-samples"></a>Образцы служб Reporting Services  
   
@@ -100,7 +100,7 @@ ms.locfileid: "35322803"
   
 2.  Используйте [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] для создания новой папки или передачи файла с целью проверки, возвращаются ли определения обратно в базу данных сервера отчетов. Если эти операции успешно завершаются, то соединение функционирует.  
   
-     Дополнительные сведения см. в статье [Веб-портал (службы SSRS в собственном режиме)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Дополнительные сведения см. в статье [Веб-портал (службы SSRS в собственном режиме)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Проверка успешной установки и запуска конструктора отчетов  
   

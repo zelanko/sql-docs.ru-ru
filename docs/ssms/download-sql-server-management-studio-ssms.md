@@ -1,7 +1,7 @@
 ---
 title: Загрузка SQL Server Management Studio (SSMS) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - установить SSMS, скачать SSMS, последняя версия SSMS
-- Среда SQL Server Management Studio
+- SQL Server Management Studio
 - ssms.exe
 - sql man studio
 - sql management studio
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8872987bbd90664f2c6fb3477f91e323a2ce96
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957687"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188940"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ SQL Server Management Studio (SSMS) — это интегрированная �
 
 SSMS 17.x — последняя версия *SQL Server Management Studio*, которая поддерживает SQL Server 2017.
 
-**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)**
+**[![Скачать](../ssdt/media/download.png) Скачайте SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802) (более ранняя версия SSMS 17.x на компьютере не требуется)**
 
-**[![скачать](../ssdt/media/download.png) Скачать пакет обновления SQL Server Management Studio 17.8.1 (обновление с версии 17.x до 17.8.1)](https://go.microsoft.com/fwlink/?linkid=875804)**
+**[![Скачать](../ssdt/media/download.png) Скачайте пакет обновления SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875804) (обновление с 17.x до 17.8.1; на компьютере должна быть более ранняя версия SSMS 17.x)**
 
 
 **Сведения о версии**
@@ -79,7 +79,7 @@ SQL Server Management Studio 17.8.1:<br>
 > [!NOTE]
 > Модуль PowerShell для SQL Server теперь устанавливается отдельно, из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
 
-## <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 
 ## <a name="new-in-this-release"></a>Новое в данном выпуске
@@ -142,11 +142,16 @@ SSMS 17.8.1 — это новейшая версия SQL Server Management Studi
 
 ## <a name="release-notes"></a>Заметки о выпуске
 
-Ниже перечислены проблемы и ограничения в выпуске 17.8.
+Ниже перечислены проблемы и ограничения в выпуске 17.8.1:
 
 - Если после изменения любого свойства файловой группы в окне *Свойства* нажать кнопку *Скрипт*, создадутся два скрипта — один с инструкцией *USE <database>* и другой с инструкцией *USE master*.  Скрипт с инструкцией *USE master* формируется с ошибкой, и его необходимо отменить. Выполняйте только тот скрипт, который содержит инструкцию *USE <database>*.
 - При работе с новыми выпусками базы данных SQL Azure (*общего назначения* или *критически важный для бизнеса*) в некоторых диалоговых окнах выводится сообщение о недопустимом выпуске.
 - В средстве просмотра XEvents могут наблюдаться задержки. Это [известная проблема .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Рекомендуем установить версию NetFx 4.7.2.
+- Монитор репликации аварийно завершает работу с ошибкой *Не удалось загрузить файл или сборку*. Решение:
+  1. Закройте *SqlMonitor.exe* (т. е. монитор репликации) и SSMS.
+  2. Скачайте обновленный файл *sqlmonitor.exe.config* отсюда: [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw).
+  3. Замените *sqlmonitor.exe.config* (обычно располагается в папке C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn) скачанным файлом.
+  4. Перезапустите SSMS и (или) монитор репликации.
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>Удаление и повторная установка SSMS

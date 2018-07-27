@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8af424b2ba5f8e23a0907c37d8f7e259e9d4192
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 4b16a7d07358ff1c561bc840a958e24205688b86
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248456"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083376"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Правила использования методов типа данных XML
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
  Шаги определения расположения данных, параметры функций и операторы, которым нужны единственные значения, возвращают ошибку, если компилятор не может определить, будет ли в период выполнения гарантирована единственность элемента. Эта проблема часто возникает при работе с нетипизированными данными. Например, при уточняющем запросе атрибута необходима информация о единственном родительском элементе. Указать порядковый номер, выбирающий единственный родительский узел, недостаточно. Чтобы извлечь значения атрибутов при обработке комбинации **node()**-**value()**, указание порядкового номера, возможно, не потребуется. Это показано в следующем примере.  
   
 ### <a name="example-known-singleton"></a>Пример. Известный единственный экземпляр  
- В данном примере метод **nodes()** создает отдельную строку для каждого элемента <`book`>. Метод **value()**, выполняемый для узла <`book`>, извлекает значение @genre, которое, будучи атрибутом, является единственным.  
+ В данном примере метод **nodes()** создает отдельную строку для каждого элемента <`book`>. Метод **value()**, выполняемый для узла <`book`>, извлекает значение \@genre, которое, будучи атрибутом, является отдельным.  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  

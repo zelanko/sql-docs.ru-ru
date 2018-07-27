@@ -1,7 +1,7 @@
 ---
 title: База данных master | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/04/2016
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: databases
@@ -19,16 +19,19 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d33bb332481561a1a81c0d18ebcfb19b4fc32f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ffc0e8ccb310cb5a5d491f057ee2b8b5074e080
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930989"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108128"
 ---
 # <a name="master-database"></a>База данных master
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   База данных **master** содержит всю системную информацию о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . в том числе общие для всего экземпляра метаданные, такие как сведения об учетных записях входа, конечных точках и связанных серверах, а также параметры конфигурации системы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]системные объекты больше не хранятся в базе данных **master** ; они хранятся в [базе данных ресурсов](../../relational-databases/databases/resource-database.md). Кроме этого, в базе данных **master** регистрируются все остальные базы данных и хранится информация о расположении их файлов. Здесь же [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранит сведения об инициализации. Таким образом, если база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **недоступна, запустить** невозможно.  
+
+> [!IMPORTANT]
+> Для логического сервера Базы данных SQL Azure используются только базы данных master и tempdb. Описание понятий логического сервера и логической базы данных master см. в разделе [Что такое логический сервер SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server) Описание базы данных tempdb в контексте Базы данных SQL Azure см. в разделе [База данных tempdb в базе данных SQL](tempdb-database.md#tempdb-database-in-sql-database). Для Управляемого экземпляра Базы данных Azure SQL применяются все системные базы данных. См. дополнительные сведения об [Управляемом экземпляре Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   
 ## <a name="physical-properties-of-master"></a>Физические свойства базы данных master  
  Исходные конфигурационные значения файлов данных и журнала базы данных **master** приведены в следующей таблице. Размеры этих файлов могут немного изменяться в зависимости от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1db17ce1dcf7cbc0c14c3ef1cf0edeaf3441e539
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786015"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216935"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -206,8 +206,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         [ NOT FOR REPLICATION ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
  
-
-  
 < table_index > ::=   
 {  
     {  
@@ -225,7 +223,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]  
   
 }   
-
 
 <table_option> ::=  
 {  
@@ -272,8 +269,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
-  
-      --Memory optimized CREATE TABLE Syntax  
+--Memory optimized CREATE TABLE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -382,7 +378,7 @@ column_name <data_type>
 -   Вычисляемый столбец не может быть целевым столбцом инструкций INSERT или UPDATE.  
   
 > [!NOTE]  
->  Каждая строка таблицы может содержать различные значения столбцов, задействованных в вычисляемом столбце; таким образом, значение вычисляемого столбца не будет одним и тем же в каждой строке.  
+> Каждая строка таблицы может содержать различные значения столбцов, задействованных в вычисляемом столбце; таким образом, значение вычисляемого столбца не будет одним и тем же в каждой строке.  
   
  Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] автоматически определяет для вычисляемых столбцов допустимость значений NULL на основе использованных выражений. Считается, что результат большинства выражений допускает значение NULL, даже если используются только столбцы, для которых значение NULL запрещено, так как при возможном переполнении или потере точности может получаться значение NULL. Для выяснения возможности вычисляемого столбца таблицы принимать значение NULL используйте функцию COLUMNPROPERTY со свойством **AllowsNull**. Добиться того, чтобы выражение не допускало значения NULL, можно, указав ISNULL с константой *check_expression*, где константа представляет собой ненулевое значение, заменяющее любое значение NULL. Для вычисляемых столбцов, основанных на выражениях, содержащих определяемые пользователем типы среды CLR, требуется разрешение REFERENCES на тип.  
   
@@ -414,7 +410,9 @@ column_name <data_type>
 > [!NOTE]  
 >  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, который должен иметь разделители, как в выражениях TEXTIMAGE_ON **"** default **"** или TEXTIMAGE_ON **[** default **]**. Если указано значение **"** default **"**, то параметру QUOTED_IDENTIFIER для текущего сеанса должно быть присвоено значение ON. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ FILESTREAM_ON { *имя_схемы_секции* | filegroup | **"** default **"** } 
+ 
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
  Задает файловую группу для данных FILESTREAM.  
   
@@ -495,6 +493,7 @@ column_name <data_type>
  В инструкции CREATE TABLE предложение NOT FOR REPLICATION может указываться для свойства IDENTITY, а также ограничений FOREIGN KEY и CHECK. Если это предложение указано для свойства IDENTITY, значения в столбцах идентификаторов не приращиваются, если вставку выполняют агенты репликации. Если ограничение сопровождается этим предложением, оно не выполняется, когда агенты репликации выполняют операции вставки, обновления или удаления.  
   
  GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ]  
+ 
  **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Определяет, что указанный столбец типа datetime2 будет использоваться системой для записи времени начала или окончания действия записи. Столбец должен быть определен как NOT NULL. Если вы попытаетесь указать NULL, система выдаст ошибку. Если вы явно не укажете NOT NULL для столбца периода, система определит столбец как NOT NULL по умолчанию. Используйте этот аргумент в сочетании с аргументами PERIOD FOR SYSTEM_TIME и WITH SYSTEM_VERSIONING = ON, чтобы выключить системное управление версиями в таблице. Дополнительные сведения см. в разделе [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
@@ -509,14 +508,12 @@ column_name <data_type>
   
  INDEX *index_name* CLUSTERED COLUMNSTORE  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Задает сохранение всей таблицы в виде столбцов с кластеризованным индексом columnstore. Сюда всегда входят все столбцы в таблице. Данные не сортируются в алфавитном или числовом порядке, поскольку организация строк позволяет использовать преимущества сжатия columnstore.  
   
  INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Задает создание некластеризованного индекса columnstore в таблице. Базовая таблица может быть кучей rowstore или кластеризованным индексом или кластеризованным индексом columnstore. В любом случае при создании некластеризованного индекса columnstore в таблице сохраняется вторая копия данных для столбцов в индексе.  
@@ -527,12 +524,12 @@ column_name <data_type>
  Задает схему секционирования, которая определяет файловые группы, соответствующие секциям секционированного индекса. Схема секционирования должна быть создана в базе данных путем выполнения инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) или [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*. Аргумент *column_name* необязательно должен соответствовать столбцам из определения индекса. Можно указать любой столбец базовой таблицы, за исключением случая секционирования индекса UNIQUE, когда аргумент *column_name* должен быть выбран из используемых в качестве уникального ключа. Это ограничение дает возможность компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверять уникальность значений ключа только в одной секции.  
   
 > [!NOTE]  
->  При секционировании неуникального кластеризованного индекса компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию добавляет столбец секционирования в список ключей кластеризованного индекса, если этого столбца еще нет в списке. При секционировании неуникального некластеризованного индекса компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] добавляет столбец секционирования как неключевой (включенный) столбец индекса, если этого столбца еще нет в списке.  
+> При секционировании неуникального кластеризованного индекса компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию добавляет столбец секционирования в список ключей кластеризованного индекса, если этого столбца еще нет в списке. При секционировании неуникального некластеризованного индекса компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] добавляет столбец секционирования как неключевой (включенный) столбец индекса, если этого столбца еще нет в списке.  
   
  Если аргумент *partition_scheme_name* или *filegroup* не задан и таблица секционирована, индекс помещается в ту же схему секционирования и с тем же столбцом секционирования, что и для базовой таблицы.  
   
 > [!NOTE]  
->  Для XML-индекса задать схему секционирования невозможно. Если базовая таблица секционирована, XML-индекс использует ту же схему секционирования, что и таблица.  
+> Для XML-индекса задать схему секционирования невозможно. Если базовая таблица секционирована, XML-индекс использует ту же схему секционирования, что и таблица.  
   
  Дополнительные сведения об индексах секционирования см. в разделе [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
@@ -581,16 +578,18 @@ column_name <data_type>
  Столбцы должны иметь подходящий тип данных.  
   
  ALGORITHM  
+   
+ **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+ 
  Должно быть **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
   
  Дополнительные сведения, в том числе об ограничениях функции, см. в разделе [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
-  
- **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
+ 
  SPARSE  
  Указывает, что столбец является разреженным столбцом. Хранилище разреженных столбцов оптимизируется для значений NULL. Для разреженных столбцов нельзя указать параметр NOT NULL. Дополнительные ограничения и сведения о разреженных столбцах см. в разделе [Разреженные столбцы](../../relational-databases/tables/use-sparse-columns.md).  
   
  MASKED WITH ( FUNCTION = ' *mask_function* ')  
+ 
  **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает маску для динамического маскирования данных. *mask_function* — это имя функции маскирования с соответствующими параметрами. Доступны три функции:  
@@ -776,14 +775,12 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  COLUMNSTORE  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Применяется только к индексам columnstore, включая некластеризованные и кластеризованные индексы columnstore. COLUMNSTORE задает сжатие с использованием самого эффективного сжатия columnstore. Это обычный вариант.  
   
  COLUMNSTORE_ARCHIVE  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Применяется только к индексам columnstore, включая некластеризованные и кластеризованные индексы columnstore. Параметр COLUMNSTORE_ARCHIVE обеспечивает дальнейшее сжатие таблицы или секции до еще меньшего размера. Это может использоваться для архивации или в других ситуациях, где требуется уменьшение объема пространства и допускается увеличение затрат времени на сохранение и выборку  
@@ -849,14 +846,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_DIRECTORY = *directory_name*  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Указывает имя каталога таблицы FileTable, совместимое с Windows. Это имя должно быть уникальным среди всех имен каталогов FileTable в базе данных. Проверка уникальности выполняется без учета регистра, независимо от параметров сортировки. Если это значение не задано, то используется имя таблицы FileTable.  
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Указывает имя параметров сортировки, применяемых к столбцу **Name** в таблице FileTable. Для соответствия семантике именования файлов Windows параметры сортировки не должны учитывать регистр. Если это значение не задано, то используются параметры сортировки по умолчанию базы данных. Если в параметрах сортировки по умолчанию базы данных учитывается регистр, то выдается ошибка и операция CREATE TABLE оканчивается неуспешно.  
@@ -875,28 +870,24 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Указывает имя, которое должно использоваться для ограничения уникальности, автоматически создаваемого в столбце **stream_id** в FileTable. Если это значение не задано, то имя для ограничения формируется системой.  
   
  FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Указывает имя, которое должно использоваться для ограничения уникальности, автоматически создаваемого в столбцах **parent_path_locator** и **name** в FileTable. Если это значение не задано, то имя для ограничения формируется системой.  
   
  SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name*.  *history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ]  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
  Допускает системное управление версиями таблицы, если выполнены требования по типу данных, ограничении допустимости значений NULL и ограничении первичного ключа. Если аргумент **HISTORY_TABLE** не используется, система создает новую таблицу журнала, соответствующую схеме текущей таблицы, в той же файловой группе, что и текущая таблица. Между двумя таблицами создается связь, и система записывает историю каждой записи текущей таблицы в таблице журнала. Таблица журнала будет называться `MSSQL_TemporalHistoryFor<primary_table_object_id>`. По умолчанию таблица журнала сжимается с использованием метода **PAGE** . Если используется аргумент HISTORY_TABLE для создания ссылки и применения существующей таблицы журнала, ссылка создается между текущей таблицей и указанной таблицей. Если текущая таблица секционирована, таблица журнала создается в файловой группе по умолчанию, так как конфигурация секционирования не реплицируется автоматически из текущей таблицы в таблицу журнала. Если при создании таблицы журнала указывается ее имя, следует также указать имя схемы и таблицы. При создании ссылки на существующую таблицу журнала вы можете указать необходимость проверки согласованности данных. Проверка согласованности данных гарантирует, что существующие записи не будут перекрываться. Проверка согласованности данных является проверкой по умолчанию. Используйте этот аргумент в сочетании с аргументами PERIOD FOR SYSTEM_TIME и GENERATED ALWAYS AS ROW { START | END }, чтобы выключить системное управление версиями в таблице. Дополнительные сведения см. в разделе [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
  REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Создание новой таблицы, для которой включена или отключена Stretch Database. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
@@ -911,13 +902,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  [ FILTER_PREDICATE = { null | *predicate* } ]  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Дополнительно указывает предикат фильтра для выбора строк для миграции из таблицы, которая содержит данные журнала и текущие данные. Этот предикат должен вызывать детерминированную встроенную функцию с табличным значением. Более подробную информацию см. в разделе [Включение Stretch Database для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) и [Выбор строк для миграции с помощью функции фильтра](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). 
    
 > [!IMPORTANT]  
->  Если указать плохо оптимизированный предикат фильтра, перенос данных будет выполняться медленно. Stretch Database применяет предикат фильтра к таблице при помощи оператора CROSS APPLY.  
+> Если указать плохо оптимизированный предикат фильтра, перенос данных будет выполняться медленно. Stretch Database применяет предикат фильтра к таблице при помощи оператора CROSS APPLY.  
   
  Если предикат фильтра не указан, переносится вся таблица.  
   
@@ -925,7 +915,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MIGRATION_STATE = { OUTBOUND |  INBOUND | PAUSED }  
    
-  
 **Применимо к**: от [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и Azure SQL. 
   
 -   Укажите `OUTBOUND` для миграции данных с SQL Server на Azure.  
@@ -938,7 +927,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Значение ON указывает, что таблица оптимизирована для памяти. Таблицы, оптимизированные для памяти, входят в функцию выполняющейся в памяти OLTP, которая используется для оптимизации производительности обработки транзакций. Дополнительные сведения о выполняющейся в памяти OLTP см. в разделе [Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Дополнительные сведения об оптимизированных для памяти таблицах см. в разделе [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
@@ -947,7 +935,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  DURABILITY  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
  Значение SCHEMA_AND_DATA указывает на устойчивость таблицы. Это означает, что изменения сохраняются на диске даже после перезагрузки или отработки отказа.  SCHEMA_AND_DATA является значением по умолчанию.  
@@ -955,11 +942,10 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Значение SCHEMA_ONLY указывает, что таблица не является надежной. При перезапуске или отработке отказа в базе данных схема таблицы сохраняется, а обновления данных — нет. Аргумент DURABILITY=SCHEMA_ONLY может использоваться только совместно с аргументом MEMORY_OPTIMIZED=ON.  
   
 > [!WARNING]  
->  Если таблица создается с аргументом **DURABILITY = SCHEMA_ONLY**, а затем **READ_COMMITTED_SNAPSHOT** меняется с помощью **ALTER DATABASE**, данные в таблице будут утеряны.  
+> Если таблица создается с аргументом **DURABILITY = SCHEMA_ONLY**, а затем **READ_COMMITTED_SNAPSHOT** меняется с помощью **ALTER DATABASE**, данные в таблице будут утеряны.  
   
  BUCKET_COUNT  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Отображает число контейнеров, которые необходимо создать в хэш-индексе. Максимальное значение для параметра BUCKET_COUNT в хэш-индексах составляет 1 073 741 824. Дополнительные сведения о числах контейнеров см. в разделе [Индексы для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
@@ -968,14 +954,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  INDEX  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
 Индексы столбцов и таблиц необходимо указывать в составе инструкции CREATE TABLE. Дополнительные сведения о добавлении и удалении индексов в таблицах, оптимизированных для памяти, см. в разделе: [Изменение таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Указывает, что был создан индекс HASH.  
@@ -998,7 +982,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Инструкции SQL могут обращаться к временной таблице по заданному в инструкции CREATE TABLE значению аргумента *table_name*, например:  
   
-```  
+```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
   
 INSERT INTO #MyTempTable VALUES (1);  
@@ -1018,7 +1002,7 @@ INSERT INTO #MyTempTable VALUES (1);
   
  Локальная временная таблица, созданная хранимой процедурой или триггером, может иметь то же имя, что и временная таблица, созданная до вызова хранимой процедуры или триггера. Однако если запрос обращается к временной таблице и одновременно существует две таблицы с одинаковым именем, не определено, к какой из таблиц будет направлен запрос. Вложенные хранимые процедуры могут также создавать временные таблицы с тем же именем, что и временная таблица, созданная вызывающей хранимой процедурой. Однако для применения изменений к таблице, созданной во вложенной процедуре, эта таблица должна иметь ту же структуру с теми же именами столбцов, что и таблица, созданная в вызывающей процедуре. Это показано в следующем примере.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.Test2  
 AS  
 n    CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1060,30 +1044,31 @@ GO
   
  При создании таблицы с именованным ограничением внутри области, определяемой пользователем транзакции, возможность выполнения инструкций, формирующих временные таблицы, ограничивается одним пользователем единовременно. Например, если хранимая процедура формирует временную таблицу с именованным ограничением первичного ключа, то она не может быть выполнена несколькими пользователями одновременно.  
 
-
 ## <a name="database-scoped-global-temporary-tables-azure-sql-database"></a>Глобальные временные таблицы (база данных SQL Azure) в области базы данных
 
-Глобальные временные таблицы для SQL Server (с префиксом ##) хранятся в tempdb и являются общими для всех сеансов пользователей на всем экземпляре SQL Server. Дополнительную информацию о типах таблиц SQL см. в предыдущем разделе о создании таблиц.  
+Глобальные временные таблицы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с префиксом ##) хранятся в базе данных tempdb и являются общими для всех сеансов пользователей во всем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительную информацию о типах таблиц SQL см. в предыдущем разделе о создании таблиц.  
 
-База данных SQL Azure поддерживает глобальные временные таблицы, которые хранятся в базе данных tempdb и областью действия которых является база данных.  Это означает, что глобальные временные таблицы являются общими для всех сеансов пользователей в рамках одной базы данных SQL Azure. Сеансы пользователей, связанные с другими базами данных SQL Azure, не имеют доступа к глобальным временным таблицам.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] поддерживает глобальные временные таблицы, которые хранятся в базе данных tempdb и областью действия которых является база данных. Это означает, что глобальные временные таблицы являются общими для всех сеансов пользователей в рамках одной [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Сеансы пользователей, связанные с другими базами данных, не имеют доступа к глобальным временным таблицам.
 
-В глобальных временных таблицах для базы данных SQL Azure используются те же синтаксис и семантика, что и для временных таблиц на SQL Server.  Точно так же временные хранимые процедуры действуют в области базы данных в базе данных SQL Azure. Локальные временные таблицы (с префиксом #) также поддерживаются базой данных SQL Azure и имеют тот же синтаксис и семантику, что и на SQL Server.  См. предыдущий раздел [Временные таблицы](#temporary-tables).  
+В глобальных временных таблицах для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] используются те же синтаксис и семантика, что и для временных таблиц в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точно так же временные хранимые процедуры действуют в области базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Локальные временные таблицы (с префиксом #) также поддерживаются [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и имеют тот же синтаксис и семантику, что и в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  См. предыдущий раздел [Временные таблицы](#temporary-tables).  
 
 > [!IMPORTANT]
-> Эта возможность доступна только для базы данных SQL Azure.
->
+> Эта возможность доступна для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Устранение неполадок с глобальными временными таблицами в базе данных SQL Azure 
+### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Устранение неполадок с глобальными временными таблицами в Базе данных SQL Azure 
 
-Сведения об устранении неполадок в базе данных tempdb см. в разделе [Устранение неполадок, связанных с нехваткой места на диске для базы данных tempdb](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396). Чтобы получить доступ к динамическому административному представлению для устранения неполадок в базе данных SQL Azure, необходимо быть администратором сервера.
+Сведения об устранении неполадок в базе данных tempdb см. в разделе [Устранение неполадок, связанных с нехваткой места на диске для базы данных tempdb](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
+
+> [!NOTE]
+> Только администратор сервера может получить доступ к динамическим административным представлениям для устранения неполадок в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ### <a name="permissions"></a>Разрешения  
 
- Любой пользователь может создавать глобальные временные объекты. Если не предоставлены какие-либо дополнительные разрешения, то пользователи могут производить доступ только к тем объектам, которыми они владеют. , и делает это по-другому.  
+ Любой пользователь может создавать глобальные временные объекты. Если не предоставлены какие-либо дополнительные разрешения, то пользователи могут производить доступ только к тем объектам, которыми они владеют.  
   
 ### <a name="examples"></a>Примеры 
 
-- Сеанс A создает глобальную временную таблицу ##test в базе данных SQL Azure testdb1 и добавляет 1 строку
+- В сеансе A создается глобальная временная таблица ##test в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 и добавляется 1 строка.
 
 ```sql
 CREATE TABLE ##test ( a int, b int);
@@ -1101,7 +1086,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ---Result
 ##test
 ```
-- Сеанс B подключается к базе данных SQL Azure testdb1 и может открыть таблицу ##test, созданную сеансом A
+- В сеансе B устанавливается подключение к [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 и доступ к таблице ##test, созданной в сеансе A.
 
 ```sql
 SELECT * FROM ##test
@@ -1109,7 +1094,7 @@ SELECT * FROM ##test
 1,1
 ```
 
-- Сеанс C подключается к другой базе данных SQL Azure testdb2 и хочет получить доступ к таблице ##test, созданной в базе данных testdb1. Это невозможно, поскольку глобальные временные таблицы существуют в области базы данных 
+- В сеансе C устанавливается подключение к другой базе данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2 и выполняется попытка получить доступ к таблице ##test, созданной в базе данных testdb1. Это невозможно, поскольку глобальные временные таблицы существуют в области базы данных 
 
 ```sql
 SELECT * FROM ##test
@@ -1118,15 +1103,13 @@ Msg 208, Level 16, State 0, Line 1
 Invalid object name '##test'
 ```
 
-- Обращение к системному объекту в базе данных SQL Azure tempdb из текущей базы данных пользователя testdb1
+- Обращение к системному объекту в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tempdb из текущей базы данных пользователя testdb1.
 
 ```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
 ```
-
-
 
 ## <a name="partitioned-tables"></a>Секционированные таблицы  
  Перед созданием секционированной таблицы с помощью инструкции CREATE TABLE следует вначале создать функцию секционирования, чтобы указать, как должна быть секционирована таблица. Функция секционирования создается с помощью инструкции [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md). Затем необходимо создать схему секционирования, чтобы указать файловые группы, которые будут содержать указанные функцией секционирования секции. Схема секционирования создается с помощью инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). Для секционированных таблиц нельзя указать ограничения PRIMARY KEY или UNIQUE для разделения файловых групп. Дополнительные сведения см. в разделе [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
@@ -1142,7 +1125,7 @@ SELECT * FROM tempdb.sys.database_files
 -   Все столбцы с ограничением PRIMARY KEY должны иметь признак NOT NULL. Если допустимость значения NULL не указана, то для всех столбцов c ограничением PRIMARY KEY устанавливается признак NOT NULL.  
   
     > [!NOTE]  
-    >  В таблицах, оптимизированных для памяти, допускается ключевой столбец, способный принимать значение NULL.  
+    > В таблицах, оптимизированных для памяти, допускается ключевой столбец, способный принимать значение NULL.  
   
 -   Если первичный ключ определен на столбце определяемого пользователем типа данных CLR, реализация этого типа должна поддерживать двоичную сортировку. Дополнительные сведения об определяемых пользователем типах данных CLR см. в разделе [Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
@@ -1184,7 +1167,7 @@ SELECT * FROM tempdb.sys.database_files
   
 -   Столбцы, участвующие в связи по внешнему ключу, должны иметь одинаковую длину и масштаб.  
   
-## <a name="default-definitions"></a>Определения DEFAULT  
+## <a name="default-definitions"></a>DEFAULT, определения  
   
 -   Столбец может иметь только определение DEFAULT.  
   
@@ -1220,13 +1203,13 @@ SELECT * FROM tempdb.sys.database_files
   
 ## <a name="additional-constraint-information"></a>Дополнительные сведения об ограничениях  
   
--   Индекс, созданный для ограничения, не может быть удален с помощью инструкции DROP INDEX; необходимо удалить ограничение с помощью инструкции ALTER TABLE. Индекс, созданный для ограничения и используемый им, можно перестроить с помощью инструкции ALTER INDEX...REBUILD. Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+-   Индекс, созданный для ограничения, не может быть удален с помощью инструкции `DROP INDEX`. Вам нужно удалить ограничение с помощью инструкции ALTER TABLE. Индекс, созданный для ограничения и используемый им, можно перестроить с помощью инструкции `ALTER INDEX ... REBUILD`. Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Имена ограничений должны подчиняться правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md), за исключением тех, которые не могут начинаться с символа решетки (#). Если аргумент *constraint_name* не указан, то ограничению присваивается имя, формируемое системой. Имя ограничения отображается в любых сообщениях об ошибках, связанных с нарушением ограничения.  
   
 -   При нарушении ограничения в инструкции INSERT, UPDATE или DELETE выполнение инструкции прекращается. Однако если параметр SET XACT_ABORT установлен в OFF, а инструкция является частью явной транзакции, выполнение этой транзакции продолжается. Если параметр SET XACT_ABORT установлен в ON, производится откат всей транзакции. С определением транзакции можно также использовать инструкцию ROLLBACK TRANSACTION, установив флажок для системной функции @@ERROR.  
   
--   Если присвоены значения ALLOW_ROW_LOCKS = ON и ALLOW_PAGE_LOCK = ON, при доступе к индексу допустимы блокировки на уровне строк, страниц и таблиц. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выбирает соответствующую блокировку и может повышать уровень с блокировки строки или страницы до блокировки таблицы. Если присвоены значения ALLOW_ROW_LOCKS = OFF и ALLOW_PAGE_LOCK = OFF, при доступе к индексу допустима только блокировка на уровне таблиц.  
+-   Когда присвоены значения `ALLOW_ROW_LOCKS = ON` и `ALLOW_PAGE_LOCK = ON`, при доступе к индексу допустимы блокировки на уровне строк, страниц и таблиц. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выбирает соответствующую блокировку и может повышать уровень с блокировки строки или страницы до блокировки таблицы. Если присвоены значения `ALLOW_ROW_LOCKS = OFF` и `ALLOW_PAGE_LOCK = OFF`, при доступе к индексу допустима только блокировка на уровне таблиц.  
   
 -   Если в таблице содержатся ограничения FOREIGN KEY или CHECK и триггеры, условия ограничений вычисляются перед выполнением триггера.  
   
@@ -1273,7 +1256,7 @@ SELECT * FROM tempdb.sys.database_files
 ### <a name="a-create-a-primary-key-constraint-on-a-column"></a>A. Создание ограничения PRIMARY KEY для столбца  
  В следующем примере показано определение ограничения PRIMARY KEY с кластеризованным индексом для столбца `EmployeeID` таблицы `Employee`. Поскольку имя ограничения не указано, оно будет подставлено системой.  
   
-```  
+```sql  
 CREATE TABLE dbo.Employee (EmployeeID int  
 PRIMARY KEY CLUSTERED);  
 ```  
@@ -1281,20 +1264,20 @@ PRIMARY KEY CLUSTERED);
 ### <a name="b-using-foreign-key-constraints"></a>Б. Использование ограничений FOREIGN KEY  
  Ограничение FOREIGN KEY используется для ссылки на другую таблицу. Внешние ключи могут включать один или несколько столбцов. В следующем примере показано ограничение FOREIGN KEY с одним столбцом в таблице `SalesOrderHeader`, ссылающееся на таблицу `SalesPerson`. Для ограничения FOREIGN KEY с одним столбцом требуется только предложение REFERENCES.  
   
-```  
+```sql  
 SalesPersonID int NULL  
 REFERENCES SalesPerson(SalesPersonID)  
 ```  
   
  Кроме того, предложение FOREIGN KEY можно применить явно и заново определить атрибут столбца. Обратите внимание, что имена столбцов в обеих таблицах могут различаться.  
   
-```  
+```sql  
 FOREIGN KEY (SalesPersonID) REFERENCES SalesPerson(SalesPersonID)  
 ```  
   
  Ограничения по ключам с несколькими столбцами создаются в виде табличных ограничений. В базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] таблица `SpecialOfferProduct` включает ограничение PRIMARY KEY с несколькими столбцами. В следующем примере показано, как обращаться к этому ключу из другой таблицы; задавать имя ограничения явно необязательно.  
   
-```  
+```sql  
 CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY  
  (ProductID, SpecialOfferID)  
 REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)  
@@ -1303,7 +1286,7 @@ REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
 ### <a name="c-using-unique-constraints"></a>В. Использование ограничений UNIQUE  
  Ограничения UNIQUE используются для указания уникальности непервичных ключевых столбцов. В следующем примере применяется ограничение уникальности столбца `Name` таблицы `Product`.  
   
-```  
+```sql  
 Name nvarchar(100) NOT NULL  
 UNIQUE NONCLUSTERED  
 ```  
@@ -1311,32 +1294,32 @@ UNIQUE NONCLUSTERED
 ### <a name="d-using-default-definitions"></a>Г. Использование определений DEFAULT  
  Определения DEFAULT (вместе с инструкциями INSERT и UPDATE) позволяют указать значение по умолчанию, используемое, если значение не задано. Например, база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] может включать таблицу уточняющих запросов, содержащую различные должности, которые могут занимать сотрудники компании. В столбце, описывающем каждую должность, значение символьной строки по умолчанию может содержать описание, отображаемое, если фактическое описание должности не было введено явно.  
   
-```  
+```sql  
 DEFAULT 'New Position - title not formalized yet'  
 ```  
   
  Кроме констант, определения DEFAULT могут включать функции. Следующий пример позволяет получить текущую дату для той или иной записи.  
   
-```  
+```sql  
 DEFAULT (getdate())  
 ```  
   
  Обработка функциями без параметров также может повысить целостность данных. Чтобы определить пользователя, вставившего строку, используйте функцию без параметров для USER. Не заключайте функции без параметров в скобки.  
   
-```  
+```sql  
 DEFAULT USER  
 ```  
   
 ### <a name="e-using-check-constraints"></a>Д. Использование ограничений CHECK  
  В следующем примере показано ограничение, применяемое к значениям, вводимым в столбец `CreditRating` таблицы `Vendor`. Ограничение не имеет имени.  
   
-```  
+```sql  
 CHECK (CreditRating >= 1 and CreditRating <= 5)  
 ```  
   
  В этом примере показано именованное ограничение вводимых в столбец таблицы символьных данных по шаблону.  
   
-```  
+```sql  
 CONSTRAINT CK_emp_id CHECK (emp_id LIKE   
 '[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'   
 OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')  
@@ -1344,7 +1327,7 @@ OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')
   
  В этом примере указывается, что значения должны входить в заданный список или соответствовать заданному шаблону.  
   
-```  
+```sql  
 CHECK (emp_id IN ('1389', '0736', '0877', '1622', '1756')  
 OR emp_id LIKE '99[0-9][0-9]')  
 ```  
@@ -1352,7 +1335,7 @@ OR emp_id LIKE '99[0-9][0-9]')
 ### <a name="f-showing-the-complete-table-definition"></a>Е. Вывод на экран полного определения таблицы  
  В следующем примере выводятся полные определения таблицы со всеми определениями ограничений для таблицы `PurchaseOrderDetail`, созданной в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Обратите внимание, что для выполнения этого образца схема таблицы заменяется на схему `dbo`.  
   
-```  
+```sql  
 CREATE TABLE dbo.PurchaseOrderDetail  
 (  
     PurchaseOrderID int NOT NULL  
@@ -1381,7 +1364,7 @@ ON PRIMARY;
 ### <a name="g-creating-a-table-with-an-xml-column-typed-to-an-xml-schema-collection"></a>Ж. Создание таблицы со столбцом, приведенным к типу коллекции схем XML  
  В следующем примере создается таблица со столбцом `xml`, приведенным к типу коллекции схем XML `HRResumeSchemaCollection`. Ключевое слово `DOCUMENT` указывает, что каждый экземпляр типа данных `xml` в столбце *column_name* может содержать только один элемент верхнего уровня.  
   
-```  
+```sql  
 CREATE TABLE HumanResources.EmployeeResumes   
    (LName nvarchar(25), FName nvarchar(25),   
     Resume xml( DOCUMENT HumanResources.HRResumeSchemaCollection) );  
@@ -1390,7 +1373,7 @@ CREATE TABLE HumanResources.EmployeeResumes
 ### <a name="h-creating-a-partitioned-table"></a>З. Создание секционированной таблицы  
  В следующем примере создается функция секционирования для разделения таблицы или индекса на четыре секции. Затем создается схема секционирования, определяющая файловые группы, в которых содержится каждая из четырех секций. Наконец, создается таблица, использующая схему секционирования. В примере предполагается, что в базе данных уже существуют файловые группы.  
   
-```  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
 GO  
@@ -1415,7 +1398,7 @@ GO
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>И. Использование типа данных uniqueidentifier в столбце  
  В следующем примере создается таблица со столбцом типа `uniqueidentifier`. В этом примере используется ограничение PRIMARY KEY для защиты таблицы от вставки пользователями повторяющихся значений, а также функция `NEWSEQUENTIALID()` в ограничении `DEFAULT` для указания значений для новых строк. К столбцу `uniqueidentifier` применяется свойство ROWGUIDCOL, чтобы на столбец можно было ссылаться с помощью ключевого слова $ROWGUID.  
   
-```  
+```sql  
 CREATE TABLE dbo.Globally_Unique_Data  
     (guid uniqueidentifier   
         CONSTRAINT Guid_Default DEFAULT   
@@ -1427,7 +1410,7 @@ CREATE TABLE dbo.Globally_Unique_Data
 ### <a name="j-using-an-expression-for-a-computed-column"></a>К. Использование выражения для вычисляемого столбца  
  В следующем примере показано использование выражения (`(low + high)/2`) для вычисления столбца `myavg`.  
   
-```  
+```sql  
 CREATE TABLE dbo.mytable   
     ( low int, high int, myavg AS (low + high)/2 ) ;  
 ```  
@@ -1435,7 +1418,7 @@ CREATE TABLE dbo.mytable
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>Л. Создание вычисляемого столбца на основе столбца определяемого пользователем типа  
  В следующем примере создается таблица с одним столбцом, имеющим определяемый пользовательским тип `utf8string`, и предполагается, что как сборка, содержащая данный тип, так и сам тип, уже созданы в текущей базе данных. Второй столбец определяется на основе типа `utf8string` и использует метод `ToString()` типа **type(class)**`utf8string` для вычисления значения столбца.  
   
-```  
+```sql  
 CREATE TABLE UDTypeTable   
     ( u utf8string, ustr AS u.ToString() PERSISTED ) ;  
 ```  
@@ -1443,7 +1426,7 @@ CREATE TABLE UDTypeTable
 ### <a name="l-using-the-username-function-for-a-computed-column"></a>М. Использование функции USER_NAME для вычисляемого столбца  
  В следующем примере используется функция `USER_NAME()` в столбце `myuser_name`.  
   
-```  
+```sql  
 CREATE TABLE dbo.mylogintable  
     ( date_in datetime, user_id int, myuser_name AS USER_NAME() ) ;  
 ```  
@@ -1451,7 +1434,7 @@ CREATE TABLE dbo.mylogintable
 ### <a name="m-creating-a-table-that-has-a-filestream-column"></a>Н. Создание таблицы со столбцом FILESTREAM  
  В следующем примере создается таблица со столбцом `FILESTREAM` `Photo`. Если таблица содержит один или более столбцов `FILESTREAM`, она должна содержать столбец `ROWGUIDCOL`.  
   
-```  
+```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
     EmployeeId int NOT NULL PRIMARY KEY,  
@@ -1464,7 +1447,7 @@ CREATE TABLE dbo.EmployeePhoto
 ### <a name="n-creating-a-table-that-uses-row-compression"></a>О. О. Создание таблицы, использующей сжатие строк  
  В следующем примере создается таблица, использующая сжатие строк.  
   
-```  
+```sql  
 CREATE TABLE dbo.T1   
 (c1 int, c2 nvarchar(200) )  
 WITH (DATA_COMPRESSION = ROW);  
@@ -1477,7 +1460,7 @@ WITH (DATA_COMPRESSION = ROW);
   
  В следующем примере создается таблица с разреженным столбцом.  
   
-```  
+```sql  
 CREATE TABLE dbo.T1  
     (c1 int PRIMARY KEY,  
     c2 varchar(50) SPARSE NULL ) ;  
@@ -1485,7 +1468,7 @@ CREATE TABLE dbo.T1
   
  В этом примере создается таблица с двумя разреженными столбцами и набором столбцов с именем `CSet`.  
   
-```  
+```sql  
 CREATE TABLE T1  
     (c1 int PRIMARY KEY,  
     c2 varchar(50) SPARSE NULL,  
@@ -1495,14 +1478,13 @@ CREATE TABLE T1
   
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>Т. Создание темпоральной таблицы на основе диска с системным управлением версиями  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  В следующих примерах показано, как создать темпоральную таблицу, привязанную к новой таблице журнала, и как создать темпоральную таблицу, привязанную к существующей таблице журнала. Для темпоральной таблицы должен быть определен первичный ключ, чтобы включить системное управление версиями. Примеры добавления или удаления системного управления версиями в существующей таблице см. в главе [Примеры](../../t-sql/statements/alter-table-transact-sql.md#Example_Top) в разделе "Системное управление версиями". Варианты использования описаны в разделе [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md).  
   
  В этом примере создается новая темпоральная таблица, привязанная к новой таблице журнала.  
   
-```  
+```sql  
 CREATE TABLE Department   
 (  
     DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,   
@@ -1518,8 +1500,7 @@ WITH (SYSTEM_VERSIONING = ON);
   
  В этом примере создается новая темпоральная таблица, привязанная к существующей таблице журнала.  
   
-```  
-  
+```sql  
 --Existing table   
 CREATE TABLE Department_History   
 (  
@@ -1549,14 +1530,13 @@ WITH
   
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>У. Создание оптимизированной для памяти темпоральной таблицы с системным управлением версиями  
    
-  
 **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  В следующем примере показано, как создать оптимизированную для памяти темпоральную таблицу с системным управлением версиями, привязанную к новой таблице журнала на диске.  
   
  В этом примере создается новая темпоральная таблица, привязанная к новой таблице журнала.  
   
-```  
+```sql  
 CREATE SCHEMA History  
 GO  
 CREATE TABLE dbo.Department   
@@ -1578,8 +1558,7 @@ WITH
   
  В этом примере создается новая темпоральная таблица, привязанная к существующей таблице журнала.  
   
-```  
-  
+```sql 
 --Existing table   
 CREATE TABLE Department_History   
 (  
@@ -1610,7 +1589,7 @@ WITH
 ### <a name="r-creating-a-table-with-encrypted-columns"></a>Ф. Создание таблицы с зашифрованными столбцами  
  В следующем примере создается таблица с двумя зашифрованными столбцами. Дополнительные сведения см. в разделе [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
-```  
+```sql  
 CREATE TABLE Customers (  
     CustName nvarchar(60)   
         ENCRYPTED WITH   
@@ -1631,17 +1610,40 @@ CREATE TABLE Customers (
 ```
 
 ### <a name="s-create-an-inline-filtered-index"></a>Х. Создание встроенного фильтруемого индекса 
-Создает таблицу со встроенным фильтруемым индексом.
+В этом примере создается таблица со встроенным фильтруемым индексом.
   
-  ```
+```sql
   CREATE TABLE t1 
- (
+  (
       c1 int,
       index IX1  (c1) WHERE c1 > 0   
  )
 GO
- ```
+```
+
+### <a name="t-create-a-temporary-table-with-an-anonymously-named-compound-primary-key"></a>T. Создание временной таблицы с анонимным составным первичным ключом.
+В примере создается таблица с анонимным составным первичным ключом. Это полезно для предотвращения конфликтов во время выполнения, если две временные таблицы, областью действия которых являются сеансы (каждая в отдельном сеансе), используют одно и то же имя для ограничения. 
+  
+```
+  CREATE TABLE #tmp 
+ (
+      c1 int,
+      c2 int,
+      PRIMARY KEY CLUSTERED ([c1], [c2])
+ )
+GO
+```
+
+Если вы явным образом именуете ограничение, во втором сеансе возникнет ошибка, например:
  
+```
+Msg 2714, Level 16, State 5, Line 1
+There is already an object named 'PK_#tmp' in the database.
+Msg 1750, Level 16, State 1, Line 1
+Could not create constraint or index. See previous errors.
+```
+
+Причина проблемы в том, что имя временной таблицы уникально, а имена ограничений — нет.
   
 ## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   

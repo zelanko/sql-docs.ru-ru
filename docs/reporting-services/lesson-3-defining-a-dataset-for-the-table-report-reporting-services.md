@@ -17,11 +17,12 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bc8a0745cb75ae2d6856bd950a6020513798970
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73455ea6ca6fdde23b61586abd9851712967e7a8
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038101"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)
 После определения источника данных необходимо определить набор данных. В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]данные, используемые в отчетах, содержатся в *наборе данных*. Набор данных содержит указатель на источник данных и запрос, используемый в отчете, а также вычисляемые поля и переменные.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Щелкните **Использовать набор данных, внедренный в отчет**.  
   
-4.  Выберите источник данных, созданный на предыдущем занятии [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
+4.  Выберите источник данных, созданный с помощью предыдущих инструкций ([!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]).   
 5. Выберите **Текст** в качестве **типа запроса**.  
   
 6.  Введите или скопируйте и вставьте приведенный ниже запрос Transact-SQL в поле **Запрос** .  

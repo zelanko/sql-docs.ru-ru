@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f94a0f5bf75f3f3b1b3cdff067835006eaa6d063
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20c9f992fe9ccfa161a2c2154fbae9cf9c53eb4f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018431"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088566"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Открытие мобильного отчета с определенными параметрами строки запроса | Службы Reporting Services
 Если у вас есть мобильный отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с параметрами, а также источник данных [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] , можно включить в URL-адрес отчета параметры строки запроса, чтобы он автоматически открывался с заданными значениями. 
@@ -42,7 +42,7 @@ ms.locfileid: "33018431"
     
     `http://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.category=Clothing` 
     
-     **Для источника данных SQL Server**. Параметр строки запроса почти такой же, но с символом @ перед именем поля:
+     **Для источника данных SQL Server**. Параметр строки запроса почти такой же, но с символом \@ перед именем поля:
 
     `http://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.@<field-name>=<parameter-value>`
 

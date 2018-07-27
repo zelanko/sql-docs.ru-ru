@@ -22,19 +22,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fc9be10a3197f645b824afe7f33f0235408439d
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 668c6cf81028417539d204fd1f28d9a7992311ea
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248316"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216915"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Зарезервированные ключевые слова (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует зарезервированные ключевые слова для определения, манипулирования и доступа к базам данных. Зарезервированные ключевые слова являются частью грамматики языка [!INCLUDE[tsql](../../includes/tsql-md.md)], которые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует для синтаксического анализа инструкций и пакетов языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Хотя синтаксис скриптов языка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет использовать зарезервированные слова [!INCLUDE[tsql](../../includes/tsql-md.md)] в качестве идентификаторов и имен объектов, это можно сделать только при помощи идентификаторов с разделителями.  
   
- Следующая таблица содержит список зарезервированных слов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Следующая таблица содержит список зарезервированных слов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Хранилища данных SQL Azure.  
   
 ||||  
 |-|-|-|  
@@ -99,7 +99,13 @@ ms.locfileid: "36248316"
 |EXEC|PRECISION|на|  
 |EXECUTE|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
-|EXIT|PROC||  
+|EXIT|PROC||
+  
+Следующая таблица содержит список зарезервированных слов для **Хранилища данных SQL**.
+
+|||
+|-|-|
+|**Метка**||
   
  Кроме того, стандартом ISO определяется список зарезервированных ключевых слов. Избегайте применения зарезервированных ключевых слов ISO в качестве имен и идентификаторов объектов. Список зарезервированных ключевых слов ODBC, приведенный в следующей таблице, совпадает со списком зарезервированных ключевых слов ISO.  
   

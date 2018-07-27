@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e32dac3a1145695c33fc06c818f8c59361e025dd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415443"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083836"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "37415443"
 |Свойство|Значение|  
 |--------------|-----------|  
 |Синтаксис|**date**|  
-|Использование|DECLARE @MyDate **date**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **date** )|  
+|Использование|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **date** )|  
 |Формат строковых литералов по умолчанию<br /><br /> (используется для клиента нижнего уровня)|ГГГГ-ММ-ДД<br /><br /> Дополнительные сведения см. в подразделе «Обратная совместимость для клиентов низкого уровня» следующего раздела.|  
 |Диапазон|От 0001-01-01 до 9999-12-31 (от 1582-10-15 до 9999-12-31 для Informatica)<br /><br /> От 1 января 1 года до 31 декабря 9999 года (от 15 октября 1582 года до 31 декабря 9999 года для Informatica)|  
 |Диапазоны элементов|ГГГГ обозначает 4 цифры, которые представляют год и принимают значения от 0001 до 9999. Для Informatica значение ГГГГ ограничено диапазоном от 1582 до 9999.<br /><br /> ММ обозначает 2 цифры, которые представляют месяц и принимают значения от 01 до 12.<br /><br /> ДД обозначает две цифры, представляющие день указанного месяца и принимающие значения от 01 до 31 в зависимости от месяца.|  

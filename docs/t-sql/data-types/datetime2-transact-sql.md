@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: feaca5b69a76fb7e3bffc67d58998de1bbd8b97e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 27c3931a5b735e91796c322d36dd7090b0a7b269
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417493"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087606"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "37417493"
 |Свойство|Значение|  
 |--------------|-----------|  
 |Синтаксис|**datetime2** [ (*fractional seconds precision*) ]|  
-|Использование|DECLARE @MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **datetime2(7)** )|  
+|Использование|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **datetime2(7)** )|  
 |Формат строковых литералов по умолчанию<br /><br /> (используется для клиента нижнего уровня)|ГГГГ-ММ-ДД чч:мм:сс[.доли секунды]<br /><br /> Дополнительные сведения см. в подразделе «Обратная совместимость для клиентов низкого уровня» следующего раздела.|  
 |Диапазон даты|От 0001-01-01 до 31.12.99<br /><br /> С 1 января 1 года нашей эры до 31 декабря 9999 года нашей эры|  
 |Диапазон времени|от 00:00:00 до 23:59:59.9999999|  

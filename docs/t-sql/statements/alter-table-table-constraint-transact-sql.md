@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dff7eb34493f69ac3e62e889f8641c9a7ed368a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9ff101bbc0288a3a6ccb1671f3f3c125908cf567
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786145"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106730"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,8 @@ ms.locfileid: "37786145"
  Определяет столбец, связанный с определением DEFAULT уровня таблицы.  
   
  WITH VALUES  
- Указывает, что значение, указанное в выражении DEFAULT *constant_expression*, сохраняется в новом столбце, добавляемом к существующим строкам. Оператор WITH VALUES может быть указан только в том случае, если указан параметр DEFAULT в предложении ADD столбца. Если добавленный столбец допускает значения NULL и указан оператор WITH VALUES, новый столбец, добавленный к существующим строкам, заполняется значением по умолчанию. Если оператор WITH VALUES не указан для столбцов, допускающих значение NULL, новый столбец для существующих строк заполняется значением NULL. Если новый столбец не допускает значения NULL, значение по умолчанию сохраняется во всех строках независимо от того, указан оператор WITH VALUES или нет.  
+ При добавлении столбца AND ограничение DEFAULT, если столбец допускает значения NULL с использованием WITH VALUES, задает для существующих строк значение нового столбца в качестве значения, указанного в DEFAULT *constant_expression*. Если добавляемый столбец не допускает значения NULL, для существующих строк значение столбца всегда будет присваиваться в качестве значения, предоставляемого в DEFAULT *constant expression*. Начиная с SQL Server 2012, может использоваться операция с метаданными [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+При использовании в ситуации, когда связанный столбец не добавляется, никакого эффекта не будет. 
   
  CHECK  
  Ограничение, обеспечивающее целостность домена путем ограничения возможных значений, которые могут быть введены в столбец или столбцы.  

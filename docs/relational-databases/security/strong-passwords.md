@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 caps.latest.revision: 30
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3bd36744f5604729d782822296dd6568b90a847
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 5ce04c1ef924224036f28b8b5dd1b4eb15c9a4a4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942630"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107966"
 ---
 # <a name="strong-passwords"></a>Надежные пароли
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "36942630"
   
 -   содержат пробел или начинаются с пробела;  
   
--   начинаются с символа $ или @.  
+-   начинаются с символа $ или \@.  
   
- При использовании в строке подключения OLE DB или ODBC имя входа или пароль не должны содержать следующие символы: [] {} () , ; ? * ! @. Эти символы используются для инициализации соединения или для указания его отдельных значений.  
+ При использовании в строке подключения OLE DB или ODBC имя входа или пароль не должны содержать следующие символы: [] {} () , ; ? * ! \@. Эти символы используются для инициализации соединения или для указания его отдельных значений.  
   
 ## <a name="related-content"></a>См. также  
  [Политика паролей](../../relational-databases/security/password-policy.md)  

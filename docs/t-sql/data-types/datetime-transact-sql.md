@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d36f230788699207b122cc849c32577e96ecb2fe
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f56a1b254aeb487001915f05bb4e278e1ebd768e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420463"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087926"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37420463"
 |Свойство|Значение|  
 |---|---|
 |Синтаксис|**datetime**|  
-|Использование|DECLARE @MyDatetime **datetime**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **datetime** )|  
+|Использование|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **datetime** )|  
 |Форматы строковых литералов по умолчанию<br /><br /> (используется для клиента нижнего уровня)|Неприменимо|  
 |Диапазон даты|С я января 1753 года до 31 декабря 9999 года|  
 |Диапазон времени|От 00:00:00 до 23:59:590,997|  

@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ea8af698d4664a62dca880222f84bfc902028f8
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 68fef3dc4b856f78720923c33df352f5ea3c7f98
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782665"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102572"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -198,6 +198,8 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 **BLOB_STORAGE**   
 Только для массовых операций: `LOCATION` должно быть действительным URL-адресом хранилища BLOB-объектов Azure или контейнера. Не помещайте **/**, имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION`.   
 Используемые учетные данные необходимо создавать, используя `SHARED ACCESS SIGNATURE` в качестве удостоверения. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Пример доступа к хранилищу BLOB-объектов см. в примере Ж инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
+>[!NOTE] 
+>Для загрузки из хранилища BLOB-объектов Azure в хранилище данных SQL или Parallel Data Warehouse в качестве секретного ключа необходимо использовать ключ хранилища Azure.
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  

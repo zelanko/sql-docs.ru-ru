@@ -15,12 +15,12 @@ caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1cfc5097bc391a9d8487506b2958635dead23b7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a62aafb5512562339ad387dcb1bf8f34efac09d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028661"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981216"
 ---
 # <a name="reporting-services-data-alerts"></a>Предупреждения об изменении данных в службах Reporting Services
 
@@ -122,7 +122,7 @@ SQL Server Reporting Services — это управляемое данными
 ##  <a name="InstallAlerting"></a> Установка предупреждений об изменении данных  
  Функция предупреждений об изменении данных доступна только в случае, если службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] установлены в режиме интеграции с SharePoint. При установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint программа установки автоматически создает базу данных предупреждений, в которой хранятся определения предупреждений и метаданные предупреждений, и две страницы SharePoint для управления предупреждениями, а также добавляет конструктор предупреждений об изменении данных к сайту SharePoint. Для установки системы предупреждений не нужно выполнять каких-либо специальных действий.  
   
- Чтобы узнать больше об установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, включая общую службу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , представленную в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , а также приложение службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , которое необходимо создать и настроить, чтобы получить возможность использования функций [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , см. статью [Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) в библиотеке MSDN.  
+ Чтобы узнать больше об установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, включая общую службу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], представленную в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], а также приложение службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], которое необходимо создать и настроить, чтобы получить возможность использования функций [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. руководство по [установке служб Reporting Services в режиме SharePoint для SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) в библиотеке MSDN.  
   
  Как показано на приведенной выше диаграмме, предупреждения об изменении данных используют задания агента SQL Server. Чтобы можно было создавать задания, должен работать агент SQL Server. Агент SQL Server мог быть настроен для автоматического запуска при установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Если это не было сделано, вы можете запустить агент SQL Server вручную. Дополнительные сведения см. в статьях [Настройка агента SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) и [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -137,7 +137,7 @@ SQL Server Reporting Services — это управляемое данными
   
  В следующей таблице перечислены элементы конфигурации для предупреждений об изменении данных, их значения по умолчанию, описания и расположения.  
   
-|Настройка|Значение по умолчанию|Description|Местоположение|  
+|Настройка|Значение по умолчанию|Описание|Местоположение|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Количество минут между запусками циклов очистки.|Файл конфигурации сервера отчетов|  
 |AlertingExecutionLogCleanupMinutes|10 080|Количество минут, в течение которых хранятся записи в журнале выполнения.|Файл конфигурации сервера отчетов|  
@@ -151,7 +151,7 @@ SQL Server Reporting Services — это управляемое данными
 ### <a name="event-handlers-and-retry"></a>Обработчики событий и повторение попытки  
  Существуют следующие обработчики событий.  
   
-|Обработчик событий|Description|  
+|Обработчик событий|Описание|  
 |-------------------|-----------------|  
 |FireAlert|Вы нажимаете кнопку **Выполнить**  в диспетчере предупреждений об изменении данных, чтобы произвести немедленную обработку определения предупреждения.|  
 |FireSchedule|Агент SQL Server запускает расписание задания для определения предупреждения.|  

@@ -1,7 +1,7 @@
 ---
 title: 'Службы SSIS: создание пакета ETL | Документы Майкрософт'
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -23,12 +23,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 234b5a72f611ab2ac85db862c04af7d749e089ab
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5d2af071661576fdcd63a46a424a457fb969aac9
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411736"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999284"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Службы SSIS: создание пакета ETL
 
@@ -40,22 +40,24 @@ ms.locfileid: "35411736"
 
 ## <a name="what-is-sql-server-integration-services-ssis"></a>Что представляют собой службы SQL Server Integration Services (SSIS)?
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) представляют собой платформу для создания высокопроизводительных решений интеграции данных, включая пакеты ETL для хранения данных. Службы SSIS содержат графические инструменты и мастера для построения и отладки пакетов; задачи для выполнения функций рабочего процесса, таких как операции FTP, выполнение инструкций SQL и отправка сообщений электронной почты; источники данных и назначения для извлечения и загрузки данных; преобразования для очистки, статистической обработки, слияния и копирования данных; службу управления, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для администрирования выполнения и хранения пакетов, а также API-интерфейсы для программирования объектной модели служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) представляют собой платформу для создания высокопроизводительных решений интеграции данных, включая пакеты ETL для хранения данных. Службы SSIS содержат графические инструменты и мастера для построения и отладки пакетов; задачи для выполнения функций рабочего процесса, таких как операции FTP, выполнение инструкций SQL и отправка сообщений электронной почты; источники данных и назначения для извлечения и загрузки данных; преобразования для очистки, статистической обработки, слияния и копирования данных; базу данных управления, `SSISDB` для администрирования выполнения и хранения пакетов, а также API для программирования объектной модели [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
 ## <a name="what-you-learn"></a>Что вы узнаете  
 Новые средства, элементы управления и возможности служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] лучше всего изучать на практике. В этом руководстве с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] вы создадите простой пакет ETL, который включает циклическую обработку, конфигурацию, логику потока ошибок и ведение журнала.  
   
-## <a name="requirements"></a>Требования  
+## <a name="prerequisites"></a>предварительные требования  
 Этот учебник предназначен для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченное представление о новых функциях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
-> [!IMPORTANT]
-> Образцы файлов, необходимые для работы с этим учебником, были перенесены в новое место. Приносим извинения за причиненные неудобства. Мы опубликовали эти файлы в новом месте и обновили в этой статье ссылки для скачивания.
-
-Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
+Для работы с этим руководством проверьте установку следующих компонентов:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных **AdventureWorksDW2012** . Чтобы скачать базу данных **AdventureWorksDW2012**, скачайте файл `AdventureWorksDW2012.bak` со страницы с [образцами баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) и выполните восстановление из резервной копии.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Чтобы установить SQL Server и служб SSIS, см. руководство по [установке Integration Services](install-windows/install-integration-services.md).
 
--   Образцы данных. Образцы данных включаются в состав с пакетами занятий по службам [!INCLUDE[ssIS](../includes/ssis-md.md)] . Чтобы скачать образец данных и пакеты занятий в виде ZIP-файла, перейдите на страницу скачивания материалов к [учебнику по созданию простого пакета ETL в составе документации по SQL Server Integration Services](https://www.microsoft.com/download/details.aspx?id=56827).  
+-   Пример базы данных **AdventureWorksDW2012**. Чтобы скачать базу данных **AdventureWorksDW2012**, скачайте файл `AdventureWorksDW2012.bak` со страницы с [образцами баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) и выполните восстановление из резервной копии.  
+
+-   Файлы с **примерами данных**. Образцы данных включаются в состав с пакетами занятий по службам [!INCLUDE[ssIS](../includes/ssis-md.md)] . Чтобы скачать образец данных и пакеты занятий в виде ZIP-файла, перейдите на страницу скачивания материалов к [учебнику по созданию простого пакета ETL в составе документации по SQL Server Integration Services](https://www.microsoft.com/download/details.aspx?id=56827).
+
+    - Большая часть файлов в ZIP-файле доступна только для чтения во избежание непреднамеренных изменений. Для записи выходных данных в файл или его изменении может потребоваться отключить атрибут "только для чтения" в свойствах файла.
+    - При использовании пакетов примеров предполагается, что файлы данных находятся в папке `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. Если распаковать скачанные файлы в другое расположение, может потребоваться обновить путь к файлу в нескольких местах в пакетах с примерами.
 
 ## <a name="lessons-in-this-tutorial"></a>Занятия этого учебника  
 [Занятие 1. Создание проекта и основного пакета с помощью служб SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  

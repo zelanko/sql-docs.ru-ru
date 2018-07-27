@@ -1,7 +1,7 @@
 ---
 title: column_definition (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 972d3c177d596240fba0a04625c5bbff36e80ae5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d727179427421ff0d7c06f8336f098f222d43eb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785335"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109246"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,8 +157,11 @@ DEFAULT
 *constant_expression*  
  Символьное значение, NULL или системная функция, используемая в качестве значения столбца по умолчанию. Если используется в сочетании со столбцом определяемого пользователем типа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], то реализация типа должна поддерживать неявное преобразование выражения *constant_expression* в определяемый пользователем тип.  
   
-WITH VALUES  
- Указывает, что значение, указанное в выражении DEFAULT *constant_expression*, сохраняется в новом столбце, добавляемом к существующим строкам. Если добавленный столбец допускает значения NULL и указано предложение WITH VALUES, новый столбец, добавленный к существующим строкам, заполняется значением по умолчанию. Если предложение WITH VALUES не указано для столбцов, допускающих значение NULL, новый столбец для существующих строк заполняется значением NULL. Если новый столбец не допускает значения NULL, значение по умолчанию сохраняется во всех строках независимо от того, указан оператор WITH VALUES или нет.  
+WITH VALUES   
+ При добавлении столбца AND ограничение DEFAULT, если столбец допускает значения NULL с использованием WITH VALUES, задает для существующих строк значение нового столбца в качестве значения, указанного в DEFAULT *constant_expression*. Если добавляемый столбец не допускает значения NULL, для существующих строк значение столбца всегда будет присваиваться в качестве значения, предоставляемого в DEFAULT *constant expression*. Начиная с SQL Server 2012, может использоваться операция с метаданными [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+При использовании в ситуации, когда связанный столбец не добавляется, никакого эффекта не будет.
+ 
+ Указывает, что значение, указанное в выражении DEFAULT *constant_expression*, сохраняется в новом столбце, добавляемом к существующим строкам. Если добавленный столбец допускает значения NULL и указан оператор WITH VALUES, новый столбец, добавленный к существующим строкам, заполняется значением по умолчанию. Если предложение WITH VALUES не указано для столбцов, допускающих значение NULL, новый столбец для существующих строк заполняется значением NULL. Если новый столбец не допускает значения NULL, значение по умолчанию сохраняется во всех строках независимо от того, указан оператор WITH VALUES или нет.  
   
 IDENTITY  
  Указывает, что новый столбец является столбцом идентификаторов. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] присваивает столбцу уникальное возрастающее значение. Когда добавляются столбцы идентификаторов к существующим таблицам, к существующим строкам таблицы добавляются номера идентификаторов с этим начальным значением и приращением. Порядок, в котором выполняется обновление строк, не гарантирован. Номера идентификаторов также формируются для всех новых строк, которые добавляются.  

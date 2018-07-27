@@ -26,12 +26,12 @@ caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dfddb0368d8c674c7f0148a395f97088d9143228
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32f47807777b40fa2aac22c2e301183cc5c09d37
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035531"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985626"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Отключение или приостановка обработки отчетов и подписок
   Существует несколько подходов, которые позволяют отключить или приостановить обработку отчетов и подписок [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В этой статье описаны различные подходы — от отключения подписки до прерывания подключения к источнику данных. Не все эти подходы можно применять при обоих режимах работы сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В таблице ниже приведена сводка методов и поддерживаемых режимов сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -163,9 +163,9 @@ ForEach ($subscription in $subscriptions)
   
 -   Библиотека SharePoint (доступна только с сайта SharePoint, который интегрирован с сервером отчетов, работающим в режиме интеграции с SharePoint).  
   
- Доставку по электронной почте перед использованием необходимо настроить. Если настройка не выполнена, эта функция недоступна. Дополнительные сведения см. в статье [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+ Доставку по электронной почте перед использованием необходимо настроить. Если настройка не выполнена, эта функция недоступна. См. дополнительные сведения о [настройке сервера отчетов для доставки электронной почты (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
- Если требуется отключить конкретные модули, можно удалить записи, относящиеся к этим модулям, из файла **RSReportServer.config** . Дополнительные сведения см. в статьях [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) и [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+ Если требуется отключить конкретные модули, можно удалить записи, относящиеся к этим модулям, из файла **RSReportServer.config** . Дополнительные сведения см. в руководствах по [файлам конфигурации Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) и [настройке сервера отчетов для доставки электронной почты (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  После удаления модуля доставки он становится недоступным в диспетчере отчетов или на сайте SharePoint. При удалении модуля доставок могут появляться неактивные подписки. Обязательно удаляйте подписки или настраивайте их на использование другого модуля доставки, прежде чем удалить какой-либо модуль.  
   

@@ -25,13 +25,13 @@ caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b44199260af6886096e2ceabb071692e34b967f
-ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions || >= aps-pdw-2016
+ms.openlocfilehash: 0a7c0aa186874c068a82441dc8c4a3313e975964
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923616"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999304"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ WITH IDENTITY = 'identity_name'
  Указывает имя учетной записи для использования при подключении за пределами сервера. Чтобы импортировать файл из хранилища BLOB-объектов Azure с использованием общего ключа, необходимо имя удостоверения `SHARED ACCESS SIGNATURE`. Для загрузки данных в хранилище данных SQL в качестве удостоверения можно использовать любое допустимое значение. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
   
  SECRET **='***secret***'**  
- Указывает секретный код, необходимый для исходящей проверки подлинности. `SECRET` требуется для импорта файла из хранилища больших двоичных объектов Azure. Для загрузки из хранилища BLOB-объектов Azure в хранилище данных SQL в качестве секретного ключа необходимо использовать ключ хранилища Azure.  
+ Указывает секретный код, необходимый для исходящей проверки подлинности. `SECRET` требуется для импорта файла из хранилища больших двоичных объектов Azure. Для загрузки из хранилища BLOB-объектов Azure в хранилище данных SQL или Parallel Data Warehouse в качестве секретного ключа необходимо использовать ключ хранилища Azure.  
 >  [!WARNING]
 >  Значение ключа SAS может начинаться с '?' (вопросительный знак). При использовании ключа SAS необходимо удалить начальный символ '?'. В противном случае действия могут быть заблокированы.  
   

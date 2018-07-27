@@ -31,12 +31,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33f794f164a1fbd63ce65289c36b30391a87587b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edd4106a1e58631112337d0dcae8da78907a519d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017431"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087486"
 ---
 # <a name="examples-using-openxml"></a>Примеры. Использование OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ LILAS      Carlos Gonzlez
   
  Поскольку элементы <`Customer`> не имеют подэлементов, то выполнение той же самой инструкции SELECT с параметром *flags* со значением **2**, которое указывает на сопоставление с использованием элементов, возвращает значения NULL столбцов **CustomerID** и **ContactName** для обоих пользователей.  
   
- Аргумент @xmlDocument может также иметь тип **xml** или **(n)varchar(max)**.  
+ Аргумент \@xmlDocument может также иметь тип **xml** или **(n)varchar(max)**.  
   
  Если <`CustomerID`> и <`ContactName`> в XML-документе являются подэлементами, то сопоставление с использованием элементов возвращает значения:  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Инструкция OPENXML иллюстрирует следующее:  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) заканчивается XML-атрибутом **ProductID**. В результирующем наборе строк для каждого выбранного в XML-документе узла атрибута создается строка;  
+-   шаблон *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) заканчивается атрибутом XML — **ProductID**. В результирующем наборе строк для каждого выбранного в XML-документе узла атрибута создается строка;  
   
 -   в этом примере параметр *flags* не задан; вместо него для указания сопоставлений используется параметр *ColPattern* .  
   
@@ -482,9 +482,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   шаблон XPath (**.**), указанный в виде параметра *ColPattern* для столбца **ProdID** в наборе строк, определяет контекстный узел — текущий узел. Согласно заданному шаблону *rowpattern*, он является атрибутом **ProductID** элемента <`OrderDetail`>;  
   
--   параметр *ColPattern*, **../@Quantity**, заданный для столбца **Qty** в наборе строк, определяет атрибут **Quantity** для узла <`OrderDetail`>, который является родительским для текущего контекстного узла \<ProductID>;  
+-   шаблон *ColPattern*, **../\@Quantity**, заданный для столбца **Qty** в наборе строк, определяет атрибут **Quantity** родительского элемента, <`OrderDetail`>, узла контекстного узла \<ProductID>.  
   
--   аналогично параметр *ColPattern*, **../../@OrderID**, заданный для столбца **OID** в наборе строк, определяет атрибут **OrderID** для узла <`Order`>, который является родительским для узла родителя текущего контекстного узла. Узлом родителя является <`OrderDetail`>, а контекстным узлом является <`ProductID`>.  
+-   аналогично шаблон *ColPattern*, **../../\@OrderID**, заданный для столбца **OID** в наборе строк, определяет атрибут **OrderID** родительского элемента, <`Order`>, родительского узла контекстного узла. Узлом родителя является <`OrderDetail`>, а контекстным узлом является <`ProductID`>.  
   
  Затем инструкция SELECT извлекает все столбцы из набора строк, предоставленного инструкцией OPENXML:  
   
@@ -582,7 +582,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- То есть вы передаете переменную (@x) типа **xml** в функцию **sp_xml_preparedocument()**.  
+ А именно, переменная (\@x) типа **xml** передается функции **sp_xml_preparedocument()**.  
   
  Результат:  
   

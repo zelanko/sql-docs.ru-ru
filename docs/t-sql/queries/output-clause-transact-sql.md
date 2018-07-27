@@ -34,12 +34,12 @@ caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90b258ba3b34d46a48e4ae34953ea5392052b5f0
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252406"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088366"
 ---
 # <a name="output-clause-transact-sql"></a>Предложение OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ ms.locfileid: "36252406"
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- @*table_variable*  
- Указывает переменную **table**, в которую возвращенные строки вставляются вместо передачи вызывающему приложению.Аргумент  @*table_variable* необходимо объявить перед вызовом инструкции INSERT, UPDATE, DELETE или MERGE.  
+ \@*table_variable*  
+ Указывает переменную **table**, в которую возвращенные строки вставляются вместо передачи вызывающему приложению. Аргумент \@*table_variable* необходимо объявить перед вызовом инструкции INSERT, UPDATE, DELETE или MERGE.  
   
  Если не указан аргумент *column_list*, переменная **table** должна иметь то же число столбцов, что и результирующий набор OUTPUT, за исключением столбцов идентификаторов и вычисляемых столбцов, которые следует пропустить. Если аргумент *column_list* указан, то любые пропущенные столбцы должны либо допускать значение NULL, либо для них должны быть определены значения по умолчанию.  
   
@@ -143,7 +143,7 @@ DELETE Sales.ShoppingCartItem
  Доступен только для инструкции MERGE. Указывает столбец типа **nvarchar(10)** в предложении OUTPUT инструкции MERGE, которая возвращает одно из трех значений для каждой строки — INSERT, UPDATE или DELETE — в зависимости от действия, выполненного с этой строкой.  
   
 ## <a name="remarks"></a>Remarks  
- Предложение OUTPUT \<dml_select_list> и предложение OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } может быть определено в отдельной инструкции INSERT, UPDATE, DELETE или MERGE.  
+ Предложения OUTPUT \<dml_select_list> и OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } можно определить в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
   
 > [!NOTE]  
 >  Если не указано иное, ссылки на предложение OUTPUT относятся как к предложению OUTPUT, так и к предложению OUTPUT INTO.  
@@ -207,9 +207,9 @@ DELETE Sales.ShoppingCartItem
   
 -   Предложение OUTPUT INTO не поддерживается в инструкциях INSERT, содержащих предложение \<dml_table_source>.  
   
--   Функция @@ROWCOUNT возвращает только строки, вставленные внешней инструкцией INSERT.  
+-   \@\@ROWCOUNT возвращает только строки, вставленные внешней инструкцией INSERT.  
   
--   Функции @@IDENTITY, SCOPE_IDENTITY и IDENT_CURRENT возвращают значения идентификаторов, сформированные только вложенной инструкцией DML, а не внешней инструкцией INSERT.  
+-   \@\@IDENTITY, SCOPE_IDENTITY и IDENT_CURRENT возвращают значения идентификаторов, созданные не внешней инструкцией INSERT, а только вложенной инструкцией DML.  
   
 -   Уведомления о запросах рассматривают инструкцию как единую сущность, и тип любого созданного сообщения будет типом вложенной инструкции DML, даже если внешняя инструкция INSERT сделала значительное изменение.  
   

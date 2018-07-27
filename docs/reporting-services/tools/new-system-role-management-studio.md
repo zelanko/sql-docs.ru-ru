@@ -17,12 +17,12 @@ caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c7e6d62e16fe888719a89ac9adb754011aa6d0cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b988b1626240d111e7156c9daf4d77c7479d4e23
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029391"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082296"
 ---
 # <a name="new-system-role-management-studio"></a>Создание системной роли (среда Management Studio)
   Используйте эту страницу, чтобы создать определение роли на уровне системы. Определение системной роли указывает набор задач на системном уровне, применимых к серверу отчетов в целом.  
@@ -34,7 +34,7 @@ ms.locfileid: "33029391"
  **Название**  
  Имя определения роли. Имя определения роли должно быть уникальным в пределах пространства имен сервера отчетов. Имя должно содержать хотя бы одну букву или цифру. В него могут также входить пробелы и другие символы. При задании имени нельзя использовать следующие символы:  
   
- ; ? : @ & = + , $ / * < >  
+ ; ? : \@ & = + , $ / * < >  
   
  " /  
   

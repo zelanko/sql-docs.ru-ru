@@ -22,12 +22,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 199b1abd026efdf383cbd982ac3ce79d36e5b5cc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f1cf60d0f7b775e4950b159c237b96e82a1b333f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401356"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083356"
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -87,7 +87,7 @@ ms.locfileid: "35401356"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- Хранимая процедура ожидает, что в переменных `@StartProductID` и `@CheckDate`будут содержаться значения параметров. Порядок следования параметров в списке **Сопоставления** неважен. Единственное требование состоит в том, что имена параметров должны совпадать с именами переменных в хранимой процедуре вплоть до знака @.  
+ Хранимая процедура ожидает, что в переменных `@StartProductID` и `@CheckDate`будут содержаться значения параметров. Порядок следования параметров в списке **Сопоставления** неважен. Единственное требование состоит в том, что имена параметров должны совпадать с именами переменных в хранимой процедуре вплоть до символа \@.  
   
 ### <a name="mapping-parameters-to-variables"></a>Сопоставление параметров и переменных  
  Параметры сопоставляются с переменными, которые во время выполнения предоставляют значения параметров. Переменные обычно являются определяемыми пользователем переменными, хотя также можно использовать системные переменные, предоставляемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . При использовании определяемых пользователем переменных убедитесь, что тип их данных совместим с типом данных столбца, на который ссылается сопоставляемый параметр. Дополнительные сведения см. в разделе [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md).  
@@ -104,7 +104,7 @@ ms.locfileid: "35401356"
   
 -   [Пользовательские свойства OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Извлечение данных с помощью источника OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   

@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19d6758a6ce66af368aabb6cb5f81fb8e004c999
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 963c58a19ee5bf13fe956dcbefbf2f73114b1e96
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787775"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024250"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -358,13 +358,13 @@ ON
 
 Нельзя использовать курсоры или триггеры в таблице с кластеризованным индексом columnstore. Это ограничение не применяется к некластеризованным индексам columnstore. Курсоры и триггеры можно использовать в таблице с некластеризованным индексом columnstore.
 
-**Особые ограничения SQL Server 2014**  
-Эти ограничения применяются только к SQL Server 2014. В этом выпуске мы представили обновляемые кластеризованные индексы columnstore. Некластеризованные индексы columnstore были доступны только для чтения.  
+**Особые ограничения [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**  
+Эти ограничения применяются только к [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. В этом выпуске мы представили обновляемые кластеризованные индексы columnstore. Некластеризованные индексы columnstore были доступны только для чтения.  
 
 -   Отслеживание изменений. Невозможно использовать отслеживание изменений с некластеризованными индексами columnstore (NCCI), так как они доступны только для чтения. Это возможно с кластеризованными индексами columnstore (CCI).  
 -   Система отслеживания измененных данных. Невозможно использовать систему отслеживания измененных данных с некластеризованными индексами columnstore (NCCI), так как они доступны только для чтения. Это возможно с кластеризованными индексами columnstore (CCI).  
 -   Вторичные реплики для чтения. Невозможно получить доступ к кластеризованному индексу columnstore (CCI) из вторичной реплики для чтения группы доступности AlwaysOn.  К некластеризованному индексу columnstore (NCCI) можно получить доступ из вторичной реплики для чтения.  
--   Множественный активный результирующий набор (MARS). SQL Server 2014 использует функцию MARS для соединения только для чтения с таблицами с индексом columnstore.    Но SQL Server 2014 не поддерживает функцию MARS для параллельного выполнения операций DML в таблице с индексом columnstore. В этом случае SQL Server завершает соединения и прерывает выполнение транзакций.  
+-   Множественный активный результирующий набор (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] использует функцию MARS для установки подключений с доступом только для чтения с использованием таблиц с индексом columnstore. При этом [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] не поддерживает функцию MARS для параллельного выполнения операций DML в таблице с индексом columnstore. В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершает подключения и прерывает выполнение транзакций.  
   
  Сведения о преимуществах в производительности и ограничениях индексов columnstore см. в статье [Общие сведения об индексах columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
@@ -383,7 +383,7 @@ ON
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Преобразование кучи в кластеризованный индекс columnstore  
  В этом примере создается таблица как куча, затем преобразуется в кластеризованный индекс с именем columnstore cci_Simple. В результате таблица rowstore становится таблицей columnstore.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable(  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -397,7 +397,7 @@ GO
 ### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>Б. Преобразование кластеризованного индекса в кластеризованный индекс columnstore с тем же именем.  
  В этом примере создается таблица с кластеризованным индексом, затем демонстрируется синтаксис преобразования кластеризованного индекса в кластеризованный индекс columnstore. В результате таблица rowstore становится таблицей columnstore.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -418,8 +418,7 @@ GO
   
  В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] было невозможно создать некластеризованный индекс в индексе columnstore. В этом примере показано, как в предыдущих выпусках необходимо было удалить некластеризованные индексы до создания индекса columnstore.  
   
-```  
-  
+```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -442,7 +441,6 @@ DROP INDEX SimpleTable.nc2_simple;
 --Convert the rowstore table to a columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_simple ON SimpleTable;   
 GO  
-  
 ```  
   
 ### <a name="d-convert-a-large-fact-table-from-rowstore-to-columnstore"></a>Г. Преобразование большой таблицы фактов из rowstore в columnstore  
@@ -452,7 +450,7 @@ GO
   
 1.  Сначала создается небольшая таблица для использования в этом примере.  
   
-    ```  
+    ```sql  
     --Create a rowstore table with a clustered index and a non-clustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
@@ -470,7 +468,7 @@ GO
   
 2.  Удалите все некластеризованные индексы из таблицы rowstore.  
   
-    ```  
+    ```sql  
     --Drop all non-clustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
@@ -480,9 +478,9 @@ GO
     -   Это следует делать только в том случае, если необходимо указать новое имя индекса при его преобразовании в кластеризованный индекс columnstore. Если не удалить кластеризованный индекс, новый кластеризованный индекс columnstore будет иметь то же имя.  
   
         > [!NOTE]  
-        >  Имя индекса может оказаться легче запомнить, если вы используете собственное имя. Все кластеризованные индексы rowstore используют имя по умолчанию — 'ClusteredIndex_\<GUID>'.  
+        > Имя индекса может оказаться легче запомнить, если вы используете собственное имя. Все кластеризованные индексы rowstore используют имя по умолчанию — 'ClusteredIndex_\<GUID>'.  
   
-    ```  
+    ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
     --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
@@ -497,7 +495,7 @@ GO
   
 4.  Преобразуйте таблицу rowstore в таблицу columnstore с кластеризованным индексом columnstore.  
   
-    ```  
+    ```sql  
     --Option 1: Convert to columnstore and name the new clustered columnstore index MyCCI.  
     CREATE CLUSTERED COLUMNSTORE INDEX MyCCI ON MyFactTable;  
   
@@ -522,7 +520,7 @@ GO
 ### <a name="e-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>Д. Преобразование таблицы columnstore в таблицу rowstore с кластеризованным индексом  
  Чтобы преобразовать таблицу columnstore в таблицу rowstore с кластеризованным индексом, используйте инструкцию CREATE INDEX с параметром DROP_EXISTING.  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX ci_MyTable   
 ON MyFactTable  
 WITH ( DROP EXISTING = ON );  
@@ -531,21 +529,21 @@ WITH ( DROP EXISTING = ON );
 ### <a name="f-convert-a-columnstore-table-to-a-rowstore-heap"></a>Е. Преобразование таблицы columnstore в кучу rowstore  
  Чтобы преобразовать таблицу columnstore в кучу rowstore, просто удалите кластеризованный индекс columnstore.  
   
-```  
+```sql  
 DROP INDEX MyCCI   
 ON MyFactTable;  
 ```  
   
 
 ### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>Ж. Дефрагментация путем перестроения всего кластеризованного индекса columnstore  
-   Применимо к: SQL Server 2014  
+   Применимо к: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  Есть два способа полностью перестроить кластеризованный индекс columnstore. Можно использовать инструкцию CREATE CLUSTERED COLUMNSTORE INDEX или [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) с параметром REBUILD. Оба метода дают одинаковые результаты.  
   
 > [!NOTE]  
->  Начиная с SQL Server 2016 используйте инструкцию ALTER INDEX REORGANIZE вместо перестраивания с помощью методов, описанных в этом примере.  
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], используйте `ALTER INDEX...REORGANIZE` вместо перестраивания с помощью методов, описанных в этом примере.  
   
-```  
+```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
 SELECT i.object_id, i.name, t.object_id, t.name   
 FROM sys.indexes i   
@@ -563,7 +561,6 @@ ALTER INDEX my_CCI
 ON MyFactTable  
 REBUILD PARTITION = ALL  
 WITH ( DROP_EXISTING = ON );  
-  
 ```  
   
 ##  <a name="nonclustered"></a> Примеры некластеризованных индексов columnstore  
@@ -571,7 +568,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Создание индекса columnstore в качестве вторичного индекса в таблице rowstore  
  В этом примере создается некластеризованный индекс в таблице rowstore. В этом случае можно создать только один индекс columnstore. Индекс columnstore требует дополнительного места, поскольку содержит копию данных из таблицы rowstore. В этом примере показано, как создать простую таблицу и кластеризованный индекс, затем демонстрируется синтаксис создания некластеризованного индекса columnstore.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable  
 (ProductKey [int] NOT NULL,   
 OrderDateKey [int] NOT NULL,   
@@ -589,7 +586,7 @@ GO
 ### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>Б. Создание простого некластеризованного индекса columnstore с использованием всех параметров  
  В следующем примере демонстрируется синтаксис создания некластеризованного индекса columnstore с использованием всех параметров.  
   
-```  
+```sql  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
 ON SimpleTable  
 (OrderDateKey, DueDateKey, ShipDateKey)  
@@ -604,7 +601,7 @@ GO
 ### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>В. Создание некластеризованного индекса columnstore с предикатом фильтрации  
  В следующем примере создается отфильтрованный некластеризованный индекс columnstore в таблице Production.BillOfMaterials в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Предикат фильтра может включать столбцы, не являющиеся ключевыми в отфильтрованном индексе. Предикат в примере выбирает только те строки, где EndDate не равно NULL.  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithEndDate'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -614,7 +611,6 @@ GO
 CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
-  
 ```  
   
 ###  <a name="ncDML"></a> Г. Изменение данных в некластеризованном индексе columnstore  
@@ -624,7 +620,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Отключить или удалить индекс columnstore. Затем можно обновлять данные в таблице. Если отключить индекс columnstore, то можно перестроить его после окончания обновления данных. Например,  
   
-    ```  
+    ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
     -- update mytable --  
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
@@ -645,7 +641,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  В этом примере создается таблица xDimProduct в виде таблицы rowstore с кластеризованным индексом, а затем используется инструкция CREATE CLUSTERED COLUMNSTORE INDEX для преобразования таблицы из rowstore в columnstore.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF EXISTS (SELECT name FROM sys.tables  
@@ -670,7 +666,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="b-rebuild-a-clustered-columnstore-index"></a>Б. Перестроение кластеризованного индекса columnstore  
  Этот пример основан на предыдущем примере. В нем используется инструкция CREATE CLUSTERED COLUMNSTORE INDEX для перестроения существующего кластеризованного индекса columnstore с именем cci_xDimProduct.  
   
-```  
+```sql  
 --Rebuild the existing clustered columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_xDimProduct   
 ON xdimProduct   
@@ -684,7 +680,7 @@ WITH ( DROP_EXISTING = ON );
   
  В этом примере удаляется кластеризованный индекс columnstore с именем cci_xDimProduct, взятый из предыдущего примера, а затем повторно создается кластеризованный индекс columnstore с именем mycci_xDimProduct.  
   
-```  
+```sql  
 --For illustration purposes, drop the clustered columnstore index.   
 --The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xDimProduct;  
@@ -698,20 +694,19 @@ WITH ( DROP_EXISTING = OFF );
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>Г. Преобразование таблицы columnstore в таблицу rowstore с кластеризованным индексом  
  Может возникнуть ситуация, в которой необходимо удалить кластеризованный индекс columnstore и создать кластеризованный индекс. При этом таблица будет сохранена в формате rowstore. В этом примере таблица columnstore преобразуется в таблицу rowstore с кластеризованным индексом с тем же именем. Данные не будут утеряны. Все данные переносятся в таблицу rowstore, а указанные столбцы становятся ключевыми столбцами в кластеризованном индексе.  
   
-```  
+```sql  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
 --All of the columns are stored in the rowstore clustered index.   
 --The columns listed are the included columns in the index.  
 CREATE CLUSTERED INDEX cci_xDimProduct    
 ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode)  
 WITH ( DROP_EXISTING = ON);  
-  
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>Д. Преобразование таблицы columnstore обратно в кучу rowstore  
  Используйте [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32), чтобы удалить кластеризованный индекс columnstore и преобразовать таблицу в кучу rowstore. В этом примере таблица cci_xDimProduct преобразуется в кучу rowstore. Таблица остается распределенной, но хранится в виде кучи.  
   
-```  
+```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  

@@ -1,5 +1,6 @@
 ---
 title: Диспетчер подключений Azure Data Lake Analytics | Документация Майкрософт
+description: Пакет SQL Server Integration Services (SSIS) может использовать диспетчер подключений Azure Data Lake Analytics для подключения к учетной записи Data Lake Analytics.
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
@@ -19,47 +20,45 @@ caps.latest.revision: 7
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 17b63aad55cf50262d7e1e56267859b1a34cc9d3
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: e094cbbb5e9f51345fc22b6bb756ce2e10e97fba
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854428"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216965"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Диспетчер подключений Azure Data Lake Analytics
 
-Пакет SQL Server Integration Services (SSIS) может использовать диспетчер подключений Azure Data Lake Analytics для подключения к учетной записи Azure Data Lake Analytics с использованием одного из двух следующих типов аутентификации:
--   удостоверение пользователя Azure AD;
+Пакет SQL Server Integration Services (SSIS) может использовать диспетчер подключений Azure Data Lake Analytics для подключения к учетной записи Data Lake Analytics с использованием одного из двух следующих типов проверки подлинности:
+-   удостоверение пользователя Azure Active Directory (Azure AD);
 -   удостоверение службы Azure AD. 
 
-Диспетчер подключений Azure Data Lake Analytics входит в состав [пакета дополнительных компонентов SSIS для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+Диспетчер подключений Azure Data Lake Analytics включен в [пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
  
-## <a name="configure-the-azure-data-lake-analytics-connection-manager"></a>Настройка диспетчера подключений Azure Data Lake Analytics
+## <a name="configure-the-connection-manager"></a>Настройка диспетчера подключений
 
-1.  В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **AzureDataLakeAnalytics** и щелкните **Добавить**. Откроется диалоговое окно **редактора диспетчера подключений Azure Data Lake Analytics**.
+1. В диалоговом окне **Добавление диспетчера подключений со службами SSIS** выберите **AzureDataLakeAnalytics** >  и щелкните **Добавить**. Откроется диалоговое окно **редактора диспетчера подключений Azure Data Lake Analytics**.
   
-2.  В диалоговом окне **редактора диспетчера подключений Azure Data Lake Analytics** введите в поле **Имя учетной записи ADLS** соответствующее имя для Azure Data Lake Analytics. Например, myadlaaccountname.
+2. В диалоговом окне **Редактор диспетчера подключений Azure Data Lake Analytics** в поле **Имя учетной записи ADLA** введите соответствующее имя для учетной записи Data Lake Analytics. Например, myadlaaccountname.
   
-3.  В поле **Проверка подлинности** выберите подходящий тип проверки подлинности для доступа к данным в Azure Data Lake Analytics.
+3. В поле **Проверка подлинности** выберите подходящий тип проверки подлинности для получения доступа к данным в Data Lake Analytics.
 
-    1.  Если вы выбрали вариант **Удостоверение пользователя Azure AD**, выполните указанные ниже действия.
-        1. Укажите значения в полях **Имя пользователя** и **Пароль**. 
+   A. Если вы выбрали вариант **Удостоверение пользователя Azure AD**, сделайте следующее:
+   
+      i. Укажите значения в полях **Имя пользователя** и **Пароль**.    
+      ii. Чтобы проверить подключение, нажмите кнопку **Проверить подключение**. Если вы или администратор клиента ранее не давали согласия на доступ к учетной записи Data Lake Analytics из SSIS,при появлении соответствующего запроса щелкните **Принять**. Дополнительные сведения о предоставлении согласия см. в разделе [Интеграция приложений с Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
-        2. Чтобы проверить подключение, нажмите кнопку **Проверить подключение**. Если вы или администратор клиента ранее не давали согласия на доступ из SSIS к учетной записи Azure Data Lake Analytics, выберите **Принять** при появлении соответствующего запроса. Дополнительные сведения о предоставлении согласия см. в разделе [Интеграция приложений с Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+   > [!NOTE] 
+   > При выборе варианта проверки подлинности **Удостоверение пользователя Azure AD** многофакторная проверка подлинности и проверка подлинности учетной записи Майкрософт не поддерживаются.
     
-        >   [!NOTE] 
-        > При выборе варианта проверки подлинности **Удостоверение пользователя Azure AD** многофакторная проверка подлинности и проверка подлинности учетной записи Майкрософт не поддерживаются.
-    
-    2. Если вы выбрали вариант **Удостоверение службы Azure AD**, выполните указанные ниже действия.
-        1. Создайте приложение и субъект-службу Azure Active Directory (AAD) для доступа к учетной записи Azure Data Lake Analytics. Дополнительные сведения об этом параметре проверки подлинности см. в разделе [Использовать портал для создания приложения и службы-участника, который имеет доступ к ресурсам Active Directory](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
-    
-        2. Назначьте приложению AAD соответствующие разрешения на доступ к учетной записи Azure Data Lake Analytics. Узнайте, как предоставить права доступа к учетной записи Azure Data Lake Analytics [с помощью мастера добавления пользователей](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user). 
-    
-        3. Укажите значения для полей **Идентификатор приложения**, **Ключ проверки подлинности** и **Идентификатор клиента**.
-    
-        4. Чтобы проверить подключение, нажмите кнопку **Проверить подключение**.  
+   Б. Если вы выбрали вариант **Удостоверение службы Azure AD**, сделайте следующее.
+   
+      i. Создайте приложение и субъект-службу Azure AD для получения доступа к учетной записи Data Lake Analytics. Дополнительные сведения об этом параметре проверки подлинности см. в разделе [Использовать портал для создания приложения и службы-участника, который имеет доступ к ресурсам Active Directory](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).    
+      ii. Назначьте приложению Azure AD соответствующие разрешения на доступ к учетной записи Data Lake Analytics. Узнайте, как предоставить права доступа к учетной записи Data Lake Analytics с помощью [мастера добавления пользователей](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    
+      iii. Укажите значения для полей **Идентификатор приложения**, **Ключ проверки подлинности** и **Идентификатор клиента**.    
+      iv. Чтобы проверить подключение, нажмите кнопку **Проверить подключение**.  
 
-4.  Щелкните **ОК**, чтобы закрыть диалоговое окно **редактора диспетчера подключений Azure Data Lake Analytics**.  
+4. Щелкните **ОК**, чтобы закрыть диалоговое окно **редактора диспетчера подключений Azure Data Lake Analytics**.  
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Просмотр свойств диспетчера подключений
 Свойства созданного диспетчера соединений можно просмотреть в окне **Свойства** .  

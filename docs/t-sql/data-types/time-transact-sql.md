@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 704baf98a80b0fa17b10303e2ce18fec4463f39d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421573"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088126"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37421573"
 |Свойство|Значение|  
 |--------------|-----------|  
 |Синтаксис|**time** [ (*fractional second scale*) ]|  
-|Использование|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **time(7)** )|  
+|Использование|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **time(7)** )|  
 |*fractional seconds scale*|Задает число знаков для долей секунды.<br /><br /> Может быть целым числом от 0 до 7. Для Informatica может быть целым числом от 0 до 3.<br /><br /> Длина дробной части по умолчанию равна 7 (100 нс).|  
 |Формат строковых литералов по умолчанию<br /><br /> (используется для клиента нижнего уровня)|чч:мм:сс[.ннннннн] для Informatica)<br /><br /> Дополнительные сведения см. в подразделе «Обратная совместимость для клиентов низкого уровня» следующего раздела.|  
 |Диапазон|От 00:00:00.0000000 до 23:59:59.9999999 (от 00:00:00.000 до 23:59:59.999 для Informatica)|  

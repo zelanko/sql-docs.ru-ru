@@ -17,12 +17,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfb9c44afb9cefa2bb689feb99e83a62cc57811e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f558775492c58faf17f2957b536e4cbfaef9b1e9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328608"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084616"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (выражение служб SSIS)
   Возвращает квадрат числового выражения.  
@@ -66,7 +66,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  В выражениях имена переменных всегда содержат префикс @.  
+>  В выражениях имена переменных всегда содержат префикс \@.  
   
 ## <a name="see-also"></a>См. также:  
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  

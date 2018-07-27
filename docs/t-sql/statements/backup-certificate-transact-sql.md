@@ -32,12 +32,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d8fad120755b75f9d7e07f9e10c184de6f879810
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788295"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024270"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -90,7 +90,9 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
  При создании резервной копии закрытого ключа в файле шифрование является необходимым. Пароль, используемый для защиты резервной копии сертификата, не является тем же ключом, который применялся для шифрования закрытого ключа сертификата.  
   
- Чтобы восстановить сертификат из резервной копии, используйте инструкцию [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).  
+ Чтобы восстановить сертификат из резервной копии, используйте инструкцию [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
+ 
+ При выполнении резервного копирования файлы будут перечислены в учетной записи службы экземпляра SQL Server. Если вам нужно восстановить сертификат сервера, работающего в другой учетной записи, настройте разрешения для файлов, чтобы они могли быть прочитаны новой учетной записью. 
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение CONTROL для сертификата и знание пароля, использованного для шифрования закрытого ключа. Если только общедоступная часть сертификата была подвергнута резервному копированию, требуются некоторые разрешения для сертификата, и чтобы для вызывающей программы не было запрещено разрешение VIEW для сертификата.  

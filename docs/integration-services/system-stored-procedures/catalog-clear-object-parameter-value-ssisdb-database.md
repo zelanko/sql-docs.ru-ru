@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 524356687337eb962c262ea1e503fd2b40856623
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8288e93ff860e79116815f5b5d5417d05786d262
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410556"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082376"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,19 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @folder_name = ] *folder_name*  
+ [ \@folder_name = ] *folder_name*  
  Имя папки, которая содержит проект. Параметр *folder_name* имеет тип **nvarchar(128)**.  
   
- [ @project_name = ] *project_name*  
+ [ \@project_name = ] *project_name*  
  Имя проекта. Параметр *project_name* имеет тип **nvarchar(128)**.  
   
- [ @object_type = ] *object_type*  
+ [ \@object_type = ] *object_type*  
  Тип объекта. Для проекта допустимо, в частности, значение `20`, а для пакета — значение `30`. Параметр *object_type* имеет тип **smallInt**.  
   
- [ @ object _name = ] *object _name*  
+ [ \@ object _name = ] *object _name*  
  Имя пакета. Параметр *object _name* имеет тип **nvarchar(260)**.  
   
- [ @parameter_ name = ] *parameter_name*  
+ [ \@parameter_ name = ] *parameter_name*  
  Имя параметра. Параметр *parameter_ name* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  

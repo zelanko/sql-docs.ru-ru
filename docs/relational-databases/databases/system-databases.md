@@ -22,18 +22,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d5bf6819d26ff105113292162c3302d54460a6e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3a231d37ef959882a9d16b7b4bccdfab21308cc
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931539"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108106"
 ---
 # <a name="system-databases"></a>Системные базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входят следующие системные базы данных.  
   
-|Системная база данных|Description|  
+|Системная база данных|Описание|  
 |---------------------|-----------------|  
 |[База данных master](../../relational-databases/databases/master-database.md)|В этой базе данных хранятся все данные системного уровня для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[База данных msdb](../../relational-databases/databases/msdb-database.md)|Используется агентом SQL Server для планирования предупреждений и задач.|  
@@ -42,7 +42,7 @@ ms.locfileid: "32931539"
 |[База данных tempdb](../../relational-databases/databases/tempdb-database.md)|Рабочее пространство для временных объектов или взаимодействия результирующих наборов.|  
 
 > [!IMPORTANT]
-> В случае с Базой данных SQL Azure используются только базы данных master и tempdb. Описание понятий логического сервера и логической базы данных master см. в разделе [Что такое логический сервер SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server) Описание базы данных tempdb в контексте Базы данных SQL Azure см. в разделе [База данных tempdb в базе данных SQL](tempdb-database.md#tempdb-database-in-sql-database).
+> Для логического сервера База данных SQL Azure используются только базы данных master и tempdb. Описание понятий логического сервера и логической базы данных master см. в разделе [Что такое логический сервер SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server) Описание базы данных tempdb в контексте Базы данных SQL Azure см. в разделе [База данных tempdb в базе данных SQL](tempdb-database.md#tempdb-database-in-sql-database). Для Управляемого экземпляра Базы данных Azure SQL применяются все системные базы данных. См. дополнительные сведения об [Управляемом экземпляре Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   
 ## <a name="modifying-system-data"></a>изменение системных данных  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает прямое обновление пользователями данных в таких системных объектах, как таблицы, системные хранимые процедуры и представления каталогов. Вместо этого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет полный набор административных средств, позволяющих пользователям управлять всей системой, пользователями и объектами базы данных. следующие основные параметры.  
@@ -73,7 +73,7 @@ ms.locfileid: "32931539"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] встроенных функций и системных хранимых процедур.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
  [Скрытие системных объектов в обозревателе объектов](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  
