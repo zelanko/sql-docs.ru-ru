@@ -1,7 +1,0 @@
-# [Поддержка параметров сортировки и Юникода](collation-and-unicode-support.md)
-## [Задание или изменение параметров сортировки сервера](set-or-change-the-server-collation.md)
-## [Установка и изменение параметров сортировки базы данных](set-or-change-the-database-collation.md)
-## [Задание или изменение параметров сортировки столбца](set-or-change-the-column-collation.md)
-## [Просмотр сведений о параметрах сортировки](view-collation-information.md)
-## [Написание инструкций Transact-SQL, адаптированных к международному использованию](write-international-transact-sql-statements.md)
-## [Задание языка сеанса](set-a-session-language.md)

@@ -1,5 +1,0 @@
-# [Microsoft ADO.NET для SQL Server](microsoft-ado-net-for-sql-server.md)
-# [Шаг 1. Настройка среды разработки для разработки в ADO.NET](step-1-configure-development-environment-for-ado-net-development.md)
-# [Шаг 2. Создание базы данных SQL для разработки в ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)
-# [Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)
-# [Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)

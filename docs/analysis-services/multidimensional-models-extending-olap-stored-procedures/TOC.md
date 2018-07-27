@@ -1,7 +1,0 @@
-# [Доступ к контексту запросов в хранимых процедурах](accessing-query-context-in-stored-procedures.md)
-# [Вызов хранимых процедур](calling-stored-procedures.md)
-# [Создание хранимых процедур](creating-stored-procedures.md)
-# [Отладка хранимых процедур](debugging-stored-procedures.md)
-# [Определение хранимых процедур](defining-stored-procedures.md)
-# [Конструирование хранимых процедур](designing-stored-procedures.md)
-# [Настройка безопасности для хранимых процедур](setting-security-for-stored-procedures.md)

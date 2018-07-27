@@ -1,5 +1,0 @@
-# [Форматирование XML-кода на клиенте и на сервере (SQLXML 4.0)](client-side-and-server-side-formatting-sqlxml-4-0.md)
-# [Архитектура форматирования XML на стороне клиента и сервера (SQLXML 4.0)](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)
-# [Форматирование XML-кода на стороне клиента и сервера (SQLXML 4.0)](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)
-# [Форматирование XML на стороне клиента (SQLXML 4.0)](client-side-xml-formatting-sqlxml-4-0.md)
-# [Форматирование XML-кода на стороне сервера (SQLXML 4.0)](server-side-xml-formatting-sqlxml-4-0.md)

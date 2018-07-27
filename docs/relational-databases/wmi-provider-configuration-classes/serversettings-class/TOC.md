@@ -1,8 +1,0 @@
-# [Свойство GeneralFlags (класс ServerSettings)](generalflags-property-serversettings-class.md)
-# [Метод GetCurrentCertificate (класс ServerSettings)](getcurrentcertificate-method-serversettings-class.md)
-# [Свойство InstanceName (класс ServerSettings)](instancename-property-serversettings-class.md)
-# [Свойство NumberOfFlags (класс ServerSettings)](numberofflags-property-serversettings-class.md)
-# [Метод RemoveCertificate (класс ServerSettings)](removecertificate-method-serversettings-class.md)
-# [Класс ServerSettings](serversettings-class.md)
-# [Метод SetCurrentCertificate (класс ServerSettings)](setcurrentcertificate-method-serversettings-class.md)
-# [Метод SetDefaults (класс ServerSettings)](setdefaults-method-serversettings-class.md)

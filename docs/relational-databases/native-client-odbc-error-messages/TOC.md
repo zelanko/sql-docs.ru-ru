@@ -1,6 +1,0 @@
-# [Обработка ошибок и сообщений](handling-errors-and-messages.md)
-# [Диагностические записи и поля](diagnostic-records-and-fields.md)
-# [Сообщения об ошибках](error-messages.md)
-# [Собственные номера ошибок](native-error-numbers.md)
-# [Обработка инструкций, выдающих сообщения](processing-statements-that-generate-messages.md)
-# [SQLSTATE (коды ошибок ODBC)](sqlstate-odbc-error-codes.md)

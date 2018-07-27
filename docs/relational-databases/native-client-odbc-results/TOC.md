@@ -1,7 +1,0 @@
-# [Обработка результатов (ODBC)](processing-results-odbc.md)
-# [Назначение хранилища](assigning-storage.md)
-# [Автоматическое преобразование символьных данных](autotranslation-of-character-data.md)
-# [Использование типов данных](data-type-usage.md)
-# [Определение характеристик результирующего набора (ODBC)](determining-the-characteristics-of-a-result-set-odbc.md)
-# [Выборка итоговых данных](fetching-result-data.md)
-# [Сопоставление типов данных (ODBC)](mapping-data-types-odbc.md)

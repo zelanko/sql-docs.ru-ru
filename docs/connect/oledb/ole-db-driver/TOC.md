@@ -1,6 +1,0 @@
-# [Создание приложения с драйвером OLE DB для SQL Server](creating-a-oledb-driver-for-sql-server-application.md)
-# [О свойствах OLE DB](about-ole-db-properties.md)
-# [Установка подключения к источнику данных](establishing-a-connection-to-a-data-source.md)
-# [Выполнение команды](executing-a-command.md)
-# [Обработка результатов](processing-results.md)
-# [Использование предложения OUTPUT с OLE DB в драйвере OLE DB для SQL Server](using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)

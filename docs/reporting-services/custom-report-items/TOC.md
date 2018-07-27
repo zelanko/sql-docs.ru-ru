@@ -1,7 +1,0 @@
-# [Создание компонента времени разработки пользовательского элемента отчета](creating-a-custom-report-item-design-time-component.md)
-# [Создание компонента времени выполнения пользовательского элемента отчета](creating-a-custom-report-item-run-time-component.md)
-# [Архитектура пользовательских элементов отчета](custom-report-item-architecture.md)
-# [Библиотеки классов пользовательских элементов отчета](custom-report-item-class-libraries.md)
-# [Требования к реализации пользовательских элементов отчета](custom-report-item-implementation-requirements.md)
-# [Пользовательские элементы отчета](custom-report-items.md)
-# [Руководство. Развертывание пользовательского элемента отчета](how-to-deploy-a-custom-report-item.md)

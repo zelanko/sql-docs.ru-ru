@@ -1,5 +1,0 @@
-# [Руководство разработчика (репликация)](replication-developer-documentation.md)
-# [Основные понятия программирования репликации](replication-programming-concepts.md)
-# [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)
-# [Основные понятия объектов RMO](replication-management-objects-concepts.md)
-# [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)

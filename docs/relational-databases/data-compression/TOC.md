@@ -1,6 +1,0 @@
-# [Обзор](data-compression.md)  
-# [Реализация сжатия строк](row-compression-implementation.md)  
-# [Реализация сжатия страниц](page-compression-implementation.md)  
-# [Реализация сжатия Юникода](unicode-compression-implementation.md)  
-# [Включение сжатия таблицы или индекса](enable-compression-on-a-table-or-index.md)  
-# [Отключение сжатия таблицы или индекса](disable-compression-on-a-table-or-index.md)  

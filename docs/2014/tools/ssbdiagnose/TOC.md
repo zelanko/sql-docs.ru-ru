@@ -1,5 +1,0 @@
-# [Программа ssbdiagnose (компонент Service Broker)](ssbdiagnose-utility-service-broker.md)
-# [Формат выходного файла XML (ssbdiagnose)](xml-output-file-format-ssbdiagnose.md)
-## [Элемент DiagnosticInformation (ssbdiagnose)](diagnosticinformation-element-ssbdiagnose.md)
-## [Элемент Banner (ssbdiagnose)](banner-element-ssbdiagnose.md)
-## [Элемент Issue (ssbdiagnose)](issue-element-ssbdiagnose.md)

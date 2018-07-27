@@ -1,8 +1,0 @@
-# [Использование пользовательских сборок с отчетами](using-custom-assemblies-with-reports.md)
-## [Ссылки на сборки в RDL-файле](referencing-assemblies-in-an-rdl-file.md)
-## [Развертывание пользовательской сборки](deploying-a-custom-assembly.md)
-## [Использование пользовательских сборок со строгими именами](using-strong-named-custom-assemblies.md)
-## [Проверка разрешений в пользовательских сборках](asserting-permissions-in-custom-assemblies.md)
-## [Доступ к пользовательским сборкам с использованием выражений](accessing-custom-assemblies-through-expressions.md)
-## [Инициализация объектов пользовательских сборок](initializing-custom-assembly-objects.md)
-## [Руководство. Отладка пользовательских сборок](how-to-debug-custom-assemblies.md)

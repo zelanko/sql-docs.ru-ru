@@ -1,5 +1,0 @@
-# [Типы данных SQL Server в платформе .NET Framework](sql-server-data-types-in-the-net-framework.md)
-# [Параметры сортировки и типы данных интеграции со средой CLR](collation-and-clr-integration-data-types.md)
-# [Обработка параметров больших объектов в среде CLR](handling-large-object-lob-parameters-in-the-clr.md)
-# [Сопоставление данных о параметрах CLR](mapping-clr-parameter-data.md)
-# [Допустимость значений NULL и трехзначная логика сравнения](nullability-and-three-value-logic-comparisons.md)

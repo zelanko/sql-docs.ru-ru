@@ -1,5 +1,0 @@
-# [Интеграция со средой CLR и транзакции](clr-integration-and-transactions.md)
-# [Доступ к текущей транзакции](accessing-the-current-transaction.md)
-# [Время существования транзакций](transaction-lifetimes.md)
-# [Повышение транзакции](transaction-promotion.md)
-# [Использование System.Transactions](using-system-transactions.md)

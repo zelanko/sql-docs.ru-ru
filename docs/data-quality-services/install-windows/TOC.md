@@ -1,7 +1,0 @@
-# [Обзор](install-data-quality-services.md)  
-# [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)  
-# [Предоставление ролей DQS пользователям](grant-dqs-roles-to-users.md)  
-# [Предоставление доступа к данным для операций со службами DQS](access-data-for-the-dqs-operations.md)  
-# [Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
-# [Обновление сборок SQLCLR после загрузки обновлений .NET Framework](upgrade-sqlclr-assemblies-after-net-framework-update.md)  
-# [Обновление схемы базы данных DQS после установки обновления SQL Server](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  

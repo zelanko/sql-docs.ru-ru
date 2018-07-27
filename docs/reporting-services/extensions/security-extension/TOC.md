@@ -1,5 +1,0 @@
-# [Проверка подлинности в службах Reporting Services](authentication-in-reporting-services.md)
-# [Авторизация в службах Reporting Services](authorization-in-reporting-services.md)
-# [Как установить настраиваемые модули безопасности](how-to-install-custom-security-extensions.md)
-# [Реализация модуля безопасности](implementing-a-security-extension.md)
-# [Общие сведения о модулях безопасности](security-extensions-overview.md)

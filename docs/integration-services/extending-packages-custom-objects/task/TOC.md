@@ -1,7 +1,0 @@
-# [Разработка пользовательской задачи](developing-a-custom-task.md)
-# [Создание пользовательской задачи](creating-a-custom-task.md)
-# [Создание кода пользовательской задачи](coding-a-custom-task.md)
-# [Соединение с источниками данных в пользовательской задаче](connecting-to-data-sources-in-a-custom-task.md)
-# [Вызов и определение событий в пользовательской задаче](raising-and-defining-events-in-a-custom-task.md)
-# [Добавление поддержки отладки в пользовательскую задачу](adding-support-for-debugging-in-a-custom-task.md)
-# [Разработка пользовательского интерфейса для пользовательской задачи](developing-a-user-interface-for-a-custom-task.md)

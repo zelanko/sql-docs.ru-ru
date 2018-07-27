@@ -1,5 +1,0 @@
-# [Дополнительные примеры компонента скрипта](additional-script-component-examples.md)
-# [Создание назначения ODBC с помощью компонента скрипта](creating-an-odbc-destination-with-the-script-component.md)
-# [Расширение вывода ошибок с помощью компонента скрипта](enhancing-an-error-output-with-the-script-component.md)
-# [Синтаксический анализ текстовых файлов нестандартного формата в компоненте скрипта](parsing-non-standard-text-file-formats-with-the-script-component.md)
-# [Имитация вывода ошибок для компонента скрипта](simulating-an-error-output-for-the-script-component.md)
