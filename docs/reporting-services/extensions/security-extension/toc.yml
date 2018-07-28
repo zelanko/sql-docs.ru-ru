@@ -1,0 +1,10 @@
+- name: Проверка подлинности в службах Reporting Services
+  href: authentication-in-reporting-services.md
+- name: Авторизация в службах Reporting Services
+  href: authorization-in-reporting-services.md
+- name: Как установить настраиваемые модули безопасности
+  href: how-to-install-custom-security-extensions.md
+- name: Реализация модуля безопасности
+  href: implementing-a-security-extension.md
+- name: Общие сведения о модулях безопасности
+  href: security-extensions-overview.md

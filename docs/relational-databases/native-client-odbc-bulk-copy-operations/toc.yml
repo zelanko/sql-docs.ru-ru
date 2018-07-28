@@ -1,0 +1,12 @@
+- name: Выполнение операций массового копирования (ODBC)
+  href: performing-bulk-copy-operations-odbc.md
+- name: Массовое копирование из переменных приложения
+  href: bulk-copying-from-program-variables.md
+- name: Массовое копирование данных text и image
+  href: bulk-copying-text-and-image-data.md
+- name: Перевод массового копирования с DB-Library на ODBC
+  href: converting-from-db-library-to-odbc-bulk-copy.md
+- name: Управление размером пакета массового копирования
+  href: managing-bulk-copy-batch-sizes.md
+- name: Использование файлов данных и файлов форматирования
+  href: using-data-files-and-format-files.md

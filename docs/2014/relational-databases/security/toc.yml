@@ -1,0 +1,117 @@
+- name: Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: Обеспечение безопасности SQL Server
+  href: securing-sql-server.md
+- name: Субъекты
+  href: authentication-access/principals-database-engine.md
+  items:
+    - name: 'Инструкции по управлению именами входа, пользователями и схемами'
+      href: authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+      items:
+        - name: Создание имени входа
+          href: authentication-access/create-a-login.md
+        - name: Создание пользователя базы данных
+          href: authentication-access/create-a-database-user.md
+        - name: Создание схемы базы данных
+          href: authentication-access/create-a-database-schema.md
+        - name: присоединение к роли
+          href: authentication-access/join-a-role.md
+        - name: Предоставление разрешения для участника
+          href: authentication-access/grant-a-permission-to-a-principal.md
+    - name: Роли уровня сервера
+      href: authentication-access/server-level-roles.md
+      items:
+        - name: Создание роли сервера
+          href: authentication-access/create-a-server-role.md
+    - name: Роли уровня базы данных
+      href: authentication-access/database-level-roles.md
+    - name: Роли приложений
+      href: authentication-access/application-roles.md
+      items:
+        - name: Создание роли приложения
+          href: authentication-access/create-an-application-role.md
+- name: Учетные данные
+  href: authentication-access/credentials-database-engine.md
+  items:
+    - name: Создание учетных данных
+      href: authentication-access/create-a-credential.md
+- name: Защищаемые объекты
+  href: securables.md
+- name: Пользователи автономной базы данных — создание переносимой базы данных
+  href: contained-database-users-making-your-database-portable.md
+- name: Выбор режима проверки подлинности
+  href: choose-an-authentication-mode.md
+- name: Настройка видимости метаданных
+  href: metadata-visibility-configuration.md
+- name: Настройка контактной зоны
+  href: surface-area-configuration.md
+- name: Свойство базы данных TRUSTWORTHY
+  href: trustworthy-database-property.md
+- name: Разрешения
+  href: permissions-database-engine.md
+- name: Иерархия разрешений
+  href: permissions-hierarchy-database-engine.md
+- name: Страница «Разрешения» или «Защищаемые объекты»
+  href: permissions-or-securables-page.md
+- name: Политика паролей
+  href: password-policy.md
+- name: Надежные пароли
+  href: strong-passwords.md
+- name: Шифрование SQL Server
+  href: encryption/sql-server-encryption.md
+  items:
+    - name: Иерархия средств шифрования
+      href: encryption/encryption-hierarchy.md
+    - name: Выбор алгоритма шифрования
+      href: encryption/choose-an-encryption-algorithm.md
+    - name: Прозрачное шифрование данных (TDE)
+      href: encryption/transparent-data-encryption.md
+      items:
+        - name: Прозрачное шифрование данных в Базе данных SQL Azure
+          href: dbengine-transparent-data-encryption-with-azure-sql-database.md
+        - name: 'Переместить базу данных, защищаемую прозрачным шифрованием, в другой экземпляр SQL Server'
+          href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+        - name: Включение прозрачного шифрования данных с использованием расширенного управления ключами
+          href: encryption/enable-tde-on-sql-server-using-ekm.md
+    - name: Ключи шифрования SQL Server и базы данных
+      href: encryption/sql-server-and-database-encryption-keys-database-engine.md
+      items:
+        - name: главный ключ службы
+          href: encryption/service-master-key.md
+        - name: Расширенное управление ключами (Extensible Key Management)
+          href: encryption/extensible-key-management-ekm.md
+        - name: Расширенное управление ключами с помощью хранилища ключей Azure
+          href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
+        - name: Создание резервной копии главного ключа службы
+          href: encryption/back-up-the-service-master-key.md
+        - name: Восстановление главного ключа службы
+          href: encryption/restore-the-service-master-key.md
+        - name: Создание главного ключа базы данных
+          href: encryption/create-a-database-master-key.md
+        - name: Создание резервной копии главного ключа базы данных
+          href: encryption/back-up-a-database-master-key.md
+        - name: Восстановление главного ключа базы данных
+          href: encryption/restore-a-database-master-key.md
+        - name: Создание идентичных симметричных ключей на двух серверах
+          href: encryption/create-identical-symmetric-keys-on-two-servers.md
+        - name: Шифрование столбца данных
+          href: encryption/encrypt-a-column-of-data.md
+- name: Безопасность на уровне строк
+  href: row-level-security.md
+- name: Сертификаты SQL Server и асимметричные ключи
+  href: sql-server-certificates-and-asymmetric-keys.md
+- name: Подсистема аудита SQL Server (Database Engine)
+  href: auditing/sql-server-audit-database-engine.md
+  items:
+    - name: Действия и группы действий подсистемы аудита SQL Server
+      href: auditing/sql-server-audit-action-groups-and-actions.md
+    - name: Записи подсистемы аудита SQL Server
+      href: auditing/sql-server-audit-records.md
+    - name: Создание аудита сервера и спецификации аудита сервера
+      href: auditing/create-a-server-audit-and-server-audit-specification.md
+    - name: Создание спецификации аудита для сервера и базы данных
+      href: auditing/create-a-server-audit-and-database-audit-specification.md
+    - name: Просмотр журнала подсистемы аудита SQL Server
+      href: auditing/view-a-sql-server-audit-log.md
+    - name: Запись событий подсистемы аудита SQL Server в журнал безопасности
+      href: auditing/write-sql-server-audit-events-to-the-security-log.md

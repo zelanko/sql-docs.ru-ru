@@ -1,0 +1,69 @@
+- name: Расширенные события
+  href: extended-events.md
+- name: Создание сеанса расширенных событий
+  href: ../../database-engine/create-an-extended-events-session.md
+  items:
+    - name: Создание сеанса расширенных событий с помощью редактора запросов
+      href: ../../database-engine/create-an-extended-events-session-using-query-editor.md
+    - name: создать сеанс расширенных событий с помощью пользовательского интерфейса нового сеанса (обозреватель объектов)
+      href: ../../database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md
+    - name: Создание сеанса расширенных событий в диалоговом окне «Создание сеанса»
+      href: ../../database-engine/create-an-extended-events-session-using-the-new-session-dialog.md
+- name: Управление сеансами событий в обозревателе объектов
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: Просмотр данных о сеансе событий
+  href: ../../database-engine/view-event-session-data.md
+- name: Пакеты обработки расширенных событий
+  href: sql-server-extended-events-packages.md
+- name: Цели расширенных событий
+  href: ../../database-engine/sql-server-extended-events-targets.md
+  items:
+    - name: Цель счетчика событий
+      href: ../../database-engine/event-counter-target.md
+    - name: Event File Target
+      href: ../../database-engine/event-file-target.md
+    - name: Цель «Попарное разбиение событий»
+      href: ../../database-engine/event-pairing-target.md
+    - name: Цель гистограммы
+      href: ../../database-engine/histogram-target.md
+    - name: Цель «Кольцевой буфер»
+      href: ../../database-engine/ring-buffer-target.md
+    - name: Цель «Средство трассировки событий для Windows»
+      href: event-tracing-for-windows-target.md
+- name: Подсистема расширенных событий
+  href: sql-server-extended-events-engine.md
+- name: Сеансы расширенных событий
+  href: sql-server-extended-events-sessions.md
+- name: Средства расширенных событий
+  href: extended-events-tools.md
+  items:
+    - name: Использование сеанса system_health
+      href: use-the-ssms-xe-profiler.md
+    - name: Использование поставщика PowerShell для расширенных событий
+      href: use-the-powershell-provider-for-extended-events.md
+- name: создать скрипт сеанса расширенных событий
+  href: ../../database-engine/script-an-extended-event-session.md
+- name: Изменение сеанса расширенных событий
+  href: alter-an-extended-events-session.md
+- name: Копирование или экспорт целевых данных
+  href: ../../database-engine/copy-or-export-target-data.md
+- name: Изменение представления результатов трассировки
+  href: ../../database-engine/modify-the-trace-results-view.md
+- name: получить поля для всех событий
+  href: ../../database-engine/get-the-fields-for-all-events.md
+- name: просмотреть события для зарегистрированных пакетов
+  href: ../../database-engine/view-the-events-for-registered-packages.md
+- name: просмотреть цели расширенных событий для зарегистрированных пакетов
+  href: ../../database-engine/view-the-extended-events-targets-for-registered-packages.md
+- name: Просмотр эквивалентов расширенных событий для классов событий трассировки SQL
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: получить настраиваемые параметры для аргумента ADD TARGET
+  href: ../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md
+- name: Преобразование существующего скрипта трассировки SQL в сеанс расширенных событий
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: 'определить запросы, удерживающие блокировки'
+  href: determine-which-queries-are-holding-locks.md
+- name: 'найти объекты, на которые наложено наибольшее число блокировок'
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: отслеживать активность системы с помощью расширенных событий
+  href: monitor-system-activity-using-extended-events.md

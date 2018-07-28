@@ -1,0 +1,92 @@
+- name: веб-служба сервера отчетов
+  href: report-server-web-service.md
+  items:
+    - name: Доступ к API-интерфейсу SOAP
+      href: accessing-the-soap-api.md
+    - name: The Role of SOAP in Reporting Services
+      href: the-role-of-soap-in-reporting-services.md
+    - name: Методы веб-службы сервера отчетов
+      href: methods/report-server-web-service-methods.md
+    - name: Конечные точки веб-службы сервера отчетов
+      href: methods/report-server-web-service-endpoints.md
+    - name: Методы управления пространством имен сервера отчетов
+      href: methods/report-server-namespace-management-methods.md
+    - name: Методы авторизации
+      href: methods/authorization-methods.md
+    - name: Источники данных и методы соединения
+      href: methods/data-sources-and-connection-methods.md
+    - name: Методы параметров отчета
+      href: methods/report-parameters-methods.md
+    - name: Методы моделей
+      href: methods/model-methods-report-server-web-service.md
+    - name: Методы подготовки к просмотру и выполнения
+      href: methods/rendering-and-execution-methods.md
+    - name: Методы журнала отчета
+      href: methods/report-history-methods.md
+    - name: Методы планирования
+      href: methods/scheduling-methods.md
+    - name: Методы подписки и доставки
+      href: methods/subscription-and-delivery-methods.md
+    - name: Методы связанных отчетов
+      href: methods/linked-reports-methods.md
+    - name: Building Applications Using the Web Service and the .NET Framework
+      href: net-framework/building-applications-using-the-web-service-and-the-net-framework.md
+    - name: Создание учетной записи-посредника веб-службы
+      href: net-framework/creating-the-web-service-proxy.md
+    - name: Проверка подлинности веб-службы
+      href: net-framework/web-service-authentication.md
+    - name: Вызов методов веб-служб
+      href: net-framework/calling-web-service-methods.md
+    - name: Задание свойства Url для веб-службы
+      href: net-framework/setting-the-url-property-of-the-web-service.md
+    - name: Передача аргументов методу веб-службы
+      href: net-framework/supplying-web-service-method-arguments.md
+    - name: Пропуск значений для необязательных объектов веб-службы
+      href: net-framework/omitting-values-for-optional-web-service-objects.md
+    - name: Использование защищенных методов веб-службы
+      href: net-framework/using-secure-web-service-methods.md
+    - name: Использование элемента управления RSClientPrint в пользовательских приложениях
+      href: net-framework/using-the-rsclientprint-control-in-custom-applications.md
+    - name: Свойства служб Reporting Services
+      href: net-framework/reporting-services-properties.md
+      items:
+        - name: Свойства элемента сервера отчетов
+          href: net-framework/reporting-services-properties-report-server-item-properties.md
+        - name: Системные свойства сервера отчетов
+          href: net-framework/reporting-services-properties-report-server-system-properties.md
+    - name: Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру
+      href: net-framework/passing-device-information-settings-to-rendering-extensions.md
+    - name: Параметры модулей доставки служб Reporting Services
+      href: net-framework/reporting-services-delivery-extension-settings.md
+    - name: Использование заголовков SOAP служб Reporting Services
+      href: ../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md
+      items:
+        - name: Методы пакетной работы
+          href: ../report-server-web-service-net-framework-soap-headers/batching-methods.md
+        - name: Определение состояния выполнения
+          href: ../report-server-web-service-net-framework-soap-headers/identifying-execution-state.md
+        - name: Задание пространства имен элементов для метода GetProperties
+          href: ../report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md
+    - name: Знакомство с обработкой исключений в службах Reporting Services
+      href: ../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md
+      items:
+        - name: Обработка исключений в службах Reporting Services
+          href: ../report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services.md
+        - name: Рекомендации по обработке исключений в службах Reporting Services
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/best-practices-for-reporting-services-exception-handling.md
+        - name: Предотвращение недопустимых запросов
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md
+        - name: Использование блоков Try-Catch
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md
+        - name: 'Обработка предупреждений и ситуаций, не вызывающих исключения'
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/handling-warnings-and-cases-that-do-not-cause-exceptions.md
+        - name: Использование свойства Detail для обработки определенных ошибок
+          href: ../report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md
+        - name: Класс SoapException в службах Reporting Services
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md
+        - name: Свойство Detail
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md
+        - name: Элемент HelpLink
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md
+        - name: Таблица ошибок SoapException
+          href: ../report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md

@@ -1,0 +1,182 @@
+- name: Тип данных Action (язык ASSL)
+  href: action-data-type-assl.md
+- name: Тип данных AggregationAttribute (ASSL)
+  href: aggregationattribute-data-type-assl.md
+- name: Тип данных AggregationDesignAttribute (ASSL)
+  href: aggregationdesignattribute-data-type-assl.md
+- name: Тип данных AggregationDesignDimension (ASSL)
+  href: aggregationdesigndimension-data-type-assl.md
+- name: Тип данных AggregationDimension (ASSL)
+  href: aggregationdimension-data-type-assl.md
+- name: Тип данных AggregationInstanceAttribute (ASSL)
+  href: aggregationinstanceattribute-data-type-assl.md
+- name: Тип данных AggregationInstanceCubeDimension (ASSL)
+  href: aggregationinstancecubedimension-data-type-assl.md
+- name: Тип данных AggregationInstanceMeasure (ASSL)
+  href: aggregationinstancemeasure-data-type-assl.md
+- name: Типы данных XML в языке ASSL
+  href: analysis-services-scripting-language-xml-data-types-assl.md
+- name: Тип данных Assembly (ASSL)
+  href: assembly-data-type-assl.md
+- name: Тип данных AttributeBinding (ASSL)
+  href: attributebinding-data-type-assl.md
+- name: Тип данных AttributeTranslation (ASSL)
+  href: attributetranslation-data-type-assl.md
+- name: Тип данных Binding (ASSL)
+  href: binding-data-type-assl.md
+- name: Тип данных ClrAssembly (ASSL)
+  href: clrassembly-data-type-assl.md
+- name: Тип данных ClrAssemblyFile (ASSL)
+  href: clrassemblyfile-data-type-assl.md
+- name: Тип данных ColumnBinding (ASSL)
+  href: columnbinding-data-type-assl.md
+- name: Тип данных ComAssembly (ASSL)
+  href: comassembly-data-type-assl.md
+- name: Тип данных CubeAttribute (ASSL)
+  href: cubeattribute-data-type-assl.md
+- name: Тип данных CubeAttributeBinding (ASSL)
+  href: cubeattributebinding-data-type-assl.md
+- name: Тип данных CubeBinding (внешний) (ASSL)
+  href: cubebinding-data-type-out-of-line-assl.md
+- name: Тип данных CubeDimension (ASSL)
+  href: cubedimension-data-type-assl.md
+- name: Тип данных CubeDimensionBinding (ASSL)
+  href: cubedimensionbinding-data-type-assl.md
+- name: Тип данных CubeDimensionPermission (ASSL)
+  href: cubedimensionpermission-data-type-assl.md
+- name: Тип данных CubeHierarchy (язык ASSL)
+  href: cubehierarchy-data-type-assl.md
+- name: Тип данных DataBlock (ASSL)
+  href: datablock-data-type-assl.md
+- name: Тип данных DataItem (ASSL)
+  href: dataitem-data-type-assl.md
+- name: Тип данных DataMiningMeasureGroupDimension (ASSL)
+  href: dataminingmeasuregroupdimension-data-type-assl.md
+- name: Тип данных DataSource (ASSL)
+  href: datasource-data-type-assl.md
+- name: Тип данных DataSourceViewBinding (ASSL)
+  href: datasourceviewbinding-data-type-assl.md
+- name: Тип данных DegenerateMeasureGroupDimension (ASSL)
+  href: degeneratemeasuregroupdimension-data-type-assl.md
+- name: Тип данных Dimension (ASSL)
+  href: dimension-data-type-assl.md
+- name: Тип данных DimensionAttribute (ASSL)
+  href: dimensionattribute-data-type-assl.md
+- name: Тип данных DimensionAttributeBinding (внешний) (ASSL)
+  href: dimensionattributebinding-data-type-out-of-line-assl.md
+- name: Тип данных DimensionBinding (ASSL)
+  href: dimensionbinding-data-type-assl.md
+- name: Тип данных DimensionPermission (ASSL)
+  href: dimensionpermission-data-type-assl.md
+- name: Тип данных DrillThroughAction (ASSL)
+  href: drillthroughaction-data-type-assl.md
+- name: Тип данных DSVTableBinding (ASSL)
+  href: dsvtablebinding-data-type-assl.md
+- name: Тип данных EventColumn (ASSL)
+  href: eventcolumn-data-type-assl.md
+- name: Тип данных Hierarchy (ASSL)
+  href: hierarchy-data-type-assl.md
+- name: Тип данных ImpersonationInfo (ASSL)
+  href: impersonationinfo-data-type-assl.md
+- name: Тип данных IncrementalProcessingNotification (ASSL)
+  href: incrementalprocessingnotification-data-type-assl.md
+- name: Тип данных InheritedBinding (ASSL)
+  href: inheritedbinding-data-type-assl.md
+- name: Тип данных ManyToManyMeasureGroupDimension (ASSL)
+  href: manytomanymeasuregroupdimension-data-type-assl.md
+- name: Тип данных MeasureBinding (ASSL)
+  href: measurebinding-data-type-assl.md
+- name: Тип данных MeasureGroupAttribute (ASSL)
+  href: measuregroupattribute-data-type-assl.md
+- name: Тип данных MeasureGroupAttributeBinding (внешний) (ASSL)
+  href: measuregroupattributebinding-data-type-out-of-line-assl.md
+- name: Тип данных MeasureGroupBinding (ASSL)
+  href: measuregroupbinding-data-type-assl.md
+- name: Тип данных MeasureGroupBinding (внешний) (ASSL)
+  href: measuregroupbinding-data-type-out-of-line-assl.md
+- name: Тип данных MeasureGroupDimension (ASSL)
+  href: measuregroupdimension-data-type-assl.md
+- name: Тип данных MeasureGroupDimensionBinding (ASSL)
+  href: measuregroupdimensionbinding-data-type-assl.md
+- name: Тип данных MeasureGroupHierarchy (ASSL)
+  href: measuregrouphierarchy-data-type-assl.md
+- name: Тип данных MiningModelColumn (ASSL)
+  href: miningmodelcolumn-data-type-assl.md
+- name: Тип данных MiningModelingFlag (ASSL)
+  href: miningmodelingflag-data-type-assl.md
+- name: Тип данных MiningStructureColumn (ASSL)
+  href: miningstructurecolumn-data-type-assl.md
+- name: Тип данных OlapDataSource (ASSL)
+  href: olapdatasource-data-type-assl.md
+- name: Тип данных PartitionBinding (ASSL)
+  href: partitionbinding-data-type-assl.md
+- name: Тип данных Permission (ASSL)
+  href: permission-data-type-assl.md
+- name: Тип данных PerspectiveAction (ASSL)
+  href: perspectiveaction-data-type-assl.md
+- name: Тип данных PerspectiveAttribute (ASSL)
+  href: perspectiveattribute-data-type-assl.md
+- name: Тип данных PerspectiveCalculation (ASSL)
+  href: perspectivecalculation-data-type-assl.md
+- name: Тип данных PerspectiveDimension (ASSL)
+  href: perspectivedimension-data-type-assl.md
+- name: Тип данных PerspectiveHierarchy (ASSL)
+  href: perspectivehierarchy-data-type-assl.md
+- name: Тип данных PerspectiveKpi (ASSL)
+  href: perspectivekpi-data-type-assl.md
+- name: Тип данных PerspectiveMeasure (ASSL)
+  href: perspectivemeasure-data-type-assl.md
+- name: Тип данных PerspectiveMeasureGroup (ASSL)
+  href: perspectivemeasuregroup-data-type-assl.md
+- name: Тип данных ProactiveCachingBinding (ASSL)
+  href: proactivecachingbinding-data-type-assl.md
+- name: Тип данных ProactiveCachingIncrementalProcessingBinding (ASSL)
+  href: proactivecachingincrementalprocessingbinding-data-type-assl.md
+- name: Тип данных ProactiveCachingInheritedBinding (ASSL)
+  href: proactivecachinginheritedbinding-data-type-assl.md
+- name: Тип данных ProactiveCachingObjectNotificationBinding (ASSL)
+  href: proactivecachingobjectnotificationbinding-data-type-assl.md
+- name: Тип данных ProactiveCachingQueryBinding (ASSL)
+  href: proactivecachingquerybinding-data-type-assl.md
+- name: Тип данных ProactiveCachingTablesBinding (ASSL)
+  href: proactivecachingtablesbinding-data-type-assl.md
+- name: Тип данных PushedDataSource (ASSL)
+  href: pusheddatasource-data-type-assl.md
+- name: Тип данных QueryBinding (ASSL)
+  href: querybinding-data-type-assl.md
+- name: Тип данных ReferenceMeasureGroupDimension (ASSL)
+  href: referencemeasuregroupdimension-data-type-assl.md
+- name: Тип данных RegularMeasureGroupDimension (ASSL)
+  href: regularmeasuregroupdimension-data-type-assl.md
+- name: Тип данных RelationalDataSource (ASSL)
+  href: relationaldatasource-data-type-assl.md
+- name: Тип данных связи (язык ASSL)
+  href: relationship-data-type-assl.md
+- name: Тип данных RelationshipEnd (язык ASSL)
+  href: relationshipend-data-type-assl.md
+- name: Элемент RelationshipEndTranslation (язык ASSL)
+  href: relationshipendtranslation-element-assl.md
+- name: Тип данных RelationshipEndVisualizationProperties (язык ASSL)
+  href: relationshipendvisualizationproperties-data-type-assl.md
+- name: Тип данных ReportAction (ASSL)
+  href: reportaction-data-type-assl.md
+- name: Тип данных RowBinding (ASSL)
+  href: rowbinding-data-type-assl.md
+- name: Тип ScalarMiningStructureColumn MeasureBinding (ASSL)
+  href: scalarminingstructurecolumn-data-type-assl.md
+- name: Тип данных StandardAction (ASSL)
+  href: standardaction-data-type-assl.md
+- name: Тип данных TableBinding (ASSL)
+  href: tablebinding-data-type-assl.md
+- name: Тип данных TableMiningStructureColumn (ASSL)
+  href: tableminingstructurecolumn-data-type-assl.md
+- name: Тип данных TabularBinding (ASSL)
+  href: tabularbinding-data-type-assl.md
+- name: Тип данных TimeAttributeBinding (ASSL)
+  href: timeattributebinding-data-type-assl.md
+- name: Тип данных TimeBinding (ASSL)
+  href: timebinding-data-type-assl.md
+- name: Тип данных Translation (ASSL)
+  href: translation-data-type-assl.md
+- name: Тип данных UserDefinedGroupBinding (ASSL)
+  href: userdefinedgroupbinding-data-type-assl.md

@@ -1,0 +1,58 @@
+- name: Данные большого двоичного объекта
+  href: binary-large-object-blob-data-sql-server.md
+- name: Сравнение параметров для хранения больших двоичных объектов
+  href: compare-options-for-storing-blobs-sql-server.md
+- name: FILESTREAM
+  href: filestream-sql-server.md
+  items:
+    - name: Включение и настройка FILESTREAM
+      href: enable-and-configure-filestream.md
+    - name: Создание базы данных с поддержкой FILESTREAM
+      href: create-a-filestream-enabled-database.md
+    - name: Создание таблицы для хранения данных FILESTREAM
+      href: create-a-table-for-storing-filestream-data.md
+    - name: Доступ к данным FILESTREAM с помощью Transact-SQL
+      href: access-filestream-data-with-transact-sql.md
+    - name: Создание клиентских приложений для данных FILESTREAM
+      href: create-client-applications-for-filestream-data.md
+    - name: Доступ к данным FILESTREAM с OpenSqlFilestream
+      href: access-filestream-data-with-opensqlfilestream.md
+    - name: Создание частичных обновлений данных FILESTREAM
+      href: make-partial-updates-to-filestream-data.md
+    - name: Избегание конфликтов в операциях баз данных в приложениях FILESTREAM
+      href: avoid-conflicts-with-database-operations-in-filestream-applications.md
+    - name: переместить базу данных с поддержкой FILESTREAM
+      href: move-a-filestream-enabled-database.md
+    - name: Установка FILESTREAM в отказоустойчивом кластере
+      href: set-up-filestream-on-a-failover-cluster.md
+    - name: Настройка брандмауэра для доступа FILESTREAM
+      href: configure-a-firewall-for-filestream-access.md
+    - name: Совместимость FILESTREAM с другими компонентами SQL Server
+      href: filestream-compatibility-with-other-sql-server-features.md
+    - name: 'FILESTREAM DDL, функции, хранимые процедуры и представления'
+      href: filestream-ddl-functions-stored-procedures-and-views.md
+- name: Таблицы FileTable
+  href: filetables-sql-server.md
+  items:
+    - name: Включение необходимых компонентов для таблицы FileTable
+      href: enable-the-prerequisites-for-filetable.md
+    - name: 'Создание, изменение и удаление таблиц FileTables'
+      href: create-alter-and-drop-filetables.md
+    - name: выполнить загрузку файлов в таблицу FileTables
+      href: load-files-into-filetables.md
+    - name: Работа с каталогами и путями в таблицах FileTable
+      href: work-with-directories-and-paths-in-filetables.md
+    - name: Доступ к таблицам FileTable с помощью Transact-SQL
+      href: access-filetables-with-transact-sql.md
+    - name: Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов
+      href: access-filetables-with-file-input-output-apis.md
+    - name: Управление таблицами FileTable
+      href: manage-filetables.md
+    - name: Схема FileTable
+      href: filetable-schema.md
+    - name: Совместимость FileTable с другими компонентами SQL Server
+      href: filetable-compatibility-with-other-sql-server-features.md
+    - name: 'Инструкции FileTable языка DDL, функции, хранимые процедуры и представления'
+      href: filetable-ddl-functions-stored-procedures-and-views.md
+- name: Удаленное хранилище больших двоичных объектов
+  href: remote-blob-store-rbs-sql-server.md

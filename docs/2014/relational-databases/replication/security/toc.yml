@@ -1,0 +1,43 @@
+- name: Безопасность и защита
+  href: security-and-protection-replication.md
+  items:
+    - name: Общие сведения о безопасности
+      href: security-overview-replication.md
+    - name: Предотвращение угроз и уязвимости для безопасности
+      href: threat-and-vulnerability-mitigation-replication.md
+    - name: Идентификатор и управление доступом
+      href: identity-and-access-control-replication.md
+    - name: Управление именами входа и паролями в репликации
+      href: manage-logins-and-passwords-in-replication.md
+    - name: Безопасная разработка
+      href: secure-development-replication.md
+    - name: Replication Agent Security Model
+      href: replication-agent-security-model.md
+    - name: Security Role Requirements for Replication
+      href: security-role-requirements-for-replication.md
+    - name: Рекомендации по защите репликации
+      href: replication-security-best-practices.md
+    - name: Безопасное развертывание
+      href: secure-deployment-replication.md
+    - name: Организация безопасности распространителя
+      href: secure-the-distributor.md
+    - name: Организация безопасности издателя
+      href: secure-the-publisher.md
+    - name: Организация безопасности подписчика
+      href: secure-the-subscriber.md
+    - name: Организация безопасности папки моментальных снимков
+      href: secure-the-snapshot-folder.md
+    - name: Securing Replication Over the Internet
+      href: securing-replication-over-the-internet.md
+    - name: Архитектура безопасности для веб-синхронизации
+      href: security-architecture-for-web-synchronization.md
+    - name: Рекомендации по безопасности для репликации баз данных выпуска SQL Server Compact
+      href: security-considerations-for-sql-server-compact-replication.md
+    - name: Организация безопасности топологии репликации
+      href: secure-a-replication-topology.md
+    - name: Просмотр и изменение параметров безопасности репликации
+      href: view-and-modify-replication-security-settings.md
+    - name: Управление именами входа в списке доступа к публикации
+      href: manage-logins-in-the-publication-access-list.md
+    - name: Репликация данных в зашифрованные столбцы (среда SQL Server Management Studio)
+      href: replicate-data-in-encrypted-columns-sql-server-management-studio.md

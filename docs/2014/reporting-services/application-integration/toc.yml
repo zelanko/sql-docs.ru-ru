@@ -1,0 +1,23 @@
+- name: Интеграция служб Reporting Services в приложения
+  href: integrating-reporting-services-into-applications.md
+  items:
+    - name: Выбор между доступом по URL-адресу и протоколом SOAP
+      href: choosing-between-url-access-and-soap.md
+    - name: Интеграция служб Reporting Services с помощью доступа по URL-адресу
+      href: integrating-reporting-services-using-url-access.md
+    - name: Использование доступа по URL-адресу в веб-приложении
+      href: integrating-reporting-services-using-url-access-web-application.md
+    - name: Использование доступа по URL-адресу в приложении Windows
+      href: integrating-reporting-services-using-url-access-windows-application.md
+    - name: Интеграция служб Reporting Services по протоколу SOAP
+      href: integrating-reporting-services-using-soap.md
+    - name: Использование API SOAP в приложении Windows
+      href: integrating-reporting-services-using-soap-windows-application.md
+    - name: Использование API SOAP в веб-приложении
+      href: integrating-reporting-services-using-soap-web-application.md
+    - name: Интеграция служб Reporting Services с помощью элементов управления ReportViewer
+      href: integrating-reporting-services-using-reportviewer-controls.md
+    - name: Использование элемента управления WinForms ReportViewer
+      href: using-the-winforms-reportviewer-control.md
+    - name: Использование элемента управления WebForms ReportViewer
+      href: using-the-webforms-reportviewer-control.md

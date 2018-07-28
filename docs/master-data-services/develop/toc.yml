@@ -1,0 +1,12 @@
+- name: Операции веб-службы по категориям (службы Master Data Services)
+  href: categorized-web-service-operations-master-data-services.md
+- name: "Создание настраиваемого рабочего процесса\_— пример"
+  href: create-a-custom-workflow-example.md
+- name: "Создание настраиваемого рабочего процесса\_— описание XML"
+  href: create-a-custom-workflow-xml-description.md
+- name: Создание настраиваемого рабочего процесса (службы Master Data Services)
+  href: create-a-custom-workflow-master-data-services.md
+- name: Создание классов-посредников веб-службы диспетчера основных данных
+  href: create-master-data-manager-web-service-proxy-classes.md
+- name: Документация для разработчика служб Master Data Services
+  href: master-data-services-developer-documentation.md

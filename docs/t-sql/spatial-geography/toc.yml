@@ -1,0 +1,181 @@
+- name: Обзор
+  href: spatial-types-geography.md
+- name: 'Методы OGC, применяемые к географическим объектам'
+  href: ogc-methods-on-geography-instances.md
+  items:
+    - name: STArea (тип данных geography)
+      href: starea-geography-data-type.md
+    - name: STAsBinary (тип данных geography)
+      href: stasbinary-geography-data-type.md
+    - name: STAsText (тип данных geography)
+      href: stastext-geography-data-type.md
+    - name: STBuffer (тип данных geography)
+      href: stbuffer-geography-data-type.md
+    - name: STContains (тип данных geography)
+      href: stcontains-geography-data-type.md
+    - name: STConvexHull (тип данных geography)
+      href: stconvexhull-geography-data-type.md
+    - name: STCurveN (тип данных geography)
+      href: stcurven-geography-data-type.md
+    - name: STCurveToLine (тип данных geography)
+      href: stcurvetoline-geography-data-type.md
+    - name: STDifference (тип данных geography)
+      href: stdifference-geography-data-type.md
+    - name: Метод STDimension (тип данных geography)
+      href: stdimension-geography-data-type.md
+    - name: STDisjoint (тип данных geography)
+      href: stdisjoint-geography-data-type.md
+    - name: STDistance (географический тип данных)
+      href: stdistance-geography-data-type.md
+    - name: STEndpoint (тип данных geography)
+      href: stendpoint-geography-data-type.md
+    - name: STEquals (географический тип данных)
+      href: stequals-geography-data-type.md
+    - name: STGeometryN (тип данных geography)
+      href: stgeometryn-geography-data-type.md
+    - name: STGeometryType (тип данных geography)
+      href: stgeometrytype-geography-data-type.md
+    - name: STIntersection (тип данных geography)
+      href: stintersection-geography-data-type.md
+    - name: STIntersects (географический тип данных)
+      href: stintersects-geography-data-type.md
+    - name: STIsClosed (тип данных geography)
+      href: stisclosed-geography-data-type.md
+    - name: STIsEmpty (тип данных geography)
+      href: stisempty-geography-data-type.md
+    - name: STIsValid (тип данных geography)
+      href: stisvalid-geography-data-type.md
+    - name: STLength (тип данных geography)
+      href: stlength-geography-data-type.md
+    - name: STNumCurves (тип данных geography)
+      href: stnumcurves-geography-data-type.md
+    - name: STNumGeometries (тип данных geography)
+      href: stnumgeometries-geography-data-type.md
+    - name: STNumPoints (тип данных geography)
+      href: stnumpoints-geography-data-type.md
+    - name: STOverlaps (тип данных geography)
+      href: stoverlaps-geography-data-type.md
+    - name: STPointN (тип данных geography)
+      href: stpointn-geography-data-type.md
+    - name: STSrid (тип данных geography)
+      href: stsrid-geography-data-type.md
+    - name: STStartPoint (тип данных geography)
+      href: ststartpoint-geography-data-type.md
+    - name: STSymDifference (тип данных geography)
+      href: stsymdifference-geography-data-type.md
+    - name: STUnion (тип данных geography)
+      href: stunion-geography-data-type.md
+    - name: STWithin (тип данных geography)
+      href: stwithin-geography-data-type.md
+- name: Расширенные методы в экземплярах географических объектов
+  href: extended-methods-on-geography-instances.md
+  items:
+    - name: AsBinaryZM (тип данных geography)
+      href: asbinaryzm-geography-data-type.md
+    - name: AsGml (тип данных geography)
+      href: asgml-geography-data-type.md
+    - name: AsTextZM (тип данных geography)
+      href: astextzm-geography-data-type.md
+    - name: BufferWithCurves (тип данных geography)
+      href: bufferwithcurves-geography-data-type.md
+    - name: BufferWithTolerance (тип данных geography)
+      href: bufferwithtolerance-geography-data-type.md
+    - name: CurveToLineWithTolerance (тип данных geography)
+      href: curvetolinewithtolerance-geography-data-type.md
+    - name: EnvelopeAngle (тип данных geography)
+      href: envelopeangle-geography-data-type.md
+    - name: EnvelopeCenter (тип данных geography)
+      href: envelopecenter-geography-data-type.md
+    - name: Filter (тип данных geography)
+      href: filter-geography-data-type.md
+    - name: HasM (тип данных geography)
+      href: hasm-geography-data-type.md
+    - name: HasZ (тип данных geography)
+      href: hasz-geography-data-type.md
+    - name: InstanceOf (тип данных geography)
+      href: instanceof-geography-data-type.md
+    - name: IsNull (тип данных geography)
+      href: isnull-geography-data-type.md
+    - name: IsValidDetailed (тип данных geography)
+      href: isvaliddetailed-geography-data-type.md
+    - name: Lat (тип данных geography)
+      href: lat-geography-data-type.md
+    - name: Long (тип данных geography)
+      href: long-geography-data-type.md
+    - name: M (тип данных geography)
+      href: m-geography-data-type.md
+    - name: MakeValid (тип данных geography)
+      href: makevalid-geography-data-type.md
+    - name: MinDbCompatibilityLevel (тип данных geography)
+      href: mindbcompatibilitylevel-geography-data-type.md
+    - name: NumRings (тип данных geography)
+      href: numrings-geography-data-type.md
+    - name: Reduce (тип данных geography)
+      href: reduce-geography-data-type.md
+    - name: ReorientObject (тип данных geography)
+      href: reorientobject-geography-data-type.md
+    - name: RingN (тип данных geography)
+      href: ringn-geography-data-type.md
+    - name: ShortestLineTo (тип данных geography)
+      href: shortestlineto-geography-data-type.md
+    - name: ToString (тип данных geography)
+      href: tostring-geography-data-type.md
+    - name: Z (тип данных geography)
+      href: z-geography-data-type.md
+- name: Статические географические методы OGC
+  href: ogc-static-geography-methods.md
+  items:
+    - name: STGeomCollFromText (географический тип данных)
+      href: stgeomcollfromtext-geography-data-type.md
+    - name: STGeomCollFromWKB (географический тип данных)
+      href: stgeomcollfromwkb-geography-data-type.md
+    - name: STGeomFromText (географический тип данных)
+      href: stgeomfromtext-geography-data-type.md
+    - name: STGeomFromWKB (географический тип данных)
+      href: stgeomfromwkb-geography-data-type.md
+    - name: STLineFromText (географический тип данных)
+      href: stlinefromtext-geography-data-type.md
+    - name: STLineFromWKB (тип данных geography)
+      href: stlinefromwkb-geography-data-type.md
+    - name: STMLineFromText (географический тип данных)
+      href: stmlinefromtext-geography-data-type.md
+    - name: STMLineFromWKB (географический тип данных)
+      href: stmlinefromwkb-geography-data-type.md
+    - name: STMPointFromText (географический тип данных)
+      href: stmpointfromtext-geography-data-type.md
+    - name: STMPointFromWKB (географический тип данных)
+      href: stmpointfromwkb-geography-data-type.md
+    - name: STMPolyFromText (географический тип данных)
+      href: stmpolyfromtext-geography-data-type.md
+    - name: STMPolyFromWKB (географический тип данных)
+      href: stmpolyfromwkb-geography-data-type.md
+    - name: STPointFromText (географический тип данных)
+      href: stpointfromtext-geography-data-type.md
+    - name: STPointFromWKB (географический тип данных)
+      href: stpointfromwkb-geography-data-type.md
+    - name: STPolyFromText (географический тип данных)
+      href: stpolyfromtext-geography-data-type.md
+    - name: STPolyFromWKB (географический тип данных)
+      href: stpolyfromwkb-geography-data-type.md
+- name: расширенные статические географические методы
+  href: extended-static-geography-methods.md
+  items:
+    - name: GeomFromGML (тип данных geography)
+      href: geomfromgml-geography-data-type.md
+    - name: Null (тип данных geography)
+      href: null-geography-data-type.md
+    - name: Parse (тип данных geography)
+      href: parse-geography-data-type.md
+    - name: Point (тип данных geography)
+      href: point-geography-data-type.md
+- name: Статические агрегатные географические методы
+  href: static-aggregate-geography-methods.md
+  items:
+    - name: CollectionAggregate (тип данных geography)
+      href: collectionaggregate-geography-data-type.md
+    - name: ConvexHullAggregate (тип данных geography)
+      href: convexhullaggregate-geography-data-type.md
+    - name: EnvelopeAggregate (тип данных geography)
+      href: envelopeaggregate-geography-data-type.md
+    - name: UnionAggregate (тип данных geography)
+      href: unionaggregate-geography-data-type.md

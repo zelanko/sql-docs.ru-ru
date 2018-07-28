@@ -1,0 +1,24 @@
+- name: Database Mail
+  href: database-mail.md
+- name: Объекты конфигурации компонента Database Mail
+  href: database-mail-configuration-objects.md
+  items:
+    - name: Создание профиля компонента Database Mail
+      href: create-a-database-mail-profile.md
+    - name: Создание учетной записи компонента Database Mail
+      href: create-a-database-mail-account.md
+    - name: Настройка компонента Database Mail
+      href: configure-database-mail.md
+- name: Объекты обмена сообщениями компонента Database Mail
+  href: database-mail-messaging-objects.md
+- name: Внешняя программа компонента Database Mail
+  href: database-mail-external-program.md
+- name: Ведение журнала и аудит компонента Database Mail
+  href: database-mail-log-and-audits.md
+  items:
+    - name: Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных
+      href: create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
+    - name: 'Проверка состояния сообщений электронной почты, отправленных при помощи компонента Database Mail'
+      href: check-the-status-of-e-mail-messages-sent-with-database-mail.md
+- name: Настройка почты агента SQL Server на использование компонента Database Mail
+  href: configure-sql-server-agent-mail-to-use-database-mail.md

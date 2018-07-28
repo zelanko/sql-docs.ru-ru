@@ -1,0 +1,92 @@
+- name: Сервер отчетов (собственный режим)
+  href: reporting-services-report-server-native-mode.md
+- name: Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)
+  href: configure-and-administer-a-report-server-ssrs-native-mode.md
+  items:
+    - name: настроить сервер отчетов
+      href: configure-a-report-server-reporting-services-native-mode.md
+    - name: Настройка диспетчера отчетов (собственный режим)
+      href: configure-web-portal.md
+    - name: настроить доступ к построителю отчетов
+      href: configure-report-builder-access.md
+    - name: Управление сервером отчетов служб Reporting Services в собственном режиме
+      href: manage-a-reporting-services-native-mode-report-server.md
+    - name: Configure a Firewall for Report Server Access
+      href: configure-a-firewall-for-report-server-access.md
+    - name: 'Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)'
+      href: configure-a-native-mode-report-server-for-local-administration-ssrs.md
+    - name: настроить сервер отчетов для удаленного администрирования
+      href: configure-a-report-server-for-remote-administration.md
+    - name: настроить сервер отчетов в кластере с балансированием сетевой нагрузки
+      href: configure-a-report-server-on-a-network-load-balancing-cluster.md
+    - name: Включение отслеживания удаленных ошибок (службы Reporting Services)
+      href: enable-remote-errors-reporting-services.md
+    - name: зарегистрировать имя участника-службы для сервера отчетов
+      href: register-a-service-principal-name-spn-for-a-report-server.md
+    - name: Включение и отключение компонентов служб Reporting Services
+      href: turn-reporting-services-features-on-or-off.md
+- name: Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)
+  href: report-server-content-management-ssrs-native-mode.md
+  items:
+    - name: 'создать, изменить или удалить папку'
+      href: create-delete-or-modify-a-folder-report-manager.md
+    - name: Перемещение или удаление элемента
+      href: move-or-delete-an-item-report-manager.md
+    - name: Передача файлов в папку
+      href: upload-files-to-a-folder.md
+    - name: обновить ресурс
+      href: update-a-resource-report-manager.md
+- name: Запуск и остановка службы сервера отчетов
+  href: start-and-stop-the-report-server-service.md
+- name: Домены приложений для приложений сервера отчетов
+  href: application-domains-for-report-server-applications.md
+- name: Включение и отключение печати на стороне клиента для служб Reporting Services
+  href: enable-and-disable-client-side-printing-for-reporting-services.md
+- name: Включение и отключение папки «Мои отчеты»
+  href: enable-and-disable-my-reports.md
+- name: 'Переименование компьютера, на котором установлен сервер отчетов'
+  href: rename-a-report-server-computer.md
+- name: База данных сервера отчетов (службы Reporting Services в собственном режиме)
+  href: report-server-database-ssrs-native-mode.md
+  items:
+    - name: Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)
+      href: administer-a-report-server-database-ssrs-native-mode.md
+    - name: Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)
+      href: moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md
+- name: 'Производительность, моментальные снимки, кэширование (службы Reporting Services)'
+  href: performance-snapshots-caching-reporting-services.md
+  items:
+    - name: Наблюдение за производительностью сервера отчетов
+      href: monitoring-report-server-performance.md
+    - name: Счетчики производительности для объектов производительности веб-службы MSRS 2014 и службы Windows MSRS 2014 (собственный режим)
+      href: performance-counters-msrs-2011-web-service-performance-objects.md
+    - name: Счетчики производительности для объектов производительности веб-службы MSRS 2014 в режиме интеграции с SharePoint и службы Windows для MSRS 2014 в режиме интеграции с SharePoint (режим SharePoint)
+      href: performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
+    - name: 'Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service'
+      href: performance-counters-reportserver-service-performance-objects.md
+    - name: Установка свойств обработки отчетов
+      href: set-report-processing-properties.md
+    - name: Настройка доступной памяти для приложений сервера отчетов
+      href: configure-available-memory-for-report-server-applications.md
+    - name: Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)
+      href: setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md
+    - name: Обработка больших отчетов
+      href: process-large-reports.md
+    - name: Максимальные размеры отчетов и моментальных снимков
+      href: report-and-snapshot-size-limits.md
+    - name: Кэширование отчетов
+      href: caching-reports-ssrs.md
+    - name: Общие наборы данных в кэше
+      href: cache-shared-datasets-ssrs.md
+    - name: выполнить предварительную загрузку кэша
+      href: preload-the-cache-report-manager.md
+    - name: кэшировать общий набор данных
+      href: cache-a-shared-dataset.md
+    - name: кэшировать отчет
+      href: cache-a-report-report-manager.md
+    - name: 'Создание, изменение и удаление моментальных снимков в журнале отчетов'
+      href: create-modify-and-delete-snapshots-in-report-history.md
+    - name: Добавление моментального снимка к журналу отчета
+      href: add-a-snapshot-to-report-history-report-manager.md
+    - name: Создавать журнал отчета
+      href: create-report-history-reporting-services-in-sharepoint-integrated-mode.md

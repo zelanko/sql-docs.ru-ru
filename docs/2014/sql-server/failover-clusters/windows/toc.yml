@@ -1,0 +1,42 @@
+- name: Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server
+  href: windows-server-failover-clustering-wsfc-with-sql-server.md
+  items:
+    - name: Режим кворума и участвующая в голосовании конфигурация WSFC
+      href: wsfc-quorum-modes-and-voting-configuration-sql-server.md
+      items:
+        - name: Просмотр параметров NodeWeight кворума кластера
+          href: view-cluster-quorum-nodeweight-settings.md
+        - name: Настройка параметров NodeWeight кворума кластера
+          href: configure-cluster-quorum-nodeweight-settings.md
+    - name: Аварийное восстановление WSFC через принудительный кворум
+      href: wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+      items:
+        - name: Принудительный запуск кластера WSFC без кворума
+          href: force-a-wsfc-cluster-to-start-without-a-quorum.md
+    - name: Кластеры SQL Server с несколькими подсетями.
+      href: sql-server-multi-subnet-clustering-sql-server.md
+- name: Экземпляры отказоустойчивого кластера AlwaysOn
+  href: always-on-failover-cluster-instances-sql-server.md
+- name: Политика отработки отказа для экземпляров отказоустойчивого кластера
+  href: failover-policy-for-failover-cluster-instances.md
+  items:
+    - name: Настройка параметров свойства HealthCheckTimeout
+      href: configure-healthchecktimeout-property-settings.md
+    - name: Настройка параметров свойства FailureConditionLevel
+      href: configure-failureconditionlevel-property-settings.md
+    - name: Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
+      href: view-and-read-failover-cluster-instance-diagnostics-log.md
+- name: Администрирование и обслуживание экземпляров отказоустойчивого кластера
+  href: failover-cluster-instance-administration-and-maintenance.md
+  items:
+    - name: добавить зависимости к ресурсу SQL Server
+      href: add-dependencies-to-a-sql-server-resource.md
+    - name: Восстановление по журналу после сбоя экземпляра отказоустойчивого кластера
+      href: recover-from-failover-cluster-instance-failure.md
+    - name: Изменение IP-адреса экземпляра отказоустойчивого кластера
+      href: change-the-ip-address-of-a-failover-cluster-instance.md
+- name: Обновление отказоустойчивого кластера SQL Server
+  href: upgrade-a-sql-server-failover-cluster-instance.md
+  items:
+    - name: Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)
+      href: upgrade-a-sql-server-failover-cluster-instance-setup.md

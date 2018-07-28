@@ -1,0 +1,31 @@
+- name: Трассировка SQL
+  href: sql-trace.md
+  items:
+    - name: Создание и запуск трассировки с помощью хранимых процедур Transact-SQL
+      href: create-and-run-traces-using-transact-sql-stored-procedures.md
+    - name: Создание трассировок вручную с помощью хранимых процедур
+      href: create-manual-traces-using-stored-procedures.md
+    - name: Сохранение результатов трассировки в файл
+      href: save-trace-results-to-a-file.md
+    - name: Улучшение доступа для трассировки данных
+      href: improve-access-to-trace-data.md
+    - name: создать трассировку (Transact-SQL)
+      href: create-a-trace-transact-sql.md
+    - name: создать фильтр трассировки (Transact-SQL)
+      href: set-a-trace-filter-transact-sql.md
+    - name: изменить существующую трассировку (Transact-SQL)
+      href: modify-an-existing-trace-transact-sql.md
+    - name: просмотреть сохраненную трассировку (Transact-SQL)
+      href: view-a-saved-trace-transact-sql.md
+    - name: просмотреть сведения фильтров (Transact-SQL)
+      href: view-filter-information-transact-sql.md
+    - name: удалить трассировку (Transact-SQL)
+      href: delete-a-trace-transact-sql.md
+    - name: Оптимизация трассировки SQL
+      href: optimize-sql-trace.md
+    - name: Фильтрация трассировки
+      href: filter-a-trace.md
+    - name: Ограничение размеров файла и таблицы трассировки
+      href: limit-trace-file-and-table-sizes.md
+    - name: Планирование трассировок
+      href: schedule-traces.md

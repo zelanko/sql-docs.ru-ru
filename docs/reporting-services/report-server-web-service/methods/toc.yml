@@ -1,0 +1,24 @@
+- name: Методы веб-службы сервера отчетов
+  href: report-server-web-service-methods.md
+- name: Методы авторизации
+  href: authorization-methods.md
+- name: Источники данных и методы соединения
+  href: data-sources-and-connection-methods.md
+- name: Методы связанных отчетов
+  href: linked-reports-methods.md
+- name: "Методы моделей\_— веб-служба сервера отчетов"
+  href: model-methods-report-server-web-service.md
+- name: Методы подготовки к просмотру и выполнения
+  href: rendering-and-execution-methods.md
+- name: Методы журнала отчета
+  href: report-history-methods.md
+- name: Методы параметров отчета
+  href: report-parameters-methods.md
+- name: Методы управления пространством имен сервера отчетов
+  href: report-server-namespace-management-methods.md
+- name: Конечные точки веб-службы сервера отчетов
+  href: report-server-web-service-endpoints.md
+- name: Методы планирования
+  href: scheduling-methods.md
+- name: Методы подписки и доставки
+  href: subscription-and-delivery-methods.md

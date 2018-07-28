@@ -1,0 +1,29 @@
+- name: Службы Integration Services (SSIS Server)
+  href: integration-services-ssis-server-and-catalog.md
+- name: Диалоговое окно свойств проекта
+  href: project-properties-dialog-box.md
+- name: Проверка диалогового окна
+  href: validate-dialog-box.md
+- name: диалоговое окно «Свойства пакета»
+  href: package-properties-dialog-box.md
+- name: Диалоговое окно «Настройка»
+  href: configure-dialog-box.md
+- name: Просмотр всех участников-диалоговое окно
+  href: browse-all-principals-dialog-box.md
+- name: Диалоговое окно «Свойства папки»
+  href: folder-properties-dialog-box.md
+- name: Диалоговое окно «Версии проекта»
+  href: project-versions-dialog-box.md
+- name: Каталог служб SSIS
+  href: ssis-catalog.md
+  items:
+    - name: Создание каталога служб SSIS
+      href: ../create-the-ssis-catalog.md
+    - name: Диалоговое окно свойств каталога
+      href: ../catalog-properties-dialog-box.md
+    - name: 'Резервное копирование, восстановление и перемещение каталога служб SSIS'
+      href: ../backup-restore-and-move-the-ssis-catalog.md
+- name: Просмотр списка пакетов на хранимом сервере служб Integration Services
+  href: view-the-list-of-packages-on-the-integration-services-server.md
+- name: Диалоговое окно «Задание значения параметра»
+  href: set-parameter-value-dialog-box.md

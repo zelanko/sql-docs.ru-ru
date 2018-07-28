@@ -1,0 +1,44 @@
+- name: Справка меню среды SQL Server Management Studio
+  href: sql-server-management-studio-menu-help.md
+- name: Справка F1 окна свойств (среда Management Studio)
+  href: properties-window-f1-help-management-studio.md
+- name: Параметры ("Среда" — страница "Шрифты и цвета")
+  href: options-environment-fonts-and-colors-page.md
+- name: Параметры ("Среда" — "Справка" — страница "Общие")
+  href: options-environment-help-general-page.md
+- name: Внешние инструменты
+  href: external-tools.md
+- name: Настройка (страница «Команды»)
+  href: customize-commands-page.md
+- name: Параметры ("Среда" — страница "Общие")
+  href: options-environment-general-page.md
+- name: Справка F1 по диалоговым окнам «Параметры»
+  href: options-dialog-boxes-f1-help.md
+- name: Выбор элементов инструментария (страница «Задачи обслуживания»)
+  href: choose-toolbox-items-maintenance-tasks-page.md
+- name: Параметры ("Конструкторы" — страница "Конструкторы таблиц и баз данных")
+  href: options-designers-table-and-database-designers-page.md
+- name: О среде SQL Server Management Studio
+  href: about-sql-server-management-studio.md
+- name: Сохранить изменения
+  href: save-changes.md
+- name: Открыть с помощью (создать файл)
+  href: open-with-new-file.md
+- name: Параметры ("Конструкторы" — "Конструкторы служб Analysis Services" — "Общие")
+  href: options-designers-analysis-services-designers-general.md
+- name: Диалоговое окно Windows (справка по обозревателю документов)
+  href: windows-dialog-box-microsoft-document-explorer-help.md
+- name: Дополнительные параметры сохранения
+  href: advanced-save-options.md
+- name: Сохранить как
+  href: save-as.md
+- name: Настройка (страница «Панели инструментов»)
+  href: customize-toolbars-page.md
+- name: Параметры ("Конструкторы" — страница "Планы обслуживания")
+  href: options-designers-maintenance-plans-page.md
+- name: Диалоговое окно «Выбор папок поиска» (Visual Studio)
+  href: choose-search-folders-dialog-box-visual-studio.md
+- name: Параметры ("Среда" — "Справка" — страница "В сети")
+  href: options-environment-help-online-page.md
+- name: Параметры ("Среда" — страница "Клавиатура")
+  href: options-environment-keyboard-page.md

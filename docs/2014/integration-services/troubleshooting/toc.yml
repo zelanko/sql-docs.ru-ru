@@ -1,0 +1,15 @@
+- name: Инструменты устранения неполадок при разработке пакета
+  href: troubleshooting-tools-for-package-development.md
+  items:
+    - name: Отладка потока управления
+      href: debugging-control-flow.md
+    - name: Скрипт отладки
+      href: debugging-script.md
+    - name: Отладка потока данных
+      href: debugging-data-flow.md
+    - name: Выполнение отладки пакета путем установки точек останова для задачи или контейнера
+      href: ../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md
+    - name: Добавление средства просмотра данных к потоку данных
+      href: ../add-a-data-viewer-to-a-data-flow.md
+    - name: Настройка вывода ошибок в компоненте потока данных
+      href: ../configure-an-error-output-in-a-data-flow-component.md

@@ -1,0 +1,15 @@
+- name: Статистика
+  href: statistics.md
+  items:
+    - name: Создание статистики
+      href: create-statistics.md
+    - name: Изменение статистики
+      href: modify-statistics.md
+    - name: Удаление статистики
+      href: delete-statistics.md
+    - name: Просмотр свойств статистики
+      href: view-statistics-properties.md
+    - name: Переименование статистики
+      href: rename-statistics.md
+    - name: Обновить статистику
+      href: update-statistics.md

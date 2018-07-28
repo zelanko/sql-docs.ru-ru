@@ -1,0 +1,36 @@
+- name: Resource Governor
+  href: resource-governor.md
+  items:
+    - name: Активация регулятора ресурсов
+      href: enable-resource-governor.md
+    - name: Отключение регулятора ресурсов
+      href: disable-resource-governor.md
+- name: Пул ресурсов регулятора ресурсов
+  href: resource-governor-resource-pool.md
+  items:
+    - name: Создание пула ресурсов
+      href: create-a-resource-pool.md
+    - name: Изменение параметров пула ресурсов
+      href: change-resource-pool-settings.md
+    - name: Удаление пула ресурсов
+      href: delete-a-resource-pool.md
+- name: Группа рабочей нагрузки регулятора ресурсов
+  href: resource-governor-workload-group.md
+  items:
+    - name: Создание группы рабочей нагрузки
+      href: create-a-workload-group.md
+    - name: Изменение параметров группы рабочей нагрузки
+      href: change-workload-group-settings.md
+    - name: Перемещение группы рабочей нагрузки
+      href: move-a-workload-group.md
+    - name: Удаление группы рабочей нагрузки
+      href: delete-a-workload-group.md
+- name: Resource Governor Classifier Function
+  href: resource-governor-classifier-function.md
+  items:
+    - name: Создать и проверить определяемую пользователем функцию-классификатор
+      href: create-and-test-a-classifier-user-defined-function.md
+- name: Настройка регулятора ресурсов с помощью шаблона
+  href: configure-resource-governor-using-a-template.md
+- name: Просмотр свойств регулятора ресурсов
+  href: view-resource-governor-properties.md

@@ -1,0 +1,28 @@
+- name: Класс ClientNetworkProtocol
+  href: clientnetworkprotocol-class.md
+- name: Метод GetNextOrderValue (класс ClientNetworkProtocol)
+  href: getnextordervalue-method-clientnetworkprotocol-class.md
+- name: Свойство NumberOfFlags (класс ClientNetworkProtocol)
+  href: numberofflags-property-clientnetworkprotocol-class.md
+- name: Свойство NumberOfProps (класс ClientNetworkProtocol)
+  href: numberofprops-property-clientnetworkprotocol-class.md
+- name: Свойство Properties (класс ClientNetworkProtocol)
+  href: properties-property-clientnetworkprotocol-class.md
+- name: Свойство ProtocolDisplayName (класс ClientNetworkProtocol)
+  href: protocoldisplayname-property-clientnetworkprotocol-class.md
+- name: Свойство ProtocolDLL (класс ClientNetworkProtocol)
+  href: protocoldll-property-clientnetworkprotocol-class.md
+- name: Свойство ProtocolName (класс ClientNetworkProtocol)
+  href: protocolname-property-clientnetworkprotocol-class.md
+- name: Свойство ProtocolOrder (класс ClientNetworkProtocol)
+  href: protocolorder-property-clientnetworkprotocol-class.md
+- name: Метод SetDisable (класс ClientNetworkProtocol)
+  href: setdisable-method-clientnetworkprotocol-class.md
+- name: Метод SetEnable (класс ClientNetworkProtocol)
+  href: setenable-method-clientnetworkprotocol-class.md
+- name: Метод SetOrderValue (класс ClientNetworkProtocol)
+  href: setordervalue-method-clientnetworkprotocol-class.md
+- name: Метод SetProtocolsOrder (класс ClientNetworkProtocol)
+  href: setprotocolsorder-method-clientnetworkprotocol-class.md
+- name: Свойство SupportAlias (класс ClientNetworkProtocol)
+  href: supportalias-property-clientnetworkprotocol-class.md

@@ -1,0 +1,10 @@
+- name: Свойство AliasName (класс SqlServerAlias)
+  href: aliasname-property-sqlserveralias-class.md
+- name: Свойство ConnectionString (класс SqlServerAlias)
+  href: connectionstring-property-sqlserveralias-class.md
+- name: Свойство ProtocolName (класс SqlServerAlias)
+  href: protocolname-property-sqlserveralias-class.md
+- name: Свойство ServerName (класс SqlServerAlias)
+  href: servername-property-sqlserveralias-class.md
+- name: Класс SqlServerAlias
+  href: sqlserveralias-class.md

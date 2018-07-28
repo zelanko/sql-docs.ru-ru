@@ -1,0 +1,29 @@
+- name: Приложения уровня данных
+  href: data-tier-applications.md
+  items:
+    - name: Поддержка приложений уровня данных для объектов и версий SQL Server
+      href: dac-support-for-sql-server-objects-and-versions.md
+    - name: Удаление приложения уровня данных
+      href: delete-a-data-tier-application.md
+    - name: Развертывание приложения уровня данных
+      href: deploy-a-data-tier-application.md
+    - name: Экспорт приложения уровня данных
+      href: export-a-data-tier-application.md
+    - name: Извлечение приложения уровня данных из базы данных
+      href: extract-a-dac-from-a-database.md
+    - name: Импорт файла BACPAC для создания новой пользовательской базы данных
+      href: import-a-bacpac-file-to-create-a-new-user-database.md
+    - name: Наблюдение за приложениями уровня данных
+      href: monitor-data-tier-applications.md
+    - name: Регистрация базы данных в качестве приложения уровня данных
+      href: register-a-database-as-a-dac.md
+    - name: Распаковка пакета DAC
+      href: unpack-a-dac-package.md
+    - name: Обновление приложения уровня данных
+      href: upgrade-a-data-tier-application.md
+    - name: Проверка пакета приложения уровня данных
+      href: validate-a-dac-package.md
+    - name: Правила проверки для мастеров приложения уровня данных
+      href: dbengine-validation-rules.md
+    - name: Развертывание базы данных с помощью приложения уровня данных
+      href: deploy-a-database-by-using-a-dac.md

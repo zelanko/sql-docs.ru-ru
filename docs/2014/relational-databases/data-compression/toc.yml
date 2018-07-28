@@ -1,0 +1,13 @@
+- name: Сжатие данных
+  href: data-compression.md
+  items:
+    - name: Row Compression Implementation
+      href: row-compression-implementation.md
+    - name: Реализация сжатия страниц
+      href: page-compression-implementation.md
+    - name: Реализация сжатия Юникода
+      href: unicode-compression-implementation.md
+    - name: Включение сжатия таблицы или индекса
+      href: enable-compression-on-a-table-or-index.md
+    - name: Отключение сжатия таблицы или индекса
+      href: disable-compression-on-a-table-or-index.md

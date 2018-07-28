@@ -1,0 +1,12 @@
+- name: Инструкции по массовому копированию с помощью драйвера ODBC для SQL Server (ODBC)
+  href: bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
+- name: Выполнение массового копирования результирующего набора SELECT (ODBC)
+  href: bulk-copy-a-select-result-set-odbc.md
+- name: Выполнение массового копирования при использовании файла форматирования (ODBC)
+  href: bulk-copy-by-using-a-format-file-odbc.md
+- name: Обеспечение массового копирования данных из переменных приложения (ODBC)
+  href: bulk-copy-data-from-program-variables-odbc.md
+- name: Выполнение массового копирования без файла форматирования (ODBC)
+  href: bulk-copy-without-a-format-file-odbc.md
+- name: Создание файла форматирования массового копирования (ODBC)
+  href: create-a-bulk-copy-format-file-odbc.md

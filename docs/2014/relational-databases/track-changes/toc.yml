@@ -1,0 +1,21 @@
+- name: Отслеживание изменений данных
+  href: track-data-changes-sql-server.md
+  items:
+    - name: О системе отслеживания измененных данных
+      href: about-change-data-capture-sql-server.md
+    - name: Включение и отключение отслеживания измененных данных
+      href: enable-and-disable-change-data-capture-sql-server.md
+    - name: Администрирование и наблюдение за системой отслеживания измененных данных
+      href: administer-and-monitor-change-data-capture-sql-server.md
+    - name: Работа с информацией об изменениях
+      href: work-with-change-data-sql-server.md
+    - name: Об отслеживании изменений
+      href: about-change-tracking-sql-server.md
+    - name: Включение и отключение отслеживания изменений
+      href: enable-and-disable-change-tracking-sql-server.md
+    - name: Управление отслеживанием изменений
+      href: manage-change-tracking-sql-server.md
+    - name: Работа с отслеживанием изменений
+      href: work-with-change-tracking-sql-server.md
+    - name: Система отслеживания измененных данных и другие функции SQL Server
+      href: change-data-capture-and-other-sql-server-features.md

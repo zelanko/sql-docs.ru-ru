@@ -1,0 +1,124 @@
+- name: Элемент Accounts (ASSL)
+  href: accounts-element-assl.md
+- name: Элемент Actions (ASSL)
+  href: actions-element-assl.md
+- name: Элемент AggregationDesigns (ASSL)
+  href: aggregationdesigns-element-assl.md
+- name: Элемент AggregationInstances (ASSL)
+  href: aggregationinstances-element-assl.md
+- name: Элемент Aggregations (ASSL)
+  href: aggregations-element-assl.md
+- name: Элемент AlgorithmParameters (ASSL)
+  href: algorithmparameters-element-assl.md
+- name: Элемент Aliases (ASSL)
+  href: aliases-element-assl.md
+- name: Элемент AllMemberTranslations (ASSL)
+  href: allmembertranslations-element-assl.md
+- name: Элемент Annotations (ASSL)
+  href: annotations-element-assl.md
+- name: Элемент Assemblies (ASSL)
+  href: assemblies-element-assl.md
+- name: Элемент AttributeAllMemberTranslations (ASSL)
+  href: attributeallmembertranslations-element-assl.md
+- name: Элемент AttributePermissions (ASSL)
+  href: attributepermissions-element-assl.md
+- name: Элемент AttributeRelationships (ASSL)
+  href: attributerelationships-element-assl.md
+- name: 'Attributes, элемент (ASSL)'
+  href: attributes-element-assl.md
+- name: Элемент Blocks (ASSL)
+  href: blocks-element-assl.md
+- name: Элемент CalculationProperties (ASSL)
+  href: calculationproperties-element-assl.md
+- name: Элемент Calculations (ASSL)
+  href: calculations-element-assl.md
+- name: Элемент CellPermissions (ASSL)
+  href: cellpermissions-element-assl.md
+- name: Элемент ClassifiedColumns (ASSL)
+  href: classifiedcolumns-element-assl.md
+- name: Коллекции (ASSL)
+  href: collections-assl.md
+- name: Элемент Columns (ASSL)
+  href: columns-element-assl.md
+- name: Элемент Commands (ASSL)
+  href: commands-element-assl.md
+- name: Элемент CubePermissions (ASSL)
+  href: cubepermissions-element-assl.md
+- name: Элемент Cubes (ASSL)
+  href: cubes-element-assl.md
+- name: Элемент DatabasePermissions (ASSL)
+  href: databasepermissions-element-assl.md
+- name: Элемент Databases (ASSL)
+  href: databases-element-assl.md
+- name: Элемент DataSourcePermissions (ASSL)
+  href: datasourcepermissions-element-assl.md
+- name: Элемент DataSources (ASSL)
+  href: datasources-element-assl.md
+- name: Элемент DataSourceViews (ASSL)
+  href: datasourceviews-element-assl.md
+- name: Элемент DimensionPermissions (ASSL)
+  href: dimensionpermissions-element-assl.md
+- name: Элемент Dimensions (ASSL)
+  href: dimensions-element-assl.md
+- name: Элемент Events (ASSL)
+  href: events-element-assl.md
+- name: Элемент Files (ASSL)
+  href: files-element-assl.md
+- name: Элемент ForeignKeyColumns (ASSL)
+  href: foreignkeycolumns-element-assl.md
+- name: Элемент Groups (ASSL)
+  href: groups-element-assl.md
+- name: Элемент Hierarchies (ASSL)
+  href: hierarchies-element-assl.md
+- name: Элемент IncrementalProcessingNotifications (ASSL)
+  href: incrementalprocessingnotifications-element-assl.md
+- name: Элемент KeyColumns (ASSL)
+  href: keycolumns-element-assl.md
+- name: Элемент Kpis (ASSL)
+  href: kpis-element-assl.md
+- name: Элемент Levels (ASSL)
+  href: levels-element-assl.md
+- name: Элемент MdxScripts (ASSL)
+  href: mdxscripts-element-assl.md
+- name: Элемент MeasureGroups (ASSL)
+  href: measuregroups-element-assl.md
+- name: Элемент Measures (ASSL)
+  href: measures-element-assl.md
+- name: Элемент Members (ASSL)
+  href: members-element-assl.md
+- name: Элемент MiningModelPermissions (ASSL)
+  href: miningmodelpermissions-element-assl.md
+- name: Элемент MiningModels (ASSL)
+  href: miningmodels-element-assl.md
+- name: Элемент MiningStructurePermissions (ASSL)
+  href: miningstructurepermissions-element-assl.md
+- name: Элемент MiningStructures (ASSL)
+  href: miningstructures-element-assl.md
+- name: Элемент ModelingFlags (ASSL)
+  href: modelingflags-element-assl.md
+- name: Элемент NamingTemplateTranslations (ASSL)
+  href: namingtemplatetranslations-element-assl.md
+- name: Элемент Partitions (ASSL)
+  href: partitions-element-assl.md
+- name: Элемент Perspectives (ASSL)
+  href: perspectives-element-assl.md
+- name: Элемент QueryNotifications (ASSL)
+  href: querynotifications-element-assl.md
+- name: Элемент Relationships (язык ASSL)
+  href: relationships-element-assl.md
+- name: Элемент ReportFormatParameters (ASSL)
+  href: reportformatparameters-element-assl.md
+- name: Элемент ReportParameters (ASSL)
+  href: reportparameters-element-assl.md
+- name: Элемент Roles (ASSL)
+  href: roles-element-assl.md
+- name: Элемент ServerProperties (ASSL)
+  href: serverproperties-element-assl.md
+- name: Элемент TableNotifications (ASSL)
+  href: tablenotifications-element-assl.md
+- name: Элемент Traces (ASSL)
+  href: traces-element-assl.md
+- name: Элемент Translations (ASSL)
+  href: translations-element-assl.md
+- name: Элемент UnknownMemberTranslations (ASSL)
+  href: unknownmembertranslations-element-assl.md

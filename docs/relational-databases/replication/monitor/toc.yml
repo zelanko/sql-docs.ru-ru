@@ -1,0 +1,43 @@
+- name: Обзор
+  href: monitoring-replication.md
+- name: Наблюдение за репликацией
+  href: monitoring-replication-overview.md
+  items:
+    - name: Обзор интерфейса монитора репликации
+      href: overview-of-the-replication-monitor-interface.md
+    - name: Запуск монитора репликации
+      href: start-the-replication-monitor.md
+    - name: Предоставление пользователям без прав администратора разрешения на использование монитора репликации
+      href: allow-non-administrators-to-use-replication-monitor.md
+    - name: Добавление и удаление издателей в мониторе репликации
+      href: add-and-remove-publishers-from-replication-monitor.md
+    - name: Обновление данных в мониторе репликации
+      href: refresh-data-in-replication-monitor.md
+    - name: Наблюдение за производительностью с помощью монитора репликации
+      href: monitor-performance-with-replication-monitor.md
+    - name: Измерение задержки и проверка правильности соединений для репликации транзакций
+      href: measure-latency-and-validate-connections-for-transactional-replication.md
+    - name: Наблюдение за агентами репликации
+      href: monitor-replication-agents.md
+    - name: Наблюдение за репликацией программным образом
+      href: programmatically-monitor-replication.md
+    - name: Настройка пороговых значений и предупреждений в мониторе репликации
+      href: set-thresholds-and-warnings-in-replication-monitor.md
+    - name: 'Кэширование, обновление и производительность монитора репликации'
+      href: caching-refresh-and-replication-monitor-performance.md
+    - name: Просмотр состояний публикаций и подписок в мониторе репликации
+      href: view-publication-and-subscription-status-in-replication-monitor.md
+    - name: Просмотр сведений и выполнение задач на издателе (монитор репликации)
+      href: view-information-and-perform-tasks-for-a-publisher-replication-monitor.md
+    - name: Просмотр сведений и выполнение задач для публикации (монитор репликации)
+      href: view-information-and-perform-tasks-for-a-publication-replication-monitor.md
+    - name: 'Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)'
+      href: view-information-and-perform-tasks-for-publication-agents.md
+    - name: Просмотр сведений и выполнение задач для подписки (монитор репликации)
+      href: view-information-and-perform-tasks-for-a-subscription-replication-monitor.md
+    - name: 'Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)'
+      href: view-information-and-perform-tasks-for-subscription-agents.md
+    - name: Просмотр реплицированных команд и другой информации в базе данных распространителя (программирование репликации на языке Transact-SQL)
+      href: view-replicated-commands-and-information-in-distribution-database.md
+- name: Наблюдение за репликацией с помощью системного монитора
+  href: monitoring-replication-with-system-monitor.md

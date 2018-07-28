@@ -1,0 +1,24 @@
+- name: Свойство InstanceName (класс ServerNetworkProtocolProperty)
+  href: instancename-property-servernetworkprotocolproperty-class.md
+- name: Свойство IPAddressName (класс ServerNetworkProtocolProperty)
+  href: ipaddressname-property-servernetworkprotocolproperty-class.md
+- name: Свойство PropertyName (класс ServerNetworkProtocolProperty)
+  href: propertyname-property-servernetworkprotocolproperty-class.md
+- name: Свойство PropertyNumVal (класс ServerNetworkProtocolProperty)
+  href: propertynumval-property-servernetworkprotocolproperty-class.md
+- name: Свойство PropertyStrVal (класс ServerNetworkProtocolProperty)
+  href: propertystrval-property-servernetworkprotocolproperty-class.md
+- name: Свойство PropertyType (класс ServerNetworkProtocolProperty)
+  href: propertytype-property-servernetworkprotocolproperty-class.md
+- name: Свойство PropertyValType (класс ServerNetworkProtocolProperty)
+  href: propertyvaltype-property-servernetworkprotocolproperty-class.md
+- name: Свойство ProtocolName (класс ServerNetworkProtocolProperty)
+  href: protocolname-property-servernetworkprotocolproperty-class.md
+- name: Класс ServerNetworkProtocolProperty
+  href: servernetworkprotocolproperty-class.md
+- name: Метод SetFlag (класс ServerNetworkProtocolProperty)
+  href: setflag-method-servernetworkprotocolproperty-class.md
+- name: Метод SetNumericalValue (класс ServerNetworkProtocolProperty)
+  href: setnumericalvalue-method-servernetworkprotocolproperty-class.md
+- name: Метод SetStringValue (класс ServerNetworkProtocolProperty)
+  href: setstringvalue-method-servernetworkprotocolproperty-class.md

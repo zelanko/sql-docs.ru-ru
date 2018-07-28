@@ -1,0 +1,64 @@
+- name: Соединения в службах Integration Services (SSIS)
+  href: integration-services-ssis-connections.md
+- name: диспетчер соединений служб Analysis Services
+  href: analysis-services-connection-manager.md
+  items:
+    - name: Добавление диалогового окна  «Диспетчер соединений со службами Analysis Services" в справочник по пользовательскому интерфейсу
+      href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: диспетчер FTP-соединений
+  href: ftp-connection-manager.md
+  items:
+    - name: редактор диспетчера FTP-сеансов
+      href: ../ftp-connection-manager-editor.md
+- name: диспетчер HTTP-соединений
+  href: http-connection-manager.md
+  items:
+    - name: Редактор диспетчера HTTP-сеансов (страница «Сервер»)
+      href: ../http-connection-manager-editor-server-page.md
+    - name: Редактор диспетчера HTTP-соединений (страница «Прокси-сервер»)
+      href: ../http-connection-manager-editor-proxy-page.md
+- name: диспетчер соединений MSMQ
+  href: msmq-connection-manager.md
+  items:
+    - name: редактор диспетчера MSMQ-сеансов
+      href: ../msmq-connection-manager-editor.md
+- name: Диспетчер соединений SMTP
+  href: smtp-connection-manager.md
+  items:
+    - name: редактор диспетчера SMTP-сеансов
+      href: ../smtp-connection-manager-editor.md
+- name: 'SMO, диспетчер соединений'
+  href: smo-connection-manager.md
+  items:
+    - name: редактор диспетчера соединений SMO
+      href: ../smo-connection-manager-editor.md
+- name: Диспетчер WMI-соединений
+  href: wmi-connection-manager.md
+  items:
+    - name: редактор диспетчера WMI-сеансов
+      href: ../wmi-connection-manager-editor.md
+- name: Создание диспетчеров соединений
+  href: ../create-connection-managers.md
+- name: диспетчер соединений с несколькими файлами
+  href: multiple-files-connection-manager.md
+- name: Область диспетчеров соединений
+  href: ../connection-managers-area.md
+- name: Инструменты устранения неполадок соединения пакетов
+  href: ../troubleshooting/troubleshooting-tools-for-package-connectivity.md
+- name: 'Добавление, удаление или совместное использование диспетчера соединений в пакете'
+  href: ../add-delete-or-share-a-connection-manager-in-a-package.md
+  items:
+    - name: добавление диспетчера соединений со службами SSIS
+      href: ../add-ssis-connection-manager.md
+- name: Задание свойств диспетчера соединений
+  href: ../set-the-properties-of-a-connection-manager.md
+- name: Диспетчер подключений Azure Data Lake Store
+  href: ../azure-data-lake-store-connection-manager.md
+- name: Диспетчер подключений Azure HDInsight
+  href: ../azure-hdinsight-connection-manager.md
+- name: Диспетчер подключений Azure Resource Manager
+  href: ../azure-resource-manager-connection-manager.md
+- name: Диспетчер подключений службы хранилища Azure
+  href: azure-storage-connection-manager.md
+- name: Диспетчер подключений подписки Azure
+  href: azure-subscription-connection-manager.md

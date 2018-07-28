@@ -1,0 +1,14 @@
+- name: Обработка результатов (ODBC)
+  href: processing-results-odbc.md
+- name: Назначение хранилища
+  href: assigning-storage.md
+- name: Автоматическое преобразование символьных данных
+  href: autotranslation-of-character-data.md
+- name: Использование типов данных
+  href: data-type-usage.md
+- name: Определение характеристик результирующего набора (ODBC)
+  href: determining-the-characteristics-of-a-result-set-odbc.md
+- name: Выборка итоговых данных
+  href: fetching-result-data.md
+- name: Сопоставление типов данных (ODBC)
+  href: mapping-data-types-odbc.md

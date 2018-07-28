@@ -1,0 +1,10 @@
+- name: Форматирование XML-кода на клиенте и на сервере (SQLXML 4.0)
+  href: client-side-and-server-side-formatting-sqlxml-4-0.md
+- name: Архитектура форматирования XML на стороне клиента и сервера (SQLXML 4.0)
+  href: architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md
+- name: Сравнение запроса XPath на стороне клиента и Форматирование XML-кода на сервере (SQLXML 4.0)
+  href: client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
+- name: Форматирование XML на стороне клиента (SQLXML 4.0)
+  href: client-side-xml-formatting-sqlxml-4-0.md
+- name: Форматирование XML-кода на сервере (SQLXML 4.0)
+  href: server-side-xml-formatting-sqlxml-4-0.md

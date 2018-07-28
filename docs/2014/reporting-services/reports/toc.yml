@@ -1,0 +1,50 @@
+- name: 'Reporting Services, отчеты служб'
+  href: reporting-services-reports-ssrs.md
+- name: Публикация источников данных и отчетов
+  href: publishing-data-sources-and-reports.md
+  items:
+    - name: Предварительный просмотр отчетов
+      href: previewing-reports.md
+    - name: Публикация отчетов на сервере отчетов
+      href: publishing-reports-to-a-report-server.md
+    - name: Публикация отчетов
+      href: ../publish-reports.md
+    - name: опубликовать отчет в библиотеке SharePoint
+      href: publish-a-report-to-a-sharepoint-library.md
+    - name: опубликовать общий источник данных в библиотеке SharePoint
+      href: publish-a-shared-data-source-to-a-sharepoint-library.md
+- name: язык определения отчетов
+  href: report-definition-language-ssrs.md
+- name: определить версию схемы определения отчета
+  href: find-the-report-definition-schema-version-ssrs.md
+- name: 'Поиск текста, числа и даты в отчете'
+  href: find-text-numbers-or-dates-in-a-report.md
+- name: Настройка свойств выполнения для отчета
+  href: configure-execution-properties-for-a-report-report-manager.md
+- name: Настройка общих свойств отчета
+  href: ../configure-general-properties-for-a-report-report-manager.md
+- name: ограничить объем журнала отчета
+  href: limit-report-history-report-manager.md
+- name: открыть и закрыть отчет
+  href: open-and-close-a-report-report-manager.md
+- name: Просмотр и удаление журнала отчета
+  href: ../view-or-delete-report-history-report-manager.md
+- name: передать файл или отчет
+  href: upload-a-file-or-report-report-manager.md
+- name: Создание связанного отчета
+  href: create-a-linked-report.md
+- name: Отчеты с дополнительной информацией (SSRS)
+  href: clickthrough-reports-ssrs.md
+- name: Просмотр и изучение отчетов в собственном режиме с помощью веб-части SharePoint (службы SSRS)
+  href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
+- name: Справка F1 по отчетам
+  href: ../report-f1-help.md
+  items:
+    - name: Диалоговое окно «Свойства отчета» — «Код»
+      href: ../report-properties-dialog-box-code.md
+    - name: Диалоговое окно «Свойства отчета» — «Параметры страницы»
+      href: ../report-properties-dialog-box-page-setup.md
+    - name: Диалоговое окно «Свойства отчета» — «Ссылки»
+      href: ../report-properties-dialog-box-references.md
+    - name: Диалоговое окно «Разделы отчета»
+      href: ../report-sections-dialog-box.md

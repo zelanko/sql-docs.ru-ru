@@ -1,0 +1,28 @@
+- name: Создание библиотеки модулей доставки
+  href: creating-a-delivery-extension-library.md
+- name: Отладка кода модулей доставки
+  href: debugging-delivery-extension-code.md
+- name: Общие сведения о модулях доставки
+  href: delivery-extensions-overview.md
+- name: Развертывание модуля доставки
+  href: deploying-a-delivery-extension.md
+- name: Реализация модуля доставки
+  href: implementing-a-delivery-extension.md
+- name: Реализация интерфейса IDeliveryExtension для модуля доставки
+  href: implementing-the-ideliveryextension-interface-for-a-delivery-extension.md
+- name: Реализация интерфейса ISubscriptionBaseUIUserControl
+  href: implementing-the-isubscriptionbaseuiusercontrol-interface.md
+- name: Подготовка к реализации модуля доставки
+  href: preparing-to-implement-a-delivery-extension.md
+- name: Удаление модуля доставки
+  href: removing-a-delivery-extension.md
+- name: Использование класса Notification для модуля доставки
+  href: using-a-notification-class-for-a-delivery-extension.md
+- name: Использование интерфейса IDeliveryReportServerInformation в модуле доставки
+  href: using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md
+- name: Использование класса RenderedOutputFile для модуля доставки
+  href: using-the-renderedoutputfile-class-for-a-delivery-extension.md
+- name: Использование класса Report в модуле доставки
+  href: using-the-report-class-for-a-delivery-extension.md
+- name: Использование класса Setting для модуля доставки
+  href: using-the-setting-class-for-a-delivery-extension.md

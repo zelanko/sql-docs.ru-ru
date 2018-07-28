@@ -1,0 +1,39 @@
+- name: Репликация слиянием
+  href: merge-replication.md
+- name: Параметры статьи для репликации слиянием
+  href: article-options-for-merge-replication.md
+- name: 'Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки'
+  href: optimize-merge-replication-performance-with-download-only-articles.md
+- name: Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления
+  href: optimize-merge-replication-performance-with-conditional-delete-tracking.md
+- name: Указание порядка обработки статей публикации слиянием
+  href: specify-the-processing-order-of-merge-articles.md
+- name: Изменения группирования связанных строк с логическими записями
+  href: group-changes-to-related-rows-with-logical-records.md
+- name: Обнаружение и разрешение конфликтов репликации слиянием
+  href: advanced-merge-replication-resolve-merge-replication-conflicts.md
+- name: Advanced Merge Replication Conflict Detection and Resolution
+  href: advanced-merge-replication-conflict-detection-and-resolution.md
+  items:
+    - name: Выбор сопоставителя
+      href: advanced-merge-replication-conflict-choose-a-resolver.md
+    - name: COM-Based Custom Resolvers
+      href: advanced-merge-replication-conflict-com-based-custom-resolvers.md
+    - name: Microsoft COM-Based Resolvers
+      href: advanced-merge-replication-conflict-com-based-resolvers.md
+    - name: Interactive Conflict Resolution
+      href: advanced-merge-replication-conflict-interactive-resolution.md
+    - name: Detecting and Resolving Conflicts in Logical Records
+      href: advanced-merge-replication-conflict-resolving-in-logical-record.md
+- name: Выполнение бизнес-логики при синхронизации слиянием
+  href: execute-business-logic-during-merge-synchronization.md
+- name: Фильтрация опубликованных данных для репликации слиянием
+  href: filter-published-data-for-merge-replication.md
+- name: Parameterized Row Filters
+  href: parameterized-filters-parameterized-row-filters.md
+- name: Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций
+  href: parameterized-filters-optimize-for-precomputed-partitions.md
+- name: фильтры соединения
+  href: join-filters.md
+- name: Оптимальные методы для фильтров строк на основе времени
+  href: best-practices-for-time-based-row-filters.md

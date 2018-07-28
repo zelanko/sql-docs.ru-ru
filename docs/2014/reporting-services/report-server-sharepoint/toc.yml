@@ -1,0 +1,42 @@
+- name: добавить на веб-страницу веб-часть средства просмотра отчетов
+  href: add-reporting-services-content-types-to-a-sharepoint-library.md
+  items:
+    - name: Веб-часть средства просмотра отчетов на сайте SharePoint
+      href: ../report-viewer-web-part-on-a-sharepoint-site.md
+    - name: установить соединение с веб-частью «Фильтр» или «Документы»
+      href: ../connect-filter-or-documents-web-part-reporting-services-sharepoint-integrated-mode.md
+    - name: Настройка веб-части средства просмотра отчетов
+      href: ../customize-the-report-viewer-web-part.md
+- name: Сервер отчетов (режим SharePoint)
+  href: ../reporting-services-report-server-sharepoint-mode.md
+  items:
+    - name: Служба SharePoint и Служебные приложения
+      href: ../reporting-services-sharepoint-service-and-service-applications.md
+      items:
+        - name: Управление Служебным приложением SharePoint службы Reporting Services
+          href: ../manage-a-reporting-services-sharepoint-service-application.md
+        - name: Резервное копирование и восстановление Служебного приложения SharePoint службы Reporting Services
+          href: ../backup-and-restore-reporting-services-sharepoint-service-applications.md
+- name: PowerShell cmdlets для режима SharePoint службы Reporting Services
+  href: ../powershell-cmdlets-for-reporting-services-sharepoint-mode.md
+- name: Настройка и администрирование (режим SharePoint)
+  href: ../configure-administer-report-server-reporting-services-sharepoint-mode.md
+  items:
+    - name: Компоненты семейства веб-сайтов служб Reporting Services
+      href: ../reporting-services-site-collection-features.md
+    - name: Активация функций интеграции семейства веб-сайтов с сервером отчетов и Power View в SharePoint
+      href: ../activate-the-report-server-and-power-view-integration-features-in-sharepoint.md
+    - name: Страницы «Параметры сайта» и «Функции сайта» служб Reporting Services (режим интеграции с SharePoint)
+      href: ../reporting-services-site-settings-and-site-features-sharepoint-mode.md
+    - name: Активация функции синхронизации файлов сервера отчетов
+      href: ../activate-report-server-file-sync-feature-sharepoint-central-administration.md
+    - name: добавить в библиотеку типы содержимого сервера отчетов (службы Reporting Services в режиме интеграции с SharePoint)
+      href: ../add-reporting-services-content-types-to-a-sharepoint-library.md
+    - name: 'Локальный режим и отчеты, созданные в локальном и подключенном режиме в средстве просмотра отчетов'
+      href: ../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md
+    - name: 'передать документы в библиотеку SharePoint '
+      href: ../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
+    - name: задать параметры обработки
+      href: ../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
+- name: Интеграция SharePoint с серверами отчетов Report Server 2008 и 2008 R2
+  href: ../sharepoint-integration-with-2008-and-2008-r2-report-servers.md

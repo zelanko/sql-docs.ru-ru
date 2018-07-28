@@ -1,0 +1,72 @@
+- name: Компонент Full-text Search
+  href: full-text-search.md
+  items:
+    - name: Приступая к работе с компонентом Full-Text Search
+      href: get-started-with-full-text-search.md
+    - name: Запрос с полнотекстовым поиском
+      href: query-with-full-text-search.md
+    - name: Поиск слов близких к другим с использованием оператора NEAR
+      href: search-for-words-close-to-another-word-with-near.md
+    - name: Ограничение количества результатов поиска с использованием функции RANK
+      href: limit-search-results-with-rank.md
+    - name: Улучшение производительности полнотекстовых запросов
+      href: improve-the-performance-of-full-text-queries.md
+    - name: Поиск свойств документа с использованием списков свойств поиска
+      href: search-document-properties-with-search-property-lists.md
+    - name: Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска
+      href: find-property-set-guids-and-property-integer-ids-for-search-properties.md
+    - name: Создание и управление полнотекстовыми каталогами
+      href: create-and-manage-full-text-catalogs.md
+    - name: Создание и управление полнотекстовыми индексами
+      href: create-and-manage-full-text-indexes.md
+    - name: Выбор языка при создании полнотекстового индекса
+      href: choose-a-language-when-creating-a-full-text-index.md
+    - name: Заполнение полнотекстовых индексов
+      href: populate-full-text-indexes.md
+    - name: Улучшение производительности полнотекстовых индексов
+      href: improve-the-performance-of-full-text-indexes.md
+    - name: Устранение неполадок полнотекстового индексирования
+      href: troubleshoot-full-text-indexing.md
+    - name: Создание резервных копий и восстановление полнотекстовых каталогов и индексов
+      href: back-up-and-restore-full-text-catalogs-and-indexes.md
+    - name: Настройка поисковых фильтров и управление ими
+      href: configure-and-manage-filters-for-search.md
+    - name: Настройка и управление средством разбиения на слова и парадигматические модули для поиска
+      href: configure-and-manage-word-breakers-and-stemmers-for-search.md
+    - name: Просмотр или изменение зарегистрированных фильтры и разделители слов
+      href: view-or-change-registered-filters-and-word-breakers.md
+    - name: Change the Word Breaker Used for US English and UK English
+      href: change-the-word-breaker-used-for-us-english-and-uk-english.md
+    - name: 'Перевод средств разбиения по словам, используемых поиском, на предыдущую версию'
+      href: revert-the-word-breakers-used-by-search-to-the-previous-version.md
+    - name: Настройка поведения средств разбиения по словам при работе с пользовательским словарем
+      href: customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md
+    - name: Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска
+      href: configure-and-manage-stopwords-and-stoplists-for-full-text-search.md
+    - name: Настройка и управление файлами тезауруса для полнотекстового поиска
+      href: configure-and-manage-thesaurus-files-for-full-text-search.md
+    - name: Управление и наблюдение за полнотекстовым поиском для экземпляра сервера
+      href: manage-and-monitor-full-text-search-for-a-server-instance.md
+    - name: Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации
+      href: set-the-service-account-for-the-full-text-filter-daemon-launcher.md
+    - name: Обновление полнотекстового поиска
+      href: upgrade-full-text-search.md
+    - name: 'Инструкции полнотекстового поиска DDL, функции, хранимые процедуры и представления'
+      href: full-text-search-ddl-functions-stored-procedures-and-views.md
+    - name: Использование мастера полнотекстового индексирования
+      href: use-the-full-text-indexing-wizard.md
+- name: Семантический поиск
+  href: semantic-search-sql-server.md
+  items:
+    - name: Установка и настройка семантического поиска
+      href: install-and-configure-semantic-search.md
+    - name: Включение семантического поиска на таблицы и столбцы
+      href: enable-semantic-search-on-tables-and-columns.md
+    - name: Поиск ключевых фраз в документах с использованием семантического поиска
+      href: find-key-phrases-in-documents-with-semantic-search.md
+    - name: Поиск похожих и связанных документов с использованием семантического поиска
+      href: find-similar-and-related-documents-with-semantic-search.md
+    - name: Управление и наблюдение за семантическим поиском
+      href: manage-and-monitor-semantic-search.md
+    - name: 'Инструкции семантического поиска DDL, функции, хранимые процедуры и представления'
+      href: semantic-search-ddl-functions-stored-procedures-and-views.md

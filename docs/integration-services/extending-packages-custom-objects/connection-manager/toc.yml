@@ -1,0 +1,8 @@
+- name: Разработка пользовательского диспетчера соединений
+  href: developing-a-custom-connection-manager.md
+- name: Создание пользовательского диспетчера соединений
+  href: creating-a-custom-connection-manager.md
+- name: Написание кода пользовательского диспетчера соединений
+  href: coding-a-custom-connection-manager.md
+- name: Разработка пользовательского интерфейса для пользовательского диспетчера соединений
+  href: developing-a-user-interface-for-a-custom-connection-manager.md

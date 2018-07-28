@@ -1,0 +1,506 @@
+- name: Элемент Access (ASSL)
+  href: access-element-assl.md
+- name: Элемент Account (ImpersonationInfo) (ASSL)
+  href: account-element-impersonationinfo-assl.md
+- name: Элемент AccountType (ASSL)
+  href: accounttype-element-assl.md
+- name: Элемент ActionID (ASSL)
+  href: actionid-element-assl.md
+- name: Элемент Administer (ASSL)
+  href: administer-element-assl.md
+- name: Элемент AggregateFunction (ASSL)
+  href: aggregatefunction-element-assl.md
+- name: Элемент AggregationDesignID (ASSL)
+  href: aggregationdesignid-element-assl.md
+- name: Элемент AggregationFunction (ASSL)
+  href: aggregationfunction-element-assl.md
+- name: Элемент AggregationID (ASSL)
+  href: aggregationid-element-assl.md
+- name: Элемент AggregationInstanceSource (ASSL)
+  href: aggregationinstancesource-element-assl.md
+- name: Элемент AggregationPrefix (ASSL)
+  href: aggregationprefix-element-assl.md
+- name: Элемент AggregationStorage (ASSL)
+  href: aggregationstorage-element-assl.md
+- name: Элемент AggregationType (ASSL)
+  href: aggregationtype-element-assl.md
+- name: Элемент AggregationUsage (ASSL)
+  href: aggregationusage-element-assl.md
+- name: Элемент Algorithm (ASSL)
+  href: algorithm-element-assl.md
+- name: Элемент Alias (ASSL)
+  href: alias-element-assl.md
+- name: Элемент AllMemberAggregationUsage (ASSL)
+  href: allmemberaggregationusage-element-assl.md
+- name: Элемент AllMemberName (ASSL)
+  href: allmembername-element-assl.md
+- name: Элемент AllowBrowsing (ASSL)
+  href: allowbrowsing-element-assl.md
+- name: Элемент AllowDrillThrough (язык ASSL)
+  href: allowdrillthrough-element-assl.md
+- name: Элемент AllowDuplicateNames (ASSL)
+  href: allowduplicatenames-element-assl.md
+- name: Элемент AllowedRowsExpression (ASSL)
+  href: allowedrowsexpression-element-assl.md
+- name: Элемент AllowedSet (ASSL)
+  href: allowedset-element-assl.md
+- name: Элемент Application (ASSL)
+  href: application-element-assl.md
+- name: Элемент AssociatedMeasureGroupID (ASSL)
+  href: associatedmeasuregroupid-element-assl.md
+- name: Элемент AttributeAllMemberName (ASSL)
+  href: attributeallmembername-element-assl.md
+- name: Элемент AttributeHierarchyDisplayFolder (ASSL)
+  href: attributehierarchydisplayfolder-element-assl.md
+- name: Элемент AttributeHierarchyEnabled (ASSL)
+  href: attributehierarchyenabled-element-assl.md
+- name: Элемент AttributeHierarchyOptimizedState (ASSL)
+  href: attributehierarchyoptimizedstate-element-assl.md
+- name: Элемент AttributeHierarchyOrdered (ASSL)
+  href: attributehierarchyordered-element-assl.md
+- name: Элемент AttributeHierarchyVisible (ASSL)
+  href: attributehierarchyvisible-element-assl.md
+- name: Элемент AttributeID (ASSL)
+  href: attributeid-element-assl.md
+- name: Элемент Audit (ASSL)
+  href: audit-element-assl.md
+- name: Элемент AutoRestart (ASSL)
+  href: autorestart-element-assl.md
+- name: Элемент BackColor (ASSL)
+  href: backcolor-element-assl.md
+- name: Элемент CacheMode (ASSL)
+  href: cachemode-element-assl.md
+- name: Элемент CalculationReference (ASSL)
+  href: calculationreference-element-assl.md
+- name: Элемент CalculationType (ASSL)
+  href: calculationtype-element-assl.md
+- name: Элемент CalendarEndDate (ASSL)
+  href: calendarenddate-element-assl.md
+- name: Элемент CalendarLanguage (ASSL)
+  href: calendarlanguage-element-assl.md
+- name: Элемент CalendarStartDate (ASSL)
+  href: calendarstartdate-element-assl.md
+- name: Элемент Caption (ASSL)
+  href: caption-element-assl.md
+- name: Элемент CaptionIsMdx (ASSL)
+  href: captionismdx-element-assl.md
+- name: Элемент Cardinality (ASSL)
+  href: cardinality-element-assl.md
+- name: Элемент CaseCubeDimensionID (ASSL)
+  href: casecubedimensionid-element-assl.md
+- name: Элемент ClassifiedColumnID (ASSL)
+  href: classifiedcolumnid-element-assl.md
+- name: Элемент Collation (ASSL)
+  href: collation-element-assl.md
+- name: Элемент CollectionCaption (язык ASSL)
+  href: collectioncaption-element-assl.md
+- name: Элемент ColumnID (ColumnBinding) (ASSL)
+  href: columnid-element-columnbinding-assl.md
+- name: Элемент ColumnID (EventColumn) (ASSL)
+  href: columnid-element-eventcolumn-assl.md
+- name: Элемент Condition (ASSL)
+  href: condition-element-assl.md
+- name: Элемент ConnectionString (ASSL)
+  href: connectionstring-element-assl.md
+- name: Элемент ConnectionStringSecurity (ASSL)
+  href: connectionstringsecurity-element-assl.md
+- name: Элемент Content (ASSL)
+  href: content-element-assl.md
+- name: Элемент CreatedTimestamp (ASSL)
+  href: createdtimestamp-element-assl.md
+- name: Элемент CubeDimensionID (ASSL)
+  href: cubedimensionid-element-assl.md
+- name: Элемент CubeID (ASSL)
+  href: cubeid-element-assl.md
+- name: Элемент CurrentStorageMode (ASSL)
+  href: currentstoragemode-element-assl.md
+- name: Элемент CurrentTimeMember (ASSL)
+  href: currenttimemember-element-assl.md
+- name: Элемент DataAggregation (ASSL)
+  href: dataaggregation-element-assl.md
+- name: Элемент DatabaseID (ASSL)
+  href: databaseid-element-assl.md
+- name: Элемент DataSize (ASSL)
+  href: datasize-element-assl.md
+- name: Элемент DataSourceID (ASSL)
+  href: datasourceid-element-assl.md
+- name: Элемент DataSourceImpersonationInfo (ASSL)
+  href: datasourceimpersonationinfo-element-assl.md
+- name: Элемент DataSourceViewID (ASSL)
+  href: datasourceviewid-element-assl.md
+- name: Элемент DataType (ASSL)
+  href: datatype-element-assl.md
+- name: Элемент DbSchemaName (ASSL)
+  href: dbschemaname-element-assl.md
+- name: Элемент DbTableName (ASSL)
+  href: dbtablename-element-assl.md
+- name: Элемент Default (ASSL)
+  href: default-element-assl.md
+- name: Элемент DefaultMeasure (ASSL)
+  href: defaultmeasure-element-assl.md
+- name: Элемент DefaultMember (ASSL)
+  href: defaultmember-element-assl.md
+- name: Элемент DefaultScript (ASSL)
+  href: defaultscript-element-assl.md
+- name: Элемент DefaultValue (ASSL)
+  href: defaultvalue-element-assl.md
+- name: Элемент DeniedSet (ASSL)
+  href: deniedset-element-assl.md
+- name: Элемент DependsOnDimensionID (ASSL)
+  href: dependsondimensionid-element-assl.md
+- name: Элемент Description (ASSL)
+  href: description-element-assl.md
+- name: Элемент DimensionID (ASSL)
+  href: dimensionid-element-assl.md
+- name: Элемент DiscretizationBucketCount (ASSL)
+  href: discretizationbucketcount-element-assl.md
+- name: Элемент DiscretizationMethod (ASSL)
+  href: discretizationmethod-element-assl.md
+- name: Элемент DisplayFlag (ASSL)
+  href: displayflag-element-assl.md
+- name: Элемент DisplayFolder (ASSL)
+  href: displayfolder-element-assl.md
+- name: Элемент Distribution (ASSL)
+  href: distribution-element-assl.md
+- name: Элемент Edition (ASSL)
+  href: edition-element-assl.md
+- name: Элемент Enabled (ASSL)
+  href: enabled-element-assl.md
+- name: Элемент EndOfData (ASSL)
+  href: endofdata-element-assl.md
+- name: Элемент EstimatedCount (ASSL)
+  href: estimatedcount-element-assl.md
+- name: Элемент EstimatedPerformanceGain (ASSL)
+  href: estimatedperformancegain-element-assl.md
+- name: Элемент EstimatedRows (ASSL)
+  href: estimatedrows-element-assl.md
+- name: Элемент EstimatedSize (ASSL)
+  href: estimatedsize-element-assl.md
+- name: Элемент EventID (ASSL)
+  href: eventid-element-assl.md
+- name: Элемент Expression (ASSL)
+  href: expression-element-assl.md
+- name: Элемент Filter (Binding) (ASSL)
+  href: filter-element-binding-assl.md
+- name: Элемент Filter (Trace) (ASSL)
+  href: filter-element-trace-assl.md
+- name: Элемент FirstDayOfWeek (ASSL)
+  href: firstdayofweek-element-assl.md
+- name: Элемент FiscalFirstDayOfMonth (ASSL)
+  href: fiscalfirstdayofmonth-element-assl.md
+- name: Элемент FiscalFirstMonth (ASSL)
+  href: fiscalfirstmonth-element-assl.md
+- name: Элемент FiscalYearName (ASSL)
+  href: fiscalyearname-element-assl.md
+- name: Элемент FoldingParameters (ASSL)
+  href: foldingparameters-element-assl.md
+- name: Элемент FontFlags (ASSL)
+  href: fontflags-element-assl.md
+- name: Элемент FontName (ASSL)
+  href: fontname-element-assl.md
+- name: Элемент FontSize ASSL)
+  href: fontsize-element-assl.md
+- name: Элемент ForceRebuildInterval (ASSL)
+  href: forcerebuildinterval-element-assl.md
+- name: Элемент ForeColor (ASSL)
+  href: forecolor-element-assl.md
+- name: Элемент Format (ASSL)
+  href: format-element-assl.md
+- name: Элемент FormatString (ASSL)
+  href: formatstring-element-assl.md
+- name: Элемент Goal (ASSL)
+  href: goal-element-assl.md
+- name: Элемент GranularityAttributeID (ASSL)
+  href: granularityattributeid-element-assl.md
+- name: Элемент HideMemberIf (ASSL)
+  href: hidememberif-element-assl.md
+- name: Элемент HierarchyID (ASSL)
+  href: hierarchyid-element-assl.md
+- name: Элемент HierarchyUniqueNameStyle (ASSL)
+  href: hierarchyuniquenamestyle-element-assl.md
+- name: Элемент HoldoutActualSize
+  href: holdoutactualsize-element.md
+- name: Элемент HoldoutMaxCases
+  href: holdoutmaxcases-element.md
+- name: Элемент HoldoutMaxPercent
+  href: holdoutmaxpercent-element.md
+- name: Элемент HoldoutSeed
+  href: holdoutseed-element.md
+- name: Элемент ID (ASSL)
+  href: id-element-assl.md
+- name: Элемент IgnoreUnrelatedDimensions (ASSL)
+  href: ignoreunrelateddimensions-element-assl.md
+- name: Элемент ImpersonationInfo (ASSL)
+  href: impersonationinfo-element-assl.md
+- name: Элемент ImpersonationInfoSecurity (ASSL)
+  href: impersonationinfosecurity-element-assl.md
+- name: Элемент ImpersonationMode (ASSL)
+  href: impersonationmode-element-assl.md
+- name: Элемент InstanceSelection (ASSL)
+  href: instanceselection-element-assl.md
+- name: Элемент IntermediateCubeDimensionID (ASSL)
+  href: intermediatecubedimensionid-element-assl.md
+- name: Элемент IntermediateGranularityAttributeID (ASSL)
+  href: intermediategranularityattributeid-element-assl.md
+- name: Элемент InvalidXmlCharacters (ASSL)
+  href: invalidxmlcharacters-element-assl.md
+- name: Элемент Invocation (ASSL)
+  href: invocation-element-assl.md
+- name: Элемент IsAggregatable (ASSL)
+  href: isaggregatable-element-assl.md
+- name: Элемент IsKey (ASSL)
+  href: iskey-element-assl.md
+- name: Элемент Isolation (ASSL)
+  href: isolation-element-assl.md
+- name: Элемент KeyDuplicate (ASSL)
+  href: keyduplicate-element-assl.md
+- name: Элемент KeyErrorAction (ASSL)
+  href: keyerroraction-element-assl.md
+- name: Элемент KeyErrorLimit (ASSL)
+  href: keyerrorlimit-element-assl.md
+- name: Элемент KeyErrorLimitAction (ASSL)
+  href: keyerrorlimitaction-element-assl.md
+- name: Элемент KeyErrorLogFile (ASSL)
+  href: keyerrorlogfile-element-assl.md
+- name: Элемент KeyNotFound (ASSL)
+  href: keynotfound-element-assl.md
+- name: Элемент KeyUniquenessGuarantee (ASSL)
+  href: keyuniquenessguarantee-element-assl.md
+- name: Элемент KpiID (ASSL)
+  href: kpiid-element-assl.md
+- name: Элемент Language (ASSL)
+  href: language-element-assl.md
+- name: Элемент LastProcessed (ASSL)
+  href: lastprocessed-element-assl.md
+- name: Элемент LastSchemaUpdate (ASSL)
+  href: lastschemaupdate-element-assl.md
+- name: Элемент LastUpdate (ASSL)
+  href: lastupdate-element-assl.md
+- name: Элемент Latency (ASSL)
+  href: latency-element-assl.md
+- name: Элемент LogFileAppend (ASSL)
+  href: logfileappend-element-assl.md
+- name: Элемент LogFileName (ASSL)
+  href: logfilename-element-assl.md
+- name: Элемент LogFileRollover (ASSL)
+  href: logfilerollover-element-assl.md
+- name: Элемент LogFileSize (ASSL)
+  href: logfilesize-element-assl.md
+- name: Элемент ManagedProvider (ASSL)
+  href: managedprovider-element-assl.md
+- name: Элемент ManufacturingExtraMonthQuarter (ASSL)
+  href: manufacturingextramonthquarter-element-assl.md
+- name: Элемент ManufacturingFirstMonth (ASSL)
+  href: manufacturingfirstmonth-element-assl.md
+- name: Элемент ManufacturingFirstWeekOfMonth (ASSL)
+  href: manufacturingfirstweekofmonth-element-assl.md
+- name: Элемент MasterDatasourceID (ASSL)
+  href: masterdatasourceid-element-assl.md
+- name: Элемент Materialization (ASSL)
+  href: materialization-element-assl.md
+- name: Элемент MaxActiveConnections (ASSL)
+  href: maxactiveconnections-element-assl.md
+- name: Элемент MdxMissingMemberMode (ASSL)
+  href: mdxmissingmembermode-element-assl.md
+- name: Элемент MeasureExpression (ASSL)
+  href: measureexpression-element-assl.md
+- name: Элемент MeasureGroupID (ASSL)
+  href: measuregroupid-element-assl.md
+- name: Элемент MeasureID (ASSL)
+  href: measureid-element-assl.md
+- name: Элемент MeasureQualificaton (ASSL)
+  href: measurequalificaton-element-assl.md
+- name: Элемент MemberNamesUnique (ASSL)
+  href: membernamesunique-element-assl.md
+- name: Элемент MembersWithData (ASSL)
+  href: memberswithdata-element-assl.md
+- name: Элемент MembersWithDataCaption (ASSL)
+  href: memberswithdatacaption-element-assl.md
+- name: Элемент MemberUniqueNameStyle (ASSL)
+  href: memberuniquenamestyle-element-assl.md
+- name: Элемент MimeType (ASSL)
+  href: mimetype-element-assl.md
+- name: Элемент MiningModelID (ASSL)
+  href: miningmodelid-element-assl.md
+- name: Элемент Multiplicity (язык ASSL)
+  href: multiplicity-element-assl.md
+- name: Элемент Name (ASSL)
+  href: name-element-assl.md
+- name: Элемент NamingTemplate (ASSL)
+  href: namingtemplate-element-assl.md
+- name: Элемент NonEmptyBehavior (ASSL)
+  href: nonemptybehavior-element-assl.md
+- name: Элемент NotificationTechnique (ASSL)
+  href: notificationtechnique-element-assl.md
+- name: Элемент NullKeyConvertedToUnknown (ASSL)
+  href: nullkeyconvertedtounknown-element-assl.md
+- name: Элемент NullKeyNotAllowed (ASSL)
+  href: nullkeynotallowed-element-assl.md
+- name: NullProcessing Element (ASSL)
+  href: nullprocessing-element-assl.md
+- name: Элемент OnlineMode (ASSL)
+  href: onlinemode-element-assl.md
+- name: Элемент OptimizedState (ASSL)
+  href: optimizedstate-element-assl.md
+- name: Элемент Optionality (ASSL)
+  href: optionality-element-assl.md
+- name: Элемент OrderBy (ASSL)
+  href: orderby-element-assl.md
+- name: Элемент OrderByAttributeID (ASSL)
+  href: orderbyattributeid-element-assl.md
+- name: Элемент Ordinal (ASSL)
+  href: ordinal-element-assl.md
+- name: Элемент OverrideBehavior (ASSL)
+  href: overridebehavior-element-assl.md
+- name: Элемент PartitionID (ASSL)
+  href: partitionid-element-assl.md
+- name: Элемент Password (ASSL)
+  href: password-element-assl.md
+- name: Элемент Path (ASSL)
+  href: path-element-assl.md
+- name: Элемент PendingValue (ASSL)
+  href: pendingvalue-element-assl.md
+- name: Элемент PermissionSet (ASSL)
+  href: permissionset-element-assl.md
+- name: Элемент Persistence (ASSL)
+  href: persistence-element-assl.md
+- name: Элемент Process (ASSL)
+  href: process-element-assl.md
+- name: Элемент ProcessingMode (ASSL)
+  href: processingmode-element-assl.md
+- name: Элемент ProcessingPriority (ASSL)
+  href: processingpriority-element-assl.md
+- name: Элемент ProcessingQuery (ASSL)
+  href: processingquery-element-assl.md
+- name: Элемент ProductName (ASSL)
+  href: productname-element-assl.md
+- name: Свойства (ASSL)
+  href: properties-assl.md
+- name: Элемент Query (ASSL)
+  href: query-element-assl.md
+- name: Элемент QueryDefinition (ASSL)
+  href: querydefinition-element-assl.md
+- name: Элемент Read (ASSL)
+  href: read-element-assl.md
+- name: Элемент ReadDefinition (ASSL)
+  href: readdefinition-element-assl.md
+- name: Элемент ReadSourceData (ASSL)
+  href: readsourcedata-element-assl.md
+- name: Элемент RefreshInterval (ASSL)
+  href: refreshinterval-element-assl.md
+- name: Элемент RefreshPolicy (ASSL)
+  href: refreshpolicy-element-assl.md
+- name: Элемент RelationshipType (ASSL)
+  href: relationshiptype-element-assl.md
+- name: Элемент RemoteDatasourceID (ASSL)
+  href: remotedatasourceid-element-assl.md
+- name: Элемент ReportingFirstMonth (ASSL)
+  href: reportingfirstmonth-element-assl.md
+- name: Элемент ReportingFirstWeekOfMonth (ASSL)
+  href: reportingfirstweekofmonth-element-assl.md
+- name: Элемент ReportingWeekToMonthPattern (ASSL)
+  href: reportingweektomonthpattern-element-assl.md
+- name: Элемент ReportServer (ASSL)
+  href: reportserver-element-assl.md
+- name: Элемент RequiresRestart (ASSL)
+  href: requiresrestart-element-assl.md
+- name: Элемент RoleID (ASSL)
+  href: roleid-element-assl.md
+- name: Элемент Root (ASSL)
+  href: root-element-assl.md
+- name: Элемент RootMemberIf (ASSL)
+  href: rootmemberif-element-assl.md
+- name: Элемент Schema (ASSL)
+  href: schema-element-assl.md
+- name: Элемент ScriptCacheProcessingMode (ASSL)
+  href: scriptcacheprocessingmode-element-assl.md
+- name: Элемент SilenceInterval (ASSL)
+  href: silenceinterval-element-assl.md
+- name: Элемент SilenceOverrideInterval (ASSL)
+  href: silenceoverrideinterval-element-assl.md
+- name: Элемент Slice (ASSL)
+  href: slice-element-assl.md
+- name: Элемент SolveOrder (ASSL)
+  href: solveorder-element-assl.md
+- name: Элемент Source (Binding) (ASSL)
+  href: source-element-binding-assl.md
+- name: Элемент Source (ComAssembly) (ASSL)
+  href: source-element-comassembly-assl.md
+- name: Элемент Source (Measure) (ASSL)
+  href: source-element-measure-assl.md
+- name: Элемент SourceAttributeID (ASSL)
+  href: sourceattributeid-element-assl.md
+- name: Элемент SourceColumnID (ASSL)
+  href: sourcecolumnid-element-assl.md
+- name: Элемент State (ASSL)
+  href: state-element-assl.md
+- name: Элемент Status (ASSL)
+  href: status-element-assl.md
+- name: Элемент StatusGraphic (ASSL)
+  href: statusgraphic-element-assl.md
+- name: Элемент StopTime (ASSL)
+  href: stoptime-element-assl.md
+- name: Элемент StorageEngineUsed (XMLA)
+  href: storageengineused-element-xmla.md
+- name: Элемент StorageLocation (ASSL)
+  href: storagelocation-element-assl.md
+- name: Элемент StorageMode (ASSL)
+  href: storagemode-element-assl.md
+- name: Элемент TableID (ASSL)
+  href: tableid-element-assl.md
+- name: Элемент Target (ASSL)
+  href: target-element-assl.md
+- name: Элемент TargetType (ASSL)
+  href: targettype-element-assl.md
+- name: Элемент Text (ASSL)
+  href: text-element-assl.md
+- name: Элемент Timeout (ASSL)
+  href: timeout-element-assl.md
+- name: Элемент Trend (ASSL)
+  href: trend-element-assl.md
+- name: Элемент TrendGraphic (ASSL)
+  href: trendgraphic-element-assl.md
+- name: Элемент Trimming (ASSL)
+  href: trimming-element-assl.md
+- name: Элемент Type (Action) (ASSL)
+  href: type-element-action-assl.md
+- name: Элемент Type (Binding) (ASSL)
+  href: type-element-binding-assl.md
+- name: Элемент Type (ClrAssemblyFile) (ASSL)
+  href: type-element-clrassemblyfile-assl.md
+- name: Элемент Type (Dimension) (ASSL)
+  href: type-element-dimension-assl.md
+- name: Элемент Type (DimensionAttribute) (ASSL)
+  href: type-element-dimensionattribute-assl.md
+- name: Элемент Type (MeasureGroup) (ASSL)
+  href: type-element-measuregroup-assl.md
+- name: Элемент Type (MeasureGroupAttribute) (ASSL)
+  href: type-element-measuregroupattribute-assl.md
+- name: Элемент Type (MiningStructureColumn) (ASSL)
+  href: type-element-miningstructurecolumn-assl.md
+- name: Элемент Type (Partition) (ASSL)
+  href: type-element-partition-assl.md
+- name: 'Type, элемент (PerspectiveCalculation) (ASSL)'
+  href: type-element-perspectivecalculation-assl.md
+- name: Элемент UnknownMember (ASSL)
+  href: unknownmember-element-assl.md
+- name: Элемент UnknownMemberName (ASSL)
+  href: unknownmembername-element-assl.md
+- name: Элемент Usage (DimensionAttribute) (ASSL)
+  href: usage-element-dimensionattribute-assl.md
+- name: Элемент Usage (MiningModelColumn) (ASSL)
+  href: usage-element-miningmodelcolumn-assl.md
+- name: Элемент Value (ASSL)
+  href: value-element-assl.md
+- name: Элемент Version (ASSL)
+  href: version-element-assl.md
+- name: Элемент Visibility (ASSL)
+  href: visibility-element-assl.md
+- name: Элемент Visible (ASSL)
+  href: visible-element-assl.md
+- name: Элемент VisualTotals (ASSL)
+  href: visualtotals-element-assl.md
+- name: Элемент Write (ASSL)
+  href: write-element-assl.md
+- name: Элемент WriteEnabled (ASSL)
+  href: writeenabled-element-assl.md

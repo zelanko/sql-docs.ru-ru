@@ -1,0 +1,47 @@
+- name: Функции и задачи служебной программы SQL Server
+  href: sql-server-utility-features-and-tasks.md
+- name: 'Замечания по выполнению программы, не относящиеся к прочим наборам элементов сбора на том же экземпляре SQL Server'
+  href: run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
+- name: создать точку управления служебной программы SQL Server (служебная программа SQL Server)
+  href: create-a-sql-server-utility-control-point-sql-server-utility.md
+- name: Подключение к служебной программе SQL Server
+  href: connect-to-a-sql-server-utility.md
+- name: Регистрация экземпляра SQL Server (служебная программа SQL Server)
+  href: enroll-an-instance-of-sql-server-sql-server-utility.md
+- name: Использование проводника служебных программ для управления служебной программой SQL Server
+  href: use-utility-explorer-to-manage-the-sql-server-utility.md
+- name: Наблюдение за экземплярами SQL Server в служебной программе SQL Server
+  href: monitor-instances-of-sql-server-in-the-sql-server-utility.md
+- name: Просмотр результатов политики исправности ресурсов (служебная программа SQL Server)
+  href: view-resource-health-policy-results-sql-server-utility.md
+- name: Изменение определения политики исправности ресурсов (служебная программа SQL Server)
+  href: modify-a-resource-health-policy-definition-sql-server-utility.md
+- name: Настройка хранилища данных точки управления служебной программы (служебная программа SQL Server)
+  href: configure-your-utility-control-point-data-warehouse-sql-server-utility.md
+- name: Настройка политик исправности (служебная программа SQL Server)
+  href: configure-health-policies-sql-server-utility.md
+- name: Уменьшение уровня шума в политиках загрузки ЦП (служебная программа SQL Server)
+  href: reduce-noise-in-cpu-utilization-policies-sql-server-utility.md
+- name: Удаление экземпляра SQL Server с помощью служебной программы SQL Server
+  href: remove-an-instance-of-sql-server-from-the-sql-server-utility.md
+- name: Изменение учетной записи-посредника для набора элементов сбора служебной программы на управляемом экземпляре SQL Server (служебная программа SQL Server)
+  href: change-proxy-account-for-utility-collection-on-managed-sql-server.md
+- name: Перенос точки управления служебной программой из одного экземпляра SQL Server на другой (служебная программа SQL Server)
+  href: move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md
+- name: удалить точку управления служебной программой (SQL Server Utility)
+  href: remove-a-utility-control-point-sql-server-utility.md
+- name: Устранение неполадок служебной программы SQL Server
+  href: ../../database-engine/troubleshoot-the-sql-server-utility.md
+- name: Устранение неполадок исправности ресурсов SQL Server (служебная программа SQL Server)
+  href: troubleshoot-sql-server-resource-health-sql-server-utility.md
+- name: Справка F1 проводника служебной программы
+  href: utility-explorer-f1-help.md
+  items:
+    - name: Панель мониторинга программ (служебная программа SQL Server)
+      href: ../../database-engine/utility-dashboard-sql-server-utility.md
+    - name: Подробные сведения о развернутом приложении уровня данных (служебная программа SQL Server)
+      href: ../../database-engine/deployed-data-tier-application-details-sql-server-utility.md
+    - name: Подробные сведения об управляемом экземпляре (служебная программа SQL Server)
+      href: ../../database-engine/managed-instance-details-sql-server-utility.md
+    - name: Администрирование программ (служебная программа SQL Server)
+      href: ../../database-engine/utility-administration-sql-server-utility.md

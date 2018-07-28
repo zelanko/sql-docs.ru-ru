@@ -1,0 +1,105 @@
+- name: Обзор
+  href: dta-utility.md
+- name: Справочник по входным XML-файлам (помощник по настройке ядра СУБД)
+  href: xml-input-file-reference-database-engine-tuning-advisor.md
+  items:
+    - name: Образцы входных XML-файлов (DTA)
+      href: xml-input-file-samples-dta.md
+      items:
+        - name: Образец простого входного файла XML (DTA)
+          href: simple-xml-input-file-sample-dta.md
+        - name: Образец входного XML-файла с описанием встроенной рабочей нагрузки (DTA)
+          href: xml-input-file-sample-with-inline-workload-dta.md
+        - name: Образец входного XML-файла с пользовательской конфигурацией (DTA)
+          href: xml-input-file-sample-with-user-specified-configuration-dta.md
+    - name: Элемент Column описания индекса (DTA)
+      href: column-element-for-index-dta.md
+    - name: Элемент Configuration (DTA)
+      href: configuration-element-dta.md
+    - name: элемент Create (DTA)
+      href: create-element-dta.md
+    - name: Элемент Database описания конфигурации (DTA)
+      href: database-element-for-configuration-dta.md
+    - name: Элемент Database описания сервера (DTA)
+      href: database-element-for-server-dta.md
+    - name: Элемент Database описания рабочей нагрузки (DTA)
+      href: database-element-for-workload-dta.md
+    - name: Элемент DatabaseToConnect (DTA)
+      href: databasetoconnect-element-dta.md
+    - name: Элемент DropOnlyMode (DTA)
+      href: droponlymode-element-dta.md
+    - name: Элемент DTAInput (DTA)
+      href: dtainput-element-dta.md
+    - name: Элемент DTAXML (DTA)
+      href: dtaxml-element-dta.md
+    - name: Элемент EventString (DTA)
+      href: eventstring-element-dta.md
+    - name: Элемент FeatureSet (DTA)
+      href: featureset-element-dta.md
+    - name: Элемент File (DTA)
+      href: file-element-dta.md
+    - name: Элемент Filegroup описания индекса (DTA)
+      href: filegroup-element-for-index-dta.md
+    - name: элемент Index (DTA)
+      href: index-element-dta.md
+    - name: Элемент KeepExisting (DTA)
+      href: keepexisting-element-dta.md
+    - name: Элемент Name описания столбца (DTA)
+      href: name-element-for-column-dta.md
+    - name: Элемент Name описания базы данных (DTA)
+      href: name-element-for-database-dta.md
+    - name: Элемент Name описания индекса (DTA)
+      href: name-element-for-index-dta.md
+    - name: Элемент Name описания схемы (DTA)
+      href: name-element-for-schema-dta.md
+    - name: Элемент Name описания сервера (DTA)
+      href: name-element-for-server-dta.md
+    - name: Элемент Name описания таблицы (DTA)
+      href: name-element-for-table-dta.md
+    - name: Элемент OnlineIndexOperation (DTA)
+      href: onlineindexoperation-element-dta.md
+    - name: Элемент Partitioning (DTA)
+      href: partitioning-element-dta.md
+    - name: Элемент Recommendation (DTA)
+      href: recommendation-element-dta.md
+    - name: Элемент Schema описания базы данных (DTA)
+      href: schema-element-for-database-dta.md
+    - name: Элемент Server (DTA)
+      href: server-element-dta.md
+    - name: Элемент Server описания конфигурации (DTA)
+      href: server-element-for-configuration-dta.md
+    - name: Элемент StorageBoundInMB (DTA)
+      href: storageboundinmb-element-dta.md
+    - name: Элемент Table описания схемы (DTA)
+      href: table-element-for-schema-dta.md
+    - name: Элемент TestServer (DTA)
+      href: testserver-element-dta.md
+    - name: Элемент TuningOptions (DTA)
+      href: tuningoptions-element-dta.md
+    - name: Элемент TuningTimeInMin (DTA)
+      href: tuningtimeinmin-element-dta.md
+    - name: Элемент Workload (DTA)
+      href: workload-element-dta.md
+- name: Учебник. помощник по настройке ядра СУБД
+  href: tutorial-database-engine-tuning-advisor.md
+  items:
+    - name: Урок 1. Основы перемещения в помощнике по настройке ядра СУБД
+      href: lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
+      items:
+        - name: "Урок\_1–1. Запуск помощника по настройке ядра\_СУБД"
+          href: lesson-1-1-launching-database-engine-tuning-advisor.md
+        - name: "Урок\_1–2. Настройка параметров и структуры инструмента"
+          href: lesson-1-2-setting-tool-options-and-layout.md
+- name: Занятие 2. Применение помощника по настройке ядра СУБД
+  href: lesson-2-using-database-engine-tuning-advisor.md
+  items:
+    - name: "Урок\_1–1. Настройка рабочей нагрузки"
+      href: lesson-1-1-tuning-a-workload.md
+    - name: "Урок\_1–2. Просмотр рекомендаций по настройке"
+      href: lesson-1-2-viewing-tuning-recommendations.md
+    - name: "Урок\_1–3. Просмотр отчетов по настройке"
+      href: lesson-1-3-viewing-tuning-reports.md
+    - name: Занятие 3. Использование программы командной строки dta
+      href: lesson-3-using-the-dta-command-prompt-utility.md
+    - name: "Урок\_3–1. Начало работы с программой\_dta для командной строки и настройка рабочей нагрузки"
+      href: lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md

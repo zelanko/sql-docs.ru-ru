@@ -1,0 +1,42 @@
+- name: Обзор
+  href: extended-events.md
+- name: Краткое руководство. Расширенные события в SQL Server
+  href: quick-start-extended-events-in-sql-server.md
+- name: Управление сеансами событий в обозревателе объектов
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: Расширенный просмотр целевых данных из расширенных событий в SQL Server
+  href: advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
+- name: Пакеты обработки расширенных событий
+  href: sql-server-extended-events-packages.md
+- name: Целевые объекты для расширенных событий в SQL Server
+  href: targets-for-extended-events-in-sql-server.md
+  items:
+    - name: Цель «Средство трассировки событий для Windows»
+      href: event-tracing-for-windows-target.md
+- name: Подсистема расширенных событий
+  href: sql-server-extended-events-engine.md
+- name: Сеансы расширенных событий
+  href: sql-server-extended-events-sessions.md
+- name: Средства расширенных событий
+  href: extended-events-tools.md
+  items:
+    - name: Использование профилировщика XEvent для SSMS
+      href: use-the-ssms-xe-profiler.md
+    - name: Использование сеанса system_health
+      href: use-the-system-health-session.md
+    - name: Использование поставщика PowerShell для расширенных событий
+      href: use-the-powershell-provider-for-extended-events.md
+- name: Изменение сеанса расширенных событий
+  href: alter-an-extended-events-session.md
+- name: Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server
+  href: selects-and-joins-from-system-views-for-extended-events-in-sql-server.md
+- name: Просмотр эквивалентов расширенных событий для классов событий трассировки SQL
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: Преобразование существующего скрипта трассировки SQL в сеанс расширенных событий
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: 'определить запросы, удерживающие блокировки'
+  href: determine-which-queries-are-holding-locks.md
+- name: 'найти объекты, на которые наложено наибольшее число блокировок'
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: отслеживать активность системы с помощью расширенных событий
+  href: monitor-system-activity-using-extended-events.md

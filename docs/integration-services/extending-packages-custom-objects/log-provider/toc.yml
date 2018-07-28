@@ -1,0 +1,8 @@
+- name: Разработка пользовательского регистратора
+  href: developing-a-custom-log-provider.md
+- name: Создание пользовательского регистратора
+  href: creating-a-custom-log-provider.md
+- name: Создание кода пользовательского регистратора
+  href: coding-a-custom-log-provider.md
+- name: Разработка пользовательского интерфейса для пользовательского регистратора
+  href: developing-a-user-interface-for-a-custom-log-provider.md

@@ -1,0 +1,37 @@
+- name: Пространственные данные
+  href: spatial-data-sql-server.md
+  items:
+    - name: Основные сведения о типах пространственных данных
+      href: spatial-data-types-overview.md
+    - name: Точка
+      href: point.md
+    - name: LineString
+      href: linestring.md
+    - name: CircularString
+      href: circularstring.md
+    - name: CompoundCurve
+      href: compoundcurve.md
+    - name: Многоугольник
+      href: polygon.md
+    - name: CurvePolygon
+      href: curvepolygon.md
+    - name: MultiPoint
+      href: multipoint.md
+    - name: MultiLineString
+      href: multilinestring.md
+    - name: MultiPolygon
+      href: multipolygon.md
+    - name: GeometryCollection
+      href: geometrycollection.md
+    - name: идентификаторы пространственных ссылок (SRID)
+      href: spatial-reference-identifiers-srids.md
+    - name: 'Создание, конструирование и запрос экземпляров geometry'
+      href: create-construct-and-query-geometry-instances.md
+    - name: 'Создание, проектирование и создание запросов к экземплярам типа данных geography'
+      href: create-construct-and-query-geography-instances.md
+    - name: Запросы пространственных данных для ближайшего соседа
+      href: query-spatial-data-for-nearest-neighbor.md
+    - name: Общие сведения о пространственных индексах
+      href: spatial-indexes-overview.md
+    - name: 'Создание, изменение и удаление пространственных индексов'
+      href: create-modify-and-drop-spatial-indexes.md

@@ -1,0 +1,240 @@
+- name: Преобразования служб Integration Services
+  href: integration-services-transformations.md
+- name: Преобразование «Статистическая обработка»
+  href: aggregate-transformation.md
+  items:
+    - name: Редактор преобразования «Статистическая обработка» (вкладка «Агрегаты»)
+      href: ../../aggregate-transformation-editor-aggregations-tab.md
+    - name: Редактор преобразований «Статистическая обработка» (вкладка «Дополнительно»)
+      href: ../../aggregate-transformation-editor-advanced-tab.md
+    - name: Статистическая обработка значений в наборе данных с помощью преобразования «Агрегатная обработка»
+      href: aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+- name: преобразование «Аудит»
+  href: audit-transformation.md
+  items:
+    - name: редактор преобразования «Аудит»
+      href: ../../audit-transformation-editor.md
+- name: Преобразование распространителя сбалансированных данных
+  href: balanced-data-distributor-transformation.md
+- name: Преобразование «Таблица символов»
+  href: character-map-transformation.md
+  items:
+    - name: Редактор преобразования «Таблица соответствия символов»
+      href: ../../character-map-transformation-editor.md
+- name: преобразование «Условное разбиение»
+  href: conditional-split-transformation.md
+  items:
+    - name: редактор преобразования «Условное разбиение»
+      href: ../../conditional-split-transformation-editor.md
+    - name: Разбиение набора данных с помощью преобразования «Условное разбиение»
+      href: split-a-dataset-by-using-the-conditional-split-transformation.md
+- name: преобразование «Копирование столбца»
+  href: copy-column-transformation.md
+  items:
+    - name: редактор преобразования «Копирование столбца»
+      href: ../../copy-column-transformation-editor.md
+- name: преобразование «Конвертация данных»
+  href: data-conversion-transformation.md
+  items:
+    - name: редактор преобразования «Конвертация данных»
+      href: ../../data-conversion-transformation-editor.md
+    - name: Преобразование данных в другой тип данных с помощью преобразования «Конвертация данных»
+      href: convert-data-type-by-using-data-conversion-transformation.md
+- name: преобразование «Запрос интеллектуального анализа данных»
+  href: data-mining-query-transformation.md
+  items:
+    - name: Редактор преобразования «Запрос интеллектуального анализа данных» (вкладка «Модель интеллектуального анализа данных»)
+      href: ../../data-mining-query-transformation-editor-mining-model-tab.md
+    - name: Редактор преобразования «Запрос интеллектуального анализа данных» (вкладка «Запрос»)
+      href: ../../data-mining-query-transformation-editor-query-tab.md
+- name: Преобразование «Очистка DQS»
+  href: dqs-cleansing-transformation.md
+  items:
+    - name: Диалоговое окно редактора преобразования «Очистка DQS»
+      href: ../../dqs-cleansing-transformation-editor-dialog-box.md
+    - name: Диспетчер соединений «Очистка DQS»
+      href: ../../connection-manager/dqs-cleansing-connection-manager.md
+    - name: Применение правил качества данных к источнику данных
+      href: apply-data-quality-rules-to-data-source.md
+    - name: Сопоставление столбцов с составными доменами
+      href: map-columns-to-composite-domains.md
+- name: Преобразование «Производный столбец»
+  href: derived-column-transformation.md
+  items:
+    - name: редактор преобразования «Производный столбец»
+      href: ../../derived-column-transformation-editor.md
+    - name: Получение значений столбцов с помощью преобразования «Производный столбец»
+      href: derive-column-values-by-using-the-derived-column-transformation.md
+- name: Преобразование «Экспорт столбца»
+  href: export-column-transformation.md
+  items:
+    - name: Редактор преобразования «Экспорт столбца» (страница «Столбцы»)
+      href: ../../export-column-transformation-editor-columns-page.md
+    - name: Редактор преобразования «Экспорт столбца» (страница «Вывод ошибок»)
+      href: ../../export-column-transformation-editor-error-output-page.md
+- name: преобразование «Нечеткое группирование»
+  href: fuzzy-grouping-transformation.md
+  items:
+    - name: Редактор преобразования «Нечеткое группирование» (вкладка «Диспетчер соединений»)
+      href: ../../fuzzy-grouping-transformation-editor-connection-manager-tab.md
+    - name: Редактор преобразования «Нечеткое группирование» (вкладка «Столбцы»)
+      href: ../../fuzzy-grouping-transformation-editor-columns-tab.md
+    - name: Редактор преобразования «Нечеткое группирование» (вкладка «Дополнительно»)
+      href: ../../fuzzy-grouping-transformation-editor-advanced-tab.md
+    - name: Определение подобных строк данных с помощью преобразования «Нечеткое группирование»
+      href: identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+- name: преобразование «Нечеткий уточняющий запрос»
+  href: fuzzy-lookup-transformation.md
+  items:
+    - name: Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Ссылочная таблица»)
+      href: ../../fuzzy-lookup-transformation-editor-reference-table-tab.md
+    - name: Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Столбцы»)
+      href: ../../fuzzy-lookup-transformation-editor-columns-tab.md
+    - name: Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Дополнительно»)
+      href: ../../fuzzy-lookup-transformation-editor-advanced-tab.md
+- name: Преобразование «Импорт столбца»
+  href: import-column-transformation.md
+- name: Преобразование «Уточняющий запрос»
+  href: lookup-transformation.md
+  items:
+    - name: Редактор преобразования «Уточняющий запрос» (страница «Соединение»)
+      href: ../../lookup-transformation-editor-connection-page.md
+    - name: Редактор преобразования «Уточняющий запрос» (страница «Дополнительно»)
+      href: ../../lookup-transformation-editor-advanced-page.md
+    - name: Редактор преобразования «Уточняющий запрос» (страница «Столбцы»)
+      href: ../../lookup-transformation-editor-columns-page.md
+    - name: Редактор преобразования «Уточняющий запрос» (страница «Общие»)
+      href: ../../lookup-transformation-editor-general-page.md
+    - name: Редактор преобразования «Уточняющий запрос» (страница «Вывод ошибок»)
+      href: ../../lookup-transformation-editor-error-output-page.md
+    - name: Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»
+      href: implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+    - name: Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем
+      href: ../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
+    - name: Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB
+      href: ../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+    - name: Создание или развертывание кэша для преобразования «Уточняющий запрос»
+      href: create-and-deploy-a-cache-for-the-lookup-transformation.md
+    - name: Создание связей
+      href: create-relationships.md
+    - name: преобразование кэша
+      href: cache-transform.md
+    - name: диспетчер соединений с кэшем
+      href: ../../connection-manager/cache-connection-manager.md
+    - name: Редактор диспетчера соединений с кэшем
+      href: ../../cache-connection-manager-editor.md
+    - name: Редактор преобразования «Кэш» (страница «Диспетчер соединений»)
+      href: ../../cache-transformation-editor-connection-manager-page.md
+    - name: Редактор преобразования «Кэш» (страница «Сопоставления»)
+      href: ../../cache-transformation-editor-mappings-page.md
+- name: преобразование «Слияние»
+  href: merge-transformation.md
+  items:
+    - name: редактор преобразования «Слияние»
+      href: ../../merge-transformation-editor.md
+- name: преобразование «Соединение слиянием»
+  href: merge-join-transformation.md
+  items:
+    - name: редактор преобразования «Cоединение слиянием»
+      href: ../../merge-join-transformation-editor.md
+    - name: Расширение набора данных при помощи преобразования «Соединение слиянием»
+      href: extend-a-dataset-by-using-the-merge-join-transformation.md
+    - name: Сортировка данных для преобразований «Слияние» и «Соединение слиянием»
+      href: sort-data-for-the-merge-and-merge-join-transformations.md
+- name: преобразование «Многоадресная доставка»
+  href: multicast-transformation.md
+  items:
+    - name: редактор преобразования «Многоадресная доставка»
+      href: ../../multicast-transformation-editor.md
+- name: преобразование «Команда OLE DB»
+  href: ole-db-command-transformation.md
+  items:
+    - name: настроить преобразование «Команда OLE DB»
+      href: ../../configure-the-ole-db-command-transformation.md
+- name: преобразование «Процентная выборка»
+  href: percentage-sampling-transformation.md
+  items:
+    - name: редактор преобразования «Процентная выборка»
+      href: ../../percentage-sampling-transformation-editor.md
+- name: преобразование «Сведение»
+  href: pivot-transformation.md
+- name: преобразование «Подсчет строк»
+  href: row-count-transformation.md
+- name: преобразование «Выборка строк»
+  href: row-sampling-transformation.md
+  items:
+    - name: Редактор преобразования «Выборка строк» (страница выборки)
+      href: ../../row-sampling-transformation-editor-sampling-page.md
+- name: Компонент скрипта
+  href: script-component.md
+  items:
+    - name: Редактор преобразования «Скрипт» (страница «Входные столбцы»)
+      href: ../../script-transformation-editor-input-columns-page.md
+    - name: Редактор преобразования «Скрипт» (страница «Входы и выходы»)
+      href: ../../script-transformation-editor-inputs-and-outputs-page.md
+    - name: Редактор преобразования «Скрипт» (страница «Скрипт»)
+      href: ../../script-transformation-editor-script-page.md
+    - name: Редактор преобразования «Скрипт» (страница «Диспетчеры соединений»)
+      href: ../../script-transformation-editor-connection-managers-page.md
+    - name: Выбор типа компонента скрипта
+      href: ../../select-script-component-type.md
+- name: преобразование «Медленно изменяющееся измерение»
+  href: slowly-changing-dimension-transformation.md
+  items:
+    - name: Настройка выходов при помощи мастера медленно изменяющихся измерений
+      href: configure-outputs-using-the-slowly-changing-dimension-wizard.md
+    - name: Справка F1 мастера медленно меняющихся измерений
+      href: slowly-changing-dimension-wizard-f1-help.md
+    - name: Приветствие мастера медленно меняющихся измерений
+      href: welcome-to-the-slowly-changing-dimension-wizard.md
+    - name: Выбрать таблицу измерения и ключи (мастер медленно изменяющихся измерений)
+      href: select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+    - name: Столбцы медленно меняющихся измерений (мастер медленно изменяющихся измерений)
+      href: slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+    - name: Параметры атрибутов неизменности и изменяемых атрибутов (мастер медленно изменяющихся измерений)
+      href: fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+    - name: Параметры атрибутов с предысторией (мастер медленно изменяющихся измерений)
+      href: historical-attribute-options-slowly-changing-dimension-wizard.md
+    - name: Выводимые элементы измерения (мастер медленно изменяющихся измерений)
+      href: inferred-dimension-members-slowly-changing-dimension-wizard.md
+    - name: Завершение работы мастера медленно меняющихся измерений
+      href: finish-the-slowly-changing-dimension-wizard.md
+- name: преобразование «Сортировка»
+  href: sort-transformation.md
+  items:
+    - name: редактор преобразования «Сортировка»
+      href: ../../sort-transformation-editor.md
+- name: преобразование «Извлечение терминов»
+  href: term-extraction-transformation.md
+  items:
+    - name: Редактор преобразования «Извлечение терминов» (вкладка «Извлечение терминов»)
+      href: ../../term-extraction-transformation-editor-term-extraction-tab.md
+    - name: Редактор преобразования «Извлечение терминов» (вкладка «Исключения»)
+      href: ../../term-extraction-transformation-editor-exclusion-tab.md
+    - name: Редактор преобразования «Извлечение терминов» (вкладка «Дополнительно»)
+      href: ../../term-extraction-transformation-editor-advanced-tab.md
+- name: преобразование «Уточняющий запрос термина»
+  href: term-lookup-transformation.md
+  items:
+    - name: Редактор преобразования «Уточняющий запрос терминов» (вкладка «Ссылочная таблица»)
+      href: ../../term-lookup-transformation-editor-reference-table-tab.md
+    - name: Редактор преобразований «Уточняющий запрос термина» (вкладка «Уточняющий запрос термина»)
+      href: ../../term-lookup-transformation-editor-term-lookup-tab.md
+    - name: Редактор преобразования «Уточняющий запрос термина» (вкладка «Дополнительно»)
+      href: ../../term-lookup-transformation-editor-advanced-tab.md
+- name: преобразование «Объединить все»
+  href: union-all-transformation.md
+  items:
+    - name: редактор преобразования «Объединить все»
+      href: ../../union-all-transformation-editor.md
+    - name: Выполнение слияния данных с помощью преобразования «Объединить все»
+      href: merge-data-by-using-the-union-all-transformation.md
+- name: Преобразование отмены свертывания
+  href: unpivot-transformation.md
+  items:
+    - name: Редактор преобразования «Отмена свертывания»
+      href: ../../unpivot-transformation-editor.md
+- name: Преобразование данных с помощью преобразований
+  href: transform-data-with-transformations.md
+- name: Transformation Custom Properties
+  href: transformation-custom-properties.md

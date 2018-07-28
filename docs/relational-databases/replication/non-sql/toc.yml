@@ -1,0 +1,39 @@
+- name: разнородная репликация базы данных
+  href: heterogeneous-database-replication.md
+- name: 'издатели, отличные от издателей SQL Server'
+  href: non-sql-server-publishers.md
+  items:
+    - name: Oracle Publishing Overview
+      href: oracle-publishing-overview.md
+    - name: Глоссарий терминов публикации Oracle
+      href: glossary-of-terms-for-oracle-publishing.md
+    - name: Настройка издателя Oracle
+      href: configure-an-oracle-publisher.md
+      items:
+        - name: Скрипт для предоставления разрешений Oracle
+          href: script-to-grant-oracle-permissions.md
+        - name: Управление табличными пространствами Oracle
+          href: manage-oracle-tablespaces.md
+    - name: Рассмотрение структуры и ограничений издателей Oracle
+      href: design-considerations-and-limitations-for-oracle-publishers.md
+    - name: Вопросы управления издателями Oracle
+      href: administrative-considerations-for-oracle-publishers.md
+    - name: Настройка производительности для издателей Oracle
+      href: performance-tuning-for-oracle-publishers.md
+    - name: Сопоставление типов данных для издателей Oracle
+      href: data-type-mapping-for-oracle-publishers.md
+    - name: Резервное копирование и восстановление для издателей Oracle
+      href: backup-and-restore-for-oracle-publishers.md
+    - name: Objects Created on the Oracle Publisher
+      href: objects-created-on-the-oracle-publisher.md
+    - name: Диагностика издателей Oracle
+      href: troubleshooting-oracle-publishers.md
+- name: 'Подписчики, отличные от подписчиков SQL Server'
+  href: non-sql-server-subscribers.md
+  items:
+    - name: Подписчики Oracle
+      href: oracle-subscribers.md
+    - name: IBM DB2 Subscribers
+      href: ibm-db2-subscribers.md
+    - name: 'Другие подписчики, отличные от SQL Server'
+      href: other-non-sql-server-subscribers.md

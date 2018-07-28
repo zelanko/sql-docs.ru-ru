@@ -1,0 +1,12 @@
+- name: Обработка ошибок и сообщений
+  href: handling-errors-and-messages.md
+- name: Диагностические записи и поля
+  href: diagnostic-records-and-fields.md
+- name: сообщения об ошибках
+  href: error-messages.md
+- name: Собственные коды ошибок
+  href: native-error-numbers.md
+- name: 'Обработка инструкций, выдающих сообщения'
+  href: processing-statements-that-generate-messages.md
+- name: SQLSTATE (коды ошибок ODBC)
+  href: sqlstate-odbc-error-codes.md
