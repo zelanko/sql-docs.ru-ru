@@ -1,0 +1,20 @@
+- name: Образцы запросов XPath (SQLXML 4.0)
+  href: sample-xpath-queries-sqlxml-4-0.md
+- name: Образец схемы XSD с заметками для примеров XPath (SQLXML 4.0)
+  href: sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md
+- name: Задание арифметических операторов в запросах XPath (SQLXML 4.0)
+  href: specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md
+- name: Указание осей в запросах XPath (SQLXML 4.0)
+  href: specifying-axes-in-xpath-queries-sqlxml-4-0.md
+- name: Указание логических функций в запросах XPath (SQLXML 4.0)
+  href: specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md
+- name: Указание логических операторов в запросах XPath (SQLXML 4.0)
+  href: specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md
+- name: Определение предикатов с логическим значением в запросах XPath (SQLXML 4.0)
+  href: specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md
+- name: Определение явных функций преобразования в запросах XPath (SQLXML 4.0)
+  href: specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md
+- name: Применение реляционных операторов в запросах XPath (SQLXML 4.0)
+  href: specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md
+- name: Указание переменных XPath в запросах XPath (SQLXML 4.0)
+  href: specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md

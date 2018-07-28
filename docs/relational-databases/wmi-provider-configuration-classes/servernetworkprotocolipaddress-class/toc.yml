@@ -1,0 +1,16 @@
+- name: Свойство Enabled (класс ServerNetworkProtocolIPAddress)
+  href: enabled-property-servernetworkprotocolipaddress-class.md
+- name: Свойство InstanceName (класс ServerNetworkProtocolIPAddress)
+  href: instancename-property-servernetworkprotocolipaddress-class.md
+- name: Свойство IPAddressName (класс ServerNetworkProtocolIPAddress)
+  href: ipaddressname-property-servernetworkprotocolipaddress-class.md
+- name: Свойство Properties (класс ServerNetworkProtocolIPAddress)
+  href: properties-property-servernetworkprotocolipaddress-class.md
+- name: Свойство ProtocolName (класс ServerNetworkProtocolIPAddress)
+  href: protocolname-property-servernetworkprotocolipaddress-class.md
+- name: Класс ServerNetworkProtocolIPAddress
+  href: servernetworkprotocolipaddress-class.md
+- name: Метод SetDisable (класс ServerNetworkProtocolIPAddress)
+  href: setdisable-method-servernetworkprotocolipaddress-class.md
+- name: Метод SetEnable (класс ServerNetworkProtocolIPAddress)
+  href: setenable-method-servernetworkprotocolipaddress-class.md

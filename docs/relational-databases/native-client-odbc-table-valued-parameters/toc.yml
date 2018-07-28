@@ -1,0 +1,30 @@
+- name: Возвращающие табличное значение параметры (ODBC)
+  href: table-valued-parameters-odbc.md
+- name: Дополнительные метаданные возвращающего табличное значение параметра
+  href: additional-table-valued-parameter-metadata.md
+- name: Привязка и передача данных возвращающих табличное значение параметров и значений столбцов
+  href: binding-and-data-transfer-of-table-valued-parameters-and-column-values.md
+- name: Совместимость версий
+  href: cross-version-compatibility.md
+- name: 'Поля дескриптора для столбцов, содержащих параметры, возвращающие табличные значения'
+  href: descriptor-fields-for-table-valued-parameter-constituent-columns.md
+- name: 'Тип ODBC SQL для параметров, возвращающих табличное значение'
+  href: odbc-sql-type-for-table-valued-parameters.md
+- name: Сводка по API-интерфейсам возвращающих табличное значение параметров ODBC
+  href: odbc-table-valued-parameter-api-summary.md
+- name: Отправка данных в виде возвращающего табличное значение параметра с использованием данных времени выполнения (ODBC)
+  href: sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc.md
+- name: Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC)
+  href: sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md
+- name: 'Атрибуты инструкции, влияющие на возвращающие табличное значение параметры'
+  href: statement-attributes-that-affect-table-valued-parameters.md
+- name: Ошибки и предупреждения преобразования данных возвращающих табличное значение параметров и другие
+  href: table-valued-parameter-data-conversion-and-other-errors-and-warnings.md
+- name: Поля дескрипторов возвращающего табличное значение параметра
+  href: table-valued-parameter-descriptor-fields.md
+- name: Поля диагностических записей для возвращающих табличные значения параметров
+  href: table-valued-parameter-diagnostic-record-fields.md
+- name: Метаданные возвращающего табличное значение параметра для подготовленных инструкций
+  href: table-valued-parameter-metadata-for-prepared-statements.md
+- name: Сценарии использования возвращающих табличное значение параметров ODBC
+  href: uses-of-odbc-table-valued-parameters.md

@@ -1,0 +1,23 @@
+- name: Распределенное воспроизведение SQL Server
+  href: sql-server-distributed-replay.md
+- name: Настройка распределенного воспроизведения
+  href: configure-distributed-replay.md
+- name: Подготовка входных данных трассировки
+  href: prepare-the-input-trace-data.md
+- name: Воспроизведение данные трассировки
+  href: replay-trace-data.md
+- name: просмотреть результаты воспроизведения
+  href: review-the-replay-results.md
+- name: Безопасность распределенного воспроизведения
+  href: distributed-replay-security.md
+- name: Параметры командной строки средства администрирования (программа распределенного воспроизведения)
+  href: administration-tool-command-line-options-distributed-replay-utility.md
+  items:
+    - name: Параметр предварительной обработки (средство администрирования распределенного воспроизведения)
+      href: preprocess-option-distributed-replay-administration-tool.md
+    - name: Параметр воспроизведения (средство администрирования распределенного воспроизведения)
+      href: replay-option-distributed-replay-administration-tool.md
+    - name: Параметр состояния (средство администрирования распределенного воспроизведения)
+      href: status-option-distributed-replay-administration-tool.md
+    - name: Параметр отмены (средство администрирования распределенного воспроизведения)
+      href: cancel-option-distributed-replay-administration-tool.md

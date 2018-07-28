@@ -1,0 +1,92 @@
+- name: Программирование расширенных хранимых процедур
+  href: database-engine-extended-stored-procedures-programming.md
+  items:
+    - name: Программирование расширенных хранимых процедур ядра СУБД
+      href: ../database-engine-extended-stored-procedure-programming.md
+    - name: Принципы работы расширенных хранимых процедур
+      href: how-extended-stored-procedures-work.md
+    - name: Создание расширенных хранимых процедур
+      href: creating-extended-stored-procedures.md
+    - name: Отправка результирующих наборов на сервер (API-интерфейс расширенных хранимых процедур)
+      href: sending-result-sets-to-the-server-extended-stored-procedure-api.md
+    - name: Добавление на SQL Server расширенной хранимой процедуры
+      href: adding-an-extended-stored-procedure-to-sql-server.md
+    - name: Характеристики выполнения расширенных хранимых процедур
+      href: execution-characteristics-of-extended-stored-procedures.md
+    - name: Удаление расширенной хранимой процедуры из SQL Server
+      href: removing-an-extended-stored-procedure-from-sql-server.md
+    - name: 'Запрос расширенных хранимых процедур, установленных в SQL Server'
+      href: querying-extended-stored-procedures-installed-in-sql-server.md
+    - name: Выгрузка DLL-библиотеки расширенной хранимой процедуры
+      href: unloading-an-extended-stored-procedure-dll.md
+    - name: Данные в Юникоде и кодовые страницы сервера
+      href: unicode-data-and-server-code-pages.md
+- name: Справочник по программированию расширенных хранимых процедур
+  href: ../extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
+  items:
+    - name: srv_alloc (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-alloc-extended-stored-procedure-api.md
+    - name: srv_convert (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md
+    - name: srv_describe (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md
+    - name: srv_getbindtoken (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md
+    - name: srv_got_attention (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md
+    - name: srv_message_handler (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-message-handler-extended-stored-procedure-api.md
+    - name: srv_paramdata (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-paramdata-extended-stored-procedure-api.md
+    - name: srv_paraminfo (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md
+    - name: srv_paramlen (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-paramlen-extended-stored-procedure-api.md
+    - name: srv_parammaxlen (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-parammaxlen-extended-stored-procedure-api.md
+    - name: srv_paramname (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-paramname-extended-stored-procedure-api.md
+    - name: srv_paramnumber (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-paramnumber-extended-stored-procedure-api.md
+    - name: srv_paramset (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-paramset-extended-stored-procedure-api.md
+    - name: srv_paramsetoutput (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md
+    - name: srv_paramstatus (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-paramstatus-extended-stored-procedure-api.md
+    - name: srv_paramtype (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-paramtype-extended-stored-procedure-api.md
+    - name: srv_pfield (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-pfield-extended-stored-procedure-api.md
+    - name: srv_pfieldex (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-pfieldex-extended-stored-procedure-api.md
+    - name: srv_rpcdb (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-rpcdb-extended-stored-procedure-api.md
+    - name: srv_ rpcname (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-rpcname-extended-stored-procedure-api.md
+    - name: srv_rpcnumber (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-rpcnumber-extended-stored-procedure-api.md
+    - name: srv_rpcoptions (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-rpcoptions-extended-stored-procedure-api.md
+    - name: srv_rpcowner (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-rpcowner-extended-stored-procedure-api.md
+    - name: srv_rpcparams (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md
+    - name: srv_senddone (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-senddone-extended-stored-procedure-api.md
+    - name: srv_sendmsg (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md
+    - name: srv_sendrow (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md
+    - name: srv_setcoldata (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md
+    - name: srv_setcollen (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-setcollen-extended-stored-procedure-api.md
+    - name: srv_setutype (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md
+    - name: srv_willconvert (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md
+    - name: srv_wsendmsg (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md
+    - name: Типы данных (API-интерфейс расширенных хранимых процедур)
+      href: ../extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md

@@ -1,0 +1,18 @@
+- name: Расширение пакета с помощью задачи «Скрипт»
+  href: extending-the-package-with-the-script-task.md
+- name: Настройка задачи «Скрипт» в редакторе задачи «Скрипт»
+  href: configuring-the-script-task-in-the-script-task-editor.md
+- name: Написание кода и отладка задачи «Скрипт»
+  href: coding-and-debugging-the-script-task.md
+- name: Использование переменных в задаче «Скрипт»
+  href: using-variables-in-the-script-task.md
+- name: Соединение с источниками данных в задаче «Скрипт»
+  href: connecting-to-data-sources-in-the-script-task.md
+- name: Вызов событий в задаче «Скрипт»
+  href: raising-events-in-the-script-task.md
+- name: Ведение журнала в задаче «Скрипт»
+  href: logging-in-the-script-task.md
+- name: Возврат результатов из задачи «Скрипт»
+  href: returning-results-from-the-script-task.md
+- name: Примеры задачи «Скрипт»
+  href: ../../extending-packages-scripting-task-examples/script-task-examples.md

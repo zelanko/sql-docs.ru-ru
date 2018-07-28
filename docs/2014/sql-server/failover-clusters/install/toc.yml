@@ -1,0 +1,14 @@
+- name: Установка отказоустойчивого кластера SQL Server
+  href: sql-server-failover-cluster-installation.md
+- name: Подготовка к установке отказоустойчивого кластера
+  href: before-installing-failover-clustering.md
+- name: Создание нового отказоустойчивого кластера SQL Server (программа установки)
+  href: create-a-new-sql-server-failover-cluster-setup.md
+- name: Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)
+  href: add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+- name: Установка клиентских средств на отказоустойчивом кластере SQL Server
+  href: install-client-tools-on-a-sql-server-failover-cluster.md
+- name: Удаление экземпляра отказоустойчивого кластера SQL Server (программа установки)
+  href: remove-a-sql-server-failover-cluster-instance-setup.md
+- name: переименовать экземпляр отказоустойчивого кластера SQL Server
+  href: rename-a-sql-server-failover-cluster-instance.md

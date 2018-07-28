@@ -1,0 +1,8 @@
+- name: Обзор
+  href: security-overview-integration-services.md
+- name: Контроль доступа для конфиденциальных данных в пакетах
+  href: access-control-for-sensitive-data-in-packages.md
+- name: Определение источника пакетов с помощью цифровых подписей
+  href: identify-the-source-of-packages-with-digital-signatures.md
+- name: Роли служб Integration Services (службы SSIS)
+  href: integration-services-roles-ssis-service.md

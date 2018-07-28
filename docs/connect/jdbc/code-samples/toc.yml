@@ -1,0 +1,30 @@
+- name: Образец приложений драйвера JDBC
+  href: sample-jdbc-driver-applications.md
+- name: Соединение и извлечение данных
+  href: connecting-and-retrieving-data.md
+- name: Изменение образца данных результирующего набора
+  href: modifying-result-set-data-sample.md
+- name: Образец источника данных
+  href: data-source-sample.md
+- name: Работа с типами данных (JDBC)
+  href: working-with-data-types-jdbc.md
+- name: Образец URL-адреса соединения
+  href: connection-url-sample.md
+- name: Образец типа данных SQLXML
+  href: sqlxml-data-type-sample.md
+- name: Образец обновления данных большого объема
+  href: updating-large-data-sample.md
+- name: Образец считывания данных большого объема
+  href: reading-large-data-sample.md
+- name: Работа с большими объемами данных
+  href: working-with-large-data.md
+- name: Образец базовых типов данных
+  href: basic-data-types-sample.md
+- name: Образец считывания данных большого объема с помощью хранимых процедур
+  href: reading-large-data-with-stored-procedures-sample.md
+- name: Работа с результирующими наборами
+  href: working-with-result-sets.md
+- name: Получение образца данных результирующего набора
+  href: retrieving-result-set-data-sample.md
+- name: Образец кэширования данных результирующего набора
+  href: caching-result-set-data-sample.md

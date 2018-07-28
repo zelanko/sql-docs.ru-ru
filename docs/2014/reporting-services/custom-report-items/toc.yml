@@ -1,0 +1,15 @@
+- name: Пользовательские элементы отчета
+  href: custom-report-items.md
+  items:
+    - name: Архитектура пользовательских элементов отчета
+      href: custom-report-item-architecture.md
+    - name: Требования к реализации пользовательских элементов отчета
+      href: custom-report-item-implementation-requirements.md
+    - name: Создание компонента времени выполнения пользовательского элемента отчета
+      href: creating-a-custom-report-item-run-time-component.md
+    - name: Создание компонента времени разработки пользовательского элемента отчета
+      href: creating-a-custom-report-item-design-time-component.md
+    - name: Развертывание пользовательского элемента отчета
+      href: how-to-deploy-a-custom-report-item.md
+    - name: Библиотеки классов пользовательского элемента отчета
+      href: custom-report-item-class-libraries.md

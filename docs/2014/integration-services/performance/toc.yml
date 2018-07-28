@@ -1,0 +1,32 @@
+- name: Наблюдение за выполнением пакетов и других операций
+  href: monitor-running-packages-and-other-operations.md
+- name: Диалоговое окно «Активные операции»
+  href: ../active-operations-dialog-box.md
+- name: Отчеты для сервера служб Integration Services
+  href: ../reports-for-the-integration-services-server.md
+- name: Просмотр отчетов для сервера служб Integration Services
+  href: ../view-reports-for-the-integration-services-server.md
+- name: 'Просмотр и остановка пакетов, выполняющихся на сервере служб Integration Services'
+  href: ../viewing-and-stopping-packages-running-on-the-integration-services-server.md
+- name: Ведение журналов в службах Integration Services (SSIS)
+  href: integration-services-ssis-logging.md
+  items:
+    - name: Пользовательские сообщения для ведения журнала
+      href: ../custom-messages-for-logging.md
+    - name: Диалоговое окно «Конфигурация журналов служб SSIS»
+      href: ../configure-ssis-logs-dialog-box.md
+    - name: Настройка ведения журналов с помощью сохраненного файла конфигурации
+      href: ../configure-logging-by-using-a-saved-configuration-file.md
+    - name: Включение средств ведения журналов в SQL Server Data Tools
+      href: ../enable-package-logging-in-sql-server-data-tools.md
+    - name: Включение ведения журналов при выполнении пакета на сервере служб SSIS
+      href: ../enable-logging-for-package-execution-on-the-ssis-server.md
+- name: Счетчики производительности
+  href: performance-counters.md
+  items:
+    - name: Добавление журнала для счетчиков производительности потока данных
+      href: ../add-a-log-for-data-flow-performance-counters.md
+- name: Анализ потока данных
+  href: ../analysis-of-data-flow.md
+- name: Вкладки «Поток данных»
+  href: ../data-flow-taps.md

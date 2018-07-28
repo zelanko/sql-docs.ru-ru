@@ -1,0 +1,39 @@
+- name: Службы Integration Services (службы SSIS)
+  href: integration-services-service-ssis-service.md
+  items:
+    - name: Управление службой Integration Services
+      href: ../manage-the-integration-services-service.md
+    - name: задать свойства службы Integration Services
+      href: ../set-the-properties-of-the-integration-services-service.md
+    - name: Настройка служб Integration Services (службы SSIS)
+      href: ../configuring-the-integration-services-service-ssis-service.md
+    - name: Настройка параметров брандмауэра Windows для доступа к службам SSIS
+      href: ../configure-a-windows-firewall-for-access-to-the-ssis-service.md
+    - name: Подключение к удаленному серверу служб Integration Services (службы SSIS Service)
+      href: ../connect-to-a-remote-integration-services-server-ssis-service.md
+    - name: Подключение к службам Integration Services
+      href: ../connect-to-integration-services.md
+    - name: Предоставление разрешений службам Integration Services
+      href: ../grant-permissions-to-integration-services-service.md
+    - name: 'Cобытия, зарегистрированные службами Integration Services'
+      href: events-logged-by-the-integration-services-service.md
+      items:
+        - name: просмотреть события службы Integration Services
+          href: ../view-events-for-the-integration-services-service.md
+- name: Управление пакетами (службы SSIS)
+  href: package-management-ssis-service.md
+  items:
+    - name: Импорт и экспорт пакетов (службы SSIS)
+      href: ../import-and-export-packages-ssis-service.md
+    - name: Диалоговое окно «Экспорт пакета» справочника по пользовательскому интерфейсу
+      href: ../export-package-dialog-box-ui-reference.md
+    - name: Диалоговое окно «Импорт пакета» справочника по пользовательскому интерфейсу
+      href: ../import-package-dialog-box-ui-reference.md
+    - name: Резервное копирование и восстановление пакетов (службы SSIS)
+      href: ../package-backup-and-restore-ssis-service.md
+    - name: Просмотр пакетов служб Integration Services в среде SQL Server Management Studio (службы SSIS)
+      href: ../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md
+    - name: Службы Integration Services (SSIS) в кластере
+      href: integration-services-ssis-in-a-cluster.md
+    - name: Настройка служб Integration Services на работу в качестве ресурса кластера
+      href: ../configure-the-integration-services-service-as-a-cluster-resource.md

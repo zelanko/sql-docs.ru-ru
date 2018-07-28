@@ -1,0 +1,73 @@
+- name: Безопасность и защита
+  href: reporting-services-security-and-protection.md
+- name: Расширенная защита для проверки подлинности служб Reporting Services
+  href: extended-protection-for-authentication-with-reporting-services.md
+- name: Проверка подлинности с использованием сервера отчетов
+  href: authentication-with-the-report-server.md
+  items:
+    - name: Настройка проверки подлинности Windows на сервере отчетов
+      href: configure-windows-authentication-on-the-report-server.md
+    - name: Настройка проверки подлинности Windows на сервере отчетов
+      href: configure-basic-authentication-on-the-report-server.md
+    - name: Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов
+      href: configure-custom-or-forms-authentication-on-the-report-server.md
+    - name: Настройка передачи куки-файлов для нестандартной проверки подлинности пользователя в диспетчере отчетов
+      href: configure-the-web-portal-to-pass-custom-authentication-cookies.md
+- name: Роли и разрешения
+  href: roles-and-permissions-reporting-services.md
+  items:
+    - name: Предоставление пользователям доступа к серверу отчетов
+      href: grant-user-access-to-a-report-server.md
+    - name: Предоставление разрешений на сервер отчетов в собственном режиме
+      href: granting-permissions-on-a-native-mode-report-server.md
+      items:
+        - name: Защищаемые элементы
+          href: securable-items.md
+        - name: Задачи и разрешения
+          href: tasks-and-permissions.md
+          items:
+            - name: Задачи уровня элемента
+              href: tasks-and-permissions-item-level-tasks.md
+            - name: Задачи системного уровня
+              href: tasks-and-permissions-system-level-tasks.md
+        - name: Создание назначений ролей и управление ими
+          href: create-and-manage-role-assignments.md
+        - name: Обеспечение защиты папок
+          href: secure-folders.md
+        - name: Защищенные отчеты и ресурсы
+          href: secure-reports-and-resources.md
+        - name: Защита совместно используемых элементов источника данных
+          href: secure-shared-data-source-items.md
+        - name: Защита элементов общего набора данных
+          href: secure-shared-dataset-items.md
+        - name: Обеспечение безопасности «Моих отчетов»
+          href: secure-my-reports.md
+        - name: Создание роли RSExecRole
+          href: create-the-rsexecrole.md
+        - name: Определение ролей
+          href: role-definitions.md
+          items:
+            - name: 'Создание, удаление и изменение ролей'
+              href: role-definitions-create-delete-or-modify.md
+            - name: Стандартные роли
+              href: role-definitions-predefined-roles.md
+        - name: Назначения ролей
+          href: role-assignments.md
+          items:
+            - name: изменить или удалить назначение ролей
+              href: role-assignments-modify-or-delete.md
+    - name: Предоставление разрешений для элементов сервера отчетов на сайте SharePoint
+      href: granting-permissions-on-report-server-items-on-a-sharepoint-site.md
+      items:
+        - name: Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов
+          href: use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
+        - name: Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint
+          href: ../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
+        - name: Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов
+          href: sharepoint-site-and-list-permission-reference-for-report-server-items.md
+        - name: Задание разрешений для работы сервера отчетов в веб-приложении SharePoint
+          href: set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
+        - name: задать разрешения для элементов сервера отчетов на сайте SharePoint
+          href: set-permissions-for-report-server-items-on-a-sharepoint-site.md
+- name: 'Настройка соединений SSL для сервера отчетов, работающего в собственном режиме'
+  href: configure-ssl-connections-on-a-native-mode-report-server.md

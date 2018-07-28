@@ -1,0 +1,10 @@
+- name: Набор строк DBSCHEMA_CATALOGS
+  href: dbschema-catalogs-rowset.md
+- name: Набор строк DBSCHEMA_COLUMNS
+  href: dbschema-columns-rowset.md
+- name: Набор строк DBSCHEMA_PROVIDER_TYPES
+  href: dbschema-provider-types-rowset.md
+- name: Набор строк DBSCHEMA_TABLES
+  href: dbschema-tables-rowset.md
+- name: Наборы строк схемы OLE DB
+  href: ole-db-schema-rowsets.md

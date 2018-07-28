@@ -1,0 +1,10 @@
+- name: Инструкции по выполнению запросов (ODBC)
+  href: executing-queries-how-to-topics-odbc.md
+- name: Непосредственное выполнение инструкции (ODBC)
+  href: execute-a-statement-directly-odbc.md
+- name: Подготовка и выполнение инструкцию (ODBC)
+  href: prepare-and-execute-a-statement-odbc.md
+- name: Указание параметров курсора (ODBC)
+  href: set-cursor-options-odbc.md
+- name: Использование инструкции (ODBC)
+  href: use-a-statement-odbc.md

@@ -1,0 +1,143 @@
+- name: Объекты
+  href: objects-assl.md
+  items:
+    - name: Элемент Account
+      href: account-element-assl.md
+    - name: Элемент Action
+      href: action-element-assl.md
+    - name: Элемент Aggregation
+      href: aggregation-element-assl.md
+    - name: Элемент AggregationDesign
+      href: aggregationdesign-element-assl.md
+    - name: Элемент AggregationInstance
+      href: aggregationinstance-element-assl.md
+    - name: Элемент AlgorithmParameter
+      href: algorithmparameter-element-assl.md
+    - name: Элемент AllMemberTranslation
+      href: allmembertranslation-element-assl.md
+    - name: Элемент Annotation
+      href: annotation-element-assl.md
+    - name: Элемент Assembly
+      href: assembly-element-assl.md
+    - name: Элемент Attribute
+      href: attribute-element-assl.md
+    - name: Элемент AttributeAllMemberTranslation
+      href: attributeallmembertranslation-element-assl.md
+    - name: Элемент AttributePermission
+      href: attributepermission-element-assl.md
+    - name: Элемент AttributeRelationship
+      href: attributerelationship-element-assl.md
+    - name: Элемент Block
+      href: block-element-assl.md
+    - name: Элемент Calculation
+      href: calculation-element-assl.md
+    - name: Элемент CalculationProperty
+      href: calculationproperty-element-assl.md
+    - name: Элемент CaptionColumn
+      href: captioncolumn-element-assl.md
+    - name: Элемент CellPermission
+      href: cellpermission-element-assl.md
+    - name: Элемент Column
+      href: column-element-assl.md
+    - name: Элемент Command
+      href: command-element-assl.md
+    - name: Элемент Cube
+      href: cube-element-assl.md
+    - name: Элемент CubePermission
+      href: cubepermission-element-assl.md
+    - name: Элемент CustomRollupColumn
+      href: customrollupcolumn-element-assl.md
+    - name: Элемент CustomRollupPropertiesColumn
+      href: customrolluppropertiescolumn-element-assl.md
+    - name: Элемент Data
+      href: data-element-assl.md
+    - name: Элемент Database
+      href: database-element-assl.md
+    - name: Элемент DatabasePermission
+      href: databasepermission-element-assl.md
+    - name: Элемент DataSource
+      href: datasource-element-assl.md
+    - name: Элемент DataSourcePermission
+      href: datasourcepermission-element-assl.md
+    - name: Элемент DataSourceView
+      href: datasourceview-element-assl.md
+    - name: Элемент Dimension
+      href: dimension-element-assl.md
+    - name: Элемент DimensionPermission
+      href: dimensionpermission-element-assl.md
+    - name: Элемент ErrorConfiguration
+      href: errorconfiguration-element-assl.md
+    - name: Элемент Event
+      href: event-element-assl.md
+    - name: Элемент File
+      href: file-element-assl.md
+    - name: Элемент ForeignKeyColumn
+      href: foreignkeycolumn-element-assl.md
+    - name: Элемент Group
+      href: group-element-assl.md
+    - name: Элемент Hierarchy
+      href: hierarchy-element-assl.md
+    - name: Элемент IncrementalProcessingNotification
+      href: incrementalprocessingnotification-element-assl.md
+    - name: Элемент KeyColumn
+      href: keycolumn-element-assl.md
+    - name: Элемент Kpi
+      href: kpi-element-assl.md
+    - name: Элемент Level
+      href: level-element-assl.md
+    - name: Элемент MdxScript
+      href: mdxscript-element-assl.md
+    - name: Элемент Measure
+      href: measure-element-assl.md
+    - name: Элемент MeasureGroups
+      href: measuregroup-element-assl.md
+    - name: Элемент Member
+      href: member-element-assl.md
+    - name: Элемент MiningModel
+      href: miningmodel-element-assl.md
+    - name: Элемент MiningModelPermission
+      href: miningmodelpermission-element-assl.md
+    - name: Элемент MiningStructures
+      href: miningstructure-element-assl.md
+    - name: Элемент MiningStructurePermission
+      href: miningstructurepermission-element-assl.md
+    - name: Элемент ModelingFlag
+      href: modelingflag-element-assl.md
+    - name: Элемент NameColumn
+      href: namecolumn-element-assl.md
+    - name: Элемент NamingTemplateTranslation
+      href: namingtemplatetranslation-element-assl.md
+    - name: Элемент Partition
+      href: partition-element-assl.md
+    - name: Элемент Perspective
+      href: perspective-element-assl.md
+    - name: Элемент ProactiveCaching
+      href: proactivecaching-element-assl.md
+    - name: Элемент QueryNotification
+      href: querynotification-element-assl.md
+    - name: Элемент ReportFormatParameter
+      href: reportformatparameter-element-asl.md
+    - name: Элемент ReportParameter
+      href: reportparameter-element-assl.md
+    - name: Элемент Role
+      href: role-element-assl.md
+    - name: Элемент Server
+      href: server-element-assl.md
+    - name: Элемент ServerProperty
+      href: serverproperty-element-assl.md
+    - name: Элемент SkippedLevelsColumn
+      href: skippedlevelscolumn-element-assl.md
+    - name: Элемент SourceMeasureGroup
+      href: sourcemeasuregroup-element-assl.md
+    - name: Элемент TableNotification
+      href: tablenotification-element-assl.md
+    - name: Элемент Trace
+      href: trace-element-assl.md
+    - name: Элемент Translation
+      href: translation-element-assl.md
+    - name: Элемент UnaryOperatorColumn
+      href: unaryoperatorcolumn-element-assl.md
+    - name: Элемент UnknownMemberTranslation
+      href: unknownmembertranslation-element-assl.md
+    - name: Элемент ValueColumn
+      href: valuecolumn-element-assl.md

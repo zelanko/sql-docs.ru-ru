@@ -1,0 +1,35 @@
+- name: безопасность
+  href: security-overview-integration-services.md
+- name: Предотвращение угроз и уязвимости для безопасности
+  href: ../threat-and-vulnerability-mitigation-integration-services.md
+- name: Роли служб Integration Services (службы SSIS)
+  href: integration-services-roles-ssis-service.md
+  items:
+    - name: Диалоговое окно «Роли пакета» справочника по пользовательскому интерфейсу
+      href: ../package-roles-dialog-box-ui-reference.md
+- name: Доступ к службам Integration Services
+  href: ../access-to-the-integration-services-service.md
+- name: 'Доступ к файлам, используемым пакетами'
+  href: ../access-to-files-used-by-packages.md
+- name: Контроль доступа для конфиденциальных данных в пакетах
+  href: access-control-for-sensitive-data-in-packages.md
+  items:
+    - name: Установка и изменение уровня защиты пакетов
+      href: ../set-or-change-the-protection-level-of-packages.md
+    - name: Диалоговое окно уровня защиты пакета и проекта
+      href: ../package-and-project-protection-level-dialog-box.md
+    - name: Пароль пакета и проекта
+      href: ../package-and-project-password.md
+- name: Определение источника пакетов с помощью цифровых подписей
+  href: identify-the-source-of-packages-with-digital-signatures.md
+  items:
+    - name: Реализация политики подписывания путем задания параметра реестра
+      href: ../implement-a-signing-policy-by-setting-a-registry-value.md
+    - name: Подписание пакета цифровым сертификатом
+      href: ../sign-a-package-by-using-a-digital-certificate.md
+    - name: Справочник по пользовательскому Интерфейсу цифровой подписи диалоговое
+      href: ../digital-signing-dialog-box-ui-reference.md
+- name: Создание пользовательской роли
+  href: ../create-a-user-defined-role.md
+- name: Назначение пакетам роли чтения и модуля записи
+  href: ../assign-a-reader-and-writer-role-to-a-package.md

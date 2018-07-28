@@ -1,0 +1,10 @@
+- name: Интеграция со средой CLR и транзакции
+  href: clr-integration-and-transactions.md
+- name: Доступ к текущей транзакции
+  href: accessing-the-current-transaction.md
+- name: Время существования транзакций
+  href: transaction-lifetimes.md
+- name: Повышение транзакции
+  href: transaction-promotion.md
+- name: Использование System.Transactions
+  href: using-system-transactions.md

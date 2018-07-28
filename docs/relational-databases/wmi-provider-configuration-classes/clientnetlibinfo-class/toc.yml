@@ -1,0 +1,14 @@
+- name: Класс ClientNetLibInfo
+  href: clientnetlibinfo-class.md
+- name: Свойство Date (класс ClientNetLibInfo)
+  href: date-property-clientnetlibinfo-class.md
+- name: Свойство FileName (класс ClientNetLibInfo)
+  href: filename-property-clientnetlibinfo-class.md
+- name: Свойство ProtocolDisplayName (класс ClientNetLibInfo)
+  href: protocoldisplayname-property-clientnetlibinfo-class.md
+- name: Свойство ProtocolName (класс ClientNetLibInfo)
+  href: protocolname-property-clientnetlibinfo-class.md
+- name: Свойство Size (класс ClientNetLibInfo)
+  href: size-property-clientnetlibinfo-class.md
+- name: Свойство Version (класс ClientNetLibInfo)
+  href: version-property-clientnetlibinfo-class.md

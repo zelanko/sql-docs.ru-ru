@@ -1,0 +1,64 @@
+- name: Обзор
+  href: integration-services-ssis-connections.md
+- name: обозревателе решений
+  href: data-sources.md
+- name: Диспетчер соединений ADO
+  href: ado-connection-manager.md
+- name: Диспетчер соединений ADO.NET
+  href: ado-net-connection-manager.md
+- name: диспетчер соединений служб Analysis Services
+  href: analysis-services-connection-manager.md
+  items:
+    - name: Добавление диалогового окна  «Диспетчер соединений со службами Analysis Services" в справочник по пользовательскому интерфейсу
+      href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: Диспетчер подключений Azure Data Lake Analytics
+  href: azure-data-lake-analytics-connection-manager.md
+- name: Диспетчер подключений Azure Data Lake Store
+  href: azure-data-lake-store-connection-manager.md
+- name: Диспетчер подключений Azure HDInsight
+  href: azure-hdinsight-connection-manager.md
+- name: Диспетчер подключений Azure Resource Manager
+  href: azure-resource-manager-connection-manager.md
+- name: Диспетчер подключений службы хранилища Azure
+  href: azure-storage-connection-manager.md
+- name: Диспетчер подключений подписки Azure
+  href: azure-subscription-connection-manager.md
+- name: Диспетчер соединений с Excel
+  href: excel-connection-manager.md
+- name: диспетчер соединения файлов
+  href: file-connection-manager.md
+  items:
+    - name: Добавление диспетчера соединения файлов диалогового окна пользовательского Интерфейса в справочник
+      href: add-file-connection-manager-dialog-box-ui-reference.md
+    - name: Предложение типов столбцов диалогового окна справочника по пользовательскому интерфейсу
+      href: suggest-column-types-dialog-box-ui-reference.md
+- name: Диспетчер соединений с неструктурированными файлами
+  href: flat-file-connection-manager.md
+- name: диспетчер FTP-соединений
+  href: ftp-connection-manager.md
+- name: Диспетчер подключений Hadoop
+  href: hadoop-connection-manager.md
+- name: диспетчер HTTP-соединений
+  href: http-connection-manager.md
+- name: диспетчер соединений MSMQ
+  href: msmq-connection-manager.md
+- name: диспетчер соединений с несколькими файлами
+  href: multiple-files-connection-manager.md
+- name: диспетчер соединения с несколькими неструктурированными файлами
+  href: multiple-flat-files-connection-manager.md
+- name: Диспетчер соединений OData
+  href: odata-connection-manager.md
+- name: диспетчер соединений ODBC
+  href: odbc-connection-manager.md
+- name: диспетчер соединений OLE DB
+  href: ole-db-connection-manager.md
+- name: Диспетчер соединений SAP BW
+  href: sap-bw-connection-manager.md
+- name: Диспетчер соединений SMTP
+  href: smtp-connection-manager.md
+- name: 'SMO, диспетчер соединений'
+  href: smo-connection-manager.md
+- name: Диспетчер соединений SQL Server Compact Edition
+  href: sql-server-compact-edition-connection-manager.md
+- name: Диспетчер WMI-соединений
+  href: wmi-connection-manager.md

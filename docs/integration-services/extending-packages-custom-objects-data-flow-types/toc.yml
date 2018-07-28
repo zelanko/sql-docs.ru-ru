@@ -1,0 +1,12 @@
+- name: Разработка пользовательского компонента назначения
+  href: developing-a-custom-destination-component.md
+- name: Разработка пользовательского компонента источника
+  href: developing-a-custom-source-component.md
+- name: Разработка пользовательского компонента преобразования с асинхронными выходами
+  href: developing-a-custom-transformation-component-with-asynchronous-outputs.md
+- name: Разработка пользовательского компонента преобразования с синхронными выходами
+  href: developing-a-custom-transformation-component-with-synchronous-outputs.md
+- name: Разработка компонентов потоков данных с несколькими входами
+  href: developing-data-flow-components-with-multiple-inputs.md
+- name: Разработка компонентов потока данных определенных типов
+  href: developing-specific-types-of-data-flow-components.md

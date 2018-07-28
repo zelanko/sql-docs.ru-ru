@@ -1,0 +1,84 @@
+- name: Таблицы
+  href: tables.md
+  items:
+    - name: Создание таблиц (компонент Database Engine)
+      href: create-tables-database-engine.md
+    - name: Удаление таблиц (компонент Database Engine)
+      href: delete-tables-database-engine.md
+    - name: Дублирование таблиц
+      href: duplicate-tables.md
+    - name: Переименование таблиц (компонент Database Engine)
+      href: rename-tables-database-engine.md
+    - name: Просмотр определения таблицы
+      href: view-the-table-definition.md
+      items:
+        - name: Свойства таблицы
+          href: table-properties-ssms.md
+        - name: Свойства столбцов (страница «Общие»)
+          href: column-properties-general-page.md
+    - name: Просмотр зависимостей таблицы
+      href: view-the-dependencies-of-a-table.md
+    - name: Добавление столбцов в таблицу (компонент Database Engine)
+      href: add-columns-to-a-table-database-engine.md
+    - name: Удаление столбцов из таблицы
+      href: delete-columns-from-a-table.md
+    - name: Переименование столбцов (компонент Database Engine)
+      href: rename-columns-database-engine.md
+    - name: Копирование столбцов из одной таблицы в другую (компонент Database Engine)
+      href: copy-columns-from-one-table-to-another-database-engine.md
+    - name: Изменение столбцов (компонент Database Engine)
+      href: modify-columns-database-engine.md
+    - name: Изменение порядка столбцов в таблице
+      href: change-column-order-in-a-table.md
+    - name: Указание вычисляемых столбцов в таблице
+      href: specify-computed-columns-in-a-table.md
+    - name: Указание значений по умолчанию для столбца
+      href: specify-default-values-for-columns.md
+    - name: Использование разреженных столбцов
+      href: use-sparse-columns.md
+    - name: Использование наборов столбцов
+      href: use-column-sets.md
+    - name: 'Использование параметров, возвращающих табличные значения (компонент Database Engine)'
+      href: use-table-valued-parameters-database-engine.md
+- name: Ограничения первичных и внешних ключей
+  href: primary-and-foreign-key-constraints.md
+  items:
+    - name: Создание первичных ключей
+      href: create-primary-keys.md
+    - name: Изменение первичных ключей
+      href: modify-primary-keys.md
+    - name: Удаление первичных ключей
+      href: delete-primary-keys.md
+    - name: Создание связей по внешнему ключу
+      href: create-foreign-key-relationships.md
+    - name: Изменение связей по внешнему ключу
+      href: modify-foreign-key-relationships.md
+    - name: Удаление связей по внешнему ключу
+      href: delete-foreign-key-relationships.md
+    - name: Просмотр свойств внешнего ключа
+      href: view-foreign-key-properties.md
+    - name: Отключение ограничений внешнего ключа для репликации
+      href: disable-foreign-key-constraints-for-replication.md
+    - name: Отключение ограничений внешнего ключа для инструкций INSERT и UPDATE
+      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+- name: Ограничения уникальности и проверочные ограничения
+  href: unique-constraints-and-check-constraints.md
+  items:
+    - name: Создание ограничений уникальности
+      href: create-unique-constraints.md
+    - name: Изменение ограничения уникальности
+      href: modify-unique-constraints.md
+    - name: Удаление ограничений уникальности
+      href: delete-unique-constraints.md
+    - name: Создание ограничений CHECK
+      href: create-check-constraints.md
+    - name: Изменение проверочного ограничения
+      href: modify-check-constraints.md
+    - name: Удаление проверочного ограничения
+      href: delete-check-constraints.md
+    - name: Отключение проверочных ограничений для репликации
+      href: disable-check-constraints-for-replication.md
+    - name: Отключение проверочных ограничений в инструкциях INSERT и UPDATE
+      href: disable-check-constraints-with-insert-and-update-statements.md
+- name: Свойства столбца таблицы (среда SQL Server Management Studio)
+  href: table-column-properties-sql-server-management-studio.md

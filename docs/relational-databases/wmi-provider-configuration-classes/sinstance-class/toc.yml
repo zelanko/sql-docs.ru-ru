@@ -1,0 +1,20 @@
+- name: Класс SInstance
+  href: sinstance-class.md
+- name: Свойства
+  items:
+    - name: Свойство GeneralFlags (класс SInstance)
+      href: generalflags-property-sinstance-class.md
+    - name: Свойство InstanceName (класс SInstance)
+      href: instancename-property-sinstance-class.md
+    - name: Свойство NumberOfFlags (класс SInstance)
+      href: numberofflags-property-sinstance-class.md
+- name: Методы
+  items:
+    - name: Метод GetCurrentCertificate (класс SInstance)
+      href: getcurrentcertificate-method-sinstance-class.md
+    - name: Метод RemoveCertificate (класс SInstance)
+      href: removecertificate-method-sinstance-class.md
+    - name: Метод SetCurrentCertificate (класс SInstance)
+      href: setcurrentcertificate-method-sinstance-class.md
+    - name: Метод SetDefaults (класс SInstance)
+      href: setdefaults-method-sinstance-class.md

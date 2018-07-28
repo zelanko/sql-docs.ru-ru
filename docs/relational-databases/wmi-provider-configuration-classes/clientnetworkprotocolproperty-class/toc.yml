@@ -1,0 +1,26 @@
+- name: Класс ClientNetworkProtocolProperty
+  href: clientnetworkprotocolproperty-class.md
+- name: Свойство PropertyIdx (класс ClientNetworkProtocolProperty)
+  href: propertyidx-property-clientnetworkprotocolproperty-class.md
+- name: Свойство PropertyName (класс ClientNetworkProtocolProperty)
+  href: propertyname-property-clientnetworkprotocolproperty-class.md
+- name: Свойство PropertyNumVal (класс ClientNetworkProtocolProperty)
+  href: propertynumval-property-clientnetworkprotocolproperty-class.md
+- name: Свойство PropertyStrVal (класс ClientNetworkProtocolProperty)
+  href: propertystrval-property-clientnetworkprotocolproperty-class.md
+- name: Свойство PropertyType (класс ClientNetworkProtocolProperty)
+  href: propertytype-property-clientnetworkprotocolproperty-class.md
+- name: Свойство PropertyValType (класс ClientNetworkProtocolProperty)
+  href: propertyvaltype-property-clientnetworkprotocolproperty-class.md
+- name: Свойство ProtocolName (класс ClientNetworkProtocolProperty)
+  href: protocolname-property-clientnetworkprotocolproperty-class.md
+- name: Метод SetFlag (класс ClientNetworkProtocolProperty)
+  href: setflag-method-clientnetworkprotocolproperty-class.md
+- name: Метод SetNumericalValue (класс ClientNetworkProtocolProperty)
+  href: setnumericalvalue-method-clientnetworkprotocolproperty-class.md
+- name: Метод SetNumValue (класс ClientNetworkProtocolProperty)
+  href: setnumvalue-method-clientnetworkprotocolproperty-class.md
+- name: Метод SetStringValue (класс ClientNetworkProtocolProperty)
+  href: setstringvalue-method-clientnetworkprotocolproperty-class.md
+- name: Метод SetStrValue (класс ClientNetworkProtocolProperty)
+  href: setstrvalue-method-clientnetworkprotocolproperty-class.md

@@ -1,0 +1,50 @@
+- name: Планы обслуживания
+  href: maintenance-plans.md
+- name: Создание плана обслуживания
+  href: create-a-maintenance-plan.md
+  items:
+    - name: Использование мастера планов обслуживания
+      href: use-the-maintenance-plan-wizard.md
+    - name: Создание планов обслуживания (область конструктора планов обслуживания)
+      href: create-a-maintenance-plan-maintenance-plan-design-surface.md
+    - name: Узел «Планы обслуживания» (обозреватель объектов)
+      href: maintenance-plans-node-object-explorer.md
+- name: Справка F1 компонента «Область элементов»
+  href: toolbox-component-f1-help.md
+  items:
+    - name: План обслуживания (вкладка «Конструирование»)
+      href: maintenance-plan-design-tab.md
+    - name: План обслуживания (страница «Отчеты и ведение журнала»)
+      href: maintenance-plan-reporting-and-logging-page.md
+    - name: План обслуживания (управление соединениями)
+      href: maintenance-plan-manage-connections.md
+    - name: Задача «Резервное копирование базы данных» (план обслуживания)
+      href: options-in-the-back-up-database-task-for-maintenance-plan.md
+    - name: Задача «Обновление статистики» (план обслуживания)
+      href: update-statistics-task-maintenance-plan.md
+    - name: Задача «Перестроение индекса» (план обслуживания)
+      href: rebuild-index-task-maintenance-plan.md
+    - name: Задача «Сжатие базы данных» (план обслуживания)
+      href: shrink-database-task-maintenance-plan.md
+    - name: Задача «Проверка целостности базы данных» (план обслуживания)
+      href: check-database-integrity-task-maintenance-plan.md
+    - name: Задача «Выполнение инструкции T-SQL» (план обслуживания)
+      href: execute-t-sql-statement-task-maintenance-plan.md
+    - name: Задача «Реорганизация индекса» (план обслуживания)
+      href: reorganize-index-task-maintenance-plan.md
+    - name: Задача уведомления оператора (план обслуживания)
+      href: notify-operator-task-maintenance-plan.md
+    - name: Задача «Очистка журнала» (план обслуживания)
+      href: history-cleanup-task-maintenance-plan.md
+    - name: Задача «Выполнение задания агента SQL Server» (план обслуживания)
+      href: execute-sql-server-agent-job-task-maintenance-plan.md
+    - name: Задача «Очистка после обслуживания» (план обслуживания)
+      href: maintenance-cleanup-task-maintenance-plan.md
+    - name: Монитор активности заданий (настройки фильтра)
+      href: job-activity-monitor-filter-settings.md
+    - name: Обновление монитора активности заданий
+      href: job-activity-monitor-refresh.md
+    - name: План обслуживания (свойства вложенного плана)
+      href: maintenance-plan-subplan-properties.md
+    - name: План обслуживания (серверы)
+      href: maintenance-plan-servers.md

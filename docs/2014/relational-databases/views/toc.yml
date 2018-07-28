@@ -1,0 +1,17 @@
+- name: Представления
+  href: views.md
+  items:
+    - name: Создание представлений
+      href: create-views.md
+    - name: Создание индексированных представлений
+      href: create-indexed-views.md
+    - name: Изменение представлений
+      href: modify-views.md
+    - name: Изменение данных через представление
+      href: modify-data-through-a-view.md
+    - name: Получение сведений о представлении
+      href: get-information-about-a-view.md
+    - name: Переименование представлений
+      href: rename-views.md
+    - name: Удаление представлений
+      href: delete-views.md

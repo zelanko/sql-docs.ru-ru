@@ -1,0 +1,21 @@
+- name: Определяемые пользователем функции
+  href: user-defined-functions.md
+  items:
+    - name: Детерминированные и недетерминированные функции
+      href: deterministic-and-nondeterministic-functions.md
+    - name: Создание определяемых пользователем функций (компонент Database Engine)
+      href: create-user-defined-functions-database-engine.md
+    - name: Создание функций CLR
+      href: create-clr-functions.md
+    - name: Создание определяемых пользователем агрегатных функций
+      href: create-user-defined-aggregates.md
+    - name: Изменение определяемых пользователем функций
+      href: modify-user-defined-functions.md
+    - name: Удаление определенных пользователем функций
+      href: delete-user-defined-functions.md
+    - name: Выполнение определяемых пользователем функций
+      href: execute-user-defined-functions.md
+    - name: Переименование определяемых пользователем функций
+      href: rename-user-defined-functions.md
+    - name: Просмотр определяемых пользователем функций
+      href: view-user-defined-functions.md

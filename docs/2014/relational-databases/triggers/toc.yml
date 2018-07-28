@@ -1,0 +1,36 @@
+- name: Триггеры DDL
+  href: ddl-triggers.md
+  items:
+    - name: Реализация триггеров DDL
+      href: implement-ddl-triggers.md
+    - name: Получение сведений о триггерах DDL
+      href: get-information-about-ddl-triggers.md
+    - name: Использование функции EVENTDATA
+      href: use-the-eventdata-function.md
+    - name: DDL-события
+      href: ddl-events.md
+    - name: группы DDL-событий
+      href: ddl-event-groups.md
+- name: Триггеры DML
+  href: dml-triggers.md
+  items:
+    - name: Создание триггеров DML
+      href: create-dml-triggers.md
+    - name: Создание триггеров CLR
+      href: create-clr-triggers.md
+    - name: Создание триггеров DML для обработки нескольких строк данных
+      href: create-dml-triggers-to-handle-multiple-rows-of-data.md
+    - name: Создание вложенных триггеров
+      href: create-nested-triggers.md
+    - name: Указание первого и последнего триггеров
+      href: specify-first-and-last-triggers.md
+    - name: Использование таблиц inserted и deleted
+      href: use-the-inserted-and-deleted-tables.md
+    - name: Изменение или переименование триггеров DML
+      href: modify-or-rename-dml-triggers.md
+    - name: Получение сведений о триггерах DML
+      href: get-information-about-dml-triggers.md
+    - name: Удаление или отключение триггеров DML
+      href: delete-or-disable-dml-triggers.md
+    - name: Управление безопасностью триггеров
+      href: manage-trigger-security.md

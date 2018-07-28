@@ -1,0 +1,14 @@
+- name: Доступ к контексту запросов в хранимых процедурах
+  href: accessing-query-context-in-stored-procedures.md
+- name: Вызов хранимых процедур
+  href: calling-stored-procedures.md
+- name: Создание хранимых процедур
+  href: creating-stored-procedures.md
+- name: Отладка хранимых процедур
+  href: debugging-stored-procedures.md
+- name: Определение хранимых процедур
+  href: defining-stored-procedures.md
+- name: Конструирование хранимых процедур
+  href: designing-stored-procedures.md
+- name: Настройка безопасности хранимых процедур
+  href: setting-security-for-stored-procedures.md

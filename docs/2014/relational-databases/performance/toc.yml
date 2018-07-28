@@ -1,0 +1,78 @@
+- name: Наблюдение и настройка производительности
+  href: monitor-and-tune-for-performance.md
+- name: Наблюдение за компонентами SQL Server
+  href: monitor-sql-server-components.md
+- name: Средства контроля и настройки производительности
+  href: performance-monitoring-and-tuning-tools.md
+- name: Оценка количества элементов
+  href: cardinality-estimation-sql-server.md
+- name: Формирование базовых показателей производительности
+  href: establish-a-performance-baseline.md
+- name: Локализация проблем производительности
+  href: isolate-performance-problems.md
+- name: Выявление узких мест
+  href: identify-bottlenecks.md
+- name: Monitoring Performance By Using the Query Store
+  href: monitoring-performance-by-using-the-query-store.md
+- name: Производительность сервера и мониторинг активности
+  href: server-performance-and-activity-monitoring.md
+  items:
+    - name: Запуск системного монитора (Windows)
+      href: start-system-monitor-windows.md
+    - name: Настройка оповещения базы данных SQL Server (Windows)
+      href: set-up-a-sql-server-database-alert-windows.md
+    - name: Просмотр журнала приложений Windows (Windows)
+      href: view-the-windows-application-log-windows-10.md
+    - name: Просмотр журнала ошибок SQL Server (среда SQL Server Management Studio)
+      href: view-the-sql-server-error-log-sql-server-management-studio.md
+    - name: Сохранение графов взаимоблокировок (приложение SQL Server Profiler)
+      href: save-deadlock-graphs-sql-server-profiler.md
+    - name: 'Открытие, просмотр и печать файла взаимоблокировок (среда SQL Server Management Studio)'
+      href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
+    - name: Раздельное сохранение события Showplan XML (приложение SQL Server Profiler)
+      href: save-showplan-xml-events-separately-sql-server-profiler.md
+    - name: раздельно сохранить события «Профиль статистики Showplan XML» (приложение SQL Server Profiler)
+      href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+- name: Отображение и сохранение планов выполнения
+  href: display-and-save-execution-plans.md
+  items:
+    - name: Отображение предполагаемого плана выполнения
+      href: display-the-estimated-execution-plan.md
+    - name: Отображение действительного плана выполнения
+      href: display-an-actual-execution-plan.md
+    - name: Сохранение плана выполнения в формате XML
+      href: save-an-execution-plan-in-xml-format.md
+- name: Руководства планов
+  href: plan-guides.md
+  items:
+    - name: Создание структуры плана
+      href: create-a-new-plan-guide.md
+    - name: Создание руководства плана для параметризованных запросов
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Указание механизма параметризации запросов с помощью структур плана
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Применение фиксированного плана запроса к структуре плана
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Присоединение указаний запросов к структуре плана
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: Просмотр свойств структуры плана
+      href: view-plan-guide-properties.md
+    - name: Использование приложения SQL Server Profiler для создания и проверки руководств планов
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Проверка структур плана после обновления
+      href: validate-plan-guides-after-upgrade.md
+    - name: Удаление структуры плана
+      href: delete-a-plan-guide.md
+    - name: Включение или отключение структуры плана.
+      href: enable-or-disable-a-plan-guide.md
+- name: Database Engine Tuning Advisor
+  href: database-engine-tuning-advisor.md
+  items:
+    - name: Запуск и использование помощника по настройке ядра СУБД
+      href: start-and-use-the-database-engine-tuning-advisor.md
+    - name: Уменьшение настроечной загрузки рабочего сервера
+      href: reduce-the-production-server-tuning-load.md
+    - name: Вопросы использования тестовых серверов
+      href: considerations-for-using-test-servers.md
+    - name: Просмотр и работа с выходными данными помощника по настройке ядра СУБД
+      href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md

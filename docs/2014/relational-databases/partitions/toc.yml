@@ -1,0 +1,11 @@
+- name: Partitioned Tables and Indexes
+  href: partitioned-tables-and-indexes.md
+  items:
+    - name: Создание секционированных таблиц и индексов
+      href: create-partitioned-tables-and-indexes.md
+    - name: Изменение функции секционирования
+      href: modify-a-partition-function.md
+    - name: Изменение схемы секционирования
+      href: modify-a-partition-scheme.md
+    - name: Справка F1 мастера управления секциями
+      href: manage-partition-wizard-f1-help.md

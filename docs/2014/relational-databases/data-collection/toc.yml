@@ -1,0 +1,33 @@
+- name: Сбор данных
+  href: data-collection.md
+- name: Управление сбором данных
+  href: manage-data-collection.md
+  items:
+    - name: Настройка хранилища данных управления (среда SQL Server Management Studio)
+      href: configure-the-management-data-warehouse-sql-server-management-studio.md
+    - name: Настройка свойств сборщика данных
+      href: configure-properties-of-a-data-collector.md
+    - name: Включение или отключение сбор данных
+      href: enable-or-disable-data-collection.md
+    - name: Запуск или остановка набора элементов сбора
+      href: start-or-stop-a-collection-set.md
+    - name: Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL (среда SQL Server Management Studio)
+      href: use-sql-server-profiler-to-create-a-sql-trace-collection-set.md
+    - name: Просмотр журналов набора элементов сбора (среда SQL Server Management Studio)
+      href: view-collection-set-logs-sql-server-management-studio.md
+    - name: Просмотр и изменение расписаний набора элементов сбора (среда SQL Server Management Studio)
+      href: view-or-change-collection-set-schedules-sql-server-management-studio.md
+    - name: Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio)
+      href: view-a-collection-set-report-sql-server-management-studio.md
+    - name: Настройка параметров сбора данных (Transact-SQL)
+      href: configure-data-collection-parameters-transact-sql.md
+    - name: 'Создание пользовательского набора элементов сбора, использующего тип сборщика «Универсальный запрос T-SQL» (Transact-SQL)'
+      href: create-custom-collection-set-generic-t-sql-query-collector-type.md
+    - name: Добавление элемента сбора в набор элементов сбора (Transact-SQL)
+      href: add-a-collection-item-to-a-collection-set-transact-sql.md
+- name: Отчеты наборов элементов сбора системных данных
+  href: system-data-collection-set-reports.md
+- name: хранилище данных управления
+  href: management-data-warehouse.md
+- name: Безопасность сборщика данных
+  href: data-collector-security.md

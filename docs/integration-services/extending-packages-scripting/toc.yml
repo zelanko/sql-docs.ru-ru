@@ -1,0 +1,14 @@
+- name: Расширение пакетов с помощью сценариев
+  href: extending-packages-with-scripting.md
+- name: Сравнение задачи «Скрипт» и компонента скрипта
+  href: comparing-the-script-task-and-the-script-component.md
+- name: Сравнение решений со сценариями и пользовательских объектов
+  href: comparing-scripting-solutions-and-custom-objects.md
+- name: Ссылки на другие сборки в решениях со сценариями
+  href: referencing-other-assemblies-in-scripting-solutions.md
+- name: Отладка скрипта с помощью точек останова в задаче и компоненте «Скрипт»
+  href: debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md
+- name: Расширение пакета с помощью задачи «Скрипт»
+  href: ../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md
+- name: Extending the Data Flow with the Script Component
+  href: ../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md

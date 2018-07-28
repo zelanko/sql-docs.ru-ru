@@ -1,0 +1,42 @@
+- name: Обзор
+  href: schedules.md
+- name: 'Create, Modify, and Delete Schedules'
+  href: create-modify-and-delete-schedules.md
+- name: Приостановка и возобновление общих расписаний
+  href: pause-and-resume-shared-schedules.md
+- name: Изменение часовых поясов и настроек часов на сервере отчетов
+  href: change-time-zones-and-clock-settings-on-a-report-server.md
+- name: Управление запущенным процессом
+  href: manage-a-running-process.md
+- name: Subscriptions and Delivery
+  href: subscriptions-and-delivery-reporting-services.md
+  items:
+    - name: Доставка электронной почтой в службах Reporting Services
+      href: e-mail-delivery-in-reporting-services.md
+    - name: 'Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками'
+      href: create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md
+      items:
+        - name: Доставка библиотек SharePoint в службах Reporting Services
+          href: sharepoint-library-delivery-in-reporting-services.md
+    - name: Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками
+      href: create-and-manage-subscriptions-for-native-mode-report-servers.md
+      items:
+        - name: Использование страницы "Мои подписки" (сервер отчетов в основном режиме)
+          href: use-my-subscriptions-native-mode-report-server.md
+    - name: Доставка отчетов в общие папки с помощью служб Reporting Services
+      href: file-share-delivery-in-reporting-services.md
+    - name: Отключение или приостановка обработки отчетов и подписок
+      href: disable-or-pause-report-and-subscription-processing.md
+    - name: управляемая данными подписка
+      href: data-driven-subscriptions.md
+      items:
+        - name: 'Создание, изменение и удаление управляемых данными подписок'
+          href: create-modify-and-delete-data-driven-subscriptions.md
+        - name: Использование внешнего источника данных для данных подписчика
+          href: use-an-external-data-source-for-subscriber-data-data-driven-subscription.md
+    - name: Отслеживание подписок служб Reporting Services
+      href: monitor-reporting-services-subscriptions.md
+    - name: Изменение модуля доставки отчетов служб Reporting Services по умолчанию
+      href: change-the-default-reporting-services-delivery-extension.md
+    - name: Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
+      href: manage-subscription-owners-and-run-subscription-powershell.md

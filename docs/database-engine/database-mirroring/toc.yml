@@ -1,0 +1,143 @@
+- name: Конечная точка зеркального отображения базы данных
+  href: the-database-mirroring-endpoint-sql-server.md
+- name: Области конечной точки
+  items:
+    - name: Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn
+      href: transport-security-database-mirroring-always-on-availability.md
+    - name: Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)
+      href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
+    - name: Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn
+      href: set-up-login-accounts-database-mirroring-always-on-availability.md
+    - name: Разрешение сетевого доступа к конечной точке зеркального отображения базы данных с использованием проверки подлинности Windows
+      href: database-mirroring-allow-network-access-windows-authentication.md
+    - name: Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)
+      href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
+      items:
+        - name: Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)
+          href: database-mirroring-use-certificates-for-outbound-connections.md
+        - name: Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)
+          href: database-mirroring-use-certificates-for-inbound-connections.md
+- name: Зеркальное отображение базы данных
+  href: database-mirroring-sql-server.md
+  items:
+    - name: 'Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных'
+      href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
+    - name: Режимы работы зеркального отображения базы данных
+      href: database-mirroring-operating-modes.md
+      items:
+        - name: Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)
+          href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
+    - name: Database Mirroring Witness
+      href: database-mirroring-witness.md
+      items:
+        - name: Кворум. Как следящий сервер влияет на доступность базы данных
+          href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
+        - name: Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (язык Transact-SQL)
+          href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
+        - name: Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio)
+          href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
+        - name: Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server)
+          href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
+    - name: Переключение ролей во время сеанса зеркального отображения базы данных
+      href: role-switching-during-a-database-mirroring-session-sql-server.md
+      items:
+        - name: Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (язык Transact-SQL)
+          href: manually-fail-over-a-database-mirroring-session-transact-sql.md
+        - name: Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio)
+          href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
+        - name: Принудительный запуск службы в сеансе зеркального отображения базы данных (Transact-SQL)
+          href: force-service-in-a-database-mirroring-session-transact-sql.md
+        - name: Оценка прерывания обслуживания во время переключения ролей
+          href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
+    - name: Possible Failures During Database Mirroring
+      href: possible-failures-during-database-mirroring.md
+    - name: Состояния зеркального отображения (SQL Server)
+      href: mirroring-states-sql-server.md
+    - name: Настройка зеркального отображения базы данных
+      href: setting-up-database-mirroring-sql-server.md
+      items:
+        - name: Подготовка зеркальной базы данных к зеркальному отображению
+          href: prepare-a-mirror-database-for-mirroring-sql-server.md
+          items:
+            - name: Настройка зашифрованной зеркальной базы данных
+              href: set-up-an-encrypted-mirror-database.md
+            - name: Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)
+              href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
+        - name: Указание сетевого адреса сервера (зеркальное отображение базы данных)
+          href: specify-a-server-network-address-database-mirroring.md
+        - name: Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)
+          href: establish-database-mirroring-session-windows-authentication.md
+          items:
+            - name: Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)
+              href: start-the-configuring-database-mirroring-security-wizard.md
+              items:
+                - name: Включить следящий сервер (мастер настройки безопасности зеркального отображения баз данных)
+                  href: include-witness-server-configure-database-mirroring-security-wizard.md
+                - name: Выбор серверов для настройки (мастер настройки безопасности зеркального отображения баз данных)
+                  href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
+                - name: Экземпляр основного сервера (мастер настройки безопасности зеркального отображения баз данных)
+                  href: principal-server-instance-configure-database-mirroring-security-wizard.md
+                - name: Экземпляр зеркального сервера (мастер настройки безопасности зеркального отображения баз данных)
+                  href: mirror-server-instance-configure-database-mirroring-security-wizard.md
+                - name: Экземпляр следящего сервера (мастер настройки безопасности зеркального отображения баз данных)
+                  href: witness-server-instance-configure-database-mirroring-security-wizard.md
+                - name: Учетные записи службы (мастер настройки безопасности зеркального отображения баз данных)
+                  href: service-accounts-configure-database-mirroring-security-wizard.md
+        - name: Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)
+          href: database-mirroring-establish-session-windows-authentication.md
+          items:
+            - name: Пример. Настройка зеркального отображения базы данных с помощью проверки подлинности Windows (язык Transact-SQL)
+              href: example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
+        - name: Пример. Настройка зеркального отображения базы данных с помощью сертификатов (язык Transact-SQL)
+          href: example-setting-up-database-mirroring-using-certificates-transact-sql.md
+        - name: Диагностика конфигурации зеркального отображения базы данных
+          href: troubleshoot-database-mirroring-configuration-sql-server.md
+    - name: Подключение клиентов к сеансу зеркального отображения базы данных
+      href: connect-clients-to-a-database-mirroring-session-sql-server.md
+    - name: Приостановка и возобновление зеркального отображения базы данных
+      href: pausing-and-resuming-database-mirroring-sql-server.md
+      items:
+        - name: Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server)
+          href: pause-or-resume-a-database-mirroring-session-sql-server.md
+    - name: Удаление зеркального отображения базы данных
+      href: removing-database-mirroring-sql-server.md
+      items:
+        - name: Удаление зеркального отображения базы данных (SQL Server)
+          href: remove-database-mirroring-sql-server.md
+    - name: Обновление зеркальных экземпляров
+      href: upgrading-mirrored-instances.md
+    - name: Наблюдение за зеркальным отображением базы данных
+      href: monitoring-database-mirroring-sql-server.md
+      items:
+        - name: Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения
+          href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
+        - name: Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)
+          href: start-database-mirroring-monitor-sql-server-management-studio.md
+          items:
+            - name: Обзор монитора зеркального отображения баз данных
+              href: database-mirroring-monitor-overview.md
+            - name: Регистрация зеркальной базы данных
+              href: register-mirrored-database.md
+            - name: Монитор зеркального отображения баз данных (страница «Состояние»)
+              href: database-mirroring-monitor-status-page.md
+            - name: Журнал зеркального отображения базы данных
+              href: database-mirroring-history.md
+            - name: Монитор зеркального отображения баз данных (страница «Предупреждения»)
+              href: database-mirroring-monitor-warnings-page.md
+            - name: Установка порогов предупреждений
+              href: set-warning-thresholds.md
+        - name: Просмотр состояния зеркального отображения базы данных (среда SQL Server Management Studio)
+          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
+    - name: 'Зеркальное отображение базы данных: взаимодействие и сосуществование'
+      href: database-mirroring-interoperability-and-coexistence-sql-server.md
+      items:
+        - name: Экземпляры зеркального отображения баз данных и отказоустойчивых кластеров (SQL Server)
+          href: database-mirroring-and-sql-server-failover-cluster-instances.md
+        - name: Зеркальное отображение баз данных и доставка журналов
+          href: database-mirroring-and-log-shipping-sql-server.md
+        - name: Зеркальное отображение баз данных и полнотекстовые каталоги
+          href: database-mirroring-and-full-text-catalogs-sql-server.md
+        - name: Зеркальное отображение и моментальные снимки баз данных
+          href: database-mirroring-and-database-snapshots-sql-server.md
+        - name: Зеркальное отображение и репликация баз данных
+          href: database-mirroring-and-replication-sql-server.md

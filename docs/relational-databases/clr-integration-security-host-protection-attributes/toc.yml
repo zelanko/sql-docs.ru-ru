@@ -1,0 +1,12 @@
+- name: Атрибуты защиты узла и программирование средств интеграции со средой CLR
+  href: host-protection-attributes-and-clr-integration-programming.md
+- name: Запрещенные типы и элементы в Microsoft.VisualBasic.dll
+  href: disallowed-types-and-members-in-microsoft-visualbasic-dll.md
+- name: Недопустимые типы и элементы в библиотеке mscorlib.dll
+  href: disallowed-types-and-members-in-mscorlib-dll.md
+- name: Недопустимые типы и элементы в библиотеке System.Core.dll
+  href: disallowed-types-and-members-in-system-core-dll.md
+- name: Недопустимые типы и элементы в библиотеке System.Data.dll
+  href: disallowed-types-and-members-in-system-data-dll.md
+- name: Запрещенные типы и элементы в System.dll
+  href: disallowed-types-and-members-in-system-dll.md

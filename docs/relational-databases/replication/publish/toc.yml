@@ -1,0 +1,105 @@
+- name: Обзор
+  href: publish-data-and-database-objects.md
+- name: Обзор модели публикации репликации
+  href: replication-publishing-model-overview.md
+- name: Фильтрация опубликованных данных
+  href: filter-published-data.md
+- name: Репликация столбцов идентификаторов
+  href: replicate-identity-columns.md
+- name: Внесение изменений схем в базы данных публикации
+  href: make-schema-changes-on-publication-databases.md
+- name: Репликация секционированных таблиц и индексов
+  href: replicate-partitioned-tables-and-indexes.md
+  items:
+    - name: Управление секциями для публикации слиянием с параметризованными фильтрами
+      href: manage-partitions-for-a-merge-publication-with-parameterized-filters.md
+- name: 'создание, изменение и удаление публикаций и статей'
+  href: create-modify-and-delete-publications-and-articles-replication.md
+  items:
+    - name: Create a Publication
+      href: create-a-publication.md
+    - name: Определение статьи
+      href: define-an-article.md
+      items:
+        - name: задать типы статей (программирование репликации на языке Transact-SQL)
+          href: specify-article-types-replication-transact-sql-programming.md
+    - name: Просмотр и изменение свойств публикации
+      href: view-and-modify-publication-properties.md
+    - name: Просмотр и изменение свойств статьи
+      href: view-and-modify-article-properties.md
+    - name: Удаление публикации
+      href: delete-a-publication.md
+    - name: Удаление статьи
+      href: delete-an-article.md
+    - name: Создание публикации из базы данных Oracle
+      href: create-a-publication-from-an-oracle-database.md
+      items:
+        - name: Указание сопоставления типов данных для издателя Oracle
+          href: specify-data-type-mappings-for-an-oracle-publisher.md
+    - name: Установка срока действия подписок
+      href: set-the-expiration-period-for-subscriptions.md
+    - name: Указание параметров схемы
+      href: specify-schema-options.md
+    - name: Репликация изменений схемы
+      href: replicate-schema-changes.md
+    - name: Управление столбцами идентификаторов
+      href: manage-identity-columns.md
+    - name: Задание уровня совместимости для публикаций слиянием
+      href: set-the-compatibility-level-for-merge-publications.md
+    - name: указать формат моментальных снимков (среда SQL Server Management Studio)
+      href: specify-snapshot-format-sql-server-management-studio.md
+    - name: указать местоположение альтернативной папки моментальных снимков (среда SQL Server Management Studio)
+      href: specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md
+    - name: сжать файлы моментальных снимков (среда SQL Server Management Studio)
+      href: compress-snapshot-files-sql-server-management-studio.md
+    - name: настроить свойства моментального снимка (программирование репликации на языке Transact-SQL)
+      href: configure-snapshot-properties-replication-transact-sql-programming.md
+    - name: Доставка моментального снимка через FTP
+      href: deliver-a-snapshot-through-ftp.md
+    - name: Определение или изменение фильтра столбцов
+      href: define-and-modify-a-column-filter.md
+    - name: Определение и изменение статического строкового фильтра
+      href: define-and-modify-a-static-row-filter.md
+    - name: Определение и изменение параметризованного фильтра строк для статьи публикации слиянием
+      href: define-and-modify-a-parameterized-row-filter-for-a-merge-article.md
+    - name: Оптимизация параметризованных фильтров строк
+      href: optimize-parameterized-row-filters.md
+    - name: Определение и изменение фильтра соединения между статьями публикации слиянием
+      href: define-and-modify-a-join-filter-between-merge-articles.md
+    - name: Автоматическое формирование набора фильтров соединения между статьями публикации слиянием (среда SQL Server Management Studio)
+      href: automatically-generate-join-filters-between-merge-articles.md
+    - name: Задание метода распространения изменений данных в транзакционные статьи
+      href: set-the-propagation-method-for-data-changes-to-transactional-articles.md
+    - name: Включение обновляемых подписок для публикаций транзакций
+      href: enable-updating-subscriptions-for-transactional-publications.md
+    - name: Создание обновляемой подписки для публикации транзакций (среда Management Studio)
+      href: create-an-updatable-subscription-to-a-transactional-publication.md
+    - name: Создание обновляемой подписки для публикации транзакций с использованием Transact-SQL
+      href: create-updatable-subscription-to-transactional-publication.md
+    - name: настроить параметры разрешения конфликтов обновления посредством очередей (среда SQL Server Management Studio)
+      href: set-queued-updating-conflict-resolution-options-sql-server-management-studio.md
+    - name: опубликовать выполнение хранимой процедуры в публикации транзакций (среда SQL Server Management Studio)
+      href: publish-execution-of-stored-procedure-in-transactional-publication.md
+    - name: Определение связи логических записей между статьями таблиц слияния
+      href: define-a-logical-record-relationship-between-merge-table-articles.md
+    - name: установить порядок обработки статей таблиц слияния (программирование репликации на языке Transact-SQL)
+      href: specify-the-processing-order-of-merge-table-articles.md
+    - name: 'Указание того, что статья таблицы публикации слиянием предназначена только для загрузки'
+      href: specify-that-a-merge-table-article-is-download-only.md
+    - name: отключить отслеживание операций удаления для статей публикации слиянием (программирование репликации на языке Transact-SQL)
+      href: specify-that-deletes-should-not-be-tracked-for-merge-articles.md
+    - name: Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием
+      href: specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md
+    - name: Определение сопоставителя статей публикации слиянием
+      href: specify-a-merge-article-resolver.md
+    - name: Указание интерактивного устранения конфликтов для статей публикации слиянием
+      href: specify-interactive-conflict-resolution-for-merge-articles.md
+    - name: Добавление и удаление статей в публикации (среда SQL Server Management Studio)
+      href: add-articles-to-and-drop-articles-from-a-publication.md
+- name: Обслуживание публикаций
+  href: maintain-publications.md
+  items:
+    - name: Добавление и удаление статей в существующих публикациях
+      href: add-articles-to-and-drop-articles-from-existing-publications.md
+    - name: Изменение свойств публикации и статьи
+      href: change-publication-and-article-properties.md

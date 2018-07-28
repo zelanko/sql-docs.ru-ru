@@ -1,0 +1,65 @@
+- name: Массовый импорт и экспорт данных
+  href: bulk-import-and-export-of-data-sql-server.md
+  items:
+    - name: Массовый импорт и экспорт данных с использованием программы bcp
+      href: import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md
+    - name: Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...)
+      href: import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md
+    - name: Prerequisites for Minimal Logging in Bulk Import
+      href: prerequisites-for-minimal-logging-in-bulk-import.md
+- name: Подготовка массового импорта данных
+  href: prepare-to-bulk-import-data-sql-server.md
+  items:
+    - name: Подготовка данных к массовому экспорту или импорту
+      href: prepare-data-for-bulk-export-or-import-sql-server.md
+- name: Образец таблицы HumanResources.myTeam
+  href: humanresources-myteam-sample-table-sql-server.md
+- name: Форматы данных для массового импорта или экспорта
+  href: data-formats-for-bulk-import-or-bulk-export-sql-server.md
+  items:
+    - name: Использование собственного формата для импорта и экспорта данных
+      href: use-native-format-to-import-or-export-data-sql-server.md
+    - name: Применение символьного формата при импорте и экспорте данных
+      href: use-character-format-to-import-or-export-data-sql-server.md
+    - name: Использование собственного формата Юникода для импорта или экспорта данных
+      href: use-unicode-native-format-to-import-or-export-data-sql-server.md
+    - name: Использование символьного формата Юникода для импорта и экспорта данных
+      href: use-unicode-character-format-to-import-or-export-data-sql-server.md
+    - name: Импорт данных в собственном и символьном формате из предыдущих версий SQL Server
+      href: import-native-and-character-format-data-from-earlier-versions-of-sql-server.md
+- name: Указание форматов данных для совместимости с помощью программы bcp
+  href: specify-data-formats-for-compatibility-when-using-bcp-sql-server.md
+  items:
+    - name: Указание типа файлового хранилища с помощью программы bcp
+      href: specify-file-storage-type-by-using-bcp-sql-server.md
+    - name: Определение длины префикса в файлах данных с помощью программы bcp
+      href: specify-prefix-length-in-data-files-by-using-bcp-sql-server.md
+    - name: Указание длины поля с помощью программы bcp
+      href: specify-field-length-by-using-bcp-sql-server.md
+    - name: Определение признаков конца поля и строки
+      href: specify-field-and-row-terminators-sql-server.md
+- name: Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных
+  href: keep-nulls-or-use-default-values-during-bulk-import-sql-server.md
+- name: Сохранение значений идентификаторов при массовом импорте данных
+  href: keep-identity-values-when-bulk-importing-data-sql-server.md
+- name: Массовый импорт данных больших объектов при помощи поставщика больших наборов строк OPENROWSET
+  href: bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md
+- name: Файлы форматирования для импорта или экспорта данных
+  href: format-files-for-importing-or-exporting-data-sql-server.md
+  items:
+    - name: 'файлы формата, отличные от XML'
+      href: non-xml-format-files-sql-server.md
+    - name: XML-файлы форматирования
+      href: xml-format-files-sql-server.md
+    - name: Создание файла форматирования
+      href: create-a-format-file-sql-server.md
+    - name: Использование файла форматирования для массового импорта данных
+      href: use-a-format-file-to-bulk-import-data-sql-server.md
+    - name: Пропуск столбца таблицы с помощью файла форматирования
+      href: use-a-format-file-to-skip-a-table-column-sql-server.md
+    - name: Использование файла форматирования для пропуска поля данных
+      href: use-a-format-file-to-skip-a-data-field-sql-server.md
+    - name: Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных
+      href: use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md
+- name: Примеры массового импорта и экспорта XML-документов
+  href: examples-of-bulk-import-and-export-of-xml-documents-sql-server.md

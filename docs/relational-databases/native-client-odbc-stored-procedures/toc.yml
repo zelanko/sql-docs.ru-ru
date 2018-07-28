@@ -1,0 +1,8 @@
+- name: Выполнение хранимых процедур
+  href: running-stored-procedures.md
+- name: Создание пакетной обработки вызовов хранимых процедур
+  href: batching-stored-procedure-calls.md
+- name: Вызов хранимой процедуры
+  href: calling-a-stored-procedure.md
+- name: Обработка результатов хранимой процедуры
+  href: processing-stored-procedure-results.md

@@ -1,0 +1,18 @@
+- name: Обзор
+  href: install-master-data-services.md
+- name: Требования веб-приложений (службы Master Data Services)
+  href: web-application-requirements-master-data-services.md
+- name: Требования к базе данных (службы Master Data Services)
+  href: database-requirements-master-data-services.md
+- name: Создание базы данных служб Master Data Services
+  href: create-a-master-data-services-database.md
+- name: Создание веб-приложения мастера основных данных (службы Master Data Services)
+  href: create-a-master-data-manager-web-application-master-data-services.md
+- name: Обеспечение безопасности веб-приложения диспетчера основных данных
+  href: secure-a-master-data-manager-web-application.md
+- name: Связывание базы данных служб Master Data Services и веб-приложения
+  href: associate-a-master-data-services-database-and-web-application.md
+- name: Включение интеграции служб Data Quality Services со службами Master Data Services
+  href: enable-data-quality-services-integration-with-master-data-services.md
+- name: Многоязычное и международное развертывание (службы Master Data Services)
+  href: multi-lingual-and-global-deployments-master-data-services.md

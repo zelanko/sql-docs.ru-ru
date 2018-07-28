@@ -1,0 +1,8 @@
+- name: Большие двоичные объекты и объекты OLE
+  href: blobs-and-ole-objects.md
+- name: Возврат больших данных
+  href: getting-large-data.md
+- name: Присваивание больших данных
+  href: setting-large-data.md
+- name: Поддержка потоков для выходных параметров BLOB
+  href: streaming-support-for-blob-output-parameters.md

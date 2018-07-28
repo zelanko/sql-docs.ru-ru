@@ -1,0 +1,10 @@
+- name: Рекомендации по обработке исключений в службах Reporting Services
+  href: best-practices-for-reporting-services-exception-handling.md
+- name: 'Обработка предупреждений и ситуаций, не вызывающих исключения'
+  href: handling-warnings-and-cases-that-do-not-cause-exceptions.md
+- name: Предотвращение недопустимых запросов
+  href: preventing-invalid-requests.md
+- name: Использование свойства Detail для обработки определенных ошибок
+  href: using-the-detail-property-to-handle-specific-errors.md
+- name: Использование блоков Try-Catch
+  href: using-try-and-catch-blocks.md

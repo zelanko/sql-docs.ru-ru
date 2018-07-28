@@ -1,0 +1,164 @@
+- name: Приложение SQL Server Profiler
+  href: sql-server-profiler.md
+- name: Шаблоны и разрешения приложения SQL Server Profiler
+  href: sql-server-profiler-templates-and-permissions.md
+  items:
+    - name: Шаблоны приложения SQL Server Profiler
+      href: sql-server-profiler-templates.md
+    - name: 'Разрешения, необходимые для запуска приложения SQL Server Profiler'
+      href: permissions-required-to-run-sql-server-profiler.md
+- name: Запуск приложения SQL Server Profiler
+  href: start-sql-server-profiler.md
+- name: Выполнение приложения SQL Server Profiler
+  href: ../../database-engine/run-sql-server-profiler.md
+- name: установить глобальные параметры трассировки (SQL Server Profiler)
+  href: set-global-trace-options-sql-server-profiler.md
+- name: установить определения трассировки по умолчанию (приложение SQL Server Profiler)
+  href: set-trace-definition-defaults-sql-server-profiler.md
+- name: установить параметры по умолчанию для отображения трассировки (приложение SQL Server Profiler)
+  href: set-trace-display-defaults-sql-server-profiler.md
+- name: создать трассировку (приложение SQL Server Profiler)
+  href: create-a-trace-sql-server-profiler.md
+- name: создать шаблон трассировки (приложение SQL Server Profiler)
+  href: create-a-trace-template-sql-server-profiler.md
+  items:
+    - name: создать шаблон на основе выполняемой трассировки (SQL Server Profiler)
+      href: derive-a-template-from-a-running-trace-sql-server-profiler.md
+    - name: создать шаблон на основе файла трассировки или таблицы трассировки (приложение SQL Server Profiler)
+      href: derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md
+    - name: экспортировать шаблон трассировки (приложение SQL Server Profiler)
+      href: export-a-trace-template-sql-server-profiler.md
+    - name: импортировать шаблон трассировки (приложение SQL Server Profiler)
+      href: import-a-trace-template-sql-server-profiler.md
+    - name: Изменение шаблонов трассировки
+      href: modify-trace-templates.md
+    - name: редактировать шаблон трассировки (приложение SQL Server Profiler)
+      href: ../../database-engine/modify-a-trace-template-sql-server-profiler.md
+- name: Сохранение трассировок и шаблонов трассировок
+  href: save-traces-and-trace-templates.md
+  items:
+    - name: сохранить результаты трассировки в файл (приложение SQL Server Profiler)
+      href: save-trace-results-to-a-file-sql-server-profiler.md
+    - name: указать столбцы событий и данных для файла трассировки (приложение SQL Server Profiler)
+      href: specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md
+    - name: установить максимальный размер для файла трассировки (приложение SQL Server Profiler)
+      href: set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md
+    - name: открыть файл трассировки (приложение SQL Server Profiler)
+      href: open-a-trace-file-sql-server-profiler.md
+    - name: сохранять результаты трассировки в таблицу (SQL Server Profiler)
+      href: save-trace-results-to-a-table-sql-server-profiler.md
+    - name: установить максимальный размер для таблицы трассировки (приложение SQL Server Profiler)
+      href: set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md
+    - name: открыть таблицу трассировки (приложение SQL Server Profiler)
+      href: open-a-trace-table-sql-server-profiler.md
+- name: Фильтрация трассировок с помощью приложения SQL Server Profiler
+  href: filter-traces-with-sql-server-profiler.md
+  items:
+    - name: просмотреть сведения о фильтре (приложение SQL Server Profiler)
+      href: view-filter-information-sql-server-profiler.md
+    - name: изменить фильтр (приложение SQL Server Profiler)
+      href: modify-a-filter-sql-server-profiler.md
+    - name: фильтровать события в трассировке (SQL Server Profiler)
+      href: filter-events-in-a-trace-sql-server-profiler.md
+      items:
+        - name: фильтровать события по времени начала (приложение SQL Server Profiler)
+          href: filter-events-based-on-the-event-start-time-sql-server-profiler.md
+        - name: фильтровать события на основе времени окончания события (приложение SQL Server Profiler)
+          href: filter-events-based-on-the-event-end-time-sql-server-profiler.md
+    - name: отфильтровать идентификаторы процессов сервера (SPID) в трассировке (приложение SQL Server Profiler)
+      href: filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md
+- name: Запуск трассировки
+  href: start-a-trace.md
+  items:
+    - name: автоматически запустить трассировку после соединения с сервером (приложение SQL Server Profiler)
+      href: start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md
+- name: приостановить трассировки (приложение SQL Server Profiler)
+  href: pause-a-trace-sql-server-profiler.md
+- name: остановить трассировку (приложение SQL Server Profiler)
+  href: stop-a-trace-sql-server-profiler.md
+- name: провести трассировку после ее приостановки или прекращения (приложение SQL Server Profiler)
+  href: run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md
+- name: очистить окно трассировки (приложение SQL Server Profiler)
+  href: clear-a-trace-window-sql-server-profiler.md
+- name: закрыть окно трассировки (приложение SQL Server Profiler)
+  href: close-a-trace-window-sql-server-profiler.md
+- name: Воспроизведение трассировок
+  href: replay-traces.md
+  items:
+    - name: Replay Requirements
+      href: replay-requirements.md
+    - name: Параметры воспроизведения (приложение SQL Server Profiler)
+      href: replay-options-sql-server-profiler.md
+    - name: Вопросы воспроизведения трассировки (приложение SQL Server Profiler)
+      href: considerations-for-replaying-traces-sql-server-profiler.md
+    - name: воспроизвести таблицу трассировки (приложение SQL Server Profiler)
+      href: replay-a-trace-table-sql-server-profiler.md
+    - name: воспроизвести файл трассировки (приложение SQL Server Profiler)
+      href: replay-a-trace-file-sql-server-profiler.md
+    - name: воспроизвести одиночное событие за раз (приложение SQL Server Profiler)
+      href: replay-a-single-event-at-a-time-sql-server-profiler.md
+    - name: воспроизвести нагрузку до точки останова (SQL Server Profiler)
+      href: replay-to-a-breakpoint-sql-server-profiler.md
+    - name: воспроизвести до курсора (приложение SQL Server Profiler)
+      href: replay-to-a-cursor-sql-server-profiler.md
+    - name: воспроизвести скрипт на языке Transact-SQL (приложение SQL Server Profiler)
+      href: replay-a-transact-sql-script-sql-server-profiler.md
+- name: найти значение или столбец данных во время трассировки (приложение SQL Server Profiler)
+  href: find-a-value-or-data-column-while-tracing-sql-server-profiler.md
+- name: создать скрипт Transact-SQL для выполнения трассировки (приложение SQL Server Profiler)
+  href: create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md
+- name: извлечь скрипт из трассировки (приложение SQL Server Profiler)
+  href: extract-a-script-from-a-trace-sql-server-profiler.md
+- name: 'упорядочить столбцы, отображаемые в трассировке (приложение SQL Server Profiler)'
+  href: organize-columns-displayed-in-a-trace-sql-server-profiler.md
+- name: Сопоставление трассировки с журналом производительности Windows
+  href: correlate-a-trace-with-windows-performance-log-data.md
+- name: согласовать трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)
+  href: ../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md
+- name: Просмотр и анализ трассировок с помощью приложения SQL Server Profiler
+  href: view-and-analyze-traces-with-sql-server-profiler.md
+- name: Анализ взаимоблокировок в приложении SQL Server Profiler
+  href: analyze-deadlocks-with-sql-server-profiler.md
+- name: Анализ запросов с помощью результатов инструкции SHOWPLAN в приложении SQL Server Profiler
+  href: analyze-queries-with-showplan-results-in-sql-server-profiler.md
+- name: Справка F1 приложения SQL Server Profiler
+  href: sql-server-profiler-f1-help.md
+  items:
+    - name: Свойства трассировки (вкладка «Общие»)
+      href: ../../database-engine/trace-properties-general-tab.md
+    - name: Свойства трассировки (вкладка «Выбор событий»)
+      href: ../../database-engine/trace-properties-events-selection-tab.md
+    - name: Свойства шаблона трассировки (вкладка «Общие»)
+      href: ../../database-engine/trace-template-properties-general-tab.md
+    - name: Изменение свойств шаблона трассировки (вкладка «Общие»)
+      href: ../../database-engine/edit-trace-template-properties-general-tab.md
+    - name: Свойства шаблона трассировки (вкладка «Выбор событий»)
+      href: ../../database-engine/trace-template-properties-events-selection-tab.md
+    - name: Свойства файла трассировки (вкладка «Общие»)
+      href: ../../database-engine/trace-file-properties-general-tab.md
+    - name: Свойства файла трассировки (вкладка «Выбор событий»)
+      href: ../../database-engine/trace-file-properties-events-selection-tab.md
+    - name: Свойства таблицы трассировки (вкладка «Общие»)
+      href: ../../database-engine/trace-table-properties-general-tab.md
+    - name: Свойства таблицы трассировки (вкладка «Выбор событий»)
+      href: ../../database-engine/trace-table-properties-events-selection-tab.md
+    - name: Приложение SQL Server Profiler — предел для счетчиков производительности
+      href: ../../database-engine/sql-server-profiler-performance-counters-limit.md
+    - name: Приложение SQL Server Profiler — Сервис/Параметры (страница «Общие параметры»)
+      href: ../../database-engine/sql-server-profiler-tools-options-general-options-page.md
+    - name: Приложение SQL Server Profiler — Исходная таблица/Помощник по настройке ядра СУБД — Выбор таблицы рабочей нагрузки
+      href: ../../database-engine/select-workload-table-sql-server-profiler-source-table-database-engine-tuning-advisor.md
+    - name: Приложение SQL Server Profiler — Целевая таблица
+      href: ../../database-engine/sql-server-profiler-destination-table.md
+    - name: Приложение SQL Server Profiler — конфигурация воспроизведения (базовые параметры воспроизведения)
+      href: ../../database-engine/sql-server-profiler-replay-configuration-basic-replay-options.md
+    - name: Приложение SQL Server Profiler — Конфигурация воспроизведения (дополнительные параметры воспроизведения)
+      href: ../../database-engine/sql-server-profiler-replay-configuration-advanced-replay-options.md
+    - name: Приложение SQL Server Profiler — диалоговое окно «Поиск»
+      href: ../../database-engine/sql-server-profiler-find-dialog-box.md
+    - name: Приложение SQL Server Profiler — организация столбцов
+      href: ../../database-engine/sql-server-profiler-organize-columns.md
+    - name: SQL Server Profiler - Edit Filter
+      href: ../../database-engine/sql-server-profiler-edit-filter.md
+    - name: Выберите имя шаблона
+      href: ../../database-engine/select-template-name.md

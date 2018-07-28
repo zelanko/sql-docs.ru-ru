@@ -1,0 +1,133 @@
+- name: Учебник по программированию управляющих объектов SQL Server (SMO)
+  href: sql-server-management-objects-smo-programming-guide.md
+- name: Общие сведения об SMO
+  href: overview-smo.md
+- name: Приступая к работе с объектами SMO
+  href: getting-started-in-smo.md
+  items:
+    - name: Синтаксические обозначения в SMO
+      href: smo-syntax-conventions.md
+    - name: Файлы и номера версий
+      href: files-and-version-numbers.md
+    - name: Ссылка на образцы программ
+      href: link-to-programming-samples.md
+    - name: Установка SMO
+      href: installing-smo.md
+- name: Объектная модель SMO
+  href: smo-object-model.md
+  items:
+    - name: Пространства имен объектов SMO
+      href: smo-object-model-namespaces.md
+    - name: Диаграмма модели объектов SMO
+      href: smo-object-model-diagram.md
+- name: Языки программирования
+  href: smo-programming-languages.md
+  items:
+    - name: Приступая к работе с Visual Basic .NET
+      href: ../../database-engine/dev-guide/getting-started-in-visual-basic-net.md
+    - name: 'Приступая к работе с Visual C# .NET'
+      href: smo-programming-getting-started-in-visual-csharp-net.md
+- name: Обратная совместимость в SMO
+  href: backward-compatibility-in-smo.md
+- name: Создание приложений SMO
+  href: create-program/creating-smo-programs.md
+  items:
+    - name: Соединение с экземпляром SQL Server
+      href: create-program/connecting-to-an-instance-of-sql-server.md
+    - name: Отсоединение от экземпляра SQL Server
+      href: create-program/disconnecting-from-an-instance-of-sql-server.md
+    - name: Вызов методов
+      href: create-program/calling-methods.md
+    - name: Установка свойств
+      href: create-program/setting-properties-smo.md
+    - name: Использование коллекций
+      href: create-program/using-collections.md
+    - name: Работа с типами данных
+      href: create-program/working-with-data-types.md
+    - name: Использование транзакций
+      href: create-program/using-transactions.md
+    - name: Использование режима записи
+      href: create-program/using-capture-mode.md
+    - name: Обработка событий SMO
+      href: create-program/handling-smo-events.md
+    - name: Обработка исключений SMO
+      href: create-program/handling-smo-exceptions.md
+- name: 'Задачи, связанные с программированием'
+  href: tasks/programming-specific-tasks.md
+  items:
+    - name: Настройка SQL Server в SMO
+      href: tasks/configuring-sql-server-in-smo.md
+    - name: Использование секционирования таблиц и индексов
+      href: tasks/using-table-and-index-partitioning.md
+    - name: Использование файловых групп и файлов для хранения данных
+      href: tasks/using-filegroups-and-files-to-store-data.md
+    - name: Работа с объектами базы данных
+      href: tasks/creating-altering-and-removing-database-objects.md
+      items:
+        - name: 'Создание, изменение и удаление баз данных'
+          href: tasks/creating-altering-and-removing-databases.md
+        - name: 'Создание, изменение и удаление таблиц'
+          href: tasks/creating-altering-and-removing-tables.md
+        - name: 'Создание, изменение и удаление индексов'
+          href: tasks/creating-altering-and-removing-indexes.md
+        - name: 'Создание, изменение и удаление внешних ключей'
+          href: tasks/creating-altering-and-removing-foreign-keys.md
+        - name: 'Создание, изменение и удаление используемых по умолчанию значений'
+          href: tasks/creating-altering-and-removing-defaults.md
+        - name: 'Создание, изменение и удаление правил'
+          href: tasks/creating-altering-and-removing-rules.md
+        - name: 'Создание, изменение и удаление представлений'
+          href: tasks/creating-altering-and-removing-views.md
+        - name: 'Создание, изменение и удаление триггеров'
+          href: tasks/creating-altering-and-removing-triggers.md
+        - name: 'Создание, изменение и удаление хранимых процедур'
+          href: tasks/creating-altering-and-removing-stored-procedures.md
+        - name: 'Создание, изменение и удаление определяемых пользователем функций'
+          href: tasks/creating-altering-and-removing-user-defined-functions.md
+        - name: 'Создание, изменение и удаление схем'
+          href: tasks/creating-altering-and-removing-schemas.md
+    - name: 'Управление пользователями, ролями и именами входа'
+      href: tasks/managing-users-roles-and-logins.md
+    - name: 'Предоставление, отмена и запрет разрешений'
+      href: tasks/granting-revoking-and-denying-permissions.md
+    - name: Использование шифрования
+      href: tasks/using-encryption.md
+    - name: Планирование автоматических административных задач в агенте SQL Server
+      href: tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md
+    - name: Резервное копирование и восстановление баз данных и журналов транзакций
+      href: tasks/backing-up-and-restoring-databases-and-transaction-logs.md
+    - name: Создание скриптов
+      href: tasks/scripting.md
+    - name: Передача данных
+      href: tasks/transferring-data.md
+    - name: Использование компонента Database Mail
+      href: tasks/using-database-mail.md
+    - name: Управление компонентом Service Broker
+      href: tasks/managing-service-broker.md
+    - name: Использование схем XML
+      href: tasks/using-xml-schemas.md
+    - name: Использование синонимов
+      href: tasks/using-synonyms.md
+    - name: Использование сообщений
+      href: tasks/using-messages.md
+    - name: Реализация полнотекстового поиска
+      href: tasks/implementing-full-text-search.md
+    - name: Реализация конечных точек
+      href: tasks/implementing-endpoints.md
+    - name: Создание и обновление статистики
+      href: tasks/creating-and-updating-statistics.md
+    - name: Трассировка и воспроизведение событий
+      href: tasks/tracing-and-replaying-events.md
+    - name: Управление службами и сетевыми настройками с помощью поставщика WMI
+      href: tasks/managing-services-and-network-settings-by-using-wmi-provider.md
+    - name: Использование связанных серверов в объектах SMO
+      href: tasks/using-linked-servers-in-smo.md
+    - name: Использование определяемых пользователем таблиц
+      href: tasks/using-user-defined-tables.md
+- name: Инструкции по SMO
+  href: ../../database-engine/dev-guide/smo-how-to-topics.md
+  items:
+    - name: 'создание проекта SMO на языке Visual C# в среде Visual Studio .NET'
+      href: how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md
+    - name: Создание проекта SMO на языке Visual Basic в среде Visual Studio .NET
+      href: ../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md

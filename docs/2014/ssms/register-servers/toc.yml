@@ -1,0 +1,35 @@
+- name: Регистрация серверов
+  href: register-servers.md
+  items:
+    - name: Регистрация подключенного сервера (среда SQL Server Management Studio)
+      href: register-a-connected-server-sql-server-management-studio.md
+    - name: Создание нового зарегистрированного сервера (среда SQL Server Management Studio)
+      href: create-a-new-registered-server-sql-server-management-studio.md
+    - name: Просмотр зарегистрированных серверов в среде SQL Server Management Studio
+      href: view-registered-servers-in-sql-server-management-studio.md
+    - name: Удаление зарегистрированного сервера (среда SQL Server Management Studio)
+      href: remove-a-registered-server-sql-server-management-studio.md
+    - name: Изменение регистрационных данных сервера (среда SQL Server Management Studio)
+      href: change-a-server-s-registration-sql-server-management-studio.md
+    - name: Подключение к зарегистрированному серверу (среда SQL Server Management Studio)
+      href: connect-to-a-registered-server-sql-server-management-studio.md
+    - name: Отключение от зарегистрированного сервера (среда SQL Server Management Studio)
+      href: disconnect-from-a-registered-server-sql-server-management-studio.md
+    - name: Перемещение зарегистрированного сервера или зарегистрированной группы серверов (среда SQL Server Management Studio)
+      href: move-a-registered-server-or-registered-server-group.md
+    - name: Изменение имени зарегистрированного сервера или зарегистрированной группы серверов (среда SQL Server Management Studio)
+      href: change-the-name-of-registered-server-or-registered-server-group.md
+    - name: Создание или изменение группы серверов (среда SQL Server Management Studio)
+      href: create-or-edit-a-server-group-sql-server-management-studio.md
+    - name: Удаление группы серверов (среда SQL Server Management Studio)
+      href: remove-a-server-group-sql-server-management-studio.md
+    - name: Выполнение экспорта сведений компонента «Зарегистрированные серверы» (среда SQL Server Management Studio)
+      href: export-registered-server-information-sql-server-management-studio.md
+    - name: Импорт сведений о зарегистрированном сервере (среда SQL Server Management Studio)
+      href: import-registered-server-information-sql-server-management-studio.md
+    - name: Создание центрального сервера управления и группы сервера (среда SQL Server Management Studio)
+      href: create-a-central-management-server-and-server-group.md
+    - name: Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio)
+      href: execute-statements-against-multiple-servers-simultaneously.md
+    - name: Справка F1 по зарегистрированным серверам
+      href: registered-servers-f1-help.md

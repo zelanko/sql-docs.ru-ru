@@ -1,0 +1,8 @@
+- name: Указание пути доступа (SQLXML 4.0)
+  href: specifying-a-location-path-sqlxml-4-0.md
+- name: Задание проверки узла в пути доступа (SQLXML 4.0)
+  href: specifying-a-node-test-in-the-location-path-sqlxml-4-0.md
+- name: Определение оси (SQLXML 4.0)
+  href: specifying-an-axis-sqlxml-4-0.md
+- name: Указание предикатов выбора в пути доступа (SQLXML 4.0)
+  href: specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md

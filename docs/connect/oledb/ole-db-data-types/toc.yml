@@ -1,0 +1,8 @@
+- name: Типы данных (OLE DB)
+  href: data-types-ole-db.md
+- name: Сопоставление типов данных в интерфейсе ITableDefinition
+  href: data-type-mapping-in-itabledefinition.md
+- name: Сопоставление типов данных в наборах строк и параметрах
+  href: data-type-mapping-in-rowsets-and-parameters.md
+- name: Структура SSVARIANT
+  href: ssvariant-structure.md

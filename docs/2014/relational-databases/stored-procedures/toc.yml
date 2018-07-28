@@ -1,0 +1,37 @@
+- name: Хранимые процедуры
+  href: stored-procedures-database-engine.md
+  items:
+    - name: Создание хранимой процедуры
+      href: create-a-stored-procedure.md
+    - name: Изменение хранимой процедуры
+      href: modify-a-stored-procedure.md
+    - name: Удаление хранимой процедуры
+      href: delete-a-stored-procedure.md
+    - name: Выполнение хранимой процедуры
+      href: execute-a-stored-procedure.md
+      items:
+        - name: Указание параметров
+          href: specify-parameters.md
+    - name: Предоставление разрешений на хранимую процедуру
+      href: grant-permissions-on-a-stored-procedure.md
+    - name: Возврат данных из хранимой процедуры
+      href: return-data-from-a-stored-procedure.md
+    - name: Перекомпиляция хранимой процедуры
+      href: recompile-a-stored-procedure.md
+    - name: Изменение имени хранимой процедуры
+      href: rename-a-stored-procedure.md
+    - name: Просмотр определения хранимой процедуры
+      href: view-the-definition-of-a-stored-procedure.md
+    - name: Просмотр зависимостей хранимой процедуры
+      href: view-the-dependencies-of-a-stored-procedure.md
+    - name: Свойства хранимой процедуры (страница «Общие»)
+      href: stored-procedure-properties-general-page.md
+- name: Объекты OLE-автоматизации в Transact-SQL
+  href: ole-automation-objects-in-transact-sql.md
+  items:
+    - name: Коды возврата и сведения об ошибках OLE-автоматизации
+      href: ole-automation-return-codes-and-error-information.md
+    - name: Результирующие наборы OLE-автоматизации
+      href: ole-automation-result-sets.md
+    - name: Пример скрипта OLE-автоматизации
+      href: ole-automation-sample-script.md
