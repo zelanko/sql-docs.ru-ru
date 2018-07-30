@@ -58,7 +58,7 @@ ms.locfileid: "37359386"
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Задайте параметры **@publication**, **@subscriber**, укажите имя базы данных подписчика, содержащей публикуемые данные, в параметре **@destination_db**, значение **pull** в параметре **@subscription_type**, а также значение **replication support only** в параметре **@sync_type**. Дополнительные сведения см. в статье [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-3.  Выполните процедуру [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)на подписчике. Сведения об обновлении подписок см. в разделе [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
+3.  Выполните процедуру [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)на подписчике. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
   
 4.  Выполните процедуру [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)на подписчике. Дополнительные сведения см. в статье [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "37359386"
   
 1.  Убедитесь, что схема и данные существуют в базе данных подписки. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите имя базы данных подписчика, содержащей публикуемые данные, в параметре **@destination_db**, значение **push** в параметре **@subscription_type**, а также значение **replication support only** в параметре **@sync_type**. Сведения об обновлении подписок см. в разделе [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите имя базы данных подписчика, содержащей публикуемые данные, в параметре **@destination_db**, значение **push** в параметре **@subscription_type**, а также значение **replication support only** в параметре **@sync_type**. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Дополнительные сведения см. в статье [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
