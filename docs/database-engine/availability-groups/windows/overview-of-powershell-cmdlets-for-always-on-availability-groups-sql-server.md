@@ -51,7 +51,7 @@ ms.locfileid: "34769220"
 > [!NOTE]  
 >  Список разделов электронной документации по [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , в которых описано использование командлетов для выполнения задач [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , приведен в подразделе "Связанные задачи" в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
+##  <a name="ConfiguringServerInstance"></a>Настройка экземпляра сервера для групп доступности AlwaysOn  
   
 |Командлеты|Описание|Поддерживается на|  
 |-------------|-----------------|------------------|
@@ -61,7 +61,7 @@ ms.locfileid: "34769220"
 |[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|Изменяет свойства существующей конечной точки зеркального отображения базы данных, например имя, состояние и свойства проверки подлинности.|Экземпляр сервера, который поддерживает [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и в котором отсутствует конечная точка зеркального отображения базы данных|  
 
   
-##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
+##  <a name="BnRcmdlets"></a>Резервное копирование и восстановление баз данных и журналов транзакций  
   
 |Командлеты|Описание|Поддерживается на|  
 |-------------|-----------------|------------------|  

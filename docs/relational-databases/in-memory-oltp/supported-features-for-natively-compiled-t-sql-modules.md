@@ -231,7 +231,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 ##  <a name="auditing"></a> Аудит  
  Аудит на уровне процедуры поддерживается для хранимых процедур, скомпилированных в собственном коде.  
 
- Дополнительные сведения об аудите см. в разделе [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Дополнительные сведения об аудите см. в разделе [Создание спецификация аудита для сервера и базы данных](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
 ##  <a name="tqh"></a> Табличные указания и указания запросов  
  Поддерживаются следующие конструкции:  
