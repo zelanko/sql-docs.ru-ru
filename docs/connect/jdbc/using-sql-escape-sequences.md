@@ -1,7 +1,7 @@
 ---
 title: С помощью escape-последовательностей SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60af5198eb78ad23bf8ad55a1dc24690b91130ab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: c9a4e7854098fcc0e2cc161658cc772cbd40c80c
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978682"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278595"
 ---
 # <a name="using-sql-escape-sequences"></a>Использование escape-последовательностей SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "37978682"
 ## <a name="like-wildcard-literals"></a>Литералы-шаблоны LIKE  
  Драйвер JDBC поддерживает синтаксис `{escape 'escape character'}` для использования шаблонов предложения LIKE в качестве литералов. Например, в следующем коде возвращаются значения col3, для которых значение col2 начинается с символа подчеркивания (и не используется как шаблон).  
   
-```  
+```java
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
 LIKE '\\_%' {escape '\\'}");  
 ```  
@@ -63,13 +63,13 @@ LIKE '\\_%' {escape '\\'}");
 ## <a name="function-handling"></a>Обработка функций  
  Драйвер JDBC поддерживает использование escape-последовательностей функций в инструкциях SQL со следующим синтаксисом:  
   
-```  
+```java
 {fn functionName}  
 ```  
   
  где `functionName` представляет собой функцию, поддерживаемую драйвером JDBC. Пример:  
   
-```  
+```sql
 SELECT {fn UCASE(Name)} FROM Employee  
 ```  
   
@@ -85,7 +85,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 ## <a name="date-and-time-literals"></a>Литералы даты и времени  
  Ниже приводится синтаксис escape-последовательности для литералов даты, времени и отметок времени:  
   
-```  
+```
 {literal-type 'value'}  
 ```  
   
@@ -99,7 +99,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  Пример:  
   
-```  
+```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
 WHERE OrderID=1025  
 ```  
@@ -109,7 +109,7 @@ WHERE OrderID=1025
   
  Процедура представляет собой исполняемый объект, который хранится в базе данных. Обычно процедурой является одна или несколько заранее скомпилированных инструкций SQL. Ниже приводится синтаксис escape-последовательности вызова хранимой процедуры:  
   
-```  
+```sql
 {[?=]call procedure-name[([parameter][,[parameter]]...)]}  
 ```  
   
@@ -120,13 +120,13 @@ WHERE OrderID=1025
 ## <a name="outer-joins"></a>Внешние соединения  
  Драйвер JDBC поддерживает синтаксис левого, правого и полного внешнего соединения SQL92. Ниже приводится синтаксис escape-последовательности для внешних соединений:  
   
-```  
+```sql
 {oj outer-join}  
 ```  
   
  где внешнее соединение:  
   
-```  
+```sql
 table-reference {LEFT | RIGHT | FULL} OUTER JOIN    
 {table-reference | outer-join} ON search-condition  
 ```  
@@ -135,7 +135,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  Пример:  
   
-```  
+```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
    FROM {oj Customers LEFT OUTER JOIN   
       Orders ON Customers.CustID=Orders.CustID}   
@@ -159,7 +159,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
   
  Escape-синтаксис LIMIT выглядит следующим образом:  
   
-```  
+```sql
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   

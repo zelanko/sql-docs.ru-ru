@@ -1,7 +1,7 @@
 ---
 title: Использование возвращающих табличные значения параметров | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 356e81dc6faf25e12c4edd51d1927ac53c5b3a38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4852b9d6546375246c9236ccdfb8522c00ec548a
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978766"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279215"
 ---
 # <a name="using-table-valued-parameters"></a>Использование параметров, возвращающих табличные значения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -56,14 +56,14 @@ ms.locfileid: "37978766"
 ## <a name="creating-table-valued-parameter-types"></a>Создание типов параметров, возвращающих табличные значения  
  Табличное значение параметры основаны на строго типизированных табличных структурах, заданных с помощью инструкций Transact-SQL CREATE TYPE. Необходимо создать табличный тип и определить структуру в SQL Server, перед использованием в клиентских приложениях возвращающих табличные значения параметров. Дополнительные сведения о создании типов таблиц см. в разделе [определяемые пользователем табличные типы](http://go.microsoft.com/fwlink/?LinkID=98364) в электронной документации по SQL Server.  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  После создания табличного типа, можно объявить возвращающие табличные значения параметров в зависимости от конкретного типа. В следующем фрагменте языка Transact-SQL демонстрируется объявление возвращающего табличное значение параметра в определении хранимой процедуры. Обратите внимание, что ключевое слово READONLY является обязательным для объявления возвращающих табличные значения параметра.  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -73,7 +73,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  Следующая инструкция Transact-SQL UPDATE демонстрируется использование возвращающих табличные значения параметра, присоединив ее в таблицу Categories. При использовании возвращающих табличные значения параметра в JOIN в предложении FROM, необходимо также псевдоним, как показано ниже, где табличное значение параметра — псевдоним «ec»:  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -82,7 +82,7 @@ UPDATE dbo.Categories
   
  Этот пример Transact-SQL демонстрируется выбор строк из возвращающих табличные значения параметра для выполнения инструкции INSERT в рамках одной операции с множествами.  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
@@ -104,7 +104,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
  Следующие два фрагмента кода показано, как настроить табличное значение параметра с SQLServerPreparedStatement и SQLServerCallableStatement для вставки данных. Здесь sourceTVPObject может быть SQLServerDataTable, ResultSet или объект ISQLServerDataRecord. В примерах предполагается, что подключение является активным объектом соединения.  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =   
     (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
@@ -112,7 +112,7 @@ pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);
 pStmt.execute();  
 ```  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerCallableStatement.  
 SQLServerCallableStatement pStmt =   
     (SQLServerCallableStatement) connection.prepareCall("exec usp_InsertCategories ?");       
@@ -126,7 +126,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>Передача табличное значение параметра как объект SQLServerDataTable  
  Начиная с Microsoft JDBC Driver 6.0 для SQL Server, класс SQLServerDataTable представляет таблицу в памяти реляционных данных. В этом примере демонстрируется создание возвращающих табличные значения параметра из данных в памяти, с помощью объекта SQLServerDataTable. Код сначала создает объект SQLServerDataTable, определяет его схемы и заполняет таблицу данных. Затем в коде настраивается SQLServerPreparedStatement, который передает этой таблицы данных как табличное значение параметра в SQL Server.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create an in-memory data table.  
@@ -154,7 +154,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>Передача табличное значение параметра как объект результирующего набора  
  В этом примере показано, как выполнять потоковую передачу строк данных из результирующего набора для возвращающих табличные значения параметра. Код сначала получает данные из исходной таблицы в создает объект SQLServerDataTable, определяет его схемы и заполняет таблицу данных. Затем в коде настраивается SQLServerPreparedStatement, который передает этой таблицы данных как табличное значение параметра в SQL Server.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create the source ResultSet object. Here SourceCategories is a table defined with the same schema as Categories table.   
@@ -174,7 +174,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>Передача табличное значение параметра как объект ISQLServerDataRecord  
  Начиная с Microsoft JDBC Driver 6.0 для SQL Server, новый интерфейс ISQLServerDataRecord доступен для потоковой передачи данных (в зависимости от как пользователь предоставляет реализацию для него) с помощью возвращающих табличные значения параметра. В следующем примере для реализации интерфейса ISQLServerDataRecord и передайте его в качестве параметров, возвращающих табличные значения. Для простоты в следующем примере передается только одну строку с жестко заданные значения для возвращающих табличные значения параметра. В идеале пользователю будет реализовывать этот интерфейс для передачи строк из любого источника, например из текстовых файлов.  
   
-```  
+```java
 class MyRecords implements ISQLServerDataRecord  
 {  
     int currentRow = 0;  
