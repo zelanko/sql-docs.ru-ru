@@ -1,5 +1,5 @@
 ---
-title: 'Как: укажите типы данных SQL Server при использовании драйвера SQLSRV | Документы Microsoft'
+title: Практическое руководство. Указание типов данных SQL Server при использовании драйвера SQLSRV | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9879edd7282beb2226593b70cab500fba4e09e4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308093"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032978"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Практическое руководство. Указание типов данных SQL Server при использовании драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "35308093"
 Ниже представлена обобщенная процедура указания типа данных SQL Server при отправке данных на сервер:  
   
 > [!NOTE]  
-> Если указан тип данных SQL Server, используются типы по умолчанию. Дополнительные сведения о типах данных SQL Server по умолчанию см. в статье [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
+> Если тип данных SQL Server не указан, используются типы по умолчанию. Дополнительные сведения о типах данных SQL Server по умолчанию см. в статье [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
   
 1.  Определите запрос Transact-SQL, который вставляет или обновляет данные. Используйте вопросительные знаки (?) в качестве заполнителей для значений параметров в запросе.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "35308093"
   
 3.  Создайте массив *$params* , используемый при подготовке или выполнении запроса. Обратите внимание, что при указании типа данных SQL Server каждый элемент массива *$params* также должен быть массивом.  
   
-4.  Укажите требуемый тип данных SQL Server, используя соответствующую **SQLSRV_SQLTYPE_\***  константы в качестве четвертого параметра в каждом подмассиве из *$params* массива. Полный список **SQLSRV_SQLTYPE_\***  константы, в разделе SQLTYPEs [константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Например, в следующем коде *$changeDate*, *$rate*и *$payFrequency* соответственно указаны как типы SQL Server **datetime**, **money**и **tinyint** в массиве *$params* . Так как для параметра *$employeeId* тип SQL Server не указан и параметр инициализируется целым числом, используется тип SQL Server по умолчанию **integer** .  
+4.  Укажите требуемый тип данных SQL Server, используя соответствующую константу **SQLSRV_SQLTYPE_\*** в качестве четвертого параметра в каждом подмассиве массива *$params*. Полный список констант **SQLSRV_SQLTYPE_\*** см. в разделе SQLTYPEs статьи [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Например, в следующем коде *$changeDate*, *$rate*и *$payFrequency* соответственно указаны как типы SQL Server **datetime**, **money**и **tinyint** в массиве *$params* . Так как для параметра *$employeeId* тип SQL Server не указан и параметр инициализируется целым числом, используется тип SQL Server по умолчанию **integer** .  
   
     ```  
     $employeeId = 5;  
@@ -58,9 +58,9 @@ ms.locfileid: "35308093"
     ```  
   
 ## <a name="example"></a>Пример  
-Следующий пример вставляет данные в *HumanResources.EmployeePayHistory* таблицы базы данных AdventureWorks. Типы SQL Server указаны для параметров *$changeDate*, *$rate*и *$payFrequency* . Тип SQL Server по умолчанию используется для параметра *$employeeId* . Чтобы убедиться, что данные были успешно вставлены, выполняется извлечение и отображение тех же данных.  
+В следующем примере данные вставляются в таблицу *HumanResources.EmployeePayHistory* базы данных AdventureWorks. Типы SQL Server указаны для параметров *$changeDate*, *$rate*и *$payFrequency* . Тип SQL Server по умолчанию используется для параметра *$employeeId* . Чтобы убедиться, что данные были успешно вставлены, выполняется извлечение и отображение тех же данных.  
   
-В этом примере предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+В примере предполагается, что SQL Server и база данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -138,7 +138,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Извлечение данных](../../connect/php/retrieving-data.md)
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)

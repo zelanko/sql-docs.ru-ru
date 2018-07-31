@@ -1,5 +1,5 @@
 ---
-title: Конструктор SQLServerBlob (SQLServerConnection, byte) | Документы Microsoft
+title: Конструктор SQLServerBlob (SQLServerConnection, byte) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d93e5bee03976c5ae9c55247f98ba180e237a4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847039"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064417"
 ---
 # <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>Конструктор SQLServerBlob (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Инициализирует новый экземпляр [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) класса для заданного [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта и **байтов** массива.  
+  Инициализирует новый экземпляр класса [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md), если имеется объект [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) и массив **byte**.  
   
 > [!NOTE]  
->  Этот метод устарел в версии драйвера JDBC 2.0. Вместо этого используйте [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) метод [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) класса.  
+>  Этот метод устарел в версии драйвера JDBC 2.0. Используйте вместо него метод [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) класса [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,15 +43,15 @@ public SQLServerBlob(SQLServerConnection connection,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *подключение*  
+ *connection*  
   
  Объект SQLServerConnection.  
   
  *data*  
   
- Объект **байтов** массива.  
+ Массив **byte**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструкторы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructors.md)   
  [Элементы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [Класс SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  

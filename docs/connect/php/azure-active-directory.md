@@ -1,5 +1,5 @@
 ---
-title: Azure Active Directory | Документы Microsoft
+title: Azure Active Directory | Документация Майкрософт
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,37 +10,37 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 224fa4f0746c45f9651b4714593e28f719b4d1ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 71e6b3b4556621b6bc8a8a4c7996cfdb47a12849
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307003"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979446"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Подключение с использованием проверки подлинности Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) — это технология управления идентификатор центра пользователь, работающий в качестве альтернативы [проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD разрешает подключения к базе данных SQL Microsoft Azure и хранилище данных SQL с федеративные удостоверения в Azure AD с помощью имени пользователя и пароля, встроенная проверка подлинности Windows или маркера доступа Azure AD; драйверы PHP для SQL Server обеспечивают частичная поддержка этих возможностей.
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) — это технология управления центрального пользовательского идентификатор, который работает как альтернативу [проверку подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD позволяет подключениями к базе данных SQL Microsoft Azure и хранилище данных SQL с федеративные удостоверения в Azure AD с помощью имени пользователя и пароля, встроенная проверка подлинности Windows или маркер доступа Azure AD; драйверы PHP для SQL Server предлагают частичная поддержка этих функций.
 
-Чтобы использовать Azure AD, используйте **проверки подлинности** ключевое слово. Значения, **проверки подлинности** может занять на приведены в следующей таблице.
+Чтобы использовать Azure AD, используйте **проверки подлинности** ключевое слово. Значения, **проверки подлинности** может занять на описаны в следующей таблице.
 
 |Ключевое слово|Значения|Описание|
 |-|-|-|
-|**Проверка подлинности**|Не задан (по умолчанию)|Режим проверки подлинности определяется другие ключевые слова. Дополнительные сведения см. в статье [Connection Options](../../connect/php/connection-options.md). |
-||`SqlPassword`|Непосредственно проверку подлинности в экземпляр SQL Server (который может быть экземпляр Azure) с помощью имени пользователя и пароля. Имя пользователя и пароль должен быть передан в строку соединения с помощью **UID** и **PWD** ключевые слова. |
-||`ActiveDirectoryPassword`|Проверка подлинности с помощью удостоверения Azure Active Directory, используя имя пользователя и пароль. Имя пользователя и пароль должен быть передан в строку соединения с помощью **UID** и **PWD** ключевые слова. |
+|**Проверка подлинности**|Не задано (по умолчанию)|Режим проверки подлинности определяется другими ключевыми словами. Дополнительные сведения см. в статье [Connection Options](../../connect/php/connection-options.md). |
+||`SqlPassword`|Прямой аутентификации к экземпляру SQL Server (который может быть экземпляром Azure) с помощью имени пользователя и пароля. Имя пользователя и пароль должен быть передан в строке подключения в **UID** и **PWD** ключевые слова. |
+||`ActiveDirectoryPassword`|Проверка подлинности с помощью удостоверения Azure Active Directory, используя имя пользователя и пароль. Имя пользователя и пароль должен быть передан в строке подключения в **UID** и **PWD** ключевые слова. |
 
-**Проверки подлинности** ключевое слово влияет параметров безопасности подключения. Если значение задано в строке подключения, а затем по умолчанию **Encrypt** ключевого слова задано значение true, поэтому клиент запрашивает шифрование. Кроме того, сертификат сервера будет проверяться независимо от того, параметры шифрования, если не **TrustServerCertificate** задано значение true. Этим оно отличается от старого и менее надежна, метод входа, в котором сертификат сервера не проверяется без шифрования особого запроса в строке подключения.
+**Проверки подлинности** ключевое слово влияет на параметры безопасности подключения. Если он задан в строке подключения, а затем по умолчанию **Encrypt** ключевого слова задано значение true, чтобы клиент запрашивает шифрование. Кроме того, сертификат сервера будет проверяться независимо от параметра шифрования, если не **TrustServerCertificate** задано значение true. Этим оно отличается из старого и менее безопасный, метод входа, в котором сертификат сервера не проверяется, если шифрование специально не была запрошена в строке подключения.
 
-Прежде чем использовать Azure AD с помощью драйверов PHP для SQL Server в Windows, убедитесь, что вы установили [Microsoft Online Services помощник по входу](https://www.microsoft.com/download/details.aspx?id=41950) (не требуется для Linux и MacOS).
+Прежде чем использовать Azure AD с драйверами PHP для SQL Server в Windows, убедитесь, что у вас установлена [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=41950) (не требуется для Linux и MacOS).
 
 #### <a name="limitations"></a>Ограничения
 
-В Windows, основной драйвер ODBC поддерживает один дополнительные значения для **проверки подлинности** ключевое слово, **ActiveDirectoryIntegrated**, драйверы PHP не поддерживают это значение на любой платформе, но и поэтому также не поддерживает проверку подлинности на основе токена Azure AD.
+В Windows, основной драйвер ODBC поддерживает одно значение больше для **проверки подлинности** ключевое слово, **ActiveDirectoryIntegrated**, но драйверами PHP не поддерживают это значение на любой платформе и, следовательно также не поддерживают проверку подлинности на основе маркеров Azure AD.
 
 ## <a name="example"></a>Пример
 
-Приведенный ниже показано, как подключаться с помощью **SqlPassword** и **ActiveDirectoryPassword**.
+В следующем примере показано, как подключиться с помощью **SqlPassword** и **ActiveDirectoryPassword**.
 
 ```php
     <?php
@@ -128,5 +128,5 @@ ms.locfileid: "35307003"
 
     ?>
 ```
-## <a name="see-also"></a>См. также  
-[Использование Azure Active Directory с драйвером ODBC](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
+## <a name="see-also"></a>См. также:  
+[Использование Azure Active Directory с драйвером ODBC](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)

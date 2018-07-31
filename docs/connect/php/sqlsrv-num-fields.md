@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_fields | Документы Microsoft
+title: sqlsrv_num_fields | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/23/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d533d9293641be5d40db2306f035827bf83b8722
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309183"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006881"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,9 +46,9 @@ sqlsrv_num_fields( resource $stmt)
 Целочисленное значение, представляющее количество полей в активном результирующем наборе. Если возникает ошибка, возвращается логическое значение **false** .  
   
 ## <a name="example"></a>Пример  
-В следующем примере выполняется запрос, чтобы получить все поля для первых трех строк в *HumanResources.Department* таблицы базы данных AdventureWorks. Функция **sqlsrv_num_fields** определяет количество полей в результирующем наборе. Это позволяет отображать данные посредством итерации по полям в каждой возвращаемой строке.  
+Следующий пример выполняет запрос, чтобы получить все поля для первых трех строк в таблице *HumanResources.Department* базы данных AdventureWorks. Функция **sqlsrv_num_fields** определяет количество полей в результирующем наборе. Это позволяет отображать данные посредством итерации по полям в каждой возвращаемой строке.  
   
-Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -93,7 +93,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  

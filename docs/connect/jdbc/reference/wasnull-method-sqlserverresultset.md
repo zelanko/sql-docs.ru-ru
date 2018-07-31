@@ -1,5 +1,5 @@
 ---
-title: Метод (SQLServerResultSet) wasNull | Документы Microsoft
+title: Метод wasNull (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 257cc1e1889e0866bcbf0e26b2315593074545fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848499"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979196"
 ---
-# <a name="wasnull-method-sqlserverresultset"></a>wasNull метод (SQLServerResultSet)
+# <a name="wasnull-method-sqlserverresultset"></a>Метод wasNull (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Проверяет, является ли последнее считанное значение Null.  
@@ -39,15 +39,15 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если последнее считанное имел значение null. В противном случае — **false**.  
+ Значение **true**, если последнее считанное значение равно null. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод wasNull указывается с помощью метода wasNull в интерфейсе java.sql.ResultSet.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

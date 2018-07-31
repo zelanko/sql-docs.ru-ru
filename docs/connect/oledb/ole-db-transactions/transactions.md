@@ -1,6 +1,6 @@
 ---
-title: Транзакции | Документы Microsoft
-description: Транзакции в драйвер OLE DB для SQL Server
+title: Транзакции | Документация Майкрософт
+description: Транзакции в драйвере OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,23 +18,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1f1e0b252960468e443b157c7c95213809a4d318
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 04be1dd71842471a05b3d0f46655f13a0113768f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689317"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108686"
 ---
 # <a name="transactions"></a>Transactions
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server реализует поддержку локальных транзакций. Потребитель может использовать распределенные или координируемые транзакции с помощью координатора распределенных транзакций (Майкрософт) (MS DTC). Для потребителей, которым требуется управление транзакциями, охватывающее несколько сеансов драйвер OLE DB для SQL Server может соединять транзакции, инициированные и обслуживаемые координатором MS DTC.  
+  Драйвер OLE DB для SQL Server реализует поддержку локальных транзакций. Потребитель может использовать распределенные или координируемые транзакции с помощью координатора распределенных транзакций (Майкрософт) (MS DTC). Для потребителей, которым требуется управление транзакциями, охватывающее несколько сеансов, драйвер OLE DB для SQL Server может соединять транзакции, инициированные и обслуживаемые координатором MS DTC.  
   
- По умолчанию драйвер OLE DB для SQL Server использует режим автоматического сохранения транзакций, где каждое отдельное действие в сеансе потребителя составляет полную транзакцию для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Драйвер OLE DB для SQL Server режим автоматической фиксации локальной и транзакций с автоматической фиксацией никогда не принадлежат более чем одного сеанса.  
+ По умолчанию драйвер OLE DB для SQL Server использует режим автоматической фиксации транзакции, в котором каждое отдельное действие в сеансе потребителя составляет полную транзакцию для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Режим автоматической фиксации драйвера OLE DB для SQL Server локальный, и транзакции с автоматической фиксацией никогда не принадлежат более чем одному сеансу.  
   
- Драйвер OLE DB для SQL Server предоставляет **ITransactionLocal** интерфейс, что позволяет потребителю использовать явно и неявно запускаемые транзакции в одном соединении с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Драйвер OLE DB для SQL Server не поддерживает вложенные локальные транзакции.  
+ Драйвер OLE DB для SQL Server предоставляет интерфейс **ITransactionLocal**, что позволяет потребителю использовать явно и неявно запускаемые транзакции в одном подключении к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Драйвер OLE DB для SQL Server не поддерживает вложенные локальные транзакции.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -44,7 +44,7 @@ ms.locfileid: "35689317"
   
 -   [Уровни изоляции &#40;OLE DB&#41;](../../oledb/ole-db-transactions/isolation-levels-ole-db.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

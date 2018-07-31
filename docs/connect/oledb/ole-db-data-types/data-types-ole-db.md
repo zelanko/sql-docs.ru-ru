@@ -1,5 +1,5 @@
 ---
-title: Типы данных (OLE DB) | Документы Microsoft
+title: Типы данных (OLE DB) | Документация Майкрософт
 description: Типы данных (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 717e9da58a28daccb6fdfab18f1c3423d9d310df
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: f04b6729f97efdacdc79b035eda9f43c6458d61d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665164"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109346"
 ---
 # <a name="data-types-ole-db"></a>Типы данных (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Для выполнения [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций и процесс результаты с помощью драйвера OLE DB для SQL Server, необходимо знать, как драйвер OLE DB для SQL Server выполняется сопоставление [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных с типами данных OLE DB при привязке параметров или столбцов в наборе строк, а также при его u SES **ITableDefinition** интерфейс для создания таблицы в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Чтобы иметь возможность выполнения инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] и обработки результатов при помощи драйвера OLE DB для SQL Server, необходимо знать, как драйвер OLE DB для SQL Server сопоставляет типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с типами данных OLE DB при привязке параметров или столбцов в наборе строк, а также при использовании им интерфейса **ITableDefinition** для создания таблицы в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35665164"
   
 -   [Структура SSVARIANT](../../oledb/ole-db-data-types/ssvariant-structure.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

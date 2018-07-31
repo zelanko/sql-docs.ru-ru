@@ -1,5 +1,5 @@
 ---
-title: Образец асинхронного выполнения (метод уведомления) | Документы Microsoft
+title: Образец асинхронного выполнения (метод уведомления) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c0fb14245c5e3365389bb127ba735c4829f03e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047497"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Образец асинхронного выполнения (метод уведомления)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  В примерах кода в этом разделе демонстрируется использование [асинхронное выполнение (метод уведомления)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  В примерах кода в этой статье показано, как использовать [асинхронное выполнение (метод уведомления)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
   
- Эта функция использует асинхронное уведомление, чтобы открыть пять подключений и выполняет один запрос на инструкцию для каждого подключения.  
+ Эта функция использует асинхронное уведомление, чтобы открыть пять подключений, и выполняет один запрос на инструкцию для каждого подключения.  
   
 ```  
   
@@ -354,7 +354,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Драйвер Microsoft ODBC для SQL Server в Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

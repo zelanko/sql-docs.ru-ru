@@ -1,5 +1,5 @@
 ---
-title: Установка драйвера OLE DB для SQL Server | Документы Microsoft
+title: Установка драйвера OLE DB для SQL Server | Документация Майкрософт
 description: Установка и удаление драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -25,46 +25,46 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e8d238c288e42b2b5f53f2ce5b9f289c05ab1c11
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 7e435aef0d4499f62ea8b6255ce25440436c3cbc
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611669"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106220"
 ---
-# <a name="installing-ole-db-driver-for-sql-server"></a>Установка драйвера OLE DB для SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="installing-ole-db-driver-for-sql-server"></a>Установка драйвера OLE DB для SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Чтобы установить драйвер OLE DB для SQL Server необходимо msoledbsql.msi установщика.
-Запустите программу установки и выберите нужные предпочтительным. Драйвер OLE DB для SQL Server может быть установленных side-by-side с более ранними версиями поставщиков Microsoft OLE DB.
+Для установки драйвера OLE DB для SQL Server требуется msoledbsql.msi установщика.
+Запустите установщик и предпочтительным нужные параметры. Драйвер OLE DB для SQL Server может быть установленных side-by-side с более ранними версиями поставщиков Microsoft OLE DB.
 
-Драйвер OLE DB для SQL Server файлов (msoledbsql.dll, msoledbsqlr.rll) устанавливаются в `%SYSTEMROOT%\system32\` . Кроме того, x64 msoledbsql.msi устанавливает 32-разрядные двоичные файлы в `%SYSTEMROOT%\SysWOW64\`.
+Драйвер OLE DB для файлов SQL Server (msoledbsql.dll, msoledbsqlr.rll) устанавливаются в `%SYSTEMROOT%\system32\` . Кроме того, x64 msoledbsql.msi устанавливает 32-разрядных двоичных файлов в `%SYSTEMROOT%\SysWOW64\`.
 
 > [!NOTE]  
-> Все необходимые настройки реестра для драйвера OLE DB для SQL Server, выполненных в процессе установки.  
+> Все необходимые настройки реестра для драйвера OLE DB для SQL Server выполняются как часть процесса установки.  
 
-Драйвер OLE DB для SQL Server файлов заголовков и библиотек (msoledbsql.h и msoledbsql.lib) устанавливаются в `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`. Кроме того, x64 msoledbsql.msi устанавливает те же файлы в `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`.  
+Драйвер OLE DB для SQL Server заголовочные и библиотечные файлы (msoledbsql.h и msoledbsql.lib) устанавливаются в `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`. Кроме того, x64 msoledbsql.msi устанавливает те же файлы в `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`.  
 
-Драйвер OLE DB для SQL Server можно распространять через msoledbsql.msi. Может потребоваться установить драйвер OLE DB для SQL Server при развертывании приложения. Один из способов установки нескольких пакетов в одном (с точки зрения пользователя) сеансе установки состоит в применении технологии построителей цепочек и загрузчиков. Дополнительные сведения см. в разделе [разработки пользовательского пакета загрузчика для Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=115667) и [Добавление настраиваемых необходимых компонентов](http://go.microsoft.com/fwlink/?LinkId=115668).  
+Драйвер OLE DB для SQL Server можно распространять через msoledbsql.msi. Может потребоваться установить драйвер OLE DB для SQL Server при развертывании приложения. Один из способов установки нескольких пакетов в одном (с точки зрения пользователя) сеансе установки состоит в применении технологии построителей цепочек и загрузчиков. Дополнительные сведения см. в статьях [Разработка пользовательского пакета начального загрузчика для Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=115667) и [Добавление настраиваемых необходимых компонентов](http://go.microsoft.com/fwlink/?LinkId=115668).  
   
-X64 msoledbsql.msi также устанавливает 32-разрядная версия драйвера OLE DB для SQL Server. Если приложение предназначено для платформы, отличной от той, которую оно было разработано, вы можете загрузить версии msoledbsql.msi x64 и x86.
+X64 msoledbsql.msi также устанавливается 32-разрядной версии драйвера OLE DB для SQL Server. Если приложение предназначено для платформы, отличном от того, в которой оно было разработано на, можете скачать версии msoledbsql.msi x64 и x86.
 
-При вызове msoledbsql.msi только клиентские компоненты устанавливаются по умолчанию. Клиентские компоненты — это файлы, поддерживающие работу приложения, разработанного с помощью драйвера OLE DB для SQL Server. Чтобы установить также компоненты пакета SDK, укажите в командной строке `ADDLOCAL=All`. Например:  
+При вызове msoledbsql.msi по умолчанию устанавливаются только компоненты клиентской части. Этими компонентами служат файлы, поддерживающие работу приложения, разработанного с помощью драйвера OLE DB для SQL Server. Чтобы установить также компоненты пакета SDK, укажите в командной строке `ADDLOCAL=All`. Пример:  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 
 ## <a name="silent-install"></a>Автоматическая установка  
- При использовании параметров/passive, / qn, /qb или /qr параметр с msiexec необходимо также указать IACCEPTMSOLEDBSQLLICENSETERMS = Да, чтобы явно указать, что вы принимаете условия лицензии конечного пользователя. Этот параметр указывается только прописными буквами.  
+ При использовании параметров /passive, /qn, /qb или /qr программы msiexec необходимо также указать параметр IACCEPTMSOLEDBSQLLICENSETERMS=YES, тем самым явно подтверждая принятие условий соглашения конечного пользователя. Этот параметр указывается только прописными буквами.  
 
 ## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>Установка драйвера OLE DB для SQL Server как зависимость  
-Очень важно не удалить драйвер OLE DB для SQL Server, пока не будут удалены все зависимые приложения. Чтобы предоставить пользователям с предупреждением, что ваше приложение зависит от драйвера OLE DB для SQL Server, используйте параметра установки APPGUID в MSI-ФАЙЛЕ, как показано ниже:  
+Очень важно не удалить драйвер OLE DB для SQL Server, пока все зависимые приложения удаляются. Чтобы предоставить пользователям с предупреждением, что приложение зависит от драйвера OLE DB для SQL Server, используйте параметром установки APPGUID в MSI-ФАЙЛЕ, следующим образом:  
 
  `msiexec /i msoledbsql.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
 
 Значением, передаваемым в APPGUID, служит код продукта. Код продукта необходимо создать при использовании установщика (Майкрософт) для формирования пакета установки приложения.
-Параметр APPGUID требует запуска из командной строки с повышенными привилегиями.
+Параметр APPGUID требует, запустив установщик из командной строки с повышенными правами.
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью драйвера OLE DB для SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

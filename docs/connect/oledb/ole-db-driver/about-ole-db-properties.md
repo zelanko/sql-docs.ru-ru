@@ -1,6 +1,6 @@
 ---
-title: О свойствах OLE DB | Документы Microsoft
-description: О свойствах OLE DB
+title: О свойствах OLE DB | Документация Майкрософт
+description: О свойствах OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 93bc309da576917777f0eddea01857ceb9702075
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a424615a54a5917d52f4144b995589345d6cb534
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665194"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105980"
 ---
 # <a name="about-ole-db-properties"></a>О свойствах OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "35665194"
   
  Каждое свойство имеет значение, тип, описание и атрибут чтения/записи, а для свойств набора строк — признак того, применим ли набор строк к отдельным столбцам.  
   
- Свойство определяется по идентификатору GUID и целому числу, представляющему идентификатор свойства. Набор свойств — это набор всех свойств с одинаковым идентификатором GUID. Помимо стандартных наборов свойств OLE DB драйвер OLE DB для SQL Server реализует наборы свойств от поставщика и свойства в них. Каждое свойство принадлежит одной или нескольким группам свойств. Группа свойств — это группа всех свойств, применимых к определенному объекту. Группой свойств может быть группа свойств инициализации, группа свойств источника данных, группа свойств сеанса, группа свойств набора строк, группа свойств таблицы и группа свойств столбца. Ниже представлены свойства каждой из этих групп свойств.  
+ Свойство определяется по идентификатору GUID и целому числу, представляющему идентификатор свойства. Набор свойств — это набор всех свойств с одинаковым идентификатором GUID. В дополнение к стандартным наборам свойств OLE DB драйвер OLE DB для SQL Server реализует наборы свойств и отдельные свойства, присущие ему. Каждое свойство принадлежит одной или нескольким группам свойств. Группа свойств — это группа всех свойств, применимых к определенному объекту. Группой свойств может быть группа свойств инициализации, группа свойств источника данных, группа свойств сеанса, группа свойств набора строк, группа свойств таблицы и группа свойств столбца. Ниже представлены свойства каждой из этих групп свойств.  
   
  Установка значения свойства предполагает следующее.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "35665194"
   
 7.  Вызов метода для установки свойств и передачи счетчика и массива структур DBPROPSET.  
   
-## <a name="see-also"></a>См. также  
- [Создание драйвером OLE DB для приложения SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
- [Свойства (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+## <a name="see-also"></a>См. также:  
+ [Создание приложения с драйвером OLE DB для SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
+ [Свойства (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Выполнение хранимых процедур (OLE DB) | Документы Microsoft
+title: Выполнение хранимых процедур (OLE DB) | Документация Майкрософт
 description: Выполнение хранимых процедур (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9919fedbb999600e17c767a3206a587b99aec4da
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b4abfa519b9f083ee90df466ec7db3bd5c7341a9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611889"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108966"
 ---
-# <a name="stored-procedures---running"></a>Хранимые процедуры — выполнение
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="stored-procedures---running"></a>Выполнение хранимых процедур
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -42,7 +42,7 @@ ms.locfileid: "35611889"
   
 -   дополнительные возможности.  
   
- Драйвер OLE DB для SQL Server поддерживает три механизмы, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать хранимые процедуры для получения данных:  
+ Драйвер OLE DB для SQL Server поддерживает три следующих механизмов, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать хранимые процедуры для возврата данных:  
   
 -   Каждая инструкция SELECT в хранимой процедуре формирует результирующий набор.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "35611889"
   
  Приложение должно быть способно обработать все эти данные, возвращаемые хранимыми процедурами.  
   
- Разные поставщики OLE DB возвращают выходные параметры и значения на разных этапах во время обработки результатов. В случае драйвер OLE DB для SQL Server выходные параметры и коды возврата не предоставляются до после потребитель получит или отменит результирующие наборы, возвращаемые хранимой процедурой. Коды возврата и выходные параметры возвращаются сервером в последнем пакете потока табличных данных.  
+ Разные поставщики OLE DB возвращают выходные параметры и значения на разных этапах во время обработки результатов. В случае с драйвером OLE DB для SQL Server выходные параметры и коды возврата недоступны, пока потребитель не получил результирующий набор или не отменил получение результирующего набора, возвращаемого хранимой процедурой. Коды возврата и выходные параметры возвращаются сервером в последнем пакете потока табличных данных.  
   
  Поставщики используют свойство DBPROP_OUTPUTPARAMETERAVAILABILITY для сообщения о возвращении выходных параметров и возвращаемых значений. Это свойство доступно в наборе свойств DBPROPSET_DATASOURCEINFO.  
   
- Драйвер OLE DB для SQL Server назначает свойству DBPROP_OUTPUTPARAMETERAVAILABILITY значение DBPROPVAL_OA_ATROWRELEASE, указывая, что коды возврата и выходные параметры не возвращаются, пока не будет обработан или освобожден результирующего набора.  
+ Драйвер OLE DB для SQL Server присваивает свойству DBPROP_OUTPUTPARAMETERAVAILABILITY значение DBPROPVAL_OA_ATROWRELEASE, указывая, что коды возврата и выходные параметры не будут возвращены, пока результирующий набор не будет обработан или освобожден.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры](../../oledb/ole-db/stored-procedures.md)  
   
   

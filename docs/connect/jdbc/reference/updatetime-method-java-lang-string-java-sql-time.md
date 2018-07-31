@@ -1,5 +1,5 @@
 ---
-title: Метод updateTime (java.lang.String, java.sql.Time) | Документы Microsoft
+title: Метод updateTime (java.lang.String, java.sql.Time) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30cd816f08e8ac17c6ff5372cebdd992c9efeb73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850979"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979246"
 ---
 # <a name="updatetime-method-javalangstring-javasqltime"></a>Метод updateTime (java.lang.String, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public void updateTime(java.lang.String columnName,
 #### <a name="parameters"></a>Параметры  
  *columnName*  
   
- Объект **строка** , содержащее имя столбца.  
+ Значение типа **String**, содержащее имя столбца.  
   
  *x*  
   
@@ -51,10 +51,10 @@ public void updateTime(java.lang.String columnName,
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод updateTime указывается с помощью метода updateTime в интерфейсе java.sql.ResultSet.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод updateTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

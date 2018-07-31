@@ -1,5 +1,5 @@
 ---
-title: Устойчивость подключения в драйвере ODBC для Windows | Документы Microsoft
+title: Устойчивость подключения в драйвере ODBC в Windows | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2b27a848773b09d651d748bd321ace69ab2a6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060335"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Устойчивость подключения в драйвере ODBC в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Чтобы обеспечить сохранение подключения приложений [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], драйвер ODBC для Windows может восстанавливать неактивные соединения.  
+  Чтобы обеспечить сохранение подключения приложений к [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], драйвер ODBC в Windows может восстанавливать неактивные соединения.  
   
 > [!IMPORTANT]  
 >  Функция устойчивости подключений поддерживается в Базах данных SQL Microsoft Azure и SQL Server 2014 (и более поздних версий).  
   
- Дополнительные сведения об устойчивости неактивных подключений см. в разделе [Техническая статья — устойчивость неактивных подключений](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ Дополнительные сведения об устойчивости неактивных подключений см. в статье [Техническая статья — устойчивость неактивных подключений](http://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows имеет два параметра для управления поведением повторного подключения:  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
     -   используете ключевое слово строки подключения **ConnectRetryCount** .  
   
-     Чтобы извлечь количество повторных попыток подключения, используйте **SQL_COPT_SS_CONNECT_RETRY_COUNT** (только для чтения) атрибут соединения. Если приложение подключается к серверу, который не поддерживает устойчивость подключений, **SQL_COPT_SS_CONNECT_RETRY_COUNT** возвращает 0.  
+     Чтобы получить количество повторных попыток подключения, используйте атрибут соединения **SQL_COPT_SS_CONNECT_RETRY_COUNT** (только для чтения). Если приложение подключается к серверу, который не поддерживает устойчивость подключений, **SQL_COPT_SS_CONNECT_RETRY_COUNT** возвращает значение 0.  
   
 -   Интервал повтора подключения.  
   
@@ -54,13 +55,13 @@ ms.lasthandoff: 05/03/2018
   
     -   используете ключевое слово строки подключения **ConnectRetryInterval** .  
   
-     Чтобы извлечь продолжительность интервала повтора подключения, используйте **SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (только для чтения) атрибут соединения.  
+     Чтобы извлечь продолжительность интервала повтора подключения, используйте атрибут соединения **SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (только для чтения).  
   
  Если приложение устанавливает соединение с SQL_DRIVER_COMPLETE_REQUIRED, а затем пытается выполнить инструкцию через разорванное соединение, драйвер ODBC не отображает это диалоговое окно повторно. Кроме того, во время восстановления наблюдается следующее:  
   
--   Во время восстановления любой вызов **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, должны возвращать **SQL_CD_FALSE**.  
+-   Во время восстановления любой вызов **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** должен возвращать значение **SQL_CD_FALSE**.  
   
--   Если в случае сбоя восстановления любой вызов **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, должны возвращать **SQL_CD_TRUE**.  
+-   В случае сбоя восстановления любой вызов **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** должен возвращать значение **SQL_CD_TRUE**.  
   
  Любая функция, которая выполняет команду на сервере, возвращает следующие коды состояния:  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
 |IMC06|Подключение разорвано, и восстановление невозможно. Соединение помечено клиентом как невосстанавливаемое. Попытки восстановить соединение не предпринимались.|  
   
 ## <a name="example"></a>Пример  
- Следующий пример содержит две функции. **func1** показывает способ подключения с именем источника данных (DSN), использующий драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows. Имя DSN использует проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и задает идентификатор пользователя. **func1** затем извлекает число повторных попыток подключения с помощью **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ Следующий пример содержит две функции. **func1** показывает способ подключения с помощью имени источника данных (DSN), использующего драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows. Имя DSN использует проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и задает идентификатор пользователя. **func1** затем извлекает число повторных попыток подключения с **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** использует **SQLDriverConnect**, ключевое слово строки подключения **ConnectRetryCount** и атрибуты соединения, чтобы получить параметр для повторных попыток подключения и интервала повторных попыток.  
   
@@ -175,7 +176,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Драйвер Microsoft ODBC для SQL Server в Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

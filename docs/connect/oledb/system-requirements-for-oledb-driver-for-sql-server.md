@@ -1,6 +1,6 @@
 ---
-title: Требования к системе для драйвера OLE DB для SQL Server | Документы Microsoft
-description: Требования для драйвера OLE DB для SQL Server
+title: Требования к системе для драйвера OLE DB для SQL Server | Документы Майкрософт
+description: Требования для драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 485693e8f350370a293696a09f11ba036397b15e
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: d7b390f385f94dbe65d667440d27e748a84bcb86
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689467"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106580"
 ---
-# <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Требования к системе для драйвера OLE DB для SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Требования к системе для драйвера OLE DB для SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -41,37 +41,37 @@ ms.locfileid: "35689467"
 >  Перед установкой данного программного обеспечения убедитесь, что вы вошли в систему с правами администратора.  
 
 ## <a name="operating-system-requirements"></a>Требования к операционной системе  
- Список операционных систем, поддерживающих драйвер OLE DB для SQL Server см. в разделе [политики поддержки для драйвер OLE DB для SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
+ Список операционных систем, поддерживающих драйвера OLE DB для SQL Server, см. в разделе [политики поддержки для драйвер OLE DB для SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
 
 ## <a name="sql-server-requirements"></a>Требования к SQL Server  
- Чтобы использовать драйвер OLE DB для SQL Server для доступа к данным в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных, необходимо иметь установленный экземпляр из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен.  
+ Чтобы использовать драйвер OLE DB для SQL Server для доступа к данным в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных, необходимо иметь экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен.  
 
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поддерживает соединения со всеми версиями компонентов MDAC, компонентов доступа к данным Windows и все версии драйвера OLE DB для SQL Server. Когда клиент более старой версии соединяется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], неизвестные клиенту типы данных сервера сопоставляются типам, совместимым с версией клиента. Дополнительные сведения см. в подразделе «Совместимость типов данных для версий клиента» ниже в этом разделе.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поддерживает подключения с помощью всех версий компонентов MDAC, компонентов доступа к данным Windows и всех версий драйвера OLE DB для SQL Server. Когда клиент более старой версии соединяется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], неизвестные клиенту типы данных сервера сопоставляются типам, совместимым с версией клиента. Дополнительные сведения см. в подразделе «Совместимость типов данных для версий клиента» ниже в этом разделе.  
 
 ## <a name="cross-language-requirements"></a>Требования к версиям на разных языках  
- Английская версия драйвер OLE DB для SQL Server поддерживается на всех локализованных версиях поддерживаемых операционных систем. Локализованные версии драйвер OLE DB для SQL Server поддерживаются в локализованных операционных системах на том же языке, как локализованные драйвер OLE DB версии SQL Server. Локализованные версии драйвер OLE DB для SQL Server также поддерживаются в английских версиях поддерживаемых операционных систем, при условии, что установлены совпадающие языковые настройки.  
+ Английская версия драйвер OLE DB для SQL Server поддерживается на всех локализованных версиях поддерживаемых операционных систем. Локализованные версии драйвер OLE DB для SQL Server, поддерживаются в локализованных операционных системах, которые являются совпадает с языком локализованного драйвер OLE DB версии SQL Server. Локализованные версии драйвера OLE DB для SQL Server также поддерживаются английскими версиями операционных систем, если установлены соответствующие языковые настройки.  
 
  Для обновлений.  
 
--   Драйвер OLE DB для SQL Server английской версии могут обновляться до любой локализованной версии драйвер OLE DB для SQL Server.  
+-   Английской версии драйвер OLE DB для SQL Server можно обновить до любой локализованной версии драйвера OLE DB для SQL Server.  
 
 -   Локализованные версии драйвер OLE DB для SQL Server можно обновить до локализованных версий драйвера OLE DB для SQL Server на том же языке.  
 
 -   Локализованная версия драйвер OLE DB для SQL Server можно обновить до английской версии драйвера OLE DB для SQL Server.  
 
--   Локализованные версии драйвер OLE DB для SQL Server не удается обновить для локализованных драйвер OLE DB для SQL Server версии для другого локализованного языка.  
+-   Локализованных версиях драйвер OLE DB для SQL Server не могут быть обновлены до локализованных драйвер OLE DB для SQL Server версии для другого локализованного языка.  
 
 ## <a name="data-type-compatibility-for-client-versions"></a>Совместимость типов данных для версий клиента  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и драйвер OLE DB для SQL Server карты новые типы данных со старыми, совместимой с клиентами низкого уровня, как показано в следующей таблице.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и драйвер OLE DB для SQL Server сопоставляют новые типы данных со старыми, которые совместимы с клиентами низкого уровня, как показано в таблице ниже.  
 
- Приложения OLE DB и ADO могут использовать **DataTypeCompatibility** ключевое слово строки подключения с драйвер OLE DB для SQL Server для работы со старыми типами данных. Когда **DataTypeCompatibility = 80**, клиенты OLE DB соединятся с помощью [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] потока табличных данных (TDS) версии, а не потока табличных данных. Это означает, что для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних типов данных преобразование низкого уровня будет выполняться на сервере, а не драйвер OLE DB для SQL Server. Это также означает, что функции, доступные при соединении, будут ограничиваться набором функций [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Попытки использовать новые типы данных или функций быстро определяются по вызовам API-интерфейса и ошибкам, возвращаемым вызывающему приложению, а не по попыткам передать недопустимые запросы на сервер.   
+ Приложения OLE DB и ADO могут использовать **DataTypeCompatibility** ключевое слово строки подключения с драйвер OLE DB для SQL Server для работы со старыми типами данных. При использовании **DataTypeCompatibility=80** клиенты OLE DB соединятся с помощью версии потока табличных данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], а не потока табличных данных. Это значит, что для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних типов данных преобразование низкого уровня будет выполнено сервером, а не драйвером OLE DB для SQL Server. Это также означает, что функции, доступные при соединении, будут ограничиваться набором функций [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Попытки использовать новые типы данных или функций быстро определяются по вызовам API-интерфейса и ошибкам, возвращаемым вызывающему приложению, а не по попыткам передать недопустимые запросы на сервер.   
 
 
- IDBInfo::GetKeywords всегда будет возвращать список ключевых слов, который соответствует версии сервера для соединения и не зависит от **DataTypeCompatibility**.  
+ IDBInfo::GetKeywords всегда будет возвращать список ключевых слов, который соответствует версии сервера для подключения и не зависит от **DataTypeCompatibility**.  
 
-|Тип данных|собственный клиент SQL Server<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Драйвер OLE DB для SQL Server|Компоненты доступа к данным Windows, компоненты MDAC и<br /><br /> Драйвер OLE DB для приложений SQL Server OLE DB со свойством DataTypeCompatibility = 80|  
+|Тип данных|собственный клиент SQL Server<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Драйвер OLE DB для SQL Server|Компоненты доступа к данным Windows, компоненты MDAC и<br /><br /> Драйвер OLE DB для приложений SQL Server OLE DB со свойством DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|Определяемый пользователем тип CLR (\<= 8 КБ)|определяемый пользователем тип|определяемый пользователем тип|определяемый пользователем тип|Varbinary|  
+|CLR UDT (\<= 8 КБ)|определяемый пользователем тип|определяемый пользователем тип|определяемый пользователем тип|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|Текст|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
@@ -82,6 +82,6 @@ ms.locfileid: "35689467"
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |time|varchar|time|time|Varchar|  
 
-## <a name="see-also"></a>См. также  
- [Драйвер OLE DB для SQL Server](../oledb/oledb-driver-for-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Драйвер OLE DB для SQL Server](../oledb/oledb-driver-for-sql-server.md)   
  [Установка драйвера OLE DB для SQL Server](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

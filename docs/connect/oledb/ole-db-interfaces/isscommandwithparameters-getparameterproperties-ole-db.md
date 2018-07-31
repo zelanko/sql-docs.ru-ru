@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Документы Microsoft
+title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Документация Майкрософт
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9c0f35cd59a670e35db6400f681187c52e4b97ef
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3bc5932fc68b627f6bc204deec971402046baca9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689997"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108096"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -44,17 +44,17 @@ HRESULT GetParameterProperties(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *pcParams*[out] [in]  
- Указатель на буфер, содержащий количество структур SSPARAMPROPS возвращается в *prgParamProperties*.  
+ *pcParams*[out][in]  
+ Указатель на область памяти, где содержится количество структур SSPARAMPROPS, возвращаемых в параметре *prgParamProperties*.  
   
  *prgParamProperties*[out]  
- Указатель на область памяти, в которую будет возвращен массив структур SSPARAMPROPS. Поставщик выделяет память для структур и возвращает адрес этой памяти, потребитель освобождает эту память с **IMalloc::Free** когда он больше не нужна структуры. Перед вызовом метода **IMalloc::Free** для *prgParamProperties*, пользователь должен также вызвать **VariantClear** для *vValue* свойство каждой структуры DBPROP, чтобы предотвратить утечку памяти в случаях, если вариант содержит ссылку типа, такие как BSTR. Если *pcParams* равен нулю на выходе или происходит ошибка, отличная от DB_E_ERRORSOCCURRED, поставщик не выделяет памяти и гарантирует, что *prgParamProperties* является указателем null на выходе.  
+ Указатель на область памяти, в которую будет возвращен массив структур SSPARAMPROPS. Поставщик выделяет память под структуры и возвращает адрес этой памяти. Когда структуры больше не нужны потребителю, он освобождает память вызовом метода **IMalloc::Free**. До вызова метода **IMalloc::Free** для объекта *prgParamProperties* потребитель должен также вызвать метод **VariantClear** для свойства *vValue* каждой структуры DBPROP, чтобы предотвратить утечку памяти в случае, если вариант содержит ссылочный тип (например, BSTR). Если указатель *pcParams* равен нулю на выходе или происходит любая ошибка, отличная от DB_E_ERRORSOCCURRED, поставщик не выделяет память и обеспечивает равенство указателя *prgParamProperties* NULL на выходе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **GetParameterProperties** метод возвращает те же коды ошибок, что и метод ядра OLE DB **ICommandProperties::GetProperties** метод, за исключением того, что DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURED не может быть создано.  
+ Метод **GetParameterProperties** возвращает те же коды ошибок, что и базовый метод OLE DB **ICommandProperties::GetProperties**, за исключением того факта, что он не может вернуть DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURED.  
   
-## <a name="remarks"></a>Примечания  
- **ISSCommandWithParameters::GetParameterProperties** метод согласованное поведение по отношению к **GetParameterInfo**. Если [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) или **SetParameterInfo** не были вызваны или были вызваны с cParams, равное нулю, **GetParameterInfo**извлекающий сведения о параметрах и возвращает его. Если **ISSCommandWithParameters::SetParameterProperties** или **SetParameterInfo** был вызван хотя бы один параметр **ISSCommandWithParameters::GetParameterProperties**  метод возвращает свойства только для этих параметров, для которых **ISSCommandWithParameters::SetParameterProperties** был вызван. Если **ISSCommandWithParameters::SetParameterProperties** вызывается после **ISSCommandWithParameters::GetParameterProperties** или **GetParameterInfo**, Последующие вызовы **ISSCommandWithParameters::GetParameterProperties** возвращает переопределенные значения тех параметров, для которых **ISSCommandWithParameters::SetParameterProperties** был вызван метод.  
+## <a name="remarks"></a>Remarks  
+ Метод **ISSCommandWithParameters::GetParameterProperties** ведет себя аналогично функции **GetParameterInfo**. Если метод [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) или функция **SetParameterInfo** не были вызваны или были вызваны с нулевым параметром cParams, **GetParameterInfo** выводит информацию о параметре и возвращает ее. Если хотя бы для одного параметра был вызван один из методов **ISSCommandWithParameters::SetParameterProperties** или **SetParameterInfo**, метод **ISSCommandWithParameters::GetParameterProperties** возвращает свойства только тех параметров, для которых вызывался метод **ISSCommandWithParameters::SetParameterProperties**. Если метод **ISSCommandWithParameters::SetParameterProperties** вызывается после метода **ISSCommandWithParameters::GetParameterProperties** или функции **GetParameterInfo**, последующие вызовы метода **ISSCommandWithParameters::GetParameterProperties** возвращают переопределенные значения тех параметров, для которых вызывался метод **ISSCommandWithParameters::SetParameterProperties**.  
   
  Структура SSPARAMPROPS определена следующим образом.  
   
@@ -74,7 +74,7 @@ HRESULT GetParameterProperties(
 |*cPropertySets*|Количество структур DBPROPSET в *rgPropertySets*.|  
 |*rgPropertySets*|Указатель на буфер, в который будет возвращен массив структур DBPROPSET.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

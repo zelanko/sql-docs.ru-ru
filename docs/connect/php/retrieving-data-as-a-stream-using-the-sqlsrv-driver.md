@@ -1,5 +1,5 @@
 ---
-title: Извлечение данных в виде потока с помощью драйвера SQLSRV | Документы Microsoft
+title: Извлечение данных в виде потока с помощью драйвера SQLSRV | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be1e84c923dad3ed92c4c2b983a1e5592741eead
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309253"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992896"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Извлечение данных в виде потока с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Извлечение данных в виде потока доступно только в драйвере SQLSRV [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]и недоступно в драйвере PDO_SQLSRV.  
+Извлечение данных в виде потока доступно только в драйвере SQLSRV [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] и недоступно в драйвере PDO_SQLSRV.  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] использует преимущества потоков для извлечения больших объемов данных. Статьи, представленные в данном разделе, содержат сведения о том, как извлечь данные в виде потока.  
   
 Ниже представлена обобщенная процедура извлечения данных в виде потока:  
   
-1.  Подготовка и выполнение запроса Transact-SQL с [sqlsrv_query](../../connect/php/sqlsrv-query.md) или сочетание [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
+1.  Подготовка и выполнение запроса Transact-SQL с [sqlsrv_query](../../connect/php/sqlsrv-query.md) или сочетанием [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
 2.  Используйте [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) для перемещения на следующую строку в результирующем наборе.  
   
-3.  Используйте [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) для извлечения полей из строки. Указать, что данные извлекается в виде потока с помощью **SQLSRV_PHPTYPE_STREAM (<encoding>)** третьего параметра в вызове функции. В этой таблице перечислены константы, используемые для задания кодировок и их описаний.  
+3.  Используйте [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) для извлечения полей из строки. Укажите, что данные следует извлечь в виде потока, используя **SQLSRV_PHPTYPE_STREAM(<encoding>)** в качестве третьего параметра в вызове функции. В этой таблице перечислены константы, используемые для задания кодировок и их описаний.  
   
     |Константа SQLSRV|Описание|  
     |-------------------|---------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "35309253"
 |[Практическое руководство. Извлечение символьных данных в виде потока с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Демонстрирует, как извлекать символьные данные в виде потока.|  
 |[Практическое руководство. Извлечение двоичных данных в виде потока с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Демонстрирует, как извлекать двоичные данные в виде потока.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Извлечение данных](../../connect/php/retrieving-data.md)
 
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

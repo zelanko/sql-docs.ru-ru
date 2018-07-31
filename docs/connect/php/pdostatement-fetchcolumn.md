@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchColumn | Документы Microsoft
+title: PDOStatement::fetchColumn | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20e79158a2b38dac6799e9affe7ac4bd656ff4f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308893"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983248"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,12 +34,12 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*равен*: Необязательное целое число, указывающее номер столбца, отсчитываемый от нуля. Значение по умолчанию — 0 (первый столбец в строке).  
+$*column_number*: необязательное целое число, указывающее номер столбца (начиная с нуля). Значение по умолчанию — 0 (первый столбец в строке).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Один столбец или значение false, если дополнительные строки отсутствуют.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Пример  
@@ -57,7 +57,7 @@ $*равен*: Необязательное целое число, указыв�
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Класс PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

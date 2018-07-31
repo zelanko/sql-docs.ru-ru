@@ -1,6 +1,6 @@
 ---
-title: Использование ADO с драйвером OLE DB для SQL Server | Документы Microsoft
-description: Использование ADO с драйвером OLE DB для SQL Server
+title: Использование ADO с драйвером OLE DB для SQL Server | Документация Майкрософт
+description: Использование объектов ADO с драйвером OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,35 +19,35 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 89f11eda93f9ac8eb67259265b646a2544143ae5
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: e1fdea857c21b66fd4e72f541f9a6a653aeb44c6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612199"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108086"
 ---
-# <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Использование ADO с драйвером OLE DB для SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Использование объектов ADO с драйвером OLE DB для SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Чтобы воспользоваться преимуществами новых возможностей, представленных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] как несколько активных результирующих наборов (MARS), уведомления о запросах, определяемых пользователем типов (UDT) или новый **xml** тип данных, существующих приложений, использующих ActiveX Data Objects (ADO) следует использовать драйвер OLE DB для SQL Server в качестве поставщика доступа к данным.  
+  Для реализации новых возможностей [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (в частности, множественного активного результирующего набора (MARS), уведомлений о запросах, пользовательских типов данных и нового типа данных **xml**) существующие приложения, использующие объекты данных ActiveX (ADO), должны использовать драйвер OLE DB для SQL Server в качестве поставщика доступа к данным.  
   
- Чтобы позволить ADO использовать новые возможности последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], были внесены некоторые улучшения драйвер OLE DB для SQL Server, которая расширяет основные функции OLE DB. Эти улучшения позволяют приложениям ADO использовать новые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функции и использовать два типа данных, введенных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** и **определяемого пользователем типа**. Эти улучшения также используют усовершенствования **varchar**, **nvarchar**, и **varbinary** типов данных. Драйвер OLE DB для SQL Server добавляет свойство инициализации SSPROP_INIT_DATATYPECOMPATIBILITY к набору свойств DBPROPSET_SQLSERVERDBINIT для использования приложениями ADO, чтобы новые типы данных, предоставляются способом, совместимым с ADO. Кроме того, драйвер OLE DB для SQL Server также определяет новое ключевое слово строки подключения с именем **DataTypeCompatibility** , задается в строке подключения.  
+ Чтобы позволить ADO использовать новые возможности последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], были внесены некоторые улучшения в драйвер OLE DB для SQL Server, расширяющие базовую функциональность OLE DB. Эти улучшения позволяют приложениям ADO использовать новые возможности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и применять два типа данных, появившихся в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** и **udt**. Эти улучшения также используют усовершенствования типов данных **varchar**, **nvarchar** и **varbinary**. Драйвер OLE DB для SQL Server добавляет свойство инициализации SSPROP_INIT_DATATYPECOMPATIBILITY к набору свойств DBPROPSET_SQLSERVERDBINIT для использования приложениями ADO, чтобы новые типы данных предоставлялись совместимым с ADO образом. Кроме того, драйвер OLE DB для SQL Server также определяет новое ключевое слово строки подключения с именем **DataTypeCompatibility** , задается в строке подключения.  
 
 > [!NOTE]  
->  Существующие приложения ADO могут обращаться к полям XML определяемых пользователем типов, текстовым полям больших значений и полям двоичных значений, а также обновлять их значения с помощью поставщика SQLOLEDB. Новый больше **varchar(max)**, **nvarchar(max)**, и **varbinary(max)** типы данных, возвращаются как типы ADO **adLongVarChar**, **adLongVarWChar** и **adLongVarBinary** соответственно. XML-столбцы возвращаются в виде **adLongVarChar**, а столбцы определяемых пользователем ТИПОВ возвращаются как **adVarBinary**. Тем не менее, если вы используете драйвер OLE DB для SQL Server (MSOLEDBSQL) вместо SQLOLEDB, необходимо обязательно установите **DataTypeCompatibility** ключевое слово «80», чтобы новые типы данных правильно сопоставлялись с типами данных ADO.  
+>  Существующие приложения ADO могут обращаться к полям XML определяемых пользователем типов, текстовым полям больших значений и полям двоичных значений, а также обновлять их значения с помощью поставщика SQLOLEDB. Новые типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** увеличенного размера возвращаются как типы ADO **adLongVarChar**, **adLongVarWChar** и **adLongVarBinary** соответственно. XML-столбцы возвращаются как **adLongVarChar**, а столбцы пользовательских типов возвращаются как **adVarBinary**. Тем не менее, если вы используете драйвер OLE DB для SQL Server (MSOLEDBSQL) вместо SQLOLEDB, необходимо обязательно установите **DataTypeCompatibility** ключевое слово «80», чтобы новые типы данных правильно сопоставлялись с типами данных ADO.  
 
-## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Включение драйвер OLE DB для SQL Server из ADO  
- Чтобы включить использование драйвер OLE DB для SQL Server, приложения ADO необходимо реализовать следующие ключевые слова в строке соединения:  
+## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Включение драйвера OLE DB для SQL Server из ADO  
+ Чтобы обеспечить использование драйвера OLE DB для SQL Server, приложения ADO должны включать следующие ключевые слова в строки подключения:  
 
 -   `Provider=MSOLEDBSQL`  
 
 -   `DataTypeCompatibility=80`  
 
- Дополнительные сведения о ADO поддерживается в драйвер OLE DB для SQL Server, ключевых словах строк соединений. в разделе [с помощью ключевых слов строки подключения с драйвер OLE DB для SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Дополнительные сведения о ADO поддерживается в драйвере OLE DB для SQL Server, ключевых словах строк соединений см. в разделе [с помощью ключевых слов строки подключения с драйвер OLE DB для SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
- Ниже приведен пример создания строки соединения ADO, полностью включены для драйвер OLE DB для SQL Server, в том числе включение функции MARS:  
+ Ниже приведен пример создания строки подключения ADO, полностью обеспечивающей работу с драйвером OLE DB для SQL Server, в том числе включающей поддержку функции MARS.  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -65,7 +65,7 @@ con.Open
  В следующих разделах приведены примеры того, как использовать ADO с драйвером OLE DB для SQL Server.  
 
 ### <a name="retrieving-xml-column-data"></a>Получение данных XML-столбца  
- В этом примере набор записей используется для извлечения и отображения данных из XML-столбец [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks** образца базы данных.  
+ В этом примере набор записей используется для извлечения и отображения данных из XML-столбца в образце базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks**.  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -101,7 +101,7 @@ Set con = Nothing
 >  Фильтрация наборов записей для XML-столбцов не поддерживается. При попытке ее использования возвращается ошибка.  
 
 ### <a name="retrieving-udt-column-data"></a>Получение данных столбца определяемого пользователем типа  
- В этом примере **команда** объект используется для выполнения запроса SQL, который возвращает определяемый пользователем тип, определяемый пользователем тип данных обновляется и затем новые данные вставляются в базу данных. В этом примере предполагается, что **точки** определяемый пользователем тип уже был зарегистрирован в базе данных.  
+ В этом примере объект **Command** используется для выполнения запроса SQL, который возвращает пользовательский тип, после чего данные пользовательского типа обновляются и вставляются в базу данных. В этом примере предполагается, что пользовательский тип **Point** был заранее зарегистрирован в базе данных.  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -144,7 +144,7 @@ Set con = Nothing
 ```  
 
 ### <a name="enabling-and-using-mars"></a>Включение и использование режима MARS  
- В этом примере строка соединения составляется для включения режима MARS через драйвер OLE DB для SQL Server и затем создаются два объекта набора записей для выполнения в том же соединении.  
+ В этом примере строка подключения составляется таким образом, чтобы включить режим MARS для драйвера OLE DB для SQL Server, затем создаются два объекта набора записей для выполнения в том же соединении.  
 
 ```  
 Dim con As New ADODB.Connection  
@@ -168,7 +168,7 @@ con.Close
 Set con = Nothing  
 ```  
 
- В предыдущих версиях поставщика OLE DB этот код вызвал бы создание неявного соединения при втором выполнении, так как в одном соединении можно было открыть только один активный набор результатов. Поскольку неявное соединение не включалось в пул соединений OLE DB, это вызывало дополнительные издержки. С помощью функции режима MARS, предоставляемые драйвер OLE DB для SQL Server вы получаете несколько активных наборов результатов в одном соединении.  
+ В предыдущих версиях поставщика OLE DB этот код вызвал бы создание неявного соединения при втором выполнении, так как в одном соединении можно было открыть только один активный набор результатов. Поскольку неявное соединение не включалось в пул соединений OLE DB, это вызывало дополнительные издержки. Когда драйвер OLE DB для SQL Server обеспечивает поддержку функции MARS, в одном соединении может быть несколько активных результатов.  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью драйвера OLE DB для SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

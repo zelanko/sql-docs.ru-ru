@@ -1,5 +1,5 @@
 ---
-title: Использование точек сохранения | Документы Microsoft
+title: Использование точек сохранения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72b354c805a3d46dd31f6f9df308e33493c2db2c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852041"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992936"
 ---
 # <a name="using-savepoints"></a>Использование точек сохранения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Точки сохранения предоставляют механизм отката части транзакций. В пределах [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно создать точку сохранения с помощью инструкции SAVE TRANSACTION savepoint_name. После выполняется инструкция ROLLBACK TRANSACTION savepoint_name для отката до точки сохранения вместо отката до начала транзакции.  
+  Точки сохранения предоставляют механизм отката части транзакций. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] можно создать точку сохранения с помощью инструкции SAVE TRANSACTION savepoint_name. После выполняется инструкция ROLLBACK TRANSACTION savepoint_name для отката до точки сохранения вместо отката до начала транзакции.  
   
  Точки сохранения удобно использовать, когда вероятность возникновения ошибок мала. Откат до точки сохранения в ситуации, когда ошибка встречается крайне редко, часто более эффективен, чем подход, когда каждая транзакция проверяет допустимость обновления, прежде чем его выполнить. Операции обновления и отката являются ресурсоемкими, поэтому точки сохранения приносят пользу, только если вероятность ошибок небольшая, а затраты на проверку допустимости обновления относительно высокие.  
   
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Поддерживает использование точек сохранения через [setSavepoint](../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md) метод [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) класса. С помощью метода setSavepoint, можно создавать именованную или неименованную точку сохранения в текущей транзакции, а метод вернет [SQLServerSavepoint](../../connect/jdbc/reference/sqlserversavepoint-class.md) объекта. В транзакции можно создать несколько точек сохранения. Для отката транзакции до заданной точки сохранения, можно передать объект SQLServerSavepoint [rollback (java.sql.Savepoint)](../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md) метод.  
+ Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает использование точек сохранения посредством вызова метода [setSavepoint](../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). С помощью метода setSavepoint можно создать именованную или неименованную точку сохранения в текущей транзакции, а метод возвращает объект [SQLServerSavepoint](../../connect/jdbc/reference/sqlserversavepoint-class.md). В транзакции можно создать несколько точек сохранения. Для отката транзакции до заданной точки сохранения можно передать объект SQLServerSavepoint в метод [rollback (java.sql.Savepoint)](../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md).  
   
- В следующем примере используется точка сохранения при выполнении локальной транзакции, состоящей из двух раздельных инструкций в `try` блока. Инструкции выполняются для таблицы Production.ScrapReason в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образца базы данных, а точка сохранения используется для отката второй инструкции. При этом в базе данных фиксируется только первая инструкция.  
+ В приведенном ниже примере используется точка сохранения при выполнении локальной транзакции, состоящей из двух раздельных инструкций в блоке `try`. Инструкции выполняются для таблицы Production.ScrapReason в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], а точка сохранения используется для отката второй инструкции. При этом в базе данных фиксируется только первая инструкция.  
   
  [!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение транзакций с помощью драйвера JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
   
   

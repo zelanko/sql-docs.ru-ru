@@ -1,5 +1,5 @@
 ---
-title: Возвращающие табличные значения параметров (OLE DB) | Документы Microsoft
+title: Возвращающие табличные значения параметров (OLE DB) | Документация Майкрософт
 description: Возвращающие табличное значение параметры (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,24 +17,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: df40f003355b7c98ec6b3b8996bf9c372faa4ad0
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 195c556c517d7954aca95cec9b54dd78adf51341
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689867"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108756"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Возвращающие табличное значение параметры (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В этом разделе описывается поддержка возвращающих табличные значения параметров в драйвер OLE DB для SQL Server. Дополнительные сведения см. в разделе [табличное значение параметры &#40;драйвер OLE DB для SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Пример см. в разделе [использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
+  В этом разделе описывается поддержка возвращающих табличные значения параметров в драйвере OLE DB для SQL Server. Дополнительные сведения см. в разделе [возвращающего табличное значение параметров &#40;драйвер OLE DB для SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Пример, см. в разделе [параметров, возвращающих &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
-## <a name="remarks"></a>Примечания  
- В настоящее время можно отправить многострочные данные на сервер в качестве параметров для процедуры с наборами параметров (параметр dbparams МЕТОДА **ICommand::Execute**). При использовании набора параметров каждый элемент набора должен быть отправлен на сервер в отдельном запросе удаленного вызова процедур (RPC). Возвращающие табличное значение параметры обеспечивают похожую функциональность, но лучше интегрированы с сервером. Уменьшает количество запросов RPC и включает операции на основе набора на сервере.  
+## <a name="remarks"></a>Remarks  
+ В настоящее время многострочные данные можно отправлять на сервер как параметры процедуры с наборами параметров (параметр DBPARAMS метода **ICommand::Execute**). При использовании набора параметров каждый элемент набора должен быть отправлен на сервер в отдельном запросе удаленного вызова процедур (RPC). Возвращающие табличное значение параметры обеспечивают похожую функциональность, но лучше интегрированы с сервером. При этом уменьшается число запросов RPC, а на сервере возможны операции, основанные на наборах.  
   
- Возвращающие табличное значение параметры поддерживаются в драйвер OLE DB для SQL Server в качестве OLE DB **строк** объектов. Любой **строк** удалось предоставить объект потребителем (то есть в клиентском приложении с помощью драйвера OLE DB для SQL Server) как заполнитель для параметров, возвращающих табличные значения параметра. Возвращающие табличное значение параметры обрабатываются как параметры других типов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Драйвер OLE DB для SQL Server предоставляет создания, обнаружения, спецификации, привязки и схемы интерфейсов.  
+ Возвращающие табличное значение параметры поддерживаются в драйвере OLE DB для SQL Server в качестве OLE DB **набора строк** объектов. Любой объект **Rowset** может быть предоставлен потребителем (то есть клиентским приложением, которое использует драйвер OLE DB для SQL Server) в качестве заполнителя для возвращающих табличные значения параметров. Возвращающие табличное значение параметры обрабатываются как параметры других типов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Драйвер OLE DB для SQL Server предоставляет создания, обнаружения, спецификации, привязки и схемы интерфейсов.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -50,12 +50,12 @@ ms.locfileid: "35689867"
   
 -   [Поддержка типов параметров OLE DB, возвращающих табличные значения](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)  
   
--   [Поддержка типов OLE DB табличное значение параметра &#40;методы&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)  
+-   [Поддержка типов параметров OLE DB, возвращающих табличные значения &#40;методы&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)  
   
--   [Поддержка типов OLE DB табличное значение параметра &#40;свойства&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
+-   [Поддержка типов параметров OLE DB, возвращающих табличные значения &#40;свойства&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
   
-## <a name="see-also"></a>См. также  
- [Драйвер OLE DB для SQL Server программирования](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
+ [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

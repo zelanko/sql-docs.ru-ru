@@ -1,5 +1,5 @@
 ---
-title: PDO::Query | Документы Microsoft
+title: PDO::Query | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308273"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979748"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>Параметры  
 *$statement*: инструкция SQL, которую требуется выполнить.  
   
-*$fetch_style*: Дополнительные инструкции по выполнению запроса. Дополнительные сведения см. в разделе "Примечания". $*fetch_style* в PDO::query можно переопределить с помощью $*fetch_style* в PDO::fetch.  
+*$fetch_style*: необязательные дополнительные инструкции по выполнению запроса. Дополнительные сведения см. в разделе "Примечания". $*fetch_style* в PDO::query можно переопределить с помощью $*fetch_style* в PDO::fetch.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Если вызов завершается успешно, PDO::query возвращает объект PDOStatement. Если вызов завершается со сбоем, PDO::query создает объект PDOException или возвращает значение false, в зависимости от настройки PDO::ATTR_ERRMODE.  
@@ -44,17 +44,17 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ## <a name="exceptions"></a>Исключения  
 PDOException.  
   
-## <a name="remarks"></a>Примечания  
-Запрос, выполняемый с PDO::query могут выполнять подготовленной инструкции, в зависимости от настройки PDO::SQLSRV_ATTR_DIRECT_QUERY. Дополнительные сведения см. в статье [Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
+## <a name="remarks"></a>Remarks  
+Запрос с применением PDO::query может выполнять подготовленную инструкцию или выполняться напрямую в зависимости от параметров PDO::SQLSRV_ATTR_DIRECT_QUERY;. Дополнительные сведения см. в статье [Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
-PDO::SQLSRV_ATTR_QUERY_TIMEOUT также влияет на поведение PDO::exec; Дополнительные сведения см. в разделе [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT также влияет на поведение PDO::exec;. Дополнительные сведения: [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
-Можно указать следующие параметры для $*fetch_style*.  
+Вы можете указать для $*fetch_style* следующие параметры.  
   
 |style|Описание|  
 |---------|---------------|  
-|Значение PDO::FETCH_COLUMN, *num*|Запросы данных в указанном столбце. Первый столбец в таблице имеет номер 0.|  
-|Значение PDO::FETCH_CLASS, "*classname*", массив ( *arglist* )|Создает экземпляр класса и назначает имена столбцов свойствам в классе. Если конструктор классов принимает один или несколько параметров, также можно передать *arglist*.|  
+|PDO::FETCH_COLUMN, *номер*|Запросы данных в указанном столбце. Первый столбец в таблице имеет номер 0.|  
+|PDO::FETCH_CLASS, '*имя_класса*', array( *список_аргументов* )|Создает экземпляр класса и назначает имена столбцов свойствам в классе. Если конструктор классов принимает один или несколько параметров, также можно передать *список_аргументов*.|  
 |Значение PDO::FETCH_CLASS, "*classname*"|Назначает имена столбцов свойствам в существующем классе.|  
   
 Вызовите PDOStatement::closeCursor, чтобы освободить ресурсы базы данных, связанные с объектом PDOStatement, перед повторным вызовом PDO::query.  
@@ -121,7 +121,7 @@ $stmt = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Класс PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 3: Эксперимент подключение к SQL с помощью PHP | Документы Microsoft'
+title: 'Шаг 3. Подтверждение концепции: подключение к SQL с помощью PHP | Документы Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6fe5c82561e32924c1a1792eda552caec522881
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309453"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006456"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "35309453"
   
 ## <a name="step-2--execute-query"></a>Шаг 2: Выполнение запроса  
   
-[Sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) функцию можно использовать для извлечения результирующего набора из запроса к базе данных SQL. По существу эта функция принимает любой запрос и объект подключения и возвращает результирующий набор, который может быть выполнен обход с использованием [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+[Sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) функция может использоваться для извлечения результирующего набора из запроса к базе данных SQL. Эта функция фактически принимает любой запрос и объект соединения и возвращает результирующий набор, который может быть выполнена итерация с использованием [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -81,9 +81,9 @@ ms.locfileid: "35309453"
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>Шаг 3: Вставьте строку  
+## <a name="step-3--insert-a-row"></a>Шаг 3: Вставка строки  
   
-В этом примере показано, как выполнить [вставить](../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передавать параметры, которые защитить приложения от [атаки SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
+В этом примере показано, как выполнить [вставить](../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передать параметры для защиты от атак [путем внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
   
   
 ```php 
@@ -116,13 +116,13 @@ ms.locfileid: "35309453"
 ## <a name="step-4--rollback-a-transaction"></a>Шаг 4: Выполнить откат транзакции  
   
   
-Данный пример кода демонстрирует использование транзакций, в котором вы:  
+Этот пример кода демонстрирует использование транзакций, в котором вы:  
   
--Начать транзакцию  
+— Начать транзакцию  
   
--Вставить строку данных, обновите другая строка данных  
+— Вставить строку данных, обновить другую строку данных  
   
--Зафиксировать транзакцию, если вставки и обновления успешно и производится откат транзакции, если один из них не была  
+— Зафиксируйте транзакцию, если вставка и обновление выполнены успешно и производится откат транзакции, если один из них не было  
   
   
 ```php 

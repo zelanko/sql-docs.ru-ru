@@ -1,6 +1,6 @@
 ---
-title: Поддержка распределенных транзакций | Документы Microsoft
-description: Распределенные транзакции, в драйвер OLE DB для SQL Server
+title: Поддержка распределенных транзакций | Документация Майкрософт
+description: Распределенные транзакции в драйвере OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -22,32 +22,32 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 469f72b416e1e262d2a775b1b49e14723a44b171
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd6cda6c01f46dd179c462b2d6038c09137de03
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690307"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105990"
 ---
 # <a name="supporting-distributed-transactions"></a>Поддержка распределенных транзакций
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server потребителей можно использовать **ITransactionJoin::JoinTransaction** метод участвовать в распределенной транзакции, координируемое координатор распределенных транзакций (MS DTC).  
+  Потребители драйвера OLE DB для SQL Server могут использовать метод **ITransactionJoin::JoinTransaction** для участия в распределенных транзакциях, которыми управляет координатор распределенных транзакций (Майкрософт) (служба MS DTC).  
   
- Службы MS DTC предоставляют доступ к COM-объектам, которые позволяют клиентам запускать и участвовать в координированных транзакциях через несколько соединений с различными хранилищами данных. Чтобы инициировать транзакцию, драйвер OLE DB для SQL Server Потребитель использует MS DTC **ITransactionDispenser** интерфейса. **BeginTransaction** членом **ITransactionDispenser** возвращает ссылку на объект распределенной транзакции. Эта ссылка передается драйвер OLE DB для SQL Server с помощью **JoinTransaction**.  
+ Службы MS DTC предоставляют доступ к COM-объектам, которые позволяют клиентам запускать и участвовать в координированных транзакциях через несколько соединений с различными хранилищами данных. Для инициирования транзакции, драйвер OLE DB для SQL Server Потребитель использует MS DTC **ITransactionDispenser** интерфейс. Элемент **BeginTransaction** интерфейса **ITransactionDispenser** возвращает ссылку на объект распределенной транзакции. Эта ссылка передается в драйвер OLE DB для SQL Server с помощью **JoinTransaction**.  
   
- Службы MS DTC поддерживают асинхронную фиксацию и прерывание распределенных транзакций. Для уведомления о состоянии асинхронных транзакций пользователь реализует **ITransactionOutcomeEvents** интерфейса и подключает интерфейс к объект транзакции MS DTC.  
+ Службы MS DTC поддерживают асинхронную фиксацию и прерывание распределенных транзакций. Для уведомления о состоянии асинхронных транзакций потребитель реализует интерфейс **ITransactionOutcomeEvents** и подключает интерфейс к объекту транзакции MS DTC.  
   
- Для распределенных транзакций реализует драйвер OLE DB для SQL Server **ITransactionJoin::JoinTransaction** параметры следующим образом.  
+ Для распределенных транзакций драйвер OLE DB для SQL Server реализует параметры **ITransactionJoin::JoinTransaction** описанным ниже образом.  
   
 |Параметр|Описание|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Указатель на объект транзакции MS DTC.|  
-|*IsoLevel*|Учитывается драйвером OLE DB для SQL Server. Уровень изоляции для транзакций, координируемых с использованием служб MS DTC, определяется, когда пользователь получает объект транзакции от координатора MS DTC.|  
+|*IsoLevel*|Игнорировать драйвера OLE DB для SQL Server. Уровень изоляции для транзакций, координируемых с использованием служб MS DTC, определяется, когда пользователь получает объект транзакции от координатора MS DTC.|  
 |*IsoFlags*|Должно быть равно 0. Драйвер OLE DB для SQL Server возвращает значение XACT_E_NOISORETAIN, если указано любое другое значение объектом-получателем.|  
-|*POtherOptions*|В противном случае значение NULL, драйвер OLE DB для SQL Server запрашивает объект параметров от интерфейса. Драйвер OLE DB для SQL Server возвращает XACT_E_NOTIMEOUT, если объект параметров *ulTimeout* не равен нулю. Драйвер OLE DB для SQL Server пропускает значения *szDescription* член.|  
+|*POtherOptions*|В противном случае значение NULL, драйвер OLE DB для SQL Server требует, чтобы объект параметров с помощью интерфейса. Драйвер OLE DB для SQL Server возвращает XACT_E_NOTIMEOUT, если объект параметров *ulTimeout* не равен нулю. Драйвер OLE DB для SQL Server пропускает значение *szDescription* член.|  
   
  В этом примере осуществляется координирование транзакции с использованием координатора MS DTC.  
   
@@ -146,7 +146,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Transactions](../../oledb/ole-db-transactions/transactions.md)  
   
   

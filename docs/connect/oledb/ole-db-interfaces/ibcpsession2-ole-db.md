@@ -1,6 +1,6 @@
 ---
-title: IBCPSession2 (OLE DB) | Документы Microsoft
-description: IBCPSession2, интерфейс (OLE DB)
+title: IBCPSession2 (OLE DB) | Документация Майкрософт
+description: Интерфейс IBCPSession2 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c29c1ce4312951625bb410063d5c0ce20af4852c
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 80ea9ad5c4e2d4f2726b659a1880451f24e2e5bf
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689037"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108186"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  IBCPSession2, интерфейс является расширением IBCPSession, предоставляющий функцию-член является альтернативой вызывающий IBCPSession::BCPColFmt для каждого столбца.  IBCPSession2, наследующий от IBCPSession и добавлением одного нового метода: [метода IBCPSession2::BCPSetBulkMode](../../oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
+  IBCPSession2, интерфейс является расширением IBCPSession, предоставляющий функцию-член, является альтернативой для вызова IBCPSession::BCPColFmt для каждого столбца.  IBCPSession2 наследует от интерфейса IBCPSession и добавлением одного нового метода: [IBCPSession2::BCPSetBulkMode](../../oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интерфейсы &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchAll | Документы Microsoft
+title: PDOStatement::fetchAll | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639ff09c2c739e99b974c1b4df7d4963b7959e94
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308993"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983024"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,14 +36,14 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 #### <a name="parameters"></a>Параметры  
 $*fetch_style*: символ (целое число), указывающий формат строки данных. Список значений см. в статье [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) . Также разрешено использовать PDO::FETCH_COLUMN. Значение по умолчанию — PDO::FETCH_BOTH.  
   
-$*column_index*: целое число, представляющее столбец для возврата, если $*fetch_style* имеет значение PDO::FETCH_COLUMN. Значение по умолчанию равно 0.  
+$*column_index*: целое число, представляющее возвращаемый столбец, если $*fetch_style* имеет значение PDO::FETCH_COLUMN. Значение по умолчанию равно 0.  
   
-$*ctor_args*: массив параметров для конструктора класса, когда $*fetch_style* имеет значение PDO::FETCH_CLASS или PDO::FETCH_OBJ.  
+$*ctor_args*: массив параметров для конструктора классов, когда $*fetch_style* имеет значение PDO::FETCH_CLASS или PDO::FETCH_OBJ.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Массив оставшихся строк в результирующем наборе или значение false, если вызов метода завершается ошибкой.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Пример  
@@ -87,7 +87,7 @@ $*ctor_args*: массив параметров для конструктора 
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Класс PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

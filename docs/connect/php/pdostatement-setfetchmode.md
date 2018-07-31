@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::setFetchMode | Документы Microsoft
+title: PDOStatement::setFetchMode | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11b8e027ba6dd51cb98fe6192c88218ef1f802cc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308923"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992836"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,12 +34,12 @@ bool PDOStatement::setFetchMode( $mode );
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*режим*: все параметры, допустимые для передачи в [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md).  
+$*mode*: любые параметры, допустимые для передачи в [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение true в случае успеха, в противном случае — значение false.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Пример  
@@ -87,7 +87,7 @@ $*режим*: все параметры, допустимые для перед
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Класс PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

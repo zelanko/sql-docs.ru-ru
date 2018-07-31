@@ -1,5 +1,5 @@
 ---
-title: Метод updateNClob (java.lang.String, java.io.Reader) | Документы Microsoft
+title: Метод updateNClob (java.lang.String, java.io.Reader) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e632b4719d0f811dfa29a8f21c5fb7573b34e3e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851829"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036112"
 ---
 # <a name="updatenclob-method-javalangstring-javaioreader"></a>Метод updateNClob (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Обновляет указанный столбец с помощью указанного Readerobject.  
+  Обновляет указанный столбец заданным объектом Readerobject.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,21 +37,21 @@ public void updateNClob(java.lang.String columnLabel,
 #### <a name="parameters"></a>Параметры  
  *ColumnLabel состоит из*  
   
- Объект **строка** , определяющее метку столбца.  
+ Значение **String**, которое указывает метку столбца.  
   
- *Модуль чтения*  
+ *reader*  
   
- Объект модуля чтения.  
+ Объект средства чтения.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод updateNClob указывается с помощью метода updateNClob в интерфейсе java.sql.ResultSet.  
   
  Этот метод поддерживается только в **nvarchar(max)**, **ntext**, и **xml** столбцов. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

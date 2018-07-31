@@ -1,5 +1,5 @@
 ---
-title: Метод (SQLServerResultSet) updateString | Документы Microsoft
+title: Метод updateString (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,25 +20,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bbfea2e2daec9b71f54a8c3c1a1a901579d14fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851059"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979226"
 ---
-# <a name="updatestring-method-sqlserverresultset"></a>updateString метод (SQLServerResultSet)
+# <a name="updatestring-method-sqlserverresultset"></a>Метод updateString (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Обновляет указанный столбец с **строка** значение.  
+  Обновляет указанный столбец значением **String**.  
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|Обновляет указанный столбец с **строка** значение заданному индексу столбца.|  
-|[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|Обновляет указанный столбец с **строка** значение заданному имени столбца.|  
+|[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|Обновляет указанный столбец значением **String** по заданному индексу столбца.|  
+|[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|Обновляет указанный столбец значением **String** по заданному имени столбца.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

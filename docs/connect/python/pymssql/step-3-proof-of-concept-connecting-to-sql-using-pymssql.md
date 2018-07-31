@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 3: Эксперимент подключение к SQL с помощью pymssql | Документы Microsoft'
+title: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e744d2e472e082cacb48a3e4f8c3a07a1f87bb03
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 8ea4fa2527fa39700647832bdd1a194389cb36e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309933"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982236"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Шаг 3: Эксперимент подключение к SQL с помощью pymssql
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-В этом примере следует рассматривать эксперимента только.  В образце кода упрощен для ясности и не представляет рекомендации рекомендуется корпорацией Майкрософт.  
+В этом примере следует рассматривать подтверждение концепции только.  Пример кода упрощен для ясности и не всегда представляет рекомендации, рекомендуемые корпорацией Майкрософт.  
   
 ## <a name="step-1--connect"></a>Шаг 1: подключение  
   
@@ -38,7 +38,7 @@ ms.locfileid: "35309933"
   
 ## <a name="step-2--execute-query"></a>Шаг 2: Выполнение запроса  
   
-[Cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) функцию можно использовать для извлечения результирующего набора из запроса к базе данных SQL. По существу эта функция принимает любой запрос и возвращает результирующий набор, который может быть выполнен обход с использованием [cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+[Cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) функция может использоваться для извлечения результирующего набора из запроса к базе данных SQL. Эта функция фактически принимает любой запрос и возвращает результирующий набор, который может быть выполнена итерация с использованием [cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
   
   
 ```python
@@ -52,9 +52,9 @@ ms.locfileid: "35309933"
         row = cursor.fetchone()  
 ```  
   
-## <a name="step-3--insert-a-row"></a>Шаг 3: Вставьте строку  
+## <a name="step-3--insert-a-row"></a>Шаг 3: Вставка строки  
   
-В этом примере показано, как выполнить [вставить](../../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передавать параметры, которые защитить приложения от [атаки SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
+В этом примере показано, как выполнить [вставить](../../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передать параметры для защиты от атак [путем внедрения кода SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
   
   
 ```python
@@ -72,11 +72,11 @@ ms.locfileid: "35309933"
   
 ## <a name="step-4--rollback-a-transaction"></a>Шаг 4: Выполнить откат транзакции  
   
-Данный пример кода демонстрирует использование транзакций, в котором вы:  
+Этот пример кода демонстрирует использование транзакций, в котором вы:  
   
 * Начать транзакцию  
 * Вставить строку данных  
-* Откат транзакции для отмены инструкции insert  
+* Откат транзакции для отмены вставки  
   
 ```python
     import pymssql  
@@ -90,4 +90,4 @@ ms.locfileid: "35309933"
     
   ## <a name="next-steps"></a>Следующие шаги  
   
-Дополнительные сведения см. в разделе [центре разработчиков Python](https://azure.microsoft.com/en-us/develop/python/).
+Дополнительные сведения см. в разделе [Центр разработчиков Python](https://azure.microsoft.com/develop/python/).

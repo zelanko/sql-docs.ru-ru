@@ -1,6 +1,6 @@
 ---
-title: Драйвер OLE DB для SQL Server (OLE DB) ссылки | Документы Microsoft
-description: Драйвер OLE DB для ссылки на SQL Server (OLE DB)
+title: Драйвер OLE DB для SQL Server (OLE DB) Reference | Документация Майкрософт
+description: Справочник по драйверу OLE DB для SQL Server (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,29 +20,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4877a5a4a3965b65bd9a61f33303dabff34af4e6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: feb8c904963b0974a736b6524f11f5551aa02005
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690167"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105810"
 ---
-# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Драйвер OLE DB для интерфейсов SQL Server (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Интерфейсы драйвера OLE DB для SQL Server (OLE DB)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server предоставляет интерфейсы для потребителей, которому нужен доступ к данным на одном или нескольких компьютерах под управлением [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Драйвер OLE DB для SQL Server является поставщика версии 2.0, совместимое с OLE DB.  
+  Драйвер OLE DB для SQL Server предоставляет интерфейсы для потребителей, которым нужен доступ к данным, расположенным на одном или нескольких компьютерах, на которых выполняется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Драйвер OLE DB для SQL Server является 2.0-совместимой версии поставщика OLE DB.  
   
- Этот драйвер OLE DB для SQL Server Справочник по программированию не содержит описания всех методов, интерфейсы и методы, которые демонстрируют поведение конкретного поставщика, при использовании драйвера OLE DB для SQL Server и интерфейсы OLE DB.  
+ В этом справочнике по программированию драйвера OLE DB для SQL Server описываются не все интерфейсы и методы OLE DB, а только те, которые демонстрируют поведение, специфичное для драйвера OLE DB для SQL Server.  
   
- Полное описание базовых интерфейсов OLE DB и методов см. в разделе [Справочник программиста OLE DB](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Полное описание базовых интерфейсов и методов OLE DB можно найти в пособии [Справочник разработчика OLE DB](http://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
 -   [Интерфейсы &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

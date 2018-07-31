@@ -1,5 +1,5 @@
 ---
-title: Метод (int, int) supportsConvert | Документы Microsoft
+title: Метод supportsConvert (int, int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d482ebf9a5baba07e72f9d9f2bbb446bd3378363
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847949"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023972"
 ---
 # <a name="supportsconvert-method-int-int"></a>Метод supportsConvert (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public boolean supportsConvert(int fromType,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Исходный_тип*  
+ *fromType*  
   
  Тип JDBC, из которого выполняется преобразование.  
   
@@ -49,16 +49,16 @@ public boolean supportsConvert(int fromType,
  Тип JDBC, в который выполняется преобразование.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** , если поддерживается. В противном случае — **false**.  
+ **значение true,** Если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод supportsConvert указывается с помощью метода supportsConvert в интерфейсе java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>См. также  
- [Метод supportsConvert &#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   
+## <a name="see-also"></a>См. также:  
+ [Методы supportsConvert &#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

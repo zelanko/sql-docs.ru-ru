@@ -1,5 +1,5 @@
 ---
-title: Получение образца данных результирующего набора | Документы Microsoft
+title: Получение образца данных результирующего набора | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4d073fb21077bc5873dcb55be452e32ee5a0af3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852999"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039198"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Получение образца данных результирующего набора
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Это [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] образце приложения показано получение набора данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных и последующее отображение этих данных.  
+  В этом образце приложения [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] показано получение набора данных из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и последующее отображение этих данных.  
   
  Файл кода для этого образца имеет имя retrieveRS.java и находится в следующей папке:  
   
  \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \samples\resultsets  
   
 ## <a name="requirements"></a>Требования  
- Чтобы запустить образец приложения, необходимо в пути к классу указать файл sqljdbc.jar или файл sqljdbc4.jar. Если в пути к классу не указан файл sqljdbc.jar или sqljdbc4.jar, то образец приложения вызовет распространенное исключение «Класс не найден». Также потребуется доступ к [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образца базы данных. Дополнительные сведения о том, как задать значение переменной classpath см. в разделе [с помощью драйвера JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+ Чтобы запустить образец приложения, необходимо в пути к классу указать файл sqljdbc.jar или файл sqljdbc4.jar. Если в пути к классу не указан файл sqljdbc.jar или sqljdbc4.jar, то образец приложения вызовет распространенное исключение «Класс не найден». Также потребуется доступ к образцу базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Предоставляет файлы библиотек классов для использования в зависимости от выбранных параметров среды выполнения Java (JRE) sqljdbc.jar и sqljdbc4.jar. Дополнительные сведения о какие файлы JAR следует выбрать см. в разделе [требования к системе для драйвера JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] содержит файлы библиотек классов sqljdbc.jar и sqljdbc4.jar, которые используются в зависимости от применяемых параметров среды выполнения Java (JRE). Дополнительные сведения о какие файлы JAR следует выбрать, см. в разделе [требования к системе для драйвера JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере образец кода устанавливает соединение для [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образца базы данных. Затем с помощью инструкции SQL с [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) объекта, он выполняет инструкцию SQL и помещает данные, возвращенные в [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ В приведенном ниже примере образец кода будет использоваться для соединения с образцом базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Затем с помощью инструкции SQL с объектом [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) выполняется инструкция SQL, а возвращенные ею данные помещаются в объект [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
- Далее образец кода вызывает метод пользовательского displayRow для прохода по строкам данных, содержащихся в результирующем наборе и использует [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) метод для отображения некоторых данных, которые она содержит.  
+ Далее образец кода вызывает настраиваемый метод displayRow для прохода по строкам данных, содержащимся в результирующем наборе, и некоторые из этих данных отображаются с помощью метода [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md).  
   
 ```java
 import java.sql.*;  
@@ -96,7 +96,7 @@ public class retrieveRS {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с результирующими наборами](../../connect/jdbc/working-with-result-sets.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Получение данных большого объема | Документы Microsoft
-description: Возврат больших данных, с помощью драйвера OLE DB для SQL Server
+title: Возврат больших данных | Документация Майкрософт
+description: Возврат больших данных с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 816d999978ff692e034bb65012cd8da46508ca8e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666204"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106187"
 ---
 # <a name="getting-large-data"></a>Возврат больших данных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Как правило, потребители должны изолировать код, создающий драйвер OLE DB для SQL Server объект хранилища из другой код, который обрабатывает данные, которые не осуществляется с помощью **ISequentialStream** указатель на интерфейс.  
+  В общих случаях потребители должны изолировать код, создающий объект хранилища драйвера OLE DB для SQL Server, от другого кода, обрабатывающего данные, на который не ссылается указатель интерфейса **ISequentialStream**.  
   
- В этой статье относится к функциональным возможностям, доступные со следующими функциями:  
+ В этой статье описываются возможности, обеспечиваемые следующими функциями:  
   
 -   IRowset:GetData  
   
@@ -41,9 +41,9 @@ ms.locfileid: "35666204"
   
 -   ICommand::Execute  
   
- Потребитель должен получать только одну строку данных в вызове **GetNextRows** метода, если свойство DBPROP_ACCESSORDER в группе свойств набора строк имеет значение DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_ SEQUENTIALSTORAGEOBJECTS. Это так, как данные типа BLOB не буферизуются. Если значение свойства DBPROP_ACCESSORDER равно DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в **GetNextRows**.  
+ Если свойство DBPROP_ACCESSORDER в группе свойств набора строк имеет значение DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получать только одну строку данных в вызове метода **GetNextRows**. Это обусловлено тем, не поддерживает буферизацию данных больших двоичных ОБЪЕКТОВ. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
   
- Драйвер OLE DB для SQL Server не извлекает большие объемы данных из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до соответствующего запроса объектом-получателем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
+ Драйвер OLE DB для SQL Server не сможет извлечь большие объемы данных из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до запроса для этого объектом-получателем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
   
 ## <a name="example"></a>Пример  
  В этом примере значение большого типа данных получается из одного столбца.  
@@ -153,7 +153,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Большие двоичные объекты и объекты OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../oledb/features/using-large-value-types.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Поддержка типов данных даты OLE DB и улучшения времени | Документы Microsoft
-description: Поддержка типов данных для улучшения даты и времени OLE DB
+title: Улучшения поддержки типов данных даты и времени OLE DB | Документы Майкрософт
+description: Улучшения поддержки типов данных даты и времени OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ce5d32efa04e3402e9e454f2ab4c89cb6e1e5b69
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 79ecd277d962cc9e592d4b91eea985e55fb5c325
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666394"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109106"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Поддержка типов данных даты OLE DB и улучшения времени
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Улучшения поддержки типов данных даты и времени OLE DB
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В этой статье содержатся сведения о OLE DB (драйвер OLE DB для SQL Server) типы, которые поддерживают [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных даты и времени.  
+  Эта статья содержит сведения о OLE DB (драйвер OLE DB для SQL Server), типах, поддерживающих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных даты и времени.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Сопоставление типов данных в наборах строк и параметрах  
  OLE DB предоставляет два новых типа данных для поддержки новых типов серверов: DBTYPE_DBTIME2 и DBTYPE_DBTIMESTAMPOFFSET. Следующая таблица отображает полное сопоставление типов серверов.  
@@ -48,7 +48,7 @@ ms.locfileid: "35666394"
 |Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Тип данных OLE DB|Формат строки для клиентских преобразований|  
 |-----------------------------------------|----------------------|------------------------------------------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|'гггг-мм-дд чч:мм:сс:[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для типа Datetime поддерживает значения долей секунды, состоящие из не более чем трех цифр.|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|'гггг-мм-дд чч:мм:сс'<br /><br /> Этот тип данных имеет точность до одной минуты. При выводе данных секунды будут равны нулю, а при вводе данных они округляются сервером.|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|'гггг-мм-дд чч:мм:сс'<br /><br /> Точность этого типа данных составляет одну минуту. При выводе данных секунды будут равны нулю, а при вводе данных они округляются сервером.|  
 |Дата|DBTYPE_DBDATE|'гггг-мм-дд'|  
 |time|DBTYPE_DBTIME2|'чч:мм:сс[.9999999]'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'гггг-мм-дд чч:мм:сс[.еееееее]'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
@@ -65,7 +65,7 @@ ms.locfileid: "35666394"
  Пустая строка не является допустимым литералом даты-времени, она не представляет значение NULL. Попытка преобразовать пустую строку в значение даты-времени приведет к ошибкам со значением SQLState, равным 22018, и сообщением «Недопустимое символьное значение для спецификации приведения».  
   
 ## <a name="data-formats-data-structures"></a>Форматы данных: Структуры данных  
- В описанных ниже структурах зависящие от OLE DB OLE DB налагаются следующие ограничения. Следующие определения взяты из описания григорианского календаря.  
+ В структурах, зависящих от поставщика OLE DB, на OLE DB налагаются указанные ниже ограничения. Следующие определения взяты из описания григорианского календаря.  
   
 -   Диапазон месяцев — от 1 до 12 включительно.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "35666394"
   
 -   Диапазон минут — от 0 до 59 включительно.  
   
--   Диапазон секунд — от 0 до 59. Это позволяет до двух корректировочных секунд для синхронизации с временем sidereal.  
+-   Диапазон секунд — от 0 до 59. Это позволяет использовать до двух корректировочных секунд для синхронизации со звездным временем.  
   
  Реализации следующих существующих структур OLE DB были изменены в целях совместимости с новыми типами данных даты и времени [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. При этом определения не изменились.  
   
--   DBTYPE_DATE (Тип автоматизации DATE. Внутренне представляются **двойные**... Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть равна части дня. Точность этого типа составляет 1 секунду, поэтому значение масштаба фактически равно 0.)  
+-   DBTYPE_DATE (Тип автоматизации DATE. Имеет внутреннее представление **double**. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть равна части дня. Точность этого типа составляет 1 секунду, поэтому значение масштаба фактически равно 0.)  
   
 -   DBTYPE_DBDATE  
   
@@ -164,7 +164,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Приложения, переход на драйвер OLE DB для SQL Server, использующие **sql_variant** и полагаться на ограниченную точность **datetime** будет обновляться, если базовая схема обновлена для использования **datetime2** вместо **datetime**.  
+ Приложения, переход на драйвер OLE DB для SQL Server, использующие **sql_variant** и полагаться на ограниченную точность **datetime** , должны быть обновлены, если базовая схема обновлена для использования **datetime2** вместо **datetime**.  
   
  Макрос доступа SSVARIANT также расширен с помощью следующего дополнения:  
   
@@ -176,18 +176,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Сопоставление типов данных в методе ITableDefinition::CreateTable  
- Следующее сопоставление типов используется со структурами DBCOLUMNDESC ITableDefinition::CreateTable:  
+ Следующее сопоставление типов используется со структурами DBCOLUMNDESC в МЕТОДЕ, ITableDefinition::CreateTable:  
   
 |Тип данных OLE DB (*wType*)|Тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Примечания|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|Дата||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
-|DBTYPE_DBTIME2|**время**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**DateTimeOffset**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* участнику, чтобы определить точность в долях секунды.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* пытаясь определить точность в долях секунды.|  
+|DBTYPE_DBTIME2|**time**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* пытаясь определить точность в долях секунды.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Драйвер OLE DB для SQL Server проверяет элемент DBCOLUMDESC *bScale* пытаясь определить точность в долях секунды.|  
   
- Если приложение задает DBTYPE_DBTIMESTAMP в *wType*, оно может заменить сопоставление с **datetime2** , предоставив имя типа в *pwszTypeName*. Если **datetime** указано, *bScale* должно быть 3. Если **smalldatetime** указано, *bScale* должно быть равно 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается значение db_e_badscale.  
+ Если приложение задает DBTYPE_DBTIMESTAMP в *wType*, его можно переопределить сопоставление **datetime2** , указав имя типа в *pwszTypeName*. Если **datetime** указано, *bScale* должно быть 3. Если **smalldatetime** указано, *bScale* должно быть равно 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается значение db_e_badscale.  
   
-## <a name="see-also"></a>См. также  
- [Дата и время улучшениях &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [Улучшения функций даты и времени &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

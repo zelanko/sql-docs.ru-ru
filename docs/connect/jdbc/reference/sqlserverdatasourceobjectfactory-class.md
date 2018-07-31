@@ -1,5 +1,5 @@
 ---
-title: Класс SQLServerDataSourceObjectFactory | Документы Microsoft
+title: Класс SQLServerDataSourceObjectFactory | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ecec8f58587d6a57468f8078e1f680675bede77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845819"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046852"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>Класс SQLServerDataSourceObjectFactory
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "32845819"
 public class SQLServerDataSourceObjectFactory  
 ```  
   
-## <a name="remarks"></a>Замечания  
- Этот метод наследуется всеми классами источников данных. В рамках поддержки интерфейса Referenceable [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] обеспечивает доступ к этому классу, реализующему ObjectFactory. Серверы приложений Java вызовут getReference класса источника данных, и это будет создан объект ссылки, использующий имя класса внутри себя в качестве своей фабрики класса.  
+## <a name="remarks"></a>Remarks  
+ Этот метод наследуется всеми классами источников данных. В рамках поддержки интерфейса Referenceable [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] предоставляет доступ к этому классу, реализующему интерфейс ObjectFactory. Серверы приложений Java вызовут getReference для класса источников данных. В результате будет создан объект Reference, использующий имя класса внутри себя в качестве своей фабрики класса.  
   
- Если сервер приложений Java для разыменования ссылок объекта, он создает экземпляр SQLServerDataSourceObjectFactory объекта и вызывает [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) метод, передавая объект ссылки на получить экземпляр источника данных.  
+ Если сервер приложений Java для разыменования ссылочный объект, он создает экземпляр класса SQLServerDataSourceObjectFactory и вызывает [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) метод, передавая объект ссылки на получить экземпляр источника данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   
- [Справочник по API для драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Справка по API драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

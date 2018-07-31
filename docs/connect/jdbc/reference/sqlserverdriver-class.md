@@ -1,5 +1,5 @@
 ---
-title: Класс SQLServerDriver | Документы Microsoft
+title: Класс SQLServerDriver | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 976893003e65ea226e5df03a3d636b20d38018ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845479"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052726"
 ---
 # <a name="sqlserverdriver-class"></a>Класс SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Представляет [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Этот класс содержит методы для подключения к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных, а также для получения сведений о драйвере JDBC.  
+  Представляет драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Этот класс включает методы для соединения с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и для получения данных о драйвере JDBC.  
   
  **Пакет:** com.microsoft.sqlserver.jdbc  
   
@@ -39,8 +39,8 @@ ms.locfileid: "32845479"
 public final class SQLServerDriver  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
- [Справочник по API для драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Справка по API драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

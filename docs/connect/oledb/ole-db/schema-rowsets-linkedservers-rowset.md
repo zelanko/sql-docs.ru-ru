@@ -1,5 +1,5 @@
 ---
-title: Набор строк LINKEDSERVERS (OLE DB) | Документы Microsoft
+title: Набор строк LINKEDSERVERS (OLE DB) | Документация Майкрософт
 description: Набор строк LINKEDSERVERS (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ff4c35178b5cc047fb711821b332f43cf0094fc8
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: c6b1299005c0307f04f0f245f6e0ec6ee57b5063
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611729"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105770"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>Наборы строк схемы — набор строк LINKEDSERVERS
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---linkedservers-rowset"></a>Наборы строк схемы — набор строк LINKEDSERVERS
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **LINKEDSERVERS** набор строк перечисляет источники данных организации, которые могут участвовать в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] распределенных запросов.  
+  Набор строк **LINKEDSERVERS** перечисляет источники данных организации, которые могут применяться в распределенных запросах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Набор строк **LINKEDSERVERS** содержит следующие столбцы.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "35611729"
   
  Набор строк сортируется по столбцу SRV_NAME, и единственное ограничение поддерживается для столбца SRV_NAME.  
   
-## <a name="see-also"></a>См. также  
- [Поддержка наборов строк схемы &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [Поддержка набора строк схемы &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

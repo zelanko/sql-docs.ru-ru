@@ -1,6 +1,6 @@
 ---
-title: Поддержку потоковой передачи большого двоичного ОБЪЕКТА выходные параметры | Документы Microsoft
-description: Поддержка потоков для выходных параметров BLOB
+title: Поддержка потоков для больших двоичных ОБЪЕКТОВ выходных параметров | Документация Майкрософт
+description: Поддержка потоков для выходных параметров BLOB-объектов
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 92a9e7501d709b5509d5226a06cf1e08db05d555
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665174"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106870"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Поддержка потоков для выходных параметров BLOB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Эта статья содержит пример, показывающий поддержку потоков для выходных параметров BLOB, которое привязывает BLOB выходные параметры, как потоки ISequentialStreams.  
+  В этой статье приводится образец, демонстрирующий поддержку потоков для выходных параметров BLOB-объектов, который связывает выходные параметры BLOB-объектов как потоки ISequentialStreams.  
   
- Выходные параметры могут быть заблокированы в методе IMultipleResults::GetResult при получении возвращаемого значения DB_E_OBJECTOPEN. Вызывающий объект должен Проверьте наличие ожидающих больших двоичных объектов параметров и либо полностью прочитать их, либо освободить их.  
+ Выходные параметры могут быть заблокированы в методе IMultipleResults::GetResult при получении возвращаемого значения DB_E_OBJECTOPEN. Вызывающему объекту следует проверить наличие ожидающих параметров BLOB-объектов и либо полностью прочитать их, либо освободить их.  
   
 ## <a name="example"></a>Пример  
   
@@ -516,7 +516,7 @@ _Exit:
 }
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Большие двоичные объекты и объекты OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

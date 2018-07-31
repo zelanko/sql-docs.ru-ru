@@ -1,5 +1,5 @@
 ---
-title: Метод updateString (java.lang.String, java.lang.String) | Документы Microsoft
+title: Метод updateString (java.lang.String, java.lang.String) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,15 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77483ea821bb90c7a386c42a6eaa0dd4fd3ed11d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039262"
 ---
 # <a name="updatestring-method-javalangstring-javalangstring"></a>Метод updateString (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Обновляет указанный столбец с **строка** значение заданному имени столбца.  
+  Обновляет указанный столбец значением **String** по заданному имени столбца.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +42,7 @@ public void updateString(java.lang.String columnName,
 #### <a name="parameters"></a>Параметры  
  *columnName*  
   
- Объект **строка** , содержащее имя столбца.  
+ Значение типа **String**, содержащее имя столбца.  
   
  *x*  
   
@@ -50,10 +51,10 @@ public void updateString(java.lang.String columnName,
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод updateString указывается с помощью метода updateString в интерфейсе java.sql.ResultSet.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод updateString &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

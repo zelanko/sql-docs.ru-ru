@@ -1,5 +1,5 @@
 ---
-title: Работа с соединением | Документы Microsoft
+title: Работа с соединением | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbcd46cd9da1ab189aeafe77c7275aa103ea51f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851929"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060275"
 ---
 # <a name="working-with-a-connection"></a>Работа с соединением
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  В следующих разделах приведены примеры различных способов для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с помощью [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) класса [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+  В следующих разделах приведены примеры различных способов соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
 > [!NOTE]  
->  При наличии проблем с подключением к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью драйвера JDBC, в разделе [Устранение неполадок подключения к](../../connect/jdbc/troubleshooting-connectivity.md) предложения по их устранению.  
+>  При возникновении неполадок с соединением с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью драйвера JDBC см. раздел [Профилактика подключений](../../connect/jdbc/troubleshooting-connectivity.md), где можно найти сведения по их устранению.  
   
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>Создание соединения с помощью класса DriverManager  
- Самый простой способ создания подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных является загрузка драйвера JDBC и вызов метода getConnection класса DriverManager, как описано ниже:  
+ Простейший способ соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] — загрузка драйвера JDBC и вызов метода getConnection класса DriverManager:  
   
 ```  
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
@@ -41,10 +41,10 @@ Connection con = DriverManager.getConnection(connectionUrl);
  По этой методике подключение к базе данных будет создано с помощью первого доступного драйвера из списка драйверов, способных успешно подсоединиться к данному URL-адресу.  
   
 > [!NOTE]  
->  При использовании библиотеки классов sqljdbc4.jar приложениям не обязательно должны явно регистрировать или загружать с помощью метода Class.forName драйвер. При вызове метода getConnection класса DriverManager подходящий драйвер выбирается из набора зарегистрированных драйверов JDBC. Дополнительные сведения об использовании JDBC см. в разделе "Использование драйвера JDBC".  
+>  При использовании библиотеки классов sqljdbc4.jar приложениям не обязательно явно регистрировать или загружать драйвер с помощью метода Class.forName. При вызове метода getConnection класса DriverManager подходящий драйвер выбирается из набора зарегистрированных драйверов JDBC. Дополнительные сведения об использовании JDBC см. в разделе "Использование драйвера JDBC".  
   
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Создание соединения с помощью класса SQLServerDriver  
- Если вам нужно указать конкретный драйвер из списка драйверов для DriverManager, можно создать подключение к базе данных с помощью [подключения](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) метод [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) класса, как описано ниже:  
+ Если нужно указать конкретный драйвер из списка драйверов для DriverManager, то можно создать подключение к базе данных с помощью метода [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) класса [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md):  
   
 ```  
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  
@@ -53,7 +53,7 @@ Connection con = d.connect(connectionUrl, new Properties());
 ```  
   
 ## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>Создание соединения с помощью класса SQLServerDataSource  
- Если необходимо создать соединение с помощью [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) , можно использовать различные методы задания класса перед вызовом метода [getConnection](../../connect/jdbc/reference/getconnection-method.md) метода, как описано ниже:  
+ При необходимости создать соединение с помощью класса [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) можно использовать различные методы задания класса, после чего вызывается метод [getConnection](../../connect/jdbc/reference/getconnection-method.md):  
   
 ```  
 SQLServerDataSource ds = new SQLServerDataSource();  
@@ -97,16 +97,16 @@ Connection con = ds.getConnection();
  `String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"`  
   
 ## <a name="closing-a-connection"></a>Закрытие соединения  
- Подключение к базе данных можно явно закрыть путем вызова [закрыть](../../connect/jdbc/reference/close-method-sqlserverconnection.md) метод класса SQLServerConnection, как описано ниже:  
+ Подключение к базе данных можно явно закрыть путем вызова метода [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md) класса SQLServerConnection:  
   
  `con.close();`  
   
- Это освободить ресурсы базы данных, которые использует объект SQLServerConnection или возврат соединения в пул соединений в сценариях с пулами.  
+ Освобождение ресурсов базы данных, используемых объектом SQLServerConnection, или возврат соединения в пул соединений в сценариях с пулами.  
   
 > [!NOTE]  
->  Вызова метода close будет также к откату любой запланированной транзакции.  
+>  Вызов метода close также приведет к откату любой ожидающей выполнения транзакции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

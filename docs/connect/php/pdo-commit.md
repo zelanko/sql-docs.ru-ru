@@ -1,5 +1,5 @@
 ---
-title: PDO::Commit | Документы Microsoft
+title: PDO::Commit | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8b60b75aea820f1f9ef41c099aa8d9b2bb98b875
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307803"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979686"
 ---
 # <a name="pdocommit"></a>PDO::commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,14 +36,14 @@ bool PDO::commit();
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение true, если вызов метода выполнен успешно, в противном случае — значение false.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 PDO::commit не подвержен влиянию со стороны значения PDO::ATTR_AUTOCOMMIT (и не влияет на него).  
   
 Пример использования PDO::commit см. в статье [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) .  
   
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Класс PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

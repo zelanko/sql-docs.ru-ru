@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_field_metadata | Документы Microsoft
+title: sqlsrv_field_metadata | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309393"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991276"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,16 +52,16 @@ sqlsrv_field_metadata( resource $stmt)
 |Размер|Число символов для полей символьного типа (char(n), varchar(n), nchar(n), nvarchar(n), XML). Число байтов для полей двоичного типа (binary(n), varbinary(n), UDT). Значение**NULL** для других типов данных SQL Server.|  
 |Точность|Точность для типов переменной точности (real, numeric, decimal, datetime2, datetimeoffset и time). Значение**NULL** для других типов данных SQL Server.|  
 |Масштаб|Масштаб для типов переменного масштаба (numeric, decimal, datetime2, datetimeoffset и time). Значение**NULL** для других типов данных SQL Server.|  
-|Допускает значения NULL|Перечислимое значение, указывающее, является ли столбец значение NULL (**SQLSRV_NULLABLE_YES**), столбец не допускает значения NULL (**SQLSRV_NULLABLE_NO**), или оно неизвестно, допускает ли столбец значение NULL ( **SQLSRV_NULLABLE_UNKNOWN**).|  
+|Допускает значения NULL|Перечисляемое значение, указывающее, что столбец допускает значение NULL (**SQLSRV_NULLABLE_YES**), столбец не допускает значение NULL (**SQLSRV_NULLABLE_NO**), либо неизвестно, допускает ли столбец значение NULL (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Следующая таблица содержит дополнительные сведения о ключах для каждого подмассива (дополнительные сведения об этих типах см. в документации по SQL Server):  
   
 |Тип данных SQL Server 2008|Тип|Минимальная/максимальная точность|Минимальный/максимальный масштаб|Размер|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |BIGINT|SQL_BIGINT (-5)|||8|  
-|BINARY|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
+|BINARY|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
-|char;|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
+|char;|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
 |Дата|SQL_TYPE_DATE (91)|10/10|0/0||  
 |DATETIME|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
@@ -71,10 +71,10 @@ sqlsrv_field_metadata( resource $stmt)
 |image|SQL_LONGVARBINARY (-4)|||2 GB|  
 |ssNoversion|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
-|NCHAR|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
+|NCHAR|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR (-10)|||1 ГБ|  
 |NUMERIC|SQL_NUMERIC (2)|1/38|0/значение точности||  
-|NVARCHAR|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
+|NVARCHAR|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
 |REAL|SQL_REAL (7)|4/4|||  
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
 |SMALLINT|SQL_SMALLINT (5)|||2 байта|  
@@ -85,8 +85,8 @@ sqlsrv_field_metadata( resource $stmt)
 |tinyint|SQL_TINYINT (-6)|||1 байт|  
 |определяемый пользователем тип|SQL_SS_UDT (-151)|||переменная|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
-|varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
-|varchar|SQL_VARCHAR (12)|||0 < *n* < 8000 <sup>1</sup>|  
+|varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
+|varchar|SQL_VARCHAR (12)|||0 < *n* < 8000 <sup>1</sup>|  
 |xml|SQL_SS_XML (-152)|||0|  
   
 (1) Нуль (0) указывает, что разрешен максимальный размер.  
@@ -94,7 +94,7 @@ sqlsrv_field_metadata( resource $stmt)
 Ключ Nullable может иметь значение yes или no.  
   
 ## <a name="example"></a>Пример  
-Следующий пример создает ресурс инструкции, а затем извлекает и отображает метаданные полей. Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример создает ресурс инструкции, а затем извлекает и отображает метаданные полей. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

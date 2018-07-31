@@ -1,5 +1,5 @@
 ---
-title: PDO::__construct | Документы Microsoft
+title: PDO::__construct | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e426530a16fbe6d9749b505723d3251e43f94aa7
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307743"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979707"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*: необязательно. Строка, содержащая пароль пользователя. Для подключения с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] укажите пароль. Для подключения с использованием проверки подлинности Windows укажите `""`.  
   
-*$driver_options*: необязательно. Вы можете указать диспетчер драйверов PDO, а [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] атрибуты драйвера — PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Недопустимый атрибут не вызывает исключение. Недопустимые атрибуты вызывают исключения при указании [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+*$driver_options*: необязательно. Вы можете указать атрибуты диспетчера драйверов PDO и эксклюзивные атрибуты драйвера [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]: PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Недопустимый атрибут не вызывает исключение. Недопустимые атрибуты вызывают исключения при указании [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Возвращает объект PDO. В случае сбоя возвращает объект PDOException.  
@@ -48,12 +48,12 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ## <a name="exceptions"></a>Исключения  
 PDOException  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 Объект соединения можно закрыть, установив для экземпляра значение NULL.  
   
 После подключения PDO::errorCode отображает 01000 вместо 00000.  
   
-Если для какой-либо причине происходит сбой PDO::__construct, исключение, даже если PDO::ATTR_ERRMODE задано значение PDO::ERRMODE_SILENT.  
+Если PDO::__construct по какой-то причине не срабатывает, выдается исключение, даже если для PDO::ATTR_ERRMODE задано значение PDO::ERRMODE_SILENT.  
   
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -90,7 +90,7 @@ PDOException
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Класс PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

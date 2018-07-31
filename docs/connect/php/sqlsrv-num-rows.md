@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_rows | Документы Microsoft
+title: sqlsrv_num_rows | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670d9b8f4e708fac264b8520a6a1ee6f183181a5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006793"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,8 +42,8 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение**false** , если произошла ошибка при вычислении количества строк. В противном случае возвращает число строк в результирующем наборе.  
   
-## <a name="remarks"></a>Примечания  
-sqlsrv_num_rows требует клиентский, статический или курсор набора ключей и вернет **false** при использовании однонаправленный или динамический курсор. (По умолчанию используется однонаправленный курсор.) Дополнительные сведения о курсорах см. в разделе [sqlsrv_query](../../connect/php/sqlsrv-query.md) и [типы курсоров &#40;драйвер SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
+## <a name="remarks"></a>Remarks  
+Инструкция sqlsrv_num_rows требует использовать курсор CLIENT, STATIC или KEYSET и возвращает значение **false** (ложь), если используется курсор FORWARD или DYNAMIC. (По умолчанию используется однонаправленный курсор.) Дополнительные сведения о курсорах см. в статьях [sqlsrv_query](../../connect/php/sqlsrv-query.md) и [Типы курсоров &#40;драйвер SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Пример  
   
@@ -96,6 +96,6 @@ echo "\nRow count for second result set = $row_count\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

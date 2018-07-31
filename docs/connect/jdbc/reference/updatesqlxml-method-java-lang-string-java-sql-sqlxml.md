@@ -1,5 +1,5 @@
 ---
-title: Метод updateSQLXML (java.lang.String, java.sql.SQLXML) | Документы Microsoft
+title: Метод updateSQLXML (java.lang.String, java.sql.SQLXML) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4678a6611e2f13624cb2cfefda15c37a8195e3aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849689"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039231"
 ---
 # <a name="updatesqlxml-method-javalangstring-javasqlsqlxml"></a>Метод updateSQLXML (java.lang.String, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateSQLXML(java.lang.String columnLabel,
 #### <a name="parameters"></a>Параметры  
  *ColumnLabel состоит из*  
   
- Объект **строка** , определяющее метку столбца.  
+ Значение **String**, которое указывает метку столбца.  
   
  *xmlObject*  
   
@@ -46,10 +46,10 @@ public void updateSQLXML(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод updateSQLXML указывается с помощью метода updateSQLXML в интерфейсе java.sql.ResultSet.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод updateSQLXML &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

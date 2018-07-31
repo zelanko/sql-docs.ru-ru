@@ -1,5 +1,5 @@
 ---
-title: С помощью разрешение IP-адресов для прозрачной сети | Документы Microsoft
+title: С помощью разрешение IP-адресов прозрачной сети | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,47 +15,47 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d76e50b4761e8d1a32bbcfc4606778f96513ed1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852238"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060231"
 ---
-# <a name="using-transparent-network-ip-resolution"></a>С помощью прозрачного сетевого разрешение IP-адресов
+# <a name="using-transparent-network-ip-resolution"></a>Использование разрешения IP-адресов прозрачной сети
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-TransparentNetworkIPResolution является существующей MultiSubnetFailover функции, доступные в Microsoft ODBC Driver 13.1 for SQL Server, которая влияет на время подключения драйвера там, где первый разрешить IP-адрес имени узла не поддерживает версии ответ и имеется несколько IP-адресов, связанный с именем узла. Он взаимодействует с MultiSubnetFailover для предоставления следующих трех соединения последовательностей:
+TransparentNetworkIPResolution является редакцией MultiSubnetFailover функцией, доступные в Microsoft ODBC Driver 13.1 for SQL Server, который влияет на время подключения драйвера в случае, когда первый разрешенный IP-адрес имени узла не поддерживает ответ, и существует несколько IP-адресов, связанный с именем узла. Он взаимодействует с MultiSubnetFailover для предоставления следующие три подключения последовательности:
 
-* 0: один предпринимается IP, следуют все IP-адресов в параллельном режиме
-* 1: попытка всех IP-адресов в параллельном режиме
-* 2: применяются все IP-адреса друг за другом
+* 0: один IP-адрес предпринимается, следуют все IP-адреса в параллельном режиме
+* 1: все IP-адреса попытки подключения выполняются в параллельном режиме
+* 2: все IP-адреса попытки подключения выполняются один за другим
 
-|TransparentNetworkIPResolution|MultiSubnetFailover|Поведение|
+|transparentNetworkIPResolution|MultiSubnetFailover|Поведение|
 |:-:|:-:|:-:|
 |(по умолчанию).|(по умолчанию).|0|
-|(по умолчанию).|Включено|1|
+|(по умолчанию).|Активировано|1|
 |(по умолчанию).|Выключено|0|
-|Включено|(по умолчанию).|0|
-|Включено|Включено|1|
-|Включено|Выключено|0|
+|Активировано|(по умолчанию).|0|
+|Активировано|Активировано|1|
+|Активировано|Выключено|0|
 |Выключено|(по умолчанию).|2|
-|Выключено|Включено|1|
+|Выключено|Активировано|1|
 |Выключено|Выключено|2|
 
-`TransparentNetworkIPResolution` Строку соединения и источника данных определяет ключевое слово, этот параметр на уровне строки подключения. По умолчанию включен.
+`TransparentNetworkIPResolution` Строку подключения и имени DSN ключевое слово управляет этот параметр на уровне строки подключения. По умолчанию включен.
 
 Ключевое слово|Значения|По умолчанию
 -|-|-
 `TransparentNetworkIPResolution`|`Yes`, `No`|`Yes`
 
-`SQL_COPT_SS_TNIR` Атрибута предварительного соединения позволяет приложению управлять программным образом этот параметр:
+`SQL_COPT_SS_TNIR` Атрибута предварительного соединения позволяет приложению для управления, этот параметр, программным способом:
 
-Атрибут соединения|   Размер или тип|  По умолчанию| Значение| Описание
+Атрибут подключения|   Размера и типа|  По умолчанию| Значение| Описание
 -|-|-|-|-
-`SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER`или`SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Включает или отключает TNIR.
+`SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` или `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Включает или отключает TNIR.
 
-<a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recoveryconnectodbclinux-macodbc-driver-on-linux-support-for-high-availability-disaster-recoverymd"></a>Дополнительные сведения о MultiSubnetFailover см. в разделе [драйвер ODBC для Linux и macOS - высокого уровня доступности и аварийного восстановления](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
+<a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recoveryconnectodbclinux-macodbc-driver-on-linux-support-for-high-availability-disaster-recoverymd"></a>Дополнительные сведения о MultiSubnetFailover, см. в разделе [драйвер ODBC для Linux и macOS — высокий уровень доступности и аварийного восстановления](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 --------------------------------------------------
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 * [Драйвер Microsoft ODBC Driver for SQL Server в Windows](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
-* [SQL Server с несколькими подсетями кластеризация (SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)
+* [Кластеры SQL Server с несколькими подсетями (SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)

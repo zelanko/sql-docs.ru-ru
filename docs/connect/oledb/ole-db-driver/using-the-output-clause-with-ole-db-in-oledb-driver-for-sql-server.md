@@ -1,6 +1,6 @@
 ---
-title: Использование предложения OUTPUT с OLE DB в драйвер OLE DB для SQL Server | Документы Microsoft
-description: Использование предложения OUTPUT с OLE DB в драйвер OLE DB для SQL Server
+title: Использование предложения OUTPUT с OLE DB в драйвере OLE DB для SQL Server | Документы Майкрософт
+description: Использование предложения OUTPUT с OLE DB в драйвере OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8cf2e08b76636ab8509ab07fd1f3d60a102fa76d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ad3408d0419e408809b151114d83a09d976505fa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665334"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109396"
 ---
-# <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>Использование предложения OUTPUT с OLE DB в драйвер OLE DB для SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>Использование предложения OUTPUT с OLE DB в драйвере OLE DB для SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Если используется предложение OUTPUT в инструкции INSERT, UPDATE, DELETE или MERGE количество затронутых строк недоступен. Приложение необходимо подсчитать число строк в наборе строк, возвращаемых предложением OUTPUT.  
+  При использовании предложения OUTPUT в командах INSERT, UPDATE, DELETE или MERGE количество затронутых строк недоступно. Выполнять подсчет строк в наборе, возвращенном предложением OUTPUT, должно приложение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложения с драйвером OLE DB для SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md) 
   
   

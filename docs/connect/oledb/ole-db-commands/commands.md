@@ -1,6 +1,6 @@
 ---
-title: Команды | Документы Microsoft
-description: Команды в драйвер OLE DB для SQL Server
+title: Команды | Документация Майкрософт
+description: Команды в драйвере OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a518a4a718007e1c1efb3b7c53732beef7d7c0ab
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 4fcc1b32e3e27fc70b5d96585194152621fc1f7b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665394"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108006"
 ---
 # <a name="commands"></a>Команды
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server предоставляет **ICommand** интерфейс и объекты команд, которые описаны в этом разделе:  
+  Драйвер OLE DB для SQL Server предоставляет интерфейс **ICommand** и объекты команд, которые описаны в этом разделе:  
   
 -   [Синтаксис команд](../../oledb/ole-db-commands/command-syntax.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "35665394"
   
 -   [Команды, формирующие результаты с несколькими наборами строк](../../oledb/ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Константы (драйверы Майкрософт для PHP для SQL Server) | Документы Microsoft
+title: Константы (драйверы Майкрософт для PHP для SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57c52b218406b658ef3f467ee122d51ed32158ad
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978697"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Константы (драйверы Майкрософт для PHP для SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "35307013"
 Эта статья описывает константы, которые определены [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="pdosqlsrv-driver-constants"></a>Константы драйвера PDO_SQLSRV  
-Константы, перечисленные на [веб-сайте PDO](http://php.net/manual/book.pdo.php) допустимы в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Константы, перечисленные на [веб-сайте PDO](http://php.net/manual/book.pdo.php), допустимы в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-Ниже описаны константы систем Microsoft в драйвере PDO_SQLSRV.  
+Ниже описаны константы, характерные для продуктов Майкрософт, в драйвере PDO_SQLSRV.  
   
 ### <a name="transaction-isolation-level-constants"></a>Константы уровня изоляции транзакции  
 Ключ **TransactionIsolation** , который используется с [PDO::__construct](../../connect/php/pdo-construct.md), принимает одну из следующих констант:  
@@ -49,34 +49,34 @@ ms.locfileid: "35307013"
 Дополнительные сведения о ключе **TransactionIsolation** см. в статье [Connection Options](../../connect/php/connection-options.md).  
   
 ### <a name="encoding-constants"></a>Константы кодировки  
-Атрибут PDO::SQLSRV_ATTR_ENCODING можно передать [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), [PDO::setAttribute](../../connect/php/pdo-setattribute.md), [PDO::prepare](../../connect/php/pdo-prepare.md), [PDOStatement: : bindColumn](../../connect/php/pdostatement-bindcolumn.md), и [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md).  
+Атрибут PDO::SQLSRV_ATTR_ENCODING можно передать в параметры [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), [PDO::setAttribute](../../connect/php/pdo-setattribute.md), [PDO::prepare](../../connect/php/pdo-prepare.md), [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md) и [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md).  
   
 Для передачи в PDO::SQLSRV_ATTR_ENCODING доступны следующие значения:  
   
 |Константа драйвера PDO_SQLSRV|Описание|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|Данные представляют собой поток необработанных байтов с сервера без применения кодировки или преобразования.<br /><br />Не является допустимым для PDO::setAttribute.|  
-|PDO::SQLSRV_ENCODING_SYSTEM|Данные представлены 8-битными символами, как указано в кодовой странице языкового стандарта Windows, установленного в системе. Любой многобайтовых символов или символов, не соответствующих этой кодовой странице, подставляется символ однобайтовый вопросительный знак (?).|  
+|PDO::SQLSRV_ENCODING_SYSTEM|Данные представлены 8-битными символами, как указано в кодовой странице языкового стандарта Windows, установленного в системе. Для всех многобайтовых символов или символов, не соответствующих этой кодовой странице, подставляется однобайтовый символ вопросительного знака (?).|  
 |PDO::SQLSRV_ENCODING_UTF8|Данные имеют кодировку UTF-8. Эта кодировка используется по умолчанию.|  
 |PDO::SQLSRV_ENCODING_DEFAULT|Использует PDO::SQLSRV_ENCODING_SYSTEM, если указано во время соединения.<br /><br />Используйте кодировку соединения, если указано в инструкции prepare.|  
   
 ### <a name="query-timeout"></a>Время ожидания запроса  
 Атрибут PDO::SQLSRV_ATTR_QUERY_TIMEOUT — это неотрицательное целое число, представляющее время ожидания в секундах. По умолчанию использует нуль (0), означающий отсутствие времени ожидания.  
   
-Можно указать атрибут PDO::SQLSRV_ATTR_QUERY_TIMEOUT с [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), [PDO::setAttribute](../../connect/php/pdo-setattribute.md), и [PDO::prepare](../../connect/php/pdo-prepare.md).  
+Атрибут PDO::SQLSRV_ATTR_QUERY_TIMEOUT можно указать с [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), [PDO::setAttribute](../../connect/php/pdo-setattribute.md) и [PDO::prepare](../../connect/php/pdo-prepare.md).  
   
 ### <a name="direct-or-prepared-execution"></a>Прямое или подготовленное выполнение  
-С помощью атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY можно выбрать выполнение прямого запроса или подготовленной инструкции. Можно задать PDO::SQLSRV_ATTR_DIRECT_QUERY [PDO::prepare](../../connect/php/pdo-prepare.md) или [PDO::setAttribute](../../connect/php/pdo-setattribute.md). Дополнительные сведения о PDO::SQLSRV_ATTR_DIRECT_QUERY см. в разделе [выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
+С помощью атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY можно выбрать выполнение прямого запроса или подготовленной инструкции. PDO::SQLSRV_ATTR_DIRECT_QUERY можно задать с помощью [PDO::prepare](../../connect/php/pdo-prepare.md) или [PDO::setAttribute](../../connect/php/pdo-setattribute.md). Дополнительные сведения о PDO::SQLSRV_ATTR_DIRECT_QUERY см. в статье [Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
 
 ### <a name="handling-numeric-fetches"></a>Обработка числовых выборки
-Атрибут PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE можно использовать для обработки числовых выборки из столбцов с числовыми типами SQL (бит, целое число со знаком, smallint, tinyint, float и real). Когда PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE имеет значение true, в результате целочисленном столбце представлены в виде целых чисел, пока смещает SQL и reals представляются в виде значений с плавающей запятой. Этот атрибут можно установить с [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
+Атрибут PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE можно использовать для обработки числовых операций выборки из столбцов с числовыми типами SQL (бит, целое число, smallint, tinyint, float и real). Когда PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE имеет значение true, результаты из целочисленного столбца отображаются в виде целых чисел, расположенном SQL и reals представляются в виде числа с плавающей запятой. Этот атрибут можно задать с помощью [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 Следующие разделы содержат константы, используемые драйвером SQLSRV.  
   
 ### <a name="err-constants"></a>Константы ERR  
-В следующей таблице перечислены константы, которые используются для указания, если [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) возвращает ошибки и предупреждения.  
+Следующая таблица содержит константы, которые используются для указания того, возвращает ли [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) ошибки и (или) предупреждения.  
   
 |Значение|Описание|  
 |---------|---------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "35307013"
 |SQLSRV_LOG_SYSTEM_INIT (1)|Включает ведения журнала по инициализации.|  
 |SQLSRV_LOG_SYSTEM_OFF (0)|Отключает ведение журнала.|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|Включает ведения журнала по инструкциям.|  
-|SQLSRV_LOG_SYSTEM_UTIL (8)|Включение ведения журнала ошибок (например, **handle_error** и **handle_warning**).|  
+|SQLSRV_LOG_SYSTEM_UTIL (8)|Включает ведение журнала по функциям ошибок (таким как **handle_error** и **handle_warning**).|  
   
 Следующая таблица содержит константы, которые можно использовать в качестве значения для параметра **LogSeverity** :  
   
@@ -135,7 +135,7 @@ ms.locfileid: "35307013"
 |SQLSRV_PARAM_OUT|Указывает параметр вывода.|  
   
 ### <a name="phptype-constants"></a>Константы PHPTYPE  
-Следующая таблица содержит константы, которые используются для описания типов данных PHP. Сведения о типах данных PHP см. в разделе [типы PHP](http://php.net/manual/en/language.types.php).  
+Следующая таблица содержит константы, которые используются для описания типов данных PHP. Дополнительные сведения о типах данных PHP см. в статье [Типы PHP](http://php.net/manual/en/language.types.php).  
   
 |Константа SQLSRV|Тип данных PHP|  
 |-------------------|-----------------|  
@@ -150,16 +150,16 @@ ms.locfileid: "35307013"
 |Константа SQLSRV|Описание|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|Данные возвращаются в виде потока необработанных байтов с сервера без применения кодировки или преобразования.|  
-|SQLSRV_ENC_CHAR|Данные возвращаются в виде 8-битных символов, как указано в кодовой странице языкового стандарта Windows, установленного в системе. Любой многобайтовых символов или символов, не соответствующих этой кодовой странице, подставляется символ однобайтовый вопросительный знак (?).<br /><br />Эта кодировка используется по умолчанию.|  
-|"UTF-8"|Данные возвращаются с кодировкой UTF-8. Эта константа была добавлена в версии 1.1 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения о поддержке UTF-8 см. в разделе [как: отправки и получения UTF-8 данных с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
+|SQLSRV_ENC_CHAR|Данные возвращаются в виде 8-битных символов, как указано в кодовой странице языкового стандарта Windows, установленного в системе. Для всех многобайтовых символов или символов, не соответствующих этой кодовой странице, подставляется однобайтовый символ вопросительного знака (?).<br /><br />Эта кодировка используется по умолчанию.|  
+|"UTF-8"|Данные возвращаются с кодировкой UTF-8. Эта константа была добавлена в версии 1.1 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения о поддержке UTF-8 см. в статье [Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
   
 > [!NOTE]  
-> При использовании **SQLSRV_PHPTYPE_STREAM** или **SQLSRV_PHPTYPE_STRING**, должна быть указана кодировка. Если параметр не указан, возвращается ошибка.  
+> При использовании **SQLSRV_PHPTYPE_STREAM** или **SQLSRV_PHPTYPE_STRING** должна быть указана кодировка. Если параметр не указан, возвращается ошибка.  
   
 Дополнительные сведения об этих константах см. в статье [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)и [Практическое руководство. Извлечение символьных данных в виде потока с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ### <a name="sqltype-constants"></a>Константы SQLTYPE  
-Следующая таблица содержит константы, которые используются для описания типов данных SQL Server. Некоторые константы подобный функции и может занять параметры, которые соответствуют точности, масштаба или длины.  При привязке параметров, следует использовать константы подобный функции. Для сравнения типов требуются стандартные константы (не как функция). Сведения о типах данных SQL Server см. в разделе [типы данных (Transact-SQL).](../../t-sql/data-types/data-types-transact-sql.md) Сведения о точности, масштаба и длины см. в разделе [точность, масштаб и длина (Transact-SQL).](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
+Следующая таблица содержит константы, которые используются для описания типов данных SQL Server. Некоторые константы, функции и может занять параметры, которые соответствуют точности, масштаба и/или длина.  При привязке параметров, следует использовать подобный функции константы. Для сравнения типов требуются стандартные константы (не как функция). Дополнительные сведения о типах данных SQL Server см. в статье [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md). Сведения о точности, масштабе и длине см. в статье [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 |Константа SQLSRV|Тип данных SQL Server|  
 |-------------------|------------------------|  
@@ -172,7 +172,7 @@ ms.locfileid: "35307013"
 |SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DECIMAL|десятичное число<sup>5</sup>|
+|SQLSRV_SQLTYPE_DECIMAL|Decimal<sup>5</sup>|
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
 |SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
@@ -212,7 +212,7 @@ ms.locfileid: "35307013"
   
 4.  Поддержка PDO для этого типа была добавлена в версии 1.1 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
-5.  Эти константы должны использоваться в операциях сравнения типа и не замените синтаксис, похожий константы подобный функции. Для параметров привязки, следует использовать функцию как константы.
+5.  Эти константы должен использоваться в операциях сравнения типа и не замените схожий синтаксис функции константы. Для привязки параметров, должны использовать константы подобный функции.
 
   
 Следующая таблица содержит константы SQLTYPE, которые принимают параметры, а также диапазон допустимых значений для параметра.  
@@ -267,6 +267,6 @@ ms.locfileid: "35307013"
   
 Сведения об использовании этих констант см. в статье [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

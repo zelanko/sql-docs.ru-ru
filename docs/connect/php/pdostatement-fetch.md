@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetch | Документы Microsoft
+title: PDOStatement::fetch | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308423"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020002"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,17 +34,17 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*fetch_style*: символ необязательно (целое число), указывающий формат строки данных. В разделе «Примечания» в список возможных значений для $*fetch_style*. Значение по умолчанию — PDO::FETCH_BOTH. $*fetch_style* в fetch переопределяет $ метод*fetch_style* указанные в методе PDO::query.  
+$*fetch_style*: необязательный символ (целое число), указывающий формат строки данных. Список возможных значений для $*fetch_style* см. в разделе "Примечания". Значение по умолчанию — PDO::FETCH_BOTH. $*fetch_style* в методе "fetch" имеет более высокий приоритет, чем $*fetch_style* в PDO::query.  
   
-$*cursor_orientation*: символ необязательно (целое число), указывающий строку для получения, когда Подготовленная инструкция указывает `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. В разделе «Примечания» в список возможных значений для $*cursor_orientation*. Пример использования прокручиваемого курсора см. в статье [PDO::prepare](../../connect/php/pdo-prepare.md) .  
+$*cursor_orientation*: необязательный символ (целое число), указывающий извлекаемую строку, когда в инструкции подготовки задано `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. Список возможных значений для $*cursor_orientation* см. в разделе "Примечания". Пример использования прокручиваемого курсора см. в статье [PDO::prepare](../../connect/php/pdo-prepare.md) .  
   
-$*cursor_offset*: символ необязательно (целое число), определяющее строку, когда $*cursor_orientation* имеет значение PDO::FETCH_ORI_ABS или PDO::FETCH_ORI_REL и PDO::ATTR_CURSOR имеет значение PDO::CURSOR_SCROLL.  
+$*cursor_offset*: необязательный символ (целое число), указывающий извлекаемую строку, когда $*cursor_orientation* имеет значение PDO::FETCH_ORI_ABS или PDO::FETCH_ORI_REL, а PDO::ATTR_CURSOR имеет значение PDO::CURSOR_SCROLL.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Смешанное значение, которое возвращает строку или значение false.  
   
-## <a name="remarks"></a>Примечания  
-Курсор автоматически перемещается вперед при вызове fetch. Следующая таблица содержит список возможных $*fetch_style* значения.  
+## <a name="remarks"></a>Remarks  
+Курсор автоматически перемещается вперед при вызове fetch. Следующая таблица содержит список возможных значений для $*fetch_style*.  
   
 |$*fetch_style*|Описание|  
 |-------------------|---------------|  
@@ -59,7 +59,7 @@ $*cursor_offset*: символ необязательно (целое число
   
 Если курсор находится в конце результирующего набора (последняя строка была извлечена, и курсор вышел за границу результирующего набора) и является курсором последовательного доступа (PDO::ATTR_CURSOR = PDO::CURSOR_FWDONLY), последующий вызов fetch завершается с ошибкой.  
   
-Если курсор является прокручиваемым (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), fetch перемещает курсор в пределах границ результирующего набора. Следующая таблица содержит список возможных $*cursor_orientation* значения.  
+Если курсор является прокручиваемым (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), fetch перемещает курсор в пределах границ результирующего набора. Следующая таблица содержит список возможных значений для $*cursor_orientation*.  
   
 |$*cursor_orientation*|Описание|  
 |--------------------------|---------------|  
@@ -67,10 +67,10 @@ $*cursor_offset*: символ необязательно (целое число
 |PDO::FETCH_ORI_PRIOR|Извлекает предыдущую строку.|  
 |PDO::FETCH_ORI_FIRST|Извлекает первую строку.|  
 |PDO::FETCH_ORI_LAST|Извлекает последнюю строку.|  
-|Значение PDO::FETCH_ORI_ABS, *num*|Извлекает строку, запрашиваемую в $*cursor_offset* по номеру строки.|  
-|PDO::FETCH_ORI_REL, *num*|Извлекает строку, запрашиваемую в $*cursor_offset* по положению относительно текущей позиции.|  
+|PDO::FETCH_ORI_ABS, *номер*|Извлекает строку, запрашиваемую в $*cursor_offset*, по номеру строки.|  
+|PDO::FETCH_ORI_REL, *номер*|Извлекает строку, запрашиваемую в $*cursor_offset*, по положению относительно текущей позиции.|  
   
-Если значение, указанное для $*cursor_offset* или $*cursor_orientation* приводит к выходу за границу результирующего набора, fetch завершается с ошибкой.  
+Если значение, указанное для $*cursor_offset* или $*cursor_orientation*, приводит к выходу за границу результирующего набора, метод "fetch" не срабатывает.  
   
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -144,7 +144,7 @@ $*cursor_offset*: символ необязательно (целое число
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Класс PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

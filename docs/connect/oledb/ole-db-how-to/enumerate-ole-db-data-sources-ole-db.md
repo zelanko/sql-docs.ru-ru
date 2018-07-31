@@ -1,6 +1,6 @@
 ---
-title: Перечисление источников данных OLE DB (OLE DB) | Документы Microsoft
-description: Перечисление источников данных OLE DB с помощью перечислителя MSOLEDBSQL
+title: Перечисление источников данных OLE DB (OLE DB) | Документация Майкрософт
+description: Перечисление источников данных OLE DB, используя перечислитель MSOLEDBSQL
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9b4911e94ec5cb21e2950a09b0a0e18d5f842bd7
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2466ebc1b701cc5f2102a895afa475a107c8af4c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665884"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107987"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Перечисление источников данных OLE DB (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   В этом образце показано, как использовать объект перечислителя для построения списка доступных источников данных.  
   
- Чтобы получить список источников данных, видимых перечислителю MSOLEDBSQL, потребитель вызывает метод [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) метод. Этот метод возвращает набор строк информации о видимых в настоящее время источниках данных.  
+ Для перечисления источников данных, доступных перечислителю MSOLEDBSQL, потребитель вызывает метод [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312). Этот метод возвращает набор строк информации о видимых в настоящее время источниках данных.  
   
  В зависимости от используемой сетевой библиотеки проводится поиск источников данных в соответствующем домене. Для именованных каналов это домен, в который загружен клиент. Для AppleTalk это зона по умолчанию. Для SPX/IPX это список установок [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], найденный в системной базе данных. Для Banyan VINES это установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], найденные в локальной сети. Сокеты Multiprotocol и TCP/IP не поддерживаются.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "35665884"
 6.  Получите данные из копии строки, находящейся в наборе строк, путем вызова метода **IRowset::GetData**и обработайте их.  
   
 ## <a name="example"></a>Пример  
- Скомпилируйте с библиотекой ole32.lib и выполните следующий листинг кода C++. Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий msoledbsql.h.  
+ Скомпилируйте с библиотекой ole32.lib и выполните следующий листинг кода C++. Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь в том, что переменная среды INCLUDE включает каталог, содержащий файл msoledbsql.h.  
   
 ```  
 // compile with: ole32.lib  

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) | Документы Microsoft
+title: IBCPSession::BCPColFmt (OLE DB) | Документация Майкрософт
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2ccd2903e1294666d7b168f94d9c7145b1350cde
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: a23869bed239a66780f388cb10ff578a602838c1
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689477"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106920"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -48,8 +48,8 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Примечания  
- **BCPColFmt** метод используется для создания привязки между полями файла данных BCP и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] столбцов. В качестве параметров он принимает длину, тип, признак конца и длину префикса столбца, а также задает каждое из этих свойств для отдельных полей.  
+## <a name="remarks"></a>Remarks  
+ Метод **BCPColFmt** используется для создания привязки между полями файла данных BCP и столбцами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. В качестве параметров он принимает длину, тип, признак конца и длину префикса столбца, а также задает каждое из этих свойств для отдельных полей.  
   
  Если пользователь работает в интерактивном режиме, этот метод вызывается дважды для каждого столбца: один раз, чтобы задать формат столбца согласно значениям по умолчанию (которые соответствуют типу столбца на сервере), а второй раз, чтобы задать формат согласно типу столбца, выбранному клиентом в интерактивном режиме.  
   
@@ -72,18 +72,18 @@ HRESULT BCPColFmt(
  При каждом вызове метода **BCPColFmt** задается формат для одного поля в файле пользователя. Например, чтобы изменить значения по умолчанию трех полей в файле данных пользователя, состоящем из пяти полей, сначала вызовите метод `BCPColumns(5)`, а затем метод **BCPColFmt** пять раз и в трех из этих вызовов задайте нужный формат. При оставшихся двух вызовах для параметра *eUserDataType* установите значение BCP_TYPE_DEFAULT, а параметрам *cbIndicator*, *cbUserData*и *cbUserDataTerm* присвойте значения 0, BCP_VARIABLE_LENGTH и 0 соответственно. Эта процедура копирует все пять столбцов. Для трех применяется заданный измененный формат, а для двух оставшихся — формат по умолчанию.  
   
 > [!NOTE]  
->  [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) метод должен вызываться перед любыми вызовами **BCPColFmt**. Метод **BCPColFmt** необходимо вызывать по одному разу для каждого столбца из файла пользователя. При вызове метода **BCPColFmt** более одного раза для любого столбца из файла пользователя возникает ошибка.  
+>  Необходимо вызывать метод [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) перед любым вызовом метода **BCPColFmt**. Метод **BCPColFmt** необходимо вызывать по одному разу для каждого столбца из файла пользователя. При вызове метода **BCPColFmt** более одного раза для любого столбца из файла пользователя возникает ошибка.  
   
  Копировать все данные из файла пользователя в таблицу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не обязательно. Чтобы пропустить столбец, укажите формат данных для этого столбца, установив параметр idxServerCol в значение 0. Чтобы поле было пропущено, по-прежнему необходимо добавить все необходимые данные для метода, чтобы он работал правильно.  
   
- **Примечание** [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) функцию можно использовать для сохранения спецификации формата, предоставленные с помощью **BCPColFmt**.  
+ **Примечание**. С помощью функции [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) можно сохранить спецификацию формата, предоставленную с помощью метода **BCPColFmt**.  
   
 ## <a name="arguments"></a>Аргументы  
  *idxUserDataCol*[in]  
  Индекс поля из файла данных пользователя.  
   
  *eUserDataType*[in]  
- Тип данных поля из файла данных пользователя. Типы данных, перечислены в драйвер OLE DB для SQL Server заголовочного файла (msoledbsql.h) в формате BCP_TYPE_XXX, например BCP_TYPE_SQLINT4. Если задано значение BCP_TYPE_DEFAULT, поставщик попытается использовать тот же тип, к которому принадлежит столбец таблицы или представления. Для операций массового копирования из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в файл при **eUserDataType** аргумента задано значение BCP_TYPE_SQLDECIMAL или BCP_TYPE_SQLNUMERIC:  
+ Тип данных поля из файла данных пользователя. Типы данных приведены в драйвере OLE DB для SQL Server заголовочного файла (msoledbsql.h) в формате BCP_TYPE_XXX, например BCP_TYPE_SQLINT4. Если задано значение BCP_TYPE_DEFAULT, поставщик попытается использовать тот же тип, к которому принадлежит столбец таблицы или представления. При массовом копировании из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в файл, когда аргументу **eUserDataType** присвоено значение BCP_TYPE_SQLDECIMAL или BCP_TYPE_SQLNUMERIC, выполняются указанные ниже условия.  
   
 -   Если тип исходного столбца отличается от decimal и numeric, то используются точность и масштаб по умолчанию.  
   
@@ -97,7 +97,7 @@ HRESULT BCPColFmt(
   
  Если параметру **cbUserData** присвоено значение BCP_LENGTH_NULL, это указывает, что все значения в полях файла данных равны NULL или должны быть установлены в NULL. Если параметру **cbUserData** присвоено значение BCP_LENGTH_VARIABLE, это указывает, что система должна определить длину данных для каждого поля. Для некоторых полей это может означать, что создаваемые признаки длины и допустимости значений NULL предваряют данные при копировании из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или ожидается наличие этих признаков в данных, копируемых в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] символьных и двоичных типов данных, **cbUserData** может иметь значение BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 или другое положительное значение. Если параметру **cbUserData** присвоено значение BCP_LENGTH_VARIABLE, то для определения длины данных система использует либо признак длины при его наличии, либо последовательность с признаком конца. Если задан и признак длины, и последовательность признака конца, то при массовом копировании используется значение, применение которого вызывает копирование данных наименьшего объема. Если **cbUserData** присвоено значение BCP_LENGTH_VARIABLE, данные типа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] символьный или двоичный тип и, если указан признак длины, ни последовательность признака конца, система возвращает сообщение об ошибке.  
+ Для символьных и двоичных типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] параметр **cbUserData** может иметь значение BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 или любое положительное значение. Если параметру **cbUserData** присвоено значение BCP_LENGTH_VARIABLE, то для определения длины данных система использует либо признак длины при его наличии, либо последовательность с признаком конца. Если задан и признак длины, и последовательность признака конца, то при массовом копировании используется значение, применение которого вызывает копирование данных наименьшего объема. Если параметру **cbUserData** присвоено значение BCP_LENGTH_VARIABLE, то данные принадлежат к символьному или двоичному типу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а если не указаны ни признак длины, ни последовательность с признаком конца, система возвращает сообщение об ошибке.  
   
  Если значение **cbUserData** больше или равно 0, то система рассматривает значение **cbUserData** как максимальную длину данных. Но если в дополнение к положительному значению для **cbUserData**указан признак длины или последовательность признака конца, то система определяет объем данных методом, который приведет к копированию наименьшего объема данных.  
   
@@ -123,10 +123,10 @@ HRESULT BCPColFmt(
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка поставщика, для использования подробных сведений [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) интерфейса.  
+ Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить с помощью интерфейса [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_UNEXPECTED  
- Непредвиденный вызов метода. Например [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) перед вызовом этого метода не был вызван метод.  
+ Непредвиденный вызов метода. Например, перед вызовом этого метода не был вызван метод [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
   
  E_INVALIDARG  
  Недопустимое значение аргумента.  
@@ -134,7 +134,7 @@ HRESULT BCPColFmt(
  E_OUTOFMEMORY  
  Ошибка, связанная с нехваткой памяти.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../oledb/features/performing-bulk-copy-operations.md)  
   

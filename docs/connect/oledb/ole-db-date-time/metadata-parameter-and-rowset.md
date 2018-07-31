@@ -1,5 +1,5 @@
 ---
-title: Набор строк метаданные параметров и | Документы Microsoft
+title: Набор строк метаданные параметров и | Документация Майкрософт
 description: Метаданные параметров и наборов строк
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 92be2b0f5ed0ae3911bd5593f82c6e493075646e
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: dfc4ffcb718cc9e11e760505baedce17507e1b90
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666374"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107356"
 ---
-# <a name="metadata---parameter-and-rowset"></a>Метаданные - параметра и набор строк
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="metadata---parameter-and-rowset"></a>Метаданные — параметры и наборы строк
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Этой статье содержатся сведения о следующих типов и членов типов, связанных с усовершенствованиями даты и времени OLE DB.  
+  В этой статье приведены сведения о следующем типе и элементах типа, связанных с усовершенствованиями даты и времени OLE DB.  
   
 -   Структура DBBINDING  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35666374"
 -   **IColumnsInfo::GetColumnInfo**  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- Следующие сведения возвращаются в структуре DBPARAMINFO через *prgParamInfo*:  
+ Следующие сведения возвращаются в структуре DBPARAMINFO с помощью *prgParamInfo*:  
   
 |Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "35666374"
   
  Обратите внимание, что в некоторых случаях диапазоны значений не являются непрерывными. Это следствие добавления десятичной запятой, когда точность в долях секунды выше нуля.  
   
- Параметр DBPARAMFLAGS_SS_ISVARIABLESCALE допустим только при подключении к [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии) сервера. DBPARAMFLAGS_SS_ISVARIABLESCALE никогда не указывайте при соединении с серверами низкого уровня.  
+ Параметр DBPARAMFLAGS_SS_ISVARIABLESCALE допустим только при соединении с сервером [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версией). DBPARAMFLAGS_SS_ISVARIABLESCALE никогда не задается при соединении с серверами низкого уровня.  
   
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>Метод ICommandWithParameters::SetParameterInfo и неявные типы параметров  
  Сведения, предоставленные в структуре DBPARAMBINDINFO, должны соответствовать следующим требованиям.  
@@ -72,7 +72,7 @@ ms.locfileid: "35666374"
   
  *BPrecision* параметр учитывается.  
   
- Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать типы устаревших потока табличных данных (TDS), используя имена типа поставщика "**datetime**«и»**smalldatetime**». При подключении к [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии) серверов, "**datetime2**«будет использоваться формат и неявное преобразование сервера, при необходимости происходит, когда тип имеет имя»**datetime2**» или «DBTYPE_ DBTIMESTAMP». *bScale* учитывается, если имена типов, характерные для поставщика "**datetime**«или»**smalldatetime**" используются. В противном случае приложения необходимо убедиться, что *bScale* задано правильно. Приложения, обновленные с MDAC и драйвер OLE DB для SQL Server из [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , использующих «DBTYPE_DBTIMESTAMP» завершится ошибкой, если они не заданы *bScale* правильно. При соединении с экземплярами сервера более ранней, чем [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], *bScale* значение, отличное от 0 или 3 с именем «DBTYPE_DBTIMESTAMP» является ошибкой и будет возвращено E_FAIL.  
+ Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов "**datetime**" и "**smalldatetime**", характерных для поставщика. При соединении с серверами [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии) используется формат "**datetime2**", а также при необходимости происходит неявное преобразование сервера, когда тип имеет имя "**datetime2**" или "DBTYPE_DBTIMESTAMP". *bScale* учитывается, если имена типов характерные для поставщика "**datetime**«или»**smalldatetime**" используются. В противном случае приложения необходимо убедиться, что *bScale* имеет правильное значение. Приложениях, обновленных с компонентами MDAC и драйвера OLE DB для SQL Server из [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , использующие «DBTYPE_DBTIMESTAMP» завершится ошибкой, если они не заданы *bScale* правильно. При соединении с экземплярами сервера версии ниже [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] значение параметра *bScale*, отличное от 0 или 3 с именем "DBTYPE_DBTIMESTAMP", является ошибкой. В этом случае будет возвращено E_FAIL.  
   
  Когда ICommandWithParameters::SetParameterInfo не вызывается, поставщик означает тип сервера из типа привязки, как указано в IAccessor::CreateAccessor следующим образом:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "35666374"
   
  В DBCOLUMN_FLAGS новый флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE внедрен, чтобы приложения могли определять тип сервера столбцов, где DBCOLUMN_TYPE является DBTYPE_DBTIMESTAMP. Также должен использоваться флаг DBCOLUMN_SCALE или DBCOLUMN_DATETIMEPRECISION для указания типа сервера.  
   
- Флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE допустим только при подключении к [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии) сервера. При соединении с серверами низкого уровня флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE остается неопределенным.  
+ Флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE допустим только при соединении с сервером [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версией). При соединении с серверами низкого уровня флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE остается неопределенным.  
   
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  Структура DBCOLUMNINFO возвращает следующие данные.  
@@ -131,7 +131,7 @@ ms.locfileid: "35666374"
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Присвойте параметру|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Присвойте параметру|  
   
- В *dwFlags*, флаг DBCOLUMNFLAGS_ISFIXEDLENGTH всегда имеет значение true для типов даты и времени, а следующие флаги всегда имеют значение false:  
+ В *dwFlags* флаг DBCOLUMNFLAGS_ISFIXEDLENGTH всегда имеет значение TRUE для типов даты и времени, а следующие флаги всегда имеют значение FALSE:  
   
 -   DBCOLUMNFLAGS_CACHEDEFERRED  
   
@@ -147,9 +147,9 @@ ms.locfileid: "35666374"
   
  Остальные флаги (DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE и DBCOLUMNFLAGS_WRITEUNKNOWN) можно задавать.  
   
- Новый флаг dbcolumnflags_ss_isvariablescale внедрен в *dwFlags* чтобы приложения могли определять тип сервера столбцов, где *wType* является DBTYPE_DBTIMESTAMP. *bScale* также должен использоваться для определения типа сервера.  
+ В *dwFlags* предусмотрен новый флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE, чтобы приложения могли определять тип сервера столбцов, где *wType* является DBTYPE_DBTIMESTAMP. Кроме того, для определения типа сервера необходимо использовать *bScale*.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения поддержки типов данных даты и времени OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
   
   

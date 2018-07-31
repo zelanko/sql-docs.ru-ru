@@ -1,5 +1,5 @@
 ---
-title: Метод valueOf (java.sql.Timestamp, int) | Документы Microsoft
+title: Метод valueOf (java.sql.Timestamp, int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 290878fc0a3687a95fd6335eba4b6ed6e1c2fda2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848889"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979186"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>Метод valueOf (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Создает **DateTimeOffset** объект, представляющий точку во времени с определенным смещением относительно среднего времени по Гринвичу заданному значению java.sql.Timestamp и значение, определяющее смещение в минутах.  
+  Создает объект **DateTimeOffset**, представляющий точку во времени с указанным смещением относительно времени по Гринвичу (GMT). Объекту нужно передать значение java.sql.Timestamp и значение смещения в минутах.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,9 +43,9 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
  Смещение в минутах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает объект DateTimeOffset, представляющий точку во времени, заданную объектом java.sql.Timestamp с указанным смещением минутах от времени GMT.  
+ Возвращает объект DateTimeOffset, представляющий точку во времени, заданную объектом и java.sql.Timestamp с указанным смещением минутах относительно GMT.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [Элементы DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Встроенная проверка подлинности Kerberos (OLE DB) | Документы Microsoft
-description: Интеграция проверки подлинности kerberos (OLE DB)
+title: Встроенная проверка подлинности Kerberos (OLE DB) | Документация Майкрософт
+description: Интегрированная проверка подлинности Kerberos (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 49aac384ef7f330a445aca4c69ea0478edc85481
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0bbfbf6d3f497143de12ff8c44e160d5eca8578d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665634"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109136"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Интеграция проверки подлинности Kerberos (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В этом примере показано, как выполнить взаимную проверку подлинности Kerberos с использованием OLE DB в драйвер OLE DB для SQL Server. Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией.  
+  В этом примере показано, как выполнить взаимную проверку подлинности Kerberos с использованием OLE DB в драйвере OLE DB для SQL Server. Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией.  
   
- Дополнительные сведения о проверке подлинности имена участников-служб и Kerberos см. в разделе [имени участника-службы &#40;имени участника-службы&#41; поддержка в клиентских соединениях](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
+ Дополнительные сведения об именах субъектов-служб и проверке подлинности Kerberos см. в статье [Поддержка имени участника-службы &#40;SPN&#41; в клиентских соединениях](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Пример  
  Необходимо указать сервер. В CPP-файле измените значение «MyServer» на имя компьютера с экземпляром [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии).  
   
  Также необходимо указать предоставленное заказчиком имя участника-службы. В CPP-файле измените значение «CPSPN» на предоставленное клиентом имя участника-службы.  
   
- Убедитесь, что переменная среды INCLUDE включает каталог, содержащий msoledbsql.h. Скомпилируйте с библиотеками ole32.lib и oleaut32.lib.  
+ Убедитесь в том, что переменная среды INCLUDE включает каталог, содержащий файл msoledbsql.h. Скомпилируйте с библиотеками ole32.lib и oleaut32.lib.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

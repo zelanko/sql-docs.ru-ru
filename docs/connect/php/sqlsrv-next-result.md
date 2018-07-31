@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_next_result | Документы Microsoft
+title: sqlsrv_next_result | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309443"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019612"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,12 +51,12 @@ sqlsrv_next_result( resource $stmt )
 Если следующий результат успешно сделан активным, возвращается логическое значение **true** . Если при попытке сделать следующий результат активным произошла ошибка, возвращается значение **false** . Если доступных результатов больше нет, возвращается значение **null** .  
   
 ## <a name="example"></a>Пример  
-Следующий пример создает и выполняет хранимую процедуру, которая вставляет обзор продукта в таблицу *Production.ProductReview* , а затем выбирает все обзоры для указанного продукта. После выполнения хранимой процедуры первый результат (количество строк, затронутых запросом INSERT в хранимой процедуре) используется без вызова **sqlsrv_next_result**. Следующий результат (строк, возвращаемых запросом SELECT в хранимой процедуре) делается доступным путем вызова **sqlsrv_next_result** и используется с помощью [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
+Следующий пример создает и выполняет хранимую процедуру, которая вставляет обзор продукта в таблицу *Production.ProductReview* , а затем выбирает все обзоры для указанного продукта. После выполнения хранимой процедуры первый результат (количество строк, затронутых запросом INSERT в хранимой процедуре) используется без вызова **sqlsrv_next_result**. Следующий результат (строки, возвращаемые запросом SELECT в хранимой процедуре) делается доступным через вызов **sqlsrv_next_result** и используется с помощью [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
-> Рекомендуется вызывать хранимые процедуры с использованием канонического синтаксиса. Дополнительные сведения о каноническом синтаксисе см. в разделе [вызов хранимой процедуры](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> Рекомендуется вызывать хранимые процедуры с использованием канонического синтаксиса. Дополнительные сведения о каноническом синтаксисе см. в статье [Вызов хранимой процедуры](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -189,7 +189,7 @@ sqlsrv_close( $conn );
 > [!NOTE]  
 > Первый (или единственный) результат, возвращаемый пакетным запросом или хранимой процедурой, становится активным без вызова **sqlsrv_next_result**.  
   
-В этом примере *Purchasing.ProductReview* таблицу [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных и предполагается, что эта база данных установлена на сервере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Пример использует таблицу *Purchasing.ProductReview* базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) и предполагает, что эта база установлена на сервере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -268,7 +268,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)

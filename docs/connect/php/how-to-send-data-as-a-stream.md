@@ -1,5 +1,5 @@
 ---
-title: 'Как: отправка данных в виде потока | Документы Microsoft'
+title: 'Практическое: отправка данных в виде Stream | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,23 +18,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5305fb34790313d5b9c246d701b0974096ce6e6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307693"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979697"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Практическое руководство. Отправка данных в виде потока
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] использует преимущества потоков PHP для отправки больших объектов на сервер. Примеры в этой статье демонстрируют процедуру отправки данных в виде потока. Первый пример использует драйвер SQLSRV, чтобы продемонстрировать поведение по умолчанию, которое заключается в отправке всех потоковых данных во время выполнения запроса. Во втором примере использует драйвер SQLSRV для демонстрации процедуры отправки до восьми килобайт (8 КБ) потоковых данных во время на сервере.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] использует преимущества потоков PHP для отправки больших объектов на сервер. Примеры в этой статье демонстрируют процедуру отправки данных в виде потока. Первый пример использует драйвер SQLSRV, чтобы продемонстрировать поведение по умолчанию, которое заключается в отправке всех потоковых данных во время выполнения запроса. Второй пример демонстрирует использование драйвера SQLSRV для отправки на сервер потоковых данных объемом до восьми килобайт (8 КБ) за раз.  
   
 Третий пример показывает, как отправить потоковые данные на сервер с помощью драйвера PDO_SQLSRV.  
   
-## <a name="example-sending-stream-data-at-execution"></a>Пример: Отправки потоковых данных во время выполнения
-Следующий пример вставляет строку в таблицу *Production.ProductReview* базы данных AdventureWorks. Комментарии клиентов (*$comments*) открываются в виде потока с PHP [fopen](http://php.net/manual/en/function.fopen.php) функцией и затем передаются в потоковом режиме сервером при выполнении запроса.  
+## <a name="example-sending-stream-data-at-execution"></a>Пример: Отправка данных Stream во время выполнения
+Следующий пример вставляет строку в таблицу *Production.ProductReview* базы данных AdventureWorks. Комментарии клиента (*$comments*) открываются в виде потока с помощью функции PHP [fopen](http://php.net/manual/en/function.fopen.php), а затем передаются в потоковом режиме на сервер при выполнении запроса.  
   
-Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. Все выходные данные выводятся в консоль.  
+В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. Все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -87,10 +87,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>Пример: Отправка потока данных с помощью sqlsrv_send_stream_data
-В следующем примере выполняются таким же, как в предыдущем примере, но отключена по умолчанию, заключающееся в отправке всех потоковых данных во время выполнения. Пример использует [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) для отправки потоковых данных на сервер. С каждым вызовом отправляется до 8 килобайт (8 КБ) данных **sqlsrv_send_stream_data**. Скрипт подсчитывает количество вызовов, сделанных **sqlsrv_send_stream_data** , и выводит это количество в консоль.  
+## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>Пример: Отправка данных при помощи Stream sqlsrv_send_stream_data
+Следующий пример такой же, как предыдущий, однако поведение по умолчанию, заключающееся в отправке всех потоковых данных при выполнении, отключено. Пример использует [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) для отправки потоковых данных на сервер. При каждом вызове **sqlsrv_send_stream_data** отправляется до восьми килобайт (8 КБ) данных. Скрипт подсчитывает количество вызовов, сделанных **sqlsrv_send_stream_data** , и выводит это количество в консоль.  
   
-Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. Все выходные данные выводятся в консоль.  
+В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. Все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -154,7 +154,7 @@ sqlsrv_close( $conn);
   
 Хотя примеры в этой статье отправляют на сервер символьные данные, в виде потока можно передавать данные в любом формате. Например, методы, описанные в этой статье, можно также использовать для отправки изображений в двоичном формате в виде потоков.  
   
-## <a name="example-sending-an-image-as-a-stream"></a>Пример: Отправка изображения в виде потока 
+## <a name="example-sending-an-image-as-a-stream"></a>Пример: Отправка образа в виде Stream 
   
 ```  
 <?php  
@@ -173,7 +173,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
 [Извлечение данных в виде потока с помощью драйвера SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

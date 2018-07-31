@@ -1,5 +1,5 @@
 ---
-title: Драйвер Microsoft OLE DB для SQL Server | Документы Microsoft
+title: Драйвер OLE DB для SQL Server | Документы Майкрософт
 description: Драйвер Microsoft OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -22,75 +22,75 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1fba5146cd663c2d7c312bb6a5c689162c1489ac
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
-ms.translationtype: MT
+ms.openlocfilehash: 6fd7f5262359597694717927c0a87f4861cc6b4f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36240826"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108056"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Драйвер Microsoft OLE DB для SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server — данных автономного доступа прикладной программный интерфейс (API) используется для OLE DB, которая была введена в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Драйвер OLE DB для SQL Server обеспечивает драйвер OLE DB для SQL в одной библиотеке динамической компоновки (DLL). Также он предоставляет новые расширенные функциональные возможности, поставляемые компонентами доступа к данным Windows (выделенное административное соединение Windows, ранее — компоненты доступа к данным компонентов MDAC). Драйвер OLE DB для SQL Server может использоваться для создания новых или усовершенствования существующих приложений, которые необходимо воспользоваться преимуществами функций, появившихся в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], такие как несколько активных результирующих наборов (MARS), данных, определяемых пользователем типов (UDT), запрос поддерживает уведомления, изоляция моментальных снимков и тип данных XML.  
+  Драйвер OLE DB для SQL Server является отдельной доступа прикладной программный интерфейс (API), используемый для OLE DB, которая была введена в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Драйвер OLE DB для SQL Server обеспечивает драйвер OLE DB для SQL в одной библиотеке динамической компоновки (DLL). Также он предоставляет новые расширенные функциональные возможности, поставляемые компонентами доступа к данным Windows (выделенное административное соединение Windows, ранее — компоненты доступа к данным компонентов MDAC). Драйвер OLE DB для SQL Server может применяться для создания новых или усовершенствования существующих приложений, которым требуется доступ к новым функциям [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], таким как множественный активный результирующий набор (MARS), пользовательские типы, уведомления о запросах, изоляция моментальных снимков и поддержка типа данных XML.  
   
 > [!NOTE]  
->  Список различий между драйвер OLE DB для SQL Server и Windows DAC, а также сведения о проблемах учесть перед обновлением приложения Windows DAC до драйвер OLE DB для SQL Server см. в разделе [обновление приложения для драйвера OLE DB для SQL Сервер с компонентами MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
+>  Список различий между драйвер OLE DB для SQL Server и Windows DAC плюс сведения о проблемах, которые следует учесть перед обновлением приложения Windows DAC для драйвера OLE DB для SQL Server, см. в разделе [обновление приложения для драйвера OLE DB для SQL Server с компонентами MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
   
- Драйвер OLE DB для SQL Server можно использовать в сочетании с основными службами OLE DB вместе с выделенным административным Соединением Windows, но это не является обязательным; по желанию могут использовать основные службы, или не зависит от требований отдельного приложения (например, если организация пулов соединений не требуется).  
+ Драйвер OLE DB для SQL Server может использоваться совместно с основными службами OLE DB, поставляемыми с компонентами доступа к данным Windows DAC, но это не является обязательным требованием. Выбор того, использовать или нет основные службы, зависит от требований отдельного приложения (например, требуется ли пул соединений).  
   
- Приложения объектов данных ActiveX (ADO), могут использовать драйвер OLE DB для SQL Server, но рекомендуется использовать ADO совместно с **DataTypeCompatibility** ключевое слово строки подключения (или с соответствующим  **Источник данных** свойство). При использовании драйвера OLE DB для SQL Server, приложения ADO могут использовать новые функции в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , можно загрузить через драйвер OLE DB для SQL Server с помощью ключевых слов строки подключения или свойства OLE DB или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения об использовании этих функций с ADO см. в разделе [с помощью ADO с драйвер OLE DB для SQL Server](../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
+ Приложения объектов данных ActiveX (ADO), могут использовать драйвер OLE DB для SQL Server, но рекомендуется использовать ADO совместно с **DataTypeCompatibility** ключевое слово строки подключения (или с соответствующим  **Источник данных** свойство). При использовании драйвера OLE DB для SQL Server, приложения ADO могут использовать эти новые функции, представленные в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , которые доступны через драйвер OLE DB для SQL Server с помощью ключевых слов строки подключения или свойства OLE DB или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения об использовании этих функций с ADO см. в разделе [использование объектов ADO с драйвер OLE DB для SQL Server](../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
   
- Драйвер OLE DB для SQL Server была разработана для предоставления упрощенного доступа к данным собственного SQL Server с помощью OLE DB. Он позволяет внедрять и развивать новые функции доступа к данным без изменения текущих компонентов выделенного административного Соединения Windows, которые теперь являются частью платформы Microsoft Windows.  
+ Драйвер OLE DB для SQL Server призван обеспечить упрощенный собственный доступ к данным SQL Server через OLE DB. Он позволяет внедрять и развивать новые функции доступа к данным без изменения текущих компонентов Windows DAC, которые теперь являются частью платформы Microsoft Windows.  
   
- Драйвер OLE DB для SQL Server использует компоненты выделенного административного соединения Windows, но не явно зависит от конкретной версии Windows DAC. Драйвер OLE DB для SQL Server можно использовать с версией выделенного административного соединения Windows, которая устанавливается с любой операционной системе, поддерживаемых драйвером OLE DB для SQL Server.  
+ Драйвер OLE DB для SQL Server использует компоненты доступа к данным Windows DAC, однако явно не зависит от их конкретных версий. Можно использовать драйвер OLE DB для SQL Server с версией Windows DAC, который устанавливается вместе с любой операционной системе, поддерживаемых драйвером OLE DB для SQL Server.  
 
  ## <a name="different-generations-of-ole-db-drivers"></a>Разных поколений драйверы OLE DB
 
 Существует три поколения различных поставщиков Microsoft OLE DB для SQL Server.
 
-### <a name="1-microsoft-ole-db-provider-for-sql-server-sqloledb"></a>1. Поставщик Microsoft OLE DB для SQL Server (SQLOLEDB)
-[Поставщик Microsoft OLE DB для SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB), по-прежнему поставляется как часть [компоненты доступа к данным Windows](https://msdn.microsoft.com/en-us/library/ms692897.aspx). Больше не поддерживается и не рекомендуется использовать этот драйвер для разработки новых приложений.
+### <a name="1-microsoft-ole-db-provider-for-sql-server-sqloledb"></a>1. Поставщик Microsoft OLE DB для SQL Server (SQLOLEDB)
+[Поставщик Microsoft OLE DB для SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB), по-прежнему поставляется как часть [Windows Data Access Components](https://msdn.microsoft.com/library/ms692897.aspx). Больше не поддерживается и не рекомендуется использовать этот драйвер для разработки новых приложений.
 
 ### <a name="2-sql-server-native-client-snac"></a>2. SQL Server Native Client (SNAC)
-Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) включает интерфейс поставщика OLE DB (SQLNCLI) и поставщика OLE DB, которая поставлялась с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] через [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
+Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) включает интерфейс поставщика OLE DB (SQLNCLI) и поставщик OLE DB, которая поставлялась с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] через [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
-Это было [устаревшие в 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) и не рекомендуется использовать этот драйвер для разработки новых приложений. Дополнительные сведения о SNAC жизненный цикл и программ для загрузки см. [жизненного цикла SNAC описано](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
+Это было [, устаревшие в 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) и не рекомендуется использовать этот драйвер для разработки новых приложений. Дополнительные сведения о жизненном цикле SNAC и доступных файлов для загрузки см. [жизненного цикла SNAC описано](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
 
-### <a name="3-microsoft-ole-db-driver-for-sql-server-msoledbsql"></a>3. Драйвер Microsoft OLE DB для SQL Server (MSOLEDBSQL)
-OLE DB не [undeprecated](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) и выпущенные 2018.
+### <a name="3-microsoft-ole-db-driver-for-sql-server-msoledbsql"></a>3. Драйвер Microsoft OLE DB для SQL Server (MSOLEDBSQL)
+OLE DB не [undeprecated](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) и выпущенная в 2018 г.
 
-Новый поставщик OLE DB, называется драйвер Microsoft OLE DB для SQL Server (MSOLEDBSQL). Новый поставщик будет добавлено в последние функции сервера Забегая вперед.
+Новый поставщик OLE DB, называется драйвера Microsoft OLE DB для SQL Server (MSOLEDBSQL). Новый поставщик будет обновляться последние функции сервера, в дальнейшем.
 
 > [!NOTE]
-> Чтобы использовать новый Microsoft OLE DB драйвер для SQL Server в существующих приложениях, следует запланировать для преобразования строки подключения из SQLOLEDB и SQLNCLI, MSOLEDBSQL.
+> Чтобы использовать новый драйвер OLE DB Майкрософт для SQL Server в существующие приложения, необходимо запланировать для преобразования строки подключения из SQLOLEDB и SQLNCLI, MSOLEDBSQL.
   
 ## <a name="in-this-section"></a>в этом разделе  
 [Когда использовать драйвер OLE DB для SQL Server](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
- Обсуждается, как драйвер OLE DB для SQL Server сочетается с данным технологий доступа, как его сравнение с выделенным административным Соединением Windows и ADO.NET и предоставляет указатели, помогающие решить которых технологии доступа к данным.  
+ Обсуждается место драйвера OLE DB для SQL Server среди технологий доступа к данным корпорации Майкрософт, дается его сравнение с компонентами доступа к данным Windows DAC и ADO.NET, а также предоставляются указания, помогающие решить, какую технологию доступа к данным следует использовать.  
   
  [Возможности драйвера OLE DB для SQL Server](../oledb/features/oledb-driver-for-sql-server-features.md )  
  Описание возможностей, поддерживаемых драйвером OLE DB для SQL Server.  
   
  [Создание приложений с помощью драйвера OLE DB для SQL Server](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
- Обзор драйвер OLE DB для SQL Server разработки, включая отличия от Windows DAC, компоненты, которые он использует, и о том, как можно использовать ADO с ним.  
+ Представлены общие сведения о разработке с помощью драйвера OLE DB для SQL Server, включая отличия от компонентов доступа к данным Windows DAC, используемые компоненты и способ использования совместно с ADO.  
   
- В этом разделе также рассматриваются драйвер OLE DB для установки SQL Server и развертывания, включая способ распространения драйвер OLE DB для SQL Server библиотеки.  
+ В этом разделе также рассматриваются драйвера OLE DB для установки SQL Server и развертывания, включая способ распространения драйвера OLE DB для SQL Server библиотеки.  
   
  [Системные требования драйвера OLE DB для SQL Server](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
  Обсуждаются системные ресурсы, необходимые для использования драйвера OLE DB для SQL Server.  
   
  [Программирование драйвера OLE DB для SQL Server](../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
- Предоставляет сведения об использовании драйвера OLE DB для SQL Server.  
+ Сведения об использовании драйвера OLE DB для SQL Server.  
   
  [Дополнительные сведения о драйвере OLE DB для SQL Server](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
- Предоставляет дополнительные ресурсы, посвященные драйвер OLE DB для SQL Server, включая ссылки на внешние ресурсы и получение дальнейшей помощи.  
+ Предоставляет дополнительные ресурсы о драйвере OLE DB для SQL Server, включая ссылки на внешние ресурсы и получение дальнейшей помощи.  
   
   
-## <a name="see-also"></a>См. также  
- [Обновление приложения от собственного клиента SQL Server 2005](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
+## <a name="see-also"></a>См. также:  
+ [Обновление приложения с переходом от SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
  [Инструкции по OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -1,24 +1,23 @@
 ---
 title: SqlPackage.exe | Документация Майкрософт
-ms.custom:
-- SSDT
+ms.prod: sql
+ms.technology: ssdt
 ms.date: 2018-06-27
-ms.prod: sql-non-specified
 ms.reviewer: alayu; sstein
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 caps.latest.revision: 53
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 4c206a60e0b494d4e060864eefcb50424d316938
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
-ms.translationtype: HT
+ms.openlocfilehash: 15a34b5cc746368edb4f4dbe3e16720da77f9128
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080082"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085416"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -137,7 +136,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Задает дополнительные аргументы участника развертывания для участников развертывания. Это должен быть список значений, разделенных точками с запятой.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Указывает дополнительных участников развертывания, которые должны выполняться при развертывании пакета DACPAC. Это должен быть список идентификаторов или полных имен участников сборки, разделенных точками с запятой.|
-|**/p:**|AllowDropBlocking Assemblies=(BOOLEAN)|Это свойство используется развертыванием SQLCLR для удаления блокирующих сборок как часть плана развертывания. По умолчанию все блокирующие сборки/ссылки на сборки блокируют обновление сборки, если ссылка на сборку должна быть удалена.|
+|**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|Это свойство используется развертыванием SQLCLR для удаления блокирующих сборок как часть плана развертывания. По умолчанию все блокирующие сборки/ссылки на сборки блокируют обновление сборки, если ссылка на сборку должна быть удалена.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Указывает, пытаться ли выполнить это действие, несмотря на несовместимость платформ SQL Server.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Если свойство имеет значение true, блокировка перемещения данных в таблице с безопасностью на уровне строк отключается. Значение по умолчанию — false.|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Создает резервную копию базы данных перед развертыванием любых изменений.|
@@ -521,14 +520,14 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DoNotAlterReplicatedObjects = (ЛОГИЧЕСКОЕ "True")|Указывает, определяются ли во время проверки реплицируемые объекты.
 |**/p:**|DoNotDropObjectType=(STRING)|Тип объекта, который не должен удаляться, если параметр DropObjectsNotInSource имеет значение true. Допустимые имена типов объектов: Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|DoNotDropObjectTypes=(STRING)|Список типов объектов (разделенных точками с запятой), которые не следует удалять, если параметр DropObjectsNotInSource имеет значение true. Допустимые имена типов объектов: Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
-|**/p:**|DropConstraintsNotInSource = (ЛОГИЧЕСКОЕ "True")|Указывает, будут ли ограничения, которые не существуют в моментальном снимке базы данных (DACPAC), удалены из целевой базы данных при публикации.|
-|**/p:**|DropDmlTriggersNotInSource = (ЛОГИЧЕСКОЕ "True")|Указывает, будут ли триггеры DML, которые не существуют в моментальном снимке базы данных (DACPAC), удалены из целевой базы данных при публикации.|
+|**/p:**|DropConstraintsNotInSource = (ЛОГИЧЕСКОЕ "True")|Указывает, будут ли ограничения, которые не существуют в моментальном снимке базы данных (файл DACPAC), удалены из конечной базы данных при публикации.|
+|**/p:**|DropDmlTriggersNotInSource = (ЛОГИЧЕСКОЕ "True")|Указывает, будут ли триггеры DML, которые не существуют в моментальном снимке базы данных (файл DACPAC), удалены из конечной базы данных при публикации.|
 |**/p:**|DropExtendedPropertiesNotInSource = (ЛОГИЧЕСКОЕ "True")|Указывает, будут ли при выполнении публикации в базе данных удалены расширенные свойства, которые не существуют в моментальном снимке базы данных (DACPAC).|
-|**/p:**|DropIndexesNotInSource = (ЛОГИЧЕСКОЕ "True")|Указывает, будут ли индексы, которые не существуют в моментальном снимке базы данных (DACPAC), удалены из целевой базы данных при публикации.|
-|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Указывает, будут ли объекты, которые не существуют в моментальном снимке базы данных (DACPAC), удалены из целевой базы данных при публикации. Это значение имеет приоритет над DropExtendedProperties.|
+|**/p:**|DropIndexesNotInSource = (ЛОГИЧЕСКОЕ "True")|Указывает, будут ли индексы, которые не существуют в моментальном снимке базы данных (файл DACPAC), удалены из конечной базы данных при публикации.|
+|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Указывает, будут ли объекты, которые не существуют в моментальном снимке базы данных (файл DACPAC), удалены из конечной базы данных при публикации. Это значение имеет приоритет над DropExtendedProperties.|
 |**/p:**|DropPermissionsNotInSource=(BOOLEAN)|Указывает, будут ли разрешения, которые не существуют в моментальном снимке базы данных (DACPAC), удалены из целевой базы данных при выполнении публикации обновлений.|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|Указывает, будут ли члены ролей, которые не определены в моментальном снимке базы данных (DACPAC), удалены из целевой базы данных при выполнении публикации обновлений.|
-|**/p:**|DropStatisticsNotInSource = (ЛОГИЧЕСКОЕ "True")|Указывает, будет ли статистика, которая отсутствует в файле моментального снимка базы данных (DACPAC), удалена из целевой базы данных при публикации в базе данных.|
+|**/p:**|DropStatisticsNotInSource = (ЛОГИЧЕСКОЕ "True")|Указывает, будет ли статистика, которая отсутствует в файле моментального снимка базы данных (DACPAC), удалена из конечной базы данных при публикации.|
 |**/p:**|ExcludeObjectType=(STRING)|Тип объекта, который должен игнорироваться во время развертывания. Допустимые имена типов объектов: Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|ExcludeObjectTypes=(STRING)|Список типов объектов, разделенных точками с запятой, которые должны игнорироваться во время развертывания. Допустимые имена типов объектов: Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|GenerateSmartDefaults=(BOOLEAN)|Автоматически предоставляет значение по умолчанию при обновлении таблицы данных со столбцом, который не допускает значения NULL.
@@ -548,7 +547,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreFilegroupPlacement = (ЛОГИЧЕСКОЕ "True")|Определяет, пропускаются или обновляются различия в размещении объектов в файловых группах FILEGROUP при публикации в базе данных.|
 |**/p:**|IgnoreFileSize = (ЛОГИЧЕСКОЕ "True")|Определяет, создается ли предупреждение о различиях в размерах файлов при публикации в базе данных.|
 |**/p:**|IgnoreFillFactor = (ЛОГИЧЕСКОЕ "True")|Определяет, создается ли предупреждение о различиях в коэффициенте заполнения для хранилища индексов при публикации.|
-|**/p:**|IgnoreFullTextCatalogFilePath = (ЛОГИЧЕСКОЕ "True")|Определяет, создается ли предупреждение о различиях в пути к файлам для полнотекстового объекта при публикации в базе данных.|
+|**/p:**|IgnoreFullTextCatalogFilePath = (ЛОГИЧЕСКОЕ "True")|Указывает, создается ли предупреждение о различиях в пути к файлам для полнотекстового объекта при публикации в базе данных.|
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|Определяет, пропускаются или обновляются различия в начальном значении для столбца идентификаторов при публикации обновлений в базе данных.|
 |**/p:**|IgnoreIncrement=(BOOLEAN)|Определяет, пропускаются или обновляются различия в шаге приращения для столбца идентификаторов при публикации в базе данных.|
 |**/p:**|IgnoreIndexOptions=(BOOLEAN)|Определяет, пропускаются или обновляются различия в параметрах индексов при публикации в базе данных.|

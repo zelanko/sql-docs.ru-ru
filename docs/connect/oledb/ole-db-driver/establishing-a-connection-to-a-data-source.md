@@ -1,5 +1,5 @@
 ---
-title: Установление подключения к источнику данных | Документы Microsoft
+title: Подключения к источнику данных | Документация Майкрософт
 description: Подключения к источнику данных с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,25 +20,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7b4a864d10b109f32e552ed82d9d89868011496d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8c198bad7fbe50aff0493d25c438268efb1deeb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666104"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107040"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Устанавливает соединение с источником данных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Чтобы открыть драйвер OLE DB для SQL Server, потребитель должен сначала создать экземпляр объекта источника данных, вызвав **CoCreateInstance** метод. Каждый поставщик OLE DB определяется уникальным идентификатором класса (CLSID). Драйвер OLE DB для SQL Server идентификатор класса касается CLSID_MSOLEDBSQL. Также можно использовать символ MSOLEDBSQL_CLSID, который разрешает драйвер OLE DB для SQL Server, который используется в msoledbsql.h, на которое имеется ссылка.  
+  Для доступа к драйверу OLE DB для SQL Server потребитель должен сначала создать экземпляр объекта источника данных, вызвав метод **CoCreateInstance**. Каждый поставщик OLE DB определяется уникальным идентификатором класса (CLSID). Для драйвер OLE DB для SQL Server идентификатор класса является CLSID_MSOLEDBSQL. Можно также использовать символ MSOLEDBSQL_CLSID, который будет решать задачи драйвера OLE DB для SQL Server, который используется в msoledbsql.h, на которую есть ссылки.  
   
- Объект источника данных предоставляет **IDBProperties** интерфейс, который потребитель использует обычную проверку подлинности данные, такие как имя сервера, имя базы данных, идентификатор пользователя и пароль. **IDBProperties::SetProperties** метод вызывается для установки этих свойств.  
+ Объект источника данных предоставляет интерфейс **IDBProperties**, который потребитель использует с целью передачи сведений для обычной проверки подлинности — имени сервера, имени базы данных, идентификатора пользователя и пароля. Для задания значений этих свойств используется метод **IDBProperties::SetProperties**.  
   
  Если на компьютере выполняется несколько экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], имя сервера указывается как «Имя_Сервера\Имя_Экземпляра».  
   
- Объект источника данных также предоставляет **IDBInitialize** интерфейса. После задания свойства подключения к источнику данных устанавливается посредством вызова **IDBInitialize::Initialize** метод. Например:  
+ Объект источника данных также предоставляет интерфейс **IDBInitialize**. После присвоения значений свойствам устанавливается соединение с источником данных с помощью вызова метода **IDBInitialize::Initialize**. Пример:  
   
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -48,9 +48,9 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
                  (void **) &pIDBInitialize)  
 ```
   
- Этот вызов **CoCreateInstance** создает единственный объект класса, связанного с CLSID_MSOLEDBSQL (идентификатор CLSID, связанный с данными и код, который будет использоваться для создания объекта). IID_IDBInitialize представляет собой ссылку на идентификатор интерфейса (**IDBInitialize**) для связи с объектом.  
+ Этот вызов метода **CoCreateInstance** создает единственный объект класса, связанного с идентификатором CLSID_MSOLEDBSQL (идентификатор CLSID, связанный с кодом и данными, которые будут использоваться для создания объекта). IID_IDBInitialize представляет собой ссылку на идентификатор интерфейса (**IDBInitialize**), который будет использоваться для взаимодействия с объектом.  
   
- Следующий пример демонстрирует инициализируйте и установите соединение с источником данных.
+ Следующий пример показано, как инициализировать и установить подключение к источнику данных.
   
 ```cpp
 #include "msoledbsql.h"
@@ -176,7 +176,7 @@ _ExitInitialize:
 }
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложения с драйвером OLE DB для SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
   

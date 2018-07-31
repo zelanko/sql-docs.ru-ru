@@ -1,5 +1,5 @@
 ---
-title: Обработка ошибок и предупреждений | Документы Microsoft
+title: Обработка ошибок и предупреждений | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cba0246f57157488b4e62ab2cdcbc80b2aea71e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307543"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054602"
 ---
 # <a name="handling-errors-and-warnings"></a>Обработка ошибок и предупреждений
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Если вы используете драйвер PDO_SQLSRV, можно найти дополнительные сведения об ошибках и обработки ошибок на [PDO](http://php.net/manual/book.pdo.php) веб-сайта.  
+При использовании драйвера PDO_SQLSRV дополнительные сведения об ошибках и обработке ошибок можно найти на веб-сайте [PDO](http://php.net/manual/book.pdo.php).  
   
 Указанные в этой статье разделы содержат сведения об обработке ошибок и предупреждений с помощью драйвера SQLSRV из [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -42,6 +42,6 @@ ms.locfileid: "35307543"
   
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

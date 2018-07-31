@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_errors | Документы Microsoft
+title: sqlsrv_errors | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309053"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979795"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Возвращает расширенные ошибки или ошибки и предупреждения о последней **sqlsrv** выполненной операции.  
+Возвращает расширенные сведения об ошибках и предупреждениях в последней выполненной операции **sqlsrv**.  
   
-**Sqlsrv_errors** функция может вернуть ошибки или ошибки и предупреждения путем вызова с одним из значений параметров, указанных в разделе "Параметры" ниже.  
+Вы можете получать с помощью функции **sqlsrv_errors** эти сведения, вызывая ее с различными значениями параметров, приведенными в разделе "Параметры" ниже.  
   
 По умолчанию предупреждения, созданные при вызове любой функции **sqlsrv** , обрабатываются как ошибки; при возникновении предупреждения во время вызова функции **sqlsrv** она возвращает значение false. Однако предупреждения, которые соответствуют значениям SQLSTATE 01000, 01001, 01003 и 01S02, никогда не обрабатываются как ошибки.  
   
@@ -49,7 +49,7 @@ sqlsrv_configure("WarningsReturnAsErrors", 0);
 sqlsrv_configure("WarningsReturnAsErrors", 1);  
 ```  
   
-Независимо от настройки предупреждения можно извлечь только путем вызова **sqlsrv_errors** либо **SQLSRV_ERR_ALL** или **SQLSRV_ERR_WARNINGS** значение параметра (см. Параметры ниже подробные сведения).  
+Вне зависимости от настройки, предупреждения можно извлечь, только вызывая **sqlsrv_errors** со значениями параметров **SQLSRV_ERR_ALL** или **SQLSRV_ERR_WARNINGS** (дополнительные сведения см. ниже в разделе "Параметры").  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -59,7 +59,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$errorsAndOrWarnings*[необязательно]: Предопределенная константа. Этот параметр может принимать одно из значений, содержащихся в следующей таблице.  
+*$errorsAndOrWarnings*(НЕОБЯЗАТЕЛЬНО): предопределенная константа. Этот параметр может принимать одно из значений, содержащихся в следующей таблице.  
   
 |Значение|Описание|  
 |---------|---------------|  
@@ -70,18 +70,18 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 Если значение параметра не указано, возвращаются ошибки и предупреждения, созданные при последнем вызове функции **sqlsrv** .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
-**Массив** массивов или значение **null**. Каждый **массива** в возвращаемом **массива** содержит три пары ключ значение. Следующая таблица содержит все ключи и их описания.  
+**Массив** массивов или значение **null**. Каждый **массив** в возвращаемом **массиве** содержит три пары "ключ-значение". Следующая таблица содержит все ключи и их описания.  
   
 |Key|Описание|  
 |-------|---------------|  
-|SQLSTATE|Для ошибок, возникших в драйвере ODBC, SQLSTATE, возвращенный ODBC. Сведения о значениях SQLSTATE для ODBC см. в разделе [коды ошибок ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Для ошибок, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], SQLSTATE для IMSSP.<br /><br />Для предупреждений, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], SQLSTATE для 01SSP.|  
+|SQLSTATE|Для ошибок, возникших в драйвере ODBC, SQLSTATE, возвращенный ODBC. Сведения о значениях SQLSTATE для ODBC см. в статье [Коды ошибок ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Для ошибок, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], SQLSTATE для IMSSP.<br /><br />Для предупреждений, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], SQLSTATE для 01SSP.|  
 |код|Для ошибок, возникших в SQL Server, собственный код ошибки SQL Server.<br /><br />Для ошибок, возникших в драйвере ODBC, код ошибки, возвращенный ODBC.<br /><br />Для ошибок, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], код ошибки [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Дополнительные сведения см. в статье [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
 |message|Описание ошибки.|  
   
 Доступ к значениям массива можно также осуществить с помощью числовых ключей 0, 1 и 2. Если ошибки или предупреждения отсутствуют, возвращается значение **null** .  
   
 ## <a name="example"></a>Пример  
-Следующий пример отображает ошибки, возникающие при сбое выполнения инструкции. (Инструкция завершается ошибкой, поскольку **InvalidColumName** не является допустимым именем столбца в указанной таблице.) Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример отображает ошибки, возникающие при сбое выполнения инструкции. (Инструкция не выполняется из-за недопустимого имени столбца **InvalidColumName** в указанной таблице.) В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -120,7 +120,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)  

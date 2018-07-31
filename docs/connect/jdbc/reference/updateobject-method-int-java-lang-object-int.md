@@ -1,5 +1,5 @@
 ---
-title: Метод updateObject (int, java.lang.Object, int) | Документы Microsoft
+title: Метод updateObject (int, java.lang.Object, int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f690ba95d40a2e9e43881b0e1c82d497cd5e26d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849879"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036172"
 ---
 # <a name="updateobject-method-int-javalangobject-int"></a>Метод updateObject (int, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Обновляет указанный столбец с **объекта** заданному индексу столбца и масштабу.  
+  Обновляет указанный столбец значением типа **Object** по заданному индексу столбца и масштабу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,11 +43,11 @@ public void updateObject(int index,
 #### <a name="parameters"></a>Параметры  
  *index*  
   
- **Int** , указывающее индекс столбца.  
+ Значение типа **int**, указывающее индекс столбца.  
   
- *OBJ*  
+ *obj*  
   
- **Объекта** значение.  
+ Значение **Object**.  
   
  *масштаб*  
   
@@ -56,7 +56,7 @@ public void updateObject(int index,
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод updateObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

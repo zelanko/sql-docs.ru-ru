@@ -1,6 +1,6 @@
 ---
-title: Отправить данные FILESTREAM - ISequentialStream с привязкой к ICommandText | Документы Microsoft
-description: Отправить данные FILESTREAM - ISequentialStream, привязанный к ICommandText
+title: Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText | Документы Майкрософт
+description: Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4bfc03b8cdf3047ddfd46338be4796dd9f39d2d3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 36461107cf11c9119bd9e11b73cb7b96383483e7
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665574"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108776"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Отправить данные FILESTREAM - ISequentialStream с привязкой к ICommandText
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   В этом образце используется интерфейс ISequentialStream, связанный с параметром ICommandText, для передачи от 4 МБ до 4 ГБ данных в столбец файлового потока.  
   
- Дополнительные сведения о функции filestream см. в разделе [поддержка FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Дополнительные сведения о функции filestream, см. в разделе [поддержка FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Пример  
- Чтобы скомпилировать и запустить этот образец, включите поддержку FILESTREAM ([Включение и настройка FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Перед компиляцией и запуском этого образца, включите поддержку FILESTREAM ([Включение и настройка FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Убедитесь, что переменная среды INCLUDE включает каталог, содержащий msoledbsql.h.  
+ Убедитесь в том, что переменная среды INCLUDE включает каталог, содержащий файл msoledbsql.h.  
   
  На сервере должен существовать каталог C:\DBFsa, в котором образец создаст базу данных. Экземпляр [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] должен иметь доступ на запись к этой папке (например, войдите в систему с учетной записью Local System).  
   

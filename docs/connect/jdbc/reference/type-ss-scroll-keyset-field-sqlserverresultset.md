@@ -1,5 +1,5 @@
 ---
-title: Поле TYPE_SS_SCROLL_KEYSET (SQLServerResultSet) | Документы Microsoft
+title: Поле TYPE_SS_SCROLL_KEYSET (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f6f5bc493af3ea74c5c96448f293376a2dc036a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847459"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020072"
 ---
 # <a name="typessscrollkeyset-field-sqlserverresultset"></a>Поле TYPE_SS_SCROLL_KEYSET (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Используется для указания [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] тип курсора keyset.  
+  Позволяет указать тип курсора для набора ключей [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,9 +39,9 @@ public static final int TYPE_SS_SCROLL_KEYSET
 ```  
   
 ## <a name="field-value"></a>Значение поля  
- **Int** значение 1005.  
+ **Int** значение 1005 типа.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

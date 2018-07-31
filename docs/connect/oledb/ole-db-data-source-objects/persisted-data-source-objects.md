@@ -1,6 +1,6 @@
 ---
-title: Материализованные данные исходного объекта | Документы Microsoft
-description: Материализованные данные исходного объекта
+title: Материализованные объекты источника данных | Документация Майкрософт
+description: Материализованные объекты источника данных
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 174bd7985cacf33a1cb62988204d8b0cec99b89b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665614"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106950"
 ---
 # <a name="persisted-data-source-objects"></a>Материализованные данные исходного объекта
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server поддерживает материализованные объекты источника данных с **IPersistFile** интерфейса.  
+  Драйвер OLE DB для SQL Server поддерживает материализованные объекты источника данных с помощью **IPersistFile** интерфейс.  
   
 ## <a name="examples"></a>Примеры  
  **А. Сохранение инициализации источника данных:**  
   
- В данном примере показана функция, которая сохраняет свойства инициализации источника данных, определяющих сервер, базу данных и использование для соединения режима проверки подлинности Windows. Имя сервера и имя базы данных, поступившие во *pLocation* и *pDatasource* параметры функции.  
+ В данном примере показана функция, которая сохраняет свойства инициализации источника данных, определяющих сервер, базу данных и использование для соединения режима проверки подлинности Windows. Имена сервера и базы данных получаются в параметрах *pLocation* и *pDatasource* функции.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -233,9 +233,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **IPersistFile::Save** метод может быть вызван до или после вызова **IDBInitialize::Initialize**. Вызов метода после успешного возвращения из **IDBInitialize::Initialize** гарантирует сохраняется допустимой спецификации источника данных.  
+ Метод **IPersistFile::Save** можно вызвать до или после вызова метода **IDBInitialize::Initialize**. Вызов метода после успешного возвращения из метода **IDBInitialize::Initialize** гарантирует сохранение допустимой спецификации источника данных.  
   
-## <a name="see-also"></a>См. также  
- [Объекты источников данных &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [Объекты источника данных &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

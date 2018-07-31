@@ -1,5 +1,5 @@
 ---
-title: Выполнение операций массового копирования | Документы Microsoft
+title: Выполнение операций массового копирования | Документация Майкрософт
 description: Выполнение операций массового копирования с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f9a820a3e5e2f7f2cf81bb00ce8cb72f195eca27
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 55ee44220bd66308c20ea4aab0d1e650e5df9756
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612159"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108916"
 ---
 # <a name="performing-bulk-copy-operations"></a>Выполнение операций массового копирования
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Функция массового копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает передачу больших объемов данных в таблицу или представление [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или из них. Данные можно также передать путем указания инструкции SELECT. Данные можно передавать между [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и файлом данных операционной системы, таким как ASCII-файл. Файлы данных могут иметь различные форматы. Формат определяется для массового копирования в файле форматирования. По желанию данные можно загрузить в переменные программы и передать в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью функций и методов массового копирования.  
   
- Образец приложения, демонстрирующий эту функцию, в разделе [массового копирования данных с помощью IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md).  
+ Образец приложения, демонстрирующий эту возможность, см. в разделе [массового копирования данных с помощью IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md).  
   
  Приложение обычно использует массовое копирование одним из следующих способов.  
   
@@ -53,26 +53,26 @@ ms.locfileid: "35612159"
   
  Файлы данных, используемые функциями массового копирования, не приходится создавать при помощи другой программы массового копирования. Любая другая система может создать файл данных и файл форматирования в соответствии с определениями массового копирования. Эти файлы можно затем использовать в программе массового копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для импорта данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Например, можно экспортировать данные из электронной таблицы в файл с разделителями-символами табуляции, построить файл форматирования, описывающий файл с разделителями-символами табуляции, а затем использовать функции массового копирования для быстрого импорта данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Файлы данных, созданные при массовом копировании, можно также импортировать в другие приложения. Например, можно использовать функции массового копирования для экспорта данных из таблицы или представления в файл с разделителями-символами табуляции, который затем можно загрузить в электронную таблицу.  
   
- Программисты, пишущие приложения, использующие функции массового копирования, должны следовать основным правилам для обеспечения хорошей производительности массового копирования. Дополнительные сведения о поддержке операций массового копирования в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в разделе [массового импорта и экспорта данных &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Программисты, пишущие приложения, использующие функции массового копирования, должны следовать основным правилам для обеспечения хорошей производительности массового копирования. Дополнительные сведения о поддержке операций массового копирования в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в разделе [массовый импорт и экспорт данных &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Определяемый пользователем тип данных CLR должен быть привязан как двоичные данные. Даже если файл форматирования указывает SQLCHAR как тип данных для целевого столбца определяемого пользователем типа, программа bcp будет рассматривать данные как двоичные.  
   
  Нельзя использовать инструкцию SET FMTONLY OFF с операциями массового копирования. Ее использование может стать причиной завершения операции массового копирования с ошибкой или получению непредвиденных результатов.  
   
-## <a name="ole-db-driver-for-sql-server"></a>Драйвер OLE DB для SQL Server 
- Драйвер OLE DB для SQL Server реализует два метода для выполнения операций массового копирования с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных. Первый метод предполагает использование [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) интерфейс на основе памяти массовое копирование; и второй предполагает использование [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) интерфейс для операций массового копирования.  
+## <a name="ole-db-driver-for-sql-server"></a>Драйвер OLE DB для SQL Server 
+ Драйвер OLE DB для SQL Server реализует два метода для выполнения операций массового копирования с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных. Первый метод предусматривает использование интерфейса [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) для операций массового копирования, работающих с памятью, а второй предусматривает использование интерфейса [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) для операций массового копирования, работающих с файлами.  
   
 ### <a name="using-memory-based-bulk-copy-operations"></a>Использование операций массового копирования, работающих с памятью  
- Драйвер OLE DB для SQL Server реализует **IRowsetFastLoad** интерфейс для предоставления поддержки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] операций на основе памяти массового копирования. **IRowsetFastLoad** интерфейс реализует [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) и [IRowsetFastLoad::InsertRow](../../oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md) методы.  
+ В драйвере OLE DB для SQL Server реализован интерфейс **IRowsetFastLoad**, предоставляющий поддержку операций массового копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], работающих с памятью. В интерфейсе **IRowsetFastLoad** реализованы методы [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) и [IRowsetFastLoad::InsertRow](../../oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md).  
   
 #### <a name="enabling-a-session-for-irowsetfastload"></a>Включение сеанса для метода IRowsetFastLoad  
- Потребитель уведомляет драйвер OLE DB для SQL Server о необходимости массового копирования, задав драйвер OLE DB для SQL Server относятся свойство источника данных SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. Со свойством в источнике данных потребитель создает драйвер OLE DB для SQL Server сеанса. Новый сеанс позволяет потребителю получить доступ к **IRowsetFastLoad** интерфейса.  
+ Потребитель уведомляет драйвер OLE DB для SQL Server о необходимости массового копирования, установив драйвер OLE DB для свойства источника данных конкретного сервера SQL SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. Свойство установлено в источнике данных потребитель создает драйвер OLE DB для SQL Server сеанса. Новый сеанс позволяет потребителю получить доступ к интерфейсу **IRowsetFastLoad**.  
   
 > [!NOTE]  
->  Если **IDataInitialize** интерфейса используется для инициализации источника данных, то необходимо задать свойство SSPROP_IRowsetFastLoad *rgPropertySets* параметр  **IOpenRowset::OpenRowset** метод; в противном случае вызов **OpenRowset** метод возвращает ошибку E_NOINTERFACE.  
+>  Если для инициализации источника данных используется интерфейс **IDataInitialize**, то необходимо задать свойство SSPROP_IRowsetFastLoad в параметре *rgPropertySets* метода **IOpenRowset::OpenRowset**. В противном случае вызов метода **OpenRowset** возвращает ошибку E_NOINTERFACE.  
   
- Включение сеанса для массового копирования ограничивает драйвер OLE DB для SQL Server поддержку интерфейсов в сеансе. Сеанс с включенным массовым копированием предоставляет только следующие интерфейсы:  
+ Включение сеанса для массового копирования ограничивает драйвера OLE DB для SQL Server, поддержка интерфейсов в сеансе. Сеанс с включенным массовым копированием предоставляет только следующие интерфейсы:  
   
 -   **IDBSchemaRowset**  
   
@@ -82,12 +82,12 @@ ms.locfileid: "35612159"
   
 -   **ISupportErrorInfo**  
   
--   **Интерфейс ITransactionJoin**  
+-   **ITransactionJoin**  
   
- Чтобы отключить создание наборы строк для массового копирования включена и вызвать драйвер OLE DB для SQL Server сеанса вернуться к обычной обработке, ssprop_enablefastload значение VARIANT_FALSE.  
+ Чтобы отключить создание набора строк с включенным массовым копированием и вернуть сеанс драйвера OLE DB для SQL Server к обычной обработке, задайте для свойства SSPROP_ENABLEFASTLOAD значение VARIANT_FALSE.  
   
 #### <a name="irowsetfastload-rowsets"></a>Наборы строк IRowsetFastLoad  
- Драйвер OLE DB для SQL Server групповое копирование наборов строк доступны только для записи, но они предоставляют интерфейсы, позволяющие потребителю определить структуру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы. На включенным массовым копированием предоставлены следующие интерфейсы OLE DB для драйверов для набора строк SQL Server:  
+ Наборы строк для массового копирования драйвера OLE DB для SQL Server доступны только для записи, но они предоставляют интерфейсы, позволяющие потребителю определить структуру таблицы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. На с включенным массовым копированием предоставлены следующие интерфейсы драйвер OLE DB для набора строк SQL Server:  
   
 -   **IAccessor**  
   
@@ -95,7 +95,7 @@ ms.locfileid: "35612159"
   
 -   **IColumnsRowset**  
   
--   **Интерфейс IConvertType**  
+-   **IConvertType**  
   
 -   **IRowsetFastLoad**  
   
@@ -103,21 +103,21 @@ ms.locfileid: "35612159"
   
 -   **ISupportErrorInfo**  
   
- Специфический для поставщика свойства SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS и SSPROP_FASTLOADKEEPIDENTITY управляют поведения драйвера OLE DB для набора строк массового копирования SQL Server. Свойства указаны в *rgProperties* членом *rgPropertySets* **IOpenRowset** член параметра.  
+ Свойства SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS и SSPROP_FASTLOADKEEPIDENTITY, зависящие от поставщика, управляют режимом работы набора строк для массового копирования драйвера OLE DB для SQL Server. Свойства указаны в элементе *rgProperties* элемента параметра *rgPropertySets* интерфейса **IOpenRowset**.  
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_FASTLOADKEEPIDENTITY|Столбец: нет<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Тип: VT_BOOL<br /><br /> По умолчанию: значение VARIANT_FALSE<br /><br /> Описание: Поддерживает значения идентификаторов, указанные потребителем.<br /><br /> VARIANT_FALSE: Значения для столбца идентификаторов в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы, созданные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Любое значение, привязанное к столбцу учитывается драйвером OLE DB для SQL Server.<br /><br /> VARIANT_TRUE: Потребитель привязывает метод доступа, указав значение для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] столбца идентификаторов. Свойство идентификатора недоступно для столбцов, допускающих значение NULL, так что потребитель предоставляет уникальное значение для каждого **IRowsetFastLoad::Insert** вызова.|  
-|SSPROP_FASTLOADKEEPNULLS|Столбец: нет<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Тип: VT_BOOL<br /><br /> По умолчанию: значение VARIANT_FALSE<br /><br /> Описание: Поддерживает значение NULL для столбцов с ограничением по умолчанию. Затрагивает только столбцы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые допускают значение NULL и к которым применено ограничение DEFAULT.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вставляет значение по умолчанию для столбца, когда драйвер OLE DB для SQL Server потребителя вставляет строки, содержащей значение NULL для столбца.<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вставит значение NULL для значения столбца, когда драйвер OLE DB для SQL Server потребителя вставляет строки, содержащей значение NULL для столбца.|  
-|SSPROP_FASTLOADOPTIONS|Столбец: нет<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Тип: VT_BSTR<br /><br /> По умолчанию: нет<br /><br /> Описание: Это свойство является таким же, как **-h** »*указание*[,...*n*]» параметр **bcp** программы. Следующие строки можно использовать в качестве параметров при массовом копировании данных в таблицу.<br /><br /> **ПОРЯДОК**(*столбца*[**ASC** &#124; **DESC**] [,...*n*]): порядок сортировки данных в файле данных. Производительность массового копирования увеличивается, если загружаемый файл данных упорядочен по кластеризованному индексу таблицы.<br /><br /> **ROWS_PER_BATCH** = *bb*: количество строк данных в каждом пакете (как *bb*). Сервер оптимизирует массовую загрузку в соответствии со значением *bb*. По умолчанию **ROWS_PER_BATCH** неизвестно.<br /><br /> **KILOBYTES_PER_BATCH** = *cc*: в килобайтах (КБ) данных в каждом пакете (значение cc). По умолчанию **KILOBYTES_PER_BATCH** неизвестно.<br /><br /> **Аргумент TABLOCK**: снятием блокировки уровня таблицы на время операции массового копирования. Применение этого параметра значительно повышает производительность, так как удержание блокировки только в течение операции массового копирования уменьшает вероятность конфликтов блокировок в таблице. Таблицы могут загружаться по нескольким клиентам параллельно, если таблица не имеет индексов и **TABLOCK** указано. По умолчанию работа блокировки определяется параметром таблицы **блокировка на массовую загрузку таблицы**.<br /><br /> **CHECK_CONSTRAINTS**: любые ограничения для *table_name* проверяются во время операции массового копирования. По умолчанию ограничения не учитываются.<br /><br /> **FIRE_TRIGGER**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует управление версиями строк для триггеров и версии строк сохраняются в хранилище версий в **tempdb**. Поэтому оптимизации массовой записи в журнал доступны даже при включенных триггерах. Перед массовым импортом пакета с большим количеством строк с включенными триггерами, может потребоваться увеличить размер **tempdb**.|  
+|SSPROP_FASTLOADKEEPIDENTITY|Столбец: нет<br /><br /> И запись: чтение и запись<br /><br /> Тип: VT_BOOL<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: поддерживает значения идентификаторов, указанные потребителем.<br /><br /> VARIANT_FALSE: значения для столбца идентификаторов в таблице [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] формируются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Любое значение привязанного столбца учитывается драйвером OLE DB для SQL Server.<br /><br /> VARIANT_TRUE: потребитель привязывает метод доступа, предоставляющий значение, к столбцу идентификаторов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Свойство идентификатора недоступно для столбцов, допускающих значение NULL, так что потребитель предоставляет уникальное значение для каждого вызова **IRowsetFastLoad::Insert**.|  
+|SSPROP_FASTLOADKEEPNULLS|Столбец: нет<br /><br /> И запись: чтение и запись<br /><br /> Тип: VT_BOOL<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: поддерживает значение NULL для столбцов с ограничением DEFAULT. Затрагивает только столбцы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые допускают значение NULL и к которым применено ограничение DEFAULT.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вставляет значение по умолчанию для столбца при вставке потребителем драйвера OLE DB для SQL Server строки, содержащей значение NULL для столбца.<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вставляет значение NULL для значения столбца при вставке потребителем драйвера OLE DB для SQL Server строки, содержащей значение NULL для столбца.|  
+|SSPROP_FASTLOADOPTIONS|Столбец: нет<br /><br /> И запись: чтение и запись<br /><br /> Тип: VT_BSTR<br /><br /> По умолчанию: нет<br /><br /> Описание: это свойство похоже на параметр **-h** "*указание*[,...*n*]" программы **bcp**. Следующие строки можно использовать в качестве параметров при массовом копировании данных в таблицу.<br /><br /> **ПОРЯДОК**(*столбец*[**ASC** &#124; **DESC**] [,... *n*]): порядок сортировки данных в файле данных. Производительность массового копирования увеличивается, если загружаемый файл данных упорядочен по кластеризованному индексу таблицы.<br /><br /> **ROWS_PER_BATCH** = *bb*: число получаемых строк данных в каждом пакете (как *bb*). Сервер оптимизирует массовую загрузку в соответствии со значением *bb*. По умолчанию значение аргумента **ROWS_PER_BATCH** неизвестно.<br /><br /> **KILOBYTES_PER_BATCH** = *cc*: число килобайт (КБ) данных в каждом пакете (значение cc). По умолчанию значение **KILOBYTES_PER_BATCH** неизвестно.<br /><br /> **TABLOCK**: блокировка уровня таблицы запрашивается на время операции массового копирования. Применение этого параметра значительно повышает производительность, так как удержание блокировки только в течение операции массового копирования уменьшает вероятность конфликтов блокировок в таблице. Таблица может загружаться одновременно несколькими клиентами, если она не содержит индексов и указан параметр **TABLOCK**. По умолчанию работа блокировки определяется параметром таблицы **table lock on bulk load**.<br /><br /> **CHECK_CONSTRAINTS**: любые ограничения на *имя_таблицы* проверяются на протяжении операции массового копирования. По умолчанию ограничения не учитываются.<br /><br /> **FIRE_TRIGGER**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует управление версиями строк для триггеров. Версии строк сохраняются в хранилище версий базы данных **tempdb**. Поэтому оптимизации массовой записи в журнал доступны даже при включенных триггерах. Перед массовым импортом пакета с большим количеством строк с включенными триггерами, возможно, придется увеличить размер базы данных **tempdb**.|  
   
 ### <a name="using-file-based-bulk-copy-operations"></a>Использование операций массового копирования, работающих с файлами  
- Драйвер OLE DB для SQL Server реализует **IBCPSession** интерфейс для предоставления поддержки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] операций массового копирования. **IBCPSession** интерфейс реализует [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md), [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md), [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md), [IBCPSession::BCPDone](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md), [IBCPSession::BCPExec](../../oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md), [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md), [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md), и [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)методы.  
+ В драйвере OLE DB для SQL Server предусмотрен интерфейс **IBCPSession**, предоставляющий поддержку операций массового копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], работающих с файлами. В интерфейсе **IBCPSession** реализованы методы [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md), [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md), [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md), [IBCPSession::BCPDone](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md), [IBCPSession::BCPExec](../../oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md), [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md), [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) и [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md).  
   
   
-## <a name="see-also"></a>См. также  
- [Драйвер OLE DB для компонентов SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
- [Свойства источника данных &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)   
+## <a name="see-also"></a>См. также:  
+ [Возможности драйвера OLE DB для SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
+ [Свойства источника данных &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)   
  [Массовый импорт и экспорт данных (SQL Server)](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   

@@ -1,5 +1,5 @@
 ---
-title: Метод (SQLServerResultSet) updateFloat | Документы Microsoft
+title: Метод updateFloat (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,25 +20,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dddc90d2d40d500d7d014705c6fb2f90155c1ef8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849759"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972797"
 ---
-# <a name="updatefloat-method-sqlserverresultset"></a>updateFloat метод (SQLServerResultSet)
+# <a name="updatefloat-method-sqlserverresultset"></a>Метод updateFloat (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Обновляет указанный столбец с **float** значение.  
+  Обновляет указанный столбец значением типа **float**.  
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|Обновляет указанный столбец с **float** значение заданному индексу столбца.|  
-|[updateFloat (java.lang.String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|Обновляет указанный столбец с **float** значение заданному имени столбца.|  
+|[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|Обновляет указанный столбец значением типа **float** по заданному индексу столбца.|  
+|[updateFloat (java.lang.String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|Обновляет указанный столбец значением типа **float** по заданному имени столбца.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Типы данных PHP по умолчанию | Документы Microsoft
+title: Default PHP Data Types | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307703"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981363"
 ---
 # <a name="default-php-data-types"></a>типы данных PHP по умолчанию;
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,47 +37,47 @@ ms.locfileid: "35307703"
   
 |Тип SQL Server|Тип PHP по умолчанию|Кодировка по умолчанию|  
 |-------------------|--------------------|--------------------|  
-|BIGINT|String|8-битовых символов<sup>1</sup>|  
+|BIGINT|String|8-битовый символ<sup>1</sup>|  
 |BINARY|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
-|bit|Целочисленный|8-битовых символов<sup>1</sup>|  
-|char;|String|8-битовых символов<sup>1</sup>|  
+|bit|Целочисленный|8-битовый символ<sup>1</sup>|  
+|char;|String|8-битовый символ<sup>1</sup>|  
 |date<sup>4</sup>|DATETIME|Неприменимо|  
 |DateTime<sup>4</sup>|DATETIME|Неприменимо|  
 |datetime2<sup>4</sup>|DATETIME|Неприменимо|  
 |datetimeoffset<sup>4</sup>|DATETIME|Неприменимо|  
-|Decimal|String|8-битовых символов<sup>1</sup>|  
-|FLOAT|float|8-битовых символов<sup>1</sup>|  
+|Decimal|String|8-битовый символ<sup>1</sup>|  
+|FLOAT|float|8-битовый символ<sup>1</sup>|  
 |geography|Поток|Двоичная<sup>3</sup>|  
 |geometry|Поток|Двоичная<sup>3</sup>|  
 |изображение<sup>5</sup>|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
-|ssNoversion|Целочисленный|8-битовых символов<sup>1</sup>|  
-|money|String|8-битовых символов<sup>1</sup>|  
-|NCHAR|String|8-битовых символов<sup>1</sup>|  
-|NUMERIC|String|8-битовых символов<sup>1</sup>|  
-|NVARCHAR|String|8-битовых символов<sup>1</sup>|  
-|nvarchar(MAX)|Поток<sup>2</sup>|8-битовых символов<sup>1</sup>|  
-|ntext<sup>6</sup>|Поток<sup>2</sup>|8-битовых символов<sup>1</sup>|  
-|REAL|float|8-битовых символов<sup>1</sup>|  
-|smalldatetime|DATETIME|8-битовых символов<sup>1</sup>|  
-|SMALLINT|Целочисленный|8-битовых символов<sup>1</sup>|  
-|SMALLMONEY|String|8-битовых символов<sup>1</sup>|  
-|sql_variant<sup>7</sup>|String|8-битовых символов<sup>1</sup>|  
-|text<sup>8</sup>|Поток<sup>2</sup>|8-битовых символов<sup>1</sup>|  
+|ssNoversion|Целочисленный|8-битовый символ<sup>1</sup>|  
+|money|String|8-битовый символ<sup>1</sup>|  
+|NCHAR|String|8-битовый символ<sup>1</sup>|  
+|NUMERIC|String|8-битовый символ<sup>1</sup>|  
+|NVARCHAR|String|8-битовый символ<sup>1</sup>|  
+|nvarchar(MAX)|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|  
+|ntext<sup>6</sup>|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|  
+|REAL|float|8-битовый символ<sup>1</sup>|  
+|smalldatetime|DATETIME|8-битовый символ<sup>1</sup>|  
+|SMALLINT|Целочисленный|8-битовый символ<sup>1</sup>|  
+|SMALLMONEY|String|8-битовый символ<sup>1</sup>|  
+|sql_variant<sup>7</sup>|String|8-битовый символ<sup>1</sup>|  
+|текст<sup>8</sup>|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|  
 |time<sup>4</sup>|DATETIME|Неприменимо|  
-|TIMESTAMP|String|8-битовых символов<sup>1</sup>|  
-|TINYINT|Целочисленный|8-битовых символов<sup>1</sup>|  
+|TIMESTAMP|String|8-битовый символ<sup>1</sup>|  
+|TINYINT|Целочисленный|8-битовый символ<sup>1</sup>|  
 |определяемый пользователем тип|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
-|UNIQUEIDENTIFIER|Строка<sup>9</sup>|8-битовых символов<sup>1</sup>|  
+|UNIQUEIDENTIFIER|Строка<sup>9</sup>|8-битовый символ<sup>1</sup>|  
 |varbinary|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
 |varbinary(MAX)|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
-|varchar|String|8-битовых символов<sup>1</sup>|  
-|varchar(MAX)|Поток<sup>2</sup>|8-битовых символов<sup>1</sup>|
-|xml|Поток<sup>2</sup>|8-битовых символов<sup>1</sup>|  
+|varchar|String|8-битовый символ<sup>1</sup>|  
+|varchar(MAX)|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|
+|xml|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|  
   
 
-1.  Данные возвращаются в виде 8-битовых символов, как указано в кодовой странице языкового стандарта Windows, установленного в системе. Любой многобайтовых символов или символов, не соответствующих этой кодовой странице, подставляется символ однобайтовый вопросительный знак (?).  
+1.  Данные возвращаются в виде 8-битовых символов, как указано в кодовой странице языкового стандарта Windows, установленного в системе. Для всех многобайтовых символов или символов, не соответствующих этой кодовой странице, подставляется однобайтовый символ вопросительного знака (?).  
   
-2.  Если [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) или [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) — используется для получения данных, имеющих тип потока PHP по умолчанию, данные возвращаются в виде строки с кодировкой потока. Например, если двоичный файл SQL Server типа извлекаются с помощью **sqlsrv_fetch_array**, тип — это двоичная строка возвращаемого значения по умолчанию.  
+2.  Если для извлечения данных, имеющих тип потока PHP по умолчанию, используется [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) или [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md), данные возвращаются в виде строки с кодировкой потока. Например, при извлечении данных двоичного типа SQL Server с использованием **sqlsrv_fetch_array** типом возвращаемого значения по умолчанию будет двоичная строка.  
   
 3.  Данные возвращаются в виде потока необработанных байтов с сервера без применения кодировки или преобразования.  
 
@@ -87,7 +87,7 @@ ms.locfileid: "35307703"
 
 6. Это устаревший тип, соответствующий типу nvarchar(max).
 
-7.  в параметрах двунаправленный или выходных данных sql_variant не поддерживается.
+7.  sql_variant не поддерживается в параметрах двунаправленного итератора или выходных данных.
 
 8.  Это устаревший тип, соответствующий типу varchar(max).  
   
@@ -97,21 +97,21 @@ ms.locfileid: "35307703"
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Другие новые типы данных и функции SQL Server 2008  
-Типы данных, впервые появившиеся в SQL Server 2008 и существующие за пределами столбцов (например, возвращающих табличные значения параметров) не поддерживаются в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. В следующей таблице перечислены поддержке новых функций SQL Server 2008 в PHP.  
+Типы данных, впервые появившиеся в SQL Server 2008 и существующие за пределами столбцов (например, параметры с табличным значением), в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] не поддерживаются. В следующей таблице приведены сводные данные о поддержке PHP в новых функциях SQL Server 2008.  
   
 |Компонент|Поддержка PHP|  
 |-----------|---------------|  
-|Возвращающий табличное значение параметр|Нет|  
+|Возвращающий табличное значение параметр|нет|  
 |Разреженные столбцы|Частичный|  
 |Сжатие NULL-битов|Да|  
 |Определяемые пользователем типы данных больших значений CLR (UDT)|Да|  
-|Имя субъекта-службы|Нет|  
+|Имя субъекта-службы|нет|  
 |MERGE|Да|  
 |FILESTREAM|Частичный|  
   
 Частичная поддержка типа означает, что вы не можете программно запросить тип столбца.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Converting Data Types](../../connect/php/converting-data-types.md)

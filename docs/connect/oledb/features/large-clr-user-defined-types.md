@@ -1,5 +1,5 @@
 ---
-title: Определяемые пользователем типы больших значений CLR | Документы Microsoft
+title: Определяемые пользователем типы больших значений CLR | Документация Майкрософт
 description: Большие определяемые пользователем типы CLR в драйвер OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: efb6e8f00859e98963dbf4f511899ef517c5f7c0
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 4cf71fa76c4759364954c8cbff446957dd80c8aa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611709"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108066"
 ---
 # <a name="large-clr-user-defined-types"></a>Большие определяемые пользователем типы данных CLR
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -34,15 +34,15 @@ ms.locfileid: "35611709"
   
 ## <a name="use-cases"></a>Способы применения   
   
- Для OLE DB поддержка больших определяемых пользователем типов включает в себя возможность поток значения определяемого пользователем ТИПА и с сервера с помощью привязки ISequentialStream.  
+ Для OLE DB поддержка больших пользовательских типов включает в себя возможность передать потоком значения пользовательского типа на сервер и обратно с помощью привязки ISequentialStream.  
   
- Определяемые пользователем типы размером меньше или равным 8 000 байт будут вести себя так же, как в SQL Server 2005. Для OLE DB прежнему можно передавать потоком малые определяемые пользователем типы с помощью привязки ISequentialStream.  
+ Определяемые пользователем типы размером меньше или равным 8 000 байт будут вести себя так же, как в SQL Server 2005. Для OLE DB вы можете по-прежнему передавать маленьких определяемых пользователем типов с помощью интерфейса ISequentialStream привязки.  
   
  Иногда собственному коду будет необходимо понять содержимое определяемых пользователем типов CLR, но не придется создавать экземпляр управляющего объекта. В таком случае можно использовать пользовательскую сериализацию для преобразования на сервере значений определяемых пользователем типов в хорошо знакомый клиенту формат.  
   
  Для приложений, имеющих существующий код доступа к данным, можно использовать поведение определяемых пользователем типов CLR на клиенте путем получения определяемых пользователем типов через собственные API-интерфейсы и создания их экземпляров при помощи CLI-взаимодействия языка C++ в приложениях смешанного режима.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возможности драйвера OLE DB для SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
   
   

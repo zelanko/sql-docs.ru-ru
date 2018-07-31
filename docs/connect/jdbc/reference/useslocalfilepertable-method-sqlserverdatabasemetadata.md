@@ -1,5 +1,5 @@
 ---
-title: Метод usesLocalFilePerTable (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод usesLocalFilePerTable (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a45d7bb5cfe5439108ce0adeb060e48ca94c774
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850409"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039187"
 ---
 # <a name="useslocalfilepertable-method-sqlserverdatabasemetadata"></a>Метод usesLocalFilePerTable (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +39,15 @@ public boolean usesLocalFilePerTable()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** для каждой таблицы используется отдельный файл. В противном случае — **false**.  
+ Значение **true**, если для каждой таблицы используется отдельный файл. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод usesLocalFilePerTable указывается с помощью метода usesLocalFilePerTable в интерфейсе java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

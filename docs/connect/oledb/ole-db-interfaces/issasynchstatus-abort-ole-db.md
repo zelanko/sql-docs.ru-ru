@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::Abort (OLE DB) | Документы Microsoft
+title: ISSAsynchStatus::Abort (OLE DB) | Документация Майкрософт
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: db1804728aea9f0362aad24c114eb1a1570c2a67
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 20ad1b1f1a33bd198f0915847d99bfa8adf86f9b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689337"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106050"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -45,16 +45,16 @@ HRESULT Abort(
   
 ## <a name="arguments"></a>Аргументы  
  *hChapter*[in]  
- Дескриптор раздела, для которого прерывается операция. Если вызываемый объект не является объектом набора строк или операция не применяется к разделу, вызывающий должен установить *hChapter* значение DB_NULL_HCHAPTER.  
+ Дескриптор раздела, для которого прерывается операция. Если вызываемый объект не является объектом набора строк или операция не применяется к разделу, вызывающий должен присвоить параметру *hChapter* значение DB_NULL_HCHAPTER.  
   
  *eOperation*[in]  
- Операция, которая должна быть прервана. Следует использовать следующие значения:  
+ Операция, которая должна быть прервана. Следует учитывать следующее значение.  
   
  DBASYNCHOP_OPEN — запрос на отмену применяется к асинхронному открытию или заполнению набора строк или асинхронной инициализации объекта источника данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
- Запрос на отмену асинхронной операции обработан. Он не гарантирует, что сама операция была отменена. Чтобы определить, отменена ли операция, потребитель должен вызвать метод [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) и проверить наличие DB_E_CANCELED; однако это значение может быть не возвращено уже в следующем вызове.  
+ Запрос на отмену асинхронной операции обработан. Это не гарантирует, что сама операция была отменена. Чтобы определить, отменена ли операция, потребитель должен вызвать метод [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) и проверить наличие DB_E_CANCELED; однако это значение может быть не возвращено уже в следующем вызове.  
   
  DB_E_CANTCANCEL  
  Асинхронную операцию невозможно отменить.  
@@ -66,23 +66,23 @@ HRESULT Abort(
  Произошла ошибка, зависящая от поставщика.  
   
  E_INVALIDARG  
- *HChapter* параметра не DB_NULL_HCHAPTER или *eOperation* не равно DBASYNCH_OPEN.  
+ Значение параметра *hChapter* не равно DB_NULL_HCHAPTER или значение параметра *eOperation* не равно DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus::Abort** был вызван для объекта источника данных, на котором **IDBInitialize::Initialize** еще не был вызван или еще не завершена.  
+ Метод **ISSAsynchStatus::Abort** был вызван для объекта источника данных, для которого не был вызван или не был завершен метод **IDBInitialize::Initialize**.  
   
  Метод**ISSAsynchStatus::Abort** был вызван для объекта источника данных, для которого был вызван метод **IDBInitialize::Initialize** , но впоследствии отменен до инициализации, либо истекло время ожидания. Объект источника данных еще не инициализирован.  
   
- **ISSAsynchStatus::Abort** был вызван для набора строк, на котором **ITransaction::Commit** или **ITransaction::Abort** был вызван ранее, и набор строк не сохранился после фиксирования или прервать и в состоянии зомби.  
+ Метод **ISSAsynchStatus::Abort** был вызван для набора строк, для которого ранее был вызван метод **ITransaction::Commit** или **ITransaction::Abort**, а набор строк не сохранился после фиксации или отмены и находится в состоянии зомби.  
   
  Интерфейс**ISSAsynchStatus::Abort** был вызван для набора строк, который был асинхронно отменен на стадии его инициализации. Набор строк находится в состоянии зомби.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При прерывании инициализации набора строк или объекта источника данных набор строк или объект источника данных может перейти в состояние зомби, когда все методы, кроме методов **IUnknown** , возвращают E_UNEXPECTED. В этом случае единственным возможным для потребителя действием является освобождение набора строк или объекта источника данных.  
   
- При вызове интерфейса **ISSAsynchStatus::Abort** и передаче параметру *eOperation* значения, отличного от DBASYNCHOP_OPEN, возвращается S_OK. Это не означает, что операция была завершена или отменена.  
+ При вызове интерфейса **ISSAsynchStatus::Abort** и передаче параметру *eOperation* значения, отличного от DBASYNCHOP_OPEN, возвращается S_OK. Это не подразумевает, что сама операция была завершена или отменена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение асинхронных операций](../../oledb/features/performing-asynchronous-operations.md)  
   
   

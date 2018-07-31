@@ -1,5 +1,5 @@
 ---
-title: Привязки и преобразования (OLE DB) | Документы Microsoft
+title: Привязки и преобразования (OLE DB) | Документация Майкрософт
 description: Привязки и преобразования (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,38 +18,38 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8c653bc4f79e9f54b96fa86fc5c0b65756b23216
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 233c9e7e2aefbdae34f964e95dbeb7d10d55a63d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666024"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105880"
 ---
 # <a name="conversions-ole-db"></a>Преобразования (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В этом разделе описано преобразование между **datetime** и **datetimeoffset** значения. Преобразования, описанные в этом разделе, либо уже предоставлены OLE DB, либо являются согласованным расширением OLE DB.  
+  В этом разделе описывается преобразование между **datetime** и **datetimeoffset** значения. Преобразования, описанные в этом разделе, либо уже предоставлены OLE DB, либо являются согласованным расширением OLE DB.  
   
- Формат литералов и строк для дат и времени в OLE DB обычно соответствует ISO и не зависит от локали, установленной на клиенте. Единственное исключение — DBTYPE_DATE, для которого стандартом является OLE-автоматизация. Тем не менее поскольку драйвер OLE DB для SQL Server преобразует только между типами при передаче данных в или из клиента, нет возможности для приложения, чтобы принудительно драйвер OLE DB для SQL Server для преобразования между DBTYPE_DATE и строковыми форматами. Во всех остальных случаях строки используют следующие форматы (скобками отмечены необязательные элементы).  
+ Формат литералов и строк для дат и времени в OLE DB обычно соответствует ISO и не зависит от локали, установленной на клиенте. Единственное исключение — DBTYPE_DATE, для которого стандартом является OLE-автоматизация. Тем не менее так как драйвер OLE DB для SQL Server преобразует только между типами при передаче данных для или от клиента, нет способа для приложения, чтобы принудительно драйвер OLE DB для SQL Server для преобразования между DBTYPE_DATE и строковыми форматами. Во всех остальных случаях строки используют следующие форматы (скобками отмечены необязательные элементы).  
   
 -   Формат **datetime** и **datetimeoffset** строк:  
   
      *гггг*-*мм*-*дд*[ *hh*:*мм*:*ss*[. *9999999*] [± *hh*:*мм*]]  
   
--   Формат **время** строк:  
+-   Формат строк типа **time**:  
   
-     *hh*:*мм*:*ss*[. *9999999*]  
+     *чч*:*мм*:*сс*[.*9999999*]  
   
 -   Формат **даты** строк:  
   
      *гггг*-*мм*-*дд*  
   
 > [!NOTE]  
->  Предыдущие версии собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и SQLOLEDB реализовали преобразования OLE в случаях, когда стандартные преобразования возвращали ошибку. Драйвер OLE DB для SQL Server следует совпадает с поведением [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. В результате некоторые преобразования, выполняемые драйвер OLE DB для SQL Server, отличаются от спецификации OLE DB.  
+>  Предыдущие версии собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и SQLOLEDB реализовали преобразования OLE в случаях, когда стандартные преобразования возвращали ошибку. Драйвер OLE DB для SQL Server следует за то же поведение, что [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. В результате некоторые преобразования, выполняемые драйвера OLE DB для SQL Server отличаются от спецификации OLE DB.  
   
- Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. в разделе «Данные форматы: строки и литералы» раздела [поддержка типов данных даты OLE DB и улучшения времени](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. в разделе «Данные форматы: строки и литералы» в [поддержки типов данных даты OLE DB и ускорение](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Далее приведены общие правила преобразования.  
   
@@ -71,12 +71,12 @@ ms.locfileid: "35666024"
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Преобразования, выполняемые при передаче от клиента к серверу](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)  
- Описывает преобразования даты и времени, проводимые между клиентским приложением, написанным с помощью драйвера OLE DB для SQL Server и [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии).  
+ Описывает преобразования даты и времени, проводимые между клиентским приложением, написанным с помощью драйвера OLE DB для SQL Server, и [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версией).  
   
  [Преобразования, выполняемые при передаче от сервера к клиенту](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
- Описывает преобразования даты и времени, проводимые между [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии) и клиентских приложений, написанных с помощью драйвера OLE DB для SQL Server.  
+ Описывает преобразования даты и времени, проводимые между [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с помощью драйвера OLE DB для SQL Server.  
   
-## <a name="see-also"></a>См. также  
- [Дата и время улучшениях &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [Улучшения функций даты и времени &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

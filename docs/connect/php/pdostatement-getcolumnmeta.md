@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::getColumnMeta | Документы Microsoft
+title: PDOStatement::getColumnMeta | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8211a6a4cda4a5efa29b7379c24ba3fbbfa5458e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308533"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983012"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,12 +34,12 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>Параметры  
-*$conn*: отсчитываемый от нуля номер столбца, метаданные которого требуется извлечь (целое число).  
+*$conn*: отсчитываемый от нуля номер столбца (целое число), метаданные которого требуется извлечь.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Ассоциативный массив (ключ и значение), содержащий метаданные для столбца. Описание полей в массиве см. в разделе "Примечания".  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 В следующей таблице перечислены поля в массиве, возвращенном getColumnMeta.  
   
 |NAME|VALUES|  
@@ -73,7 +73,7 @@ print $metadata['name'];
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Класс PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

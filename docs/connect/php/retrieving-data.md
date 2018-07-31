@@ -1,5 +1,5 @@
 ---
-title: Извлечение данных | Документы Microsoft
+title: Получение данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309193"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983040"
 ---
 # <a name="retrieving-data"></a>Извлечение данных
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "35309193"
   
 Если запрос извлекает больше одного результирующего набора, можно перейти к следующему результирующему набору с помощью [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md).  
   
-Начиная с версии 1.1 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], можно использовать [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) имеет ли результирующий набор строк.  
+Начиная с версии 1.1 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] можно использовать [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md), чтобы определить наличие строк в результирующем наборе.  
   
 ## <a name="pdosqlsrv-driver"></a>Драйвер PDO_SQLSRV  
 Драйвер PDO_SQLSRV [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] предоставляет следующие возможности для извлечения данных из результирующего набора:  
@@ -83,7 +83,7 @@ ms.locfileid: "35309193"
 ## <a name="related-sections"></a>См. также  
 [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Извлечение данных](../../connect/php/retrieving-data.md)  

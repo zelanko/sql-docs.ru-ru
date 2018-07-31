@@ -1,5 +1,5 @@
 ---
-title: По умолчанию для типов данных SQL Server | Документы Microsoft
+title: По умолчанию типы данных SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307233"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979576"
 ---
 # <a name="default-sql-server-data-types"></a>Типы данных SQL Server по умолчанию
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35307233"
 |Логическое значение|bit|bit|  
 |Целочисленный|ssNoversion|ssNoversion|  
 |float|float(24)|не поддерживается|  
-|Строка (длина менее 8000 байт)|varchar (<string length>)|varchar (<string length>)|  
+|Строка (длина менее 8000 байт)|varchar(<string length>)|varchar(<string length>)|  
 |Строка (длина более 8000 байт)|varchar(max)|varchar(max)|  
 |Ресурс|Не поддерживается.|Не поддерживается.|  
 |Поток (кодировка: не двоичная)|varchar(max)|varchar(max)|  
@@ -44,7 +44,7 @@ ms.locfileid: "35307233"
 |Объект|Не поддерживается.|Не поддерживается.|  
 |DateTime (1)|DATETIME|Не поддерживается.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Преобразование типов данных](../../connect/php/converting-data-types.md)
@@ -53,5 +53,5 @@ ms.locfileid: "35307233"
 
 [Типы PHP](http://php.net/manual/language.types.php)
 
-[Типы данных (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[Типы данных (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: Оболочки и интерфейсы | Документы Microsoft
+title: Оболочки и интерфейсы | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a7316e5daa6fa27209a31a07ddf0ace84c191b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852439"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994816"
 ---
 # <a name="wrappers-and-interfaces"></a>Оболочки и интерфейсы
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Поддерживает интерфейсы, позволяющие создавать классы-посредники и оболочки, позволяющие доступа к расширениям API-интерфейса JDBC, характерные для [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] через прокси-интерфейса.  
+  Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает интерфейсы, позволяющие создавать классы-посредники и оболочки для доступа к расширениям API JDBC, определяемым драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], через интерфейс-посредник.  
   
 ## <a name="wrappers"></a>Оболочки  
- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Поддерживает интерфейс java.sql.Wrapper. Этот интерфейс обеспечивает механизм для расширения доступа к API-интерфейса JDBC, характерные для [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] через прокси-интерфейса.  
+ Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает интерфейс java.sql.Wrapper. Этот интерфейс обеспечивает механизм доступа к расширениям API JDBC, определяемым драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], через интерфейс-посредник.  
   
- Интерфейс java.sql.Wrapper определяет два метода: **isWrapperFor** и **unwrap**. **IsWrapperFor** метод проверяет, реализует ли указанный объект ввода данный интерфейс. **Unwrap** метод возвращает объект, реализующий этот интерфейс, чтобы разрешить доступ к [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] определенных методов.  
+ Интерфейс java.sql.Wrapper определяет два метода: **isWrapperFor** и **unwrap**. Метод **isWrapperFor** проверяет, реализует ли указанный объект ввода данный интерфейс. Метод **unwrap** возвращает объект, в котором реализован указанный интерфейс, для обеспечения доступа к методам, определяемым драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  **isWrapperFor** и **unwrap** методы предоставляются следующим образом:  
   
@@ -58,9 +58,9 @@ ms.locfileid: "32852439"
 -   [Метод unwrap &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
   
 ## <a name="interfaces"></a>Интерфейсы  
- Начиная с версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] версии 3.0 драйвера JDBC, доступны интерфейсы для сервера приложений для доступа к методу, определяемому драйвером из связанного класса. Сервер приложений может поместить класс в оболочку, создав класс-посредник, обеспечивающий [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-определенных функциональных возможностей интерфейса. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Поддерживает интерфейсы, имеющие [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] методы и константы, сервер приложений может создать прокси-класса.  
+ Начиная с версии 3.0 драйвера JDBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] доступны интерфейсы для сервера приложений, позволяющие осуществлять доступ к методу, определяемому драйвером, из связанного класса. Сервер приложений может поместить класс в оболочку, создав класс-посредник, обеспечивающий определяемые драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] функции через интерфейс. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает интерфейсы, имеющие методы и константы, определяемые драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], что позволяет серверу приложений создать для класса класс-посредник.  
   
- Интерфейсы являются производными от стандартных Java-интерфейсов, можно использовать тот же объект после оболочки для доступа к функции драйвера или универсальный интерфейс [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] функциональные возможности.  
+ Эти интерфейсы являются производными от стандартных интерфейсов Java, поэтому тот же объект может быть использован и после получения из оболочки для доступа к функциям, определяемым драйвером, либо к стандартным функциям драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  Добавлены следующие интерфейсы:  
   
@@ -79,9 +79,9 @@ ms.locfileid: "32852439"
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В этом примере показано, как получить доступ к [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-определенной функции из объекта источника данных. Этот класс источник данных может быть были в оболочку сервером приложений. Для доступа к функции драйвера JDBC или константа, можно снять оболочку с datasource для интерфейса ISQLServerDataSource и использовать функции, объявленные в этом интерфейсе.  
+ В образце показано, как получить доступ к функции, определяемой драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], через объект DataSource. Класс DataSource может быть помещен в оболочку сервером приложений. Для доступа к функции или константе, определяемой драйвером JDBC, можно снять оболочку с datasource для интерфейса ISQLServerDataSource и использовать функции, объявленные в данном интерфейсе.  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 import javax.sql.*;  
@@ -111,7 +111,7 @@ public class UnWrapTest {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

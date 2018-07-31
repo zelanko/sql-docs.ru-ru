@@ -1,5 +1,5 @@
 ---
-title: Использование параметров направления | Документы Microsoft
+title: Использование параметров направления | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8dc5a423b432d272565f8b8db6afdd2c22cbd16
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310193"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991266"
 ---
 # <a name="using-directional-parameters"></a>Использование параметров направления
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-При использовании драйвера PDO_SQLSRV, можно использовать [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) для указания входных и выходных параметров.  
+При использовании драйвера PDO_SQLSRV можно применять [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) для указания входных и выходных параметров.  
   
 В разделах этой статьи описано, как использовать параметры направления при вызове хранимых процедур с помощью драйвера SQLSRV.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "35310193"
 |[Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Демонстрирует, как вызвать хранимую процедуру с выходным параметром и как извлечь его значение.|  
 |[Практическое руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|Демонстрирует, как вызвать хранимую процедуру с входным/выходным параметром и как извлечь его значение.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Извлечение данных](../../connect/php/retrieving-data.md)  
 
 [Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

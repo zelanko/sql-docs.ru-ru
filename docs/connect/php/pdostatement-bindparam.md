@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::bindParam | Документы Microsoft
+title: PDOStatement::bindParam | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 683ee4dcfd797f49ccd297f0a88f8fc607ea7aae
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308327"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007143"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,21 +34,21 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*параметр*: идентификатор параметра (смешанное). Для инструкции, использующей именованные заполнители, используйте имя параметра (: имя). Для подготовленной инструкции, использующей синтаксис с вопросительным знаком это единицы индекс параметра.  
+$*parameter*: идентификатор параметра (смешанные значения). Для инструкции, использующей именованные заполнители, это имя параметра (:name). Для подготовленной инструкции, использующей синтаксис с вопросительным знаком, это индекс параметра, идущий от единицы.  
   
-&$*переменная*: имя (смешанное) переменной PHP, привязываемой к параметру инструкции SQL.  
+&$*variable*: имя (смешанные значения) переменной PHP, привязываемой к параметру инструкции SQL.  
   
-$*data_type*: константа PDO::PARAM_ * необязательно (целое число). Значение по умолчанию — PDO::PARAM_STR.  
+$*data_type*: необязательная константа PDO::PARAM_* (целое число). Значение по умолчанию — PDO::PARAM_STR.  
   
-$*Длина*: длина типа данных необязательно (целое число). Можно задать PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE, чтобы указать размер по умолчанию при использовании PDO::PARAM_INT или PDO::PARAM_BOOL в $*data_type*.  
+$*length*: необязательная длина типа данных (целое число). С помощью PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE вы можете указать размер по умолчанию при использовании PDO::PARAM_INT или PDO::PARAM_BOOL в $*data_type*.  
   
-$*driver_options*: необязательные параметры драйвера (смешанное). Например, можно указать PDO::SQLSRV_ENCODING_UTF8 для привязки столбца к переменной в виде строки с кодировкой UTF-8.  
+$*driver_options*: необязательные параметры драйвера (смешанное значение). Например, можно указать PDO::SQLSRV_ENCODING_UTF8 для привязки столбца к переменной в виде строки с кодировкой UTF-8.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение TRUE в случае успеха, в противном случае — значение FALSE.  
   
-## <a name="remarks"></a>Примечания  
-При привязке к столбцам сервера, имеющим тип varbinary, binary или varbinary(max) пустых данных следует указать двоичную кодировку (PDO::SQLSRV_ENCODING_BINARY) с помощью $*driver_options*. Дополнительные сведения о константах кодирования см. в разделе [константы](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+## <a name="remarks"></a>Remarks  
+Если вы привязываете данные NULL к серверным столбцам типа varbinary, binary или varbinary(max), необходимо указать двоичную кодировку (PDO::SQLSRV_ENCODING_BINARY) с помощью $*driver_options*. Дополнительные сведения о кодировании констант: [Константы](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
@@ -103,7 +103,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> При привязке выходной параметр типа bigint, если значение может оказаться за пределами диапазона [целое](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), использование PDO::PARAM_INT с PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE может привести к исключению «значение вне допустимого диапазона». Таким образом вместо этого используйте значение по умолчанию PDO::PARAM_STR и укажите размер полученной строке, не более 21. Это максимальное число цифр, включая знак минус любого значения типа bigint. 
+> При привязке выходной параметр с типом bigint, если значение может оказаться вне диапазона [целое число](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), использовании PDO::PARAM_INT с PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE может привести к исключению «значение вне допустимого диапазона». Таким образом вместо этого используйте значение по умолчанию PDO::PARAM_STR и укажите размер для результирующая строка имеет не более 21. Это максимальное количество цифр, включая отрицательный знак, любое значение типа bigint. 
 
 ## <a name="example"></a>Пример  
 Этот пример кода показывает, как получить доступ к параметру ввода/вывода.  
@@ -125,7 +125,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> Рекомендуется использовать строки в качестве входных данных при привязке значения [столбца decimal или numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) для обеспечения точности и точность как PHP имеет ограниченную точность для [чисел с плавающей запятой](http://php.net/manual/en/language.types.float.php). То же самое происходит со столбцами bigint, особенно при вне диапазона значений [целое](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Рекомендуется использовать строки в качестве входных данных при привязке значения [столбца decimal или numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) чтобы обеспечить точность и правильность, как PHP имеет ограниченную точность для [чисел с плавающей запятой](http://php.net/manual/en/language.types.float.php). То же применимо к столбцами bigint, особенно в том случае, если значения вне диапазона [целое число](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Пример  
 В этом примере кода показано, как привязать десятичное значение в качестве входного параметра.  
@@ -146,7 +146,7 @@ $stmt->execute();
 ```
 
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Класс PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

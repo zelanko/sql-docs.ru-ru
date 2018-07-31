@@ -1,5 +1,5 @@
 ---
-title: Использование нескольких результирующих наборов | Документы Microsoft
+title: Использование нескольких результирующих наборов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,34 +15,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4f3c8b75d18b598bfe43a48969f098022893c8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851659"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978736"
 ---
 # <a name="using-multiple-result-sets"></a>Использование нескольких результирующих наборов
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  При работе со встроенным SQL или [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] хранимых процедур, которые возвращают более чем одного результирующего набора, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] предоставляет [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) метод в [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) класса для получение каждого возвращенного набора данных. Кроме того, если выполнение инструкции, которая возвращает несколько результирующих наборов, можно использовать [выполнение](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) метод SQLServerStatement класса, так как он вернет **логическое** значение, указывающее, если Возвращаемое значение является результирующим набором или счетчиком обновлений.  
+  При работе со встроенным SQL или хранимыми процедурами [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], которые возвращают более одного результирующего набора, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] реализует метод [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) в классе [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) для получения каждого из возвращенных результирующих наборов. Кроме того, при выполнении инструкции, которая возвращает несколько результирующих наборов, можно использовать метод [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) класса SQLServerStatement. Он возвращает **логическое** значение, указывающее, чем является возвращенное значение: результирующим набором или числом обновлений.  
   
- Если метод execute возвращает **true**, выполненная инструкция возвратила один или несколько результирующих наборов. Можно использовать для первого результирующего набора путем вызова метода getResultSet. Чтобы определить, если доступно несколько результирующих наборов, можно вызвать [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) метод, возвращающий **логическое** значение **true** Если доступны дополнительные результирующие наборы. Если доступно несколько результирующих наборов, можно вызвать метод getResultSet еще раз для доступа к ним, продолжить процесс, пока не будут обработаны все результирующие наборы. Если метод getMoreResults возвращает **false**, существует больше нет результирующих наборов для процесса.  
+ Если метод execute возвращает значение **true**, то выполненная инструкция возвратила один или несколько результирующих наборов. Доступ к первому результирующему набору можно получить, вызвав метод getResultSet. Чтобы определить, есть ли еще доступные результирующие наборы, можно вызвать метод [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md), который возвращает **логическое** значение **true**, если доступны также другие результирующие наборы. Если доступно большее число результирующих наборов, можно снова вызвать метод getResultSet, чтобы получить к ним доступ. Эту процедуру можно продолжать до тех пор, пока не будут обработаны все результирующие наборы. Если метод getMoreResults возвращает **false**, существуют больше нет результирующих наборов для процесса.  
   
- Если метод execute возвращает **false**, выполненная инструкция возвратила значение счетчика обновлений, которое можно получить, вызвав [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) метод.  
+ Если метод execute возвращает **false**, то выполненная инструкция возвратила значение числа обновлений, которое можно получить с помощью метода [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о счетчиках обновлений см. в разделе [с помощью хранимой процедуры с числом обновления](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).  
+>  Дополнительные сведения о счетчиках обновлений см. в разделе [использование хранимых процедур со счетчиком обновления](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).  
   
- В следующем примере открытое соединение с [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образца базы данных передается в функцию и создается инструкция SQL, при выполнении возвращает два результирующих набора:  
+ В следующем примере открытое подключение к примеру базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] передается в функцию, и создается инструкция SQL, которая после выполнения возвращает два результирующих набора:  
   
  [!code[JDBC#UsingMultipleResultSets1](../../connect/jdbc/codesnippet/Java/using-multiple-result-sets_1.java)]  
   
- В этом случае известно, что количество результирующих наборов равно двум. Но этот код написан таким образом, что даже если количество возвращенных результирующих наборов было бы неизвестно, как при вызове хранимой процедуры, все они были бы обработаны. Пример вызова хранимой процедуры, которая возвращает несколько результирующих наборов наряду со значениями обновления см. в разделе [обработка сложных инструкций](../../connect/jdbc/handling-complex-statements.md).  
+ В этом случае известно, что количество результирующих наборов равно двум. Но этот код написан таким образом, что даже если количество возвращенных результирующих наборов было бы неизвестно, как при вызове хранимой процедуры, все они были бы обработаны. Пример вызова хранимой процедуры, которая возвращает несколько результирующих наборов наряду со значениями обновления, см. в разделе [Обработка сложных инструкций](../../connect/jdbc/handling-complex-statements.md).  
   
 > [!NOTE]  
->  При вызове в метод getMoreResults класса SQLServerStatement, возвращенный ранее результирующий набор неявно закрывается.  
+>  Когда вызов метода getMoreResults класса SQLServerStatement, возвращенный ранее результирующий набор неявно закрывается.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование инструкций с драйвером JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

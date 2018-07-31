@@ -1,5 +1,5 @@
 ---
-title: Использование инструкций с драйвером JDBC | Документы Microsoft
+title: Использование инструкций с драйвером JDBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,39 +15,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c7da2ce5f69df8f28b281a935ea938b2648fa555
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968937"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Использование инструкций с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Можно использовать для работы с данными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базе данных различными способами. Драйвер JDBC можно использовать для выполнений инструкций SQL для базы данных или вызова хранимых процедур в базе данных, используя как входные, так и выходные параметры. Драйвер JDBC также поддерживает использование escape-последовательностей SQL, счетчиков обновления, автоматически формируемых ключей, а также выполнение обновлений в рамках пакетной операции.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] можно использовать для разнообразных способов работы с данными в базах [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Драйвер JDBC можно использовать для выполнений инструкций SQL для базы данных или вызова хранимых процедур в базе данных, используя как входные, так и выходные параметры. Драйвер JDBC также поддерживает использование escape-последовательностей SQL, счетчиков обновления, автоматически формируемых ключей, а также выполнение обновлений в рамках пакетной операции.  
   
- Драйвер JDBC предоставляет три класса для получения данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных:  
+ Драйвер JDBC предоставляет три класса для получения данных из базы [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
   
-1.  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) — служат для выполнения инструкций SQL без параметров.  
+1.  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) — используется для выполнения инструкций SQL без параметров.  
   
-2.  [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) — (унаследованные от SQLServerStatement), используемый для выполнения компилированных инструкций SQL, которые могут содержать параметры.  
+2.  [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) (наследуется от SQLServerStatement) — используется для выполнения скомпилированных инструкций SQL, которые могут содержать параметры IN.  
   
-3.  [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) — (унаследованные от SQLServerPreparedStatement) используется для запуска хранимых процедур, которые могут содержать параметры IN, OUT параметров или оба.  
+3.  [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) (наследуется от SQLServerPreparedStatement) — используется для запуска хранимых процедур, которые могут содержать параметры IN, OUT либо и те, и другие.  
   
- Подразделы данного раздела рассматриваются, как использовать каждый из трех классов инструкций для работы с данными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.  
+ В разделах этой статьи описано использование каждого из этих трех классов инструкций для работы с данными в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Использование инструкций в SQL](../../connect/jdbc/using-statements-with-sql.md)|Описывает, как использовать инструкции SQL с драйвером JDBC для работы с данными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
-|[Использование инструкций с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md)|Описывает использование хранимых процедур с драйвером JDBC для работы с данными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
+|[Использование инструкций в SQL](../../connect/jdbc/using-statements-with-sql.md)|Описывает использование инструкций SQL с драйвером JDBC для работы с данными в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Использование инструкций с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md)|Описывает использование хранимых процедур с драйвером JDBC для работы с данными в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Использование нескольких результирующих наборов](../../connect/jdbc/using-multiple-result-sets.md)|Описывает использование драйвера JDBC для извлечения данных из нескольких результирующих наборов.|  
 |[Использование escape-последовательностей SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Описывает использование escape-последовательностей SQL, таких как литералы даты и времени и функции.|  
 |[Использование автоматически сформированных ключей](../../connect/jdbc/using-auto-generated-keys.md)|Описывает использование автоматически формируемых ключей.|  
 |[Выполнение пакетных операций](../../connect/jdbc/performing-batch-operations.md)|Описывает использование драйвера JDBC для выполнения пакетных операций.|  
 |[Обработка сложных инструкций](../../connect/jdbc/handling-complex-statements.md)|Описывает использование драйвера JDBC для выполнения сложных инструкций, выполняющих несколько заданий и могущих вернуть различные типы данных.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

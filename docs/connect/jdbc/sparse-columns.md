@@ -1,5 +1,5 @@
 ---
-title: Разреженные столбцы | Документы Microsoft
+title: Разреженные столбцы | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2aa31ce2f41c8308025fd2648f18caf7ad8e04c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851689"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020980"
 ---
 # <a name="sparse-columns"></a>Разреженные столбцы
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Разреженные столбцы — это обычные столбцы, имеющие оптимизированное хранилище для значений NULL. Разреженные столбцы уменьшают пространство, необходимое для хранения значений NULL, однако увеличивают затраты на получение значений, отличных от NULL. Разреженные столбцы следует использовать только в том случае, если экономится не менее чем от 20 до 40 процентов места.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Драйвер JDBC 3.0 поддерживает разреженные столбцы при подключении к [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (или более поздней версии) сервера. Можно использовать [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md), или [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) Чтобы определить, какие столбцы являются разреженными и столбец, который является столбцом набора столбцов.  
+ Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 поддерживает разреженные столбцы при подключении к серверу [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] или более поздней версии. Чтобы определить, какие столбцы являются разреженными, а какие относятся к набору столбцов, можно использовать методы [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) или [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md).  
   
  Наборы столбцов представляют вычисляемые столбцы, которые возвращают все разреженные столбцы в нетипизированном формате XML. Наборы столбцов следует использовать в том случае, если в таблице существует большое число столбцов (более 1024) или если неудобно работать с отдельными разреженными столбцами. Набор столбцов может содержать до 30 000 столбцов.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "32851689"
   
  Второй листинг — это исходный код Java. Перед компиляцией приложения нужно изменить имя сервера в строке соединения.  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 use AdventureWorks  
@@ -67,7 +67,7 @@ VALUES ('07-20-09','05:15:00', 'CC', 'DD')
 GO  
 ```  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 import java.sql.*;  
@@ -189,7 +189,7 @@ public class SparseColumns {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Повышение производительности и надежности с помощью драйвера JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

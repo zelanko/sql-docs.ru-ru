@@ -1,6 +1,6 @@
 ---
-title: Массовое копирование данных с использованием интерфейса IRowsetFastLoad (OLE DB) | Документы Microsoft
-description: Массовое копирование данных в интерфейсе с помощью IRowsetFastLoad таблицы SQL Server из драйвер OLE DB для SQL Server
+title: Массовое копирование данных с использованием интерфейса IRowsetFastLoad (OLE DB) | Документация Майкрософт
+description: Массовое копирование данных в SQL Server интерфейс IRowsetFastLoad, с помощью таблицы драйвер OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 915a9ba3bf4a9f9937d79cbb9449671ca09b3cb9
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 60141327793c4839110dfed05165102060de2d00
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665664"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107726"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Выполнение массового копирования данных с использованием интерфейса IRowsetFastLoad (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Этот образец иллюстрирует использование интерфейса IRowsetFastLoad для массового копирования записей в таблицу.  
   
- Потребитель уведомляет драйвер OLE DB для SQL Server о необходимости массового копирования путем установки драйвера OLE DB для SQL Server драйвера свойства SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. Со свойством в источнике данных потребитель создает драйвер OLE DB для SQL Server сеанса. Новый сеанс позволяет потребителю получить доступ к **IRowsetFastLoad**.  
+ Потребитель уведомляет драйвер OLE DB для SQL Server о необходимости массового копирования путем установки драйвера OLE DB для SQL Server специфические для драйвера свойства SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. Свойство установлено в источнике данных потребитель создает драйвер OLE DB для SQL Server сеанса. Новый сеанс позволяет потребителю получить доступ к **IRowsetFastLoad**.  
   
- Доступен полный пример, иллюстрирующий использование **IRowsetFastLoad** для массового копирования записей в таблицу. В этом примере добавляется 10 записей в таблицу **IRFLTable**. Необходимо создать в таблице **IRFLTable** в базе данных.  
+ Имеется полный образец, иллюстрирующий применение интерфейса **IRowsetFastLoad** для массового копирования записей в таблицу. В этом образце в таблицу **IRFLTable** добавляется 10 записей. Необходимо создать в базе данных таблицу **IRFLTable**.  
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
@@ -46,24 +46,24 @@ ms.locfileid: "35665664"
   
 1.  Установите соединение с источником данных.  
   
-2.  Драйвер OLE DB для SQL Server драйвера свойство источника данных SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. Благодаря этому свойству присвоить значение VARIANT_TRUE вновь созданный сеанс позволяет потребителю получить доступ к **IRowsetFastLoad**.  
+2.  Драйвер OLE DB для SQL Server специфические для драйвера свойство источника данных SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. При присвоении этому свойству значения VARIANT_TRUE созданный сеанс позволит потребителю получить доступ к **IRowsetFastLoad**.  
   
-3.  Создайте сеанс, запрашивающий **IOpenRowset** интерфейса.  
+3.  Создайте сеанс, запрашивающий **IOpenRowset** интерфейс.  
   
-4.  Вызовите **IOpenRowset::OpenRowset** для открытия набора строк, содержащий все строки из таблицы (в котором данные — для копирования с помощью операции массового копирования).  
+4.  Вызовите метод **IOpenRowset::OpenRowset** для открытия набора строк, включающего все строки таблицы (в которую необходимо скопировать данные с помощью операции массового копирования).  
   
 5.  Выполните необходимые привязки и создайте метод доступа **IAccessor::CreateAccessor**.  
   
 6.  Задайте буфер памяти, из которого данные будут копироваться в таблицу.  
   
-7.  Вызовите **IRowsetFastLoad::InsertRow** для массового копирования данных в таблице.  
+7.  Вызовите **IRowsetFastLoad::InsertRow** для массового копирования данных в таблицу.  
   
 ## <a name="example"></a>Пример  
  В этом примере в таблицу IRFLTable добавляется 10 записей. Необходимо создать в базе данных таблицу IRFLTable. Этот образец не поддерживается на архитектуре IA64.  
   
  Выполните первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы создать таблицу, используемую приложением.  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы соединиться с именованным экземпляром, измените строку подключения из L"(local)» для L"(local)\\\name», где имя является именем экземпляра. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий msoledbsql.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь в том, что переменная среды INCLUDE включает каталог, содержащий файл msoledbsql.h.  
   
  Выполните третий листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы удалить таблицу, используемую приложением.  
   

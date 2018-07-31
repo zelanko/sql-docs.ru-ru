@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::bindColumn | Документы Microsoft
+title: PDOStatement::bindColumn | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b01f19dcb7b55da9c547d07d07784fe1730cdd66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308453"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006896"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,11 +34,11 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*столбец*: (смешанное значение) номер столбца (индекс, начинающийся 1) или имя столбца в результирующем наборе.  
+$*column*: номер (смешанные значения) столбца (с индексами от 1) или его имя в результирующем наборе.  
   
-&$*PARAM*: имя (смешанное) переменной PHP, к которому будет привязан столбец.  
+&$*param*: имя (смешанные значения) переменной PHP, к которой будет привязан столбец.  
   
-$*Тип*: необязательный тип данных параметра, представленный константой PDO::PARAM_ *.  
+$*type*: необязательный тип данных параметра, представленный константой PDO::PARAM_*.  
   
 $*maxLen*: необязательное целое число, не используемое драйверами Майкрософт для PHP для SQL Server.  
   
@@ -47,7 +47,7 @@ $*driverdata*: необязательные смешанные параметр�
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение TRUE в случае успеха, в противном случае — значение FALSE.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Пример  
@@ -70,7 +70,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_BOUND ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Класс PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  
