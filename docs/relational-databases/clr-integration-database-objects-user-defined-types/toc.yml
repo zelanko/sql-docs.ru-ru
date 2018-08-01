@@ -1,0 +1,22 @@
+- name: Определяемые пользователем типы данных CLR
+  href: clr-user-defined-types.md
+- name: "Доступ к определяемым пользователем типам\_— извлечение определяемых пользователем данных"
+  href: accessing-user-defined-types-retrieving-udt-data.md
+- name: "Доступ к определяемым пользователем типам\_— обновление определяемых пользователем столбцов с помощью DataAdapter"
+  href: accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
+- name: Доступ к определяемым пользователем типам в ADO.NET
+  href: accessing-user-defined-types-in-ado-net.md
+- name: "Создание определяемых пользователем типов\_— программирование"
+  href: creating-user-defined-types-coding.md
+- name: "Создание определяемых пользователем типов\_— требования"
+  href: creating-user-defined-types-requirements.md
+- name: Создание определяемых пользователем типов
+  href: creating-user-defined-types.md
+- name: Регистрация определяемых пользователем типов в SQL Server
+  href: registering-user-defined-types-in-sql-server.md
+- name: "Работа с определяемыми пользователем типами\_— определение пользовательских таблиц и столбцов"
+  href: working-with-user-defined-types-defining-udt-tables-and-columns.md
+- name: "Работа с определяемыми пользователем типами\_— обработка данных определяемого пользователем типа"
+  href: working-with-user-defined-types-manipulating-udt-data.md
+- name: Работа с определяемыми пользователем типами в SQL Server
+  href: working-with-user-defined-types-in-sql-server.md

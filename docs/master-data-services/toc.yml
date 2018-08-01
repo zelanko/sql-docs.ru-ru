@@ -1,0 +1,409 @@
+- name: Введение
+  href: master-data-services-overview-mds.md
+- name: Обзор
+  items:
+    - name: Новые возможности Master Data Services (MDS)
+      href: what-s-new-in-master-data-services-mds.md
+    - name: Новые и обновленные статьи
+      href: new-updated-master-data-services.md
+    - name: Изучение служб SQL Server Master Data Services
+      href: learn-sql-server-master-data-services.md
+    - name: 'Примеры: пакеты развертывания моделей (службы Master Data Services)'
+      href: sql-server-samples-model-deployment-packages-mds.md
+    - name: 'Функции, поддерживаемые различными выпусками SQL Server 2016 служб Master Data Services и качества данных'
+      href: master-data-services-and-data-quality-services-features-support.md
+    - name: Обратная совместимость (Master Data Services)
+      href: backward-compatibility-master-data-services.md
+    - name: Устаревшие функции Master Data Services
+      href: deprecated-master-data-services-features.md
+    - name: Неподдерживаемые функции служб Master Data Services
+      href: discontinued-master-data-services-features.md
+- name: Установка и настройка.
+  href: master-data-services-installation-and-configuration.md
+  items:
+    - name: Install-windows
+      href: ../master-data-services/install-windows/install-master-data-services.md
+    - name: Технический документ по установке в AlwaysOn
+      href: installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md
+    - name: Страница «Настройка сервера служб Master Data Services»
+      href: server-configuration-mds-configuration-manager.md
+    - name: Страница «Конфигурация базы данных»
+      href: database-configuration-page-master-data-services-configuration-manager.md
+- name: Функции и задачи
+  href: master-data-services-features-and-tasks.md
+  items:
+    - name: Диалоговое окно «Подключение к базе данных служб Master Data Services»
+      href: connect-to-a-master-data-services-database-dialog-box.md
+    - name: Мастер создания базы данных
+      href: create-database-wizard-master-data-services-configuration-manager.md
+    - name: Мастер обновления баз данных
+      href: upgrade-database-wizard-master-data-services-configuration-manager.md
+    - name: Диалоговое окно «Создание профиля электронной почты и учетной записи базы данных»
+      href: create-database-mail-profile-and-account-dialog-box.md
+    - name: Страница «Веб-конфигурация»
+      href: web-configuration-page-master-data-services-configuration-manager.md
+    - name: Диалоговое окно «Создание веб-приложения»
+      href: create-web-application-dialog-box-master-data-services-configuration-manager.md
+    - name: Диалоговое окно «Создание веб-сайта»
+      href: create-website-dialog-box-master-data-services-configuration-manager.md
+    - name: Раздел «Веб-конфигурация»
+      href: web-configuration-reference-master-data-services.md
+    - name: Надстройка для Microsoft Excel
+      href: ../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
+    - name: Модели
+      href: models-master-data-services.md
+      items:
+        - name: Создание модели
+          href: create-a-model-master-data-services.md
+        - name: Изменение модели
+          href: edit-model-master-data-services.md
+        - name: Удаление модели
+          href: delete-a-model-master-data-services.md
+    - name: Сущности
+      href: entities-master-data-services.md
+      items:
+        - name: Обозреватель зависимостей сущности
+          href: entity-dependencies-explorer.md
+        - name: Создание сущности
+          href: create-an-entity-master-data-services.md
+        - name: Изменение сущности
+          href: edit-an-entity-master-data-services.md
+        - name: Удаление сущности
+          href: delete-an-entity-master-data-services.md
+        - name: Отношение синхронизации сущностей
+          href: entity-sync-relationship-master-data-services.md
+        - name: Создание и выполнение отношений синхронизации сущностей
+          href: create-and-execute-an-entity-sync-relationship-master-data-services.md
+        - name: Создание и удаление отношения синхронизации сущностей
+          href: edit-and-delete-an-entity-sync-relationship-master-data-services.md
+        - name: Требуется утверждение
+          href: approval-required-master-data-services.md
+    - name: Пользовательский индекс
+      href: custom-index-master-data-services.md
+      items:
+        - name: Создание индекса
+          href: create-an-index-master-data-services.md
+        - name: Изменение и удаление индекса
+          href: edit-and-delete-an-index-master-data-services.md
+    - name: Атрибуты
+      href: attributes-master-data-services.md
+      items:
+        - name: Создание текстового атрибута
+          href: create-a-text-attribute-master-data-services.md
+        - name: Создание числового атрибута
+          href: create-a-numeric-attribute-master-data-services.md
+        - name: Создание атрибута даты
+          href: create-a-date-attribute-master-data-services.md
+        - name: Создание атрибута ссылки
+          href: create-a-link-attribute-master-data-services.md
+        - name: Создание файлового атрибута
+          href: create-a-file-attribute-master-data-services.md
+        - name: Изменение имени атрибута и типа данных
+          href: change-an-attribute-name-and-data-type-master-data-services.md
+        - name: Удаление атрибута
+          href: delete-an-attribute-master-data-services.md
+        - name: Изменение порядка атрибутов
+          href: change-the-order-of-attributes.md
+    - name: Атрибуты на основе домена
+      href: domain-based-attributes-master-data-services.md
+      items:
+        - name: Создание атрибута на основе домена
+          href: create-a-domain-based-attribute-master-data-services.md
+    - name: Группы атрибутов
+      href: attribute-groups-master-data-services.md
+      items:
+        - name: Создание группы атрибутов
+          href: create-an-attribute-group-master-data-services.md
+        - name: Превращение группы атрибутов в видимую для пользователей
+          href: make-an-attribute-group-visible-to-users-master-data-services.md
+        - name: Изменение имени группы атрибутов
+          href: change-an-attribute-group-name-master-data-services.md
+        - name: Удаление группы атрибутов
+          href: delete-an-attribute-group-master-data-services.md
+    - name: 'Обзор: импорт данных из таблиц (службы Master Data Services)'
+      href: overview-importing-data-from-tables-master-data-services.md
+      items:
+        - name: Импорт данных из таблиц (службы Master Data Services)
+          href: import-data-from-tables-master-data-services.md
+        - name: 'Просмотр ошибок, возникающих во время помещения на промежуточное хранение'
+          href: view-errors-that-occur-during-staging-master-data-services.md
+        - name: Конечный элемент таблицы элементов
+          href: leaf-member-staging-table-master-data-services.md
+        - name: Промежуточная таблица консолидированных элементов
+          href: consolidated-member-staging-table-master-data-services.md
+        - name: Промежуточная таблица связей
+          href: relationship-staging-table-master-data-services.md
+        - name: Промежуточная хранимая процедура
+          href: staging-stored-procedure-master-data-services.md
+        - name: Ошибки промежуточного процесса
+          href: staging-process-errors-master-data-services.md
+        - name: Состояния операции импорта
+          href: import-statuses-master-data-services.md
+    - name: Члены
+      href: members-master-data-services.md
+      items:
+        - name: Создание конечного элемента
+          href: create-a-leaf-member-master-data-services.md
+        - name: Create a Consolidated Member
+          href: create-a-consolidated-member-master-data-services.md
+        - name: Удаление элемента или коллекции
+          href: delete-a-member-or-collection-master-data-services.md
+        - name: Повторная активация элемента или коллекции
+          href: reactivate-a-member-or-collection-master-data-services.md
+        - name: Операторы фильтров
+          href: filter-operators-master-data-services.md
+        - name: Слияние конфликтов
+          href: merge-conflicts-master-data-services.md
+    - name: Зарезервированные слова
+      href: reserved-words-master-data-services.md
+    - name: Автоматическое создание кодов
+      href: automatic-code-creation-master-data-services.md
+      items:
+        - name: Автоматическое формирование значений атрибута Code
+          href: automatically-generate-code-attribute-values-master-data-services.md
+        - name: Автоматическое формирование значений атрибута отличного от Code
+          href: automatically-generate-attribute-values-other-than-code-master-data-services.md
+    - name: Бизнес-правила
+      href: business-rules-master-data-services.md
+      items:
+        - name: Создание и публикация бизнес-правила
+          href: create-and-publish-a-business-rule-master-data-services.md
+        - name: Добавление нескольких условий к бизнес-правилу
+          href: add-multiple-conditions-to-a-business-rule-master-data-services.md
+        - name: Запрос значений атрибута
+          href: require-attribute-values-master-data-services.md
+        - name: Изменение имени бизнес-правила
+          href: change-a-business-rule-name-master-data-services.md
+        - name: Настройка в бизнес-правилах отправки уведомлений
+          href: configure-business-rules-to-send-notifications-master-data-services.md
+        - name: 'Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)'
+          href: validate-specific-members-against-business-rules-master-data-services.md
+        - name: Исключение бизнес-правила
+          href: exclude-a-business-rule-master-data-services.md
+        - name: Удаление бизнес-правила
+          href: delete-a-business-rule-master-data-services.md
+        - name: Условия бизнес-правил
+          href: business-rule-conditions-master-data-services.md
+        - name: Действия бизнес-правил
+          href: business-rule-actions-master-data-services.md
+        - name: Business Rules Extension
+          href: business-rules-extension-master-data-services.md
+        - name: Примеры бизнес-правил (службы Master Data Services)
+          href: business-rule-examples-master-data-services.md
+    - name: Наборы изменений
+      href: changesets-master-data-services.md
+      items:
+        - name: Создание набора изменений
+          href: create-a-changeset-master-data-services.md
+        - name: Применение и обновление набора изменений
+          href: apply-and-update-a-changeset-master-data-services.md
+        - name: Фиксация или отправка набора изменений
+          href: commit-or-submit-a-changeset-master-data-services.md
+        - name: Утверждение или отклонение набора изменений
+          href: approve-or-reject-a-changeset-master-data-services.md
+        - name: Управление наборами изменений
+          href: manage-changesets-master-data-services.md
+    - name: Уведомления
+      href: notifications-master-data-services.md
+      items:
+        - name: Настройка уведомления электронной почты
+          href: configure-email-notifications-master-data-services.md
+    - name: Transactions
+      href: transactions-master-data-services.md
+      items:
+        - name: Отмена транзакции
+          href: reverse-a-transaction-master-data-services.md
+        - name: Изменение типа журнала транзакций сущности
+          href: change-the-entity-transaction-log-type-master-data-services.md
+        - name: Журнал изменений элемента
+          href: member-revision-history-master-data-services.md
+        - name: Откат журнала изменений элемента
+          href: rollback-member-revision-history-master-data-services.md
+    - name: Заметки
+      href: annotations-master-data-services.md
+      items:
+        - name: Добавление заметки для транзакции
+          href: annotate-a-transaction-master-data-services.md
+    - name: Иерархии
+      href: hierarchies-master-data-services.md
+      items:
+        - name: Явные иерархии
+          href: explicit-hierarchies-master-data-services.md
+          items:
+            - name: Создание явной иерархии
+              href: create-an-explicit-hierarchy-master-data-services.md
+            - name: Изменение имени явной иерархии
+              href: change-an-explicit-hierarchy-name-master-data-services.md
+            - name: Удаление явной иерархии
+              href: delete-an-explicit-hierarchy-master-data-services.md
+        - name: Производные иерархии
+          href: derived-hierarchies-master-data-services.md
+          items:
+            - name: Рекурсивные иерархии
+              href: recursive-hierarchies-master-data-services.md
+            - name: Производные иерархии с явными ограничениями
+              href: derived-hierarchies-with-explicit-caps-master-data-services.md
+            - name: Создание производной иерархии
+              href: create-a-derived-hierarchy-master-data-services.md
+            - name: скрыть или удалить уровни в производной иерархии
+              href: hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md
+            - name: Изменение имени производной иерархии
+              href: change-a-derived-hierarchy-name-master-data-services.md
+            - name: Удаление производной иерархии
+              href: delete-a-derived-hierarchy-master-data-services.md
+            - name: Отображение связей "многие-ко-многим" в производных иерархиях
+              href: show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md
+    - name: Коллекции
+      href: collections-master-data-services.md
+      items:
+        - name: Создание коллекции
+          href: create-a-collection-master-data-services.md
+        - name: Добавление элементов в коллекцию
+          href: add-members-to-a-collection-master-data-services.md
+    - name: Обзор. Экспорт данных (службы Master Data Services)
+      href: overview-exporting-data-master-data-services.md
+      items:
+        - name: Создание представления подписки для экспорта данных (службы Master Data Services)
+          href: create-a-subscription-view-to-export-data-master-data-services.md
+        - name: Удаление представления подписки
+          href: delete-a-subscription-view-master-data-services.md
+        - name: Форматы представлений подписки
+          href: subscription-view-formats-master-data-services.md
+    - name: Версии
+      href: versions-master-data-services.md
+      items:
+        - name: Изменение имени версии
+          href: change-a-version-name-master-data-services.md
+        - name: Блокировка версии
+          href: lock-a-version-master-data-services.md
+        - name: Разблокировка версии
+          href: unlock-a-version-master-data-services.md
+        - name: Фиксация версии
+          href: commit-a-version-master-data-services.md
+        - name: Создание флага версии
+          href: create-a-version-flag-master-data-services.md
+        - name: Изменение имени флага версии
+          href: change-a-version-flag-name-master-data-services.md
+        - name: Назначение флага версии
+          href: assign-a-flag-to-a-version-master-data-services.md
+        - name: Копирование версии
+          href: copy-a-version-master-data-services.md
+        - name: Удаление версии
+          href: delete-a-version-master-data-services.md
+        - name: Очистка элементов версии
+          href: purge-version-members-master-data-services.md
+    - name: Проверка
+      href: validation-master-data-services.md
+      items:
+        - name: 'Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам'
+          href: validate-a-version-against-business-rules-master-data-services.md
+        - name: Состояния проверки
+          href: validation-statuses-master-data-services.md
+        - name: Проверка хранимых процедур
+          href: validation-stored-procedure-master-data-services.md
+    - name: Развертывание моделей
+      href: deploying-models-master-data-services.md
+      items:
+        - name: Создание пакета развертывания модели с помощью мастера
+          href: create-a-model-deployment-package-by-using-the-wizard.md
+        - name: Создание пакета развертывания модели при помощи MDSModelDeploy
+          href: create-a-model-deployment-package-by-using-mdsmodeldeploy.md
+        - name: Варианты развертывания модели
+          href: model-deployment-options-master-data-services.md
+        - name: Развертывание пакета развертывания модели с помощью мастера
+          href: deploy-a-model-deployment-package-by-using-the-wizard.md
+        - name: Развертывание пакета развертывания модели при помощи MDSModelDeploy
+          href: deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
+        - name: Изменение пакета развертывания модели
+          href: edit-a-model-deployment-package.md
+    - name: безопасность
+      href: security-master-data-services.md
+      items:
+        - name: Администраторы
+          href: administrators-master-data-services.md
+          items:
+            - name: Создание администратора модели
+              href: create-a-model-administrator-master-data-services.md
+            - name: Создание администратора сущностей (службы Master Data Services)
+              href: create-an-entity-administrator-master-data-services.md
+        - name: Пользователи и группы
+          href: users-and-groups-master-data-services.md
+          items:
+            - name: Добавление пользователя
+              href: add-a-user-master-data-services.md
+            - name: Добавление группы
+              href: add-a-group-master-data-services.md
+            - name: Изменение адреса электронной почты пользователя
+              href: change-a-user-s-email-address-master-data-services.md
+            - name: Удаление пользователей или группы
+              href: delete-users-or-groups-master-data-services.md
+        - name: Разрешения функциональной области
+          href: functional-area-permissions-master-data-services.md
+          items:
+            - name: Назначение разрешений для функциональной области
+              href: assign-functional-area-permissions-master-data-services.md
+        - name: Разрешения объекта модели
+          href: model-object-permissions-master-data-services.md
+          items:
+            - name: Назначение разрешения объекта модели
+              href: assign-model-object-permissions-master-data-services.md
+            - name: Удаление разрешений для объекта модели
+              href: delete-model-object-permissions-master-data-services.md
+            - name: Разрешения модели
+              href: model-permissions-master-data-services.md
+            - name: Разрешения сущности
+              href: entity-permissions-master-data-services.md
+            - name: Разрешения конечного элемента
+              href: leaf-permissions-master-data-services.md
+            - name: Разрешения коллекции
+              href: collection-permissions-master-data-services.md
+            - name: Навигационный доступ
+              href: navigational-access-master-data-services.md
+        - name: Разрешения на элементы иерархии
+          href: hierarchy-member-permissions-master-data-services.md
+          items:
+            - name: Назначение разрешений для элемента иерархии
+              href: assign-hierarchy-member-permissions-master-data-services.md
+            - name: Срочное применение разрешения для элемента
+              href: immediately-apply-member-permissions-master-data-services.md
+            - name: Удаление разрешений элемента иерархии
+              href: delete-hierarchy-member-permissions-master-data-services.md
+        - name: Способ определения разрешений
+          href: how-permissions-are-determined-master-data-services.md
+        - name: Пересечение разрешений для моделей и элементов
+          href: overlapping-model-and-member-permissions-master-data-services.md
+        - name: Пересечение разрешений для пользователей и групп
+          href: overlapping-user-and-group-permissions-master-data-services.md
+        - name: Проверка разрешений пользователя
+          href: test-a-user-s-permissions-master-data-services.md
+- name: Технический справочник (службы Master Data Services)
+  href: technical-reference-master-data-services.md
+  items:
+    - name: База данных служб Master Data Services
+      href: master-data-services-database.md
+      items:
+        - name: Системные настройки
+          href: system-settings-master-data-services.md
+        - name: Защита объектов базы данных
+          href: database-object-security-master-data-services.md
+        - name: 'Имена входа, пользователи и роли базы данных'
+          href: database-logins-users-and-roles-master-data-services.md
+    - name: Веб-приложение диспетчера основных данных
+      href: master-data-manager-web-application.md
+      items:
+        - name: Функциональная область обозревателя
+          href: explorer-functional-area-master-data-manager.md
+        - name: Функциональная область управления версиями
+          href: version-management-functional-area-master-data-manager.md
+        - name: Функциональная область управления интеграцией
+          href: integration-management-functional-area-master-data-manager.md
+        - name: Функциональная область системного администрирования
+          href: system-administration-functional-area-master-data-manager.md
+        - name: Функциональная область разрешений пользователей и групп
+          href: user-and-group-permissions-functional-area-master-data-manager.md
+        - name: Разрешения для папок и файлов
+          href: folder-and-file-permissions-master-data-services.md
+    - name: Трассировка
+      href: tracing-master-data-services.md
+- name: Статьи для разработчиков MDS
+  href: ../master-data-services/develop/categorized-web-service-operations-master-data-services.md

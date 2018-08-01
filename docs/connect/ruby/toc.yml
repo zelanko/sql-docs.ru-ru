@@ -1,0 +1,8 @@
+- name: Драйвер Ruby для SQL Server
+  href: ruby-driver-for-sql-server.md
+- name: "Шаг\_1. Настройка среды разработки для разработки на языке Ruby"
+  href: step-1-configure-development-environment-for-ruby-development.md
+- name: "Шаг\_2. Создание базы данных SQL для разработки на языке Ruby"
+  href: step-2-create-a-sql-database-for-ruby-development.md
+- name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby"
+  href: step-3-proof-of-concept-connecting-to-sql-using-ruby.md

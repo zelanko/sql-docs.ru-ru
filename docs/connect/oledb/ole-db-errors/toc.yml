@@ -1,0 +1,12 @@
+- name: "Ошибки в драйвере OLE\_DB для SQL\_Server"
+  href: errors.md
+- name: Сведения в интерфейсах обработки ошибок
+  href: information-in-error-interfaces.md
+- name: Получение информации об ошибке
+  href: retrieving-error-information.md
+- name: Коды возврата
+  href: return-codes.md
+- name: Подробные сведения об ошибках SQL Server
+  href: sql-server-error-detail.md
+- name: Результаты сообщения SQL Server
+  href: sql-server-message-results.md

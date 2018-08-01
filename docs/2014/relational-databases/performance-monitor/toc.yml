@@ -1,0 +1,103 @@
+- name: Наблюдение за использованием ресурсов (системный монитор)
+  href: monitor-resource-usage-system-monitor.md
+  items:
+    - name: Запуск системного монитора
+      href: run-system-monitor.md
+    - name: Наблюдение за использованием диска
+      href: monitor-disk-usage.md
+    - name: Мониторинг использования ЦП
+      href: monitor-cpu-usage.md
+    - name: Наблюдение за использованием памяти
+      href: monitor-memory-usage.md
+- name: Создание предупреждения для базы данных SQL Server
+  href: create-a-sql-server-database-alert.md
+- name: 'Создание диаграмм, предупреждений, журналов и отчетов'
+  href: create-charts-alerts-logs-and-reports.md
+- name: Использование объектов SQL Server
+  href: use-sql-server-objects.md
+  items:
+    - name: 'Агент SQL Server, объект Alerts'
+      href: sql-server-agent-alerts-object.md
+    - name: 'Агент SQL Server, объект Jobs'
+      href: sql-server-agent-jobs-object.md
+    - name: 'Агент SQL Server, объект JobSteps'
+      href: sql-server-agent-jobsteps-object.md
+    - name: 'Агент SQL Server, объект Statistics'
+      href: sql-server-agent-statistics-object.md
+    - name: 'SQL Server, объект Access Methods'
+      href: sql-server-access-methods-object.md
+    - name: 'SQL Server, реплика доступности'
+      href: sql-server-availability-replica.md
+    - name: 'SQL Server, объект Backup Device'
+      href: sql-server-backup-device-object.md
+    - name: 'SQL Server, объект Broker Activation'
+      href: sql-server-broker-activation-object.md
+    - name: 'SQL Server, объект Broker Statistics'
+      href: sql-server-broker-statistics-object.md
+    - name: 'SQL Server, объект Broker TO Statistics'
+      href: sql-server-broker-to-statistics-object.md
+    - name: 'SQL Server, объект Broker и DBM Transport'
+      href: sql-server-broker-dbm-transport-object.md
+    - name: 'SQL Server, объект Buffer Manager'
+      href: sql-server-buffer-manager-object.md
+    - name: 'SQL Server, объект Buffer Node'
+      href: sql-server-buffer-node.md
+    - name: 'SQL Server, объект «Среда CLR»'
+      href: sql-server-clr-object.md
+    - name: 'SQL Server: объект Cursor Manager by Type'
+      href: sql-server-cursor-manager-by-type-object.md
+    - name: 'SQL Server, объект Cursor Manager Total'
+      href: sql-server-cursor-manager-total-object.md
+    - name: 'SQL Server, объект Database Mirroring'
+      href: sql-server-database-mirroring-object.md
+    - name: 'SQL Server, реплика базы данных'
+      href: sql-server-database-replica.md
+    - name: 'SQL Server, объект Databases'
+      href: sql-server-databases-object.md
+    - name: 'SQL Server, объект Deprecated Features'
+      href: sql-server-deprecated-features-object.md
+    - name: 'SQL Server, объект ExecStatistics'
+      href: sql-server-execstatistics-object.md
+    - name: 'SQL Server, объект General Statistics'
+      href: sql-server-general-statistics-object.md
+    - name: 'SQL Server, HTTP_STORAGE_OBJECT'
+      href: sql-server-http-storage-object.md
+    - name: 'SQL Server, объект Latches'
+      href: sql-server-latches-object.md
+    - name: 'SQL Server, объект Locks'
+      href: sql-server-locks-object.md
+    - name: 'SQL Server, объект Memory Manager'
+      href: sql-server-memory-manager-object.md
+    - name: 'SQL Server, память узла'
+      href: sql-server-memory-node.md
+    - name: 'SQL Server, объект Plan Cache'
+      href: sql-server-plan-cache-object.md
+    - name: 'SQL Server, объект Resource Pool Stats'
+      href: sql-server-resource-pool-stats-object.md
+    - name: 'SQL Server, объект SQL Errors'
+      href: sql-server-sql-errors-object.md
+    - name: 'SQL Server, объект SQL Statistics'
+      href: sql-server-sql-statistics-object.md
+    - name: 'SQL Server, объект Transactions'
+      href: sql-server-transactions-object.md
+    - name: 'SQL Server, объект User Settable'
+      href: sql-server-user-settable-object.md
+    - name: 'SQL Server, объект Wait Statistics'
+      href: sql-server-wait-statistics-object.md
+    - name: 'SQL Server, объект Workload Group Stats'
+      href: sql-server-workload-group-stats-object.md
+- name: Счетчики производительности XTP (In-Memory OLTP)
+  href: sql-server-xtp-in-memory-oltp-performance-counters.md
+  items:
+    - name: Курсоры XTP
+      href: sql-server-xtp-cursors.md
+    - name: Сборка мусора XTP
+      href: sql-server-xtp-garbage-collection.md
+    - name: XTP Phantom Processor
+      href: sql-server-xtp-phantom-processor.md
+    - name: Хранилище XTP
+      href: sql-server-xtp-storage.md
+    - name: Журнал транзакций XTP
+      href: sql-server-xtp-transaction-log.md
+    - name: Транзакции XTP
+      href: sql-server-xtp-transactions.md

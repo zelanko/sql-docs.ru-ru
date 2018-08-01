@@ -1,0 +1,407 @@
+- name: Поток данных
+  href: data-flow.md
+- name: Помощник источника
+  href: source-assistant.md
+  items:
+    - name: Добавление источника с помощью помощника по источнику
+      href: ../add-a-source-using-source-assistant.md
+    - name: Добавление нового целевого диалогового окна
+      href: ../add-new-source-dialog-box.md
+- name: Помощник назначения
+  href: destination-assistant.md
+  items:
+    - name: Добавление назначения с помощью помощника по назначениям
+      href: ../add-a-destination-using-destination-assistant.md
+    - name: Добавления нового целевого диалогового окна
+      href: ../add-new-destination-dialog-box.md
+- name: Источник ADO NET
+  href: ado-net-source.md
+  items:
+    - name: Редактор источника данных «ADO.NET» (страница «Диспетчер соединений»)
+      href: ../ado-net-source-editor-connection-manager-page.md
+    - name: Редактор источника «ADO.NET» (страница «Столбцы»)
+      href: ../ado-net-source-editor-columns-page.md
+    - name: Редактор источника данных «ADO.NET» (страница «Вывод ошибок»)
+      href: ../ado-net-source-editor-error-output-page.md
+- name: Назначение «ADO.NET»
+  href: ado-net-destination.md
+  items:
+    - name: Редактор назначения «ADO.NET» (страница «Диспетчер соединений»)
+      href: ../ado-net-destination-editor-connection-manager-page.md
+    - name: Редактор назначения «ADO.NET» (страница «Сопоставления»)
+      href: ../ado-net-destination-editor-mappings-page.md
+    - name: Редактор назначения «ADO.NET» (страница «Вывод ошибок»)
+      href: ../ado-net-destination-editor-error-output-page.md
+- name: Диспетчер соединений ADO.NET
+  href: ../connection-manager/ado-net-connection-manager.md
+  items:
+    - name: настройка диспетчера соединений ADO.NET
+      href: ../configure-ado-net-connection-manager.md
+- name: Пользовательские свойства ADO NET
+  href: ado-net-custom-properties.md
+- name: Диспетчер соединений ADO
+  href: ../connection-manager/ado-connection-manager.md
+- name: Компоненты потока CDC
+  href: cdc-flow-components.md
+  items:
+    - name: CDC-источник
+      href: cdc-source.md
+      items:
+        - name: Редактор источника «CDC» (страница «Диспетчер соединений»)
+          href: ../cdc-source-editor-connection-manager-page.md
+        - name: Редактор источника «CDC» (страница «Столбцы»)
+          href: ../cdc-source-editor-columns-page.md
+        - name: Редактор источника «CDC» (страница «Вывод ошибок»)
+          href: ../cdc-source-editor-error-output-page.md
+        - name: Пользовательские свойства источника «CDC»
+          href: cdc-source-custom-properties.md
+        - name: Извлечение информации об изменениях данных с помощью источника CDC
+          href: extract-change-data-using-the-cdc-source.md
+    - name: Разделитель CDC
+      href: cdc-splitter.md
+    - name: Выбор направления потока CDC в соответствии с типом изменения
+      href: direct-the-cdc-stream-according-to-the-type-of-change.md
+    - name: Определение переменной состояния
+      href: define-a-state-variable.md
+- name: Источник Excel
+  href: excel-source.md
+  items:
+    - name: Редактор источника Excel (страница «Диспетчер соединений»)
+      href: ../excel-source-editor-connection-manager-page.md
+    - name: Редактор источника Excel (страница «Столбцы»)
+      href: ../excel-source-editor-columns-page.md
+    - name: Редактор источника Excel (страница «Вывод ошибок»)
+      href: ../excel-source-editor-error-output-page.md
+- name: Назначение Excel
+  href: excel-destination.md
+  items:
+    - name: Редактор назначения «Excel» (страница «Диспетчер соединений»)
+      href: ../excel-destination-editor-connection-manager-page.md
+    - name: Редактор назначения «Excel» (страница «Сопоставления»)
+      href: ../excel-destination-editor-mappings-page.md
+    - name: Редактор назначения «Excel» (страница «Вывод ошибок»)
+      href: ../excel-destination-editor-error-output-page.md
+- name: Диспетчер соединений с Excel
+  href: ../connection-manager/excel-connection-manager.md
+  items:
+    - name: редактор диспетчера соединений с Excel
+      href: ../excel-connection-manager-editor.md
+- name: Пользовательские свойства Excel
+  href: excel-custom-properties.md
+- name: диспетчер соединения файлов
+  href: ../connection-manager/file-connection-manager.md
+  items:
+    - name: редактор диспетчера подключения файлов
+      href: ../file-connection-manager-editor.md
+    - name: Добавление диспетчера соединения файлов диалогового окна пользовательского Интерфейса в справочник
+      href: ../connection-manager/add-file-connection-manager-dialog-box-ui-reference.md
+    - name: Предложение типов столбцов диалогового окна справочника по пользовательскому интерфейсу
+      href: ../connection-manager/suggest-column-types-dialog-box-ui-reference.md
+- name: источник «Неструктурированный файл»
+  href: flat-file-source.md
+  items:
+    - name: Редактор источника «Неструктурированный файл» (страница «Диспетчер соединений»)
+      href: ../flat-file-source-editor-connection-manager-page.md
+    - name: Редактор источника «Неструктурированный файл» (страница «Столбцы»)
+      href: ../flat-file-source-editor-columns-page.md
+    - name: Редактор источника «Неструктурированный файл» (страница «Вывод ошибок»)
+      href: ../flat-file-source-editor-error-output-page.md
+- name: назначение «Неструктурированный файл»
+  href: flat-file-destination.md
+  items:
+    - name: Редактор назначения «Неструктурированный файл» (страница «Диспетчер соединений»)
+      href: ../flat-file-destination-editor-connection-manager-page.md
+    - name: Редактор назначения «Неструктурированный файл» (страница «Сопоставления»)
+      href: ../flat-file-destination-editor-mappings-page.md
+- name: Диспетчер соединений с неструктурированными файлами
+  href: ../connection-manager/flat-file-connection-manager.md
+  items:
+    - name: Редактор диспетчера соединения с неструктурированными файлами (страница «Предварительный просмотр»)
+      href: ../flat-file-connection-manager-editor-preview-page.md
+    - name: Редактор диспетчера соединений с неструктурированными файлами (страница «Дополнительно»)
+      href: ../flat-file-connection-manager-editor-advanced-page.md
+    - name: Редактор диспетчера соединений с неструктурированными файлами (страница «Столбцы»)
+      href: ../flat-file-connection-manager-editor-columns-page.md
+    - name: Редактор диспетчера соединений с неструктурированными файлами (страница «Общие»)
+      href: ../flat-file-connection-manager-editor-general-page.md
+- name: диспетчер соединения с несколькими неструктурированными файлами
+  href: ../connection-manager/multiple-flat-files-connection-manager.md
+  items:
+    - name: Редактор диспетчера соединений с несколькими неструктурированными файлами (страница «Общие»)
+      href: ../multiple-flat-files-connection-manager-editor-general-page.md
+    - name: Редактор диспетчера соединения с несколькими неструктурированными файлами (страница «Столбцы»)
+      href: ../multiple-flat-files-connection-manager-editor-columns-page.md
+    - name: Редактор диспетчера соединения с несколькими неструктурированными файлами (страница «Дополнительно»)
+      href: ../multiple-flat-files-connection-manager-editor-advanced-page.md
+    - name: Редактор диспетчера соединений с несколькими неструктурированными файлами (страница «Предварительный просмотр»)
+      href: ../multiple-flat-files-connection-manager-editor-preview-page.md
+- name: Пользовательские свойства неструктурированного файла
+  href: flat-file-custom-properties.md
+- name: Компоненты потока ODBC
+  href: odbc-flow-components.md
+  items:
+    - name: Назначение ODBC
+      href: odbc-destination.md
+      items:
+        - name: Редактор назначения «ODBC» (страница «Вывод ошибок»)
+          href: ../odbc-destination-editor-error-output-page.md
+        - name: Редактор назначения ODBC (страница «Сопоставления»)
+          href: ../odbc-destination-editor-mappings-page.md
+        - name: Редактор назначения «ODBC» (страница «Диспетчер соединений»)
+          href: ../odbc-destination-editor-connection-manager-page.md
+        - name: Загрузка данных с помощью назначения ODBС
+          href: load-data-by-using-the-odbc-destination.md
+        - name: Пользовательские свойства назначений ODBC
+          href: odbc-destination-custom-properties.md
+    - name: ODBC-источник
+      href: odbc-source.md
+      items:
+        - name: Редактор источника «ODBC» (страница «Вывод ошибок»)
+          href: ../odbc-source-editor-error-output-page.md
+        - name: Редактор источника «ODBC» (страница «Столбцы»)
+          href: ../odbc-source-editor-columns-page.md
+        - name: Редактор источника «ODBC» (страница «Диспетчер соединений»)
+          href: ../odbc-source-editor-connection-manager-page.md
+        - name: Извлечение данных с помощью источника ODBC
+          href: extract-data-by-using-the-odbc-source.md
+        - name: Пользовательские свойства источника «ODBC»
+          href: odbc-source-custom-properties.md
+- name: диспетчер соединений ODBC
+  href: ../connection-manager/odbc-connection-manager.md
+  items:
+    - name: Справочник по пользовательскому интерфейсу диспетчера соединений ODBC
+      href: ../odbc-connection-manager-ui-reference.md
+- name: Источник OLE DB
+  href: ole-db-source.md
+  items:
+    - name: Редактор источника OLE DB (страница «Диспетчер соединений»)
+      href: ../ole-db-source-editor-connection-manager-page.md
+    - name: Редактор источника «OLE DB» (страница «Столбцы»)
+      href: ../ole-db-source-editor-columns-page.md
+    - name: Редактор источника «OLE DB» (страница «Вывод ошибок»)
+      href: ../ole-db-source-editor-error-output-page.md
+    - name: Извлечение данных с помощью источника OLE DB
+      href: extract-data-by-using-the-ole-db-source.md
+- name: Назначение «OLE DB»
+  href: ole-db-destination.md
+  items:
+    - name: Редактор назначения OLE DB (страница «Диспетчер соединений»)
+      href: ../ole-db-destination-editor-connection-manager-page.md
+    - name: Редактор назначения OLE DB (страница «Сопоставления»)
+      href: ../ole-db-destination-editor-mappings-page.md
+    - name: Редактор назначения «OLE DB» (страница «Вывод ошибок»)
+      href: ../ole-db-destination-editor-error-output-page.md
+    - name: Загрузка данных с помощью назначения «OLE DB»
+      href: load-data-by-using-the-ole-db-destination.md
+- name: диспетчер соединений OLE DB
+  href: ../connection-manager/ole-db-connection-manager.md
+  items:
+    - name: настройка диспетчера соединений OLE DB
+      href: ../configure-ole-db-connection-manager.md
+- name: Пользовательские свойства OLE DB
+  href: ole-db-custom-properties.md
+- name: источник «Необработанный файл»
+  href: raw-file-source.md
+  items:
+    - name: Редактор источника «Необработанный файл» (страница «Диспетчер соединений»)
+      href: ../raw-file-source-editor-connection-manager-page.md
+    - name: Редактор источника «Необработанный файл»  (страница "Столбцы")
+      href: ../raw-file-source-editor-columns-page.md
+- name: назначение «Необработанный файл»
+  href: raw-file-destination.md
+  items:
+    - name: Редактор назначения «Необработанный файл» (страница «Диспетчер соединений»)
+      href: ../raw-file-destination-editor-connection-manager-page.md
+    - name: Редактор назначения «Строковый файл» (страница «Столбцы»)
+      href: ../raw-file-destination-editor-columns-page.md
+- name: Пользовательские свойства необработанного файла
+  href: raw-file-custom-properties.md
+- name: целевой объект «Обучение модели интеллектуального анализа данных»
+  href: data-mining-model-training-destination.md
+  items:
+    - name: Редактор обучения модели интеллектуального анализа данных (вкладка «Соединение»)
+      href: ../data-mining-model-training-editor-connection-tab.md
+    - name: Редактор обучения модели интеллектуального анализа данных (вкладка «Столбцы»)
+      href: ../data-mining-model-training-editor-columns-tab.md
+    - name: Пользовательские свойства назначения «Обучение модели интеллектуального анализа данных»
+      href: data-mining-model-training-destination-custom-properties.md
+- name: назначение DataReader
+  href: datareader-destination.md
+  items:
+    - name: Пользовательские свойства назначения «Модуль чтения данных»
+      href: datareader-destination-custom-properties.md
+- name: назначение «Обработка измерений»
+  href: dimension-processing-destination.md
+  items:
+    - name: Редактор назначения обработки измерений (страница «Диспетчер соединений»)
+      href: ../dimension-processing-destination-editor-connection-manager-page.md
+    - name: Редактор назначения «Обработка измерения» (страница «Сопоставления»)
+      href: ../dimension-processing-destination-editor-mappings-page.md
+    - name: Редактор назначения обработки измерений (страница «Дополнительно»)
+      href: ../dimension-processing-destination-editor-advanced-page.md
+    - name: Пользовательские свойства назначения «Обработка измерений»
+      href: dimension-processing-destination-custom-properies.md
+- name: Назначение обработки секции
+  href: partition-processing-destination.md
+  items:
+    - name: Редактор назначения обработки секций (страница «Диспетчер соединений»)
+      href: ../partition-processing-destination-editor-connection-manager-page.md
+    - name: Редактор назначения «Обработка секций» (страница «Сопоставления»)
+      href: ../partition-processing-destination-editor-mappings-page.md
+    - name: Редактор назначения обработки секций (страница «Дополнительно»)
+      href: ../partition-processing-destination-editor-advanced-page.md
+    - name: Пользовательские свойства назначения «Обработка секций»
+      href: partition-processing-destination-custom-properties.md
+- name: назначение «Набор записей»
+  href: recordset-destination.md
+  items:
+    - name: использовать назначение «Набор записей»
+      href: use-a-recordset-destination.md
+    - name: Пользовательские свойства назначения «Набор записей»
+      href: recordset-destination-custom-properties.md
+- name: Назначение «SQL Server Compact Edition»
+  href: sql-server-compact-edition-destination.md
+  items:
+    - name: Пользовательские свойства назначения «SQL Server Compact Edition»
+      href: sql-server-compact-edition-destination-custom-properties.md
+- name: Диспетчер соединений SQL Server Compact Edition
+  href: ../connection-manager/sql-server-compact-edition-connection-manager.md
+  items:
+    - name: Редактор диспетчера соединений SQL Server Compact Edition (страница «Соединение»)
+      href: ../sql-server-compact-edition-connection-manager-editor-connection-page.md
+    - name: Редактор диспетчера соединений SQL Server Compact Edition (страница «Все»)
+      href: ../sql-server-compact-edition-connection-manager-editor-all-page.md
+- name: назначение «SQL Server»
+  href: sql-server-destination.md
+  items:
+    - name: Редактор назначения «SQL» (страница «Диспетчер соединений»)
+      href: ../sql-destination-editor-connection-manager-page.md
+    - name: Редактор назначения "SQL" (страница «Сопоставления»)
+      href: ../sql-destination-editor-mappings-page.md
+    - name: Редактор назначения SQL (страница «Дополнительно»)
+      href: ../sql-destination-editor-advanced-page.md
+    - name: Выполнение массовой загрузки данных с помощью назначения «SQL Server»
+      href: bulk-load-data-by-using-the-sql-server-destination.md
+    - name: Пользовательские свойства назначения «SQL Server»
+      href: sql-server-destination-custom-properties.md
+- name: XML-источник
+  href: xml-source.md
+  items:
+    - name: Редактор источника «XML» (страница «Диспетчер соединений»)
+      href: ../xml-source-editor-connection-manager-page.md
+    - name: Редактор источника «XML» (страница «Столбцы»)
+      href: ../xml-source-editor-columns-page.md
+    - name: Редактор источника «XML» (страница «Вывод ошибок»)
+      href: ../xml-source-editor-error-output-page.md
+    - name: Извлечение данных с помощью XML-источника
+      href: extract-data-by-using-the-xml-source.md
+    - name: Пользовательские свойства источника «XML»
+      href: xml-source-custom-properties.md
+- name: Преобразования служб Integration Services +
+  href: transformations/integration-services-transformations.md
+- name: Пути служб Integration Services
+  href: integration-services-paths.md
+  items:
+    - name: Просмотр метаданных пути в редакторе пути потока данных
+      href: ../view-path-metadata-in-the-data-flow-path-editor.md
+      items:
+        - name: Редактор пути потока данных (страница «Общие»)
+          href: ../data-flow-path-editor-general-page.md
+        - name: Редактор пути потока данных (страница «Метаданные»)
+          href: ../data-flow-path-editor-metadata-page.md
+        - name: Редактор пути потока данных (страница «Средства просмотра данных»)
+          href: ../data-flow-path-editor-data-viewers-page.md
+    - name: Задание свойств пути с помощью редактора пути потока данных
+      href: ../set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md
+    - name: Соединение компонентов с путями
+      href: ../connect-components-with-paths.md
+    - name: Свойства пути
+      href: ../path-properties.md
+- name: Данные потоков данных
+  href: data-in-data-flows.md
+  items:
+    - name: Типы данных служб Integration Services
+      href: integration-services-data-types.md
+    - name: Анализ данных
+      href: parsing-data.md
+      items:
+        - name: Fast Parse
+          href: ../fast-parse.md
+          items:
+            - name: Форматы числовых данных
+              href: ../numeric-data-formats.md
+            - name: Форматы даты и времени
+              href: ../date-and-time-formats.md
+            - name: Установка быстрого анализа
+              href: ../set-fast-parse.md
+        - name: Standard Parse
+          href: ../standard-parse.md
+    - name: сравнение строковых данных
+      href: comparing-string-data.md
+- name: Обработка ошибок в данных
+  href: error-handling-in-data.md
+  items:
+    - name: Настройка вывода ошибок
+      href: ../configure-error-output.md
+- name: Общие свойства
+  href: ../common-properties.md
+  items:
+    - name: Установление свойств компонента потока данных
+      href: set-the-properties-of-a-data-flow-component.md
+- name: Вкладка «Поток данных»
+  href: ../data-flow-tab.md
+- name: Задача потока данных
+  href: ../control-flow/data-flow-task.md
+- name: обозревателе решений
+  href: ../connection-manager/data-sources.md
+- name: Средство просмотра данных
+  href: data-viewer.md
+  items:
+    - name: Настройка средства просмотра данных (вкладка «Общие»)
+      href: ../configure-data-viewer-general-tab.md
+    - name: Настройка средства просмотра данных (вкладка «Столбчатая диаграмма»)
+      href: ../configure-data-viewer-column-chart-tab.md
+    - name: Настройка средства просмотра данных (вкладка «Сетка»)
+      href: ../configure-data-viewer-grid-tab.md
+    - name: Настройка средства просмотра данных (вкладка «Гистограмма»)
+      href: ../configure-data-viewer-histogram-tab.md
+    - name: Настройка средства просмотра данных (вкладка «Точечная диаграмма»)
+      href: ../configure-data-viewer-scatter-plot-tab.md
+- name: Добавление или удаление компонента в потоке данных
+  href: add-or-delete-a-component-in-a-data-flow.md
+- name: Соединение компонентов в потоке данных
+  href: connect-components-in-a-data-flow.md
+- name: Редактор разрешения ссылок на столбцы
+  href: resolve-column-reference-editor.md
+- name: Возможности для повышения производительности потока данных
+  href: data-flow-performance-features.md
+- name: Диспетчер соединений OData
+  href: ../connection-manager/odata-connection-manager.md
+  items:
+    - name: Редактор диспетчера соединений c OData
+      href: ../odata-connection-manager-editor.md
+- name: Источник OData
+  href: odata-source.md
+  items:
+    - name: Установка и удаление компонента источника OData
+      href: ../install-and-uninstall-odata-source-component.md
+    - name: Учебник. Использование источника OData
+      href: tutorial-using-the-odata-source.md
+    - name: Изменение запроса источника OData во время выполнения
+      href: modify-odata-source-query-at-runtime.md
+    - name: Редактор источника OData (страница «Подключение»)
+      href: ../odata-source-editor-connection-page.md
+    - name: Редактор источника OData (страница «Столбцы»)
+      href: ../odata-source-editor-columns-page.md
+    - name: Редактор источника OData (страница «Вывод ошибок»)
+      href: ../odata-source-editor-error-output-page.md
+    - name: Свойства источника OData
+      href: odata-source-properties.md
+- name: Компонент Azure Blob Source
+  href: azure-blob-source.md
+- name: Назначение больших двоичных объектов Azure
+  href: azure-blob-destination.md
+- name: Источник Azure Data Lake Store
+  href: ../azure-data-lake-store-source.md
+- name: Цель Azure Data Lake Store
+  href: ../azure-data-lake-store-destination.md

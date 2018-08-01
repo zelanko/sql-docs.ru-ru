@@ -1,0 +1,16 @@
+- name: Создание объектов базы данных с интеграцией со средой CLR
+  href: building-database-objects-with-common-language-runtime-clr-integration.md
+- name: 'Интеграция со средой CLR, типы в .NET Framework +'
+  href: ../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
+- name: 'Интеграция со средой CLR, определяемые пользователем функции +'
+  href: ../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md
+- name: 'Интеграция со средой CLR, определяемые пользователем типы +'
+  href: ../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
+- name: Пользовательские атрибуты интеграции со средой CLR для процедур CLR
+  href: clr-integration-custom-attributes-for-clr-routines.md
+- name: Ограничения модели программирования на основе интеграции со средой CLR
+  href: clr-integration-programming-model-restrictions.md
+- name: Приступая к работе с интеграцией со средой CLR
+  href: getting-started-with-clr-integration.md
+- name: Поддерживаемые библиотеки платформы .NET Framework
+  href: supported-net-framework-libraries.md

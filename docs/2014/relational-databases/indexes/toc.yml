@@ -1,0 +1,60 @@
+- name: Индексы (компонент Database Engine)
+  href: indexes.md
+- name: Кучи (таблицы без кластеризованных индексов)
+  href: heaps-tables-without-clustered-indexes.md
+- name: Описания кластеризованных и некластеризованных индексов
+  href: clustered-and-nonclustered-indexes-described.md
+- name: Columnstore Indexes Described
+  href: columnstore-indexes-described.md
+- name: Работа с индексами columnstore
+  href: dbengine-columnstore-indexes.md
+- name: Создание кластеризованных индексов
+  href: create-clustered-indexes.md
+- name: Создание некластеризованных индексов
+  href: create-nonclustered-indexes.md
+- name: Создание уникальных индексов
+  href: create-unique-indexes.md
+- name: Создание отфильтрованных индексов
+  href: create-filtered-indexes.md
+- name: Создание индексов с включенными столбцами
+  href: create-indexes-with-included-columns.md
+- name: Удаление индекса
+  href: delete-an-index.md
+- name: Изменение индекса
+  href: modify-an-index.md
+- name: Перемещение существующего индекса в другую файловую группу
+  href: move-an-existing-index-to-a-different-filegroup.md
+- name: Индексы вычисляемых столбцов
+  href: indexes-on-computed-columns.md
+- name: Параметр SORT_IN_TEMPDB для индексов
+  href: sort-in-tempdb-option-for-indexes.md
+- name: Отключение индексов и ограничений
+  href: disable-indexes-and-constraints.md
+- name: Включение индексов и ограничений
+  href: enable-indexes-and-constraints.md
+- name: Переименование индексов
+  href: rename-indexes.md
+- name: Установка параметров индекса
+  href: set-index-options.md
+- name: Disk Space Requirements for Index DDL Operations
+  href: disk-space-requirements-for-index-ddl-operations.md
+  items:
+    - name: Место на диске журнала транзакций для операций обработки индекса
+      href: transaction-log-disk-space-for-index-operations.md
+    - name: Пример места на диске для индекса
+      href: index-disk-space-example.md
+- name: Реорганизация и перестроение индексов
+  href: reorganize-and-rebuild-indexes.md
+- name: Укажите коэффициент заполнения для индекса
+  href: specify-fill-factor-for-an-index.md
+- name: Выполнение операции с индексами в сети
+  href: perform-index-operations-online.md
+  items:
+    - name: Об операциях с индексом в сети
+      href: how-online-index-operations-work.md
+    - name: Руководящие принципы для операций с индексами
+      href: guidelines-for-online-index-operations.md
+- name: Настройка параллельных операций с индексами
+  href: configure-parallel-index-operations.md
+- name: Справка F1 свойств индекса
+  href: index-properties-f1-help.md

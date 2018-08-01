@@ -1,0 +1,260 @@
+- name: Справочник по ODBC
+  href: odbc-reference.md
+- name: Сводка по функциям
+  href: function-summary.md
+  items:
+    - name: Сводка по функциям библиотеки DLL установщика
+      href: installer-dll-function-summary.md
+    - name: Сводка по функциям ODBC
+      href: odbc-function-summary.md
+    - name: Сводка по интерфейсу поставщика служб ODBC
+      href: odbc-service-provider-interface-summary.md
+    - name: Сводка по функциям библиотеки DLL установки
+      href: setup-dll-function-summary.md
+    - name: Сводка по функциям библиотеки DLL перевода
+      href: translation-dll-function-summary.md
+- name: Справочник по API ODBC
+  href: odbc-api-reference.md
+  items:
+    - name: Функция SQLAllocConnect
+      href: sqlallocconnect-function.md
+    - name: Функция SQLAllocEnv
+      href: sqlallocenv-function.md
+    - name: Функция SQLAllocHandle
+      href: sqlallochandle-function.md
+    - name: Функция SQLAllocStmt
+      href: sqlallocstmt-function.md
+    - name: 'SQLBindCol, функция'
+      href: sqlbindcol-function.md
+    - name: Функция SQLBindParameter
+      href: sqlbindparameter-function.md
+    - name: Функция SQLBrowseConnect
+      href: sqlbrowseconnect-function.md
+    - name: Функция SQLBulkOperations
+      href: sqlbulkoperations-function.md
+    - name: Функция SQLCancel
+      href: sqlcancel-function.md
+    - name: Функция SQLCancelHandle
+      href: sqlcancelhandle-function.md
+    - name: Функция SQLCloseCursor
+      href: sqlclosecursor-function.md
+    - name: Функция SQLColAttribute
+      href: sqlcolattribute-function.md
+    - name: Функция SQLColAttributes
+      href: sqlcolattributes-function.md
+    - name: Функция SQLColumnPrivileges
+      href: sqlcolumnprivileges-function.md
+    - name: 'SQLColumns, функция'
+      href: sqlcolumns-function.md
+    - name: Функция SQLCompleteAsync
+      href: sqlcompleteasync-function.md
+    - name: Функция SQLConnect
+      href: sqlconnect-function.md
+    - name: Функция SQLCopyDesc
+      href: sqlcopydesc-function.md
+    - name: Функция SQLDataSources
+      href: sqldatasources-function.md
+    - name: 'SQLDescribeCol, функция'
+      href: sqldescribecol-function.md
+    - name: Функция SQLDescribeParam
+      href: sqldescribeparam-function.md
+    - name: Функция SQLDisconnect
+      href: sqldisconnect-function.md
+    - name: Функция SQLDriverConnect
+      href: sqldriverconnect-function.md
+    - name: Функция SQLDrivers
+      href: sqldrivers-function.md
+    - name: Функция SQLEndTran
+      href: sqlendtran-function.md
+    - name: Функция SQLError
+      href: sqlerror-function.md
+    - name: Функция SQLExecDirect
+      href: sqlexecdirect-function.md
+    - name: Функция SQLExecute
+      href: sqlexecute-function.md
+    - name: Функция SQLExtendedFetch
+      href: sqlextendedfetch-function.md
+    - name: Функция SQLFetch
+      href: sqlfetch-function.md
+    - name: Функция SQLFetchScroll
+      href: sqlfetchscroll-function.md
+    - name: Функция SQLForeignKeys
+      href: sqlforeignkeys-function.md
+    - name: Функция SQLFreeConnect
+      href: sqlfreeconnect-function.md
+    - name: Функция SQLFreeEnv
+      href: sqlfreeenv-function.md
+    - name: 'SQLFreeHandle, функция'
+      href: sqlfreehandle-function.md
+    - name: 'SQLFreeStmt, функция'
+      href: sqlfreestmt-function.md
+    - name: Функция SQLGetConnectAttr
+      href: sqlgetconnectattr-function.md
+    - name: Функция SQLGetConnectOption
+      href: sqlgetconnectoption-function.md
+    - name: Функция SQLGetCursorName
+      href: sqlgetcursorname-function.md
+    - name: Функция SQLGetData
+      href: sqlgetdata-function.md
+    - name: Функция SQLGetDescField
+      href: sqlgetdescfield-function.md
+    - name: Функция SQLGetDescRec
+      href: sqlgetdescrec-function.md
+    - name: Функция SQLGetDiagField
+      href: sqlgetdiagfield-function.md
+    - name: Функция SQLGetDiagRec
+      href: sqlgetdiagrec-function.md
+    - name: Функция SQLGetEnvAttr
+      href: sqlgetenvattr-function.md
+    - name: 'SQLGetFunctions, функция'
+      href: sqlgetfunctions-function.md
+    - name: 'SQLGetInfo, функция'
+      href: sqlgetinfo-function.md
+    - name: 'SQLGetStmtAttr, функция'
+      href: sqlgetstmtattr-function.md
+    - name: Функция SQLGetStmtOption
+      href: sqlgetstmtoption-function.md
+    - name: Функция SQLGetTypeInfo
+      href: sqlgettypeinfo-function.md
+    - name: 'SQLMoreResults, функция'
+      href: sqlmoreresults-function.md
+    - name: Функция SQLNativeSql
+      href: sqlnativesql-function.md
+    - name: 'SQLNumParams, функция'
+      href: sqlnumparams-function.md
+    - name: 'SQLNumResultCols, функция'
+      href: sqlnumresultcols-function.md
+    - name: Функция SQLParamData
+      href: sqlparamdata-function.md
+    - name: Функция SQLParamOptions
+      href: sqlparamoptions-function.md
+    - name: Функция SQLPrepare
+      href: sqlprepare-function.md
+    - name: Функция SQLPrimaryKeys
+      href: sqlprimarykeys-function.md
+    - name: 'SQLProcedureColumns, функция'
+      href: sqlprocedurecolumns-function.md
+    - name: Функция SQLProcedures
+      href: sqlprocedures-function.md
+    - name: 'SQLPutData, функция'
+      href: sqlputdata-function.md
+    - name: Функция SQLRowCount
+      href: sqlrowcount-function.md
+    - name: Функция SQLSetConnectAttr
+      href: sqlsetconnectattr-function.md
+    - name: Функция SQLSetConnectOption
+      href: sqlsetconnectoption-function.md
+    - name: Функция SQLSetCursorName
+      href: sqlsetcursorname-function.md
+    - name: Функция SQLSetDescField
+      href: sqlsetdescfield-function.md
+    - name: Функция SQLSetDescRec
+      href: sqlsetdescrec-function.md
+    - name: 'SQLSetEnvAttr, функция'
+      href: sqlsetenvattr-function.md
+    - name: Функция SQLSetParam
+      href: sqlsetparam-function.md
+    - name: Функция SQLSetPos
+      href: sqlsetpos-function.md
+    - name: Функция SQLSetScrollOptions
+      href: sqlsetscrolloptions-function.md
+    - name: Функция SQLSetStmtAttr
+      href: sqlsetstmtattr-function.md
+    - name: Функция SQLSetStmtOption
+      href: sqlsetstmtoption-function.md
+    - name: 'SQLSpecialColumns, функция'
+      href: sqlspecialcolumns-function.md
+    - name: 'SQLStatistics, функция'
+      href: sqlstatistics-function.md
+    - name: Функция SQLTablePrivileges
+      href: sqltableprivileges-function.md
+    - name: Функция SQLTables
+      href: sqltables-function.md
+    - name: Функция SQLTransact
+      href: sqltransact-function.md
+- name: Справочник по API библиотеки DLL установки
+  href: setup-dll-api-reference.md
+  items:
+    - name: Функция ConfigDriver
+      href: configdriver-function.md
+    - name: Функция ConfigDSN
+      href: configdsn-function.md
+    - name: Функция ConfigTranslator
+      href: configtranslator-function.md
+- name: Функция справочника по API библиотеки DLL установщика
+  href: installer-dll-api-reference-function.md
+  items:
+    - name: 'SQLConfigDataSource, функция'
+      href: sqlconfigdatasource-function.md
+    - name: Функция SQLConfigDriver
+      href: sqlconfigdriver-function.md
+    - name: Функция SQLCreateDataSource
+      href: sqlcreatedatasource-function.md
+    - name: Функция SQLGetConfigMode
+      href: sqlgetconfigmode-function.md
+    - name: Функция SQLGetInstalledDrivers
+      href: sqlgetinstalleddrivers-function.md
+    - name: Функция SQLGetPrivateProfileString
+      href: sqlgetprivateprofilestring-function.md
+    - name: Функция SQLGetTranslator
+      href: sqlgettranslator-function.md
+    - name: Функция SQLInstallDriverEx
+      href: sqlinstalldriverex-function.md
+    - name: Функция SQLInstallDriverManager
+      href: sqlinstalldrivermanager-function.md
+    - name: Функция SQLInstallerError
+      href: sqlinstallererror-function.md
+    - name: Функция SQLInstallTranslator
+      href: sqlinstalltranslator-function.md
+    - name: Функция SQLInstallTranslatorEx
+      href: sqlinstalltranslatorex-function.md
+    - name: SQLManageDataSources
+      href: sqlmanagedatasources.md
+    - name: Функция SQLPostInstallerError
+      href: sqlpostinstallererror-function.md
+    - name: Функция SQLReadFileDSN
+      href: sqlreadfiledsn-function.md
+    - name: Функция SQLRemoveDefaultDataSource
+      href: sqlremovedefaultdatasource-function.md
+    - name: Функция SQLRemoveDriver
+      href: sqlremovedriver-function.md
+    - name: Функция SQLRemoveDriverManager
+      href: sqlremovedrivermanager-function.md
+    - name: Функция SQLRemoveDSNFromIni
+      href: sqlremovedsnfromini-function.md
+    - name: Функция SQLRemoveTranslator
+      href: sqlremovetranslator-function.md
+    - name: Функция SQLSetConfigMode
+      href: sqlsetconfigmode-function.md
+    - name: Функция SQLValidDSN
+      href: sqlvaliddsn-function.md
+    - name: Функция SQLWriteDSNToIni
+      href: sqlwritedsntoini-function.md
+    - name: Функция SQLWriteFileDSN
+      href: sqlwritefiledsn-function.md
+    - name: Функция SQLWritePrivateProfileString
+      href: sqlwriteprivateprofilestring-function.md
+- name: Справочник по API библиотеки DLL перевода
+  href: translation-dll-api-reference.md
+  items:
+    - name: Функция SQLDataSourceToDriver
+      href: sqldatasourcetodriver-function.md
+    - name: Функция SQLDriverToDataSource
+      href: sqldrivertodatasource-function.md
+- name: Справочник по интерфейсу службы доступа (SPI) ODBC
+  href: odbc-service-provider-interface-spi-reference.md
+  items:
+    - name: Функция SQLCleanupConnectionPoolID
+      href: sqlcleanupconnectionpoolid-function.md
+    - name: Функция SQLGetPoolID
+      href: sqlgetpoolid-function.md
+    - name: Функция SQLPoolConnect
+      href: sqlpoolconnect-function.md
+    - name: Функция SQLRateConnection
+      href: sqlrateconnection-function.md
+    - name: Функция SQLSetConnectAttrForDbcInfo
+      href: sqlsetconnectattrfordbcinfo-function.md
+    - name: Функция SQLSetConnectInfo
+      href: sqlsetconnectinfo-function.md
+    - name: Функция SQLSetDriverConnectInfo
+      href: installation-and-configuration-wwi-oltp.md

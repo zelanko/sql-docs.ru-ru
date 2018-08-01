@@ -1,0 +1,48 @@
+- name: Компоненты собственного клиента SQL Server
+  href: sql-server-native-client-features.md
+- name: Доступ к диагностическим сведениям в журнале расширенных событий
+  href: accessing-diagnostic-information-in-the-extended-events-log.md
+- name: Смена пароля программным способом
+  href: changing-passwords-programmatically.md
+- name: Улучшения функций даты и времени
+  href: date-and-time-improvements.md
+- name: Поддержка FILESTREAM
+  href: filestream-support.md
+- name: Большие определяемые пользователем типы данных CLR
+  href: large-clr-user-defined-types.md
+- name: Обнаружение метаданных
+  href: metadata-discovery.md
+- name: Изменение поведения драйвера ODBC при обработке преобразования символов
+  href: odbc-driver-behavior-change-when-handling-character-conversions.md
+- name: Выполнение асинхронных операций
+  href: performing-asynchronous-operations.md
+- name: Выполнение операций массового копирования
+  href: performing-bulk-copy-operations.md
+- name: Поддержка имени участника-службы в клиентских соединениях
+  href: service-principal-name-spn-support-in-client-connections.md
+- name: Поддержка разреженных столбцов в собственном клиенте SQL Server
+  href: sparse-columns-support-in-sql-server-native-client.md
+- name: Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
+  href: sql-server-native-client-support-for-high-availability-disaster-recovery.md
+- name: Поддержка SQL Server Native Client для LocalDB
+  href: sql-server-native-client-support-for-localdb.md
+- name: Возвращающие табличное значение параметры (собственный клиент SQL Server)
+  href: table-valued-parameters-sql-server-native-client.md
+- name: Использование зеркального отображения базы данных
+  href: using-database-mirroring.md
+- name: Использование шифрования без проверки
+  href: using-encryption-without-validation.md
+- name: Использование типов больших значений
+  href: using-large-value-types.md
+- name: Использование режима MARS
+  href: using-multiple-active-result-sets-mars.md
+- name: Использование определяемых пользователем типов данных
+  href: using-user-defined-types.md
+- name: Использование типов данных XML
+  href: using-xml-data-types.md
+- name: Поддержка UTF-16 в собственном клиенте SQL Server версии 11.0
+  href: utf-16-support-in-sql-server-native-client-11-0.md
+- name: Работа с уведомлениями запросов
+  href: working-with-query-notifications.md
+- name: Работа с изоляцией моментального снимка
+  href: working-with-snapshot-isolation.md

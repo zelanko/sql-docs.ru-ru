@@ -1,0 +1,48 @@
+- name: Обзор
+  href: stretch-database.md
+- name: Ограничения и критические препятствия
+  href: limitations-for-stretch-database.md
+- name: Приступая к работе
+  items:
+    - name: Определение баз данных и таблиц
+      href: stretch-database-databases-and-tables-stretch-database-advisor.md
+    - name: Запустите мастер.
+      href: get-started-by-running-the-enable-database-for-stretch-wizard.md
+    - name: Настройка совместимых функций
+      href: configure-compatible-sql-server-features-with-stretch-database.md
+- name: Инструкции
+  items:
+    - name: Включить
+      items:
+        - name: Включение базы данных
+          href: enable-stretch-database-for-a-database.md
+        - name: Включение таблицы
+          href: enable-stretch-database-for-a-table.md
+        - name: Выбор строк для миграции
+          href: select-rows-to-migrate-by-using-a-filter-function-stretch-database.md
+    - name: управление
+      items:
+        - name: Мониторинг миграции
+          href: monitor-and-troubleshoot-data-migration-stretch-database.md
+        - name: Приостановка и возобновление миграции
+          href: pause-and-resume-data-migration-stretch-database.md
+        - name: Управление и устранение неполадок
+          href: manage-and-troubleshoot-stretch-database.md
+        - name: Резервное копирование
+          href: backup-stretch-enabled-databases-stretch-database.md
+        - name: Восстановить
+          href: restore-stretch-enabled-databases-stretch-database.md
+        - name: Отключение и возврат данных
+          href: disable-stretch-database-and-bring-back-remote-data.md
+        - name: Расширенные события
+          href: extended-events-for-stretch-database.md
+- name: Ресурсы
+  items:
+    - name: Цены
+      href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
+    - name: Блог
+      href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
+    - name: Обновление службы
+      href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
+    - name: Видеоролики
+      href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'

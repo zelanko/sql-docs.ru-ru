@@ -1,0 +1,380 @@
+- name: Обзор
+  href: data-mining-ssas.md
+- name: Основные понятия
+  href: data-mining-concepts.md
+- name: Алгоритмы
+  href: data-mining-algorithms-analysis-services-data-mining.md
+  items:
+    - name: Взаимосвязи (Майкрософт)
+      href: microsoft-association-algorithm.md
+      items:
+        - name: Технический справочник по алгоритму взаимосвязей (Майкрософт)
+          href: microsoft-association-algorithm-technical-reference.md
+        - name: Содержимое модели интеллектуального анализа данных для моделей взаимосвязей
+          href: mining-model-content-for-association-models-analysis-services-data-mining.md
+        - name: Примеры запросов моделей взаимосвязей
+          href: association-model-query-examples.md
+    - name: Алгоритм кластеризации Майкрософт
+      href: microsoft-clustering-algorithm.md
+      items:
+        - name: Технический справочник по алгоритму кластеризации (Майкрософт)
+          href: microsoft-clustering-algorithm-technical-reference.md
+        - name: Содержимое модели интеллектуального анализа данных для моделей кластеризации
+          href: mining-model-content-for-clustering-models-analysis-services-data-mining.md
+        - name: Примеры запросов к модели кластеризации
+          href: clustering-model-query-examples.md
+    - name: Алгоритм дерева принятия решений Майкрософт
+      href: microsoft-decision-trees-algorithm.md
+      items:
+        - name: Технический справочник по алгоритму дерева принятия решений (Майкрософт)
+          href: microsoft-decision-trees-algorithm-technical-reference.md
+        - name: Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений
+          href: mining-model-content-for-decision-tree-models-analysis-services-data-mining.md
+        - name: Примеры запросов к модели дерева принятия решений
+          href: decision-trees-model-query-examples.md
+    - name: Алгоритм линейной регрессии Майкрософт
+      href: microsoft-linear-regression-algorithm.md
+      items:
+        - name: Технический справочник по алгоритму линейной регрессии (Майкрософт)
+          href: microsoft-linear-regression-algorithm-technical-reference.md
+        - name: Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии
+          href: mining-model-content-for-linear-regression-models-analysis-services-data-mining.md
+        - name: Примеры запросов модели линейной регрессии
+          href: linear-regression-model-query-examples.md
+    - name: Алгоритм логистической регрессии Майкрософт
+      href: microsoft-logistic-regression-algorithm.md
+      items:
+        - name: техническом справочнике по алгоритму логистической регрессии (Майкрософт)
+          href: microsoft-logistic-regression-algorithm-technical-reference.md
+        - name: Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии
+          href: mining-model-content-for-logistic-regression-models.md
+        - name: Примеры запросов модели логистической регрессии
+          href: logistic-regression-model-query-examples.md
+    - name: Упрощенный алгоритм Байеса (Майкрософт)
+      href: microsoft-naive-bayes-algorithm.md
+      items:
+        - name: Технический справочник по упрощенному алгоритму Байеса (Майкрософт)
+          href: microsoft-naive-bayes-algorithm-technical-reference.md
+        - name: Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса
+          href: mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md
+        - name: Примеры запросов к модели упрощенного алгоритма Байеса
+          href: naive-bayes-model-query-examples.md
+    - name: Алгоритм нейронной сети Майкрософт
+      href: microsoft-neural-network-algorithm.md
+      items:
+        - name: Технический справочник по алгоритму нейронной сети (Майкрософт)
+          href: microsoft-neural-network-algorithm-technical-reference.md
+        - name: Содержимое моделей интеллектуального анализа данных для моделей нейронных сетей
+          href: mining-model-content-for-neural-network-models-analysis-services-data-mining.md
+        - name: Примеры запросов к модели нейронной сети
+          href: neural-network-model-query-examples.md
+    - name: Кластер последовательностей Майкрософт
+      href: microsoft-sequence-clustering-algorithm.md
+      items:
+        - name: Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)
+          href: microsoft-sequence-clustering-algorithm-technical-reference.md
+        - name: Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей
+          href: mining-model-content-for-sequence-clustering-models.md
+        - name: Примеры запросов к модели кластеризации последовательностей
+          href: sequence-clustering-model-query-examples.md
+    - name: алгоритм временных рядов (Майкрософт)
+      href: microsoft-time-series-algorithm.md
+      items:
+        - name: Microsoft Time Series Algorithm Technical Reference
+          href: microsoft-time-series-algorithm-technical-reference.md
+        - name: Содержимое моделей интеллектуального анализа данных для моделей временных рядов
+          href: mining-model-content-for-time-series-models-analysis-services-data-mining.md
+        - name: Примеры запросов моделей временных рядов
+          href: time-series-model-query-examples.md
+    - name: Подключаемые алгоритмы
+      href: plugin-algorithms.md
+- name: Структуры
+  href: mining-structures-analysis-services-data-mining.md
+  items:
+    - name: Столбцы структуры интеллектуального анализа данных
+      href: mining-structure-columns.md
+      items:
+        - name: Типы данных (интеллектуальный анализ данных)
+          href: data-types-data-mining.md
+        - name: Вложенные таблицы
+          href: nested-tables-analysis-services-data-mining.md
+        - name: Распределения столбцов
+          href: column-distributions-data-mining.md
+        - name: Методы дискретизации
+          href: discretization-methods-data-mining.md
+        - name: Классифицированные столбцы
+          href: classified-columns-data-mining.md
+    - name: Детализация структур интеллектуального анализа данных
+      href: drillthrough-on-mining-structures.md
+    - name: Свойства структур интеллектуального анализа данных и их столбцов
+      href: properties-for-mining-structure-and-structure-columns.md
+    - name: Задачи и инструкции по структуре интеллектуального анализа данных
+      href: mining-structure-tasks-and-how-tos.md
+      items:
+        - name: создать новую реляционную структуру интеллектуального анализа данных
+          href: create-a-new-relational-mining-structure.md
+        - name: создать новую структуру интеллектуального анализа OLAP
+          href: create-a-new-olap-mining-structure.md
+        - name: добавить столбцы к структуре интеллектуального анализа данных
+          href: add-columns-to-a-mining-structure.md
+        - name: удалить столбцы из структуры интеллектуального анализа данных
+          href: remove-columns-from-a-mining-structure.md
+        - name: добавить вложенную таблицу в структуру интеллектуального анализа данных
+          href: add-a-nested-table-to-a-mining-structure.md
+        - name: изменить свойства структуры интеллектуального анализа данных
+          href: change-the-properties-of-a-mining-structure.md
+        - name: 'Изменение представления источников данных, используемого для структуры интеллектуального анализа данных'
+          href: edit-the-data-source-view-used-for-a-mining-structure.md
+        - name: обработать структуру интеллектуального анализа данных
+          href: process-a-mining-structure.md
+- name: Модели
+  href: mining-models-analysis-services-data-mining.md
+  items:
+    - name: Столбцы модели интеллектуального анализа данных
+      href: mining-model-columns.md
+    - name: Типы содержимого (интеллектуальный анализ данных)
+      href: content-types-data-mining.md
+    - name: Свойства модели интеллектуального анализа данных
+      href: mining-model-properties.md
+    - name: Отсутствующие значения
+      href: missing-values-analysis-services-data-mining.md
+    - name: Выбор компонентов (интеллектуальный анализ данных)
+      href: feature-selection-data-mining.md
+    - name: Флаги моделирования (интеллектуальный анализ данных)
+      href: modeling-flags-data-mining.md
+    - name: Содержимое модели интеллектуального анализа данных
+      href: mining-model-content-analysis-services-data-mining.md
+    - name: Детализация моделей интеллектуального анализа данных
+      href: drillthrough-on-mining-models.md
+    - name: Фильтры для моделей интеллектуального анализа данных
+      href: filters-for-mining-models-analysis-services-data-mining.md
+      items:
+        - name: Синтаксис и примеры фильтров модели
+          href: model-filter-syntax-and-examples-analysis-services-data-mining.md
+    - name: Задачи и инструкции по модели интеллектуального анализа данных
+      href: mining-model-tasks-and-how-tos.md
+      items:
+        - name: добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных
+          href: add-a-mining-model-to-an-existing-mining-structure.md
+        - name: удалить модель интеллектуального анализа данных из структуры интеллектуального анализа данных
+          href: delete-a-mining-model-from-a-mining-structure.md
+        - name: исключить столбец из модели интеллектуального анализа данных
+          href: exclude-a-column-from-a-mining-model.md
+        - name: создать псевдоним для столбца модели
+          href: create-an-alias-for-a-model-column.md
+        - name: изменить дискретизацию столбца в модели интеллектуального анализа данных
+          href: change-the-discretization-of-a-column-in-a-mining-model.md
+        - name: Просмотр или изменение флагов модели
+          href: view-or-change-modeling-flags-data-mining.md
+        - name: 'Указание столбца, который будет использоваться в модели в качестве регрессора'
+          href: specify-a-column-to-use-as-regressor-in-a-model.md
+        - name: Изменение свойств модели интеллектуального анализа данных
+          href: change-the-properties-of-a-mining-model.md
+        - name: Применение фильтра к модели интеллектуального анализа данных
+          href: apply-a-filter-to-a-mining-model.md
+        - name: удалить фильтр из модели интеллектуального анализа данных
+          href: delete-a-filter-from-a-mining-model.md
+        - name: включить детализацию для модели интеллектуального анализа данных
+          href: enable-drillthrough-for-a-mining-model.md
+        - name: Просмотр или изменение параметров алгоритма
+          href: view-or-change-algorithm-parameters.md
+        - name: обработать модель интеллектуального анализа данных
+          href: process-a-mining-model.md
+        - name: создать копию модели интеллектуального анализа данных
+          href: make-a-copy-of-a-mining-model.md
+        - name: создать измерение интеллектуального анализа данных
+          href: create-a-data-mining-dimension.md
+- name: Тестирование и проверка
+  href: testing-and-validation-data-mining.md
+  items:
+    - name: Обучающие и проверочные наборы данных
+      href: training-and-testing-data-sets.md
+    - name: Диаграмма точности прогнозов
+      href: lift-chart-analysis-services-data-mining.md
+    - name: Диаграмма роста прибыли
+      href: profit-chart-analysis-services-data-mining.md
+    - name: Матрица классификации
+      href: classification-matrix-analysis-services-data-mining.md
+    - name: Точечная диаграмма
+      href: scatter-plot-analysis-services-data-mining.md
+    - name: Перекрестная проверка
+      href: cross-validation-analysis-services-data-mining.md
+      items:
+        - name: Меры в отчете перекрестной проверки
+          href: measures-in-the-cross-validation-report.md
+        - name: Формулы перекрестной проверки
+          href: cross-validation-formulas.md
+    - name: Задачи и решения по тестированию и проверке
+      href: testing-and-validation-tasks-and-how-tos-data-mining.md
+      items:
+        - name: 'Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации'
+          href: create-a-lift-chart-profit-chart-or-classification-matrix.md
+        - name: создать отчет перекрестной проверки
+          href: create-a-cross-validation-report.md
+        - name: Выбрать и сопоставить данные проверки модели
+          href: choose-and-map-model-testing-data.md
+        - name: Применение фильтров к данным проверки модели
+          href: apply-filters-to-model-testing-data.md
+        - name: 'Выбор столбца, используемого для тестирования модели интеллектуального анализа данных'
+          href: choose-the-column-to-use-for-testing-a-mining-model.md
+        - name: Выбор типа диаграммы точности и задание параметров диаграммы
+          href: choose-an-accuracy-chart-type-and-set-chart-options.md
+        - name: Использование данных вложенной таблицы в качестве входных для диаграммы точности
+          href: using-nested-table-data-as-an-input-for-an-accuracy-chart.md
+- name: Запросы
+  href: data-mining-queries.md
+  items:
+    - name: Прогнозирующие запросы
+      href: prediction-queries-data-mining.md
+    - name: Запросы содержимого
+      href: content-queries-data-mining.md
+    - name: Запросы детализации
+      href: drillthrough-queries-data-mining.md
+      items:
+        - name: выполнить детализацию до данных вариантов из модели интеллектуального анализа данных
+          href: drill-through-to-case-data-from-a-mining-model.md
+        - name: Создание запросов детализации с помощью расширений интеллектуального анализа данных
+          href: create-drillthrough-queries-using-dmx.md
+    - name: 'Запросы, определяющие данные'
+      href: data-definition-queries-data-mining.md
+    - name: Data Mining Schema Rowsets
+      href: data-mining-schema-rowsets-ssas.md
+    - name: Средства запросов интеллектуального анализа данных
+      href: data-mining-query-tools.md
+    - name: Задачи и инструкции по запросам интеллектуального анализа данных
+      href: data-mining-query-tasks-and-how-tos.md
+      items:
+        - name: Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов
+          href: create-a-prediction-query-using-the-prediction-query-builder.md
+        - name: Создание DMX-запроса в среде SQL Server Management Studio
+          href: create-a-dmx-query-in-sql-server-management-studio.md
+        - name: Создание одноэлементного запроса в конструкторе интеллектуального анализа данных
+          href: create-a-singleton-query-in-the-data-mining-designer.md
+        - name: Применение функций прогнозирования к модели
+          href: apply-prediction-functions-to-a-model.md
+        - name: Выбор и сопоставление входных данных для прогнозирующего запроса
+          href: choose-and-map-input-data-for-a-prediction-query.md
+        - name: Изменение прогнозирующего запроса вручную
+          href: manually-edit-a-prediction-query.md
+        - name: Просмотр и сохранение результатов прогнозирующего запроса
+          href: view-and-save-the-results-of-a-prediction-query.md
+        - name: Создание запроса содержимого к модели интеллектуального анализа данных
+          href: create-a-content-query-on-a-mining-model.md
+        - name: 'запросить параметры, используемые для создания модели интеллектуального анализа данных'
+          href: query-the-parameters-used-to-create-a-mining-model.md
+        - name: создать одноэлементный прогнозирующий запрос из шаблона
+          href: create-a-singleton-prediction-query-from-a-template.md
+        - name: Создание запроса интеллектуального анализа данных с помощью XMLA
+          href: create-a-data-mining-query-by-using-xmla.md
+        - name: изменить значение времени ожидания для запросов интеллектуального анализа данных
+          href: change-the-time-out-value-for-data-mining-queries.md
+- name: Решения
+  href: data-mining-solutions.md
+  items:
+    - name: Проекты интеллектуального анализа данных
+      href: data-mining-projects.md
+      items:
+        - name: Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services
+          href: import-a-data-mining-project-using-the-analysis-services-import-wizard.md
+    - name: Обработка объектов интеллектуального анализа данных
+      href: processing-data-mining-objects.md
+    - name: Связанные проекты для решений интеллектуального анализа данных
+      href: related-projects-for-data-mining-solutions.md
+    - name: Развертывание решений интеллектуального анализа данных
+      href: deployment-of-data-mining-solutions.md
+      items:
+        - name: Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server
+          href: deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md
+        - name: Экспорт и импорт объектов интеллектуального анализа данных
+          href: export-and-import-data-mining-objects.md
+- name: Architecture
+  href: data-mining-architecture.md
+  items:
+    - name: Логическая архитектура
+      href: logical-architecture-analysis-services-data-mining.md
+    - name: Физическая архитектура
+      href: physical-architecture-analysis-services-data-mining.md
+    - name: Службы интеллектуального анализа данных и источники данных
+      href: data-mining-services-and-data-sources.md
+    - name: Управление решениями и объектами интеллектуального анализа данных
+      href: management-of-data-mining-solutions-and-objects.md
+      items:
+        - name: Перемещение объектов интеллектуального анализа данных
+          href: moving-data-mining-objects.md
+        - name: Требования к обработке и связанные замечания (интеллектуальный анализ данных)
+          href: processing-requirements-and-considerations-data-mining.md
+        - name: Наблюдение за интеллектуальным анализом данных с помощью приложения SQL Server Profiler
+          href: using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md
+    - name: Общие сведения о безопасности (интеллектуальный анализ данных)
+      href: security-overview-data-mining.md
+- name: Инструменты
+  href: data-mining-tools.md
+  items:
+    - name: Мастер интеллектуального анализа данных
+      href: data-mining-wizard-analysis-services-data-mining.md
+      items:
+        - name: Создание реляционной структуры интеллектуального анализа данных
+          href: create-a-relational-mining-structure.md
+        - name: Создание структуры интеллектуального анализа данных OLAP
+          href: create-an-olap-mining-structure.md
+        - name: Добавление моделей интеллектуального анализа данных в структуру
+          href: add-mining-models-to-a-structure-analysis-services-data-mining.md
+        - name: Настройка структуры и моделей интеллектуального анализа данных
+          href: customize-mining-models-and-structure.md
+    - name: Конструктора моделей интеллектуального анализа данных
+      href: data-mining-designer.md
+    - name: Средства просмотра моделей интеллектуального анализа данных
+      href: data-mining-model-viewers.md
+      items:
+        - name: Просмотр модели с помощью средства просмотра деревьев (Майкрософт)
+          href: browse-a-model-using-the-microsoft-tree-viewer.md
+        - name: Просмотр модели с помощью средства просмотра кластеров (Майкрософт)
+          href: browse-a-model-using-the-microsoft-cluster-viewer.md
+        - name: Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)
+          href: browse-a-model-using-the-microsoft-time-series-viewer.md
+        - name: Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт)
+          href: browse-a-model-using-the-microsoft-naive-bayes-viewer.md
+        - name: Просмотр модели с помощью средства просмотра кластеризации последовательностей (Майкрософт)
+          href: browse-a-model-using-the-microsoft-sequence-cluster-viewer.md
+        - name: Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт)
+          href: browse-a-model-using-the-microsoft-association-rules-viewer.md
+        - name: Просмотр модели с помощью средства просмотра нейронных сетей (Майкрософт)
+          href: browse-a-model-using-the-microsoft-neural-network-viewer.md
+        - name: Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)
+          href: browse-a-model-using-the-microsoft-generic-content-tree-viewer.md
+        - name: Задачи и инструкции средства просмотра моделей интеллектуального анализа данных
+          href: mining-model-viewer-tasks-and-how-tos.md
+          items:
+            - name: Выбор модели интеллектуального анализа данных и средства просмотра интеллектуального анализа данных
+              href: select-a-mining-model-and-a-data-mining-viewer.md
+            - name: Копирование представления модели интеллектуального анализа данных
+              href: copy-a-view-of-a-mining-model.md
+            - name: Поиск определенного узла в сети зависимостей
+              href: find-a-specific-node-in-a-dependency-network.md
+            - name: Фильтрация правила в модели ассоциативных правил
+              href: filter-a-rule-in-an-association-rules-model.md
+            - name: Фильтрация набора элементов в модели ассоциативных правил
+              href: filter-an-itemset-in-an-association-rules-model.md
+            - name: Использование детализации из средств просмотра моделей
+              href: use-drillthrough-from-the-model-viewers.md
+            - name: просмотреть формулу модели временных рядов
+              href: view-the-formula-for-a-time-series-model-data-mining.md
+            - name: 'изменить цвета, используемые в средстве просмотра интеллектуального анализа данных'
+              href: change-the-colors-used-in-the-data-mining-viewer.md
+    - name: Надстройки интеллектуального анализа данных для Office
+      href: sql-server-data-mining-add-ins-for-office.md
+- name: Хранимые процедуры
+  href: data-mining-stored-procedures-analysis-services-data-mining.md
+  items:
+    - name: SystemGetCrossValidationResults
+      href: systemgetcrossvalidationresults-analysis-services-data-mining.md
+    - name: SystemGetClusterCrossValidationResults
+      href: systemgetclustercrossvalidationresults-analysis-services-data-mining.md
+    - name: 'SystemGetAccuracyResults, хранимая процедура'
+      href: systemgetaccuracyresults-analysis-services-data-mining.md
+    - name: 'SystemGetClusterAccuracyResults, метод'
+      href: systemgetclusteraccuracyresults-analysis-services-data-mining.md
+- name: Справочник
+  items:
+    - name: расширения интеллектуального анализа данных
+      href: ../../dmx/data-mining-extensions-dmx-reference.md

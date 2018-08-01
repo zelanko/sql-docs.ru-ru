@@ -1,0 +1,353 @@
+- name: Репликация
+  href: sql-server-replication.md
+  items:
+    - name: Новые возможности (репликация)
+      href: what-s-new-replication.md
+    - name: Обратная совместимость репликации
+      href: replication-backward-compatibility.md
+    - name: Устаревшие функции репликации SQL Server
+      href: deprecated-features-in-sql-server-replication.md
+    - name: Критические изменения репликации в SQL Server
+      href: breaking-changes-in-sql-server-replication.md
+- name: Функции и задачи репликации
+  href: replication-features-and-tasks.md
+  items:
+    - name: Типы репликации
+      href: types-of-replication.md
+    - name: Репликация моментальных снимков
+      href: snapshot-replication.md
+    - name: Репликация транзакций +
+      href: transactional/transactional-replication.md
+    - name: Репликация слиянием +
+      href: merge/merge-replication.md
+    - name: Разнородная репликация базы данных +
+      href: non-sql/heterogeneous-database-replication.md
+    - name: Репликация на подписчиков оптимизированных для памяти таблиц
+      href: replication-to-memory-optimized-table-subscribers.md
+    - name: Агенты репликации +
+      href: agents/replication-agents.md
+    - name: Повторная публикация данных
+      href: republish-data.md
+    - name: Репликация через Интернет
+      href: replication-over-the-internet.md
+      items:
+        - name: Публикация данных через Интернет с помощью виртуальных частных сетей
+          href: publish-data-over-the-internet-using-vpn.md
+        - name: Веб-синхронизация для репликации слиянием
+          href: web-synchronization-for-merge-replication.md
+        - name: Настроить веб-синхронизацию
+          href: configure-web-synchronization.md
+        - name: Topologies for Web Synchronization
+          href: topologies-for-web-synchronization.md
+        - name: настроить сервер IIS для веб-синхронизации
+          href: configure-iis-for-web-synchronization.md
+        - name: Настройка сервера IIS 7 для веб-синхронизации
+          href: configure-iis-7-for-web-synchronization.md
+    - name: Безопасность и защита +
+      href: security/security-and-protection-replication.md
+    - name: Администрирование +
+      href: administration/administration-replication.md
+    - name: Руководство разработчика. Инструкции
+      href: developer-s-guide-how-to-topics-replication.md
+      items:
+        - name: Руководство разработчика (репликация) +
+          href: concepts/replication-developer-documentation.md
+    - name: Мониторинг +
+      href: monitor/monitoring-replication-overview.md
+    - name: Публикация данных и объектов базы данных +
+      href: publish/publish-data-and-database-objects.md
+- name: Справочник по ошибкам и событиям +
+  href: errors-events/errors-events-replication.md
+- name: Техническая справка (репликация)
+  href: technical-reference-replication.md
+- name: Справочник по свойствам
+  href: properties-reference-replication.md
+  items:
+    - name: Свойства распространителя
+      href: distributor-properties.md
+      items:
+        - name: 'Диалоговое окно «Свойства распространителя», страница «Общие»'
+          href: distributor-properties-general.md
+        - name: 'Свойства распространителя, страница «Издатели»'
+          href: distributor-properties-publishers.md
+        - name: Свойства базы данных распространителя
+          href: distribution-database-properties.md
+    - name: Свойства издателя
+      href: publisher-properties.md
+      items:
+        - name: Свойства издателя — распространитель
+          href: publisher-properties-distributor.md
+        - name: 'Свойства издателя — издатель, страница «Общие»'
+          href: publisher-properties-publisher-general.md
+        - name: 'Свойства издателя — издатель, базы данных публикации'
+          href: publisher-properties-publisher-publication-databases.md
+        - name: 'Свойства издателя — издатель, подписчики'
+          href: publisher-properties-publisher-subscribers.md
+    - name: Свойства подписчика
+      href: subscriber-properties.md
+    - name: Свойства публикации — <Publication>
+      href: publication-properties-publication.md
+      items:
+        - name: 'Свойства публикации, страница «Общие»'
+          href: publication-properties-general.md
+        - name: 'Свойства публикации, статьи'
+          href: publication-properties-articles.md
+        - name: 'Свойства публикации, фильтрация строк'
+          href: publication-properties-filter-rows.md
+        - name: 'Свойства публикаций, моментальный снимок'
+          href: publication-properties-snapshot.md
+        - name: 'Свойства публикации, страница «Моментальный снимок — FTP и Интернет»'
+          href: publication-properties-ftp-snapshot-and-internet.md
+        - name: 'Свойства публикации, параметры подписки'
+          href: publication-properties-subscription-options.md
+        - name: 'Свойства публикаций, список доступа к публикации'
+          href: publication-properties-publication-access-list.md
+        - name: 'Свойства публикации, агент безопасности'
+          href: publication-properties-agent-security.md
+        - name: 'Свойства публикации, секции данных'
+          href: publication-properties-data-partitions.md
+    - name: Свойства статьи — <Article>
+      href: article-properties-article.md
+    - name: Свойства подписки — <Subscription>
+      href: subscription-properties-subscription.md
+      items:
+        - name: Свойства подписки — подписчик
+          href: subscription-properties-subscriber.md
+        - name: Свойства подписки — издатель
+          href: subscription-properties-publisher.md
+- name: Справочник по средствам
+  href: tools-reference-replication.md
+  items:
+    - name: монитор репликации
+      href: replication-monitor.md
+      items:
+        - name: 'Монитор репликации, страница «Общие»'
+          href: replication-monitor-main-page.md
+        - name: Добавление издателя
+          href: add-publisher.md
+        - name: Параметры распространителя
+          href: distributor-settings.md
+        - name: 'Сведения о распространителе, публикации'
+          href: distributor-information-publications.md
+        - name: 'Сведения о распространителе, список наблюдения за подписками (публикация транзакций, SQL Server 2005 и более поздние версии)'
+          href: distributor-info-subscription-watch-list-transaction-pub-sql-2005.md
+        - name: 'Сведения о распространителе, список просмотра подписок (публикация слиянием, SQL Server 2005 и более поздние версии)'
+          href: distributor-info-subscription-watch-list-merge-pub-sql-2005.md
+        - name: 'Сведения о распространителе, список наблюдения за подписками (публикация моментальных снимков, SQL Server 2005 и более поздние версии)'
+          href: distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md
+        - name: 'Сведения о распространителе, агенты'
+          href: distributor-information-agents.md
+        - name: Настройки издателя
+          href: publisher-settings.md
+        - name: 'Данные об издателе, вкладка «Публикации»'
+          href: publisher-information-publications.md
+        - name: 'Сведения об издателе, список наблюдения за подписками (публикация транзакций, SQL Server 2005 и более поздние версии)'
+          href: publisher-information-subscription-watch-list-transactional.md
+        - name: 'Сведения об издателе, список просмотра подписок (публикация слиянием, SQL Server 2005 и более поздние версии)'
+          href: publisher-information-subscription-watch-list-merge-publication.md
+        - name: 'Сведения об издателе, список наблюдения за подписками (публикация моментальных снимков, SQL Server 2005 и более поздние версии)'
+          href: publisher-information-subscription-watch-list-snapshot.md
+        - name: 'Данные об издателе, агенты'
+          href: publisher-information-agents.md
+        - name: 'Сведения о публикации, вкладка «Все подписки» (публикация транзакций)'
+          href: publication-information-all-subscriptions-transactional-publication.md
+        - name: 'Сведения о публикации, все подписки (публикация слиянием)'
+          href: publication-information-all-subscriptions-merge-publication.md
+        - name: 'Сведения о публикации, вкладка «Все подписки» (публикация моментальных снимков)'
+          href: publication-information-all-subscriptions-snapshot-publication.md
+        - name: 'Сведения о публикации, предупреждения (публикация транзакций, SQL Server 2005 и более поздние версии)'
+          href: publication-information-warnings-transactional-publication.md
+        - name: 'Сведения о публикации, предупреждения (публикации слиянием, SQL Server 2005 и более поздние версии)'
+          href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
+        - name: 'Сведения о публикации, предупреждения (публикация моментального снимка, SQL Server 2005 и более поздние версии)'
+          href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
+        - name: 'Сведения о публикации, агенты (публикация транзакций)'
+          href: publication-information-agents-transactional-publication.md
+        - name: 'Сведения о публикации, агенты (публикация слиянием)'
+          href: publication-information-agents-merge-publication.md
+        - name: 'Сведения о публикации, агенты (публикация моментального снимка)'
+          href: publication-information-agents-snapshot-publication.md
+        - name: 'Сведения о публикации, трассировочные токены (публикация транзакций, SQL Server 2005 и более поздние версии)'
+          href: publication-information-tracer-tokens-sql-server-2005-and-later.md
+        - name: 'Подписка, нераспространенные команды (подписка на публикацию транзакций, SQL Server 2005 и более поздние версии)'
+          href: subscription-undistributed-commands-transactional-subscription.md
+        - name: 'Подписка, журнал издателя для распространителя (подписка на публикацию транзакций)'
+          href: subscription-publisher-to-distributor-history-transactional-subscription.md
+        - name: 'Подписка, журнал от распространителя к подписчику (подписка на публикацию транзакций)'
+          href: subscription-distributor-to-subscriber-history-transactional-subscription.md
+        - name: 'Подписка, журнал синхронизации (подписка на публикацию слиянием, SQL Server 2005 и более поздние версии)'
+          href: subscription-synchronization-history.md
+        - name: 'Подписка, журнал синхронизации (подписка на публикацию слиянием, SQL Server 2000)'
+          href: subscription-synchronization-history-merge-subscription-sql-server-2000.md
+        - name: 'Подписка, журнал распространителя для подписчика (подписка на моментальные снимки)'
+          href: subscription-distributor-to-subscriber-history-snapshot-subscription.md
+        - name: Агент чтения журнала.
+          href: log-reader-agent.md
+        - name: Агент чтения очереди.
+          href: queue-reader-agent.md
+        - name: агент моментальных снимков
+          href: snapshot-agent.md
+        - name: Настройки фильтра
+          href: filter-settings.md
+        - name: Сортировка столбцов
+          href: sort-columns.md
+    - name: мастер настройки распространителя
+      href: configure-distribution-wizard.md
+      items:
+        - name: Распространитель
+          href: distributor.md
+        - name: Папка моментальных снимков
+          href: snapshot-folder.md
+        - name: База данных распространителя
+          href: distribution-database.md
+        - name: Издатели
+          href: publishers.md
+        - name: Пароль распространителя
+          href: distributor-password.md
+    - name: New Publication Wizard
+      href: new-publication-wizard.md
+      items:
+        - name: Издатель Oracle
+          href: oracle-publisher.md
+        - name: Административный пароль
+          href: administrative-password.md
+        - name: База данных публикации
+          href: publication-database.md
+        - name: Тип публикации
+          href: publication-type.md
+        - name: Типы подписчиков
+          href: subscriber-types.md
+        - name: Безопасность агентов (мастер создания публикаций)
+          href: agent-security-new-publication-wizard.md
+        - name: Статьи
+          href: articles.md
+        - name: Проблемы в статьях
+          href: article-issues.md
+        - name: Фильтрация строк таблицы
+          href: filter-table-rows.md
+        - name: Добавление или редактирование фильтров
+          href: add-or-edit-filter.md
+        - name: Добавление или изменение соединения
+          href: add-or-edit-join.md
+        - name: Формирование фильтров
+          href: generate-filters.md
+        - name: Агент моментальных снимков (мастер создания публикаций)
+          href: snapshot-agent-new-publication-wizard.md
+    - name: Мастер создания подписки (справочник пользовательского интерфейса)
+      href: new-subscription-wizard-ui-reference.md
+      items:
+        - name: Расположение агента <AgentName>
+          href: agentname-agent-location.md
+        - name: Подписчики
+          href: subscribers.md
+        - name: 'Добавить подписчик, отличный от подписчика SQL Server'
+          href: add-non-sql-server-subscriber.md
+        - name: Безопасность агента <AgentName>
+          href: agentname-agent-security.md
+        - name: Обновляемые подписки
+          href: updatable-subscriptions.md
+        - name: Имя входа для обновляемых подписок
+          href: login-for-updatable-subscriptions.md
+        - name: Инициализировать подписки
+          href: initialize-subscriptions.md
+        - name: Сведения о веб-сервере
+          href: web-server-information.md
+        - name: Тип подписки
+          href: subscription-type.md
+        - name: Значения функции HOST_NAME
+          href: host-name-values.md
+    - name: мастер настройки одноранговой топологии
+      href: configure-peer-to-peer-topology-wizard.md
+      items:
+        - name: Публикация (одноранговая репликация)
+          href: publication-peer-to-peer-replication.md
+        - name: Настройка топологии (одноранговая репликация)
+          href: configure-topology-peer-to-peer-replication.md
+        - name: Безопасность агента чтения журнала (одноранговая репликация)
+          href: log-reader-agent-security-peer-to-peer-replication.md
+        - name: Безопасность агента распространителя (одноранговая репликация)
+          href: distribution-agent-security-peer-to-peer-replication.md
+        - name: Инициализация нового узла (одноранговая репликация)
+          href: new-peer-initialization-peer-to-peer-replication.md
+    - name: Программы Microsoft «Средство просмотра конфликтов репликации» и «Интерактивный сопоставитель»
+      href: microsoft-replication-conflict-viewer-and-interactive-resolver.md
+      items:
+        - name: Средство просмотра конфликтов репликации Microsoft (репликация слиянием)
+          href: microsoft-replication-conflict-viewer-merge-replication.md
+        - name: Средство просмотра конфликтов репликации Майкрософт (репликация транзакций)
+          href: microsoft-replication-conflict-viewer-transactional-replication.md
+        - name: Интерактивный сопоставитель конфликтов репликации (Microsoft)
+          href: microsoft-replication-interactive-conflict-resolver.md
+        - name: Определение фильтров
+          href: define-filters.md
+- name: Диалоговые окна репликации в среде SQL Server Management Studio
+  href: sql-server-management-studio-replication-dialog-boxes.md
+  items:
+    - name: Безопасность агента моментальных снимков
+      href: snapshot-agent-security.md
+    - name: Безопасность агента чтения журнала
+      href: log-reader-agent-security.md
+    - name: Безопасность агента распространителя
+      href: distribution-agent-security.md
+    - name: Безопасность агента слияния
+      href: merge-agent-security.md
+    - name: Безопасность агента чтения очереди
+      href: queue-reader-agent-security.md
+    - name: Профили агента (один агент)
+      href: agent-profiles-single-agent.md
+    - name: Профили агентов
+      href: agent-profiles.md
+    - name: Свойства <AgentProfileName>
+      href: agentprofilename-properties.md
+    - name: Создать профиль агента
+      href: new-agent-profile.md
+    - name: Проверка всех подписок
+      href: validate-all-subscriptions.md
+    - name: Проверка подписок
+      href: validate-subscriptions.md
+    - name: Проверка подписки
+      href: validate-subscription.md
+    - name: Параметры проверки подписки (подписки на публикацию транзакций)
+      href: subscription-validation-options-transactional-subscriptions.md
+    - name: Параметры проверки подписки (подписка на публикацию слиянием)
+      href: subscription-validation-options-merge-subscriptions.md
+    - name: Повторная инициализация подписок — все подписки
+      href: reinitialize-subscription-s-all-subscriptions.md
+    - name: Повторная инициализация подписок — одна подписка
+      href: reinitialize-subscription-s-one-subscription.md
+    - name: Диалоговое окно «Формирование скрипта SQL» (объекты репликации)
+      href: generate-sql-script-replication-objects.md
+    - name: 'Диалоговое окно «Соединение с сервером (Oracle)», вкладка «Имя входа»'
+      href: connect-to-server-oracle-login.md
+    - name: 'Соединение с сервером (Oracle), свойства соединения'
+      href: connect-to-server-oracle-connection-properties.md
+- name: Учебники по репликации
+  href: replication-tutorials.md
+  items:
+    - name: Подготовка сервера к репликации
+      href: tutorial-preparing-the-server-for-replication.md
+      items:
+        - name: Занятие 1. Создание учетных записей Windows для репликации
+          href: lesson-1-creating-windows-accounts-for-replication.md
+        - name: Занятие 2. Подготовка папки моментальных снимков
+          href: lesson-2-preparing-the-snapshot-folder.md
+        - name: Урок 3. Настройка распространения
+          href: lesson-3-configuring-distribution.md
+    - name: Репликация данных между всегда соединенными серверами
+      href: tutorial-replicating-data-between-continuously-connected-servers.md
+      items:
+        - name: Урок 1. Публикация данных с помощью репликации транзакций
+          href: lesson-1-publishing-data-using-transactional-replication.md
+        - name: Занятие 2. Создание подписки на публикацию транзакций
+          href: lesson-2-creating-a-subscription-to-the-transactional-publication.md
+        - name: Занятие 3. Проверка подписки и измерение задержки
+          href: lesson-3-validating-the-subscription-and-measuring-latency.md
+    - name: Репликация данных с мобильными клиентами
+      href: tutorial-replicating-data-with-mobile-clients.md
+      items:
+        - name: Урок 1. Публикация данных с помощью репликации слиянием
+          href: lesson-1-publishing-data-using-merge-replication.md
+        - name: Занятие 2. Создание подписки на публикацию слиянием
+          href: lesson-2-creating-a-subscription-to-the-merge-publication.md
+        - name: Занятие 3. Синхронизация подписки на публикацию слиянием
+          href: lesson-3-synchronizing-the-subscription-to-the-merge-publication.md

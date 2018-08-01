@@ -1,0 +1,18 @@
+- name: "Создание приложений с помощью драйвера OLE\_DB для SQL\_Server"
+  href: building-applications-with-oledb-driver-for-sql-server.md
+- name: "Компоненты драйвера OLE\_DB для SQL\_Server"
+  href: components-of-oledb-driver-for-sql-server.md
+- name: "Установка драйвера OLE\_DB для SQL\_Server"
+  href: installing-oledb-driver-for-sql-server.md
+- name: "Политики поддержки для драйвера OLE\_DB для SQL\_Server"
+  href: support-policies-for-oledb-driver-for-sql-server.md
+- name: Обновление приложения с переходом от собственного клиента SQL Server 2005
+  href: updating-an-application-from-sql-server-2005-native-client.md
+- name: "Обновление приложения с переходом от\_MDAC на драйвер OLE DB для SQL Server"
+  href: updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md
+- name: "Использование объектов\_ADO с драйвером OLE\_DB для SQL\_Server"
+  href: using-ado-with-oledb-driver-for-sql-server.md
+- name: Использование ключевых слов строки подключения с драйвером OLE DB для SQL Server
+  href: using-connection-string-keywords-with-oledb-driver-for-sql-server.md
+- name: "Использование файлов библиотеки и заголовков драйвера OLE\_DB для SQL\_Server"
+  href: using-the-oledb-driver-for-sql-server-header-and-library-files.md

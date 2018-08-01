@@ -1,0 +1,834 @@
+- name: Примеры кода ADO
+  href: ado-code-examples.md
+- name: Свойство Type (объект Stream ADO)
+  href: type-property-ado-stream.md
+- name: Пример свойства Prepared (Visual C++)
+  href: prepared-property-example-vc.md
+- name: ObjectProxy (ADO — синтаксис WFC)
+  href: objectproxy-ado-wfc-syntax.md
+- name: 'Свойства, методы и события объекта Connection'
+  href: connection-object-properties-methods-and-events.md
+- name: RecordTypeEnum
+  href: recordtypeenum.md
+- name: MoveRecordOptionsEnum
+  href: moverecordoptionsenum.md
+- name: Пример метода Refresh (Visual Basic)
+  href: refresh-method-example-vb.md
+- name: Пример метода CompareBookmarks (Visual Basic)
+  href: comparebookmarks-method-example-vb.md
+- name: SeekEnum
+  href: seekenum.md
+- name: ADCPROP_ASYNCTHREADPRIORITY_ENUM
+  href: adcprop-asyncthreadpriority-enum.md
+- name: Объект Connection (ADO)
+  href: connection-object-ado.md
+- name: Объект Recordset (ADO)
+  href: recordset-object-ado.md
+- name: 'Примеры Execute, Requery и Clear (Visual Basic)'
+  href: execute-requery-and-clear-methods-example-vb.md
+- name: Метод Save
+  href: save-method.md
+- name: 'Начало, фиксация, откат — TransComplete'
+  href: begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md
+- name: EventStatusEnum
+  href: eventstatusenum.md
+- name: PersistFormatEnum
+  href: persistformatenum.md
+- name: Пример метода AddNew (JScript)
+  href: addnew-method-example-jscript.md
+- name: Метод CancelUpdate (ADO)
+  href: cancelupdate-method-ado.md
+- name: Свойство Number (ADO)
+  href: number-property-ado.md
+- name: Метод Append (ADO)
+  href: append-method-ado.md
+- name: Метод Execute (объект Command ADO)
+  href: execute-method-ado-command.md
+- name: Свойство CommandStream (ADO)
+  href: commandstream-property-ado.md
+- name: Примеры методов Open и Close (Visual C++)
+  href: open-and-close-methods-example-vc.md
+- name: Свойство IsolationLevel
+  href: isolationlevel-property.md
+- name: 'ActiveConnection, CommandText, CommandTimeout (JScript)'
+  href: activeconnection-commandtext-timeout-type-size-example-jscript.md
+- name: Примеры свойств Filter и RecordCount (Visual Basic)
+  href: filter-and-recordcount-properties-example-vb.md
+- name: XactAttributeEnum
+  href: xactattributeenum.md
+- name: Свойство Size (объект Parameter ADO)
+  href: size-property-ado-parameter.md
+- name: PositionEnum
+  href: positionenum.md
+- name: Stream (индекс синтаксиса Visual C++ с импортом)
+  href: stream-visual-c-syntax-index-with-sharpimport.md
+- name: Свойство PageSize (ADO)
+  href: pagesize-property-ado.md
+- name: Свойство Charset (ADO)
+  href: charset-property-ado.md
+- name: Пример свойства Prepared (Visual Basic)
+  href: prepared-property-example-vb.md
+- name: Пример свойства Status (объект Recordset) (Visual Basic)
+  href: status-property-example-recordset-vb.md
+- name: Свойство Item (ADO)
+  href: item-property-ado.md
+- name: Пример свойства Source (Visual C++)
+  href: source-property-example-vc.md
+- name: Пример свойства CacheSize (Visual C++)
+  href: cachesize-property-example-vc.md
+- name: Метод Cancel (ADO)
+  href: cancel-method-ado.md
+- name: FieldStatusEnum
+  href: fieldstatusenum.md
+- name: Объект Parameter
+  href: parameter-object.md
+- name: ADCPROP_AUTORECALC_ENUM
+  href: adcprop-autorecalc-enum.md
+- name: Stream (синтаксис ADO для Visual C++)
+  href: stream-ado-for-visual-c-syntax.md
+- name: Примеры методов Save и Open (Visual Basic)
+  href: save-and-open-methods-example-vb.md
+- name: Свойство AbsolutePage (ADO)
+  href: absolutepage-property-ado.md
+- name: Событие WillExecute (ADO)
+  href: willexecute-event-ado.md
+- name: ConnectionEvents (индекс синтаксиса Visual C++ с импортом)
+  href: connectionevents-visual-c-syntax-index-with-sharpimport.md
+- name: Пример метода AddNew (VBScript)
+  href: addnew-method-example-vbscript.md
+- name: Метод CancelBatch (ADO)
+  href: cancelbatch-method-ado.md
+- name: Объект Record (ADO)
+  href: record-object-ado.md
+- name: Свойство Version (ADO)
+  href: version-property-ado.md
+- name: 'ActiveConnection, CommandText, CommandTimeout (Visual Basic)'
+  href: activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md
+- name: 'Свойства, методы и события объекта Record'
+  href: record-object-properties-methods-and-events.md
+- name: Свойство Position (ADO)
+  href: position-property-ado.md
+- name: Свойство Count (ADO)
+  href: count-property-ado.md
+- name: Событие WillConnect (ADO)
+  href: willconnect-event-ado.md
+- name: Примеры свойств Provider и DefaultDatabase (Visual C++)
+  href: provider-and-defaultdatabase-properties-example-vc.md
+- name: Метод Requery
+  href: requery-method.md
+- name: Динамические свойства ADO
+  href: ado-dynamic-properties.md
+- name: События WillChangeRecordset и RecordsetChangeComplete (ADO)
+  href: willchangerecordset-and-recordsetchangecomplete-events-ado.md
+- name: Свойство Direction
+  href: direction-property.md
+- name: 'Методы BeginTrans, CommitTrans и RollbackTrans (ADO)'
+  href: begintrans-committrans-and-rollbacktrans-methods-ado.md
+- name: Пример метода AddNew (Visual Basic)
+  href: addnew-method-example-vb.md
+- name: ResyncEnum
+  href: resyncenum.md
+- name: Пример метода Resync (Visual C++)
+  href: resync-method-example-vc.md
+- name: Пример метода GetRows (JScript)
+  href: getrows-method-example-jscript.md
+- name: LockTypeEnum
+  href: locktypeenum.md
+- name: Метод Open (объект Stream ADO)
+  href: open-method-ado-stream.md
+- name: 'Уникальная таблица, уникальная схема, уникальный каталог)'
+  href: unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md
+- name: Объекты и интерфейсы ADO
+  href: ado-objects-and-interfaces.md
+- name: Метод CompareBookmarks (ADO)
+  href: comparebookmarks-method-ado.md
+- name: Индекс синтаксиса ADO для Visual C++ для модели COM
+  href: ado-for-visual-c-syntax-index-for-com.md
+- name: Parameter (ADO — синтаксис WFC)
+  href: parameter-ado-wfc-syntax.md
+- name: Свойство Name (ADO)
+  href: name-property-ado.md
+- name: StreamReadEnum
+  href: streamreadenum.md
+- name: Command (синтаксис ADO для Visual C++)
+  href: command-ado-for-visual-c-syntax.md
+- name: 'Свойства, методы и события объекта Error'
+  href: error-object-properties-methods-and-events.md
+- name: Command (индекс синтаксиса Visual C++ с импортом)
+  href: command-visual-c-syntax-index-with-sharpimport.md
+- name: Примеры методов Update и CancelUpdate (Visual C++)
+  href: update-and-cancelupdate-methods-example-vc.md
+- name: События WillChangeRecord и RecordChangeComplete (ADO)
+  href: willchangerecord-and-recordchangecomplete-events-ado.md
+- name: Connection (синтаксис ADO для Visual C++)
+  href: connection-ado-for-visual-c-syntax.md
+- name: Пример свойства Optimize (Visual C++)
+  href: optimize-property-example-vc.md
+- name: Метод put_OLEDBCommand
+  href: put-oledbcommand-method.md
+- name: Свойство CommandType (ADO)
+  href: commandtype-property-ado.md
+- name: Перечисляемые константы ADO
+  href: ado-enumerated-constants.md
+- name: Примеры ConnectionString и ConnectionTimeout (Visual C++)
+  href: connectionstring-connectiontimeout-and-state-properties-example-vc.md
+- name: ParameterDirectionEnum
+  href: parameterdirectionenum.md
+- name: Метод AppendChunk (ADO)
+  href: appendchunk-method-ado.md
+- name: Свойство CommandTimeout (ADO)
+  href: commandtimeout-property-ado.md
+- name: Примеры OriginalValue и UnderlyingValue (Visual C++)
+  href: originalvalue-and-underlyingvalue-properties-example-vc.md
+- name: Свойство Prompt (динамическое) (ADO)
+  href: prompt-property-dynamic-ado.md
+- name: Record (синтаксис ADO для Visual C++)
+  href: record-ado-for-visual-c-syntax.md
+- name: Примеры AbsolutePosition и CursorLocation (Visual Basic)
+  href: absoluteposition-and-cursorlocation-properties-example-vb.md
+- name: Примеры DeleteRecord и MoveRecord (Visual Basic)
+  href: deleterecord-and-moverecord-methods-example-vb.md
+- name: Примеры AppendChunk и GetChunk (Visual Basic)
+  href: appendchunk-and-getchunk-methods-example-vb.md
+- name: Примеры AbsolutePosition и CursorLocation (JScript)
+  href: absoluteposition-and-cursorlocation-properties-example-jscript.md
+- name: Примеры ActualSize и DefinedSize (Visual Basic)
+  href: actualsize-and-definedsize-properties-example-vb.md
+- name: ConnectOptionEnum
+  href: connectoptionenum.md
+- name: Справочник по API ADO
+  href: ado-api-reference.md
+- name: Метод ReadText
+  href: readtext-method.md
+- name: FieldEnum
+  href: fieldenum.md
+- name: Пример свойства ActiveCommand (JScript)
+  href: activecommand-property-example-jscript.md
+- name: StreamWriteEnum
+  href: streamwriteenum.md
+- name: 'Примеры BOF, EOF и Bookmark Example (Visual C++)'
+  href: bof-eof-and-bookmark-properties-example-vc.md
+- name: Recordset (ADO — синтаксис WFC)
+  href: recordset-ado-wfc-syntax.md
+- name: Примеры методов UpdateBatch и CancelBatch (Visual C++)
+  href: updatebatch-and-cancelbatch-methods-example-vc.md
+- name: ADCPROP_UPDATERESYNC_ENUM
+  href: adcprop-updateresync-enum.md
+- name: CompareEnum
+  href: compareenum.md
+- name: Пример метода Find (Visual Basic)
+  href: find-method-example-vb.md
+- name: Record (индекс синтаксиса Visual C++ с импортом)
+  href: record-visual-c-syntax-index-with-sharpimport.md
+- name: Метод CopyRecord (ADO)
+  href: copyrecord-method-ado.md
+- name: Свойство NativeError (ADO)
+  href: nativeerror-property-ado.md
+- name: Примеры Filter и RecordCount (Visual C++)
+  href: filter-and-recordcount-properties-example-vc.md
+- name: RecordsetEvents (индекс синтаксиса Visual C++ с импортом)
+  href: recordsetevents-visual-c-syntax-index-with-sharpimport.md
+- name: Пример свойства StayInSync (Visual Basic)
+  href: stayinsync-property-example-vb.md
+- name: 'Примеры свойств BOF, EOF и Bookmark (Visual Basic)'
+  href: bof-eof-and-bookmark-properties-example-vb.md
+- name: Свойство CursorType (ADO)
+  href: cursortype-property-ado.md
+- name: Свойство PageCount (ADO)
+  href: pagecount-property-ado.md
+- name: Коллекции ADO
+  href: ado-collections.md
+- name: Примеры Append и CreateParameter (Visual C++)
+  href: append-and-createparameter-methods-example-vc.md
+- name: Метод CopyTo (ADO)
+  href: copyto-method-ado.md
+- name: Пример свойства Item (Visual Basic)
+  href: item-property-example-vb.md
+- name: Метод GetChildren (ADO)
+  href: getchildren-method-ado.md
+- name: 'Примеры CursorType, LockType, EditMode (Visual C++)'
+  href: cursortype-locktype-and-editmode-properties-example-vc.md
+- name: Объект Property (ADO)
+  href: property-object-ado.md
+- name: FilterGroupEnum
+  href: filtergroupenum.md
+- name: Метод LoadFromFile (ADO)
+  href: loadfromfile-method-ado.md
+- name: Пример метода NextRecordset (Visual Basic)
+  href: nextrecordset-method-example-vb.md
+- name: Объект Field
+  href: field-object.md
+- name: Recordset (синтаксис ADO для Visual C++)
+  href: recordset-ado-for-visual-c-syntax.md
+- name: Пример свойства MaxRecords (Visual C++)
+  href: maxrecords-property-example-vc.md
+- name: Примеры кода ADO в Visual C++
+  href: ado-code-examples-in-visual-c.md
+- name: Пример свойства MarshalOptions (Visual Basic)
+  href: marshaloptions-property-example-vb.md
+- name: GetRowsOptionEnum
+  href: getrowsoptionenum.md
+- name: Пример метода Find (JScript)
+  href: find-method-example-jscript.md
+- name: 'Примеры Execute, Requery и Clear (Visual C++)'
+  href: execute-requery-and-clear-methods-example-vc.md
+- name: Интерфейс IDSOShapeExtensions
+  href: idsoshapeextensions-interface.md
+- name: Метод Clone (ADO)
+  href: clone-method-ado.md
+- name: Пример свойства Type (объект Field) (Visual Basic)
+  href: type-property-example-field-vb.md
+- name: Свойство Attributes (ADO)
+  href: attributes-property-ado.md
+- name: CursorLocationEnum
+  href: cursorlocationenum.md
+- name: Пример метода Resync (Visual Basic)
+  href: resync-method-example-vb.md
+- name: Метод Open (объект Record ADO)
+  href: open-method-ado-record.md
+- name: Метод NextRecordset (ADO)
+  href: nextrecordset-method-ado.md
+- name: 'Примеры BeginTrans, CommitTrans и RollbackTrans (Visual Basic)'
+  href: begintrans-committrans-and-rollbacktrans-methods-example-vb.md
+- name: Метод AddNew (ADO)
+  href: addnew-method-ado.md
+- name: 'Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)'
+  href: movefirst-movelast-movenext-and-moveprevious-methods-ado.md
+- name: Пример свойства Type (объект Property) (Visual C++)
+  href: type-property-example-property-vc.md
+- name: Свойство Optimize (динамическое) (ADO)
+  href: optimize-property-dynamic-ado.md
+- name: Свойство Size (объект Stream ADO)
+  href: size-property-ado-stream.md
+- name: Пример свойства MarshalOptions (Visual C++)
+  href: marshaloptions-property-example-vc.md
+- name: Методы ADO
+  href: ado-methods.md
+- name: Событие FetchComplete (ADO)
+  href: fetchcomplete-event-ado.md
+- name: Пример свойства CacheSize (Visual Basic)
+  href: cachesize-property-example-vb.md
+- name: Error (ADO — синтаксис WFC)
+  href: error-ado-wfc-syntax.md
+- name: Свойство EditMode
+  href: editmode-property.md
+- name: Объект Error
+  href: error-object.md
+- name: ADO — индекс синтаксиса WFC
+  href: ado-wfc-syntax-index.md
+- name: Свойство Source (объект Recordset ADO)
+  href: source-property-ado-recordset.md
+- name: Объект Command (ADO)
+  href: command-object-ado.md
+- name: Пример метода GetRows (Visual Basic)
+  href: getrows-method-example-vb.md
+- name: Пример свойства State (Visual Basic)
+  href: state-property-example-vb.md
+- name: Свойство RowPosition (ADO)
+  href: rowposition-property-ado.md
+- name: Пример метода AddNew (Visual C++)
+  href: addnew-method-example-vc.md
+- name: Примеры NumericScale и Precision (Visual Basic)
+  href: numericscale-and-precision-properties-example-vb.md
+- name: 'Свойства, методы и события объекта Stream'
+  href: stream-object-properties-methods-and-events.md
+- name: Метод Stat
+  href: stat-method.md
+- name: Свойство LockType (ADO)
+  href: locktype-property-ado.md
+- name: PropertyAttributesEnum
+  href: propertyattributesenum.md
+- name: Метод CreateParameter (ADO)
+  href: createparameter-method-ado.md
+- name: DataSpace (ADO — синтаксис WFC)
+  href: dataspace-ado-wfc-syntax.md
+- name: ErrorValueEnum
+  href: errorvalueenum.md
+- name: Метод Flush (ADO)
+  href: flush-method-ado.md
+- name: Интерфейс ADOStreamConstruction
+  href: adostreamconstruction-interface.md
+- name: Примеры IsolationLevel и Mode (Visual C++)
+  href: isolationlevel-and-mode-properties-example-vc.md
+- name: Метод GetString (ADO)
+  href: getstring-method-ado.md
+- name: 'Примеры MoveFirst, MoveLast и MoveNext (VBScript)'
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md
+- name: Field (индекс синтаксиса Visual C++ с импортом)
+  href: field-visual-c-syntax-index-with-sharpimport.md
+- name: RecordOpenOptionsEnum
+  href: recordopenoptionsenum.md
+- name: IsolationLevelEnum
+  href: isolationlevelenum.md
+- name: Connection (ADO — синтаксис WFC)
+  href: connection-ado-wfc-syntax.md
+- name: Свойство Status (объект Field ADO)
+  href: status-property-ado-field.md
+- name: 'Свойства, методы и события коллекции Fields'
+  href: fields-collection-properties-methods-and-events.md
+- name: Пример метода NextRecordset (Visual C++)
+  href: nextrecordset-method-example-vc.md
+- name: Свойство Chapter (ADO)
+  href: chapter-property-ado.md
+- name: Метод SaveToFile
+  href: savetofile-method.md
+- name: Свойство Type (ADO)
+  href: type-property-ado.md
+- name: Свойство Update Resync (динамическое) (ADO)
+  href: update-resync-property-dynamic-ado.md
+- name: Свойство ConnectionTimeout (ADO)
+  href: connectiontimeout-property-ado.md
+- name: StreamOpenOptionsEnum
+  href: streamopenoptionsenum.md
+- name: Метод OpenSchema
+  href: openschema-method.md
+- name: Метод Read
+  href: read-method.md
+- name: Свойство RecordCount (ADO)
+  href: recordcount-property-ado.md
+- name: Пример свойства ActiveCommand (Visual C++)
+  href: activecommand-property-example-vc.md
+- name: SearchDirectionEnum
+  href: searchdirectionenum.md
+- name: Индекс динамических свойств ADO
+  href: ado-dynamic-property-index.md
+- name: Property (индекс синтаксиса Visual C++ с импортом)
+  href: property-visual-c-syntax-index-with-sharpimport.md
+- name: Свойство Mode (ADO)
+  href: mode-property-ado.md
+- name: Свойство Filter
+  href: filter-property.md
+- name: 'Примеры MoveFirst, MoveLast, MoveNext и MovePrevious (Visual C++)'
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md
+- name: ParameterAttributesEnum
+  href: parameterattributesenum.md
+- name: Пример метода Cancel (Visual C++)
+  href: cancel-method-example-vc.md
+- name: Field (ADO — синтаксис WFC)
+  href: field-ado-wfc-syntax.md
+- name: EventReasonEnum
+  href: eventreasonenum.md
+- name: Свойство Rowset (ADO)
+  href: rowset-property-ado.md
+- name: Пример метода Delete (Visual C++)
+  href: delete-method-example-vc.md
+- name: Пример свойства Source (Visual Basic)
+  href: source-property-example-vb.md
+- name: Коллекция Fields (ADO)
+  href: fields-collection-ado.md
+- name: Пример метода Clone (Visual C++)
+  href: clone-method-example-vc.md
+- name: Метод WriteText
+  href: writetext-method.md
+- name: Свойство AbsolutePosition (ADO)
+  href: absoluteposition-property-ado.md
+- name: Свойство RecordType (ADO)
+  href: recordtype-property-ado.md
+- name: Примеры кода ADO для VBScript
+  href: ado-code-examples-vbscript.md
+- name: Пример метода Delete (VBScript)
+  href: delete-method-example-vbscript.md
+- name: Примеры свойств EOS и LineSeparator (Visual Basic)
+  href: eos-and-lineseparator-properties-and-skipline-method-example-vb.md
+- name: Parameter (синтаксис ADO для Visual C++)
+  href: parameter-ado-for-visual-c-syntax.md
+- name: Метод Resync
+  href: resync-method.md
+- name: Свойство ActualSize (ADO)
+  href: actualsize-property-ado.md
+- name: Пример свойства Version (Visual Basic)
+  href: version-property-example-vb.md
+- name: Метод SetEOS
+  href: seteos-method.md
+- name: Пример метода OpenSchema (Visual C++)
+  href: openschema-method-example-vc.md
+- name: FieldAttributeEnum
+  href: fieldattributeenum.md
+- name: Свойство OriginalValue (ADO)
+  href: originalvalue-property-ado.md
+- name: Пример метода Supports (Visual C++)
+  href: supports-method-example-vc.md
+- name: RecordCreateOptionsEnum
+  href: recordcreateoptionsenum.md
+- name: Метод MoveRecord (ADO)
+  href: moverecord-method-ado.md
+- name: Parameter (индекс синтаксиса Visual C++ с импортом)
+  href: parameter-visual-c-syntax-index-with-sharpimport.md
+- name: Метод Update
+  href: update-method.md
+- name: Collections (синтаксис ADO для Visual C++)
+  href: collections-ado-for-visual-c-syntax.md
+- name: 'Примеры методов Read, ReadText, Write и WriteText (Visual Basic)'
+  href: read-readtext-write-and-writetext-methods-example-vb.md
+- name: Свойство Reshape Name (динамическое) (ADO)
+  href: reshape-name-property-dynamic-ado.md
+- name: ExecuteOptionEnum
+  href: executeoptionenum.md
+- name: Примеры Filter и RecordCount (JScript)
+  href: filter-and-recordcount-properties-example-jscript.md
+- name: Примеры Provider и DefaultDatabase (Visual Basic)
+  href: provider-and-defaultdatabase-properties-example-vb.md
+- name: Примеры методов Open и Close (VBScript)
+  href: open-and-close-methods-example-vbscript.md
+- name: Метод Open (объект Connection ADO)
+  href: open-method-ado-connection.md
+- name: Пример свойства Optimize (Visual Basic)
+  href: optimize-property-example-vb.md
+- name: Свойство ParentURL (ADO)
+  href: parenturl-property-ado.md
+- name: Пример метода Clone (Visual Basic)
+  href: clone-method-example-vb.md
+- name: Свойства и события коллекции Parameters
+  href: parameters-collection-properties-methods-and-events.md
+- name: Пример свойства MaxRecords (Visual Basic)
+  href: maxrecords-property-example-vb.md
+- name: Событие ExecuteComplete (ADO)
+  href: executecomplete-event-ado.md
+- name: 'Примеры CopyRecord, CopyTo и SaveToFile (Visual Basic)'
+  href: copyrecord-copyto-and-savetofile-methods-example-vb.md
+- name: 'Свойства, методы и события коллекции Errors'
+  href: errors-collection-properties-methods-and-events.md
+- name: Свойство ParentRow (ADO)
+  href: parentrow-property-ado.md
+- name: 'Примеры Description, HelpContext, HelpFile и NativeError (Visual Basic)'
+  href: description-helpcontext-helpfile-nativeerror-number-source-example-vb.md
+- name: Пример метода Cancel (Visual Basic)
+  href: cancel-method-example-vb.md
+- name: 'Примеры AbsolutePage, PageCount и PageSize (Visual Basic)'
+  href: absolutepage-pagecount-and-pagesize-properties-example-vb.md
+- name: Метод GetDataProviderDSO
+  href: getdataproviderdso-method.md
+- name: Пример метода Find (Visual C++)
+  href: find-method-example-vc.md
+- name: SaveOptionsEnum
+  href: saveoptionsenum.md
+- name: Индекс синтаксиса ADO для Visual C++ с импортом
+  href: ado-for-visual-c-syntax-index-with-sharpimport.md
+- name: Пример свойства Sort (Visual C++)
+  href: sort-property-example-vc.md
+- name: Свойство EOS
+  href: eos-property.md
+- name: Примеры метода Seek и свойства Index (Visual C++)
+  href: seek-method-and-index-property-example-vc.md
+- name: События ConnectComplete и Disconnect (ADO)
+  href: connectcomplete-and-disconnect-events-ado.md
+- name: Пример метода Move (Visual Basic)
+  href: move-method-example-vb.md
+- name: Примеры свойств NumericScale и Precision (Visual C++)
+  href: numericscale-and-precision-properties-example-vc.md
+- name: BookmarkEnum
+  href: bookmarkenum.md
+- name: Метод Find (ADO)
+  href: find-method-ado.md
+- name: Примеры методов Update и CancelUpdate (Visual Basic)
+  href: update-and-cancelupdate-methods-example-vb.md
+- name: Пример свойства Count (Visual C++)
+  href: count-property-example-vc.md
+- name: Свойства и методы объекта Parameter
+  href: parameter-object-properties-methods-and-events.md
+- name: 'Примеры Description, HelpContext и HelpFile (Visual C++)'
+  href: description-helpcontext-helpfile-nativeerror-number-source-example-vc.md
+- name: Свойство ActiveConnection (ADO)
+  href: activeconnection-property-ado.md
+- name: Интерфейс ADORecordConstruction
+  href: adorecordconstruction-interface.md
+- name: Примеры методов AppendChunk и GetChunk (Visual C++)
+  href: appendchunk-and-getchunk-methods-example-vc.md
+- name: 'Примеры Execute, Requery и Clear (JScript)'
+  href: execute-requery-and-clear-methods-example-jscript.md
+- name: RecordStatusEnum
+  href: recordstatusenum.md
+- name: Свойство StayInSync
+  href: stayinsync-property.md
+- name: Свойство Resync Command (динамическое) (ADO)
+  href: resync-command-property-dynamic-ado.md
+- name: CursorOptionEnum
+  href: cursoroptionenum.md
+- name: Примеры ConnectionString и ConnectionTimeout (Visual Basic)
+  href: connectionstring-connectiontimeout-and-state-properties-example-vb.md
+- name: Свойство CommandText (ADO)
+  href: commandtext-property-ado.md
+- name: Пример метода GetString (Visual C++)
+  href: getstring-method-example-vc.md
+- name: Свойство Description
+  href: description-property.md
+- name: CommandTypeEnum
+  href: commandtypeenum.md
+- name: Объектная модель ADO
+  href: ado-object-model.md
+- name: 'Примеры BeginTrans, CommitTrans и RollbackTrans (Visual C++)'
+  href: begintrans-committrans-and-rollbacktrans-methods-example-vc.md
+- name: Свойство Stream
+  href: stream-property.md
+- name: Свойство CacheSize (ADO)
+  href: cachesize-property-ado.md
+- name: Коллекция Parameters (ADO)
+  href: parameters-collection-ado.md
+- name: Примеры AbsolutePosition и CursorLocation (Visual С++)
+  href: absoluteposition-and-cursorlocation-properties-example-vc.md
+- name: Свойство Value (ADO)
+  href: value-property-ado.md
+- name: Свойство Bookmark (ADO)
+  href: bookmark-property-ado.md
+- name: Событие EndOfRecordset (ADO)
+  href: endofrecordset-event-ado.md
+- name: Примеры методов Append и CreateParameter (Visual Basic)
+  href: append-and-createparameter-methods-example-vb.md
+- name: Событие InfoMessage (ADO)
+  href: infomessage-event-ado.md
+- name: EditModeEnum
+  href: editmodeenum.md
+- name: Пример метода OpenSchema (Visual Basic)
+  href: openschema-method-example-vb.md
+- name: Пример свойства Type (объект Field) (Visual C++)
+  href: type-property-example-field-vc.md
+- name: 'Свойства, методы и события объекта Recordset'
+  href: recordset-object-properties-methods-and-events.md
+- name: Свойство NamedParameters (ADO)
+  href: namedparameters-property-ado.md
+- name: Свойство DefaultDatabase
+  href: defaultdatabase-property.md
+- name: Свойство Status (объект Recordset ADO)
+  href: status-property-ado-recordset.md
+- name: Примеры методов UpdateBatch и CancelBatch (Visual Basic)
+  href: updatebatch-and-cancelbatch-methods-example-vb.md
+- name: Свойство Source (объект Error ADO)
+  href: source-property-ado-error.md
+- name: MarshalOptionsEnum
+  href: marshaloptionsenum.md
+- name: Свойство DefinedSize
+  href: definedsize-property.md
+- name: События WillChangeField и FieldChangeComplete (ADO)
+  href: willchangefield-and-fieldchangecomplete-events-ado.md
+- name: Пример метода Refresh (Visual C++)
+  href: refresh-method-example-vc.md
+- name: Метод Close (ADO)
+  href: close-method-ado.md
+- name: Свойство ConnectionString (ADO)
+  href: connectionstring-property-ado.md
+- name: 'Примеры Execute, Requery и Clear (VBScript)'
+  href: execute-requery-and-clear-methods-example-vbscript.md
+- name: Пример свойства StayInSync (Visual C++)
+  href: stayinsync-property-example-vc.md
+- name: Command (ADO — синтаксис WFC)
+  href: command-ado-wfc-syntax.md
+- name: Свойство CursorLocation (ADO)
+  href: cursorlocation-property-ado.md
+- name: Свойство MarshalOptions (ADO)
+  href: marshaloptions-property-ado.md
+- name: 'Примеры AbsolutePage, PageCount и PageSize (Visual C++)'
+  href: absolutepage-pagecount-and-pagesize-properties-example-vc.md
+- name: ConnectModeEnum
+  href: connectmodeenum.md
+- name: Примеры Append и CreateParameter (JScript)
+  href: append-and-createparameter-methods-example-jscript.md
+- name: Collections (индекс синтаксиса Visual C++ с импортом)
+  href: collections-visual-c-syntax-index-with-sharpimport.md
+- name: Свойства BOF и EOF (ADO)
+  href: bof-eof-properties-ado.md
+- name: Пример метода Clone (VBScript)
+  href: clone-method-example-vbscript.md
+- name: Свойство Sort
+  href: sort-property.md
+- name: Пример свойства CacheSize (JScript)
+  href: cachesize-property-example-jscript.md
+- name: Пример свойства Count (Visual Basic)
+  href: count-property-example-vb.md
+- name: ADCPROP_UPDATECRITERIA_ENUM
+  href: adcprop-updatecriteria-enum.md
+- name: Примеры IsolationLevel и Mode (Visual Basic)
+  href: isolationlevel-and-mode-properties-example-vb.md
+- name: Примеры метода Seek и свойства Index (Visual Basic)
+  href: seek-method-and-index-property-example-vb.md
+- name: Примеры Save и Open (Visual C++)
+  href: save-and-open-methods-example-vc.md
+- name: Свойство Dialect
+  href: dialect-property.md
+- name: ObjectStateEnum
+  href: objectstateenum.md
+- name: Метод Open (объект Recordset ADO)
+  href: open-method-ado-recordset.md
+- name: 'Примеры MoveFirst, MoveLast и MoveNext (Visual Basic)'
+  href: movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md
+- name: Пример метода ConvertToString (Visual Basic)
+  href: converttostring-method-example-vb.md
+- name: Событие FetchProgress (ADO)
+  href: fetchprogress-event-ado.md
+- name: Свойство DataSource (ADO)
+  href: datasource-property-ado.md
+- name: CopyRecordOptionsEnum
+  href: copyrecordoptionsenum.md
+- name: Пример свойства Type (объект Property) (Visual Basic)
+  href: type-property-example-property-vb.md
+- name: Пример метода CreateRecordset (Visual Basic)
+  href: createrecordset-method-example-vb.md
+- name: Примеры Attributes и Name (Visual C++)
+  href: attributes-and-name-properties-example-vc.md
+- name: 'Примеры AbsolutePage, PageCount и PageSize (JScript)'
+  href: absolutepage-pagecount-and-pagesize-properties-example-jscript.md
+- name: Пример свойства Value (Visual Basic)
+  href: value-property-example-vb.md
+- name: 'Примеры CursorType, LockType и EditMode (Visual Basic)'
+  href: cursortype-locktype-and-editmode-properties-example-vb.md
+- name: Свойство DataMember
+  href: datamember-property.md
+- name: DataTypeEnum
+  href: datatypeenum.md
+- name: Свойство Source (объект Record ADO)
+  href: source-property-ado-record.md
+- name: Свойства HelpContext и HelpFile
+  href: helpcontext-helpfile-properties.md
+- name: Пример свойства Value (Visual C++)
+  href: value-property-example-vc.md
+- name: Пример метода Move (VBScript)
+  href: move-method-example-vbscript.md
+- name: Свойство NumericScale (ADO)
+  href: numericscale-property-ado.md
+- name: Метод Supports
+  href: supports-method.md
+- name: Пример модели событий ADO (Visual C ++)
+  href: ado-events-model-example-vc.md
+- name: Коллекция Errors (ADO)
+  href: errors-collection-ado.md
+- name: StringFormatEnum
+  href: stringformatenum.md
+- name: Метод DeleteRecord (ADO)
+  href: deleterecord-method-ado.md
+- name: Метод Delete (коллекция Fields ADO)
+  href: delete-method-ado-fields-collection.md
+- name: Примеры свойств Attributes и Name (Visual Basic)
+  href: attributes-and-name-properties-example-vb.md
+- name: Пример метода CompareBookmarks (Visual C++)
+  href: comparebookmarks-method-example-vc.md
+- name: Пример свойства Version (Visual C++)
+  href: version-property-example-vc.md
+- name: Метод UpdateBatch
+  href: updatebatch-method.md
+- name: Метод get_OLEDBCommand
+  href: get-oledbcommand-method.md
+- name: Пример свойства ActiveCommand (Visual Basic)
+  href: activecommand-property-example-vb.md
+- name: Примеры свойств ActualSize и DefinedSize (JScript)
+  href: actualsize-and-definedsize-properties-example-jscript.md
+- name: Примеры кода ADO в Microsoft JScript
+  href: ado-code-examples-in-microsoft-jscript.md
+- name: StreamTypeEnum
+  href: streamtypeenum.md
+- name: Свойства и методы объекта Property
+  href: property-object-properties-methods-and-events.md
+- name: SchemaEnum
+  href: schemaenum.md
+- name: ConnectPromptEnum
+  href: connectpromptenum.md
+- name: Свойство Row (ADO)
+  href: row-property-ado.md
+- name: Свойство MaxRecords (ADO)
+  href: maxrecords-property-ado.md
+- name: Свойство Precision (ADO)
+  href: precision-property-ado.md
+- name: Error (индекс синтаксиса Visual C++ с импортом)
+  href: error-visual-c-syntax-index-with-sharpimport.md
+- name: Метод Delete (объект Recordset ADO)
+  href: delete-method-ado-recordset.md
+- name: 'Свойства, методы и события объекта Field'
+  href: field-object-properties-methods-and-events.md
+- name: Коллекция Properties (ADO)
+  href: properties-collection-ado.md
+- name: Свойство Index
+  href: index-property.md
+- name: Error (синтаксис ADO для Visual C++)
+  href: error-ado-for-visual-c-syntax.md
+- name: Пример свойства State (Visual C++)
+  href: state-property-example-vc.md
+- name: AffectEnum
+  href: affectenum.md
+- name: События WillMove и MoveComplete (ADO)
+  href: willmove-and-movecomplete-events-ado.md
+- name: Пример свойства Status (Visual C++)
+  href: status-property-example-vc.md
+- name: Примеры OriginalValue и UnderlyingValue (Visual Basic)
+  href: originalvalue-and-underlyingvalue-properties-example-vb.md
+- name: Метод Delete (коллекция Parameters ADO)
+  href: delete-method-ado-parameters-collection.md
+- name: Пример метода GetString (Visual Basic)
+  href: getstring-method-example-vb.md
+- name: Метод GetRows (ADO)
+  href: getrows-method-ado.md
+- name: Метод Move (ADO)
+  href: move-method-ado.md
+- name: Пример метода Supports (Visual Basic)
+  href: supports-method-example-vb.md
+- name: Примеры методов Open и Close (Visual Basic)
+  href: open-and-close-methods-example-vb.md
+- name: Метод Seek
+  href: seek-method.md
+- name: Свойство Prepared (ADO)
+  href: prepared-property-ado.md
+- name: Примеры кода ADO в Visual Basic
+  href: ado-code-examples-in-visual-basic.md
+- name: Свойство Provider (ADO)
+  href: provider-property-ado.md
+- name: Пример метода Move (Visual C++)
+  href: move-method-example-vc.md
+- name: События ADO
+  href: ado-events.md
+- name: Примеры ActiveConnection и CommandText (Visual C++)
+  href: activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md
+- name: Пример метода Delete (Visual Basic)
+  href: delete-method-example-vb.md
+- name: Свойство State (ADO)
+  href: state-property-ado.md
+- name: Свойство LineSeparator (ADO)
+  href: lineseparator-property-ado.md
+- name: Свойства ADO
+  href: ado-properties.md
+- name: Метод SkipLine
+  href: skipline-method.md
+- name: Метод Clear (ADO)
+  href: clear-method-ado.md
+- name: Пример метода GetRows (Visual C++)
+  href: getrows-method-example-vc.md
+- name: CursorTypeEnum
+  href: cursortypeenum.md
+- name: Recordset (индекс синтаксиса Visual C++ с импортом)
+  href: recordset-visual-c-syntax-index-with-sharpimport.md
+- name: Пример свойства Status (объект Field) (Visual Basic)
+  href: status-property-example-field-vb.md
+- name: Пример свойства Sort (Visual Basic)
+  href: sort-property-example-vb.md
+- name: Метод GetChunk (ADO)
+  href: getchunk-method-ado.md
+- name: Свойство ActiveCommand (ADO)
+  href: activecommand-property-ado.md
+- name: Индексы синтаксиса ADO
+  href: ado-syntax-indexes.md
+- name: Свойство SQLState
+  href: sqlstate-property.md
+- name: Метод Refresh (ADO)
+  href: refresh-method-ado.md
+- name: Интерфейс ADORecordsetConstruction
+  href: adorecordsetconstruction-interface.md
+- name: Collections (ADO — синтаксис WFC)
+  href: collections-ado-wfc-syntax.md
+- name: Примеры ActualSize и DefinedSize (Visual C++)
+  href: actualsize-and-definedsize-properties-example-vc.md
+- name: Пример свойства Item (Visual C++)
+  href: item-property-example-vc.md
+- name: Объект Stream (ADO)
+  href: stream-object-ado.md
+- name: Field (синтаксис ADO для Visual C++)
+  href: field-ado-for-visual-c-syntax.md
+- name: LineSeparatorsEnum
+  href: lineseparatorsenum.md
+- name: Connection (индекс синтаксиса Visual C++ с импортом)
+  href: connection-visual-c-syntax-index-with-sharpimport.md
+- name: 'Свойства, методы и события коллекции Properties'
+  href: properties-collection-properties-methods-and-events.md
+- name: Метод Execute (объект Connection ADO)
+  href: execute-method-ado-connection.md
+- name: 'Свойства, методы и события объекта Command'
+  href: command-object-properties-methods-and-events.md
+- name: Метод Write
+  href: write-method.md
+- name: Свойство UnderlyingValue
+  href: underlyingvalue-property.md

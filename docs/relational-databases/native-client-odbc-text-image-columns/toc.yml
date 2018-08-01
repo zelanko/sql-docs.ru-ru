@@ -1,0 +1,8 @@
+- name: Управление столбцами text и image
+  href: managing-text-and-image-columns.md
+- name: Привязанные и непривязанные столбцы text и image
+  href: bound-vs-unbound-text-and-image-columns.md
+- name: 'Данные времени выполнения и столбцы text, ntext или image'
+  href: data-at-execution-and-text-ntext-or-image-columns.md
+- name: Изменения с ведением журнала и без ведения журнала
+  href: logged-vs-unlogged-modifications.md

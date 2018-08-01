@@ -1,0 +1,13 @@
+- name: "Руководства: SQL\_Server Management Studio "
+  href: tutorial-sql-server-management-studio.md
+  items:
+    - name: "Подключение и отправка запроса к SQL\_Server с помощью SQL Server Management Studio"
+      href: connect-query-sql-server.md
+    - name: "Написание скриптов для объектов в\_SSMS"
+      href: scripting-ssms.md
+    - name: "Использование шаблонов в\_SSMS"
+      href: templates-ssms.md
+    - name: "Конфигурация\_SSMS"
+      href: ssms-configuration.md
+    - name: "Советы и рекомендации по использованию\_SSMS"
+      href: ssms-tricks.md

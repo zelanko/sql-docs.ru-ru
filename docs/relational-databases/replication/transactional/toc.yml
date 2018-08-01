@@ -1,0 +1,24 @@
+- name: Обзор
+  href: transactional-replication.md
+- name: Типы публикации для репликации транзакций
+  href: publication-types-for-transactional-replication.md
+  items:
+    - name: Обновляемые подписки для репликации транзакций
+      href: updatable-subscriptions-for-transactional-replication.md
+    - name: Обновляемые подписки. Разрешение конфликтов для обновления посредством очередей
+      href: updatable-subscriptions-queued-updating-conflict-resolution.md
+    - name: Одноранговая репликация транзакций
+      href: peer-to-peer-transactional-replication.md
+    - name: Обнаружение конфликтов в одноранговой репликации
+      href: peer-to-peer-conflict-detection-in-peer-to-peer-replication.md
+    - name: двунаправленная репликация транзакций
+      href: bidirectional-transactional-replication.md
+- name: Параметры статьи для репликации транзакций
+  href: article-options-for-transactional-replication.md
+  items:
+    - name: Определение способа распространения изменений для статей транзакций
+      href: transactional-articles-specify-how-changes-are-propagated.md
+    - name: Повторное создание транзакционных статей с учетом изменений в схеме
+      href: transactional-articles-regenerate-to-reflect-schema-changes.md
+    - name: Публикация выполнения хранимых процедур в репликации транзакций
+      href: publishing-stored-procedure-execution-in-transactional-replication.md

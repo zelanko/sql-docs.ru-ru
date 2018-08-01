@@ -1,0 +1,16 @@
+- name: Требования к запуску примеров SQLXML
+  href: requirements-for-running-sqlxml-examples.md
+- name: Форматирование +
+  href: ../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
+- name: "Схемы\_XSD с заметками +"
+  href: ../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md
+- name: Основные понятия о программировании для SQLXML 4.0
+  href: sqlxml-4-0-programming-concepts.md
+- name: SQLXML не установлен в SQL Server
+  href: sqlxml-is-not-installed-in-sql-server.md
+- name: Использование ADO для выполнения запросов SQLXML 4.0
+  href: using-ado-to-execute-sqlxml-4-0-queries.md
+- name: Новые возможности в SQLXML 4.0 с пакетом обновления 1 (SP1)
+  href: what-s-new-in-sqlxml-4-0-sp1.md
+- name: Поддержка типов данных xml в SQLXML 4.0
+  href: xml-data-type-support-in-sqlxml-4-0.md

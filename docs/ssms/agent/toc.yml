@@ -1,0 +1,318 @@
+- name: Агент SQL Server
+  href: sql-server-agent.md
+- name: Журнал ошибок агента SQL Server
+  href: sql-server-agent-error-log.md
+  items:
+    - name: View SQL Server Agent Error Log (SQL Server Management Studio)
+      href: view-sql-server-agent-error-log-sql-server-management-studio.md
+    - name: Переименование журнала ошибок агента SQL Server (SSMS)
+      href: rename-a-sql-server-agent-error-log-sql-server-management-studio.md
+    - name: Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (SSMS)
+      href: write-execution-trace-messages-to-sql-server-agent-log-ssms.md
+- name: Задачи автоматизированного администрирования (агент SQL Server)
+  href: automated-administration-tasks-sql-server-agent.md
+  items:
+    - name: Обеспечение безопасности агента SQL Server
+      href: implement-sql-server-agent-security.md
+    - name: Реализация заданий
+      href: implement-jobs.md
+    - name: Наблюдение и обработка событий
+      href: monitor-and-respond-to-events.md
+    - name: Автоматизация администрирования в масштабах предприятия
+      href: automated-administration-across-an-enterprise.md
+      items:
+        - name: Change Steps of a SQL Server Agent Master Job
+          href: change-steps-of-a-sql-server-agent-master-job.md
+        - name: Изменение параметров расписания для главного задания
+          href: change-the-scheduling-details-for-a-sql-server-agent-master-job.md
+- name: Справка F1 агента SQL Server
+  href: sql-server-agent-f1-help.md
+  items:
+    - name: Узел заданий (справка F1 агента SQL Server)
+      href: jobs-node-sql-server-agent-f1-help.md
+    - name: Узел «Предупреждения» (справка F1 агента SQL Server)
+      href: alerts-node-sql-server-agent-f1-help.md
+    - name: Узел прокси-серверов (справка F1 агента SQL Server)
+      href: proxies-node-sql-server-agent-f1-help.md
+    - name: Узел операторов (справка F1 агента SQL Server)
+      href: operators-node-sql-server-agent-f1-help.md
+    - name: Журналы ошибок конфигурации агента SQL Server (страница «Общие»)
+      href: configure-sql-server-agent-error-logs-general-page.md
+    - name: Очистка журналов ошибок агента SQL Server
+      href: recycle-sql-server-agent-error-logs.md
+    - name: Свойства агента SQL Server (страница «Дополнительно»)
+      href: sql-server-agent-properties-advanced-page.md
+    - name: Свойства агента SQL Server (страница «Система предупреждений»)
+      href: sql-server-agent-properties-alert-system-page.md
+    - name: Свойства агента SQL Server (страница «Соединение»)
+      href: sql-server-agent-properties-connection-page.md
+    - name: Свойства агента SQL Server (страница «Общие»)
+      href: sql-server-agent-properties-general-page.md
+    - name: Свойства агента SQL Server (страница «Журнал»)
+      href: sql-server-agent-properties-history-page.md
+    - name: Свойства агента SQL Server (страница «Система заданий»)
+      href: sql-server-agent-properties-job-system-page.md
+    - name: Целевые серверы (вкладка «Загрузить инструкции»)
+      href: target-servers-download-instructions-tab.md
+    - name: Целевые серверы (вкладка «Состояние целевого сервера»)
+      href: target-servers-target-server-status-tab.md
+    - name: Публиковать инструкции загрузки
+      href: post-download-instructions.md
+- name: Сведения об агенте SQL Server
+  items:
+    - name: видны узлы
+      href: alerts.md
+    - name: Свойства предупреждений — новое предупреждение (страница "Общие")
+      href: alert-properties-new-alert-general-page.md
+    - name: Свойства предупреждения — создание предупреждения (страница "Параметры")
+      href: alert-properties-new-alert-options-page.md
+    - name: Свойства предупреждения — создание предупреждения (страница "Ответ")
+      href: alert-properties-new-alert-response-page.md
+    - name: Свойства предупреждения (страница журнала)
+      href: alert-properties-history-page.md
+    - name: Назначение задания в категорию заданий
+      href: assign-a-job-to-a-job-category.md
+    - name: Assign Alerts to an Operator
+      href: assign-alerts-to-an-operator.md
+    - name: Автоматическое удаление задания
+      href: automatically-delete-a-job.md
+    - name: Автозапуск агента SQL Server
+      href: autostart-sql-server-agent-sql-server-management-studio.md
+    - name: Изменение доступности оператора
+      href: change-an-operator-s-availability.md
+    - name: Change the Membership of a Job Category
+      href: change-the-membership-of-a-job-category.md
+    - name: Выбор правильной учетной записи службы агента SQL Server для многосерверных сред
+      href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
+    - name: Clear the Job History Log
+      href: clear-the-job-history-log.md
+    - name: Configure a User to Create and Manage SQL Server Agent Jobs
+      href: configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
+    - name: Configure SQL Server Agent
+      href: configure-sql-server-agent.md
+    - name: Create a CmdExec Job Step
+      href: create-a-cmdexec-job-step.md
+    - name: Создание категории заданий
+      href: create-a-job-category.md
+    - name: Создание задания
+      href: create-a-job.md
+    - name: Создание многосерверной среды
+      href: create-a-multiserver-environment.md
+    - name: Create a PowerShell Script Job Step
+      href: create-a-powershell-script-job-step.md
+    - name: Создание расписания
+      href: create-a-schedule.md
+    - name: Создание задания агента главного сервера SQL Server
+      href: create-a-sql-server-agent-master-job.md
+    - name: Создание учетной записи-посредника агента SQL Server
+      href: create-a-sql-server-agent-proxy.md
+    - name: Создание шага задания Transact-SQL
+      href: create-a-transact-sql-job-step.md
+    - name: Создание пользовательского события
+      href: create-a-user-defined-event.md
+    - name: Создание предупреждения о событии WMI
+      href: create-a-wmi-event-alert.md
+    - name: Create an ActiveX Script Job Step
+      href: create-an-activex-script-job-step.md
+    - name: Создание предупреждения по номеру сообщения
+      href: create-an-alert-using-an-error-number.md
+    - name: Create an Alert Using Severity Level
+      href: create-an-alert-using-severity-level.md
+    - name: Create an Analysis Services Job Step
+      href: create-an-analysis-services-job-step.md
+    - name: Create an Operator
+      href: create-an-operator.md
+    - name: Создание и присоединение расписаний к заданиям
+      href: create-and-attach-schedules-to-jobs.md
+    - name: Создание заданий
+      href: create-jobs.md
+    - name: Отключение целевого сервера от главного сервера
+      href: defect-a-target-server-from-a-master-server.md
+    - name: Defect Multiple Target Servers from a Master Server
+      href: defect-multiple-target-servers-from-a-master-server.md
+    - name: Определение ответа на предупреждение (SSMS)
+      href: define-the-response-to-an-alert-sql-server-management-studio.md
+    - name: Определение параметров для шагов заданий Transact-SQL
+      href: define-transact-sql-job-step-options.md
+    - name: Удаление категории заданий
+      href: delete-a-job-category.md
+    - name: Delete a Job Step Log
+      href: delete-a-job-step-log.md
+    - name: Delete a SQL Server Agent Proxy
+      href: delete-a-sql-server-agent-proxy.md
+    - name: Удаление предупреждения
+      href: delete-an-alert.md
+    - name: Удаление оператора
+      href: delete-an-operator.md
+    - name: удаление заданий
+      href: delete-jobs.md
+    - name: Удаление одного или нескольких заданий
+      href: delete-one-or-more-jobs.md
+    - name: Удаление оператора
+      href: delete-operator.md
+    - name: Назначение резервного оператора
+      href: designate-a-fail-safe-operator.md
+    - name: Назначение сервера пересылки событий (SSMS)
+      href: designate-an-events-forwarding-server-sql-server-management-studio.md
+    - name: Disable or Enable a Job
+      href: disable-or-enable-a-job.md
+    - name: Disable or Reactivate an Alert
+      href: disable-or-reactivate-an-alert.md
+    - name: Изменение предупреждения
+      href: edit-an-alert.md
+    - name: Изменение оператора
+      href: edit-an-operator.md
+    - name: Прикрепление целевого сервера к главному
+      href: enlist-a-target-server-to-a-master-server.md
+    - name: Force a Target Server to Poll the Master Server
+      href: force-a-target-server-to-poll-the-master-server.md
+    - name: Format Pager Addresses for Alerts
+      href: format-pager-addresses-for-alerts.md
+    - name: Give Others Ownership of a Job
+      href: give-others-ownership-of-a-job.md
+    - name: Обработка множественных шагов задания
+      href: handle-multiple-job-steps.md
+    - name: Монитор активности заданий
+      href: job-activity-monitor.md
+    - name: Категории заданий — управление категориями заданий
+      href: job-categories-manage-job-categories.md
+    - name: Свойства категории заданий — создание категории заданий
+      href: job-categories-properties-new-job-category.md
+    - name: Свойства задания — создание задания (страница "Предупреждения")
+      href: job-properties-new-job-alerts-page.md
+    - name: Свойства задания — создание задания (страница "Общие")
+      href: job-properties-new-job-general-page.md
+    - name: Свойства задания — создание задания (страница "Уведомления")
+      href: job-properties-new-job-notifications-page.md
+    - name: Свойства задания — новое задание (страница "Расписания")
+      href: job-properties-new-job-schedules-page.md
+    - name: Свойства задания — новое задание (страница "Шаги")
+      href: job-properties-new-job-steps-page.md
+    - name: Свойства задания — создание задания (страница "Цели")
+      href: job-properties-new-job-targets-page.md
+    - name: Свойства шага задания — создание шага задания (страница "Дополнительно")
+      href: job-step-properties-new-job-step-advanced-page.md
+    - name: Свойства шага задания — создание шага задания (страница "Общие")
+      href: job-step-properties-new-job-step-general-page.md
+    - name: 'Задания, содержащие ссылки на расписание'
+      href: jobs-that-reference-a-schedule.md
+    - name: Просмотр сведений о категории задания
+      href: list-job-category-information.md
+    - name: Make a Master Server
+      href: make-a-master-server.md
+    - name: Создание целевого сервера
+      href: make-a-target-server.md
+    - name: Управление событиями
+      href: manage-events.md
+    - name: Управление шагами задания
+      href: manage-job-steps.md
+    - name: Управление заданиями в масштабе предприятия
+      href: manage-jobs-across-an-enterprise.md
+    - name: Управление расписаниями
+      href: manage-schedules.md
+    - name: Изменение задания
+      href: modify-a-job.md
+    - name: Изменение задания агента главного сервера SQL Server
+      href: modify-a-sql-server-agent-master-job.md
+    - name: Modify a SQL Server Agent Proxy
+      href: modify-a-sql-server-agent-proxy.md
+    - name: 'Изменение целевых серверов, связанных с главным заданием агента SQL Server'
+      href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
+    - name: Modify the Target Servers for a Job
+      href: modify-the-target-servers-for-a-job.md
+    - name: Наблюдение за активностью заданий
+      href: monitor-job-activity.md
+    - name: Создание расписания задания — свойства расписания задания
+      href: new-job-schedule-job-schedule-properties.md
+    - name: Notify an Operator of Job Status
+      href: notify-an-operator-of-job-status.md
+    - name: Свойства оператора (страница «Журнал»)
+      href: operator-properties-history-page.md
+    - name: Свойства оператора — создание оператора (страница "Общие")
+      href: operator-properties-new-operator-general-page.md
+    - name: Свойства оператора — создание оператора (страница "Уведомления")
+      href: operator-properties-new-operator-notifications-page.md
+    - name: Операторы
+      href: operators.md
+    - name: упорядочивание заданий
+      href: organize-jobs.md
+    - name: Выбор расписания для задания
+      href: pick-schedule-for-job.md
+    - name: Опрос серверов
+      href: poll-servers.md
+    - name: Свойства учетной записи-посредника (вкладка «Ссылки»)
+      href: proxy-account-properties-references-tab.md
+    - name: Свойства учетной записи-посредника — создание учетной записи-посредника (страница "Общие")
+      href: proxy-account-properties-new-proxy-account-general-page.md
+    - name: Свойства учетной записи-посредника — создание учетной записи-посредника (вкладка "Участники")
+      href: proxy-account-properties-new-proxy-account-principals-tab.md
+    - name: Редактор учетной записи-посредника — добавление участника
+      href: proxy-editor-add-principal.md
+    - name: Remove Steps from a SQL Server Agent Master Job
+      href: remove-steps-from-a-sql-server-agent-master-job.md
+    - name: Resize the Job History Log
+      href: resize-the-job-history-log.md
+    - name: Запуск заданий
+      href: run-jobs.md
+    - name: Schedule a Job
+      href: schedule-a-job.md
+    - name: Выбор учетной записи для службы агента SQL Server
+      href: select-an-account-for-the-sql-server-agent-service.md
+    - name: Send SQL Server Agent Error Messages
+      href: send-sql-server-agent-error-messages.md
+    - name: Настройка псевдонима для службы агента SQL Server (SQL Server Management Studio)
+      href: set-sql-server-alias-for-sql-server-agent-service-ssms.md
+    - name: Задание времени и продолжительности простоя ЦП (SSMS)
+      href: set-cpu-idle-time-and-duration-sql-server-management-studio.md
+    - name: Установка параметров шифрования на целевых серверах
+      href: set-encryption-options-on-target-servers.md
+    - name: Настройка завершения выполнения заданий (SSMS)
+      href: set-job-execution-shutdown-sql-server-management-studio.md
+    - name: Set Job Step Success or Failure Flow
+      href: set-job-step-success-or-failure-flow.md
+    - name: Set the Polling Interval for Target Servers
+      href: set-the-polling-interval-for-target-servers.md
+    - name: Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+      href: set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md
+    - name: Установка подключения к SQL Server для службы агента
+      href: set-sql-server-connection-for-sql-server-agent-service-ssms.md
+    - name: Set Up the Job History Log
+      href: set-up-the-job-history-log.md
+    - name: Указание расположения целевого сервера (SSMS)
+      href: specify-a-target-server-s-location-sql-server-management-studio.md
+    - name: Определение ответов заданий
+      href: specify-job-responses.md
+    - name: Предопределенные роли базы данных агента SQL Server
+      href: sql-server-agent-fixed-database-roles.md
+    - name: Запуск задания
+      href: start-a-job.md
+    - name: 'Start, Stop, or Pause the SQL Server Agent Service'
+      href: start-stop-or-pause-the-sql-server-agent-service.md
+    - name: Остановка задания
+      href: stop-a-job.md
+    - name: Синхронизация часов целевых серверов (SSMS)
+      href: synchronize-target-server-clocks-sql-server-management-studio.md
+    - name: 'Устранение неполадок, связанных с многосерверными заданиями, использующими учетные записи-посредники'
+      href: troubleshoot-multiserver-jobs-that-use-proxies.md
+    - name: Настройка автоматизированного администрирования в организации
+      href: tune-automated-administration-across-an-enterprise.md
+    - name: Использование объектов производительности
+      href: use-performance-objects.md
+    - name: Использование токенов в шагах задания
+      href: use-tokens-in-job-steps.md
+    - name: View a Job
+      href: view-a-job.md
+    - name: Просмотр сведений о предупреждении
+      href: view-information-about-an-alert.md
+    - name: Просмотр сведений об операторе
+      href: view-information-about-an-operator.md
+    - name: Просмотр активности заданий
+      href: view-job-activity.md
+    - name: View Job Step Information
+      href: view-job-step-information.md
+    - name: Просмотр или изменение заданий
+      href: view-or-modify-jobs.md
+    - name: View the Job History
+      href: view-the-job-history.md
+    - name: Запись данных о состоянии задания в журнал приложений Windows
+      href: write-the-job-status-to-the-windows-application-log.md

@@ -1,0 +1,90 @@
+- name: Обзор
+  href: data-types-transact-sql.md
+- name: Константы
+  href: constants-transact-sql.md
+- name: Преобразование
+  href: data-type-conversion-database-engine.md
+- name: Приоритет
+  href: data-type-precedence-transact-sql.md
+- name: Синонимы
+  href: data-type-synonyms-transact-sql.md
+- name: 'Точность, масштаб и длина'
+  href: precision-scale-and-length-transact-sql.md
+- name: курсор
+  href: cursor-transact-sql.md
+- name: Дата и время
+  href: date-and-time-types.md
+  items:
+    - name: Дата
+      href: date-transact-sql.md
+    - name: DATETIME
+      href: datetime-transact-sql.md
+    - name: datetime2
+      href: datetime2-transact-sql.md
+    - name: datetimeoffset
+      href: datetimeoffset-transact-sql.md
+    - name: smalldatetime
+      href: smalldatetime-transact-sql.md
+    - name: time
+      href: time-transact-sql.md
+- name: Методы hierarchyid
+  href: hierarchyid-data-type-method-reference.md
+  items:
+    - name: GetAncestor (компонент Database Engine)
+      href: getancestor-database-engine.md
+    - name: GetDescendant (компонент Database Engine)
+      href: getdescendant-database-engine.md
+    - name: GetLevel (компонент Database Engine)
+      href: getlevel-database-engine.md
+    - name: GetRoot (компонент Database Engine)
+      href: getroot-database-engine.md
+    - name: IsDescendantOf (компонент Database Engine)
+      href: isdescendantof-database-engine.md
+    - name: Parse (компонент Database Engine)
+      href: parse-database-engine.md
+    - name: Read (компонент Database Engine)
+      href: read-database-engine.md
+    - name: GetReparentedValue (компонент Database Engine)
+      href: getreparentedvalue-database-engine.md
+    - name: ToString (компонент Database Engine)
+      href: tostring-database-engine.md
+    - name: Write (компонент Database Engine)
+      href: write-database-engine.md
+- name: Числовой
+  href: numeric-types.md
+  items:
+    - name: bit
+      href: bit-transact-sql.md
+    - name: decimal и numeric
+      href: decimal-and-numeric-transact-sql.md
+    - name: float и real
+      href: float-and-real-transact-sql.md
+    - name: 'int, bigint, smallint и tinyint'
+      href: int-bigint-smallint-and-tinyint-transact-sql.md
+    - name: money и smallmoney
+      href: money-and-smallmoney-transact-sql.md
+- name: rowversion
+  href: rowversion-transact-sql.md
+- name: Строковые и двоичные типы
+  href: string-and-binary-types.md
+  items:
+    - name: binary и varbinary
+      href: binary-and-varbinary-transact-sql.md
+    - name: char и varchar
+      href: char-and-varchar-transact-sql.md
+    - name: nchar и nvarchar
+      href: nchar-and-nvarchar-transact-sql.md
+    - name: 'ntext, text, и image'
+      href: ntext-text-and-image-transact-sql.md
+- name: Пространственный индекс "география"
+  href: ../../t-sql/spatial-geography/spatial-types-geography.md
+- name: Пространственный индекс "геометрия"
+  href: ../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md
+- name: sql_variant
+  href: sql-variant-transact-sql.md
+- name: Таблица
+  href: table-transact-sql.md
+- name: UNIQUEIDENTIFIER
+  href: uniqueidentifier-transact-sql.md
+- name: XML
+  href: ../../t-sql/xml/xml-transact-sql.md

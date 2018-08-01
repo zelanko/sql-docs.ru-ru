@@ -1,0 +1,107 @@
+- name: "Установка Reporting Services\_2017"
+  href: install-reporting-services.md
+  items:
+    - name: "Как найти ключ продукта для Reporting Services\_2017"
+      href: find-reporting-services-product-key-ssrs.md
+- name: "Установка Reporting Services\_2016 в собственном режиме"
+  href: install-reporting-services-native-mode-report-server.md
+  items:
+    - name: Выполнение установки в режиме «только файлы» служб Reporting Services
+      href: files-only-installation-reporting-services.md
+    - name: Параллельная установка служб Reporting Services и служб IIS (собственный режим SSRS)
+      href: install-reporting-and-internet-information-services-side-by-side.md
+    - name: Размещение базы данных сервера отчетов в отказоустойчивом кластере SQL Server
+      href: host-a-report-server-database-in-a-sql-server-failover-cluster.md
+    - name: Использование диспетчера конфигурации служб Reporting Services (собственный режим)
+      href: reporting-services-configuration-manager-native-mode.md
+      items:
+        - name: Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
+          href: configure-the-report-server-service-account-ssrs-configuration-manager.md
+        - name: Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
+          href: configure-report-server-urls-ssrs-configuration-manager.md
+          items:
+            - name: Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
+              href: about-url-reservations-and-registration-ssrs-configuration-manager.md
+            - name: Настройка URL-адреса (диспетчер конфигурации служб SSRS)
+              href: configure-a-url-ssrs-configuration-manager.md
+            - name: Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)
+              href: url-reservation-syntax-ssrs-configuration-manager.md
+            - name: URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
+              href: urls-in-configuration-files-ssrs-configuration-manager.md
+            - name: Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
+              href: url-reservations-for-multi-instance-report-server-deployments.md
+        - name: Создание базы данных
+          href: ssrs-report-server-create-a-report-server-database.md
+        - name: Создание базы данных в собственном режиме
+          href: ssrs-report-server-create-a-native-mode-report-server-database.md
+        - name: Настройка подключения к базе данных сервера отчетов
+          href: configure-a-report-server-database-connection-ssrs-configuration-manager.md
+        - name: Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)
+          href: e-mail-settings-reporting-services-native-mode-configuration-manager.md
+        - name: Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)
+          href: configure-the-unattended-execution-account-ssrs-configuration-manager.md
+        - name: "Ключи шифрования служб SSRS\_— управление ключами шифрования"
+          href: ssrs-encryption-keys-manage-encryption-keys.md
+          items:
+            - name: "Ключи шифрования служб SSRS\_— инициализация сервера отчетов"
+              href: ssrs-encryption-keys-initialize-a-report-server.md
+            - name: "Ключи шифрования служб SSRS\_— хранение зашифрованных данных сервера отчетов"
+              href: ssrs-encryption-keys-store-encrypted-report-server-data.md
+            - name: "Ключи шифрования служб SSRS\_— создание резервных копий и восстановление"
+              href: ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+            - name: "Ключи шифрования служб SSRS\_— удаление и повторное создание"
+              href: ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+            - name: "Ключи шифрования служб SSRS\_— добавление и удаление для масштабного развертывания"
+              href: add-and-remove-encryption-keys-for-scale-out-deployment.md
+        - name: Параметры подписки и учетная запись общей папки (диспетчер конфигураций)
+          href: subscription-settings-and-a-file-share-account-configuration-manager.md
+        - name: Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
+          href: configure-a-native-mode-report-server-scale-out-deployment.md
+        - name: Интеграция с Power BI
+          href: power-bi-report-server-integration-configuration-manager.md
+- name: "Установка служб Reporting Services\_2016 в режиме интеграции с SharePoint"
+  href: install-reporting-services-sharepoint-mode.md
+  items:
+    - name: "Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server\_2016)"
+      href: supported-combinations-of-sharepoint-and-reporting-services-server.md
+    - name: Где найти надстройку служб SSRS для SharePoint
+      href: where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
+    - name: Установка первого сервера отчетов в режиме интеграции с SharePoint
+      href: install-the-first-report-server-in-sharepoint-mode.md
+    - name: Установка или удаление надстройки служб Reporting Services для SharePoint
+      href: install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+    - name: Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
+      href: add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
+    - name: Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме
+      href: add-an-additional-reporting-services-web-front-end-to-a-farm.md
+    - name: Настройка электронной почты для приложения служб Reporting Services
+      href: configure-e-mail-for-a-reporting-services-service-application.md
+    - name: Подготовка подписок и предупреждений для приложений служб SSRS
+      href: provision-subscriptions-and-alerts-for-ssrs-service-applications.md
+    - name: Служба Claims to Windows Token Service (c2WTS) и службы SSRS
+      href: claims-to-windows-token-service-c2wts-and-reporting-services.md
+- name: Установка служб Reporting Services из командной строки
+  href: install-reporting-services-at-the-command-prompt.md
+- name: Install Report Builder
+  href: install-report-builder.md
+- name: Удаление построителя отчетов
+  href: uninstall-report-builder.md
+- name: Verify a Reporting Services Installation
+  href: verify-a-reporting-services-installation.md
+- name: Устранение неполадок при установке служб Reporting Services
+  href: troubleshoot-a-reporting-services-installation.md
+- name: Upgrade and Migrate Reporting Services
+  href: upgrade-and-migrate-reporting-services.md
+  items:
+    - name: Перенос установки служб Reporting Services (собственный режим)
+      href: migrate-a-reporting-services-installation-native-mode.md
+    - name: Перенос установки служб Reporting Services (режим интеграции с SharePoint)
+      href: migrate-a-reporting-services-installation-sharepoint-mode.md
+    - name: Миграция из собственного режима в режим интеграции с SharePoint (SSRS)
+      href: native-to-sharepoint-migration-ssrs.md
+    - name: Обновление базы данных сервера отчетов
+      href: upgrade-a-report-server-database.md
+    - name: Upgrade Reports
+      href: upgrade-reports.md
+    - name: Операции резервного копирования и восстановления для служб Reporting Services
+      href: backup-and-restore-operations-for-reporting-services.md

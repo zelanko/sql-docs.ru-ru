@@ -1,0 +1,16 @@
+- name: "Язык сценариев Analysis\_Services (ASSL для\_XMLA)"
+  href: analysis-services-scripting-language-assl-for-xmla.md
+- name: Коллекции +
+  href: ../../analysis-services/scripting/collections/accounts-element-assl.md
+- name: Тип данных +
+  href: ../../analysis-services/scripting/data-type/action-data-type-assl.md
+- name: Объекты +
+  href: ../../analysis-services/scripting/objects/account-element-assl.md
+- name: Свойства +
+  href: ../../analysis-services/scripting/properties/access-element-assl.md
+- name: Иерархия типов данных XML в языке ASSL
+  href: analysis-services-scripting-language-xml-data-type-hierarchy-assl.md
+- name: Иерархия элементов XML языка ASSL
+  href: analysis-services-scripting-language-xml-element-hierarchy-assl.md
+- name: Элементы XML языка сценариев служб Analysis Services (ASSL)
+  href: analysis-services-scripting-language-xml-elements-assl.md

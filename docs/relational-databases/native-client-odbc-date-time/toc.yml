@@ -1,0 +1,24 @@
+- name: Улучшения функций даты и времени (ODBC)
+  href: date-and-time-improvements-odbc.md
+- name: Изменения в функции массового копирования для работы с улучшенными типами даты и времени (OLE DB и ODBC)
+  href: bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md
+- name: Поддержка типов данных для улучшений функций даты и времени ODBC
+  href: data-type-support-for-odbc-date-and-time-improvements.md
+- name: Преобразования
+  items:
+    - name: Преобразования типа данных datetime (ODBC)
+      href: datetime-data-type-conversions-odbc.md
+    - name: Преобразования типа данных datetime из C в SQL
+      href: datetime-data-type-conversions-from-c-to-sql.md
+    - name: Преобразования типа данных datetime из SQL в C
+      href: datetime-data-type-conversions-from-sql-to-c.md
+- name: Улучшенная работа типа даты-времени с предыдущими версиями SQL Server (ODBC)
+  href: enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md
+- name: Метаданные — каталог
+  href: metadata-catalog.md
+- name: Метаданные — параметры и результаты
+  href: metadata-parameter-and-result.md
+- name: Поддержка API-интерфейса ODBC для улучшенных функций даты и времени
+  href: odbc-api-support-for-enhanced-date-and-time-features.md
+- name: Поддержка sql_variant для типов даты и времени
+  href: sql-variant-support-for-date-and-time-types.md

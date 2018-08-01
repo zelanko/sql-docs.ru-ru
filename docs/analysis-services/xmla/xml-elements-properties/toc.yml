@@ -1,0 +1,280 @@
+- name: "XMLA-элементы\_— свойства"
+  href: xml-elements-properties.md
+- name: Элемент AllowOverwrite (XML для аналитики)
+  href: allowoverwrite-element-xmla.md
+- name: Элемент ApplyCompression (XML для аналитики)
+  href: applycompression-element-xmla.md
+- name: Элемент Attribute (XML для аналитики)
+  href: attribute-element-xmla.md
+- name: Элемент AttributeName (XML для аналитики)
+  href: attributename-element-xmla.md
+- name: Элемент Attributes (XMLA)
+  href: attributes-element-xmla.md
+- name: Элемент Axes (XML для аналитики)
+  href: axes-element-xmla.md
+- name: Элемент AxesInfo (XML для аналитики)
+  href: axesinfo-element-xmla.md
+- name: Элемент Axis (XML для аналитики)
+  href: axis-element-xmla.md
+- name: Элемент AxisInfo (XML для аналитики)
+  href: axisinfo-element-xmla.md
+- name: Элемент BackupRemotePartitions (XML для аналитики)
+  href: backupremotepartitions-element-xmla.md
+- name: Элемент Binding (XML для аналитики)
+  href: binding-element-xmla.md
+- name: Элемент Bindings (XML для аналитики)
+  href: bindings-element-xmla.md
+- name: Элемент CancelAssociated (XML для аналитики)
+  href: cancelassociated-element-xmla.md
+- name: Элемент Capability (XML для аналитики)
+  href: capability-element-xmla.md
+- name: Элемент Caption (XML для аналитики)
+  href: caption-element-xmla.md
+- name: Элемент Cell (MDDataSet) (XML для аналитики)
+  href: cell-element-mddataset-xmla.md
+- name: Элемент Cell (XML для аналитики)
+  href: cell-element-xmla.md
+- name: Элемент CellData (XML для аналитики)
+  href: celldata-element-xmla.md
+- name: Элемент CellInfo (XML для аналитики)
+  href: cellinfo-element-xmla.md
+- name: Элемент CellOrdinal (XML для аналитики)
+  href: cellordinal-element-xmla.md
+- name: Элемент Command (XML для аналитики)
+  href: command-element-xmla.md
+- name: Элемент CommonIdentifierPosition (XML)
+  href: commonidentifierposition-element-xml.md
+- name: Элемент ConnectionID (XML для аналитики)
+  href: connectionid-element-xmla.md
+- name: Элемент ConnectionString (XML для аналитики)
+  href: connectionstring-element-xmla.md
+- name: Элемент ContextualNameRule (XML)
+  href: contextualnamerule-element-xml.md
+- name: Элемент CrossProduct (XML для аналитики)
+  href: crossproduct-element-xmla.md
+- name: Элемент Cube (OlapInfo) (XMLA)
+  href: cube-element-olapinfo-xmla.md
+- name: Элемент Cube (XML для аналитики)
+  href: cube-element-xmla.md
+- name: Элемент CubeID (XML для аналитики)
+  href: cubeid-element-xmla.md
+- name: Элемент CubeInfo (XML для аналитики)
+  href: cubeinfo-element-xmla.md
+- name: Элемент CubeName (XML для аналитики)
+  href: cubename-element-xmla.md
+- name: Элемент CustomRollup (XML для аналитики)
+  href: customrollup-element-xmla.md
+- name: Элемент CustomRollupProperties (XML для аналитики)
+  href: customrollupproperties-element-xmla.md
+- name: Элемент Database (XML для аналитики)
+  href: database-element-xmla.md
+- name: Элемент DatabaseID (XML для аналитики)
+  href: databaseid-element-xmla.md
+- name: Элемент DatabaseName (XML для аналитики)
+  href: databasename-element-xmla.md
+- name: Элемент DataSource (XML для аналитики)
+  href: datasource-element-xmla.md
+- name: Элемент DataSourceID (XML для аналитики)
+  href: datasourceid-element-xmla.md
+- name: Элемент DataSourceType (XML для аналитики)
+  href: datasourcetype-element-xmla.md
+- name: Элемент DataSourceView (XML для аналитики)
+  href: datasourceview-element-xmla.md
+- name: Элемент DbSchemaName (XML для аналитики)
+  href: dbschemaname-element-xmla.md
+- name: Элемент DbStorageLocation
+  href: dbstoragelocation-element.md
+- name: Элемент DbTableName (XML для аналитики)
+  href: dbtablename-element-xmla.md
+- name: Элемент DefaultDetailsPosition (XML)
+  href: defaultdetailsposition-element-xml.md
+- name: Элемент DeleteWithDescendants (XML для аналитики)
+  href: deletewithdescendants-element-xmla.md
+- name: Элемент Description (XML для аналитики)
+  href: description-element-xmla.md
+- name: Элемент Dimension (XML для аналитики)
+  href: dimension-element-xmla.md
+- name: Элемент DisplayInfo (XML для аналитики)
+  href: displayinfo-element-xmla.md
+- name: Элемент DisplayKeyPosition (XML)
+  href: displaykeyposition-element-xml.md
+- name: Элемент EditionId
+  href: editionid-element.md
+- name: Элемент Error (XML для аналитики)
+  href: error-element-xmla.md
+- name: Элемент ErrorCode (XML для аналитики)
+  href: errorcode-element-xmla.md
+- name: Элемент ErrorConfiguration (XML для аналитики)
+  href: errorconfiguration-element-xmla.md
+- name: Элемент Exception (XML для аналитики)
+  href: exception-element-xmla.md
+- name: Элемент File (XML для аналитики)
+  href: file-element-xmla.md
+- name: Элемент Folder (XML для аналитики)
+  href: folder-element-xmla.md
+- name: Элемент FolderPosition (XML)
+  href: folderposition-element-xml.md
+- name: Элемент Folders (XML для аналитики)
+  href: folders-element-xmla.md
+- name: Элемент HelpFile (XML для аналитики)
+  href: helpfile-element-xmla.md
+- name: Элемент HierarchyInfo (XML для аналитики)
+  href: hierarchyinfo-element-xmla.md
+- name: Элемент ID (XML для аналитики)
+  href: id-element-xmla.md
+- name: Элемент IsDefaultImage (XML)
+  href: isdefaultimage-element-xml.md
+- name: Элемент IsDefaultMeasure (XML)
+  href: isdefaultmeasure-element-xml.md
+- name: Элемент Key (XML для аналитики)
+  href: key-element-xmla.md
+- name: Элемент Keys (XML для аналитики)
+  href: keys-element-xmla.md
+- name: Элемент Language (XML для аналитики)
+  href: language-element-xmla.md
+- name: Элемент LastDataUpdate (XML для аналитики)
+  href: lastdataupdate-element-xmla.md
+- name: Элемент LastSchemaUpdate (XML для аналитики)
+  href: lastschemaupdate-element-xmla.md
+- name: Элемент LName (XML для аналитики)
+  href: lname-element-xmla.md
+- name: Элемент LNum (XML для аналитики)
+  href: lnum-element-xmla.md
+- name: Элемент Location (XML для аналитики)
+  href: location-element-xmla.md
+- name: Элемент Locations (XML для аналитики)
+  href: locations-element-xmla.md
+- name: Элемент Materialize (XML для аналитики)
+  href: materialize-element-xmla.md
+- name: Элемент MeasureGroupID (XML для аналитики)
+  href: measuregroupid-element-xmla.md
+- name: Элемент Member (XML для аналитики)
+  href: member-element-xmla.md
+- name: Элемент Members (XML для аналитики)
+  href: members-element-xmla.md
+- name: Элемент Message (XML для аналитики)
+  href: message-element-xmla.md
+- name: Элемент Messages (XML для аналитики)
+  href: messages-element-xmla.md
+- name: Элемент Mode (XML для аналитики)
+  href: mode-element-xmla.md
+- name: Элемент MoveWithDescendants (XML для аналитики)
+  href: movewithdescendants-element-xmla.md
+- name: Элемент Name (Parameter) (XML для аналитики)
+  href: name-element-parameter-xmla.md
+- name: Элемент Name (XML для аналитики)
+  href: name-element-xmla.md
+- name: Элемент New (XML для аналитики)
+  href: new-element-xmla.md
+- name: Элемент Object (Dimension) (XMLA)
+  href: object-element-dimension-xmla.md
+- name: Элемент Object (XML для аналитики)
+  href: object-element-xmla.md
+- name: Элемент ObjectDefinition (XML для аналитики)
+  href: objectdefinition-element-xmla.md
+- name: Элемент OlapInfo (XML для аналитики)
+  href: olapinfo-element-xmla.md
+- name: Элемент Optimization (XML для аналитики)
+  href: optimization-element-xmla.md
+- name: Элемент Original (XML для аналитики)
+  href: original-element-xmla.md
+- name: Parallel Element (XMLA)
+  href: parallel-element-xmla.md
+- name: Элемент Parameter (XML для аналитики)
+  href: parameter-element-xmla.md
+- name: Элемент Parameters (XML для аналитики)
+  href: parameters-element-xmla.md
+- name: Элемент ParentObject (XML для аналитики)
+  href: parentobject-element-xmla.md
+- name: Элемент PartitionID (XML для аналитики)
+  href: partitionid-element-xmla.md
+- name: Элемент Password (XML для аналитики)
+  href: password-element-xmla.md
+- name: Элемент ProductLabel
+  href: productlabel-element.md
+- name: Элемент Properties (XML для аналитики)
+  href: properties-element-xmla.md
+- name: "Элемент PropertyList\_— поддерживаемые свойства XMLA"
+  href: propertylist-element-supported-xmla-properties.md
+- name: Элемент PropertyList (XML для аналитики)
+  href: propertylist-element-xmla.md
+- name: Элемент Queries (XML для аналитики)
+  href: queries-element-xmla.md
+- name: Элемент Query (XML для аналитики)
+  href: query-element-xmla.md
+- name: Элемент ReadWriteMode
+  href: readwritemode-element.md
+- name: Элемент RequestType (XML для аналитики)
+  href: requesttype-element-xmla.md
+- name: Элемент RestrictionList (XML для аналитики)
+  href: restrictionlist-element-xmla.md
+- name: Элемент Restrictions (XML для аналитики)
+  href: restrictions-element-xmla.md
+- name: Элемент results (XML для аналитики)
+  href: results-element-xmla.md
+- name: Элемент return (XML для аналитики)
+  href: return-element-xmla.md
+- name: Элемент Role (XMLA)
+  href: role-element-xmla.md
+- name: Элемент root (XML для аналитики)
+  href: root-element-xmla.md
+- name: Элемент row (XML для аналитики)
+  href: row-element-xmla.md
+- name: Элемент Security (XML для аналитики)
+  href: security-element-xmla.md
+- name: Элемент ServerMode
+  href: servermode-element.md
+- name: Элемент SessionID (XML для аналитики)
+  href: sessionid-element-xmla.md
+- name: Элемент SkippedLevels (XML для аналитики)
+  href: skippedlevels-element-xmla.md
+- name: Элемент SortPropertiesPosition (XML)
+  href: sortpropertiesposition-element-xml.md
+- name: Элемент Source (Error) (XMLA)
+  href: source-element-error-xmla.md
+- name: Элемент Source (Synchronize) (XML для аналитики)
+  href: source-element-synchronize-xmla.md
+- name: Элемент Source (XML для аналитики)
+  href: source-element-xmla.md
+- name: Элемент Sources (XML для аналитики)
+  href: sources-element-xmla.md
+- name: Элемент SPID (XML для аналитики)
+  href: spid-element-xmla.md
+- name: Элемент Steps (XML для аналитики)
+  href: steps-element-xmla.md
+- name: Элемент Storage (XMLA)
+  href: storage-element-xmla.md
+- name: Элемент SynchronizeSecurity (XML для аналитики)
+  href: synchronizesecurity-element-xmla.md
+- name: Элемент TableNotification (XML для аналитики)
+  href: tablenotification-element-xmla.md
+- name: Элемент TableNotifications (XML для аналитики)
+  href: tablenotifications-element-xmla.md
+- name: Элемент Target (XML для аналитики)
+  href: target-element-xmla.md
+- name: Элемент Time (XML для аналитики)
+  href: time-element-xmla.md
+- name: Элемент Translation (XML для аналитики)
+  href: translation-element-xmla.md
+- name: Элемент Translations (XML для аналитики)
+  href: translations-element-xmla.md
+- name: Элемент Tuple (XML для аналитики)
+  href: tuple-element-xmla.md
+- name: Элемент Tuples (XML для аналитики)
+  href: tuples-element-xmla.md
+- name: Элемент Type (XML для аналитики)
+  href: type-element-xmla.md
+- name: Элемент UName (XML для аналитики)
+  href: uname-element-xmla.md
+- name: Элемент UnaryOperator (XML для аналитики)
+  href: unaryoperator-element-xmla.md
+- name: Элемент Value (Parameter) (XML для аналитики)
+  href: value-element-parameter-xmla.md
+- name: 'Value, элемент (XML для аналитики)'
+  href: value-element-xmla.md
+- name: Элемент Warning (XML для аналитики)
+  href: warning-element-xmla.md
+- name: Элемент Where (XML для аналитики)
+  href: where-element-xmla.md
+- name: Элемент WritebackTableCreation (XML для аналитики)
+  href: writebacktablecreation-element-xmla.md

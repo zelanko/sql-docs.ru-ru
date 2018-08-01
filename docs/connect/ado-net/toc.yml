@@ -1,0 +1,10 @@
+- name: Microsoft ADO.NET для SQL Server
+  href: microsoft-ado-net-for-sql-server.md
+- name: "Шаг\_1. Настройка среды разработки для разработки в ADO.NET"
+  href: step-1-configure-development-environment-for-ado-net-development.md
+- name: "Шаг\_2. Создание базы данных SQL для разработки в ADO.NET"
+  href: step-2-create-a-sql-database-for-ado-net-development.md
+- name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET"
+  href: step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
+- name: "Шаг\_4. Выполнение устойчивого подключения к SQL с помощью ADO.NET"
+  href: step-4-connect-resiliently-to-sql-with-ado-net.md

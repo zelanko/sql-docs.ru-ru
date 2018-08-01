@@ -1,0 +1,321 @@
+- name: Обзор
+  items:
+    - name: Что такое службы машинного обучения SQL Server?
+      href: what-is-sql-server-machine-learning.md
+      items:
+        - name: Аналитика в базе данных
+          href: r/sql-server-r-services.md
+        - name: Отдельный сервер
+          href: r/r-server-standalone.md
+    - name: Новые возможности
+      href: what-s-new-in-sql-server-machine-learning-services.md
+    - name: Функции разных выпусков
+      href: r/differences-in-r-features-between-editions-of-sql-server.md
+- name: Architecture
+  href: architecture-overview-machine-learning.md
+  items:
+    - name: Чтение
+      href: r/architecture-overview-sql-server-r.md
+      items:
+        - name: Совместимость с R
+          href: r/r-interoperability-in-sql-server.md
+        - name: 'Компоненты, обеспечивающие интеграцию R'
+          href: r/new-components-in-sql-server-to-support-r.md
+        - name: Безопасность R
+          href: r/security-overview-sql-server-r.md
+    - name: Python
+      href: python/architecture-overview-sql-server-python.md
+      items:
+        - name: Python в службах машинного обучения
+          href: python/sql-server-python-services.md
+        - name: Совместимость c Python
+          href: python/python-interoperability.md
+        - name: Компоненты для поддержки Python
+          href: python/new-components-in-sql-server-to-support-python-integration.md
+        - name: Безопасность Python
+          href: python/security-overview-sql-server-python-services.md
+- name: Установить
+  items:
+    - name: "SQL Server\_2017"
+      items:
+        - name: Аналитика в базе данных
+          href: install/sql-machine-learning-services-windows-install.md
+        - name: Отдельный сервер
+          href: install/sql-machine-learning-standalone-windows-install.md
+    - name: "SQL Server\_2016"
+      items:
+        - name: Службы R (в базе данных)
+          href: install/sql-r-services-windows-install.md
+        - name: R Server (Standalone)
+          href: install/sql-r-standalone-windows-install.md
+    - name: Предварительно обученная модель
+      href: install/sql-pretrained-models-install.md
+    - name: Установка из командной строки
+      href: install/sql-ml-component-commandline-install.md
+    - name: Автономная установка (без Интернета)
+      href: install/sql-ml-component-install-without-internet-access.md
+    - name: Обновление R и Python
+      href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
+    - name: Настройка средств R
+      href: r/set-up-a-data-science-client.md
+    - name: Настройка средств Python
+      href: python/setup-python-client-tools-sql.md
+- name: Краткие руководства
+  items:
+    - name: Чтение
+      items:
+        - name: Hello World в R и SQL
+          href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+        - name: Работа с входными и выходными данными
+          href: tutorials/rtsql-working-with-inputs-and-outputs.md
+        - name: Работа с типами данных и объектами
+          href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+        - name: Создание модели прогнозирования
+          href: tutorials/rtsql-create-a-predictive-model-r.md
+        - name: Получение прогнозов с помощью модели и построение графика с результатами
+          href: tutorials/rtsql-predict-and-plot-from-model.md
+- name: Учебники
+  href: tutorials/machine-learning-services-tutorials.md
+  items:
+    - name: Чтение
+      href: tutorials/sql-server-r-tutorials.md
+      items:
+        - name: Изучение аналитики в базе данных
+          href: tutorials/sqldev-in-database-r-for-sql-developers.md
+          items:
+            - name: 1. Получение данных и скриптов
+              href: tutorials/sqldev-download-the-sample-data.md
+            - name: 2. Настройка среды
+              href: r/sqldev-import-data-to-sql-server-using-powershell.md
+            - name: 3. Визуализация данных
+              href: tutorials/sqldev-explore-and-visualize-the-data.md
+            - name: 4. Создание характеристик данных
+              href: tutorials/sqldev-create-data-features-using-t-sql.md
+            - name: 5. Обучение и сохранение в SQL
+              href: r/sqldev-train-and-save-a-model-using-t-sql.md
+            - name: 6. Прогнозирование результатов
+              href: tutorials/sqldev-operationalize-the-model.md
+        - name: Пошаговое руководство по обработке и анализу данных
+          href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+          items:
+            - name: Подготовка данных
+              href: tutorials/walkthrough-prepare-the-data.md
+            - name: Изучение данных с помощью SQL
+              href: tutorials/walkthrough-view-and-explore-the-data.md
+            - name: Сведение данных с помощью R
+              href: tutorials/walkthrough-view-and-summarize-data-using-r.md
+            - name: Создание диаграмм и графиков
+              href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
+            - name: Создание характеристик данных
+              href: tutorials/walkthrough-create-data-features.md
+            - name: Создание и сохранение модели
+              href: tutorials/walkthrough-build-and-save-the-model.md
+            - name: Развертывание и использование модели
+              href: tutorials/walkthrough-deploy-and-use-the-model.md
+        - name: Глубокое погружение с помощью RevoScaleR
+          href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+          items:
+            - name: Создание базы данных и разрешений
+              href: tutorials/deepdive-work-with-sql-server-data-using-r.md
+            - name: Создание объектов данных с помощью функции RxSqlServerData
+              href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
+            - name: Запрос и изменение данных
+              href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
+            - name: Определение контекста вычисления
+              href: tutorials/deepdive-define-and-use-compute-contexts.md
+            - name: Создание и выполнение скриптов R
+              href: tutorials/deepdive-create-and-run-r-scripts.md
+            - name: Визуализация данных
+              href: tutorials/deepdive-visualize-sql-server-data-using-r.md
+            - name: Создание моделей
+              href: tutorials/deepdive-create-models.md
+            - name: Оценка новых данных
+              href: tutorials/deepdive-score-new-data.md
+            - name: Преобразование данных
+              href: tutorials/deepdive-transform-data-using-r.md
+            - name: Загрузка данных в память с помощью функции rxImport
+              href: tutorials/deepdive-load-data-into-memory-using-rximport.md
+            - name: Создание таблицы с использованием rxDataStep
+              href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
+            - name: Выполнение фрагментирующего анализа с помощью rxDataStep
+              href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
+            - name: Анализ данных в локальном контексте вычисления
+              href: tutorials/deepdive-analyze-data-in-local-compute-context.md
+            - name: Перенос данных между SQL Server и файлом XDF
+              href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
+            - name: Создание простого моделирования
+              href: tutorials/deepdive-create-a-simple-simulation.md
+    - name: Python
+      href: tutorials/sql-server-python-tutorials.md
+      items:
+        - name: Запуск Python с помощью T-SQL
+          href: tutorials/run-python-using-t-sql.md
+          items:
+            - name: Упаковка Python в хранимую процедуру
+              href: tutorials/wrap-python-in-tsql-stored-procedure.md
+            - name: Обучение и оценка на основе модели Python в SQL Server
+              href: tutorials/train-score-using-python-in-tsql.md
+            - name: Создание модели с помощью revoscalepy в контексте вычислений SQL Server
+              href: tutorials/use-python-revoscalepy-to-create-model.md
+        - name: Изучение аналитики в базе данных
+          href: tutorials/sqldev-in-database-python-for-sql-developers.md
+          items:
+            - name: Получение данных и скриптов
+              href: tutorials/sqldev-py1-download-the-sample-data.md
+            - name: импорт данных
+              href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
+            - name: Анализ и визуализация данных
+              href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+            - name: Создание характеристик данных
+              href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+            - name: Обучение и сохранение модели
+              href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+            - name: Ввод модели в эксплуатацию
+              href: tutorials/sqldev-py6-operationalize-the-model.md
+- name: Примеры
+  href: 'https://github.com/Microsoft/sql-server-samples'
+- name: Решения
+  href: tutorials/data-science-scenarios-and-solution-templates.md
+- name: Инструкции
+  href: r/sql-server-machine-learning-tasks.md
+  items:
+    - name: Управление пакетами
+      items:
+        - name: Пакеты по умолчанию
+          href: r/installing-and-managing-r-packages.md
+        - name: Получение сведений о пакете
+          href: r/determine-which-packages-are-installed-on-sql-server.md
+        - name: Установка новых пакетов Python
+          href: python/install-additional-python-packages-on-sql-server.md
+        - name: Установка новых пакетов R
+          href: r/install-additional-r-packages-on-sql-server.md
+          items:
+            - name: "Использование диспетчеров пакетов\_R"
+              href: r/use-r-package-managers-on-sql-server.md
+            - name: Использование T-SQL
+              href: r/install-r-packages-tsql.md
+            - name: Использование RevoScaleR
+              href: r/use-revoscaler-to-manage-r-packages.md
+              items:
+                - name: Включение удаленного управления пакетами R
+                  href: r/r-package-how-to-enable-or-disable.md
+                - name: "Синхронизация пакетов\_R"
+                  href: r/package-install-uninstall-and-sync.md
+            - name: Создание репозитория miniCRAN
+              href: r/create-a-local-package-repository-using-minicran.md
+            - name: Советы по использованию пакетов R
+              href: r/packages-installed-in-user-libraries.md
+    - name: Изучение данных и моделирование
+      items:
+        - name: Библиотеки и типы данных R
+          href: r/r-libraries-and-data-types.md
+        - name: Библиотеки и типы данных Python
+          href: python/python-libraries-and-data-types.md
+        - name: Собственная оценка
+          href: sql-native-scoring.md
+        - name: Оценка в режиме реального времени
+          href: real-time-scoring.md
+        - name: Прогнозирующее моделирование с помощью R
+          href: r/data-exploration-and-predictive-modeling-with-r.md
+        - name: Выполнение собственной оценки или оценки в режиме реального времени
+          href: r/how-to-do-realtime-scoring.md
+        - name: Загрузка объектов R с помощью ODBC
+          href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
+        - name: Преобразование кода на языке R для использования в службах машинного обучения
+          href: r/converting-r-code-for-use-in-sql-server.md
+        - name: Создание нескольких моделей с помощью rxExecBy
+          href: r/creating-multiple-models-using-rxexecby.md
+        - name: Использование данных из кубов OLAP в R
+          href: r/using-data-from-olap-cubes-in-r.md
+        - name: Создание хранимой процедуры с помощью sqlrutils
+          href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+    - name: Производительность
+      items:
+        - name: "Настройка производительности для R\_— обзор"
+          href: r/sql-server-r-services-performance-tuning.md
+        - name: "Настройка производительности для R\_— конфигурация SQL Server"
+          href: r/sql-server-configuration-r-services.md
+        - name: "Настройка производительности для R\_— R и оптимизация данных"
+          href: r/r-and-data-optimization-r-services.md
+        - name: "Настройка производительности для R\_— результаты"
+          href: r/performance-case-study-r-services.md
+        - name: Использование функций профилирования кода R
+          href: r/using-r-code-profiling-functions.md
+    - name: Администрирование
+      items:
+        - name: Настройка R и управление R
+          href: r/configuration-sql-server-r-services.md
+        - name: Дополнительные параметры конфигурации для служб машинного обучения
+          href: r/configure-and-manage-advanced-analytics-extensions.md
+        - name: Вопросы безопасности для среды выполнения R в SQL Server
+          href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+        - name: Изменение пула учетных записей пользователей для служб машинного обучения SQL Server
+          href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+        - name: Добавление SQLRUserGroup в качестве пользователя базы данных
+          href: r/add-sqlrusergroup-to-database.md
+        - name: Развертывание и использование моделей с помощью веб-служб
+          href: operationalization-with-mrsdeploy.md
+        - name: Решения для управления и мониторинга
+          href: r/managing-and-monitoring-r-solutions.md
+        - name: Известные проблемы в службах машинного обучения
+          href: r/resource-governance-for-r-services.md
+        - name: Создание пула ресурсов для машинного обучения
+          href: r/how-to-create-a-resource-pool-for-r.md
+        - name: Расширенные события для служб машинного обучения
+          href: r/extended-events-for-sql-server-r-services.md
+        - name: Расширенные события для наблюдения за инструкциями PREDICT
+          href: xe-event-predict-tsql.md
+        - name: Представления DMV для служб машинного обучения
+          href: r/dmvs-for-sql-server-r-services.md
+        - name: Использование функций профилирования кода R
+          href: r/using-r-code-profiling-functions.md
+        - name: Мониторинг служб машинного обучения с помощью настраиваемых отчетов в Management Studio
+          href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+- name: Справочник по пакетам
+  href: r/machine-learning-services-r-reference.md
+  items:
+    - name: MicrosoftML в SQL
+      href: using-the-microsoftml-package.md
+    - name: RevoScaleR в SQL
+      href: r/revoscaler-overview.md
+    - name: "Список функций RevoScaleR для данных SQL\_Server"
+      href: r/scaler-functions-for-working-with-sql-server-data.md
+    - name: Пакет sqlrutils в SQL
+      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+    - name: Пакет olapR в SQL
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: Пакет revoscalepy в SQL
+      href: python/what-is-revoscalepy.md
+- name: Ресурсы
+  items:
+    - name: Известные проблемы
+      href: known-issues-for-sql-server-machine-learning-services.md
+    - name: Заметки о выпуске
+      href: 'https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes'
+    - name: Настройка виртуальной машины
+      href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
+    - name: Устранение неполадок
+      href: machine-learning-troubleshooting-faq.md
+      items:
+        - name: сбор данных
+          href: data-collection-ml-troubleshooting-process.md
+        - name: Ошибки при установке и обновлении
+          href: r/upgrade-and-installation-faq-sql-server-r-services.md
+        - name: Ошибки в работе панели запуска и при выполнении внешнего скрипта
+          href: common-issues-external-script-execution.md
+        - name: Ошибки скрипта R
+          href: r-script-execution-errors.md
+    - name: Блоги
+      items:
+        - name: SQL Server
+          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+        - name: R Server
+          href: 'https://blogs.msdn.microsoft.com/microsoftrservertigerteam/'
+        - name: Машинное обучение
+          href: 'https://blogs.technet.microsoft.com/machinelearning/'
+    - name: Форумы
+      items:
+        - name: SQL Server
+          href: 'https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver'
+        - name: Machine Learning Server
+          href: 'https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR'

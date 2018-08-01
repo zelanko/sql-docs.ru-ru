@@ -1,0 +1,136 @@
+- name: "Установка SSMA для\_Oracle (OracleToSQL)"
+  href: installing-ssma-for-oracle-oracletosql.md
+- name: "Начало работы с SSMA для\_Oracle (OracleToSQL)"
+  href: getting-started-with-ssma-for-oracle-oracletosql.md
+- name: Преобразование схемы Oracle HR в SQL Server
+  href: sql-server-linux-convert-from-oracle.md
+- name: "Юридическая информация (SSMA для\_Oracle)"
+  href: legal-notice-ssma-for-oracle.md
+- name: "Установка клиента SSMA для\_Oracle (OracleToSQL)"
+  href: installing-ssma-for-oracle-client-oracletosql.md
+- name: "Новые возможности в SSMA для\_Oracle (OracleToSQL)"
+  href: what-s-new-in-ssma-for-oracle-oracletosql.md
+- name: "Новые функции графического пользовательского интерфейса в\_SSMA (OracleToSQL)"
+  href: new-gui-features-in-ssma-for-oracle-oracletosql.md
+- name: Параметры проекта (миграция) (OracleToSQL)
+  href: project-settings-migration-oracletosql.md
+- name: Запуск тестовых случаев (OracleToSQL)
+  href: running-test-cases-oracletosql.md
+- name: Команды меню и другие сочетания клавиш (OracleToSQL)
+  href: menu-commands-and-other-shortcut-keys-oracle-to-sql.md
+- name: Использование репозиториев тестирования (OracleToSQL)
+  href: using-test-repositories-oracletosql.md
+- name: Создание файлов переменных значений (OracleToSQL)
+  href: creating-variable-value-files-oracletosql.md
+- name: Тестирование объектов баз данных после миграции (OracleToSQL)
+  href: testing-migrated-database-objects-oracletosql.md
+- name: "Работа с проектами\_SSMA (OracleToSQL)"
+  href: working-with-ssma-projects-oracletosql.md
+- name: "Подключение к базе данных\_Oracle (OracleToSQL)"
+  href: connecting-to-oracle-database-oracletosql.md
+- name: "Миграция данных\_Oracle в SQL\_Server (OracleToSQL)"
+  href: migrating-oracle-data-into-sql-server-oracletosql.md
+- name: Параметры проекта (синхронизация) (OracleToSQL)
+  href: project-settings-synchronization-oracletosql.md
+- name: "Преобразование схем\_Oracle (OracleToSQL)"
+  href: converting-oracle-schemas-oracletosql.md
+- name: Отчет о миграции данных (OracleToSQL)
+  href: data-migration-report-oracletosql.md
+- name: Создание отчетов (OracleToSQL)
+  href: generating-reports-oracletosql.md
+- name: Расширенный выбор объектов (OracleToSQL)
+  href: advanced-object-selection-oracletosql.md
+- name: Работа с образцами файлов сценария консоли (OracleToSQL)
+  href: working-with-the-sample-console-script-files-oracletosql.md
+- name: "Параметры командной строки в консоли\_SSMA (OracleToSQL)"
+  href: command-line-options-in-ssma-console-oracletosql.md
+- name: Сочетания клавиш (OracleToSQL)
+  href: shortcut-keys-oracle-to-sql.md
+- name: Параметры проекта (преобразование) (OracleToSQL)
+  href: project-settings-conversion-oracletosql.md
+- name: "Загрузка преобразованных объектов базы данных в SQL\_Server (OracleToSQL)"
+  href: loading-converted-database-objects-into-sql-server-oracletosql.md
+- name: Глобальные параметры (редактор) (OracleToSQL)
+  href: global-settings-editor-oracletosql.md
+- name: Настройка параметров проекта (OracleToSQL)
+  href: setting-project-options-oracletosql.md
+- name: Управление резервными копиями (OracleToSQL)
+  href: managing-backups-oracletosql.md
+- name: Сохранение метаданных (OracleToSQL)
+  href: save-metadata-oracletosql.md
+- name: Настройка порядка вызовов (OracleToSQL)
+  href: customizing-calls-order-oracletosql.md
+- name: Параметры проекта (графический пользовательский интерфейс) (OracleToSQL)
+  href: project-settings-gui-oracletosql.md
+- name: Параметры проекта (загрузка системных объектов) (OracleToSQL)
+  href: project-settings-loading-system-objects-oracletosql.md
+- name: Параметры миграции данных (OracleToSQL)
+  href: data-migration-settings-oracletosql.md
+- name: Просмотр отчетов о тестовых случаях (OracleToSQL)
+  href: viewing-test-case-reports-oracletosql.md
+- name: Управление паролями (OracleToSQL)
+  href: managing-passwords-oracletosql.md
+- name: "Удаление компонентов SSMA для\_Oracle (OracleToSQL)"
+  href: removing-ssma-for-oracle-components-oracletosql.md
+- name: "Помощник по миграции SQL\_Server\_(SSMA) (OracleToSQL)"
+  href: sql-server-migration-assistant-for-oracle-oracletosql.md
+- name: Обновление из базы данных (OracleToSQL)
+  href: refresh-from-database-oracletosql.md
+- name: "Выполнение команд консоли\_SSMA (OracleToSQL)"
+  href: executing-the-ssma-console-oracletosql.md
+- name: Изменение сопоставления типов (OracleToSQL)
+  href: edit-type-mapping-oracletosql.md
+- name: "Начало работы с консолью SSMA для\_Oracle (OracleToSQL)"
+  href: getting-started-with-ssma-for-oracle-console-oracletosql.md
+- name: Создание файлов сценария (OracleToSQL)
+  href: creating-script-files-oracletosql.md
+- name: Выбор и настройка обрабатываемых объектов (OracleToSQL)
+  href: selecting-and-configuring-affected-objects-oracletosql.md
+- name: "Диалоговое окно \"Подключение к SQL\_Server\" (OracleToSQL)"
+  href: connect-to-sql-server-oracletosql.md
+- name: "Работа с консолью SSMA для\_Oracle (OracleToSQL)"
+  href: working-with-ssma-for-oracle-console-oracletosql.md
+- name: "Оценка схем\_Oracle для преобразования (OracleToSQL)"
+  href: assessing-oracle-schemas-for-conversion-oracletosql.md
+- name: Параметры проекта (сопоставление типов) (OracleToSQL)
+  href: project-settings-type-mapping-oracletosql.md
+- name: Глобальные параметры (средство тестирования) (OracleToSQL)
+  href: global-settings-tester-oracletosql.md
+- name: Инициализация тестовых случаев (OracleToSQL)
+  href: initializing-test-cases-oracletosql.md
+- name: Глобальные параметры (OracleToSQL)
+  href: global-settings-dialogs-oracletosql.md
+- name: Глобальные параметры (окно вывода) (OracleToSQL)
+  href: global-settings-output-window-oracletosql.md
+- name: "Установка компонентов\_SSMA в SQL\_Server (OracleToSQL)"
+  href: installing-ssma-components-on-sql-server-oracletosql.md
+- name: Завершение подготовки тестовых случаев (OracleToSQL)
+  href: finishing-test-case-preparation-oracletosql.md
+- name: Выбор и настройка объектов для тестирования (OracleToSQL)
+  href: selecting-and-configuring-objects-to-test-oracletosql.md
+- name: "Подключение к\_Oracle (OracleToSQL)"
+  href: connect-to-oracle-oracletosql.md
+- name: Создание тестовых случаев (OracleToSQL)
+  href: creating-test-cases-oracletosql.md
+- name: Устранение неполадок (OracleToSQL)
+  href: troubleshooting-oracletosql.md
+- name: "Миграция баз данных\_Oracle в SQL\_Server (OracleToSQL)"
+  href: migrating-oracle-databases-to-sql-server-oracletosql.md
+- name: "Подключение к SQL\_Server (OracleToSQL)"
+  href: connecting-to-sql-server-oracletosql.md
+- name: Отчет об оценке (OracleToSQL)
+  href: assessment-report-oracletosql.md
+- name: Создание проекта (OracleToSQL)
+  href: new-project-oracletosql.md
+- name: Справочник по пользовательскому интерфейсу (OracleToSQL)
+  href: user-interface-reference-oracletosql.md
+- name: Глобальные параметры (ведение журнала) (OracleToSQL)
+  href: global-settings-logging-oracletosql.md
+- name: "Сопоставление схем\_Oracle со схемами SQL\_Server (OracleToSQL)"
+  href: mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md
+- name: "Сопоставление типов данных Oracle и SQL\_Server (OracleToSQL)"
+  href: mapping-oracle-and-sql-server-data-types-oracletosql.md
+- name: Создание файлов подключения к серверу (OracleToSQL)
+  href: creating-the-server-connection-files-oracletosql.md
+- name: "Приложение\_1 (OracleToSQL)"
+  href: appendix-1-oracletosql.md

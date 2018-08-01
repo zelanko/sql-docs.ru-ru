@@ -1,0 +1,34 @@
+- name: Обзор примеров
+  href: sql-samples-where-are.md
+- name: Все примеры с Github +
+  href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
+- name: AdventureWorks
+  items:
+    - name: Установка и настройка.
+      href: adventureworks-install-configure.md
+- name: "Wide World\_Importers"
+  items:
+    - name: Обзор
+      href: wide-world-importers-what-is.md
+    - name: OLTP
+      items:
+        - name: Каталог базы данных
+          href: wide-world-importers-oltp-database-catalog.md
+        - name: Установка и настройка.
+          href: wide-world-importers-oltp-install-configure.md
+        - name: функции SQL Server
+          href: wide-world-importers-oltp-use-of-sql-server-features.md
+    - name: хранилище данных
+      items:
+        - name: Каталог базы данных
+          href: wide-world-importers-dw-database-catalog.md
+        - name: Установка и настройка.
+          href: wide-world-importers-dw-install-configure.md
+        - name: функции SQL Server
+          href: wide-world-importers-dw-use-of-sql-server-features.md
+    - name: Создание данных
+      href: wide-world-importers-generate-data.md
+    - name: Рабочий процесс ETL
+      href: wide-world-importers-perform-etl.md
+- name: Новые и обновленные статьи
+  href: new-updated-samples.md

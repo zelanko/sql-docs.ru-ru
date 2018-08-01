@@ -1,0 +1,210 @@
+- name: Основные понятия о программировании интеграции со средой CLR
+  href: common-language-runtime-clr-integration-programming-concepts.md
+- name: Общие сведения об интеграции со средой CLR
+  href: common-language-runtime-integration-overview.md
+  items:
+    - name: Общие сведения об интеграции со средой CLR
+      href: clr-integration-overview.md
+    - name: Архитектура интеграции со средой CLR
+      href: ../../database-engine/dev-guide/architecture-of-clr-integration.md
+- name: Приступая к работе с интеграцией со средой CLR
+  href: database-objects/getting-started-with-clr-integration.md
+- name: новые возможности в интеграции со средой CLR
+  href: clr-integration-what-s-new.md
+  items:
+    - name: Среда размещения CLR
+      href: clr-integration-architecture-clr-hosted-environment.md
+    - name: Производительность интеграции со средой CLR
+      href: clr-integration-architecture-performance.md
+- name: Хранимые процедуры CLR
+  href: ../../database-engine/dev-guide/clr-stored-procedures.md
+- name: Триггеры CLR
+  href: ../../database-engine/dev-guide/clr-triggers.md
+- name: Включение интеграции со средой CLR
+  href: clr-integration-enabling.md
+- name: Сборки
+  href: assemblies-database-engine.md
+  items:
+    - name: Конструирование сборок
+      href: assemblies-designing.md
+    - name: Реализация сборок
+      href: assemblies-implementing.md
+    - name: Получение сведений о сборках
+      href: assemblies-getting-information.md
+    - name: Свойства сборки (страница «Общие»)
+      href: assemblies-properties.md
+- name: Создание объектов базы данных с интеграцией со средой CLR
+  href: database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
+  items:
+    - name: Поддерживаемые библиотеки платформы .NET Framework
+      href: database-objects/supported-net-framework-libraries.md
+    - name: Ограничения модели программирования на основе интеграции со средой CLR
+      href: database-objects/clr-integration-programming-model-restrictions.md
+    - name: Типы данных SQL Server в платформе .NET Framework
+      href: ../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
+      items:
+        - name: Допустимость значений NULL и трехзначная логика сравнения
+          href: ../clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md
+        - name: Параметры сортировки и типы данных интеграции со средой CLR
+          href: ../clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md
+        - name: Обработка параметров больших объектов в среде CLR
+          href: ../clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md
+        - name: Сопоставление данных о параметрах CLR
+          href: ../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md
+- name: Общие сведения о пользовательских атрибутах интеграции со средой CLR
+  href: ../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md
+  items:
+    - name: Пользовательские атрибуты для процедур CLR
+      href: database-objects/clr-integration-custom-attributes-for-clr-routines.md
+- name: Определяемые пользователем функции среды CLR
+  href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md
+  items:
+    - name: Скалярные функции среды CLR
+      href: ../clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md
+    - name: Функции среды CLR с табличным значением
+      href: ../clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md
+    - name: Пользовательские агрегатные функции среды CLR
+      href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md
+    - name: Требования для определяемых пользователем статистических функций CLR
+      href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates-requirements.md
+    - name: Вызов определяемых пользователем агрегатных функций CLR
+      href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md
+- name: Определяемые пользователем типы данных CLR
+  href: ../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
+  items:
+    - name: Определяемый пользователем тип
+      href: ../../database-engine/dev-guide/user-defined-type.md
+    - name: UTF8 String User-Defined Data Type (UDT)
+      href: ../../database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md
+    - name: Создание определяемого пользователем типа
+      href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types.md
+    - name: Требования определяемого пользователем типа данных
+      href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
+    - name: Разработка кода для определяемых пользователем типов
+      href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
+    - name: Регистрация определяемых пользователем типов в SQL Server
+      href: ../clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
+    - name: Работа с определяемыми пользователем типами в SQL Server
+      href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
+    - name: Определение таблиц и столбцов определяемых пользователем типов
+      href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md
+    - name: Работа с данными определяемого пользователем типа
+      href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md
+    - name: Доступ к определяемым пользователем типам в ADO.NET
+      href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md
+    - name: Получение данных определяемого пользователем типа
+      href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-retrieving-udt-data.md
+    - name: Обновление столбцов определяемых пользователем типов с помощью DataAdapter
+      href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
+- name: Доступ к данным из объектов среды CLR для работы с базами данных
+  href: data-access/data-access-from-clr-database-objects.md
+  items:
+    - name: Контекстное соединение
+      href: data-access/context-connection.md
+      items:
+        - name: Обычные и Контекстные соединения
+          href: data-access/context-connections-vs-regular-connections.md
+        - name: Ограничения обычных и контекстных соединений
+          href: data-access/context-connections-and-regular-connections-restrictions.md
+    - name: Олицетворение и учетные данные для соединений
+      href: data-access/impersonation-and-credentials-for-connections.md
+- name: Внутрипроцессные расширения SQL Server для ADO.NET
+  href: ../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md
+  items:
+    - name: Объект SqlContext
+      href: ../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md
+    - name: Объект SqlPipe
+      href: ../clr-integration-data-access-in-process-ado-net/sqlpipe-object.md
+    - name: 'SqlTriggerContext, объект'
+      href: ../clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md
+    - name: Объект SqlDataRecord
+      href: ../clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md
+- name: Интеграция со средой CLR и транзакции
+  href: ../clr-integration-data-access-transactions/clr-integration-and-transactions.md
+  items:
+    - name: Повышение транзакции
+      href: ../clr-integration-data-access-transactions/transaction-promotion.md
+    - name: Доступ к текущей транзакции
+      href: ../clr-integration-data-access-transactions/accessing-the-current-transaction.md
+    - name: Использование System.Transactions
+      href: ../clr-integration-data-access-transactions/using-system-transactions.md
+    - name: Время существования транзакций
+      href: ../clr-integration-data-access-transactions/transaction-lifetimes.md
+- name: Сериализация XML из объектов базы данных CLR
+  href: ../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md
+- name: Безопасность интеграции со средой CLR
+  href: security/clr-integration-security.md
+  items:
+    - name: Управление доступом для кода на основе интеграции со средой CLR
+      href: security/clr-integration-code-access-security.md
+    - name: Ссылки в средствах безопасности интеграции со средой CLR
+      href: ../../database-engine/dev-guide/links-in-clr-integration-security.md
+    - name: Олицетворение и средства обеспечения безопасности при интеграции со средой CLR
+      href: ../../database-engine/dev-guide/impersonation-and-clr-integration-security.md
+    - name: Частично доверенный вызывающий код
+      href: ../../database-engine/dev-guide/allowing-partially-trusted-callers.md
+    - name: Домены приложений и безопасность интеграции со средой CLR
+      href: ../../database-engine/dev-guide/application-domains-and-clr-integration-security.md
+- name: Атрибуты защиты узла и программирование средств интеграции со средой CLR
+  href: ../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md
+  items:
+    - name: Запрещенные типы и элементы в Microsoft.VisualBasic.dll
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md
+    - name: Недопустимые типы и элементы в библиотеке mscorlib.dll
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md
+    - name: Запрещенные типы и элементы в System.dll
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md
+    - name: Недопустимые типы и элементы в библиотеке System.Data.dll
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md
+    - name: Недопустимые типы и элементы в библиотеке System.Core.dll
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md
+- name: Отладка объектов базы данных среды CLR
+  href: debugging-clr-database-objects.md
+- name: Развертывание объектов базы данных CLR
+  href: deploying-clr-database-objects.md
+- name: Управление сборками интеграции со средой CLR
+  href: assemblies/managing-clr-integration-assemblies.md
+  items:
+    - name: Создание сборки
+      href: assemblies/creating-an-assembly.md
+    - name: Изменение сборки
+      href: assemblies/altering-an-assembly.md
+    - name: Удаление сборки
+      href: assemblies/dropping-an-assembly.md
+- name: Наблюдение и устранение неполадок в управляемых объектах базы данных
+  href: monitoring-and-troubleshooting-managed-database-objects.md
+- name: Сценарии использования и примеры интеграции со средой CLR
+  href: ../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md
+  items:
+    - name: доступ к машинному коду из определяемой пользователем функции CLR
+      href: ../../database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md
+    - name: Образец параметра массива
+      href: ../../database-engine/dev-guide/array-parameter-sample.md
+    - name: Образец определяемого пользователем типа данных даты и времени с учетом календаря
+      href: ../../database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md
+    - name: Образец транзакции среды CLR
+      href: ../../database-engine/dev-guide/clr-transactions-sample.md
+    - name: Создание контакта с использованием среды CLR и XML-кода
+      href: ../../database-engine/dev-guide/contact-creation-using-clr-and-xml.md
+    - name: Тип денежной единицы и функция конвертации
+      href: ../../database-engine/dev-guide/currency-type-and-conversion-function.md
+    - name: Обработка больших объектов в среде CLR
+      href: ../../database-engine/dev-guide/handling-large-objects-using-clr.md
+    - name: Образец Hello World Ready
+      href: ../../database-engine/dev-guide/hello-world-ready-sample.md
+    - name: Образец «Hello World»
+      href: ../../database-engine/dev-guide/hello-world-sample.md
+    - name: Образец внутрипроцессного доступа к данным
+      href: ../../database-engine/dev-guide/in-process-data-access-sample.md
+    - name: Образец результирующего набора
+      href: ../../database-engine/dev-guide/result-set-sample.md
+    - name: Образец отправки DataSet
+      href: ../../database-engine/dev-guide/send-dataset-sample.md
+    - name: Пример функций программы работы со строками
+      href: ../../database-engine/dev-guide/string-utility-functions-sample.md
+    - name: Образец операций над строками с учетом дополнений
+      href: ../../database-engine/dev-guide/supplementary-aware-string-manipulation-sample.md
+- name: Программы определяемых пользователем типов
+  href: ../../database-engine/dev-guide/udt-utilities.md
+- name: Очистка неиспользуемой сборки
+  href: ../../database-engine/dev-guide/unused-assembly-cleanup.md

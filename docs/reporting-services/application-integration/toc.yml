@@ -1,0 +1,28 @@
+- name: Интеграция служб Reporting Services в приложения
+  href: integrating-reporting-services-into-applications.md
+- name: Интеграция с помощью...
+  items:
+    - name: "Интеграция служб Reporting Services с помощью элементов управления ReportViewer\_— сбор данных"
+      href: integrating-reporting-services-using-reportviewer-controls-data-collection.md
+    - name: "Интеграция служб Reporting Services с помощью элементов управления ReportViewer\_— начало работы"
+      href: integrating-reporting-services-using-reportviewer-controls-get-started.md
+    - name: "Интеграция служб Reporting Services с помощью элементов управления ReportViewer\_— веб-формы ReportViewer"
+      href: using-the-webforms-reportviewer-control.md
+    - name: "Интеграция служб Reporting Services с помощью элементов управления ReportViewer\_— WinForms ReportViewer"
+      href: using-the-winforms-reportviewer-control.md
+    - name: Интеграция служб Reporting Services с помощью элементов управления ReportViewer
+      href: integrating-reporting-services-using-reportviewer-controls.md
+    - name: "Интеграция служб Reporting Services с использованием протокола SOAP\_— веб-приложения"
+      href: integrating-reporting-services-using-soap-web-application.md
+    - name: "Интеграция служб Reporting Services с использованием протокола SOAP\_— приложения Windows"
+      href: integrating-reporting-services-using-soap-windows-application.md
+    - name: Интеграция служб Reporting Services по протоколу SOAP
+      href: integrating-reporting-services-using-soap.md
+    - name: "Интеграция службы Reporting Services с использованием URL-адресов\_— веб-приложения"
+      href: integrating-reporting-services-using-url-access-web-application.md
+    - name: "Интеграция служб Reporting Services с помощью доступа по URL-адресу\_— приложения Windows"
+      href: integrating-reporting-services-using-url-access-windows-application.md
+    - name: Интеграция служб Reporting Services с помощью доступа по URL-адресу
+      href: integrating-reporting-services-using-url-access.md
+- name: Выбор между доступом по URL-адресу и протоколом SOAP
+  href: choosing-between-url-access-and-soap.md

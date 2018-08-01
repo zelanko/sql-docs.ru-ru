@@ -1,0 +1,14 @@
+- name: Обзор
+  href: sql-server-audit-database-engine.md
+- name: Группы действий и действия
+  href: sql-server-audit-action-groups-and-actions.md
+- name: Записи аудита
+  href: sql-server-audit-records.md
+- name: Создание аудита сервера и спецификации аудита сервера
+  href: create-a-server-audit-and-server-audit-specification.md
+- name: Создание спецификации аудита для сервера и базы данных
+  href: create-a-server-audit-and-database-audit-specification.md
+- name: Просмотр журнала подсистемы аудита SQL Server
+  href: view-a-sql-server-audit-log.md
+- name: Запись событий подсистемы аудита SQL Server в журнал безопасности
+  href: write-sql-server-audit-events-to-the-security-log.md

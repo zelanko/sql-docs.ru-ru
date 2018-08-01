@@ -1,0 +1,154 @@
+- name: Администрирование серверов с помощью управления на основе политик
+  href: administer-servers-by-using-policy-based-management.md
+  items:
+    - name: Хранение политик управления на основе политик
+      href: policy-based-management-storage.md
+    - name: Настройка общих свойств управления на основе политик
+      href: configure-the-general-properties-of-policy-based-management.md
+    - name: Настройка предупреждений для уведомления администраторов политик об ошибках политик
+      href: configure-alerts-to-notify-policy-administrators-of-policy-failures.md
+    - name: Создание политики управления на основе политик
+      href: create-a-policy-based-management-policy.md
+    - name: Создание нового условия управления на основе политик
+      href: create-a-new-policy-based-management-condition.md
+    - name: Просмотр или изменение свойств политики управления на основе политик
+      href: view-or-modify-the-properties-of-a-policy-based-management-policy.md
+    - name: Просмотр или изменение свойств условия управления на основе политик
+      href: view-or-modify-the-properties-of-a-policy-based-management-condition.md
+    - name: Удаление политики управления на основе политик
+      href: delete-a-policy-based-management-policy.md
+    - name: Удаление условия управления на основе политик
+      href: delete-a-policy-based-management-condition.md
+    - name: Вычисление политики управления на основе политик на основе объекта
+      href: evaluate-a-policy-based-management-policy-from-an-object.md
+    - name: Вычисление политики управления на основе политик по этой политике
+      href: evaluate-a-policy-based-management-policy-from-that-policy.md
+    - name: Вычисление политики управления на основе политик по расписанию
+      href: evaluate-a-policy-based-management-policy-on-a-schedule.md
+    - name: Экспорт политики управления на основе политик
+      href: export-a-policy-based-management-policy.md
+    - name: Импорт политики управления на основе политик
+      href: import-a-policy-based-management-policy.md
+    - name: Подписка базы данных на категорию политики или отмена подписки
+      href: subscribe-or-unsubscribe-a-database-to-a-policy-category.md
+    - name: Управление категориями политики
+      href: manage-policy-categories.md
+- name: Работа с аспектами управления на основе политик
+  href: working-with-policy-based-management-facets.md
+  items:
+    - name: Просмотр аспектов управления на основе политик в объекте SQL Server
+      href: view-the-policy-based-management-facets-on-a-sql-server-object.md
+    - name: Просмотр свойств аспекта управления на основе политик
+      href: view-the-properties-of-a-policy-based-management-facet.md
+    - name: Копирование состояния аспекта управления на основе политик в XML-файл
+      href: copy-a-policy-based-management-facet-state-to-an-xml-file.md
+- name: Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик
+  href: monitor-and-enforce-best-practices-by-using-policy-based-management.md
+  items:
+    - name: Стойкость шифрования асимметричных ключей
+      href: asymmetric-keys-encryption-strength.md
+    - name: Файлы резервной копии и файлы базы данных должны находиться на отдельных устройствах
+      href: dbengine-backup-files-must-be-on-separate-devices-from-the-database-files.md
+    - name: Проверка подсистемы дискового ввода-вывода на наличие проблем задержки ввода-вывода
+      href: check-disk-input-and-output-subsystem-for-io-delay-problems.md
+    - name: Проверка на наличие проблем повторного чтения в подсистеме дискового ввода-вывода
+      href: check-disk-input-output-subsystem-for-read-retry-problems.md
+    - name: Проверка целостности базы данных с потенциально поврежденными страницами
+      href: check-integrity-of-database-with-suspect-pages.md
+    - name: Правильное перекрытие параметров affinity mask и affinity I/O mask
+      href: correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+    - name: Отключение предусмотренных по умолчанию файлов журнала трассировки
+      href: default-trace-log-files-disabled.md
+    - name: Обнаружение неудачно завершившегося запроса ввода-вывода
+      href: detect-failed-input-and-output-requests.md
+    - name: Определение неполадок хост-адаптера SCSI
+      href: detect-scsi-host-adapter-issues.md
+    - name: Ошибка управления драйвером устройства
+      href: device-driver-control-error.md
+    - name: Ошибка отсутствия готовности устройства
+      href: device-not-ready-error.md
+    - name: Отключение использования упрощенных пулов
+      href: disable-lightweight-pooling.md
+    - name: Разрешения гостя для пользовательских баз данных
+      href: guest-permissions-on-user-databases.md
+    - name: Input and Output Error During Hard Page Fault
+      href: input-and-output-error-during-hard-page-fault.md
+    - name: Увеличение или отключение порога заблокированных процессов
+      href: increase-or-disable-blocked-process-threshold.md
+    - name: Сохранение значения маски сходства по умолчанию
+      href: keep-the-affinity-mask-default-value.md
+    - name: Сохранение предусмотренного по умолчанию значения параметра конфигурации блокировок
+      href: keep-the-locks-configuration-option-default-value.md
+    - name: Размер сетевого пакета не должен превышать 8060 байт
+      href: network-packet-size-should-not-exceed-8060-bytes.md
+    - name: Устаревшая резервная копия
+      href: outdated-backup.md
+    - name: Размещение файлов данных и файлов журнала на различных дисках
+      href: place-data-and-log-files-on-separate-drives.md
+    - name: Разрешения роли сервера public
+      href: server-public-permissions.md
+    - name: Задание значения OFF для параметра базы данных AUTO_CLOSE
+      href: set-the-auto-close-database-option-to-off.md
+    - name: 'Задание значения параметра базы данных AUTO_SHRINK, равного OFF'
+      href: set-the-auto-shrink-database-option-to-off.md
+    - name: Задание параметров сортировки пользовательских баз данных в соответствии с параметрами баз данных master и model
+      href: dbengine-set-collation-user-defined-databases.md
+    - name: Задание параметра максимальной степени параллелизма для оптимальной производительности
+      href: set-the-max-degree-of-parallelism-option-for-optimal-performance.md
+    - name: Задание значения CHECKSUM для параметра базы данных PAGE_VERIFY
+      href: set-the-page-verify-database-option-to-checksum.md
+    - name: Истечение срока действия пароля имени входа SQL Server
+      href: sql-server-login-password-expiration.md
+    - name: Стойкость пароля имени входа SQL Server
+      href: sql-server-login-password-strength.md
+    - name: Время ожидания ввода-вывода для системы хранения
+      href: storage-system-input-output-time-out.md
+    - name: Симметричные ключи в системных базах данных
+      href: symmetric-keys-on-system-databases.md
+    - name: Симметричные ключи в пользовательских базах данных
+      href: symmetric-keys-on-user-databases.md
+    - name: Бит доверия
+      href: trustworthy-bit.md
+    - name: Непредвиденные сбои системы
+      href: unexpected-system-failures.md
+    - name: Использование компонента Database Mail вместо службы SQL Mail
+      href: use-database-mail-instead-of-sql-mail.md
+    - name: Проверка параметра максимального числа рабочих потоков
+      href: verify-max-worker-threads-setting.md
+- name: Узел управления политиками (обозреватель объектов)
+  href: policy-management-node-object-explorer.md
+  items:
+    - name: 'Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Общие»'
+      href: create-new-condition-or-open-condition-dialog-box-general-page.md
+    - name: 'Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Описание»'
+      href: create-new-condition-or-open-condition-dialog-box-description-page.md
+    - name: 'Диалоговое окно «Открытие условия», вкладка «Зависимые политики»'
+      href: open-condition-dialog-box-dependent-policies-page.md
+    - name: Диалоговое окно «Расширенное редактирование» (условие)
+      href: advanced-edit-condition-dialog-box.md
+    - name: 'Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Общие»'
+      href: create-new-policy-or-open-policy-dialog-box-general-page.md
+    - name: 'Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Описание»'
+      href: create-new-policy-or-open-policy-dialog-box-description-page.md
+    - name: Диалоговое окно «Просмотр политик»
+      href: view-policies-dialog-box.md
+    - name: 'Диалоговое окно «Выполнение политик», страница «Выбор политики»'
+      href: evaluate-policies-dialog-box-policy-selection-page.md
+    - name: 'Диалоговое окно «Выполнение политик», страница «Результаты выполнения»'
+      href: evaluate-policies-dialog-box-evaluation-results-page.md
+    - name: 'Диалоговое окно «Свойства аспекта», вкладка «Общие»'
+      href: facet-properties-dialog-box-general-page.md
+    - name: 'Диалоговое окно «Свойства аспекта», вкладка «Зависимые политики»'
+      href: facet-properties-dialog-box-dependent-policies-page.md
+    - name: 'Диалоговое окно «Свойства аспекта», вкладка «Зависимые условия»'
+      href: facet-properties-dialog-box-dependent-conditions-page.md
+    - name: Диалоговое окно «Подробный просмотр результатов»
+      href: results-detailed-view-dialog-box.md
+    - name: Диалоговое окно «Просмотр аспектов»
+      href: view-facets-dialog-box.md
+    - name: Диалоговое окно «Выбор источника»
+      href: select-source-dialog-box.md
+    - name: Диалоговое окно «Экспортировать как политику»
+      href: export-as-policy-dialog-box.md
+    - name: Диалоговое окно «Импорт политик»
+      href: import-policies-dialog-box.md

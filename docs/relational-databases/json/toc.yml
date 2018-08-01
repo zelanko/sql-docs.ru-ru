@@ -1,0 +1,42 @@
+- name: Обзор
+  href: json-data-sql-server.md
+- name: Хранение документов JSON в SQL Server
+  href: store-json-documents-in-sql-tables.md
+- name: Импорт документов JSON на SQL Server
+  href: import-json-documents-into-sql-server.md
+- name: Индексирование данных JSON
+  href: index-json-data.md
+- name: Оптимизация обработки JSON с помощью выполняющейся в памяти OLTP
+  href: optimize-json-processing-with-in-memory-oltp.md
+- name: 'Проверка, построение запросов и изменение данных JSON с помощью встроенных функций'
+  href: validate-query-and-change-json-data-with-built-in-functions-sql-server.md
+- name: Выражения пути JSON
+  href: json-path-expressions-sql-server.md
+- name: "Анализ и преобразование данных\_JSON с помощью\_OPENJSON"
+  href: convert-json-data-to-rows-and-columns-with-openjson-sql-server.md
+  items:
+    - name: Использование OPENJSON со схемой по умолчанию
+      href: use-openjson-with-the-default-schema-sql-server.md
+    - name: Использование функции OPENJSON с явной схемой
+      href: use-openjson-with-an-explicit-schema-sql-server.md
+- name: Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)
+  href: format-query-results-as-json-with-for-json-sql-server.md
+  items:
+    - name: Форматирование вложенных выходных данных JSON в режиме PATH
+      href: format-nested-json-output-with-path-mode-sql-server.md
+    - name: Автоматическое форматирование выходных данных JSON в режиме AUTO
+      href: format-json-output-automatically-with-auto-mode-sql-server.md
+    - name: Добавление корневого узла к выходным данным JSON с параметром ROOT
+      href: add-a-root-node-to-json-output-with-the-root-option-sql-server.md
+    - name: Использование параметра INCLUDE_NULL_VALUES для включения значений Null в выходные данные JSON
+      href: include-null-values-in-json-include-null-values-option.md
+    - name: Удаление квадратных скобок из выходных данных JSON с помощью параметра WITHOUT_ARRAY_WRAPPER (SQL Server)
+      href: remove-square-brackets-from-json-without-array-wrapper-option.md
+    - name: Преобразование типов данных SQL Server в формат JSON с помощью предложения FOR JSON
+      href: how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md
+    - name: Как FOR JSON экранирует специальные и управляющие символы
+      href: how-for-json-escapes-special-characters-and-control-characters-sql-server.md
+    - name: Использование выходных данных FOR JSON в SQL Server и клиентских приложениях
+      href: use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md
+- name: Устранение распространенных проблем с JSON в SQL Server
+  href: solve-common-issues-with-json-in-sql-server.md

@@ -1,0 +1,13 @@
+- name: Решения высокого уровня доступности в SQL Server 2014
+  href: high-availability-solutions-sql-server.md
+  items:
+    - name: Автоматическое восстановление страниц (для групп доступности и зеркального отображения баз данных)
+      href: automatic-page-repair-availability-groups-database-mirroring.md
+    - name: Управление именами входа и заданиями после переключения ролей
+      href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+    - name: 'Диагностика пользователей, утративших связь с учетной записью'
+      href: troubleshoot-orphaned-users-sql-server.md
+- name: Установка отказоустойчивого кластера SQL Server +
+  href: install/sql-server-failover-cluster-installation.md
+- name: Отказоустойчивая кластеризация Windows Server (WSFC) +
+  href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md

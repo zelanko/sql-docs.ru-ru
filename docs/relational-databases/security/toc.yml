@@ -1,0 +1,46 @@
+- name: Обзор
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: Обеспечение безопасности SQL Server
+  href: securing-sql-server.md
+- name: Аудит
+  href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
+- name: Проверка подлинности и доступ
+  href: ../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
+- name: Шифрование
+  href: ../../relational-databases/security/encryption/sql-server-encryption.md
+- name: Защита интеллектуальной собственности SQL Server
+  href: protecting-your-sql-server-intellectual-property.md
+- name: Защищаемые объекты
+  href: securables.md
+- name: Пользователи автономной базы данных — создание переносимой базы данных
+  href: contained-database-users-making-your-database-portable.md
+- name: Выбор режима проверки подлинности
+  href: choose-an-authentication-mode.md
+- name: Настройка видимости метаданных
+  href: metadata-visibility-configuration.md
+- name: Настройка контактной зоны
+  href: surface-area-configuration.md
+- name: Атака путем внедрения кода SQL
+  href: sql-injection.md
+- name: Оценка уязвимостей SQL
+  href: sql-vulnerability-assessment.md
+- name: Обнаружение и классификация данных SQL
+  href: sql-data-discovery-and-classification.md
+- name: Свойство базы данных TRUSTWORTHY
+  href: trustworthy-database-property.md
+- name: Разрешения
+  href: permissions-database-engine.md
+- name: Иерархия разрешений
+  href: permissions-hierarchy-database-engine.md
+- name: Страница «Разрешения» или «Защищаемые объекты»
+  href: permissions-or-securables-page.md
+- name: Политика паролей
+  href: password-policy.md
+- name: Надежные пароли
+  href: strong-passwords.md
+- name: Безопасность на уровне строк
+  href: row-level-security.md
+- name: Динамическое маскирование данных
+  href: dynamic-data-masking.md
+- name: Сертификаты SQL Server и асимметричные ключи
+  href: sql-server-certificates-and-asymmetric-keys.md

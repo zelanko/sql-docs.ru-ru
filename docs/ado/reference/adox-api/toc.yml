@@ -1,0 +1,306 @@
+- name: Объектная модель ADOX
+  href: adox-object-model.md
+- name: Объекты ADOX
+  href: adox-objects.md
+  items:
+    - name: Объект Catalog (ADOX)
+      href: catalog-object-adox.md
+      items:
+        - name: 'Свойства, методы и события объекта Catalog'
+          href: catalog-object-properties-methods-and-events.md
+    - name: Объект Column (ADOX)
+      href: column-object-adox.md
+      items:
+        - name: 'Свойства, методы и события объекта Column'
+          href: column-object-properties-methods-and-events.md
+    - name: Объект Group (ADOX)
+      href: group-object-adox.md
+      items:
+        - name: 'Свойства, методы и события объекта Group'
+          href: group-object-properties-methods-and-events.md
+    - name: Объект Index (ADOX)
+      href: index-object-adox.md
+      items:
+        - name: 'Свойства, методы и события объекта Index'
+          href: index-object-properties-methods-and-events.md
+    - name: Объект Key (ADOX)
+      href: key-object-adox.md
+      items:
+        - name: 'Свойства, методы и события объекта Key'
+          href: key-object-properties-methods-and-events.md
+    - name: Объект Procedure (ADOX)
+      href: procedure-object-adox.md
+      items:
+        - name: 'Свойства, методы и события объекта Procedure'
+          href: procedure-object-properties-methods-and-events.md
+    - name: Объект Property (ADOX)
+      href: property-object-adox.md
+      items:
+        - name: 'Свойства, методы и события объекта Property (ADOX)'
+          href: adox-property-object-properties-methods-and-events.md
+    - name: Объект Table (ADOX)
+      href: table-object-adox.md
+      items:
+        - name: 'Свойства, методы и события объекта Table'
+          href: table-object-properties-methods-and-events.md
+    - name: Объект User (ADOX)
+      href: user-object-adox.md
+      items:
+        - name: 'Свойства, методы и события объекта User'
+          href: user-object-properties-methods-and-events.md
+    - name: Объект View (ADOX)
+      href: view-object-adox.md
+      items:
+        - name: 'Свойства, методы и события объекта View'
+          href: view-object-properties-methods-and-events.md
+- name: Коллекции ADOX
+  href: adox-collections.md
+  items:
+    - name: Коллекция Columns (ADOX)
+      href: columns-collection-adox.md
+      items:
+        - name: 'Свойства, методы и события коллекции Columns'
+          href: columns-collection-properties-methods-and-events.md
+    - name: Коллекция Groups (ADOX)
+      href: groups-collection-adox.md
+      items:
+        - name: 'Свойства, методы и события коллекции Groups'
+          href: groups-collection-properties-methods-and-events.md
+    - name: Коллекция Indexes (ADOX)
+      href: indexes-collection-adox.md
+      items:
+        - name: 'Свойства, методы и события коллекции Indexes'
+          href: indexes-collection-properties-methods-and-events.md
+    - name: Коллекция Keys (ADOX)
+      href: keys-collection-adox.md
+      items:
+        - name: 'Свойства, методы и события коллекции Keys'
+          href: keys-collection-properties-methods-and-events.md
+    - name: Коллекция Procedures (ADOX)
+      href: procedures-collection-adox.md
+      items:
+        - name: 'Свойства, методы и события коллекции Procedures'
+          href: procedures-collection-properties-methods-and-events.md
+    - name: Коллекция Tables (ADOX)
+      href: tables-collection-adox.md
+      items:
+        - name: 'Свойства, методы и события коллекции Tables'
+          href: tables-collection-properties-methods-and-events.md
+    - name: Коллекция Users (ADOX)
+      href: users-collection-adox.md
+      items:
+        - name: 'Свойства, методы и события коллекции Users'
+          href: users-collection-properties-methods-and-events.md
+    - name: Коллекция Views (ADOX)
+      href: views-collection-adox.md
+      items:
+        - name: 'Свойства, методы и события коллекции Views'
+          href: views-collection-properties-methods-and-events.md
+- name: Свойства ADOX
+  href: adox-properties.md
+  items:
+    - name: Свойство ActiveConnection (ADOX)
+      href: activeconnection-property-adox.md
+    - name: Свойство Attributes (ADOX)
+      href: attributes-property-adox.md
+    - name: Свойство Clustered (ADOX)
+      href: clustered-property-adox.md
+    - name: Свойство Command (ADOX)
+      href: command-property-adox.md
+    - name: Свойство DateCreated (ADOX)
+      href: datecreated-property-adox.md
+    - name: Свойство DateModified (ADOX)
+      href: datemodified-property-adox.md
+    - name: Свойство DefinedSize (ADOX)
+      href: definedsize-property-adox.md
+    - name: Свойство DeleteRule (ADOX)
+      href: deleterule-property-adox.md
+    - name: Свойство IndexNulls (ADOX)
+      href: indexnulls-property-adox.md
+    - name: Свойство Name (ADOX)
+      href: name-property-adox.md
+    - name: Свойство NumericScale (ADOX)
+      href: numericscale-property-adox.md
+    - name: Свойство ParentCatalog (ADOX)
+      href: parentcatalog-property-adox.md
+    - name: Свойство Precision (ADOX)
+      href: precision-property-adox.md
+    - name: Свойство PrimaryKey (ADOX)
+      href: primarykey-property-adox.md
+    - name: Свойство RelatedColumn (ADOX)
+      href: relatedcolumn-property-adox.md
+    - name: Свойство RelatedTable (ADOX)
+      href: relatedtable-property-adox.md
+    - name: Свойство SortOrder (ADOX)
+      href: sortorder-property-adox.md
+    - name: Свойство Type (Column) (ADOX)
+      href: type-property-column-adox.md
+    - name: Свойство Property (Key) (ADOX)
+      href: type-property-key-adox.md
+    - name: Свойство Type (Table) (ADOX)
+      href: type-property-table-adox.md
+    - name: Свойство Unique (ADOX)
+      href: unique-property-adox.md
+    - name: Свойство UpdateRule (ADOX)
+      href: updaterule-property-adox.md
+- name: Методы ADOX
+  href: adox-methods.md
+  items:
+    - name: Метод Append (коллекция Columns ADOX)
+      href: append-method-adox-columns.md
+    - name: Метод Append (коллекция Groups ADOX)
+      href: append-method-adox-groups.md
+    - name: Метод Append (коллекция Indexes ADOX)
+      href: append-method-adox-indexes.md
+    - name: Метод Append (коллекция Keys ADOX)
+      href: append-method-adox-keys.md
+    - name: Метод Append (коллекция Procedures ADOX)
+      href: append-method-adox-procedures.md
+    - name: Метод Append (коллекция Tables ADOX)
+      href: append-method-adox-tables.md
+    - name: Метод Append (коллекция Users ADOX)
+      href: append-method-adox-users.md
+    - name: Метод Append (коллекция Views ADOX)
+      href: append-method-adox-views.md
+    - name: Метод ChangePassword (ADOX)
+      href: changepassword-method-adox.md
+    - name: Метод Create (ADOX)
+      href: create-method-adox.md
+    - name: Метод Delete (коллекции ADOX)
+      href: delete-method-adox-collections.md
+    - name: Метод GetObjectOwner (ADOX)
+      href: getobjectowner-method-adox.md
+    - name: Метод GetPermissions (ADOX)
+      href: getpermissions-method-adox.md
+    - name: Метод SetObjectOwner
+      href: setobjectowner-method.md
+    - name: Метод SetPermissions (ADOX)
+      href: setpermissions-method-adox.md
+- name: ADOX Enumerated Constants
+  href: adox-enumerated-constants.md
+  items:
+    - name: AllowNullsEnum
+      href: allownullsenum.md
+    - name: ActionEnum
+      href: actionenum.md
+    - name: SortOrderEnum
+      href: sortorderenum.md
+    - name: RightsEnum
+      href: rightsenum.md
+    - name: RuleEnum
+      href: ruleenum.md
+    - name: KeyTypeEnum
+      href: keytypeenum.md
+    - name: InheritTypeEnum
+      href: inherittypeenum.md
+    - name: ObjectTypeEnum
+      href: objecttypeenum.md
+    - name: ColumnAttributesEnum
+      href: columnattributesenum.md
+- name: Примеры кода ADOX
+  href: adox-code-examples.md
+  items:
+    - name: Примеры кода ADOX в Microsoft Visual Basic
+      href: adox-code-examples-in-microsoft-visual-basic.md
+      items:
+        - name: Пример свойства Attributes (Visual Basic)
+          href: attributes-property-example-vb.md
+        - name: Пример свойства ActiveConnection объекта Catalog (Visual Basic)
+          href: catalog-activeconnection-property-example-vb.md
+        - name: Пример свойства Clustered (Visual Basic)
+          href: clustered-property-example-vb.md
+        - name: 'Примеры методов Append для коллекций Columns и Tables, а также пример свойства Name (Visual Basic)'
+          href: columns-and-tables-append-methods-name-property-example-vb.md
+        - name: Примеры свойств Command и CommandText (Visual Basic)
+          href: command-and-commandtext-properties-example-vb.md
+        - name: Примеры метода Close для объекта Connection и свойства Type для объекта Table (Visual Basic)
+          href: connection-close-method-table-type-property-example-vb.md
+        - name: Пример метода Create (Visual Basic)
+          href: create-method-example-vb.md
+        - name: Примеры свойств DateCreated и DateModified (Visual Basic)
+          href: datecreated-and-datemodified-properties-example-vb.md
+        - name: Пример свойства DefinedSize (Visual Basic)
+          href: definedsize-property-example-vb.md
+        - name: Пример свойства DeleteRule (Visual Basic)
+          href: deleterule-property-example-vb.md
+        - name: Примеры методов GetObjectOwner и SetObjectOwner (Visual Basic)
+          href: getobjectowner-and-setobjectowner-methods-example-vb.md
+        - name: Примеры методов GetPermissions и SetPermissions (Visual Basic)
+          href: getpermissions-and-setpermissions-methods-example-vb.md
+        - name: 'Примеры методов Append коллекций Groups и Users, а также пример метода ChangePassword (Visual Basic)'
+          href: groups-and-users-append-changepassword-methods-example-vb.md
+        - name: Пример метода Append коллекции Indexes (Visual Basic)
+          href: indexes-append-method-example-vb.md
+        - name: Пример свойства IndexNulls (Visual Basic)
+          href: indexnulls-property-example-vb.md
+        - name: 'Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)'
+          href: keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md
+        - name: 'Пример кода ADOX: примеры свойств NumericScale и Precision (Visual Basic)'
+          href: adox-code-example-numericscale-and-precision-properties-example-vb.md
+        - name: Примеры коллекции Parameters и свойства Command (Visual Basic)
+          href: parameters-collection-command-property-example-vb.md
+        - name: Пример свойства ParentCatalog (Visual Basic)
+          href: parentcatalog-property-example-vb.md
+        - name: Примеры свойств PrimaryKey и Unique (Visual Basic)
+          href: primarykey-and-unique-properties-example-vb.md
+        - name: Пример метода Append коллекции Procedures (Visual Basic)
+          href: procedures-append-method-example-vb.md
+        - name: Пример метода Delete коллекции Procedures (Visual Basic)
+          href: procedures-delete-method-example-vb.md
+        - name: Пример метода Refresh коллекции Procedures (Visual Basic)
+          href: procedures-refresh-method-example-vb.md
+        - name: Пример свойства SortOrder (Visual Basic)
+          href: sortorder-property-example-vb.md
+        - name: Примеры коллекций Views и Fields (Visual Basic)
+          href: views-and-fields-collections-example-vb.md
+        - name: Пример метода Append коллекции Views (Visual Basic)
+          href: views-append-method-example-vb.md
+        - name: Примеры коллекции Views и свойства CommandText (Visual Basic)
+          href: views-collection-commandtext-property-example-vb.md
+        - name: Пример метода Delete коллекции Views (Visual Basic)
+          href: views-delete-method-example-vb.md
+        - name: Пример метода Refresh коллекции Views (Visual Basic)
+          href: views-refresh-method-example-vb.md
+    - name: Примеры кода ADOX в Microsoft Visual C++
+      href: adox-code-examples-in-microsoft-visual-c.md
+      items:
+        - name: Пример свойства Attributes (Visual C++)
+          href: attributes-property-example-vc.md
+        - name: Пример свойства ActiveConnection объекта Catalog (Visual C++)
+          href: catalog-activeconnection-property-example-vc.md
+        - name: Пример свойства Clustered (Visual C++)
+          href: clustered-property-example-vc.md
+        - name: 'Примеры методов Append для коллекций Columns и Tables, а также пример свойства Name (Visual C++)'
+          href: columns-and-tables-append-methods-name-property-example-vc.md
+        - name: Примеры свойств Command и CommandText (Visual C++)
+          href: command-and-commandtext-properties-example-vc.md
+        - name: Примеры метода Close для объекта Connection и свойства Type для объекта Table (Visual C++)
+          href: connection-close-method-table-type-property-example-vc.md
+        - name: Пример метода Create (Visual C++)
+          href: create-method-example-vc.md
+        - name: Примеры свойств DateCreated и DateModified (Visual C++)
+          href: datecreated-and-datemodified-properties-example-vc.md
+        - name: Пример свойства DefinedSize (Visual C++)
+          href: definedsize-property-example-vc.md
+        - name: Пример свойства DeleteRule (Visual C++)
+          href: deleterule-property-example-vc.md
+        - name: Примеры методов GetObjectOwner и SetObjectOwner (Visual C++)
+          href: getobjectowner-and-setobjectowner-methods-example-vc.md
+        - name: Примеры методов GetPermissions и SetPermissions (Visual C++)
+          href: getpermissions-and-setpermissions-methods-example-vc.md
+        - name: 'Примеры методов Append коллекций Groups и Users, а также пример метода ChangePassword (Visual C++)'
+          href: groups-and-users-append-changepassword-methods-example-vc.md
+        - name: Пример метода Append коллекции (Visual C++)
+          href: indexes-append-method-example-vc.md
+        - name: Пример свойства IndexNulls (Visual C++)
+          href: indexnulls-property-example-vc.md
+        - name: 'Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual C++)'
+          href: keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md
+        - name: Примеры свойств NumericScale и Precision для объекта Column (Visual C++)
+          href: numericscale-and-precision-properties-of-the-column-object-example-vc.md
+        - name: Примеры коллекции Parameters и свойства Command (Visual C++)
+          href: parameters-collection-command-property-example-vc.md
+        - name: Пример свойства ParentCatalog (Visual C++)
+          href: parentcatalog-property-example-vc.md
+        - name: Примеры свойств PrimaryKey и Unique (Visual C++)
+          href: primarykey-and-unique-properties-example-vc.md

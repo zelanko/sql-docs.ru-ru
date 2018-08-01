@@ -1,0 +1,23 @@
+- name: Средство просмотра файлов журнала
+  href: log-file-viewer.md
+  items:
+    - name: Открыть
+      href: open-log-file-viewer.md
+    - name: Просмотр в автономном режиме
+      href: view-offline-log-files.md
+    - name: справка F1
+      href: log-file-viewer-f1-help.md
+- name: Журнал транзакций
+  href: the-transaction-log-sql-server.md
+  items:
+    - name: Управление размером
+      href: manage-the-size-of-the-transaction-log-file.md
+    - name: "Устранение неполадок при переполнении журнала (ошибка\_9002 в SQL Server)"
+      href: troubleshoot-a-full-transaction-log-sql-server-error-9002.md
+    - name: Управление устойчивостью транзакций
+      href: control-transaction-durability.md
+- name: Контрольные точки базы данных
+  href: database-checkpoints-sql-server.md
+  items:
+    - name: Изменение целевого времени восстановления базы данных
+      href: change-the-target-recovery-time-of-a-database-sql-server.md

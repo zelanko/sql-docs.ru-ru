@@ -1,0 +1,50 @@
+- name: Собственный клиент SQL Server (OLE DB)
+  href: sql-server-native-client-ole-db.md
+- name: Конкретные аспекты
+  items:
+    - name: Поставщик OLE DB для Native Client +
+      href: ../../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
+    - name: Объекты источника данных OLE DB +
+      href: ../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md
+    - name: Команды +
+      href: ../../../relational-databases/native-client-ole-db-commands/commands.md
+    - name: Наборы строк +
+      href: ../../../relational-databases/native-client-ole-db-rowsets/rowsets.md
+    - name: BLOB-объекты +
+      href: ../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
+    - name: Индексы таблиц +
+      href: ../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md
+    - name: Типы данных +
+      href: ../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md
+    - name: Параметры с табличными значениями +
+      href: ../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+    - name: Дата и время +
+      href: ../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md
+    - name: Транзакции +
+      href: ../../../relational-databases/native-client-ole-db-transactions/transactions.md
+    - name: Ошибки +
+      href: ../../../relational-databases/native-client-ole-db-errors/errors.md
+    - name: Интерфейсы +
+      href: ../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md
+    - name: Инструкции +
+      href: ../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md
+- name: Поддержка FILESTREAM (OLE DB)
+  href: filestream-support-ole-db.md
+- name: Большие определяемые пользователем типы данных CLR (OLE DB)
+  href: large-clr-user-defined-types-ole-db.md
+- name: Поддержка набора строк схемы (OLE DB)
+  href: schema-rowset-support-ole-db.md
+- name: "Наборы строк схемы\_— поддержка распределенных запросов"
+  href: schema-rowsets-distributed-query-support.md
+- name: "Наборы строк схемы\_— набор строк LINKEDSERVERS"
+  href: schema-rowsets-linkedservers-rowset.md
+- name: Имена участника-службы в клиентских соединениях (OLE DB)
+  href: service-principal-names-spns-in-client-connections-ole-db.md
+- name: Поддержка разреженных столбцов (OLE DB)
+  href: sparse-columns-support-ole-db.md
+- name: Вызов хранимых процедур
+  href: stored-procedures-calling.md
+- name: Выполнение хранимых процедур
+  href: stored-procedures-running.md
+- name: Хранимые процедуры
+  href: stored-procedures.md

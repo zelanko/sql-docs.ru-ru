@@ -1,0 +1,274 @@
+- name: "Сведения о SQL\_Server Analysis\_Services"
+  href: analysis-services.md
+- name: Обзор
+  items:
+    - name: "Новые возможности в SQL\_Server Analysis Services\_2016"
+      href: what-s-new-in-analysis-services.md
+    - name: "Новые возможности в SQL\_Server Analysis Services\_2017"
+      href: what-s-new-in-sql-server-analysis-services-2017.md
+    - name: Новые и обновленные статьи
+      href: new-updated-analysis-services.md
+    - name: Средства и приложения
+      href: tools-and-applications-used-in-analysis-services.md
+    - name: Клиентские библиотеки (поставщики данных)
+      href: ../analysis-services/instances/data-providers-used-for-analysis-services-connections.md
+    - name: Сравнение табличных и многомерных решений
+      href: comparing-tabular-and-multidimensional-solutions-ssas.md
+    - name: "Поддержка функций Analysis\_Services в выпусках SQL\_Server"
+      href: analysis-services-features-supported-by-the-editions-of-sql-server-2016.md
+    - name: "Обратная совместимость (SQL Server\_2016 Analysis\_Services)"
+      href: analysis-services-backward-compatibility.md
+    - name: "Обратная совместимость (SQL Server\_2017 Analysis\_Services)"
+      href: analysis-services-backward-compatibility-sql2017.md
+    - name: Глобализация и преобразование
+      href: globalization-scenarios-for-analysis-services.md
+      items:
+        - name: Языки и параметры сортировки
+          href: languages-and-collations-analysis-services.md
+        - name: Translations
+          href: translation-support-in-analysis-services.md
+        - name: Конвертация валюты
+          href: currency-conversions-analysis-services.md
+        - name: Советы и рекомендации
+          href: globalization-tips-and-best-practices-analysis-services.md
+- name: Учебники
+  href: analysis-services-tutorials-ssas.md
+  items:
+    - name: "Табличное моделирование (с уровнем совместимости\_1400)"
+      href: tutorial-tabular-1400/as-adventure-works-tutorial.md
+      items:
+        - name: 1. Создание проекта табличной модели
+          href: tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
+        - name: 2. Получение данных
+          href: tutorial-tabular-1400/as-lesson-2-get-data.md
+        - name: 3. Отметка в качестве таблицы дат
+          href: tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
+        - name: 4. Создание связей
+          href: tutorial-tabular-1400/as-lesson-4-create-relationships.md
+        - name: 5. Создание вычисляемых столбцов
+          href: tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
+        - name: 6. Создание мер
+          href: tutorial-tabular-1400/as-lesson-6-create-measures.md
+        - name: 7. Создание ключевых показателей эффективности
+          href: tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
+        - name: 8. Создание перспектив
+          href: tutorial-tabular-1400/as-lesson-8-create-perspectives.md
+        - name: 9. Создание иерархий
+          href: tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
+        - name: 10. Создание секций
+          href: tutorial-tabular-1400/as-lesson-10-create-partitions.md
+        - name: 11. Создание ролей
+          href: tutorial-tabular-1400/as-lesson-11-create-roles.md
+        - name: "12. Анализ в\_Excel"
+          href: tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
+        - name: 13. Развертывание
+          href: tutorial-tabular-1400/as-lesson-13-deploy.md
+        - name: Дополнительный урок. Строки детализации
+          href: tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
+        - name: Дополнительный урок. Динамическая безопасность
+          href: tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
+        - name: Дополнительный урок. Неоднородные иерархии
+          href: tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
+    - name: "Табличное моделирование (с уровнем совместимости\_1200)"
+      href: tabular-modeling-adventure-works-tutorial.md
+      items:
+        - name: Занятие 1. Создание нового проекта табличной модели
+          href: lesson-1-create-a-new-tabular-model-project.md
+        - name: Занятие 2. Добавление данных
+          href: lesson-2-add-data.md
+        - name: "Урок\_3. Отметка в качестве таблицы дат"
+          href: lesson-3-mark-as-date-table.md
+        - name: "Урок\_4. Создание связей"
+          href: lesson-4-create-relationships.md
+        - name: "Урок\_5. Создание вычисляемых столбцов"
+          href: lesson-5-create-calculated-columns.md
+        - name: "Урок\_6. Создание мер"
+          href: lesson-6-create-measures.md
+        - name: Занятие 7. Создание ключевых показателей эффективности
+          href: lesson-7-create-key-performance-indicators.md
+        - name: "Урок\_8. Создание перспектив"
+          href: lesson-8-create-perspectives.md
+        - name: "Урок\_9. Создание иерархий"
+          href: lesson-9-create-hierarchies.md
+        - name: "Урок\_10. Создание разделов"
+          href: lesson-10-create-partitions.md
+        - name: Урок 11. Создание ролей
+          href: lesson-11-create-roles.md
+        - name: Занятие 12. Анализ в Excel
+          href: lesson-12-analyze-in-excel.md
+        - name: Занятие 13. Развертывание
+          href: lesson-13-deploy.md
+        - name: Дополнительный урок. Реализация динамической безопасности с помощью строковых фильтров
+          href: supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+        - name: "Дополнительный урок. Настройка свойств отчетов Power\_View"
+          href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+    - name: Многомерное моделирование
+      href: multidimensional-modeling-adventure-works-tutorial.md
+      items:
+        - name: Учебный сценарий
+          href: analysis-services-tutorial-scenario.md
+        - name: "Установка образцов проектов и данных для учебника по многомерному моделированию Analysis\_Services"
+          href: install-sample-data-and-projects.md
+        - name: "Урок\_1. Определение представления источников данных в проекте Analysis\_Services"
+          href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
+          items:
+            - name: "Урок\_1–1. Создание проекта Analysis\_Services"
+              href: lesson-1-1-creating-an-analysis-services-project.md
+            - name: "Урок\_1–2. Определение источника данных"
+              href: lesson-1-2-defining-a-data-source.md
+            - name: "Урок\_1–3. Определение представления источника данных"
+              href: lesson-1-3-defining-a-data-source-view.md
+            - name: "Урок\_1–4. Изменение имен таблиц по умолчанию"
+              href: lesson-1-4-modifying-default-table-names.md
+        - name: "Урок\_2. Определение и развертывание куба"
+          href: lesson-2-defining-and-deploying-a-cube.md
+          items:
+            - name: "Урок\_2–1. Определение измерения"
+              href: lesson-2-1-defining-a-dimension.md
+            - name: "Урок\_2–2. Определение куба"
+              href: lesson-2-2-defining-a-cube.md
+            - name: "Урок\_2–3. Добавление к измерениям атрибутов"
+              href: lesson-2-3-adding-attributes-to-dimensions.md
+            - name: "Урок\_2–4. Просмотр свойств куба и измерений"
+              href: lesson-2-4-reviewing-cube-and-dimension-properties.md
+            - name: "Урок\_2–5. Развертывание проекта Analysis\_Services"
+              href: lesson-2-5-deploying-an-analysis-services-project.md
+            - name: "Урок\_2–6. Просмотр данных куба"
+              href: lesson-2-6-browsing-the-cube.md
+        - name: "Урок\_3. Изменение мер, атрибутов и иерархий"
+          href: lesson-3-modifying-measures-attributes-and-hierarchies.md
+          items:
+            - name: "Урок\_3–1. Изменение мер"
+              href: lesson-3-1-modifying-measures.md
+            - name: "Урок\_3–2. Изменение пользовательского измерения"
+              href: lesson-3-2-modifying-the-customer-dimension.md
+            - name: "Урок\_3–3. Изменение измерения продукта"
+              href: lesson-3-3-modifying-the-product-dimension.md
+            - name: "Урок\_3–4. Изменение измерения даты"
+              href: lesson-3-4-modifying-the-date-dimension.md
+            - name: "Урок\_3–5. Просмотр данных развернутого куба"
+              href: lesson-3-5-browsing-the-deployed-cube.md
+        - name: "Урок\_4. Определение расширенных свойств атрибутов и измерений"
+          href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
+          items:
+            - name: "Урок\_4–1. Использование измененной версии учебного проекта Analysis\_Services"
+              href: lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
+            - name: "Урок\_4–2. Определение свойств родительского атрибута в иерархии \"родители-потомки\""
+              href: lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
+            - name: "Урок\_4–3. Автоматическое группирование элементов атрибута"
+              href: lesson-4-3-automatically-grouping-attribute-members.md
+            - name: "Урок\_4–4. Скрытие и отключение иерархий атрибутов"
+              href: lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
+            - name: "Урок\_4–5. Сортировка элементов атрибута по вторичному атрибуту"
+              href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
+            - name: "Урок\_4–6. Определение связей атрибутов в определенной пользователем иерархии"
+              href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+            - name: "Урок\_4–7. Определение свойств неизвестного элемента и обработки значений\_NULL"
+              href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
+        - name: "Урок\_5. Определение связей между измерениями и группами мер"
+          href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
+          items:
+            - name: "Урок\_5–1. Определение отношения ссылки"
+              href: lesson-5-1-defining-a-referenced-relationship.md
+            - name: "Урок\_5–2. Определение связи фактов"
+              href: lesson-5-2-defining-a-fact-relationship.md
+            - name: "Урок\_5–3. Определение связи \"многие ко многим\""
+              href: lesson-5-3-defining-a-many-to-many-relationship.md
+            - name: "Урок\_5–4. Определение степени детализации измерения в группе мер"
+              href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
+        - name: "Урок\_6. Определение вычислений"
+          href: lesson-6-defining-calculations.md
+          items:
+            - name: "Урок\_6–1. Определение вычисляемых элементов"
+              href: lesson-6-1-defining-calculated-members.md
+            - name: "Урок\_6–2. Определение именованных наборов"
+              href: lesson-6-2-defining-named-sets.md
+        - name: Занятие 7. Определение ключевых показателей эффективности
+          href: lesson-7-defining-key-performance-indicators-kpis.md
+          items:
+            - name: "Урок\_7–1. Определение и просмотр\_КПЭ"
+              href: lesson-7-1-defining-and-browsing-kpis.md
+        - name: "Урок\_8. Определение действий"
+          href: lesson-8-defining-actions.md
+          items:
+            - name: "Урок\_8–1. Определение и использование действия детализации"
+              href: lesson-8-1-defining-and-using-a-drillthrough-action.md
+        - name: "Урок\_9. Определение перспектив и преобразований"
+          href: lesson-9-defining-perspectives-and-translations.md
+          items:
+            - name: "Урок\_9–1. Определение и просмотр перспектив"
+              href: lesson-9-1-defining-and-browsing-perspectives.md
+            - name: "Урок\_9–2. Определение и просмотр преобразований"
+              href: lesson-9-2-defining-and-browsing-translations.md
+        - name: "Урок\_10. Определение ролей администрирования"
+          href: lesson-10-defining-administrative-roles.md
+          items:
+            - name: "Урок\_10. Предоставление разрешений на обработку базы данных"
+              href: lesson-10-granting-process-database-permissions.md
+    - name: Интеллектуальный анализ данных
+      href: data-mining-tutorials-analysis-services.md
+- name: Практическое руководство
+  items:
+    - name: Табличные модели
+      href: ../analysis-services/tabular-models/tabular-models-ssas.md
+    - name: Многомерные модели
+      href: ../analysis-services/multidimensional-models/multidimensional-models-ssas.md
+    - name: Интеллектуальный анализ данных
+      href: ../analysis-services/data-mining/data-mining-ssas.md
+    - name: "Power\_Pivot для\_SharePoint"
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+    - name: Управление серверами
+      href: ../analysis-services/instances/analysis-services-instance-management.md
+    - name: События трассировки
+      href: ../analysis-services/trace-events/analysis-services-trace-events.md
+- name: Разработчик
+  items:
+    - name: Программирование табличных моделей с уровнем совместимости 1200 и выше
+      href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
+      items:
+        - name: "Язык сценариев табличной модели\_(TMSL)"
+          href: tabular-model-scripting-language-tmsl-reference.md
+        - name: "Команды языка сценариев табличной модели\_(TMSL)"
+          href: ../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md
+        - name: "Объекты языка сценариев табличной модели\_(TMSL)"
+          href: ../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md
+    - name: "Программирование табличных моделей для уровней совместимости\_1050–1103"
+      href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+    - name: "Язык сценариев Analysis Services\_(ASSL)\_+"
+      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+    - name: Объекты управления аналитикой (AMO)+
+      href: ../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md
+    - name: "ADOMD.NET\_+"
+      href: ../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md
+    - name: "Логическая архитектура OLAP\_+"
+      href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+    - name: "Физическая архитектура OLAP\_+"
+      href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+    - name: "Расширение OLAP\_+"
+      href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+    - name: Наборы строк схемы
+      href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
+    - name: "Язык сценариев Analysis\_Services (ASSL для\_XMLA)"
+      href: scripting/analysis-services-scripting-language-assl-for-xmla.md
+- name: Примеры
+  items:
+    - name: "Примеры Analysis\_Services"
+      href: analysis-services-samples.md
+- name: Справочник
+  items:
+    - name: Справочник по компоненту PowerShell для служб Analysis Services
+      href: ../analysis-services/powershell/analysis-services-powershell-reference.md
+    - name: Справочник по PowerShell для Power Pivot для SharePoint
+      href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
+    - name: "Выражения анализа данных\_(DAX) в\_MSDN"
+      href: 'https://msdn.microsoft.com/library/gg413422.aspx'
+    - name: Расширения интеллектуального анализа данных
+      href: ../dmx/data-mining-extensions-dmx-reference.md
+    - name: Многомерные выражения.
+      href: ../mdx/analysis-services-language-reference.md
+    - name: "Power Query\_M"
+      href: 'https://msdn.microsoft.com/library/mt211003.aspx'
+    - name: Свойства сервера
+      href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
+    - name: XML для аналитики (XMLA)
+      href: ../analysis-services/xmla/xml-for-analysis-xmla-reference.md

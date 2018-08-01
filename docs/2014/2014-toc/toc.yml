@@ -1,0 +1,58 @@
+- name: Электронная документация по SQL Server 2014
+  href: books-online-for-sql-server-2014.md
+- name: Службы Analysis Services +
+  href: ../analysis-services/analysis-services.md
+- name: Службы Data Quality Services +
+  href: ../data-quality-services/data-quality-services.md
+- name: Ядро СУБД +
+  href: ../database-engine/sql-server-database-engine-overview.md
+- name: Приступая к работе (SQL Server 2014) +
+  href: ../getting-started/getting-started-sql-server-2014.md
+- name: Службы Integration Services +
+  href: ../integration-services/sql-server-integration-services.md
+- name: Master Data Services +
+  href: ../master-data-services/master-data-services.md
+- name: PowerShell для SQL Server +
+  href: ../powershell/sql-server-powershell.md
+- name: Основные понятия реляционной базы данных +
+  href: ../relational-databases/database-features.md
+- name: Службы Reporting Services +
+  href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+- name: Учебные материалы по SQL Server 2014 +
+  href: ../tutorials/tutorials-for-sql-server-2014.md
+- name: Глоссарий
+  href: glossary.md
+- name: Новые возможности SQL Server 2014 +
+  href: ../sql-server/what-s-new-in-sql-server-2016.md
+- name: Справочник разработчика для SQL Server 2014
+  href: developer-reference-for-sql-server-2014.md
+  items:
+    - name: Руководство разработчика (службы Analysis Services) +
+      href: ../analysis-services/dev-guide/analysis-services-dev-guide.md
+    - name: Руководство разработчика (службы Integration Services) +
+      href: ../integration-services/integration-services-developer-documentation.md
+    - name: Руководство разработчика (службы Master Data Services) +
+      href: ../master-data-services/develop/master-data-services-developer-documentation.md
+    - name: Руководство разработчика (реляционное ядро СУБД) +
+      href: ../relational-databases/database-engine-developer-documentation.md
+    - name: Руководство разработчика (репликация) +
+      href: ../relational-databases/replication/concepts/replication-developer-documentation.md
+    - name: Руководство разработчика (службы Reporting Services) +
+      href: ../reporting-services/reporting-services-developer-documentation.md
+- name: Установка SQL Server 2014 +
+  href: ../database-engine/install-windows/installation-for-sql-server.md
+  items:
+    - name: Помощник по обновлению +
+      href: ../sql-server/install/sql-server-2014-upgrade-advisor.md
+    - name: Настройка и обслуживание установки +
+      href: ../sql-server/install/setup-and-servicing-installation.md
+- name: Справка по диспетчеру конфигурации +
+  href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
+- name: Руководство по созданию индексов
+  href: sql-server-index-design-guide.md
+- name: Руководство по блокировке и управлению версиями строк транзакций
+  href: sql-server-transaction-locking-and-row-versioning-guide.md
+- name: Архитектура журнала транзакций и управление им
+  href: sql-server-transaction-log-architecture-and-management.md
+- name: Пример внедрения. Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности
+  href: case-study-building-an-enterprise-ecosystem.md

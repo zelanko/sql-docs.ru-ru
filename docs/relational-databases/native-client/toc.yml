@@ -1,0 +1,20 @@
+- name: Программирование собственного клиента SQL Server
+  href: sql-server-native-client-programming.md
+- name: Функции +
+  href: ../../relational-databases/native-client/features/sql-server-native-client-features.md
+- name: Приложения +
+  href: ../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md
+- name: OLE DB +
+  href: ../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md
+- name: ODBC +
+  href: ../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md
+- name: Поиск дополнительных сведений о собственном клиенте SQL Server
+  href: finding-more-sql-server-native-client-information.md
+- name: Ошибки собственного клиента SQL Server MSSQLSERVER_50000
+  href: sql-server-native-client-error-mssqlserver-50000.md
+- name: собственный клиент SQL Server
+  href: sql-server-native-client.md
+- name: Системные требования для собственного клиента SQL Server
+  href: system-requirements-for-sql-server-native-client.md
+- name: Когда использовать собственный клиент SQL Server
+  href: when-to-use-sql-server-native-client.md

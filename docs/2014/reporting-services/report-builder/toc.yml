@@ -1,0 +1,155 @@
+- name: 'Поиск, просмотр и управление отчетами'
+  href: finding-viewing-and-managing-reports-report-builder-and-ssrs.md
+  items:
+    - name: Поиск и просмотр отчетов в диспетчере отчетов
+      href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+    - name: Поиск и просмотр отчетов с помощью браузера
+      href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+    - name: Поиск отчетов и других элементов
+      href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
+    - name: Использование папки «Мои отчеты»
+      href: using-my-reports-report-builder-and-ssrs.md
+    - name: Предварительный просмотр отчетов в построителе отчетов
+      href: previewing-reports-in-report-builder.md
+- name: Экспорт отчетов
+  href: export-reports-report-builder-and-ssrs.md
+  items:
+    - name: Интерактивные возможности различных модулей подготовки отчетов к просмотру
+      href: interactive-functionality-different-report-rendering-extensions.md
+    - name: Экспорт в CSV-файл
+      href: exporting-to-a-csv-file-report-builder-and-ssrs.md
+    - name: Экспорт в Microsoft Excel
+      href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
+    - name: Экспорт в Microsoft Word
+      href: exporting-to-microsoft-word-report-builder-and-ssrs.md
+    - name: Подготовка к просмотру в виде HTML
+      href: rendering-to-html-report-builder-and-ssrs.md
+    - name: Экспорт в файл изображения
+      href: exporting-to-an-image-file-report-builder-and-ssrs.md
+    - name: Экспорт в PDF-файл
+      href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
+    - name: Экспорт в XML
+      href: exporting-to-xml-report-builder-and-ssrs.md
+    - name: Экспорт отчета в файл другого типа
+      href: ../export-a-report-as-another-file-type-report-builder-and-ssrs.md
+    - name: Формирование веб-каналов данных из отчетов
+      href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
+    - name: Формирование веб-каналов данных из отчета
+      href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+    - name: Обход ограничения строк Excel
+      href: work-around-the-excel-2003-row-limitation.md
+- name: Печать отчетов
+  href: print-reports-report-builder-and-ssrs.md
+  items:
+    - name: Печать отчетов из браузера с помощью элемента управления печатью
+      href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+    - name: Печать отчетов из других приложений
+      href: print-reports-from-other-applications-report-builder-and-ssrs.md
+    - name: Печать отчета
+      href: print-a-report-report-builder-and-ssrs.md
+    - name: Печать отчетов (службы Reporting Services в режиме SharePoint)
+      href: print-a-report-reporting-services-in-sharepoint-mode.md
+- name: Сохранение отчетов
+  href: saving-reports-report-builder.md
+  items:
+    - name: Сохранение отчетов на сервере отчетов
+      href: save-reports-to-a-report-server-report-builder.md
+    - name: Сохранение отчета в библиотеке SharePoint
+      href: save-a-report-to-a-sharepoint-library-report-builder.md
+    - name: Сохранение отчетов на компьютере
+      href: ../save-reports-to-your-computer-report-builder.md
+- name: Справка F1 построителя отчетов
+  href: report-builder-f1-help.md
+  items:
+    - name: 'Справка для диалоговых окон, панелей и мастеров (F1)'
+      href: ../report-builder-help-for-dialog-boxes-panes-and-wizards.md
+    - name: Диалоговое окно «Свойства действия»
+      href: ../action-properties-dialog-box-report-builder-and-ssrs.md
+    - name: Диалоговые окна диаграммы (построитель отчетов и службы SSRS)
+      href: ../chart-dialog-boxes-report-builder-and-ssrs.md
+    - name: Диалоговое окно «Свойства оси» — «Параметры оси»
+      href: ../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md
+    - name: Диалоговое окно «Свойства заголовка оси» — «Общие»
+      href: ../axis-title-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: Диалоговое окно «Свойства вычисляемого ряда» — «Общие» (построитель отчетов и службы SSRS)
+      href: ../calculated-series-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: Диалоговое окно «Свойства вычисляемого ряда» — «Маркеры»
+      href: ../calculated-series-properties-dialog-box-markers-report-builder-and-ssrs.md
+    - name: 'Страница «Фильтры», диалоговые окна диаграммы'
+      href: ../filters-page-chart-dialog-boxes-report-builder-and-ssrs.md
+    - name: Диалоговое окно «Свойства условных обозначений» — «Общие»
+      href: ../legend-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: Диалоговое окно «Видимость столбца»
+      href: ../column-visibility-dialog-box-report-builder.md
+    - name: Диалоговое окно «Преобразование пользовательского элемента отчета»
+      href: convert-cri-dialog-box-report-builder.md
+    - name: Диалоговое окно «Выбор куба»
+      href: ../cube-selection-dialog-box-report-builder.md
+    - name: Диалоговое окно «Свойства источника данных» — «Учетные данные»
+      href: ../data-source-properties-dialog-box-credentials-report-builder.md
+    - name: Диалоговое окно «Свойства источника данных» — «Общие»
+      href: ../data-source-properties-dialog-box-general-report-builder.md
+    - name: Диалоговое окно «Свойства набора данных» — «Поля»
+      href: ../dataset-properties-dialog-box-fields-report-builder.md
+    - name: Диалоговое окно «Свойства набора данных» — «Фильтры»
+      href: ../dataset-properties-dialog-box-filters-report-builder.md
+    - name: Диалоговое окно «Свойства набора данных» — «Настройки»
+      href: ../report-data/dataset-properties-dialog-box-options-report-builder.md
+    - name: Диалоговое окно «Свойства набора данных» — «Настройки»
+      href: ../dataset-properties-dialog-box-parameters-report-builder.md
+    - name: Диалоговое окно «Свойства набора данных» — «Запрос»
+      href: ../report-data/dataset-properties-dialog-box-query-report-builder.md
+    - name: Диалоговое окно «Ввод учетных данных для источника данных»
+      href: ../report-data/enter-data-source-credentials-dialog-box-report-builder.md
+    - name: Диалоговое окно «Выражение»
+      href: ../expression-dialog-box-report-builder.md
+    - name: Диалоговое окно «Заливка»
+      href: ../fill-dialog-box-report-builder-and-ssrs.md
+    - name: Панель группировки
+      href: ../report-design/grouping-pane-report-builder.md
+    - name: Диалоговое окно «Свойства изображения» — вкладка «Общие»
+      href: ../image-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: Диалоговое окно «Свойства изображения» — «Размер»
+      href: ../image-properties-dialog-box-size-report-builder-and-ssrs.md
+    - name: Диалоговое окно «Свойства заполнителя» — «Общие»
+      href: ../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: Конструкторы запросов
+      href: ../query-designers-report-builder.md
+      items:
+        - name: Пользовательский интерфейс конструктора реляционных запросов
+          href: ../report-data/relational-query-designer-user-interface-report-builder.md
+        - name: Пользовательский интерфейс текстового конструктора запросов
+          href: ../report-data/text-based-query-designer-user-interface-report-builder.md
+          items:
+            - name: Диалоговое окно «Определение параметров запроса»
+              href: ../define-query-parameters-dialog-box-report-builder.md
+        - name: Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services
+          href: ../analysis-services-mdx-query-designer-user-interface-report-builder.md
+        - name: Пользовательский интерфейс конструктора запросов Hyperion Essbase
+          href: ../hyperion-essbase-query-designer-user-interface-report-builder.md
+        - name: Конструктор запросов к спискам SharePoint
+          href: ../report-data/sharepoint-list-query-designer-report-builder.md
+        - name: Пользовательский интерфейс конструктора запросов BI SAP NetWeaver
+          href: ../sap-netweaver-bi-query-designer-user-interface-report-builder.md
+    - name: Диалоговое окно «Параметры построителя отчетов» — «Настройки»
+      href: set-default-options-for-report-builder.md
+    - name: Область данных отчета
+      href: ../report-data-pane-report-builder.md
+    - name: Диалоговое окно «Разделы отчета»
+      href: report-sections-dialog-box-report-builder.md
+    - name: Диалоговое окно «Имя входа служб Reporting Services»
+      href: reporting-services-login-dialog-box-report-builder.md
+    - name: Диалоговое окно «Свойства отчета» — «Код»
+      href: ../report-properties-dialog-box-code-report-builder.md
+    - name: Диалоговое окно «Свойства отчета» — «Параметры страницы»
+      href: ../report-properties-dialog-box-page-setup-report-builder.md
+    - name: Диалоговое окно «Свойства отчета» — «Ссылки»
+      href: ../report-properties-dialog-box-references-report-builder.md
+    - name: Диалоговое окно «Видимость строки»
+      href: ../row-visibility-dialog-box-report-builder.md
+    - name: Диалоговое окно «Выбор цвета»
+      href: ../select-color-dialog-box-report-builder-and-ssrs.md
+    - name: Текстовое поле «Свойства текстового поля» ― «Выравнивание»
+      href: ../text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md
+    - name: Диалоговое окно «Выравнивание» для текста и заполнителей
+      href: ../alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs.md

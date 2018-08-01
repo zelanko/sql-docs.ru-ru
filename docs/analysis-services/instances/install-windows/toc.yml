@@ -1,0 +1,33 @@
+- name: Обзор
+  href: install-analysis-services.md
+- name: Установка служб Analysis Services в режиме Power Pivot
+  href: install-analysis-services-in-power-pivot-mode.md
+  items:
+    - name: Проверка установки PowerPivot для SharePoint
+      href: verify-a-power-pivot-for-sharepoint-installation.md
+    - name: Пример конфигурации PowerPivot для SharePoint 2016 с минимальными правами
+      href: power-pivot-minimum-privilege-example-sharepoint-2016.md
+    - name: Пример конфигурации PowerPivot для SharePoint 2013 с минимальными правами
+      href: power-pivot-minimum-privilege-example-sharepoint-2013.md
+    - name: Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2016)
+      href: install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md
+    - name: Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)
+      href: install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
+    - name: Настройка Power Pivot и развертывание решений (SharePoint 2016)
+      href: configure-power-pivot-and-deploy-solutions-sharepoint-2016.md
+    - name: Настройка PowerPivot и развертывание решений (SharePoint 2013)
+      href: configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
+    - name: Перенос Power Pivot в SharePoint 2013
+      href: migrate-power-pivot-to-sharepoint-2013.md
+    - name: Обновление книг и запланированное обновление данных (SharePoint 2013)
+      href: upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+    - name: Настройка служб Analysis Services и ограниченного делегирования Kerberos (KCD)
+      href: configure-analysis-services-and-kerberos-constrained-delegation-kcd.md
+    - name: Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint
+      href: checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
+    - name: Развертывание SQL Server 2016 PowerPivot и Power View в SharePoint 2016
+      href: deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md
+    - name: Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm (Развертывание SQL Server 2016 PowerPivot и Power View в многоуровневой ферме SharePoint 2016)
+      href: deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md
+- name: 'Установка клиентских библиотек (AMO, ADOMD.NET, MSOLAP)'
+  href: ../data-providers-used-for-analysis-services-connections.md

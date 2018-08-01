@@ -1,0 +1,444 @@
+- name: Помощник по обновлению SQL Server 2014
+  href: sql-server-2014-upgrade-advisor.md
+- name: Установка помощника по обновлению
+  href: installing-upgrade-advisor.md
+  items:
+    - name: 'Компоненты, необходимые для помощника по обновлению'
+      href: upgrade-advisor-prerequisites.md
+    - name: Установка помощника по обновлению из командной строки
+      href: installing-upgrade-advisor-from-the-command-prompt.md
+- name: Работа с помощником по обновлению
+  href: working-with-upgrade-advisor.md
+- name: Общие сведения о помощнике по обновлению
+  href: overview-of-upgrade-advisor.md
+  items:
+    - name: Общие сведения о процессе обновления
+      href: upgrade-process-overview.md
+    - name: Общие сведения о помощнике по обновлению
+      href: upgrade-advisor-overview.md
+    - name: Запуск помощника по обновлению (пользовательский интерфейс)
+      href: running-upgrade-advisor-user-interface.md
+    - name: Запуск помощника по обновлению (командная строка)
+      href: running-upgrade-advisor-command-prompt.md
+    - name: Использование отчетов
+      href: using-reports.md
+    - name: Ошибки помощника по обновлению
+      href: upgrade-advisor-errors.md
+- name: Инструкции по работе с помощником по обновлению
+  href: upgrade-advisor-how-to-topics.md
+  items:
+    - name: Установка помощника по обновлению
+      href: how-to-install-upgrade-advisor.md
+    - name: Запуск помощника по обновлению
+      href: how-to-launch-upgrade-advisor.md
+    - name: Как запустить мастер анализа помощника по обновлению
+      href: how-to-run-the-upgrade-advisor-analysis-wizard.md
+    - name: Просмотр отчета помощника по обновлению
+      href: how-to-view-an-upgrade-advisor-report.md
+    - name: Фильтрация отчетов
+      href: how-to-filter-reports.md
+    - name: Экспорт отчетов
+      href: how-to-export-reports.md
+- name: Справочник по пользовательскому интерфейсу
+  href: upgrade-advisor-user-interface-reference.md
+  items:
+    - name: Компоненты SQL Server
+      href: sql-server-components.md
+    - name: Параметры соединения
+      href: connection-parameters.md
+    - name: Параметры SQL Server
+      href: sql-server-parameters.md
+    - name: Параметры служб Analysis Services
+      href: analysis-services-parameters.md
+    - name: Параметры служб Reporting Services
+      href: reporting-services-parameters.md
+    - name: Параметры служб Integration Services
+      href: integration-services-parameters.md
+    - name: Подтверждение настроек помощника по обновлению
+      href: confirm-upgrade-advisor-settings.md
+    - name: Ход выполнения помощника по обновлению
+      href: upgrade-advisor-progress.md
+- name: Разрешение проблем при обновлении
+  href: resolving-upgrade-issues.md
+  items:
+    - name: Последние сведения о проблемах при обновлении
+      href: late-breaking-upgrade-issues.md
+    - name: Проблемы обновления компонента Database Engine
+      href: database-engine-upgrade-issues.md
+      items:
+        - name: Символ с кодом 0xFFFF не является допустимым идентификатором объекта
+          href: 0xffff-character-is-not-valid-as-an-object-identifier.md
+        - name: После обновления новые зарезервированные ключевые слова не могут быть использованы в качестве идентификаторов
+          href: after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers.md
+        - name: Изменения в работе функций длины строки и подстроки
+          href: changes-to-behavior-of-string-length-and-substring.md
+        - name: Изменение в работе представления syslockinfo и процедуры sp_lock
+          href: changes-to-behavior-in-syslockinfo-and-sp-lock.md
+        - name: Изменения в поведении флагов трассировки
+          href: changes-to-behavior-of-trace-flags.md
+        - name: Изменения ограничений ЦП и памяти для выпусков служб SQL Server Reporting Services Standard Edition и Enterprise Edition
+          href: cpu-memory-limits-changes-sql-server-reporting-services-standard-enterprise.md
+        - name: 'Изменение формата хранения для типов xs:dateTime, xs:date и xs:time'
+          href: changes-to-the-storage-format-for-types-xs-datetime-xs-date-and-xs-time.md
+        - name: Псевдонимы столбцов в предложении ORDER BY не могут предваряться псевдонимом таблицы
+          href: column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias.md
+        - name: Устаревшие команды DBCC теперь удалены
+          href: deprecated-dbcc-commands-have-now-been-removed.md
+        - name: Отсоедините базу данных с идентификатором 32767
+          href: detach-database-id-32767.md
+        - name: Невозможно обновить неактивные имена входа SQL Server 6.5
+          href: dormant-sql-server-6-5-logins-cannot-be-upgraded.md
+        - name: Предложение FOR BROWSE не поддерживается для представлений в режиме совместимости 90 и выше
+          href: for-browse-is-not-allowed-in-views-in-90-or-later-compatibility-modes.md
+        - name: Запросы в режиме FOR XML AUTO возвращают ссылки на производные таблицы в режиме совместимости 90 и выше
+          href: for-xml-auto-queries-return-derived-table-references-90-later-compatibility-mode.md
+        - name: 'Представление INFORMATION_SCHEMA.SCHEMATA возвращает имена схем в базе данных, а не баз данных в экземпляре'
+          href: information-schema-schemata-returns-schema-names-not-databases.md
+        - name: Неверное имя именованного канала может помешать обновлению
+          href: invalid-named-pipe-name-can-block-upgrade.md
+        - name: Резервное копирование или восстановление больших таблиц журналов может привести к кажущемуся отсутствию ответа от процесса обновления
+          href: large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond.md
+        - name: В режиме совместимости 90 и выше большие константы имеют тип больших значений
+          href: large-constants-typed-as-large-value-types-90-later-compatibility-mode.md
+        - name: Доставка журналов перестанет работать после обновления
+          href: log-shipping-will-not-run-after-upgrading.md
+        - name: 'Измените приложения, чтобы они использовали значения bigint из столбца sysperfinfo.cntr_value'
+          href: modify-applications-to-expect-bigint-values-from-sysperfinfo-cntr-value.md
+        - name: 'Изменение подключений, использующие сетевые протоколы Banyan VINES SPP, Multiprotocol, AppleTalk или NWLink IPX/SPX'
+          href: modify-connections-banyan-vines-spp-multiprotocol-appletalk-nwlink-ipx-spx.md
+        - name: 'Измените индексы, которые зависят от возвращаемого типа HOST_ID'
+          href: modify-indexes-that-depend-on-the-return-type-of-host-id.md
+        - name: 'Внесите изменения в инструкции UPDATETEXT, которые считывают и записывают большие двоичные объекты'
+          href: modify-updatetext-statements-that-read-and-write-to-binary-large-objects-blobs.md
+        - name: 'Вложенный триггер AFTER срабатывает даже в том случае, если вложенные триггеры отключены'
+          href: nested-after-trigger-fires-even-when-trigger-nesting-is-off.md
+        - name: 'Новый столбец, возвращаемый процедурой sp_helptrigger, может повлиять на работу приложений'
+          href: new-column-in-output-of-sp-helptrigger-may-impact-applications.md
+        - name: Программа osql больше не поддерживает команды ED и !! команды
+          href: osql-no-longer-supports-the-ed-and-commands.md
+        - name: "Операторы внешнего соединения *= и =* не поддерживаются в режиме совместимости\_90 и выше"
+          href: outer-join-operators-and-are-not-supported-in-90-or-later-compatibility-modes.md
+        - name: Доступные только для чтения базы данных не могут быть обновлены
+          href: read-only-databases-cannot-be-upgraded.md
+        - name: Удаление вызовов устаревшей команды DBCC CONCURRENCYVIOLATION
+          href: remove-calls-to-the-deprecated-dbcc-concurrencyviolation-command.md
+        - name: Удалите двоеточие после зарезервированного ключевого слова
+          href: remove-colon-following-reserved-keyword.md
+        - name: Удалите DDL-операции в таблицах inserted и deleted внутри триггеров DML
+          href: remove-ddl-operations-on-the-inserted-and-deleted-tables-inside-dml-triggers.md
+        - name: Удаление ссылок на устаревшие системные хранимые процедуры
+          href: remove-references-to-deprecated-system-stored-procedures.md
+        - name: Удаление ссылки на недокументированные системные таблицы
+          href: remove-references-to-undocumented-system-tables.md
+        - name: 'Удалите инструкции, которые удаляют системные объекты'
+          href: remove-statements-that-drop-system-objects.md
+        - name: 'Удаление инструкций, которые изменяют разрешения уровня столбца в системных объектах'
+          href: remove-statements-that-modify-column-level-permissions-on-system-objects.md
+        - name: 'Удаление инструкций, которые изменяют системные объекты'
+          href: remove-statements-that-modify-system-objects.md
+        - name: 'Удаление схемы cdc, если планируется ввести в действие систему отслеживания измененных данных'
+          href: remove-the-cdc-schema-if-you-plan-to-enable-change-data-capture.md
+        - name: 'Переименование имен входа, которые совпадают с именами предопределенной роли сервера'
+          href: rename-logins-matching-fixed-server-role-names.md
+        - name: 'Удаление определяемых пользователем типов с именами, совпадающими с зарезервированными типами данных DATE и TIME'
+          href: remove-udt-s-named-after-the-reserved-date-and-time-data-types.md
+        - name: 'Удаление определяемых пользователем типов с именами, совпадающими с зарезервированным типом данных ORDPATH'
+          href: remove-udt-s-named-after-the-reserved-ordpath-data-type.md
+        - name: 'Удалите определяемые пользователем типы с именами, совпадающими с зарезервированными типами данных GEOMETRY и GEOGRAPHY'
+          href: remove-udts-named-after-the-reserved-geometry-and-geography-data-types.md
+        - name: Переименуйте пользователя с именем sys
+          href: rename-user-sys.md
+        - name: В SQL Server 2005 функция SERVERPROPERTY возвращает правильный результат для свойства LCID
+          href: serverproperty-returns-correct-result-for-lcid-property-in-sql-server-2005.md
+        - name: Требования к учетной записи службы для обновления до SQL Server 2008 на контроллере домена
+          href: service-account-requirements-upgrade-sql-server-2008-on-domain-controller.md
+        - name: Указание ключевого слова WITH при использовании табличных подсказок в режиме совместимости 90
+          href: specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode.md
+        - name: Поддержка собственной реализации доступа по протоколу SOAP в SQL Server прекращается в этой версии SQL Server.
+          href: sql-server-native-soap-support-is-discontinued-in-this-version-of-sql-server.md
+        - name: 'Табличные указания в определении индексированных представлений в режиме совместимости 80 не учитываются, а в режиме совместимости 90 недопустимы'
+          href: table-hints-indexed-views-ignored-80-compatibility-mode-not-allowed-90-later.md
+        - name: 'Обновите выражения XPath OPENXML, удалив неподдерживаемые функции'
+          href: update-openxml-xpath-expressions-to-remove-unsupported-functions.md
+        - name: При помощи хранимой процедуры sp_rename переименуйте повторяющиеся имена индексов
+          href: use-sp-rename-to-rename-duplicate-index-name.md
+        - name: Используйте полный путь для регистрации имен DLL-библиотек расширенных хранимых процедур
+          href: use-the-full-path-to-register-extended-stored-procedure-dll-names.md
+        - name: В схеме system_function_schema запрещены определяемые пользователем функции
+          href: user-defined-functions-are-not-allowed-in-system-function-schema.md
+        - name: 'Убедитесь, что все файловые группы доступны для записи во время процесса обновления'
+          href: verify-all-filegroups-are-writeable-during-the-upgrade-process.md
+        - name: 'Убедитесь, что во время процесса обновления автоувеличение размера включено для всех файлов с данными и файлов журнала'
+          href: verify-autogrow-turned-on-for-all-data-and-log-files-during-upgrade.md
+        - name: 'Убедитесь, что во время процесса обновления на сжатых дисках отсутствуют файлы базы данных'
+          href: verify-no-database-files-on-compressed-drives-during-upgrade.md
+        - name: 'Предупреждение об использовании GEOMETRY, GEOGRAPHY и HIERARCHYID на стороне клиента'
+          href: warning-about-client-side-usage-of-geometry-geography-and-hierarchyid.md
+        - name: Удалены хранимые процедуры помощника Web Assistant
+          href: web-assistant-stored-procedures-have-been-removed.md
+        - name: Не поддерживается конфигурация прокси-сервера Winsock
+          href: winsock-proxy-configuration-not-supported.md
+        - name: 'Предложение WITH CHECK OPTION не поддерживается в представлениях, содержащих предложение TOP, в режиме совместимости 90 и выше'
+          href: with-check-option-not-supported-in-top-views-90-later-compatibility-mode.md
+        - name: Параметр WITH ROWS не поддерживается в инструкциях CREATE STATISTICS в режиме совместимости 90 и выше
+          href: with-rows-not-supported-in-create-statistics-statements-90-later-compatibility-mode.md
+        - name: Другие проблемы обновления компонента Database Engine
+          href: other-database-engine-upgrade-issues.md
+          items:
+            - name: Объявление об устаревании зеркального отображения базы данных.
+              href: database-mirroring-deprecation-announcement.md
+    - name: Проблемы обновления компонента Full-Text Search
+      href: full-text-search-upgrade-issues.md
+      items:
+        - name: Компонент Full-Text Search был изменен по сравнению с версией SQL Server 2008
+          href: full-text-search-has-changed-since-sql-server-2008.md
+        - name: В SQL Server 2005 и SQL Server 2008 средства разбиения по словам и фильтры полнотекстового поиска были существенно улучшены
+          href: full-text-search-word-breakers-filters-improved-sql-server-2005-2008.md
+        - name: Длина имен полнотекстовых каталогов ограничена 120 символами
+          href: length-of-full-text-catalog-names-restricted-to-120-characters.md
+        - name: 'По умолчанию средство полнотекстового поиска (Майкрософт) для SQL Server не загружает компоненты сторонних производителей, не имеющие подписи'
+          href: full-text-engine-sql-server-default-will-not-load-third-party-components.md
+        - name: 'Измените хранимые процедуры, в которых используются неподдерживаемые свойства полнотекстового поиска'
+          href: modify-stored-procedures-that-use-discontinued-full-text-search-properties.md
+        - name: Полнотекстовые индексы для нематериализованных вычисляемых столбцов недопустимы
+          href: full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed.md
+        - name: 'Полнотекстовые индексы в базах данных master, tempdb и model не поддерживаются'
+          href: full-text-indexes-on-master-tempdb-and-model-databases-are-not-supported.md
+        - name: 'После обновления компонент Full-Text Search будет по умолчанию использовать средства разбиения по словам и фильтры не глобального уровня, а уровня экземпляра'
+          href: full-text-search-uses-instance-not-global-level-defaults-after-upgrade.md
+        - name: После обновления в полнотекстовом поиске будут недопустимы предикаты в выражениях OUTPUT INTO
+          href: full-text-search-will-not-allow-predicates-in-output-into-expressions-after-upgrade.md
+    - name: Проблемы репликации при обновлении
+      href: replication-upgrade-issues.md
+      items:
+        - name: 'Обновление изменит обновляемую посредством очередей подписку, использующую службу очередей сообщений'
+          href: upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing.md
+        - name: Другие проблемы при обновлении репликации
+          href: other-replication-upgrade-issues.md
+    - name: Проблемы обновления служб Reporting Services (помощник по обновлению)
+      href: reporting-services-upgrade-issues-upgrade-advisor.md
+      items:
+        - name: Сертификаты клиента на веб-сайте сервера отчетов (советник по переходу)
+          href: client-certificates-on-the-report-server-web-site-upgrade-advisor.md
+        - name: На сервере отчетов обнаружены пользовательские расширения (советник по переходу)
+          href: custom-extensions-were-detected-on-the-report-server-upgrade-advisor.md
+        - name: На сервере отчетов были обнаружены пользовательские элементы отчета (советник по переходу)
+          href: custom-report-items-were-detected-on-the-report-server-upgrade-advisor.md
+        - name: Не найдены компоненты обратной совместимости служб IIS (советник по переходу)
+          href: iis-backward-compatibility-components-were-not-detected-upgrade-advisor.md
+        - name: Обнаружено ограничение по IP-адресу (советник по переходу)
+          href: ip-address-restriction-detected-upgrade-advisor.md
+        - name: На сайте сервера отчетов обнаружены фильтры ISAPI (советник по переходу)
+          href: isapi-filters-detected-on-the-report-server-site-upgrade-advisor.md
+        - name: На компьютере сервера отчетов обнаружены устаревшие модули (советник по переходу)
+          href: obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor.md
+        - name: База данных сервера отчетов настроена (советник по переходу)
+          href: report-server-database-is-not-configured-upgrade-advisor.md
+        - name: Обнаружена группа веб-служб сервера отчетов SQL Server 2005 (советник по переходу)
+          href: sql-server-2005-report-server-web-service-group-detected-upgrade-advisor.md
+        - name: Виртуальные каталоги не указаны (советник по переходу)
+          href: virtual-directories-are-unspecified-upgrade-advisor.md
+        - name: Виртуальный каталог использует неподдерживаемый метод проверки подлинности (советник по переходу)
+          href: virtual-directory-has-unsupported-authentication-method-upgrade-advisor.md
+        - name: Изменения ограничений ЦП и памяти для выпусков служб SQL Server Standard и Enterprise (советник по переходу)
+          href: cpu-memory-limits-changes-sql-server-standard-enterprise-upgrade-advisor.md
+        - name: Для фермы SharePoint требуются учетные записи домена (советник по переходу)
+          href: domain-accounts-required-for-sharepoint-farm-upgrade-advisor.md
+        - name: Прямой переход на сервер отчетов (советник по переходу)
+          href: direct-browsing-to-report-server-upgrade-advisor.md
+        - name: Установлен Microsoft SharePoint 2007 (советник по переходу)
+          href: microsoft-sharepoint-2007-is-installed-upgrade-advisor.md
+        - name: Общая служба Microsoft SQL Server Reporting Services SharePoint установлена параллельно (советник по переходу)
+          href: sql-server-reporting-services-sharepoint-shared-service-side-by-side-upgrade-advisor.md
+        - name: Несовместимые параметры сортировки сервера компонента Database Engine (советник по переходу)
+          href: incompatible-database-engine-server-collation-upgrade-advisor.md
+        - name: Другие проблемы обновления служб Reporting Services
+          href: other-reporting-services-upgrade-issues.md
+    - name: Проблемы обновления агента SQL Server
+      href: sql-server-agent-upgrade-issues.md
+      items:
+        - name: Планы обслуживания базы данных заменены
+          href: database-maintenance-plans-superseded.md
+        - name: Только пользователи с правами sysadmin могут записывать файлы журнала шага задания в файловую систему
+          href: only-sysadmin-users-can-write-job-step-log-files-to-the-file-system.md
+        - name: Замена вызовов расширенной хранимой процедуры xp_sqlagent_proxy_account на вызовы новых хранимых процедур
+          href: replace-xp-sqlagent-proxy-account-extended-sp-with-new-stored-procedures.md
+        - name: Категория заданий доставки журналов агента SQL Server приводит к ошибке обновления
+          href: sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md
+        - name: Служба агента SQL Server не может использовать проверку подлинности SQL Server
+          href: sql-server-agent-service-cannot-use-sql-server-authentication.md
+        - name: Обновите синтаксис токенов в шагах заданий агента SQL Server
+          href: update-token-syntax-in-sql-server-agent-job-steps.md
+        - name: Обновите все целевые серверы перед обновлением главного сервера
+          href: upgrade-all-target-servers-before-upgrading-the-master-server.md
+        - name: При обновлении пользовательская учетная запись-посредник агента SQL Server изменится на временную учетную запись-посредник UpgradedProxyAccount
+          href: upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md
+- name: Настройка и обслуживание установки
+  href: setup-and-servicing-installation.md
+  items:
+    - name: Вопросы лицензирования в SQL Server
+      href: licensing-considerations-for-sql-server.md
+- name: Обзор документации по установке SQL Server
+  href: overview-of-sql-server-setup-documentation.md
+- name: Пользовательский интерфейс программы установки SQL Server 2014
+  href: sql-server-2014-setup-user-interface.md
+- name: Справочник по пользовательскому интерфейсу программы установки SQL Server
+  href: sql-server-setup-user-interface-reference.md
+  items:
+    - name: Принятие условий лицензионного соглашения
+      href: accept-license-terms.md
+    - name: Добавление узла отказоустойчивого кластера SQL Server
+      href: add-sql-server-failover-cluster-node.md
+    - name: Настройка служб Analysis Services — провизионирование учетных записей
+      href: analysis-services-configuration-account-provisioning.md
+    - name: Настройка служб Analysis Services — каталоги данных
+      href: analysis-services-configuration-data-directories.md
+    - name: Выбор диска кластера
+      href: cluster-disk-selection.md
+    - name: Конфигурация сети кластера
+      href: cluster-network-configuration.md
+    - name: Настройка узла кластера
+      href: cluster-node-configuration.md
+    - name: Настройка узла кластера (Полная)
+      href: cluster-node-configuration-complete.md
+    - name: Группа кластерных ресурсов
+      href: cluster-resource-group.md
+    - name: Политика безопасности кластера
+      href: cluster-security-policy.md
+    - name: Завершение (завершение образа)
+      href: complete-complete-image.md
+    - name: Ход выполнения завершения образа
+      href: complete-image-progress.md
+    - name: Правила завершения образа
+      href: complete-image-rules.md
+    - name: Завершение (подготовка образа)
+      href: complete-prepare-image.md
+    - name: Завершение (восстановление)
+      href: complete-repair.md
+    - name: Завершение — обновление
+      href: complete-upgrade.md
+    - name: Настройка компонента Database Engine — провизионирование учетных записей
+      href: database-engine-configuration-account-provisioning.md
+    - name: Настройка компонента Database Engine — каталоги данных
+      href: database-engine-configuration-data-directories.md
+    - name: Настройка компонента Database Engine — Filestream
+      href: database-engine-configuration-filestream.md
+    - name: Конфигурация компонента Database Engine — пользовательский экземпляр
+      href: database-engine-configuration-user-instance.md
+    - name: Конфигурация контроллера распределенного воспроизведения
+      href: distributed-replay-controller-configuration.md
+    - name: Конфигурация клиента распределенного воспроизведения
+      href: distributed-replay-client-configuration.md
+    - name: Правила обновления выпуска
+      href: edition-upgrade-rules.md
+    - name: Отчет отказоустойчивого кластера
+      href: failover-cluster-report.md
+    - name: Обзор компонента
+      href: feature-review.md
+    - name: Правила установки
+      href: installation-rules.md
+    - name: правила компонентов
+      href: feature-rules.md
+    - name: Выбор компонентов
+      href: feature-selection.md
+    - name: Выбор компонентов (удаление)
+      href: feature-selection-uninstall.md
+    - name: Выбор компонентов (обновление)
+      href: select-features-upgrade.md
+    - name: Режимы обновления полнотекстового поиска
+      href: full-text-search-upgrade-options.md
+    - name: Завершение — установка
+      href: complete-installation.md
+    - name: 'Компоненты, необходимые для установки'
+      href: installation-prerequisites.md
+    - name: Ход выполнения установки
+      href: installation-progress.md
+    - name: Тип установки
+      href: installation-type.md
+    - name: Конфигурация экземпляра
+      href: instance-configuration.md
+    - name: Выбор экземпляра (удаление)
+      href: instance-selection-uninstall.md
+    - name: Выбор экземпляра (обновление)
+      href: instance-selection-upgrade.md
+    - name: Выберите экземпляр
+      href: select-instance.md
+    - name: Завершение удаления
+      href: post-uninstall.md
+    - name: Ход выполнения подготовки образа
+      href: prepare-image-progress.md
+    - name: Правила подготовки образа
+      href: prepare-image-rules.md
+    - name: Тип подготовки образа
+      href: prepare-image-type.md
+    - name: Ключ продукта
+      href: product-key.md
+    - name: Выполнение (удаление)
+      href: progress-uninstall.md
+    - name: Все готово к завершению образа
+      href: ready-to-complete-image.md
+    - name: Все готово для установки
+      href: ready-to-install.md
+    - name: Все готово для подготовки образа
+      href: ready-to-prepare-image.md
+    - name: Все готово для восстановления
+      href: ready-to-repair.md
+    - name: Удаление узла отказоустойчивого кластера SQL Server
+      href: remove-sql-server-failover-cluster-node.md
+    - name: Ход выполнения восстановления
+      href: repair-progress.md
+    - name: параметры конфигурации служб Reporting Services
+      href: reporting-services-configuration-options-ssrs.md
+    - name: обновление служб Reporting Services в режиме SharePoint
+      href: reporting-services-sharepoint-mode-upgrade-ssrs.md
+    - name: проверка подлинности служб Reporting Services в режиме SharePoint
+      href: reporting-services-sharepoint-mode-authentication.md
+    - name: Выбор подготовленного экземпляра
+      href: select-a-prepared-instance.md
+    - name: Настройка сервера — параметры сортировки
+      href: server-configuration-collation.md
+    - name: Настройка сервера — учетные записи служб
+      href: server-configuration-service-accounts.md
+    - name: Роль установки
+      href: setup-role.md
+    - name: 'Мастер отказоустойчивого кластера SQL Server: завершено'
+      href: sql-server-failover-cluster-wizard-complete.md
+    - name: 'Мастер отказоустойчивого кластера SQL Server: установка'
+      href: sql-server-failover-cluster-wizard-install.md
+    - name: Мастер отказоустойчивой кластеризации SQL Server — подготовка
+      href: sql-server-failover-cluster-wizard-prepare.md
+    - name: Все готово для обновления
+      href: ready-to-upgrade.md
+    - name: Установка правил
+      href: install-rules.md
+    - name: Правила удаления
+      href: uninstallation-rules.md
+    - name: Ход выполнения обновления
+      href: upgrade-progress.md
+    - name: Правила компонентов (обновление)
+      href: feature-rules-upgrade.md
+    - name: Проверка параметров удаления
+      href: verify-uninstall-options.md
+- name: Установка служебных программ SQL Server
+  href: sql-server-servicing-installation.md
+  items:
+    - name: Установка обновлений из командной строки
+      href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
+    - name: Инструкции. Проверка успешности установки обновления SQL Server
+      href: how-to-validate-successful-installation-of-a-sql-server-update.md
+    - name: Общие сведения об обслуживании установки SQL Server
+      href: overview-of-sql-server-servicing-installation.md
+    - name: Добро пожаловать
+      href: welcome.md
+    - name: Условия лицензии
+      href: license-terms.md
+    - name: Выбор компонентов
+      href: select-features.md
+    - name: Проверка используемых файлов
+      href: check-files-in-use.md
+    - name: Все готово для обновления
+      href: ready-to-update.md
+    - name: Ход выполнения обновления
+      href: update-progress.md
+    - name: Завершение
+      href: complete.md

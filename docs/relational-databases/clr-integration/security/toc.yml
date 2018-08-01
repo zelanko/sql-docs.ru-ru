@@ -1,0 +1,6 @@
+- name: Управление доступом для кода на основе интеграции со средой CLR
+  href: clr-integration-code-access-security.md
+- name: Атрибуты защиты узла безопасности +
+  href: ../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md
+- name: Безопасность интеграции со средой CLR
+  href: clr-integration-security.md

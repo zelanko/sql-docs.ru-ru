@@ -1,0 +1,194 @@
+- name: SQL Server Data Tools (SSDT)
+  href: sql-server-data-tools.md
+- name: Скачивание SSDT
+  href: download-sql-server-data-tools-ssdt.md
+- name: Новые и обновленные статьи
+  href: new-updated-ssdt.md
+- name: Журнал изменений для SSDT
+  href: changelog-for-sql-server-data-tools-ssdt.md
+- name: Data-Tier Application Framework. Условия лицензирования
+  href: data-tier-application-framework-license-terms.md
+- name: Предыдущие выпуски SSDT и SSDT-BI
+  href: previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+- name: Поддержка Azure Active Directory
+  href: azure-active-directory.md
+- name: Средства SQL Server
+  href: sql-server-tools.md
+- name: Условия лицензии SSDT
+  href: sql-server-data-tools-license-terms.md
+- name: "Условия лицензии SSDT (VS\_2017)"
+  href: sql-server-data-tools-license-terms-vs2017.md
+- name: Разработка базы данных вне сети с учетом проекта
+  href: project-oriented-offline-database-development.md
+  items:
+    - name: Импорт в проект базы данных
+      href: import-into-a-database-project.md
+    - name: Диалоговое окно «Добавление ссылки на базу данных»
+      href: add-database-reference-dialog-box.md
+    - name: Диалоговое окно «Проверка наличия обновлений»
+      href: check-for-updates-dialog-box.md
+    - name: Параметры проекта базы данных
+      href: database-project-settings.md
+    - name: Практическое руководство. Просмотр объектов из проекта базы данных SQL Server
+      href: how-to-browse-objects-in-a-sql-server-database-project.md
+    - name: Окно операций Data Tools
+      href: data-tools-operations-window.md
+    - name: Параметры редактора Transact-SQL
+      href: transact-sql-editor-options.md
+    - name: Как создать новый проект базы данных
+      href: how-to-create-a-new-database-project.md
+    - name: Как использовать сравнение схем для сопоставления различных определений баз данных
+      href: how-to-use-schema-compare-to-compare-different-database-definitions.md
+    - name: Как выполнять построение и развертывание в локальной базе данных
+      href: how-to-build-and-deploy-to-a-local-database.md
+    - name: Как использовать объекты Microsoft SQL Server 2012 в своем проекте
+      href: how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
+    - name: Как работать с объектами баз данных CLR
+      href: how-to-work-with-clr-database-objects.md
+    - name: Как создавать моментальный снимок проекта
+      href: how-to-create-a-snapshot-of-a-project.md
+    - name: Как изменить целевую платформу и опубликовать проект базы данных
+      href: how-to-change-target-platform-and-publish-a-database-project.md
+    - name: Как преобразовать проекты базы данных Visual Studio 2010 в проекты базы данных SQL Server с изменением целевой платформы
+      href: how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
+    - name: 'Как указать скрипты, выполняемые до или после развертывания'
+      href: how-to-specify-predeployment-or-postdeployment-scripts.md
+- name: 'Разработка баз, ориентированная на проекты, с помощью программ командной строки'
+  href: project-oriented-database-development-using-command-line-tools.md
+  items:
+    - name: SqlPackage.exe
+      href: ../tools/sqlpackage.md
+    - name: Использование MSDeploy с поставщиком dbSqlPackage
+      href: using-msdeploy-with-dbsqlpackage-provider.md
+- name: Разработка подключенной базы данных
+  href: connected-database-development.md
+  items:
+    - name: Как подключаться к базе данных и просматривать существующие объекты
+      href: how-to-connect-to-a-database-and-browse-existing-objects.md
+    - name: Как создавать объекты базы данных с помощью конструктора таблиц
+      href: how-to-create-database-objects-using-table-designer.md
+    - name: Как обновлять подключенную базу данных с помощью Power Buffer
+      href: how-to-update-a-connected-database-with-power-buffer.md
+    - name: Диалоговое окно фильтрации и сортировки
+      href: filter-and-sort-dialog-box.md
+    - name: Как создавать новые объекты базы данных с помощью запросов
+      href: how-to-create-new-database-objects-using-queries.md
+    - name: Как изменять существующие таблицы с помощью запросов
+      href: how-to-edit-an-existing-table-using-queries.md
+    - name: Как просматривать и изменять данные в таблице
+      href: how-to-view-and-edit-data-in-a-table.md
+    - name: Как удалять объекты и разрешать зависимости
+      href: how-to-delete-objects-and-resolve-dependencies.md
+    - name: Как клонировать существующую базу данных
+      href: how-to-clone-an-existing-database.md
+    - name: 'Извлечение, публикация и регистрация DACPAC-файлов'
+      href: extract-publish-and-register-dacpac-files.md
+- name: Сравнение и синхронизация данных из одной или нескольких таблиц с данными из эталонной базы данных
+  href: compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
+  items:
+    - name: Практическое руководство. Сравнение и синхронизация данных из двух баз данных
+      href: how-to-compare-and-synchronize-the-data-of-two-databases.md
+    - name: Практическое руководство. Просмотр различий данных
+      href: how-to-view-data-differences.md
+    - name: Использовать редактор Transact-SQL для изменения и выполнения скриптов
+      href: use-transact-sql-editor-to-edit-and-execute-scripts.md
+    - name: Как формировать структуру и добавлять фрагменты кода к скриптам Transact-SQL
+      href: how-to-outline-and-add-snippets-to-transact-sql-script.md
+    - name: Навигация между скриптами
+      href: how-to-navigate-between-scripts.md
+    - name: Как использовать переименование и рефакторинг для внесения изменений в объекты базы данных
+      href: how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
+    - name: Как выполнить частичный запрос
+      href: how-to-execute-a-partial-query.md
+    - name: Как выполнять отладку хранимых процедур
+      href: how-to-debug-stored-procedures.md
+    - name: Анализ производительности скрипта
+      href: analyze-script-performance.md
+- name: 'Управление таблицами, связями, исправление ошибок'
+  href: manage-tables-relationships-and-fix-errors.md
+  items:
+    - name: Как использовать конструктор таблиц для управления таблицами и связями
+      href: how-to-use-the-table-designer-to-manage-tables-and-relationships.md
+    - name: Устранение ошибок
+      href: how-to-fix-errors.md
+- name: Проверка кода базы данных с помощью модульных тестов SQL Server
+  href: verifying-database-code-by-using-sql-server-unit-tests.md
+  items:
+    - name: Пошаговое руководство. Создание и запуск модульного теста SQL Server
+      href: walkthrough-creating-and-running-a-sql-server-unit-test.md
+    - name: Создание и определение модульных тестов SQL Server
+      href: creating-and-defining-sql-server-unit-tests.md
+      items:
+        - name: Скрипты в модульных тестах SQL Server
+          href: scripts-in-sql-server-unit-tests.md
+        - name: Файлы модульного теста SQL Server
+          href: sql-server-unit-test-files.md
+        - name: Использование условий теста в модульных тестах SQL Server
+          href: using-test-conditions-in-sql-server-unit-tests.md
+        - name: Использование проверочных утверждений Transact-SQL в модульных тестах SQL Server
+          href: using-transact-sql-assertions-in-sql-server-unit-tests.md
+        - name: Практическое руководство. Создание проекта тестов для модульного тестирования базы данных SQL Server
+          href: how-to-create-a-test-project-for-sql-server-database-unit-testing.md
+        - name: Практическое руководство. Создание пустого модульного теста SQL Server
+          href: how-to-create-an-empty-sql-server-unit-test.md
+        - name: 'Практическое руководство. Создание модульных тестов SQL Server для функций, триггеров и хранимых процедур'
+          href: how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
+        - name: Практическое руководство. Добавление условий теста в модульные тесты SQL Server
+          href: how-to-add-test-conditions-to-sql-server-unit-tests.md
+        - name: Практическое руководство. Открытие модульного теста SQL Server для его изменения
+          href: how-to-open-a-sql-server-unit-test-to-edit.md
+        - name: 'Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции'
+          href: how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
+        - name: Практическое руководство. Настройка запуска модульного теста SQL Server
+          href: how-to-configure-sql-server-unit-test-execution.md
+        - name: Общие сведения о строках подключения и разрешениях
+          href: overview-of-connection-strings-and-permissions.md
+        - name: Сочетания клавиш для конструктора модульных тестов SQL Server
+          href: keyboard-shortcuts-for-sql-server-unit-test-designer.md
+    - name: Выполнение модульных тестов SQL Server
+      href: running-sql-server-unit-tests.md
+      items:
+        - name: Практическое руководство. Отладка объектов базы данных
+          href: how-to-debug-database-objects.md
+        - name: Практическое руководство. Запуск модульных тестов SQL Server из построения Team Foundation
+          href: how-to-run-sql-server-unit-tests-from-team-foundation-build.md
+        - name: Практическое руководство. Выполнение модульных тестов SQL Server
+          href: how-to-run-sql-server-unit-tests.md
+        - name: Интерпретация результатов модульного теста SQL Server
+          href: interpreting-sql-server-unit-test-results.md
+    - name: 'Обновление старого проекта тестов, содержащего модульные тесты базы данных'
+      href: upgrade-an-older-test-project-containing-database-unit-tests.md
+    - name: Пользовательские условия теста для модульных тестов SQL Server
+      href: custom-test-conditions-for-sql-server-unit-tests.md
+      items:
+        - name: Практическое руководство. Создание условия теста для конструктора модульных тестов SQL Server
+          href: how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
+        - name: Пошаговое руководство. Использование пользовательского условия теста для проверки результатов выполнения хранимой процедуры
+          href: walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
+        - name: Практическое руководство. Обновление нестандартного условия теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools
+          href: how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
+    - name: Устранение неполадок модульных тестов базы данных SQL Server
+      href: troubleshooting-sql-server-database-unit-testing-issues.md
+- name: Расширение функций баз данных
+  href: extending-the-database-features.md
+  items:
+    - name: Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания
+      href: use-deployment-contributors-to-customize-database-build-and-deployment.md
+      items:
+        - name: Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели
+          href: walkthrough-extend-database-project-build-to-generate-model-statistics.md
+        - name: Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания
+          href: walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
+        - name: Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания
+          href: walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md
+    - name: Общие сведения о расширяемости для правил анализа кода базы данных
+      href: overview-of-extensibility-for-database-code-analysis-rules.md
+      items:
+        - name: Пошаговое руководство по созданию сборки настраиваемого правила анализа статического кода для SQL Server
+          href: walkthrough-author-custom-static-code-analysis-rule-assembly.md
+    - name: Практическое руководство. Установка расширений компонентов и управление ими
+      href: how-to-install-and-manage-feature-extensions.md
+- name: 'Разрешения, необходимые для запуска SQL Server Data Tools'
+  href: required-permissions-for-sql-server-data-tools.md
+- name: Совместимость с платформой приложения уровня данных
+  href: dac-framework-compatibility.md

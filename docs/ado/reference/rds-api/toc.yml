@@ -1,0 +1,149 @@
+- name: Нерекомендуемые возможности. Справочник по API службы удаленных рабочих столов
+  href: rds-api-reference.md
+- name: Объекты службы удаленных рабочих столов
+  href: rds-objects.md
+  items:
+    - name: Объект DataControl (служба удаленных рабочих столов)
+      href: datacontrol-object-rds.md
+      items:
+        - name: 'Свойства, методы и события объекта DataControl (служба удаленных рабочих столов)'
+          href: datacontrol-object-rds-properties-methods-and-events.md
+    - name: Объект DataFactory (RDSServer)
+      href: datafactory-object-rdsserver.md
+      items:
+        - name: 'Свойства, методы и события объекта DataFactory (RDSServer)'
+          href: datafactory-object-rdsserver-properties-methods-and-events.md
+    - name: Объект DataSpace (служба удаленных рабочих столов)
+      href: dataspace-object-rds.md
+      items:
+        - name: 'Свойства, методы и события объекта DataSpace (служба удаленных рабочих столов)'
+          href: dataspace-object-rds-properties-methods-and-events.md
+    - name: Интерфейс IRDSService (служба удаленных рабочих столов)
+      href: irdsservice-interface-rds.md
+- name: Свойства службы удаленных рабочих столов
+  href: rds-properties.md
+  items:
+    - name: Свойство Connect (служба удаленных рабочих столов)
+      href: connect-property-rds.md
+    - name: Свойство ExecuteOptions (служба удаленных рабочих столов)
+      href: executeoptions-property-rds.md
+    - name: Свойство FetchOptions (служба удаленных рабочих столов)
+      href: fetchoptions-property-rds.md
+    - name: Свойство FilterColumn (служба удаленных рабочих столов)
+      href: filtercolumn-property-rds.md
+    - name: Свойство FilterCriterion (служба удаленных рабочих столов)
+      href: filtercriterion-property-rds.md
+    - name: Свойство FilterValue (служба удаленных рабочих столов)
+      href: filtervalue-property-rds.md
+    - name: Свойство Handler (служба удаленных рабочих столов)
+      href: handler-property-rds.md
+    - name: Свойство InternetTimeout (служба удаленных рабочих столов)
+      href: internettimeout-property-rds.md
+    - name: Свойство ReadyState (служба удаленных рабочих столов)
+      href: readystate-property-rds.md
+    - name: Свойства Recordset и SourceRecordset (служба удаленных рабочих столов)
+      href: recordset-sourcerecordset-properties-rds.md
+    - name: Свойство Server (служба удаленных рабочих столов)
+      href: server-property-rds.md
+    - name: Свойство SortColumn (служба удаленных рабочих столов)
+      href: sortcolumn-property-rds.md
+    - name: Свойство SortDirection (служба удаленных рабочих столов)
+      href: sortdirection-property-rds.md
+    - name: Свойство SQL
+      href: sql-property.md
+    - name: Свойство URL (служба удаленных рабочих столов)
+      href: url-property-rds.md
+- name: Методы службы удаленных рабочих столов
+  href: rds-methods.md
+  items:
+    - name: Метод Cancel (служба удаленных рабочих столов)
+      href: cancel-method-rds.md
+    - name: Метод CancelUpdate (служба удаленных рабочих столов)
+      href: cancelupdate-method-rds.md
+    - name: Метод ConvertToString (служба удаленных рабочих столов)
+      href: converttostring-method-rds.md
+    - name: Метод CreateObject (служба удаленных рабочих столов)
+      href: createobject-method-rds.md
+    - name: Метод CreateRecordset (служба удаленных рабочих столов)
+      href: createrecordset-method-rds.md
+    - name: Метод Execute (служба удаленных рабочих столов)
+      href: execute-method-rds.md
+    - name: Метод Execute21 (служба удаленных рабочих столов)
+      href: execute21-method-rds.md
+    - name: InvokeService (служба удаленных рабочих столов)
+      href: invokeservice-rds.md
+    - name: 'Методы MoveFirst, MoveLast, MoveNext и MovePrevious (служба удаленных рабочих столов)'
+      href: movefirst-movelast-movenext-and-moveprevious-methods-rds.md
+    - name: Метод Query (служба удаленных рабочих столов)
+      href: query-method-rds.md
+    - name: Метод Refresh (служба удаленных рабочих столов)
+      href: refresh-method-rds.md
+    - name: Метод Reset (служба удаленных рабочих столов)
+      href: reset-method-rds.md
+    - name: Метод SubmitChanges (служба удаленных рабочих столов)
+      href: submitchanges-method-rds.md
+    - name: Метод Synchronize (служба удаленных рабочих столов)
+      href: synchronize-method-rds.md
+    - name: Метод Synchronize21 (служба удаленных рабочих столов)
+      href: synchronize21-method-rds.md
+- name: События службы удаленных рабочих столов
+  href: rds-events.md
+  items:
+    - name: Событие onError (служба удаленных рабочих столов)
+      href: onerror-event-rds.md
+    - name: Событие onReadyStateChange (служба удаленных рабочих столов)
+      href: onreadystatechange-event-rds.md
+- name: Примеры коды службы удаленных рабочих столов
+  href: rds-code-examples.md
+  items:
+    - name: Примеры кода службы удаленных рабочих столов в Visual Basic
+      href: rds-code-examples-in-visual-basic.md
+      items:
+        - name: Пример свойства Handler (Visual Basic)
+          href: handler-property-example-vb.md
+        - name: Пример свойства InternetTimeout (Visual Basic)
+          href: internettimeout-property-example-vb.md
+    - name: Примеры кода службы удаленных рабочих столов в VBScript
+      href: rds-code-examples-in-vbscript.md
+      items:
+        - name: Пример метода Cancel (VBScript)
+          href: cancel-method-example-vbscript.md
+        - name: Пример метода CancelUpdate (VBScript)
+          href: cancelupdate-method-example-vbscript.md
+        - name: Пример свойства Connect (VBScript)
+          href: connect-property-example-vbscript.md
+        - name: Пример метода ConvertToString (VBScript)
+          href: converttostring-method-example-vbscript.md
+        - name: Пример метода CreateRecordset (VBScript)
+          href: createrecordset-method-example-vbscript.md
+        - name: Пример объекта DataControl (VBScript)
+          href: datacontrol-object-example-vbscript.md
+        - name: Примеры объекта DataSpace и метода CreateObject (VBScript)
+          href: dataspace-object-and-createobject-method-example-vbscript.md
+        - name: 'Примеры объекта DataFactory, а также методов Query и CreateObject (VBScript)'
+          href: datafactory-object-query-method-and-createobject-method-example-vbscript.md
+        - name: Примеры свойств ExecuteOptions и FetchOptions (VBScript)
+          href: executeoptions-and-fetchoptions-properties-example-vbscript.md
+        - name: 'Примеры свойств FilterColumn, Criterion, Value, SortColumn и SortDirection, а также метода Reset (VBScript)'
+          href: filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md
+        - name: Пример свойства ReadyState (VBScript)
+          href: readystate-property-example-vbscript.md
+        - name: Примеры свойств Recordset и SourceRecordset (VBScript)
+          href: recordset-and-sourcerecordset-properties-example-vbscript.md
+        - name: Пример метода Refresh (VBScript)
+          href: refresh-method-example-vbscript.md
+        - name: Пример свойства Server (VBScript)
+          href: server-property-example-vbscript.md
+        - name: Пример свойства SQL (VBScript)
+          href: sql-property-example-vbscript.md
+        - name: Пример метода SubmitChanges (VBScript)
+          href: submitchanges-method-example-vbscript.md
+        - name: Пример свойства URL (VBScript)
+          href: url-property-example-vbscript.md
+    - name: Примеры кода службы удаленных рабочих столов в Visual C++
+      href: rds-code-examples-in-visual-c.md
+      items:
+        - name: Пример свойства Handler (Visual C++)
+          href: handler-property-example-vc.md
+        - name: Пример свойства InternetTimeout (Visual C++)
+          href: internettimeout-property-example-vc.md

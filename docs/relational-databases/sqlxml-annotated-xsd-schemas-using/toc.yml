@@ -1,0 +1,40 @@
+- name: Использование заметок в схемах XSD (SQLXML 4.0)
+  href: using-annotations-in-xsd-schemas-sqlxml-4-0.md
+- name: 'Создание разделов CDATA с использованием sql:use-cdata (SQLXML 4.0)'
+  href: creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md
+- name: 'Создание постоянных элементов при помощи sql:is-constant (SQLXML 4.0)'
+  href: creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md
+- name: 'Создание допустимых атрибутов типа ID, IDREF и IDREFS с использованием sql:prefix (SQLXML 4.0)'
+  href: creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md
+- name: 'Приведение типов данных и заметка sql:datatype (SQLXML 4.0)'
+  href: data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md
+- name: Сопоставление элементов и атрибутов XSD с таблицами и столбцами по умолчанию (SQLXML 4.0)
+  href: default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md
+- name: 'Исключение элементов схемы из XML-документа с помощью sql:mapped'
+  href: excluding-schema-elements-from-the-xml-document-using-sql-mapped.md
+- name: Явное сопоставление элементов и атрибутов XSD с таблицами и столбцами
+  href: explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md
+- name: 'Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)'
+  href: filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md
+- name: 'Скрытие элементов и атрибутов при помощи sql:hide'
+  href: hiding-elements-and-attributes-by-using-sql-hide.md
+- name: 'Идентификация ключевых столбцов с использованием sql:key-fields (SQLXML 4.0)'
+  href: identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md
+- name: Сопоставление типов данных XSD с типами данных XPath (SQLXML 4.0)
+  href: mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md
+- name: 'Получение URL-ссылок на данные BLOB с использованием sql:encode (SQLXML 4.0)'
+  href: requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md
+- name: 'Получение невостребованных данных с помощью sql:overflow-field (SQLXML 4.0)'
+  href: retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md
+- name: Задание целевого пространства имен с помощью атрибута targetNamespace (SQLXML 4.0)
+  href: specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md
+- name: 'Задание глубины рекурсивных связей с использованием sql:max-depth'
+  href: specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md
+- name: 'Указание связей при помощи sql:relationship (SQLXML 4.0)'
+  href: specifying-relationships-using-sql-relationship-sqlxml-4-0.md
+- name: 'Задание значения атрибута sql:inverse для sql:relationship (SQLXML 4.0)'
+  href: specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md
+- name: 'Использование заметок sql:identity и sql:guid'
+  href: using-the-sql-identity-and-sql-guid-annotations.md
+- name: Заметки XSD (SQLXML 4.0)
+  href: xsd-annotations-sqlxml-4-0.md

@@ -1,0 +1,40 @@
+- name: Справка F1 по подключению к серверу (SSMS)
+  href: f1-help-for-server-connections-sql-server-management-studio.md
+- name: Подключение к службе хранилища Microsoft Azure
+  href: connect-to-microsoft-azure-storage.md
+- name: Подключение к любому компоненту сервера SQL Server из среды SQL Server Management Studio
+  href: connect-to-any-sql-server-component-from-sql-server-management-studio.md
+- name: диалоговое окно «Свойства соединения»
+  href: connection-properties-dialog-box.md
+- name: Подключение к серверу (ядро СУБД)
+  href: connect-to-server-database-engine.md
+- name: "Соединение с сервером (страница \"Свойства\")\_— ядро СУБД"
+  href: connect-to-server-connection-properties-page-database-engine.md
+- name: "Соединение с сервером\_(страница \"Вход\")\_— ядро СУБД"
+  href: connect-to-server-login-page-database-engine.md
+- name: Вход. Соединение с сервером SSAS
+  href: connect-to-server-login-page-analysis-services.md
+- name: Соединение с SSAS
+  href: connect-to-server-analysis-services.md
+- name: "Соединение с сервером\_SSAS (страница \"Свойства подключения\")"
+  href: connect-to-server-connection-properties-page-analysis-services.md
+- name: Вход. Соединение с сервером SSRS
+  href: connect-to-server-login-page-reporting-services.md
+- name: Соединение с сервером SSRS
+  href: connect-to-server-reporting-services.md
+- name: "Соединение с сервером\_SSRS (страница \"Свойства подключения\")"
+  href: connect-to-server-connection-properties-page-reporting-services.md
+- name: Выбор серверов (локальные серверы)
+  href: browse-for-servers-local-servers.md
+- name: Соединение с сервером (дополнительные параметры соединения)
+  href: connect-to-server-additional-connection-parameters-page.md
+- name: Обзор серверов (сетевые серверы)
+  href: browse-for-servers-network-servers.md
+- name: Срок действия пароля истек
+  href: password-expired.md
+- name: Соединение с сервером SSIS
+  href: connect-to-server-integration-services.md
+- name: Соединение с сервером SSIS (страница "Вход")
+  href: connect-to-server-login-page-integration-services.md
+- name: "Соединение с сервером\_SSIS (страница \"Свойства подключения\")"
+  href: connect-to-server-connection-properties-page-integration-services.md

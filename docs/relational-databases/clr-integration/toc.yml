@@ -1,0 +1,38 @@
+- name: Основные понятия о программировании интеграции со средой CLR
+  href: common-language-runtime-clr-integration-programming-concepts.md
+- name: Объекты базы данных +
+  href: ../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
+- name: Доступ к данным +
+  href: ../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md
+- name: Безопасность +
+  href: ../../relational-databases/clr-integration/security/clr-integration-code-access-security.md
+- name: Сборки +
+  href: ../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
+- name: Конструирование сборок
+  href: assemblies-designing.md
+- name: Получение сведений о сборках
+  href: assemblies-getting-information.md
+- name: Реализация сборок
+  href: assemblies-implementing.md
+- name: Свойства сборок
+  href: assemblies-properties.md
+- name: Сборки (компонент Database Engine)
+  href: assemblies-database-engine.md
+- name: Включение интеграции со средой CLR
+  href: clr-integration-enabling.md
+- name: Общие сведения об интеграции со средой CLR
+  href: clr-integration-overview.md
+- name: Новые возможности в интеграции со средой CLR
+  href: clr-integration-what-s-new.md
+- name: Архитектура интеграции со средой CLR — производительность
+  href: clr-integration-architecture-performance.md
+- name: Архитектура интеграции со средой CLR — среда размещения CLR
+  href: clr-integration-architecture-clr-hosted-environment.md
+- name: Общие сведения об интеграции со средой CLR
+  href: common-language-runtime-integration-overview.md
+- name: Отладка объектов базы данных среды CLR
+  href: debugging-clr-database-objects.md
+- name: Развертывание объектов базы данных CLR
+  href: deploying-clr-database-objects.md
+- name: Наблюдение и устранение неполадок в управляемых объектах базы данных
+  href: monitoring-and-troubleshooting-managed-database-objects.md

@@ -1,0 +1,90 @@
+- name: Программирование собственного клиента SQL Server
+  href: sql-server-native-client-programming.md
+  items:
+    - name: Новые возможности собственного клиента SQL Server
+      href: sql-server-native-client.md
+    - name: Когда использовать собственный клиент SQL Server
+      href: when-to-use-sql-server-native-client.md
+- name: Компоненты собственного клиента SQL Server
+  href: features/sql-server-native-client-features.md
+  items:
+    - name: Изменение поведения драйвера ODBC при обработке преобразования символов
+      href: features/odbc-driver-behavior-change-when-handling-character-conversions.md
+    - name: Использование зеркального отображения базы данных
+      href: features/using-database-mirroring.md
+    - name: Выполнение асинхронных операций
+      href: features/performing-asynchronous-operations.md
+    - name: Использование режима MARS
+      href: features/using-multiple-active-result-sets-mars.md
+    - name: Использование типов данных XML
+      href: features/using-xml-data-types.md
+    - name: Использование определяемых пользователем типов данных
+      href: features/using-user-defined-types.md
+    - name: Использование типов больших значений
+      href: features/using-large-value-types.md
+    - name: Смена пароля программным способом
+      href: features/changing-passwords-programmatically.md
+    - name: Работа с изоляцией моментального снимка
+      href: features/working-with-snapshot-isolation.md
+    - name: Работа с уведомлениями запросов
+      href: features/working-with-query-notifications.md
+    - name: Выполнение операций массового копирования
+      href: features/performing-bulk-copy-operations.md
+    - name: Использование шифрования без проверки
+      href: features/using-encryption-without-validation.md
+    - name: 'Параметры, возвращающие табличные значения'
+      href: features/table-valued-parameters-sql-server-native-client.md
+    - name: Большие определяемые пользователем типы данных CLR
+      href: features/large-clr-user-defined-types.md
+    - name: Поддержка FILESTREAM
+      href: features/filestream-support.md
+    - name: Поддержка имени участника-службы в клиентских соединениях
+      href: features/service-principal-name-spn-support-in-client-connections.md
+    - name: Поддержка разреженных столбцов в собственном клиенте SQL Server
+      href: features/sparse-columns-support-in-sql-server-native-client.md
+    - name: Date/Time Improvements
+      href: features/date-and-time-improvements.md
+    - name: Обнаружение метаданных
+      href: features/metadata-discovery.md
+    - name: Поддержка UTF-16 в собственном клиенте SQL Server версии 11.0
+      href: features/utf-16-support-in-sql-server-native-client-11-0.md
+    - name: Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
+      href: features/sql-server-native-client-support-for-high-availability-disaster-recovery.md
+    - name: Доступ к диагностическим сведениям в журнале расширенных событий
+      href: features/accessing-diagnostic-information-in-the-extended-events-log.md
+    - name: Поддержка SQL Server Native Client для LocalDB
+      href: features/sql-server-native-client-support-for-localdb.md
+- name: Построение приложений с использованием собственного клиента SQL Server
+  href: applications/building-applications-with-sql-server-native-client.md
+  items:
+    - name: Установка собственного клиента SQL Server
+      href: applications/installing-sql-server-native-client.md
+    - name: Компоненты собственного клиента SQL Server
+      href: applications/components-of-sql-server-native-client.md
+    - name: Использование ключевых слов строки подключения с собственным клиентом SQL Server
+      href: applications/using-connection-string-keywords-with-sql-server-native-client.md
+    - name: Использование файлов заголовков и библиотек собственного клиента SQL Server
+      href: applications/using-the-sql-server-native-client-header-and-library-files.md
+    - name: Обновление приложения с переходом от компонентов MDAC к собственному клиенту SQL Server
+      href: applications/updating-an-application-to-sql-server-native-client-from-mdac.md
+    - name: Обновление приложения с переходом от собственного клиента SQL Server 2005
+      href: applications/updating-an-application-from-sql-server-2005-native-client.md
+    - name: Использование ADO с собственным клиентом SQL Server
+      href: applications/using-ado-with-sql-server-native-client.md
+    - name: Политики поддержки собственного клиента SQL Server
+      href: applications/support-policies-for-sql-server-native-client.md
+    - name: Подключение к базе данных SQL Azure с помощью SQL Server Native Client
+      href: applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
+- name: Системные требования для собственного клиента SQL Server
+  href: system-requirements-for-sql-server-native-client.md
+- name: SQL Server Native Client (OLE DB) +
+  href: ole-db/sql-server-native-client-ole-db.md
+- name: SQL Server Native Client (ODBC) +
+  href: odbc/sql-server-native-client-odbc.md
+- name: Поиск дополнительных сведений о собственном клиенте SQL Server
+  href: finding-more-sql-server-native-client-information.md
+- name: Ошибки собственного клиента SQL Server
+  href: ../../database-engine/dev-guide/sql-server-native-client-errors.md
+  items:
+    - name: MSSQLSERVER_50000
+      href: ../errors-events/sql-server-native-client-error-mssqlserver-50000.md

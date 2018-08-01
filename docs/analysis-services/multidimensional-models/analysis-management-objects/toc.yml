@@ -1,0 +1,30 @@
+- name: "Классы AMO\_— введение"
+  href: amo-classes-introduction.md
+- name: Основные понятия и модель объектов AMO
+  href: amo-concepts-and-object-model.md
+- name: Классы интеллектуального анализа данных объектов AMO
+  href: amo-data-mining-classes.md
+- name: Основные классы объектов AMO
+  href: amo-fundamental-classes.md
+- name: Классы OLAP объектов AMO
+  href: amo-olap-classes.md
+- name: Другие классы и методы объектов AMO
+  href: amo-other-classes-and-methods.md
+- name: Классы безопасности объектов AMO
+  href: amo-security-classes.md
+- name: Разработка объектов управления аналитикой (объекты AMO)
+  href: developing-with-analysis-management-objects-amo.md
+- name: Программирование административных задач с помощью объектов AMO
+  href: programming-administrative-tasks-with-amo.md
+- name: Программирование дополнительных классов и методов объектов AMO
+  href: programming-amo-complementary-classes-and-methods.md
+- name: Программирование объектов интеллектуального анализа данных AMO
+  href: programming-amo-data-mining-objects.md
+- name: Программирование фундаментальных объектов AMO
+  href: programming-amo-fundamental-objects.md
+- name: Программирование расширенных объектов AMO OLAP
+  href: programming-amo-olap-advanced-objects.md
+- name: Программирование основных объектов AMO OLAP
+  href: programming-amo-olap-basic-objects.md
+- name: Программирование объектов безопасности AMO
+  href: programming-amo-security-objects.md

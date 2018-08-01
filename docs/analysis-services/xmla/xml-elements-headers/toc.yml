@@ -1,0 +1,10 @@
+- name: "XMLA-элементы\_— заголовки"
+  href: xml-elements-headers.md
+- name: Элемент BeginSession (XML для аналитики)
+  href: beginsession-element-xmla.md
+- name: Элемент EndSession (XML для аналитики)
+  href: endsession-element-xmla.md
+- name: Элемент ProtocolCapabilities (XML для аналитики)
+  href: protocolcapabilities-element-xmla.md
+- name: Элемент Session (XML для аналитики)
+  href: session-element-xmla.md

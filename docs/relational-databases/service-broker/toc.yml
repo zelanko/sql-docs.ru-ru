@@ -1,0 +1,8 @@
+- name: Обзор
+  href: event-notifications.md
+- name: Реализация
+  href: implement-event-notifications.md
+- name: Настройка безопасности диалога
+  href: configure-dialog-security-for-event-notifications.md
+- name: Получение сведений
+  href: get-information-about-event-notifications.md

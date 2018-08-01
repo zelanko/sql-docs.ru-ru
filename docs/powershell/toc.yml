@@ -1,0 +1,44 @@
+- name: Установка модуля SQL PowerShell
+  href: download-sql-server-ps-module.md
+- name: Общие сведения о SQL Server PowerShell
+  href: sql-server-powershell.md
+  items:
+    - name: 'SQL Server PowerShell, поставщик'
+      href: sql-server-powershell-provider.md
+    - name: Выражения запросов и универсальные имена ресурсов
+      href: query-expressions-and-uniform-resource-names.md
+- name: Получение доступа к объектам SQL Server
+  href: navigate-sql-server-powershell-paths.md
+- name: Загрузка сборок объектов SMO в Windows PowerShell
+  href: load-the-smo-assemblies-in-windows-powershell.md
+- name: Запуск PowerShell в среде SQL Server Management Studio
+  href: run-windows-powershell-from-sql-server-management-studio.md
+- name: Запуск PowerShell с помощью агента SQL Server
+  href: run-windows-powershell-steps-in-sql-server-agent.md
+- name: Управление проверкой подлинности
+  href: manage-authentication-in-database-engine-powershell.md
+- name: Управление заполнением нажатием клавиши TAB
+  href: manage-tab-completion-sql-server-powershell.md
+- name: Работа с  путями SQL Server PowerShell
+  href: work-with-sql-server-powershell-paths.md
+- name: Идентификаторы SQL Server в PowerShell
+  href: sql-server-identifiers-in-powershell.md
+  items:
+    - name: Указание экземпляров в поставщике SQL Server PowerShell
+      href: specify-instances-in-the-sql-server-powershell-provider.md
+    - name: Шифрование и расшифровка идентификаторов SQL Server
+      href: encode-and-decode-sql-server-identifiers.md
+    - name: Применение escape-символов к идентификаторам SQL Server
+      href: escape-sql-server-identifiers.md
+- name: Ресурсы
+  items:
+    - name: Новые и обновленные статьи
+      href: new-updated-powershell.md
+    - name: Условия лицензионного соглашения SQL Server PowerShell
+      href: sql-server-powershell-license-terms.md
+- name: Справочник по командлетам
+  items:
+    - name: Командлеты SqlServer
+      href: 'https://docs.microsoft.com/powershell/module/sqlserver/?toc=/sql/powershell/toc.json'
+    - name: Командлеты SQLPS
+      href: 'https://docs.microsoft.com/powershell/module/sqlps/?toc=/sql/powershell/toc.json'

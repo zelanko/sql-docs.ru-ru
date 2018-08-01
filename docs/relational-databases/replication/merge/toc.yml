@@ -1,0 +1,40 @@
+- name: Обзор
+  href: merge-replication.md
+- name: Параметры статьи для репликации слиянием
+  href: article-options-for-merge-replication.md
+  items:
+    - name: 'Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки'
+      href: optimize-merge-replication-performance-with-download-only-articles.md
+    - name: Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления
+      href: optimize-merge-replication-performance-with-conditional-delete-tracking.md
+    - name: Указание порядка обработки статей публикации слиянием
+      href: specify-the-processing-order-of-merge-articles.md
+    - name: Изменения группирования связанных строк с логическими записями
+      href: group-changes-to-related-rows-with-logical-records.md
+    - name: 'Расширенная репликация слиянием: разрешение конфликтов'
+      href: advanced-merge-replication-resolve-merge-replication-conflicts.md
+    - name: "Подробнее о репликации слиянием\_— обнаружение и разрешение конфликтов"
+      href: advanced-merge-replication-conflict-detection-and-resolution.md
+    - name: 'Конфликт расширенной репликации слиянием: выбор сопоставителя'
+      href: advanced-merge-replication-conflict-choose-a-resolver.md
+    - name: 'Конфликт расширенной репликации слиянием: пользовательские сопоставители на основе технологии COM'
+      href: advanced-merge-replication-conflict-com-based-custom-resolvers.md
+    - name: 'Конфликт расширенной репликации слиянием: сопоставители на базе технологии COM'
+      href: advanced-merge-replication-conflict-com-based-resolvers.md
+    - name: 'Конфликт расширенной репликации слиянием: интерактивное разрешение'
+      href: advanced-merge-replication-conflict-interactive-resolution.md
+    - name: "Подробнее о конфликтах при репликации слиянием\_— разрешение в логической записи"
+      href: advanced-merge-replication-conflict-resolving-in-logical-record.md
+    - name: Выполнение бизнес-логики при синхронизации слиянием
+      href: execute-business-logic-during-merge-synchronization.md
+- name: Фильтрация опубликованных данных для репликации слиянием
+  href: filter-published-data-for-merge-replication.md
+  items:
+    - name: 'Параметризованные фильтры: фильтры строк'
+      href: parameterized-filters-parameterized-row-filters.md
+    - name: Параметризованные фильтры.Оптимизация предварительно вычисляемых секций
+      href: parameterized-filters-optimize-for-precomputed-partitions.md
+    - name: фильтры соединения
+      href: join-filters.md
+    - name: Оптимальные методы для фильтров строк на основе времени
+      href: best-practices-for-time-based-row-filters.md

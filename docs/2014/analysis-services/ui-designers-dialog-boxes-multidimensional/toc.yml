@@ -1,0 +1,307 @@
+- name: Конструкторы пользовательского интерфейса и диалоговые окна для многомерного анализа
+  href: ui-designers-dialog-boxes-multidimensional.md
+- name: Конструкторы и диалоговые окна служб Analysis Service (многомерные данные)
+  href: ../analysis-services-designers-and-dialog-boxes-multidimensional-data.md
+- name: Диалоговое окно «Добавление измерения куба»
+  href: ../add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Добавление ссылки»
+  href: ../add-reference-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Добавление таблицы»
+  href: ../add-table-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Добавление или удаление таблиц»
+  href: ../../database-engine/add-remove-tables-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Свойства сервера анализа данных»
+  href: ../analysis-server-properties-dialog-box-analysis-services.md
+- name: Конструктор запросов многомерных выражений служб Analysis Services (PowerPivot)
+  href: ../analysis-services-mdx-query-designer-powerpivot.md
+- name: Диалоговое окно «Свойства сборки»
+  href: ../assembly-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Назначение статистической схемы»
+  href: ../assign-aggregation-design-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Перевод данных атрибута»
+  href: ../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Создание резервной копии базы данных»
+  href: ../backup-database-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Обзор источника данных»
+  href: ../browse-data-source-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Обзор представления источников данных»
+  href: ../browse-data-source-view-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Выбор удаленной папки»
+  href: ../browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Построитель вычисляемых элементов»
+  href: ../calculated-member-builder-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Свойства вычислений»
+  href: ../calculation-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Изменить настройки»
+  href: ../change-settings-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Соединение с базой данных»
+  href: ../connect-to-database-dialog-box.md
+- name: Диалоговые окна «Создание связи атрибутов» и «Изменение связи атрибутов»
+  href: ../create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Создание именованного вычисления»/«Изменение именованного вычисления»
+  href: ../create-edit-named-calculation-dialog-box-analysis-services.md
+- name: Диалоговое окно «Создание именованного запроса»/«Изменение именованного запроса»
+  href: ../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md
+- name: диалоговое окно "Создание/Изменение связи"
+  href: ../create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Создание опрашивающего запроса»
+  href: ../create-polling-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Создание обрабатывающего запроса»
+  href: ../create-processing-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Конструктор кубов
+  href: ../cube-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: Структура куба (конструктор кубов)
+      href: ../cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Структура куба», конструктор кубов)'
+      href: ../toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: Представление источника данных (вкладка «Структура куба» конструктора кубов)
+      href: ../data-source-view-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Меры (вкладка «Структура куба», конструктор кубов)'
+      href: ../measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Измерения (вкладка «Структура куба», конструктор кубов)'
+      href: ../dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: Использование измерений (конструктор кубов)
+      href: ../dimension-usage-cube-designer-analysis-services-multidimensional-data.md
+    - name: Панель инструментов (вкладка «Использование измерений» конструктора кубов)
+      href: ../toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Сетка (вкладка «Использование измерений», конструктор кубов )'
+      href: ../grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: Вычисления (конструктор кубов)
+      href: ../calculations-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Вычисления», конструктор кубов)'
+      href: ../toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Организатор скриптов (вкладка «Вычисления», конструктор кубов)'
+      href: ../script-organizer-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Средства вычисления (вкладка «Вычисления», конструктор кубов)'
+      href: ../calculation-tools-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Редактор форм вычисляемых элементов (вкладка «Вычисления», конструктор кубов)'
+      href: ../calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Редактор формы именованных наборов (вкладка «Вычисления», конструктор кубов)'
+      href: ../named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Редактор скриптов (вкладка «Вычисления», конструктор кубов)'
+      href: ../script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md
+    - name: Ключевые показатели эффективности (конструктор кубов)
+      href: ../kpis-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Ключевые показатели эффективности», конструктор кубов)'
+      href: ../toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Организатор ключевых показателей (вкладка «Ключевые показатели эффективности», конструктор кубов)'
+      href: ../kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель «Средства вычислений» (вкладка «Ключевые показатели эффективности», конструктор кубов)'
+      href: ../calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Редактор формы ключевого показателя эффективности (вкладка «Ключевые показатели эффективности», конструктор кубов)'
+      href: ../kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Браузер ключевых показателей эффективности (вкладка «Ключевые показатели эффективности», конструктор кубов)'
+      href: ../kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: Действия (конструктор кубов)
+      href: ../actions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Действия», конструктор кубов)'
+      href: ../toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Организатор действий (вкладка «Действия», конструктор кубов)'
+      href: ../action-organizer-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Средства вычисления (вкладка «Действия», конструктор кубов)'
+      href: ../calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Редактор формы действия (вкладка «Действия», конструктор кубов)'
+      href: ../action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: Редактор формы действия детализации (вкладка «Действия» конструктора кубов) (службы SSAS)
+      href: ../drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Редактор формы действий отчета (вкладка «Действия», конструктор кубов)'
+      href: ../report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: Секции (конструктор кубов)
+      href: ../partitions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Секции», конструктор кубов)'
+      href: ../toolbar-partitions-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Группы мер (вкладка «Секции», конструктор кубов)'
+      href: ../measure-groups-partitions-cube-designer-analysis-services-multidimensional-data.md
+    - name: Агрегаты (создание кубов)
+      href: ../aggregations-cube-design.md
+    - name: 'Панель инструментов (вкладка «Агрегаты», конструктор кубов)'
+      href: ../toolbar-aggregations-tab-cube-designer.md
+    - name: 'Стандартное представление (вкладка «Агрегаты», конструктор кубов)'
+      href: ../standard-view-aggregations-tab-cube-designer.md
+    - name: 'Расширенное представление (вкладка «Агрегаты», конструктор кубов)'
+      href: ../advanced-view-aggregations-tab-cube-designer.md
+    - name: Перспективы (конструктор кубов)
+      href: ../perspectives-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Перспективы», конструктор кубов)'
+      href: ../toolbar-perspectives-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Подробности перспективы (вкладка «Перспективы», конструктор кубов)'
+      href: ../perspective-details-cube-designer-analysis-services-multidimensional-data.md
+    - name: Переводы (конструктор кубов)
+      href: ../translations-cube-designer-analysis-services-multidimensional-data.md
+    - name: Панель инструментов (вкладка «Переводы» конструктора кубов)
+      href: ../toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Сведения о переводе (вкладка «Переводы», конструктор кубов)'
+      href: ../translation-details-cube-designer-analysis-services-multidimensional-data.md
+    - name: Браузер (конструктор кубов)
+      href: ../browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Браузер», конструктор кубов)'
+      href: ../toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Анализ в Excel (вкладка «Браузер», конструктор кубов)'
+      href: ../analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Метаданные (вкладка «Браузер», конструктор кубов)'
+      href: ../metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 'Запрос и фильтр (вкладка «Браузер», конструктор кубов)'
+      href: ../query-filter-browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: Диалоговое окно «Параметры запроса» (MDX)
+      href: ../query-parameters-dialog-box-mdx.md
+- name: Диалоговое окно «Свойства куба или модели»
+  href: ../cube-or-model-properties-dialog-box-ssas.md
+- name: Диалоговое окно «Параметры просмотра данных»
+  href: ../data-exploration-options-dialog-box-analysis-services-data-mining.md
+- name: Диалоговое окно «Просмотр образцов данных»
+  href: ../data-sample-viewer-dialog-box-analysis-services-multidimensional-data.md
+- name: Конструктор представлений источников данных
+  href: ../data-source-view-designer-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Свойства представления источников данных»
+  href: ../data-source-view-properties-dialog-box-ssas.md
+- name: Конструктор баз данных
+  href: ../database-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: Общие (конструктор баз данных)
+      href: ../general-database-designer-analysis-services-multidimensional-data.md
+    - name: Предупреждения (конструктор баз данных)
+      href: ../warnings-database-designer-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Свойства базы данных»
+  href: ../database-properties-dialog-box-ssas-multidimensional.md
+- name: Диалоговое окно «Задание связи»
+  href: ../define-relationship-dialog-box-analysis-services-multidimensional-data.md
+- name: конструктор измерений
+  href: ../dimension-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: Структура измерения (конструктор измерений)
+      href: ../dimension-structure-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Структура измерения», конструктор измерений)'
+      href: ../toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md
+    - name: 'Представление источника данных (структура измерения, конструктор измерений)'
+      href: ../datasource-view-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Иерархии (вкладка «Структура измерения», конструктор измерений)'
+      href: ../hierarchies-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Атрибуты (вкладка «Структура измерения», конструктор измерений)'
+      href: ../attributes-dimension-designer-analysis-services-multidimensional-data.md
+    - name: Связи атрибутов (конструктор измерений)
+      href: ../attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Конструктор связей атрибутов», конструктор измерений)'
+      href: ../toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Диаграмма связи атрибутов (вкладка «Конструктор связей атрибутов», конструктор измерений)'
+      href: ../attribute-relationship-diagram-analysis-services-multidimensional-data.md
+    - name: 'Атрибуты (вкладка «Конструктор связей атрибутов», конструктор измерений)'
+      href: ../attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Связи атрибутов (вкладка «Конструктор связей атрибутов», конструктор измерений)'
+      href: ../attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: Переводы (конструктор измерений)
+      href: ../translations-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Переводы», конструктор измерений)'
+      href: ../toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md
+    - name: Подробности перевода (вкладка «Переводы» конструктора измерений)
+      href: ../translation-details-dimension-designer-analysis-services-multidimensional-data.md
+    - name: Браузер (конструктор измерений)
+      href: ../browser-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Панель инструментов (вкладка «Браузер», конструктор измерений)'
+      href: ../toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 'Уровень и элементы (вкладка «Браузер», конструктор измерений)'
+      href: ../level-members-dimension-designer-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Свойства измерения»
+  href: ../dimension-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Отклонить предупреждение»
+  href: ../dismiss-warning-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Дублирование роли»
+  href: ../duplicate-security-role-dialog-box-analysis-services-multidimensional-data.md
+- name: диалоговое окно «Включение/отключение обратной записи»
+  href: ../enable-disable-writeback-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Фильтрация элементов»
+  href: ../filter-members-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Поиск таблицы»
+  href: ../find-table-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Создание именованного запроса»
+  href: ../generate-named-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Анализ влияния»
+  href: ../impact-analysis-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Добавочное обновление»
+  href: ../incremental-update-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Ключевые столбцы»
+  href: ../key-columns-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Шаблон именования уровней»
+  href: ../level-naming-template-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Расположение файлов базы данных»
+  href: ../locate-database-files-dialog-box-analysis-services-multidimensional-data.md
+- name: Конструктор многомерных выражений
+  href: ../mdx-builder-analysis-services-multidimensional-data.md
+- name: редактор запросов многомерных выражений
+  href: ../mdx-query-editor-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Привязки группы мер»
+  href: ../measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Слияние секций»
+  href: ../merge-partition-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Создание базы данных»
+  href: ../new-database-dialog-box-analysis-services.md
+- name: Диалоговое окно «Создание меры»
+  href: ../new-measure-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Создание группы мер» (конструктор кубов)
+  href: ../new-measure-group-dialog-box-cube-designer.md
+- name: Диалоговое окно «Привязка объектов»
+  href: ../object-binding-dialog-box.md
+- name: Диалоговое окно «Свойства секции»
+  href: ../partition-properties-dialog-box-ssms.md
+  items:
+    - name: Выбор (диалоговое окно «Свойства секции»)
+      href: ../selection-partition-properties-dialog-box-ssms.md
+    - name: Страница «Общие» (диалоговое окно «Свойства секции»)
+      href: ../general-partition-properties-dialog-box-ssms.md
+    - name: Упреждающее кэширование (диалоговое окно «Свойства секции»)
+      href: ../proactive-caching-partition-properties-dialog-box-ssms.md
+- name: Диалоговое окно «Источник секции»
+  href: ../partition-source-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: Сведения о привязке таблицы (диалоговое окно «Источник секции»)
+      href: ../table-binding-partition-source-dialog-analysis-services-multidimensional-data.md
+    - name: Сведения о привязке запроса (диалоговое окно «Источник секции») (службы SSAS)
+      href: ../query-binding-partition-source-dialog-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Обработка»
+  href: ../process-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Ход обработки»
+  href: ../process-progress-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Обновление представления источников данных»
+  href: ../refresh-data-source-view-dialog-box.md
+- name: Диалоговое окно «Регистрация сборки базы данных»
+  href: ../register-database-assembly-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Реляционные объекты»
+  href: ../relational-objects-dialog-box-analysis-services-multidimensional-data.md
+- name: Удаленные секции — диалоговое окно «Дополнительные параметры»
+  href: ../remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Переименование экземпляра»
+  href: ../rename-instance-dialog-box-analysis-services.md
+- name: Диалоговое окно «Замена таблицы другой таблицей»
+  href: ../replace-table-with-other-table-dialog-box.md
+- name: Диалоговое окно «Восстановление базы данных»
+  href: ../restore-database-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: Общие (диалоговое окно «Восстановление базы данных»)
+      href: ../general-restore-database-dialog-box-analysis-services-multidimensional-data.md
+    - name: Секции (диалоговое окно «Восстановление базы данных»)
+      href: ../partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Сохранение файла»
+  href: ../save-file-as-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Контекст безопасности»
+  href: ../security-context-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Выбор языка»
+  href: ../select-language-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Выбор родительского элемента»
+  href: ../select-parent-member-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Отображение таблицы»
+  href: ../show-table-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Параметры хранилища»
+  href: ../storage-options-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: 'Общие (диалоговое окно «Параметры хранилища») '
+      href: ../general-storage-options-dialog-box-analysis-services-multidimensional-data.md
+    - name: 'Уведомления (диалоговое окно «Параметры хранилища») '
+      href: ../notifications-storage-options-dialog-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Настройки хранилища»
+  href: ../storage-settings-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Выбор пользователей»
+  href: ../user-selection-dialog-box-analysis-services-multidimensional-data.md
+- name: Диалоговое окно «Просмотр подробностей»
+  href: ../view-details-dialog-box-analysis-services-multidimensional-data.md
+- name: редактор запросов XMLA
+  href: ../xmla-query-editor-analysis-services-multidimensional-data.md

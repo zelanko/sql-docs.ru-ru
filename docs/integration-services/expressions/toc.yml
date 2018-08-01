@@ -1,0 +1,162 @@
+- name: Обзор
+  href: integration-services-ssis-expressions.md
+- name: Примеры расширенных выражений служб Integration Services
+  href: examples-of-advanced-integration-services-expressions.md
+- name: Использование выражений свойств в пакетах
+  href: use-property-expressions-in-packages.md
+  items:
+    - name: Констант-перечислителей в выражениях свойств
+      href: enumerated-constants-in-property-expressions.md
+    - name: Добавление или изменение выражение свойства
+      href: add-or-change-a-property-expression.md
+      items:
+        - name: Страница «Выражения»
+          href: expressions-page.md
+        - name: Редактор выражений свойств
+          href: property-expressions-editor.md
+        - name: Построитель выражений
+          href: expression-builder.md
+- name: Типы данных в выражениях служб Integration Services
+  href: integration-services-data-types-in-expressions.md
+- name: Усечение данных (службы SSIS)
+  href: data-truncation-ssis.md
+- name: Дополнение строк (службы SSIS)
+  href: string-padding-ssis.md
+- name: Синтаксис (службы SSIS)
+  href: syntax-ssis.md
+- name: Идентификаторы (службы SSIS)
+  href: identifiers-ssis.md
+- name: Литералы (службы SSIS)
+  href: numeric-string-and-boolean-literals.md
+- name: Операторы (выражение служб SSIS)
+  href: operators-ssis-expression.md
+  items:
+    - name: Очередность и ассоциативность операторов
+      href: operator-precedence-and-associativity.md
+    - name: Приведение (выражение служб SSIS)
+      href: cast-ssis-expression.md
+    - name: () (скобки) (выражение служб SSIS)
+      href: parentheses-ssis-expression.md
+    - name: + (сложение) (службы SSIS)
+      href: add-ssis.md
+    - name: + (объединение) (выражение служб SSIS)
+      href: concatenate-ssis-expression.md
+    - name: '- (вычитание) (выражение служб SSIS)'
+      href: subtract-ssis-expression.md
+    - name: '- (инверсия) (выражение служб SSIS)'
+      href: negate-ssis-expression.md
+    - name: '* (умножение) (выражение служб SSIS)'
+      href: multiply-ssis-expression.md
+    - name: Деление (выражение служб SSIS)
+      href: divide-ssis-expression.md
+    - name: (Остаток от деления) (выражение служб SSIS)
+      href: modulo-ssis-expression.md
+    - name: '|| (логическое ИЛИ) (выражение служб SSIS)'
+      href: logical-or-ssis-expression.md
+    - name: '&& (логическое И) (выражение служб SSIS)'
+      href: logical-and-ssis-expression.md
+    - name: '! (логическое НЕ) (выражение служб SSIS)'
+      href: logical-not-ssis-expression.md
+    - name: '| (битовое включающее ИЛИ) (выражение служб SSIS)'
+      href: bitwise-inclusive-or-ssis-expression.md
+    - name: ^ (битовое исключающее ИЛИ) (выражение служб SSIS)
+      href: bitwise-exclusive-or-ssis-expression.md
+    - name: '& (битовое И) (выражение служб SSIS)'
+      href: bitwise-and-ssis-expression.md
+    - name: ~ (битовое НЕ) (выражение служб SSIS)
+      href: bitwise-not-ssis-expression.md
+    - name: == (равно) (выражение служб SSIS)
+      href: equal-ssis-expression.md
+    - name: '!= (не равно) (выражение служб SSIS)'
+      href: unequal-ssis-expression.md
+    - name: '> (больше) (выражение служб SSIS)'
+      href: greater-than-ssis-expression.md
+    - name: < (меньше) (выражение служб SSIS)
+      href: less-than-ssis-expression.md
+    - name: '>= (больше или равно) (выражение служб SSIS)'
+      href: greater-than-or-equal-to-ssis-expression.md
+    - name: <= (меньше или равно) (выражение служб SSIS)
+      href: less-than-or-equal-to-ssis-expression.md
+    - name: '? : (условный) (выражение служб SSIS)'
+      href: conditional-ssis-expression.md
+- name: Функции (выражение служб SSIS)
+  href: functions-ssis-expression.md
+  items:
+    - name: ABS (выражение служб SSIS)
+      href: abs-ssis-expression.md
+    - name: CEILING (выражение служб SSIS)
+      href: ceiling-ssis-expression.md
+    - name: CODEPOINT (выражение служб SSIS)
+      href: codepoint-ssis-expression.md
+    - name: DATEADD (выражение служб SSIS)
+      href: dateadd-ssis-expression.md
+    - name: DATEDIFF (выражение служб SSIS)
+      href: datediff-ssis-expression.md
+    - name: DATEPART (выражение служб SSIS)
+      href: datepart-ssis-expression.md
+    - name: DAY (выражение служб SSIS)
+      href: day-ssis-expression.md
+    - name: EXP (выражение служб SSIS)
+      href: exp-ssis-expression.md
+    - name: FINDSTRING (выражение служб SSIS)
+      href: findstring-ssis-expression.md
+    - name: FLOOR (выражение службы SSIS)
+      href: floor-ssis-expression.md
+    - name: GETDATE (выражение служб SSIS)
+      href: getdate-ssis-expression.md
+    - name: GETUTCDATE (выражение служб SSIS)
+      href: getutcdate-ssis-expression.md
+    - name: HEX (выражение служб SSIS)
+      href: hex-ssis-expression.md
+    - name: ISNULL (выражение служб SSIS)
+      href: isnull-ssis-expression.md
+    - name: LEFT (выражение служб SSIS)
+      href: left-ssis-expression.md
+    - name: LEN (выражение служб SSIS)
+      href: len-ssis-expression.md
+    - name: LN (выражение служб SSIS)
+      href: ln-ssis-expression.md
+    - name: LOG (выражение служб SSIS)
+      href: log-ssis-expression.md
+    - name: LOWER (выражение служб SSIS)
+      href: lower-ssis-expression.md
+    - name: LTRIM (выражение служб SSIS)
+      href: ltrim-ssis-expression.md
+    - name: MONTH (выражение служб SSIS)
+      href: month-ssis-expression.md
+    - name: NULL (выражение служб SSIS)
+      href: null-ssis-expression.md
+    - name: POWER (выражение служб SSIS)
+      href: power-ssis-expression.md
+    - name: REPLACE (выражение служб SSIS)
+      href: replace-ssis-expression.md
+    - name: REPLACENULL (выражение служб SSIS)
+      href: replacenull-ssis-expression.md
+    - name: REPLICATE (выражение служб SSIS)
+      href: replicate-ssis-expression.md
+    - name: REVERSE (выражение служб SSIS)
+      href: reverse-ssis-expression.md
+    - name: RIGHT (выражение служб SSIS)
+      href: right-ssis-expression.md
+    - name: ROUND (выражение служб SSIS)
+      href: round-ssis-expression.md
+    - name: RTRIM (выражение служб SSIS)
+      href: rtrim-ssis-expression.md
+    - name: SIGN (выражение служб SSIS)
+      href: sign-ssis-expression.md
+    - name: SQRT (выражение служб SSIS)
+      href: sqrt-ssis-expression.md
+    - name: SQUARE (выражение служб SSIS)
+      href: square-ssis-expression.md
+    - name: SUBSTRING (выражение служб SSIS)
+      href: substring-ssis-expression.md
+    - name: TOKEN (выражение служб SSIS)
+      href: token-ssis-expression.md
+    - name: TOKENCOUNT (выражение служб SSIS)
+      href: tokencount-ssis-expression.md
+    - name: TRIM (выражение служб SSIS)
+      href: trim-ssis-expression.md
+    - name: UPPER (выражение служб SSIS)
+      href: upper-ssis-expression.md
+    - name: YEAR (выражение служб SSIS)
+      href: year-ssis-expression.md

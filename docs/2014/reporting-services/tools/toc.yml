@@ -1,0 +1,247 @@
+- name: Инструменты
+  href: reporting-services-tools.md
+- name: Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
+  href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+- name: Службы Reporting Services в SQL Server Data Tools
+  href: reporting-services-in-sql-server-data-tools-ssdt.md
+  items:
+    - name: Разработка отчетов с использованием конструктора отчетов
+      href: design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+      items:
+        - name: Добавление в проект отчета нового или существующего отчета
+          href: add-a-new-or-existing-report-to-a-report-project-ssrs.md
+        - name: импортировать отчеты из базы данных Microsoft Access
+          href: ../import-reports-from-microsoft-access-reporting-services.md
+          items:
+            - name: Поддерживаемые функции отчетов Access
+              href: ../supported-access-report-features-ssrs.md
+        - name: Средства проектирования запросов в конструкторе отчетов SQL Server Data Tools
+          href: ../report-data/query-design-tools-ssrs.md
+    - name: Развертывание и поддержка версий в SQL Server Data Tools
+      href: deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+    - name: Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (SSRS)
+      href: url-examples-for-items-on-a-report-server-sharepoint-mode.md
+    - name: Задание свойства развертывания
+      href: set-deployment-properties-reporting-services.md
+    - name: Закрепление области данных отчета в конструкторе отчетов
+      href: dock-the-report-data-pane-in-report-designer-ssrs.md
+    - name: Справка мастера отчетов
+      href: ../report-wizard-help.md
+      items:
+        - name: Мастер отчетов
+          href: ../welcome-to-the-report-wizard.md
+        - name: Выбор источника данных
+          href: ../select-the-data-source.md
+        - name: Создание запроса
+          href: ../design-the-query.md
+        - name: Построитель запросов
+          href: ../query-builder-report-wizard.md
+        - name: Выбрать тип отчета
+          href: ../select-the-report-type.md
+        - name: Построить таблицу
+          href: ../design-the-table-report-wizard.md
+        - name: Создание матрицы
+          href: ../design-the-matrix.md
+        - name: Выбор макета таблицы
+          href: ../choose-the-table-layout.md
+        - name: Выбор стиля таблицы или матрицы
+          href: ../choose-the-table-style-or-choose-the-matrix-style.md
+        - name: Выбор места развертывания
+          href: ../choose-the-deployment-location.md
+        - name: Завершение работы мастера отчетов
+          href: ../complete-the-report-wizard.md
+    - name: Справка F1 конструктора отчетов
+      href: report-designer-f1-help.md
+      items:
+        - name: Структура документа
+          href: document-outline.md
+        - name: Конструктор
+          href: design-view.md
+        - name: Предварительный просмотр
+          href: preview-view.md
+        - name: Панель группировки
+          href: grouping-pane.md
+        - name: Диалоговое окно страниц свойств проекта
+          href: project-property-pages-dialog-box.md
+        - name: Диалоговое окно «Добавление ссылки»
+          href: ../add-reference-dialog-box.md
+        - name: Диалоговое окно «Видимость столбца»
+          href: ../column-visibility-dialog-box.md
+        - name: Диалоговое окно «Удаление группы»
+          href: ../delete-group-dialog-box.md
+        - name: Диалоговое окно «Удаление столбцов»
+          href: ../delete-columns-dialog-box.md
+        - name: Диалоговое окно «Удаление строк»
+          href: ../delete-rows-dialog-box.md
+        - name: Диалоговое окно «Имя входа служб Reporting Services» (службы SSRS)
+          href: reporting-services-login-dialog-box-ssrs.md
+        - name: Диалоговое окно «Видимость строки»
+          href: ../row-visibility-dialog-box.md
+- name: Службы Reporting Services в среде SQL Server Management Studio
+  href: reporting-services-in-sql-server-management-studio-ssrs.md
+  items:
+    - name: Установка свойств сервера отчетов
+      href: set-report-server-properties-management-studio.md
+    - name: удалить элемент
+      href: delete-an-item-management-studio.md
+    - name: Подключение к серверу отчетов в среде Management Studio
+      href: connect-to-a-report-server-in-management-studio.md
+    - name: Справка F1 по использованию сервера отчетов среде Management Studio
+      href: report-server-in-management-studio-f1-help.md
+      items:
+        - name: Отмена заданий сервера отчетов
+          href: cancel-report-server-jobs-management-studio.md
+        - name: Удаление объектов из каталога
+          href: delete-catalog-items-management-studio.md
+        - name: Свойства задания
+          href: job-properties-management-studio.md
+        - name: Создание общего расписания
+          href: new-shared-schedule-management-studio.md
+        - name: Создать системную роль
+          href: new-system-role-management-studio.md
+        - name: Создание пользовательской роли
+          href: new-user-role-management-studio.md
+        - name: Свойства расписания (страница «Общие»)
+          href: schedule-properties-general-page.md
+        - name: Свойства расписания (страница отчетов)
+          href: schedule-properties-reports-page.md
+        - name: Свойства сервера (страница «Общие»)
+          href: report-server-properties-general-page.md
+        - name: Свойства сервера (страница «Выполнение»)
+          href: server-properties-execution-page.md
+        - name: Свойства сервера (страница «Журнал»)
+          href: server-properties-history-page.md
+        - name: Свойства сервера (страница «Регистрация»)
+          href: server-properties-logging-page.md
+        - name: Свойства сервера (страница «Безопасность»)
+          href: server-properties-security-page-reporting-services.md
+        - name: Свойства сервера (страница «Дополнительно»)
+          href: server-properties-advanced-page-reporting-services.md
+        - name: Свойства системной роли
+          href: system-role-properties-management-studio.md
+        - name: Свойства роли пользователя
+          href: user-role-properties-management-studio.md
+- name: построитель отчетов
+  href: report-builder-authoring-environment-ssrs.md
+- name: Диспетчер отчетов (службы SSRS в основном режиме)
+  href: ../report-manager-ssrs-native-mode.md
+  items:
+    - name: Справка F1 диспетчера отчетов
+      href: ../report-manager-f1-help.md
+      items:
+        - name: Параметр обновления кэша
+          href: ../cache-refresh-options-report-manager.md
+        - name: 'Страница «Кэширование», «Общие наборы данных»'
+          href: ../caching-page-shared-datasets-report-manager.md
+        - name: Страница «Выбор ссылки»
+          href: ../choose-link-page-report-manager.md
+        - name: Страница «Выбор расположения элементов»
+          href: ../choose-item-location-page-report-manager.md
+        - name: Страница «Отчеты с дополнительной информацией»
+          href: ../clickthrough-reports-page-report-manager.md
+        - name: Страница «Содержимое»
+          href: ../contents-page-report-manager.md
+        - name: Страница «Создание управляемой данными подписки»
+          href: ../create-data-driven-subscription-page-report-manager.md
+        - name: Страница «Выбор источника данных»
+          href: ../data-source-selection-page-report-manager.md
+        - name: Страница свойств «Источники данных»
+          href: ../data-sources-properties-page-report-manager.md
+        - name: Страница «Зависимые элементы»
+          href: ../dependent-items-page-report-manager.md
+        - name: Страница «Ошибка»
+          href: ../error-page-report-manager.md
+        - name: Страница свойств «Выполнение»
+          href: ../processing-options-properties-page-report-manager.md
+        - name: 'Страница «Общие свойства», папки'
+          href: ../general-properties-page-folders-report-manager.md
+        - name: 'Страница «Общие свойства», модели'
+          href: ../general-properties-page-models-report-manager.md
+        - name: Страница «Общие свойства» — «элементы отчета»
+          href: ../general-properties-page-report-parts-report-manager.md
+        - name: 'Страница «Общие свойства», отчеты'
+          href: ../general-properties-page-reports-report-manager.md
+        - name: 'Страница «Общие свойства», ресурсы'
+          href: ../general-properties-page-resources-report-manager.md
+        - name: 'Страница «Общие свойства», общие источники данных'
+          href: ../general-properties-page-shared-data-sources-report-manager.md
+        - name: 'Страница «Общие свойства», общие наборы данных'
+          href: ../general-properties-page-shared-datasets-report-manager.md
+        - name: Страница «Свойства параметров моментального снимка»
+          href: ../snapshot-options-properties-page-report-manager.md
+        - name: Страница «Безопасность элементов модели»
+          href: ../model-item-security-page-report-manager.md
+        - name: Страница «Перемещение элементов»
+          href: ../move-items-page-report-manager.md
+        - name: Страница «Мои подписки»
+          href: ../my-subscriptions-page-report-manager.md
+        - name: Страница «Создание источника данных»
+          href: ../new-data-source-page-report-manager.md
+        - name: Страница «Создание папки»
+          href: ../new-folder-page-report-manager.md
+        - name: Страница «Создание связанного отчета»
+          href: ../new-linked-report-page-report-manager.md
+        - name: Страница «Создание модели»
+          href: ../new-model-page-report-manager.md
+        - name: 'Страница "Создание назначения роли", "Изменение назначения роли"'
+          href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
+        - name: 'Страница "Создание расписания", "Изменение расписания"'
+          href: ../new-schedule-edit-schedule-page-report-manager.md
+        - name: Страница "Создание подписки" или "Изменение подписки"
+          href: ../new-subscription-or-edit-subscription-page-report-manager.md
+        - name: 'Страница "Создание назначения системной роли": "Изменение назначения системных ролей"'
+          href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
+        - name: Страница «Свойства параметров»
+          href: ../parameters-properties-page-report-manager.md
+        - name: Страница «Журнал отчета»
+          href: ../report-history-page-report-manager.md
+        - name: Страница «Поиск»
+          href: ../search-page-report-manager.md
+        - name: Страница «Безопасность» (настройки сайта)
+          href: ../security-page-site-settings-report-manager.md
+        - name: 'Страница «Свойства безопасности», элементы'
+          href: ../security-properties-page-items-report-manager.md
+        - name: Страница «Расписание»
+          href: ../schedules-page-report-manager.md
+        - name: Страница «Выбор общего набора данных» (диспетчер отчетов)
+          href: ../shared-dataset-selection-page-report-manager.md
+        - name: Страница «Настройки сайта» (диспетчер отчетов)
+          href: ../site-settings-page-report-manager.md
+        - name: Страница «Подписки»
+          href: ../subscriptions-page-report-manager.md
+        - name: Страница «Передача файла»
+          href: ../upload-file-page-report-manager.md
+        - name: 'Страница «Просмотр», отчеты'
+          href: ../view-page-reports-report-manager.md
+        - name: 'Страница «Просмотр», ресурсы'
+          href: ../view-page-resources-report-manager.md
+    - name: Создание модели с помощью диспетчера отчетов
+      href: ../create-a-model-using-report-manager.md
+    - name: Связывание отчета с моделью в качестве отчета с дополнительной информацией
+      href: ../link-a-report-to-a-model-as-a-clickthrough-report.md
+    - name: Настройка таблицы стилей для средства просмотра HTML-страниц и диспетчера отчетов
+      href: ../customize-style-sheets-for-html-viewer-and-report-manager.md
+- name: Сценарии и PowerShell со службами Reporting Services
+  href: scripting-and-powershell-with-reporting-services.md
+  items:
+    - name: Создание скриптов с помощью программы rs.exe и веб-службы
+      href: script-with-the-rs-exe-utility-and-the-web-service.md
+    - name: Форматирование файла скрипта служб Reporting Services
+      href: format-a-reporting-services-script-file.md
+    - name: Запуск файла скрипта для служб Reporting Services
+      href: run-a-reporting-services-script-file.md
+    - name: Написание скриптов для задач развертывания и администрирования
+      href: script-deployment-and-administrative-tasks.md
+    - name: Образец скрипта программы rs.exe служб Reporting Services для переноса содержимого между серверами отчетов
+      href: sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+    - name: Доступ к поставщику WMI для служб Reporting Services
+      href: access-the-reporting-services-wmi-provider.md
+- name: Программы командной строки сервера отчетов
+  href: report-server-command-prompt-utilities-ssrs.md
+  items:
+    - name: Программа rskeymgmt
+      href: rskeymgmt-utility-ssrs.md
+    - name: Программа rsconfig
+      href: rsconfig-utility-ssrs.md
+    - name: Служебная программа RS.exe (SSRS)
+      href: rs-exe-utility-ssrs.md

@@ -1,0 +1,26 @@
+- name: Каталог и сервер
+  href: integration-services-ssis-server-and-catalog.md
+- name: Каталог служб SSIS
+  href: ssis-catalog.md
+- name: Просмотр списка пакетов на сервере SSIS
+  href: view-the-list-of-packages-on-the-integration-services-server.md
+- name: Справочник по Transact-SQL (каталог SSIS)
+  href: integration-services-ssis-catalog-transact-sql-reference.md
+- name: Диалоговые окна в каталоге SSIS
+  items:
+    - name: Просмотр всех участников-диалоговое окно
+      href: browse-all-principals-dialog-box.md
+    - name: Диалоговое окно «Настройка»
+      href: configure-dialog-box.md
+    - name: Диалоговое окно «Свойства папки»
+      href: folder-properties-dialog-box.md
+    - name: диалоговое окно «Свойства пакета»
+      href: package-properties-dialog-box.md
+    - name: Диалоговое окно свойств проекта
+      href: project-properties-dialog-box.md
+    - name: Диалоговое окно «Версии проекта»
+      href: project-versions-dialog-box.md
+    - name: Диалоговое окно «Задание значения параметра»
+      href: set-parameter-value-dialog-box.md
+    - name: Проверка диалогового окна
+      href: validate-dialog-box.md

@@ -1,0 +1,8 @@
+- name: "Драйвер SQL Python\_— pyodbc"
+  href: python-sql-driver-pyodbc.md
+- name: "Шаг\_1. Настройка среды разработки для использования pyodbc в Python"
+  href: step-1-configure-development-environment-for-pyodbc-python-development.md
+- name: "Шаг\_2. Создание базы данных SQL для разработки с помощью Python pyodbc"
+  href: step-2-create-a-sql-database-for-pyodbc-python-development.md
+- name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью pyodbc"
+  href: step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md

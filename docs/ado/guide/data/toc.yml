@@ -1,0 +1,328 @@
+- name: Основные принципы ADO
+  href: ado-fundamentals.md
+- name: Объекты и коллекции ADO
+  href: ado-objects-and-collections.md
+- name: 'HelloData: простое приложение ADO'
+  href: hellodata-a-simple-ado-application.md
+  items:
+    - name: Комментарии к HelloData
+      href: comments-on-hellodata.md
+    - name: Код HelloData
+      href: hellodata-code.md
+- name: Поставщики OLE DB (ADO)
+  href: ole-db-providers-ado.md
+  items:
+    - name: Поставщики данных
+      href: data-providers.md
+    - name: Поставщики служб и компоненты
+      href: service-providers-and-components.md
+- name: Ошибки (ADO)
+  href: errors-ado.md
+- name: Получение данных
+  href: getting-data.md
+  items:
+    - name: Подключение к источникам данных
+      href: connecting-to-data-sources.md
+      items:
+        - name: Использование объекта Connection
+          href: using-a-connection-object.md
+        - name: Использование объекта Recordset
+          href: using-a-recordset-object.md
+        - name: Создание строки подключения
+          href: creating-a-connection-string.md
+        - name: Указание свойств подключения
+          href: specifying-connection-properties.md
+        - name: Управление транзакциями (ADO)
+          href: controlling-transactions-ado.md
+    - name: Подготовка и выполнение команд
+      href: preparing-and-executing-commands.md
+      items:
+        - name: Обзор объекта Command
+          href: command-object-overview.md
+        - name: Создание и выполнение простой команды
+          href: creating-and-executing-a-simple-command.md
+        - name: Параметры объекта Command
+          href: command-object-parameters.md
+        - name: Вызов хранимой процедуры с использованием команды
+          href: calling-a-stored-procedure-with-a-command.md
+        - name: Вызов хранимой процедуры в качестве метода объекта Connection
+          href: calling-a-stored-procedure-as-a-method-on-a-connection-object.md
+        - name: Именованные команды
+          href: named-commands.md
+        - name: Передача параметров именованной команде
+          href: passing-parameters-to-a-named-command.md
+    - name: Получение результатов
+      href: receiving-results.md
+      items:
+        - name: Получение нескольких наборов записей
+          href: receiving-multiple-recordsets.md
+- name: Проверка данных
+  href: examining-data.md
+  items:
+    - name: Текущая запись и размер набора записей
+      href: current-record-and-size-of-recordset.md
+    - name: Границы набора записей
+      href: boundaries-of-a-recordset.md
+    - name: Переход между записями данных
+      href: navigating-through-data.md
+      items:
+        - name: Переход к записи
+          href: jumping-to-a-record.md
+        - name: Дополнительные способы перемещения в наборе записей
+          href: more-ways-to-move-in-a-recordset.md
+        - name: Использование закладок
+          href: using-bookmarks.md
+        - name: Использование страниц
+          href: using-pages.md
+        - name: Позиционирование в наборе записей
+          href: recordset-positioning.md
+    - name: Пример набора записей для проверки данных
+      href: sample-recordset-for-examining-data.md
+      items:
+        - name: 'Пример кода JScript, возвращающего набор записей'
+          href: jscript-code-example-to-return-a-recordset.md
+    - name: Основные сведения о структуре набора записей
+      href: understanding-recordset-structure.md
+      items:
+        - name: Коллекция Fields
+          href: the-fields-collection.md
+        - name: Объект Field
+          href: the-field-object.md
+        - name: Работа с наборами записей
+          href: working-with-recordsets.md
+- name: Изменение данных
+  href: editing-data.md
+  items:
+    - name: Изменение существующих записей
+      href: editing-existing-records.md
+    - name: Добавление записей
+      href: adding-records.md
+      items:
+        - name: Добавление записей с помощью AddNew
+          href: adding-records-using-addnew.md
+        - name: Добавление нескольких полей
+          href: adding-multiple-fields.md
+        - name: Определение режима изменения
+          href: determining-edit-mode.md
+        - name: Использование AddNew в режиме интерпретации и пакетном режиме
+          href: using-addnew-in-immediate-and-batch-modes.md
+    - name: Определение поддерживаемых возможностей
+      href: determining-what-is-supported.md
+    - name: Удаление записей с помощью метода Delete
+      href: deleting-records-using-the-delete-method.md
+    - name: 'Варианты: с помощью инструкций SQL'
+      href: alternatives-using-sql-statements.md
+- name: Обновление и сохранение данных
+  href: updating-and-persisting-data.md
+  items:
+    - name: Обновление данных
+      href: updating-data.md
+      items:
+        - name: Режим интерпретации
+          href: immediate-mode.md
+        - name: Пакетный режим
+          href: batch-mode.md
+          items:
+            - name: 'Отправка обновлений: метод UpdateBatch'
+              href: sending-the-updates-updatebatch-method.md
+            - name: Фильтрация обновленных записей
+              href: filtering-for-updated-records.md
+            - name: Работа с ошибками обновлений
+              href: dealing-with-failed-updates.md
+            - name: Обнаружение и разрешение конфликтов
+              href: detecting-and-resolving-conflicts.md
+            - name: Отключение и повторное подключение набора записей
+              href: disconnecting-and-reconnecting-the-recordset.md
+            - name: 'Обновление результатов объединения JOIN: уникальная таблица'
+              href: updating-joined-results-unique-table.md
+        - name: Обработка транзакций
+          href: transaction-processing.md
+    - name: Сохранение данных
+      href: persisting-data.md
+      items:
+        - name: Дополнительные сведения о сохраняемости набора записей
+          href: more-about-recordset-persistence.md
+        - name: Сохранение отфильтрованных и иерархических наборов записей
+          href: persisting-filtered-and-hierarchical-recordsets.md
+        - name: Сохранение записей в формате XML
+          href: persisting-records-in-xml-format.md
+          items:
+            - name: Формат сохраняемости XML
+              href: xml-persistence-format.md
+            - name: Пространства имен
+              href: namespaces.md
+            - name: Раздел схемы
+              href: schema-section.md
+            - name: Раздел данных
+              href: data-section.md
+            - name: Иерархические наборы записей в XML
+              href: hierarchical-recordsets-in-xml.md
+            - name: Динамические свойства набора записей в XML
+              href: recordset-dynamic-properties-in-xml.md
+            - name: Преобразования XSLT
+              href: xslt-transformations.md
+            - name: Сохранение в объект DOM XML
+              href: saving-to-the-xml-dom-object.md
+            - name: Вопросы безопасности при работе с XML
+              href: xml-security-considerations.md
+            - name: Сценарий сохраняемости набора записей XML
+              href: xml-recordset-persistence-scenario.md
+- name: Обработка ошибок
+  href: error-handling.md
+  items:
+    - name: Ошибки ADO
+      href: ado-errors.md
+      items:
+        - name: Справочник по ошибкам ADO
+          href: ado-error-reference.md
+    - name: Ошибки поставщика
+      href: provider-errors.md
+    - name: Сведения о связанных с полями ошибках
+      href: field-related-error-information.md
+    - name: Сведения о связанных с наборами записей ошибках
+      href: recordset-related-error-information.md
+    - name: Обработка ошибок на других языках
+      href: handling-errors-in-other-languages.md
+      items:
+        - name: Обработка ошибок в VBScript
+          href: handling-errors-in-vbscript.md
+        - name: Обработка ошибок в Visual C++
+          href: handling-errors-in-visual-c.md
+        - name: Обработка ошибок в Visual J++
+          href: handline-errors-in-visual-j.md
+        - name: Обработка ошибок в JScript
+          href: handling-errors-in-jscript.md
+    - name: Прогнозирование ошибок
+      href: anticipating-errors.md
+- name: Обработка событий ADO
+  href: handling-ado-events.md
+  items:
+    - name: Общие сведения об обработчике событий ADO
+      href: ado-event-handler-summary.md
+    - name: Типы событий
+      href: types-of-events.md
+    - name: Параметры события
+      href: event-parameters.md
+    - name: Совместная работа обработчиков событий
+      href: how-event-handlers-work-together.md
+    - name: Создание экземпляра события ADO на различных языках
+      href: ado-event-instantiation-by-language.md
+      items:
+        - name: 'Создание экземпляра события ADO: Visual Basic'
+          href: ado-event-instantiation-visual-basic.md
+        - name: 'Создание экземпляра события ADO: Visual C++'
+          href: ado-event-instantiation-visual-c.md
+        - name: 'Создание экземпляра события ADO: Visual J++'
+          href: ado-event-instantiation-visual-j.md
+        - name: 'Создание экземпляра события ADO: VBScript'
+          href: ado-event-instantiation-vbscript.md
+        - name: 'Создание экземпляра события ADO: JScript'
+          href: ado-event-instantiation-jscript.md
+        - name: 'Создание экземпляра события ADO: ADO и WFC'
+          href: ado-event-instantiation-ado-and-wfc.md
+- name: Основные сведения о курсорах и блокировок
+  href: understanding-cursors-and-locks.md
+  items:
+    - name: Что такое курсор?
+      href: what-is-a-cursor.md
+    - name: Типы курсоров (ADO)
+      href: types-of-cursors-ado.md
+      items:
+        - name: Курсоры последовательного доступа
+          href: forward-only-cursors.md
+        - name: Статические курсоры
+          href: static-cursors.md
+        - name: Курсоры ключевого набора
+          href: keyset-cursors.md
+        - name: Динамические курсоры
+          href: dynamic-cursors.md
+    - name: Важность положения курсора
+      href: the-significance-of-cursor-location.md
+    - name: Служба курсора Майкрософт для OLE DB
+      href: the-microsoft-cursor-service-for-ole-db.md
+    - name: Что такое блокировка?
+      href: what-is-a-lock.md
+      items:
+        - name: Типы блокировок
+          href: types-of-locks.md
+    - name: Using CacheSize
+      href: using-cachesize.md
+    - name: Характеристики курсора и блокировки
+      href: cursor-and-lock-characteristics.md
+- name: Формирование данных
+  href: data-shaping.md
+  items:
+    - name: Общие сведения о формировании данных
+      href: data-shaping-overview.md
+    - name: Пример формирования данных
+      href: data-shaping-example.md
+      items:
+        - name: Пример формирования данных (Visual Basic)
+          href: visual-basic-example-of-data-shaping.md
+    - name: Изменение формы данных
+      href: reshaping.md
+    - name: Статистические выражения внучатых элементов
+      href: grandchild-aggregates.md
+    - name: Параметризованные команды с промежуточными командами COMPUTE
+      href: parameterized-commands-with-intervening-compute-commands.md
+    - name: Сохранение иерархических наборов записей
+      href: persisting-hierarchical-recordsets.md
+    - name: Обязательные поставщики для формирования данных
+      href: required-providers-for-data-shaping.md
+    - name: Общие сведения о командах формирования данных
+      href: shape-commands-in-general.md
+      items:
+        - name: 'Агрегатные функции, функция CALC и ключевое слово NEW'
+          href: aggregate-functions-the-calc-function-and-the-new-keyword.md
+        - name: Выдача команды для базового поставщика данных
+          href: issuing-commands-to-the-underlying-data-provider.md
+    - name: Предложение APPEND для формирования данных
+      href: shape-append-clause.md
+      items:
+        - name: Использование непараметризованных команд
+          href: operation-of-non-parameterized-commands.md
+        - name: Использование параметризованных команд
+          href: operation-of-parameterized-commands.md
+        - name: Гибридные команды
+          href: hybrid-commands.md
+        - name: Предложения COMPUTE для промежуточного формирования данных
+          href: intervening-shape-compute-clauses.md
+    - name: Предложение COMPUTE для формирования данных
+      href: shape-compute-clause.md
+    - name: Составление иерархических наборов записей
+      href: fabricating-hierarchical-recordsets.md
+    - name: Доступ к строкам в иерархических наборах записей
+      href: accessing-rows-in-a-hierarchical-recordset.md
+    - name: Грамматика формального формирования данных
+      href: formal-shape-grammar.md
+    - name: Функции Visual Basic для приложений
+      href: visual-basic-for-applications-functions.md
+- name: Записи и потоки
+  href: records-and-streams.md
+  items:
+    - name: Потоки и сохраняемость
+      href: streams-and-persistence.md
+    - name: Потоки команд
+      href: command-streams.md
+    - name: Извлечение результирующих наборов в потоки
+      href: retrieving-resultsets-into-streams.md
+    - name: Использование ADO для публикации в Интернете
+      href: using-ado-for-internet-publishing.md
+      items:
+        - name: Поставщик OLE DB для публикации в Интернете
+          href: the-ole-db-provider-for-internet-publishing.md
+        - name: Сценарий публикации в Интернете
+          href: internet-publishing-scenario.md
+          items:
+            - name: "Шаг\_1. Настройка проекта Visual Basic"
+              href: step-1-set-up-the-visual-basic-project.md
+            - name: "Шаг\_2. Инициализация главного списка"
+              href: step-2-initialize-the-main-list-box.md
+            - name: "Шаг\_3. Заполнение списка полей"
+              href: step-3-populate-the-fields-list-box.md
+            - name: "Шаг\_4. Заполнение текстового поля сведений"
+              href: step-4-populate-the-details-text-box.md
+        - name: Абсолютные и относительные URL-адреса
+          href: absolute-and-relative-urls.md
+        - name: Записи и предоставляемые поставщиком поля
+          href: records-and-provider-supplied-fields.md

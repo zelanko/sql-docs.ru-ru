@@ -1,0 +1,12 @@
+- name: Основные принципы объектов данных ActiveX (MD)
+  href: ado-md-fundamentals.md
+- name: Использование ADO с объектами данных ActiveX (MD)
+  href: using-ado-with-ado-md.md
+- name: Общие сведения о многомерных схемах и данных
+  href: overview-of-multidimensional-schemas-and-data.md
+- name: Программирование с объектами данных ActiveX (MD)
+  href: programming-with-ado-md.md
+- name: Работа с многомерными данными
+  href: working-with-multidimensional-data.md
+- name: ADO (многомерные данные) (объекты данных ActiveX (MD))
+  href: ado-multidimensional-ado-md.md

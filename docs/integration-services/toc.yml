@@ -1,0 +1,330 @@
+- name: Службы SQL Server Integration Services
+  href: sql-server-integration-services.md
+- name: Обзор
+  items:
+    - name: "Новые возможности служб Integration Services в SQL Server\_2016"
+      href: what-s-new-in-integration-services-in-sql-server-2016.md
+    - name: "Новые возможности служб Integration Services в SQL Server\_2017"
+      href: what-s-new-in-integration-services-in-sql-server-2017.md
+    - name: Новые и обновленные статьи
+      href: new-updated-integration-services.md
+    - name: 'Функции служб Integration Services, поддерживаемые различными выпусками SQL Server'
+      href: integration-services-features-supported-by-the-editions-of-sql-server.md
+    - name: Обратная совместимость служб Reporting Services
+      href: integration-services-backward-compatibility.md
+- name: Краткие руководства
+  items:
+    - name: Развертывание
+      items:
+        - name: Развертывание с помощью SSMS
+          href: ./ssis-quickstart-deploy-ssms.md
+        - name: Развертывание с помощью Transact-SQL (SSMS)
+          href: ./ssis-quickstart-deploy-tsql-ssms.md
+        - name: Развертывание с помощью Transact-SQL (VS Code)
+          href: ssis-quickstart-deploy-tsql-vscode.md
+        - name: Развертывание с помощью командной строки
+          href: ./ssis-quickstart-deploy-cmdline.md
+        - name: Развертывание с помощью PowerShell
+          href: ssis-quickstart-deploy-powershell.md
+        - name: 'Развертывание с помощью C#'
+          href: ./ssis-quickstart-deploy-dotnet.md
+    - name: Выполнить
+      items:
+        - name: Запуск с помощью SSMS
+          href: ./ssis-quickstart-run-ssms.md
+        - name: Запуск с помощью Transact-SQL (SSMS)
+          href: ./ssis-quickstart-run-tsql-ssms.md
+        - name: Запуск с помощью Transact-SQL (VS Code)
+          href: ssis-quickstart-run-tsql-vscode.md
+        - name: Запуск с помощью командной строки
+          href: ./ssis-quickstart-run-cmdline.md
+        - name: Запуск с помощью PowerShell
+          href: ssis-quickstart-run-powershell.md
+        - name: 'Запуск с помощью C#'
+          href: ./ssis-quickstart-run-dotnet.md
+- name: Развертывание и запуск пакетов в Azure
+  href: lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md
+  items:
+    - name: Руководство. Развертывание и запуск пакетов в Azure
+      href: lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
+    - name: Подключение к данным с проверкой подлинности Windows
+      href: lift-shift/ssis-azure-connect-with-windows-auth.md
+    - name: Сохранение файлов и подключение к общим папкам
+      href: lift-shift/ssis-azure-files-file-shares.md
+    - name: Подключение к каталогу служб SSIS в Azure
+      href: lift-shift/ssis-azure-connect-to-catalog-database.md
+    - name: 'Проверка пакетов, развертываемых в Azure'
+      href: lift-shift/ssis-azure-validate-packages.md
+    - name: Выполнение пакетов в Azure
+      href: lift-shift/ssis-azure-run-packages.md
+    - name: Планирование выполнения пакетов в Azure
+      href: lift-shift/ssis-azure-schedule-packages.md
+    - name: Планирование выполнения пакетов в Azure с помощью SSMS
+      href: lift-shift/ssis-azure-schedule-packages-ssms.md
+- name: Установка или обновление
+  href: ../integration-services/install-windows/install-integration-services.md
+- name: Инструменты разработки и управления
+  href: integration-services-ssis-development-and-management-tools.md
+- name: Проекты и решения
+  href: integration-services-ssis-projects-and-solutions.md
+- name: Пользовательский интерфейс
+  href: integration-services-user-interface.md
+  items:
+    - name: конструктор служб SSIS
+      href: ssis-designer.md
+    - name: Расширенный редактор
+      href: advanced-editor.md
+    - name: Группирование и разгруппирование компонентов
+      href: group-or-ungroup-components.md
+    - name: Использование заметок в пакетах
+      href: use-annotations-in-packages.md
+    - name: Область элементов служб SSIS
+      href: ssis-toolbox.md
+    - name: 'Параметры конструкторов служб Integration Services: страница "Общие"'
+      href: general-page-of-integration-services-designers-options.md
+- name: Пакеты
+  href: integration-services-ssis-packages.md
+  items:
+    - name: Создание пакетов в SQL Server Data Tools
+      href: create-packages-in-sql-server-data-tools.md
+    - name: Добавление копии существующего пакета
+      href: add-copy-of-existing-package.md
+    - name: Установка свойств пакета
+      href: set-package-properties.md
+    - name: просмотр объектов пакета
+      href: view-package-objects.md
+    - name: Копирование пакета с помощью SQL Server Data Tools
+      href: copy-a-package-in-sql-server-data-tools.md
+    - name: Копирование объектов пакета
+      href: copy-package-objects.md
+    - name: Сохранение пакетов
+      href: save-packages.md
+    - name: Повторное использование потока управления для нескольких пакетов с помощью частей пакета потока управления
+      href: reuse-control-flow-across-packages-by-using-control-flow-package-parts.md
+    - name: Повторное использование объектов пакета
+      href: reuse-of-package-objects.md
+    - name: Удаление пакетов
+      href: delete-packages.md
+    - name: 'dtutil, программа'
+      href: dtutil-utility.md
+    - name: Справка F1 мастера обновления пакетов
+      href: ssis-package-upgrade-wizard-f1-help.md
+    - name: Параметры пакета и проекта
+      href: integration-services-ssis-package-and-project-parameters.md
+- name: Соединения
+  href: ../integration-services/connection-manager/integration-services-ssis-connections.md
+- name: Поток управления
+  href: ../integration-services/control-flow/control-flow.md
+- name: Поток данных
+  href: ../integration-services/data-flow/data-flow.md
+- name: Переменные
+  href: integration-services-ssis-variables.md
+  items:
+    - name: Окно переменных
+      href: variables-window.md
+    - name: Системные переменные
+      href: system-variables.md
+- name: Выражения
+  href: ../integration-services/expressions/integration-services-ssis-expressions.md
+- name: Обработчики событий
+  href: integration-services-ssis-event-handlers.md
+- name: Запросы
+  href: integration-services-ssis-queries.md
+- name: Transactions
+  href: integration-services-transactions.md
+- name: Развертывание пакетов
+  href: packages/deploy-integration-services-ssis-projects-and-packages.md
+- name: Выполнение пакетов
+  href: packages/run-integration-services-ssis-packages.md
+- name: Масштабирование
+  href: scale-out/integration-services-ssis-scale-out.md
+- name: Каталог и сервер
+  href: catalog/integration-services-ssis-server-and-catalog.md
+- name: Обслуживание (для прежних версий)
+  href: ../integration-services/service/integration-services-service-ssis-service.md
+- name: безопасность
+  href: ../integration-services/security/security-overview-integration-services.md
+- name: Производительность
+  href: ../integration-services/performance/monitor-running-packages-and-other-operations.md
+- name: Устранение неполадок
+  href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
+- name: Системные представления
+  href: ../integration-services/system-views/views-integration-services-catalog.md
+- name: Системные хранимые процедуры
+  href: ../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md
+- name: "Системная функция\_— dm_execution_performance_counters"
+  href: functions-dm-execution-performance-counters.md
+- name: Справочник по ошибкам и событиям
+  href: errors-and-events-reference-integration-services.md
+  items:
+    - name: Справочник по сообщениям об ошибках служб Integration Services
+      href: integration-services-error-and-message-reference.md
+- name: Создание скриптов и программ
+  items:
+    - name: Общие сведения о программировании служб Integration Services
+      href: integration-services-programming-overview.md
+    - name: Основные сведения о синхронных и асинхронных преобразованиях
+      href: understanding-synchronous-and-asynchronous-transformations.md
+    - name: Работа с диспетчерами соединений программным образом
+      href: working-with-connection-managers-programmatically.md
+    - name: Расширение пакетов с помощью сценариев
+      href: ../integration-services/extending-packages-scripting/extending-packages-with-scripting.md
+    - name: Расширение пакетов с помощью пользовательских объектов
+      href: ../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md
+    - name: Программное построение пакетов
+      href: ../integration-services/building-packages-programmatically/adding-connections-programmatically.md
+    - name: Программный запуск и контроль пакетов
+      href: ../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md
+- name: Справочник по языку служб Integration Services
+  href: integration-services-language-reference.md
+- name: Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)
+  href: azure-feature-pack-for-integration-services-ssis.md
+- name: Поддержка Hadoop и HDFS в службах Integration Services (SSIS)
+  href: hadoop-and-hdfs-support-in-integration-services-ssis.md
+- name: Соединители Microsoft для Oracle и Teradata компании Attunity
+  href: attunity-connectors.md
+- name: Импорт и экспорт данных
+  href: ../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+- name: Импорт из Excel и экспорт в Excel
+  href: load-data-to-from-excel-with-ssis.md
+- name: "Загрузка данных в хранилище данных\_SQL"
+  href: load-data-to-sql-data-warehouse.md
+- name: система отслеживания измененных данных
+  href: ../integration-services/change-data-capture/change-data-capture-ssis.md
+- name: Соединитель Microsoft Connector для SAP BW
+  href: microsoft-connector-for-sap-bw.md
+  items:
+    - name: Установка Microsoft Connector для SAP BW
+      href: installing-the-microsoft-connector-for-sap-bw.md
+    - name: Компоненты Microsoft Connector для SAP BW
+      href: microsoft-connector-for-sap-bw-components.md
+    - name: Справка F1 по Microsoft Connector для SAP BW
+      href: microsoft-connector-for-sap-bw-f1-help.md
+    - name: Сертификация SAP
+      href: certification-by-sap.md
+- name: Учебники
+  href: integration-services-tutorials.md
+  items:
+    - name: Создание пакета
+      href: ssis-how-to-create-an-etl-package.md
+      items:
+        - name: "Урок\_1. Создание проекта и основного пакета"
+          href: lesson-1-create-a-project-and-basic-package-with-ssis.md
+          items:
+            - name: "Занятие\_1–1. Создание проекта служб Integration Services"
+              href: lesson-1-1-creating-a-new-integration-services-project.md
+            - name: "Занятие\_1–2. Добавление и настройка диспетчера соединений с неструктурированными файлами"
+              href: lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
+            - name: "Занятие\_1–3. Добавление и настройка диспетчера соединений OLE\_DB"
+              href: lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
+            - name: Занятие 1–4. Добавление задачи потока данных в пакет
+              href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
+            - name: Занятие 1–5. Добавление и настройка источника неструктурированных файлов
+              href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
+            - name: "Занятие\_1-6. Добавление и настройка преобразований «Уточняющий запрос»"
+              href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
+            - name: Занятие 1–7. Добавление и настройка назначения OLE DB
+              href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
+            - name: "Занятие\_1–8. Облегчение чтения пакета, созданного на занятии\_1"
+              href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
+            - name: 'Занятие 1–9. Проверка учебного пакета, созданного на занятии 1'
+              href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
+        - name: "Урок\_2. Добавление циклов"
+          href: lesson-2-adding-looping-with-ssis.md
+          items:
+            - name: "Занятие\_2–1. Копирование пакета, созданного на занятии\_1"
+              href: lesson-2-1-copying-the-lesson-1-package.md
+            - name: "Занятие\_2–2. Добавление и настройка контейнера \"цикл по каждому элементу\"\_| Документы Майкрософт"
+              href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
+            - name: "Занятие\_2-3. Изменение диспетчера соединений с неструктурированными файлами"
+              href: lesson-2-3-modifying-the-flat-file-connection-manager.md
+            - name: "Занятие\_2–4. Проверка учебного пакета, созданного на занятии\_2"
+              href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
+        - name: "Урок\_3. Добавление ведения журнала"
+          href: lesson-3-add-logging-with-ssis.md
+          items:
+            - name: "Занятие\_3–1. Копирование пакета, созданного на занятии\_2"
+              href: lesson-3-1-copying-the-lesson-2-package.md
+            - name: Занятие 3–2. Добавление и настройка ведения журнала
+              href: lesson-3-2-adding-and-configuring-logging.md
+            - name: "Занятие\_3–3. Проверка учебного пакета, созданного на занятии\_3"
+              href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
+        - name: "Урок\_4. Добавление перенаправления потока ошибок"
+          href: lesson-4-add-error-flow-redirection-with-ssis.md
+          items:
+            - name: "Занятие\_4–1. Копирование пакета, созданного на занятии\_3"
+              href: lesson-4-1-copying-the-lesson-3-package.md
+            - name: Занятие 4–2. Создание поврежденного файла
+              href: lesson-4-2-creating-a-corrupted-file.md
+            - name: "Занятие\_4-3. Добавление перенаправления потока ошибок"
+              href: lesson-4-3-adding-error-flow-redirection.md
+            - name: "Занятие\_4–4. Добавление назначения \"Неструктурированный файл\""
+              href: lesson-4-4-adding-a-flat-file-destination.md
+            - name: "Занятие\_4–5. Проверка учебного пакета, созданного на занятии\_4"
+              href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
+        - name: "Урок\_5. Добавление конфигураций пакетов в модель развертывания пакета"
+          href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
+          items:
+            - name: "Занятие\_5-1. Копирование пакета, созданного на занятии\_4"
+              href: lesson-5-1-copying-the-lesson-4-package.md
+            - name: "Занятие\_5–2. Активация и настройка конфигураций пакетов"
+              href: lesson-5-2-enabling-and-configuring-package-configurations.md
+            - name: "Занятие\_5–3. Изменение значения конфигурации свойства Directory"
+              href: lesson-5-3-modifying-the-directory-property-configuration-value.md
+            - name: "Занятие\_5–4. Проверка учебного пакета, созданного на занятии\_5"
+              href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
+        - name: Занятие 6. Использование параметров в модели развертывания проекта
+          href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
+          items:
+            - name: 'Занятие 6–1. Копирование пакета, созданного на занятии 5'
+              href: lesson-6-1-copying-the-lesson-5-package.md
+            - name: Занятие 6–2. Преобразование проекта в модель развертывания проекта
+              href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
+            - name: "Занятие\_6–3. Проверка пакета, созданного на занятии\_6"
+              href: lesson-6-3-testing-the-lesson-6-package.md
+            - name: "Занятие\_6–4. Развертывание пакета, созданного на занятии\_6"
+              href: lesson-6-4-deploying-the-lesson-6-package.md
+    - name: Развертывание пакетов
+      href: deploy-packages-with-ssis.md
+      items:
+        - name: Урок 1. Подготовка к созданию пакета развертывания
+          href: lesson-1-preparing-to-create-the-deployment-bundle.md
+          items:
+            - name: "Занятие\_1–1. Создание рабочих папок и переменных среды"
+              href: lesson-1-1-creating-working-folders-and-environment-variables.md
+            - name: "Занятие\_1–2. Создание проекта развертывания"
+              href: lesson-1-2-creating-the-deployment-project.md
+            - name: "Занятие\_1–3. Добавление пакетов и других файлов"
+              href: lesson-1-3-adding-packages-and-other-files.md
+            - name: "Занятие\_1–4. Добавление конфигураций пакетов"
+              href: lesson-1-4-adding-package-configurations.md
+            - name: "Занятие\_1–5. Тестирование обновленных пакетов"
+              href: lesson-1-5-testing-the-updated-packages.md
+        - name: "Урок\_2. Создание пакета развертывания"
+          href: lesson-2-create-the-deployment-bundle-in-ssis.md
+          items:
+            - name: "Занятие\_2–1. Построение программы развертывания"
+              href: lesson-2-1-building-the-deployment-utility.md
+            - name: "Занятие\_2–2. Проверка пакета развертывания"
+              href: lesson-2-2-verifying-the-deployment-bundle.md
+        - name: "Урок\_3. Установка пакетов"
+          href: lesson-3-install-ssis-packages.md
+          items:
+            - name: Занятие 3–1. Копирование пакета развертывания
+              href: lesson-3-1-copying-the-deployment-bundle.md
+            - name: "Занятие\_3–2. Запуск мастера установки пакета"
+              href: lesson-3-2-running-the-package-installation-wizard.md
+            - name: "Занятие\_3–3. Тестирование развернутых пакетов"
+              href: lesson-3-3-testing-the-deployed-packages.md
+- name: Ресурсы
+  items:
+    - name: Получить справку на форуме SSIS
+      href: 'https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices'
+    - name: Получить справку на сайте Stack Overflow
+      href: 'http://stackoverflow.com/questions/tagged/ssis'
+    - name: Читать блог группы разработки служб SSIS
+      href: 'https://blogs.msdn.microsoft.com/ssis/'
+    - name: Сообщить о проблемах или запросить новые функции
+      href: 'https://feedback.azure.com/forums/908035-sql-server'
+    - name: Получить документы на ПК
+      href: ../sql-server/sql-server-help-installation.md

@@ -1,0 +1,337 @@
+- name: Службы Integration Services
+  href: sql-server-integration-services.md
+  items:
+    - name: What's New
+      href: what-s-new-in-integration-services-in-sql-server-2016.md
+    - name: Обратная совместимость служб Reporting Services
+      href: integration-services-backward-compatibility.md
+    - name: Устаревшие функции служб SQL Server 2014 Integration Services
+      href: deprecated-integration-services-features-in-sql-server-2014.md
+    - name: Неподдерживаемые возможности служб Integration Services в SQL Server 2014
+      href: discontinued-integration-services-functionality-in-sql-server-2014.md
+    - name: Критические изменения в функциях служб Integration Services в SQL Server 2014
+      href: breaking-changes-to-integration-services-features-in-sql-server-2014.md
+    - name: Изменения в работе служб Integration Services в SQL Server 2014
+      href: behavior-changes-to-integration-services-features-in-sql-server-2014.md
+- name: Функции и задачи служб Integration Services
+  href: integration-services-features-and-tasks.md
+- name: Службы Integration Services (SSIS) и среды Studio
+  href: integration-services-ssis-development-and-management-tools.md
+  items:
+    - name: конструктор служб SSIS
+      href: ssis-designer.md
+      items:
+        - name: Вкладка «Выполнение»
+          href: progress-tab.md
+        - name: Страница «Общие»
+          href: general-page-of-integration-services-designers-options.md
+        - name: Страница «Подтверждение удаления»
+          href: confirm-delete-page.md
+        - name: Область элементов служб SSIS
+          href: ssis-toolbox.md
+        - name: Перемещение элементов панели элементов служб SSIS
+          href: move-ssis-toolbox-items.md
+    - name: Пользовательский интерфейс служб Integration Services
+      href: integration-services-user-interface.md
+      items:
+        - name: Расширенный редактор
+          href: advanced-editor.md
+    - name: 'dtutil, программа'
+      href: dtutil-utility.md
+    - name: Программа выполнения пакетов справочника по пользовательскому интерфейсу (DtExecUI)
+      href: packages/execute-package-utility-dtexecui-ui-reference.md
+    - name: Программа dtexec
+      href: packages/dtexec-utility.md
+    - name: Построитель выражений
+      href: expression-builder-integration-services.md
+    - name: Мастер импорта проектов
+      href: import-project-wizard.md
+- name: Пакеты служб Integration Services (SSIS)
+  href: integration-services-ssis-packages.md
+  items:
+    - name: Поток управления +
+      href: control-flow/control-flow.md
+    - name: Поток данных +
+      href: data-flow/data-flow.md
+    - name: Группирование и разгруппирование компонентов
+      href: group-or-ungroup-components.md
+    - name: Система отслеживания измененных данных +
+      href: change-data-capture/change-data-capture-ssis.md
+    - name: Добавление копии существующего пакета
+      href: add-copy-of-existing-package.md
+    - name: Удаление пакетов
+      href: delete-packages.md
+    - name: Создание пакетов в SQL Server Data Tools
+      href: create-packages-in-sql-server-data-tools.md
+    - name: Установка свойств пакета
+      href: set-package-properties.md
+      items:
+        - name: Установка свойств переменной пакета
+          href: set-the-properties-of-a-package.md
+    - name: Повторное использование объектов пакета
+      href: reuse-of-package-objects.md
+    - name: просмотр объектов пакета
+      href: view-package-objects.md
+      items:
+        - name: Просмотр объектов пакета в обозревателе пакетов
+          href: view-package-objects-in-package-explorer.md
+    - name: Сохранение пакетов
+      href: save-packages.md
+      items:
+        - name: Сохранение копии пакета
+          href: save-copy-of-package.md
+        - name: Сохранение одной копии пакета
+          href: save-a-copy-of-a-package.md
+        - name: Сохранение пакета в файловой системе
+          href: save-a-package-to-the-file-system.md
+        - name: Сохранение пакета в качестве шаблона пакета
+          href: save-a-package-as-a-package-template.md
+        - name: Копирование пакета с помощью SQL Server Data Tools
+          href: copy-a-package-in-sql-server-data-tools.md
+        - name: Копирование объектов пакета
+          href: copy-package-objects.md
+    - name: Использование заметок в пакетах
+      href: use-annotations-in-packages.md
+      items:
+        - name: Добавление заметки к пакету
+          href: add-an-annotation-to-a-package.md
+    - name: Перезапуск пакетов с помощью контрольных точек
+      href: packages/restart-packages-by-using-checkpoints.md
+      items:
+        - name: 'Настройка контрольных точек для повторного запуска пакета, завершившегося с ошибкой'
+          href: configure-checkpoints-for-restarting-a-failed-package.md
+    - name: Справка F1 мастера обновления пакетов служб SSIS
+      href: ssis-package-upgrade-wizard-f1-help.md
+      items:
+        - name: Мастер обновления служб SSIS (мастер обновления пакетов служб SSIS)
+          href: ssis-upgrade-wizard-ssis-package-upgrade-wizard.md
+        - name: Выбор расположения источника (мастер обновления пакетов служб SSIS)
+          href: select-source-location-ssis-package-upgrade-wizard.md
+        - name: Выбор целевого расположения (мастер обновления пакетов служб SSIS)
+          href: select-destination-location-ssis-package-upgrade-wizard.md
+        - name: Выбор параметров управления пакетами (мастер обновления пакетов служб SSIS)
+          href: select-package-management-options-ssis-package-upgrade-wizard.md
+        - name: Выбор пакетов (мастер обновления пакетов служб SSIS)
+          href: select-packages-ssis-package-upgrade-wizard.md
+        - name: Завершение работы мастера (мастер обновления пакетов служб SSIS)
+          href: complete-the-wizard-ssis-package-upgrade-wizard.md
+        - name: Обновление пакетов (мастер обновления пакетов служб SSIS)
+          href: upgrading-the-packages-ssis-package-upgrade-wizard.md
+    - name: Мастер импорта и экспорта SQL Server +
+      href: import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+    - name: Импорт из Excel и экспорт в Excel
+      href: load-data-to-from-excel-with-ssis.md
+    - name: Инструменты устранения неполадок при разработке пакета +
+      href: troubleshooting/troubleshooting-tools-for-package-development.md
+    - name: Регистрация событий в пакете служб Integration Services
+      href: performance/events-logged-by-an-integration-services-package.md
+    - name: Просмотр записей журнала в окне "Регистрация событий"
+      href: view-log-entries-in-the-log-events-window.md
+    - name: Вкладка «Обозреватель пакетов служб SSIS»
+      href: ssis-package-explorer-tab.md
+    - name: Формат пакетов служб SSIS
+      href: ssis-package-format.md
+    - name: Основы работы с пакетами служб SSIS
+      href: ssis-package-essentials.md
+- name: Соединения в службах Integration Services (SSIS)
+  href: connection-manager/integration-services-ssis-connections.md
+- name: Проекты служб Integration Services (SSIS)
+  href: integration-services-ssis-projects-and-solutions.md
+  items:
+    - name: Разработка проекта служб Integration Services
+      href: development-of-an-integration-services-project.md
+    - name: Добавление или удаление проектом служб Integration Services из решения
+      href: add-or-remove-an-integration-services-project-in-a-solution.md
+    - name: Создание нового проекта служб Integration Services
+      href: create-a-new-integration-services-project.md
+    - name: Импорт проекта служб Integration Services
+      href: import-an-integration-services-project.md
+    - name: Добавление элемента к проекту служб Integration Services
+      href: add-an-item-to-an-integration-services-project.md
+    - name: Копирование элементов проекта
+      href: copy-project-items.md
+    - name: Параметры служб Integration Services (SSIS)
+      href: integration-services-ssis-package-and-project-parameters.md
+    - name: Parameterize Dialog Box
+      href: parameterize-dialog-box.md
+    - name: Create Parameters
+      href: create-parameters.md
+    - name: Задать значения параметров после развертывания проекта
+      href: set-parameter-values-after-the-project-is-deployed.md
+- name: Запросы в службах Integration Services (SSIS)
+  href: integration-services-ssis-queries.md
+  items:
+    - name: Построитель запросов
+      href: query-builder.md
+    - name: Выражения служб Integration Services (SSIS)
+      href: expressions/integration-services-ssis-expressions.md
+    - name: Переменные в службах Integration Services (SSIS)
+      href: integration-services-ssis-variables.md
+    - name: Системные переменные
+      href: system-variables.md
+    - name: Использование переменных в пакетах
+      href: use-variables-in-packages.md
+    - name: 'Добавление, удаление и изменение области определяемой пользователем переменной в пакете'
+      href: add-delete-change-scope-of-user-defined-variable-in-a-package.md
+    - name: Установка свойств определяемой пользователем переменной
+      href: set-the-properties-of-a-user-defined-variable.md
+    - name: Сопоставления параметров запросов с переменными в компонентах потока данных
+      href: data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md
+    - name: Добавить переменную
+      href: add-variable.md
+    - name: Параметры сетки переменных
+      href: variable-grid-options.md
+    - name: Выбор переменных
+      href: select-variables.md
+    - name: Окно переменных
+      href: variables-window.md
+- name: Обработчики событий в службах Integration Services (SSIS)
+  href: integration-services-ssis-event-handlers.md
+  items:
+    - name: Вкладка «Обработчики событий»
+      href: event-handlers-tab.md
+    - name: Добавление к пакету обработчик событий
+      href: add-an-event-handler-to-a-package.md
+- name: Службы Integration Services (службы SSIS)
+  href: service/integration-services-service-ssis-service.md
+- name: Службы Integration Services (SSIS Server)
+  href: catalog/integration-services-ssis-server-and-catalog.md
+- name: Каталог служб SSIS +
+  href: catalog/ssis-catalog.md
+- name: Развертывание проектов и пакетов +
+  href: packages/deploy-integration-services-ssis-projects-and-packages.md
+- name: Наблюдение за выполнением пакетов и других операций +
+  href: performance/monitor-running-packages-and-other-operations.md
+- name: Безопасность +
+  href: security/security-overview-integration-services.md
+- name: Пакет дополнительных компонентов Azure
+  href: azure-feature-pack-for-integration-services-ssis.md
+- name: Справочник по ошибкам и событиям
+  href: errors-and-events-reference-integration-services.md
+  items:
+    - name: Справочник по сообщениям об ошибках служб Integration Services
+      href: integration-services-error-and-message-reference.md
+- name: Руководство разработчика (службы Integration Services)
+  href: integration-services-developer-documentation.md
+  items:
+    - name: Общие сведения о программировании служб Integration Services
+      href: integration-services-programming-overview.md
+    - name: Основные сведения о синхронных и асинхронных преобразованиях
+      href: understanding-synchronous-and-asynchronous-transformations.md
+    - name: Работа с диспетчерами соединений программным образом
+      href: working-with-connection-managers-programmatically.md
+    - name: Расширение пакетов с помощью сценариев +
+      href: extending-packages-scripting/extending-packages-with-scripting.md
+- name: Учебники по службам Integration Services
+  href: integration-services-tutorials.md
+- name: Учебник по службам SSIS. Создание простого ETL-пакета
+  href: ssis-how-to-create-an-etl-package.md
+  items:
+    - name: Урок 1. Создание проекта и основного пакета
+      href: lesson-1-create-a-project-and-basic-package-with-ssis.md
+      items:
+        - name: Шаг 1. Создание нового проекта служб Integration Services
+          href: lesson-1-1-creating-a-new-integration-services-project.md
+        - name: Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами
+          href: lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
+        - name: Шаг 3. Добавление и настройка диспетчера соединений OLE DB
+          href: lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
+        - name: Этап 4. Добавление задачи потока данных в пакет
+          href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
+        - name: Шаг 5. Добавление и настройка источника неструктурированных файлов
+          href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
+        - name: Шаг 6. Добавление и настройка преобразований «Уточняющий запрос»
+          href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
+        - name: Шаг 7. Добавление и настройка назначения OLE DB
+          href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
+        - name: 'Шаг 8. Облегчение чтения пакета, созданного на занятии 1'
+          href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
+        - name: 'Шаг 9. Проверка учебного пакета, созданного на занятии 1'
+          href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
+    - name: Занятие 2. Добавление циклов
+      href: lesson-2-adding-looping-with-ssis.md
+      items:
+        - name: Шаг 1. Копирование пакета занятия 1
+          href: lesson-2-1-copying-the-lesson-1-package.md
+        - name: Шаг 2. Добавление и настройка контейнера "цикл по каждому элементу"
+          href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
+        - name: Шаг 3. Изменение диспетчера соединений с неструктурированными файлами
+          href: lesson-2-3-modifying-the-flat-file-connection-manager.md
+        - name: 'Шаг 4. Проверка учебного пакета, созданного на занятии 2'
+          href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
+    - name: Урок 3. Добавление журнала
+      href: lesson-3-add-logging-with-ssis.md
+      items:
+        - name: Шаг 1. Копирование пакета занятия 2
+          href: lesson-3-1-copying-the-lesson-2-package.md
+        - name: Шаг 2. Добавление и настройка ведения журнала
+          href: lesson-3-2-adding-and-configuring-logging.md
+        - name: 'Шаг 3. Проверка учебного пакета, созданного на занятии 3'
+          href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
+    - name: Урок 4. Добавление перенаправления потока ошибок
+      href: lesson-4-add-error-flow-redirection-with-ssis.md
+      items:
+        - name: Шаг 1. Копирование пакета занятия 3
+          href: lesson-4-1-copying-the-lesson-3-package.md
+        - name: Этап 2. Создание поврежденного файла
+          href: lesson-4-2-creating-a-corrupted-file.md
+        - name: Шаг 3. Добавление перенаправления потока ошибок
+          href: lesson-4-3-adding-error-flow-redirection.md
+        - name: Шаг 4. Добавление назначения «Неструктурированный файл»
+          href: lesson-4-4-adding-a-flat-file-destination.md
+        - name: 'Шаг 5. Проверка учебного пакета, созданного на занятии 4'
+          href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
+    - name: Урок 5. Добавление конфигураций пакетов в модель развертывания пакета
+      href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
+      items:
+        - name: Шаг 1. Копирование пакета занятия 4
+          href: lesson-5-1-copying-the-lesson-4-package.md
+        - name: Шаг 2. Активация и настройка конфигурации пакетов
+          href: lesson-5-2-enabling-and-configuring-package-configurations.md
+        - name: Шаг 3. Изменение значения конфигурации свойства Directory
+          href: lesson-5-3-modifying-the-directory-property-configuration-value.md
+        - name: 'Шаг 4. Проверка учебного пакета, созданного на занятии 5'
+          href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
+    - name: Занятие 6. Использование параметров в модели развертывания проекта
+      href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
+      items:
+        - name: Шаг 1. Копирование пакета занятия 5
+          href: lesson-6-1-copying-the-lesson-5-package.md
+        - name: Этап 2. Преобразование проекта в модель развертывания проекта
+          href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
+        - name: 'Шаг 3. Проверка пакета, созданного на занятии 6'
+          href: lesson-6-3-testing-the-lesson-6-package.md
+        - name: 'Шаг 4. Развертывание пакета, созданного на занятии 6'
+          href: lesson-6-4-deploying-the-lesson-6-package.md
+- name: Учебник по службам SSIS. Развертывание пакетов
+  href: deploy-packages-with-ssis.md
+  items:
+    - name: Урок 1. Подготовка к созданию пакета развертывания
+      href: lesson-1-preparing-to-create-the-deployment-bundle.md
+      items:
+        - name: "Шаг\_1. Создание рабочих папок и переменных среды"
+          href: lesson-1-1-creating-working-folders-and-environment-variables.md
+        - name: Шаг 2. Создание проекта развертывания
+          href: lesson-1-2-creating-the-deployment-project.md
+        - name: Шаг 3. Добавление пакетов и других файлов
+          href: lesson-1-3-adding-packages-and-other-files.md
+        - name: Шаг 4. Добавление конфигурации пакета
+          href: lesson-1-4-adding-package-configurations.md
+        - name: Шаг 5. Тестирование обновленных пакетов
+          href: lesson-1-5-testing-the-updated-packages.md
+    - name: Занятие 2. Cоздание пакета развертывания
+      href: lesson-2-create-the-deployment-bundle-in-ssis.md
+      items:
+        - name: Шаг 1. Построение программы развертывания
+          href: lesson-2-1-building-the-deployment-utility.md
+        - name: Этап 2. Проверка пакета развертывания
+          href: lesson-2-2-verifying-the-deployment-bundle.md
+    - name: Урок 3. Установка пакетов
+      href: lesson-3-install-ssis-package.md
+      items:
+        - name: Шаг 1. Копирование пакета развертывания
+          href: lesson-3-1-copying-the-deployment-bundle.md
+        - name: "Шаг\_2. Запуск мастера установки пакета"
+          href: lesson-3-2-running-the-package-installation-wizard.md
+        - name: Шаг 3. Тестирование развернутых пакетов
+          href: lesson-3-3-testing-the-deployed-packages.md

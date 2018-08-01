@@ -1,0 +1,59 @@
+- name: Обзор средств и служебных программ SQL Server
+  href: ../tools/overview-sql-tools.md
+- name: Новые и обновленные статьи
+  href: new-updated-tools.md
+- name: SQL Operations Studio (предварительная версия)
+  href: ../sql-operations-studio/what-is.md
+- name: SQL Server Management Studio (SSMS)
+  href: ../ssms/download-sql-server-management-studio-ssms.md
+- name: SQL Server Data Tools (SSDT)
+  href: ../ssdt/download-sql-server-data-tools-ssdt.md
+- name: mssql-cli (программа командной строки для запросов)
+  href: mssql-cli.md
+- name: диспетчер конфигураций
+  href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
+- name: mssql-conf (Linux)
+  href: ../linux/sql-server-linux-configure-mssql-conf.md
+- name: Распределенное воспроизведение
+  href: ../tools/distributed-replay/install-distributed-replay-overview.md
+- name: Помощник по настройке ядра СУБД (dta)
+  href: ../tools/dta/dta-utility.md
+- name: Приложение SQL Server Profiler
+  href: ../tools/sql-server-profiler/sql-server-profiler.md
+- name: Service Broker (ssbdiagnose)
+  href: ../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
+- name: Программы командной строки
+  href: command-prompt-utility-reference-database-engine.md
+  items:
+    - name: Программа массового копирования (bcp)
+      href: bcp-utility.md
+    - name: Программа SqlLocalDB
+      href: sqllocaldb-utility.md
+    - name: Программа osql
+      href: osql-utility.md
+    - name: Приложение SQL Profiler
+      href: profiler-utility.md
+    - name: 'sqlagent90, приложение'
+      href: sqlagent90-application.md
+    - name: Служебная программа sqlcmd
+      href: sqlcmd-utility.md
+    - name: 'SQLdiag, программа'
+      href: sqldiag-utility.md
+    - name: 'sqlmaint, программа'
+      href: sqlmaint-utility.md
+    - name: Приложение sqllogship
+      href: sqllogship-application.md
+    - name: программа sqlps
+      href: sqlps-utility.md
+    - name: Приложение sqlservr
+      href: sqlservr-application.md
+    - name: 'tablediff, программа'
+      href: tablediff-utility.md
+- name: sqlpackage
+  items:
+    - name: Установка sqlpackage
+      href: sqlpackage-download.md
+    - name: Заметки о выпуске
+      href: sqlpackage-release-notes.md
+    - name: Справочник по sqlpackage
+      href: sqlpackage.md

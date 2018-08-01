@@ -1,0 +1,28 @@
+- name: Aggregations and Aggregation Designs
+  href: aggregations-and-aggregation-designs.md
+- name: Вычисления
+  href: calculations.md
+- name: Ячейки куба (службы Analysis Services — многомерные данные)
+  href: cube-cells-analysis-services-multidimensional-data.md
+- name: Объекты куба (службы Analysis Services — многомерные данные)
+  href: cube-objects-analysis-services-multidimensional-data.md
+- name: "Свойства куба\_— программирование многомерной модели"
+  href: cube-properties-multidimensional-model-programming.md
+- name: Хранилище кубов (службы Analysis Services — многомерные данные)
+  href: cube-storage-analysis-services-multidimensional-data.md
+- name: Переводы куба
+  href: cube-translations.md
+- name: Связи измерений
+  href: dimension-relationships.md
+- name: "Секции\_— режимы хранения и обработка секций"
+  href: partitions-partition-storage-modes-and-processing.md
+- name: "Секции\_— упреждающее кэширование"
+  href: partitions-proactive-caching.md
+- name: "Секции\_— удаленные секции"
+  href: partitions-remote-partitions.md
+- name: "Секции\_— секции, доступные для записи"
+  href: partitions-write-enabled-partitions.md
+- name: Секции (службы Analysis Services — многомерные данные)
+  href: partitions-analysis-services-multidimensional-data.md
+- name: перспективами
+  href: perspectives.md

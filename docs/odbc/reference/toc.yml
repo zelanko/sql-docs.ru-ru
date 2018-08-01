@@ -1,0 +1,106 @@
+- name: Введение в ODBC
+  href: introduction-to-odbc.md
+- name: Установка +
+  href: ../../odbc/reference/install/odbc-subkey.md
+- name: Разработка приложений +
+  href: ../../odbc/reference/develop-app/checking-feature-support-and-variability.md
+- name: Разработка драйверов +
+  href: ../../odbc/reference/develop-driver/developing-an-odbc-driver.md
+- name: Синтаксис +
+  href: ../../odbc/reference/syntax/odbc-reference.md
+- name: Приложения +
+  href: ../../odbc/reference/appendixes/odbc-appendixes.md
+- name: Справочник по программированию ODBC
+  href: odbc-programmer-s-reference.md
+- name: "Новые возможности ODBC\_3.8"
+  href: what-s-new-in-odbc-3-8.md
+- name: Образец программы ODBC
+  href: sample-odbc-program.md
+  items:
+    - name: Общие сведения об ODBC
+      href: odbc-overview.md
+      items:
+        - name: Зачем создали ODBC?
+          href: why-was-odbc-created.md
+        - name: Что такое ODBC?
+          href: what-is-odbc.md
+        - name: ODBC и стандартная инфраструктура CLI
+          href: odbc-and-the-standard-cli.md
+    - name: Введение в SQL и ODBC
+      href: introduction-to-sql-and-odbc.md
+      items:
+        - name: язык SQL
+          href: structured-query-language-sql.md
+          items:
+            - name: Обработка инструкции SQL
+              href: processing-a-sql-statement.md
+            - name: Embedded SQL
+              href: embedded-sql.md
+              items:
+                - name: Пример Embedded SQL
+                  href: embedded-sql-example.md
+                - name: Компиляция программы на Embedded SQL
+                  href: compiling-an-embedded-sql-program.md
+                - name: Статический SQL
+                  href: static-sql.md
+                - name: Динамические инструкции SQL
+                  href: dynamic-sql.md
+            - name: Модули SQL
+              href: sql-modules.md
+            - name: Интерфейсы уровня вызова
+              href: call-level-interfaces.md
+        - name: Архитектура доступа к базе данных
+          href: database-access-architecture.md
+          items:
+            - name: Сетевой доступ к базе данных
+              href: network-database-access.md
+            - name: Стандартные архитектуры доступа к базе данных
+              href: standard-database-access-architectures.md
+              items:
+                - name: Стандартный интерфейс программирования
+                  href: standard-programming-interface.md
+                - name: Стандартный протокол потока данных
+                  href: standard-data-stream-protocol.md
+                - name: Стандартный шлюз
+                  href: standard-gateway.md
+            - name: Решение ODBC
+              href: the-odbc-solution.md
+    - name: Архитектура ODBC
+      href: odbc-architecture.md
+      items:
+        - name: Приложения
+          href: applications.md
+        - name: Диспетчер драйверов
+          href: the-driver-manager.md
+        - name: Драйверы
+          href: drivers.md
+          items:
+            - name: Задачи драйвера
+              href: driver-tasks.md
+            - name: Архитектура драйвера
+              href: driver-architecture.md
+              items:
+                - name: Драйверы на основе файлов
+                  href: file-based-drivers.md
+                - name: Драйверы на основе СУБД
+                  href: dbms-based-drivers.md
+                - name: Сетевой пример
+                  href: network-example.md
+                - name: Другие архитектуры драйверов
+                  href: other-driver-architectures.md
+        - name: обозревателе решений
+          href: data-sources.md
+          items:
+            - name: Типы источников данных
+              href: types-of-data-sources.md
+              items:
+                - name: Машинные источники данных
+                  href: machine-data-sources.md
+                - name: Файловые источники данных
+                  href: file-data-sources.md
+            - name: Использование источников данных
+              href: using-data-sources.md
+            - name: Образец источника данных
+              href: data-source-example.md
+    - name: Сведения о 64-разрядном интерфейсе ODBC
+      href: odbc-64-bit-information.md

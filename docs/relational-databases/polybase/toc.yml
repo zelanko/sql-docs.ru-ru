@@ -1,0 +1,21 @@
+- name: Обзор
+  href: polybase-guide.md
+- name: Начало работы
+  href: get-started-with-polybase.md
+- name: Сводка по функциям
+  href: polybase-versioned-feature-summary.md
+- name: Масштабируемые группы
+  href: polybase-scale-out-groups.md
+- name: Установка
+  href: polybase-installation.md
+- name: Конфигурация
+  href: polybase-configuration.md
+- name: Объекты T-SQL
+  href: polybase-t-sql-objects.md
+- name: Запросы
+  href: polybase-queries.md
+- name: Устранение неполадок
+  href: polybase-troubleshooting.md
+  items:
+    - name: "Устранение неполадок с подключением PolyBase к\_Kerberos"
+      href: polybase-troubleshoot-connectivity.md

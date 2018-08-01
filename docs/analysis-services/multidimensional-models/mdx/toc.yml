@@ -1,0 +1,101 @@
+- name: Доступ к данным с помощью многомерных выражений
+  href: multidimensional-model-data-access-analysis-services-multidimensional-data.md
+- name: Запрос многомерных данных с помощью многомерных выражений
+  href: querying-multidimensional-data-with-mdx.md
+- name: Основные понятия многомерных выражений
+  href: key-concepts-in-mdx-analysis-services.md
+  items:
+    - name: автоматическая проверка существования
+      href: autoexists.md
+    - name: Контекст вычисления
+      href: calculation-context.md
+    - name: Вычисляемые элементы в подзапросах выборки и вложенных кубах
+      href: calculated-members-in-subselects-and-subcubes.md
+    - name: Пространство куба
+      href: cube-space.md
+    - name: Подзапросы выборки в запросах
+      href: subselects-in-queries.md
+    - name: Кортежи
+      href: tuples.md
+    - name: Визуальные и невизуальные итоги
+      href: visual-totals-and-non-visual-totals.md
+    - name: 'Работа с элементами, кортежами и наборами (многомерные выражения)'
+      href: working-with-members-tuples-and-sets-mdx.md
+- name: Основные принципы запросов многомерных выражений
+  href: mdx-query-fundamentals-analysis-services.md
+  items:
+    - name: "Запрос многомерных выражений\_— базовый запрос"
+      href: mdx-query-the-basic-query.md
+    - name: "Запрос многомерных выражений\_— ключевое слово Existing"
+      href: mdx-query-existing-keyword.md
+    - name: "Запрос многомерных выражений и ось среза\_— ограничение запроса"
+      href: mdx-query-and-slicer-axes-restricting-the-query.md
+    - name: "Запрос многомерных выражений и ось среза\_— указание содержимого оси запроса"
+      href: mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+    - name: "Запрос многомерных выражений и ось среза\_— указание содержимого оси среза"
+      href: mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+    - name: "Запрос многомерных выражений и ось среза\_— использование оси в простом примере"
+      href: mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+    - name: Определение контекста куба в запросе
+      href: establishing-cube-context-in-a-query-mdx.md
+    - name: Построение вложенных кубов в многомерных выражениях
+      href: building-subcubes-in-mdx-mdx.md
+    - name: "Именованные наборы многомерных выражений\_— построение"
+      href: mdx-named-sets-building-named-sets.md
+    - name: "Именованные наборы многомерных выражений\_— создание наборов с областью действия запроса"
+      href: mdx-named-sets-creating-query-scoped-named-sets.md
+    - name: "Именованные наборы многомерных выражений\_— создание наборов с областью действия сеанса"
+      href: mdx-named-sets-creating-session-scoped-named-sets.md
+    - name: "Вычисляемые элементы многомерных выражений\_— создание вычисляемых элементов"
+      href: mdx-calculated-members-building-calculated-members.md
+    - name: "Вычисляемые элементы многомерных выражений\_— с областью действия запроса"
+      href: mdx-calculated-members-query-scoped-calculated-members.md
+    - name: "Вычисляемые элементы многомерных выражений\_— с областью действия сеанса"
+      href: mdx-calculated-members-session-scoped-calculated-members.md
+    - name: "Вычисления ячеек многомерных выражений\_— сборка"
+      href: mdx-cell-calculations-build-cell-calculations.md
+    - name: "Вычисления ячеек многомерных выражений\_— с областью действия запроса"
+      href: mdx-cell-calculations-query-scoped-cell-calculations.md
+    - name: "Вычисления ячеек многомерных выражений\_— с областью действия сеанса"
+      href: mdx-cell-calculations-session-scoped-calculated-cells.md
+    - name: Меры построения многомерных выражений
+      href: mdx-building-measures.md
+    - name: Свойства элементов многомерных выражений
+      href: mdx-member-properties.md
+    - name: "Свойства элементов многомерных выражений\_— внутренние"
+      href: mdx-member-properties-intrinsic-member-properties.md
+    - name: "Свойства элементов многомерных выражений\_— пользовательские"
+      href: mdx-member-properties-user-defined-member-properties.md
+    - name: "Свойства ячеек многомерных выражений\_— использование"
+      href: mdx-cell-properties-using-cell-properties.md
+    - name: "Свойства ячеек многомерных выражений\_— содержимое FORMAT_STRING"
+      href: mdx-cell-properties-format-string-contents.md
+    - name: "Свойства ячеек многомерных выражений\_— содержимое FORE_COLOR и BACK_COLOR"
+      href: mdx-cell-properties-fore-color-and-back-color-contents.md
+    - name: "Свойства ячеек многомерных выражений\_— FORMATTED_VALUE"
+      href: mdx-cell-properties-formatted-value-property.md
+    - name: Обработка данных многомерных выражений
+      href: mdx-data-manipulation-manipulating-data.md
+    - name: "Обработка данных многомерных выражений\_— извлечение источника данных с помощью DRILLTHROUGH"
+      href: mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+    - name: "Обработка данных многомерных выражений\_— функция RollupChildren"
+      href: mdx-data-manipulation-rollupchildren-function.md
+    - name: "Обработка данных многомерных выражений\_— общие сведения о порядке передачи и вычисления"
+      href: mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+    - name: Изменение данных многомерных выражений
+      href: mdx-data-modification-modifying-data.md
+    - name: "Изменение данных многомерных выражений\_— использование обратной записи кубов"
+      href: mdx-data-modification-using-cube-writebacks.md
+    - name: Переменные и параметры
+      href: using-variables-and-parameters-mdx.md
+- name: Основные понятия о сценариях многомерных выражений
+  href: mdx-scripting-fundamentals-analysis-services.md
+  items:
+    - name: Базовый скрипт многомерных выражений
+      href: the-basic-mdx-script-mdx.md
+    - name: Управление областью и контекстом
+      href: managing-scope-and-context-mdx.md
+    - name: Обработка ошибок
+      href: error-handling-mdx.md
+    - name: Поддержка многомерных выражений
+      href: supported-mdx-mdx.md

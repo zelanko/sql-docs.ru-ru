@@ -1,0 +1,184 @@
+- name: In-Memory OLTP (оптимизация в памяти)
+  href: in-memory-oltp-in-memory-optimization.md
+- name: 'Требования для использования таблиц, оптимизированных для памяти'
+  href: requirements-for-using-memory-optimized-tables.md
+- name: Использование In-Memory OLTP в среде ВМ
+  href: ../../database-engine/using-in-memory-oltp-in-a-vm-environment.md
+- name: Примеры кода In-Memory OLTP
+  href: in-memory-oltp-code-samples.md
+  items:
+    - name: Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
+      href: demonstration-performance-improvement-of-in-memory-oltp.md
+    - name: Расширения AdventureWorks для демонстрации In-Memory OLTP
+      href: ../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md
+    - name: 'Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде'
+      href: creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+    - name: Секционирование уровня приложения
+      href: application-level-partitioning.md
+- name: 'Таблицы, оптимизированные для памяти'
+  href: memory-optimized-tables.md
+  items:
+    - name: 'Введение в таблицы, оптимизированные для памяти'
+      href: introduction-to-memory-optimized-tables.md
+    - name: Собственная компиляция таблиц и хранимых процедур
+      href: native-compilation-of-tables-and-stored-procedures.md
+    - name: Изменение таблиц с оптимизацией для памяти
+      href: altering-memory-optimized-tables.md
+    - name: 'Основные сведения о транзакциях с таблицами, оптимизированными для памяти'
+      href: ../../database-engine/understanding-transactions-on-memory-optimized-tables.md
+    - name: 'Транзакции в таблицах, оптимизированных для памяти'
+      href: ../../database-engine/transactions-in-memory-optimized-tables.md
+    - name: 'Рекомендации для уровней изоляции транзакций с таблицами, оптимизированными для памяти'
+      href: ../../database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md
+    - name: 'Рекомендации для логики повторного выполнения транзакций для таблиц, оптимизированных для памяти'
+      href: ../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md
+    - name: Уровни изоляции транзакций
+      href: ../../database-engine/transaction-isolation-levels.md
+    - name: Транзакции между контейнерами
+      href: ../../database-engine/cross-container-transactions.md
+    - name: 'Модель приложения для секционирования таблиц, оптимизированных для памяти'
+      href: application-pattern-for-partitioning-memory-optimized-tables.md
+    - name: 'Статистика для таблиц, оптимизированных для памяти'
+      href: statistics-for-memory-optimized-tables.md
+    - name: Параметры сортировки и кодовые страницы
+      href: ../../database-engine/collations-and-code-pages.md
+    - name: 'Размер строк и таблицы для таблиц, оптимизированных для памяти'
+      href: table-and-row-size-in-memory-optimized-tables.md
+    - name: 'Руководство по обработке запросов для таблиц, оптимизированных для памяти'
+      href: a-guide-to-query-processing-for-memory-optimized-tables.md
+- name: Переменные оптимизированной для памяти таблицы
+  href: ../../database-engine/memory-optimized-table-variables.md
+- name: Индексы для оптимизированных для памяти таблиц
+  href: ../../database-engine/indexes-on-memory-optimized-tables.md
+  items:
+    - name: 'Рекомендации по использованию индексов в таблицах, оптимизированных для памяти'
+      href: ../../database-engine/guidelines-for-using-indexes-on-memory-optimized-tables.md
+    - name: Хэш-индексы.
+      href: ../../database-engine/hash-indexes.md
+    - name: Определение правильного числа контейнеров для хэш-индексов
+      href: ../../database-engine/determining-the-correct-bucket-count-for-hash-indexes.md
+    - name: Диагностика общих проблем с производительностью хэш-индексов оптимизированными для памяти таблиц
+      href: ../../database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md
+- name: скомпилированные в собственном коде хранимые процедуры
+  href: natively-compiled-stored-procedures.md
+  items:
+    - name: 'Создание хранимых процедур, скомпилированных в собственном коде'
+      href: creating-natively-compiled-stored-procedures.md
+    - name: Блоки ATOMIC
+      href: atomic-blocks-in-native-procedures.md
+    - name: 'Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде'
+      href: supported-features-for-natively-compiled-t-sql-modules.md
+    - name: 'Использование блоков try..catch в хранимых процедурах, скомпилированных в собственном коде'
+      href: ../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md
+    - name: 'Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде'
+      href: supported-ddl-for-natively-compiled-t-sql-modules.md
+    - name: Скомпилированные в собственном коде хранимые процедуры и параметры SET выполнения
+      href: natively-compiled-stored-procedures-and-execution-set-options.md
+    - name: 'Рекомендации по вызову хранимых процедур, скомпилированных в собственном коде'
+      href: best-practices-for-calling-natively-compiled-stored-procedures.md
+    - name: Отслеживание производительности скомпилированных в собственном коде хранимых процедур
+      href: monitoring-performance-of-natively-compiled-stored-procedures.md
+    - name: 'Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным'
+      href: calling-natively-compiled-stored-procedures-from-data-access-applications.md
+- name: Управление памятью для компонента In-Memory OLTP
+  href: ../../database-engine/managing-memory-for-in-memory-oltp.md
+  items:
+    - name: 'Оценка требований к объему памяти для таблиц, оптимизированных для памяти'
+      href: estimate-memory-requirements-for-memory-optimized-tables.md
+    - name: 'Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов'
+      href: bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+    - name: Мониторинг и устранение неполадок с использованием памяти
+      href: monitor-and-troubleshoot-memory-usage.md
+    - name: Устранение проблем нехватки памяти
+      href: resolve-out-of-memory-issues.md
+    - name: восстановить базу данных и привязать ее к пулу ресурсов
+      href: restore-a-database-and-bind-it-to-a-resource-pool.md
+    - name: Сборка мусора модулем In-Memory OLTP
+      href: in-memory-oltp-garbage-collection.md
+- name: Создание и управление хранилищем для оптимизированных для памяти объектов
+  href: creating-and-managing-storage-for-memory-optimized-objects.md
+  items:
+    - name: Настройка хранилища оптимизированных для памяти таблиц
+      href: configuring-storage-for-memory-optimized-tables.md
+    - name: Оптимизированная для памяти файловая группа
+      href: the-memory-optimized-filegroup.md
+    - name: 'Устойчивость таблиц, оптимизированных для памяти'
+      href: durability-for-memory-optimized-tables.md
+    - name: Работа контрольной точки для оптимизированных для памяти таблиц
+      href: checkpoint-operation-for-memory-optimized-tables.md
+    - name: Определение устойчивости для оптимизированных для памяти объектов
+      href: defining-durability-for-memory-optimized-objects.md
+    - name: Сравнение хранилища таблиц на диске с хранилищем таблиц оптимизированным для памяти
+      href: comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+    - name: Мониторинг и устранение неполадок со слиянием для пар файлов данных и разностных файлов
+      href: ../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md
+- name: Резервное копирование и восстановление оптимизированных для памяти таблиц
+  href: ../../database-engine/backup-restore-and-recovery-of-memory-optimized-tables.md
+  items:
+    - name: Резервное копирование базы данных с оптимизированными для памяти таблицами
+      href: backing-up-a-database-with-memory-optimized-tables.md
+    - name: 'Поэтапное восстановление баз данных с таблицами, оптимизированными для памяти'
+      href: piecemeal-restore-of-databases-with-memory-optimized-tables.md
+    - name: Восстановление оптимизированных для памяти таблиц
+      href: restore-and-recovery-of-memory-optimized-tables.md
+- name: Поддержка Transact-SQL для In-Memory OLTP
+  href: transact-sql-support-for-in-memory-oltp.md
+  items:
+    - name: Поддерживаемые типы данных
+      href: supported-data-types-for-in-memory-oltp.md
+    - name: 'Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQL'
+      href: accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+    - name: 'Системные представления, хранимые процедуры, динамические административные представления и типы ожидания для выполняющейся в памяти OLTP'
+      href: ../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md
+- name: Поддержка SQL Server для In-Memory OLTP
+  href: sql-server-support-for-in-memory-oltp.md
+  items:
+    - name: Поддерживаемые возможности SQL Server
+      href: unsupported-sql-server-features-for-in-memory-oltp.md
+    - name: Поддержка управляющих объектов SQL Server SMO для In-Memory OLTP
+      href: sql-server-management-objects-support-for-in-memory-oltp.md
+    - name: Поддержка служб SQL Server Integration Services для In-Memory OLTP
+      href: sql-server-integration-services-support-for-in-memory-oltp.md
+    - name: Поддержка среды SQL Server Management Studio для In-Memory OLTP
+      href: sql-server-management-studio-support-for-in-memory-oltp.md
+    - name: Поддержка высокого уровня доступности в базах данных OLTP в памяти
+      href: high-availability-support-for-in-memory-oltp-databases.md
+- name: Миграция в In-Memory OLTP
+  href: migrating-to-in-memory-oltp.md
+  items:
+    - name: 'Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP'
+      href: determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+    - name: Помощник по оптимизации памяти
+      href: memory-optimization-advisor.md
+    - name: Помощник по собственной компиляции
+      href: native-compilation-advisor.md
+    - name: 'Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP'
+      href: transact-sql-constructs-not-supported-by-in-memory-oltp.md
+    - name: 'Реализация LOB Columns в таблице, оптимизированной для памяти'
+      href: ../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md
+    - name: 'Реализация SQL_VARIANT в таблице, оптимизированной для памяти'
+      href: implementing-sql-variant-in-a-memory-optimized-table.md
+    - name: 'Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде'
+      href: migration-issues-for-natively-compiled-stored-procedures.md
+    - name: Создание и обращение к таблицам в базе данных TempDB из скомпилированных в собственном коде хранимых процедур
+      href: create-and-access-tables-in-tempdb-from-stored-procedures.md
+    - name: Имитация предложения EXISTS в скомпилированной в собственном коде хранимой процедуре
+      href: simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+    - name: Реализация функции MERGE
+      href: implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+    - name: Реализация инструкции CASE
+      href: implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+    - name: Создание внешнего соединения
+      href: implementing-an-outer-join.md
+    - name: Реализация оператора OR в скомпилированных в собственном коде хранимых процедурах
+      href: ../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md
+    - name: Перенос вычисляемых столбцов
+      href: migrating-computed-columns.md
+    - name: Перенос триггеров
+      href: migrating-triggers.md
+    - name: Межбазовые запросы
+      href: cross-database-queries.md
+    - name: Миграция проверочных ограничений и ограничений внешнего ключа
+      href: ../../database-engine/migrating-check-and-foreign-key-constraints.md
+    - name: 'Реализация IDENTITY в таблице, оптимизированной для памяти'
+      href: implementing-identity-in-a-memory-optimized-table.md

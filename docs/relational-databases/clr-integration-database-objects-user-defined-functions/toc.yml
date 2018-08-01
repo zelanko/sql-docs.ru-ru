@@ -1,0 +1,12 @@
+- name: Определяемые пользователем функции среды CLR
+  href: clr-user-defined-functions.md
+- name: Скалярные функции среды CLR
+  href: clr-scalar-valued-functions.md
+- name: Функции среды CLR с табличным значением
+  href: clr-table-valued-functions.md
+- name: Вызов определяемых пользователем агрегатных функций среды CLR
+  href: clr-user-defined-aggregate-invoking-functions.md
+- name: Требования для определяемых пользователем агрегатных функций среды CLR
+  href: clr-user-defined-aggregates-requirements.md
+- name: Пользовательские агрегатные функции среды CLR
+  href: clr-user-defined-aggregates.md

@@ -1,0 +1,32 @@
+- name: Building Applications Using the Web Service and the .NET Framework
+  href: building-applications-using-the-web-service-and-the-net-framework.md
+- name: Введение в обработку исключений в службах Reporting Services
+  href: ../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json
+- name: Использование заголовков SOAP служб Reporting Services +
+  href: ../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json
+- name: Вызов методов веб-служб
+  href: calling-web-service-methods.md
+- name: Создание учетной записи-посредника веб-службы
+  href: creating-the-web-service-proxy.md
+- name: Пропуск значений для необязательных объектов веб-службы
+  href: omitting-values-for-optional-web-service-objects.md
+- name: Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру
+  href: passing-device-information-settings-to-rendering-extensions.md
+- name: Параметры модулей доставки служб Reporting Services
+  href: reporting-services-delivery-extension-settings.md
+- name: "Свойства Reporting Services\_— свойства элементов сервера отчетов"
+  href: reporting-services-properties-report-server-item-properties.md
+- name: "Свойства служб Reporting Services\_— свойства системы сервера отчетов"
+  href: reporting-services-properties-report-server-system-properties.md
+- name: Свойства служб Reporting Services
+  href: reporting-services-properties.md
+- name: Задание свойства Url для веб-службы
+  href: setting-the-url-property-of-the-web-service.md
+- name: Передача аргументов методу веб-службы
+  href: supplying-web-service-method-arguments.md
+- name: Использование защищенных методов веб-службы
+  href: using-secure-web-service-methods.md
+- name: Использование элемента управления RSClientPrint в пользовательских приложениях
+  href: using-the-rsclientprint-control-in-custom-applications.md
+- name: Проверка подлинности веб-службы
+  href: web-service-authentication.md

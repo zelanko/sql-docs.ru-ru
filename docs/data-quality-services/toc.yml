@@ -1,0 +1,145 @@
+- name: Обзор
+  href: data-quality-services.md
+- name: Новые и обновленные статьи
+  href: new-updated-data-quality-services.md
+- name: Понятия и возможности
+  items:
+    - name: Общие сведения о службах Data Quality Services
+      href: introduction-to-data-quality-services.md
+    - name: Основные понятия служб Data Quality Services
+      href: data-quality-services-concepts.md
+    - name: Функции и задачи служб Data Quality Services
+      href: data-quality-services-features-and-tasks.md
+- name: Установить
+  href: ../data-quality-services/install-windows/install-data-quality-services.md
+- name: Клиентское приложение DQS
+  href: data-quality-client-application.md
+  items:
+    - name: Запуск клиентского приложения DQS
+      href: run-the-data-quality-client-application.md
+    - name: Главный экран клиента DQS
+      href: data-quality-client-home-screen.md
+- name: Базы знаний и домены DQS
+  href: dqs-knowledge-bases-and-domains.md
+  items:
+    - name: Построение базы знаний
+      href: building-a-knowledge-base.md
+      items:
+        - name: Создание базы знаний
+          href: create-a-knowledge-base.md
+        - name: Открытие базы знаний
+          href: open-a-knowledge-base.md
+        - name: Управление базой знаний
+          href: manage-a-knowledge-base.md
+        - name: Добавление знаний в базу знаний
+          href: adding-knowledge-to-a-knowledge-base.md
+        - name: Обнаружение набора знаний
+          href: perform-knowledge-discovery.md
+    - name: Импорт и экспорт набора знаний
+      href: importing-and-exporting-knowledge.md
+      items:
+        - name: Экспорт домена в файл .dqs
+          href: export-a-domain-to-a-dqs-file.md
+        - name: Импорт домена из файла .dqs
+          href: import-a-domain-from-a-dqs-file.md
+        - name: Экспорт базы знаний в файл .dqs
+          href: export-a-knowledge-base-to-a-dqs-file.md
+        - name: Импорт базы знаний из файла .dqs
+          href: import-a-knowledge-base-from-a-dqs-file.md
+        - name: Импорт значений в домен из файла Excel
+          href: import-values-from-an-excel-file-into-a-domain.md
+        - name: Импорт доменов из файла Excel при обнаружении набора знаний
+          href: import-domains-from-an-excel-file-in-knowledge-discovery.md
+        - name: Импорт значений проекта очистки в домен
+          href: import-cleansing-project-values-into-a-domain.md
+    - name: Управление доменом
+      href: managing-a-domain.md
+      items:
+        - name: Создание домена
+          href: create-a-domain.md
+        - name: 'Управление доменами: список доменов'
+          href: domain-management-domain-list.md
+        - name: Установка свойств домена
+          href: set-domain-properties.md
+        - name: Создание связанного домена
+          href: create-a-linked-domain.md
+        - name: Изменение значений домена
+          href: change-domain-values.md
+        - name: Создание правила домена
+          href: create-a-domain-rule.md
+        - name: Создание связей на основе термина
+          href: create-term-based-relations.md
+        - name: Использование средства проверки орфографии DQS
+          href: use-the-dqs-speller.md
+        - name: 'Типы данных SQL Server и службы SSIS, поддерживаемые для доменов DQS'
+          href: supported-sql-server-and-ssis-data-types-for-dqs-domains.md
+    - name: Управление составным доменом
+      href: managing-a-composite-domain.md
+      items:
+        - name: Создание составного домена
+          href: create-a-composite-domain.md
+        - name: Создание междоменного правила
+          href: create-a-cross-domain-rule.md
+        - name: Использование связей значений в составном домене
+          href: use-value-relations-in-a-composite-domain.md
+    - name: Использование базы знаний DQS по умолчанию
+      href: using-the-dqs-default-knowledge-base.md
+- name: Проекты служб Data Quality Services
+  href: data-quality-projects-dqs.md
+  items:
+    - name: Создание проекта служб DQS
+      href: create-a-data-quality-project.md
+    - name: 'Открытие, разблокировка, переименование и удаление проекта качества данных'
+      href: open-unlock-rename-and-delete-a-data-quality-project.md
+    - name: Открытие проектов служб Integration Services в клиенте DQS
+      href: open-integration-services-projects-in-data-quality-client.md
+- name: Data Cleansing
+  href: data-cleansing.md
+  items:
+    - name: Очистка данных с использованием набора знаний служб DQS (внутренних)
+      href: cleanse-data-using-dqs-internal-knowledge.md
+    - name: Очистка данных в составном домене
+      href: cleanse-data-in-a-composite-domain.md
+- name: Сопоставление данных
+  href: data-matching.md
+  items:
+    - name: Создание политики сопоставления
+      href: create-a-matching-policy.md
+    - name: Запуск проекта сопоставления
+      href: run-a-matching-project.md
+- name: Службы эталонных данных в DQS
+  href: reference-data-services-in-dqs.md
+  items:
+    - name: Настройка служб DQS для использования справочных данных
+      href: configure-dqs-to-use-reference-data.md
+    - name: Добавление домена или составного домена к ссылочным данным
+      href: attach-domain-or-composite-domain-to-reference-data.md
+    - name: Очистка данных с использованием знаний о справочных данных (внешних знаний)
+      href: cleanse-data-using-reference-data-external-knowledge.md
+- name: Профилирование данных и уведомления в DQS
+  href: data-profiling-and-notifications-in-dqs.md
+- name: администрирование DQS
+  href: dqs-administration.md
+  items:
+    - name: Мониторинг операций DQS
+      href: monitor-dqs-activities.md
+    - name: Настройка пороговых значений для очистки и сопоставления
+      href: configure-threshold-values-for-cleansing-and-matching.md
+    - name: Включение или отключение уведомлений по профилированию в DQS
+      href: enable-or-disable-profiling-notifications-in-dqs.md
+    - name: Управление файлами журнала DQS
+      href: manage-dqs-log-files.md
+      items:
+        - name: Настройка степеней серьезности для файлов журнала DQS
+          href: configure-severity-levels-for-dqs-log-files.md
+        - name: Configure Advanced Settings for DQS Log Files
+          href: configure-advanced-settings-for-dqs-log-files.md
+    - name: Manage DQS Databases
+      href: manage-dqs-databases.md
+      items:
+        - name: Резервное копирование и восстановление баз данных DQS
+          href: backing-up-and-restoring-dqs-databases.md
+        - name: Присоединение и отсоединение баз данных DQS
+          href: detaching-and-attaching-dqs-databases.md
+- name: Безопасность DQS
+  href: dqs-security.md

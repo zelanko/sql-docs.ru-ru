@@ -1,0 +1,325 @@
+- name: Приложения по ODBC
+  href: odbc-appendixes.md
+- name: Приложения
+  items:
+    - name: "Приложение\_А. Коды ошибок ODBC"
+      href: appendix-a-odbc-error-codes.md
+    - name: "Приложение\_Б. Таблицы перехода состояния ODBC"
+      href: appendix-b-odbc-state-transition-tables.md
+    - name: "Приложение\_В. Грамматика SQL"
+      href: appendix-c-sql-grammar.md
+    - name: "Приложение\_Г. Типы данных"
+      href: appendix-d-data-types.md
+    - name: "Приложение\_Д. Скалярные функции"
+      href: appendix-e-scalar-functions.md
+    - name: "Приложение\_Е. Библиотека курсоров ODBC"
+      href: appendix-f-odbc-cursor-library.md
+    - name: "Приложение\_Ж. Рекомендации по обеспечению обратной совместимости с драйвером"
+      href: appendix-g-driver-guidelines-for-backward-compatibility.md
+- name: "Обратная совместимость типов данных\_C"
+  href: backward-compatibility-of-c-data-types.md
+- name: "Изменения в поведении и драйверы ODBC\_3.x"
+  href: behavioral-changes-and-odbc-3-x-drivers.md
+- name: 'Блочные курсоры, прокручиваемые курсоры и обратная совместимость'
+  href: block-cursors-scrollable-cursors-and-backward-compatibility.md
+- name: "Тип данных\_C Bookmark"
+  href: bookmark-c-data-type.md
+- name: "Типы данных\_C"
+  href: c-data-types.md
+  items:
+    - name: "Получение числовых данных с помощью SQL_NUMERIC_STRUCT в\_C"
+      href: retrieve-numeric-data-sql-numeric-struct-kb222831.md
+- name: Структура Interval (C)
+  href: c-interval-structure.md
+- name: "Преобразование данных из\_C в типы данных SQL"
+  href: converting-data-from-c-to-sql-data-types.md
+  items:
+    - name: "Примеры преобразования данных из\_C в SQL"
+      href: c-to-sql-data-conversion-examples.md
+    - name: "Преобразование из\_C в SQL: двоичные данные"
+      href: c-to-sql-binary.md
+    - name: "Преобразование из\_C в SQL: битовые данные"
+      href: c-to-sql-bit.md
+    - name: "Преобразование из\_C в SQL: символы"
+      href: c-to-sql-character.md
+    - name: "Преобразование из\_C в SQL: даты"
+      href: c-to-sql-date.md
+    - name: "Преобразование из\_C в SQL: интервалы времени дня"
+      href: c-to-sql-day-time-intervals.md
+    - name: "Преобразование из\_C в SQL: GUID"
+      href: c-to-sql-guid.md
+    - name: "Преобразование из\_C в SQL: числовые данные"
+      href: c-to-sql-numeric.md
+    - name: "Преобразование из\_C в SQL: отметки времени"
+      href: c-to-sql-timestamp.md
+    - name: "Преобразование из\_C в SQL: время"
+      href: c-to-sql-time.md
+    - name: "Преобразование из\_C в SQL: интервалы месяцев года"
+      href: c-to-sql-year-month-intervals.md
+- name: Вызов SQLSetPos для вставки данных
+  href: calling-sqlsetpos-to-insert-data.md
+- name: Столбец данных
+  href: column-data.md
+- name: 'Размер столбца, число десятичных разрядов, длительность октета передачи и отображаемый размер'
+  href: column-size-decimal-digits-transfer-octet-length-and-display-size.md
+- name: Размер столбца
+  href: column-size.md
+- name: Переходы подключения
+  href: connection-transitions.md
+- name: Ограничения григорианского календаря
+  href: constraints-of-the-gregorian-calendar.md
+- name: Построение поисковых выражений
+  href: constructing-searched-statements.md
+- name: Кэш библиотеки курсоров
+  href: cursor-library-cache.md
+- name: Пример кода библиотеки курсоров
+  href: cursor-library-code-example.md
+- name: Идентификаторы и дескрипторы типа данных
+  href: data-type-identifiers-and-descriptors.md
+- name: Поддержка типов данных
+  href: data-type-support.md
+- name: 'Escape-последовательности для значений даты, времени и отметок времени'
+  href: date-time-and-timestamp-escape-sequences.md
+- name: Типы данных даты и времени
+  href: datetime-data-types.md
+- name: Десятичные цифры
+  href: decimal-digits.md
+- name: Типы данных C по умолчанию
+  href: default-c-data-types.md
+- name: Переходы дескрипторов
+  href: descriptor-transitions.md
+- name: Отображаемый размер
+  href: display-size.md
+- name: 'Элементы, используемые в инструкциях SQL'
+  href: elements-used-in-sql-statements.md
+- name: Переходы среды
+  href: environment-transitions.md
+- name: Пример результирующего набора SQLGetTypeInfo
+  href: example-sqlgettypeinfo-result-set.md
+- name: Выполнение инструкций позиционированного обновления и удаления
+  href: executing-positioned-update-and-delete-statements.md
+- name: Функция явного преобразования типа данных
+  href: explicit-data-type-conversion-function.md
+- name: Закладки фиксированной длины
+  href: fixed-length-bookmarks.md
+- name: Escape-последовательности GUID
+  href: guid-escape-sequences.md
+- name: Рекомендации по использованию интервальных и числовых типов данных
+  href: guidelines-for-interval-and-numeric-data-types.md
+- name: Примечания по реализации
+  href: implementation-notes.md
+- name: Длина интервального типа данных
+  href: interval-data-type-length.md
+- name: Точность интервального типа данных
+  href: interval-data-type-precision.md
+- name: Интервальные типы данных
+  href: interval-data-types.md
+- name: Escape-последовательности интервалов
+  href: interval-escape-sequences.md
+- name: Синтаксис литерала интервала
+  href: interval-literal-syntax.md
+- name: Литералы интервала
+  href: interval-literals.md
+- name: Длина данных столбца
+  href: length-of-column-data.md
+- name: Escape-последовательность LIKE
+  href: like-escape-sequence.md
+- name: Литералы в ODBC
+  href: literals-in-odbc.md
+- name: Загрузка по порядковому номеру
+  href: loading-by-ordinal.md
+- name: Расположение кэша
+  href: location-of-cache.md
+- name: Сопоставление нерекомендуемых функций
+  href: mapping-deprecated-functions.md
+  items:
+    - name: Сопоставление SQLAllocConnect
+      href: sqlallocconnect-mapping.md
+    - name: Сопоставление SQLAllocEnv
+      href: sqlallocenv-mapping.md
+    - name: Сопоставление SQLAllocStmt
+      href: sqlallocstmt-mapping.md
+    - name: Сопоставление SQLBindParam
+      href: sqlbindparam-mapping.md
+    - name: Сопоставление SQLColAttributes
+      href: sqlcolattributes-mapping.md
+    - name: Сопоставление SQLError
+      href: sqlerror-mapping.md
+    - name: Сопоставление SQLFreeConnect
+      href: sqlfreeconnect-mapping.md
+    - name: Сопоставление SQLFreeEnv
+      href: sqlfreeenv-mapping.md
+    - name: Сопоставление SQLFreeStmt
+      href: sqlfreestmt-mapping.md
+    - name: Сопоставление SQLGetConnectOption
+      href: sqlgetconnectoption-mapping.md
+    - name: Сопоставление SQLGetStmtOption
+      href: sqlgetstmtoption-mapping.md
+    - name: Сопоставление SQLInstallTranslator
+      href: sqlinstalltranslator-mapping.md
+    - name: Сопоставление SQLParamOptions
+      href: sqlparamoptions-mapping.md
+    - name: Сопоставление SQLSetConnectOption
+      href: sqlsetconnectoption-mapping.md
+    - name: Сопоставление SQLSetParam
+      href: sqlsetparam-mapping.md
+    - name: Сопоставление SQLSetScrollOptions
+      href: sqlsetscrolloptions-mapping.md
+    - name: Сопоставление SQLSetStmtOption
+      href: sqlsetstmtoption-mapping.md
+    - name: Сопоставление SQLTransact
+      href: sqltransact-mapping.md
+- name: Числовые функции
+  href: numeric-functions.md
+- name: Синтаксис числовых литералов
+  href: numeric-literal-syntax.md
+- name: Числовые литералы
+  href: numeric-literals.md
+- name: Escape-последовательности ODBC
+  href: odbc-escape-sequences.md
+- name: Функции ODBC и библиотека курсоров
+  href: odbc-functions-and-the-cursor-library.md
+  items:
+    - name: 'Функции ODBC, выполняемые библиотекой курсоров'
+      href: odbc-functions-executed-by-the-cursor-library.md
+    - name: 'Функции ODBC, не выполняемые библиотекой курсоров'
+      href: odbc-functions-not-executed-by-the-cursor-library.md
+    - name: SQLBindCol (библиотека курсоров)
+      href: sqlbindcol-cursor-library.md
+    - name: SQLBindParameter (библиотека курсоров)
+      href: sqlbindparameter-cursor-library.md
+    - name: SQLBulkOperations и библиотека курсоров
+      href: sqlbulkoperations-and-the-cursor-library.md
+    - name: SQLCloseCursor_ODBC
+      href: sqlclosecursor-odbc.md
+    - name: SQLEndTran (библиотека курсоров)
+      href: sqlendtran-cursor-library.md
+    - name: SQLExtendedFetch (библиотека курсоров)
+      href: sqlextendedfetch-cursor-library.md
+    - name: SQLFetch (библиотека курсоров)
+      href: sqlfetch-cursor-library.md
+    - name: SQLFetchScroll (библиотека курсоров)
+      href: sqlfetchscroll-cursor-library.md
+    - name: SQLFreeStmt (библиотека курсоров)
+      href: sqlfreestmt-cursor-library.md
+    - name: SQLGetData (библиотека курсоров)
+      href: sqlgetdata-cursor-library.md
+    - name: SQLGetDescField и SQLGetDescRec (библиотека курсоров)
+      href: sqlgetdescfield-and-sqlgetdescrec-cursor-library.md
+    - name: SQLGetFunctions (библиотека курсоров)
+      href: sqlgetfunctions-cursor-library.md
+    - name: SQLGetInfo (библиотека курсоров)
+      href: sqlgetinfo-cursor-library.md
+    - name: Поддержка SQLGetInfo
+      href: sqlgetinfo-support.md
+    - name: SQLGetStmtAttr (библиотека курсоров)
+      href: sqlgetstmtattr-cursor-library.md
+    - name: SQLGetStmtOption (библиотека курсоров)
+      href: sqlgetstmtoption-cursor-library.md
+    - name: SQLNativeSql (библиотека курсоров)
+      href: sqlnativesql-cursor-library.md
+    - name: SQLRowCount (библиотека курсоров)
+      href: sqlrowcount-cursor-library.md
+    - name: SQLSetConnectAttr (библиотека курсоров)
+      href: sqlsetconnectattr-cursor-library.md
+    - name: SQLSetDescField и SQLSetDescRec (библиотека курсоров)
+      href: sqlsetdescfield-and-sqlsetdescrec-cursor-library.md
+    - name: SQLSetEnvAttr и библиотека курсоров
+      href: sqlsetenvattr-and-the-cursor-library.md
+    - name: SQLSetPos (библиотека курсоров)
+      href: sqlsetpos-cursor-library.md
+    - name: SQLSetScrollOptions (библиотека курсоров)
+      href: sqlsetscrolloptions-cursor-library.md
+    - name: SQLSetStmtAttr (библиотека курсоров)
+      href: sqlsetstmtattr-cursor-library.md
+- name: Коды ошибок для библиотеки курсоров ODBC
+  href: odbc-cursor-library-error-codes.md
+- name: Escape-последовательность внешнего соединения
+  href: outer-join-escape-sequence.md
+- name: Переопределение заданной по умолчанию точности ведущего значения и точности значения долей секунды для интервальных типов данных
+  href: overriding-default-leading-and-seconds-precision-for-interval-data-types.md
+- name: Переопределение заданных по умолчанию точности и шкалы для числовых типов данных
+  href: overriding-default-precision-and-scale-for-numeric-data-types.md
+- name: Типы данных параметров
+  href: parameter-data-types.md
+- name: Маркеры параметров
+  href: parameter-markers.md
+- name: Escape-последовательность вызова процедуры
+  href: procedure-call-escape-sequence.md
+- name: Обработка пакетов инструкций SQL
+  href: processing-batches-of-sql-statements.md
+- name: Обработка инструкций позиционированного обновления и удаления
+  href: processing-positioned-update-and-delete-statements.md
+- name: Обработка инструкций SELECT FOR UPDATE
+  href: processing-select-for-update-statements.md
+- name: Обработка инструкций SQL
+  href: processing-sql-statements.md
+- name: Идентификаторы псевдотипа
+  href: pseudo-type-identifiers.md
+- name: Зарезервированные слова
+  href: reserved-keywords.md
+- name: Возврат SQL_NO_DATA
+  href: returning-sql-no-data.md
+- name: Статус строки
+  href: row-status.md
+- name: Правила преобразования
+  href: rules-for-conversions.md
+- name: Escape-последовательность скалярной функции
+  href: scalar-function-escape-sequence.md
+- name: Типы данных SQL
+  href: sql-data-types.md
+- name: Минимальная грамматика SQL
+  href: sql-minimum-grammar.md
+- name: "Преобразование данных из\_SQL в типы данных\_C"
+  href: converting-data-from-sql-to-c-data-types.md
+  items:
+    - name: "Примеры преобразования данных из SQL в\_C"
+      href: sql-to-c-data-conversion-examples.md
+    - name: "Преобразование данных из SQL в\_C: двоичные данные"
+      href: sql-to-c-binary.md
+    - name: "Преобразование данных из SQL в\_C: битовые данные"
+      href: sql-to-c-bit.md
+    - name: "Преобразование данных из SQL в\_C: символы"
+      href: sql-to-c-character.md
+    - name: "Преобразование данных из SQL в\_C: даты"
+      href: sql-to-c-date.md
+    - name: "Преобразование данных из SQL в\_C: интервалы времени дня"
+      href: sql-to-c-day-time-intervals.md
+    - name: "Преобразование данных из SQL в\_C: GUID"
+      href: sql-to-c-guid.md
+    - name: "Преобразование данных из SQL в\_C: числовые данные"
+      href: sql-to-c-numeric.md
+    - name: "Преобразование данных из SQL в\_C: отметки времени"
+      href: sql-to-c-timestamp.md
+    - name: "Преобразование данных из SQL в\_C: время"
+      href: sql-to-c-time.md
+    - name: "Преобразование данных из SQL в\_C: интервалы месяцев года"
+      href: sql-to-c-year-month-intervals.md
+- name: Функция CAST SQL-92
+  href: sql-92-cast-function.md
+- name: SQL_ARD_TYPE
+  href: sql-ard-type.md
+- name: SQL_C_TCHAR
+  href: sql-c-tchar.md
+- name: Переходы инструкций
+  href: statement-transitions.md
+- name: Строковые функции
+  href: string-functions.md
+- name: Системные функции
+  href: system-functions.md
+- name: 'Функции даты, времени и интервалов'
+  href: time-date-and-interval-functions.md
+- name: Длительность октета передачи
+  href: transfer-octet-length.md
+- name: Передача данных в двоичной форме
+  href: transferring-data-in-its-binary-form.md
+- name: Использование идентификаторов типов данных
+  href: using-data-type-identifiers.md
+- name: Использование библиотеки курсоров ODBC
+  href: using-the-odbc-cursor-library.md
+- name: Функции драйвера
+  href: what-the-driver-does.md
+- name: Функции диспетчера драйверов
+  href: what-the-driver-manager-does.md
+- name: 64-разрядные целочисленные структуры
+  href: 64-bit-integer-structures.md

@@ -1,0 +1,14 @@
+- name: Доступ к данным из объектов среды CLR для работы с базами данных
+  href: data-access-from-clr-database-objects.md
+- name: "Внутрипроцессное использование\_ADO.NET +"
+  href: ../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md
+- name: Транзакции доступа к данным +
+  href: ../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md
+- name: Контекстное соединение
+  href: context-connection.md
+- name: "Контекстные соединения и обычные соединения\_— ограничения"
+  href: context-connections-and-regular-connections-restrictions.md
+- name: Сравнение контекстных и обычных соединений
+  href: context-connections-vs-regular-connections.md
+- name: Олицетворение и учетные данные для соединений
+  href: impersonation-and-credentials-for-connections.md
