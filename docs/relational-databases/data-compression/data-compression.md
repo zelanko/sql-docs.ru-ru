@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ed791ca34a8a88ce9dd8b25d38740430ce18424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 944a0ca328ca0835601bf1cb4b75e974da6a8e7a
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001676"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240696"
 ---
 # <a name="data-compression"></a>Сжатие данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "38001676"
     -   Перестройка таблицы с помощью инструкции ALTER TABLE ... REBUILD с параметром сжатия PAGE.  
 -   Для новых страниц, размещенных в куче в процессе выполнения операций DML, сжатие страниц не будет использоваться до тех пор, пока куча не будет перестроена. Перестройте кучу. Для этого удалите и повторно примените сжатие либо создайте и удалите кластеризованный индекс.  
 -   Чтобы изменить параметры сжатия кучи, необходимо перестроить все некластеризованные индексы в таблице. Это обеспечивает наличие в них указателей на новые расположения в куче.  
--   Включить или отключить сжатие типа ROW или PAGE можно в оперативном или режиме вне  сети. Включение сжатия для кучи является однопоточным для операции в сети.  
+-   Включить или отключить сжатие типа ROW или PAGE можно в оперативном или режиме вне сети. Включение сжатия для кучи является однопоточным для операции в сети.  
 -   Чтобы включить или отключить сжатие строки или страницы, необходимо столько же места на диске, как и для создания или перестройки индекса. Для секционированных данных объем пространства, необходимый для включения или отключения сжатия, можно сократить, выполняя включение или отключение сжатия последовательно для каждой секции.  
 -   Чтобы определить состояние сжатия секций в секционированной таблице, выполните запрос столбца data_compression из представления каталога sys.partitions.  
 -   При сжатии индексов страницы конечного уровня можно сжать как сжатием строк, так и сжатием страниц. Для страниц, расположенных не на конечном уровне, нельзя использовать сжатие страниц.  
@@ -93,7 +93,7 @@ ms.locfileid: "38001676"
 -   Используйте сжатие данных **COLUMNSTORE_ARCHIVE** для сжатия данных columnstore с помощью архивного сжатия.  
 -   Используйте сжатие данных **COLUMNSTORE** для распаковки архивного сжатия. Эти результирующие данные по-прежнему будут сжаты с использованием сжатия columnstore.  
   
-Чтобы добавить архивное сжатие, используйте команды [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) или [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) с параметром REBUILD и DATA COMPRESSION = COLUMNSTORE.  
+Чтобы добавить архивное сжатие, используйте инструкцию [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) или [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) с параметром REBUILD и DATA COMPRESSION = COLUMNSTORE_ARCHIVE.  
   
 #### <a name="examples"></a>Примеры:  
 ```  

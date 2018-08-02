@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080102"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228460"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Учебник: дополнительные советы и рекомендации по использованию SSMS
 В этом учебнике приводятся некоторые дополнительные советы по использованию SQL Server Management Studio (SSMS). В этой статье показано, как выполнить следующие действия: 
@@ -189,6 +189,8 @@ ms.locfileid: "37080102"
     ![Поиск журнала ошибок с помощью запроса](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Определение расположения журнала ошибок при отсутствии подключения к SQL Server
+Путь к журналу ошибок SQL Server зависит от параметров конфигурации. Путь к расположению журнала ошибок можно найти в параметрах запуска в диспетчере конфигурации SQL Server. Выполните приведенные ниже инструкции, чтобы найти соответствующий параметр запуска, который определяет расположение журнала ошибок SQL Server. *Ваш путь может отличаться от указанного ниже*. 
+
 1. Откройте диспетчер конфигурации SQL Server. 
 2. Разверните узел **Службы**.
 3. Щелкните правой кнопкой мыши свой экземпляр SQL Server и выберите **Свойства**:

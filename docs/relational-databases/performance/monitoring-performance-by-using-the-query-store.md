@@ -1,7 +1,7 @@
 ---
 title: Мониторинг производительности с использованием хранилища запросов | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/26/2017
+ms.date: 07/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f30d87526729100a99336408778f2d2df4406475
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 932137c603db51693f90b2aa823232842e918e50
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332455"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228440"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ ms.locfileid: "34332455"
   Хранилище запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет подробные сведения о выборе и производительности плана запроса. Оно упрощает устранение неполадок с производительностью, помогая быстро находить разницу в производительности, вызванную изменением плана запроса. Хранилище запросов автоматически собирает журнал запросов, планов и статистики выполнения, сохраняя эти данные для просмотра. Данные разделяются по временным диапазонам, благодаря чему вы можете просматривать закономерности использования и узнавать об изменениях плана запроса на сервере. Хранилище запросов можно настроить с помощью инструкции [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
  Сведения о работе с хранилищем запросов в Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в разделе [Работа с хранилищем запросов в Базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
+ 
+> [!IMPORTANT]
+> Если вы используете хранилище запросов для JIT-анализа рабочих нагрузок в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], запланируйте установку исправлений масштабируемости производительности (см. [статью базы знаний 4340759](http://support.microsoft.com/help/4340759)) как можно скорее. 
   
 ##  <a name="Enabling"></a> Включение хранилища запросов  
  Хранилище запросов неактивно для новых баз данных по умолчанию.  
@@ -57,7 +60,10 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
 Другие параметры синтаксиса, связанные с хранилищем запросов, см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 > [!NOTE]  
->  Нельзя включить хранилище запросов для базы данных **master** или **tempdb** .  
+> Нельзя включить хранилище запросов для базы данных **master** или **tempdb** .  
+ 
+> [!IMPORTANT]
+> Дополнительные сведения о включении хранилища запросов и настройке в соответствии с требованиями рабочей нагрузки см. в [рекомендациях по использованию хранилища запросов](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
  
 ## <a name="About"></a> Сведения о хранилище запросов  
  Планы выполнения для любого специального запроса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно меняются со временем по разным причинам, например из-за изменения статистики, схемы, создания и удаления индексов и т. д. В кэше процедур (где хранятся кэшированные планы запросов) хранится только последний план выполнения. Планы исключаются из кэша планов из-за нехватки памяти. В результате устранение проблем со снижением производительности запросов, вызванным изменениями планов выполнения, может оказаться сложным и требующим много времени.  
@@ -492,9 +498,9 @@ hist AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @history_start_time   
                AND rs.last_execution_time < @history_end_time)  
-        OR (rs.first_execution_time \<= @history_start_time   
+        OR (rs.first_execution_time <= @history_start_time   
                AND rs.last_execution_time > @history_start_time)  
-        OR (rs.first_execution_time \<= @history_end_time   
+        OR (rs.first_execution_time <= @history_end_time   
                AND rs.last_execution_time > @history_end_time)  
     GROUP BY p.query_id  
 ),  
@@ -509,9 +515,9 @@ recent AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @recent_start_time   
                AND rs.last_execution_time < @recent_end_time)  
-        OR (rs.first_execution_time \<= @recent_start_time   
+        OR (rs.first_execution_time <= @recent_start_time   
                AND rs.last_execution_time > @recent_start_time)  
-        OR (rs.first_execution_time \<= @recent_end_time   
+        OR (rs.first_execution_time <= @recent_end_time   
                AND rs.last_execution_time > @recent_end_time)  
     GROUP BY p.query_id  
 )  

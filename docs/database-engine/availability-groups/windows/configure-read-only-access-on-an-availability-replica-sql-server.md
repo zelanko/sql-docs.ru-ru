@@ -19,12 +19,12 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0bbeaa627bc1183fa6bdcb72538887132a5ba2b3
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cffaa400fa9e3727d1bcc7a569827573b70b10a9
+ms.sourcegitcommit: d457bb828eb46ee83f8ff5bdecfff09b26d7b154
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769000"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39259749"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Настройка доступа только для чтения в реплике доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34769000"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Дальнейшие действия:**  [после настройки доступа только для чтения для реплики доступности](#FollowUp)  
+-   **Дальнейшие действия:** [после настройки доступа только для чтения для реплики доступности](#FollowUp)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
@@ -214,10 +214,10 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
  **Факторы, которые могут повлиять на триггеры и задания после отработки отказа.**  
   
- Если имеются триггеры и задания, которые не могут выполняться в недоступной или доступной для чтения базы данных-получателе, то в скриптах триггеров и заданий следует проверять, какой базой данных является искомая реплика, базой данных-источником или базой данных-получателем, доступной для чтения. Для получения этих сведений следует использовать функцию [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md) , возвращающую свойство **Updatability** базы данных. Чтобы определить базу данных, доступную только для чтения, задайте в качестве значения READ_ONLY, как в примере ниже:  
+ Если имеются триггеры и задания, которые не могут выполняться в недоступной или доступной для чтения базы данных-получателе, то в скриптах триггеров и заданий следует проверять, какой базой данных является искомая реплика, базой данных-источником или базой данных-получателем, доступной для чтения. Для получения этих сведений используйте функцию [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md), возвращающую свойство **Updateability** базы данных. Чтобы определить базу данных, доступную только для чтения, задайте в качестве значения READ_ONLY, как в примере ниже:  
   
 ```  
-DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’  
+DATABASEPROPERTYEX([db name],’UpdateAbility’) = N’READ_ONLY’  
 ```  
   
  Чтобы определить базу данных для чтения и записи, укажите в качестве значения READ_WRITE.  

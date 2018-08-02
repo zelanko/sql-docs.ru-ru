@@ -71,7 +71,7 @@ ms.locfileid: "37149265"
   
 12. Из **маска ввода** выберите формат отрицательных чисел.  
   
-13. По желанию установите флажок **Включить отслеживание изменений** , чтобы отслеживать изменения в группах атрибутов. Дополнительные сведения см. в разделе [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
+13. По желанию установите флажок **Включить отслеживание изменений** , чтобы отслеживать изменения в группах атрибутов. Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)1;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
   
 14. Нажмите кнопку **Сохранить атрибут**.  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 07/02/2018
 ms.locfileid: "37266648"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Развертывание и выполнение пакетов служб SSIS с помощью хранимых процедур
-  После настройки проекта [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для использования модели развертывания проекта можно вызывать хранимые процедуры в каталоге служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , чтобы развернуть проект и выполнить пакеты. Дополнительные сведения о модели развертывания проектов см. в разделе [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
+  После настройки проекта [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для использования модели развертывания проекта можно вызывать хранимые процедуры в каталоге служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , чтобы развернуть проект и выполнить пакеты. Дополнительные сведения о модели развертывания проектов см. в разделе [Развертывание проектов и пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Для развертывания и выполнения пакетов также можно использовать среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения см. в разделе **См. также** .  
   
@@ -33,7 +33,7 @@ ms.locfileid: "37266648"
 > 2.  Щелкните правой кнопкой мыши пакет и выберите команду **Выполнить**.  
 > 3.  При необходимости задайте значения параметров, свойства диспетчера соединений и параметры на вкладке **Дополнительно** , например уровень ведения журнала.  
 >   
->      Дополнительные сведения об уровнях ведения журнала см. в разделе [Enable Logging for Package Execution on the SSIS Server](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
+>      Дополнительные сведения об уровнях ведения журнала см. в разделе [Включение ведения журналов при выполнении пакета на сервере служб SSIS](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
 > 4.  Перед нажатием кнопки **ОК** для выполнения пакета выберите пункт **Скрипт**. Код Transact-SQL откроется в окне редактора запросов среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>Развертывание и выполнение пакета с помощью хранимых процедур  

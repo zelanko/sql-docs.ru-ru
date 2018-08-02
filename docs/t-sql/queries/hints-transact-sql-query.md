@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: 534251e03b3f2a76994a3138475dc0de35388fd4
+ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854346"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39331600"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "37854346"
  Предотвращает использование в запросе некластеризованного индекса columnstore с оптимизацией для памяти. Если в запросе содержится указание запроса, исключающее использование индекса columnstore, а также указание индекса для использования индекса columnstore, то данные указания будут конфликтовать между собой, и запрос вернет ошибку.  
   
  MAX_GRANT_PERCENT = *percent*  
- Максимальный объем предоставленной памяти в PERCENT. Запрос гарантированно не превышает это ограничение. Реальное ограничение может быть ниже, если указано более низкое значение параметра регулятора ресурсов. Допустимые значения — от 0 до 100.  
+ Максимальный объем предоставленной памяти в PERCENT. Запрос гарантированно не превышает это ограничение. Реальное ограничение может быть ниже, если указано более низкое значение параметра Resource Governor. Допустимые значения — от 0 до 100.  
   
 **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

@@ -26,17 +26,17 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54224c2b6f977f21764553ceddfb7e7be5fd10c7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 05bb6bb4ec9a34abf7669514f2ed1c18fe83817e
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788365"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228430"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Возвращает номер идентификатора файла (ID) для указанного логического имени файла данных, файла журнала, или полнотекстового файла в текущей базе данных.  
+Эта функция возвращает номер идентификатора файла для указанного логического имени файла данных, файла журнала, или полнотекстового файла в текущей базе данных. 
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,22 +48,22 @@ FILE_IDEX ( file_name )
   
 ## <a name="arguments"></a>Аргументы  
  *file_name*  
- Выражение типа **sysname**, представляющее имя файла, для которого необходимо вернуть идентификатор файла.  
+Выражение типа **sysname**, представляющее имя файла, для которого необходимо вернуть значение идентификатора файла (FILE_IDEX). 
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **int**  
+**int**  
   
- **NULL** в случае ошибки  
+**NULL** в случае ошибки  
   
 ## <a name="remarks"></a>Remarks  
- Аргумент *file_name* соответствует логическому имени файла, отображенному в столбце **name** в представлении каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) или [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
+*file_name* соответствует логическому имени файла, отображенному в столбце **name** в представлении каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) или [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
- Функция FILE_IDEX может быть использована в списке выбора, в предложении WHERE или в любом другом месте, где допускаются выражения. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
+Используйте `FILE_IDEX` в списке SELECT, предложении WHERE или любом другом объекте с поддержкой выражений. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Получение идентификатора для указанного файла  
-Следующий пример возвращает идентификатор файла `AdventureWorks_Data`.  
+Этот пример возвращает идентификатор файла `AdventureWorks_Data`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>Б. Получение идентификатора файла, имя которого неизвестно  
-В приведенном ниже примере возвращается идентификатор файла журнала базы данных `AdventureWorks` путем выбора логического имени файла из представления каталога `sys.database_files`, где тип файла равен `1` (логический).  
+Этот пример возвращает идентификатор файла журнала `AdventureWorks`. Фрагмент кода Transact-SQL (T-SQL) выбирает логическое имя файла из представления каталога `sys.database_files`, где тип файла — `1` (журнал).  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -100,7 +100,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>В. Получение идентификатора файла полнотекстового файла каталога  
-В приведенном ниже примере возвращается идентификатор полнотекстового файла путем выбора логического имени файла из представления каталога `sys.database_files`, где тип файла равен `4` (полнотекстовый). Этот пример возвращает значение NULL, если полнотекстовый каталог не существует.  
+Этот пример возвращает идентификатор полнотекстового файла. Фрагмент кода T-SQL выбирает логическое имя файла из представления каталога `sys.database_files`, где тип файла — `4` (полнотекстовый). Этот код возвращает значение NULL, если полнотекстовый каталог не существует.
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  

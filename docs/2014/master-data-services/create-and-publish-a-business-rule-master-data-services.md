@@ -75,7 +75,7 @@ ms.locfileid: "37322385"
   
 18. На панели **Изменение действия** нажмите кнопку **Сохранить элемент**.  
   
-19. В правило также можно добавлять по несколько условий. Дополнительные сведения см. в статье [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
+19. В правило также можно добавлять по несколько условий. Дополнительные сведения см. в статье [Добавление нескольких условий к бизнес-правилу &#40службы Master Data Services&#41](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
 20. Нажмите кнопку **Назад**.  
   
