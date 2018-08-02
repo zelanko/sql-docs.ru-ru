@@ -45,7 +45,7 @@ ms.locfileid: "37194994"
   
  ![Логическая запись из трех таблиц со значениями](../media/logical-records-02.gif "Логическая запись из трех таблиц со значениями")  
   
- Чтобы определить связь логических записей между статьями, см. раздел [Define a Logical Record Relationship Between Merge Table Articles](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
+ Чтобы определить связь логических записей между статьями, см. раздел [Определение логической записи Отношения между Объединить таблицы статей](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ## <a name="benefits-of-logical-records"></a>Преимущества логических записей  
  Функция логических записей имеет два основных преимущества:  

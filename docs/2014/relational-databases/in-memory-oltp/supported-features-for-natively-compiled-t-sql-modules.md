@@ -158,7 +158,7 @@ ms.locfileid: "37240856"
 ##  <a name="auditing"></a> Аудит  
  Аудит на уровне процедуры поддерживается для хранимых процедур, скомпилированных в собственном коде. Аудит уровня инструкций не поддерживается.  
   
- Дополнительные сведения об аудите см. в разделе [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Дополнительные сведения об аудите см. в разделе [Создание спецификация аудита для сервера и базы данных](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ##  <a name="tqh"></a> Таблица, запрос и указания по соединению  
  Поддерживаются следующие конструкции:  

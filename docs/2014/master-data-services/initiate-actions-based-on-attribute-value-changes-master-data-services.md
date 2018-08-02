@@ -34,7 +34,7 @@ ms.locfileid: "37275540"
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   Атрибуты должны быть в группе отслеживания изменений. Дополнительные сведения см. в разделе [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
+-   Атрибуты должны быть в группе отслеживания изменений. Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений службы &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
   
 ### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>Создание бизнес-правила для инициации действий на основе значения атрибута  
   

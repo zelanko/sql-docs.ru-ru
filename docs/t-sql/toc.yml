@@ -17,34 +17,9 @@
 - name: Учебник. Составление инструкций Transact-SQL
   href: tutorial-writing-transact-sql-statements.md
   items:
-    - name: Урок 1. Создание объектов базы данных
+    - name: 'Урок 1: Создание объектов базы данных и запросов к ним'
       href: lesson-1-creating-database-objects.md
-      items:
-        - name: "Урок\_1–1. Создание базы данных"
-          href: lesson-1-1-creating-a-database.md
-        - name: "Урок\_1–2. Создание таблицы"
-          href: lesson-1-2-creating-a-table.md
-        - name: "Урок\_1–3. Вставка данных в таблицу и их обновление"
-          href: lesson-1-3-inserting-and-updating-data-in-a-table.md
-        - name: "Урок\_1–4. Чтение данных в таблице"
-          href: lesson-1-4-reading-the-data-in-a-table.md
-        - name: "Урок\_1–5. Сводка: создание объектов базы данных"
-          href: lesson-1-5-summary-creating-database-objects.md
-    - name: Занятие 2. Настройка разрешений на объекты базы данных
+    - name: "Урок\_2. Настройка разрешений для объектов базы данных"
       href: lesson-2-configuring-permissions-on-database-objects.md
-      items:
-        - name: "Урок\_2–1. Создание данных для входа"
-          href: lesson-2-1-creating-a-login.md
-        - name: "Урок\_2–2. Предоставление доступа к базе данных"
-          href: lesson-2-2-granting-access-to-a-database.md
-        - name: "Урок\_2–3. Создание представлений и хранимых процедур"
-          href: lesson-2-3-creating-views-and-stored-procedures.md
-        - name: "Урок\_2–4. Предоставление доступа к объекту базы данных"
-          href: lesson-2-4-granting-access-to-a-database-object.md
-        - name: "Урок\_2–5. Сводка: настройка разрешений для объектов базы данных"
-          href: lesson-2-5-summary-configuring-permissions-on-database-objects.md
-    - name: Урок 3. Удаление объектов базы данных
+    - name: "Урок\_3. Удаление объектов базы данных"
       href: lesson-3-deleting-database-objects.md
-      items:
-        - name: "Урок\_3–1. Удаление объектов базы данных"
-          href: lesson-3-1-deleting-database-objects.md
