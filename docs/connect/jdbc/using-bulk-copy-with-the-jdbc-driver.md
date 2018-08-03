@@ -1,7 +1,7 @@
 ---
 title: Использование массового копирования с драйвером JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,19 +14,19 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6daf0ae2773d8a99e4f9264c05024a86fcd79926
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 310545ee532baa5d8d1bac3acb804637bd1f44ed
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978666"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279205"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Использование массового копирования с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Microsoft SQL Server включает популярную служебную программу командной строки **bcp**, позволяющую быстро выполнять массовое копирование больших файлов в таблицы или представления баз данных SQL Server. Класс SQLServerBulkCopy позволяет создавать решения на языке Java, которые предоставляют аналогичные возможности. Существуют другие способы загрузки данных в таблицу SQL Server (например, с помощью инструкции INSERT), но SQLServerBulkCopy делает это значительно быстрее.  
   
- Класс SQLServerBulkCopy можно использовать для записи данных только в таблицы SQL Server. Но источником данных может быть не только SQL Server, а любой источник данных, если данные могут быть прочитаны с помощью реализации ResultSet, RowSet или ISQLServerBulkRecord.  
+ Класс SQLServerBulkCopy можно использовать для записи данных только в таблицы SQL Server. Но источником данных может быть не только SQL Server, а любой источник данных, если данные можно считать с помощью реализации ResultSet, RowSet или ISQLServerBulkRecord.  
   
  С помощью класса SQLServerBulkCopy вы можете выполнить:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "37978666"
 >  При использовании драйвера Microsoft JDBC 4.1 для SQL Server или более ранней версии (которая не поддерживает класс SQLServerBulkCopy) вместо него можно воспользоваться инструкцией SQL Server Transact-SQL BULK INSERT.  
   
 ## <a name="bulk-copy-example-setup"></a>Пример настройки массового копирования  
- Класс SQLServerBulkCopy можно использовать для записи данных только в таблицы SQL Server. В примерах кода в этом разделе используется образец базы данных SQL Server AdventureWorks. Чтобы не допустить изменения существующих таблиц, примеры кода записывают данные в таблицы, которые сначала необходимо создать.  
+ Класс SQLServerBulkCopy можно использовать для записи данных только в таблицы SQL Server. В примерах кода в этой статье используется пример базы данных SQL Server с именем AdventureWorks. Чтобы не допустить изменения существующих таблиц, примеры кода записывают данные в таблицы, которые сначала необходимо создать.  
   
  Таблицы BulkCopyDemoMatchingColumns и BulkCopyDemoDifferentColumns основаны на таблице AdventureWorks Production.Products. В примерах кода, использующих эти таблицы, данные из таблицы Production.Products добавляются к одной из этих таблиц-образцов. Таблица BulkCopyDemoDifferentColumns используется для демонстрации сопоставления столбцов из источника данных с целевой таблицей. Таблица BulkCopyDemoMatchingColumns используется в большинстве других примеров.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "37978666"
 ###  <a name="BKMK_TableSetup"></a> Настройка таблиц  
  Чтобы создать таблицы, необходимые для правильной работы примеров кода, выполните следующие инструкции Transact-SQL в базе данных SQL Server.  
   
-```  
+```sql
 USE AdventureWorks  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   
@@ -145,104 +145,70 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 > [!IMPORTANT]  
 >  Этот пример не будет работать, если вы не создали рабочие таблицы, как описано в разделе [Настройка таблиц](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Этот пример кода предназначен только для демонстрации синтаксиса использования SQLServerBulkCopy. Если исходная и целевая таблицы расположены в одном экземпляре SQL Server, будет проще и быстрее использовать инструкцию Transact-SQL INSERT ... SELECT для копирования данных.  
   
-```  
-import java.sql.*;  
-  
-import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;  
-  
-public class Program  
-{  
-    public static void main(String[] args)  
-    {  
-        String connectionString = GetConnectionString();  
-        try  
-        {  
-            // Note: if you are not using try-with-resources statements (as here),  
-            // you must remember to call close() on any Connection, Statement,   
-            // ResultSet, and SQLServerBulkCopy objects that you create.  
-  
-            // Open a sourceConnection to the AdventureWorks database.   
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-            try (Connection sourceConnection = DriverManager.getConnection(connectionString))  
-            {  
-                try (Statement stmt = sourceConnection.createStatement())  
-                {  
-                    // Perform an initial count on the destination table.  
-                    long countStart = 0;  
-                    try (ResultSet rsRowCount = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoMatchingColumns;"))  
-                    {  
-                        rsRowCount.next();  
-                        countStart = rsRowCount.getInt(1);  
-                        System.out.println("Starting row count = " + countStart);  
-                    }  
-  
-                    // Get data from the source table as a ResultSet.  
-                    try (ResultSet rsSourceData = stmt.executeQuery(  
-                            "SELECT ProductID, Name, ProductNumber FROM Production.Product"))  
-                    {  
-                        // Open the destination connection. In the real world you would    
-                        // not use SQLServerBulkCopy to move data from one table to the other    
-                        // in the same database. This is for demonstration purposes only.   
-                        try (Connection destinationConnection =   
-                                DriverManager.getConnection(connectionString))  
-                        {  
-                            // Set up the bulk copy object.    
-                            // Note that the column positions in the source   
-                            // table match the column positions in    
-                            // the destination table so there is no need to   
-                            // map columns.   
-                            try (SQLServerBulkCopy bulkCopy =  
-                                       new SQLServerBulkCopy(destinationConnection))  
-                            {  
-                                bulkCopy.setDestinationTableName("dbo.BulkCopyDemoMatchingColumns");  
-  
-                                try  
-                                {  
-                                    // Write from the source to the destination.  
-                                    bulkCopy.writeToServer(rsSourceData);  
-                                }  
-                                catch (Exception e)  
-                                {  
-                                    // Handle any errors that may have occurred.  
-                                    e.printStackTrace();  
-                                }  
-                            }  
-  
-                            // Perform a final count on the destination    
-                            // table to see how many rows were added.  
-                            try (ResultSet rsRowCount = stmt.executeQuery(  
-                                    "SELECT COUNT(*) FROM dbo.BulkCopyDemoMatchingColumns;"))  
-                            {  
-                                rsRowCount.next();  
-                                long countEnd = rsRowCount.getInt(1);  
-                                System.out.println("Ending row count = " + countEnd);  
-                                System.out.println((countEnd - countStart) + " rows were added.");  
-                            }  
-                        }  
-                    }  
-                }  
-            }  
-        }  
-        catch (Exception e)  
-        {  
-            // Handle any errors that may have occurred.  
-            e.printStackTrace();  
-        }  
-    }  
-  
-    // To avoid storing the sourceConnection String in your code,    
-    // you can retrieve it from a configuration file.   
-    private static String GetConnectionString()  
-    {  
-  
-        // Create a variable for the connection string.  
-        String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-           "databaseName=AdventureWorks;user=UserName;password=*****";  
-  
-        return connectionUrl;  
-    }  
-}  
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;
+
+public class BulkCopySingle {
+    public static void main(String[] args) {
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String destinationTable = "dbo.BulkCopyDemoMatchingColumns";
+        int countBefore, countAfter;
+        ResultSet rsSourceData;
+
+        try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+                Connection destinationConnection = DriverManager.getConnection(connectionUrl);
+                Statement stmt = sourceConnection.createStatement();
+                SQLServerBulkCopy bulkCopy = new SQLServerBulkCopy(destinationConnection)) {
+
+            // Empty the destination table.
+            stmt.executeUpdate("DELETE FROM " + destinationTable);
+
+            // Perform an initial count on the destination table.
+            countBefore = getRowCount(stmt, destinationTable);
+
+            // Get data from the source table as a ResultSet.
+            rsSourceData = stmt.executeQuery("SELECT ProductID, Name, ProductNumber FROM Production.Product");
+
+            // In real world applications you would
+            // not use SQLServerBulkCopy to move data from one table to the other
+            // in the same database. This is for demonstration purposes only.
+
+            // Set up the bulk copy object.
+            // Note that the column positions in the source
+            // table match the column positions in
+            // the destination table so there is no need to
+            // map columns.
+            bulkCopy.setDestinationTableName(destinationTable);
+
+            // Write from the source to the destination.
+            bulkCopy.writeToServer(rsSourceData);
+
+            // Perform a final count on the destination
+            // table to see how many rows were added.
+            countAfter = getRowCount(stmt, destinationTable);
+            System.out.println((countAfter - countBefore) + " rows were added.");
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static int getRowCount(Statement stmt,
+            String tableName) throws SQLException {
+        ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM " + tableName);
+        rs.next();
+        int count = rs.getInt(1);
+        rs.close();
+        return count;
+    }
+}
 ```  
   
 ### <a name="performing-a-bulk-copy-operation-using-transact-sql"></a>Выполнение операции массового копирования с помощью Transact-SQL  
@@ -251,18 +217,13 @@ public class Program
 > [!NOTE]  
 >  Путь к источнику данных указан относительно сервера. Для успешного выполнения массового копирования у процесса сервера должен быть доступ к этому пути.  
   
-```  
-try (Connection con = DriverManager.getConnection(connectionString))  
-{  
-    try (Statement stmt = con.createStatement())  
-    {  
-        // Perform the BULK INSERT  
-        stmt.executeUpdate(  
-                "BULK INSERT Northwind.dbo.[Order Details] " +  
-                        "FROM 'f:\\mydata\\data.tbl' " +  
-                        "WITH ( FORMATFILE='f:\\mydata\\data.fmt' )");  
-    }  
-}  
+```java
+try (Connection con = DriverManager.getConnection(connectionUrl);
+        Statement stmt = con.createStatement()) {
+    // Perform the BULK INSERT
+    stmt.executeUpdate(
+            "BULK INSERT Northwind.dbo.[Order Details] " + "FROM 'f:\\mydata\\data.tbl' " + "WITH ( FORMATFILE='f:\\mydata\\data.fmt' )");
+}
 ```  
   
 ## <a name="multiple-bulk-copy-operations"></a>несколько операций массового копирования;  
@@ -276,186 +237,116 @@ try (Connection con = DriverManager.getConnection(connectionString))
 > [!IMPORTANT]  
 >  Этот пример не будет работать, если вы не создали рабочие таблицы, как описано в разделе [Настройка таблиц](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Этот пример кода предназначен только для демонстрации синтаксиса использования SQLServerBulkCopy. Если исходная и целевая таблицы расположены в одном экземпляре SQL Server, будет проще и быстрее использовать инструкцию Transact-SQL INSERT ... SELECT для копирования данных.  
   
-```  
-import java.sql.*;  
-  
-import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;  
-  
-public class Program  
-{  
-    public static void main(String[] args)  
-    {  
-        String connectionString = GetConnectionString();  
-        try  
-        {  
-            // Note: if you are not using try-with-resources statements (as here),  
-            // you must remember to call close() on any Connection, Statement,   
-            // ResultSet, and SQLServerBulkCopy objects that you create.  
-  
-            // Open a sourceConnection to the AdventureWorks database.   
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-            try (Connection sourceConnection1 = DriverManager.getConnection(connectionString))  
-            {  
-                try (Statement stmt = sourceConnection1.createStatement())  
-                {  
-  
-                    // Empty the destination tables.   
-                    stmt.executeUpdate("DELETE FROM dbo.BulkCopyDemoOrderHeader;");  
-                    stmt.executeUpdate("DELETE FROM dbo.BulkCopyDemoOrderDetail;");  
-  
-                    // Perform an initial count on the destination   
-                    //  table with matching columns.  
-                    long countStartHeader = 0;  
-                    try (ResultSet rsRowCountHeader = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoOrderHeader;"))  
-                    {  
-                        rsRowCountHeader.next();  
-                        countStartHeader = rsRowCountHeader.getInt(1);  
-                        System.out.println("Starting row count for Header table = " + countStartHeader);  
-                    }  
-  
-                    // Perform an initial count on the destination   
-                    // table with different column positions.  
-                    long countStartDetail = 0;  
-                    try (ResultSet rsRowCountDetail = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoOrderDetail;"))  
-                    {  
-                        rsRowCountDetail.next();  
-                        countStartDetail = rsRowCountDetail.getInt(1);  
-                        System.out.println("Starting row count for Detail table = " + countStartDetail);  
-                    }  
-  
-                    // Get data from the source table as a ResultSet.   
-                    // The Sales.SalesOrderHeader and Sales.SalesOrderDetail   
-                    // tables are quite large and could easily cause a timeout   
-                    // if all data from the tables is added to the destination.    
-                    // To keep the example simple and quick, a parameter is     
-                    // used to select only orders for a particular account    
-                    // as the source for the bulk insert.  
-                    try (PreparedStatement preparedStmt1 = sourceConnection1.prepareStatement(  
-                            "SELECT [SalesOrderID], [OrderDate], " +  
-                            "[AccountNumber] FROM [Sales].[SalesOrderHeader] " +  
-                            "WHERE [AccountNumber] = ?;"))  
-                    {  
-                        preparedStmt1.setString(1, "10-4020-000034");  
-  
-                        try (ResultSet rsHeader = preparedStmt1.executeQuery())  
-                        {  
-                            // Get the Detail data in a separate connection.   
-                            try (Connection sourceConnection2 = DriverManager.getConnection(connectionString))  
-                            {  
-                                try (PreparedStatement preparedStmt2 = sourceConnection2.prepareStatement(  
-                                        "SELECT [Sales].[SalesOrderDetail].[SalesOrderID], " +  
-                                                "[SalesOrderDetailID], [OrderQty], [ProductID], " +  
-                                                "[UnitPrice] FROM [Sales].[SalesOrderDetail] " +  
-                                                "INNER JOIN [Sales].[SalesOrderHeader] " +  
-                                                "ON [Sales].[SalesOrderDetail].[SalesOrderID] " +  
-                                                "= [Sales].[SalesOrderHeader].[SalesOrderID] " +  
-                                                "WHERE [AccountNumber] = ?;"))  
-                                {  
-                                    preparedStmt2.setString(1, "10-4020-000034");  
-  
-                                    try (ResultSet rsDetail = preparedStmt2.executeQuery())  
-                                    {  
-                                        // Create the SQLServerBulkCopySQLServerBulkCopy object.    
-                                        try (SQLServerBulkCopy bulkCopy =  
-                                                   new SQLServerBulkCopy(connectionString))  
-                                        {  
-                                            bulkCopy.setBulkCopyOptions(copyOptions);  
-                                            bulkCopy.setDestinationTableName("dbo.BulkCopyDemoOrderHeader");  
-  
-                                            // Guarantee that columns are mapped correctly by   
-                                            // defining the column mappings for the order.  
-                                            bulkCopy.addColumnMapping("SalesOrderID", "SalesOrderID");  
-                                            bulkCopy.addColumnMapping("OrderDate", "OrderDate");  
-                                            bulkCopy.addColumnMapping("AccountNumber", "AccountNumber");  
-  
-                                            // Write rsHeader to the destination.   
-                                            try  
-                                            {  
-                                                bulkCopy.writeToServer(rsHeader);  
-                                            }  
-                                            catch (Exception e)  
-                                            {  
-                                                // Handle any errors that may have occurred.  
-                                                e.printStackTrace();  
-                                            }  
-  
-                                            // Set up the order details destination.   
-                                            bulkCopy.setDestinationTableName("dbo.BulkCopyDemoOrderDetail");  
-  
-                                            // Clear the existing column mappings  
-                                            bulkCopy.clearColumnMappings();  
-  
-                                            // Add order detail column mappings.  
-                                            bulkCopy.addColumnMapping("SalesOrderID", "SalesOrderID");  
-                                            bulkCopy.addColumnMapping(  
-                                                    "SalesOrderDetailID",   
-                                                    "SalesOrderDetailID");  
-                                            bulkCopy.addColumnMapping("OrderQty", "OrderQty");  
-                                            bulkCopy.addColumnMapping("ProductID", "ProductID");  
-                                            bulkCopy.addColumnMapping("UnitPrice", "UnitPrice");  
-  
-                                            // Write rsDetail to the destination.   
-                                            try  
-                                            {  
-                                                bulkCopy.writeToServer(rsDetail);  
-                                            }  
-                                            catch (Exception e)  
-                                            {  
-                                                // Handle any errors that may have occurred.  
-                                                e.printStackTrace();  
-                                            }  
-                                        }  
-                                    }  
-                                }  
-                            }  
-                        }  
-                    }  
-  
-                    // Perform a final count on the destination   
-                    // tables to see how many rows were added.  
-                    try (ResultSet rsRowCountHeader = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoOrderHeader;"))  
-                    {  
-                        rsRowCountHeader.next();  
-                        long countEndHeader =  rsRowCountHeader.getInt(1);  
-                        System.out.println(  
-                                (countEndHeader - countStartHeader) +   
-                                " rows were added to the Header table.");  
-                    }  
-  
-                    try (ResultSet rsRowCountDetail = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoOrderDetail;"))  
-                    {  
-                        rsRowCountDetail.next();  
-                        long countEndDetail = rsRowCountDetail.getInt(1);  
-                        System.out.println(  
-                                (countEndDetail - countStartDetail) +   
-                                " rows were added to the Detail table.");  
-                    }  
-                }  
-            }  
-        }  
-        catch (Exception e)  
-        {  
-            // Handle any errors that may have occurred.  
-            e.printStackTrace();  
-        }  
-    }  
-  
-    // To avoid storing the sourceConnection String in your code,    
-    // you can retrieve it from a configuration file.   
-    private static String GetConnectionString()  
-    {  
-        // Create a variable for the connection string.  
-        String connectionUrl = "jdbc:sqlserver://localhost:1433;"  
-                + "databaseName=AdventureWorks;user=UserName;password=*****";  
-  
-        return connectionUrl;  
-    }  
-}  
-  
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;
+import com.microsoft.sqlserver.jdbc.SQLServerBulkCopyOptions;
+
+public class BulkCopyMultiple {
+    public static void main(String[] args) {
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String destinationHeaderTable = "dbo.BulkCopyDemoOrderHeader";
+        String destinationDetailTable = "dbo.BulkCopyDemoOrderDetail";
+        int countHeaderBefore, countDetailBefore, countHeaderAfter, countDetailAfter;
+        ResultSet rsHeader, rsDetail;
+
+        try (Connection sourceConnection1 = DriverManager.getConnection(connectionUrl);
+                Connection sourceConnection2 = DriverManager.getConnection(connectionUrl);
+                Statement stmt = sourceConnection1.createStatement();
+                PreparedStatement preparedStmt1 = sourceConnection1.prepareStatement(
+                        "SELECT [SalesOrderID], [OrderDate], [AccountNumber] FROM [Sales].[SalesOrderHeader] WHERE [AccountNumber] = ?;");
+                PreparedStatement preparedStmt2 = sourceConnection2.prepareStatement(
+                        "SELECT [Sales].[SalesOrderDetail].[SalesOrderID], [SalesOrderDetailID], [OrderQty], [ProductID], [UnitPrice] FROM "
+                                + "[Sales].[SalesOrderDetail] INNER JOIN [Sales].[SalesOrderHeader] ON "
+                                + "[Sales].[SalesOrderDetail].[SalesOrderID] = [Sales].[SalesOrderHeader].[SalesOrderID] WHERE [AccountNumber] = ?;");
+                SQLServerBulkCopy bulkCopy = new SQLServerBulkCopy(connectionUrl);) {
+
+            // Empty the destination tables.
+            stmt.executeUpdate("DELETE FROM " + destinationHeaderTable);
+            stmt.executeUpdate("DELETE FROM " + destinationDetailTable);
+
+            // Perform an initial count on the destination
+            // table with matching columns.
+            countHeaderBefore = getRowCount(stmt, destinationHeaderTable);
+
+            // Perform an initial count on the destination
+            // table with different column positions.
+            countDetailBefore = getRowCount(stmt, destinationDetailTable);
+
+            // Get data from the source table as a ResultSet.
+            // The Sales.SalesOrderHeader and Sales.SalesOrderDetail
+            // tables are quite large and could easily cause a timeout
+            // if all data from the tables is added to the destination.
+            // To keep the example simple and quick, a parameter is
+            // used to select only orders for a particular account
+            // as the source for the bulk insert.
+            preparedStmt1.setString(1, "10-4020-000034");
+            rsHeader = preparedStmt1.executeQuery();
+
+            // Get the Detail data in a separate connection.
+            preparedStmt2.setString(1, "10-4020-000034");
+            rsDetail = preparedStmt2.executeQuery();
+
+            // Create the SQLServerBulkCopySQLServerBulkCopy object.
+            SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
+            copyOptions.setBulkCopyTimeout(100);
+            bulkCopy.setBulkCopyOptions(copyOptions);
+            bulkCopy.setDestinationTableName(destinationHeaderTable);
+
+            // Guarantee that columns are mapped correctly by
+            // defining the column mappings for the order.
+            bulkCopy.addColumnMapping("SalesOrderID", "SalesOrderID");
+            bulkCopy.addColumnMapping("OrderDate", "OrderDate");
+            bulkCopy.addColumnMapping("AccountNumber", "AccountNumber");
+
+            // Write rsHeader to the destination.
+            bulkCopy.writeToServer(rsHeader);
+
+            // Set up the order details destination.
+            bulkCopy.setDestinationTableName(destinationDetailTable);
+
+            // Clear the existing column mappings
+            bulkCopy.clearColumnMappings();
+
+            // Add order detail column mappings.
+            bulkCopy.addColumnMapping("SalesOrderID", "SalesOrderID");
+            bulkCopy.addColumnMapping("SalesOrderDetailID", "SalesOrderDetailID");
+            bulkCopy.addColumnMapping("OrderQty", "OrderQty");
+            bulkCopy.addColumnMapping("ProductID", "ProductID");
+            bulkCopy.addColumnMapping("UnitPrice", "UnitPrice");
+
+            // Write rsDetail to the destination.
+            bulkCopy.writeToServer(rsDetail);
+
+            // Perform a final count on the destination
+            // tables to see how many rows were added.
+            countHeaderAfter = getRowCount(stmt, destinationHeaderTable);
+            countDetailAfter = getRowCount(stmt, destinationDetailTable);
+
+            System.out.println((countHeaderAfter - countHeaderBefore) + " rows were added to the Header table.");
+            System.out.println((countDetailAfter - countDetailBefore) + " rows were added to the Detail table.");
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static int getRowCount(Statement stmt,
+            String tableName) throws SQLException {
+        ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM " + tableName);
+        rs.next();
+        int count = rs.getInt(1);
+        rs.close();
+        return count;
+    }
+}
 ```  
   
 ##  <a name="BKMK_TransactionBulk"></a> Транзакции и операции массового копирования  
@@ -473,120 +364,88 @@ public class Program
 > [!NOTE]  
 >  Этот пример не будет работать, если вы не создали рабочие таблицы, как описано в разделе [Настройка таблиц](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Этот пример кода предназначен только для демонстрации синтаксиса использования SQLServerBulkCopy. Если исходная и целевая таблицы расположены в одном экземпляре SQL Server, будет проще и быстрее использовать инструкцию Transact-SQL INSERT ... SELECT для копирования данных.  
   
-```  
-import java.sql.*;  
-  
-import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;  
-import com.microsoft.sqlserver.jdbc.SQLServerBulkCopyOptions;  
-  
-public class Program  
-{  
-    public static void main(String[] args)  
-    {  
-        String connectionString = GetConnectionString();  
-        try  
-        {  
-            // Note: if you are not using try-with-resources statements (as here),  
-            // you must remember to call close() on any Connection, Statement,   
-            // ResultSet, and SQLServerBulkCopy objects that you create.  
-  
-            // Open a sourceConnection to the AdventureWorks database.   
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-            try (Connection sourceConnection = DriverManager.getConnection(connectionString))  
-            {  
-                try (Statement stmt = sourceConnection.createStatement())  
-                {  
-                    //  Delete all from the destination table.  
-                    stmt.executeUpdate("DELETE FROM dbo.BulkCopyDemoMatchingColumns");  
-  
-                    //  Add a single row that will result in duplicate key            
-                    //  when all rows from source are bulk copied.            
-                    //  Note that this technique will only be successful in             
-                    //  illustrating the point if a row with ProductID = 446              
-                    //  exists in the AdventureWorks Production.Products table.             
-                    //  If you have made changes to the data in this table, change            
-                    //  the SQL statement in the code to add a ProductID that            
-                    //  does exist in your version of the Production.Products            
-                    //  table. Choose any ProductID in the middle of the table            
-                    //  (not first or last row) to best illustrate the result.  
-                    stmt.executeUpdate("SET IDENTITY_INSERT dbo.BulkCopyDemoMatchingColumns ON;" +  
-                            "INSERT INTO " + "dbo.BulkCopyDemoMatchingColumns " +  
-                            "([ProductID], [Name] ,[ProductNumber]) " +  
-                            "VALUES(446, 'Lock Nut 23','LN-3416');" +  
-                            "SET IDENTITY_INSERT dbo.BulkCopyDemoMatchingColumns OFF");  
-  
-                    // Perform an initial count on the destination table.  
-                    long countStart = 0;  
-                    try (ResultSet rsRowCount = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoMatchingColumns;"))  
-                    {  
-                        rsRowCount.next();  
-                        countStart = rsRowCount.getInt(1);  
-                        System.out.println("Starting row count = " + countStart);  
-                    }  
-  
-                    //  Get data from the source table as a ResultSet.  
-                    try (ResultSet rsSourceData = stmt.executeQuery(  
-                            "SELECT ProductID, Name, ProductNumber FROM Production.Product"))  
-                    {  
-  
-                        // Set up the bulk copy object using the KeepIdentity option and BatchSize = 10.  
-                        SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();  
-                        copyOptions.setKeepIdentity(true);  
-                        copyOptions.setBatchSize(10);  
-  
-                        try (SQLServerBulkCopy bulkCopy =   
-                                new SQLServerBulkCopy(connectionString))  
-                        {  
-                            bulkCopy.setBulkCopyOptions(copyOptions);  
-                            bulkCopy.setDestinationTableName("dbo.BulkCopyDemoMatchingColumns");  
-  
-                            // Write from the source to the destination.   
-                            // This should fail with a duplicate key error   
-                            // after some of the batches have been copied.   
-                            try  
-                            {  
-                                bulkCopy.writeToServer(rsSourceData);  
-                            }  
-                            catch (Exception e)  
-                            {  
-                                // Handle any errors that may have occurred.  
-                                e.printStackTrace();  
-                            }  
-                        }  
-                    }  
-  
-                    // Perform a final count on the destination    
-                    // table to see how many rows were added.  
-                    try (ResultSet rsRowCount = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoMatchingColumns;"))  
-                    {  
-                        rsRowCount.next();  
-                        long countEnd = rsRowCount.getInt(1);  
-                        System.out.println("Ending row count = " + countEnd);  
-                        System.out.println((countEnd - countStart) + " rows were added.");  
-                    }  
-                }  
-            }  
-        }  
-        catch (Exception e)  
-        {  
-            // Handle any errors that may have occurred.  
-            e.printStackTrace();  
-        }  
-    }  
-  
-    // To avoid storing the sourceConnection String in your code,    
-    // you can retrieve it from a configuration file.   
-    private static String GetConnectionString()  
-    {  
-        // Create a variable for the connection String.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-              "databaseName=AdventureWorks;user=UserName;password=*****";  
-  
-        return connectionUrl;  
-    }  
-}  
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;
+import com.microsoft.sqlserver.jdbc.SQLServerBulkCopyOptions;
+
+public class BulkCopyNonTransacted {
+    public static void main(String[] args) {
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String destinationTable = "dbo.BulkCopyDemoMatchingColumns";
+        int countBefore, countAfter;
+        ResultSet rsSourceData;
+
+        try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+                Statement stmt = sourceConnection.createStatement();
+                SQLServerBulkCopy bulkCopy = new SQLServerBulkCopy(connectionUrl)) {
+
+            // Empty the destination table.
+            stmt.executeUpdate("DELETE FROM " + destinationTable);
+
+            // Add a single row that will result in duplicate key
+            // when all rows from source are bulk copied.
+            // Note that this technique will only be successful in
+            // illustrating the point if a row with ProductID = 446
+            // exists in the AdventureWorks Production.Products table.
+            // If you have made changes to the data in this table, change
+            // the SQL statement in the code to add a ProductID that
+            // does exist in your version of the Production.Products
+            // table. Choose any ProductID in the middle of the table
+            // (not first or last row) to best illustrate the result.
+            stmt.executeUpdate("SET IDENTITY_INSERT " + destinationTable + " ON;" + "INSERT INTO " + destinationTable
+                    + "([ProductID], [Name] ,[ProductNumber]) VALUES(446, 'Lock Nut 23','LN-3416'); SET IDENTITY_INSERT " + destinationTable
+                    + " OFF");
+
+            // Perform an initial count on the destination table.
+            countBefore = getRowCount(stmt, destinationTable);
+
+            // Get data from the source table as a ResultSet.
+            rsSourceData = stmt.executeQuery("SELECT ProductID, Name, ProductNumber FROM Production.Product");
+
+            // Set up the bulk copy object using the KeepIdentity option and BatchSize = 10.
+            SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
+            copyOptions.setKeepIdentity(true);
+            copyOptions.setBatchSize(10);
+
+            bulkCopy.setBulkCopyOptions(copyOptions);
+            bulkCopy.setDestinationTableName(destinationTable);
+
+            // Write from the source to the destination.
+            // This should fail with a duplicate key error
+            // after some of the batches have been copied.
+            try {
+                bulkCopy.writeToServer(rsSourceData);
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+            // Perform a final count on the destination
+            // table to see how many rows were added.
+            countAfter = getRowCount(stmt, destinationTable);
+            System.out.println((countAfter - countBefore) + " rows were added.");
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static int getRowCount(Statement stmt,
+            String tableName) throws SQLException {
+        ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM " + tableName);
+        rs.next();
+        int count = rs.getInt(1);
+        rs.close();
+        return count;
+    }
+}
 ```  
   
 ### <a name="performing-a-dedicated-build-copy-operation-in-a-transaction"></a>Выполнение выделенной операции массового копирования в транзакции  
@@ -595,263 +454,109 @@ public class Program
 > [!NOTE]  
 >  Поскольку разные пакеты выполняются в разных транзакциях, если во время операции массового копирования возникает ошибка, для всех строк в текущем пакете будет выполнен откат, но строки из предыдущих пакетов останутся в базе данных.  
   
- Следующее приложение похоже на предыдущий пример с одним исключением: в этом примере операция массового копирования обрабатывает собственные транзакции. Фиксируются все пакеты, скопированные до появления ошибки. Пакет, содержащий повторяющийся ключ, откатывается, а операция массового копирования прерывается до обработки любых других пакетов.  
-  
-> [!NOTE]  
->  Этот пример не будет работать, если вы не создали рабочие таблицы, как описано в разделе [Настройка таблиц](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Этот пример кода предназначен только для демонстрации синтаксиса использования SQLServerBulkCopy. Если исходная и целевая таблицы расположены в одном экземпляре SQL Server, будет проще и быстрее использовать инструкцию Transact-SQL INSERT ... SELECT для копирования данных.  
-  
-```  
-import java.sql.*;  
-  
-import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;  
-import com.microsoft.sqlserver.jdbc.SQLServerBulkCopyOptions;  
-  
-public class Program  
-{  
-    public static void main(String[] args)  
-    {  
-        String connectionString = GetConnectionString();  
-        try  
-        {  
-            // Note: if you are not using try-with-resources statements (as here),  
-            // you must remember to call close() on any Connection, Statement,   
-            // ResultSet, and SQLServerBulkCopy objects that you create.  
-  
-            // Open a sourceConnection to the AdventureWorks database.   
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-            try (Connection sourceConnection = DriverManager.getConnection(connectionString))  
-            {  
-                try (Statement stmt = sourceConnection.createStatement())  
-                {  
-                    //  Delete all from the destination table.  
-                    stmt.executeUpdate("DELETE FROM dbo.BulkCopyDemoMatchingColumns");  
-  
-                    //  Add a single row that will result in duplicate key            
-                    //  when all rows from source are bulk copied.            
-                    //  Note that this technique will only be successful in             
-                    //  illustrating the point if a row with ProductID = 446              
-                    //  exists in the AdventureWorks Production.Products table.             
-                    //  If you have made changes to the data in this table, change            
-                    //  the SQL statement in the code to add a ProductID that            
-                    //  does exist in your version of the Production.Products            
-                    //  table. Choose any ProductID in the middle of the table            
-                    //  (not first or last row) to best illustrate the result.  
-                    stmt.executeUpdate("SET IDENTITY_INSERT dbo.BulkCopyDemoMatchingColumns ON;" +  
-                            "INSERT INTO " + "dbo.BulkCopyDemoMatchingColumns " +  
-                            "([ProductID], [Name] ,[ProductNumber]) " +  
-                            "VALUES(446, 'Lock Nut 23','LN-3416');" +  
-                            "SET IDENTITY_INSERT dbo.BulkCopyDemoMatchingColumns OFF");  
-  
-                    // Perform an initial count on the destination table.  
-                    long countStart = 0;  
-                    try (ResultSet rsRowCount = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoMatchingColumns;"))  
-                    {  
-                        rsRowCount.next();  
-                        countStart = rsRowCount.getInt(1);  
-                        System.out.println("Starting row count = " + countStart);  
-                    }  
-  
-                    //  Get data from the source table as a ResultSet.  
-                    try (ResultSet rsSourceData = stmt.executeQuery(  
-                            "SELECT ProductID, Name, ProductNumber FROM Production.Product"))  
-                    {  
-  
-                        // Set up the bulk copy object.  
-                        // Note that when specifying the UseInternalTransaction   
-                        // option, you cannot also use an external transaction.   
-                        // Therefore, you must use the SQLServerBulkCopy construct that   
-                        // requires a string for the connection, rather than an   
-                        // existing Connection object.   
-                        SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();  
-                        copyOptions.setKeepIdentity(true);  
-                        copyOptions.setBatchSize(10);  
-                        copyOptions.setUseInternalTransaction(true);  
-  
-                        try (SQLServerBulkCopy bulkCopy =   
-                                new SQLServerBulkCopy(connectionString))  
-                        {  
-                            bulkCopy.setBulkCopyOptions(copyOptions);  
-                            bulkCopy.setDestinationTableName("dbo.BulkCopyDemoMatchingColumns");  
-  
-                            // Write from the source to the destination.   
-                            // This should fail with a duplicate key error   
-                            // after some of the batches have been copied.   
-                            try  
-                            {  
-                                bulkCopy.writeToServer(rsSourceData);  
-                            }  
-                            catch (Exception e)  
-                            {  
-                                // Handle any errors that may have occurred.  
-                                e.printStackTrace();  
-                            }  
-                        }  
-                    }  
-  
-                    // Perform a final count on the destination    
-                    // table to see how many rows were added.  
-                    try (ResultSet rsRowCount = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoMatchingColumns;"))  
-                    {  
-                        rsRowCount.next();  
-                        long countEnd = rsRowCount.getInt(1);  
-                        System.out.println("Ending row count = " + countEnd);  
-                        System.out.println((countEnd - countStart) + " rows were added.");  
-                    }  
-                }  
-            }  
-        }  
-        catch (Exception e)  
-        {  
-            // Handle any errors that may have occurred.  
-            e.printStackTrace();  
-        }  
-    }  
-  
-    // To avoid storing the sourceConnection String in your code,    
-    // you can retrieve it from a configuration file.   
-    private static String GetConnectionString()  
-    {  
-        // Create a variable for the connection string.  
-        String connectionUrl = "jdbc:sqlserver://localhost:1433;"  
-                + "databaseName=AdventureWorks;user=UserName;password=*****";  
-  
-        return connectionUrl;  
-    }  
-}  
-```  
+ При указании **UseInternalTransaction** в диалоговом окне **BulkCopyNonTransacted**, операция массового копирования включена в большую, внешнюю транзакцию. Если возникает ошибка нарушения первичного ключа, производится откат всей транзакции и никакие строки не добавляются в целевую таблицу.
+ 
+```java
+SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
+copyOptions.setKeepIdentity(true);
+copyOptions.setBatchSize(10);
+copyOptions.setUseInternalTransaction(true);
+```
   
 ### <a name="using-existing-transactions"></a>Использование существующих транзакций  
  Вы можете передать объект Connection с включенными транзакциями в качестве параметра конструктора SQLServerBulkCopy. В этом случае операция массового копирования выполняется в существующей транзакции, а состояние транзакции не изменяется (то есть она не фиксируется и не прерывается). Это позволяет приложению включить операцию массового копирования в транзакцию с другими операциями базы данных. Если необходимо выполнить откат всей операции массового копирования из-за ошибки или если массовое копирование должно выполняться как часть большего процесса, который может быть отменен, можно выполнить откат в объекте Connection в любой момент после массового копирования.  
   
- Следующее приложение похоже на первый пример (без транзакции) с одним исключением: в этом примере операция массового копирования включена в большую, внешнюю транзакцию. Если возникает ошибка нарушения первичного ключа, производится откат всей транзакции и никакие строки не добавляются в целевую таблицу.  
+ Следующее приложение похоже на **BulkCopyNonTransacted** с одним исключением: в этом примере операция массового копирования включена в большую, внешнюю транзакцию. Если возникает ошибка нарушения первичного ключа, производится откат всей транзакции и никакие строки не добавляются в целевую таблицу.
   
 > [!NOTE]  
 >  Этот пример не будет работать, если вы не создали рабочие таблицы, как описано в разделе [Настройка таблиц](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Этот пример кода предназначен только для демонстрации синтаксиса использования SQLServerBulkCopy. Если исходная и целевая таблицы расположены в одном экземпляре SQL Server, будет проще и быстрее использовать инструкцию Transact-SQL INSERT ... SELECT для копирования данных.  
   
-```  
-import java.sql.*;  
-  
-import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;  
-import com.microsoft.sqlserver.jdbc.SQLServerBulkCopyOptions;  
-  
-public class Program  
-{  
-    public static void main(String[] args)  
-    {  
-        String connectionString = GetConnectionString();  
-        try  
-        {  
-            // Note: if you are not using try-with-resources statements (as here),  
-            // you must remember to call close() on any Connection, Statement,   
-            // ResultSet, and SQLServerBulkCopy objects that you create.  
-  
-            // Open a sourceConnection to the AdventureWorks database.   
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-            try (Connection sourceConnection = DriverManager.getConnection(connectionString))  
-            {  
-                try (Statement stmt = sourceConnection.createStatement())  
-                {  
-                    //  Delete all from the destination table.  
-                    stmt.executeUpdate("DELETE FROM dbo.BulkCopyDemoMatchingColumns");  
-  
-                    //  Add a single row that will result in duplicate key            
-                    //  when all rows from source are bulk copied.            
-                    //  Note that this technique will only be successful in             
-                    //  illustrating the point if a row with ProductID = 446              
-                    //  exists in the AdventureWorks Production.Products table.             
-                    //  If you have made changes to the data in this table, change            
-                    //  the SQL statement in the code to add a ProductID that            
-                    //  does exist in your version of the Production.Products            
-                    //  table. Choose any ProductID in the middle of the table            
-                    //  (not first or last row) to best illustrate the result.  
-                    stmt.executeUpdate("SET IDENTITY_INSERT dbo.BulkCopyDemoMatchingColumns ON;" +  
-                            "INSERT INTO " + "dbo.BulkCopyDemoMatchingColumns " +  
-                            "([ProductID], [Name] ,[ProductNumber]) " +  
-                            "VALUES(446, 'Lock Nut 23','LN-3416');" +  
-                            "SET IDENTITY_INSERT dbo.BulkCopyDemoMatchingColumns OFF");  
-  
-                    // Perform an initial count on the destination table.  
-                    long countStart = 0;  
-                    try (ResultSet rsRowCount = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoMatchingColumns;"))  
-                    {  
-                        rsRowCount.next();  
-                        countStart = rsRowCount.getInt(1);  
-                        System.out.println("Starting row count = " + countStart);  
-                    }  
-  
-                    //  Get data from the source table as a ResultSet.  
-                    try (ResultSet rsSourceData = stmt.executeQuery(  
-                            "SELECT ProductID, Name, ProductNumber FROM Production.Product"))  
-                    {  
-  
-                        // Set up the bulk copy object inside the transaction.  
-                        try (Connection destinationConnection =   
-                                DriverManager.getConnection(connectionString))  
-                        {  
-                            destinationConnection.setAutoCommit(false);  
-  
-                            SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();  
-                            copyOptions.setKeepIdentity(true);  
-                            copyOptions.setBatchSize(10);  
-  
-                            try (SQLServerBulkCopy bulkCopy =   
-                                    new SQLServerBulkCopy(destinationConnection))  
-                            {  
-                                bulkCopy.setBulkCopyOptions(copyOptions);  
-                                bulkCopy.setDestinationTableName("dbo.BulkCopyDemoMatchingColumns");  
-  
-                                // Write from the source to the destination.   
-                                // This should fail with a duplicate key error.   
-                                try  
-                                {  
-                                    bulkCopy.writeToServer(rsSourceData);  
-                                    destinationConnection.commit();  
-                                }  
-                                catch (Exception e)  
-                                {  
-                                    // Handle any errors that may have occurred.  
-                                    e.printStackTrace();  
-                                    destinationConnection.rollback();  
-                                }  
-                            }  
-                        }  
-                    }  
-  
-                    // Perform a final count on the destination    
-                    // table to see how many rows were added.  
-                    try (ResultSet rsRowCount = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoMatchingColumns;"))  
-                    {  
-                        rsRowCount.next();  
-                        long countEnd = rsRowCount.getInt(1);  
-                        System.out.println("Ending row count = " + countEnd);  
-                        System.out.println((countEnd - countStart) + " rows were added.");  
-                    }  
-                }  
-            }  
-        }  
-        catch (Exception e)  
-        {  
-            // Handle any errors that may have occurred.  
-            e.printStackTrace();  
-        }  
-    }  
-  
-    // To avoid storing the sourceConnection String in your code,    
-    // you can retrieve it from a configuration file.   
-    private static String GetConnectionString()  
-    {  
-        // Create a variable for the connection string.  
-        String connectionUrl = "jdbc:sqlserver://localhost:1433;"  
-                + "databaseName=AdventureWorks;user=UserName;password=*****";  
-  
-        return connectionUrl;  
-    }  
-}  
-  
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;
+import com.microsoft.sqlserver.jdbc.SQLServerBulkCopyOptions;
+
+public class BulkCopyExistingTransactions {
+    public static void main(String[] args) {
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String destinationTable = "dbo.BulkCopyDemoMatchingColumns";
+        int countBefore, countAfter;
+        ResultSet rsSourceData;
+        SQLServerBulkCopyOptions copyOptions;
+
+        try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+                Connection destinationConnection = DriverManager.getConnection(connectionUrl);
+                Statement stmt = sourceConnection.createStatement();
+                SQLServerBulkCopy bulkCopy = new SQLServerBulkCopy(destinationConnection);) {
+
+            // Empty the destination table.
+            stmt.executeUpdate("DELETE FROM " + destinationTable);
+
+            // Add a single row that will result in duplicate key
+            // when all rows from source are bulk copied.
+            // Note that this technique will only be successful in
+            // illustrating the point if a row with ProductID = 446
+            // exists in the AdventureWorks Production.Products table.
+            // If you have made changes to the data in this table, change
+            // the SQL statement in the code to add a ProductID that
+            // does exist in your version of the Production.Products
+            // table. Choose any ProductID in the middle of the table
+            // (not first or last row) to best illustrate the result.
+            stmt.executeUpdate("SET IDENTITY_INSERT " + destinationTable + " ON;" + "INSERT INTO " + destinationTable
+                    + "([ProductID], [Name] ,[ProductNumber]) VALUES(446, 'Lock Nut 23','LN-3416'); SET IDENTITY_INSERT " + destinationTable
+                    + " OFF");
+
+            // Perform an initial count on the destination table.
+            countBefore = getRowCount(stmt, destinationTable);
+
+            // Get data from the source table as a ResultSet.
+            rsSourceData = stmt.executeQuery("SELECT ProductID, Name, ProductNumber FROM Production.Product");
+
+            // Set up the bulk copy object inside the transaction.
+            destinationConnection.setAutoCommit(false);
+
+            copyOptions = new SQLServerBulkCopyOptions();
+            copyOptions.setKeepIdentity(true);
+            copyOptions.setBatchSize(10);
+
+            bulkCopy.setBulkCopyOptions(copyOptions);
+            bulkCopy.setDestinationTableName(destinationTable);
+
+            // Write from the source to the destination.
+            // This should fail with a duplicate key error.
+            try {
+                bulkCopy.writeToServer(rsSourceData);
+                destinationConnection.commit();
+            }
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+            // Perform a final count on the destination
+            // table to see how many rows were added.
+            countAfter = getRowCount(stmt, destinationTable);
+            System.out.println((countAfter - countBefore) + " rows were added.");
+        }
+        catch (Exception e) {
+            // Handle any errors that may have occurred.
+            e.printStackTrace();
+        }
+    }
+
+    private static int getRowCount(Statement stmt,
+            String tableName) throws SQLException {
+        ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM " + tableName);
+        rs.next();
+        int count = rs.getInt(1);
+        rs.close();
+        return count;
+    }
+}
 ```  
   
 ### <a name="bulk-copy-from-a-csv-file"></a>Массовое копирование из CSV-файла  
@@ -868,111 +573,76 @@ public class Program
   
 4.  Выберите **назначение "Неструктурированный файл"** и введите **Имя файла** с путем назначения, например: C:\Test\TestBulkCSVExample.csv. Задайте значения **Формат** — "С разделителями" и **Ограничитель текста** — "Нет", установите флажок **Имена столбцов в первой строке данных** и нажмите **Далее**  
   
-5.  Установите флажок **Написать запрос, указывающий данные для передачи** и вновь нажмите **Далее**.  Введите свою **SQL-инструкцию** "SELECT ProductID, Name, ProductNumber FROM Production.Product", затем снова нажмите **Далее**  
+5.  Установите флажок **Написать запрос, указывающий данные для передачи** и вновь нажмите **Далее**.  Введите **SQL-инструкцию** "SELECT ProductID, Name, ProductNumber FROM Production.Product" и снова щелкните **Далее**.  
   
 6.  Проверьте конфигурацию: как разделитель строк можно использовать {CR}{LF}, а как разделитель столбцов — запятую {,}.  Выберите **Изменить сопоставления**… и проверьте **Тип** данных для каждого столбца (например, целое число для ProductID и строка Юникода для других столбцов).  
   
 7.  Нажмите **Готово** и запустите экспорт.  
   
-```  
-  
-import java.sql.*;  
-  
-import com.microsoft.sqlserver.jdbc.SQLServerBulkCSVFileRecord;  
-import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;  
-  
-public class Program  
-{  
-    public static void main(String[] args)  
-    {  
-        String connectionString = GetConnectionString();  
-        SQLServerBulkCSVFileRecord fileRecord = null;  
-        try  
-        {              
-            // Get data from the source file by loading it into a class that implements ISQLServerBulkRecord.  
-            // Here we are using the SQLServerBulkCSVFileRecord implementation to import the example CSV file.  
-            fileRecord = new SQLServerBulkCSVFileRecord("C:\\Test\\TestBulkCSVExample.csv", true);      
-  
-            // Set the metadata for each column to be copied.  
-            fileRecord.addColumnMetadata(1, null, java.sql.Types.INTEGER, 0, 0);  
-            fileRecord.addColumnMetadata(2, null, java.sql.Types.NVARCHAR, 50, 0);  
-            fileRecord.addColumnMetadata(3, null, java.sql.Types.NVARCHAR, 25, 0);  
-  
-            // Open a destinationConnection to the AdventureWorks database.   
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-            try (Connection destinationConnection = DriverManager.getConnection(connectionString))  
-            {  
-                try (Statement stmt = destinationConnection.createStatement())  
-                {  
-                    // Perform an initial count on the destination table.  
-                    long countStart = 0;  
-                    try (ResultSet rsRowCount = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoMatchingColumns;"))  
-                    {  
-                        rsRowCount.next();  
-                        countStart = rsRowCount.getInt(1);  
-                        System.out.println("Starting row count = " + countStart);  
-                    }  
-  
-                    // Set up the bulk copy object.    
-                    // Note that the column positions in the source   
-                    // data reader match the column positions in    
-                    // the destination table so there is no need to   
-                    // map columns.   
-                    try (SQLServerBulkCopy bulkCopy =  
-                               new SQLServerBulkCopy(destinationConnection))  
-                    {  
-                        bulkCopy.setDestinationTableName("dbo.BulkCopyDemoMatchingColumns");  
-  
-                        try  
-                        {  
-                            // Write from the source to the destination.  
-                            bulkCopy.writeToServer(fileRecord);  
-                        }  
-                        catch (Exception e)  
-                        {  
-                            // Handle any errors that may have occurred.  
-                            e.printStackTrace();  
-                        }  
-                    }  
-  
-                    // Perform a final count on the destination    
-                    // table to see how many rows were added.  
-                    try (ResultSet rsRowCount = stmt.executeQuery(  
-                            "SELECT COUNT(*) FROM dbo.BulkCopyDemoMatchingColumns;"))  
-                    {  
-                        rsRowCount.next();  
-                        long countEnd = rsRowCount.getInt(1);  
-                        System.out.println("Ending row count = " + countEnd);  
-                        System.out.println((countEnd - countStart) + " rows were added.");  
-                    }  
-                }  
-            }  
-        }  
-        catch (Exception e)  
-        {  
-            // Handle any errors that may have occurred.  
-            e.printStackTrace();  
-        }  
-        finally  
-        {  
-            if (fileRecord != null) try { fileRecord.close(); } catch(Exception e) {}  
-        }  
-    }  
-  
-    // To avoid storing the sourceConnection String in your code,    
-    // you can retrieve it from a configuration file.   
-    private static String GetConnectionString()  
-    {  
-  
-        // Create a variable for the connection string.  
-        String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-           "databaseName=AdventureWorks;user=UserName;password=*****";  
-  
-        return connectionUrl;  
-    }  
-}  
-  
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerBulkCSVFileRecord;
+import com.microsoft.sqlserver.jdbc.SQLServerBulkCopy;
+
+public class BulkCopyCSV {
+    public static void main(String[] args) {
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String destinationTable = "dbo.BulkCopyDemoMatchingColumns";
+        int countBefore, countAfter;
+
+        // Get data from the source file by loading it into a class that implements ISQLServerBulkRecord.
+        // Here we are using the SQLServerBulkCSVFileRecord implementation to import the example CSV file.
+        try (Connection destinationConnection = DriverManager.getConnection(connectionUrl);
+                Statement stmt = destinationConnection.createStatement();
+                SQLServerBulkCopy bulkCopy = new SQLServerBulkCopy(destinationConnection);
+                SQLServerBulkCSVFileRecord fileRecord = new SQLServerBulkCSVFileRecord("C:\\Test\\TestBulkCSVExample.csv", true);) {
+
+            // Set the metadata for each column to be copied.
+            fileRecord.addColumnMetadata(1, null, java.sql.Types.INTEGER, 0, 0);
+            fileRecord.addColumnMetadata(2, null, java.sql.Types.NVARCHAR, 50, 0);
+            fileRecord.addColumnMetadata(3, null, java.sql.Types.NVARCHAR, 25, 0);
+
+            // Empty the destination table.
+            stmt.executeUpdate("DELETE FROM " + destinationTable);
+
+            // Perform an initial count on the destination table.
+            countBefore = getRowCount(stmt, destinationTable);
+
+            // Set up the bulk copy object.
+            // Note that the column positions in the source
+            // data reader match the column positions in
+            // the destination table so there is no need to
+            // map columns.
+            bulkCopy.setDestinationTableName(destinationTable);
+
+            // Write from the source to the destination.
+            bulkCopy.writeToServer(fileRecord);
+
+            // Perform a final count on the destination
+            // table to see how many rows were added.
+            countAfter = getRowCount(stmt, destinationTable);
+            System.out.println((countAfter - countBefore) + " rows were added.");
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static int getRowCount(Statement stmt,
+            String tableName) throws SQLException {
+        ResultSet rs = stmt.executeQuery("SELECT COUNT(*) FROM " + tableName);
+        rs.next();
+        int count = rs.getInt(1);
+        rs.close();
+        return count;
+    }
+}
 ```  
   
 ### <a name="bulk-copy-with-always-encrypted-columns"></a>Массовое копирование с помощью постоянного шифрования столбцов  
@@ -996,7 +666,7 @@ public class Program
   
  Microsoft SQL Server включает популярную программу командной строки bcp, используемую для перемещения данных из одной таблицы в другую как на одном сервере, так и между серверами. Класс SQLServerBulkCopy позволяет создавать решения на языке Java, которые предоставляют аналогичные возможности. Существуют другие способы загрузки данных в таблицу SQL Server (например, с помощью инструкции INSERT), но SQLServerBulkCopy делает это значительно быстрее.  
   
- Класс SQLServerBulkCopy можно использовать для записи данных только в таблицы SQL Server. Но источником данных может быть не только SQL Server, а любой источник данных, если данные могут быть прочитаны с помощью экземпляра ResultSet или реализации ISQLServerBulkRecord.  
+ Класс SQLServerBulkCopy можно использовать для записи данных только в таблицы SQL Server. Но источником данных может быть не только SQL Server, а любой источник данных, если данные можно считать с помощью экземпляра ResultSet или реализации ISQLServerBulkRecord.  
   
 |Конструктор|Описание|  
 |-----------------|-----------------|  
@@ -1005,8 +675,8 @@ public class Program
   
 |Свойство|Описание|  
 |--------------|-----------------|  
-|DestinationTableName строки|Имя целевой таблицы на сервере.<br /><br /> Если DestinationTableName не было задано при вызове writeToServer, вызывается исключение SQLServerException.<br /><br /> Имя DestinationTableName состоит из трех компонентов (\<база данных>.\<схема-владелец>.\<имя>). При необходимости можно уточнить имя таблицы с помощью указания базы данных и схемы-владельца. Но если имя таблицы содержит символ подчеркивания («_») или другие специальные символы, необходимо заключить имя в скобки. Дополнительные сведения см. в разделе «Идентификаторы» в электронной документации по SQL Server.|  
-|ColumnMappings|Сопоставления столбцов определяют связи между столбцами в источнике данных и столбцами в месте назначения.<br /><br /> Если сопоставления не определены, столбцы сопоставляются неявно по порядковому номеру. При этом исходная и целевая схемы должны совпадать. В противном случае будет вызвано исключение.<br /><br /> Если сопоставления не пусты, необязательно должны быть заданы все столбцы, присутствующие в источнике данных. Несопоставленные столбцы будут проигнорированы.<br /><br /> Обращаться к исходным и целевым столбцам можно по имени или порядковому номеру.|  
+|DestinationTableName строки|Имя целевой таблицы на сервере.<br /><br /> Если имя DestinationTableName не было задано при вызове writeToServer, вызывается исключение SQLServerException.<br /><br /> Имя DestinationTableName состоит из трех компонентов (\<база данных>.\<схема-владелец>.\<имя>). При необходимости можно уточнить имя таблицы с помощью указания базы данных и схемы-владельца. Но если имя таблицы содержит символ подчеркивания («_») или другие специальные символы, необходимо заключить имя в скобки. Дополнительные сведения см. в разделе «Идентификаторы» в электронной документации по SQL Server.|  
+|ColumnMappings|Сопоставления столбцов определяют связи между столбцами в источнике данных и столбцами в месте назначения.<br /><br /> Если сопоставления не определены, столбцы сопоставляются неявно по порядковому номеру. При этом исходная и целевая схемы должны совпадать. Иначе будет вызвано исключение.<br /><br /> Если сопоставления не пусты, не обязательно задавать все столбцы, присутствующие в источнике данных. Несопоставленные столбцы будут проигнорированы.<br /><br /> Обращаться к исходным и целевым столбцам можно по имени или порядковому номеру.|  
   
 |Метод|Описание|  
 |------------|-----------------|  
@@ -1043,7 +713,7 @@ public class Program
 |Логическое UseInternalTransaction|Если этот параметр указан, каждый пакет операции массового копирования будет выполняться в рамках транзакции. Если SQLServerBulkCopy использует существующее подключение (как указано конструктором), вызывается исключение SQLServerException.  Если объект SQLServerBulkCopy создал выделенное соединение, транзакция будет разрешена.|False — транзакция отсутствует.|  
 |Int BatchSize|Количество строк в каждом пакете. В конце каждого пакета строки из пакета передаются на сервер.<br /><br /> Пакет завершается, когда число обработанных строк равно BatchSize или отсутствуют строки для отправки в целевой источник данных.  Если экземпляр SQLServerBulkCopy объявлен без параметра UseInternalTransaction, на сервер передается число строк, равное BatchSize, но не выполняются никакие действия, связанные с транзакциями. Если параметр UseInternalTransaction включен, каждый пакет строк вставляется как отдельная транзакция.|Значение 0 указывает, что каждая операция writeToServer представляет один пакет.|  
 |Int BulkCopyTimeout|Время выполнения операции до истечения времени ожидания в секундах. 0 — отсутствие ограничений; операция массового копирования будет ждать бесконечно долго.|60 секунд.|  
-|Логическое allowEncryptedValueModifications|Этот параметр доступен с Microsoft JDBC Driver 6.0 (или более поздней версии) для SQL Server.<br /><br /> При указании **allowEncryptedValueModifications** осуществлять массовое копирование зашифрованных данных между таблицами или базами данных, не расшифровывая данные. Как правило приложение нужно выбирать данные из зашифрованных столбцов из одной таблицы без расшифровки данных (приложение должно подключиться к базе данных с ключевым словом параметр шифрования столбца, отключена) и затем использовать этот параметр, чтобы операции массовой вставки данных, который по-прежнему шифруется. Дополнительные сведения: [Использование функции Always Encrypted с драйвером JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Используйте параметр **allowEncryptedValueModifications** с осторожностью. Драйвер не проверяет, являются ли данные зашифрованными и используется ли при шифровании тот же тип, алгоритм и ключ шифрования, что у целевого столбца. Таким образом, изменение значений может повредить целевую базу.||  
+|Логическое allowEncryptedValueModifications|Этот параметр доступен с Microsoft JDBC Driver 6.0 (или более поздней версии) для SQL Server.<br /><br /> При указании **allowEncryptedValueModifications** осуществлять массовое копирование зашифрованных данных между таблицами или базами данных, не расшифровывая данные. Как правило приложение нужно выбирать данные из зашифрованных столбцов из одной таблицы без расшифровки данных (приложение должно подключиться к базе данных с ключевым словом параметр шифрования столбца, отключена) и затем использовать этот параметр, чтобы операции массовой вставки данных, который по-прежнему шифруется. Дополнительные сведения: [Использование функции Always Encrypted с драйвером JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Используйте параметр **allowEncryptedValueModifications** с осторожностью. Драйвер не проверяет, являются ли данные зашифрованными и используется ли при шифровании тот же тип, алгоритм и ключ шифрования, что у целевого столбца. Поэтому изменение значений может повредить целевую базу данных.||  
   
  Методы get и set:  
   
@@ -1060,7 +730,7 @@ public class Program
 |Логическое isTableLock()|Указывает, следует ли SQLServerBulkCopy получить блокировку массовых обновлений в течение операции массового копирования.|  
 |Void setTableLock(Boolean tableLock)|Задает ли SQLServerBulkCopy получите блокировку массовых обновлений в течение операции массового копирования.|  
 |Логическое isUseInternalTransaction()|Указывает, должен ли каждый пакет операции массового копирования выполняться в рамках транзакции.|  
-|Void setUseInternalTranscation(Boolean useInternalTransaction)|Задает ли каждый пакет операции массового копирования будет выполняться в рамках транзакции, или нет.|  
+|Void setUseInternalTranscation(Boolean useInternalTransaction)|Указывает, должен ли каждый пакет операции массового копирования выполняться в рамках транзакции.|  
 |Int getBatchSize()|Получает число строк в каждом пакете. По окончании каждого пакета его строки отправляются на сервер|  
 |Void setBatchSize(int batchSize)|Задает число строк в каждом пакете. В конце каждого пакета строки из пакета передаются на сервер.|  
 |Int getBulkCopyTimeout()|Получает время выполнения операции до истечения времени ожидания, в секундах.|  
@@ -1091,7 +761,7 @@ public class Program
   
 2.  Потоковая передача типов данных большого размера, таких как varchar(max), varbinary(max), nvarchar(max), sqlxml и ntext, не поддерживается.  
   
-3.  Разделитель, указанный для CSV-файла, не должен содержаться в данных и, если это зарезервированный символ, должен быть экранирован в регулярных выражениях Java.  
+3.  Разделитель, указанный для CSV-файла, не должен содержаться в данных и, если это зарезервированный символ, должен быть надлежащим образом экранирован в регулярных выражениях Java.  
   
 4.  В реализации CSV-файла двойные кавычки рассматриваются как часть данных. Например, строка hello,"world","hello,world" будет рассматриваться как строка с четырьмя столбцами со значениями hello, "world", "hello, world", если разделитель — запятая.  
   
@@ -1101,7 +771,7 @@ public class Program
 |-----------------|-----------------|  
 |SQLServerBulkCSVFileRecord (fileToParse строка, кодировка строки, разделитель строк, логическое firstLineIsColumnNamesSQLServerBulkCSVFileRecord (строка, строка, String, boolean)|Инициализирует новый экземпляр класса SQLServerBulkCSVFileRecord, который будет выполнять синтаксический анализ каждой строки в fileToParse с указанными разделителем и кодировкой. Если firstLineIsColumnNames имеет значение True, первая строка файла будет проанализирована как имена столбцов.  Если кодировка имеет значение NULL, будет использоваться кодировка по умолчанию.|  
 |SQLServerBulkCSVFileRecord (строка fileToParse, строку, кодирование, логическое firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String, String, boolean)|Инициализирует новый экземпляр класса SQLServerBulkCSVFileRecord, который будет выполнять синтаксический анализ каждой строки в fileToParse с указанными разделителем-запятой и кодировкой. Если firstLineIsColumnNames имеет значение True, первая строка файла будет проанализирована как имена столбцов.  Если кодировка имеет значение NULL, будет использоваться кодировка по умолчанию.|  
-|SQLServerBulkCSVFileRecord (fileToParse строка, логическое firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String, boolean)|Инициализирует новый экземпляр класса SQLServerBulkCSVFileRecord, который будет выполнять синтаксический анализ каждой строки в fileToParse с указанными разделителем-запятой и кодировкой по умолчанию. Если firstLineIsColumnNames имеет значение True (Истина), первая строка файла будет прочитана как содержащая имена столбцов.|  
+|SQLServerBulkCSVFileRecord (fileToParse строка, логическое firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String, boolean)|Инициализирует новый экземпляр класса SQLServerBulkCSVFileRecord, который будет выполнять синтаксический анализ каждой строки в fileToParse с указанными разделителем-запятой и кодировкой по умолчанию. Если firstLineIsColumnNames имеет значение True, первая строка файла будет проанализирована как имена столбцов.|  
   
 |Метод|Описание|  
 |------------|-----------------|  

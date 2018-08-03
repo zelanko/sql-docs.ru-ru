@@ -1,7 +1,7 @@
 ---
 title: Основные сведения о транзакциях XA | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: e86cdc909ec6c7457094125df3965008a8849dbd
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040612"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278605"
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "38040612"
   
 -   Флаг [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) разрешает приложениям использовать тесно связанные транзакции XA, имеющие различные идентификаторы ветвей транзакции (BQUAL), но одинаковые глобальные идентификаторы транзакции (GTRID) и идентификатор формата (FormatID). Для использования этой функции необходимо задать [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) на параметр flags XAResource.start метода:  
   
-    ```  
+    ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
@@ -105,7 +105,7 @@ ms.locfileid: "38040612"
 ###  <a name="BKMK_ServerSide"></a> Настройка параметров времени ожидания сервера для автоматического отката неподготовленных транзакций  
   
 > [!WARNING]  
->  Этот серверный параметр появился в версии Microsoft JDBC Driver 4.2 для SQL Server (и более поздних версиях). Чтобы это обновленное поведение работало, убедитесь, что файл sqljdbc_xa.dll на сервере обновлен. Дополнительные сведения о настройке времени ожидания на стороне клиента см. в разделе [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+>  Этот серверный параметр появился в версии Microsoft JDBC Driver 4.2 для SQL Server (и более поздних версиях). Чтобы это обновленное поведение работало, убедитесь, что файл sqljdbc_xa.dll на сервере обновлен. Дополнительные сведения о настройке времени ожидания на стороне клиента см. в описании [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
   
  Существует два параметра реестра (типа DWORD) для управления временем ожидания распределенных транзакций.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "38040612"
 > [!NOTE]  
 >  Параметры реестра для 32-разрядных SQL Server в 64-разрядных компьютерах, необходимо создать в следующем разделе: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<версии >. < имя_экземпляра > \ XATimeout  
   
- Время ожидания задается для каждой транзакции, когда она запускается; по истечении времени ожидания выполняется откат транзакции в SQL Server. Время ожидания зависит от параметров реестра и указанных пользователем параметров в XAResource.setTransactionTimeout(). Вот несколько примеров интерпретации таких значений времени ожидания.  
+ Время ожидания задается для каждой транзакции при ее запуске. По истечении времени ожидания выполняется откат транзакции в SQL Server. Время ожидания зависит от параметров реестра и указанных пользователем параметров в XAResource.setTransactionTimeout(). Вот несколько примеров интерпретации таких значений времени ожидания.  
   
 -   XADefaultTimeout = 0, XAMaxTimeout = 0  
   
@@ -153,7 +153,7 @@ ms.locfileid: "38040612"
 ### <a name="configuring-the-user-defined-roles"></a>Настройка определяемых пользователем ролей  
  Чтобы предоставить определенному пользователю разрешения для участия в распределенных транзакциях через драйвер JDBC, его необходимо включить в роль SqlJDBCXAUser. Например, следующий код [!INCLUDE[tsql](../../includes/tsql_md.md)] позволяет добавить пользователя с именем shelby (стандартное имя входа пользователя SQL) в роль SqlJDBCXAUser:  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  
@@ -161,11 +161,11 @@ GO
 EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
 ```  
   
- Определяемые пользователем роли SQL определяются в рамках базы данных. Чтобы создать собственную роль в целях безопасности, необходимо определить роль в каждой базе данных и добавлять пользователей отдельно для каждой базы данных. Роль SqlJDBCXAUser строго определена в базе данных master, поскольку она используется для предоставления доступа к расширенным хранимым процедурам SQL JDBC, располагающимся в базе данных master. Сначала необходимо предоставить отдельным пользователям доступ к базе данных master, а затем выполнить вход в базу данных master и предоставить этим пользователям доступ к роли SqlJDBCXAUser.  
+ Определяемые пользователем роли SQL определяются в рамках базы данных. Чтобы создать собственную роль в целях безопасности, необходимо определить роль в каждой базе данных и добавлять пользователей отдельно для каждой базы данных. Роль SqlJDBCXAUser строго определена в базе данных master, так как она используется для предоставления доступа к расширенным хранимым процедурам SQL JDBC, находящимся в базе данных master. Сначала необходимо предоставить отдельным пользователям доступ к базе данных master, а затем выполнить вход в базу данных master и предоставить этим пользователям доступ к роли SqlJDBCXAUser.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```java
 import java.net.Inet4Address;  
 import java.sql.*;  
 import java.util.Random;  

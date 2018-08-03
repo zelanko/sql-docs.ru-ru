@@ -1,7 +1,7 @@
 ---
 title: С помощью постоянного шифрования с драйвером JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 3/14/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c53479e3e94206645382e0c7b2d930a0b63075f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: fd5d3bb54c4587c177160cdf99f2f0dacc2bb086
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982268"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279285"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Использование функции Always Encrypted с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,10 +52,10 @@ Microsoft JDBC Driver для SQL Server в состав следующих по�
 |**SQLServerColumnEncryptionCertificateStoreProvider**| Поставщик для хранилища сертификатов Windows.|MSSQL_CERTIFICATE_STORE|Да
 |**SQLServerColumnEncryptionJavaKeyStoreProvider**| Поставщик для хранилище ключей Java|MSSQL_JAVA_KEYSTORE|Да|
 
-Для поставщиков хранилища ключей предварительно зарегистрированы не требуется вносить изменения кода приложения для использования этих поставщиков, но иметь в виду следующее:
+Для поставщиков хранилища ключей предварительно зарегистрированы не требуется вносить любые изменения кода приложения для использования этих поставщиков, но иметь в виду следующее:
 
-- Вы (или ваш администратор баз данных) должны проверить правильность имени поставщика, настроенного в метаданных главного ключа столбца, и убедиться в том, что путь к главному ключу столбца соответствует формату пути к ключу, который является допустимым для данного поставщика. Для настройки ключей рекомендуется использовать средство, такое как среда SQL Server Management Studio, которое при выполнении инструкции CREATE COLUMN MASTER KEY (Transact-SQL) автоматически создает допустимые имена поставщиков и пути к ключам.
-- Убедитесь, что приложение может получить доступ к ключ в хранилище ключей. Для этого может потребоваться предоставить приложению доступ к ключу или хранилищу ключей (в зависимости от хранилища ключей) либо выполнить другие действия по настройке конкретного хранилища ключей. Например при помощи SQLServerColumnEncryptionJavaKeyStoreProvider необходимо указать расположение и пароль хранилища ключей в свойствах соединения. 
+- Вы (или ваш администратор баз данных) должны проверить правильность имени поставщика, настроенного в метаданных главного ключа столбца, и убедиться в том, что путь к главному ключу столбца соответствует формату пути к ключу, который является допустимым для данного поставщика. Для настройки ключей рекомендуется использовать такое средство, как среда SQL Server Management Studio, которое при выполнении инструкции CREATE COLUMN MASTER KEY (Transact-SQL) автоматически создает допустимые имена поставщиков и пути к ключам.
+- Убедитесь, что приложение может получить доступ к ключу в хранилище ключей. Для этого может потребоваться предоставить приложению доступ к ключу или хранилищу ключей (в зависимости от хранилища ключей) либо выполнить другие действия по настройке конкретного хранилища ключей. Например при помощи SQLServerColumnEncryptionJavaKeyStoreProvider необходимо указать расположение и пароль хранилища ключей в свойствах соединения. 
 
 Все эти поставщики хранилища ключей описаны более подробно в последующих разделах. Необходимо реализовать один поставщик хранилища ключей для использования постоянного шифрования.
 
@@ -64,7 +64,7 @@ Microsoft JDBC Driver для SQL Server в состав следующих по�
 
 Для примеров на этой странице, если вы создали хранилище ключей Azure на основе главного ключа столбца и ключа шифрования столбца с помощью SQL Server Management Studio, сценарий T-SQL для повторного создания их может выглядеть как в этом примере с определенные **KEY_ ПУТЬ** и **ENCRYPTED_VALUE**:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -85,7 +85,7 @@ WITH VALUES
 
 Вот пример инициализации SQLServerColumnEncryptionAzureKeyVaultProvider:  
 
-```
+```java
 SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
 ```
 
@@ -93,7 +93,7 @@ SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumn
 
 После того как приложение создаст экземпляр SQLServerColumnEncryptionAzureKeyVaultProvider, приложение необходимо зарегистрировать экземпляр с помощью драйвера, с помощью метода SQLServerConnection.registerColumnEncryptionKeyStoreProviders(). Настоятельно рекомендуется, что экземпляр зарегистрирован с именем Уточняющий запрос по умолчанию, AZURE_KEY_VAULT, который можно получить, вызвав SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API. С именем по умолчанию позволит вам использовать средства, такие как SQL Server Management Studio или PowerShell для подготовки и управления ключами, Always Encrypted (средства используйте имя по умолчанию для создания объекта метаданных для главного ключа столбца). В следующем примере показано, регистрация поставщика хранилища ключей Azure. Дополнительные сведения о методе SQLServerConnection.registerColumnEncryptionKeyStoreProviders(), см. в разделе [всегда зашифрованы Справочник по API для драйвера JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
-```
+```java
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
 keyStoreMap.put(akvProvider.getName(), akvProvider);
 SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
@@ -115,7 +115,7 @@ The SQLServerColumnEncryptionCertificateStoreProvider можно использ�
 
 Для примеров на этой странице, если вы создали сертификат Windows Store на основе главного ключа столбца и ключа шифрования столбца с помощью SQL Server Management Studio, сценарий T-SQL для повторного создания их может выглядеть как в этом примере с определенные **KEY_PATH** и **ENCRYPTED_VALUE**:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -148,8 +148,8 @@ WITH VALUES
 
 Ниже приведен пример предоставления эти учетные данные в строке подключения:
 
-```
-String connectionString = "jdbc:sqlserver://localhost;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
+```java
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
 ```
 
 Кроме того, можно также получить или задать эти параметры, с помощью объекта SQLServerDataSource. Дополнительные сведения см. в разделе [всегда зашифрованы Справочник по API для драйвера JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
@@ -171,7 +171,7 @@ keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.pfx -storepass mypassword -validity 360 -keysize 2048 -storetype pkcs12 -keypass mypassword
 ```
 
-Если хранилище ключей типа PKCS12, программа keytool не запрашивает пароль ключа и должен предоставить с параметром - keypass SQLServerColumnEncryptionJavaKeyStoreProvider требуется, то хранилище ключей и ключ имеют одинаковый пароль ключа пароль.
+Если хранилище ключей типа PKCS12, программа keytool не запрашивается пароль ключа и должен предоставить с параметром - keypass SQLServerColumnEncryptionJavaKeyStoreProvider требуется, то хранилище ключей и ключ имеют одинаковый пароль ключа пароль.
 
 Можно также экспортировать сертификат из хранилища сертификатов Windows в формате PFX и использовать его с SQLServerColumnEncryptionJavaKeyStoreProvider. Экспортированный сертификат можно также импортировать Store ключ Java как тип хранилища ключей JKS.
 
@@ -179,7 +179,7 @@ keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.pfx
 
 Используется следующий синтаксис T-SQL для создания главного ключа столбца:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [<CMK_name>]
 WITH
 (
@@ -190,7 +190,7 @@ WITH
 
 Для «AlwaysEncryptedKey» созданную выше будет определения главного ключа столбца:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -208,7 +208,7 @@ WITH
 ### <a name="implementing-a-custom-column-master-key-store-provider"></a>Реализация настраиваемого поставщика хранилища главных ключей столбцов
 Чтобы сохранить главные ключи столбцов в хранилище ключей, не поддерживаемом существующим поставщиком, можно реализовать настраиваемый поставщик, расширив класс SQLServerColumnEncryptionKeyStoreProvider и зарегистрировав поставщик с помощью метода SQLServerConnection.registerColumnEncryptionKeyStoreProviders().
 
-```
+```java
 public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{  
     private String name = "MY_CUSTOM_KEYSTORE";
 
@@ -236,7 +236,7 @@ public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{
 
 Регистрация поставщика:
 
-```
+```java
 SQLServerColumnEncryptionKeyStoreProvider storeProvider = new MyCustomKeyStore();
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
 keyStoreMap.put(storeProvider.getName(), storeProvider);
@@ -248,9 +248,12 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 Если используется настраиваемый поставщик хранилища ключей, может потребоваться реализация собственных средств управления ключами. При использовании ключей, хранящихся в Windows Store сертификата или в хранилище ключей Azure, можно использовать существующие средства, такие как SQL Server Management Studio или PowerShell, чтобы управлять ключами и их подготовки. При использовании ключей, хранящихся в Store ключ Java, можно использовать для подготовки ключей программным способом. В следующем примере с помощью класса SQLServerColumnEncryptionJavaKeyStoreProvider для шифрования ключа с ключом, хранящимся в Store ключ Java.
 
-```
-import java.sql.*;
-import javax.xml.bind.DatatypeConverter;
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionJavaKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -258,8 +261,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
 /**
  * This program demonstrates how to create a column encryption key programmatically for the Java Key Store.
  */
-public class AlwaysEncrypted
-{
+public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
     private static String keyAlias = "<proide key alias>";
 
@@ -276,96 +278,64 @@ public class AlwaysEncrypted
     private static char[] keyStoreSecret = "********".toCharArray();
 
     /**
-     * Name of the encryption algorithm used to encrypt the value of
-     * the column encryption key. The algorithm for the system providers must be RSA_OAEP.
+     * Name of the encryption algorithm used to encrypt the value of the column encryption key. The algorithm for the system providers must be
+     * RSA_OAEP.
      */
     private static String algorithm = "RSA_OAEP";
 
-    public static void main(String[] args)
-    {
-        String connectionString = GetConnectionString();
-        try
-        {
-            // Note: if you are not using try-with-resources statements (as here),
-            // you must remember to call close() on any Connection, Statement,
-            // ResultSet objects that you create.
+    public static void main(String[] args) {
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 
-            // Open a connection to the database.
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-            {
-                // Instantiate the Java Key Store provider.
-                SQLServerColumnEncryptionKeyStoreProvider storeProvider =
-                        new SQLServerColumnEncryptionJavaKeyStoreProvider(
-                                keyStoreLocation,
-                                keyStoreSecret);
+        try (Connection connection = DriverManager.getConnection(connectionUrl);
+                Statement statement = connection.createStatement();) {
 
-                byte [] encryptedCEK=getEncryptedCEK(storeProvider);
+            // Instantiate the Java Key Store provider.
+            SQLServerColumnEncryptionKeyStoreProvider storeProvider = new SQLServerColumnEncryptionJavaKeyStoreProvider(keyStoreLocation,
+                    keyStoreSecret);
 
-                /**
-                 * Create column encryption key
-                 * For more details on the syntax, see:
-                 * https://docs.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql
-                 * Encrypted column encryption key first needs to be converted into varbinary_literal from bytes, 
-                 * for which DatatypeConverter.printHexBinary is used
-                 */
-                String createCEKSQL = "CREATE COLUMN ENCRYPTION KEY "
-                        + columnEncryptionKey
-                        + " WITH VALUES ( "
-                        + " COLUMN_MASTER_KEY = "
-                        + columnMasterKeyName
-                        + " , ALGORITHM =  '"
-                        + algorithm
-                        + "' , ENCRYPTED_VALUE =  0x"
-                        + DatatypeConverter.printHexBinary(encryptedCEK)
-                        + " ) ";
+            byte[] encryptedCEK = getEncryptedCEK(storeProvider);
 
-                try (Statement cekStatement = sourceConnection.createStatement())
-                {
-                    cekStatement.executeUpdate(createCEKSQL);
-                    System.out.println("Column encryption key created with name : " + columnEncryptionKey);
-                }
-            }
+            /**
+             * Create column encryption key For more details on the syntax, see:
+             * https://docs.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql Encrypted column encryption key first needs
+             * to be converted into varbinary_literal from bytes, for which byteArrayToHex() is used.
+             */
+            String createCEKSQL = "CREATE COLUMN ENCRYPTION KEY "
+                    + columnEncryptionKey
+                    + " WITH VALUES ( "
+                    + " COLUMN_MASTER_KEY = "
+                    + columnMasterKeyName
+                    + " , ALGORITHM =  '"
+                    + algorithm
+                    + "' , ENCRYPTED_VALUE =  0x"
+                    + byteArrayToHex(encryptedCEK)
+                    + " ) ";
+            statement.executeUpdate(createCEKSQL);
+            System.out.println("Column encryption key created with name : " + columnEncryptionKey);
         }
-        catch (Exception e)
-        {
-            // Handle any errors that may have occurred.
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    // To avoid storing the sourceConnection String in your code,
-    // you can retrieve it from a configuration file.
-    private static String GetConnectionString()
-    {
-        // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
-                "databaseName=ae2;user=sa;password=********;";
-
-        return connectionUrl;
-    }
-
-    private static byte[] getEncryptedCEK(SQLServerColumnEncryptionKeyStoreProvider storeProvider) throws SQLServerException
-    {
-        /**
-         * Following arguments needed by SQLServerColumnEncryptionJavaKeyStoreProvider
-         * 1) keyStoreLocation :
-         *      Path where keystore is located, including the keystore file name.
-         * 2) keyStoreSecret :
-         *      Password of the keystore and the key.
-         */
+    private static byte[] getEncryptedCEK(SQLServerColumnEncryptionKeyStoreProvider storeProvider) throws SQLServerException {
         String plainTextKey = "You need to give your plain text";
 
         // plainTextKey has to be 32 bytes with current algorithm supported
         byte[] plainCEK = plainTextKey.getBytes();
 
         // This will give us encrypted column encryption key in bytes
-        byte[] encryptedCEK = storeProvider.encryptColumnEncryptionKey(
-                keyAlias,
-                algorithm,
-                plainCEK);
+        byte[] encryptedCEK = storeProvider.encryptColumnEncryptionKey(keyAlias, algorithm, plainCEK);
 
         return encryptedCEK;
+    }
+
+    public static String byteArrayToHex(byte[] a) {
+        StringBuilder sb = new StringBuilder(a.length * 2);
+        for (byte b : a)
+            sb.append(String.format("%02x", b).toUpperCase());
+        return sb.toString();
     }
 }
 ```
@@ -375,16 +345,17 @@ public class AlwaysEncrypted
 
 Следующая строка подключения является примером включения постоянного шифрования в драйвере JDBC:
 
-```
-String connectionString = "jdbc:sqlserver://localhost;user=<user>;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
-SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionString);
+```java
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
+SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionUrl);
 ```
 
 Ниже приведен эквивалентный пример, с помощью объекта SQLServerDataSource.
 
-```
+```java
 SQLServerDataSource ds = new SQLServerDataSource();
-ds.setServerName("localhost");
+ds.setServerName("<server>");
+ds.setPortNumber(<port>);
 ds.setUser("<user>");
 ds.setPassword("<password>");
 ds.setDatabaseName("<database>");
@@ -392,12 +363,12 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-Постоянное шифрование также можно включить для отдельных запросов. Дополнительные сведения см. в разделе [управление влиянием на производительность функции постоянного шифрования](#controlling-the-performance-impact-of-always-encrypted). Включение функции Always Encrypted недостаточно для успешного шифрования или расшифровки. Необходимо также проверить выполнение следующих условий:
+Постоянное шифрование также можно включить для отдельных запросов. Дополнительные сведения см. в разделе [управление влиянием на производительность функции постоянного шифрования](#controlling-the-performance-impact-of-always-encrypted). Включения функции Always Encrypted недостаточно для успешного шифрования или расшифровки. Необходимо также проверить выполнение следующих условий:
 - Приложение имеет разрешения *VIEW ANY COLUMN MASTER KEY DEFINITION* и *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* для базы данных, необходимые для доступа к метаданным о ключах постоянного шифрования в базе данных. Дополнительные сведения см. в разделе [Разрешения в Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 - Приложение может получить доступ к главному ключу столбца, который защищает ключи шифрования столбцов, шифрующие запрашиваемые столбцы базы данных. Чтобы воспользоваться поставщиком Store ключ Java, необходимо указать дополнительные учетные данные в строке подключения. Дополнительные сведения см. в разделе [Using Java Key Store provider](#using-java-key-store-provider).
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Настройка способа отправки значений java.sql.Time на сервер
-**SendTimeAsDatetime** свойство подключения позволяет настроить порядок отправки значения java.sql.Time на сервер. Если задано значение false, значения времени отправляется как тип времени SQL Server. Если задано значение true, время отправки значение как тип даты и времени. Если в них столбец времени зашифрован, **sendTimeAsDatetime** свойство должно быть задано значение false, так как зашифрованные столбцы не поддерживают преобразование из времени в дату и время. Также Обратите внимание, что это свойство по умолчанию true, поэтому при использовании зашифрованных столбцов необходимо присвоить ему значение false. В противном случае драйвер вызовет исключение. Класс SQLServerConnection, начиная с версии 6.0 драйвера, используются два метода для программной настройки значение этого свойства.
+**SendTimeAsDatetime** свойство подключения позволяет настроить порядок отправки значения java.sql.Time на сервер. Если задано значение false, значения времени отправляется как тип времени SQL Server. Если задано значение true, время отправки значение как тип даты и времени. Если в них столбец времени зашифрован, **sendTimeAsDatetime** свойство должно быть задано значение false, так как зашифрованные столбцы не поддерживает преобразование из времени в datetime. Также Обратите внимание, что это свойство по умолчанию true, поэтому при использовании зашифрованных столбцов вы должны присвоить ему значение false. В противном случае драйвер вызовет исключение. Класс SQLServerConnection, начиная с версии 6.0 драйвера, используются два метода для программной настройки значение этого свойства.
  
 * открытый void setSendTimeAsDatetime (логическое sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
@@ -410,11 +381,11 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Получение и изменение данных в зашифрованных столбцах
 После включения постоянного шифрования для запросов приложений, можно использовать стандартные API JDBC для извлечения или изменения данных в зашифрованных столбцах базы данных. Если приложение имеет разрешения нужную базу данных и может получить доступ к главному ключу столбца, драйвер будет шифровать все параметры запроса, предназначенные для зашифрованных столбцов и расшифровывать данные, полученные из зашифрованных столбцов.
 
-Если постоянное шифрование не включено, выполнение запросов с параметрами, предназначенными для зашифрованных столбцов, завершится ошибкой. Запросы по-прежнему могут получать данные из зашифрованных столбцов, пока для них не будут указаны параметры, предназначенные для зашифрованных столбцов. Однако драйвер не будет пытаться расшифровать все значения, полученные из зашифрованных столбцов, и приложение будет получать двоичные зашифрованные данные (в виде массивов байтов).
+Если функция Always Encrypted не включена, выполнение запросов с параметрами, предназначенными для зашифрованных столбцов, завершится ошибкой. Запросы по-прежнему могут получать данные из зашифрованных столбцов, пока для них не будут указаны параметры, предназначенные для зашифрованных столбцов. Но драйвер не будет пытаться расшифровать все значения, полученные из зашифрованных столбцов, и приложение будет получать двоичные зашифрованные данные (в виде массивов байтов).
 
 В приведенной ниже таблице описывается поведение запросов в зависимости от того, включена ли функция Always Encrypted.
 
-|Характеристика запроса | Постоянное шифрование включено, и приложение может получать доступ к ключам и метаданным ключей|Постоянное шифрование включено, и приложение не может получать доступ к ключам и метаданным ключей | Постоянное шифрование отключено|
+|Характеристика запроса | Постоянное шифрование включено, и приложение может получать доступ к ключам и метаданным ключей|Функция Always Encrypted включена, и приложение не может получать доступ к ключам и метаданным ключей | Постоянное шифрование отключено|
 |:---|:---|:---|:---|
 | Запросы с параметрами, предназначенными для зашифрованных столбцов. | Значения параметров прозрачно шифруются. | Ошибка | Ошибка|
 | Запросы, получающие данные из зашифрованных столбцов, без параметров, предназначенных для зашифрованных столбцов.| Результаты из зашифрованных столбцов прозрачно расшифровываются. Приложение получает в виде открытого текста значения типов данных JDBC, которые соответствуют типам SQL Server, настроенным для зашифрованных столбцов. | Ошибка | Результаты из зашифрованных столбцов не расшифровываются. Приложение получает зашифрованные значения в виде массивов байтов (byte[]).
@@ -422,7 +393,7 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ### <a name="inserting-and-retrieving-encrypted-data-examples"></a>Вставка и извлечение зашифрованных данных примеров 
 В следующих примерах показано получение и изменение данных в зашифрованных столбцах. В примерах предполагается целевую таблицу со следующей схемой и зашифрованных столбцов SSN и BirthDate. Если вы настроили главного ключа столбца с именем «MyCMK» и ключа шифрования столбца с именем «MyCEK» (как описано в предыдущих разделах поставщиков хранилища ключей), можно создать таблицу, с помощью этого сценария:
 
-```
+```sql
 CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
  [SSN] [char](11) COLLATE Latin1_General_BIN2
  ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC,
@@ -440,60 +411,51 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 Для каждого примера кода Java необходимо вставить код для конкретного хранилища ключей, расположенную там указаны.
 
-Если при использовании поставщика хранилища ключей Azure Key Vault:
+Если вы используете поставщик хранилища ключей Azure Key Vault:
 
-```
+```java
     String clientID = "<Azure Application ID>";
     String clientKey = "<Azure Application API Key Password>";
     SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
     Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
     keyStoreMap.put(akvProvider.getName(), akvProvider);
     SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;";
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
 Если вы используете поставщик хранилища ключей Windows Certificate Store:
 
-```
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;";
+```java
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
 Если вы используете поставщик хранилища ключей ключ Store Java:
 
-```
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
+```java
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
 ```
 
 ### <a name="inserting-data-example"></a>Пример вставки данных
 В этом примере показана вставка строки в таблицу Patients. Обратите внимание на следующие моменты:
-- В образце кода нет ничего, связанного с шифрованием. Microsoft JDBC Driver для SQL Server автоматически обнаруживает и шифрует параметры, предназначенные для зашифрованных столбцов. Благодаря этому шифрование является прозрачным для приложения.
-- Значениях, вставляемых в столбцы базы данных, включая зашифрованные столбцы, передаются как параметры, с помощью SQLServerPreparedStatement. Несмотря на то, что при отправке значений в незашифрованные столбцы использовать параметры необязательно (но настоятельно рекомендуется, так как они помогают предотвратить внедрение кода SQL), они требуются для значений, предназначенных для зашифрованных столбцов. Если значения, вставляемые в зашифрованные столбцы были переданы в качестве литералов, внедренных в инструкции запроса, выполнение запроса завершится ошибкой, так как драйвер, не сможет определить значения в зашифрованных столбцах, и не сможет зашифровать значения. В результате сервер отклонит их как несовместимые с зашифрованными столбцами.
-- Все значения, выводимые программой будет в виде обычного текста, как Microsoft JDBC Driver для SQL Server прозрачно расшифровывает данные, полученные из зашифрованных столбцов.
-- Если вы выполняете поиск с использованием предложения WHERE, значение, используемое в предложении WHERE должен передается как параметр, чтобы драйвер мог его прозрачно зашифровать перед их отправкой в базу данных. В следующем примере номера социального Страхования передается в качестве параметра, но LastName передается в качестве литерала, так как LastName не зашифрована.
+- В примере кода нет ничего, связанного с шифрованием. Microsoft JDBC Driver для SQL Server автоматически обнаруживает и шифрует параметры, предназначенные для зашифрованных столбцов. Благодаря этому шифрование является прозрачным для приложения.
+- Значениях, вставляемых в столбцы базы данных, включая зашифрованные столбцы, передаются как параметры, с помощью SQLServerPreparedStatement. При отправке значений в незашифрованные столбцы использовать параметры необязательно (но настоятельно рекомендуется, так как они помогают предотвратить внедрение кода SQL), но они требуются для значений, предназначенных для зашифрованных столбцов. Если значения, вставляемые в зашифрованные столбцы были переданы в качестве литералов, внедренных в инструкции запроса, выполнение запроса завершится ошибкой, так как драйвер не смогут определить значения в зашифрованных столбцах, и он бы зашифровать значения. В результате сервер отклонит их как несовместимые с зашифрованными столбцами.
+- Все значения, выводимые программой, будут представлены в виде обычного текста, так как драйвер Microsoft JDBC Driver для SQL Server прозрачно расшифровывает данные, полученные из зашифрованных столбцов.
+- Если вы выполняете поиск с использованием предложения WHERE, значение, используемое в предложении WHERE должен передается как параметр, чтобы драйвер мог его прозрачно зашифровать перед их отправкой в базу данных. В следующем примере номера социального Страхования передается в качестве параметра, но LastName передается как литерал, как LastName не шифруется.
 - Метод задания свойства, используемое для параметра, предназначенных для столбца SSN — а методы setString(), который сопоставляется с типом данных SQL Server char и varchar. Если для этого параметра использовался метод задания setNString(), который сопоставляется с типом данных nchar или nvarchar, выполнение запроса завершится ошибкой, так как функция Always Encrypted не поддерживает преобразования из зашифрованных значений nchar и nvarchar в зашифрованные значения char и varchar.
 
-```
-try
-{
-    <Insert keystore-specific code here>
-
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String insertRecord="INSERT INTO [dbo].[Patients] VALUES (?, ?, ?, ?)";
-        try (PreparedStatement insertStatement = sourceConnection.prepareStatement(insertRecord))
-        {
-            insertStatement.setString(1, "795-73-9838");
-            insertStatement.setString(2, "Catherine");
-            insertStatement.setString(3, "Abel");
-            insertStatement.setDate(4, Date.valueOf("1996-09-10"));
-            insertStatement.executeUpdate();
-            System.out.println("1 record inserted.\n");
-        }
-    }
+```java
+// <Insert keystore-specific code here>
+try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement insertStatement = sourceConnection.prepareStatement("INSERT INTO [dbo].[Patients] VALUES (?, ?, ?, ?)")) {
+    insertStatement.setString(1, "795-73-9838");
+    insertStatement.setString(2, "Catherine");
+    insertStatement.setString(3, "Abel");
+    insertStatement.setDate(4, Date.valueOf("1996-09-10"));
+    insertStatement.executeUpdate();
+    System.out.println("1 record inserted.\n");
 }
-catch (Exception e)
-{
+// Handle any errors that may have occurred.
+catch (SQLException e) {
     e.printStackTrace();
 }
 ```
@@ -506,69 +468,45 @@ catch (Exception e)
 > [!NOTE]
 > Если столбцы шифруются с помощью детерминированного шифрования, запросы могут выполнять сравнение на равенство для них. Дополнительные сведения см. в разделе [Выбор детерминированного или случайного шифрования в Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
-```
-try
-{
-    <Insert keystore-specific code here>
-
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String filterRecord="SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = ?;";
-    
-        try (PreparedStatement selectStatement = sourceConnection.prepareStatement(filterRecord))
-        {
-            selectStatement.setString(1, "795-73-9838");
-            ResultSet rs = selectStatement.executeQuery();
-            while(rs.next())
-            {
-                System.out.println("SSN: " +rs.getString("SSN") +
-                    ", FirstName: " + rs.getString("FirstName") +
-                    ", LastName:"+ rs.getString("LastName")+
-                    ", Date of Birth: " + rs.getString("BirthDate"));
-            }
-        }
+```java
+// <Insert keystore-specific code here>
+try (Connection connection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = connection
+                .prepareStatement("\"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = ?;\"");) {
+    selectStatement.setString(1, "795-73-9838");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("SSN: " + rs.getString("SSN") + ", FirstName: " + rs.getString("FirstName") + ", LastName:"
+                + rs.getString("LastName") + ", Date of Birth: " + rs.getString("BirthDate"));
     }
 }
-catch (Exception e)  
-{  
-    e.printStackTrace();  
+// Handle any errors that may have occurred.
+catch (SQLException e) {
+    e.printStackTrace();
 }
 ```
   
 ### <a name="retrieving-encrypted-data-example"></a>Пример получения зашифрованных данных
-Если постоянное шифрование не включено, запрос может получать данные из зашифрованных столбцов, пока для него не будут указаны параметры, предназначенные для зашифрованных столбцов.
+Если функция Always Encrypted не включена, запрос может получать данные из зашифрованных столбцов, пока для него не будут указаны параметры, предназначенные для зашифрованных столбцов.
 
 В приведенном ниже примере показано извлечение двоичных зашифрованных данных из зашифрованных столбцов. Обратите внимание на следующие моменты:
 - Так как функция Always Encrypted не включена в строке подключения, запрос будет возвращать зашифрованные значения SSN и BirthDate в виде байтовых массивов (программа преобразует значения в строки).
-- Запрос, получающий данные из зашифрованных столбцов с отключенным постоянным шифрованием, может иметь параметры при условии, что ни один из параметров не предназначен для зашифрованного столбца. Приведенный ниже запрос выполняет фильтрацию по столбцу LastName, который не зашифрован в базе данных. Запрос, отфильтрованный по SSN или BirthDate, завершится ошибкой.
+- Запрос, получающий данные из зашифрованных столбцов с отключенным постоянным шифрованием, может иметь параметры при условии, что ни один из параметров не предназначен для зашифрованного столбца. Приведенный ниже запрос позволяет выполнить фильтрацию по столбцу LastName, который не зашифрован в базе данных. Запрос, отфильтрованный по SSN или BirthDate, завершится ошибкой.
 
-```
-try
-{
-    String connectionString  = "jdbc:sqlserver://localhost:1433;" + "databaseName=Clinic;user=sa;password=******";
+```java
+try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = sourceConnection
+                .prepareStatement("SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE LastName = ?;");) {
 
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String filterRecord="SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE LastName = ?;";
-
-        try (PreparedStatement selectStatement = sourceConnection.prepareStatement(filterRecord))
-        {
-            selectStatement.setString(1, "Abel");
-            ResultSet rs = selectStatement.executeQuery();
-            while (rs.next())
-            {
-                System.out.println("SSN: " + rs.getString("SSN") +
-                    ", FirstName: " + rs.getString("FirstName") +
-                    ", LastName:"+ rs.getString("LastName") +
-                    ", Date of Birth: " + rs.getString("BirthDate"));
-            }
-        }
+    selectStatement.setString(1, "Abel");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("SSN: " + rs.getString("SSN") + ", FirstName: " + rs.getString("FirstName") + ", LastName:"
+                + rs.getString("LastName") + ", Date of Birth: " + rs.getString("BirthDate"));
     }
 }
-catch (Exception e)
-{
+// Handle any errors that may have occurred.
+catch (SQLException e) {
     e.printStackTrace();
 }
 ```
@@ -579,7 +517,7 @@ catch (Exception e)
 ### <a name="unsupported-data-type-conversion-errors"></a>Ошибки преобразования неподдерживаемых типов данных
 Постоянное шифрование поддерживает несколько преобразований для зашифрованных типов данных. Подробный список поддерживаемых преобразований типов см. в статье [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Далее приведены действия, позволяющие избежать ошибок при преобразовании типов данных. Убедитесь, что:
 
-- При передаче значений для параметров, предназначенных для зашифрованных столбцов, используйте методы соответствующие задания. Убедитесь, что тип данных SQL Server параметра точно совпадал с типом целевого столбца или поддерживается преобразование типа данных SQL Server параметра в целевой тип столбца. Добавлены методы API для классов SQLServerPreparedStatement и SQLServerCallableStatement, SQLServerResultSet для передачи параметров, соответствующих определенных типов данных SQL Server. Например, если столбец не зашифрован setTimestamp() метод можно использовать для передачи параметра, datetime2 или столбца данных типа datetime. Но при шифровании столбца необходимо использовать конкретный метод, представляющий тип столбца в базе данных. Например используйте setTimestamp() передавать значения в столбец зашифрованных datetime2 и использовать setDateTime() для передачи значений в столбец зашифрованных даты и времени. См. в разделе [всегда зашифрованы Справочник по API для драйвера JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) полный список новых интерфейсов API.
+- При передаче значений для параметров, предназначенных для зашифрованных столбцов, используйте методы соответствующие задания. Убедитесь, что тип данных SQL Server параметра точно совпадал с типом целевого столбца или поддерживается преобразование типа данных SQL Server параметра в целевой тип столбца. Добавлены методы API для классов SQLServerPreparedStatement и SQLServerCallableStatement, SQLServerResultSet для передачи параметров, соответствующих определенных типов данных SQL Server. Например, если столбец не зашифрован setTimestamp() метод можно использовать для передачи параметра, datetime2 или столбца данных типа datetime. Однако когда столбец зашифрован вам придется использовать конкретный метод, представляющий тип столбца в базе данных. Например используйте setTimestamp() передавать значения в столбец зашифрованных datetime2 и использовать setDateTime() для передачи значений в столбец зашифрованных даты и времени. См. в разделе [всегда зашифрованы Справочник по API для драйвера JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) полный список новых интерфейсов API.
 - Точность и масштаб параметров, предназначенных для столбцов типов данных SQL Server decimal и numeric, соответствуют точности и масштабу, настроенным для целевого столбца. Добавлены методы API для классов SQLServerPreparedStatement и SQLServerCallableStatement, SQLServerResultSet принимать точность и масштаб, а также значения данных для параметров/столбцами, представляющими десятичных и числовых типов данных. См. в разделе [всегда зашифрованы Справочник по API для драйвера JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) полный список новых/перегружены API-интерфейсов.  
 - Точность долей секунды/масштаб параметров, предназначенных для столбцов datetime2, datetimeoffset или типы данных SQL Server времени не больше, чем точность долей секунды или масштаб для целевого столбца в запросах, которые изменяют значения целевого столбца . Добавлены методы API для классов SQLServerPreparedStatement и SQLServerCallableStatement, SQLServerResultSet принимать долей секунды точностью или масштабом вместе со значениями данных для представления этих типов данных параметров. Полный список новых/перегружены API-интерфейсов, см. в разделе [всегда зашифрованы Справочник по API для драйвера JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).   
 
@@ -591,7 +529,7 @@ catch (Exception e)
 ### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Ошибки, возникающие из-за передачи значений в виде открытого текста, а не в зашифрованном виде
 Любое значение, предназначенное для зашифрованного столбца, должно быть зашифровано внутри приложения. Попытка вставки, изменения или фильтрации по значению в виде открытого текста в зашифрованном столбце приведет к возникновению ошибки, подобной следующей:
 
-```
+```java
 com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is incompatible with varchar(8000) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'MyCEK', column_encryption_key_database_name = 'ae') collation_name = 'SQL_Latin1_General_CP1_CI_AS'
 ```
 
@@ -599,12 +537,12 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 - функция Always Encrypted включена для запросов приложений, предназначенных для зашифрованных столбцов (для строки подключения или конкретного запроса);
 - с помощью подготовленных инструкций и параметры для отправки данных, предназначенных для зашифрованных столбцов. В примере ниже показан запрос, который вместо передачи литерала как параметра неправильно фильтрует по литералу или константе в зашифрованном столбце (SSN). Этот запрос завершится ошибкой:
 
-```
+```java
 ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customers WHERE SSN='795-73-9838'");
 ```
 
 ## <a name="force-encryption-on-input-parameters"></a>Принудительное шифрование на входные параметры
-Функция принудительное шифрование обеспечивает шифрование параметра, при использовании функции постоянного шифрования. Если используется принудительное шифрование и SQL Server сообщает драйверу, что параметр не должен быть зашифрован, запрос, использующий параметр, завершится ошибкой. Это свойство обеспечивает дополнительную защиту от атак на систему безопасности, включающих предоставление клиенту скомпрометированным SQL Server неверных метаданных шифрования, что может привести к раскрытию данных. Set * методы классов SQLServerPreparedStatement и SQLServerCallableStatement и обновление\* являются перегруженными методами в классе SQLServerResultSet для принимает логический аргумент, чтобы указать параметр force шифрования. Если значение этого аргумента равно false, драйвер не будет принудительно выполнять шифрование на параметры. Если принудительное шифрование имеет значение true, в запросе параметр отправляется только если целевой столбец зашифрован и постоянное шифрование включено для соединения или в отчете. Используя это свойство предоставляет дополнительный уровень безопасности, гарантируя, что драйвер не отправляют ошибочно данные для SQL Server как обычный текст, когда он должен быть зашифрован.
+Функция принудительное шифрование обеспечивает шифрование параметра, при использовании функции постоянного шифрования. Если используется принудительное шифрование и SQL Server сообщает драйверу, что параметр не должен быть зашифрован, запрос, использующий параметр, завершится ошибкой. Это свойство обеспечивает дополнительную защиту от атак на систему безопасности, включающих предоставление клиенту скомпрометированным SQL Server неверных метаданных шифрования, что может привести к раскрытию данных. Set * методы классов SQLServerPreparedStatement и SQLServerCallableStatement и обновление\* являются перегруженными методами в классе SQLServerResultSet для принимает логический аргумент, чтобы указать параметр force шифрования. Если значение этого аргумента равно false, драйвер не принудительное шифрование параметров. Если принудительное шифрование имеет значение true, в запросе параметр отправляется только если целевой столбец зашифрован и постоянное шифрование включено для соединения или в отчете. С помощью этого свойства предоставляет дополнительный уровень безопасности, гарантируя, что драйвер не отправляет ошибочно данных для SQL Server как обычный текст при его должна шифроваться.
 
 Дополнительные сведения о перегруженные методы SQLServerPreparedStatement и SQLServerCallableStatement с помощью параметра force шифрования, см. в разделе [всегда зашифрованы Справочник по API для драйвера JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 
@@ -616,7 +554,7 @@ ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customer
 В этом разделе описываются процессы оптимизации производительности, встроенные в Microsoft JDBC Driver для SQL Server, и способы управления влиянием двух указанных выше факторов на производительность.
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Управление обращениями для получения метаданных для параметров запроса
-Если для соединения включена функция Always Encrypted, по умолчанию драйвер будет вызывать [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) для каждого параметризованного запроса, передавая инструкцию запроса (без значений параметров) в SQL Server. [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) анализирует инструкцию запроса и для каждого параметра, который должен быть зашифрован, возвращает связанные с шифрованием сведения, позволяющие драйверу шифровать значения параметров. Такое поведение обеспечивает высокий уровень прозрачности для клиентского приложения. До тех пор, пока приложение использует параметры для передачи значений, предназначенных для зашифрованных столбцов к драйверу, оно (и разработчику приложений) не должны знать, какие запросы получают доступ к зашифрованным столбцам.
+Если для соединения включена функция Always Encrypted, по умолчанию драйвер будет вызывать [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) для каждого параметризованного запроса, передавая инструкцию запроса (без значений параметров) в SQL Server. [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) анализирует инструкцию запроса и для каждого параметра, который должен быть зашифрован, возвращает связанные с шифрованием сведения, позволяющие драйверу шифровать значения параметров. Такое поведение обеспечивает высокий уровень прозрачности для клиентского приложения. До тех пор, пока приложение использует параметры для передачи значений, предназначенных для зашифрованных столбцов к драйверу, оно (и разработчику приложений) не нужно знать, какие запросы получают доступ к зашифрованным столбцам.
 
 ### <a name="setting-always-encrypted-at-the-query-level"></a>Задание постоянного шифрования на уровне запроса
 Для управления влиянием получения метаданных шифрования для параметризованных запросов на производительность можно включить функцию Always Encrypted для отдельных запросов, а не настраивать ее для соединения. Таким образом, это гарантирует, что sys.sp_describe_parameter_encryption вызывается только для запросов, которые точно имеют параметры, предназначенные для зашифрованных столбцов. Обратите внимание, что в этом случае снижается прозрачность шифрования: при изменении свойств шифрования столбцов базы данных может потребоваться изменить код приложения в соответствии с изменениями схемы.
@@ -625,43 +563,43 @@ ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customer
 - Если большинство запросов, отправляемых клиентским приложением через подключение к базе данных, получает доступ к зашифрованным столбцам, следуйте приведенным ниже рекомендациям.
     - Задайте для ключевого слова строки подключения **columnEncryptionSetting** значение **Enabled**.
     - Задайте SQLServerStatementColumnEncryptionSetting.Disabled для отдельных запросов, которые не обращаются к зашифрованным столбцам. Таким образом будет отключена возможность вызова sys.sp_describe_parameter_encryption и расшифровки всех значений в результирующем наборе.
-    - Задайте SQLServerStatementColumnEncryptionSetting.ResultSet для отдельных запросов, которые не имеют параметров, требующих шифрования, но получают данные из зашифрованных столбцов. Таким образом будет отключена возможность вызова sys.sp_describe_parameter_encryption и шифрования параметров. Запрос сможет расшифровывать результаты из столбцов шифрования.
-- Если большинство запросов, отправляемых клиентским приложением через подключение к базе данных, не получает доступ к зашифрованным столбцам, следуйте приведенным ниже рекомендациям.
+    - Задайте SQLServerStatementColumnEncryptionSetting.ResultSet для отдельных запросов, которые не содержат параметров, требующих шифрования, но получают данные из зашифрованных столбцов. Таким образом будет отключена возможность вызова sys.sp_describe_parameter_encryption и шифрования параметров. Запрос сможет расшифровывать результаты из столбцов шифрования.
+- Если большинство запросов, отправляемых клиентским приложением через подключение к базе данных, не получают доступ к зашифрованным столбцам, следуйте приведенным ниже рекомендациям:
     - Задайте для ключевого слова строки подключения **columnEncryptionSetting** значение **Disabled**.
     - Задайте SQLServerStatementColumnEncryptionSetting.Enabled для отдельных запросов, имеющих параметры, которые требуется зашифровать. Таким образом будет включена возможность вызова sys.sp_describe_parameter_encryption и расшифровки результатов запроса, полученных из зашифрованных столбцов.
-    - Задайте SQLServerStatementColumnEncryptionSetting.ResultSet для отдельных запросов, которые не имеют параметров, требующих шифрования, но получают данные из зашифрованных столбцов. Таким образом будет отключена возможность вызова sys.sp_describe_parameter_encryption и шифрования параметров. Запрос сможет расшифровывать результаты из столбцов шифрования.
+    - Задайте SQLServerStatementColumnEncryptionSetting.ResultSet для запросов, которые не содержат параметров, требующих шифрования, но получают данные из зашифрованных столбцов. Таким образом будет отключена возможность вызова sys.sp_describe_parameter_encryption и шифрования параметров. Запрос сможет расшифровывать результаты из столбцов шифрования.
 
 Параметры SQLServerStatementColumnEncryptionSetting не может использоваться для обхода шифрования и получить доступ к данным в виде обычного текста. Дополнительные сведения о том, как настройка шифрования столбцов в инструкции см. в разделе [всегда зашифрованы Справочник по API для драйвера JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).  
 
-В приведенном ниже примере функция Always Encrypted отключена для подключения к базе данных. Запрос, выполняемый приложением, имеет параметр, предназначенный для незашифрованного столбца LastName. Запрос получает данные из зашифрованных столбцов SSN и BirthDate. В этом случае вызывать sys.sp_describe_parameter_encryption для получения метаданных шифрования не требуется. Однако необходимо включить расшифровку результатов запроса, чтобы приложение могло получать значения в виде обычного текста из двух зашифрованных столбцов. Чтобы убедиться, что используется параметр SQLServerStatementColumnEncryptionSetting.ResultSet.
+В приведенном ниже примере функция Always Encrypted отключена для подключения к базе данных. Запрос, создаваемый приложением, содержит параметр, предназначенный для незашифрованного столбца LastName. Запрос получает данные из зашифрованных столбцов SSN и BirthDate. В этом случае вызывать sys.sp_describe_parameter_encryption для получения метаданных шифрования не требуется. Однако необходимо включить расшифровку результатов запроса, чтобы приложение могло получать значения в виде обычного текста из двух зашифрованных столбцов. Чтобы убедиться, что используется параметр SQLServerStatementColumnEncryptionSetting.ResultSet.
 
-```
+```java
 // Assumes the same table definition as in Section "Retrieving and modifying data in encrypted columns"
 // where only SSN and BirthDate columns are encrypted in the database.
-String connectionUrl = "jdbc:sqlserver://localhost;databaseName=ae;user=sa;password=******;"
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>;" 
         + "keyStoreAuthentication=JavaKeyStorePassword;"
-        + "keyStoreLocation=" + keyStoreLocation + ";"
-        + "keyStoreSecret=******;";
-SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionString);
+        + "keyStoreLocation=<keyStoreLocation>" 
+        + "keyStoreSecret=<keyStoreSecret>;";
 
-String filterRecord="SELECT FirstName, LastName, SSN, BirthDate FROM " + tblName + " WHERE LastName = ?";
-PreparedStatement selectStatement = connection.prepareStatement(
-        filterRecord,
-        ResultSet.TYPE_FORWARD_ONLY,
-        ResultSet.CONCUR_READ_ONLY,
-        connection.getHoldability(),
-        SQLServerStatementColumnEncryptionSetting.ResultSetOnly);
-selectStatement.setString(1, "Abel");
-ResultSet rs = selectStatement.executeQuery();
-while(rs.next()) {
-    System.out.println("First name: " + rs.getString("FirstName"));
-    System.out.println("Last name: " + rs.getString("LastName"));
-    System.out.println("SSN: " + rs.getString("SSN"));
-    System.out.println("Date of Birth: " + rs.getDate("BirthDate"));
+String filterRecord = "SELECT FirstName, LastName, SSN, BirthDate FROM " + tableName + " WHERE LastName = ?";
+
+try (SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = connection.prepareStatement(filterRecord, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY,
+                connection.getHoldability(), SQLServerStatementColumnEncryptionSetting.ResultSetOnly);) {
+
+    selectStatement.setString(1, "Abel");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("First name: " + rs.getString("FirstName"));
+        System.out.println("Last name: " + rs.getString("LastName"));
+        System.out.println("SSN: " + rs.getString("SSN"));
+        System.out.println("Date of Birth: " + rs.getDate("BirthDate"));
+    }
 }
-rs.close();
-selectStatement.close();
-connection.close();
+// Handle any errors that may have occurred.
+catch (SQLException e) {
+    e.printStackTrace();
+}
 ```
 
 ### <a name="column-encryption-key-caching"></a>Кэширование ключа шифрования столбца
@@ -669,13 +607,13 @@ connection.close();
 
 Можно настроить значение времени жизни для записи ключей шифрования столбцов в кэше, используя файловый API, setColumnEncryptionKeyCacheTtl(), в классе SQLServerConnection. Значение для записи ключей шифрования столбцов в кэше, время жизни по умолчанию — два часа. Чтобы отключить кэширование, используйте значение 0. Чтобы задать любое значение времени жизни, используйте следующие API:
 
-```
+```java
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (int columnEncryptionKeyCacheTTL, TimeUnit unit)
 ```
 
 Например чтобы задать значение времени жизни 10 минут, используйте следующую команду:
 
-```
+```java
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 ```
 

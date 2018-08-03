@@ -1,7 +1,7 @@
 ---
 title: С помощью зеркального отображения (JDBC) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,17 +14,17 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7528a85cd8e2eb258a89e6d7971ce0f80fa90258
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 686e62581e2c18b79f20a25be6c5cd0ec0bcb3f8
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041431"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278682"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Использование зеркального отображения базы данных (JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Зеркальное отображение базы данных представляет решение по повышению доступности базы данных и резервированию данных, реализуемое в основном программными средствами. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] реализует неявную поддержку зеркального отображения базы данных, поэтому разработчику не придется писать какой бы то ни было код или выполнять другие действия, если для базы данных настроено зеркальное отображение.  
+  Зеркальное отображение базы данных представляет решение по повышению доступности базы данных и резервированию данных, реализуемое в основном программными средствами. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] реализует неявную поддержку зеркального отображения базы данных, поэтому разработчику не придется писать код или выполнять другие действия, если для базы данных настроено зеркальное отображение.  
   
  Зеркальное отображение базы данных, реализованное отдельно для каждой базы данных, хранит копию рабочей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] на резервном сервере. Это или «горячий», или «теплый» резервный сервер, в зависимости от конфигурации и состояния сеанса зеркального отображения базы данных. Сервер горячей замены поддерживает быструю отработку отказа без потери зафиксированных транзакций, а резервный сервер поддерживает принудительное обслуживание (с возможной потерей данных).  
   
@@ -37,16 +37,16 @@ ms.locfileid: "38041431"
  Другие конфигурации зеркального отображения баз данных имеют разные уровни производительности и безопасности данных, а также поддерживают разные формы отработки отказа. Дополнительные сведения см. в разделе "Общие сведения о зеркальном отображении базы данных" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="programming-considerations"></a>Замечания по программированию  
- Если сервер, на котором размещается основная база данных, дает сбой, в ответ на вызовы API клиентское приложение получает ошибки, которые указывают на потерю соединения с базой данных. В этом случае утрачиваются все незафиксированные изменения в базе данных и выполняется откат текущей транзакции. Приложение должно закрыть соединение (или освободить объект источника данных), а затем снова открыть его. После подключения новое соединение автоматически направляется на зеркальную базу данных, которая теперь играет роль основного сервера, а клиенту не нужно изменять строку соединения или объект источника данных.  
+ Если сервер, на котором размещается основная база данных, дает сбой, в ответ на вызовы API клиентское приложение получает ошибки, которые указывают на потерю соединения с базой данных. В этом случае утрачиваются все незафиксированные изменения в базе данных и выполняется откат текущей транзакции. Приложение должно закрыть соединение (или освободить объект источника данных), а затем снова открыть его. После подключения новое соединение автоматически направляется на зеркальную базу данных, которая теперь играет роль основного сервера, и клиенту не нужно изменять строку подключения или объект источника данных.  
   
- Во время первоначального установления соединения основной сервер отправляет удостоверение партнера по обеспечению обработки отказа на клиент, который будет использоваться при отработке отказа. Когда приложение пытается установить первоначальное соединение с отказавшим основным сервером, клиенту неизвестно удостоверение партнера по обеспечению обработки отказа. Чтобы дать клиентам возможность выхода из такой ситуации, предоставляются свойство строки подключения failoverPartner и необязательный метод источника данных [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md), с помощью которых клиент может самостоятельно указать удостоверение партнера по обеспечению отработки отказа. Свойство клиента используется только в этом сценарии и не используется, если доступен основной сервер.  
+ Во время первоначального установления соединения основной сервер отправляет удостоверение партнера по обеспечению обработки отказа на клиент, который будет использоваться при отработке отказа. Когда приложение пытается установить первоначальное соединение с основным сервером в состоянии сбоя, клиенту неизвестно удостоверение партнера по обеспечению обработки отказа. Чтобы дать клиентам возможность выхода из такой ситуации, предоставляются свойство строки подключения failoverPartner и необязательный метод источника данных [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md), с помощью которых клиент может самостоятельно указать удостоверение партнера по обеспечению отработки отказа. Свойство клиента используется только в этом сценарии и не используется, если доступен основной сервер.  
   
 > [!NOTE]  
 >  Если свойство failoverPartner указывается в строке соединения или в объекте источника данных, то также необходимо установить свойство databaseName. В противном случае будет вызвано исключение. Если свойства failoverPartner и databaseName не заданы явно, то приложение не будет запускать отработку отказа в случае отказа основного сервера базы данных. Иначе говоря, автоматическое перенаправление работает только для соединений, где явно указаны свойства failoverPartner и databaseName. Дополнительные сведения о свойстве failoverPartner и других свойствах строки соединения, см. в разделе [заданию свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
   
- Если сервер-партнер по обеспечению обработки отказа, указанный клиентом, не является сервером, который играет роль партнера по обеспечению отработки отказа для указанной базы данных, и если указанный сервер (база данных) участвует в зеркальном отображении, то соединение будет отклонено сервером. Класс [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) содержит метод [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md), но этот метод возвращает только имя партнера по обеспечению отработки отказа, указанное в строке подключения или с помощью метода setFailoverPartner. Получить имя фактического партнера по обеспечению отработки отказа можно с помощью следующей инструкции [!INCLUDE[tsql](../../includes/tsql_md.md)]:  
+ Если сервер, указанный клиентом как партнер по обеспечению обработки отказа, не играет роль партнера по обеспечению отработки отказа для указанной базы данных и если указанный сервер (база данных) участвует в зеркальном отображении, то соединение будет отклонено сервером. Класс [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) содержит метод [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md), но этот метод возвращает только имя партнера по обеспечению отработки отказа, указанное в строке подключения или с помощью метода setFailoverPartner. Получить имя фактического партнера по обеспечению отработки отказа можно с помощью следующей инструкции [!INCLUDE[tsql](../../includes/tsql_md.md)]:  
   
-```  
+```sql
 SELECT m.mirroring_role_DESC, m.mirroring_state_DESC,  
 m.mirroring_partner_instance FROM sys.databases as db,  
 sys.database_mirroring AS m WHERE db.name = 'MirroringDBName'  
@@ -61,68 +61,52 @@ AND db.database_id = m.database_id
 ## <a name="example"></a>Пример  
  В следующем примере сначала выполняется попытка подключения к основному серверу. Если эта попытка завершается созданием исключения, выполняется попытка подключения к зеркальному серверу, который мог стать новым основным сервером. Заметьте, что в строке соединения используется свойство failoverPartner.  
   
-```  
-import java.sql.*;  
-  
-public class clientFailover {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://serverA:1433;" +  
-         "databaseName=AdventureWorks;integratedSecurity=true;" +  
-         "failoverPartner=serverB";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-  
-      try {  
-         // Establish the connection to the principal server.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-         System.out.println("Connected to the principal server.");  
-  
-         // Note that if a failover of serverA occurs here, then an  
-         // exception will be thrown and the failover partner will  
-         // be used in the first catch block below.  
-  
-         // Create and execute an SQL statement that inserts some data.  
-         stmt = con.createStatement();  
-  
-         // Note that the following statement assumes that the   
-         // TestTable table has been created in the AdventureWorks  
-         // sample database.  
-         stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (SQLException se) {  
-         try {  
-            // The connection to the principal server failed,  
-            // try the mirror server which may now be the new  
-            // principal server.  
-            System.out.println("Connection to principal server failed, " +  
-            "trying the mirror server.");  
-            con = DriverManager.getConnection(connectionUrl);  
-            System.out.println("Connected to the new principal server.");  
-            stmt = con.createStatement();  
-            stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");  
-         }  
-         catch (Exception e) {  
-            e.printStackTrace();  
-         }  
-      }  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      // Close the JDBC objects.  
-      finally {  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-}  
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ClientFailover {
+    public static void main(String[] args) {
+
+        String connectionUrl = "jdbc:sqlserver://serverA:1433;" 
+                + "databaseName=AdventureWorks;integratedSecurity=true;" 
+                + "failoverPartner=serverB";
+
+        // Establish the connection to the principal server.
+        try (Connection con = DriverManager.getConnection(connectionUrl); 
+                Statement stmt = con.createStatement();) {
+            System.out.println("Connected to the principal server.");
+
+            // Note that if a failover of serverA occurs here, then an
+            // exception will be thrown and the failover partner will
+            // be used in the first catch block below.
+
+            // Execute a SQL statement that inserts some data.
+
+            // Note that the following statement assumes that the
+            // TestTable table has been created in the AdventureWorks
+            // sample database.
+            stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");
+        }
+        catch (SQLException se) {
+            System.out.println("Connection to principal server failed, " + "trying the mirror server.");
+            // The connection to the principal server failed,
+            // try the mirror server which may now be the new
+            // principal server.
+            try (Connection con = DriverManager.getConnection(connectionUrl); 
+                    Statement stmt = con.createStatement();) {
+                System.out.println("Connected to the new principal server.");
+                stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");
+            }
+            // Handle any errors that may have occurred.
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 ```  
   
 ## <a name="see-also"></a>См. также:  

@@ -1,7 +1,7 @@
 ---
 title: Использование автоматически сформированных ключей | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,23 +14,23 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be2799c9d1b4eae52dc2ede364b88099175f1adf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 61235c24ceac9182895e5c31c62b8d06f0462e72
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982148"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278795"
 ---
 # <a name="using-auto-generated-keys"></a>Использование автоматически сформированных ключей
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает дополнительные API JDBC 3.0 для получения автоматически сформированных идентификаторов строк. Главным преимуществом этой функции является доступность значений IDENTITY для приложения, которое обновляет таблицу базы данных, без необходимости отправлять запрос и вторично обращаться к серверу.  
   
- Поскольку [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] не поддерживает псевдостолбцы для идентификаторов, то обновления, использующие функцию автоматического создания ключей, должны работать с таблицей, содержащей столбец IDENTITY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] позволяет иметь только один столбец IDENTITY в каждой таблице. Результирующий набор, возвращаемый методом [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) класса [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), будет содержать только один столбец, а именем возвращаемого столбца будет GENERATED_KEYS. Если созданные ключи запрашиваются для таблицы без столбца IDENTITY, то драйвер JDBC возвращает результирующий набор со значением NULL.  
+ Так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] не поддерживает псевдостолбцы для идентификаторов, то обновления, использующие функцию автоматического создания ключей, должны работать с таблицей, содержащей столбец IDENTITY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] позволяет иметь только один столбец IDENTITY в каждой таблице. Результирующий набор, возвращаемый методом [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) класса [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), будет содержать только один столбец, а именем возвращаемого столбца будет GENERATED_KEYS. Если созданные ключи запрашиваются для таблицы без столбца IDENTITY, то драйвер JDBC возвращает результирующий набор со значением NULL.  
   
  Для примера создайте в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] следующую таблицу:  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   

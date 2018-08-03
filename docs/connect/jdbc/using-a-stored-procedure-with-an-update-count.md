@@ -1,7 +1,7 @@
 ---
 title: Использование хранимых процедур со счетчиком обновлений | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,17 +14,17 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d858b255d5bdd6ce74509d36f4d0497220350694
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: b840cc9b6b8492af0cffa71986d747ac59b7dd57
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040822"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278925"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Использование хранимых процедур со счетчиком обновлений
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Для изменения данных в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью хранимой процедуры в драйвере [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] предусмотрен класс [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). С помощью класса SQLServerCallableStatement можно вызывать хранимые процедуры, которые изменяют данные, содержащиеся в базе данных, и возвращают количество обработанных строк, которое также называется счетчиком обновления.  
+  Для изменения данных в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью хранимой процедуры в драйвере [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] предусмотрен класс [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). С помощью класса SQLServerCallableStatement можно вызывать хранимые процедуры, которые изменяют данные в базе данных и возвращают количество обработанных строк, которое также называется счетчиком обновления.  
   
  После настройки вызова хранимой процедуры с помощью класса SQLServerCallableStatement можно вызывать эту хранимую процедуру с помощью метода [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) или [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md). Метод executeUpdate возвращает значение **int**, которое содержит количество строк, обработанных хранимой процедурой, а метод execute не возвращает это значение. Если используется метод execute и нужно получить количество обработанных строк, можно вызвать метод [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) после выполнения хранимой процедуры.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "38040822"
   
  В качестве примера создайте следующую таблицу и хранимую процедуру, а также вставьте образец данных в образец базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   

@@ -29,7 +29,7 @@ ms.locfileid: "37285320"
   В этом разделе описано, как восстановить журнал транзакций с устройства в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Дополнительные сведения о резервном копировании SQL Server в службу хранилища больших двоичных объектов Windows Azure см. в разделе [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Дополнительные сведения о резервном копировании SQL Server в службу хранилища больших двоичных объектов Windows Azure см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилищ больших двоичных объектов Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **В этом разделе**  
   
