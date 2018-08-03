@@ -1,5 +1,5 @@
 ---
-title: В хранилище Azure ключ версии образца 6.0.0 | Документы Microsoft
+title: Пример версии 6.0.0 хранилища ключей Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530d952126de09c46fffe7537e91be443f1bd4da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e7526276da62ea6f251944eca7b7ce4b1a03c2f6
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828600"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278935"
 ---
-# <a name="azure-key-vault-sample-version-600"></a>Образец хранилища ключей Azure версии 6.0.0
+# <a name="azure-key-vault-sample-version-600"></a>Пример Azure Key Vault версии 6.0.0
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-##  <a name="sample-application-using-azure-key-vault-feature"></a>Пример приложения с помощью функции хранилища ключей Azure
-Это приложение является запускаемым с помощью драйвера JDBC 6.0.0 и Azure-Keyvault (версия 0.9.7), Adal4j (версия 1.3.0) и их зависимости.  Базовый зависимости можно устранить путем добавления этих библиотек pom-файла проекта, как описано [здесь](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
+##  <a name="sample-application-using-azure-key-vault-feature"></a>Пример приложения с помощью функции Azure Key Vault
+Это приложение – готов к запуску, с помощью драйвера JDBC 6.0.0 и Azure-Keyvault (версии 0.9.7), Adal4j (версия 1.3.0) и их зависимости.  Можно разрешить базовой зависимости, добавив эти библиотеки к pom-файлу проекта, как описано [здесь](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
 
-```xml
+```java
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -285,5 +285,5 @@ public class AE_AKV_Maven {
 
 ```
 
-## <a name="see-also"></a>См. также  
- [Образец хранилища ключей Azure версии 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
+## <a name="see-also"></a>См. также:  
+ [Пример Azure Key Vault версии 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  

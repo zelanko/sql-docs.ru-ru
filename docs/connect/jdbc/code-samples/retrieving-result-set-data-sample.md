@@ -1,7 +1,7 @@
 ---
-title: Получение образца данных результирующего набора | Документы Microsoft
+title: Получение образца данных результирующего набора | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,89 +14,69 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abe60fd0d28ddfe46b08490763103d9392ce521d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: fb68f2bedb680f990e2b0c4e4e559191915dd300
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830299"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279065"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Получение образца данных результирующего набора
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Это [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] образце приложения показано получение набора данных из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных и последующее отображение этих данных.  
+  В этом образце приложения [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] показано получение набора данных из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и последующее отображение этих данных.  
   
- Файл кода для этого образца имеет имя retrieveRS.java и находится в следующей папке:  
+ Файл кода для этого образца имеет имя RetrieveRS.java и находится в следующей папке:  
   
  \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \samples\resultsets  
   
 ## <a name="requirements"></a>Требования  
- Чтобы запустить образец приложения, необходимо в пути к классу указать файл sqljdbc.jar или файл sqljdbc4.jar. Если в пути к классу не указан файл sqljdbc.jar или sqljdbc4.jar, то образец приложения вызовет распространенное исключение «Класс не найден». Также потребуется доступ к [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образца базы данных. Дополнительные сведения о том, как задать значение переменной classpath см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Также потребуется доступ к образцу базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] Предоставляет файлы библиотек классов для использования в зависимости от выбранных параметров среды выполнения Java (JRE) sqljdbc.jar и sqljdbc4.jar. Дополнительные сведения о какие файлы JAR следует выбрать см. в разделе [требования к системе для драйвера JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  Драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Дополнительные сведения о какие файлы JAR следует выбрать, см. в разделе [требования к системе для драйвера JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере образец кода устанавливает соединение для [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образца базы данных. Затем с помощью инструкции SQL с [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта, он выполняет инструкцию SQL и помещает данные, возвращенные в [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ В приведенном ниже примере образец кода будет использоваться для соединения с образцом базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Затем с помощью инструкции SQL с объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) выполняется инструкция SQL, а возвращенные ею данные помещаются в объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
- Далее образец кода вызывает метод пользовательского displayRow для прохода по строкам данных, содержащихся в результирующем наборе и использует [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) метод для отображения некоторых данных, которые она содержит.  
+ Далее образец кода вызывает настраиваемый метод displayRow для прохода по строкам данных в результирующем наборе, и некоторые из этих данных отображаются с помощью метода [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md).
   
 ```java
-import java.sql.*;  
-  
-public class retrieveRS {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-            "databaseName=AdventureWorks;integratedSecurity=true;";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-  
-         // Establish the connection.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-  
-         // Create and execute an SQL statement that returns a  
-         // set of data and then display it.  
-         String SQL = "SELECT * FROM Production.Product;";  
-         stmt = con.createStatement();  
-         rs = stmt.executeQuery(SQL);  
-         displayRow("PRODUCTS", rs);  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-  
-   private static void displayRow(String title, ResultSet rs) {  
-      try {  
-         System.out.println(title);  
-         while (rs.next()) {  
-            System.out.println(rs.getString("ProductNumber") + " : " + rs.getString("Name"));  
-         }  
-      } catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-   }  
-}  
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class RetrieveRS {
+
+    public static void main(String[] args) {
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
+            String SQL = "SELECT * FROM Production.Product;";
+            ResultSet rs = stmt.executeQuery(SQL);
+            displayRow("PRODUCTS", rs);
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void displayRow(String title,
+            ResultSet rs) throws SQLException {
+        System.out.println(title);
+        while (rs.next()) {
+            System.out.println(rs.getString("ProductNumber") + " : " + rs.getString("Name"));
+        }
+    }
+}
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с результирующими наборами](../../../connect/jdbc/working-with-result-sets.md)  
   
   

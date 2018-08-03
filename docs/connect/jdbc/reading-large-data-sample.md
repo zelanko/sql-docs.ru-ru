@@ -1,7 +1,7 @@
 ---
-title: Чтение больших объемов данных образец | Документы Microsoft
+title: Чтение больших объемов данных образец | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,40 +14,40 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0037ee678766bad6786a6feb14e0bf569f9448a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f5791ec7eb7e4e9e561de479fc461e809f514d52
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833299"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278639"
 ---
 # <a name="reading-large-data-sample"></a>Образец считывания данных большого объема
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Это [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] образец приложения показано, как получить большое значение одного столбца из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с помощью [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) метод.  
+  В этом примере приложения, использующем драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], показано, как получить из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] большое значение одного столбца с помощью метода [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md).  
   
- Файл кода для этого образца имеет имя readLargeData.java и находится в следующей папке:  
+ Файл кода для этого образца имеет имя ReadLargeData.java и находится в следующей папке:  
   
  \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \samples\adaptive  
   
 ## <a name="requirements"></a>Требования  
- Чтобы запустить этот образец приложения, потребуется доступ к [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образца базы данных. Необходимо также включить в путь к классу файл sqljdbc.jar или sqljdbc4.jar. Если в пути к классу не указан файл sqljdbc.jar или sqljdbc4.jar, то образец приложения вызовет распространенное исключение «Класс не найден». Дополнительные сведения о том, как задать значение переменной classpath см. в разделе [с помощью драйвера JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+ Для запуска этого образца приложения также потребуется доступ к образцу базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Необходимо также включить в параметр classpath путь к файлу mssql-jdbc.jar. Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Предоставляет файлы библиотек классов для использования в зависимости от выбранных параметров среды выполнения Java (JRE) sqljdbc.jar и sqljdbc4.jar. Дополнительные сведения о какие файлы JAR следует выбрать см. в разделе [требования к системе для драйвера JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Дополнительные сведения о какие файлы JAR следует выбрать, см. в разделе [требования к системе для драйвера JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере образец кода устанавливает соединение для [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] базы данных. Затем образец кода создает образцы данных и обновляет таблицу Production.Document с помощью параметризированного запроса.  
+ В следующем примере образец кода будет использоваться для соединения с базой данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Затем образец кода создает образцы данных и обновляет таблицу Production.Document с помощью параметризированного запроса.  
   
- Кроме того, в образце кода показано, как получить режим адаптивной буферизации с помощью [getResponseBuffering](../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) метод [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) класса. Обратите внимание, что, начиная с версии драйвера JDBC 2.0, свойство соединения responseBuffering по умолчанию имеет значение «adaptive».  
+ Кроме того, в образце кода показано, как получить режим адаптивной буферизации с помощью метода [getResponseBuffering](../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) класса [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Обратите внимание, что, начиная с версии драйвера JDBC 2.0, свойство соединения responseBuffering по умолчанию имеет значение «adaptive».  
   
- Затем с помощью инструкции SQL с [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) , образец кода выполняет инструкцию SQL и объектов помещает данные, возвращенные в [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ Затем в образце кода выполняется инструкция SQL с объектом [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), а возвращенные ею данные помещаются в объект [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
- И, наконец, в примере кода выполняется итерация по строкам данных, содержащихся в результирующем наборе и использует [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) метод для доступа к некоторые данные, которые она содержит.  
+ Наконец, выполняется проход по строкам данных, содержащимся в результирующем наборе, и выполняется доступ к некоторым из этих данных с помощью метода [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md).  
   
  [!code[JDBC#UsingAdaptiveBuffering1](../../connect/jdbc/codesnippet/Java/reading-large-data-sample_1.java)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с большими объемами данных](../../connect/jdbc/working-with-large-data.md)  
   
   

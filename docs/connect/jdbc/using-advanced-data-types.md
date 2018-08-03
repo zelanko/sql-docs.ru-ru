@@ -1,7 +1,7 @@
 ---
-title: Использование расширенных типов данных | Документы Microsoft
+title: Использование расширенных типов данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,30 +14,30 @@ caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4bd8d2b92c6d998c10239f3502328b016de42045
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9ef615f695209cf01c2307c53effc7e84b06eb11
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852759"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278615"
 ---
 # <a name="using-advanced-data-types"></a>Использование расширенных типов данных
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Использует расширенные типы данных JDBC для преобразования [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных в формат, распознаваемый Java языка программирования.  
+  В [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] расширенные типы данных JDBC служат для преобразования типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в форматы, распознаваемые языком программирования Java.  
   
-## <a name="remarks"></a>Замечания  
- В следующей таблице перечислены все стандартные сопоставления между расширенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], JDBC и типами данных языка программирования Java.  
+## <a name="remarks"></a>Remarks  
+ В следующей таблице перечислены все стандартные сопоставления между расширенными типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], типами данных JDBC и типами данных языка программирования Java.  
   
 |Типы SQL Server|Типы JDBC (java.sql.Types)|Типы языка Java|  
 |----------------------|-----------------------------------|-------------------------|  
-|varbinary(max)<br /><br /> image|LONGVARBINARY|Byte [] \(по умолчанию), Blob, InputStream, строка|  
+|varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(по умолчанию), Blob, InputStream, String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (по умолчанию), Clob, InputStream|  
 |ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (по умолчанию), Clob, NClob (Java SE 6.0)|  
 |xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (по умолчанию), InputStream, Clob, byte[],Blob, SQLXML (Java SE 6.0)|  
-|Определяемый пользователем тип<sup>1</sup>|VARBINARY|String (по умолчанию), byte[], InputStream|  
+|Пользовательский тип<sup>1</sup>|VARBINARY|String (по умолчанию), byte[], InputStream|  
   
- <sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает отправку и получение определяемых пользователем типов CLR как двоичные данные, но не поддерживает операции с метаданными CLR.  
+ <sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает отправку и получение пользовательских типов CLR в виде двоичных данных, но не поддерживает работу с метаданными CLR.  
   
  В следующих разделах приведены примеры использования драйвера JDBC и расширенных типов данных.  
   
@@ -45,17 +45,17 @@ ms.locfileid: "32852759"
  Драйвер JDBC реализует все методы интерфейсов java.sql.Blob, java.sql.Clob и java.sql.NClob.  
   
 > [!NOTE]  
->  Значения CLOB могут использоваться с [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (или более поздней версии) типы данных больших значений. В частности, типы CLOB могут использоваться с **varchar(max)** и **nvarchar(max)** типы данных типов больших двоичных ОБЪЕКТОВ можно использовать с **varbinary(max)** и **изображения**  типы данных, а типы NCLOB могут использоваться с **ntext** и **nvarchar(max)**.  
+>  Значения CLOB могут использоваться с типами данных больших значений [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] и более поздних версий. В частности, типы CLOB могут использоваться с **varchar(max)** и **nvarchar(max)** типы данных типов больших двоичных ОБЪЕКТОВ может использоваться с **varbinary(max)** и **изображения**  типы данных, а типы NCLOB могут использоваться с **ntext** и **nvarchar(max)**.  
   
 ## <a name="large-value-data-types"></a>Типы данных большого объема  
- В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]работа с данными большого размера типов требовала особого подхода. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Представляет описатель max для **varchar**, **nvarchar**, и **varbinary** типы данных, чтобы разрешить хранение значений размером до 2 ^ 31 байт. Столбцы таблицы и [!INCLUDE[tsql](../../includes/tsql_md.md)] можно указать переменные **varchar(max)**, **nvarchar(max)**, или **varbinary(max)** типов данных.  
+ В ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] работа с типами данных большого объема требовала особого подхода. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] введен описатель max для типов данных **varchar**, **nvarchar** и **varbinary**, который обеспечивает хранение значений размером до 2^31 байт. Столбцы таблицы и переменные [!INCLUDE[tsql](../../includes/tsql_md.md)] могут указывать типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**.  
   
  В большинстве случаев работа с типами данных большого объема предполагает их извлечение из базы данных или добавление в базу данных. В следующих разделах описываются различные способы выполнения этих задач.  
   
 ### <a name="retrieving-large-value-types-from-a-database"></a>Извлечение типов данных большого объема из базы данных  
- Если извлечь тип недвоичных данных большого объема, например **varchar(max)** тип данных — из базы данных, одним из подходов является считывания данных в виде потока символов. В следующем примере [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) метод [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) класс используется для получения данных из базы данных и возвращать в виде результирующего набора. Затем [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) метод [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) класс используется для считывания данных большого объема из результирующего набора.  
+ Извлечь тип недвоичных данных большого объема, например типа данных **varchar(max)** из базы данных, можно путем считывания данных в виде потока символов. В следующем примере для извлечения данных из базы данных и их возвращения в виде результирующего набора используется метод [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) класса [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Затем для считывания данных большого объема из результирующего набора используется метод [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) класса [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
-```  
+```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
 rs.next();  
 Reader reader = rs.getCharacterStream(2);  
@@ -64,17 +64,17 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]  
 >  Этот же подход можно использовать также для **текст**, **ntext**, и **nvarchar(max)** типов данных.  
   
- При извлечении типа двоичных данных больших значений, таких как **varbinary(max)** тип данных — из базы данных, существует несколько подходов, которые можно предпринять. Эффективнее всего считать данные в виде двоичного потока следующим образом:  
+ Извлечь тип двоичных данных большого объема, например типа данных **varbinary(max)** из базы данных, можно несколькими способами. Эффективнее всего считать данные в виде двоичного потока следующим образом:  
   
-```  
+```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
 rs.next();  
 InputStream is = rs.getBinaryStream(2);  
 ```  
   
- Можно также использовать [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md) метод для чтения данных в виде массива байтов, как описано ниже:  
+ Кроме того, для считывания данных в виде байтового массива можно следующим образом использовать метод [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md):  
   
-```  
+```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
 rs.next();  
 byte [] b = rs.getBytes(2);  
@@ -88,7 +88,7 @@ byte [] b = rs.getBytes(2);
   
  Также можно использовать передачу в виде строки или байтов следующим образом:  
   
-```  
+```java
 PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (c1_id, c2_vcmax) VALUES (?, ?)");  
 pstmt.setInt(1, 1);  
 pstmt.setString(2, htmlStr);  
@@ -96,11 +96,11 @@ pstmt.executeUpdate();
 ```  
   
 > [!NOTE]  
->  Такой подход также может использоваться для значений, хранящихся в **текст**, **ntext**, и **nvarchar(max)** столбцов.  
+>  Этот подход также может использоваться для значений, которые хранятся в **текст**, **ntext**, и **nvarchar(max)** столбцов.  
   
- При наличии на сервере библиотеки изображений и при необходимости загрузить целые двоичные файлы изображений для **varbinary(max)** , наиболее эффективный метод с помощью драйвера JDBC будет использовать потоки напрямую, как описано ниже:  
+ При наличии на сервере библиотеки изображений и при необходимости загрузки целых двоичных файлов изображений в столбец **varbinary(max)** эффективнее всего использовать драйвер JDBC, организуя потоки напрямую следующим образом:  
   
-```  
+```java
 PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Col2) VALUES(?,?)");  
 File inputFile = new File("CLOBFile20mb.jpg");  
 FileInputStream inStream = new FileInputStream(inputFile);  
@@ -115,11 +115,11 @@ inStream.close();
 >  Методы CLOB и BLOB для загрузки больших объемов данных неэффективны.  
   
 ### <a name="modifying-large-value-types-in-a-database"></a>Изменение типов данных большого объема в базе данных.  
- В большинстве случаев для обновления или изменения больших значений в базе данных рекомендуется передавать параметра через [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) классы с помощью [!INCLUDE[tsql](../../includes/tsql_md.md)] такие команды как UPDATE, WRITE и SUBSTRING.  
+ В большинстве случаев для обновления или изменения больших значений в базе данных рекомендуется передавать параметры через классы [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) с помощью таких команд [!INCLUDE[tsql](../../includes/tsql_md.md)], как UPDATE, WRITE и SUBSTRING.  
   
- Если нужно заменить экземпляр слова в крупном текстовом файле, например в архивном HTML-файле, можно использовать объект Clob, как показано ниже:  
+ Если нужно заменить экземпляр слова в крупном текстовом файле, например в архивном HTML-файле, можно воспользоваться объектом Clob следующим образом:  
   
-```  
+```java
 String SQL = "SELECT * FROM test1;";  
 Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);  
 ResultSet rs = stmt.executeQuery(SQL);  
@@ -137,11 +137,11 @@ rs.updateRow();
  Дополнительные сведения о типах данных большого объема ищите в разделе «Использование типов данных большого объема» электронной документации по Microsoft SQL Server.  
   
 ## <a name="xml-data-type"></a>Тип данных XML  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] предоставляет **xml** тип данных, который позволяет хранить XML-документы и фрагменты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. **Xml** тип данных является встроенным типом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]и в чем-то напоминающий другие встроенные типы, такие как **int** и **varchar**. Как и другие встроенные типы можно использовать **xml** тип данных, как тип столбца при создании таблицы, как тип переменной, тип параметра или типа возвращаемого функцией значения; или в [!INCLUDE[tsql](../../includes/tsql_md.md)] функций CAST и CONVERT.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] содержит тип данных **xml**, который позволяет хранить XML-документы и фрагменты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Тип данных **xml** — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как **int** и **varchar**. Аналогично другим встроенным типам, типы данных **xml** можно использовать следующим образом: как тип переменной, тип параметра, тип возвращаемой функции или тип столбца при создании таблицы, а также в функциях CAST и CONVERT [!INCLUDE[tsql](../../includes/tsql_md.md)].  
   
- В драйвере JDBC **xml** могут быть сопоставлены типу данных String, массив байтов, поток, объект CLOB, BLOB или SQLXML. По умолчанию задана строка. Для драйвера JDBC, начиная с версии 2.0, обеспечивается поддержка API-интерфейса JDBC 4.0, что позволяет использовать интерфейс SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. **SQLXML** сопоставляется с типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** тип данных. Дополнительные сведения о том, как на чтение и запись XML-данных из реляционной базы данных с **SQLXML** типом данных Java см [XML-данных с поддержкой](../../connect/jdbc/supporting-xml-data.md).  
+ В драйвере JDBC тип данных **xml** может быть сопоставлен со строкой, байтовым массивом, потоком или объектом CLOB, BLOB или SQLXML. По умолчанию задана строка. Для драйвера JDBC, начиная с версии 2.0, обеспечивается поддержка API-интерфейса JDBC 4.0, что позволяет использовать интерфейс SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. **SQLXML** сопоставляется с типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** тип данных. Дополнительные сведения о считывании XML-данных из реляционной базы данных и записи их в нее с типом данных Java **SQLXML** см. в разделе [Поддержка данных XML](../../connect/jdbc/supporting-xml-data.md).  
   
- Реализация **xml** тип данных в драйвере JDBC обеспечивает поддержку для следующего:  
+ Благодаря реализации типа данных **xml** в драйвере JDBC обеспечена поддержка следующих возможностей:  
   
 -   Доступ к XML как к стандартным строкам Java UTF-16 для большинства общепринятых методик программирования.  
   
@@ -149,18 +149,18 @@ rs.updateRow();
   
 -   Доступ к XML как к байтовому массиву с ведущей меткой следования байтов (BOM) при кодировании в UTF-16 для взаимообмена с другими средствами обработками XML и файлами на диске.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] начальные Спецификации требует для XML в кодировке UTF-16. Приложение должно использовать эту метку при указании значений параметров XML в виде байтовых массивов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] всегда выводит XML-значения как UTF-16 без метки следования байтов строки или встроенным объявлением кодировки. Если значения XML извлекаются в формате byte[], BinaryStream или Blob, то для значения ожидается метка следования байтов UTF-16.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] требует для XML в кодировке UTF-16 ведущую метку порядка байтов (BOM). Приложение должно использовать эту метку при указании значений параметров XML в виде байтовых массивов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] всегда выводит XML-значения как строки в кодировке UTF-16 без метки порядка байтов и без внедренного объявления кодировки. Если значения XML извлекаются в формате byte[], BinaryStream или Blob, то для значения ожидается метка следования байтов UTF-16.  
   
- Дополнительные сведения о **xml** тип данных, в разделе «тип данных xml» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] электронной документации.  
+ Дополнительные сведения о типе данных **xml** можно найти в разделе "Тип данных XML" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="user-defined-data-type"></a>Пользовательский тип данных  
- Введение определяемых пользователем типов (UDT) в [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] расширяет систему типов SQL, позволяя пользователю сохранять объекты и пользовательские структуры данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. Определяемые пользователем типы могут содержать несколько типов данных, и их поведение может отличаться от традиционных псевдонимов типов данных, которые состоят из одного системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Определяемые пользователем типы данных определяются с помощью любого из языков, которые поддерживаются средой Microsoft .NET CLR и формируют проверяемый код. Это языки Microsoft Visual C# и Visual Basic .NET. Данные предоставляются в виде полей и свойств класса или структуры на базе платформы .NET Framework, а особенности работы определяются методами класса или структуры.  
+ Введение пользовательских типов (UDT) в [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] совершенствует систему типов SQL, позволяя пользователю сохранять объекты и настраиваемые структуры данных в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Определяемые пользователем типы могут содержать несколько типов данных, и их поведение может отличаться от традиционных псевдонимов типов данных, которые состоят из одного системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Определяемые пользователем типы данных определяются с помощью любого из языков, которые поддерживаются средой Microsoft .NET CLR и формируют проверяемый код. Это языки Microsoft Visual C# и Visual Basic .NET. Данные предоставляются в виде полей и свойств класса или структуры на базе платформы .NET Framework, а особенности работы определяются методами класса или структуры.  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], определяемого пользователем ТИПА можно использовать в качестве определения столбца таблицы, в переменной [!INCLUDE[tsql](../../includes/tsql_md.md)] пакет, или как аргумент [!INCLUDE[tsql](../../includes/tsql_md.md)] функции или хранимой процедуры.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] пользовательские типы можно использовать в качестве идентификатора столбцов таблицы, как переменную в пакете [!INCLUDE[tsql](../../includes/tsql_md.md)] или как аргумент функции [!INCLUDE[tsql](../../includes/tsql_md.md)] или хранимой процедуры.  
   
- Дополнительные сведения об определенных пользователем типов данных см. в разделе «Использование и изменение экземпляров определяемых пользователем типов» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] электронной документации.  
+ Дополнительные сведения о применении пользовательских типов данных см. в разделе "Использование и изменение экземпляров пользовательских типов" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

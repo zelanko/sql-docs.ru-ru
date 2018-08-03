@@ -1,7 +1,7 @@
 ---
-title: Образец URL-адреса подключения | Документы Microsoft
+title: Пример URL-адрес подключения | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,81 +14,64 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d0ae6f113968d2774ce5d842a34d38b2274609
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 31a3a492c9c6405e4d7f3c8d629adca38c2a3199
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829649"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278765"
 ---
 # <a name="connection-url-sample"></a>Образец URL-адреса соединения
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Это [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] образец приложения показано, как подключиться к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных с помощью URL-адрес подключения. Также демонстрируется извлечение данных из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных с помощью инструкции SQL.  
+  Этот пример приложения, использующего драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], показывает, как соединиться с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] по URL-адресу соединения. Приложение также показывает, как извлечь данные из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] при помощи инструкции SQL.  
   
- Файл кода для этого образца имеет имя connectURL.java и находится в следующей папке:  
+ Файл кода для этого образца имеет имя СonnectURL.java и находится в следующей папке:  
   
  \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \samples\connections  
   
 ## <a name="requirements"></a>Требования  
- Чтобы запустить этот образец приложения, необходимо в пути к классу указать файл sqljdbc.jar или файл sqljdbc4.jar. Если в пути к классу не указан файл sqljdbc.jar или sqljdbc4.jar, то образец приложения вызовет распространенное исключение «Класс не найден». Также потребуется доступ к [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образца базы данных. Дополнительные сведения о том, как задать значение переменной classpath см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Также потребуется доступ к образцу базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] Предоставляет файлы библиотек классов для использования в зависимости от выбранных параметров среды выполнения Java (JRE) sqljdbc.jar и sqljdbc4.jar. Дополнительные сведения о какие файлы JAR следует выбрать см. в разделе [требования к системе для драйвера JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  Драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Дополнительные сведения о какие файлы JAR следует выбрать, см. в разделе [требования к системе для драйвера JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере образец кода задает различные свойства соединения в URL-АДРЕСЕ соединения и затем вызывает метод getConnection для возвращения класса DriverManager [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта.  
+ В следующем примере образец кода задает различные свойства соединения в URL-адресе соединения и затем вызывает метод getConnection класса DriverManager, чтобы вернуть объект [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
- Затем в примере кода используется [createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) метод для создания объекта SQLServerConnection [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта, а затем [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) метод вызывается для выполнения инструкции SQL.  
+ Далее образец кода использует метод [createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) объекта SQLServerConnection, чтобы создать объект [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), после чего вызывается метод [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) для выполнения инструкции SQL.  
   
- Наконец, в образце используется [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объект, возвращенный из метода executeQuery для перебора результатов, возвращенных инструкцией SQL.  
+ Наконец, в образце используется объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), возвращенный из метода executeQuery, для прохода по результатам, возвращенным инструкцией SQL.  
   
 ```java  
-import java.sql.*;  
-  
-public class connectURL {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-         "databaseName=AdventureWorks;user=UserName;password=*****";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-         // Establish the connection.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-  
-         // Create and execute an SQL statement that returns some data.  
-         String SQL = "SELECT TOP 10 * FROM Person.Contact";  
-         stmt = con.createStatement();  
-         rs = stmt.executeQuery(SQL);  
-  
-         // Iterate through the data in the result set and display it.  
-         while (rs.next()) {  
-            System.out.println(rs.getString(4) + " " + rs.getString(6));  
-         }  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-}  
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ConnectURL {
+    public static void main(String[] args) {
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
+            String SQL = "SELECT TOP 10 * FROM Person.Contact";
+            ResultSet rs = stmt.executeQuery(SQL);
+
+            // Iterate through the data in the result set and display it.
+            while (rs.next()) {
+                System.out.println(rs.getString("FirstName") + " " + rs.getString("LastName"));
+            }
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```  
   
-## <a name="see-also"></a>См. также  
- [Подключение к данным и их извлечение](../../../connect/jdbc/connecting-and-retrieving-data.md)  
-  
-  
+## <a name="see-also"></a>См. также:  
+ [Подключение к данным и их извлечение](../../../connect/jdbc/connecting-and-retrieving-data.md)

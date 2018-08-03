@@ -1,7 +1,7 @@
 ---
-title: Режим FIPS | Документы Microsoft
+title: Режим FIPS | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,48 +14,48 @@ caps.latest.revision: 1
 author: v-nisidh
 ms.author: v-nisidh
 manager: andrela
-ms.openlocfilehash: 48c0ca49b743a012130a46dda30dd5053e52cea3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 792d843a2c11c7bde016aec513df9c8724b366b4
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833699"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278855"
 ---
 # <a name="fips-mode"></a>Режим FIPS
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Драйвер Microsoft JDBC для SQL Server поддерживает *режиме совместимости с FIPS 140*. Для Oracle / виртуальной машины Java Sun, ссылаться на [совместимого с FIPS 140 режима для SunJSSE](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html) раздела, предоставляемого корпорацией Oracle Настройка FIPS включена виртуальной машины Java. 
+Microsoft JDBC Driver для SQL Server поддерживает *совместимого с FIPS 140 режима*. Для Oracle / виртуальной машины Java Sun, ссылаться на [совместимого с FIPS 140 режима для SunJSSE](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html) раздел, предоставляемого корпорацией Oracle по настройке FIPS включен виртуальной машины Java. 
 
 **Предварительные требования**:
 * FIPS настроенной виртуальной машине Java
 * Соответствующий SSL-сертификат.
 * Файлы соответствующую политику. 
-* Параметры в соответствующей конфигурации. 
+* Параметры соответствующей конфигурации. 
 
 
 ## <a name="fips-configured-jvm"></a>FIPS настроенной виртуальной машине Java
 
-Утвержденные модули для конфигурации FIPS, можно найти по [проверка FIPS 140-1 и криптографических модулей FIPS 140-2](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
+Утвержденные модули FIPS конфигурации, можно найти по [проверки FIPS 140-1 и криптографические модули FIPS 140-2](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
 
 Поставщики могут иметь некоторые дополнительные действия по настройке виртуальной машины Java с FIPS.
 
-### <a name="ensure-your-jvm-is-in-fips-mode"></a>Убедитесь, что в режиме FIPS вашей виртуальной машины Java
-Чтобы убедиться, что в вашей виртуальной машины Java — FIPS включена, выполните следующий фрагмент кода: 
+### <a name="ensure-your-jvm-is-in-fips-mode"></a>Убедитесь, что виртуальной машины Java в режиме FIPS
+Чтобы обеспечить виртуальной машины Java поддержкой FIPS, выполните следующий фрагмент кода: 
 
-````
+```java
 public boolean isFIPS() throws Exception {
     Provider jsse = Security.getProvider("SunJSSE");
     return jsse != null && jsse.getInfo().contains("FIPS");
 }
-````
+```
 
 ## <a name="appropriate-ssl-certificate"></a>Соответствующий SSL-сертификата
-Для подключения SQL Server в режиме FIPS, требуется действительный сертификат SSL. Установите или импортировать его в Java хранилище ключей на клиентском компьютере (JVM) активированной FIPS. Если не Импорт и установите соответствующий сертификат, вам не удалось подключиться к SQL Server, которые невозможно установить безопасное подключение.
+Для подключения к SQL Server в режиме FIPS, необходим действительный сертификат SSL. Установите или импортировать его в Java Key Store на клиентском компьютере (JVM) где система FIPS включена.
 
-### <a name="importing-ssl-certificate-in-java-keystore"></a>Импорт SSL-сертификата в хранилище ключей Java
-Для FIPS скорее всего необходимо импортировать сертификат (.cert) либо PKCS или в формате конкретного поставщика. Используйте следующий фрагмент, чтобы импортировать сертификат SSL и сохраните его в рабочий каталог на соответствующий формат хранилища ключей. _TRUST_STORE_PASSWORD_ — пароль для хранилища ключей Java. 
+### <a name="importing-ssl-certificate-in-java-keystore"></a>Импорт SSL-сертификат в хранилище ключей Java
+Для FIPS скорее всего необходимо импортировать сертификат (.cert) либо PKCS или в формате конкретного поставщика. Используйте следующий фрагмент кода для импорта SSL-сертификат и сохранить его в рабочий каталог на соответствующий формат хранилища ключей. _TRUST_STORE_PASSWORD_ — это пароль для хранилища ключей Java. 
 
-````
+```java
     public void saveGenericKeyStore(String provider, String trustStoreType, String certName, String certPath) throws KeyStoreException, CertificateException, NoSuchAlgorithmException, NoSuchProviderException, IOException {
         KeyStore ks = KeyStore.getInstance(trustStoreType, provider);
         FileOutputStream os = new FileOutputStream("./MyTrustStore_" + trustStoreType);
@@ -72,30 +72,30 @@ public boolean isFIPS() throws Exception {
         return cf.generateCertificate(fis);
     }
 
-````
+```
 
 
-В следующем примере выполняется импорт SSL-сертификат Azure в формате PKCS12 с поставщиком BouncyCastle. Импортировать сертификат в рабочем каталоге с именем _MyTrustStore_PKCS12_ , используя следующий фрагмент кода:
+В следующем примере выполняется импорт SSL-сертификат Azure в формате PKCS12 с поставщиком BouncyCastle. Сертификат будет импортирован в рабочем каталоге с именем _MyTrustStore_PKCS12_ , используя следующий фрагмент кода:
 
 ` saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer"); `
 
-## <a name="appropriate-policy-files"></a>Файлы подходящей политики:
-Для некоторых поставщиков FIPS необходимы неограниченный JAR-файлов политики. В таких случаях для Sun / Oracle, загрузите Java Cryptography Extension (JCE) неограниченное стойкость файлы политики юрисдикции для [JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) или [JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
+## <a name="appropriate-policy-files"></a>Соответствующие политики файлов
+Некоторые поставщики предоставляют FIPS необходимы неограниченный JAR-файлы политики. В таком случае для Sun / Oracle, скачать Java Cryptography Extension (JCE) неограниченное стойкость файлы политики юрисдикции для [JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) или [JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
 
-## <a name="appropriate-configuration-parameters"></a>Параметры соответствующей конфигурации
-Для запуска драйвера JDBC в режиме FIPS-совместимые, настройте свойства подключения, как показано в следующей таблице. 
+## <a name="appropriate-configuration-parameters"></a>Соответствующие параметры.
+Чтобы запустить драйвер JDBC в режиме совместимости с FIPS, настройте свойства соединения, как показано в следующей таблице. 
 
 **Свойства**: 
 
-|property|Тип|По умолчанию|Описание|Примечания|
+|Свойство|Тип|По умолчанию|Описание|Примечания|
 |---|---|---|---|---|
-|encrypt|Логическое значение [«true / false»]|«false»|Шифрование FIPS включен виртуальной машины Java свойство должно быть **true**||
-|TrustServerCertificate|Логическое значение [«true / false»]|«false»|Для FIPS, пользователь должен проверить цепочку сертификатов, поэтому пользователь должен использовать **«false»** значение этого свойства. ||
-|trustStore|Строковые значения|null|Хранилище ключей Java путь к файлу где импортировать сертификат. Если установить сертификат на компьютер, а затем передать ничего не нужно. Драйвер использует cacerts или jssecacerts файлов.||
-|trustStorePassword|Строковые значения|null|Пароль, используемый для проверки целостности данных trustStore.||
-|FIPS|Логическое значение [«true / false»]|«false»|Для виртуальной машины Java с поддержкой стандарта fips это свойство должно быть **true**|Добавлено в 6.1.4 (стабильный выпуск 6.2.2)||
-|fipsProvider|Строковые значения|null|Поставщик FIPS, настроенные в виртуальной машины Java. Например, BCFIPS или SunPKCS11 NSS |Добавлено в 6.1.2 (стабильный выпуска 6.2.2), рекомендуется использовать в 6.4.0 - просмотреть подробные сведения [здесь](https://github.com/Microsoft/mssql-jdbc/pull/460).|
-|trustStoreType|Строковые значения|JKS|Для типа хранилища доверия набора режим FIPS PKCS12 или тип определены поставщиком FIPS |Добавлено в 6.1.2 (стабильный выпуск 6.2.2)||
+|encrypt|Логическое значение [«true / false»]|"false"|Для включенных FIPS JVM шифровать свойство должно быть **true**||
+|TrustServerCertificate|Логическое значение [«true / false»]|"false"|Для FIPS, необходимые пользователю для проверки цепочки сертификатов, поэтому пользователь должен использовать **«false»** значение этого свойства. ||
+|trustStore|String|null|Хранилище ключей Java путь к файлу где импортировать сертификат. При установке сертификата на компьютере, то не нужно передать все что угодно. Драйвер использует cacerts или jssecacerts файлов.||
+|trustStorePassword|String|null|Пароль, используемый для проверки целостности данных trustStore.||
+|fips|Логическое значение [«true / false»]|"false"|Для виртуальной машины Java с поддержкой FIPS это свойство должно иметь **true**|Добавлен в 6.1.4 (стабильный выпуск 6.2.2)||
+|fipsProvider|String|null|Поставщик FIPS, настроенные в виртуальной машине Java. Например, BCFIPS или SunPKCS11 NSS |Добавлен в 6.1.2 (стабильной выпуска 6.2.2), рекомендуется использовать в 6.4.0 - см. в разделе сведений [здесь](https://github.com/Microsoft/mssql-jdbc/pull/460).|
+|trustStoreType|String|JKS|Для типа хранилища доверия для набора FIPS режима PKCS12 или тип определены поставщиком FIPS |Добавлен в 6.1.2 (стабильный выпуск 6.2.2)||
 
 
 

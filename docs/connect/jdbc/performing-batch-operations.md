@@ -1,7 +1,7 @@
 ---
-title: Выполнение пакетных операций | Документы Microsoft
+title: Выполнение пакетных операций | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,37 +14,37 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55470e4246256f2dfce11464ab8aafb9c9e7873c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831869"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279019"
 ---
 # <a name="performing-batch-operations"></a>Выполнение пакетных операций
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Для повышения производительности при выполнении нескольких обновлений [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных в случае возникновения [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] предоставляет возможность передать несколько обновлений в едином фрагменте работы, который также называют пакета.  
+  Чтобы обеспечить повышение производительности при выполнении нескольких обновлений базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] позволяет передать несколько обновлений в едином фрагменте работы, который называется пакетом.  
   
- [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) классы все используется для передачи пакетных обновлений. [AddBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) метод используется для добавления команды. [ClearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) метод используется для очистки списка команд. [ExecuteBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) метод используется для передачи всех команд для обработки. В качестве части пакета могут выполняться только инструкции языка описания данных DDL и языка обработки данных DML, возвращающие простой счетчик обновлений.  
+ Для передачи пакетных обновлений можно использовать следующие классы: [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Метод [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) используется для добавления команды. Метод [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) используется для очистки списка команд. Метод [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) используется для передачи всех команд для обработки. В качестве части пакета могут выполняться только инструкции языка описания данных DDL и языка обработки данных DML, возвращающие простой счетчик обновлений.  
   
- Метод executeBatch возвращает массив **int** значений, соответствующих счетчику обновлений каждой команды. В случае сбоя одного из команд создается BatchUpdateException и следует использовать метод getUpdateCounts класса BatchUpdateException для извлечения массива счетчиков обновления. При возникновении ошибки выполнения команды драйвер продолжает обработку остальных команд. Однако при наличии ошибки синтаксиса в команде происходит ошибка инструкций в пакете.  
+ Метод executeBatch возвращает массив значений **int**, соответствующих счетчику обновлений каждой команды. В случае сбоя одного из команд создается BatchUpdateException и следует использовать метод getUpdateCounts BatchUpdateException класса для извлечения массива счетчиков обновления. При возникновении ошибки выполнения команды драйвер продолжает обработку остальных команд. Однако при наличии ошибки синтаксиса в команде происходит ошибка инструкций в пакете.  
   
 > [!NOTE]  
->  Если у вас счетчики обновлений, можно сначала отправить инструкцию SET NOCOUNT ON для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Это позволит уменьшить объем сетевого трафика и увеличить производительность приложений.  
+>  Если отсутствуют счетчики обновлений, можно сначала отправить инструкцию SET NOCOUNT ON [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Это позволит уменьшить объем сетевого трафика и увеличить производительность приложений.  
   
- Например, создайте следующую таблицу в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образца базы данных:  
+ Для примера создайте в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] следующую таблицу:  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   
     Col3 int);  
 ```  
   
- В следующем примере открытое соединение с [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образца базы данных передается в функцию, метод addBatch используется для создания выполняемых инструкций и метод executeBatch вызывается для отправки пакета в базе данных.  
+ В следующем примере открытое соединение с образцом базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] передается в функцию, метод addBatch используется для создания выполняемых инструкций, а метод executeBatch вызывается для передачи пакета базе данных.  
   
-```  
+```java
 public static void executeBatchUpdate(Connection con) {  
    try {  
       Statement stmt = con.createStatement();  
@@ -60,7 +60,7 @@ public static void executeBatchUpdate(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование инструкций с драйвером JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

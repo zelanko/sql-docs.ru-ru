@@ -1,7 +1,7 @@
 ---
-title: В хранилище Azure ключ версии образца 6.2.2 | Документы Microsoft
+title: Пример версии 6.2.2 хранилища ключей Azure | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/28/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,20 +14,20 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f51fc5a5dace2c973b363e26d3c5d627a370f1f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 927b46d548a0eb13f7346b9e0cb68702ae0070f1
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832369"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278835"
 ---
-# <a name="azure-key-vault-sample-version-622"></a>Образец хранилища ключей Azure версии 6.2.2
+# <a name="azure-key-vault-sample-version-622"></a>Пример Azure Key Vault версии 6.2.2
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-##  <a name="sample-application-using-azure-key-vault-feature"></a>Пример приложения с помощью функции хранилища ключей Azure
-Это приложение является запускаемым с помощью драйвера JDBC 6.2.2 и более поздних версий и Azure-Keyvault (версии 1.0.0), Adal4j (версия 1.4.0) и их зависимости.  Базовый зависимости можно устранить путем добавления этих библиотек pom-файла проекта, как описано [здесь](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
+##  <a name="sample-application-using-azure-key-vault-feature"></a>Пример приложения с помощью функции Azure Key Vault
+Это приложение с помощью драйвера JDBC 6.2.2 готов к запуску и более поздних версий и Azure-Keyvault (версии 1.0.0), Adal4j (версии 1.4.0) и их зависимости.  Можно разрешить базовой зависимости, добавив эти библиотеки к pom-файлу проекта, как описано [здесь](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
 
-```xml
+```java
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -254,5 +254,5 @@ public class AE_AKV_Maven {
 
 ```
 
-## <a name="see-also"></a>См. также  
- [Образец хранилища ключей Azure версии 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  
+## <a name="see-also"></a>См. также:  
+ [Пример Azure Key Vault версии 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  

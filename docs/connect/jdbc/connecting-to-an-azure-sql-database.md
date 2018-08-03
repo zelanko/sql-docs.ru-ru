@@ -1,7 +1,7 @@
 ---
-title: Подключение к базе данных Azure SQL | Документы Microsoft
+title: Подключение к базе данных Azure SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,46 +14,46 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 183cd9c749cac8b1af3d97a9830d4d4288fd464f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e716ec94db3f37dc51136f55884ac0c9eb33d236
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832479"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278745"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Подключение к базе данных SQL Azure
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  В этом разделе обсуждаются проблемы при использовании [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] для подключения к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Дополнительные сведения о подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], см.:  
+  В этой статье обсуждаются проблемы, которые могут возникнуть при использовании [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] для соединения с [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Дополнительные сведения о соединении с [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] см. в разделах:  
   
--   [SQL Azure Database](http://go.microsoft.com/fwlink/?LinkID=202490)  
+-   [База данных SQL Azure](http://go.microsoft.com/fwlink/?LinkID=202490)  
   
--   [Как: подключение к SQL Azure с помощью JDBC](http://msdn.microsoft.com/library/gg715284.aspx)  
+-   [Как подключиться к SQL Azure с помощью JDBC](http://msdn.microsoft.com/library/gg715284.aspx)  
   
 -   [Использование SQL Azure в Java](http://msdn.microsoft.com/library/windowsazure/hh749029(VS.103).aspx)
 
 -   [Соединение с использованием проверки подлинности Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Сведения  
- При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], необходимо подключиться к базе данных master для вызова **SQLServerDatabaseMetaData.getCatalogs**.  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] не поддерживает возврат всего набора каталогов из пользовательской базы данных. **SQLServerDatabaseMetaData.getCatalogs** использует для получения каталогов представление sys.databases. См. обсуждение разрешений в [sys.databases (база данных SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) для понимания **SQLServerDatabaseMetaData.getCatalogs** поведение на [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+ При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует подключиться к базе данных master для вызова **SQLServerDatabaseMetaData.getCatalogs**.  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData.getCatalogs позволяет получения каталогов представление sys.databases. См. обсуждение разрешений в [sys.databases (база данных SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) для понимания **SQLServerDatabaseMetaData.getCatalogs** поведение на [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
  Прерванные соединения  
- При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], неактивных соединений могут быть разорваны сетевым компонентом (например, брандмауэром) после периода отсутствия активности. В данном контексте существует два типа бездействующих соединений.  
+ При установлении соединения с [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] простаивающие соединения по истечении определенного времени бездействия могут быть разорваны сетевым компонентом (например, брандмауэром). В данном контексте существует два типа бездействующих соединений.  
   
 -   Бездействующие на уровне TCP, которые сбрасываются многими сетевыми устройствами.  
   
--   Бездействующие на уровне шлюза SQL Azure, где TCP **keepalive** вероятно (что делает соединение небездействующим TCP), но не выполняющие активных запросов в течение 30 минут. В этом случае шлюз определит, что соединение TDS бездействует в течение 30 минут, и прервет его.  
+-   Бездействующие на уровне шлюза SQL Azure, где, вероятно, отправляются TCP-сообщения **keepalive** (что делает соединение небездействующим на уровне TCP), не выполняющие активных запросов в течение 30 минут. В этом случае шлюз определит, что соединение TDS бездействует в течение 30 минут, и прервет его.  
   
  Чтобы избежать разрыва связи простаивающих соединений сетевыми компонентами, необходимо задать следующие параметры в реестре операционной системе, в которой загружается драйвер (или их аналоги для операционных систем, отличных от Windows):  
   
 |Параметр реестра|Рекомендуемое значение|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ системы \ CurrentControlSet \ служб \ Tcpip \ параметры \ KeepAliveTime|30 000|  
-|HKEY_LOCAL_MACHINE \ системы \ CurrentControlSet \ служб \ Tcpip \ параметры \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ системы \ CurrentControlSet \ служб \ Tcpip \ параметры \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ KeepAliveTime|30 000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ TcpMaxDataRetransmissions|10|  
   
- После этого необходимо перезагрузить компьютер, чтобы новые параметры вступили в силу.  
+ Перезагрузите компьютер, чтобы новые параметры вступили в силу.  
   
  Чтобы эта операция выполнялась при запуске Windows Azure, создайте выполняемую при запуске задачу, которая будет добавлять значения в реестр.  Например, в файл определения службы добавьте следующую задачу, выполняемую при запуске.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "32832479"
   
  Затем добавьте файл AddKeepAlive.cmd в проект. Выберите для параметра "Копировать в выходной каталог" значение "Всегда копировать". Ниже приведен образец файла AddKeepAlive.cmd.  
   
-```  
+```bat
 if exist keepalive.txt goto done  
 time /t > keepalive.txt  
 REM Workaround for JDBC keep alive on SQL Azure  
@@ -78,18 +78,18 @@ shutdown /r /t 1
 ```  
   
  Добавление имени сервера к идентификатору пользователя UserId в строке подключения  
- До версии 4.0 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], при подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], требовалось Добавление имени сервера к параметру UserId в строке подключения. Например, user@servername. Начиная с версии 4.0 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], нет необходимости для добавления @servername к параметру UserId в строке подключения.  
+ До [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] версии 4.0 при установлении соединения с базой данных [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] требовалось добавление имени сервера к параметру UserId в строке подключения. Например, user@servername. Начиная с версии 4.0 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] добавление компонента @servername к параметру UserId в строке подключения не требуется.  
   
  Для использования шифрования необходимо задать hostNameInCertificate  
- При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **шифрования = true**. (Если имя сервера в строке подключения указано *shortName*. *имя_домена*, задайте **hostNameInCertificate** свойства \*. *имя_домена*.)  
+ При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **шифрования = true**. (Если имя сервера в строке подключения указано *shortName*. *domainName*, задайте **hostNameInCertificate** свойства \*. *domainName*.)  
   
- Например:  
+ Пример:  
   
-```  
+```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

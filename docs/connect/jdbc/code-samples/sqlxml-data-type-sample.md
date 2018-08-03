@@ -1,7 +1,7 @@
 ---
-title: Образец типа данных SQLXML | Документы Microsoft
+title: Образец типа данных SQLXML | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,17 +14,17 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35259e7c9f6bc0129933117b0202b4ec61e52010
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ac104dac28376dcbda85be60fa996fbc628e3654
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833759"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278755"
 ---
 # <a name="sqlxml-data-type-sample"></a>Образец типа данных SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Это [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] образце приложения показано, как сохранить данные XML в реляционной базе данных, способ получения XML-данных из базы данных и как выполнить синтаксический анализ XML-данных с **SQLXML** типа данных.  
+  В этом образце приложения, использующем драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], показано, как сохранить данные XML в реляционной базе данных, как извлечь их из базы данных и выполнить их синтаксический анализ с помощью типа данных Java **SQLXML**.  
   
  В примерах кода в этом разделе используется Simple API-интерфейс для синтаксического анализатора XML (SAX). Интерфейс SAX ― это открытый стандарт синтаксического анализа XML-документов на основе событий. Он также предоставляет прикладной программный интерфейс для работы с XML-данными. Обратите внимание, что приложения могут использовать и другие синтаксические анализаторы XML, например модель DOM или потоковый API-интерфейс для XML (StAX) и так далее.  
   
@@ -33,17 +33,17 @@ ms.locfileid: "32833759"
 > [!IMPORTANT]  
 >  Чтобы использовать API-интерфейс средства синтаксического анализа SAX, следует импортировать стандартную реализацию SAX из пакета javax.xml.  
   
- Файл кода для этого образца имеет имя sqlxmlExample.java и находится в следующей папке:  
+ Файл кода для этого образца имеет имя SQLXMLExample.java и находится в следующей папке:  
   
  \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \samples\datatypes  
   
 ## <a name="requirements"></a>Требования  
- Чтобы запустить этот образец приложения, необходимо включить в параметр classpath путь к файлу sqljdbc4.jar. Если параметр classpath не включает путь к файлу sqljdbc4.jar, образец приложения вызовет исключение «Класс не найден». Дополнительные сведения о том, как задать значение переменной classpath см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ Чтобы запустить этот образец приложения, необходимо включить в параметр classpath путь к файлу sqljdbc4.jar. Если параметр classpath не включает путь к файлу sqljdbc4.jar, образец приложения вызовет исключение «Класс не найден». Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
- Кроме того, необходим доступ к [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образец базы данных для запуска этого образца приложения.  
+ Кроме этого, для запуска данного примера приложения необходим доступ к образцу базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ## <a name="example"></a>Пример  
- В следующем примере образец кода устанавливает соединение для [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] базы данных, а затем вызывает метод createSampleTables.  
+ В следующем примере образец кода будет использоваться для соединения с базой данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] и вызова метода createSampleTables.  
   
  Метод createSampleTables удаляет тестовые таблицы, TestTable1 и TestTable2, если они существуют. Затем метод вставляет две строки в TestTable1.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "32833759"
   
  Метод showGetters показывает, как анализировать данные в объекте SQLXML при помощи SAX, ContentHandler и XMLReader. Сначала образец кода создает экземпляр пользовательского обработчика данных, то есть ExampleContentHandler. Затем он создает и выполняет инструкцию SQL, которая возвращает набор данных из TestTable1. Далее образец кода запускает средство синтаксического анализа SAX и обрабатывает XML-данные.  
   
- Метод showSetters показывает, как задать **xml** столбца с помощью SAX, ContentHandler и ResultSet. Во-первых, он создает пустой объект SQLXML, используя [createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) метод класса подключения. Затем метод поручает экземпляру обработчика содержимого записать данные в объект SQLXML. Далее пример кода записывает данные в TestTable1. И, наконец, в примере кода выполняется итерация по строкам данных, содержащихся в результирующем наборе и использует [getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) метод для чтения данных XML.  
+ Метод showSetters показывает, как задать столбец **xml** при помощи SAX, ContentHandler и ResultSet. Сначала создается пустой объект SQLXML, используя метод класса Connection [createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md). Затем метод поручает экземпляру обработчика содержимого записать данные в объект SQLXML. Далее пример кода записывает данные в TestTable1. Наконец, образец кода выполняет проход по строкам данных, содержащимся в результирующем наборе, и используется метод [getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) для прочтения XML-данных.  
   
- Метод showTransformer показывает, как получить XML-данные из одной таблицы и вставить эти XML-данные в другую таблицу при помощи SAX и преобразователя. Сначала метод извлекает объект SLQXML из TestTable1. Затем он создает пустой объект назначения SQLXML с помощью [createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) метод класса подключения. Далее метод обновляет объект назначения SQLXML и записывает XML-данные в TestTable2. И, наконец, в примере кода выполняется итерация по строкам данных, содержащихся в результирующем наборе и использует [getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) метод для чтения XML-данных в TestTable2.  
+ Метод showTransformer показывает, как получить XML-данные из одной таблицы и вставить эти XML-данные в другую таблицу при помощи SAX и преобразователя. Сначала метод извлекает объект SLQXML из TestTable1. Затем метод создает пустой объект назначения SQLXML при помощи метода класса Connection [createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md). Далее метод обновляет объект назначения SQLXML и записывает XML-данные в TestTable2. Наконец, образец кода выполняет проход по строкам данных, содержащимся в результирующем наборе, и используется метод [getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) для прочтения XML-данных в TestTable2.  
   
  [!code[JDBC#UsingSQLXML1](../../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]  
   
-## <a name="see-also"></a>См. также  
- [Работа с типами данных &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Работа с типами данных (JDBC)](../../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   

@@ -54,7 +54,7 @@
           href: check-disk-input-output-subsystem-for-read-retry-problems.md
         - name: Проверка целостности базы данных с потенциально поврежденными страницами
           href: check-integrity-of-database-with-suspect-pages.md
-        - name: Correct Affinity Mask and Affinity Input and Output Mask Overlap
+        - name: Правильное перекрытие параметров affinity mask и affinity input-output mask
           href: correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
         - name: Отключение предусмотренных по умолчанию файлов журнала трассировки
           href: default-trace-log-files-disabled.md

@@ -1,7 +1,7 @@
 ---
-title: Настройка способа отправки значений java.sql.Time сервер | Документы Microsoft
+title: Настройка способа отправки значений java.sql.Time на сервер | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,23 +14,23 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e2e91550767715616599c2720c99b864363a185
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6a52f214b0383a8cabe04bd8c10b7c9ecdef2b21
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831969"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278725"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Настройка способа отправки значений java.sql.Time на сервер
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Если для задания параметра используется объект java.sql.Time или тип JDBC java.sql.Types.TIME, можно настроить как значения java.sql.Time отправляется на сервер; либо как [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **время** типа или как **datetime** типа.  
+  Если для задания параметра используется объект java.sql.Time или тип JDBC java.sql.Types.TIME, то можно настроить порядок отправки значения java.sql.Time на сервер: в виде типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **time** или в виде типа **datetime**.  
   
  Этот сценарий применяется в случае использования одного из следующих методов:  
   
--   [SQLServerCallableStatement.registerOutParameter (int, int)](../../connect/jdbc/reference/registeroutparameter-method-int-int.md)  
+-   [SQLServerCallableStatement.registerOutParameter(int, int)](../../connect/jdbc/reference/registeroutparameter-method-int-int.md)  
   
--   [SQLServerCallableStatement.registerOutParameter (int, int, int)](../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)  
+-   [SQLServerCallableStatement.registerOutParameter(int, int, int)](../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)  
   
 -   [SQLServerCallableStatement.setTime](../../connect/jdbc/reference/settime-method-sqlservercallablestatement.md)  
   
@@ -40,32 +40,32 @@ ms.locfileid: "32831969"
   
 -   [SQLServerPreparedStatement.setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)  
   
- Можно настроить способ отправки значения java.sql.Time с помощью **sendTimeAsDatetime** свойство соединения. Дополнительные сведения см. в разделе [задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
+ Порядок отправки значения java.sql.Time можно настроить с помощью свойства соединения **sendTimeAsDatetime**. Дополнительные сведения: [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
   
- Можно программно изменить значение **sendTimeAsDatetime** свойство соединения с [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ Значение свойства соединения **sendTimeAsDatetime** можно изменить программным образом с помощью [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] более раннюю, чем [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] не поддерживают **время** тип данных, поэтому приложения, использующие java.sql.Time, обычно сохраняют java.sql.Time значения как **datetime** или **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных.  
+ Версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] не поддерживают **время** значения типа данных, поэтому приложения, использующие java.sql.Time, обычно сохраняют java.sql.Time **datetime** или **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных.  
   
- Если вы хотите использовать **datetime** и **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных при работе со значениями java.sql.Time, необходимо задать **sendTimeAsDatetime** Свойство соединения для **true**. Если вы хотите использовать **время** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типа данных при работе со значениями java.sql.Time, необходимо задать **sendTimeAsDatetime** свойства соединения **false**.  
+ Если вы хотите использовать **datetime** и **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типы данных при работе со значениями java.sql.Time, следует задать **sendTimeAsDatetime** Свойства соединения **true**. Если вы хотите использовать **время** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типу данных, при работе со значениями java.sql.Time, следует задать **sendTimeAsDatetime** свойства соединения **false**.  
   
- Имейте в виду, что если значения java.sql.Time в параметр, тип данных которого можно также хранение дат, то даты по умолчанию различаются в зависимости от того, является ли значения java.sql.Time отправляются в **datetime** (1/1/1970 г.) или **время** значение (1/1/1900 г.). Дополнительные сведения о преобразовании данных при отправке данных на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], в разделе [данных с использованием даты и времени](http://go.microsoft.com/fwlink/?LinkID=145211).  
+ Учтите, что если значения java.sql.Time передаются в параметр, тип данных которого также поддерживает хранение дат, то даты по умолчанию различаются в зависимости от типа отправки значения java.sql.Time — **datetime** (1 января 1970 г.) или **time** (1 января 1900 г.). Дополнительные сведения о преобразовании данных при отправке на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] см. в разделе [Использование даты и времени](http://go.microsoft.com/fwlink/?LinkID=145211).  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] версии 3.0 драйвера JDBC **sendTimeAsDatetime** имеет значение true, если по умолчанию. В следующем выпуске **sendTimeAsDatetime** свойство соединения может быть задано значение false по умолчанию.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] версии 3.0 драйвера JDBC **sendTimeAsDatetime** по умолчанию имеет значение true. В следующей версии свойство соединения **sendTimeAsDatetime** может иметь значение false по умолчанию.  
   
- Чтобы убедиться, что приложение продолжает работать должным образом независимо от значения по умолчанию **sendTimeAsDatetime** свойства соединения, вы можете:  
+ Чтобы гарантировать, что приложение будет работать ожидаемым образом независимо от значения по умолчанию для свойства соединения **sendTimeAsDatetime**, можно выполнить следующие действия.  
   
--   Использовать java.sql.Time при работе с **время** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных.  
+-   Использовать java.sql.Time при работе с типом данных **time**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 -   Использовать java.sql.Timestamp при работе с **datetime**, **smalldatetime**, и **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных.  
   
-Обратите внимание, что sendTimeAsDatetime должен иметь значение false для зашифрованных столбцов, как зашифрованные столбцы не поддерживают преобразование из времени в дату-время. Класс SQLServerConnection, начиная с Microsoft JDBC Driver 6.0 для SQL Server, имеет следующие два метода set или get значение свойства sendTimeAsDatetime.
+SendTimeAsDatetime должно иметь значение false, если для зашифрованных столбцов, так как зашифрованные столбцы не поддерживает преобразование из времени в datetime. Класс SQLServerConnection, начиная с Microsoft JDBC Driver 6.0 для SQL Server, имеет следующие два метода set или get значение свойства sendTimeAsDatetime.
 
-```
+```java
   public boolean getSendTimeAsDatetime()
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
