@@ -103,6 +103,8 @@
           href: basic-data-types-sample.md
         - name: Образец типа данных SQLXML
           href: sqlxml-data-type-sample.md
+        - name: Образец пространственных типов данных
+          href: spatial-data-types-sample.md
     - name: Работа с результирующими наборами
       href: working-with-result-sets.md
       items:
@@ -121,6 +123,8 @@
           href: reading-large-data-with-stored-procedures-sample.md
         - name: Образец обновления данных большого объема
           href: updating-large-data-sample.md
+    - name: Образец обнаружения и классификации данных
+      href: data-discovery-classification-sample.md
 - name: Соответствие требованиям и юридические аспекты использования драйвера JDBC для SQL
   href: compliance-and-legal-for-the-jdbc-sql-driver.md
   items:
@@ -163,6 +167,8 @@
           href: using-parameter-metadata.md
         - name: Использование базовых типов данных
           href: using-basic-data-types.md
+        - name: Использование пространственных типов данных
+          href: use-spatial-datatypes.md
         - name: Основные сведения о транзакциях
           href: understanding-transactions.md
         - name: Работа с соединением
@@ -241,6 +247,8 @@
           href: wrappers-and-interfaces.md
         - name: Использование массового копирования с драйвером JDBC
           href: using-bulk-copy-with-the-jdbc-driver.md
+        - name: Использование API массового копирования для операции пакетной вставки
+          href: use-bulk-copy-api-batch-insert-operation.md
         - name: Использование хранимых процедур с выходными параметрами
           href: using-a-stored-procedure-with-output-parameters.md
         - name: Выполнение пакетных операций
@@ -257,3 +265,5 @@
           href: azure-key-vault-sample-version-6.0.0.md
         - name: Пример Azure Key Vault версии 6.2.2
           href: azure-key-vault-sample-version-6.2.2.md
+        - name: "Пример Azure\_Key\_Vault версии\_7.0.0"
+          href: azure-key-vault-sample-version-7-0-0.md
