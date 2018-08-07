@@ -14,13 +14,13 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 28dad124a7c4552418f103dc03d6893d5718632b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2af8f48646f0cb99ffd2bd5bf6ac734dcaeecf52
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941349"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534914"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Краткое руководство. Расширенные события в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -427,7 +427,7 @@ SELECT
 В приведенной ниже таблице перечислены термины, используемые в связи с расширенными событиями, и объясняется их смысл.
 
 
-| Термин | Description |
+| Термин | Описание |
 | :--- | :---------- |
 | сеанс событий | Целью является конструкция, основанная на одном или нескольких событиях, а также вспомогательные элементы, такие как действия. Инструкция CREATE EVENT SESSION создает каждый сеанс событий. С помощью инструкции ALTER можно по желанию запускать и останавливать сеансы. <br/> <br/> Сеанс событий часто называется просто *сеансом*, если из контекста понятно, что имеется в виду именно *сеанс событий*. <br/> <br/> Более подробные сведения о сеансах событий см. в разделе [Сеансы расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | event | Определенное событие в системе, наступление которого отслеживается активным сеансом событий. <br/> <br/> Например, событие *sql_statement_completed* представляет момент завершения какой-либо инструкции T-SQL. Событие может сообщать различные данные, например длительность. |

@@ -20,13 +20,13 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f2d1a1463b751bcd820419db24c978ed08d7e463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c674869b9c478bd5accf85f74106aba6a33dcaa9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939409"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534784"
 ---
 # <a name="configure-parallel-index-operations"></a>Настройка параллельных операций с индексами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "32939409"
   
 -   Параметр индекса MAXDOP замещает параметр конфигурации max degree of parallelism только для запросов, указывающих этот параметр. В следующей таблице перечислены действительные целочисленные значения, которые могут быть установлены для параметра конфигурации максимальной степени параллелизма и параметра индекса MAXDOP.  
   
-    |Значение|Description|  
+    |Значение|Описание|  
     |-----------|-----------------|  
     |0|Указывает, что сервер определяет число используемых процессоров в зависимости от текущей рабочей нагрузки. Это значение по умолчанию, которое рекомендуется использовать.|  
     |1|Подавляет формирование параллельных планов. Операция будет выполнена последовательно.|  
