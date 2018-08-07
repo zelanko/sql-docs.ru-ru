@@ -1,7 +1,7 @@
 ---
-title: Работа с результирующими наборами | Документы Microsoft
+title: Работа с результирующими наборами | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,34 +14,35 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1802a6a51773ce552bcd4fcc45745a29e2405db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9b5c2df6c7c932e16394b91e76719756d9b959ff
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828239"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458468"
 ---
 # <a name="working-with-result-sets"></a>Работа с результирующими наборами
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  При работе с данными, содержащимися в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных, одним из способов обработки данных является использование результирующего набора. [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] Поддерживает результирующих наборами через [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта. С помощью объекта SQLServerResultSet, можно извлекать данные, возвращенные из инструкции SQL или хранимой процедуры, при необходимости обновите данные и затем снова сохранить данные в базу данных.  
+Во время работы с данными, содержащимися в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], одним из способов обработки данных является использование результирующего набора. Драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] поддерживает работу с результирующими наборами через объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). С помощью объекта SQLServerResultSet можно получить данные, возвращенные инструкцией SQL или хранимой процедурой, обновить данные в случае необходимости, а затем снова сохранить данные в базе данных.  
   
- Кроме того объект SQLServerResultSet предоставляет методы для перехода по строкам данных, получения или задания данных, которые он содержит, а также для настройки различных уровней чувствительности к переменам в основной базе данных.  
+Кроме того, объект SQLServerResultSet предоставляет методы для перехода по строкам данных, получения или задания данных, содержащихся в наборе, а также для настройки различных уровней учета изменений в базовой базе данных.  
   
 > [!NOTE]  
->  Дополнительные сведения об управлении результирующими наборами, включая порядок учета изменений, в разделе [управление результирующие наборы с драйвером JDBC](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
+> Дополнительные сведения об управлении результирующими наборами, включая порядок учета изменений, см. в разделе [управление результирующие наборы с драйвером JDBC](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
   
- В этом разделе описываются различные способы, результирующий набор можно использовать для управления данными, содержащимися в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных.  
+Здесь представлены разделы, где описываются различные способы использования результирующего набора для обработки данных, содержащихся в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
-|-----------|-----------------|  
-|[Получение примера данных результирующего набора](../../../connect/jdbc/retrieving-result-set-data-sample.md)|Описывает использование результирующего набора для получения данных из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных и его отображения.|  
-|[Изменение примера данных результирующего набора](../../../connect/jdbc/modifying-result-set-data-sample.md)|Описывает использование результирующего набора для вставки, получения и изменения данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных.|  
-|[Пример кэширования данных результирующего набора](../../../connect/jdbc/caching-result-set-data-sample.md)|Описывает использование результирующего набора для извлечения больших объемов данных из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных, а также для управления кэшированием этих данных на стороне клиента.|  
+| Раздел                                                                                           | Описание                                                                                                                                                                                             |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Получение примера данных результирующего набора](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Описывает использование результирующего набора для получения данных из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и их отображения.                                                         |
+| [Изменение примера данных результирующего набора](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Описывается использование результирующего набора для вставки, получения и изменения данных в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].                                                      |
+| [Пример кэширования данных результирующего набора](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Описывается использование результирующего набора для получения данных большого объема из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и управления кэшированием этих данных в клиенте. |
   
-## <a name="see-also"></a>См. также  
- [Пример приложений драйвера JDBC](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
+## <a name="see-also"></a>См. также:  
+
+[Пример приложений драйвера JDBC](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

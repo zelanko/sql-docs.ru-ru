@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d8f83d0f838304f6f541d1d88e56ce316b07d25
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: c86fc615bcf3dec2a87581bbb09f482c8befc943
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278845"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452648"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Соединение с использованием проверки подлинности Azure Active Directory
 
@@ -211,10 +211,12 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > Должен существовать в базе данных автономного пользователя и пользователя автономной базы данных, представляющий указанный пользователем Azure AD или одной из групп, указанного Azure AD пользователь принадлежит, должен существовать в базе данных и должна иметь разрешение CONNECT (за исключением Azure Active Directory Администратор сервера или группы)
 
-
 ## <a name="connecting-using-access-token"></a>Подключение с использованием маркера доступа
-Приложения и службы можно получить маркер доступа из Azure Active Directory и использовать ее для подключения к базе данных SQL Azure. Обратите внимание, что этого accessToken можно задать только с помощью параметра свойства getConnection() метода в классе диспетчер драйверов. Он не может использоваться в строке подключения.
- 
+Приложения и службы можно получить маркер доступа из Azure Active Directory и использовать ее для подключения к базе данных SQL Azure.
+
+> [!NOTE] 
+> **accessToken** можно задать только с помощью параметра свойства getConnection() метода в классе диспетчер драйверов. Он не может использоваться в строке подключения.
+
 В приведенном ниже примере содержит простое приложение Java, которое подключается к базе данных SQL Azure с использованием проверки подлинности на основе маркеров доступа. Перед построением и запуском примера, выполните следующие действия:
 1.  Создайте учетную запись приложения в Azure Active Directory для службы.
     1. Войдите на портал Azure.

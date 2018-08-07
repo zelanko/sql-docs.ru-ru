@@ -14,22 +14,24 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cb8975c4eda311b93c7a26c1d83eecbbfa581f4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 50e80b34becde8987a06f9293a39ba24e3639cd2
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991656"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454198"
 ---
 # <a name="sqlxml-interface"></a>Интерфейс SQLXML
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Драйвер JDBC обеспечивает поддержку API JDBC 4.0, который реализует интерфейс java.sql.SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. **SQLXML** сопоставляется с типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** тип данных.  
+Драйвер JDBC обеспечивает поддержку API JDBC 4.0, который реализует интерфейс java.sql.SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. **SQLXML** сопоставляется с типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** тип данных.  
   
- Интерфейс SQLXML обеспечивает методы для доступа к значению XML в виде **строка**, **чтения** или **записи**, или как **Stream**. Обратиться к значению XML можно также через свойство **Source**, а задать его — через свойство **Result**. Эти свойства используются интерфейсами API синтаксического анализатора XML, такими как модель DOM, простой интерфейс API для XML (SAX) и потоковый интерфейс API для XML (StAX), а также преобразованиями XSLT и XPath.  
+Интерфейс SQLXML обеспечивает методы для доступа к значению XML в виде **строка**, **чтения** или **записи**, или как **Stream**. Обратиться к значению XML можно также через свойство **Source**, а задать его — через свойство **Result**. Эти свойства используются интерфейсами API синтаксического анализатора XML, такими как модель DOM, простой интерфейс API для XML (SAX) и потоковый интерфейс API для XML (StAX), а также преобразованиями XSLT и XPath.  
   
 ## <a name="remarks"></a>Remarks  
- В следующей таблице приводится описание методов, определенных в интерфейсе SQLXML.  
+
+В следующей таблице приводится описание методов, определенных в интерфейсе SQLXML.  
   
 |Синтаксис метода|Описание метода|  
 |-------------------|------------------------|  
@@ -43,15 +45,14 @@ ms.locfileid: "37991656"
 |[T extends Result T setResult(Class\<T> resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Возвращает **результат** параметра **XML** значение, указанное в этом **SQLXML** объекта.<br /><br /> **Примечание**. Метод setResult поддерживает следующие источники: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult и java.io.OutputStream.|  
 |[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|Задает значение XML, назначенное данным объектом SQLXML для указанного представления **String**.|  
   
- Приложения могут читать XML-значения в объекте SQLXML или записывать их только один раз.  
+Приложения могут читать XML-значения в объекте SQLXML или записывать их только один раз.  
   
- При вызове метода free() объект SQLXML становится недействительным: его больше нельзя прочесть или записать в него значения. Если приложение пытается вызвать для этого объекта SQLXML метод, отличный от метода free(), возникает исключение.  
+При вызове метода free() объект SQLXML становится недействительным: его больше нельзя прочесть или записать в него значения. Если приложение пытается вызвать для этого объекта SQLXML метод, отличный от метода free(), возникает исключение.  
   
- Объект SQLXML становится ни читаемым, ни для записи, когда приложение вызывает любой из следующих методов считывания: getSource, getCharacterStream, getBinaryStream и getString.  
+Объект SQLXML становится ни читаемым, ни для записи, когда приложение вызывает любой из следующих методов считывания: getSource, getCharacterStream, getBinaryStream и getString.  
   
- Объект SQLXML больше нельзя будет доступной для чтения при приложение вызовет какой-либо из следующих методов задания: setResult, setCharacterStream, setBinaryStream и setString.  
+Объект SQLXML больше нельзя будет доступной для чтения при приложение вызовет какой-либо из следующих методов задания: setResult, setCharacterStream, setBinaryStream и setString.  
   
 ## <a name="see-also"></a>См. также:  
- [Поддержка XML-данных](../../connect/jdbc/supporting-xml-data.md)  
-  
-  
+
+[Поддержка XML-данных](../../connect/jdbc/supporting-xml-data.md)  

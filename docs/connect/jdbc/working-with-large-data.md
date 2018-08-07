@@ -1,5 +1,5 @@
 ---
-title: Работа с большим объемом данных | Документы Microsoft
+title: Работа с большими объемами данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,33 +14,33 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 688c1f331e3f60868cc53a510308a58730819dd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a60bc049b02ca998119fd4741fa51589a029aeca
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851739"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452298"
 ---
 # <a name="working-with-large-data"></a>Работа с большими объемами данных
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Драйвер JDBC реализует поддержку адаптивной буферизации, которая позволяет получать любые данные большого объема, не расходуя ресурсы на серверные курсоры. При адаптивной буферизации [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] извлекает результаты выполнения инструкции из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] как приложение должно их, а не все сразу. Драйвер также удаляет результаты, когда приложение теряет к ним доступ.  
+Драйвер JDBC реализует поддержку адаптивной буферизации, которая позволяет получать любые данные большого объема, не расходуя ресурсы на серверные курсоры. При адаптивной буферизации драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] получает результаты выполнения инструкции из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] по мере того, как их запрашивает приложение, а не все сразу. Драйвер также удаляет результаты, когда приложение теряет к ним доступ.
+
+В версии [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] JDBC Driver 1.2 по умолчанию использовался режим **полной** буферизации. Если приложение не устанавливало для свойства responseBuffering значение **adaptive** в свойствах подключения или с помощью метода [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) объекта [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), то драйвер поддерживал одновременное считывание всех результатов с сервера. Чтобы включить режим адаптивной буферизации, приложение должно было явно установить для свойства подключения responseBuffering значение **adaptive**.  
   
- В [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] драйвера JDBC версии 1.2, использовался режим буферизации «**полного**» по умолчанию. Если приложение не задано свойство соединения «responseBuffering» значение «**адаптивной**» в свойствах соединения или с помощью [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) метод [ SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) объект, то драйвер поддерживал одновременное считывание всех результатов с сервера. Чтобы получить режим адаптивной буферизации, приложение должно было устанавливать свойство соединения «responseBuffering» «**адаптивный**» явным образом.  
+Значение **adaptive** включает режим буферизации по умолчанию, когда драйвер JDBC выполняет буферизацию для минимально необходимого объема данных. Дополнительные сведения об использовании адаптивной буферизации см. в разделе [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md).  
   
- **Адаптивной** значение — режим буферизации по умолчанию и драйвер JDBC выполняет буферизацию минимума данных при необходимости. Дополнительные сведения об использовании адаптивной буферизации см. в разделе [с помощью адаптивной буферизации](../../connect/jdbc/using-adaptive-buffering.md).  
+ Здесь представлены разделы, в которых описаны различные способы получения данных большого объема из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
- В подразделах этого раздела описываются различные способы можно использовать для получения данных большого объема из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.  
+## <a name="in-this-section"></a>в этом разделе  
   
-## <a name="in-this-section"></a>В этом разделе  
+| Раздел                                                                                                                      | Описание                                                              |
+| -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [Пример считывания данных большого объема](../../connect/jdbc/reading-large-data-sample.md)                                               | Описывает получение данных большого объема с помощью инструкции SQL.       |
+| [Пример считывания данных большого объема с помощью хранимых процедур](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) | Описывает получение значений параметра CallableStatement OUT большого объема. |
+| [Пример обновления данных большого объема](../../connect/jdbc/updating-large-data-sample.md)                                             | Описывает обновление данных большого объема в базе данных.                |
   
-|Раздел|Описание|  
-|-----------|-----------------|  
-|[Пример считывания данных большого объема](../../connect/jdbc/reading-large-data-sample.md)|Описывает получение данных большого объема с помощью инструкции SQL.|  
-|[Пример считывания данных большого объема с помощью хранимых процедур](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)|Описывает получение значений параметра CallableStatement OUT большого объема.|  
-|[Пример обновления данных большого объема](../../connect/jdbc/updating-large-data-sample.md)|Описывает обновление данных большого объема в базе данных.|  
-  
-## <a name="see-also"></a>См. также  
- [Пример приложений драйвера JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
-  
+## <a name="see-also"></a>См. также:
+
+[Пример приложений драйвера JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  
