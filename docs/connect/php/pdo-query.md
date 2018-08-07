@@ -1,7 +1,7 @@
 ---
 title: PDO::Query | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/01/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 71c5125b2948918a1a0fdefb4884529e8c1703c6
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979748"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415533"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,7 +54,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT также влияет на поведение P
 |style|Описание|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *номер*|Запросы данных в указанном столбце. Первый столбец в таблице имеет номер 0.|  
-|PDO::FETCH_CLASS, '*имя_класса*', array( *список_аргументов* )|Создает экземпляр класса и назначает имена столбцов свойствам в классе. Если конструктор классов принимает один или несколько параметров, также можно передать *список_аргументов*.|  
+|PDO::FETCH_CLASS, '*имя_класса*', array( *список_аргументов* )|Создает экземпляр класса и назначает имена столбцов свойствам в классе. Если конструктор классов принимает один или несколько параметров, также можно передать *arglist*.|  
 |Значение PDO::FETCH_CLASS, "*classname*"|Назначает имена столбцов свойствам в существующем классе.|  
   
 Вызовите PDOStatement::closeCursor, чтобы освободить ресурсы базы данных, связанные с объектом PDOStatement, перед повторным вызовом PDO::query.  
@@ -119,8 +119,56 @@ while ( $stmt->fetch() ){
   
 $stmt = null;  
 ?>  
-```  
-  
+```
+
+## <a name="example"></a>Пример
+В этом примере кода показано, как создать таблицу [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) типов и получения вставляемых данных.
+
+```
+<?php
+$server = 'serverName';
+$dbName = 'databaseName';
+$uid = 'yourUserName';
+$pwd = 'yourPassword';
+
+$conn = new PDO("sqlsrv:server=$server; database = $dbName", $uid, $pwd);
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );  
+
+try {
+    $tableName = 'testTable';
+    $query = "CREATE TABLE $tableName ([c1_int] sql_variant, [c2_varchar] sql_variant)";
+
+    $stmt = $conn->query($query);
+    unset($stmt);
+
+    $query = "INSERT INTO [$tableName] (c1_int, c2_varchar) VALUES (1, 'test_data')";
+    $stmt = $conn->query($query);
+    unset($stmt);
+
+    $query = "SELECT * FROM $tableName";
+    $stmt = $conn->query($query);
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    print_r($result);
+    
+    unset($stmt);
+    unset($conn);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+?>
+```
+
+Ожидаемый результат будет следующим:
+
+```
+Array
+(
+    [c1_int] => 1
+    [c2_varchar] => test_data
+)
+```
+
 ## <a name="see-also"></a>См. также:  
 [Класс PDO](../../connect/php/pdo-class.md)
 

@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b0327a7fb471299785d7899befabcbd9f228aa2e
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335868"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482705"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Развертывание проекта служб SSIS из командной строки с помощью ISDeploymentWizard.exe
 В этом кратком руководстве описано, как развернуть проект SSIS из командной строки с помощью мастера развертывания Integration Services, `ISDeploymentWizard.exe`.
@@ -47,7 +47,7 @@ ms.locfileid: "35335868"
 3. На странице **Обзор** для базы данных просмотрите полное имя сервера. Чтобы увидеть параметр **Щелкните, чтобы скопировать**, наведите указатель мыши на имя сервера. 
 4. Если вы забыли учетные данные входа на сервер базы данных SQL Azure, перейдите на страницу этого сервера, чтобы узнать имя его администратора. При необходимости вы можете сбросить пароль.
 
-## <a name="authentication-methods-in-the-deployment-wizard"></a>Методы проверки подлинности в мастере развертывания
+## <a name="wizard_auth"></a> Методы проверки подлинности в мастере развертывания
 
 При развертывании на SQL Server с помощью мастера развертывания необходимо использовать проверку подлинности Windows. Вы не можете использовать проверку подлинности SQL Server.
 

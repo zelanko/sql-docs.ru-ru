@@ -30,13 +30,13 @@ caps.latest.revision: 74
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 400b5f3a35546b84b3d1c7a3006e77c27bf447ff
-ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 30713ea63bdd8c6a63b284e9a02530833a72c2c6
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39359601"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459164"
 ---
 # <a name="create-certificate-transact-sql"></a>Инструкция CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -158,7 +158,7 @@ CREATE CERTIFICATE certificate_name
  Дата, начиная с которой сертификат действителен. Если она не указана, в качестве значения START_DATE устанавливается текущая дата. Значение START_DATE имеет формат времени UTC. Это значение можно указать в любом формате, который можно преобразовать в формат даты и времени.  
   
  EXPIRY_DATE ='*datetime*'  
- Дата истечения срока действия сертификата. Если она не указана, для EXPIRY_DATE устанавливается дата через год от START_DATE. Значение EXPIRY_DATE имеет формат времени UTC. Это значение можно указать в любом формате, который можно преобразовать в формат даты и времени. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker проверяет дату окончания срока действия. Во время резервного копирования с шифрованием при помощи сертификатов также проверяется дата окончания срока действия. Если сертификат просрочен, резервная копия не будет создана, но восстановление с просроченным сертификатом допускается. Срок действия не проверяется, когда сертификат используется для шифрования баз данных или для функции Always Encrypted.  
+ Дата истечения срока действия сертификата. Если она не указана, для EXPIRY_DATE устанавливается дата через год от START_DATE. Значение EXPIRY_DATE имеет формат времени UTC. Это значение можно указать в любом формате, который можно преобразовать в формат даты и времени. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Компонент Service Broker проверяет дату окончания срока действия. Во время резервного копирования с шифрованием при помощи сертификатов также проверяется дата окончания срока действия. Если сертификат просрочен, резервная копия не будет создана, но восстановление с просроченным сертификатом допускается. Срок действия не проверяется, когда сертификат используется для шифрования баз данных или для функции Always Encrypted.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Делает сертификат доступным для инициатора диалога с компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Значение по умолчанию — ON.  

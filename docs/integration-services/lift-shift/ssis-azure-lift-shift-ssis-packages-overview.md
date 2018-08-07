@@ -12,12 +12,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 3864a5ac0f4bb1ebd87ab54a0b949ec80b636bc6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304394"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482665"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Перенос рабочих нагрузок SQL Server Integration Services в облако
 Проекты, пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure. Для управления, развертывания и выполнения проектов и пакетов SSI и в каталоге SSI (SSISDB), размещенном в Базе данных SQL Azure или Управляемом экземпляре базы данных SQL (предварительная версия) вы можете использовать привычные вам инструменты, например SQL Server Management Studio (SSMS).
@@ -75,7 +75,7 @@ Azure-SSIS IR достаточно подготовить только один 
 
 При подготовке экземпляра базы данных SQL для размещения базы данных SSISDB также устанавливаются пакет дополнительных компонентов Azure для служб SSIS и распространяемый компонент Access. Эти компоненты обеспечивают подключение к различным источникам данных **Azure**, файлам **Excel и Access**, а также источникам данных, поддерживаемым встроенными компонентами.
 
-Можно также установить дополнительные компоненты. Например, можно установить драйвер, который не устанавливается по умолчанию. Дополнительные сведения см. в статье [Customize setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup) (Настройка установки для среды выполнения интеграции Azure — SSIS).
+Можно также установить дополнительные компоненты. Например, можно установить драйвер, который не устанавливается по умолчанию. Дополнительные сведения см. в статье [Customize setup for the Azure-SSIS integration runtime](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) (Настройка установки для среды выполнения интеграции Azure — SSIS).
 
 Владельцам лицензия Enterprise Edition доступны дополнительные компоненты. Дополнительные сведения см. в статье [Подготовка выпуска Enterprise Edition для среды выполнения интеграции Azure Integration Services](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-enterprise-edition).
 
