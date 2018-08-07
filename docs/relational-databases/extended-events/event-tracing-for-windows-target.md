@@ -18,13 +18,13 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f3471f30347decd4a6a7f882aed43c8d1325107
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c3f447e5c0ffa192262e26ade592d1e9c23fc741
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939789"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561014"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "32939789"
   
  В следующей таблице описаны доступные параметры для настройки назначения ETW.  
   
-|Параметр|Допустимые значения|Description|  
+|Параметр|Допустимые значения|Описание|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Любая строка длиной до 256 символов. Это значение является необязательным.|Имя сеанса расширенных событий. По умолчанию это XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Любая строка длиной до 256 символов. Это значение является необязательным.|Путь к файлу журнала сеанса расширенных событий. По умолчанию %TEMP%\ XEEtw.etl.|  

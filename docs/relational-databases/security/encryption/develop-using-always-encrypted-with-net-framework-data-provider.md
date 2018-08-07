@@ -14,12 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ca667951d50ddf996d5ef5a46ee7d699681325c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538144"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Разработка с использованием постоянного шифрования с поставщиком данных .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -281,7 +282,7 @@ cmd.ExecuteNonQuery();
 В состав поставщика данных .NET Framework для SQL Server входят следующие встроенные поставщики хранилища главных ключей столбцов, которые предварительно зарегистрированы с конкретными именами поставщиков (используемыми для поиска поставщика).
 
 
-| Class | Description | Имя поставщика |
+| Class | Описание | Имя поставщика |
 |:---|:---|:---|
 |Класс SqlColumnEncryptionCertificateStoreProvider| Поставщик для хранилища сертификатов Windows. | MSSQL_CERTIFICATE_STORE |
 |[Класс SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Примечание.** Этот поставщик доступен в .NET Framework 4.6.1 или более поздней версии. |Поставщик хранилища ключей, поддерживающий [Microsoft Cryptography API: Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Как правило, такое хранилище представляет собой аппаратный модуль безопасности — физическое устройство, которое защищает цифровые ключи и управляет ими, а также обеспечивает обработку шифрования.  | MSSQL_CNG_STORE|
@@ -551,7 +552,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Имя|Description|Версия .NET
+|Имя|Описание|Версия .NET
 |:---|:---|:---
 |[Класс SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Поставщик хранилища ключей для хранилища сертификатов Windows.|  4.6
 |[Класс SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Поставщик хранилища ключей для интерфейса Microsoft Cryptography API: Next Generation (CNG).|  4.6.1

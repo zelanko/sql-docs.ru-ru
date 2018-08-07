@@ -14,13 +14,13 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da86c799085983f5d2bc73ba970893e9fbcc7385
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc7d5df1d8e7d11e97512a31cda94fbf2687e6b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432393"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539034"
 ---
 # <a name="ddl-triggers"></a>Триггеры DDL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "37432393"
 >  Тестировать триггеры DDL, чтобы определить, как они отвечают на запущенные системные хранимые процедуры. Например: как инструкция CREATE TYPE, так и хранимая процедура **sp_addtype** вызывают срабатывание триггера DDL, созданного на событии CREATE_TYPE.  
   
 ## <a name="types-of-ddl-triggers"></a>Типы триггеров DDL  
- Триггер DDL языка Transact-SQL  
+ ### <a name="transact-sql-ddl-trigger"></a>Триггер DDL языка Transact-SQL  
  Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)] особого типа, которая выполняет одну или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в ответ на событие из области действия сервера или базы данных. Например, триггер DDL может активироваться, если выполняется такая инструкция, как ALTER SERVER CONFIGURATION, или если происходит удаление таблицы с использованием команды DROP TABLE.  
   
- Триггер DDL среды CLR  
+ ### <a name="clr-ddl-trigger"></a>Триггер DDL среды CLR  
  Вместо вызова хранимой процедуры на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер CLR вызывает один или несколько методов управляемого кода, являющихся членами сборки, созданной с помощью среды .NET Framework и загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Триггеры DDL срабатывают только после выполнения соответствующих инструкций DDL. Триггеры DDL нельзя использовать в качестве триггеров INSTEAD OF. Триггеры DDL не срабатывают в ответ на события, влияющие на локальные или глобальные временные таблицы и хранимые процедуры.  
@@ -112,7 +112,7 @@ GO
   
  Список стандартных групп инструкций DDL для триггеров DDL, инструкции, входящие в эти группы событий, а также области, где можно программировать эти группы событий, приводятся в разделе [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Задача|Раздел|  
 |----------|-----------|  

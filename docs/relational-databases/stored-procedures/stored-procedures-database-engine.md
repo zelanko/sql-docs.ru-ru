@@ -15,13 +15,13 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 923c06b5cb9a897946bcdff05e70f4af317ee311
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ff907398115e5beaaab2921ab7d2e301f66583ac
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332944"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560354"
 ---
 # <a name="stored-procedures-database-engine"></a>Хранимые процедуры (компонент Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "37332944"
 > [!NOTE]  
 >  Расширенные хранимые процедуры в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]будут удалены. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется. Вместо них рекомендуется создавать процедуры CLR. Этот метод более надежен и безопасен, чем использование расширенных хранимых процедур.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |||  
 |-|-|  

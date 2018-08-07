@@ -19,12 +19,13 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0a87403ce74d29fd1a967e4eb0775a70f7d10ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 318d2ee649a083023485ee3eed3507aeb643cfe3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543656"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Файлы формата, отличные от XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,14 +63,14 @@ ms.lasthandoff: 05/03/2018
   
  Поля **Version** и **Number of columns** встречаются только один раз. Описание этих параметров приводится в следующей таблице.  
   
-|Поле файла форматирования|Description|  
+|Поле файла форматирования|Описание|  
 |------------------------|-----------------|  
 |Версия|Номер версии программы **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Номер версии распознается по программе **bcp[!INCLUDE[tsql](../../includes/tsql-md.md)], а не по** .<br /><br /> <br /><br /> Примечание. Версия служебной программы **bcp** (Bcp.exe), используемая для считывания файла форматирования, должна быть той же или более поздней по сравнению с программой, с помощью которой создавался файл форматирования. Например, служебная программа [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, но служебная программа [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** не может считать файл форматирования версии 12.0, созданный служебной программой [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**.|  
 |Number of columns|Число полей в файле данных. Это значение должно быть одинаковым во всех строках.|  
   
  Другие поля файла форматирования описывают поля данных, массовый импорт и экспорт которых должен быть произведен. Для каждого поля данных необходима отдельная строка файла форматирования. Каждая строка файла форматирования содержит значения полей файла форматирования, описание которых находится в следующей таблице.  
   
-|Поле файла форматирования|Description|  
+|Поле файла форматирования|Описание|  
 |------------------------|-----------------|  
 |**Порядковый номер поля в файле данных**|Число, указывающее на расположение поля в файле данных. Первое поле в строке имеет номер 1 и т. д.|  
 |**Тип данных файла**|Указывает тип данных, хранящихся в этом поле файла данных. Для ASCII-файлов используйте SQLCHAR; для файлов данных в собственном формате используйте типы данных по умолчанию. Дополнительные сведения см. в разделе [Указание типа файлового хранилища с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).|  

@@ -22,12 +22,13 @@ caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d5c8427cc756a3aa4635e97288cec3aa2e6fb8e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 55938d1a17e4a6f1d2e6321b74340fde24814df9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537704"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Улучшение производительности полнотекстовых индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -183,7 +184,7 @@ GO
   
      В следующей таблице описаны типы значений ожидания, представляющие интерес.  
   
-    |Тип ожидания|Description|Возможное решение|  
+    |Тип ожидания|Описание|Возможное решение|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX или _UP)|Это может свидетельствовать о наличии узкого места в подсистеме ввода-вывода. В этом случае средняя длина очереди диска обычно велика.|Перемещение полнотекстового индекса в другую файловую группу на другом диске может помочь снизить влияние узкого места в операциях ввода-вывода.|  
     |PAGELATCH_EX (или _UP)|Это может свидетельствовать о высокой конкуренции между потоками, которые пытаются выполнить запись в один и тот же файл базы данных.|Уровень конкуренции можно снизить, добавив файлы в файловую группу, в которой расположен полнотекстовый индекс.|  
