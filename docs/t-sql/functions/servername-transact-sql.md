@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0adbdba1c04ad4cc2e39f532ded83d3964a47ea
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4335b063b5b8f734be6fe76bb0a1f43c3f7e8622
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787365"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582190"
 ---
 # <a name="x40x40servername-transact-sql"></a>@@SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "37787365"
 |--------------|------------------------|  
 |Экземпляр по умолчанию|'*имя_сервера*'|  
 |Именованный экземпляр|'*имя_сервера*\\*имя_экземпляра*'|  
-|экземпляр отказоустойчивого кластера — экземпляр по умолчанию|'*имя_виртуального_сервера*'|  
-|экземпляр отказоустойчивого кластера — именованный экземпляр|'*имя_виртуального_сервера*\\*имя_экземпляра*'|  
+|Экземпляр отказоустойчивого кластера — экземпляр по умолчанию|"*сетевое_имя_экземпляра_отказоустойчивого_кластера_windows_server*"|  
+|Экземпляр отказоустойчивого кластера — именованный экземпляр|"*сетевое_имя_экземпляра_отказоустойчивого_кластера_windows_server*\\*имя_экземпляра*"|  
   
  Хотя функция @@SERVERNAME и свойство SERVERNAME функции SERVERPROPERTY могут возвращать строки в похожих форматах, эта информация может различаться. Свойство SERVERNAME автоматически сообщает об изменениях сетевого имени компьютера.  
   

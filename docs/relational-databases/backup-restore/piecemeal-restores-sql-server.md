@@ -19,16 +19,16 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2c0af1af6758a9520d36398dfd34dc56430dd392
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de4ff47096b20847ab3eecffee1cbe734bf17cab
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923659"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415443"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Поэтапное восстановление (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Этот раздел касается только баз данных в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, которые содержат несколько файлов или файловых групп, а для простой модели — только файловых групп, предназначенных только для чтения.  
+  Сведения в этом разделе распространяются на базы данных в выпуске Enterprise Edition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (оперативное восстановление) или Standard Edition (автономное восстановление), которые содержат несколько файлов или файловых групп, а в простой модели — лишь на файловые группы, предназначенные только для чтения.  
   
  Дополнительные сведения о поэтапном восстановлении и оптимизированных для памяти таблицах см. в разделе [Поэтапное восстановление баз данных с таблицами, оптимизированными для памяти](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   

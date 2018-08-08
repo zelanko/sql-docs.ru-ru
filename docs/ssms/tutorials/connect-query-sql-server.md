@@ -12,12 +12,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988758"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367666"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Учебник. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio
 Это руководство научит вас подключаться к экземпляру SQL Server с использованием SQL Server Management Studio (SSMS) и выполнять некоторые базовые команды Transact-SQL (T-SQL). В статье показано, как выполнять следующие задачи.
@@ -184,5 +184,11 @@ ms.locfileid: "33988758"
     > [!NOTE]
     > Это действие изменяет только сервер, к которому подключено окно запросов, но не меняет сервер, к которому подключен обозреватель объектов. 
 
+## <a name="next-steps"></a>Следующие шаги
+В следующей статье объясняется, как создавать сценарии разных объектов в SQL Server Managment Studio. 
+
+Дополнительные сведения см. в следующей статье:
+> [!div class="nextstepaction"]
+> [Следующие шаги](scripting-ssms.md)
 
 

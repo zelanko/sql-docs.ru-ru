@@ -1,7 +1,7 @@
 ---
-title: Урок 3. Удаление объектов базы данных | Документы Майкрософт
+title: Учебник T-SQL. Удаление объектов базы данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 07/30/2018
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ''
@@ -17,24 +17,94 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 491a95099bdb7b70bca11c9567a450b42d2012d3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f9b41982cf0d71ad138d6eb43462174633c8d2de
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420923"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455548"
 ---
-# <a name="lesson-3-deleting-database-objects"></a>Урок 3. Удаление объектов базы данных
+# <a name="lesson-3-delete-database-objects"></a>Урок 3. Удаление объектов базы данных
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 На этом коротком занятии рассматривается удаление объектов, созданных на занятиях 1 и 2, а затем удаление базы данных.  
   
-Это занятие содержит один раздел:  
+Перед удалением объектов необходимо убедиться, что используется нужная база данных:
   
--   [Удаление объектов базы данных](../t-sql/lesson-3-1-deleting-database-objects.md)  
+  ```sql  
+  USE TestData;  
+  GO  
+  ```  
+
+## <a name="revoke-stored-procedure-permissions"></a>Отзыв разрешений на хранимые процедуры
   
-## <a name="next-task-in-lesson"></a>Следующая задача занятия  
-[Deleting Database Objects](../t-sql/lesson-3-1-deleting-database-objects.md)  
+С помощью инструкции `REVOKE` удаляется разрешение на выполнение, предоставленное `Mary` на хранимую процедуру:
   
+  ```sql  
+  REVOKE EXECUTE ON pr_Names FROM Mary;  
+  GO  
+  ```  
+  
+## <a name="drop-permissions"></a>Удаление разрешений
+
+1. С помощью инструкции `DROP` удаляется разрешение, предоставленное `Mary` для доступа к базе данных `TestData` :
+  
+  ```sql  
+  DROP USER Mary;  
+  GO  
+  ```  
+
+
+2. С помощью инструкции `DROP` удаляется разрешение, предоставленное `Mary` для доступа к экземпляру [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]:
+  
+  ```sql  
+    DROP LOGIN [<computer_name>\Mary];  
+    GO   
+  ```  
+  
+3.   С помощью инструкции `DROP` удаляется хранимая процедура `pr_Names`:  
+  
+    ```sql  
+    DROP PROC pr_Names;  
+    GO  
+    ```  
+  
+6.  С помощью инструкции `DROP` удаляется представление `vw_Names`:  
+  
+    ```sql  
+    DROP VIEW vw_Names;  
+    GO  
+  
+    ```  
+
+## <a name="delete-table"></a>Удалить таблицу
+  
+1. С помощью инструкции `DELETE` удаляются все строки таблицы `Products` :  
+  
+    ```sql  
+    DELETE FROM Products;  
+    GO  
+    ```  
+  
+2.  С помощью инструкции `DROP` удаляется таблица `Products` :  
+  
+    ```sql  
+    DROP TABLE Products;  
+    GO    
+    ```  
+
+## <a name="remove-database"></a>Удаление базы данных
+  
+Базу данных `TestData` невозможно удалить во время нахождения в ней; поэтому сначала требуется переключить контекст на другую базу данных и только после этого с помощью инструкции `DROP` удалить базу данных `TestData` :  
+  
+  ```sql  
+  USE MASTER;  
+  GO  
+  DROP DATABASE TestData;  
+  GO   
+  ```  
+  
+Это заключительный шаг учебника «Составление инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] ». Помните, что этот учебник содержит только краткий обзор и не включает описания всех параметров используемых инструкций. Для проектирования и создания эффективной структуры базы данных и настройки безопасного доступа к данным требуется более сложная база данных, чем показанная в примерах данного учебника.  
+
   
   

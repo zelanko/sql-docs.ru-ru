@@ -54,6 +54,8 @@
       href: install/sql-ml-component-commandline-install.md
     - name: Автономная установка (без Интернета)
       href: install/sql-ml-component-install-without-internet-access.md
+    - name: "Загрузка файлов\_CAB (автономная установка)"
+      href: install/sql-ml-cab-downloads.md
     - name: Обновление R и Python
       href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
     - name: Настройка средств R

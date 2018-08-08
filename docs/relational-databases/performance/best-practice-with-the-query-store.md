@@ -16,13 +16,13 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9bc9c0f916a26a46d2bfc3aaed05ce8e4072f57a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279185"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549534"
 ---
 # <a name="best-practice-with-the-query-store"></a>Рекомендации по хранилищу запросов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  При указании запроса с недостаточной производительностью необходимые действия будут зависеть от характера проблемы.  
   
--   Если запрос выполнялся с несколькими планами и последний план оказался значительно хуже, чем предыдущий, можно использовать механизм принудительного плана, чтобы заставить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда использовать оптимальный план при последующих выполнениях.  
+-   Если запрос выполнялся с несколькими планами и последний план оказался значительно хуже предыдущего, можно применить механизм принудительного использования плана. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] попытается принудительно применить план в оптимизаторе. Если это не удастся сделать, будет порождено событие XEvent и оптимизация будет выполнена как обычно. 
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 

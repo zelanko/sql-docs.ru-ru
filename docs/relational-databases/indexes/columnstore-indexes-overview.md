@@ -21,13 +21,13 @@ caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c253b01b0d2e40fe15596fbb63a49119ca5dfdec
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 59b0dc689642906b134da064378a63e185997bfd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024280"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563338"
 ---
 # <a name="columnstore-indexes-overview"></a>Общие сведения об индексах columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,7 +147,7 @@ Rowgroup — это группа строк, сжимаемых в формат�
 |Создание таблицы как кластеризованного индекса columnstore|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], таблицы можно создавать как кластеризованный индекс columnstore. Для этого не нужно сначала создавать таблицу rowstore, а затем конвертировать ее в columnstore.|  
 |Создание таблицы в памяти с индексом columnstore.|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], таблицы, оптимизированные для памяти, можно создавать с индексом columnstore. Индекс columnstore можно добавить и после создания таблицы, используя синтаксис `ALTER TABLE ADD INDEX`.|  
 |Преобразование таблицы rowstore в таблицу columnstore|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Преобразуйте существующую кучу или сбалансированное дерево в columnstore. В примерах показано, как обрабатывать существующие индексы, а также имя индекса, которое нужно использовать в процессе преобразования.|  
-|Преобразование таблицы columnstore в rowstore|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Обычно это преобразование не требуется, но бывают ситуации, когда оно необходимо. В примерах показано, как преобразовать columnstore в кучу или кластеризованный индекс.|  
+|Преобразование таблицы columnstore в rowstore|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41;OR DROP INDEX](../../relational-databases/indexes/create-clustered-indexes.md)|Обычно это преобразование не требуется, но бывают ситуации, когда оно необходимо. В примерах показано, как преобразовать columnstore в кучу или кластеризованный индекс.|  
 |Создание индекса columnstore в таблице rowstore|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Таблица rowstore может включать один индекс columnstore. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], индекс columnstore может иметь отфильтрованное условие. В примерах показан основной синтаксис.|  
 |Создание высокопроизводительных индексов для оперативной аналитики|[Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Здесь объясняется, как создать дополнительные индексы columnstore и индексы сбалансированного дерева, чтобы использовать индексы сбалансированного дерева в запросах OLTP, а индексы columnstore — в запросах аналитики.|  
 |Создание высокопроизводительных индексов сolumnstore для хранилищ данных|[Индексы сolumnstore для хранилищ данных](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Описывает использование индексов сбалансированного дерева в таблицах columnstore для создания высокопроизводительных запросов к хранилищу данных.|  
