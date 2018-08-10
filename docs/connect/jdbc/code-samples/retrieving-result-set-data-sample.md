@@ -1,7 +1,7 @@
 ---
 title: Получение образца данных результирующего набора | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,38 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb68f2bedb680f990e2b0c4e4e559191915dd300
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: e7bea017a9fd36dc0e910fc2dfff69df10aabbde
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279065"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453082"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Получение образца данных результирующего набора
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  В этом образце приложения [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] показано получение набора данных из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и последующее отображение этих данных.  
-  
- Файл кода для этого образца имеет имя RetrieveRS.java и находится в следующей папке:  
-  
- \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \samples\resultsets  
-  
-## <a name="requirements"></a>Требования  
- Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Также потребуется доступ к образцу базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
-  
+В этом образце приложения [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] показано получение набора данных из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и последующее отображение этих данных.
+
+Файл кода для этого примера с именем RetrieveResultSet.java находится в следующей папке:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets  
+```
+
+## <a name="requirements"></a>Требования
+
+Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Также потребуется доступ к примеру базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
+
 > [!NOTE]  
->  Драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Дополнительные сведения о какие файлы JAR следует выбрать, см. в разделе [требования к системе для драйвера JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## <a name="example"></a>Пример  
- В приведенном ниже примере образец кода будет использоваться для соединения с образцом базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Затем с помощью инструкции SQL с объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) выполняется инструкция SQL, а возвращенные ею данные помещаются в объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
-  
- Далее образец кода вызывает настраиваемый метод displayRow для прохода по строкам данных в результирующем наборе, и некоторые из этих данных отображаются с помощью метода [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md).
-  
+> Драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Дополнительные сведения о какие файлы JAR следует выбрать, см. в разделе [требования к системе для драйвера JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+
+## <a name="example"></a>Пример
+
+В приведенном ниже примере образец кода будет использоваться для соединения с образцом базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Затем с помощью инструкции SQL с объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) выполняется инструкция SQL, а возвращенные ею данные помещаются в объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).
+
+Далее пример кода вызывает настраиваемый метод displayRow для прохода по строкам данных в результирующем наборе, и некоторые из этих данных отображаются с помощью метода [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md).
+
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -56,7 +61,8 @@ public class RetrieveRS {
         String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
-            String SQL = "SELECT * FROM Production.Product;";
+            createTable(stmt);
+        String SQL = "SELECT * FROM Production.Product;";
             ResultSet rs = stmt.executeQuery(SQL);
             displayRow("PRODUCTS", rs);
         }
@@ -73,10 +79,50 @@ public class RetrieveRS {
             System.out.println(rs.getString("ProductNumber") + " : " + rs.getString("Name"));
         }
     }
+
+    private static void createTable(Statement stmt) throws SQLException {
+        stmt.execute("if exists (select * from sys.objects where name = 'Product_JDBC_Sample')"
+                + "drop table Product_JDBC_Sample");
+
+        String sql = "CREATE TABLE [Product_JDBC_Sample](" + "[ProductID] [int] IDENTITY(1,1) NOT NULL,"
+                + "[Name] [varchar](30) NOT NULL," + "[ProductNumber] [nvarchar](25) NOT NULL,"
+                + "[MakeFlag] [bit] NOT NULL," + "[FinishedGoodsFlag] [bit] NOT NULL," + "[Color] [nvarchar](15) NULL,"
+                + "[SafetyStockLevel] [smallint] NOT NULL," + "[ReorderPoint] [smallint] NOT NULL,"
+                + "[StandardCost] [money] NOT NULL," + "[ListPrice] [money] NOT NULL," + "[Size] [nvarchar](5) NULL,"
+                + "[SizeUnitMeasureCode] [nchar](3) NULL," + "[WeightUnitMeasureCode] [nchar](3) NULL,"
+                + "[Weight] [decimal](8, 2) NULL," + "[DaysToManufacture] [int] NOT NULL,"
+                + "[ProductLine] [nchar](2) NULL," + "[Class] [nchar](2) NULL," + "[Style] [nchar](2) NULL,"
+                + "[ProductSubcategoryID] [int] NULL," + "[ProductModelID] [int] NULL,"
+                + "[SellStartDate] [datetime] NOT NULL," + "[SellEndDate] [datetime] NULL,"
+                + "[DiscontinuedDate] [datetime] NULL," + "[rowguid] [uniqueidentifier] ROWGUIDCOL  NOT NULL,"
+                + "[ModifiedDate] [datetime] NOT NULL,)";
+
+        stmt.execute(sql);
+
+        sql = "INSERT Product_JDBC_Sample VALUES ('Adjustable Time','AR-5381','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
+        stmt.execute(sql);
+
+        sql = "INSERT Product_JDBC_Sample VALUES ('ML Bottom Bracket','BB-8107','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
+        stmt.execute(sql);
+
+        sql = "INSERT Product_JDBC_Sample VALUES ('Mountain-500 Black, 44','BK-M18B-44','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
+        stmt.execute(sql);
+    }
+
+    private static void displayRow(String title, ResultSet rs) {
+        try {
+            System.out.println(title);
+            while (rs.next()) {
+                System.out.println(rs.getString("ProductNumber") + " : " + rs.getString("Name"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
-```  
-  
-## <a name="see-also"></a>См. также:  
- [Работа с результирующими наборами](../../../connect/jdbc/working-with-result-sets.md)  
-  
-  
+
+```
+
+## <a name="see-also"></a>См. также:
+
+[Работа с результирующими наборами](../../../connect/jdbc/code-samples/working-with-result-sets.md)

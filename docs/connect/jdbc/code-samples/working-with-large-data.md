@@ -1,7 +1,7 @@
 ---
-title: Работа с большим объемом данных | Документы Microsoft
+title: Работа с большими объемами данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,34 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 126775f2b56bdf2cf1847334b0c8faad7cfcfafb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e9269200560447593a50364a4b4801a8ec80f4ca
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831369"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455268"
 ---
 # <a name="working-with-large-data"></a>Работа с большими объемами данных
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Драйвер JDBC реализует поддержку адаптивной буферизации, которая позволяет получать любые данные большого объема, не расходуя ресурсы на серверные курсоры. При адаптивной буферизации [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] извлекает результаты выполнения инструкции из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] как приложение должно их, а не все сразу. Драйвер также удаляет результаты, когда приложение теряет к ним доступ.  
+Драйвер JDBC реализует поддержку адаптивной буферизации, которая позволяет получать любые данные большого объема, не расходуя ресурсы на серверные курсоры. При адаптивной буферизации [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] получает результаты выполнения инструкций из экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] по мере того, как их запрашивает приложение, а не все сразу. Драйвер также удаляет результаты, когда приложение теряет к ним доступ.  
   
- В [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)] драйвера JDBC версии 1.2, использовался режим буферизации «**полного**» по умолчанию. Если приложение не задано свойство соединения «responseBuffering» значение «**адаптивной**» в свойствах соединения или с помощью [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) метод [ SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объект, то драйвер поддерживал одновременное считывание всех результатов с сервера. Чтобы получить режим адаптивной буферизации, приложение должно было устанавливать свойство соединения «responseBuffering» «**адаптивный**» явным образом.  
+В версии JDBC Driver 1.2 для [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)] по умолчанию использовался режим **полной** буферизации. Если приложение не задавало свойству responseBuffering значение **adaptive** в свойствах подключения или с помощью метода [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), то драйвер поддерживал считывание с сервера всех результатов одновременно. Чтобы включить режим адаптивной буферизации, приложение должно было явно задать свойству подключения responseBuffering значение **adaptive**.  
   
- **Адаптивной** значение — режим буферизации по умолчанию и драйвер JDBC выполняет буферизацию минимума данных при необходимости. Дополнительные сведения об использовании адаптивной буферизации см. в разделе [с помощью адаптивной буферизации](../../../connect/jdbc/using-adaptive-buffering.md).  
+Значение **adaptive** соответствует режиму буферизации по умолчанию, когда драйвер JDBC выполняет буферизацию для минимально необходимого объема данных. Дополнительные сведения об использовании адаптивной буферизации см. в разделе [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
   
- В подразделах этого раздела описываются различные способы можно использовать для получения данных большого объема из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных.  
+Здесь представлены разделы, в которых описаны различные способы получения данных большого размера из базы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
-|-----------|-----------------|  
-|[Пример считывания данных большого объема](../../../connect/jdbc/reading-large-data-sample.md)|Описывает получение данных большого объема с помощью инструкции SQL.|  
-|[Пример считывания данных большого объема с помощью хранимых процедур](../../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)|Описывает получение значений параметра CallableStatement OUT большого объема.|  
-|[Пример обновления данных большого объема](../../../connect/jdbc/updating-large-data-sample.md)|Описывает обновление данных большого объема в базе данных.|  
+| Раздел                                                                                                                         | Описание                                                              |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [Пример считывания данных большого объема](../../../connect/jdbc/code-samples/reading-large-data-sample.md)                                               | Описывает получение данных большого объема с помощью инструкции SQL.       |
+| [Пример считывания данных большого объема с помощью хранимых процедур](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Описывает получение значений параметра CallableStatement OUT большого объема. |
+| [Пример обновления данных большого объема](../../../connect/jdbc/code-samples/updating-large-data-sample.md)                                             | Описывает обновление данных большого объема в базе данных.                |
   
-## <a name="see-also"></a>См. также  
- [Пример приложений драйвера JDBC](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
+## <a name="see-also"></a>См. также:
+
+[Пример приложений драйвера JDBC](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

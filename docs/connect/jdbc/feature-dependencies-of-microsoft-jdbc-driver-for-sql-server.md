@@ -1,7 +1,7 @@
 ---
-title: Функция зависимости драйвера Microsoft JDBC для SQL Server | Документы Microsoft
+title: Зависимости компонентов Microsoft JDBC Driver для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/28/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,54 +14,59 @@ caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 052628258ae1d8c1f31430ea132ed594a976be98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 70179d55c6aae5fc01c84f0c4af860f86d528a06
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832589"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454228"
 ---
-# <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Зависимости компонентов драйвера Microsoft JDBC для SQL Server
+# <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Зависимости компонентов Microsoft JDBC Driver для SQL Server
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
- Эта страница содержит список библиотек, от которых зависит Microsoft JDBC Driver for SQL Server. Проект включает следующие зависимости.
- 
- ## <a name="compile-time"></a>Время компиляции
- - `azure-keyvault` : Azure поставщика хранилища ключей для функции всегда зашифрованы хранилище ключей Azure (необязательно)
- - `adal4j` : Библиотека azure ActiveDirectory для Java для проверки подлинности Azure Active Directory функции и хранилище ключей Azure (необязательно)
+На этой странице перечислены работу библиотеки, от которых зависит Microsoft JDBC Driver для SQL Server. Проект включает следующие зависимости.
 
- ##  <a name="test-time"></a>Время выполнения теста
-Конкретных проектов, для которых требуется одно из двух описанных функций, необходимо явно объявить соответствующих зависимостей в pom-файла:
+## <a name="compile-time"></a>Время компиляции
 
-***Например:*** при использовании *функция проверки подлинности Azure Active Directory*, вам нужно повторно объявить *adal4j* зависимостей в pom-файла проекта. См. в следующем фрагменте кода: 
+- `azure-keyvault`: Azure Key Vault Provider для функции Always Encrypted Azure Key Vault (необязательно)
+- `adal4j`: Библиотека azure ActiveDirectory для Java для аутентификации Azure Active Directory и Azure Key Vault (необязательно)
+
+## <a name="test-time"></a>Время выполнения теста
+
+Определенных проектов, требующих либо из этих двух функций необходимо явно объявить соответствующие зависимости в их в файл pom:
+
+**_Например:_**  при использовании _функция проверки подлинности Azure Active Directory_, то необходимо повторно объявить _adal4j_ зависимость в файл pom для проекта. См. следующий фрагмент кода:
+
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.4.0.jre8</version>
+    <version>7.0.0.jre10</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.4.0</version>
+    <version>1.6.0</version>
 </dependency>
 ```
 
-***Например:*** при использовании *функция хранилища ключей Azure* вам нужно повторно объявить *azure keyvault* зависимостей и *adal4j* зависимостей в вашей pom-файла проекта. См. в следующем фрагменте кода: 
+**_Например:_**  при использовании _функция Azure Key Vault_, то необходимо повторно объявить _хранилище ключей azure_ зависимостей и _adal4j_ зависимость в файл pom для проекта. См. следующий фрагмент кода:
+
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.4.0.jre8</version>
+    <version>7.0.0.jre10</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.4.0</version>
+    <version>1.6.0</version>
 </dependency>
 
 <dependency>
@@ -70,29 +75,35 @@ ms.locfileid: "32832589"
     <version>1.0.0</version>
 </dependency>
 ```
- 
- ## <a name="dependency-requirements-for-the-jdbc-driver"></a>Требования к зависимостям для драйвера JDBC
 
- ### <a name="azure-keyvault-feature"></a>Функция Keyvault Azure:
-- Драйвер JDBC версии 6.0.0 
-    - Версии зависимостей: Azure-Keyvault (версия 0.9.7), Adal4j (версия 1.3.0) и их зависимостей ( [образец приложения](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
-- Драйвер JDBC версии 6.2.2 и выше (включая последнюю 6.4.0)
-    - Версии зависимостей: Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.4.0) и их зависимостей ([образец приложения](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+## <a name="dependency-requirements-for-the-jdbc-driver"></a>Требования к зависимостям для JDBC Driver
+
+### <a name="working-with-azure-key-vault-provider"></a>Работа с поставщиком хранилища ключей Azure:
+
+- Драйвер JDBC version 7.0.0 - версиями зависимостей: хранилище ключей Azure (версии 1.0.0), Adal4j (версии 1.6.0) и их зависимостей ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-7-0-0.md))
+- Драйвер JDBC версии 6.4.0 - версиями зависимостей: хранилище ключей Azure (версии 1.0.0), Adal4j (версии 1.4.0) и их зависимостей ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- Драйвер JDBC версии 6.2.2 - версиями зависимостей: хранилище ключей Azure (версии 1.0.0), Adal4j (версии 1.4.0) и их зависимостей ([пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- Драйвер JDBC версии 6.0.0 - версиями зависимостей: хранилище ключей Azure (версии 0.9.7), Adal4j (версия 1.3.0) и их зависимостей ( [пример приложения](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
->   Начиная с v6.2.2 зависимостей azure keyvault-java обновляется до версии 1.0.0. Тем не менее новая версия несовместима с предыдущей версии (версия 0.9.7) и поэтому разрывы существующую реализацию в драйвере. Новая реализация в драйвере требует изменения API, которые в свою очередь прервать выполнение программы клиента, которые используют хранилище ключей Azure.
+> С версиями драйвера v6.2.2 и версии 6.4.0 зависимости java для хранилища ключей azure была обновлена до версии 1.0.0. Тем не менее новая версия была несовместима с предыдущей версией (версии 0.9.7) и таким образом нарушает существующую реализацию в драйвере. Новая реализация в драйвере необходимые изменения API, который в свою очередь разбивает клиентских программ, использующих поставщик хранилища ключей Azure.
 
-  
- ### <a name="azure-active-directory-authentication"></a>Проверка подлинности Azure Active Directory:
-- Драйвер JDBC версии 6.0.0 
-    - Версии зависимостей: Adal4j (версия 1.3.0) и его зависимостей
-        - В этой версии драйвера можно подключиться при помощи *ActiveDirectoryIntegrated* режим проверки подлинности только в Windows, операционной системе и использовании sqljdbc_auth.dll и библиотеку аутентификации Active Directory (SQL Server ADALSQL. БИБЛИОТЕКА DLL). 
-- Драйвер JDBC версии 6.4.0
-    - Версии зависимостей: Adal4j (версия 1.4.0) и его зависимостей
-        - В этой версии драйвера приложение не требует использования ADALSQL. БИБЛИОТЕКИ DLL. В зависимости от операционной системы. Для **операционные системы Windows не**, драйвер требует билет Kerberos для работы с проверкой подлинности ActiveDirectoryIntegrated. В разделе [билет Kerberos, задайте в Windows, Linux и Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) для получения дополнительных сведений. Для **операционных систем Windows**, драйвера по умолчанию проверяет sqljdbc_auth.dll загружается и не требует установки или adal4j зависимостей билета Kerberos. Однако если sqljdbc_auth.dll не загружен, драйвер ведет себя так же, как операционных систем, отличных от Windows и требует установки, как описано в следующем примере: пример приложения с помощью этой функции можно найти [здесь](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md) .
+> Эта проблема была разрешена с последней v7.0.0 версии драйвера, удален конструктор, с помощью механизма проверки подлинности обратного вызова при добавлении обратно поставщик хранилища ключей Azure для обеспечения обратной совместимости.
 
- ## <a name="see-also"></a>См. также  
- [Репозитории GitHub драйвера JDBC](https://github.com/microsoft/mssql-jdbc)  
- [Справочник по API для драйвера JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+### <a name="working-with-azure-active-directory-authentication"></a>Использование проверки подлинности Azure Active Directory:
+
+- Драйвер JDBC version 7.0.0 - версиями зависимостей: Ada4j (версии 1.6.0) и его зависимостей
+- Драйвер JDBC версии 6.4.0 - версиями зависимостей: Adal4j (версии 1.4.0) и его зависимостей
+- Драйвер JDBC версии 6.2.2 - версиями зависимостей: Adal4j (версии 1.4.0) и его зависимостей
+- Драйвер JDBC версии 6.0.0 - версиями зависимостей: Adal4j (версия 1.3.0), и его зависимости — в этой версии драйвера, можно подключиться с помощью _ActiveDirectoryIntegrated_ режим проверки подлинности только в операционной системе Windows и использование sqljdbc_auth.dll и библиотеку аутентификации Active Directory для SQL Server (ADALSQL. БИБЛИОТЕКА DLL).
+
+Драйвер версии 6.4.0 и более поздних версий приложения не обязательно с помощью ADALSQL. Библиотека DLL в операционных системах Windows. Для **операционные системы Windows не**, драйвер требует билет Kerberos для работы с проверкой подлинности ActiveDirectoryIntegrated. Дополнительные сведения о том, как подключиться к Active Directory с помощью Kerberos см. в разделе [билет Kerberos, установить на Windows, Linux и Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
+
+Для **операционных систем Windows**, драйвер выполняет поиск sqljdbc_auth.dll по умолчанию и не требует установки билет Kerberos или зависимости библиотек Azure. Тем не менее если sqljdbc_auth.dll недоступна, драйвер ищет билет Kerberos для проверки подлинности в Active Directory, как в других операционных системах.
+
+Пример приложения с помощью этой функции можно найти [здесь](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md).
+
+## <a name="see-also"></a>См. также:
+
+[Репозиторий GitHub для драйвера JDBC](https://github.com/microsoft/mssql-jdbc)  
+ [Справка по API драйвера JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

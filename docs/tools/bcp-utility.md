@@ -33,13 +33,13 @@ caps.latest.revision: 222
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac3587d85f772f2e1fd14d17e792be2fb0cdfe86
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e0bf785a4e7738b569a72cc4e30c7e94cbe233ac
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310241"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456058"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "39310241"
 
  > Подробные сведения об использовании программы bcp с хранилищем данных SQL Azure см. в разделе [загрузка данных с помощью bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
-  Служебная программа **b**ulk **c**opy **p**rogram (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в пользовательском формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
+  Служебная программа "**b**ulk **c**opy **p**rogram" (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
   
  ![Topic link icon](../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел")Сведения о синтаксических обозначениях в программе **bcp** см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   

@@ -1,7 +1,7 @@
 ---
-title: Образцы приложений драйвера JDBC | Документы Microsoft
+title: Пример приложений драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,34 +14,38 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a93b47d03f4cbd5f2a8dbdffe3d0e14c59b19cc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bea9da66105735a69b8d4d0eb53abeeacd233584
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851619"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454508"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Образец приложений драйвера JDBC
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Образцы приложений демонстрируют различные функции драйвера JDBC. Кроме того, они показывают хороший стиль программирования, которые необходимо выполнить при использовании драйвера JDBC с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.  
+Примеры приложений [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] демонстрируют различные функции драйвера JDBC. Кроме того, они демонстрируют хороший стиль программирования, которого можно придерживаться при использовании драйвера JDBC с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
- Все образцы приложений содержатся в файлах кода *.java. Их можно откомпилировать и запустить на локальном компьютере. Они расположены в различных вложенных папках в следующих расположениях:  
+Все образцы приложений содержатся в файлах кода *.java. Их можно откомпилировать и запустить на локальном компьютере. Они расположены в различных вложенных папках в следующих расположениях:  
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples  
+```
+
+В подразделах данного раздела описан порядок настройки и выполнения образцов приложений, приводится обсуждение результатов работы образцов приложений.  
   
- \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \samples  
+## <a name="in-this-section"></a>в этом разделе  
   
- В подразделах данного раздела описан порядок настройки и выполнения образцов приложений, приводится обсуждение результатов работы образцов приложений.  
+| Раздел                                                                                                        | Описание                                                                                                                                                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Подключение к данным и их извлечение](../../connect/jdbc/connecting-and-retrieving-data.md)                       | Эти примеры приложений показывают, как подключиться к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Они также демонстрируют различные способы получения данных из базы [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. |
+| [Работа с типами данных (JDBC)](../../connect/jdbc/working-with-data-types-jdbc.md)                 | Эти примеры приложений показывают, как использовать методы драйвера JDPC для работы с различными типами данных в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].                                                                                           |
+| [Работа с результирующими наборами](../../connect/jdbc/working-with-result-sets.md)                                   | Эти примеры приложений показывают, как использовать результирующие наборы для обработки данных, содержащихся в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].                                                                                                         |
+| [Работа с большими объемами данных](../../connect/jdbc/working-with-large-data.md)                                     | Эти примеры приложений показывают, как использовать адаптивную буферизацию для извлечения данных большого размера из базы [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и при этом избежать излишней нагрузки, связанной с использованием серверных курсоров.                                                      |
+| [Обнаружение и классификация данных SQL](../../connect/jdbc/data-discovery-classification-sample.md) | В этом образце приложения показано, как для получения данных обнаружения и классификации информация содержится в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных из объекта ResultSet, с помощью драйвера JDBC.                                      |
   
-## <a name="in-this-section"></a>В этом разделе  
-  
-|Раздел|Описание|  
-|-----------|-----------------|  
-|[Подключение к данным и их извлечение](../../connect/jdbc/connecting-and-retrieving-data.md)|Эти образцы приложений показывают, как подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. Они также показывают различные способы, с которого требуется извлечь данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
-|[Работа с типами данных &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)|Эти образцы приложений показывают, как использовать методы типов данных драйвера JDBC для работы с данными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
-|[Работа с результирующими наборами](../../connect/jdbc/working-with-result-sets.md)|Эти образцы приложений показывают, как использовать результирующие наборы для обработки данных, содержащихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
-|[Работа с большими объемами данных](../../connect/jdbc/working-with-large-data.md)|Эти образцы приложений показывают, как использовать адаптивную буферизацию для получения данных большого объема из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных без использования серверных курсоров.|  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
+## <a name="see-also"></a>См. также:
+
+[Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

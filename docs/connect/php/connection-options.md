@@ -1,7 +1,7 @@
 ---
 title: Параметры соединения | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7408af86aee324d63998ab8d0bce1f5dc0e616
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174941"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367646"
 ---
 # <a name="connection-options"></a>Параметры соединения
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "39174941"
 |TraceFile|String|Указывает путь для файла, используемый для трассировки данных.|Значение не задано.|  
 |TraceOn|1 или **true** для включения трассировки.<br /><br />0 или **false** для отключения трассировки.|Указывает, включена (1 или **true**) или отключена (0 или **false**) трассировка ODBC для устанавливаемого соединения.|**false** (0)|  
 |TransactionIsolation|Драйвер SQLSRV использует следующие значения:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />Драйвер PDO_SQLSRV использует следующие значения:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Указывает уровень изоляции транзакции.<br /><br />Дополнительные сведения об изоляции транзакций см. в статье [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) в документации по SQL Server.|SQLSRV_TXN_READ_COMMITTED<br /><br />или диспетчер конфигурации служб<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|transparentNetworkIPResolution|**Enabled** (Включено) или **Disabled** (Отключено)|Влияет на последовательность соединения, устраняется первый IP-адрес имени узла не отвечает, и существует несколько IP-адресов, связанный с имени узла.<br /><br />Он взаимодействует с MultiSubnetFailover для предоставления последовательностей другое подключение. Дополнительные сведения см. в разделе [с помощью прозрачного разрешение IP-адресов сети](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Активировано|
+|transparentNetworkIPResolution|**Enabled** (Включено) или **Disabled** (Отключено)|Влияет на последовательность соединения, устраняется первый IP-адрес имени узла не отвечает, и существует несколько IP-адресов, связанный с имени узла.<br /><br />Он взаимодействует с MultiSubnetFailover для предоставления последовательностей другое подключение. Дополнительные сведения см. в разделе [разрешение IP-адресов прозрачной сети](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) или [с помощью прозрачного разрешение IP-адресов сети](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Активировано|
 |TrustServerCertificate|1 или **true** , чтобы доверять сертификату.<br /><br />0 или **false** , чтобы не доверять сертификату.|Указывает, должен ли клиент доверять самозаверяющему сертификату сервера (1 или **true**) или отклонить его (0 или **false**).|**false** (0)|  
 |UID<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|String|Указывает идентификатор пользователя, применяемый при подключении с использованием проверки подлинности SQL Server <sup>4</sup>.|Значение не задано.|  
 |WSID|String|Задает имя компьютера для выполнения трассировки.|Значение не задано.|  
@@ -69,7 +69,7 @@ ms.locfileid: "39174941"
 
 4. Экземпляр *UID* и *PWD* должны быть заданы при соединении с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
 
-Многие поддерживаемые ключи являются атрибутами строк подключения ODBC. Дополнительные сведения о строках подключения ODBC см. в статье [Использование ключевых слов строки подключения с SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Многие поддерживаемые ключи являются атрибутами строк подключения ODBC. Дополнительные сведения о строках подключения ODBC см. в статье [Использование ключевых слов строки подключения с SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
 ## <a name="see-also"></a>См. также:  
 [Подключение к серверу](../../connect/php/connecting-to-the-server.md)  

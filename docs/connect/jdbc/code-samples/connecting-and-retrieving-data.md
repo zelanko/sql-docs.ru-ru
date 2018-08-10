@@ -1,7 +1,7 @@
 ---
-title: Соединение и извлечение данных | Документы Microsoft
+title: Соединение и извлечение данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,34 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86b7dce984408c7d49e302b9b450e07a32fdacc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 051593c5d3a37217a5ab4380fd947cb585532e3d
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828109"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456638"
 ---
 # <a name="connecting-and-retrieving-data"></a>Соединение и извлечение данных
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  При работе с [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], существует два основных способа подключения к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных. Один — задать свойства подключения в URL-АДРЕСЕ соединения и вызова метода getConnection для возвращения класса DriverManager [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта.  
+При работе с драйвером [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] есть два основных способа установить подключение к базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Во-первых, можно задать свойства подключения в URL-адресе подключения, а затем вызвать метод getConnection класса DriverManager для возвращения объекта [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 > [!NOTE]  
->  Список свойств соединения, поддерживаемых драйвером JDBC см. в разделе [задание свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md).  
+> Список свойств соединения, поддерживаемых драйвером JDBC, см. в разделе [заданию свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md).  
   
- Второй метод включает в себя задание свойств соединения с помощью методов задания [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) класса и затем вызвать [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) метод для возврата SQLServerConnection объект.  
+По второму методу свойства подключения определяются с помощью методов задания класса [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) и последующего вызова метода [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md), возвращающего объект SQLServerConnection.  
   
- Подразделы этого раздела описываются различные способы, в которой вы можете подключиться к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] базы данных, а также демонстрируются различные методики извлечения данных.  
+В разделах этой статьи описаны различные способы подключения к базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и показаны приемы для извлечения данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Пример URL-адреса подключения](../../../connect/jdbc/connection-url-sample.md)|Описывает, как использовать URL-адрес подключения для подключения к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и затем использовать инструкцию SQL для получения данных.|  
-|[Пример источника данных](../../../connect/jdbc/data-source-sample.md)|Описывается порядок использования источника данных для соединения с SQL Server и последующего использования хранимой процедуры для извлечения данных.|  
+|[Пример URL-адреса подключения](../../../connect/jdbc/code-samples/connection-url-sample.md)|Описывает подключение к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] по URL-адресу и последующее использование инструкции SQL для извлечения данных.|  
+|[Пример источника данных](../../../connect/jdbc/code-samples/data-source-sample.md)|Описывается порядок использования источника данных для соединения с SQL Server и последующего использования хранимой процедуры для извлечения данных.|  
   
-## <a name="see-also"></a>См. также  
- [Пример приложений драйвера JDBC](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
+## <a name="see-also"></a>См. также:
+
+[Пример приложений драйвера JDBC](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
   

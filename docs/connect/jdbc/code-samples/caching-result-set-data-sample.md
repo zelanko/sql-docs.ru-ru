@@ -1,7 +1,7 @@
 ---
 title: Образец данных кэширования результирующего набора | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,54 +14,61 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 487033ade14c5f320b45baba8857c171b94032a4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: 33dcb1a7e9b00968b4b02aa2d32b2ab0cc769d10
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278975"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455217"
 ---
 # <a name="caching-result-set-data-sample"></a>Образец кэширования данных результирующего набора
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Этот пример приложения, использующего драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], демонстрирует способы извлечения больших объемов данных из базы данных и управления количеством строк данных, кэшируемых на клиенте с помощью метода [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
+Этот пример приложения, использующего драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], демонстрирует способы извлечения больших объемов данных из базы данных и управления количеством строк данных, кэшируемых на клиенте с помощью метода [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 > [!NOTE]  
->  Ограничение количества строк, кэшируемых на клиенте, отличается от ограничения общего количества строк, которое может содержаться в результирующем наборе. Для управления общим количеством строк, которое может содержаться в результирующем наборе, следует использовать метод [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), наследуемый объектами [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
+> Ограничение количества строк, кэшируемых на клиенте, отличается от ограничения общего количества строк, которое может содержаться в результирующем наборе. Для управления общим количеством строк, которое может содержаться в результирующем наборе, следует использовать метод [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), наследуемый объектами [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- Чтобы ограничить количество строк, кэшируемых на клиенте, необходимо сначала использовать курсор на стороне сервера при создании одного из объектов Statement, специально указав тип курсора, который необходимо использовать при создании объекта Statement. Например, драйвер JDBC обеспечивает тип курсора TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, который является быстрым однопроходным курсором только для чтения на стороне сервера для использования при работе с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Чтобы ограничить количество строк, кэшируемых на клиенте, необходимо сначала использовать курсор на стороне сервера при создании одного из объектов Statement, специально указав тип курсора, который необходимо использовать при создании объекта Statement. Например, драйвер JDBC обеспечивает тип курсора TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, который является быстрым однопроходным курсором только для чтения на стороне сервера для использования при работе с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 > [!NOTE]  
->  Альтернативой использованию определенного типа курсора SQL Server является использование свойства строки соединения selectMethod при задании для него значения "cursor". Дополнительные сведения о типах курсоров, поддерживаемых драйвером JDBC, см. в разделе [Общие сведения о типах курсоров](../../../connect/jdbc/understanding-cursor-types.md).  
+> Альтернативой использованию определенного типа курсора SQL Server является использование свойства строки соединения selectMethod при задании для него значения "cursor". Дополнительные сведения о типах курсоров, поддерживаемых драйвером JDBC, см. в разделе [Общие сведения о типах курсоров](../../../connect/jdbc/understanding-cursor-types.md).  
   
- После выполнения запроса в объекте Statement и возврате данных клиенту в виде результирующего набора можно вызвать метод setFetchSize для управления объемом данных, извлекаемых единовременно из базы данных. Например, если имеется таблица, в которой содержится 100 строк данных, и значение размера выборки равно 10, то на клиенте в определенный момент времени будет кэшироваться только 10 строк. Хотя при этом будет уменьшена скорость обработки данных, преимуществом является использование меньшего объема памяти на клиенте, что особенно ценно при необходимости обработки больших объемов данных.  
+После выполнения запроса в объекте Statement и возврате данных клиенту в виде результирующего набора можно вызвать метод setFetchSize для управления объемом данных, извлекаемых единовременно из базы данных. Например, если имеется таблица, в которой содержится 100 строк данных, и значение размера выборки равно 10, то на клиенте в определенный момент времени будет кэшироваться только 10 строк. Хотя при этом будет уменьшена скорость обработки данных, преимуществом является использование меньшего объема памяти на клиенте, что особенно ценно при необходимости обработки больших объемов данных.  
   
- Файл кода для этого образца имеет имя CacheRS.java и находится в следующей папке:  
-  
- \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \samples\resultsets  
-  
+Файл кода для этого примера с именем CacheResultSet.java находится в следующей папке:  
+
+```bash  
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets  
+```
+
 ## <a name="requirements"></a>Требования  
- Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Также потребуется доступ к образцу базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+
+Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Также потребуется доступ к примеру базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  Драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Дополнительные сведения о какие файлы JAR следует выбрать, см. в разделе [требования к системе для драйвера JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
+> Драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Дополнительные сведения о какие файлы JAR следует выбрать, см. в разделе [требования к системе для драйвера JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+
 ## <a name="example"></a>Пример  
- В приведенном ниже примере образец кода будет использоваться для соединения с образцом базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Затем используется инструкция SQL с объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), указывается тип курсора на стороне сервера и выполняется инструкция SQL, а возвращенные ею данные помещаются в объект SQLServerResultSet.  
+
+В приведенном ниже примере образец кода будет использоваться для соединения с образцом базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Затем используется инструкция SQL с объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), указывается тип курсора на стороне сервера и выполняется инструкция SQL, а возвращенные ею данные помещаются в объект SQLServerResultSet.  
   
- Затем образец кода вызывает специальный метод timerTest, передавая в качестве аргументов размер выборки для использования и результирующий набор. Затем метод timerTest задает размер выборки результирующего набора с помощью метода setFetchSize, задает время начала проверки и затем просматривает результирующий набор в цикле `While`. После завершения цикла `While` код задает время завершения проверки и отображает результат проверки, включая размер выборки, количество обработанных строк и время выполнения проверки.  
-  
+Затем образец кода вызывает специальный метод timerTest, передавая в качестве аргументов размер выборки для использования и результирующий набор. Затем метод timerTest задает размер выборки результирующего набора с помощью метода setFetchSize, задает время начала проверки и затем просматривает результирующий набор в цикле `While`. После завершения цикла `While` код задает время завершения проверки и отображает результат проверки, включая размер выборки, количество обработанных строк и время выполнения проверки.  
+
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
 
-public class CacheRS {
+public class CacheResultSet {
 
+    @SuppressWarnings("serial")
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
@@ -72,30 +79,20 @@ public class CacheRS {
 
             String SQL = "SELECT * FROM Sales.SalesOrderDetail;";
 
-            // Perform a fetch for every row in the result set.
-            ResultSet rs = stmt.executeQuery(SQL);
-            timerTest(1, rs);
-            rs.close();
-
-            // Perform a fetch for every tenth row in the result set.
-            rs = stmt.executeQuery(SQL);
-            timerTest(10, rs);
-            rs.close();
-
-            // Perform a fetch for every 100th row in the result set.
-            rs = stmt.executeQuery(SQL);
-            timerTest(100, rs);
-            rs.close();
-
-            // Perform a fetch for every 1000th row in the result set.
-            rs = stmt.executeQuery(SQL);
-            timerTest(1000, rs);
-            rs.close();
-
-            // Perform a fetch for every 128th row (the default) in the result set.
-            rs = stmt.executeQuery(SQL);
-            timerTest(0, rs);
-            rs.close();
+            for (int n : new ArrayList<Integer>() {
+                {
+                    add(1);
+                    add(10);
+                    add(100);
+                    add(1000);
+                    add(0);
+                }
+            }) {
+                // Perform a fetch for every nth row in the result set.
+                try (ResultSet rs = stmt.executeQuery(SQL)) {
+                    timerTest(n, rs);
+                }
+            }
         }
         // Handle any errors that may have occurred.
         catch (SQLException e) {
@@ -129,9 +126,8 @@ public class CacheRS {
         System.out.println();
     }
 }
-```  
-  
+```
+
 ## <a name="see-also"></a>См. также:  
- [Работа с результирующими наборами](../../../connect/jdbc/working-with-result-sets.md)  
-  
-  
+
+[Работа с результирующими наборами](../../../connect/jdbc/code-samples/working-with-result-sets.md)  
