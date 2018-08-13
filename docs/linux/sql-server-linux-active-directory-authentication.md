@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7bc0a49035eeddfa014c39b9011fef85d98ce4cf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084356"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400707"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Учебник: Использование Active Directory аутентификации с SQL Server в Linux
 
@@ -206,6 +206,9 @@ ms.locfileid: "39084356"
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
+   > [!NOTE]
+   > Имена участников-служб может занять несколько минут для распространения через домен, особенно в том случае, если домен велико. Если появляется ошибка «kvno: сервер не найден в базе данных Kerberos при получении учетных данных для MSSQLSvc /\*\*\<полное доменное имя компьютера-узла\>\*\*:\* \* \<TCP-порт\>\*\*\@CONTOSO.COM», подождите несколько минут и повторите попытку.
+
 2. Создание файла keytab с **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** для пользователя AD, созданный на предыдущем шаге. При запросе введите пароль для этой учетной записи AD.
 
    ```bash
@@ -223,18 +226,54 @@ ms.locfileid: "39084356"
    > [!NOTE]
    > Средство ktutil не проверки пароля, поэтому убедитесь, что введен правильно.
 
-3. Все, кто имеет доступ к этому `keytab` файл может олицетворять [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в домене, поэтому убедитесь, что ограничение доступа к файлу таких только `mssql` учетная запись имеет доступ на чтение:
+3. Добавьте учетную запись компьютера для вашего keytab с  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. (Также называемый UPN) учетной записи компьютера присутствует в `/etc/krb5.keytab` в форме "\<hostname\>$\@\<realm.com\>" (например sqlhost$\@CONTOSO.COM). Мы будет копировать эти записи из `/etc/krb5.keytab` для `mssql.keytab`.
+
+   ```bash
+   sudo ktutil
+
+   # Read all entries from /etc/krb5.keytab
+   ktutil: rkt /etc/krb5.keytab
+
+   # List all entries
+   ktutil: list
+
+   # Delete all entries by their slot number which are not the UPN one at a
+   # time.
+   # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
+   # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
+   # 1's entry is deleted)
+   ktutil: delent <slot num>
+   ktutil: delent <slot num>
+   ...
+
+   # List all entries to ensure only UPN entries are left
+   ktutil: list
+
+   # When only UPN entries are left, append these values to mssql.keytab
+   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+
+   quit
+   ```
+
+4. Все, кто имеет доступ к этому `keytab` файл может олицетворять [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в домене, поэтому убедитесь, что ограничение доступа к файлу таких только `mssql` учетная запись имеет доступ на чтение:
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
    ```
 
-4. Настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использовать этот `keytab` файл для проверки подлинности Kerberos:
+5. Настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использовать этот `keytab` файл для проверки подлинности Kerberos:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
    sudo systemctl restart mssql-server
+   ```
+
+6. Необязательно: Отключить UDP-подключений к контроллеру домена для повышения производительности. Во многих случаях подключения по протоколу UDP всегда завершится ошибкой, при подключении к контроллеру домена, можно задать параметры конфигурации `/etc/krb5.conf` пропустить вызовы UDP. Изменить `/etc/krb5.conf` и задать следующие параметры:
+
+   ```/etc/krb5.conf
+   [libdefaults]
+   udp_preference_limit=0
    ```
 
 ## <a id="createsqllogins"></a> Создание имен входа на основе AD в Transact-SQL
@@ -280,7 +319,7 @@ ms.locfileid: "39084356"
   * JDBC: [с помощью Kerberos, встроенная проверка подлинности для подключения к серверу SQL](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [использование встроенной проверки подлинности](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [синтаксис строки подключения](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
-  
+ 
 ## <a name="next-steps"></a>Следующие шаги
 
 В этом учебнике мы рассмотрели способы настройки проверки подлинности Active Directory с SQL Server в Linux. Вы узнали, как для:

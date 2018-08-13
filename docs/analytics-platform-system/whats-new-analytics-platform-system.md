@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b1eee6b3ca692c7935b061696b37842cda0f8326
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137893"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400647"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Новые возможности в Analytics Platform System, хранилища данных MPP горизонтального масштабирования
 См. в разделе, новые возможности в последние обновления устройства для Microsoft® Analytics Platform System (APS). APS является горизонтальное масштабирование локальное устройство, на котором размещена MPP SQL Server Parallel Data Warehouse. 
@@ -25,7 +25,7 @@ ms.locfileid: "37137893"
 APS 2016 является необходимым условием для обновления до AU7. Ниже приведены возможности APS AU7.
 
 ### <a name="auto-create-and-auto-update-statistics"></a>Автоматическое создание и автоматическое обновление статистики
-APS AU7 создает и обновляет статистику автоматически, по умолчанию. Чтобы обновить параметры статистики, администраторы могут использовать новые функции коммутатора пункта меню в [Configuration Manager](appliance-configuration.md#CMTasks). [Переключатель](appliance-feature-switch.md) управляет auto-create, автоматическое обновление и поведение асинхронного обновления статистики. Вы также можете обновить параметры статистики с [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) инструкции.
+APS AU7 создает и обновляет статистику автоматически, по умолчанию. Чтобы обновить параметры статистики, администраторы могут использовать новые функции коммутатора пункта меню в [Configuration Manager](appliance-configuration.md#CMTasks). [Переключатель](appliance-feature-switch.md) управляет auto-create, автоматическое обновление и поведение асинхронного обновления статистики. Вы также можете обновить параметры статистики с [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) инструкции.
 
 ### <a name="t-sql"></a>T-SQL
 Выберите @var теперь поддерживается. Дополнительные сведения см. в разделе [выберите локальная переменная] (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 
