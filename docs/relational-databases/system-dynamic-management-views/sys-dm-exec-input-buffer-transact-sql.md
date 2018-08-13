@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_input_buffer (Transact-SQL) | Документы Microsoft
+title: sys.dm_exec_input_buffer (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da708fb9606b5e5d52165680af8dff74a9201115
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 583a49e34b922e128ea7b55cf0c738789ca60a06
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464070"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565058"
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
   
 ## <a name="arguments"></a>Аргументы  
 *session_id*  
-Идентификатор сеанса, выполняет поиск пакета. *session_id* — **smallint**. *session_id* можно получить из следующих объектов DMO:  
+Идентификатор сеанса выполнения пакета выполняется поиск. *session_id* — **smallint**. *session_id* можно получить из следующих объектов DMO:  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -53,20 +53,20 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)   
   
 *request_id*  
-Идентификатор_запроса из [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *идентификатор_запроса* — **int**.  
+Идентификатор request_id из [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *Идентификатор request_id* — **int**.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**event_type**|**nvarchar(256)**|Тип события из входного буфера для данным идентификатором spid.|  
-|**parameters**|**smallint**|Для инструкции каких-либо параметров.|  
-|**event_info**|**nvarchar(max)**|Текст инструкции из входного буфера для данным идентификатором spid.|  
+|**event_type**|**nvarchar(256)**|Тип события во входном буфере для заданной spid.|  
+|**parameters**|**smallint**|Любые параметры, предоставленные для инструкции.|  
+|**event_info**|**nvarchar(max)**|Текст инструкции во входном буфере для заданной spid.|  
   
 ## <a name="permissions"></a>Разрешения  
- На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если пользователь имеет разрешение VIEW SERVER STATE, пользователь увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь увидит только текущий сеанс.  
+ На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если пользователь имеет разрешение VIEW SERVER STATE, пользователь увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь будет видеть только текущий сеанс.  
   
- На [!INCLUDE[ssSDS](../../includes/sssds-md.md)], если пользователь является владельцем базы данных, пользователь увидит все выполняющиеся сеансы на [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; в противном случае пользователь увидит только текущий сеанс.  
+ На [!INCLUDE[ssSDS](../../includes/sssds-md.md)], если пользователь является владельцем базы данных, пользователь увидит все выполняющиеся сеансы на [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; в противном случае пользователь будет видеть только текущий сеанс.  
   
 ## <a name="remarks"></a>Примечания  
  Данная функция динамического управления может использоваться в сочетании с sys.dm_exec_sessions или sys.dm_exec_requests во время работы **CROSS APPLY**.  
@@ -74,15 +74,15 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-simple-example"></a>A. Простой пример  
- В следующем примере показано, передавая идентификатор сеанса (SPID) и идентификатор запроса в функцию.  
+ Ниже приведен пример, передавая идентификатор сеанса (SPID) и идентификатор запроса функции.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
   
-### <a name="b-using-cross-apply-to-additional-information"></a>Б. С помощью кросс-примените Дополнительные сведения  
- В следующем примере перечисляются входного буфера для сеанса с идентификатором сеанса больше 50.  
+### <a name="b-using-cross-apply-to-additional-information"></a>Б. С помощью кросс-применяются на дополнительные сведения  
+ В следующем примере перечисляются входного буфера для сеансов с идентификатором сеанса, больше 50.  
   
 ```sql  
 SELECT es.session_id, ib.event_info   

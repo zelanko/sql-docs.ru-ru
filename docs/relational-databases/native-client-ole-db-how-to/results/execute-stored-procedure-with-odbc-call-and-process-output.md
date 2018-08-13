@@ -1,5 +1,5 @@
 ---
-title: Выполнение хранимой процедуры с использованием ODBC CALL и обработка выходных данных | Документация Майкрософт
+title: Выполнение хранимой процедуры с использованием ODBC CALL и обработка выходных данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,22 +17,22 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e3e04f2d636887b943b99cab234af3f00b7b4cbf
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 766dfbd14eb13392baa06265100941c38d031cb6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427623"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561164"
 ---
-# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Выполнение хранимой процедуры с использованием ODBC CALL и обработка выходных данных
+# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Выполнение хранимой процедуры с использованием ODBC CALL и обработка выходных данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Хранимые процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются с сервера в последнем пакете и потому недоступны приложению до полного освобождения набора строк. Если команда возвращает несколько результатов, выходные данные параметр доступен, если **IMultipleResults::GetResult** вернул значение DB_S_NORESULT или **IMultipleResults** полном освобождении интерфейса что произойдет раньше.  
+  Хранимые процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются с сервера в последнем пакете и потому недоступны приложению до полного освобождения набора строк. Если команда возвращает множество результатов, то данные параметров вывода будут доступны, когда метод **IMultipleResults::GetResult** вернет значение DB_S_NORESULT или при полном освобождении интерфейса **IMultipleResults** (в зависимости от того, что произойдет раньше).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с использованием [API шифрования Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Обработка кодов возврата и выходных параметров  
   
@@ -44,7 +44,7 @@ ms.locfileid: "37427623"
   
 4.  Заполните структуру DBPARAMS.  
   
-5.  Вызовите **Execute** команду (в данном случае вызов хранимой процедуры).  
+5.  Выполните команду **Execute** (в данном случае это вызов хранимой процедуры).  
   
 6.  Обработайте набор строк и освободите его с помощью **IRowset::Release** метод.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "37427623"
   
  Выполните первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы создать хранимую процедуру, используемую приложением.  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы подключиться к именованному экземпляру, измените строку подключения из L"(local)» для L"(local)\\\name», где имя — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
  Выполните третий листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы удалить хранимую процедуру, используемую приложением.  
   
@@ -362,6 +362,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Результаты инструкции по обработке &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Инструкции по обработке результатов &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

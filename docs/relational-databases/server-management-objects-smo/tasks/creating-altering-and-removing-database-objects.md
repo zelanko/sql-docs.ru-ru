@@ -18,15 +18,15 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 37b8491bc441db0a2457ea4d87e6bb372326cafb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 0539009019f23555d77a6bf0656ad285f7bb0bf8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040202"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563928"
 ---
-# <a name="creating-altering-and-removing-database-objects"></a>Создание, изменение и удаление объектов базы данных
+# <a name="creating-altering-and-removing-database-objects"></a>Создание, изменение и удаление объектов баз данных
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Создание объектов SMO включает следующие этапы:  

@@ -18,31 +18,31 @@ ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3367a8bbf0e25bb6a2fb6a7d2c5cd4089ecbef31
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1db5e1e6181c9c7ece64be68ff40f5c9f31113f5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421543"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565888"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Добавление столбца к таблице SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **ITableDefinition::AddColumn** функции. Это позволяет пользователю добавить столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **ITableDefinition::AddColumn** функции. Это позволяет пользователю добавить столбец в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  При добавлении столбца к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребителем поставщика OLE DB для собственного клиента ограничен следующим образом:  
   
 -   Если значение DBPROP_COL_AUTOINCREMENT равно VARIANT_TRUE, то значение DBPROP_COL_NULLABLE должно быть равно VARIANT_FALSE.  
   
--   Если столбец определен с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** тип данных, оба свойства DBPROP_COL_NULLABLE должно быть равно VARIANT_FALSE.  
+-   Если столбец принадлежит к типу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, значение DBPROP_COL_NULLABLE должно быть равно VARIANT_FALSE.  
   
 -   Для столбца любого другого типа DBPROP_COL_NULLABLE должно быть равно VARIANT_TRUE.  
   
- Пользователь задает имя таблицы в виде символьной строки в Юникоде *pwszName* членом *uName* объединения в *pTableID* параметра. *EKind* членом *pTableID* должен быть равен DBKIND_NAME.  
+ Пользователь задает имя таблицы в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* в параметре *pTableID*. Элемент *eKind* параметра *pTableID* должен быть равен DBKIND_NAME.  
   
- Имя нового столбца указан как строку символов Юникода в *pwszName* членом *uName* объединения в *dbcid* член параметра DBCOLUMNDESC *pColumnDesc*. *EKind* член должен быть равен DBKIND_NAME.  
+ Имя столбца задается в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* в элементе *dbcid* параметра *pColumnDesc* типа DBCOLUMNDESC. Элемент *eKind* должен быть равен DBKIND_NAME.  
   
 ## <a name="see-also"></a>См. также  
  [Таблицы и индексы](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   

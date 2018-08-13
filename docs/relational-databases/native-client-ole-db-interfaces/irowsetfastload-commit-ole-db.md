@@ -19,13 +19,13 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c20cc56a1976d58d73d8eb022b9ccbaf01855240
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e9dc0f4443b87558972b3f2d4c7f64ddafe33bdd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419303"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560994"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,16 +53,16 @@ HRESULT Commit(
  Произошла ошибка, зависящая от поставщика. Получите сведения об ошибке для конкретного текста ошибки из поставщика.  
   
  E_UNEXPECTED  
- Метод был вызван для набора строк массового копирования, ранее не делает недействительными **IRowsetFastLoad::Commit** метод.  
+ Этот метод был вызван применительно к набору строк массового копирования, который ранее стал недействительным в результате выполнения метода **IRowsetFastLoad::Commit**.  
   
 ## <a name="remarks"></a>Примечания  
- Объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набору строк массового копирования поставщика OLE DB для собственного клиента ведет себя как набор строк в режиме отложенного обновления. Как пользователь вставляет данные строк через набор строк, добавленные строки обрабатываются так же, как ожидающие выполнения вставки на наборе строк, поддерживающем **IRowsetUpdate**.  
+ Объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набору строк массового копирования поставщика OLE DB для собственного клиента ведет себя как набор строк в режиме отложенного обновления. По мере вставки пользователем данных строк с помощью набора строк добавленные строки обрабатываются таким же образом, как и ожидающие выполнения вставки для набора строк, поддерживающего **IRowsetUpdate**.  
   
- Потребитель должен вызвать метод **зафиксировать** метод набору строк массового копирования, чтобы записать добавленные строки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы в так же, как **IRowsetUpdate::Update** метод используется для отправки ожидающих строк в экземпляр SQL Server.  
+ Пользователь должен вызвать метод **Commit** применительно к набору строк массового копирования, чтобы записать добавленные строки в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таким же образом, как и при использовании метода **IRowsetUpdate::Update** для отправки ожидающих строк в экземпляр SQL Server.  
   
- Если потребитель освобождает ссылку на набор данных массового копирования без вызова **зафиксировать** метод, все добавленные строки не были записаны, теряются.  
+ Если пользователь освобождает ссылку на набор данных массового копирования, не вызывая метод **Commit**, то все добавленные строки, которые не были записаны, теряются.  
   
- Потребитель может сгруппировать добавленные строки, вызвав **зафиксировать** метод с *fDone* аргумента значение FALSE. Когда *fDone*имеет значение TRUE, набор строк становится недействительным. Набор строк недопустимый массового копирования поддерживает только **ISupportErrorInfo** интерфейс и **IRowsetFastLoad::Release** метод.  
+ Пользователь может сгруппировать добавленные строки, вызывая метод **Commit** с аргументом *fDone* в значении FALSE. Если аргумент *fDone* установлен в значение TRUE, то набор строк становится недействительным. Недействительным набором строк массового копирования поддерживаются только интерфейс **ISupportErrorInfo** и метод **IRowsetFastLoad::Release**.  
   
 ## <a name="see-also"></a>См. также  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  

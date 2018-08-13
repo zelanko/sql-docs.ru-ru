@@ -19,13 +19,13 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90fdb17506d624e5210288716736ae29721c0feb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 23e7cca6868d61b6a26901b6542732a60776a0e2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431263"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562831"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37431263"
   
 **ISSAbort** интерфейс, который предоставляется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента предоставляет **ISSAbort::Abort** метод, используемый для отмены текущего набора строк, а также все команды в пакетном режиме с командой, первоначально создавшей набор строк, и который еще не завершивших выполнение.  
   
- **ISSAbort** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерфейс поставщика собственного клиента, доступный с помощью **QueryInterface** на **IMultipleResults** объект, возвращаемый  **ICommand::Execute** или **IOpenRowset::OpenRowset**.  
+ **ISSAbort** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерфейс поставщика собственного клиента, доступный с помощью **QueryInterface** на **IMultipleResults** объект, возвращаемый ** ICommand::Execute** или **IOpenRowset::OpenRowset**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +50,7 @@ HRESULT Abort(void);
  После того как метод **ISSAbort::Abort** вернет результат S_OK, связанный с ним интерфейс **IMultipleResults** становится непригодным к использованию и вплоть до освобождения в ответ на любые вызовы методов возвращает результат DB_E_CANCELED (кроме методов, определенных для интерфейса **IUnknown** ). Если из интерфейса **IMultipleResults** до вызова метода **Abort** был получен интерфейс **IRowset**, он также входит в непригодное к использованию состояние и в ответ на любые вызовы методов возвращает результат DB_E_CANCELED (кроме методов, определенных для интерфейсов **IUnknown** и **IRowset::ReleaseRows**), пока не будет освобожден успешным вызовом метода **ISSAbort::Abort**.  
   
 > [!NOTE]  
->  Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], если сервера XACT_ABORT имеет значение ON, **ISSAbort::Abort** завершит и выполнить откат текущего явного или неявного транзакции при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Более ранние версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прекратят текущих транзакций.  
+>  Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], если состояние сервера XACT_ABORT имеет значение ON, вызов метода **ISSAbort::Abort** при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прекращает все транзакции, явные и неявные, и совершает их откат. Более ранние версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прекратят текущих транзакций.  
   
 ## <a name="arguments"></a>Аргументы  
  Нет.  

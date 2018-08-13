@@ -1,5 +1,5 @@
 ---
-title: Выполнение файлов шаблонов с помощью свойства CommandText | Документы Microsoft
+title: Выполнение файлов шаблонов с использованием свойства CommandText | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d96e75c3cd077b6985d76994cef35cb0b9dc7853
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5a6079aa56a74b85eddb9b9fa1135be008015cce
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619501"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563988"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Выполнение файлов шаблонов с использованием свойства CommandText
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath с помощью CommandTextproperty. Вместо указания запроса SQL или XPath, как значение CommandText, можно указать имя файла как значение. В следующем примере Если свойство CommandType задается как SqlXmlCommandType.TemplateFile.  
+  В этом примере показано, как с помощью CommandTextproperty можно указать файлы шаблонов, состоящие из запросов SQL или XPath. Вместо указания запросов SQL или XPath в качестве значение CommandText, можно указать имя файла как значение. В следующем примере свойство CommandType указываются в виде SqlXmlCommandType.TemplateFile.  
   
  Образец приложения выполняет следующий шаблон:  
   

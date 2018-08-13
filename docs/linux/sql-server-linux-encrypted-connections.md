@@ -1,9 +1,9 @@
 ---
 title: Шифрование подключений к SQL Server в Linux | Документация Майкрософт
 description: В этой статье описывается шифрование соединений с SQL Server в Linux.
-author: tmullaney
+author: vin-yu
 ms.date: 01/30/2018
-ms.author: meetb
+ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 574699c5cb3d1215e85af3f176812950dd4219da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085036"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009036"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Шифрование подключений к SQL Server в Linux
 
@@ -32,7 +32,7 @@ ms.locfileid: "39085036"
 - Текущее системное время должен быть после действителен с свойства сертификата и перед допустимо для свойства сертификата.
 - Сертификат должен быть предназначен для проверки подлинности сервера. Для этого требуется свойство расширенного использования ключа сертификата, проверку подлинности сервера (1.3.6.1.5.5.7.3.1).
 - Сертификат должен быть создан с помощью параметра KeySpec AT_KEYEXCHANGE. Как правило свойство использования ключа сертификата (KEY_USAGE) также включает шифрование ключей (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- Свойство субъекта сертификата должно указывать, что общее имя (CN) совпадает с именем узла или полное доменное имя (FQDN) сервера. Примечание: поддерживаются групповые сертификаты. 
+- Свойство субъекта сертификата должно указывать, что общее имя (CN) совпадает с именем узла или полное доменное имя (FQDN) сервера. Примечание: поддерживаются групповые сертификаты.
 
 ## <a name="overview"></a>Обзор
 TLS используется для шифрования подключения из клиентского приложения к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При правильной настройке TLS обеспечивает конфиденциальность и целостность данных для обмена данными между клиентом и сервером.  TLS-подключения может быть клиент или сервер инициировал. 

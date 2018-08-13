@@ -35,16 +35,16 @@ caps.latest.revision: 67
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71f1417b1fd54226be6d2bfe001e3e3f95b6ceff
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7d78c002d25d5804230ce53be05d809489d26b77
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353986"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008876"
 ---
 # <a name="clr-user-defined-types"></a>Определяемые пользователем типы данных CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет создавать объекты базы данных, которые программируются по сборке, созданной в среде CLR платформы .NET Framework. Объекты базы данных, которые способны пользоваться преимуществами многофункциональной модели программирования, предоставляемыми средой CLR, содержат триггеры, хранимые процедуры, функции, агрегатные функции и типы.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] дает возможность создавать объекты базы данных, которые программируются по сборке, созданной в .NET Framework common language runtime (CLR). Объекты базы данных, которые способны пользоваться преимуществами многофункциональной модели программирования, предоставляемыми средой CLR, содержат триггеры, хранимые процедуры, функции, агрегатные функции и типы.  
   
 > [!NOTE]  
 >  По умолчанию возможность выполнять код CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена. Среда CLR можно включить с помощью **sp_configure** системной хранимой процедуры.  

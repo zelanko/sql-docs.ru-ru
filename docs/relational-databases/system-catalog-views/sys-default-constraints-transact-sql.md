@@ -1,5 +1,5 @@
 ---
-title: sys.default_constraints (Transact-SQL) | Документы Microsoft
+title: sys.default_constraints (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9da755e03c4cbdf9390db34e167da20ad3b78a61
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 362006b22a60ab8c7e36ca7f3b8bbe513eb6c31c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239364"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561522"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Содержит по одной строке для каждого объекта, являющегося определением по умолчанию (созданного как часть инструкции CREATE TABLE или ALTER TABLE, вместо инструкции CREATE DEFAULT) с **sys.objects.type** = D.  
+  Содержит по одной строке для каждого объекта, являющегося определением по умолчанию (созданного как часть инструкции CREATE TABLE или ALTER TABLE, а не в инструкции CREATE DEFAULT), с помощью **sys.objects.type** = D.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Столбцы, наследуемые из sys.objects >**||Список столбцов, наследуемых этим представлением см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Столбцы, наследуемые из sys.objects >**||Список столбцов, наследуемых этим представлением, см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**parent_column_id**|**int**|Идентификатор столбца в **parent_object_id** , которому принадлежит это значение по умолчанию.|  
 |**Определение**|**nvarchar(max)**|Выражение SQL, определяющее данное значение по умолчанию.|  
 |**is_system_named**|**bit**|1 = имя сформировано системой.<br /><br /> 0 = имя предоставлено пользователем.|  

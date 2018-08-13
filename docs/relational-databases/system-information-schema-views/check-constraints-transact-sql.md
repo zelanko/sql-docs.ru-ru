@@ -1,5 +1,5 @@
 ---
-title: CHECK_CONSTRAINTS (Transact-SQL) | Документы Microsoft
+title: CHECK_CONSTRAINTS (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6674911d07f087989d08654f548635508663e155
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: bdaff0d468acf89b5ec429ad36244484a4804564
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230807"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564798"
 ---
 # <a name="checkconstraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33230807"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Квалификатор ограничения.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, которой принадлежит ограничение.<br /><br /> **\*\* Важные \* \***  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, которой принадлежит ограничение.<br /><br /> **\*\* Важные \* \* ** не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Имя ограничения.|  
 |**CHECK_CLAUSE**|**nvarchar (** 4000 **)**|Фактический текст инструкции определения [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store (Transact-SQL) | Документы Microsoft
+title: sys.dm_tran_version_store (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7de332c09b586b1c3a7feba4097a940ba9f29a83
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bfb296c8224eb066c8e5f03f94436e05ce6cd4b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467630"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561924"
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sys.event_notifications (Transact-SQL) | Документы Microsoft
+title: sys.event_notifications (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,17 +24,18 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 353b6504b367ddae0a1bb211c6265ca726ffe157
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1b07ca793821b39a549e709f52fa57bf1dd32dcb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562098"
 ---
 # <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает по одной строке для каждого объекта, который является уведомлением о событии с **sys.objects.type** = EN.  
+  Возвращает строку для каждого объекта, являющегося уведомление о событии, с помощью **sys.objects.type** = EN.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_ID**|**int**|Ненулевой идентификатор родительского объекта.<br /><br /> 0 = родительский класс — база данных|  
 |**create_date**|**datetime**|Дата создания.|  
-|**modify_date**|**datetime**|Всегда равен **create_date**.|  
+|**modify_date**|**datetime**|Всегда равна **create_date**.|  
 |**service_name**|**nvarchar(256)**|Имя целевой службы, куда посылается уведомление.|  
 |**broker_instance**|**nvarchar(128)**|Экземпляр посредника, которому отправляют уведомление.|  
 |**principal_id**|**int**|Идентификатор участника базы данных, являющегося хозяином этого уведомления о событии.|  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_current_snapshot (Transact-SQL) | Документы Microsoft
+title: sys.dm_tran_current_snapshot (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,21 +23,21 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f7d32aa395ecb53ae9ccb3fd793fb661af8480b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4fd2319dff2d5cc5e7f4948ba6c1994fe2407222
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467790"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562288"
 ---
 # <a name="sysdmtrancurrentsnapshot-transact-sql"></a>sys.dm_tran_current_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает виртуальную таблицу, которая отображает все активные транзакции в момент запуска текущей транзакции моментального снимка. Если текущая транзакция не является транзакцией моментальных снимков, данная функция не возвращает строк. **sys.dm_tran_current_snapshot** аналогичен **sys.dm_tran_transactions_snapshot**, за исключением того, что **sys.dm_tran_current_snapshot** возвращает только активные транзакции для Текущая транзакция моментального снимка.  
+  Возвращает виртуальную таблицу, которая отображает все активные транзакции в момент запуска текущей транзакции моментального снимка. Если текущая транзакция не является транзакцией моментальных снимков, данная функция не возвращает строк. **sys.dm_tran_current_snapshot** аналогичен **sys.dm_tran_transactions_snapshot**, за исключением того, что **sys.dm_tran_current_snapshot** возвращает только активные транзакции для текущей транзакции моментального снимка.  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_tran_current_snapshot**.  
+>  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_tran_current_snapshot**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,7 +51,7 @@ sys.dm_tran_current_snapshot
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Порядковый номер активной транзакции.|  
-|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения
 

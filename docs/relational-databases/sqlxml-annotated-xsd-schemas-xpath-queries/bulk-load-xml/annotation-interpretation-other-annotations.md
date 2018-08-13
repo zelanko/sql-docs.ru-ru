@@ -26,15 +26,15 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6f3941965ceadbc98f4215d646dda4e87fea752b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 97db77a5dec0380d0e19163bf836379d542c8773
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053978"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564788"
 ---
-# <a name="annotation-interpretation---other-annotations"></a>Интерпретация заметки — другие аннотации
+# <a name="annotation-interpretation---other-annotations"></a>Интерпретация заметки — прочие заметки
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Помимо заметок, описанных в предыдущих подразделах этого раздела, массовая загрузка XML интерпретирует ниже приведенные заметки.  
   

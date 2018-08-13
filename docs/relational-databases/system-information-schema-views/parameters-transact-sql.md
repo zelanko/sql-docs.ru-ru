@@ -1,5 +1,5 @@
 ---
-title: Параметры (Transact-SQL) | Документы Microsoft
+title: Параметры (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b73215f275f2171f72a70a71f1855d88d60c034
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 62156897510a969bc0ed99de56b59ae3251067e1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238511"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564808"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "33238511"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|Имя каталога процедуры, для которой это является параметром.|  
-|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы процедуры, для которой это является параметром.<br /><br /> **\*\* Важные \* \***  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы процедуры, для которой это является параметром.<br /><br /> **\*\* Важные \* \* ** не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**SPECIFIC_NAME**|**nvarchar (** 128 **)**|Имя процедуры, для которой это является параметром.|  
 |**ORDINAL_POSITION**|**int**|Порядковый номер параметра, начиная с 1. Для возвращаемого значения функции это 0.|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|Возвращает значение IN для входного параметра, OUT для выходного параметра и INOUT для изменяемого входного параметра.|  
 |**IS_RESULT**|**nvarchar (** 10 **)**|Возвращает значение YES, если результат подпрограммы является результатом выполнения функции. В противном случае возвращается значение NO.|  
 |**AS_LOCATOR**|**nvarchar (** 10 **)**|Возвращает значение YES, если результат объявлен как указатель. В противном случае возвращается значение NO.|  
 |**ИМЯ_ПАРАМЕТРА**|**nvarchar (** 128 **)**|Имя параметра. Если соответствует результату выполнения функции, то возвращается значение NULL.|  
-|**ТИП ДАННЫХ**|**nvarchar (** 128 **)**|Тип данных, поддерживаемый системой.|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|Максимальная длина в символах для двоичных или символьных данных.<br /><br /> -1 для **xml** и данные типов больших значений. В противном случае возвращается значение NULL.|  
-|**CHARACTER_OCTET_LENGTH**|**int**|Максимальная длина в байтах для двоичных или символьных данных.<br /><br /> -1 для **xml** и данные типов больших значений. В противном случае возвращается значение NULL.|  
+|**DATA_TYPE**|**nvarchar (** 128 **)**|Тип данных, поддерживаемый системой.|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|Максимальная длина в символах для двоичных или символьных данных.<br /><br /> -1 для **xml** и данные типа больших значений. В противном случае возвращается значение NULL.|  
+|**CHARACTER_OCTET_LENGTH**|**int**|Максимальная длина в байтах для двоичных или символьных данных.<br /><br /> -1 для **xml** и данные типа больших значений. В противном случае возвращается значение NULL.|  
 |**COLLATION_CATALOG**|**nvarchar (** 128 **)**|Всегда возвращает значение NULL.|  
 |**COLLATION_SCHEMA**|**nvarchar (** 128 **)**|Всегда возвращает значение NULL.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|Имя параметров сортировки параметра. Если введенные данные не принадлежат ни к одному из символьных типов, возвращает значение NULL.|  
@@ -59,7 +59,7 @@ ms.locfileid: "33238511"
 |**NUMERIC_PRECISION**|**tinyint**|Точность приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. В противном случае возвращается значение NULL.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Основание системы счисления точности приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. В противном случае возвращается значение NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Масштаб приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. В противном случае возвращается значение NULL.|  
-|**DATETIME_PRECISION**|**smallint**|Точность в долях секунды, если тип параметра является **datetime** или **smalldatetime**. В противном случае возвращается значение NULL.|  
+|**DATETIME_PRECISION**|**smallint**|Точность до долей секунды, если тип параметра — **datetime** или **smalldatetime**. В противном случае возвращается значение NULL.|  
 |**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Зарезервировано для последующего использования.|  
 |**INTERVAL_PRECISION**|**smallint**|NULL. Зарезервировано для последующего использования.|  
 |**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
@@ -74,6 +74,6 @@ ms.locfileid: "33238511"
  [Представления информационной схемы &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.parameters & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

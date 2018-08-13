@@ -1,5 +1,5 @@
 ---
-title: Выборка данных BLOB при помощи метода IRow::Open и интерфейса ISequentialStream | Документация Майкрософт
+title: Выборка данных BLOB с помощью метода IRow::Open и интерфейса ISequentialStream | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dd55cc02558987350e0a620ef0c48150465a0c47
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e38ab3efae737f4c56525c5036fe5af73d3c20b6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410293"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562948"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Выборка данных BLOB при помощи метода IRow::Open и интерфейса ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **IRow::Open** поддерживает только DBGUID_STREAM или DBGUID_NULL тип объектов, которые должны быть открыты.  
+  Метод **IRow::Open** поддерживает открытие только объектов типа DBGUID_STREAM или DBGUID_NULL.  
   
- Следующая функция использует **IRow::Open** и **ISequentialStream** для выборки больших данных.  
+ Следующая функция использует метод **IRow::Open** и интерфейс **ISequentialStream** для выборки больших данных.  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -84,7 +84,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- Большие объемы данных можно быть привязать или получить с помощью **ISequentialStream** интерфейс. Для привязанных столбцов флаг состояния указывает, усекаются ли данные при установке флага DBSTATUS_S_TRUNCATED.  
+ Большие данные могут быть привязаны или получены с помощью интерфейса **ISequentialStream**. Для привязанных столбцов флаг состояния указывает, усекаются ли данные при установке флага DBSTATUS_S_TRUNCATED.  
   
 ## <a name="see-also"></a>См. также  
  [Выборка данных большого двоичного объекта при помощи интерфейса IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  

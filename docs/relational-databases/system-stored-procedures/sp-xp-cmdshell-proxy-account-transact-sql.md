@@ -1,5 +1,5 @@
 ---
-title: sp_xp_cmdshell_proxy_account (Transact-SQL) | Документы Microsoft
+title: sp_xp_cmdshell_proxy_account (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,12 +23,13 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18c960fdf3d70c82684d493fd498a57ed357bb4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 48a92be607ea1d57740587840cb854299443b285
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560564"
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
   Создает учетные данные прокси-сервера для **xp_cmdshell**.  
   
 > [!NOTE]  
->  **xp_cmdshell** отключена по умолчанию. Чтобы включить **xp_cmdshell**, в разделе [параметр конфигурации сервера «xp_cmdshell»](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  **xp_cmdshell** отключен по умолчанию. Чтобы включить **xp_cmdshell**, см. в разделе [параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,10 +61,10 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Учетные данные прокси-сервера будет вызываться **# #xp_cmdshell_proxy_account ##**.  
   
- Во время выполнения с помощью параметра NULL **sp_xp_cmdshell_proxy_account** удаляет учетные данные прокси-сервера.  
+ При выполнении с аргументом NULL **sp_xp_cmdshell_proxy_account** удаляет учетные данные прокси-сервера.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER.  

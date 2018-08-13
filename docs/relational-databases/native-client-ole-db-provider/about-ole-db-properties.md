@@ -18,13 +18,13 @@ ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 81a928d788c3461a6f24baa46906d5af40a4e7ba
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 135d1584c528d31a42ade65e2025f52c70cc5ac7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432643"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565668"
 ---
 # <a name="about-ole-db-properties"></a>О свойствах OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "37432643"
   
 ## <a name="see-also"></a>См. также  
  [Создание приложения поставщика OLE DB для собственного клиента SQL Server](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Свойства (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [Свойства (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
   
   
