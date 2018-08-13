@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_helpindex (Transact-SQL) | Документы Microsoft
+title: sp_helpindex (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e6e64715eeb893e1a93df1c1c7c52b62e0d18d4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6560726bb583d823ad0cf0b36310eb68691705f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255383"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547624"
 ---
 # <a name="sphelpindex-transact-sql"></a>Хранимая процедура sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +61,10 @@ sp_helpindex [ @objname = ] 'name'
   
  Столбец, индексированный по убыванию, приводится в результирующем наборе со знаком «минус» (-), за которым следует его имя. Для столбца, индексированного по возрастанию (по умолчанию), приводится только его имя.  
   
-## <a name="remarks"></a>Замечания  
- Если индексы строились с параметром NORECOMPUTE инструкции UPDATE STATISTICS, эти сведения включаются в **index_description** столбца.  
+## <a name="remarks"></a>Примечания  
+ Если индексы были настроены с помощью параметра NORECOMPUTE инструкции UPDATE STATISTICS, эти сведения включаются в **index_description** столбца.  
   
- **Хранимая процедура sp_helpindex** предоставляет доступ только к упорядочиваемым столбцам индекса; поэтому она не предоставляет сведения об XML-индексы или Пространственные индексы.  
+ **sp_helpindex** предоставляет доступ только к упорядочиваемым столбцам индекса; таким образом, он не предоставляет сведения о XML-индексы или Пространственные индексы.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  
@@ -80,7 +80,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

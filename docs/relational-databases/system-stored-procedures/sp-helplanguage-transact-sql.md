@@ -1,5 +1,5 @@
 ---
-title: sp_helplanguage (Transact-SQL) | Документы Microsoft
+title: sp_helplanguage (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,13 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fdea1704b8942191bf79cb9074715f61eb9a9e81
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29f366517986620444e018a5348e623aa541b00a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560634"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@language=** ] **"***языка***"**  
- Имя альтернативного языка, для которого следует отображать сведения. *Язык* — **sysname**, значение по умолчанию NULL. Если *языка* будет указан, возвращаются сведения о соответствующем языке. Если язык не указан, сведения обо всех языках из **sys.syslanguages** возвращается представление совместимости.  
+ Имя альтернативного языка, для которого следует отображать сведения. *Язык* — **sysname**, значение по умолчанию NULL. Если *языка* будет указан, возвращаются сведения о соответствующем языке. Если язык не указан, сведения обо всех языках из **sys.syslanguages** возвращается Просмотр в режиме совместимости.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -61,10 +62,10 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**Обновление**|**int**|Версия последнего обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для данного языка.|  
 |**name**|**sysname**|Имя языка.|  
 |**alias**|**sysname**|Альтернативное имя языка.|  
-|**Месяцев**|**nvarchar(372)**|Названия месяцев.|  
+|**месяцев**|**nvarchar(372)**|Названия месяцев.|  
 |**shortmonths**|**nvarchar(132)**|Сокращенные названия месяцев.|  
-|**Дни**|**nvarchar(217)**|Названия дней.|  
-|**lcid**|**int**|Код данной локали в Windows.|  
+|**дней**|**nvarchar(217)**|Названия дней.|  
+|**код языка**|**int**|Код данной локали в Windows.|  
 |**msglangid**|**smallint**|Идентификатор группы сообщений компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -87,8 +88,8 @@ sp_helplanguage;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)   
  [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

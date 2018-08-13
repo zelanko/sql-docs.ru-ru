@@ -1,5 +1,5 @@
 ---
-title: sp_helpstats (Transact-SQL) | Документы Microsoft
+title: sp_helpstats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eda430dedf39538c27f85d0ea11ca59bbfdc5e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 42d35f6890a5bfc686274510ee7ed4328e2860c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251640"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547564"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33251640"
   Возвращает статистические сведения о столбцах и индексах указанной таблицы.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Чтобы получить сведения о статистике, запросите [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) и [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) представления каталога.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Чтобы получить сведения о статистике, запрос [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) и [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) представления каталога.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ sp_helpstats[ @objname = ] 'object_name'
  Указывает таблицу, для которой необходимо получить статистические сведения. *object_name* — **nvarchar(520)** и не может иметь значение null. Можно указать одно- или двухкомпонентное имя таблицы.  
   
  [  **@results=**] **"***значение***"**  
- Определяет экстент предоставляемых сведений. Допустимыми значениями являются **все** и **STATS**. **ВСЕ** статистика для всех индексов, а также столбцы, для которых создана статистика **STATS** только статистика, не связанная с индексом. *значение* — **nvarchar(5)** значение по умолчанию STATS.  
+ Определяет экстент предоставляемых сведений. Допустимыми значениями являются **все** и **STATS**. **ВСЕ** Статистика предоставляется для всех индексов, а также столбцов, для которых создана статистика **STATS** только статистика, не связанная с индексом. *значение* — **nvarchar(5)** значение по умолчанию STATS.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -66,7 +66,7 @@ sp_helpstats[ @objname = ] 'object_name'
 |**statistics_name**|Название статистики. Возвращает **sysname** и не может иметь значение null.|  
 |**statistics_keys**|Ключи, на которых основаны статистические сведения. Возвращает **nvarchar(2078)** и не может иметь значение null.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Для отображения подробных статистических сведений об определенном индексе или статистике воспользуйтесь инструкцией DBCC SHOW_STATISTICS. Дополнительные сведения см. в разделе [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) и [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
@@ -107,6 +107,6 @@ EXEC sp_helpstats
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproperty (Transact-SQL) | Документы Microsoft
+title: sp_addextendedproperty (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8ebd317abcd9fec6ee6e116c0bbacc63bf547be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9f415c295a45e2505bfa30afb34b76dba1d423c5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240634"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555104"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ sp_addextendedproperty
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Для указания расширенных свойств объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных распределены по трем уровням: 0, 1 и 2. Уровень 0 является самым высоким и определен как «объекты, содержащиеся в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней.  
   
  Ссылки на объект определенного уровня должны быть уточнены именами объектов более высокого уровня, в которых они содержатся или которым они принадлежат. Например, при добавлении расширенного свойства к столбцу таблицы (уровень 2) необходимо также задать имя таблицы (уровень 1), содержащей этот столбец, а также схему (уровень 0), содержащую таблицу.  
@@ -242,7 +242,7 @@ EXEC sys.sp_addextendedproperty
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  

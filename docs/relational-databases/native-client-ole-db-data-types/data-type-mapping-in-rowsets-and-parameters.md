@@ -24,13 +24,13 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea9322153c59e3d83e07504236df82b0aa7b3272
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c84ea6be119438310292facda5e04c75b6f5da55
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413963"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566068"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Сопоставление типов данных в наборах строк и параметрах
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,20 +72,20 @@ ms.locfileid: "37413963"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента поддерживает данные, запрашиваемые потребителем преобразования, как показано на рисунке.  
   
- **Sql_variant** объектов может содержать данные любого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, кроме text, ntext, изображение, varchar(max), nvarchar(max), varbinary(max), xml, timestamp и Microsoft .NET Framework среда CLR (CLR) определяемые пользователем типы. Экземпляр данных sql_variant не может также иметь sql_variant в качестве базового типа данных. Например, столбец может содержать **smallint** для некоторых строк значения **float** значений для других строк, и **char**/**nchar**значения в остальных.  
+ Объекты **sql_variant** могут хранить данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] любого типа, кроме text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp и пользовательских типов данных CLR платформы Microsoft .NET Framework. Экземпляр данных sql_variant не может также иметь sql_variant в качестве базового типа данных. Например, столбец может содержать значения **smallint** в некоторых строках, значения **float** в других строках и значения **char**/**nchar** в остальных.  
   
 > [!NOTE]  
->  **Sql_variant** подобен типу данных в тип данных Variant в Microsoft Visual Basic® и DBTYPE_VARIANT, DBTYPE_SQLVARIANT в OLEDB.  
+>  Тип данных **sql_variant** аналогичен типу данных Variant в Microsoft Visual Basic® и типу данных DBTYPE_VARIANT, DBTYPE_SQLVARIANT в OLEDB.  
   
- Когда **sql_variant** данные получены как DBTYPE_VARIANT, они размещаются в структуре VARIANT в буфере. Но подтипы в структуре VARIANT могут не соответствовать подтипам, определенным в **sql_variant** тип данных. **Sql_variant** данных должны быть выбраны как DBTYPE_SQLVARIANT в порядке все подтипы для сопоставления.  
+ Если данные **sql_variant** получены как DBTYPE_VARIANT, они размещаются в структуре VARIANT в буфере. Однако подтипы в структуре VARIANT могут не соответствовать подтипам, определенным в типе данных **sql_variant**. Затем данные **sql_variant** должны быть выбраны как DBTYPE_SQLVARIANT для сопоставления всех подтипов.  
   
 ## <a name="dbtypesqlvariant-data-type"></a>Тип данных DBTYPE_SQLVARIANT  
- Для поддержки **sql_variant** тип данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента предоставляет тип поставщика данных, называемый DBTYPE_SQLVARIANT. Когда **sql_variant** данные извлекаются в как DBTYPE_SQLVARIANT, они сохраняются в структуру SSVARIANT поставщика. Структура SSVARIANT содержит все подтипы подтипами **sql_variant** тип данных.  
+ Для поддержки **sql_variant** тип данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента предоставляет тип поставщика данных, называемый DBTYPE_SQLVARIANT. Если данные **sql_variant** получены как DBTYPE_SQLVARIANT, они размещаются в специфической для поставщика структуре SSVARIANT. Структура SSVARIANT содержит все подтипы, сопоставленные с подтипами типа данных **sql_variant**.  
   
  Свойство сеанса SSPROP_ALLOWNATIVEVARIANT должно быть равно true.  
   
 ## <a name="provider-specific-property-sspropallownativevariant"></a>Специфическое для поставщика свойство SSPROP_ALLOWNATIVEVARIANT  
- При выборке данных можно явно указать разновидность типа данных, которые должны быть возвращены для столбца или для параметра. **IColumnsInfo** также можно получить сведения о столбце и использовать его для привязки. Когда **IColumnsInfo** используется для получения сведения о столбце для привязки, если свойство сеанса SSPROP_ALLOWNATIVEVARIANT имеет значение FALSE (значение по умолчанию), возвращается DBTYPE_VARIANT **sql_variant**столбцов. Если свойство SSPROP_ALLOWNATIVEVARIANT имеет значение FALSE, DBTYPE_SQLVARIANT не поддерживается. Если свойство SSPROP_ALLOWNATIVEVARIANT имеет значение TRUE, возвращается тип столбца DBTYPE_SQLVARIANT. В этом случае в буфере сохраняется структура SSVARIANT. При выборке **sql_variant** данных как DBTYPE_SQLVARIANT свойство сеанса SSPROP_ALLOWNATIVEVARIANT должно быть присвоено значение TRUE.  
+ При выборке данных можно явно указать разновидность типа данных, которые должны быть возвращены для столбца или для параметра. Интерфейс **IColumnsInfo** может также использоваться с целью получения сведений о столбце и их применения для привязки. Если интерфейс **IColumnsInfo** используется для получения сведений о столбце с целью привязки, а свойство сеанса SSPROP_ALLOWNATIVEVARIANT имеет значение FALSE (по умолчанию), для столбцов **sql_variant** возвращается DBTYPE_VARIANT. Если свойство SSPROP_ALLOWNATIVEVARIANT имеет значение FALSE, DBTYPE_SQLVARIANT не поддерживается. Если свойство SSPROP_ALLOWNATIVEVARIANT имеет значение TRUE, возвращается тип столбца DBTYPE_SQLVARIANT. В этом случае в буфере сохраняется структура SSVARIANT. При выборке данных **sql_variant** как данных типа DBTYPE_SQLVARIANT свойство сеанса SSPROP_ALLOWNATIVEVARIANT должно быть равно TRUE.  
   
  Свойство SSPROP_ALLOWNATIVEVARIANT является частью специфического для поставщика набора свойств DBPROPSET_SQLSERVERSESSION и свойством сеанса.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "37413963"
   
 |||  
 |-|-|  
-|Свойство SSPROP_ALLOWNATIVEVARIANT|Тип: VT_BOOL<br /><br /> И запись: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: Определяет, является ли данные, полученные в качестве DBTYPE_VARIANT или DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: Тип столбца возвращается как DBTYPE_SQLVARIANT, в котором регистр буфера будет содержать структура SSVARIANT.<br /><br /> VARIANT_FALSE: Тип столбца возвращается DBTYPE_VARIANT и буфера будет иметь структура VARIANT.|  
+|Свойство SSPROP_ALLOWNATIVEVARIANT|Тип: VT_BOOL<br /><br /> И запись: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: определяет, имеют ли данные, полученные в результате выборки, тип DBTYPE_VARIANT или DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: возвращается тип столбца DBTYPE_SQLVARIANT. В этом случае в буфере сохраняется структура SSVARIANT.<br /><br /> VARIANT_FALSE: возвращается столбец типа DBTYPE_VARIANT, и в буфере сохраняется структура VARIANT.|  
   
 ## <a name="see-also"></a>См. также  
  [Типы данных &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  

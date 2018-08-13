@@ -1,5 +1,5 @@
 ---
-title: 'Скрытие элементов и атрибутов с помощью SQL: hide | Документы Microsoft'
+title: 'Скрытие элементов и атрибутов с помощью SQL: hide | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -29,12 +29,13 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a6b58b7503e066c8d36e178b82f9048be7cd235f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c2e7f9df3211f2af5e063757b9c76c5eb9dc2ccf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544294"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Скрытие элементов и атрибутов при помощи sql:hide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,12 +44,12 @@ ms.lasthandoff: 05/03/2018
  **SQL: hide** заметка имеет логическое значение (0 = false, 1 = true). Допустимые значения: 0, 1, true и false.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для выполнения примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Указание sql:hide для атрибута  
  В этом примере схема XSD состоит из  **\<Person.Contact >** элемент с **ContactID**, **FirstName**, и **LastName** атрибуты.  
   
- **\<Person.Contact >** элемент имеет сложный тип и, таким образом, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты  **\<Person.Contact >** элемента относятся к простому типу и сопоставляются со столбцами с теми же именами в Person.Contacttable базы данных AdventureWorks. В схеме **SQL: hide** заметка указывается для **ContactID** атрибута. При выполнении запроса XPath к этой схеме **ContactID** не возвращается в XML-документе.  
+ **\<Person.Contact >** элемент имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты  **\<Person.Contact >** элемента имеют простой тип и сопоставляются со столбцами с теми же именами в Person.Contacttable в базе данных AdventureWorks. В схеме **SQL: hide** задана заметка для **ContactID** атрибута. При указании запроса XPath к этой схеме **ContactID** не возвращается в XML-документе.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Результирующий набор:  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 05/03/2018
 </ROOT>  
 ```  
   
- Когда **SQL: hide** указана для элемента, элемент и его атрибуты или дочерние элементы не отображаются в XML-документ, который создается. Вот другой схемы XSD, в котором **SQL: hide** указано на  **\<OD >** элемента:  
+ Когда **SQL: hide** указана для элемента, элемент и его атрибуты или дочерние элементы не отображаются в XML-документ, который создается. Вот другой схеме XSD, в котором **SQL: hide** заметка указывается для  **\<OD >** элемент:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -150,7 +151,7 @@ ms.lasthandoff: 05/03/2018
 </xsd:schema>  
 ```  
   
- При выполнении запроса XPath (например `/Customers[@CID="1"]`), заданный относительно этой схемы XML-документа, которое создается, не включает  **\<OD >** элемент и его дочерние элементы, как показано в следующем частичном результате:  
+ При выполнении запроса XPath (например `/Customers[@CID="1"]`) указан к этой схеме XML-документ, который создается не включает  **\<OD >** элемент и его дочерние элементы, как показано в следующем частичном результате:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

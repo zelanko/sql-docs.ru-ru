@@ -1,5 +1,5 @@
 ---
-title: sp_helprole (Transact-SQL) | Документы Microsoft
+title: sp_helprole (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cd4ea621669688065075a3ff3894bbce369a54a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 10d457eaf25531790df63d4128a3d77d4ed30fb9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250279"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538404"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@rolename =** ] **"***роль***"**  
- Имя роли в текущей базе данных. *роль* — **sysname**, значение по умолчанию NULL. *роль* должен существовать в текущей базе данных. Если *роли* — не указано, возвращаются сведения обо всех ролях в текущей базе данных.  
+ [  **@rolename =** ] **"***роли***"**  
+ Имя роли в текущей базе данных. *роль* — **sysname**, значение по умолчанию NULL. *роль* должен существовать в текущей базе данных. Если *роли* является не указан, возвращаются сведения обо всех ролей в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -59,8 +59,8 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |**RoleId**|**smallint**|Идентификатор **RoleName**.|  
 |**IsAppRole**|**int**|0 = **RoleName** не является ролью приложения.<br /><br /> 1 = **RoleName** является ролью приложения.|  
   
-## <a name="remarks"></a>Замечания  
- Чтобы просмотреть разрешения, связанные с ролью, используйте **sp_helprotect**. Чтобы просмотреть членов роли базы данных, используйте **sp_helprolemember**.  
+## <a name="remarks"></a>Примечания  
+ Чтобы просмотреть разрешения, связанные с ролью, используйте **sp_helprotect**. Для просмотра членами роли базы данных, используйте **sp_helprolemember**.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  

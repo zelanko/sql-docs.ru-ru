@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_database (Transact-SQL) | Документы Microsoft
+title: sp_fulltext_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,21 +22,21 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f4904de1142052a8286aabb4a69bf439871b84e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5ee4cb63c476b898c286f6223e9e56d1778e6a47
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241466"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563908"
 ---
 # <a name="spfulltextdatabase-transact-sql"></a>sp_fulltext_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Не влияет на полнотекстовые каталоги в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях и поддерживается только для обеспечения обратной совместимости. **sp_fulltext_database** не отключает средство полнотекстового поиска для конкретной базы данных. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] полнотекстовое индексирование всегда включено для всех баз данных, созданных пользователем.  
+  Не влияет на полнотекстовые каталоги в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях и поддерживается только для обеспечения обратной совместимости. **sp_fulltext_database** не отключает механизм полнотекстового поиска для конкретной базы данных. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] полнотекстовое индексирование всегда включено для всех баз данных, созданных пользователем.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Используйте [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] вместо него.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого используйте [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_fulltext_database [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@action=**] **"***действия***"**  
+ [  **@action=**] **"***действие***"**  
  Действие, которое должно быть выполнено. **Действие** — **varchar(20)**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -60,13 +60,13 @@ sp_fulltext_database [@action=] 'action'
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
- В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях полнотекстовое индексирование отключить нельзя. Отключение полнотекстового индексирования не удаляет строки из **sysfulltextcatalogs** и не означает, что таблицы с включенным полнотекстового больше таковыми не помечены для полнотекстового индексирования. Все определения полнотекстовых метаданных продолжают храниться в системных таблицах.  
+## <a name="remarks"></a>Примечания  
+ В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях полнотекстовое индексирование отключить нельзя. Отключение полнотекстового индексирования не удаляет строки из **sysfulltextcatalogs** и не означает, что таблицы с поддержкой полнотекстового поиска, больше не помечаются для полнотекстового индексирования. Все определения полнотекстовых метаданных продолжают храниться в системных таблицах.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять **sp_fulltext_database**.  
+ Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_fulltext_database**.  
   
 ## <a name="see-also"></a>См. также  
  [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)   

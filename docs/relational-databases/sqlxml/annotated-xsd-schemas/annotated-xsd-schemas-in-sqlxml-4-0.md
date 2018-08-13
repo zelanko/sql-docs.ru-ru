@@ -1,5 +1,5 @@
 ---
-title: Аннотированные схемы XSD в SQLXML 4.0 | Документы Microsoft
+title: Аннотированные схемы XSD в SQLXML 4.0 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: edf8e4836693eb67e9e6c4c3816d46d2b9d6ccc4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4209bf6b0ffbeef97e65b6c70896055d38c7478d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708762"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537954"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Схемы XSD с заметками в SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,20 +47,20 @@ ms.locfileid: "34708762"
  [Преобразование схем XDR в эквивалентные схемы XSD с заметками &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
  Описывает, как преобразовывать схемы XDR в эквивалентные схемы XSD для SQLXML 4.0.  
   
- [Схемы XDR с заметками &#40;является устаревшим в SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [Схемы XDR с заметками &#40;устарели в SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
  Предшествующие версии SQLXML поддерживали заметки в схемах XDR. Аннотированные схемы XDR не используются в SQLXML 4.0, и этот раздел приводится в качестве справочника по приложениям устаревших версий.  
   
 ## <a name="other-resources"></a>Другие ресурсы  
  Дополнительные сведения о языке XSD, языке XPath и преобразованиях XSLT находятся на следующих веб-сайтах.  
   
--   XML Schema Part 0: Учебник, W3C рекомендации ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Учебник для начинающих, W3C рекомендации ()http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Структуры, W3C рекомендации ()http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Структуры, W3C (рекомендацияhttp://www.w3.org/TR/xmlschema-1/)  
   
--   Схема XML, часть 2: типы данных, W3C (рекомендацииhttp://www.w3.org/TR/xmlschema-2/)  
+-   Схема XML, часть 2: типы данных, W3C (рекомендацияhttp://www.w3.org/TR/xmlschema-2/)  
   
 -   FOR XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
   
--   (XSL-преобразования (XSLT)http://www.w3.org/TR/xslt)  
+-   (XSL) преобразований (XSLT)http://www.w3.org/TR/xslt)  
   
   

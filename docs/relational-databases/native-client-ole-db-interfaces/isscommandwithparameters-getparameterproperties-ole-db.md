@@ -19,13 +19,13 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9a3a89693271e6dc062359114a7d7bd321bce
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: db7ff5ed9c55473283091950a5d5fee6dd5cd54f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409143"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533455"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,8 +43,8 @@ HRESULT GetParameterProperties(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *pcParams*[out] [in]  
- Возвращаемый указатель на буфер, который содержит количество структур SSPARAMPROPS в *prgParamProperties*.  
+ *pcParams*[out][in]  
+ Указатель на область памяти, где содержится количество структур SSPARAMPROPS, возвращаемых в параметре *prgParamProperties*.  
   
  *prgParamProperties*[out]  
  Указатель на область памяти, в которую будет возвращен массив структур SSPARAMPROPS. Поставщик выделяет память для структур и возвращает адрес этой памяти; Поставщик высвобождает эту память с помощью **IMalloc::Free** когда он больше не нужна структуры. Перед вызовом **IMalloc::Free** для *prgParamProperties*, он должен также вызвать **VariantClear** для *vValue* свойство каждой структуры DBPROP, чтобы предотвратить утечку памяти в случаях, если вариант содержит ссылку, введите (например, BSTR.) Если *pcParams* равен нулю на выходе или происходит ошибка, отличная от DB_E_ERRORSOCCURRED, поставщик не выделяет памяти и гарантирует, что *prgParamProperties* является указателем null на выходе.  

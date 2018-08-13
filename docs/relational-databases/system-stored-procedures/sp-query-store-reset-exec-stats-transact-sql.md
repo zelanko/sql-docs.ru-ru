@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_reset_exec_stats (Transact-SQL) | Документы Microsoft
+title: sp_query_store_reset_exec_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,17 +25,18 @@ caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 152a2de5b373c9130f5d2a579737a823b752e832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d91756ed0a9870c9748db62b7908dfb78091b175
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545124"
 ---
 # <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Очищает статистику времени выполнения для определенного плана из хранилища запросов.  
+  Очищает статистику выполнения специальный план запроса из хранилища запросов.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,15 +49,15 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@plan_id =** ] *plan_id*  
- — Это идентификатор плана запроса к очистке. *plan_id* — **bigint**, не имеет значения по умолчанию.  
+ — Идентификатор плана запроса для очистки. *plan_id* — **bigint**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется **EXECUTE** разрешения в базе данных и **удалить** разрешения на представления каталога хранилища запросов.  
+ Требуется **EXECUTE** разрешений в базе данных, и **удалить** разрешения на представления каталога хранилища запросов.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает сведения о запросах в хранилище запросов.  

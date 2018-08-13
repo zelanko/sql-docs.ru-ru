@@ -1,5 +1,5 @@
 ---
-title: 'Создать допустимые атрибуты — SQL: prefix (SQLXML 4.0) введите ID, IDREF, IDREFS | Документы Microsoft'
+title: 'Создать допустимые атрибуты — SQL: prefix (SQLXML 4.0) введите ID, IDREF, IDREFS | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -27,19 +27,19 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 891182053b28673b8a7a16c484b591f4924f3842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d7d84cbb4d4ca2fc7646d794698fe7c10e8188c9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970431"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547594"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Создание допустимых атрибутов типа ID, IDREF и IDREFS с использованием sql:prefix (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Атрибут может быть задан как атрибут типа ID. Атрибуты, заданные как IDREF или IDREFS, могут затем использоваться для ссылки на атрибуты типа ID, создавая ссылки между документами.  
   
- ID, IDREF и IDREFS соответствуют связям PK/FK («первичный ключ-внешний ключ») в базе данных, не считая некоторых отличий. В XML-документе значения атрибутов типа ID должны быть различными. Если **CustomerID** и **OrderID** атрибутов задаются в виде Идентификатором типа в XML-документ, эти значения должны быть различными. Но в базе данных столбцы CustomerID и OrderID могут иметь одинаковые значения. (Например, в базе данных допустимы значения CustomerID = 1 и OrderID = 1.)  
+ ID, IDREF и IDREFS соответствуют связям PK/FK («первичный ключ-внешний ключ») в базе данных, не считая некоторых отличий. В XML-документе значения атрибутов типа ID должны быть различными. Если **CustomerID** и **OrderID** атрибутов задаются в виде Идентификатором типа в XML-документа, эти значения должны быть различными. Но в базе данных столбцы CustomerID и OrderID могут иметь одинаковые значения. (Например, в базе данных допустимы значения CustomerID = 1 и OrderID = 1.)  
   
  Чтобы атрибуты ID, IDREF и IDREFS были допустимыми, должны выполняться следующие условия.  
   
@@ -49,19 +49,19 @@ ms.locfileid: "32970431"
   
 -   Значение атрибутов ID, IDREF и IDREFS должно быть именованным токеном. (Например, целочисленное значение 101 не может быть значением ID.)  
   
--   Атрибуты типа ID, IDREF и IDREFS не могут быть сопоставлены столбцам типа **текст**, **ntext**, или **изображение** или любого другого типа двоичных данных (например, **timestamp**).  
+-   Атрибуты типа ID, IDREF и IDREFS не могут быть сопоставлены столбцам типа **текст**, **ntext**, или **изображение** или другим данным двоичного типа (например, **timestamp**).  
   
  Если документ XML содержит несколько идентификаторов, используйте **SQL: prefix** заметки, чтобы убедиться, что значения уникальны.  
   
  Обратите внимание, что **SQL: prefix** аннотацию нельзя использовать с атрибутом неизменности XSD.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для выполнения примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Задание типов ID и IDREFS  
- В следующей схеме  **\<клиента >** элемент состоит из  **\<порядок >** дочерний элемент. **\<Порядок >** элемент содержит дочерний элемент, а также  **\<OrderDetail >** элемента.  
+ В следующей схеме  **\<клиента >** элемент состоит из  **\<порядок >** дочерний элемент. **\<Порядок >** элемент содержит дочерний элемент, а также  **\<OrderDetail >** элемент.  
   
- **OrderIDList** атрибут  **\<клиента >** является атрибутом типа IDREFS, ссылающийся на **OrderID** атрибут  **\< Порядок >** элемента.  
+ **OrderIDList** атрибут  **\<клиента >** является атрибутом типа IDREFS, ссылающийся на **OrderID** атрибут  **\< Порядок >** элемент.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -137,7 +137,7 @@ ms.locfileid: "32970431"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Частичный результат:  
   

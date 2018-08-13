@@ -20,15 +20,15 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5f4527068d0fd0f83987f5e145226c091a7913c0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 424691b34fdb393f23288ef11ae0d1b84a31b3c9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005817"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550924"
 ---
-# <a name="annotation-interpretation---sqloverflow-field"></a>Интерпретация заметки — SQL: Overflow-поле
+# <a name="annotation-interpretation---sqloverflow-field"></a>Интерпретация заметки — sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В схеме можно указать столбец как столбец переполнения, чтобы получить все невостребованные данные из XML-документа. Этот столбец указывается в схеме с помощью **SQL: Overflow-поле** заметки. Возможно иметь несколько столбцов переполнения.  
   

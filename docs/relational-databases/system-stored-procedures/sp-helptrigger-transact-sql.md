@@ -1,5 +1,5 @@
 ---
-title: sp_helptrigger (Transact-SQL) | Документы Microsoft
+title: sp_helptrigger (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,18 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c6c78c302266ce3a9e29c432e1a913c263d704
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6435e1b79907debc159b3ba39eb35980b783c791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566238"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает тип или типы триггеров DML, определенных в указанной таблице для текущей базы данных. sp_helptrigger нельзя использовать с триггерами DDL. Запрос [системные хранимые процедуры](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) представления каталога.  
+  Возвращает тип или типы триггеров DML, определенных в указанной таблице для текущей базы данных. sp_helptrigger нельзя использовать с триггерами DDL. Запрос [системные хранимые процедуры](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) вместо этого представление каталога.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +49,8 @@ sp_helptrigger [ @tabname = ] 'table'
  [  **@tabname=** ] **"***таблицы***"**  
  Имя таблицы в текущей базе данных, для которой необходимо вернуть сведения о триггерах. *Таблица* — **nvarchar(776)**, не имеет значения по умолчанию.  
   
- [  **@triggertype=** ] **"***типа***"**  
- Тип триггера DML, о котором необходимо вернуть сведения. *Тип* — **char(6)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
+ [  **@triggertype=** ] **"***тип***"**  
+ Тип триггера DML, о котором необходимо вернуть сведения. *Тип* — **char(6)**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -72,10 +73,10 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsert**|**int**|1=триггер INSERT<br /><br /> 0=не триггер INSERT|  
 |**isafter**|**int**|1=триггер AFTER<br /><br /> 0=не триггер AFTER|  
 |**isinsteadof**|**int**|1=триггер INSTEAD OF<br /><br /> 0=не триггер INSTEAD OF|  
-|**trigger_schema**|**sysname**|Имя схемы, к которой принадлежит триггер.|  
+|**столбец trigger_schema**|**sysname**|Имя схемы, к которой принадлежит триггер.|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется [настроек видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md) разрешение на таблицу.  
+ Требуется [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md) разрешение на таблицу.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере выполняется хранимая процедура `sp_helptrigger` для получения сведений о триггерах для таблицы `Person.Person`.  
@@ -87,7 +88,7 @@ EXEC sp_helptrigger 'Person.Person';
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)   

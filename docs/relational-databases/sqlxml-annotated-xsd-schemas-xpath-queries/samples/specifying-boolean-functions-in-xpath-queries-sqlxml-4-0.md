@@ -1,5 +1,5 @@
 ---
-title: Указание логических функций в запросах XPath (SQLXML 4.0) | Документы Microsoft
+title: Указание логических функций в запросах XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,22 +21,22 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9366a70d31e286ec69610f3551642ec24b1e2cad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2c0d4902bd1ec3d1c5e1e1cf7f2178275f68f2b8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971189"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549654"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Указание логических функций в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующих примерах показано, как задаются логические функции в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующих примерах показано, как задаются логические функции в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Задание логической функции not()  
- Этот запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, которые не имеют  **\<порядок >** дочерних элементов:  
+ Этот запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, у которых нет  **\<порядок >** дочерние элементы:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -70,7 +70,7 @@ ms.locfileid: "32971189"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен частичный результирующий набор, полученный в результате выполнения этого шаблона.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "32971189"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен частичный результирующий набор, полученный в результате выполнения этого шаблона.  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_autostats (Transact-SQL) | Документы Microsoft
+title: sp_autostats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab8716d2a4580edf9d9cdb34a849210d60f31d17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e1b26b708db7fc435ea6f37ce81e6ff734e5f7d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239864"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553444"
 ---
 # <a name="spautostats-transact-sql"></a>Хранимая процедура sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  **OFF** = OFF  
   
- Когда *stats_flag* — не указан, отображается текущее значение AUTO_UPDATE_STATISTICS. *stats_value* — **varchar(10)**, значение по умолчанию NULL.  
+ Когда *stats_flag* является не указан, отображается текущее значение AUTO_UPDATE_STATISTICS. *stats_value* — **varchar(10)**, значение по умолчанию NULL.  
   
  [  **@indname=** ] **"***имя_статистики***"**  
  Имя объекта статистики для отображения или обновления параметра AUTO_UPDATE_STATISTICS. Чтобы отобразить статистику для индекса, можно использовать имя индекса. Имя индекса совпадает с именем соответствующего объекта статистики.  
@@ -78,17 +78,17 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 |-----------------|---------------|-----------------|  
 |**Index Name**|**varchar(60)**|Имя индекса или статистики.|  
 |**СТАТИСТИКА**|**тип varchar(3) столбцы разделяются**|Текущее значение параметра AUTO_UPDATE_STATISTICS.|  
-|**Последнее обновление**|**datetime**|Дата последнего обновления статистики.|  
+|**Последнее обновление:**|**datetime**|Дата последнего обновления статистики.|  
   
- Результирующий набор для таблицы или индексированного представления содержит статистику, созданную для индексов, статистики по отдельным столбцам, созданным параметром AUTO_CREATE_STATISTICS и статистику, созданную с [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) инструкции.  
+ Результирующий набор для таблицы или индексированного представления содержит статистику, созданную для индексов, статистику по отдельным столбцам, созданным параметром AUTO_CREATE_STATISTICS, и статистику, созданную с помощью [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) инструкции.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если указанный индекс отключен или указанная таблица имеет отключенный кластеризованный индекс, выводится сообщение об ошибке.  
   
  Параметр AUTO_UPDATE_STATISTICS всегда имеет значение OFF для таблиц с оптимизацией памяти.  
   
 ## <a name="permissions"></a>Разрешения  
- Чтобы изменить параметр AUTO_UPDATE_STATISTICS параметра необходимо членство **db_owner** фиксированной роли базы данных или разрешение ALTER *table_name*. Чтобы отобразить AUTO_UPDATE_STATISTICS параметра необходимо членство в **открытый** роли.  
+ Чтобы изменить AUTO_UPDATE_STATISTICS параметр требует членства в n **db_owner** предопределенной роли базы данных или разрешение ALTER *table_name*. Для отображения параметра AUTO_UPDATE_STATISTICS параметра необходимо членство в **открытый** роли.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -125,7 +125,7 @@ GO
 ## <a name="see-also"></a>См. также  
  [Статистика](../../relational-databases/statistics/statistics.md)   
  [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   

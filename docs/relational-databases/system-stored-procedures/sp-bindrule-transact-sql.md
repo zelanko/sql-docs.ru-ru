@@ -1,5 +1,5 @@
 ---
-title: sp_bindrule (Transact-SQL) | Документы Microsoft
+title: sp_bindrule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff3dda4304d1dae1fc8183a667507867893f1bdc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 15576737e238ebd81d36e1ab2ff3090f6aa30791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239954"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560724"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33239954"
   Привязывает правило к столбцу или к псевдониму типа данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте[ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md) вместо него. Ограничения CHECK создаются с помощью ключевого слова CHECK [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) инструкции.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте[ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md) вместо этого. Ограничения CHECK создаются с помощью ключевого слова CHECK [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) инструкций.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,28 +56,28 @@ sp_bindrule [ @rulename = ] 'rule' ,
  [  **@objname=**] **"***object_name***"**  
  Таблица и столбец или тип данных псевдонима, к которым будет привязано правило. Правило не может быть привязано к **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, определяемому пользователем типу CLR или столбцу **timestamp**. Правило не может быть привязано к вычисляемому столбцу.  
   
- *object_name* — **nvarchar(776)** без значения по умолчанию. Если *object_name* — это имя одной части, оно рассматривается как псевдоним типа данных. Если имя двух- или трехкомпонентное, оно рассматривается как таблица и столбец; в случае неудачи разрешения имя рассматривается как псевдоним типа данных. По умолчанию существующие столбцы типа данных псевдонима наследуют *правило* Если правило привязано к столбцу напрямую.  
+ *object_name* — **nvarchar(776)** не имеет значения по умолчанию. Если *object_name* — это имя одной части, оно рассматривается как псевдоним типа данных. Если имя двух- или трехкомпонентное, оно рассматривается как таблица и столбец; в случае неудачи разрешения имя рассматривается как псевдоним типа данных. По умолчанию существующие столбцы типа данных псевдонима наследуют *правило* Если правило привязано непосредственно к столбцу.  
   
 > [!NOTE]  
->  *object_name* может содержать выражение в квадратных скобках **[** и **]** символов как символов идентификатора с разделителем. Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+>  *object_name* может содержать скобок **[** и **]** символы как символы в идентификаторе с разделителями. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
 >  Правила, созданные на основе выражений, которые используют псевдоним типов данных, могут быть привязаны к столбцам или типам данных псевдонима, но не могут быть скомпилированы, если на них ссылаются. Избегайте использования правил, созданных на основе псевдонима типов данных.  
   
  [  **@futureonly=** ] **"***аргумента futureonly_flag***"**  
- Используется только при привязке правила к псевдониму типа данных. *future_only_flag* — **varchar(15)** значение по умолчанию NULL. Этот параметр, если задано значение **futureonly** предотвращает наследование нового правила существующие столбцы типа данных псевдонима. Если *аргумента futureonly_flag* имеет значение NULL, новое правило привязано к любым столбцам с псевдонимом типа данных, в данный момент не имеет правила или используют существующее правило типа данных псевдонима.  
+ Используется только при привязке правила к псевдониму типа данных. *future_only_flag* — **varchar(15)** значение по умолчанию NULL. Этот параметр, если значение **futureonly** предотвращает наследование нового правила существующие столбцы типа данных псевдонима. Если *аргумента futureonly_flag* имеет значение NULL, новое правило привязывается ко всем столбцам с псевдонимом типа данных, который в данный момент не имеет правила или используют существующее правило типа данных псевдонима.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- Можно привязать новое правило к столбцу (хотя предпочтительнее использовать ограничение CHECK) или к псевдониму типа данных с **sp_bindrule** без отмены привязки существующего правила. Старое правило замещается. Если правило привязано к столбцу с существующим ограничением CHECK, вычисляются все ограничения. Нельзя привязать правило к типу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Примечания  
+ Можно привязать новое правило к столбцу (хотя предпочтительнее использовать ограничение CHECK) или к псевдониму типа данных с помощью **sp_bindrule** без отмены привязки существующего правила. Старое правило замещается. Если правило привязано к столбцу с существующим ограничением CHECK, вычисляются все ограничения. Нельзя привязать правило к типу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Правило создается принудительно при выполнении инструкции INSERT, а не путем привязки. Можно привязать символьное правило к столбцу **числовое** тип данных, несмотря на то, что такая операция INSERT не является допустимым.  
+ Правило создается принудительно при выполнении инструкции INSERT, а не путем привязки. Можно привязать символьное правило к столбцу **числовых** тип данных, несмотря на то, что такая операция INSERT не допускается.  
   
  Существующие столбцы типа данных псевдонима наследуют новое правило, если *аргумента futureonly_flag* указывается как **futureonly**. Новые столбцы, определяемые как столбцы с типом данных псевдонима, всегда наследуют новое правило. Однако если предложение ALTER COLUMN инструкции ALTER TABLE меняет тип данных столбца на тип данных псевдонима, привязанный к правилу, то правило, привязанное к типу данных, не наследуется столбцом. Правило должно быть четко привязано к столбцу с помощью **sp_bindrule**.  
   
- При привязке правила к столбцу, соответствующие сведения добавляются в **sys.columns** таблицы. При привязке правила к псевдониму типа данных, соответствующие сведения добавляются в **sys.types** таблицы.  
+ При привязке правила к столбцу, соответствующие сведения добавляются к **sys.columns** таблицы. При привязке правила к псевдониму типа данных, соответствующие сведения добавляются к **sys.types** таблицы.  
   
 ## <a name="permissions"></a>Разрешения  
  Чтобы привязать правило к столбцу таблицы, необходимо разрешение ALTER на таблицу. Чтобы привязать правило к псевдониму типа данных, необходимо разрешение CONTROL на псевдоним типа данных или разрешение ALTER на схему, к которой принадлежит тип.  
@@ -94,7 +94,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>Б. Привязка правила к псевдониму типа данных  
- Предполагая существование правила с именем `rule_ssn` и типа данных псевдонима с именем `ssn`, следующий пример привязывает `rule_ssn` к `ssn`. В инструкции CREATE TABLE столбцы типа `ssn` наследуют правило `rule_ssn`. Существующие столбцы типа `ssn` также наследуют `rule_ssn` правило, если не **futureonly** указан для *аргумента futureonly_flag*, или `ssn` непосредственно к нему привязано правило. Правила, привязанные к столбцам, всегда имеют преимущество перед теми, которые привязаны к типам данных.  
+ Предполагая существование правила с именем `rule_ssn` и типа данных псевдонима с именем `ssn`, следующий пример привязывает `rule_ssn` к `ssn`. В инструкции CREATE TABLE столбцы типа `ssn` наследуют правило `rule_ssn`. Существующие столбцы типа `ssn` также наследуют `rule_ssn` правило, если не **futureonly** указывается для *аргумента futureonly_flag*, или `ssn` непосредственно к нему привязано правило. Правила, привязанные к столбцам, всегда имеют преимущество перед теми, которые привязаны к типам данных.  
   
 ```  
 USE master;  
@@ -127,7 +127,7 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE (Transact-SQL)](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_unbindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   

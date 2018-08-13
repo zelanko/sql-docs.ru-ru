@@ -18,13 +18,13 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ed32d379c0a0a58af6a4239899af434027a904f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8a2ef0a97e9c94b7f61b9fbe9061716da03b0e68
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421563"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536788"
 ---
 # <a name="getting-large-data"></a>Возврат больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "37421563"
   
 -   ICommand::Execute  
   
- Если свойство DBPROP_ACCESSORDER (в группе свойств набора строк) присвоено одно из значений DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получать только одну строку данных в вызове **GetNextRows**  метод так, как данные BLOB не буферизуются. Если DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в **GetNextRows**.  
+ Если свойство DBPROP_ACCESSORDER (в группе свойств набора строк) присвоено одно из значений DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получать только одну строку данных в вызове **GetNextRows**  метод так, как данные BLOB не буферизуются. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не получает большие объемы данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до запроса для этого объектом-получателем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
   

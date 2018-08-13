@@ -19,13 +19,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4ccbc15cd4493f4d0d9654e9da130ac192f9f8c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 860c4a6188254cbb1240578ee1fa9c822b9af6a2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416923"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563808"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,26 +44,26 @@ HRESULT SetParameterProperties(
   
 ## <a name="arguments"></a>Аргументы  
  *cParams*[in]  
- Количество структур SSPARAMPROPS в *rgParamProperties* массива. Если это число равно нулю, **ISSCommandWithParameters::SetParameterProperties** приведет к удалению всех свойств, которые могли быть указаны для любых параметров в команде.  
+ Количество структур SSPARAMPROPS в массиве *rgParamProperties*. Если это число равно 0, то метод **ISSCommandWithParameters::SetParameterProperties** удалит все свойства, которые могли быть указаны для всех параметров команды.  
   
  *rgParamProperties*[in]  
  Массив задаваемых структур SSPARAMPROPS.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **ISSCommandWithParameters::SetParameterProperties** метод возвращает те же коды ошибок, как ядро OLE DB **ICommandProperties::SetProperties** метод.  
+ Метод **ISSCommandWithParameters::SetParameterProperties** возвращает те же коды ошибок, что и базовый метод OLE DB **ICommandProperties::SetProperties**.  
   
 ## <a name="remarks"></a>Примечания  
- Настройка свойств параметров с помощью этого метода разрешена для каждого параметра в отдельности по порядковому номеру или с одним **ISSCommandWithParameters::SetParameterProperties** вызвать после структура SSPARAMPROPS строится из массива свойств.  
+ С помощью этого метода разрешается задавать свойства для каждого параметра по порядковому номеру параметра или путем одного вызова метода **ISSCommandWithParameters::SetParameterProperties**, если структура SSPARAMPROPS строится из массива свойств.  
   
- **SetParameterInfo** метод должен вызываться перед вызовом **ISSCommandWithParameters::SetParameterProperties** метод. Вызов метода `SetParameterProperties(0, NULL)` очищает все указанные свойства параметра, тогда как вызов метода `SetParameterInfo(0,NULL,NULL)` очищает все сведения о параметре, в том числе все свойства, которые могут быть связаны с параметром.  
+ Метод **SetParameterInfo** необходимо вызывать до вызова метода **ISSCommandWithParameters::SetParameterProperties**. Вызов метода `SetParameterProperties(0, NULL)` очищает все указанные свойства параметра, тогда как вызов метода `SetParameterInfo(0,NULL,NULL)` очищает все сведения о параметре, в том числе все свойства, которые могут быть связаны с параметром.  
   
  Вызов **ISSCommandWithParameters::SetParameterProperties** для указания свойства параметра, который не относится к типу DBTYPE_XML и DBTYPE_UDT, возвратит DB_E_ERRORSOCCURRED или DB_S_ERRORSOCCURRED и пометит  *dwStatus* поле все DBPROPs, содержащегося в структуре SSPARAMPROPS для этого параметра с DBPROPSTATUS_NOTSET. Чтобы обнаружить, к какому параметру относится DB_E_ERRORSOCCURRED или DB_S_ERRORSOCCURRED, необходимо пройти по массиву DBPROP каждого набора DBPROPSET, содержащегося в структуре SSPARAMPROPS.  
   
- Если **ISSCommandWithParameters::SetParameterProperties** вызывается для указания свойства параметров, сведения о имеют еще не был установлен с **SetParameterInfo**, поставщик возвращает E_ НЕПРЕДВИДЕННЫЙ с следующее сообщение об ошибке:  
+ Если метод **ISSCommandWithParameters::SetParameterProperties** вызывается, чтобы задать свойства параметров, сведения о которых еще не были заданы с помощью метода **SetParameterInfo**, то поставщик возвратит E_UNEXPECTED со следующим сообщением об ошибке:  
   
  Невозможно вызвать метод SetParameterProperties для указанных параметров, не вызывая предварительно метод SetParameterInfo. До задания свойств параметров необходимо задать сведения о параметрах.  
   
- Если вызов **ISSCommandWithParameters::SetParameterProperties** содержит некоторые параметры, где сведения о параметрах был набор и некоторые параметры, где сведения о параметрах не было задано, то свойства dwStatus в DBPROPSET набора свойств SSPARAMPROPS вернутся со значением DBSTATUS_NOTSET.  
+ Если вызов метода **ISSCommandWithParameters::SetParameterProperties** содержит некоторые параметры с заданными сведениями и некоторые параметры с незаданными сведениями, то свойства dwStatus в структуре DBPROPSET набора свойств SSPARAMPROPS будут возвращены со значением DBSTATUS_NOTSET.  
   
  Структура SSPARAMPROPS определена следующим образом.  
   
@@ -77,7 +77,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- Улучшения в ядро базы данных, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] разрешить ISSCommandWithParameters::SetParameterProperties получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значения, возвращаемые методом ISSCommandWithParameters::SetParameterProperties в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Улучшения в ядро базы данных, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] разрешить ISSCommandWithParameters::SetParameterProperties получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значения, возвращаемые методом ISSCommandWithParameters::SetParameterProperties в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 |Член|Описание|  
 |------------|-----------------|  

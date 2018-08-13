@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_background_job_queue (Transact-SQL) | Документы Microsoft
+title: sys.dm_exec_background_job_queue (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,20 +23,20 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1c65f1333733936c8192ec5a4012a3a918dd69b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6b04f500b1603df57eace3b2d58fb158bda3f945
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464720"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550544"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает строку для каждого задания обработчика запросов, запланированного для асинхронного (фонового) выполнения.  
   
-> **ПРИМЕЧАНИЕ.** Вызов его из **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** или **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, используйте имя **sys.dm_pdw_nodes_exec_background_job_queue**.  
+> **ПРИМЕЧАНИЕ.** Вызывать его из **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** или **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, используйте имя **sys.dm_pdw_nodes_exec_background_job_queue**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "34464720"
 |**retry_count**|**smallint**|Число возвратов задания в очередь из-за отсутствия ресурсов или по другим причинам.|  
 |**in_progress**|**smallint**|Показывает, начато ли выполнение задания:<br /><br /> 1 = выполнение начато;<br /><br /> 0 = задание пока еще ожидает.|  
 |**session_id**|**smallint**|Идентификатор сеанса.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения
 

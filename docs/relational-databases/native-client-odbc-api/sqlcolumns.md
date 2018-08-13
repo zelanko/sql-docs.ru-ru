@@ -17,13 +17,13 @@ caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f56b3e1b80687692293998b0b7b12daf9af7a330
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5e2febda8a84ca1d8479b0139947683f70a23658
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416063"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562888"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,8 +86,8 @@ ms.locfileid: "37416063"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|Если столбец является разреженным, то значение равно SQL_TRUE. В противном случае — SQL_FALSE.|  
-|SS_IS_COLUMN_SET|**Smallint**|Если столбец является **column_set** столбца, это значение равно SQL_TRUE; в противном случае — SQL_FALSE.|  
+|SS_IS_SPARSE|**smallint**|Если столбец является разреженным, то значение равно SQL_TRUE. В противном случае — SQL_FALSE.|  
+|SS_IS_COLUMN_SET|**smallint**|Если столбец является **column_set** столбца, это значение равно SQL_TRUE; в противном случае — SQL_FALSE.|  
   
  В соответствии со спецификацией ODBC SS_IS_SPARSE и SS_IS_COLUMN_SET появляются перед все специфические для драйвера столбцами, которые были добавлены [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]и после всех столбцов, обязательных для ODBC.  
   

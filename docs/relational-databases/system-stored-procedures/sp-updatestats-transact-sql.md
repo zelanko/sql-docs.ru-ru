@@ -1,5 +1,5 @@
 ---
-title: sp_updatestats (Transact-SQL) | Документы Microsoft
+title: sp_updatestats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
@@ -22,19 +22,20 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 895c3fd65ac6cad3a0ce67dee54cfe8cf1070ea4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cd4eada4db6af75ad794efdba231407b23f79354
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560584"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Запускает инструкцию UPDATE STATISTICS для всех пользовательских и внутренних таблиц в текущей базе данных.  
   
- Дополнительные сведения об инструкции UPDATE STATISTICS см. в разделе [обновление СТАТИСТИКИ &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). Дополнительные сведения о статистике см. в разделе [статистики](../../relational-databases/statistics/statistics.md).  
+ Дополнительные сведения об инструкции UPDATE STATISTICS см. в разделе [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md).  
     
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,18 +51,18 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 ## <a name="arguments"></a>Аргументы  
  [ **@resample** =] **'resample'**  
- Указывает, что **sp_updatestats** будет использовать параметр RESAMPLE [обновление СТАТИСТИКИ](../../t-sql/statements/update-statistics-transact-sql.md) инструкции. Если **'resample'** не указан, **sp_updatestats** обновляет статистику с помощью выборки по умолчанию. **Обработайте** — **varchar(8)** со значением по умолчанию нет.  
+ Указывает, что **sp_updatestats** будет использовать параметр RESAMPLE [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) инструкции. Если **'resample'** не указан, **sp_updatestats** обновляет статистику с помощью выборки по умолчанию. **Повторить выборку** — **varchar(8)** со значением по умолчанию "Нет".  
   
-## <a name="remarks"></a>Замечания  
- **sp_updatestats** выполняет инструкцию UPDATE STATISTICS, указав ключевое слово ALL, для всех пользовательских и внутренних таблиц в базе данных. sp_updatestats выводит сообщения о ходе своего выполнения. По завершении обновления выдается отчет о том, что обновление статистики произведено для всех таблиц.  
+## <a name="remarks"></a>Примечания  
+ **sp_updatestats** выполняет инструкцию UPDATE STATISTICS, указывая ключевое слово ALL, для всех пользовательских и внутренних таблиц в базе данных. sp_updatestats выводит сообщения о ходе своего выполнения. По завершении обновления выдается отчет о том, что обновление статистики произведено для всех таблиц.  
   
  Процедура sp_updatestats обновляет статистику по отключенным некластеризованным индексам и не обновляет статистику по отключенным кластеризованным индексам.  
   
- Для дисковых таблиц **sp_updatestats** обновляет статистику на основании **modification_counter** сведения в **sys.dm_db_stats_properties** представление каталога Обновление статистики, где был изменен по крайней мере одну строку. Статистика для таблиц, оптимизированных для памяти всегда обновляется при выполнении **sp_updatestats**. Поэтому не следует вызывать **sp_updatestats** чаще, чем необходимо.  
+ Для дисковых таблиц **sp_updatestats** обновляет статистику на основе **modification_counter** сведения в **sys.dm_db_stats_properties** представление каталога Обновление статистики, где был изменен по крайней мере одну строку. Статистика для таблиц, оптимизированных для памяти всегда обновляется при выполнении **sp_updatestats**. Поэтому не следует вызывать **sp_updatestats** чаще, чем необходимо.  
   
- **sp_updatestats** можно запустить повторную компиляцию хранимых процедур или другого откомпилированного кода. Тем не менее **sp_updatestats** не может запустить повторную компиляцию, если только один план запроса для целевых таблиц и индексов на них. Повторная компиляция в этих случаях будет не нужна даже при обновлении статистики.  
+ **sp_updatestats** можно запустить повторную компиляцию хранимых процедур или другого откомпилированного кода. Тем не менее **sp_updatestats** не может запустить повторную компиляцию, если только один план запроса для таблиц и индексов в них. Повторная компиляция в этих случаях будет не нужна даже при обновлении статистики.  
   
- Для баз данных с уровнем совместимости ниже 90 при выполнении процедуры **sp_updatestats** не сохраняет последнее значение параметра NORECOMPUTE для заданной статистики. Для баз данных с уровнем совместимости 90 и выше sp_updatestats сохраняет последнее значение параметра NORECOMPUTE для заданной статистики. Дополнительные сведения об отключении и повторном включении обновления статистики см. в разделе [Статистика](../../relational-databases/statistics/statistics.md).  
+ Для баз данных с уровнем совместимости ниже 90 при выполнении процедуры **sp_updatestats** не сохраняет последнее значение параметра NORECOMPUTE для заданной статистики. Для баз данных с уровнем совместимости 90 или выше sp_updatestats сохраняет последнее значение параметра NORECOMPUTE для заданной статистики. Дополнительные сведения об отключении и повторном включении обновления статистики см. в разделе [Статистика](../../relational-databases/statistics/statistics.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **sysadmin** предопределенной роли сервера или владельцем базы данных (**dbo**).  

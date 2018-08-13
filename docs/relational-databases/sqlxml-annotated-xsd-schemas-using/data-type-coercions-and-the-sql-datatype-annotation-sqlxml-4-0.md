@@ -1,5 +1,5 @@
 ---
-title: 'Приведение типов данных и SQL: DataType заметки (SQLXML 4.0) | Документы Microsoft'
+title: 'Приведение типов данных и заметка (SQLXML 4.0), SQL: DataType | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,27 +26,28 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 25685856bbb1b088f7c2825e27973915f850dea7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 68e0308ed8b06967b240fe1f2937607833a723b2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551394"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Приведение типов данных и заметка sql:datatype (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В схеме XSD **заметки xsd: Type** атрибут задает тип данных XSD элемент или атрибут. Если схема XSD используется для получения данных из базы данных, указанный тип данных используется для форматирования данных.  
+  В схеме XSD **заметки xsd: Type** атрибут указывает тип данных XSD элемента или атрибута. Если схема XSD используется для получения данных из базы данных, указанный тип данных используется для форматирования данных.  
   
- Помимо указания XSD-типа в схеме, можно также указать Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных с помощью **SQL: DataType** заметки. **Заметки xsd: Type** и **SQL: DataType** атрибуты определяют сопоставление типов данных XSD и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.  
+ Помимо указания типа XSD в схеме, можно также указать Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных с помощью **SQL: DataType** заметки. **Заметки xsd: Type** и **SQL: DataType** атрибуты управляют сопоставлением между типами данных XSD и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.  
   
 ## <a name="xsdtype-attribute"></a>Атрибут xsd:type  
- Можно использовать **заметки xsd: Type** атрибут для указания типа данных XML атрибута или элемента, который сопоставляется со столбцом. **Заметки xsd: Type** влияет на документ, возвращенный сервером, а также выполняемый запрос XPath. При выполнении запроса XPath к схеме сопоставления, которая содержит **xsd: тип**, XPath использует заданный тип данных при обработке запроса. Дополнительные сведения об использовании XPath **заметки xsd: Type**, в разделе [сопоставление типов данных XSD в типы данных XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md).  
+ Можно использовать **заметки xsd: Type** атрибут для указания типа данных XML атрибута или элемента, который сопоставляется со столбцом. **Заметки xsd: Type** влияет на документ, возвращаемый сервером, а также выполняемый запрос XPath. При выполнении запроса XPath к схеме сопоставления, которая содержит **заметки xsd: Type**, XPath использует указанный тип данных при обработке запроса. Дополнительные сведения о способах использования XPath **заметки xsd: Type**, см. в разделе [сопоставление типов данных XSD с типами данных XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md).  
   
  В возвращенном документе все типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразуются в строковые представления. Для некоторых типов данных необходимо дополнительное преобразование. В следующей таблице перечислены преобразования, которые используются для различных **заметки xsd: Type** значения.  
   
 |Тип данных XSD|Преобразование SQL Server|  
 |-------------------|---------------------------|  
-|Boolean|CONVERT(bit, COLUMN)|  
+|Логическое значение|CONVERT(bit, COLUMN)|  
 |Дата|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 |Все остальные|Дополнительное преобразование не выполняется|  
   
 > [!NOTE]  
->  Некоторые значения, возвращаемые методом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут оказаться несовместимыми с типами данных XML, заданные с помощью **заметки xsd: Type**, так как преобразование не поддерживается (например, преобразование «XYZ» в  **десятичное число** тип данных) или из-за превышения диапазона этого типа данных (например,-100000 преобразуется в **UnsignedShort** типа XSD). Преобразования несовместимых типов может привести к недопустимым XML-документам или ошибкам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Некоторые значения, возвращаемые методом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может оказаться несовместимым с типами данных XML, которые указываются с помощью **заметки xsd: Type**, из-за преобразование не поддерживается (например, преобразование «XYZ» в  **Decimal** тип данных) или из-за превышения диапазона этого типа данных (например,-100000 в **типа UnsignedShort** тип XSD). Преобразования несовместимых типов может привести к недопустимым XML-документам или ошибкам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="mapping-from-sql-server-data-types-to-xsd-data-types"></a>Сопоставление типов данных SQL Server с типами данных XSD  
  Следующая таблица показывает очевидные сопоставления типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типам данных XSD. Если известен тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в данной таблице показан соответствующий XSD-тип, который можно указать в схеме XSD.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 |--------------------------|-------------------|  
 |**bigint**|**Long**|  
 |**binary**|**Base64Binary**|  
-|**бит**|**boolean**|  
+|**bit**|**boolean**|  
 |**char**|**строка**|  
 |**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
@@ -90,21 +91,21 @@ ms.lasthandoff: 05/03/2018
 |**uniqueidentifier**|**строка**|  
   
 ## <a name="sqldatatype-annotation"></a>Заметка sql:datatype  
- **SQL: DataType** заметка используется для указания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, эта заметка должен быть указан, если:  
+ **SQL: DataType** заметка используется для указания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; эту заметку в тип данных должен быть указан, если:  
   
 -   Выполняется Массовая загрузка в **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбец из XSD **dateTime**, **даты**, или **время** типа. В этом случае необходимо определить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных столбца с помощью **SQL: DataType = «dateTime»**. Это правило применяется только для диаграмм обновления.  
   
--   Выполняется Массовая загрузка в столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** тип и значение XSD представляет собой идентификатор GUID, который включает фигурные скобки ({и}). При указании **SQL: DataType = «uniqueidentifier»**, фигурные скобки удаляются из значения перед вставкой в столбце. Если **SQL: DataType** не указан, значение пересылается с фигурными скобками и вставка или обновление завершается неудачей.  
+-   Выполняется Массовая загрузка в столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** тип и значение XSD представляет собой идентификатор GUID, который включает фигурные скобки ({и}). При указании **SQL: DataType = «uniqueidentifier»**, фигурные скобки удаляются из значения, прежде чем оно вставляется в столбец. Если **SQL: DataType** не указан, значение пересылается с фигурными скобками и вставка или обновление завершается неудачей.  
   
--   Тип данных XML **base64Binary** сопоставляется различным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных (**двоичных**, **изображения**, или **varbinary**). Чтобы сопоставить тип данных XML **base64Binary** с определенным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, используйте **SQL: DataType** заметки. Эта заметка указывает явный тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбца, которому сопоставляется атрибут. Это полезно, если данные сохраняются в базах данных. Указав **SQL: DataType** заметки, можно определить явные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
+-   Тип данных XML **base64Binary** сопоставляется различным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных (**двоичных**, **изображение**, или **varbinary**). Чтобы сопоставить тип данных XML **base64Binary** с конкретными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, используйте **SQL: DataType** заметки. Эта заметка указывает явный тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбца, которому сопоставляется атрибут. Это полезно, если данные сохраняются в базах данных. Путем указания **SQL: DataType** заметки, можно определить явный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
   
  Обычно рекомендуется указывать **SQL: DataType** в схеме.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для выполнения примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-xsdtype"></a>A. Указание заметки xsd:type  
- В этом примере показано, как XSD **даты** типа, заданного с помощью **заметки xsd: Type** атрибут в схеме, влияет на результирующий XML-документ. Схема обеспечивает XML-представление таблицы Sales.SalesOrderHeader в базе данных AdventureWorks.  
+ В этом примере показано, как XSD- **даты** типа, заданного с помощью **заметки xsd: Type** атрибут в схеме, влияет на итоговый документ XML. Схема обеспечивает XML-представление таблицы Sales.SalesOrderHeader в базе данных AdventureWorks.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -125,9 +126,9 @@ ms.lasthandoff: 05/03/2018
   
 -   Указывает **заметки xsd: Type = Дата** на **OrderDate** атрибут дату часть значения, возвращенного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для **OrderDate** атрибут отображается.  
   
--   Указывает **заметки xsd: Type = время** на **ShipDate** атрибут часть времени значения, возвращаемого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для **ShipDate** атрибут отображается.  
+-   Указывает **заметки xsd: Type = время** на **ShipDate** атрибут, часть времени значения, возвращенного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для **ShipDate** атрибут отображается.  
   
--   Не указывайте **заметки xsd: Type** на **DueDate** атрибута, то же значение, возвращенный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображается.  
+-   Не указывайте **заметки xsd: Type** на **DueDate** атрибута, значение, возвращается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображается.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Проверка образца запроса XPath к схеме  
   
@@ -151,7 +152,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Частичный результирующий набор:  
   
@@ -196,6 +197,6 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>Б. Указание типа данных SQL с помощью заметки sql:datatype  
- Работающий пример см. в разделе примере Е в [примеры массовой загрузки XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). В этом примере выполняется массовая загрузка значения идентификатора GUID, включая "{" и "}". В этом примере схема задает **SQL: DataType** для идентификации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных как **uniqueidentifier**. В этом примере показано, когда **SQL: DataType** должен быть указан в схеме.  
+ Работающий пример см. в разделе в примере G [примеры массовой загрузки XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). В этом примере выполняется массовая загрузка значения идентификатора GUID, включая "{" и "}". В этом примере схема указывает **SQL: DataType** для идентификации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как тип данных **uniqueidentifier**. В этом примере показано, когда **SQL: DataType** должен быть указан в схеме.  
   
   

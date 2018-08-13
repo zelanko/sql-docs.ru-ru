@@ -1,5 +1,5 @@
 ---
-title: Указание логических операторов в запросах XPath (SQLXML 4.0) | Документы Microsoft
+title: Указание логических операторов в запросах XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,16 +21,17 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c3f061db3f431f87c5f2a214776558c3f6d69a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3b284681edd3caa26028a159a7b4cf024aa08cb4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563718"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Указание логических операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующем примере показано, каким образом логические операторы задаются в запросах XPath. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующем примере показано, каким образом логические операторы задаются в запросах XPath. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -41,13 +42,13 @@ ms.lasthandoff: 05/03/2018
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
 ```  
   
- Ярлык для **атрибута** оси (@) можно указать, а потому, что **дочерних** оси используется по умолчанию, ее можно опустить:  
+ Ярлык для **атрибут** оси (@) можно указать и поскольку **дочерних** оси используется по умолчанию, ее можно опустить:  
   
 ```  
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- В этом предикате `attribute` является осью и `CustomerID` является проверкой узла (значение TRUE, если **CustomerID** —  **\<атрибут >** узла, так как  **\<атрибут >** узел является основным узлом для **атрибута** оси). Фильтры предикатов  **\<клиента >** элементов и возвращает только те, которые удовлетворяют условию, заданному в предикате.  
+ В этом предикате `attribute` является осью и `CustomerID` является проверкой узла (значение TRUE, если **CustomerID** —  **\<атрибут >** узла, так как  **\<атрибут >** узел является основным узлом для **атрибут** оси). Фильтры предикатов  **\<клиента >** элементов и возвращает только те, которые удовлетворяют условию, заданному в предикате.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Проверка запросов XPath к схеме сопоставления  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен результирующий набор, полученный в результате выполнения этого шаблона.  
   

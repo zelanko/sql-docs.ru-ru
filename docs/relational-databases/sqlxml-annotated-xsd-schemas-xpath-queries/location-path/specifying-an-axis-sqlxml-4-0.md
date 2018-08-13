@@ -1,5 +1,5 @@
 ---
-title: Определение оси (SQLXML 4.0) | Документы Microsoft
+title: Определение оси (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8659d8187042b0c40d2890e5a4feaf367efc7203
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 09c2ddbbe478672c610ed33c4c5efd55ddf0ad57
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968229"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551224"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Определение оси (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "32968229"
   
      Содержит дочерний элемент узла контекста.  
   
-     Следующее выражение XPath (путь доступа) выбирает из текущего контекстного узла все  **\<клиента >** дочерних элементов:  
+     Следующее выражение XPath (путь доступа) выбирает из текущего контекстного узла все  **\<клиента >** дочерние элементы:  
   
     ```  
     child::Customer  
@@ -52,7 +52,7 @@ ms.locfileid: "32968229"
   
      Содержит родительский элемент контекстного узла.  
   
-     Следующее выражение XPath выбирает все  **\<клиента >** родительские объекты  **\<порядок >** дочерних элементов:  
+     Следующее выражение XPath выбирает все  **\<клиента >** родителям  **\<порядок >** дочерние элементы:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -70,7 +70,7 @@ ms.locfileid: "32968229"
     attribute::CustomerID  
     ```  
   
--   **Самообслуживания**  
+-   **SELF**  
   
      Содержит сам узел контекста.  
   
