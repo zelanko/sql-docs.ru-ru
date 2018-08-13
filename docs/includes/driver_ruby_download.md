@@ -1,1 +1,0 @@
-![Скачать](../ssdt/media/download.png)[Установить драйвер Ruby](http://msdn.microsoft.com/library/mt711041.aspx)

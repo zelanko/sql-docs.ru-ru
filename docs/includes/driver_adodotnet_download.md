@@ -1,1 +1,0 @@
-![Скачать](../ssdt/media/download.png)[Скачать драйвер .Net](http://www.microsoft.com/net/download/)
