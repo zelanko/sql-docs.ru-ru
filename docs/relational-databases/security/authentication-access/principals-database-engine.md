@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8195661f681d3f0e694e040e2319efdfcd3803bc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553104"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008966"
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "39553104"
   
 ## <a name="sql-server-level-principals"></a>Субъекты уровня SQL Server:  
   
--  имя входа для проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];   
--  имя входа для проверки подлинности Windows для пользователя Windows;  
--  имя входа для проверки подлинности Windows для группы Windows;   
--  имя входа для проверки подлинности Azure Active Directory для пользователя AD;
--  имя входа для проверки подлинности Azure Active Directory для группы AD.
--  Роль сервера  
+- имя входа для проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];   
+- имя входа для проверки подлинности Windows для пользователя Windows;  
+- имя входа для проверки подлинности Windows для группы Windows;   
+- имя входа для проверки подлинности Azure Active Directory для пользователя AD;
+- имя входа для проверки подлинности Azure Active Directory для группы AD.
+- Роль сервера  
   
- ## <a name="database-level-principals"></a>Субъекты уровня базы данных  
+## <a name="database-level-principals"></a>Субъекты уровня базы данных
   
--   пользователь базы данных (существует 11 типов пользователей; сведения см. в статье об инструкции [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)); 
--   Роль базы данных  
--   Роль приложения  
+- пользователь базы данных (существует 11 типов пользователей; сведения см. в статье об инструкции [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md));
+- Роль базы данных
+- Роль приложения
   
 ## <a name="sa-login"></a>Имя входа SA  
  Имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` является субъектом уровня сервера. По умолчанию оно создается при установке экземпляра. Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]базой данных для имени входа sa по умолчанию является master. Это поведение было изменено по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Имя входа `sa` является участником предопределенной роли базы данных `sysadmin`. `sa` имеет все разрешения на сервере и не может быть ограничено. Имя входа `sa` нельзя удалить, но его можно отключить, чтобы никто не смог его использовать.

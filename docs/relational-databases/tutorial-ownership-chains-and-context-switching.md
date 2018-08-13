@@ -21,11 +21,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 22aa54280e01854e44b8b3d64eefbd797eb98276
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008806"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="1-configure-the-environment"></a>1. Настройка среды  
 С помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и приведенного ниже кода откройте базу данных `AdventureWorks2012`, затем с помощью инструкции `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] проверьте, отображается ли пользователь dbo в качестве контекста.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -69,7 +70,7 @@ GO
   
 От имени пользователя dbo создайте с помощью этого кода двух пользователей на сервере и в базе данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
   
-```  
+```sql
 CREATE LOGIN TestManagerUser   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khx';  
 GO  
@@ -90,7 +91,7 @@ GO
   
 Изменить владельца схемы `Purchasing` на учетную запись `TestManagerUser` можно с помощью приведенного ниже кода. Это позволит учетной записи использовать все инструкции доступа языка обработки данных DML (например, разрешения `SELECT` или `INSERT` ) для объектов, которые содержит эта схема. `TestManagerUser` также предоставляет возможность создавать хранимые процедуры.  
   
-```  
+```sql
 /* Change owner of the Purchasing Schema to TestManagerUser */  
 ALTER AUTHORIZATION   
    ON SCHEMA::Purchasing   
@@ -110,7 +111,7 @@ GO
   
 С помощью инструкции `EXECUTE AS` в приведенном ниже коде измените контекст на `TestManagerUser` и создайте хранимую процедуру, показывающую только те данные, которые должны быть видны пользователю `TestEmployeeUser`. Для соответствия требованиям хранимая процедура принимает одну переменную для номера заказа на покупку и не показывает финансовую информацию, а предложение WHERE ограничивает результаты для частичных отгрузок.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestManagerUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -134,7 +135,7 @@ GO
   
 В данный момент пользователь `TestEmployeeUser` не имеет доступа к объектам базы данных. Следующий код (все еще в контексте `TestManagerUser` ) предоставляет учетной записи пользователя возможность запрашивать информацию из базовой таблицы через хранимую процедуру.  
   
-```  
+```sql
 GRANT EXECUTE  
    ON OBJECT::Purchasing.usp_ShowWaitingItems  
    TO TestEmployeeUser;  
@@ -143,7 +144,7 @@ GO
   
 Хотя схема не была указана явно, хранимая процедура является частью схемы `Purchasing` , поскольку пользователь `TestManagerUser` по умолчанию связан со схемой `Purchasing` . Для поиска объектов можно использовать информацию из системного каталога, как показано в следующем коде.  
   
-```  
+```sql
 SELECT a.name AS 'Schema'  
    , b.name AS 'Object Name'  
    , b.type AS 'Object Type'  
@@ -156,7 +157,7 @@ GO
   
 После завершения этого раздела примера код переключает контекст обратно на dbo с помощью инструкции `REVERT`.  
   
-```  
+```sql
 REVERT;  
 GO  
 ```  
@@ -166,7 +167,7 @@ GO
 ## <a name="3-access-data-through-the-stored-procedure"></a>3. Доступ к данным через хранимую процедуру  
 `TestEmployeeUser` не обладает разрешениями на объекты базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , кроме разрешения на вход в систему и прав, присвоенных роли базы данных public. Следующий код возвращает ошибку при попытке обращения `TestEmployeeUser` к базовым таблицам.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -182,7 +183,7 @@ GO
   
 Поскольку объекты, на которые ссылается процедура, созданная в предыдущем разделе, принадлежат `TestManagerUser` по причине владения схемой `Purchasing` , `TestEmployeeUser` может получить доступ к базовым таблицам через хранимую процедуру. Следующий код, все еще в контексте `TestEmployeeUser` , проводит заказ на покупку 952 как параметр.  
   
-```  
+```sql
 EXEC Purchasing.usp_ShowWaitingItems 952  
 GO  
 ```  
@@ -190,7 +191,7 @@ GO
 ## <a name="4-reset-the-environment"></a>4. Сброс среды  
 Следующий код с помощью команды `REVERT` изменяет контекст текущей учетной записи обратно на `dbo`и затем выполняет сброс среды.  
   
-```  
+```sql
 REVERT;  
 GO  
 ALTER AUTHORIZATION   
@@ -214,7 +215,7 @@ GO
 > [!NOTE]  
 > В этот код не включены две ошибки, которые иллюстрировали невозможность `TestEmployeeUser` получить данные из базовых таблиц.  
   
-```  
+```sql
 /*   
 Script:       UserContextTutorial.sql  
 Author:       Microsoft  

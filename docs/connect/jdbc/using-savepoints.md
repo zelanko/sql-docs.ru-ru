@@ -14,27 +14,27 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72b354c805a3d46dd31f6f9df308e33493c2db2c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 125c15caac95f152c6f5009b1a794bd0fb625a2c
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992936"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661866"
 ---
 # <a name="using-savepoints"></a>Использование точек сохранения
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Точки сохранения предоставляют механизм отката части транзакций. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] можно создать точку сохранения с помощью инструкции SAVE TRANSACTION savepoint_name. После выполняется инструкция ROLLBACK TRANSACTION savepoint_name для отката до точки сохранения вместо отката до начала транзакции.  
-  
- Точки сохранения удобно использовать, когда вероятность возникновения ошибок мала. Откат до точки сохранения в ситуации, когда ошибка встречается крайне редко, часто более эффективен, чем подход, когда каждая транзакция проверяет допустимость обновления, прежде чем его выполнить. Операции обновления и отката являются ресурсоемкими, поэтому точки сохранения приносят пользу, только если вероятность ошибок небольшая, а затраты на проверку допустимости обновления относительно высокие.  
-  
- Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает использование точек сохранения посредством вызова метода [setSavepoint](../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). С помощью метода setSavepoint можно создать именованную или неименованную точку сохранения в текущей транзакции, а метод возвращает объект [SQLServerSavepoint](../../connect/jdbc/reference/sqlserversavepoint-class.md). В транзакции можно создать несколько точек сохранения. Для отката транзакции до заданной точки сохранения можно передать объект SQLServerSavepoint в метод [rollback (java.sql.Savepoint)](../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md).  
-  
- В приведенном ниже примере используется точка сохранения при выполнении локальной транзакции, состоящей из двух раздельных инструкций в блоке `try`. Инструкции выполняются для таблицы Production.ScrapReason в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], а точка сохранения используется для отката второй инструкции. При этом в базе данных фиксируется только первая инструкция.  
-  
- [!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]  
-  
-## <a name="see-also"></a>См. также:  
- [Выполнение транзакций с помощью драйвера JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
-  
-  
+Точки сохранения предоставляют механизм отката части транзакций. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] можно создать точку сохранения с помощью инструкции SAVE TRANSACTION savepoint_name. После выполняется инструкция ROLLBACK TRANSACTION savepoint_name для отката до точки сохранения вместо отката до начала транзакции.
+
+Точки сохранения удобно использовать, когда вероятность возникновения ошибок мала. Откат до точки сохранения в ситуации, когда ошибка встречается крайне редко, часто более эффективен, чем подход, когда каждая транзакция проверяет допустимость обновления, прежде чем его выполнить. Операции обновления и отката являются ресурсоемкими, поэтому точки сохранения приносят пользу, только если вероятность ошибок небольшая, а затраты на проверку допустимости обновления относительно высокие.
+
+Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает использование точек сохранения посредством вызова метода [setSavepoint](../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). С помощью метода setSavepoint можно создать именованную или неименованную точку сохранения в текущей транзакции, а метод возвращает объект [SQLServerSavepoint](../../connect/jdbc/reference/sqlserversavepoint-class.md). В транзакции можно создать несколько точек сохранения. Для отката транзакции до заданной точки сохранения можно передать объект SQLServerSavepoint в метод [rollback (java.sql.Savepoint)](../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md).
+
+В приведенном ниже примере используется точка сохранения при выполнении локальной транзакции, состоящей из двух раздельных инструкций в блоке `try`. Инструкции выполняются для таблицы Production.ScrapReason в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], а точка сохранения используется для отката второй инструкции. При этом в базе данных фиксируется только первая инструкция.
+
+[!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]
+
+## <a name="see-also"></a>См. также:
+
+[Выполнение транзакций с помощью драйвера JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

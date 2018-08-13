@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98c351eef36810032e55941683996c007a8c39d3
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 04511587586fc2faef1471a9e6a8d1629fe62c78
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452081"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662416"
 ---
 # <a name="basic-data-types-sample"></a>Образец базовых типов данных
 
@@ -29,7 +29,7 @@ ms.locfileid: "39452081"
   
 Файлу с этим примером кода присвоено имя BasicDataTypes.java. Файл находится в следующем расположении:  
 
-```
+```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
 ```
 

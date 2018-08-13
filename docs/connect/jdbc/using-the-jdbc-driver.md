@@ -14,12 +14,12 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1af25d246de93812aca83c490a7a11c7dc66fbdc
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456398"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661796"
 ---
 # <a name="using-the-jdbc-driver"></a>Использование драйвера JDBC
 
@@ -35,7 +35,7 @@ Microsoft 7.0 драйвера JDBC для SQL Server предоставляет
 
 Microsoft JDBC Driver 6.4 для SQL Server предоставляет **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, и **mssql-jdbc-6.4.0.jre9.jar** библиотеки классов файлы.
 
-Microsoft JDBC Driver 6.2 для SQL Server предоставляет **mssql-jdbc-6.2.1.jre7.jar**, и **mssql-jdbc-6.2.1.jre8.jar** файлы библиотек классов.
+Microsoft JDBC Driver 6.2 для SQL Server предоставляет **mssql-jdbc-6.2.2.jre7.jar**, и **mssql-jdbc-6.2.2.jre8.jar** файлы библиотек классов.
   
 Драйверы Microsoft JDBC 6.0 и 4.2 для SQL Server предоставляют **sqljdbc41.jar**, и **sqljdbc42.jar** файлы библиотек классов.
   
@@ -49,7 +49,7 @@ Microsoft JDBC Driver 4.1 для SQL Server предоставляет **sqljdbc
 
 Если с помощью JDBC Driver 4.1 или 4.2, в пути к классу **sqljdbc41.jar** или **sqljdbc42.jar** файл из соответствующих драйверов загрузки.
 
-Если с помощью JDBC Driver 6.2 в пути к классу **mssql-jdbc-6.2.1.jre7.jar** или **mssql-jdbc-6.2.1.jre8.jar**.
+Если с помощью JDBC Driver 6.2 в пути к классу **mssql-jdbc-6.2.2.jre7.jar** или **mssql-jdbc-6.2.2.jre8.jar**.
 
 Если с помощью JDBC Driver 6.4 в пути к классу **mssql-jdbc-6.4.0.jre7.jar**, ** mssql-jdbc-6.4.0.jre8.jar или **mssql-jdbc-6.4.0.jre9.jar**.
 
@@ -62,9 +62,9 @@ Microsoft JDBC Driver 4.1 для SQL Server предоставляет **sqljdbc
 **Mssql-jdbc-7.0.0.jre8.jar** или **mssql-jdbc-7.0.0.jre10.jar** файлы устанавливаются в следующих расположениях:
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-7.0.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre8.jar
 
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-7.0.0.jre10.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre10.jar
 ```
 
 В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Windows:  
@@ -82,11 +82,11 @@ Microsoft JDBC Driver 4.1 для SQL Server предоставляет **sqljdbc
 **Mssql-jdbc-6.4.0.jre7.jar**, ** mssql-jdbc-6.4.0.jre8.jar или **mssql-jdbc-6.4.0.jre9.jar** файлы устанавливаются в следующий каталог:  
 
 ```bash  
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre7.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre7.jar
   
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre8.jar
 
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre9.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre9.jar
 ```
 
 В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Windows:  
@@ -101,36 +101,36 @@ Microsoft JDBC Driver 4.1 для SQL Server предоставляет **sqljdbc
 
 ### <a name="for-microsoft-jdbc-driver-62"></a>Для драйвера Microsoft JDBC Driver 6.2
 
-**Mssql-jdbc-6.2.1.jre7.jar** или **mssql-jdbc-6.2.1.jre8.jar** файлы устанавливаются в следующих расположениях:
+**Mssql-jdbc-6.2.2.jre7.jar** или **mssql-jdbc-6.2.2.jre8.jar** файлы устанавливаются в следующих расположениях:
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\mssql-jdbc-6.2.2.jre7.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre7.jar
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\mssql-jdbc-6.2.2.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre8.jar
 ```
 
 В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Windows:  
   
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.1.jre8.jar`  
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.2.jre8.jar`  
   
 В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Unix/Linux:  
   
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.1.jre8.jar`  
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
   
-Убедитесь, что инструкция CLASSPATH содержит только одну [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], например mssql-jdbc-6.2.1.jre7.jar или mssql-jdbc-6.2.1.jre8.jar.  
+Убедитесь, что инструкция CLASSPATH содержит только одну [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], например mssql-jdbc-6.2.2.jre7.jar и mssql-jdbc-6.2.2.jre8.jar.  
 
 ### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Для драйвера Microsoft JDBC Driver 6.0, 4.1 и 4.2
 
 Файл sqljdbc.jar file, sqljdbc4.jar file, sqljdbc41.jar или sqljdbc42.jar устанавливается в следующее расположение:  
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc4.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc4.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc41.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc41.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc42.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc42.jar  
 ```
 
 В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Windows:  
