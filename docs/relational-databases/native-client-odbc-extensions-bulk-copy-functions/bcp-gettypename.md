@@ -21,13 +21,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 90b98b23bff869b0fbf0498669d389a7d834a84d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426226"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539684"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *токен*  
+ *Маркер*  
  Значение, указывающее токен типа BCP.  
   
  *field*  
@@ -78,8 +78,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|Допустим любой вариант|**text**|  
 |**SQLBIGBINARY**|Нет|**binary**|  
 |**SQLBINARY**|Нет|**Двоичный**|  
-|**SQLBIGVARBINARY**|Нет|**Varbinary**|  
-|**SQLVARBINARY**|Нет|**Varbinary**|  
+|**SQLBIGVARBINARY**|Нет|**varbinary**|  
+|**SQLVARBINARY**|Нет|**varbinary**|  
 |**SQLIMAGE**|Допустим любой вариант|**Изображение**|  
 |**SQLINTN**|Допустим любой вариант|**int-null**|  
 |**SQLDATETIMN**|Допустим любой вариант|**DateTime-null**|  
@@ -91,12 +91,12 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|Допустим любой вариант|**Min**|  
 |**SQLAOPMAX**|Допустим любой вариант|**Max**|  
 |**SQLDATETIM4**|Допустим любой вариант|**smalldatetime**|  
-|**SQLMONEY4**|Допустим любой вариант|**Smallmoney**|  
-|**SQLFLT4**|Допустим любой вариант|**Real**|  
+|**SQLMONEY4**|Допустим любой вариант|**smallmoney**|  
+|**SQLFLT4**|Допустим любой вариант|**real**|  
 |**SQLUNIQUEID**|Допустим любой вариант|**uniqueidentifier**|  
-|**SQLNCHAR**|Нет|**Nchar**|  
+|**SQLNCHAR**|Нет|**nchar**|  
 |**SQLNVARCHAR**|Нет|**Nvarchar**|  
-|**SQLNTEXT**|Допустим любой вариант|**Ntext**|  
+|**SQLNTEXT**|Допустим любой вариант|**ntext**|  
 |**SQLVARIANT**|Допустим любой вариант|**sql_variant**|  
 |**SQLINT8**|Допустим любой вариант|**Bigint**|  
 |**SQLCHARACTER**|Да|**varchar(max)**|  
@@ -110,7 +110,7 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Да|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Да|**nvarchar(max)**|  
 |**SQLXML**|Да|**Xml**|  
-|**SQLUDT**|Допустим любой вариант|**Определяемый пользователем тип**|  
+|**SQLUDT**|Допустим любой вариант|**определяемый пользователем тип**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_getcolfmt улучшенных возможностей работы с датой и временем  
  В столбце «Тип в SQLNCLI.h»» в таблице описаны значения параметра токена для типов даты времени [изменения массового копирования для типов усиленной даты и времени &#40;OLE DB и ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Возвращенное значение находится в соответствующей строке столбца «Тип хранения файла».  

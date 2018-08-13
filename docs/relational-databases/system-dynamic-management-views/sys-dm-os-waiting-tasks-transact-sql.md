@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_waiting_tasks (Transact-SQL) | Документы Microsoft
+title: sys.dm_os_waiting_tasks (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a0174fbe566afa6eec5c6cb208dacfed00fcd735
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f13f8e1edb78b969dd6303a6eca339fcb3946cd1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467410"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540764"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34467410"
   Возвращает сведения об очереди задач, ожидающих освобождения определенного ресурса.  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_waiting_tasks**.  
+>  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_waiting_tasks**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -51,20 +51,20 @@ ms.locfileid: "34467410"
 |**blocking_session_id**|**smallint**|Идентификатор сеанса, блокирующего данный запрос. Если этот столбец содержит значение NULL, то запрос не блокирован или сведения о сеансе блокировки недоступны (или не могут быть идентифицированы).<br /><br /> -2 = Блокирующий ресурс принадлежит потерянной распределенной транзакции.<br /><br /> -3 = Блокирующий ресурс принадлежит отложенной транзакции восстановления.<br /><br /> -4 = Идентификатор сеанса владельца кратковременной блокировки не может быть определен из-за внутренних переходов состояния кратковременной блокировки.|  
 |**blocking_exec_context_id**|**int**|Идентификатор контекста выполнения блокирующей задачи.|  
 |**resource_description**|**nvarchar(3072)**|Описание используемого ресурса. Дополнительные сведения см. в приведенном ниже списке.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="resourcedescription-column"></a>Столбец resource_description  
- В столбце resource_description имеет следующие возможные значения.  
+ Столбец resource_description имеет следующие возможные значения.  
   
  **Владелец ресурса пула потоков:**  
   
--   Идентификатор пула потоков = планировщик\<hex адрес >  
+-   Идентификатор пула потоков = планировщик\<hex-address >  
   
  **Владелец ресурса параллельного запроса:**  
   
--   Идентификатор exchangeEvent = {порт | Канал}\<hex адрес > WaitType =\<exchange тип ожидания > nodeId =\<идентификатор для узла exchange >  
+-   exchangeEvent id = {порта | Канал}\<hex-address > WaitType =\<exchange-wait-type > nodeId =\<exchange узел id >  
   
- **Exchange —-тип ожидания:**  
+ **Exchange-wait-type:**  
   
 -   e_waitNone  
   
@@ -82,7 +82,7 @@ ms.locfileid: "34467410"
   
  **Владелец ресурса блокировки:**  
   
--   \<описания определенного типа > id = блокировка\<блокировки hex-address > режим =\<режим > associatedObjectId =\<связанные obj-id >  
+-   \<Тип specific-description > id = блокировка\<блокировки hex-address > режим =\<режим > associatedObjectId =\<связанные obj-id >  
   
      **\<Тип specific-description > может быть:**  
   
@@ -92,17 +92,17 @@ ms.locfileid: "34467410"
   
     -   Для OBJECT: Objectlock lockPartition =\<lock-partition-id > objid =\<obj-id > subresource =\<objectlock-subresource > dbid =\<db-id >  
   
-    -   Для PAGE: Pagelock fileid =\<файл id > pageid =\<идентификатор страницы > dbid =\<db-id > subresource =\<pagelock-subresource >  
+    -   Для PAGE: Pagelock fileid =\<файл id > pageid =\<страницы id > dbid =\<db-id > subresource =\<pagelock-subresource >  
   
     -   Для ключа: Keylock hobtid =\<hobt-id > dbid =\<db-id >  
   
-    -   Для EXTENT: Extentlock fileid =\<файл id > pageid =\<идентификатор страницы > dbid =\<db-id >  
+    -   Для EXTENT: Extentlock fileid =\<файл id > pageid =\<страницы id > dbid =\<db-id >  
   
-    -   Для RID: Ridlock fileid =\<файл id > pageid =\<идентификатор страницы > dbid =\<db-id >  
+    -   Для RID: Ridlock fileid =\<файл id > pageid =\<страницы id > dbid =\<db-id >  
   
     -   Для APPLICATION: Applicationlock hash =\<hash > databasePrincipalId =\<роли id > dbid =\<db-id >  
   
-    -   Для METADATA: Metadatalock subresource =\<метаданные subresource > classid =\<metadatalock-description > dbid =\<db-id >  
+    -   Для METADATA: Metadatalock subresource =\<метаданных subresource > classid =\<metadatalock-description > dbid =\<db-id >  
   
     -   Для HOBT: Hobtlock hobtid =\<hobt-id > subresource =\<hobt-subresource > dbid =\<db-id >  
   
@@ -132,11 +132,11 @@ ms.locfileid: "34467410"
   
  **Владелец ресурса кратковременной блокировки:**  
   
--   \<DB-id >:\<идентификатор файла >:\<файла подкачки >  
+-   \<DB-id >:\<файл id >:\<в файл подкачки >  
   
 -   \<ИДЕНТИФИКАТОР GUID &GT;  
   
--   \<Класс кратковременных блокировок > (\<кратковременной блокировки адрес >)  
+-   \<Класс кратковременных блокировок > (\<кратковременной блокировки address >)  
   
 ## <a name="permissions"></a>Разрешения
 

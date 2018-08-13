@@ -19,13 +19,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc385c19386a151625cbccf07e498f5a35b88827
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5c152794e719cd4337b54d628dae385734043668
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413583"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552154"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>Интерфейсы SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37413583"
   
  Это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Справочник по программированию поставщика OLE DB для собственного клиента не содержит описания всех методов, и интерфейсы OLE DB только эти интерфейсы и методы, демонстрируют поведение конкретного поставщика, при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB для собственного клиента Поставщик.  
   
- Полное описание базовых интерфейсов OLE DB и методы, см. в разделе [Справочник программиста OLE DB по](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Полное описание базовых интерфейсов и методов OLE DB можно найти в пособии [Справочник разработчика OLE DB](http://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

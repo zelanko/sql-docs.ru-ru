@@ -1,5 +1,5 @@
 ---
-title: sys.sql_modules (Transact-SQL) | Документы Microsoft
+title: sys.sql_modules (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: sql
@@ -24,17 +24,18 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: af128c6c3b28c448111f49adf55c66c12ab4bbae
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7277009805307ed5f9208227cc98c72df3fc3e2a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542354"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает по одной строке для каждого объекта, являющегося в модулем, определенным на языке SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая изначально скомпилированные скалярной определяемой пользователем функции. Объекты типа P, RF, V, TR, FN, IF, TF и R имеют сопоставленный с ними SQL модуль. Изолированные значения по умолчанию и объекты типа D в этом представлении также имеют определение SQL модуля. Описание этих типов см. в разделе **тип** столбца в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) представления каталога.  
+  Возвращает строку для каждого объекта, являющегося в модулем, определенным на языке SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая изначально скомпилированные скалярной определяемой пользователем функции. Объекты типа P, RF, V, TR, FN, IF, TF и R имеют сопоставленный с ними SQL модуль. Изолированные значения по умолчанию и объекты типа D в этом представлении также имеют определение SQL модуля. Описание этих типов, см. в разделе **тип** столбца в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) представления каталога.  
   
  Дополнительные сведения см. в разделе [Скалярные определяемые пользователем функции для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -42,17 +43,17 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор объекта, содержащего данный объект. Уникален в базе данных.|  
 |**Определение**|**nvarchar(max)**|Текст на языке SQL, определяющий этот модуль. Это значение можно получить с помощью [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) встроенной функции.<br /><br /> NULL = зашифрован.|  
-|**uses_ansi_nulls**|**бит**|Модуль был создан с параметром SET ANSI_NULLS ON.<br /><br /> Всегда будет равен 0 (нулю) для правил и умолчаний.|  
-|**uses_quoted_identifier**|**бит**|Модуль был создан с параметром SET QUOTED_IDENTIFIER ON.|  
-|**is_schema_bound**|**бит**|Модуль был создан с параметром SCHEMABINDING.<br /><br /> Всегда содержит значение 1 для скомпилированных собственными средствами хранимых процедур.|  
-|**uses_database_collation**|**бит**|1 = определение модуля, ограниченное схемой, зависит от принятых по умолчанию параметров сортировки базы данных для правильной оценки; в противном случае — 0. Такая зависимость предотвращает изменение параметров сортировки по умолчанию для базы данных.|  
-|**is_recompiled**|**бит**|Процедура была создана с параметром WITH RECOMPILE.|  
-|**null_on_null_input**|**бит**|Модуль был объявлен, чтобы обеспечить выходные значения NULL для любых входных значений NULL.|  
-|**execute_as_principal_id**|**Int**|ID-идентификатор участника базы данных, указанного в инструкции EXECUTE AS.<br /><br /> По умолчанию и в случае EXECUTE AS CALLER имеет значение NULL.<br /><br /> Идентификатор заданного участника, если EXECUTE AS SELF или EXECUTE AS \<основной >.<br /><br /> -2 = EXECUTE AS OWNER.|  
-|**uses_native_compilation**|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = не скомпилированы в собственном коде<br /><br /> 1 = скомпилированы в собственном коде<br /><br /> Значение по умолчанию — 0.|  
+|**uses_ansi_nulls**|**bit**|Модуль был создан с параметром SET ANSI_NULLS ON.<br /><br /> Всегда будет равен 0 (нулю) для правил и умолчаний.|  
+|**uses_quoted_identifier**|**bit**|Модуль был создан с параметром SET QUOTED_IDENTIFIER ON.|  
+|**is_schema_bound**|**bit**|Модуль был создан с параметром SCHEMABINDING.<br /><br /> Всегда содержит значение 1 для скомпилированных собственными средствами хранимых процедур.|  
+|**uses_database_collation**|**bit**|1 = определение модуля, ограниченное схемой, зависит от принятых по умолчанию параметров сортировки базы данных для правильной оценки; в противном случае — 0. Такая зависимость предотвращает изменение параметров сортировки по умолчанию для базы данных.|  
+|**is_recompiled**|**bit**|Процедура была создана с параметром WITH RECOMPILE.|  
+|**null_on_null_input**|**bit**|Модуль был объявлен, чтобы обеспечить выходные значения NULL для любых входных значений NULL.|  
+|**execute_as_principal_id**|**Int**|ID-идентификатор участника базы данных, указанного в инструкции EXECUTE AS.<br /><br /> По умолчанию и в случае EXECUTE AS CALLER имеет значение NULL.<br /><br /> Идентификатор заданного участника, если EXECUTE AS SELF или EXECUTE AS \<участника >.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**uses_native_compilation**|**bit**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = не скомпилированы в собственном коде<br /><br /> 1 = скомпилированы в собственном коде<br /><br /> Значение по умолчанию — 0.|  
   
-## <a name="remarks"></a>Замечания  
- Выражение SQL для ограничения по умолчанию объект типа D, находится в [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) представления каталога. Выражение SQL для ПРОВЕРОЧНОГО ограничения, объектом типа C, находится в [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) представления каталога.  
+## <a name="remarks"></a>Примечания  
+ Выражение SQL для ограничения по умолчанию, объект типа D, находится в [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) представления каталога. Выражение SQL для ПРОВЕРОЧНОГО ограничения объектом типа C, находится в [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) представления каталога.  
   
  Эти сведения также описан в [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
@@ -74,6 +75,6 @@ GO
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Запросив системный каталог SQL Server часто задаваемые вопросы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [Выполняющаяся в памяти OLTP &#40;оптимизация в памяти&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

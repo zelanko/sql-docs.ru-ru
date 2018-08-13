@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_buffer_descriptors (Transact-SQL) | Документы Microsoft
+title: sys.dm_os_buffer_descriptors (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3bae01f30cf7b6af860004f69effb4df44cf3c8b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 807b1bafe3ca3d374765ede6ee3e557e6e50ffe9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465820"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557274"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34465820"
   
  При считывании страницы данных с диска она копируется в буферный пул [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кэшируется для повторного использования. Каждая страница данных в кэше имеет один дескриптор буфера. Дескрипторы буфера уникально идентифицируют каждую страницу данных, кэшируемую в данный момент в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. представление sys.dm_os_buffer_descriptors возвращает страницы в кэше для всех пользовательских и системных баз данных. В их число входят страницы, связанные с базой данных Resource.  
   
-> **Примечание:** вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **Примечание:** вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -50,11 +50,11 @@ ms.locfileid: "34465820"
 |page_type|**nvarchar(60)**|Тип страницы, например: страница данных или страница индекса. Допускает значение NULL.|  
 |row_count|**int**|Количество строк на странице. Допускает значение NULL.|  
 |free_space_in_bytes|**int**|Объем доступного свободного места, в байтах, на странице. Допускает значение NULL.|  
-|is_modified|**бит**|1 = страница была изменена после того, как она была считана с диска. Допускает значение NULL.|  
+|is_modified|**bit**|1 = страница была изменена после того, как она была считана с диска. Допускает значение NULL.|  
 |numa_node|**int**|Узел с неоднородным доступом к памяти для буфера. Допускает значение NULL.|  
 |read_microsec|**bigint**|Фактическое время (в миллисекундах), необходимое для считывания страницы в буфер. Счетчик сбрасывается, если буфер используется повторно. Допускает значение NULL.|  
-|is_in_bpool_extension|**бит**|1 = страница находится в расширении буферного пула. Допускает значение NULL.|  
-|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|is_in_bpool_extension|**bit**|1 = страница находится в расширение буферного пула. Допускает значение NULL.|  
+|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения  
 
@@ -62,7 +62,7 @@ ms.locfileid: "34465820"
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
    
 ## <a name="remarks"></a>Примечания  
- представление sys.dm_os_buffer_descriptors возвращает страницы, которые используются в базе данных ресурсов. оно не возвращает сведения о свободных или заимствованных страницах, а также о страницах, в которых возникли ошибки при чтении.  
+ представление sys.dm_os_buffer_descriptors возвращает страницы, используются ли в базе данных ресурсов. представление sys.dm_os_buffer_descriptors возвращает сведения о свободных или заимствованных страницах, или о страницах, в которых возникли ошибки при чтении.  
   
 |От|Чтобы|В|Связь|  
 |----------|--------|--------|------------------|  
@@ -121,7 +121,7 @@ ORDER BY cached_pages_count DESC;
  
  [Динамические административные представления, относящиеся к операционной системе SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [База данных Resource](../../relational-databases/databases/resource-database.md)   
- [sys.dm_os_buffer_pool_extension_configuration & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

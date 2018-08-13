@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_requests (Transact-SQL) | Документы Microsoft
+title: sys.dm_exec_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/25/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b8e51c1078ebe9b1fd2784a14e8c8e1575eae27
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 85c9decc6e59e3a35290081cbc0af59410c5db9d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467960"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548034"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,14 +75,14 @@ ms.locfileid: "34467960"
 |language|**nvarchar(128)**|Установка языка для данного запроса. Допускает значение NULL.|  
 |date_format|**nvarchar(3)**|Установка параметра DATEFORMAT для данного запроса. Допускает значение NULL.|  
 |date_first|**smallint**|Установка параметра DATEFIRST для данного запроса. Не допускает значение NULL.|  
-|quoted_identifier|**бит**|1 = Параметр QUOTED_IDENTIFIER для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|arithabort|**бит**|1 = Параметр ARITHABORT для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|ansi_null_dflt_on|**бит**|1 = Параметр ANSI_NULL_DFLT_ON для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|ansi_defaults|**бит**|1 = Параметр ANSI_DEFAULTS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|ansi_warnings|**бит**|1 = Параметр ANSI_WARNINGS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|ansi_padding|**бит**|1 = Параметр ANSI_PADDING для запроса включен (ON).<br /><br /> В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|ansi_nulls|**бит**|1 = Параметр ANSI_NULLS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|concat_null_yields_null|**бит**|1 = Параметр CONCAT_NULL_YIELDS_NULL для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|quoted_identifier|**bit**|1 = Параметр QUOTED_IDENTIFIER для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|arithabort|**bit**|1 = Параметр ARITHABORT для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|ansi_null_dflt_on|**bit**|1 = Параметр ANSI_NULL_DFLT_ON для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|ansi_defaults|**bit**|1 = Параметр ANSI_DEFAULTS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|ansi_warnings|**bit**|1 = Параметр ANSI_WARNINGS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|ansi_padding|**bit**|1 = Параметр ANSI_PADDING для запроса включен (ON).<br /><br /> В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|ansi_nulls|**bit**|1 = Параметр ANSI_NULLS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|concat_null_yields_null|**bit**|1 = Параметр CONCAT_NULL_YIELDS_NULL для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
 |transaction_isolation_level|**smallint**|Уровень изоляции, с которым создана транзакция для данного запроса. Не допускает значение NULL.<br /><br /> 0 = не указан;<br /><br /> 1 = читать незафиксированные;<br /><br /> 2 = читать зафиксированные;<br /><br /> 3 = повторяемые результаты;<br /><br /> 4 = сериализуемые;<br /><br /> 5 = моментальный снимок.|  
 |lock_timeout|**int**|Время ожидания блокировки для данного запроса (в миллисекундах). Не допускает значение NULL.|  
 |deadlock_priority|**int**|Значение параметра DEADLOCK_PRIORITY для данного запроса. Не допускает значение NULL.|  
@@ -90,19 +90,19 @@ ms.locfileid: "34467960"
 |prev_error|**int**|Последняя ошибка, происшедшая при выполнении запроса. Не допускает значение NULL.|  
 |nest_level|**int**|Текущий уровень вложенности кода, выполняемого для данного запроса. Не допускает значение NULL.|  
 |granted_query_memory|**int**|Число страниц, выделенных для выполнения поступившего запроса. Не допускает значение NULL.|  
-|executing_managed_code|**бит**|Указывает, выполняет ли данный запрос в настоящее время код объекта среды CLR (например, процедуры, типа или триггера). Этот флаг установлен в течение всего времени, когда объект среды CLR находится в стеке, даже когда из среды вызывается код [!INCLUDE[tsql](../../includes/tsql-md.md)]. Не допускает значение NULL.|  
+|executing_managed_code|**bit**|Указывает, выполняет ли данный запрос в настоящее время код объекта среды CLR (например, процедуры, типа или триггера). Этот флаг установлен в течение всего времени, когда объект среды CLR находится в стеке, даже когда из среды вызывается код [!INCLUDE[tsql](../../includes/tsql-md.md)]. Не допускает значение NULL.|  
 |group_id|**int**|Идентификатор группы рабочей нагрузки, которой принадлежит этот запрос. Не допускает значение NULL.|  
 |query_hash|**binary(8)**|Двоичное хэш-значение рассчитывается для запроса и используется для идентификации запросов с аналогичной логикой. Можно использовать хэш запроса для определения использования статистических ресурсов для запросов, которые отличаются только своими литеральными значениями.|  
 |query_plan_hash|**binary(8)**|Двоичное хэш-значение рассчитывается для плана выполнения запроса и используется для идентификации аналогичных планов выполнения запросов. Можно использовать хэш плана запроса для нахождения совокупной стоимости запросов со схожими планами выполнения.|  
-|statement_sql_handle|**varbinary(64)**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Дескриптор SQL для отдельного запроса. |  
-|statement_context_id|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Необязательный внешний ключ к sys.query_context_settings. |  
-|dop |**int** |**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Степень параллелизма запроса. |  
-|parallel_worker_count |**int** |**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество зарезервированных параллельных рабочих процессов в случае параллельных запросов.  |  
-|external_script_request_id |**uniqueidentifier** |**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор запроса внешних скриптов, связанные с текущим запросом. |  
-|is_resumable |**бит** |**Область применения**: начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли запрос возобновляемые индекса. |  
+|statement_sql_handle|**varbinary(64)**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Дескриптор SQL отдельный запрос. |  
+|statement_context_id|**bigint**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Необязательный внешний ключ к sys.query_context_settings. |  
+|dop |**int** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Степень параллелизма запроса. |  
+|parallel_worker_count |**int** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество зарезервированных параллельных рабочих процессов в случае параллельных запросов.  |  
+|external_script_request_id |**uniqueidentifier** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор запроса внешнего скрипта, связанного с текущим запросом. |  
+|is_resumable |**bit** |**Применимо к**: с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли запрос возобновляемой операции с индексами. |  
   
 ## <a name="permissions"></a>Разрешения  
- Если у пользователя есть `VIEW SERVER STATE` разрешение на сервере, пользователь увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь увидит только текущий сеанс. `VIEW SERVER STATE` не может быть предоставлено в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , `sys.dm_exec_requests` всегда ограничен до текущего соединения. 
+ Если пользователь имеет `VIEW SERVER STATE` разрешение на сервере, пользователь увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь будет видеть только текущий сеанс. `VIEW SERVER STATE` не может быть предоставлена в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , `sys.dm_exec_requests` только текущему соединению. 
   
 ## <a name="examples"></a>Примеры  
   
@@ -122,14 +122,14 @@ GO
 ```  
   
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>Б. Поиск всех блокировок, которые содержит выполняемый пакет  
- В следующем примере запрос **sys.dm_exec_requests** для поиска необходимого пакета и копируется его `transaction_id` из выходных данных.  
+ В следующем примере запрос **sys.dm_exec_requests** для поиска необходимого пакета и скопируйте его `transaction_id` из выходных данных.  
   
 ```  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- Нажмите, чтобы найти сведения о блокировке, используйте скопированный `transaction_id` с помощью системной функции **sys.dm_tran_locks**.  
+ Затем, чтобы найти сведения о блокировке, используйте скопированный `transaction_id` с помощью системной функции **sys.dm_tran_locks**.  
   
 ```  
 SELECT * FROM sys.dm_tran_locks   

@@ -23,13 +23,13 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f48268c800345ed66f065e444a8d7cfe09a6a30
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a6eaa2759ac911f748da143dbd592abc5de066b9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998117"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533854"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37998117"
 |**row_group_id**|**int**|Идентификатор этой группы строк. Для секционированных таблиц является уникальным в пределах секции.<br /><br /> -1 для заключительного фрагмента в памяти.|  
 |**delta_store_hobt_id**|**bigint**|Hobt_id для группы строк в разностном хранилище.<br /><br /> Имеет значение NULL, если группа строк не в разностном хранилище.<br /><br /> Значение NULL для заключительного фрагмента таблицы в памяти.|  
 |**state**|**tinyint**|Идентификационный номер, связанный *параметром state_description*.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN;<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = ОТМЕТКИ ПОЛНОГО УДАЛЕНИЯ<br /><br /> COMPRESSED — это единственное состояние, которое применяется к таблицам в памяти.|  
-|**state_desc**|**nvarchar(60)**|Описание состояния группы строк:<br /><br /> НЕВИДИМЫЕ — группу строк, которое создается. Например: <br />Группа строк в columnstore является НЕВИДИМЫМ, пока данные сжимаются. После завершения изменения метаданных switch сжатие состояние строки columnstore группы из НЕВИДИМОГО для СЖАТЫХ и состояния группы строк deltastore с ЗАКРЫТО для объекта-ЗАХОРОНЕНИЯ.<br /><br /> OPEN — группа строк deltastore, которая принимает новые строки. Открытая группа строк остается в формате rowstore и не сжимается в формат columnstore.<br /><br /> CLOSED — группа строк в разностном хранилище, содержащее максимальное количество строк и ожидает процесса перемещения кортежей для сжатия в columnstore.<br /><br /> COMPRESSED — группа строк, с помощью сжатия columnstore и хранятся в columnstore.<br /><br /> TOMBSTONE — группа строк, которая ранее называлась в deltastore и больше не используется.|  
+|**state_desc**|**nvarchar(60)**|Описание состояния группы строк:<br /><br /> НЕВИДИМЫЕ — группу строк, которое создается. Пример: <br />Группа строк в columnstore является НЕВИДИМЫМ, пока данные сжимаются. После завершения изменения метаданных switch сжатие состояние строки columnstore группы из НЕВИДИМОГО для СЖАТЫХ и состояния группы строк deltastore с ЗАКРЫТО для объекта-ЗАХОРОНЕНИЯ.<br /><br /> OPEN — группа строк deltastore, которая принимает новые строки. Открытая группа строк остается в формате rowstore и не сжимается в формат columnstore.<br /><br /> CLOSED — группа строк в разностном хранилище, содержащее максимальное количество строк и ожидает процесса перемещения кортежей для сжатия в columnstore.<br /><br /> COMPRESSED — группа строк, с помощью сжатия columnstore и хранятся в columnstore.<br /><br /> TOMBSTONE — группа строк, которая ранее называлась в deltastore и больше не используется.|  
 |**total_rows**|**bigint**|Количество физических строк, хранимых в группе строк. Для групп сжатых строк такие, которые помечены удаляемых строк.|  
 |**deleted_rows**|**bigint**|Количество строк, физически хранятся в сжатой группе строк, которые помечены для удаления.<br /><br /> 0 для групп строк, которые находятся в разностном хранилище.|  
 |**size_in_bytes**|**bigint**|Общий размер в байтах всех страниц в этой группе строк. Этот размер включает размер, необходимый для хранения метаданных или Общие словари.|  

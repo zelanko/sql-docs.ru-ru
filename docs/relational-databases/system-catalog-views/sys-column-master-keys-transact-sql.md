@@ -1,5 +1,5 @@
 ---
-title: sys.column_master_keys (Transact-SQL) | Документы Microsoft
+title: sys.column_master_keys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -32,17 +32,18 @@ caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f961586da2bb4bd9a3169fe955d989557535ba7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 61b7c2eb43ec5d30dea98b7eda00f072f883793d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553014"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Возвращает по одной строке для каждого главного ключа базы данных, добавленные с помощью [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) инструкции. Каждая строка представляет одного главного ключа столбца (CMK).  
+  Возвращает строку для каждого главного ключа базы данных, добавленных с помощью [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) инструкции. Каждая строка представляет одного главного ключа столбца (CMK).  
     
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -50,8 +51,8 @@ ms.lasthandoff: 05/04/2018
 |**column_master_key_id**|**int**|Идентификатор главного ключа столбца.|  
 |**create_date**|**datetime**|Дата создания главного ключа столбца.|  
 |**modify_date**|**datetime**|Дата последнего изменения главного ключа столбца.|  
-|**key_store_provider_name**|**sysname**|Имя поставщика хранилища главного ключа столбца, которое содержит CMK. Допустимые значения:<br /><br /> MSSQL_CERTIFICATE_STORE — Если хранилища главных ключей столбцов в хранилище сертификатов.<br /><br /> Определяемые пользователем значение, если хранилище главного ключа столбца пользовательского типа.|  
-|**key_path**|**nvarchar(4000)**|Путь конкретного хранилища главного ключа столбца ключа. Формат пути зависит от типа хранилища главного ключа столбца. Пример<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Для хранилища главного ключа настраиваемый столбец, разработчик отвечает за определение какой путь к разделу — пользовательские столбца хранилища главного ключа.|  
+|**key_store_provider_name**|**sysname**|Имя поставщика хранилища главных ключей столбцов, который содержит ключ CMK. Допустимые значения:<br /><br /> MSSQL_CERTIFICATE_STORE — Если Store сертификат хранилища главных ключей столбцов.<br /><br /> Определяемое пользователем значение, если хранилища главных ключей столбца пользовательского типа.|  
+|**key_path**|**nvarchar(4000)**|Путь конкретного хранилища главного ключа столбца ключа. Формат пути зависит от типа хранилища главного ключа столбца. Пример<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Для хранилища главных ключей пользовательских столбцов, разработчик отвечает за определение — какие путь к ключу для хранилища главных ключей пользовательского столбца.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется **VIEW ANY COLUMN MASTER KEY** разрешение.  

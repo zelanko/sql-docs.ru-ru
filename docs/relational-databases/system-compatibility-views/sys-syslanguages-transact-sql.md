@@ -1,5 +1,5 @@
 ---
-title: sys.syslanguages (Transact-SQL) | Документы Microsoft
+title: sys.syslanguages (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4c879ed679052a14d420211c5977d2152d5ccb8f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c927af11c853a2cd2ff94049f4eb99de3c5e10f7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222075"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556394"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "33222075"
 |формат даты|**nchar(3)**|Формат представления даты, например DMY.|  
 |datefirst|**tinyint**|Первый день недели: 1 — понедельник, 2 — вторник и так далее до 7 — воскресенье.|  
 |обновление|**int**|Зарезервировано для системного использования.|  
-|имя|**sysname**|Официальное название языка, например Français.|  
+|name|**sysname**|Официальное название языка, например Francais.|  
 |alias|**sysname**|Альтернативное название языка, например French.|  
 |months|**nvarchar(372)**|Список полных названий месяцев через запятую в порядке с января до декабря. Каждое название может содержать не более 20 символов.|  
 |shortmonths|**nvarchar(132)**|Список сокращенных названий месяцев через запятую в порядке с января до декабря. Название может содержать не более 9 символов.|  
@@ -57,7 +57,7 @@ ms.locfileid: "33222075"
 |Английское название языка|Код языка в Windows|Идентификатор группы сообщений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |---------------------|------------------|-----------------------------------------|  
 |Английский|1033|1033|  
-|Немецкий|1031|1031|  
+|German|1031|1031|  
 |Французский|1036|1036|  
 |Японский|1041|1041|  
 |Danish|1030|1030|  

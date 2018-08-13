@@ -1,5 +1,5 @@
 ---
-title: ПРОЦЕДУРЫ (Transact-SQL) | Документы Microsoft
+title: ПРОЦЕДУРЫ (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ec03e10cd41e964c9687f04478e05871de5b68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240604"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548894"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "33240604"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Определенное имя каталога. Это имя совпадает с ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Определенное имя схемы.<br /><br /> **\*\* Важные \* \***  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Определенное имя схемы.<br /><br /> **\*\* Важные \* \* ** не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Определенное имя каталога. Это имя совпадает с ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Имя каталога функции.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Имя схемы, содержащей эту функцию.<br /><br /> **\*\* Важные \* \***  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Имя схемы, содержащей эту функцию.<br /><br /> **\*\* Важные \* \* ** не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Имя функции.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Возвращает значение PROCEDURE для хранимой процедуры и FUNCTION для функций.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
@@ -55,9 +55,9 @@ ms.locfileid: "33240604"
 |UDT_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
 |UDT_SCHEMA|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
 |UDT_NAME|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
-|DATA_TYPE|**nvarchar (** 128 **)**|Тип данных возвращаемого значения функции. Возвращает **таблицы** Если табличную функцию.|  
-|CHARACTER_MAXIMUM_LENGTH|**int**|Максимальная длина в символах, если возвращаемый тип символьный.<br /><br /> -1 для **xml** и данные типов больших значений.|  
-|CHARACTER_OCTET_LENGTH|**int**|Максимальная длина в байтах, если возвращаемый тип символьный.<br /><br /> -1 для **xml** и данные типов больших значений.|  
+|DATA_TYPE|**nvarchar (** 128 **)**|Тип данных возвращаемого значения функции. Возвращает **таблицы** Если функции, возвращающие табличные значения.|  
+|CHARACTER_MAXIMUM_LENGTH|**int**|Максимальная длина в символах, если возвращаемый тип символьный.<br /><br /> -1 для **xml** и данные типа больших значений.|  
+|CHARACTER_OCTET_LENGTH|**int**|Максимальная длина в байтах, если возвращаемый тип символьный.<br /><br /> -1 для **xml** и данные типа больших значений.|  
 |COLLATION_CATALOG|**nvarchar (** 128 **)**|Всегда возвращает значение NULL.|  
 |COLLATION_SCHEMA|**nvarchar (** 128 **)**|Всегда возвращает значение NULL.|  
 |COLLATION_NAME|**nvarchar (** 128 **)**|Имя параметров сортировки для возвращаемого значения. Для несимвольных типов возвращает значение NULL.|  
@@ -79,7 +79,7 @@ ms.locfileid: "33240604"
 |MAXIMUM_CARDINALITY|**bigint**|NULL. Зарезервировано для последующего использования.|  
 |DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Возвращает значение SQL для функции [!INCLUDE[tsql](../../includes/tsql-md.md)] и EXTERNAL для функции, написанной внешними средствами.<br /><br /> Функции всегда SQL.|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Возвращает первые 4 000 символов текста определения функции или хранимой процедуры, если они не зашифрованы. В противном случае возвращается значение NULL.<br /><br /> Чтобы убедиться, что получено полное определение, запрос [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) функции или в определении столбца [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) представления каталога.|  
+|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Возвращает первые 4 000 символов текста определения функции или хранимой процедуры, если они не зашифрованы. В противном случае возвращается значение NULL.<br /><br /> Чтобы убедиться в том, что получено полное определение, выполните запрос [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) функции или определению столбца в [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) представления каталога.|  
 |EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Зарезервировано для последующего использования.|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Зарезервировано для последующего использования.|  

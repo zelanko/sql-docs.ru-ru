@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_collections (Transact-SQL) | Документы Microsoft
+title: sys.xml_schema_collections (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,24 +24,25 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 11e9a91fc27b704b54415acfe98a516a2176603a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1248a985298d55a6dae7ccd6f19768eb6c248309
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543934"
 ---
 # <a name="sysxmlschemacollections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает по одной строке для каждой коллекции схем XML. Коллекция схем XML представляет собой именованный набор XSD-определений. Коллекция схем XML содержится в реляционной схеме и определяется именем языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в области схемы. Следующие кортежи уникальны: xml_collection_id и schema_id, так и именем.  
+  Возвращает по одной строке для каждой коллекции схем XML. Коллекция схем XML представляет собой именованный набор XSD-определений. Коллекция схем XML содержится в реляционной схеме и определяется именем языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в области схемы. Следующие кортежи уникальны: xml_collection_id, а schema_id, так и имя.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |xml_collection_id|**int**|Идентификатор коллекции схем XML. Уникально в пределах базы данных.|  
 |schema_id|**int**|Идентификатор реляционной схемы, содержащей эту коллекцию схем XML.|  
 |principal_id|**int**|Идентификатор непосредственного владельца, если он отличается от владельца схемы. По умолчанию содержащиеся в схеме объекты принадлежат владельцу схемы. Однако с помощью инструкции ALTER AUTHORIZATION можно изменить право собственности и указать альтернативного владельца.<br /><br /> NULL = альтернативного владельца нет.|  
-|имя|**sysname**|Имя коллекции схем XML.|  
+|name|**sysname**|Имя коллекции схем XML.|  
 |create_date|**datetime**|Дата создания коллекции схем XML.|  
 |modify_date|**datetime**|Дата последнего изменения коллекции схем XML.|  
   

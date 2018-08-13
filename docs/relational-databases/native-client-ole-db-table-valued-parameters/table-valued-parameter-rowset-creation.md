@@ -16,13 +16,13 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6932538ac699d4a8c1e0dbb5d2cbef93a29511df
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 097b3e5c09a243952e0fd0562d54a73a4f00c561
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432363"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535334"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Создание набора строк возвращающего табличное значение параметра
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "37432363"
 ## <a name="static-scenario"></a>Статический сценарий  
  Если известно, сведения о типе, потребитель использует ITableDefinitionWithConstraints::CreateTableWithConstraints для создания экземпляра объекта набора строк табличное значение параметра, соответствующее параметру, возвращающих табличные значения.  
   
- *Guid* поле (*pTableID* параметр) содержит специальный идентификатор GUID (CLSID_ROWSET_TVP). *PwszName* член содержит имя типа табличное значение параметра, который потребитель хочет создать. *EKind* поле устанавливается в значение DBKIND_GUID_NAME. Данное имя требуется при использовании нерегламентированной инструкции SQL. При вызове процедуры имя является необязательным.  
+ *Guid* поле (*pTableID* параметр) содержит специальный идентификатор GUID (CLSID_ROWSET_TVP). Элемент *pwszName* содержит имя типа возвращающего табличное значение параметра, который потребитель хочет создать. Поле *eKind* будет установлено в значение DBKIND_GUID_NAME. Данное имя требуется при использовании нерегламентированной инструкции SQL. При вызове процедуры имя является необязательным.  
   
  Для статистической обработки потребитель передает *pUnkOuter* параметр с управляющий IUnknown.  
   
  Свойства объекта набора строк возвращающего табличное значение параметра доступны только для чтения, поэтому потребитель не должен задать какие-либо свойства *rgPropertySets*.  
   
- Для *rgPropertySets* каждой структуры DBCOLUMNDESC, потребитель может указать дополнительные свойства для каждого столбца. Эти свойства принадлежат набору свойств DBPROPSET_SQLSERVERCOLUMN. Они позволяют указать для каждого столбца вычисляемые настройки и настройки по умолчанию. Также они поддерживают существующие свойства столбца, например допустимость значений NULL и идентификатор.  
+ Для элемента *rgPropertySets* каждой структуры DBCOLUMNDESC потребитель может указать дополнительные свойства для каждого столбца. Эти свойства принадлежат набору свойств DBPROPSET_SQLSERVERCOLUMN. Они позволяют указать для каждого столбца вычисляемые настройки и настройки по умолчанию. Также они поддерживают существующие свойства столбца, например допустимость значений NULL и идентификатор.  
   
- Для получения соответствующих сведений из объекта набора строк возвращающего табличное значение параметра, потребитель использует IRowsetInfo::GetProperties.  
+ Для получения соответствующих сведений от объекта набора строк возвращающего табличные значения параметра потребитель использует метод IRowsetInfo::GetProperties.  
   
  Чтобы получить сведения о null, уникальном, вычисляемым и обновить состояние каждого столбца, потребитель использовать IColumnsRowset::GetColumnsRowset или IColumnsInfo::GetColumnInfo. Эти методы предоставляют подробные сведения о каждом столбце набора строк возвращающего табличные значения параметра.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "37432363"
  *PTableID* и *pUnkOuter* параметры должны устанавливаться аналогично статическому сценарию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный поставщик OLE DB клиента, затем получает сведения о типе (сведения о столбцах и ограничения) на сервере и возврата объекта набора строк возвращающего табличное значение параметра через *ppRowset* параметра. Данная операция требует связи с сервером, поэтому выполняется не так быстро, как статический сценарий. Динамический сценарий работает только с параметризованными вызовами процедур.  
   
 ## <a name="see-also"></a>См. также  
- [Возвращающие табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Возвращающие табличные значения параметры &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

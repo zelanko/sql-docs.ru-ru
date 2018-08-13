@@ -25,13 +25,13 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a9ce2b5f63405a0754782e0dddae5584c1b47ee2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9a674efd6c2e7d9db42a0d731e9722fb267830e9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031181"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552174"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "38031181"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**desired_state**|**smallint**|Указывает нужный режим работы запроса Store, явно заданных пользователем.<br /> 0 = выключен. <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE|  
-|**desired_state_desc**|**nvarchar(64)**|Текстовое описание нужный режим работы Query Store:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
+|**desired_state_desc**|**Nvarchar(64)**|Текстовое описание нужный режим работы Query Store:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|Указывает режим работы запроса Store. Помимо списка необходимых состояний, необходимых пользователю фактическое состояние может быть состояние ошибки.<br /> 0 = выключен. <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = ОШИБКА|  
-|**actual_state_desc**|**nvarchar(64)**|Текстовое описание фактический режим работы запроса Store.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />Ошибка<br /><br /> Существуют ситуации, когда фактическое состояние отличается от желаемого состояния:<br /><br /> Query Store может работать в режиме только для чтения, даже если чтения и записи было указано пользователем. Например, который может произойти, если база данных находится в режиме только для чтения или запроса Store размер превышает квоту.<br /><br /> Крайне редко Query Store могут быть сохранены в состоянии ошибки из-за внутренней ошибки. В этом случае запрос Store удалось восстановить, выполнив **sp_query_store_consistency_check** хранимую процедуру в этой базы данных.|  
+|**actual_state_desc**|**Nvarchar(64)**|Текстовое описание фактический режим работы запроса Store.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />Ошибка<br /><br /> Существуют ситуации, когда фактическое состояние отличается от желаемого состояния:<br /><br /> Query Store может работать в режиме только для чтения, даже если чтения и записи было указано пользователем. Например, который может произойти, если база данных находится в режиме только для чтения или запроса Store размер превышает квоту.<br /><br /> Крайне редко Query Store могут быть сохранены в состоянии ошибки из-за внутренней ошибки. В этом случае запрос Store удалось восстановить, выполнив **sp_query_store_consistency_check** хранимую процедуру в этой базы данных.|  
 |**readonly_reason**|**int**|Когда **desired_state_desc** находится в режиме READ_WRITE и **actual_state_desc** находится в режиме READ_ONLY, **readonly_reason** возвращает немного карты необходимо указать причину Store запроса находится в режим только для чтения.<br /><br /> 1 — база данных находится в режиме только для чтения<br /><br /> 2 — база данных находится в однопользовательском режиме<br /><br /> 4 — база данных находится в аварийном режиме<br /><br /> 8 — база данных является вторичной репликой (применяется к Always On и Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] георепликации). Это значение можно было эффективно контролировать только через **для чтения** вторичных реплик<br /><br /> 65536 Store запрос был достигнут предельный размер, установленное параметром MAX_STORAGE_SIZE_MB.<br /><br /> 131072 — число различных инструкций в Store запросов достигнут предел внутренней памяти. Рекомендуется удалить запросы, которые не требуется или обновлении до более высокого уровня службы, передачу Store запросов в режим чтения и записи.<br />Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> 262144 — размер элементов в памяти, ожидающих сохраняются на диске был достигнут предел внутренней памяти. Query Store будет находиться в режиме только для чтения, временно, пока не элементы в памяти сохраняются на диске. <br />Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br />524288 — базы данных был достигнут предельный размер диска. Query Store является частью пользовательской базы данных, поэтому если больше нет свободного места для базы данных, которое означает, что Store запроса не может продолжать увеличиваться больше.<br />Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. <br /> <br /> Для переключения операции Query Store обратно режим чтения и записи, см. в разделе **непрерывность сбора данных запросов является проверка запроса Store** раздел [оптимальным образом с помощью Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md).|  
 |**current_storage_size_mb**|**bigint**|Размер запроса Store на диске в мегабайтах.|  
 |**flush_interval_seconds**|**bigint**|Определяет период для регулярного записью Store запроса данных на диск. Значение по умолчанию — 900 (15 минут).<br /><br /> Изменение с помощью `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` инструкции.|  

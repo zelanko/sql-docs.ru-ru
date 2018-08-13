@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_tasks (Transact-SQL) | Документы Microsoft
+title: sys.dm_os_tasks (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b800dc110baa7279edb2ce788befb433b7afd77a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 213dc89ebc9bbd398813440e1c965bbce2fb8c28
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467420"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548704"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "34467420"
   Возвращает одну строку для каждой активной задачи в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_tasks**.  
+>  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_tasks**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Адрес объекта в памяти.|  
-|**task_state**|**nvarchar(60)**|Состояние задачи. Может иметь одно из следующих значений.<br /><br /> Ожидание: Ожидание рабочего потока.<br /><br /> Готово к ЗАПУСКУ: Готов к запуску, но ожидает получения такта.<br /><br /> ВЫПОЛНЕНИЯ: В настоящее время выполняется в планировщике.<br /><br /> ПРИОСТАНОВЛЕНО: У задачи есть исполнитель, но ожидает события.<br /><br /> ВЫПОЛНЕНО: завершено.<br /><br /> SPINLOOP: Заблокирована с ожиданием из.|  
+|**task_state**|**nvarchar(60)**|Состояние задачи. Может иметь одно из следующих значений.<br /><br /> Ожидание: Ожидание рабочего потока.<br /><br /> ВОЗМОЖЕН запуск: Готов к запуску, но ожидает получения такта.<br /><br /> ВЫПОЛНЯЕТСЯ: В настоящее время выполняемых в планировщике.<br /><br /> ПРИОСТАНОВЛЕНО: У задачи есть исполнитель, но ожидает события.<br /><br /> ГОТОВО: завершено.<br /><br /> SPINLOOP: Заблокирована с ожиданием из.|  
 |**context_switches_count**|**int**|Число переключений контекста планировщика, которые задача уже выполнила.|  
 |**pending_io_count**|**int**|Количество физических операций ввода-вывода, выполняемых этой задачей.|  
 |**pending_io_byte_count**|**bigint**|Суммарное количество байт, обработанных в операциях ввода-вывода, выполняемых этой задачей.|  
@@ -54,7 +54,7 @@ ms.locfileid: "34467420"
 |**worker_address**|**varbinary(8)**|Адрес в памяти для исполнителя, выполняющего задачу.<br /><br /> NULL = задача либо ожидает готовности исполнителя, либо выполнение задачи только что завершилось.<br /><br /> Дополнительные сведения см. в разделе [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |**host_address**|**varbinary(8)**|Адрес сервера в памяти.<br /><br /> 0 = задача создавалась без помощи сервера. Помогает идентифицировать сервер, использованный для создания этой задачи.<br /><br /> Дополнительные сведения см. в разделе [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
 |**parent_task_address**|**varbinary(8)**|Адрес в памяти задачи, являющейся родительской задачей объекта.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения
 
@@ -64,10 +64,10 @@ ms.locfileid: "34467420"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. Наблюдение за параллельными запросами  
- Для запросов, которые выполняются параллельно, будет отображено несколько строк для того же сочетания (\<**session_id**>, \< **request_id**>). Используйте следующий запрос для поиска [Настройка параметра max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) для всех активных запросов.  
+ Для запросов, которые выполняются параллельно, будет отображено несколько строк для каждого сочетания (\<**session_id**>, \< **request_id**>). Используйте следующий запрос для поиска [Настройка max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) для всех активных запросов.  
   
 > [!NOTE]  
->  Объект **request_id** уникален в пределах одного сеанса.  
+>  Объект **request_id** является уникальным в пределах сеанса.  
   
 ```  
 SELECT  

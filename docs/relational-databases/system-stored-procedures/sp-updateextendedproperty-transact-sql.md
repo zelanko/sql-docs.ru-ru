@@ -1,5 +1,5 @@
 ---
-title: sp_updateextendedproperty (Transact-SQL) | Документы Microsoft
+title: sp_updateextendedproperty (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
@@ -22,12 +22,13 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fef4a744e237d81edc15ec7dbcef79a67e5edc70
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9e8d86bbcb6a35babce5ce2da7a0c63a8c310ddf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533103"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ sp_updateextendedproperty
  Имя свойства, которое необходимо обновить. *property_name* — **sysname**, и не может иметь значение NULL.  
   
  [ @value=] {"*значение*"}  
- Значение, связанное со свойством. *значение* — **sql_variant**, значение по умолчанию NULL. Размер *значение* не может превышать 7 500 байт.  
+ Значение, связанное со свойством. *значение* — **sql_variant**, значение по умолчанию NULL. Размер *значение* может оказаться более чем 7 500 байт.  
   
  [ @level0type=] {"*level0_object_type*"}  
  Пользователь или тип, определяемый пользователем. *level0_object_type* — **varchar(128)**, значение по умолчанию NULL. Допустимыми входными значениями являются сборки, КОНТРАКТА, уведомления о СОБЫТИИ, файловой группы, тип сообщений, функции СЕКЦИОНИРОВАНИЯ, СХЕМЫ СЕКЦИОНИРОВАНИЯ, СТРУКТУРЫ ПЛАНА, REMOTE SERVICE BINDING, МАРШРУТА, СХЕМЫ, службы, пользователя, триггер, тип и значение NULL.  
@@ -86,13 +87,13 @@ sp_updateextendedproperty
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  С целью указания расширенных свойств объекты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] распределены по трем уровням (0, 1 и 2). Уровень 0 является высшим уровнем и определяется как «объекты в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней. Ссылки на объект определенного уровня должны быть уточнены именами объектов более высокого уровня, в которых они содержатся или которым они принадлежат.  
   
- Допустимые *property_name* и *значение*, если все типы и имена объектов имеют значение null, то обновляемое свойство принадлежит текущей базы данных.  
+ Задан допустимый *property_name* и *значение*, если все типы и имена объектов имеют значение null, то обновляемое свойство принадлежит текущей базе данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Члены предопределенной роли базы данных db_ddladmin и db_owner могут обновлять расширенные свойства любого объекта за следующим исключением: db_ddladmin не могут добавлять свойства к самой базе данных, пользователям или ролям.  
+ Члены предопределенной роли базы данных db_ddladmin и db_owner могут обновлять расширенные свойства любого объекта со следующим исключением: db_ddladmin не могут добавлять свойства к самой базе данных, пользователям или ролям.  
   
  Пользователи могут обновлять расширенные свойства принадлежащих им объектов, а также свойства, для которых у этих пользователей есть разрешения ALTER или CONTROL.  
   
@@ -140,7 +141,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   

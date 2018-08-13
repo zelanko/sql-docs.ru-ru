@@ -1,5 +1,5 @@
 ---
-title: sys.Types (Transact-SQL) | Документы Microsoft
+title: sys.Types (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,12 +25,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ce1d7cbfc11a425a1e39622b379ad8b34cac6e10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9b4dc0dd6455823e2f08327a418032b47309b474
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539364"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,15 +46,15 @@ ms.lasthandoff: 05/04/2018
 |**schema_id**|**int**|Идентификатор схемы, к которой принадлежит тип данных.|  
 |**principal_id**|**int**|Идентификатор отдельного владельца, если он отличается от владельца схемы. По умолчанию содержащиеся в схеме объекты принадлежат владельцу схемы. Однако с помощью инструкции ALTER AUTHORIZATION можно изменить право собственности и указать другого владельца.<br /><br /> Имеет значение NULL, если нет другого владельца.|  
 |**max_length**|**smallint**|Максимальная длина типа (в байтах):<br /><br /> -1 = тип данных столбца — **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, или **xml**.<br /><br /> Для **текст** столбцы, **max_length** значение будет равно 16.|  
-|**precision**|**tinyint**|Максимальная точность значений этого типа данных, если он числовой; иначе — значение 0.|  
-|**масштаб**|**tinyint**|Максимальный масштаб значений этого типа данных, если он числовой; иначе — значение 0.|  
+|**Точность**|**tinyint**|Максимальная точность значений этого типа данных, если он числовой; иначе — значение 0.|  
+|**Масштаб**|**tinyint**|Максимальный масштаб значений этого типа данных, если он числовой; иначе — значение 0.|  
 |**collation_name**|**sysname**|Имя параметров сортировки значений этого типа данных, если он символьный; иначе — значение NULL.|  
-|**is_nullable**|**бит**|Тип данных допускает значения NULL.|  
-|**is_user_defined**|**бит**|1 = определяемый пользователем тип.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип системных данных.|  
-|**is_assembly_type**|**бит**|1 = реализация этого типа данных определена в сборке среды CLR.<br /><br /> 0 = тип данных основан на системном типе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**is_nullable**|**bit**|Тип данных допускает значения NULL.|  
+|**is_user_defined**|**bit**|1 = определяемый пользователем тип.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип системных данных.|  
+|**is_assembly_type**|**bit**|1 = реализация этого типа данных определена в сборке среды CLR.<br /><br /> 0 = тип данных основан на системном типе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**default_object_id**|**int**|Идентификатор изолированного значения по умолчанию, привязанного к типу данных с помощью [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md).<br /><br /> 0 = нет значения по умолчанию.|  
 |**rule_object_id**|**int**|Идентификатор изолированного правила, привязанного к типу данных с помощью [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md).<br /><br /> 0 = нет правила по умолчанию.|  
-|**is_table_type**|**бит**|Указывает, что тип является табличным.|  
+|**is_table_type**|**bit**|Указывает, что тип является табличным.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

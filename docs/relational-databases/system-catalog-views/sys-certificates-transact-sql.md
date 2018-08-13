@@ -1,5 +1,5 @@
 ---
-title: sys.Certificates (Transact-SQL) | Документы Microsoft
+title: sys.Certificates (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f5aaf349d050b2b1b1d27ae3067f003186c8c6eb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 35e026a66a0d170be49cfbf8d220e591a73a2f37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552664"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,15 +44,15 @@ ms.lasthandoff: 05/04/2018
 |**principal_id**|**int**|Идентификатор участника базы данных, владеющего сертификатом.|  
 |**pvt_key_encryption_type**|**char(2)**|Способ шифрования закрытого ключа.<br /><br /> NA = сертификат не имеет закрытого ключа.<br /><br /> MK = закрытый ключ зашифрован главным ключом.<br /><br /> MK = закрытый ключ зашифрован пользовательским паролем.<br /><br /> MK = закрытый ключ зашифрован главным ключом службы.|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Описание способа шифрования закрытого ключа.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**is_active_for_begin_dialog**|**бит**|Если значение равно 1, то данный сертификат применяется для инициализации зашифрованных диалоговых окон службы.|  
+|**is_active_for_begin_dialog**|**bit**|Если значение равно 1, то данный сертификат применяется для инициализации зашифрованных диалоговых окон службы.|  
 |**issuer_name**|**nvarchar(442)**|Имя поставщика сертификата.|  
-|**cert_serial_number**|**nvarchar(64)**|Регистрационный номер сертификата.|  
+|**cert_serial_number**|**Nvarchar(64)**|Регистрационный номер сертификата.|  
 |**ИД безопасности**|**varbinary(85)**|Идентификатор SID имени входа для данного сертификата.|  
 |**string_sid**|**nvarchar(128)**|Строковое представление идентификатора SID имени входа для данного сертификата|  
 |**Тема**|**nvarchar(4000)**|Субъект сертификата.|  
 |**expiry_date**|**datetime**|Дата окончания срока действия сертификата.|  
 |**start_date**|**datetime**|Дата выпуска сертификата.|  
-|**Отпечаток**|**varbinary(32)**|Хэш сертификата SHA-1. Хэш SHA-1 является глобально уникальным.|  
+|**отпечаток**|**varbinary(32)**|Хэш сертификата SHA-1. Хэш SHA-1 является глобально уникальным.|  
 |**attested_by**|**nvarchar(260)**|Только для системного использования.|  
 |pvt_key_last_backup_date|**datetime**|Дата и время последнего экспорта закрытого ключа сертификата.|  
   

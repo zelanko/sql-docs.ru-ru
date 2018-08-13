@@ -1,5 +1,5 @@
 ---
-title: sp_configure (Transact-SQL) | Документы Microsoft
+title: sp_configure (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 05074a051f39e8b2dd81314ed6e230868c410c49
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 05be6cd18d0617cb327c1b964ec19b4d275b1778
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239974"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560094"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33239974"
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
->  Параметры конфигурации уровня базы данных см. в разделе [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Для настройки программной архитектуры NUMA см [программной архитектуры NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  Параметры конфигурации уровня базы данных, см. в разделе [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Для настройки программной архитектуры NUMA, см. в разделе [программной архитектуры NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,9 +81,9 @@ RECONFIGURE
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- При выполнении без параметров, **sp_configure** возвращает результирующий набор с пятью столбцами и упорядочивает параметры в алфавитном порядке по возрастанию, как показано в следующей таблице.  
+ При выполнении без параметров **sp_configure** возвращает результирующий набор с пятью столбцами и упорядочивает параметры в алфавитном порядке по возрастанию, как показано в следующей таблице.  
   
- Значения для **config_value** и **run_value** не всегда эквивалентны. После обновления параметра конфигурации с помощью **sp_configure**, администратор системы должен обновить активное значение с помощью RECONFIGURE или RECONFIGURE WITH OVERRIDE. Дополнительные сведения см. в разделе «Примечания».  
+ Значения для **config_value** и **run_value** не эквивалентны автоматически. После обновления параметра конфигурации с помощью **sp_configure**, системный администратор должен обновить активное значение с помощью инструкцию RECONFIGURE или RECONFIGURE WITH OVERRIDE. Дополнительные сведения см. в разделе «Примечания».  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -91,35 +91,35 @@ RECONFIGURE
 |**minimum**|**int**|Минимальное значение параметра конфигурации.|  
 |**maximum**|**int**|Максимальное значение параметра конфигурации.|  
 |**config_value**|**int**|Значение, к которому было установлено для параметра конфигурации с помощью **sp_configure** (значение в **sys.configurations.value**). Дополнительные сведения об этих параметрах см. в разделе [параметры конфигурации сервера &#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) и [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|Текущее активное значение параметра конфигурации (значение в **sys.configurations.value_in_use**).<br /><br /> Дополнительные сведения см. в разделе [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**run_value**|**int**|В настоящее время текущее значение параметра конфигурации (значение в **sys.configurations.value_in_use**).<br /><br /> Дополнительные сведения см. в разделе [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Используйте **sp_configure** для отображения или изменения параметров уровня сервера. Для изменения параметров уровня базы данных используйте инструкцию ALTER DATABASE. Для изменения параметров, влияющих только на сеанс текущего пользователя, используйте инструкцию SET.  
   
 ## <a name="updating-the-running-configuration-value"></a>Обновление активного значения конфигурации  
- При указании нового *значение* для *параметр*, результирующий набор отображает это значение в **config_value** столбца. Это значение сначала отличается от значения в **run_value** столбец, в котором показано текущее значение конфигурации. Обновление активного значения параметра конфигурации в **run_value** столбца, администратор системы должен выполнить инструкцию RECONFIGURE или RECONFIGURE WITH OVERRIDE.  
+ При указании нового *значение* для *параметр*, результирующий набор показывает это значение в **config_value** столбца. Это значение сначала отличается от значения в **run_value** столбец, который показывает текущее значение конфигурации. Чтобы обновить активное значение в **run_value** столбца, системный администратор должен выполнить инструкцию RECONFIGURE или RECONFIGURE WITH OVERRIDE.  
   
- Обе инструкции — и RECONFIGURE, и RECONFIGURE WITH OVERRIDE — работают с любым параметром конфигурации. Однако базовая инструкция RECONFIGURE отклоняет значение параметра, выходящее за разумный диапазон или способное вызвать конфликт параметров. Например, инструкция RECONFIGURE возвращает ошибку, если **интервал восстановления** значение больше 60 минут или если **маска схожести** пересекается с **маска схожести ввода-вывода**значение. В противоположность этому, инструкция RECONFIGURE WITH OVERRIDE принимает любое значение параметра с правильным типом данных и инициирует повторную конфигурацию с заданным значением.  
+ Обе инструкции — и RECONFIGURE, и RECONFIGURE WITH OVERRIDE — работают с любым параметром конфигурации. Однако базовая инструкция RECONFIGURE отклоняет значение параметра, выходящее за разумный диапазон или способное вызвать конфликт параметров. Например, инструкция RECONFIGURE возвращает ошибку, если **интервал восстановления** значение больше 60 минут или если **маска сходства** пересекается со значением **affinity I/O mask**значение. В противоположность этому, инструкция RECONFIGURE WITH OVERRIDE принимает любое значение параметра с правильным типом данных и инициирует повторную конфигурацию с заданным значением.  
   
 > [!CAUTION]  
 >  Недопустимое значение параметра может отрицательно сказаться на конфигурации экземпляра сервера. Поэтому использовать инструкцию RECONFIGURE WITH OVERRIDE следует с осторожностью.  
   
- Инструкция RECONFIGURE выполняет динамическое обновление некоторых параметров; для обновления других параметров необходимо остановить и перезапустить сервер. Например **параметре min server memory** и **Макс. памяти сервера** параметры памяти сервера динамически обновляются в [!INCLUDE[ssDE](../../includes/ssde-md.md)], поэтому их можно менять без перезапуска сервера. В отличие от этого изменения активного значения из **коэффициент заполнения** необходим перезапуск [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Инструкция RECONFIGURE выполняет динамическое обновление некоторых параметров; для обновления других параметров необходимо остановить и перезапустить сервер. Например **мин. памяти сервера** и **Макс. памяти сервера** параметры памяти сервера динамически обновляются в [!INCLUDE[ssDE](../../includes/ssde-md.md)]; таким образом, их можно изменить без перезапуска сервера. В отличие от этого изменения активного значения из **коэффициент заполнения** необходим перезапуск [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- После выполнения инструкции RECONFIGURE для параметра конфигурации, видно ли параметр был обновлен динамически при выполнении **sp_configure'***option_name***"**. Значения в **run_value** и **config_value** должны совпадать, если для параметра обновляется динамически. Можно также проверить, чтобы увидеть, какие параметры обновляются динамически, просмотрев **is_dynamic** столбец **sys.configurations** представления каталога.  
+ После выполнения инструкции RECONFIGURE для параметра конфигурации, вы увидите параметр обновлялся ли динамически, выполнив **sp_configure "***option_name***"**. Значения в **run_value** и **config_value** столбцов должны совпадать и для параметра обновляется динамически. Можно также проверить, чтобы увидеть, какие параметры обновляются динамически, просмотрев **is_dynamic** столбец **sys.configurations** представления каталога.  
   
 > [!NOTE]  
->  Если указанный *значение* слишком велико для параметра, **run_value** отражает тот факт, [!INCLUDE[ssDE](../../includes/ssde-md.md)] может динамической памяти, а не использовать параметр, который не является допустимым.  
+>  Если заданное *значение* слишком велико для параметра, **run_value** столбец отражен тот факт, [!INCLUDE[ssDE](../../includes/ssde-md.md)] установлено динамической памяти, вместо того чтобы использовать это параметр, который не является допустимым.  
   
  Дополнительные сведения см. в разделе [ПЕРЕНАСТРОИТЬ &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
 ## <a name="advanced-options"></a>Дополнительные параметры  
- Некоторые параметры конфигурации, такие как **маска схожести** и **интервал восстановления**, определенных в качестве дополнительных параметров. По умолчанию эти параметры недоступны для просмотра и изменения. Чтобы сделать их доступными, присвойте **ShowAdvancedOptions** параметр конфигурации 1.  
+ Некоторые параметры конфигурации, такие как **маска сходства** и **интервал восстановления**, определенных в качестве дополнительных параметров. По умолчанию эти параметры недоступны для просмотра и изменения. Чтобы сделать их доступными, присвойте **ShowAdvancedOptions** параметра конфигурации значение 1.  
   
  Дополнительные сведения о параметрах конфигурации и их значениях см. в разделе [параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения **sp_configure** с обоими параметрами для изменения параметра конфигурации или выполнения инструкции RECONFIGURE необходимо предоставить разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
+ Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения **sp_configure** с обоими параметрами для изменения параметра конфигурации или запуска инструкции RECONFIGURE должно предоставлено разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
   
 ## <a name="examples"></a>Примеры  
   
@@ -169,10 +169,10 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>Д. Установка подключения к Hadoop.  
- Для настройки подключения к Hadoop требуется еще несколько шагов, наряду с выполнением хранимой процедуры sp_configure. Полную процедуру в статье [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ Чтобы настроить подключение Hadoop необходима несколько дополнительных действий, наряду с выполнением хранимой процедуры sp_configure. Для полной процедуры, см. в разделе [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция RECONFIGURE & #40; Transact-SQL & #41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Определение предикатов с логическим значением в запросах XPath (SQLXML 4.0) | Документы Microsoft
+title: Определение предикатов с логическим значением в запросах XPath (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,16 +23,17 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aad334864e5b0aa26fa4d7e1a8e9a0e3ae4aff0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 44bb23ca6b42dbeb016c91baff519833d1180e74
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555504"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Определение предикатов с логическим значением в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующем примере показано, как предикаты с логическим значением указываются в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующем примере показано, как предикаты с логическим значением указываются в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
      Результат:  
   
@@ -95,21 +96,21 @@ ms.lasthandoff: 05/03/2018
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>Б. Указание последовательных и вложенных предикатов  
- В следующем запросе показано использование последовательных предикатов. Запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, которые оба имеют **SalesPersonID** атрибут со значением 277 и **TerritoryID**атрибут со значением 3:  
+ В следующем запросе показано использование последовательных предикатов. Запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, имеющие и **SalesPersonID** атрибут со значением 277 и **TerritoryID**атрибут со значением 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- Запрос возвращает  **\<клиента >** элементы, которые удовлетворяют условиям, указанным в предикатах.  
+ Запрос возвращает  **\<клиента >** элементы, удовлетворяющие обоим условиям, указанным в предикатах.  
   
- Ярлык для **атрибута** оси (@) может быть указан, а потому, что **дочерних** оси используется по умолчанию, его можно исключить из запроса:  
+ Ярлык для **атрибут** оси (@) можно указать и поскольку **дочерних** оси используется по умолчанию, его можно исключить из запроса:  
   
 ```  
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- В следующем запросе XPath показано использование вложенных предикатов. Запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, которые включают  **\<порядок >** дочерние элементы, имеющие по крайней мере один  **\<Заказ >** элемент, имеющий **SalesPersonID** атрибута значение 2.  
+ В следующем запросе XPath показано использование вложенных предикатов. Запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, которые включают  **\<порядок >** дочерние элементы, имеющие по крайней мере  **\<Порядок >** элемент, имеющий **SalesPersonID** атрибута значение 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -137,7 +138,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее показан частичный результат:  
   
@@ -172,7 +173,7 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>В. Указание предиката верхнего уровня  
- Следующий запрос возвращает  **\<клиента >** дочерних узлов элементов контекстного узла, имеющих  **\<порядок >** дочерние элементы. В этом запросе проверяется, является ли путь доступа предикатом верхнего уровня:  
+ Следующий запрос возвращает  **\<клиента >** дочерние узлы элемента для узла контекста, которые имеют  **\<порядок >** дочерние элементы. В этом запросе проверяется, является ли путь доступа предикатом верхнего уровня:  
   
 ```  
 /child::Customer[child::Order]  
@@ -206,7 +207,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [с помощью ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Частичный результат:  
   

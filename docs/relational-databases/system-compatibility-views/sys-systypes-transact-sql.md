@@ -1,5 +1,5 @@
 ---
-title: sys.systypes (Transact-SQL) | Документы Microsoft
+title: sys.systypes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8526b0335d9d222cd0c28f4304566812905a07b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 32f3ff7bb65822e0ce0c8e3e9192b88dd572c22b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240853"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537224"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,22 +47,22 @@ ms.locfileid: "33240853"
 |**xtype**|**tinyint**|Тип физического хранилища.|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Расширенный пользовательский тип. Вызывает переполнение или возвращает значение NULL, если количество типов данных превышает 32 767.|  
-|**длина**|**smallint**|Физическая длина типа данных.|  
+|**Длина**|**smallint**|Физическая длина типа данных.|  
 |**xprec**|**tinyint**|Внутренняя точность, используемая сервером. Не для использования в запросах.|  
 |**XScale**|**tinyint**|Внутренний масштаб, используемый сервером. Не для использования в запросах.|  
 |**tdefault**|**int**|Идентификатор хранимой процедуры, содержащей проверку целостности для этого типа данных.|  
 |**Домен**|**int**|Идентификатор хранимой процедуры, содержащей проверку целостности для этого типа данных.|  
-|**UID**|**smallint**|Идентификатор схемы владельца типа.<br /><br /> Для баз данных, обновленных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентификатор схемы эквивалентен идентификатору владельца.<br /><br /> **\*\* Важные \* \***  при использовании одного из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции DDL, необходимо использовать [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) представления вместо каталога **sys.systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Вызывает переполнение или возвращает значение NULL, если количество пользователей и ролей превышает 32 767.|  
+|**UID**|**smallint**|Идентификатор схемы владельца типа.<br /><br /> Для баз данных, обновленных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентификатор схемы эквивалентен идентификатору владельца.<br /><br /> **\*\* Важные \* \* ** при использовании одного из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции DDL, необходимо использовать [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) представления вместо каталога **sys.systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Вызывает переполнение или возвращает значение NULL, если количество пользователей и ролей превышает 32 767.|  
 |**Зарезервировано**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|Для символьного **collationid** идентификатор параметров сортировки текущей базы данных; в противном случае возвращается значение NULL.|  
 |**usertype**|**smallint**|Идентификатор пользовательского типа. Вызывает переполнение или возвращает значение NULL, если количество типов данных превышает 32 767.|  
-|**variable**|**бит**|Тип данных с переменной длиной.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|**allownulls**|**бит**|Указывает для этого типа данных возможность принимать значения NULL по умолчанию. Это значение по умолчанию переопределяется, если допустимость значения NULL указана с помощью [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
+|**variable**|**bit**|Тип данных с переменной длиной.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|**allownulls**|**bit**|Указывает для этого типа данных возможность принимать значения NULL по умолчанию. Это значение по умолчанию переопределяется, если допустимость значения NULL определяется с помощью [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
 |**type**|**tinyint**|Тип данных физического хранилища.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Уровень точности для этого типа данных.<br /><br /> -1 = **xml** или типы больших значений.|  
-|**масштаб**|**tinyint**|Масштаб для этого типа данных на основе точности.<br /><br /> NULL = данные не числовые.|  
-|**Параметры сортировки**|**sysname**|Для символьного **сортировки** являются параметры сортировки текущей базы данных; в противном случае возвращается значение NULL.|  
+|**Масштаб**|**tinyint**|Масштаб для этого типа данных на основе точности.<br /><br /> NULL = данные не числовые.|  
+|**Параметры сортировки**|**sysname**|Для символьного **параметры сортировки** параметры сортировки текущей базы данных; в противном случае возвращается значение NULL.|  
   
 ## <a name="see-also"></a>См. также  
  [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   

@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: c589d08832e08399d54ca9612fc1468a6b1f3baf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95c9c2b9bdbcbfb6573688ad220ab504dc89e337
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084826"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415513"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Настройка кластера SLES для группы доступности SQL Server
 
@@ -215,7 +215,7 @@ crm configure property cluster-recheck-interval=2min
 
 Дополнительные сведения о свойствах кластера Pacemaker, см. в разделе [Настройка ресурсов кластера](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
-# <a name="configure-fencing-stonith"></a>Настройка ограждения (STONITH)
+## <a name="configure-fencing-stonith"></a>Настройка ограждения (STONITH)
 Поставщики кластера pacemaker требуются STONITH включения и ограждения устройства, настроенные для настройки кластера, поддерживаемых. Если диспетчер кластерных ресурсов не может определить состояние узла или ресурса на узле, ограждения используется для ввода кластера в известное состояние еще раз.
 
 Ресурс уровня ограждения главным образом, гарантируется без повреждения данных во время сбоя, настроив ресурса. Можно использовать ограждения уровня ресурсов, например, с DRBD (Distributed реплицированные блочное устройство) для обозначения диска на узле как устаревшие, когда канал связи выходит из строя.
@@ -237,6 +237,16 @@ sudo crm configure property stonith-enabled=true
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Настройте кластерные ресурсы для SQL Server
 
 Ссылаться на [SLES администрирования Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
+
+## <a name="enable-pacemaker"></a>Включить Pacemaker
+
+Включите Pacemaker, таким образом, чтобы он запускается автоматически.
+
+Выполните следующую команду на каждом узле в кластере.
+
+```bash
+systemctl enable pacemaker
+```
 
 ### <a name="create-availability-group-resource"></a>Создайте ресурс группы доступности
 

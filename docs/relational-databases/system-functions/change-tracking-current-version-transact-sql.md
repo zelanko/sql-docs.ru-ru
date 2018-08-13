@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL) | Документы Microsoft
+title: CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,17 +23,18 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a83c0a60da4029892b258443833902f24c954d19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e317243066e51a9c253af8177d8245fa33dac5a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540474"
 ---
 # <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает версию, связанную с последней зафиксированной транзакцией. Эта версия может использоваться при перечислении изменений с помощью [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
+  Возвращает версию, связанную с последней зафиксированной транзакцией. Эту версию можно использовать при перечислении изменений с помощью [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +48,7 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **bigint**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Возвращает NULL, если отслеживание изменений не включено для базы данных.  
   
 ## <a name="examples"></a>Примеры  

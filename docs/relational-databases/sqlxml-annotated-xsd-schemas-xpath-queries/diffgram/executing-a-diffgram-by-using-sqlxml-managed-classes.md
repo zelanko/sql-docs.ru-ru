@@ -1,5 +1,5 @@
 ---
-title: Выполнение дельты с помощью SQLXML управляемых классов | Документы Microsoft
+title: Выполнение дельты с использованием SQLXML управляемых классов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,16 +20,17 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9d0fba2d5e51c38ccc2fee03279d4f97c4841ecb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e19e54a72bb6ef6852353d8ff9feb59bec00b8e0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548914"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Выполнение дельты с использованием управляемых классов SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В этом примере показано, как выполнять файл дельты в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] обновления среды .NET Framework для применения данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблиц с помощью управляемых классов SQLXML (Microsoft.Data.SqlXml).  
+  В этом примере показано, как выполнять файл дельты в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] среды .NET Framework для применения данных обновляет до [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы с помощью управляемых классов SQLXML (Microsoft.Data.SqlXml).  
   
  В этом примере дельта обновляет CompanyName и ContactName для клиента ALFKI.  
   
@@ -58,9 +59,9 @@ ms.lasthandoff: 05/03/2018
 </ROOT>  
 ```  
   
- **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer1»**). **\<DataInstance >** блок содержит соответствующий  **\<клиента >** элемент с таким же **идентификатор**.  **\<Клиента >** элемент в  **\<NewDataSet >** также указывает **diffgr: HasChanges = «modified»**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если **diffgr:** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
+ ** \<Перед >** блок содержит ** \<клиента >** элемент (**diffgr: ID = «Customer1»**). ** \<DataInstance >** блок содержит соответствующий ** \<клиента >** элемент с таким же **идентификатор**. ** \<Клиента >** элемент в ** \<NewDataSet >** также указывает **diffgr: HasChanges = «modified»**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если **diffgr: HasChanges** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
   
- Ниже приведен код для приложения C# tutorial, показано, как использовать управляемые классы SQLXML для выполнения вышеупомянутого файла дельты и обновления двух таблиц (Cust, Ord), также создается **tempdb** базы данных.  
+ Ниже приведен код для приложения C# tutorial, показывающий, как использовать управляемые классы SQLXML для выполнить выше дельту и обновления двух таблиц (Cust, Ord), также создается в **tempdb** базы данных.  
   
 ```  
 using System;  
@@ -184,6 +185,6 @@ class Test
 8.  Из командной строки выполните файл DiffgramSample.exe.  
   
 ## <a name="see-also"></a>См. также  
- [Примеры дельт & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [Примеры дельт &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
   
   

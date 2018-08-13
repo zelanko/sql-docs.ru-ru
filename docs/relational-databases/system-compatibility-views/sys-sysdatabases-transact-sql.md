@@ -25,13 +25,13 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a19ff47d576a7a2ffe5a72f609a27d5c1214f70
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 561af4e645f757880a3b5319f437e21e9e97a526
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993903"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549184"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37993903"
 |**name**|**sysname**|Имя базы данных|  
 |**dbid**|**smallint**|Идентификатор базы данных|  
 |**ИД безопасности**|**varbinary(85)**|Системный идентификатор создателя базы данных.|  
-|**режим**|**smallint**|Для внутреннего применения: блокирует базу данных во время ее создания.|  
+|**Режим**|**smallint**|Для внутреннего применения: блокирует базу данных во время ее создания.|  
 |**status**|**int**|Биты состояния, некоторые из которых можно задать с помощью [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) описанных:<br /><br /> 1 = **autoclose** (ALTER DATABASE)<br /><br /> 4 = **select в / bulkcopy** (ALTER DATABASE с помощью SET RECOVERY)<br /><br /> 8 = **trunc. log на контрольной точке** (ALTER DATABASE с помощью SET RECOVERY)<br /><br /> 16 = **разорванных страниц** (ALTER DATABASE)<br /><br /> 32 = **загрузки**<br /><br /> 64 = **Подготовка к восстановлению**<br /><br /> 128 = **восстановление**<br /><br /> 256 = **не восстановлена**<br /><br /> 512 = **автономной** (ALTER DATABASE)<br /><br /> 1024 = **только для чтения** (ALTER DATABASE)<br /><br /> 2048 = **используется только dbo** (ALTER DATABASE с помощью SET RESTRICTED_USER)<br /><br /> 4096 = **одного пользователя** (ALTER DATABASE)<br /><br /> 32768 = **аварийный режим**<br /><br /> 65536 = **КОНТРОЛЬНОЙ СУММЫ** (ALTER DATABASE)<br /><br /> 4194304 = **автосжатия** (ALTER DATABASE)<br /><br /> 1073741824 = **безопасное завершение работы**<br /><br /> В одно и то же время несколько битов могут находиться в состоянии ON.|  
 |**status2**|**int**|16384 = **ANSI null по умолчанию** (ALTER DATABASE)<br /><br /> 65536 = **сцепление значений null дает null** (ALTER DATABASE)<br /><br /> 131072 = **рекурсивные триггеры** (ALTER DATABASE)<br /><br /> 1048576 = **по умолчанию локальный курсор** (ALTER DATABASE)<br /><br /> 8388608 = **заключенный в кавычки идентификатор** (ALTER DATABASE)<br /><br /> 33554432 = **закрытие курсора при фиксации** (ALTER DATABASE)<br /><br /> 67108864 = **ANSI nulls** (ALTER DATABASE)<br /><br /> 268435456 = **предупреждения ANSI** (ALTER DATABASE)<br /><br /> 536870912 = **полнотекстовые функции включены** (устанавливается с помощью **sp_fulltext_database**)|  
 |**crdate**|**datetime**|Дата создания.|  

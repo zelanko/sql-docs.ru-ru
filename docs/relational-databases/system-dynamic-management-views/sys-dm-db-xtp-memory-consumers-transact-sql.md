@@ -23,13 +23,13 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05632eebe6bd329815016da40db4705be0b935ed
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3f4bb702cfbe30b26b2f38fa159a9a49b90efed7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015179"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542394"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "38015179"
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|Идентификатор (внутренний) потребителя памяти.|  
 |memory_consumer_type|**int**|Тип потребителя памяти:<br /><br /> 0 = агрегатная функция. (Суммирует использование памяти для двух или более потребителей. Не должен отображаться.)<br /><br /> 2 = VARHEAP (Отслеживает потребление памяти для кучи переменной длины.)<br /><br /> 3 = HASH (Отслеживает потребление памяти для индекса.)<br /><br /> 5 = пул страниц БД (Отслеживает потребление памяти для пула страниц базы данных, используемого для операций времени выполнения. Например, переменных таблиц и некоторых сериализуемых сканирований. Для одной базы данных существует только один потребитель памяти этого типа.)|  
-|memory_consumer_type_desc|**nvarchar(64)**|Тип потребителя памяти: VARHEAP, HASH или PGPOOL.<br /><br /> 0 — (Он не должен отображаться.)<br /><br /> 2 — VARHEAP<br /><br /> 3 — HASH<br /><br /> 5 — PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Описание экземпляра потребителя памяти.<br /><br /> VARHEAP: <br />Куча базы данных. Используется для выделения данных пользователя для базы данных (строк).<br />Куча системы базы данных. Используется для выделения данных базы данных, которые будут включены в дампы памяти и не содержат пользовательских данных.<br />Куча индекса диапазона. Частная куча, используемая индексом диапазона для выделения страниц BW.<br /><br /> ХЭШ: Описание отсутствует, поскольку object_id указывает таблицу, а index_id сам хэш-индекс.<br /><br /> PGPOOL: Для базы данных имеется только одна страница пула пул страниц Database 64K.|  
+|memory_consumer_type_desc|**Nvarchar(64)**|Тип потребителя памяти: VARHEAP, HASH или PGPOOL.<br /><br /> 0 — (Он не должен отображаться.)<br /><br /> 2 — VARHEAP<br /><br /> 3 — HASH<br /><br /> 5 — PGPOOL|  
+|memory_consumer_desc|**Nvarchar(64)**|Описание экземпляра потребителя памяти.<br /><br /> VARHEAP: <br />Куча базы данных. Используется для выделения данных пользователя для базы данных (строк).<br />Куча системы базы данных. Используется для выделения данных базы данных, которые будут включены в дампы памяти и не содержат пользовательских данных.<br />Куча индекса диапазона. Частная куча, используемая индексом диапазона для выделения страниц BW.<br /><br /> ХЭШ: Описание отсутствует, поскольку object_id указывает таблицу, а index_id сам хэш-индекс.<br /><br /> PGPOOL: Для базы данных имеется только одна страница пула пул страниц Database 64K.|  
 |object_id|**bigint**|Идентификатор объекта, к которому относится выделенная память. Для системных объектов значение отрицательное.|  
 |xtp_object_id|**bigint**|Идентификатор объекта для таблицы, оптимизированной для памяти.|  
 |index_id|**int**|Идентификатор индекса потребителя (если применимо). Значение NULL для базовых таблиц.|  

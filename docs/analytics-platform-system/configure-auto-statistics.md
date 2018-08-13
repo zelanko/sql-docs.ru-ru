@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 000a31f76118a3f2acaf702ce5c74c1dd5703422
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107142"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400917"
 ---
 # <a name="configure-auto-statistics"></a>Настроить автоматическое статистики
 
@@ -45,7 +45,7 @@ ms.locfileid: "37107142"
 Изменение значения параметра функция потребуется перезапустить службу на точках доступа.
 
 ## <a name="change-auto-statistics-settings-on-a-database"></a>Изменить параметры автоматической статистики в базе данных
-При включении автоматической статистики системным администратором, можно использовать [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) для изменения параметров статистики в базе данных. Если параметр компонента автоматической статистики включено системным администратором, все новые базы данных, созданные после обновления до AU7 будет включена автоматическая статистика. Все базы данных, которые существовали до обновления до AU7 имеют автоматическое статистики отключен. В следующем примере включается автоматическое статистики в существующих myPDW базы данных.
+При включении автоматической статистики системным администратором, можно использовать [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) для изменения параметров статистики в базе данных. Если параметр компонента автоматической статистики включено системным администратором, все новые базы данных, созданные после обновления до AU7 будет включена автоматическая статистика. Все базы данных, которые существовали до обновления до AU7 имеют автоматическое статистики отключен. В следующем примере включается автоматическое статистики в существующих myPDW базы данных.
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON

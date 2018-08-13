@@ -1,5 +1,5 @@
 ---
-title: sp_fkeys (Transact-SQL) | Документы Microsoft
+title: sp_fkeys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -22,12 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fdb582cf8e77e61d7723ea1c6ed2e854ef8f6940
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fc012a7b05f2387756e25bfb86c93896d3f94190
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536664"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,9 +53,9 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  Имя таблицы с первичным ключом, применяемое для возврата сведений о каталоге. *pktable_name* — **sysname**, значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Этот параметр или *fktable_name* должен быть указан параметр (или оба).  
   
  [ @pktable_owner=] '*аргумент pktable_owner*"  
- — Это имя владельца таблицы (с первичным ключом), применяемое для возврата сведений о каталоге. *Аргумент pktable_owner* — **sysname**, значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если *аргумент pktable_owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
+ — Имя владельца таблицы (с первичным ключом), применяемое для возврата сведений о каталоге. *Аргумент pktable_owner* — **sysname**, значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если *аргумент pktable_owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если *аргумент pktable_owner* не указан и текущий пользователь не является владельцем таблицы с указанным *pktable_name*, то процедура ищет таблицу с указанным *pktable_name* принадлежат владельцу базы данных. Если такая таблица существует, возвращаются ее столбцы.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если *аргумент pktable_owner* не задан и текущий пользователь не является владельцем таблицы с указанным *pktable_name*, процедура ищет таблицу с указанным *pktable_name* принадлежат владельцу базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   
  [ @pktable_qualifier =] '*pktable_qualifier*"  
  Имя квалификатора таблицы (с первичным ключом). *pktable_qualifier* имеет тип sysname и значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*qualifier.owner.name*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] квалификатор представляет собой имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
@@ -65,13 +66,13 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  [ @fktable_owner =] '*fktable_owner*"  
  Имя владельца таблицы (с внешним ключом), применяемое для возврата сведений о каталоге. *fktable_owner* — **sysname**, значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если *fktable_owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если *fktable_owner* не указан и текущий пользователь не является владельцем таблицы с указанным *fktable_name*, то процедура ищет таблицу с указанным *fktable_name* принадлежат владельцу базы данных. Если такая таблица существует, возвращаются ее столбцы.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если *fktable_owner* не задан и текущий пользователь не является владельцем таблицы с указанным *fktable_name*, процедура ищет таблицу с указанным *fktable_name* принадлежат владельцу базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   
  [ @fktable_qualifier=] '*fktable_qualifier*"  
  Имя квалификатора таблицы (с внешним ключом). *fktable_qualifier* — **sysname**, значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] квалификатор представляет собой имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -93,7 +94,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  Возвращенные результаты упорядочиваются по FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME и KEY_SEQ.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Кодирование приложения, в состав которого входят таблицы с отключенными внешними ключами, можно выполнять следующим образом.  
   
 -   Временно отключить проверку ограничений (ALTER TABLE NOCHECK или CREATE TABLE NOT FOR REPLICATION) при работе с таблицами, потом включить ее снова.  
@@ -102,10 +103,10 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 Если введено имя таблицы первичных ключей, а имя таблицы внешних ключей — NULL, то процедура sp_fkeys возвращает все таблицы, в которых есть внешний ключ к данной таблице. Если введено имя таблицы внешних ключей, а имя таблицы первичных ключей — NULL, то процедура sp_fkeys возвращает все таблицы, имеющие связь «первичный-внешний ключ» с внешними ключами в таблице внешних ключей.  
   
-Хранимая процедура sp_fkeys эквивалентно SQLForeignKeys в ODBC.  
+Хранимая процедура sp_fkeys эквивалентна SQLForeignKeys в ODBC.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется `SELECT` на схему.  
+ Требуется `SELECT` разрешения на схему.  
   
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере выводится список внешних ключей для таблицы `HumanResources.Department` базы данных `AdventureWorks2012`.  

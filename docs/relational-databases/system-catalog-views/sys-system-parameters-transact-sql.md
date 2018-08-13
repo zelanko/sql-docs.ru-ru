@@ -1,5 +1,5 @@
 ---
-title: sys.system_parameters (Transact-SQL) | Документы Microsoft
+title: sys.system_parameters (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c849674f30a041ea58a771c3a75505a7d1fa2ebf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b98410a8938d01586933ee896b0e67058e1896b0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559634"
 ---
 # <a name="syssystemparameters-transact-sql"></a>sys.system_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,16 +43,16 @@ ms.lasthandoff: 05/04/2018
 |**name**|**sysname**|Имя параметра. Уникален в пределах объекта.<br /><br /> Если объект является скалярной функцией, именем параметра будет пустая строка в строке, представляющей возвращаемое значение.|  
 |**parameter_id**|**int**|Идентификатор параметра. Уникален в пределах объекта. Если объект является скалярной функцией, **parameter_id** = 0 представляет возвращаемое значение.|  
 |**system_type_id**|**tinyint**|Идентификатор системного типа параметра.|  
-|**user_type_id**|**int**|Определенный пользователем идентификатор типа параметра.<br /><br /> Чтобы вернуть имя типа, присоединение к [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) представления на этот столбец каталога.|  
-|**max_length**|**smallint**|Максимальная длина параметра в байтах. Значение будет равно -1, когда тип данных столбца является **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, или **xml**.|  
-|**precision**|**tinyint**|Для числового аргумента — точность; иначе 0.|  
-|**масштаб**|**tinyint**|Масштаб числового аргумента; иначе 0.|  
-|**is_output**|**бит**|1 = выходной параметр (или возвращаемый); иначе — 0.|  
-|**is_cursor_ref**|**бит**|1 = аргумент представляет собой ссылку на курсор.|  
-|**has_default_value**|**бит**|1 = параметр имеет значение по умолчанию.<br /><br /> В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются значения по умолчанию для объектов среды CLR в данном представлении каталога, поэтому в данном столбце всегда будет содержаться значение 0 для объектов языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для просмотра значения по умолчанию параметра в [!INCLUDE[tsql](../../includes/tsql-md.md)] объекта, запрос **определения** столбец [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) представления каталога, или используйте [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)системная функция.|  
-|**is_xml_document**|**бит**|1 = содержимое является готовым XML-документом.<br /><br /> 0 = содержимое является фрагментом документа, или тип данных столбца не **xml**.|  
+|**user_type_id**|**int**|Определенный пользователем идентификатор типа параметра.<br /><br /> Чтобы вернуть имя типа, присоедините к [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) представления по этому столбцу каталога.|  
+|**max_length**|**smallint**|Максимальная длина параметра в байтах. Значение будет равно -1, когда тип данных столбца находится **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, или **xml**.|  
+|**Точность**|**tinyint**|Для числового аргумента — точность; иначе 0.|  
+|**Масштаб**|**tinyint**|Масштаб числового аргумента; иначе 0.|  
+|**is_output**|**bit**|1 = выходной параметр (или возвращаемый); иначе — 0.|  
+|**is_cursor_ref**|**bit**|1 = аргумент представляет собой ссылку на курсор.|  
+|**has_default_value**|**bit**|1 = параметр имеет значение по умолчанию.<br /><br /> В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются значения по умолчанию для объектов среды CLR в данном представлении каталога, поэтому в данном столбце всегда будет содержаться значение 0 для объектов языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Чтобы просмотреть значение по умолчанию параметра в [!INCLUDE[tsql](../../includes/tsql-md.md)] объекта, запрос **определение** столбец [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) представления каталога или используйте [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)системной функции.|  
+|**is_xml_document**|**bit**|1 = содержимое является готовым XML-документом.<br /><br /> 0 = содержимое является фрагментом документа или тип данных столбца не **xml**.|  
 |**default_value**|**sql_variant**|Если **has_default_value** равно 1, значение этого столбца является значением по умолчанию для параметра; в противном случае — значение NULL.|  
-|**xml_collection_id**|**int**|Не равно нулю, если тип данных параметра **xml** и XML типизирован. Значение является идентификатором коллекции, в которой содержится пространство имен схемы XML проверки для данного параметра.<br /><br /> 0 = нет коллекции схем XML.|  
+|**xml_collection_id**|**int**|Ненулевое значение, если тип данных параметра **xml** и XML типизирован. Значение является идентификатором коллекции, в которой содержится пространство имен схемы XML проверки для данного параметра.<br /><br /> 0 = нет коллекции схем XML.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

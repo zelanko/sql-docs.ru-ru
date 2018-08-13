@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_outstanding_batches (Transact-SQL) | Документы Microsoft
+title: sys.dm_fts_outstanding_batches (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2eb67cfc9ae23c9779efdfccb436157b9a14349f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2c214242445ed6769b44f060cb563db1296006c1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464820"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547544"
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34464820"
 |crawl_memory_address|**varbinary(8)**|Адрес памяти объекта сканирования (родительского объекта).|  
 |memregion_memory_address|**varbinary(8)**|Адрес области памяти исходящей общей памяти узла управляющей программы фильтрации (fdhost.exe).|  
 |hr_batch|**int**|Самый последний код ошибки для пакета.|  
-|is_retry_batch|**бит**|Обозначает, является ли пакет повторно передаваемым:<br /><br /> 0 = нет<br /><br /> 1 = да|  
+|is_retry_batch|**bit**|Обозначает, является ли пакет повторно передаваемым:<br /><br /> 0 = нет<br /><br /> 1 = да|  
 |retry_hints|**int**|Тип повторной попытки, нужный для пакета:<br /><br /> 0 = нет повторения;<br /><br /> 1 = многопоточное повторение;<br /><br /> 2 = однопоточное повторение;<br /><br /> 3 = однопоточное и многопоточное повторение;<br /><br /> 5 = многопоточное окончательное повторение;<br /><br /> 6 = однопоточное окончательное повторение;<br /><br /> 7 = однопоточное и многопоточное окончательное повторение.|  
 |retry_hints_description|**nvarchar(120)**|Описание типа необходимой повторной попытки:<br /><br /> НЕТ ПОВТОРЕНИЯ;<br /><br /> МНОГОПОТОЧНОЕ ПОВТОРЕНИЕ;<br /><br /> ОДНОПОТОЧНОЕ ПОВТОРЕНИЕ;<br /><br /> ОДНОПОТОЧНОЕ И МНОГОПОТОЧНОЕ ПОВТОРЕНИЕ;<br /><br /> МНОГОПОТОЧНОЕ ОКОНЧАТЕЛЬНОЕ ПОВТОРЕНИЕ;<br /><br /> ОДНОПОТОЧНОЕ ОКОНЧАТЕЛЬНОЕ ПОВТОРЕНИЕ;<br /><br /> ОДНОПОТОЧНОЕ И МНОГОПОТОЧНОЕ ОКОНЧАТЕЛЬНОЕ ПОВТОРЕНИЕ.|  
 |doc_failed|**bigint**|Количество отказавших документов в пакете.|  

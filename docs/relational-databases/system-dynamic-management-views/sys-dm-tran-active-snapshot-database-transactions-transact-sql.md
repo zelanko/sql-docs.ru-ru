@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Документы Microsoft
+title: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 55
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 761d9196100f97fe763aa5739d96d7f41373e59b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: edfc0e1de9cf342027c42a3c05de3c6bee1dda98
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467640"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533554"
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34467640"
  Это динамическое административное представление не включает в себя системные транзакции.  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
+>  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -73,7 +73,7 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|Максимальная длина цепочки версий, пройденной в поисках транзакционно согласованной версии.|  
 |**average_version_chain_traversed**|**real**|Среднее число версий строк по всем пройденным цепочкам версий.|  
 |**elapsed_time_seconds**|**bigint**|Время, истекшее с момента, когда транзакция получила свой порядковый номер.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения
 
@@ -81,7 +81,7 @@ sys.dm_tran_active_snapshot_database_transactions
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
 
 ## <a name="remarks"></a>Примечания  
- **sys.dm_tran_active_snapshot_database_transactions** о транзакциях, назначенных порядковый номер транзакции (XSN). Порядковый номер XSN назначается при первом доступе транзакции к хранилищу версий. В следующих примерах показано, как в базе данных, для которой включена изоляция моментальных снимков или READ COMMITTED с использованием управления версиями строк, транзакции назначается номер XSN.  
+ **sys.dm_tran_active_snapshot_database_transactions** о транзакциях, назначаются порядковый номер транзакции (XSN). Порядковый номер XSN назначается при первом доступе транзакции к хранилищу версий. В следующих примерах показано, как в базе данных, для которой включена изоляция моментальных снимков или READ COMMITTED с использованием управления версиями строк, транзакции назначается номер XSN.  
   
 -   Если транзакция выполняется на упорядочиваемом уровне изоляции, номер XSN назначается при первом выполнении транзакцией какой-либо инструкции, например операции UPDATE, в ходе которой создается версия строки.  
   
@@ -147,15 +147,15 @@ elapsed_time_seconds
 333  
 ```  
   
- Следующие сведения анализирует результаты из **sys.dm_tran_active_snapshot_database_transactions**:  
+ Следующие сведения оценивает результаты из **sys.dm_tran_active_snapshot_database_transactions**:  
   
--   XSN-57: Так как эта транзакция выполняется не в режиме изоляции моментального снимка `is_snapshot` значение и `first_snapshot_sequence_num` являются `0`. Аргумент `transaction_sequence_num` показывает, что данной транзакции был присвоен порядковый номер, поскольку параметр READ_COMMITTED_SNAPSHOT или ALLOW_SNAPSHOT_ISOLATION (или оба) имеют значение ON.  
+-   XSN-57: Так как эта транзакция выполняется не в режиме изоляции моментального снимка, `is_snapshot` значение и `first_snapshot_sequence_num` являются `0`. Аргумент `transaction_sequence_num` показывает, что данной транзакции был присвоен порядковый номер, поскольку параметр READ_COMMITTED_SNAPSHOT или ALLOW_SNAPSHOT_ISOLATION (или оба) имеют значение ON.  
   
--   XSN-58: Эта транзакция не выполняется в режиме изоляции моментального снимка и применяет те же сведения для транзакции XSN-57.  
+-   XSN-58: Эта транзакция не выполняется в режиме изоляции моментального снимка и применяет те же сведения по XSN-57.  
   
--   XSN-59: Это первая активная транзакция, которая работает в режиме изоляции моментального снимка. Транзакция считывает данные, зафиксированные транзакцией XSN-57, на что указывает параметр `first_snapshot_sequence_num`. Вывод этой транзакции также указывает на то, что максимальная цепочка версий, пройденная для строки, равна `1` и что для каждой строки, к которой был получен доступ, пройдена в среднем `1` версия. Это означает, что транзакции XSN-57, XSN-58 и XSN-60 не изменяли строки и были зафиксированы.  
+-   XSN-59: Это первая активная транзакция, на котором работает в режиме изоляции моментального снимка. Транзакция считывает данные, зафиксированные транзакцией XSN-57, на что указывает параметр `first_snapshot_sequence_num`. Вывод этой транзакции также указывает на то, что максимальная цепочка версий, пройденная для строки, равна `1` и что для каждой строки, к которой был получен доступ, пройдена в среднем `1` версия. Это означает, что транзакции XSN-57, XSN-58 и XSN-60 не изменяли строки и были зафиксированы.  
   
--   XSN-60: Это вторая транзакция, запущенная с изоляцией моментального снимка. Вывод содержит такие же сведения, что и для транзакции XSN-59.  
+-   XSN-60: Это вторая транзакция, выполняемая при изоляции моментальных снимков. Вывод содержит такие же сведения, что и для транзакции XSN-59.  
   
 ## <a name="see-also"></a>См. также  
  [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

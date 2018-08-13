@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_connections (Transact-SQL) | Документы Microsoft
+title: sys.dm_exec_connections (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
@@ -23,21 +23,21 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27499bf31561addd909d92a81222662e4470b8b5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f438405c33237f93cb214a1dfb40dff70fdf84e8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465520"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535634"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает сведения о соединениях, установленных с данным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и подробные сведения о каждом соединении. Возвращает сведения о расширенных соединение сервера для SQL Server. Возвращает текущую информацию о подключении базы данных для базы данных SQL.  
+  Возвращает сведения о соединениях, установленных с данным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и подробные сведения о каждом соединении. Возвращает сведения о сервере подключения для SQL Server. Возвращает текущую информацию о подключении базы данных для базы данных SQL.  
   
 > [!NOTE]
-> Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте [sys.dm_pdw_exec_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
+> Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], использовать [sys.dm_pdw_exec_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -51,8 +51,8 @@ ms.locfileid: "34465520"
 |encrypt_option|**nvarchar(40)**|Логическое значение, указывающее, разрешено ли шифрование для данного соединения. Не допускает значение NULL.|  
 |auth_scheme|**nvarchar(40)**|Указывает схему проверки подлинности ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows), используемую с данным соединением. Не допускает значение NULL.|  
 |node_affinity|**smallint**|Идентифицирует узел памяти, которому соответствует данное соединение. Не допускает значение NULL.|  
-|num_reads|**int**|Количество операций считывания байтов, переданных посредством данного соединения. Допускает значение NULL.|  
-|num_writes|**int**|Количество операций записи байтов, переданных посредством данного соединения. Допускает значение NULL.|  
+|num_reads|**int**|Количество операций считывания байтов в этом соединении. Допускает значение NULL.|  
+|num_writes|**int**|Число байтов переданных через это подключение. Допускает значение NULL.|  
 |last_read|**datetime**|Метка времени о последнем полученном пакете данных. Допускает значение NULL.|  
 |last_write|**datetime**|Метка времени о последнем отправленном пакете данных. Не допускает значения NULL.|  
 |net_packet_size|**int**|Размер сетевого пакета, используемый для передачи данных. Допускает значение NULL.|  
@@ -63,7 +63,7 @@ ms.locfileid: "34465520"
 |connection_id|**uniqueidentifier**|Однозначно определяет каждое соединение. Не допускает значение NULL.|  
 |parent_connection_id|**uniqueidentifier**|Идентифицирует первичное соединение, используемое в сеансе режима MARS. Допускает значение NULL.|  
 |most_recent_sql_handle|**varbinary(64)**|Дескриптор последнего запроса SQL, выполненного с помощью данного соединения. Постоянно проводится синхронизация между столбцом most_recent_sql_handle и столбцом most_recent_session_id. Допускает значение NULL.|  
-|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения
 
@@ -99,7 +99,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>См. также  
 
- [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_runtime_stats_interval (Transact-SQL) | Документы Microsoft
+title: sys.query_store_runtime_stats_interval (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -25,22 +25,23 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4357eaf9abe519cc3238acddedc6fc8168db5fa5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5808cc6432087572946ea63436534dd6bfd35844
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559624"
 ---
 # <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Содержит сведения о времени начала и окончания каждого интервала, через который среда выполнения сбора сведений о статистике выполнения для запроса.  
+  Содержит сведения о времени начала и окончания каждого интервала над какая среда выполнения сбора сведений о статистике выполнения для запроса.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_interval_id**|**bigint**|Первичный ключ.|  
-|**start_time**|**datetimeoffset**|Начало интервала.|  
+|**start_time**|**datetimeoffset**|Начальное время интервала.|  
 |**end_time**|**datetimeoffset**|Время окончания интервала.|  
 |**Комментарий**|**nvarchar(32)**|Значение всегда равно NULL.|  
   
@@ -57,6 +58,6 @@ ms.lasthandoff: 05/04/2018
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Хранимые процедуры в хранилище запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Query Store хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

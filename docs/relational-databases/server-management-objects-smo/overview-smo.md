@@ -15,13 +15,13 @@ caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 125c8ae22faabb7b32bb37ee1f8620dfd0cf815a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006017"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546744"
 ---
 # <a name="overview-smo"></a>Общие сведения об SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "38006017"
   
 -   Конечные точки HTTP для управления SOAP-запросами. Дополнительные сведения см. в разделе [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   
--   Изоляция моментальных снимков и управление версиями на уровне строк для повышения параллелизма. Дополнительные сведения см. в разделе [работа с изоляцией моментального снимка](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
+-   Изоляция моментальных снимков и управление версиями на уровне строк для повышения параллелизма. Дополнительные сведения см. в разделе [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
 -   Коллекции схем XML, XML-индексы и типы данных XML, обеспечивающие проверку и хранение XML-данных. Дополнительные сведения см. в разделе [коллекции XML-схем &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) и [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   

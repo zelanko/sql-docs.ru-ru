@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_session_space_usage (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_session_space_usage (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/16/2015
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 61926a7bde695d1ca8af605373cf666653c1cee5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e6da45e2ff7a56dd458462fb6dd3f1f691031787
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464580"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538634"
 ---
 # <a name="sysdmdbsessionspaceusage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34464580"
 >  Это представление применимо только к [базы данных tempdb](../../relational-databases/databases/tempdb-database.md).  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_db_session_space_usage**.  
+>  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_db_session_space_usage**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -50,8 +50,8 @@ ms.locfileid: "34464580"
 |**user_objects_dealloc_page_count**|**bigint**|Число страниц, освобожденных пользовательскими объектами или более не зарезервированных для них в данном сеансе.|  
 |**internal_objects_alloc_page_count**|**bigint**|Число страниц, зарезервированных или выделенных для внутренних объектов в данном сеансе.|  
 |**internal_objects_dealloc_page_count**|**bigint**|Число страниц, освобожденных внутренними объектами или более не зарезервированных для них в данном сеансе.|  
-|**user_objects_deferred_dealloc_page_count**|**bigint**|Количество страниц, отмеченных для отложенного освобождения.<br /><br /> **Примечание:** появился в пакеты обновления для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|**user_objects_deferred_dealloc_page_count**|**bigint**|Количество страниц, которые были помечены для отложенное освобождение.<br /><br /> **Примечание:** в пакеты обновления для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
+|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения  
 
@@ -92,7 +92,7 @@ ms.locfileid: "34464580"
 -   Сортировки  
   
 ## <a name="physical-joins"></a>Физические соединения  
- ![Физические соединения для sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/media/join-dm-db-session-space-usage-1.gif "физического соединения для sys.dm_db_session_space_usage")  
+ ![Физические соединения для sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/media/join-dm-db-session-space-usage-1.gif "физические соединения для sys.dm_db_session_space_usage")  
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   

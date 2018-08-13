@@ -1,5 +1,5 @@
 ---
-title: sys.Procedures (Transact-SQL) | Документы Microsoft
+title: sys.Procedures (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10263b4418b90b2284d0abb3d433101a9afcaa98
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9c36883f8595b51239c78b178217a094f37e9484
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180620"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547934"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "33180620"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Столбцы, наследуемые из sys.objects >**||Список столбцов, наследуемых этим представлением см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
-|**is_auto_executed**|**бит**|1 = процедура автоматически выполняется при запуске сервера, иначе 0. Может устанавливаться только для процедур в базе данных master.|  
-|**is_execution_replicated**|**бит**|Выполнение этой процедуры реплицируется.|  
-|**is_repl_serializable_only**|**бит**|Репликация выполнения процедуры производится, только если транзакция может быть сериализована.|  
-|**skips_repl_constraints**|**бит**|Во время выполнения процедура пропускает ограничения, отмеченные как NOT FOR REPLICATION.|  
+|**\<Столбцы, наследуемые из sys.objects >**||Список столбцов, наследуемых этим представлением, см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
+|**is_auto_executed**|**bit**|1 = процедура автоматически выполняется при запуске сервера, иначе 0. Может устанавливаться только для процедур в базе данных master.|  
+|**is_execution_replicated**|**bit**|Выполнение этой процедуры реплицируется.|  
+|**is_repl_serializable_only**|**bit**|Репликация выполнения процедуры производится, только если транзакция может быть сериализована.|  
+|**skips_repl_constraints**|**bit**|Во время выполнения процедура пропускает ограничения, отмеченные как NOT FOR REPLICATION.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

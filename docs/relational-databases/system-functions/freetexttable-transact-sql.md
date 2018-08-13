@@ -1,5 +1,5 @@
 ---
-title: FREETEXTTABLE (Transact-SQL) | Документы Microsoft
+title: FREETEXTTABLE (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,20 +26,20 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f2d3c0c014db5a0cd5aab0dee22e6622fd24f20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5dbb201a507d168a06b6417c5648c209807bc773
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239054"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540564"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Функция, используемая в [предложение FROM](../../t-sql/queries/from-transact-sql.md) из [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции SELECT для выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстового поиска в полнотекстовых индексированных столбцах, содержащим типы символьных данных. Эта функция возвращает таблицу из нуля, одной или нескольких строк и столбцов содержат значения, совпадающие по смыслу, а не только дословно, с текстом, указанным в *freetext_string*. Ссылки на функцию FREETEXTTABLE указываются так, как если бы это было имя обычной таблицы.  
+  Функция, используемая в [предложение FROM](../../t-sql/queries/from-transact-sql.md) из [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции SELECT для выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбцам, содержащим типы символьных данных индекса, полнотекстового поиска для полнотекстового поиска. Эта функция возвращает таблицу из нуля, одной или нескольких строк. столбцы содержат значения, совпадающие по смыслу, а не только дословно, с текстом, указанным в *freetext_string*. Ссылки на функцию FREETEXTTABLE указываются так, как если бы это было имя обычной таблицы.  
   
- Функция FREETEXTTABLE полезна для тех же видов совпадений, что [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md),  
+ Функция FREETEXTTABLE полезна для таких же совпадений, что [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md),  
   
  Запросы, использующие функцию FREETEXTTABLE, возвращают ранжирующие по релевантности значения (RANK) и полнотекстовый ключ (KEY) для каждой строки.  
   
@@ -73,12 +73,12 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Указывает, что можно задать несколько столбцов, разделенных запятыми. *column_list* должен быть заключен в скобки. Если задан аргумент *language_term*, то у всех столбцов в *column_list* должен быть одинаковый язык.  
   
  \*  
- Указывает, что все столбцы, которые были зарегистрированы для полнотекстового поиска, должны быть использованы для поиска строки, заданной аргументом *freetext_string*. Если не *language_term* указан, язык всех полнотекстовых индексированных столбцов в таблице должны быть одинаковыми.  
+ Указывает, что все столбцы, которые были зарегистрированы для полнотекстового поиска, должны быть использованы для поиска строки, заданной аргументом *freetext_string*. Если не *language_term* указан, язык всех полнотекстовых индексированных столбцов в таблице должны совпадать.  
   
  *freetext_string*  
  Искомый текст в столбце, определенном аргументом *column_name*. Допустимо вводить любой текст, включая слова, фразы или предложения. Соответствия формируются, если любой ключ или его формы найдены в полнотекстовом индексе.  
   
- В отличие от поиска CONTAINS условием, где слово AND является ключевым, при использовании в *freetext_string* слова «и» считается пропускаемым словом или [стоп-слово](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)и будут потеряны.  
+ В отличие от поиска CONTAINS условие, где слово AND является ключевым, при использовании в *freetext_string* слово «and» считается пропускаемым, или [стоп-слово](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)и будут потеряны.  
   
  Использование функций WEIGHT, FORMSOF, символов шаблонов, NEAR, а также других синтаксических элементов запрещено. *freetext_string* разбивается на слова, проходит процедуру вычленения корней и пропускается через тезаурус.  
   
@@ -94,9 +94,9 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Если указанный язык является недопустимым или связанные с ним ресурсы не установлены, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке. Для использования нейтральных языковых ресурсов следует указать 0x0 в качестве значения аргумента *language_term*.  
   
  *top_n_by_rank*  
- Указывает, что только *n*возвращаются первых ранжированных совпадений, в порядке убывания. Применяется только тогда, когда целочисленные значения, *n*, указан. Если параметр *top_n_by_rank* скомбинирован с другими параметрами, то запрос может вернуть меньше строк, чем фактически соответствует всем предикатам. *top_n_by_rank* позволяет повысить производительность запросов, выбирать только наиболее важные попадания.  
+ Указывает, что только *n*возвращаются первых ранжированных совпадений, в порядке убывания. Применяется, только если целочисленное значение, *n*, указан. Если параметр *top_n_by_rank* скомбинирован с другими параметрами, то запрос может вернуть меньше строк, чем фактически соответствует всем предикатам. *top_n_by_rank* позволяет повысить производительность запросов, выбирать только наиболее важные попадания.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Полнотекстовые предикаты и функции работают в одной таблице, что следует из наличия предиката FROM. Для поиска в нескольких таблицах используйте в предложении FROM соединенную таблицу, чтобы выполнять поиск в результирующем наборе, который получен в результате соединения нескольких таблиц.  
   
  Функция FREETEXTTABLE использует те же условия поиска, что и предикат FREETEXT.  
@@ -109,7 +109,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-simple-example"></a>A. Простой пример  
- Следующий пример создает и заполняет простую таблицу из двух столбцов, список 3 округа и цветов в флагов. ИТ-создает и заполняет полнотекстового каталога и индекса в таблице. Затем **FREETEXTTABLE** демонстрируется синтаксис.  
+ Следующий пример создает и заполняет простую таблицу из двух столбцов, в листинге 3 округа и цветов в их флаги. Создает и заполняет полнотекстового каталога и индекса для таблицы. Затем **FREETEXTTABLE** демонстрируется синтаксис.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>В. Указание языка и соответствий с наивысшими ранжирующими значениями  
- В следующем примере идентичны и показано, как использовать `LANGUAGE` *language_term* и *top_n_by_rank* параметров.  
+ В следующем примере идентичны, а также показано использование `LANGUAGE` *language_term* и *top_n_by_rank* параметров.  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,12 +167,12 @@ GO
 ```  
   
 > [!NOTE]  
->  Язык *language_term* являются*r* не требуется для использования *top_n_by_rank* параметр *.*  
+>  Язык *language_term* параметр Language*r* не требуется для использования *top_n_by_rank* параметр *.*  
   
 ## <a name="see-also"></a>См. также  
  [Приступая к работе с компонентом Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Создание полнотекстовых каталогов и управление ими](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [CREATE FULLTEXT CATALOG #40; Transact-SQL & #41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Создание и управление полнотекстовыми индексами](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   

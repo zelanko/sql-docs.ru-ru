@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_top_version_generators (Transact-SQL) | Документы Microsoft
+title: sys.dm_tran_top_version_generators (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,21 +23,21 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dad87c14f7b8f1af31b7a0245e3bbe0b634089c5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54b55bec3dd52a014286457770a40b51e0dd35c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467271"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536014"
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает виртуальную таблицу для объектов, формирующих большинство версий в хранилище версий. **sys.dm_tran_top_version_generators** возвращает первые 256 значений длины записей, сгруппированных по статистическая обработка проводится **database_id** и **rowset_id**. **sys.dm_tran_top_version_generators** получает данные с помощью запроса к **dm_tran_version_store** виртуальную таблицу. **sys.dm_tran_top_version_generators** является неэффективным представлением для выполнения, поскольку в этом представлении запросов в хранилище версий и хранилище версий может быть очень большим. Эту функцию рекомендуется использовать для поиска самых крупных потребителей в хранилище версий.  
+  Возвращает виртуальную таблицу для объектов, формирующих большинство версий в хранилище версий. **sys.dm_tran_top_version_generators** возвращает первые 256 значений длины записей, сгруппированных по **database_id** и **rowset_id**. **sys.dm_tran_top_version_generators** извлекает данные, запросив **dm_tran_version_store** виртуальной таблицы. **sys.dm_tran_top_version_generators** является неэффективным, так как в этом представлении запросов в хранилище версий и хранилище версий может быть очень большим. Эту функцию рекомендуется использовать для поиска самых крупных потребителей в хранилище версий.  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_tran_top_version_generators**.  
+>  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_tran_top_version_generators**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +53,7 @@ sys.dm_tran_top_version_generators
 |**database_id**|**int**|Идентификатор базы данных.|  
 |**rowset_id**|**bigint**|Идентификатор набора строк.|  
 |**aggregated_record_length_in_bytes**|**int**|Сумма длин записей для каждого **database_id** и **rowset_id pair** в хранилище версий.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения
 
@@ -61,7 +61,7 @@ sys.dm_tran_top_version_generators
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
 
 ## <a name="remarks"></a>Примечания  
- Поскольку **sys.dm_tran_top_version_generators** может оказаться необходимым считать много страниц, как он просматривает хранилище версий целиком, выполнение **sys.dm_tran_top_version_generators** могут мешать работе системы производительность.  
+ Так как **sys.dm_tran_top_version_generators** может потребоваться считать много страниц, так как он проверяет все хранилище версий, под управлением **sys.dm_tran_top_version_generators** могут мешать работе системы производительность.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример использует тестовый сценарий, содержащий четыре параллельные транзакции, идентифицированные порядковыми номерами (XSN), который выполняется в базе данных с параметрами ALLOW_SNAPSHOT_ISOLATION и READ_COMMITTED_SNAPSHOT, установленными в значение ON. Следующие транзакции запущены:  

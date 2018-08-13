@@ -1,5 +1,5 @@
 ---
-title: sp_wait_for_database_copy_sync (база данных SQL Azure) | Документы Microsoft
+title: sp_wait_for_database_copy_sync (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -23,22 +23,22 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6658ab7b1b68637978ca76ea709c4c0a23414d07
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d1200ffc3a7bf643b55478297dc25e40b02a3dff
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237922"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557344"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Активная Георепликация - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Использование этой процедуры ограничено связью [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] между источником и получателем. Вызов **sp_wait_for_database_copy_sync** приводит к подождать, пока все зафиксированные транзакции репликации и подтверждения, активная вторичная база данных приложения. Запустите **sp_wait_for_database_copy_sync** только в основной базе данных.  
+  Использование этой процедуры ограничено связью [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] между источником и получателем. Вызов **sp_wait_for_database_copy_sync** приводит к Подождите, пока все зафиксированные транзакции репликации и подтверждения, активная вторичная база данных приложения. Запустите **sp_wait_for_database_copy_sync** только базы данных-источника.  
   
 ||  
 |-|  
-|**Применяется к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,7 +51,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
  [ @target_server =] «имя_сервера»  
  Имя сервера базы данных SQL, на котором размещена активная база данных-получатель. Аргумент server_name имеет тип sysname и не имеет значения по умолчанию.  
   
- [ @target_database =] 'имя_базы_данных»  
+ [ @target_database =] «database_name»  
  Имя активной базы данных-получателя. Аргумент database_name имеет тип sysname и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -63,16 +63,16 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   Невозможно найти ссылку на заданное имя сервера или базы данных.  
   
--   Потеряно подключение к Interlink. **sp_wait_for_database_copy_sync** вернет после истечения времени ожидания соединения.  
+-   Потеряно подключение к Interlink. **sp_wait_for_database_copy_sync** вернет после истечения времени ожидания подключения.  
   
 ## <a name="permissions"></a>Разрешения  
  Эту системную хранимую процедуру может вызывать любой пользователь в базе данных-источнике. Имя входа должно быть пользователем и в базе данных-источнике, и в активной базе данных-получателе.  
   
-## <a name="remarks"></a>Замечания  
- Все транзакции, зафиксированные до **sp_wait_for_database_copy_sync** вызов отправляются активную вторичную базу данных.  
+## <a name="remarks"></a>Примечания  
+ Все транзакции, зафиксированные до **sp_wait_for_database_copy_sync** вызова отправляются активную вторичную базу данных.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере вызывается **sp_wait_for_database_copy_sync** убедитесь, что все транзакции фиксируются в основной базе данных, db0, будут возвращены его активную вторичную базу данных на целевом сервере ubfyu5ssyt.  
+ В следующем примере вызывается **sp_wait_for_database_copy_sync** чтобы убедиться, что все транзакции будут зафиксированы в основной базе данных, db0, отправляемых его активную вторичную базу данных на целевом сервере ubfyu5ssyt.  
   
 ```  
 USE db0;  

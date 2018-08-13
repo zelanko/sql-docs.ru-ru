@@ -1,5 +1,5 @@
 ---
-title: sys.plan_guides (Transact-SQL) | Документы Microsoft
+title: sys.plan_guides (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4309a55a8c0b631cd1e5f49d6601bfba30245178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6faaeea0bfc19594bd2131c4b40bdf270e4f6d8d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180710"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548394"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33180710"
 |**name**|**sysname**|Имя структуры плана.|  
 |**create_date**|**datetime**|Дата и время создания структуры плана.|  
 |**modify_date**|**DateTime**|Дата последнего изменения структуры плана.|  
-|**is_disabled**|**бит**|1 = структура плана отключена.<br /><br /> 0 = структура плана включена.|  
+|**is_disabled**|**bit**|1 = структура плана отключена.<br /><br /> 0 = структура плана включена.|  
 |**query_text**|**nvarchar(max)**|Текст запроса, по которому была создана структура плана.|  
 |**scope_type**|**tinyint**|Определяет область действия структуры плана.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
 |**scope_type_desc**|**nvarchar(60)**|Описание области действия структуры плана.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_threads (Transact-SQL) | Документы Microsoft
+title: sys.dm_os_threads (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee180232114e311cf40a53d2e33f23acba7a0cd0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2109830ba21d60fa67eb33b1b1e5e8b5cb14a8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468620"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543214"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "34468620"
   Возвращает список всех потоков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в операционной системе, запущенных процессом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_threads**.  
+>  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_threads**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |thread_address|**varbinary(8)**|Адрес потока в памяти (первичный ключ).|  
-|started_by_sqlservr|**бит**|Указывает, кто создал поток:<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запустил поток.<br /><br /> 0 = поток создан другим компонентом, например расширенной хранимой процедурой внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|started_by_sqlservr|**bit**|Указывает, кто создал поток:<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запустил поток.<br /><br /> 0 = поток создан другим компонентом, например расширенной хранимой процедурой внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |os_thread_id|**int**|Идентификатор потока, назначенный операционной системой.|  
 |status|**int**|Флаг внутреннего состояния.|  
 |instruction_address|**varbinary(8)**|Адрес выполняющейся в данный момент инструкции.|  
@@ -66,8 +66,8 @@ ms.locfileid: "34468620"
 |worker_address|**varbinary(8)**|Адрес в памяти связанного с данным потоком исполнителя. Дополнительные сведения см. в разделе [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |fiber_context_address|**varbinary(8)**|Адрес контекста внутреннего волокна. Применимо только в случае, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для использования упрощенных пулов.|  
 |self_address|**varbinary(8)**|Указатель для обеспечения внутренней согласованности.|  
-|processor_group|**smallint**|**Область применения**: начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор Processor_group.|  
-|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|processor_group|**smallint**|**Применимо к**: с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор Processor_group.|  
+|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения
 
@@ -80,7 +80,7 @@ ms.locfileid: "34468620"
  Следующий запрос используется для поиска рабочих процессов, выполняющих потоки, не запущенные сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и для получения сведений о времени их выполнения.  
   
 > [!NOTE]  
->  Для краткости в следующем запросе в инструкции `*` используется звездочка (`SELECT`). Следует избегать использования звездочки (*) при выполнении запросов к представлениям каталога, динамическим административным представлениям и системным функциям с табличным значением. В будущих обновлениях и версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может добавить столбцы и изменение порядка столбцов в этих представлениях и функциях. Эти изменения могут повредить приложения, которые запрограммированы на определенный порядок и число столбцов.  
+>  Для краткости в следующем запросе в инструкции `*` используется звездочка (`SELECT`). Следует избегать использования звездочки (*) при выполнении запросов к представлениям каталога, динамическим административным представлениям и системным функциям с табличным значением. В будущих обновлениях и версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может добавить столбцы и изменить порядок столбцов в этих представлениях и функциях. Эти изменения могут повредить приложения, которые запрограммированы на определенный порядок и число столбцов.  
   
 ```  
 SELECT *  

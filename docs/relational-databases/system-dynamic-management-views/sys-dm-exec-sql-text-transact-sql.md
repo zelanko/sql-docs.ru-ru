@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_sql_text (Transact-SQL) | Документы Microsoft
+title: sys.dm_exec_sql_text (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21b22b837cc4e46bdd5169b0c669e7dde74c029c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5bc68b376f5524324756715497c00094eb2ed101
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465160"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557144"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает текст SQL пакета, который определен определяемый указанным *sql_handle*. Это функция с табличным значением заменяет системную функцию **fn_get_sql**.  
+  Возвращает текст SQL, то есть пакета определяется указанным *sql_handle*. Эта функция с табличным значением заменяет системную функцию **fn_get_sql**.  
   
  
 ## <a name="syntax"></a>Синтаксис  
@@ -74,29 +74,29 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|Идентификатор базы данных.<br /><br /> Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.|  
 |**objectid**|**int**|Идентификатор объекта.<br /><br /> Имеет значение NULL для нерегламентированных и подготовленных инструкций SQL.|  
-|**number**|**smallint**|Для пронумерованной хранимой процедуры этот столбец возвращает ее номер. Дополнительные сведения см. в разделе [представление sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Имеет значение NULL для нерегламентированных и подготовленных инструкций SQL.|  
-|**Шифрование**|**бит**|1 = текст SQL зашифрован.<br /><br /> 0 = текст SQL не зашифрован.|  
+|**номер**|**smallint**|Для пронумерованной хранимой процедуры этот столбец возвращает ее номер. Дополнительные сведения см. в разделе [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Имеет значение NULL для нерегламентированных и подготовленных инструкций SQL.|  
+|**Шифрование**|**bit**|1 = текст SQL зашифрован.<br /><br /> 0 = текст SQL не зашифрован.|  
 |**text**|**nvarchar (max** **)**|Текст SQL-запроса.<br /><br /> Имеет значение NULL для зашифрованных объектов.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
   
 ## <a name="remarks"></a>Примечания  
-Для нерегламентированных запросов дескрипторы SQL являются значениями хэша на основе текста SQL, отправляемая на сервер и могут быть получены из любой базы данных. 
+Для нерегламентированных запросов дескрипторы SQL являются значениями хэша на основе текста SQL, отправляемых на сервер и могут быть получены из любой базы данных. 
 
 Для таких объектов баз данных, как хранимые процедуры, триггеры или функции, дескрипторы SQL создаются на основе идентификатора базы данных, идентификатора объекта, а также номера объекта. 
 
-Дескриптор плана является производным от скомпилированного плана всего пакета хэш-значения. 
+Дескриптор плана — это значение хэша, производным от скомпилированного плана всего пакета. 
 
 > [!NOTE]
-> **DBID** не может быть определен из *sql_handle* для нерегламентированных запросов. Чтобы определить **dbid** для нерегламентированных запросов с помощью *plan_handle* вместо него.
+> **DBID** не может быть определена по *sql_handle* для нерегламентированных запросов. Чтобы определить **dbid** для нерегламентированных запросов с помощью *plan_handle* вместо этого.
   
 ## <a name="examples"></a>Примеры 
 
 ### <a name="a-conceptual-example"></a>A. Пример
-Ниже приведен простой пример для иллюстрации передача **sql_handle** напрямую или с **CROSS APPLY**.
-  1.  Создайте действие.  
-Выполните следующий запрос T-SQL в новое окно запроса в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
+Ниже приведен простой пример для иллюстрации передачи **sql_handle** напрямую или с помощью **CROSS APPLY**.
+  1.  Создание действия.  
+Выполните следующий запрос T-SQL в новом окне запроса в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -107,7 +107,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
       ```
       
     2.  С помощью **CROSS APPLY**.  
-    Sql_handle из **sys.dm_exec_requests** будет передан **sys.dm_exec_sql_text** с помощью **CROSS APPLY**. Открыть новое окно запроса и передать spid, определенных на шаге 1. В этом примере идентификатор spid оказался `59`.
+    Sql_handle из **sys.dm_exec_requests** будут переданы **sys.dm_exec_sql_text** с помощью **CROSS APPLY**. Откройте новое окно запроса и передать spid, определенных на шаге 1. В этом примере, может быть идентификатор spid `59`.
 
         ```sql
         SELECT t.*
@@ -117,7 +117,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
  
     2.  Передача **sql_handle** напрямую.  
-Получить **sql_handle** из **sys.dm_exec_requests**. Затем передайте **sql_handle** непосредственно к **sys.dm_exec_sql_text**. Открыть новое окно запроса и передать spid, определенных на шаге 1 для **sys.dm_exec_requests**. В этом примере идентификатор spid оказался `59`. Передать возвращенный **sql_handle** как аргумент **sys.dm_exec_sql_text**.
+Получить **sql_handle** из **sys.dm_exec_requests**. Затем передайте **sql_handle** непосредственно к **sys.dm_exec_sql_text**. Откройте новое окно запроса и spid, определенных на шаге 1, чтобы передать **sys.dm_exec_requests**. В этом примере, может быть идентификатор spid `59`. Передать возвращенный **sql_handle** как аргумент **sys.dm_exec_sql_text**.
 
         ```sql
         -- acquire sql_handle
@@ -174,7 +174,7 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
@@ -182,6 +182,6 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
  [sys.dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys.dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [С помощью применения](../../t-sql/queries/from-transact-sql.md#using-apply)   
+ [Использования оператора APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   
  [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

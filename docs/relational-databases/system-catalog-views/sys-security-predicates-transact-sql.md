@@ -28,13 +28,13 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 539ca48e5c55485a5a4b3fdecb3044c1feae6826
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1576ed5332f0cae14b3c263e3bfd72eacc26a956
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993856"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559414"
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37993856"
 |object_id|**int**|Идентификатор политики безопасности, содержащей этот предикат.|  
 |security_predicate_id|**int**|Идентификатор предиката в этой политике безопасности.|  
 |target_object_id|**int**|Идентификатор объекта, к которому привязан этот предикат безопасности.|  
-|predicate_definition|**nvarchar(max)**|Полное имя функции, которая будет использоваться в качестве предиката безопасности, включая аргументы. Обратите внимание, что `schema.function` имя может быть нормализовано (т. е. экранировано) как и любой другой элемент в тексте для обеспечения согласованности. Например:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_definition|**nvarchar(max)**|Полное имя функции, которая будет использоваться в качестве предиката безопасности, включая аргументы. Обратите внимание, что `schema.function` имя может быть нормализовано (т. е. экранировано) как и любой другой элемент в тексте для обеспечения согласованности. Пример:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|Тип предикат, используемый с такой политикой безопасности:<br /><br /> 0 = ПРЕДИКАТА ФИЛЬТРА<br /><br /> 1 = ПРЕДИКАТ БЛОКИРОВКИ|  
 |predicate_type_desc|**nvarchar(60)**|Тип предикат, используемый с такой политикой безопасности:<br /><br /> FILTER<br /><br /> БЛОК|  
 |операции|**int**|Тип операции, заданной для предиката:<br /><br /> NULL = все применимые операции<br /><br /> 1 = ПОСЛЕ ВСТАВКИ<br /><br /> 2 = ПОСЛЕ ОБНОВЛЕНИЯ<br /><br /> 3 = ДО ОБНОВЛЕНИЯ<br /><br /> 4 = ДО УДАЛЕНИЯ|  

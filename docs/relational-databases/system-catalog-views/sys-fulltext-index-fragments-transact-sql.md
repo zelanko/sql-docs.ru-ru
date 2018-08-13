@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_index_fragments (Transact-SQL) | Документы Microsoft
+title: sys.fulltext_index_fragments (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18997da5a5eeb691245166be015b0678403b52ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2d6d073d2ed93208b0fc6c5fbe032b768392ee35
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182250"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543020"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "33182250"
 |TIMESTAMP|**timestamp**|Отметка времени создания фрагмента. Отметки времени создания более новых фрагментов больше, чем отметки времени более старых фрагментов.|  
 |data_size|**int**|Логический размер фрагмента в байтах.|  
 |row_count|**int**|Количество индивидуальных строк фрагмента.|  
-|status|**int**|Состояние фрагмента одно из следующих:<br /><br /> 0 — только что создан и еще не использован;<br /><br /> 1 — используется для вставки во время заполнения или слияния полнотекстового индекса;<br /><br /> 4 — закрыт. Готов к запросу;<br /><br /> 6 — используется для входа слияния и готов к запросу;<br /><br /> 8 — помечен для удаления. Не будет использоваться для запросов и как вход слияния.<br /><br /> Состояние 4 или 6 означает, что фрагмент является частью логического полнотекстового индекса и могут запрашиваться; он является *запрашиваемым* фрагмента.|  
+|status|**int**|Состояние фрагмента одно из следующих:<br /><br /> 0 — только что создан и еще не использован;<br /><br /> 1 — используется для вставки во время заполнения или слияния полнотекстового индекса;<br /><br /> 4 — закрыт. Готов к запросу;<br /><br /> 6 — используется для входа слияния и готов к запросу;<br /><br /> 8 — помечен для удаления. Не будет использоваться для запросов и как вход слияния.<br /><br /> Состояние 4 или 6 означает, что фрагмент является частью логического полнотекстового индекса и может запрашиваться; он является *поддерживает запросы* фрагмента.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Представление каталога sys.fulltext_index_fragments можно использовать для запроса о числе фрагментов, составляющих полнотекстовый индекс. Если полнотекстовый запрос работает медленно, можно использовать представление sys.fulltext_index_fragments, чтобы получить число запрашиваемых фрагментов (с состоянием, равным 4 или 6) полнотекстового индекса следующим образом:  
   
 ```  
@@ -59,7 +59,7 @@ SELECT table_id, status FROM sys.fulltext_index_fragments
    WHERE status=4 OR status=6;  
 ```  
   
- Если существует много запрашиваемых фрагментов, рекомендуется реорганизовать полнотекстовый каталог, содержащий полнотекстовый индекс, чтобы объединить фрагменты. Для реорганизации использования полнотекстового каталога [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*имя_каталога* REORGANIZE. Например, чтобы реорганизовать полнотекстовый каталог `ftCatalog` в базе данных `AdventureWorks2012`, введите:  
+ Если существует много запрашиваемых фрагментов, рекомендуется реорганизовать полнотекстовый каталог, содержащий полнотекстовый индекс, чтобы объединить фрагменты. Для реорганизации использования полнотекстового каталога [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REORGANIZE. Например, чтобы реорганизовать полнотекстовый каталог `ftCatalog` в базе данных `AdventureWorks2012`, введите:  
   
 ```  
 USE AdventureWorks2012;  

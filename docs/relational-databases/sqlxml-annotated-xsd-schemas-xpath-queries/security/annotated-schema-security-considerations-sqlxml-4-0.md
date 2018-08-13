@@ -25,13 +25,13 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7940c1288c6bd802750d6c0cb3b76db46d85d3c1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: eadb64b65efae0c90d363dda8a1b9e7dc6d55edd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032332"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538174"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>Основные понятия о безопасности схемы с заметками (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "38032332"
   
 -   Явное задание сопоставления с помощью заметок предоставляет информацию о базе данных (например, об именах таблиц и столбцов). Поэтому бывает нежелательно предоставлять публичный доступ к этим схемам.  
   
--   Некоторые запросы, например теми, которые указаны для схемы сопоставления с рекурсией (определены с помощью **max-depth** заметки, задать более высокое значение) может занять больше времени для обработки. При необходимости можно указать предел времени ожидания, задав свойство время ожидания команды (в секундах). Например:  
+-   Некоторые запросы, например теми, которые указаны для схемы сопоставления с рекурсией (определены с помощью **max-depth** заметки, задать более высокое значение) может занять больше времени для обработки. При необходимости можно указать предел времени ожидания, задав свойство время ожидания команды (в секундах). Пример:  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

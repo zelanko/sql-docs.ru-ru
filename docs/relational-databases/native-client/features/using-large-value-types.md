@@ -19,13 +19,13 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c4dce3d855aeccf96ce255a7cbd9903040b774b2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4cf70e0bd0115eee465b54c58c43740795406f16
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419353"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537064"
 ---
 # <a name="using-large-value-types"></a>Использование типов больших значений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "37419353"
 > [!NOTE]  
 >  Типы больших значений могут иметь максимальный размер от 1 до 8 КБ или они могут быть указаны как неограниченные.  
   
- Ранее только [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных, такие как **текст**, **ntext** и **изображение** могли достигать такой длины. **Max** описатель для **varchar**, **nvarchar** и **varbinary** сделали эти типы данных избыточным. Однако поскольку типы данных большой длины до сих пор доступны, большинство интерфейсов к компонентам доступа к данным OLE DB и ODBC остаются теми же. Для обратной совместимости с более ранними версиями флаг DBCOLUMNFLAGS_ISLONG в поставщике OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и флаг SQL_LONGVARCHAR в драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до сих пор используются. Поставщики и драйверы, предназначенные для [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версий, продолжают использовать эти термины для новых типов при задании неограниченной максимальной длины.  
+ Ранее только типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **ntext** и **image** могли достигать такой длины. **Max** описатель для **varchar**, **nvarchar** и **varbinary** сделали эти типы данных избыточным. Однако поскольку типы данных большой длины до сих пор доступны, большинство интерфейсов к компонентам доступа к данным OLE DB и ODBC остаются теми же. Для обратной совместимости с более ранними версиями флаг DBCOLUMNFLAGS_ISLONG в поставщике OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и флаг SQL_LONGVARCHAR в драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до сих пор используются. Поставщики и драйверы, предназначенные для [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версий, продолжают использовать эти термины для новых типов при задании неограниченной максимальной длины.  
   
 > [!NOTE]  
->  Можно также указать **varchar(max)**, **nvarchar(max)**, и **varbinary(max)** типы возвращаемых типов данных, как типы входных и выходных параметров хранимых процедур, функция , или в [CAST и CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) функции.  
+>  Типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** можно также указывать в качестве типов входных и выходных параметров хранимых процедур, типов возвращаемых значений функций или в функциях [CAST и CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
 >  При репликации данных может потребоваться настроить [max параметра text repl size server configuration](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) значение -1.  
@@ -47,13 +47,13 @@ ms.locfileid: "37419353"
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **varchar(max)**, **varbinary(max)**, и **nvarchar(max)** типы как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_WSTR соответственно.  
   
- Типы данных **varchar(max)**, **varbinary(max)**, и **nvarchar(max)** в столбцах с **max** размер, заданным в неограниченное представлены как ISLONG через основные наборы строк схемы OLE DB и интерфейсы, возвращающие типы данных столбцов.  
+ Типы данных **varchar(max)**, **varbinary(max)** и **nvarchar(max)** в столбцах с размером **max**, установленным в неограниченное значение, представляются как ISLONG через основные наборы строк схемы OLE DB и интерфейсы, возвращающие типы столбцов.  
   
- Объект команды **IAccessor** реализации был изменен, чтобы разрешить привязку типа dbtype_iunknown. Если потребитель указывает DBTYPE_IUNKNOWN и задает *pObject* значение NULL, то поставщик возвратит **ISequentialStream** интерфейс, чтобы потребитель мог направить **varchar () max)**, **nvarchar(max)**, или **varbinary(max)** данных вне выходных переменных.  
+ Реализация интерфейса **IAccessor** объекта команды была изменена, чтобы разрешить привязку типа DBTYPE_IUNKNOWN. Если потребитель указывает DBTYPE_IUNKNOWN и задает для *pObject* значение NULL, то поставщик возвратит потребителю интерфейс **ISequentialStream**, чтобы потребитель мог направить данные **varchar(max)**, **nvarchar(max)** или **varbinary(max)** из выходных переменных.  
   
- Поток значений выходных параметров возвращается после любых результирующих строк. Если приложение пытается перейти к следующему результирующему набору, вызвав **IMultipleResults::GetResult** без использования все возвращаемые значения выходных параметров, то возвращается DB_E_OBJECTOPEN.  
+ Поток значений выходных параметров возвращается после любых результирующих строк. Если приложение пытается перейти к следующему результирующему набору, вызывая метод **IMultipleResults::GetResult** и не используя все возвращаемые значения выходных параметров, то возвращается DB_E_OBJECTOPEN.  
   
- Чтобы поддерживать потоковую передачу, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента требует параметров переменной длины в последовательном порядке. Это означает, что свойства DBPROP_ACCESSORDER необходимо присвоить DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS всякий раз, когда **varchar(max)**, **nvarchchar(max)**, или  **varbinary(max)** столбцов или выходные параметры привязываются к DBTYPE_IUNKNOWN. Вызовы **IRowset::GetData** завершится с ошибкой DBSTATUS_E_UNAVAILABLE, если не следовать ограничению на порядок доступа. Это ограничение не применяется, если нет выходных привязок с использованием типа DBTYPE_IUNKNOWN.  
+ Чтобы поддерживать потоковую передачу, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента требует параметров переменной длины в последовательном порядке. Это означает, что для свойства DBPROP_ACCESSORDER необходимо задавать либо значение DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, либо значение DBPROPVAL_AO_SEQUENTIAL каждый раз, когда столбцы **varchar(max)**, **nvarchchar(max)** или **varbinary(max)** либо выходные параметры привязываются к типу DBTYPE_IUNKNOWN. Если не следовать этому ограничению на порядок доступа, то вызов метода **IRowset::GetData** завершится с ошибкой DBSTATUS_E_UNAVAILABLE. Это ограничение не применяется, если нет выходных привязок с использованием типа DBTYPE_IUNKNOWN.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента также поддерживает привязку выходных параметров как DBTYPE_IUNKNOWN для типов данных больших значений облегчить ситуацию, где хранимая процедура возвращает типы больших значений в качестве возвращаемых значений, которые отображаются как DBTYPE_IUNKNOWN клиенту.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "37419353"
   
 -   Заданный максимальный размер, например, который является 2000 для **varchar (** 2000 **)** столбца, или  
   
--   Значение «unlimited» которой в случае использования **varchar(max)** столбец имеет значение ~ 0. Это значение устанавливается для свойства метаданных DBCOLUMN_COLUMNSIZE.  
+-   значение "unlimited", если столбец **varchar(max)** равен ~0. Это значение устанавливается для свойства метаданных DBCOLUMN_COLUMNSIZE.  
   
- Стандартные правила преобразования применяются к **varchar(max)** столбца, это означает, что любое преобразование, которое является допустимым для **varchar (** 2000 **)** также будет допустимым для столбца **varchar(max)** столбца. То же самое касается **nvarchar(max)** и **varbinary(max)** столбцов.  
+ К столбцу **varchar(max)** будут применены стандартные правила преобразования. Это значит, что любое преобразование, допустимое для столбца **varchar(** 2000 **)**, также допустимо для столбца **varchar(max)**. То же относится к столбцам **nvarchar(max)** и **varbinary(max)**.  
   
  При получении типов больших значений наиболее эффективным подходом является привязка как типа DBTYPE_IUNKNOWN и задание для свойства DBPROP_ACCESSORDER набора строк значения DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Это вызовет передачу значения в потоке напрямую из сети без промежуточной буферизации, как показано в следующем примере:  
   
@@ -704,7 +704,7 @@ _ExitProcessResultSet:
   
 -   Значение «unlimited» которой в случае использования **varchar(max)** столбца равно 0.  
   
- Стандартные правила преобразования применяются к **varchar(max)** столбца, это означает, что любое преобразование, которое является допустимым для **varchar (** 2000 **)** столбец будет также применяться для **varchar(max)** столбца. То же самое касается **nvarchar(max)** и **varbinary(max)** столбцов.  
+ Стандартные правила преобразования применяются к **varchar(max)** столбца, это означает, что любое преобразование, которое является допустимым для **varchar (** 2000 **)** столбец будет также применяться для **varchar(max)** столбца. То же относится к столбцам **nvarchar(max)** и **varbinary(max)**.  
   
  Ниже приведен список функций ODBC API, которые были улучшены для работы с типами больших значений:  
   

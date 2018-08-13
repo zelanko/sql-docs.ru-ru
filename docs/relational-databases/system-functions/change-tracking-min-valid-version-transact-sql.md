@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL) | Документы Microsoft
+title: CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7809bd218e1f7c8c81ee6c30a7ddcc514e2f085d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d9a53856fc95d8564c6b08f4867bba0f8a9604b5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228029"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535514"
 ---
 # <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,8 +52,8 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **bigint**  
   
-## <a name="remarks"></a>Замечания  
- Эта функция используется для проверки значения *last_sync_version* параметра для функции CHANGETABLE. Если *last_sync_version* меньше, чем значения, возвращаемого этой функцией, результаты, возвращаемые последующим вызовом CHANGETABLE может оказаться недопустимым.  
+## <a name="remarks"></a>Примечания  
+ Эта функция используется для проверки значения *last_sync_version* параметра для функции CHANGETABLE. Если *last_sync_version* меньше, чем значения, возвращаемого этой функцией, результаты, возвращаемые последующим вызовом CHANGETABLE могут оказаться недопустимыми.  
   
  Функция CHANGE_TRACKING_MIN_VALID_VERSION использует для определения значения возврата следующие сведения.  
   

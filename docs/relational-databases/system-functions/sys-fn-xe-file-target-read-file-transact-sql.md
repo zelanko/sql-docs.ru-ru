@@ -1,5 +1,5 @@
 ---
-title: sys.fn_xe_file_target_read_file (Transact-SQL) | Документы Microsoft
+title: sys.fn_xe_file_target_read_file (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3836b2932d9856c59e1d511d53998df57856f08
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d21a49c24dd33ffebd00eae8e33ed9e4601706c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239254"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535714"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Аргументы  
  *путь*  
- Путь к файлам для чтения. *путь* может содержать символы-шаблоны и включать имя файла. *путь* — **nvarchar(260)**. Значение по умолчанию отсутствует. В контексте базы данных SQL Azure это значение является URL-адрес HTTP для файла в хранилище Azure.
+ Путь к файлам для чтения. *путь* может содержать подстановочных знаков и включать имя файла. *путь* — **nvarchar(260)**. Значение по умолчанию отсутствует. В контексте базы данных SQL Azure это значение является URL-адресом HTTP в файл в службе хранилища Azure.
   
  *mdpath*  
  Путь к файлу метаданных, соответствующий файлу или файлам, указанным *путь* аргумент. *mdpath* — **nvarchar(260)**. Значение по умолчанию отсутствует. Начиная с SQL Server 2016, этот параметр может быть задан как null.
@@ -62,13 +62,13 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не требует *mdpath* параметра. Однако он используется для поддержки обратной совместимости фалов журналов, сформированных в предыдущих версиях SQL Server.  
   
  *initial_file_name*  
- Первый файл, из которого выполняется чтение *путь*. *initial_file_name* — **nvarchar(260)**. Значение по умолчанию отсутствует. Если **null** указывается как аргумент, всех файлов, найденных в *путь* доступны для чтения.  
+ Первый файл для чтения из *путь*. *параметров initial_file_name* — **nvarchar(260)**. Значение по умолчанию отсутствует. Если **null** указывается как аргумент, всех файлов, найденных в *путь* доступны для чтения.  
   
 > [!NOTE]  
->  *initial_file_name* и *initial_offset* парной аргументы. При указании значения для любого из этих аргументов необходимо также указать значение для второго аргумента.  
+>  *параметров initial_file_name* и *initial_offset* парных аргументы. При указании значения для любого из этих аргументов необходимо также указать значение для второго аргумента.  
   
  *initial_offset*  
- Используется для указания последнего считанного ранее смещения и пропуска всех событий до смещения (включительно). Перечисление событий начинается после указанного смещения. *initial_offset* — **bigint**. Если **null** указывается как аргумент по всему файлу для чтения.  
+ Используется для указания последнего считанного ранее смещения и пропуска всех событий до смещения (включительно). Перечисление событий начинается после указанного смещения. *initial_offset* — **bigint**. Если **null** указывается как аргумент весь файл будет читаться.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -80,11 +80,11 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Содержимое события в формате XML. Не допускает значение NULL.|  
 |file_name|**nvarchar(260)**|Имя файла, содержащего событие. Не допускает значение NULL.|  
 |file_offset|**bigint**|Смещение блока в файле, содержащем событие. Не допускает значение NULL.|  
-|timestamp_utc|**datetime2**|**Применимо к**: с [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время события (по Гринвичу). Не допускает значение NULL.|  
+|timestamp_utc|**datetime2**|**Применимо к**: с [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время (часовой пояс UTC) события. Не допускает значение NULL.|  
 
   
-## <a name="remarks"></a>Замечания  
- Чтение больших результирующих наборов, выполнив **sys.fn_xe_file_target_read_file** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к возникновению ошибки. Используйте **результаты в файл** режим (**Ctrl + Shift + F**) для экспорта больших результирующих наборов в файл и вместо этого прочитать файл с помощью другого средства.  
+## <a name="remarks"></a>Примечания  
+ Чтение больших результирующих наборов, выполнив **sys.fn_xe_file_target_read_file** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к ошибке. Используйте **результаты в файл** режим (**Ctrl + Shift + F**) для экспорта больших результирующих наборов в файл и прочитать файл с помощью другого средства, вместо этого.  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  

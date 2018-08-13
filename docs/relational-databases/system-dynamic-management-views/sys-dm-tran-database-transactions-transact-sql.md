@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_database_transactions (Transact-SQL) | Документы Microsoft
+title: sys.dm_tran_database_transactions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3054cc3cc8378e34b44d97720692b040e1b1bade
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 192c5637932c5137c26e00ad380584b83a541e09
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467600"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544624"
 ---
 # <a name="sysdmtrandatabasetransactions-transact-sql"></a>sys.dm_tran_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,22 +45,22 @@ ms.locfileid: "34467600"
 |database_id|**int**|Идентификатор базы данных, связанной с транзакцией.|  
 |database_transaction_begin_time|**datetime**|Момент времени, с которого база данных задействована в транзакции. Точнее, это время первой записи журнала в базе данных для данной транзакции.|  
 |database_transaction_type|**int**|1 = транзакция чтения-записи<br /><br /> 2 = транзакция только чтения<br /><br /> 3 = системная транзакция|  
-|database_transaction_state|**int**|1 = Транзакция не инициализирована.<br /><br /> 3 = Транзакция инициализирована, но в ней еще не сформировано ни одной записи журнала.<br /><br /> 4 = В транзакции имеются сформированные записи журнала.<br /><br /> 5 = Транзакция подготовлена.<br /><br /> 10 = Транзакция зафиксирована.<br /><br /> 11 = Транзакция находится в процессе отката.<br /><br /> 12 = Транзакция находится в стадии фиксации. (Запись журнала формируется, но не материализуются или не сохраняются.)|  
+|database_transaction_state|**int**|1 = Транзакция не инициализирована.<br /><br /> 3 = Транзакция инициализирована, но в ней еще не сформировано ни одной записи журнала.<br /><br /> 4 = В транзакции имеются сформированные записи журнала.<br /><br /> 5 = Транзакция подготовлена.<br /><br /> 10 = Транзакция зафиксирована.<br /><br /> 11 = Транзакция находится в процессе отката.<br /><br /> 12 = Транзакция находится в стадии фиксации. (Запись журнала формируется, но не материализованного или не сохраняются.)|  
 |database_transaction_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |database_transaction_status2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|database_transaction_log_record_count|**bigint**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число записей журнала, сформированных в базе данных для этой транзакции.|  
-|database_transaction_replicate_record_count|**int**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество записей журнала, сформированных в базе данных для транзакции, которая реплицируется.|  
-|database_transaction_log_bytes_used|**bigint**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число байтов, используемых журналом базы данных для данной транзакции.|  
-|database_transaction_log_bytes_reserved|**bigint**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число байтов, зарезервированных в журнале базы данных для данной транзакции.|  
-|database_transaction_log_bytes_used_system|**int**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число байтов, занятых в журнале базы данных для системных транзакций от имени данной транзакции.|  
-|database_transaction_log_bytes_reserved_system|**int**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число байтов, зарезервированных в журнале базы данных для системных транзакций от имени данной транзакции.|  
-|database_transaction_begin_lsn|**numeric(25,0)**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Регистрационный номер транзакции в журнале (номер LSN) начальной записи для данной транзакции в журнале базы данных.|  
-|database_transaction_last_lsn|**numeric(25,0)**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Номер LSN последней сохраненной записи для данной транзакции в журнале базы данных.|  
-|database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Номер LSN самой последней точки сохранения для данной транзакции в журнале базы данных.|  
-|database_transaction_commit_lsn|**numeric(25,0)**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Номер LSN записи фиксации для данной транзакции в журнале базы данных.|  
-|database_transaction_last_rollback_lsn|**numeric(25,0)**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Номер LSN транзакции в журнале, до которой произошел последний откат. Если откат не было выполнено, значение будет равно MaxLSN.|  
-|database_transaction_next_undo_lsn|**numeric(25,0)**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Номер LSN следующей записи для отката.|  
-|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|database_transaction_log_record_count|**bigint**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число записей журнала, сформированных в базе данных для этой транзакции.|  
+|database_transaction_replicate_record_count|**int**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число записей журнала, созданных в базе данных для транзакции, которая реплицируется.|  
+|database_transaction_log_bytes_used|**bigint**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число байтов, используемых журналом базы данных для данной транзакции.|  
+|database_transaction_log_bytes_reserved|**bigint**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число байтов, зарезервированных в журнале базы данных для данной транзакции.|  
+|database_transaction_log_bytes_used_system|**int**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число байтов, занятых в журнале базы данных для системных транзакций от имени данной транзакции.|  
+|database_transaction_log_bytes_reserved_system|**int**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Число байтов, зарезервированных в журнале базы данных для системных транзакций от имени данной транзакции.|  
+|database_transaction_begin_lsn|**numeric(25,0)**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Регистрационный номер транзакции в журнале (номер LSN) начальной записи для данной транзакции в журнале базы данных.|  
+|database_transaction_last_lsn|**numeric(25,0)**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Номер LSN последней сохраненной записи для данной транзакции в журнале базы данных.|  
+|database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Номер LSN самой последней точки сохранения для данной транзакции в журнале базы данных.|  
+|database_transaction_commit_lsn|**numeric(25,0)**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Номер LSN записи фиксации для данной транзакции в журнале базы данных.|  
+|database_transaction_last_rollback_lsn|**numeric(25,0)**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Номер LSN транзакции в журнале, до которой произошел последний откат. Если откат не было выполнено, значение будет равно MaxLSN.|  
+|database_transaction_next_undo_lsn|**numeric(25,0)**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Номер LSN следующей записи для отката.|  
+|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения
 

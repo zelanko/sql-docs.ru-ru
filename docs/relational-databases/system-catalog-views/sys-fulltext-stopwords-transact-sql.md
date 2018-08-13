@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_stopwords (Transact-SQL) | Документы Microsoft
+title: sys.fulltext_stopwords (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,12 +27,13 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1060a852471394d6b0773e69bb00bc908723ea4c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: beff58fb561fcb3568efee6c6d5a74f31be04701
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553864"
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +43,8 @@ ms.lasthandoff: 05/04/2018
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|Идентификатор списка стоп-слов, которому принадлежит данное стоп-слово **stopword** . Этот идентификатор уникален в пределах базы данных.|  
-|**Стоп-слово**|**nvarchar(64)**|Термин, соответствующий стоп-слову.|  
-|**Язык**|**sysname**|Значение псевдонима в [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md), соответствующее значению кода языкового стандарта (**LCID**), либо строковое представление числового значения кода языка.|  
+|**Стоп-слово**|**Nvarchar(64)**|Термин, соответствующий стоп-слову.|  
+|**Язык**|**sysname**|Значение псевдонима в [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)соответствующее значению кода языкового стандарта (**LCID**), или строковое представление числового значения кода языка.|  
 |**language_id**|**int**|Идентификатор локали, используемый для разбиения по словам.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [sys.fulltext_stoplists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [sys.fulltext_system_stopwords (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-system-stopwords-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.column_encryption_keys (Transact-SQL) | Документы Microsoft
+title: sys.column_encryption_keys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
@@ -27,25 +27,25 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c058236cf8a9c106c622c65d3bde244004531270
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51f52b1445523d13996f596dfa723d033cd3bde9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178690"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541464"
 ---
 # <a name="syscolumnencryptionkeys--transact-sql"></a>sys.column_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
-  Возвращает сведения о ключах шифрования столбцов (столбца), созданных с помощью [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) инструкции. Каждая строка представляет ключа CEK.  
+  Возвращает сведения о ключах шифрования столбцов (ключей CEK), созданные с помощью [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) инструкции. Каждая строка представляет ключ CEK.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя CMK.|  
-|**column_encryption_key_id**|**int**|Идентификатор ключа.|  
-|**create_date**|**datetime**|Дата создания ключа CEK.|  
-|**modify_date**|**datetime**|Дата последнего изменения ключа CEK.|  
+|**column_encryption_key_id**|**int**|Идентификатор ключа шифрования Столбца.|  
+|**create_date**|**datetime**|Дата создания ключа шифрования Столбца.|  
+|**modify_date**|**datetime**|Дата последнего изменения ключа шифрования Столбца.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется **VIEW ANY COLUMN ENCRYPTION KEY** разрешение.  

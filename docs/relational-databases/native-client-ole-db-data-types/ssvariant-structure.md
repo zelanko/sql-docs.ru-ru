@@ -18,13 +18,13 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d45c3b54eb6b5e09c00ea94cfef924b3c94fa70
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6c15bfc29ae02e362ea1010ef67b0a99e4b05dc0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420483"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551134"
 ---
 # <a name="ssvariant-structure"></a>Структура SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "37420483"
 
   **SSVARIANT** структура, которая определена в файле sqlncli.h, соответствует значению DBTYPE_SQLVARIANT в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLEDB для собственного клиента.  
   
- **SSVARIANT** представляет собой Избирательное. В зависимости от значения элемента vt потребитель может определить, какой элемент следует считывать. значения VT соответствуют [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных. Таким образом **SSVARIANT** структура может содержать любой тип SQL Server. Дополнительные сведения о структуре данных для стандартных типов OLE DB, см. в разделе [индикаторов типа](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ **SSVARIANT** представляет собой Избирательное. В зависимости от значения элемента vt объект-получатель может определить, какой элемент следует считывать. Значения vt соответствуют типам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Таким образом, структура **SSVARIANT** может содержать любой тип SQL Server. Дополнительные сведения о структуре данных для стандартных типов OLE DB, см. в разделе [индикаторов типа](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
 ## <a name="remarks"></a>Примечания  
- Если DataTypeCompat == 80, несколько **SSVARIANT** подтипы становятся строками. Например, следующие значения vt будут отображаться в **SSVARIANT** виде VT_SS_WVARSTRING:  
+ Если DataTypeCompat==80, несколько подтипов **SSVARIANT** становятся строками. Например, следующие значения vt будут представлены в **SSVARIANT** в виде VT_SS_WVARSTRING:  
   
 -   VT_SS_DATETIMEOFFSET  
   
@@ -58,13 +58,13 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  Полный набор макросов доступа для каждого члена **SSVARIANT** структуры см. в файле sqlncli.hi.  
   
- В следующей таблице описаны элементы **SSVARIANT** структуры:  
+ В приведенной ниже таблице описываются элементы структуры **SSVARIANT**.  
   
 |Член|Индикатор типа OLE DB|Тип данных OLE DB|Значение vt|Комментарии|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|VT|SSVARTYPE|||Указывает тип значения, содержащиеся в **SSVARIANT** структуры.|  
-|bTinyIntVal|DBTYPE_UI1|**БАЙТОВ**|**VT_SS_UI1**|Поддерживает **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
-|sShortIntVal|DBTYPE_I2|**КОРОТКИЙ**|**VT_SS_I2**|Поддерживает **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
+|VT|SSVARTYPE|||Указывает тип значения, которое содержится в структуре **SSVARIANT**.|  
+|bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Поддерживает **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
+|sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|Поддерживает **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
 |lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Поддерживает **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Поддерживает **bigint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Поддерживает **реальных** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
@@ -73,7 +73,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|Поддерживает **бит** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
 |rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|Поддерживает **uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|Поддерживает **числовых** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
-|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Поддерживает **даты** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.|  
+|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Поддерживает тип данных **date**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|Поддерживает **smalldatetime**, **datetime**, и **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.|  
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Поддерживает **время** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.<br /><br /> Содержит следующие элементы:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**БАЙТОВ**) Задает масштаб для *tTime2Val* значение.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Поддерживает **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.<br /><br /> Содержит следующие элементы:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**БАЙТОВ**) Задает масштаб для *tsDataTimeVal* значение.|  

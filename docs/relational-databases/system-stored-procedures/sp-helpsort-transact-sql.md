@@ -1,5 +1,5 @@
 ---
-title: sp_helpsort (Transact-SQL) | Документы Microsoft
+title: sp_helpsort (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,12 +22,13 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eed0e712a4cba2400b864b0170b08a6007d85e63
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b72de312f8d3ab7abadc592b14149d47f65dfa7a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539414"
 ---
 # <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,8 +50,8 @@ sp_helpsort
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает параметры сортировки по умолчанию для сервера.  
   
-## <a name="remarks"></a>Замечания  
- Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается вместе с параметрами сортировки, которые совместимы с предыдущей установке служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_helpsort** возвращает пустые результаты. В этом случае можно определить параметры сортировки путем запроса объекта SERVERPROPERTY, например: `SELECT SERVERPROPERTY ('Collation');`.  
+## <a name="remarks"></a>Примечания  
+ Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается вместе с параметрами сортировки, указанными на совместимость с предшествующими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_helpsort** возвращает пустые результаты. В этом случае можно определить параметры сортировки путем запроса объекта SERVERPROPERTY, например: `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  
@@ -72,7 +73,7 @@ sp_helpsort;
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)   
  [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)  

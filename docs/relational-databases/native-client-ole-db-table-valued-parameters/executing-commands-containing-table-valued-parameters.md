@@ -1,5 +1,5 @@
 ---
-title: Выполнение команд, содержащих возвращающие табличные значения параметры | Документация Майкрософт
+title: Выполнение команд, содержащих возвращающие табличные значения параметры | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 943dba9ff3fbd04e8344ac4d325114ee9f05a2e2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1413ad1e8bd9a251cb841ed8a590b6b1ca1c5d39
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428355"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536070"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Выполняет команды, содержащие возвращающие табличное значение параметры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "37428355"
 ## <a name="table-valued-parameter-specification"></a>Спецификация возвращающих табличные значения параметров  
  Потребитель может указать тип возвращающего табличные значения параметра. В эту информацию входит имя возвращающего табличное значение параметра. Кроме того, в нее входит имя схемы, если тип определенной пользователем таблицы для возвращающего табличное значение параметра не входит в текущую используемую по умолчанию схему соединения. В зависимости от поддержки на сервере потребитель может также указать необязательную информацию о метаданных (например, упорядочение столбцов), и указать, что все строки конкретных столбцов имеют значения по умолчанию.  
   
- Чтобы задать параметр, возвращающие табличные значения, потребитель вызывает ISSCommandWithParamter::SetParameterInfo и при необходимости вызывает ISSCommandWithParameters::SetParameterProperties. Для возвращающих табличные значения параметра *pwszDataSourceType* поле в структуре DBPARAMBINDINFO имеет значение DBTYPE_TABLE. *UlParamSize* поле имеет значение ~ 0 указывает, что длина неизвестна. Конкретные свойства параметров, возвращающих табличные значения, таких как имя схемы, имя типа, порядок столбцов и столбцы по умолчанию, можно задать через ISSCommandWithParameters::SetParameterProperties.  
+ Чтобы задать параметр, возвращающие табличные значения, потребитель вызывает ISSCommandWithParamter::SetParameterInfo и при необходимости вызывает ISSCommandWithParameters::SetParameterProperties. Для возвращающего табличное значение параметра поле *pwszDataSourceType* структуры DBPARAMBINDINFO имеет значение DBTYPE_TABLE. Полю *ulParamSize* присваивается значение ~0, которое указывает, что длина неизвестна. Конкретные свойства параметров, возвращающих табличные значения, таких как имя схемы, имя типа, порядок столбцов и столбцы по умолчанию, можно задать через ISSCommandWithParameters::SetParameterProperties.  
   
 ## <a name="table-valued-parameter-binding"></a>Привязка возвращающих табличные значения параметров  
  Возвращающий табличное значение параметр может представлять собой любой объект — набор рядов. Поставщик читает этот объект при отправке возвращающих табличное значение параметров на сервер во время выполнения.  
   
- Чтобы привязать табличное значение параметра, потребитель вызывает метод IAccessor::CreateAccessor. *WType* поля структуры DBBINDING табличное значение параметра задается значение DBTYPE_TABLE. *PObject* член структуры DBBINDING не равно NULL и *pObject* *iid* присваивается значение IID_IRowset или любого другого объекта набора строк возвращающего табличное значение параметра интерфейсы. Остальным полям структуры DBBINDING значения присваиваются так же, как для объектов BLOB с потоковым обновлением.  
+ Чтобы привязать табличное значение параметра, потребитель вызывает метод IAccessor::CreateAccessor. Полю *wType* структуры DBBINDING возвращающего табличное значение параметра присваивается значение DBTYPE_TABLE. Элемент *pObject* структуры DBBINDING имеет значение, отличное от NULL, а элементу *iid* элемента *pObject* присваивается значение IID_IRowset или интерфейсы любых других объектов — наборов строк возвращающего табличное значение параметра. Остальным полям структуры DBBINDING значения присваиваются так же, как для объектов BLOB с потоковым обновлением.  
   
  При привязке возвращающего табличное значение параметра и связанного с ним объекта набора строк действуют следующие ограничения.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "37428355"
 -   Данные для столбцов с атрибутом DPPROP_COL_AUTOINCREMENT или SSPROP_COL_COMPUTED будут переданы на сервер, за исключением столбцов, для которых также задан атрибут SSPROP_PARAM_TABLE_DEFAULT.  
   
 ## <a name="see-also"></a>См. также  
- [Возвращающие табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Возвращающие табличные значения параметры &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

@@ -25,13 +25,13 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08f3d90937968713c598418a125ad0167ed94fe7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9216f9babb03814fb7f644add94f20db7bcc4439
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980526"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556914"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    Этот аргумент должен содержать как путь (букву диска или сетевой ресурс), так и имя файла, которое может включать символ-шаблон. Одна звездочка (*) используется для выбора нескольких файлов из набора файлов аудита. Например:  
+    Этот аргумент должен содержать как путь (букву диска или сетевой ресурс), так и имя файла, которое может включать символ-шаблон. Одна звездочка (*) используется для выбора нескольких файлов из набора файлов аудита. Пример:  
   
-    -   **\<путь >\\ \***  - собрать все файлы аудита в указанном расположении.  
+    -   **\<путь >\\ \* ** - собрать все файлы аудита в указанном расположении.  
   
     -   **\<путь > \LoginsAudit_{GUID}** - собрать все файлы, которые имеют указанное имя и идентификатор GUID аудита.  
   
@@ -64,9 +64,9 @@ fn_get_audit_file ( file_pattern,
   
  - **База данных Azure SQL**:
  
-    Этот аргумент используется для указания URL-адрес большого двоичного объекта (в том числе конечную точку хранилища и контейнер). Хотя он не поддерживает шаблон «звездочка», можно использовать префикс имени частичного файла (blob) (вместо имени весь большой двоичный объект) для выбора нескольких файлов (BLOB), которые начинаются с этого префикса. Например:
+    Этот аргумент используется для указания URL-адрес большого двоичного объекта (в том числе конечную точку хранилища и контейнер). Хотя он не поддерживает шаблон «звездочка», можно использовать префикс имени частичного файла (blob) (вместо имени весь большой двоичный объект) для выбора нескольких файлов (BLOB), которые начинаются с этого префикса. Пример:
  
-      - **\<Storage_endpoint\>/\<контейнера\>/\<ServerName\>/\<DatabaseName\> /**  -собирает все файлы аудита (BLOB) для конкретной базы данных.    
+      - **\<Storage_endpoint\>/\<контейнера\>/\<ServerName\>/\<DatabaseName\> / ** -собирает все файлы аудита (BLOB) для конкретной базы данных.    
       
       - **\<Storage_endpoint\>/\<контейнера\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>.xel** -собирает указанный файл аудита (blob).
   

@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023862"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556474"
 ---
 # <a name="automatic-tuning"></a>Автоматическая настройка
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - Описание, которое содержит сведения, почему [!INCLUDE[ssde_md](../../includes/ssde_md.md)] считает, что это изменение плана потенциальных снижения производительности.
  - Дата и время, при обнаружении потенциальных регрессии.
  - Оценка этой рекомендации. 
- - Сведения о проблемах, например обнаруженные плана, идентификатор плана с ухудшением, идентификатор плана, которое должно обязательно устраните ее причину, по Идентификатору [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- сценарий, который может применяться для устранения проблемы и т. д. Сведения хранятся в [формат JSON](../../relational-databases/json/index.md).
+ - Сведения о неполадках, таких как идентификатор обнаруженных плана, идентификатор плана с ухудшением, идентификатор плана, которое должно обязательно устраните ее причину, [!INCLUDE[tsql_md](../../includes/tsql_md.md)] скрипт, который может применяться для устранения проблемы и т. д. Сведения хранятся в [формат JSON](../../relational-databases/json/index.md).
 
 Используйте следующий запрос, чтобы получить сценарий, который устраняет проблемы и Дополнительные сведения о предполагаемым получить:
 

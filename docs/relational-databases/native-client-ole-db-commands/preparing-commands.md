@@ -18,13 +18,13 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0bb783907259eeb5ba40ed90a71671887cab3a74
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 096aff783be598522569d0963679080971d776ed
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418323"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532974"
 ---
 # <a name="preparing-commands"></a>Подготовка команд
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,17 +46,17 @@ ms.locfileid: "37418323"
   
  Создание временных хранимых процедур управляется свойством инициализации SSPROP_INIT_USEPROCFORPREP, определяемым поставщиком OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если свойство имеет значение SSPROPVAL_USEPROCFORPREP_ON или SSPROPVAL_USEPROCFORPREP_ON_DROP, то поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при подготовке команды выполняет попытку создать хранимую процедуру. Хранимая процедура будет создана успешно, если пользователь приложения имеет все необходимые разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Для потребителей, изредка теряющих соединение, создание временных хранимых процедур может потребовать значительных ресурсов **tempdb**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системной базы данных, в котором были созданы временные объекты. Если свойство SSPROP_INIT_USEPROCFORPREP имеет значение SSPROPVAL_USEPROCFORPREP_ ON, то временные хранимые процедуры, созданные поставщиком OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], удаляются только после потери соединения сеанса, создавшего команду, с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если это соединение по умолчанию, созданное при инициализации источника данных, то временная хранимая процедура удаляется только тогда, когда источник данных становится неинициализированным.  
+ Для потребителей, изредка теряющих соединение, создание временных хранимых процедур может потребовать значительных ресурсов базы **tempdb**, системной базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в которой создаются временные объекты. Если свойство SSPROP_INIT_USEPROCFORPREP имеет значение SSPROPVAL_USEPROCFORPREP_ ON, то временные хранимые процедуры, созданные поставщиком OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], удаляются только после потери соединения сеанса, создавшего команду, с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если это соединение по умолчанию, созданное при инициализации источника данных, то временная хранимая процедура удаляется только тогда, когда источник данных становится неинициализированным.  
   
  Если свойство SSPROP_INIT_USEPROCFORPREP имеет значение SSPROPVAL_USEPROCFORPREP_ON_DROP, то временные хранимые процедуры поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будут удаляться только в следующих случаях.  
   
--   Потребитель вызывает **ICommandText::SetCommandText** для задания новой команды.  
+-   Потребитель вызывает метод **ICommandText::SetCommandText** для задания новой команды.  
   
--   Потребитель вызывает **ICommandPrepare::Unprepare** для указания, что он больше не требуется текст команды.  
+-   Потребитель вызывает метод **ICommandPrepare::Unprepare** для указания на то, что текст команды больше не нужен.  
   
 -   Потребитель освобождает все ссылки на объект команды, связанной с временной хранимой процедурой.  
   
- Объект command имеет не более одной хранимой процедуры в **tempdb**. Любая существующая временная хранимая процедура представляет текущий текст команды для этого объекта.  
+ Объект команды имеет в базе данных **tempdb** не более одной хранимой процедуры. Любая существующая временная хранимая процедура представляет текущий текст команды для этого объекта.  
   
 ## <a name="see-also"></a>См. также  
  [Команды](../../relational-databases/native-client-ole-db-commands/commands.md)  

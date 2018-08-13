@@ -25,13 +25,13 @@ caps.latest.revision: 37
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: ff9639268b4b7db33cd36f0cb6dc9d0407379ade
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f90bdf2966092f003e45b3bb6c8d80710875b59a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997906"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554254"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.DM\_db\_настройке\_рекомендации (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "37997906"
 | **Отменить\_действие\_инициированный\_по** | **nvarchar(4000)** | `User` = Пользователь вручную ухудшением Рекомендуемый план. <br /> `System` = Система автоматически возвращается рекомендации. |
 | **Отменить\_действие\_инициированный\_времени** | **datetime2** | Дата рекомендация была отменена. |
 | **Оценка** | **int** | Предполагаемое значение/влияние этой рекомендации по 0 – 100 масштабирования (чем больше чем) |
-| **сведения о** | **nvarchar(max)** | Документ JSON, который содержит дополнительные сведения об этой рекомендации. Доступны следующие поля:<br /><br />`planForceDetails`<br />-    `queryId` -запрос\_идентификатор регрессионных запроса.<br />-    `regressedPlanId` -plan_id из плана с ухудшением.<br />-   `regressedPlanExecutionCount` -Обнаруживается число выполнений запроса с помощью плана с ухудшением перед регрессии.<br />-    `regressedPlanAbortedCount` -Количество обнаруженных ошибок во время выполнения плана с ухудшением.<br />-    `regressedPlanCpuTimeAverage` -Среднее время ЦП, затраченное на выполнение регрессионных запроса до обнаружения регрессии.<br />-    `regressedPlanCpuTimeStddev` — Обнаружена стандартное отклонение времени ЦП, затраченное на выполнение запроса регрессионных перед регрессии.<br />-    `recommendedPlanId` -plan_id плана, который должен быть принудительно.<br />-   `recommendedPlanExecutionCount`— Количество выполнений запроса с планом, следует принудительно до обнаружения регрессии.<br />-    `recommendedPlanAbortedCount` — Количество обнаруженные ошибки во время выполнения плана, на который должен быть принудительно.<br />-    `recommendedPlanCpuTimeAverage` -Среднее время ЦП, затраченное на выполнение запроса с план, который должен быть принудительно (вычисляется до обнаружения регрессии).<br />-    `recommendedPlanCpuTimeStddev` Стандартное отклонение времени ЦП, затраченное на выполнение запроса регрессионных перед регрессии обнаруживается.<br /><br />`implementationDetails`<br />-  `method` Метод, который следует использовать для исправления регрессии. Значение всегда равно `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] скрипт, который должен быть выполнен для принудительного Рекомендуемый план. |
+| **Сведения о** | **nvarchar(max)** | Документ JSON, который содержит дополнительные сведения об этой рекомендации. Доступны следующие поля:<br /><br />`planForceDetails`<br />-    `queryId` -запрос\_идентификатор регрессионных запроса.<br />-    `regressedPlanId` -plan_id из плана с ухудшением.<br />-   `regressedPlanExecutionCount` -Обнаруживается число выполнений запроса с помощью плана с ухудшением перед регрессии.<br />-    `regressedPlanAbortedCount` -Количество обнаруженных ошибок во время выполнения плана с ухудшением.<br />-    `regressedPlanCpuTimeAverage` -Среднее время ЦП, затраченное на выполнение регрессионных запроса до обнаружения регрессии.<br />-    `regressedPlanCpuTimeStddev` — Обнаружена стандартное отклонение времени ЦП, затраченное на выполнение запроса регрессионных перед регрессии.<br />-    `recommendedPlanId` -plan_id плана, который должен быть принудительно.<br />-   `recommendedPlanExecutionCount`— Количество выполнений запроса с планом, следует принудительно до обнаружения регрессии.<br />-    `recommendedPlanAbortedCount` — Количество обнаруженные ошибки во время выполнения плана, на который должен быть принудительно.<br />-    `recommendedPlanCpuTimeAverage` -Среднее время ЦП, затраченное на выполнение запроса с план, который должен быть принудительно (вычисляется до обнаружения регрессии).<br />-    `recommendedPlanCpuTimeStddev` Стандартное отклонение времени ЦП, затраченное на выполнение запроса регрессионных перед регрессии обнаруживается.<br /><br />`implementationDetails`<br />-  `method` Метод, который следует использовать для исправления регрессии. Значение всегда равно `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] скрипт, который должен быть выполнен для принудительного Рекомендуемый план. |
   
 ## <a name="remarks"></a>Примечания  
  Сведения, возвращаемые функцией `sys.dm_db_tuning_recommendations` обновляется, когда компонент database engine определяет потенциальные снижением производительности запросов и не сохраняется. Рекомендации хранится только до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапускается. Если необходимо сохранить их после перезагрузки сервера, администраторы баз данных должны периодически делать резервные копии рекомендации по настройке. 

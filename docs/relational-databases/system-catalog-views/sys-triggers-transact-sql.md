@@ -1,5 +1,5 @@
 ---
-title: sys.triggers (Transact-SQL) | Документы Microsoft
+title: sys.triggers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,17 +24,18 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c176e5cdf68b5aa9516cd054a57f36c630b0c64
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cb87bc58f99cc501bff8d8a04f503f2fb04f1e3b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547144"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Содержит по одной строке для каждого объекта, являющегося триггером типа TR или TA. Имена триггеров DML ограничены областью схемы и, следовательно, видимы в **sys.objects**. Область существования имен триггеров DDL определяется родительской сущностью, поэтому эти имена видимы только в этом представлении.  
+  Содержит по одной строке для каждого объекта, являющегося триггером типа TR или TA. Имена триггеров DML принадлежат области схемы и, следовательно, видимы в **sys.objects**. Область существования имен триггеров DDL определяется родительской сущностью, поэтому эти имена видимы только в этом представлении.  
   
  **Parent_class** и **имя** столбцы однозначно идентифицируют триггер в базе данных.  
   
@@ -49,10 +50,10 @@ ms.lasthandoff: 05/04/2018
 |**type_desc**|**nvarchar(60)**|Описание типа объекта.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Дата создания триггера.|  
 |**modify_date**|**datetime**|Дата последнего изменения объекта с помощью инструкции ALTER.|  
-|**is_ms_shipped**|**бит**|Триггер создан от лица пользователя внутренним компонентом сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**is_disabled**|**бит**|Триггер выключен.|  
-|**is_not_for_replication**|**бит**|Триггер создан с аргументом NOT FOR REPLICATION.|  
-|**is_instead_of_trigger**|**бит**|1 = триггеры INSTEAD OF<br /><br /> 0 = триггеры AFTER|  
+|**is_ms_shipped**|**bit**|Триггер создан от лица пользователя внутренним компонентом сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**is_disabled**|**bit**|Триггер выключен.|  
+|**is_not_for_replication**|**bit**|Триггер создан с аргументом NOT FOR REPLICATION.|  
+|**is_instead_of_trigger**|**bit**|1 = триггеры INSTEAD OF<br /><br /> 0 = триггеры AFTER|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_languages (Transact-SQL) | Документы Microsoft
+title: sys.fulltext_languages (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,22 +25,23 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dabc9334091b5b545c78b069b3e9f31a5a68a1bd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b137d433f06eddcd57bc01bb2b26900c3fdd3483
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535214"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Это представление каталога содержит одну строку для каждого языка, средства разбиения по словам которого зарегистрированы с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждая строка отображает код языка и имя языка. Если для языка зарегистрированы средства разбиения по словам, все его прочие лингвистические ресурсы, в том числе парадигматические модули, пропускаемые слова (стоп-слова) и файлы тезауруса, становятся доступными для полнотекстовой индексации и выполнения запросов. Значение **имя** или **lcid** в полнотекстовых запросах и полнотекстового индекса можно указать [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции.  
+  Это представление каталога содержит одну строку для каждого языка, средства разбиения по словам которого зарегистрированы с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждая строка отображает код и имя языка. Если для языка зарегистрированы средства разбиения по словам, все его прочие лингвистические ресурсы, в том числе парадигматические модули, пропускаемые слова (стоп-слова) и файлы тезауруса, становятся доступными для полнотекстовой индексации и выполнения запросов. Значение **имя** или **lcid** можно указать в запросах полнотекстового поиска и полнотекстовый индекс [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций.  
    
 |Столбец|Data type|Описание|  
 |------------|---------------|-----------------|  
-|**lcid**|**int**|Код локали [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для языка.|  
-|**name**|**sysname**|Значение псевдонима в [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) соответствующее значение **lcid** или строкового представления числового значения кода языка.|  
+|**код языка**|**int**|Код локали [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для языка.|  
+|**name**|**sysname**|Значение псевдонима в [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) соответствующее значение **lcid** или строковое представление числового значения кода языка.|  
   
 ## <a name="values-returned-for-default-languages"></a>Значения, возвращаемые для языков по умолчанию  
  В следующей таблице показаны значения для тех языков, средства разбиения по словам которых зарегистрированы по умолчанию.  
@@ -61,8 +62,8 @@ ms.lasthandoff: 05/04/2018
 |Нидерландский|1043|  
 |Английский|1033|  
 |Французский|1036|  
-|Немецкий|1031|  
-|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
+|German|1031|  
+|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
 |Гуджарати|1095|  
 |Hebrew|1037|  
 |Hindi|1081|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/04/2018
 |Маратхи|1102|  
 |Нейтральный|0|  
 |Norwegian (Bokmål)|1044|  
-|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Польский|1045|  
+|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Польский|1045|  
 |Portuguese (Brazil)|1046|  
 |Portuguese (Portugal)|2070|  
 |Панджабский|1094|  
@@ -96,12 +97,12 @@ ms.lasthandoff: 05/04/2018
 |Телугу|1098|  
 |Тайский|1054|  
 |Китайский (традиционный)|1028|  
-|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Турецкий|1055|  
+|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Турецкий|1055|  
 |Украинский|1058|  
 |Урду|1056|  
 |Вьетнамский|1066|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Чтобы обновить список языков, зарегистрированных для полнотекстового поиска, используйте [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**".  
   
 ## <a name="permissions"></a>Разрешения  
@@ -112,7 +113,7 @@ ms.lasthandoff: 05/04/2018
  [sp_fulltext_service (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка и управление файлами тезауруса для полнотекстового поиска](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

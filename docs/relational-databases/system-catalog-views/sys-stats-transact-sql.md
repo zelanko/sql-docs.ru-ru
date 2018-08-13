@@ -1,5 +1,5 @@
 ---
-title: sys.STATS (Transact-SQL) | Документы Microsoft
+title: sys.STATS (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -24,32 +24,33 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 414de01d62d6472dd2a1d4efea02d11605592319
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c160609bdab32c2db33584429b7b2dd6074afb67
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535275"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Содержит по одной строке для каждого объекта статистики, существующего для таблиц, индексов и индексированных представлений в базе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый индекс будет иметь соответствующую строку статистики с тем же именем и Идентификатором (**index_id** = **stats_id**), но не каждая строка статистики имеет соответствующий индекс.  
   
- Представление каталога [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) содержит статистические данные для каждого столбца в базе данных. Дополнительные сведения о статистике см. в разделе [статистики](../../relational-databases/statistics/statistics.md).  
+ Представление каталога [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) содержит статистические данные для каждого столбца в базе данных. Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор объекта, которому принадлежит статистика.|  
 |**name**|**sysname**|Имя статистики. Уникален в пределах объекта.|  
 |**stats_id**|**int**|Идентификатор статистики. Уникален в пределах объекта.<br /><br />Если статистика соответствует индексу, *stats_id* значение совпадает со значением *index_id* значение в [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представления каталога.|  
-|**auto_created**|**бит**|Указывает, была ли статистика создана автоматически [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = статистика не была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = статистика была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**user_created**|**бит**|Указывает, была ли статистика создана пользователем.<br /><br /> 0 = статистика не была создана пользователем.<br /><br /> 1 = статистика была создана пользователем.|  
-|**no_recompute**|**бит**|Указывает, была ли статистика создана с **NORECOMPUTE** параметр.<br /><br /> 0 = статистика не была создана с **NORECOMPUTE** параметр.<br /><br /> 1 = Статистика была создана с **NORECOMPUTE** параметр.|  
-|**has_filter**|**бит**|0 = Статистика не имеет фильтр и рассчитывается для всех строк.<br /><br /> 1 = Статистика имеет фильтр и рассчитывается только для строк, которые удовлетворяют определению фильтра.|  
+|**флаг auto_created**|**bit**|Указывает, была ли статистика создана автоматически [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = статистика не была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = статистика была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**user_created**|**bit**|Указывает, была ли статистика создана пользователем.<br /><br /> 0 = статистика не была создана пользователем.<br /><br /> 1 = статистика была создана пользователем.|  
+|**no_recompute**|**bit**|Указывает, была ли статистика создана с помощью **NORECOMPUTE** параметр.<br /><br /> 0 = статистика не была создана с помощью **NORECOMPUTE** параметр.<br /><br /> 1 = Статистика была создана с **NORECOMPUTE** параметр.|  
+|**has_filter**|**bit**|0 = Статистика не имеет фильтр и рассчитывается для всех строк.<br /><br /> 1 = Статистика имеет фильтр и рассчитывается только для строк, которые удовлетворяют определению фильтра.|  
 |**filter_definition**|**nvarchar(max)**|Выражение для подмножества строк, включенного в отфильтрованную статистику.<br /><br /> NULL — неотфильтрованная статистика.|  
-|**is_temporary**|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли статистика временной. Временная статистика поддерживает базы данных-получатели [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], доступные только для чтения.<br /><br /> 0 = статистика не является временной.<br /><br /> 1 = статистика является временной.|  
-|**is_incremental**|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, создается ли статистика в добавочном виде.<br /><br /> 0 = статистика добавочная.<br /><br /> 1 = статистика недобавочная.|  
+|**is_temporary**|**bit**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли статистика временной. Временная статистика поддерживает базы данных-получатели [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], доступные только для чтения.<br /><br /> 0 = статистика не является временной.<br /><br /> 1 = статистика является временной.|  
+|**is_incremental**|**bit**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, создается ли статистика в добавочном виде.<br /><br /> 0 = статистика добавочная.<br /><br /> 1 = статистика недобавочная.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
