@@ -22,7 +22,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38054082"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Практическое руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Эта статья описывает, как использовать драйвер SQLSRV для вызова хранимой процедуры, в которой один параметр определен как параметр ввода/вывода, и получить результаты. При извлечении параметра ввода или вывода все результаты, возвращаемые хранимой процедурой, должны быть использованы до того, как становится доступно значение возвращаемого параметра.  
