@@ -26,7 +26,7 @@ ms.locfileid: "37988266"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Клиентские протоколы — cвойства общей памяти (вкладка «Протокол»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  В диспетчере конфигурации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используйте вкладку **Протокол** в диалоговом окне **Свойства общей памяти** , чтобы просмотреть или изменить общую память. Дополнительные сведения о строках соединения см. в разделе [Creating a Valid Connection String Using Shared Memory Protocol](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
+  В диспетчере конфигурации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используйте вкладку **Протокол** в диалоговом окне **Свойства общей памяти** , чтобы просмотреть или изменить общую память. Дополнительные сведения о строках соединения см. в разделе [Создание допустимой строки соединения с использованием протокола общей памяти](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
   
 ## <a name="options"></a>Параметры  
  **Enabled**  
