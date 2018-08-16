@@ -256,11 +256,11 @@ ms.locfileid: "38020783"
 ### <a name="expanded-connectivity-on-premises"></a>Расширенные возможности связи в локальной среде
 
 ####  <a name="ODatav4"></a> Поддержка источников данных OData версии 4  
- Источник OData и диспетчер подключений OData теперь поддерживают протоколы OData версии&3; и&4;.  
+ Источник OData и диспетчер подключений OData теперь поддерживают протоколы OData версии 3 и 4.  
   
 -   Для протокола OData версии 3 компонент поддерживает форматы данных ATOM и JSON.  
   
--   Для протокола OData версии&4; компонент поддерживает формат данных JSON.  
+-   Для протокола OData версии 4 компонент поддерживает формат данных JSON.  
   
  Дополнительные сведения см. в разделе [OData Source](../integration-services/data-flow/odata-source.md).  
 
@@ -291,7 +291,7 @@ ms.locfileid: "38020783"
  Соединитель Microsoft® для SAP BW для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Чтобы скачать компоненты пакета дополнительных компонентов, см. страницу [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).
  
 #### <a name="oracleteradata"></a> Выпуск соединителей версии 4.0 для Oracle и Teradata
-Были выпущены соединители Майкрософт версии&4;.0 для Oracle и Teradata. Сведения о скачивании соединителей см. в разделе [Соединители Майкрософт версии&4;.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
+Были выпущены соединители Майкрософт версии 4.0 для Oracle и Teradata. Сведения о скачивании соединителей см. в разделе [Соединители Майкрософт версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
 ### <a name="pdwau5"></a> Выпуск соединителей для системы платформы аналитики (PDW) с обновлением 5
 Были выпущены адаптеры назначения для загрузки данных в PDW с AU5. Сведения о скачивании адаптеров см. в разделе [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610).
