@@ -19,13 +19,13 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 86a6da5314bb8b4c956910d58f5d511e93e92742
 ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/02/2018
 ms.locfileid: "37164987"
 ---
 # <a name="memory-optimization-advisor"></a>Помощник по оптимизации памяти
-  Средство отчетов о производительности транзакций (см. [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) информирует о том, какие таблицы в базе данных смогут воспользоваться преимуществами перехода на In-Memory OLTP. После определения таблицы, которую планируется перенести для использования In-Memory OLTP, можно воспользоваться помощником по оптимизации памяти для миграции таблицы базы данных на диске в In-Memory OLTP.  
+  Отчеты об анализе производительности транзакции (см. статью [Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) информируют о том, какие таблицы в базе данных смогут воспользоваться преимуществами перехода на выполняющуюся в памяти OLTP. После определения таблицы, которую планируется перенести для использования In-Memory OLTP, можно воспользоваться помощником по оптимизации памяти для миграции таблицы базы данных на диске в In-Memory OLTP.  
   
  Чтобы начать, подключитесь к экземпляру, содержащему дисковую таблицу базы данных. Вы можете подключиться к экземпляру [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Однако если необходимо выполнить операцию миграции с помощником, необходимо подключиться к экземпляру [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , на котором включена функциональность In-Memory OLTP. Дополнительные сведения о требованиях In-Memory OLTP см. в разделе [Требования для использования таблиц, оптимизированных для памяти](memory-optimized-tables.md).  
   
