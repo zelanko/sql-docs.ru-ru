@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
-ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
+ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39228460"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020678"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Учебник: дополнительные советы и рекомендации по использованию SSMS
 В этом учебнике приводятся некоторые дополнительные советы по использованию SQL Server Management Studio (SSMS). В этой статье показано, как выполнить следующие действия: 
@@ -189,7 +189,7 @@ ms.locfileid: "39228460"
     ![Поиск журнала ошибок с помощью запроса](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Определение расположения журнала ошибок при отсутствии подключения к SQL Server
-Путь к журналу ошибок SQL Server зависит от параметров конфигурации. Путь к расположению журнала ошибок можно найти в параметрах запуска в диспетчере конфигурации SQL Server. Выполните приведенные ниже инструкции, чтобы найти соответствующий параметр запуска, который определяет расположение журнала ошибок SQL Server. *Ваш путь может отличаться от указанного ниже*. 
+Путь к журналу ошибок SQL Server зависит от параметров конфигурации. Путь к расположению журнала ошибок можно найти в параметрах запуска в диспетчере конфигурации SQL Server. Найдите параметр запуска, указывающий расположение журнала ошибок SQL Server, выполнив следующие действия. *Ваш путь может отличаться от указанного ниже*. 
 
 1. Откройте диспетчер конфигурации SQL Server. 
 2. Разверните узел **Службы**.
@@ -210,7 +210,7 @@ ms.locfileid: "39228460"
 Определить имя сервера SQL Server до и после подключения к SQL Server можно различными способами.  
 
 ### <a name="before-you-connect-to-sql-server"></a>До подключения к SQL Server
-1. Выполните инструкции по поиску [журнала ошибок SQL Server на диске](#finding-your-error-log-if-you-cannot-connect-to-sql). 
+1. Выполните инструкции по поиску [журнала ошибок SQL Server на диске](#finding-your-error-log-if-you-cannot-connect-to-sql). Ваш путь может отличаться от указанного на рисунке ниже.
 2. Откройте файл errorlog.log в Блокноте.  
 3. Найдите текст *Server name is*.
     

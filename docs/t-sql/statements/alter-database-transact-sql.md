@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 08/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -28,32 +28,58 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 11a17e013933456a092f1ef3f9da9a3695271963
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 7d632476cd9d113e31eabbf26835fe0d7eb43ce5
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452658"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008976"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
-Вносит изменения в базу данных. 
+Изменяет определенные параметры конфигурации базы данных. 
 
-Щелкните одну из следующих вкладок, чтобы изучить синтаксис, аргументы, примечания, разрешения и примеры для используемой вам версии SQL.
+Эта статья приводит синтаксис, аргументы, комментарии, разрешения и примеры для любых выбранных продуктов SQL.
 
 Дополнительные сведения о соглашениях о синтаксисе см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
-  
+## <a name="click-a-product"></a>Выберите продукт!
+
+В следующей строке щелкните имя продукта, который вас интересует. На этой веб-странице отобразится другой контент, относящийся к выбранному продукту.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Логический сервер<br />Базы данных SQL</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Управляемый экземпляр<br />Базы данных SQL</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>SQL Server
+
 ## <a name="overview"></a>Обзор
 
 В SQL Server эта инструкция изменяет базу данных или файлы и файловые группы, связанные с базой данных. Добавляет или удаляет файлы и файловые группы из базы данных, изменяет атрибуты базы данных или ее файлов и файловых групп, изменяет параметры сортировки базы данных и устанавливает параметры базы данных. Моментальные снимки базы данных изменить нельзя. Чтобы изменить параметры базы данных, связанные с репликацией, используйте процедуру [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
    
-Так как синтаксис ALTER DATABASE имеет значительную длину, мы разделили его описание на несколько разделов.  
+Так как синтаксис ALTER DATABASE имеет значительную длину, мы разделили его описание на несколько статей.  
 
 ALTER DATABASE  
-В этом разделе описывается синтаксис для изменения имени и параметров сортировки базы данных, а также содержится дополнительная информация.  
+В этой статье приведен синтаксис и сопутствующие сведения по изменению имени и параметров сортировки базы данных.  
   
 [Параметры инструкции ALTER DATABASE для файлов и файловых групп](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 Синтаксис для добавления или удаления файлов и файловых групп в базе данных, для изменения атрибутов файлов и файловых групп, а также дополнительная информация об этом.  
@@ -259,17 +285,40 @@ GO
 - [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [Системные базы данных](../../relational-databases/databases/system-databases.md)  
-  
-# <a name="sql-db-logical-servertabsqldbls"></a>[Логический сервер базы данных SQL](#tab/sqldbls)
+
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th style="border: 1"><strong><em>* Логический сервер<br />Базы данных SQL*</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Управляемый экземпляр<br />Базы данных SQL</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Логический сервер Базы данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
 В базе данных SQL Azure эта инструкция предназначена для изменения базы данных на логическом сервере. Используйте эту инструкцию, чтобы изменить имя базы данных, изменить выпуск и цель обслуживания базы данных, присоединить или удалить базы данных из эластичного пула, настроить параметры базы данных, добавить или удалить дополнительные базы данных для георепликации или настроить уровень совместимости базы данных.
 
-Так как синтаксис ALTER DATABASE имеет значительную длину, мы разделили его описание на несколько разделов.  
+Так как синтаксис ALTER DATABASE имеет значительную длину, мы разделили его описание на несколько статей.  
 
 ALTER DATABASE  
-В этом разделе описывается синтаксис для изменения имени и параметров сортировки базы данных, а также содержится дополнительная информация.  
+В этой статье приведен синтаксис и сопутствующие сведения по изменению имени и параметров сортировки базы данных.  
   
 [Параметры ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbls)  
 Синтаксис для изменения атрибутов базы данных с помощью параметров SET команды ALTER DATABASE, а также дополнительная информация об этом.  
@@ -363,7 +412,7 @@ ALTER DATABASE db1
 
 MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
 
-Изменяет уровень службы базы данных. Поддержка "premiumrs" была упразднена. При возникновении вопросов пишите на следующий адрес premium-rs@microsoft.com.
+Изменяет уровень службы базы данных. 
 
 В следующем примере выпуск изменяется на `premium`.
   
@@ -431,7 +480,7 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Максимальный размер данных (ГБ)|1024|1024|1024|1024|2048|4096|4096|4096|
 
-Если при использовании модели виртуальных ядер значение `MAXSIZE` не задано, используется значение по умолчанию, равное 32 ГБ. Дополнительные сведения об ограничениях по ресурсам для модели на основе виртуальных ядер см. в разделе [Пределы для ресурсов на основе виртуальных ядер](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+Если при использовании модели виртуальных ядер значение `MAXSIZE` не задано, используется значение по умолчанию, равное 32 ГБ. Дополнительные сведения об ограничениях ресурсов в модели с виртуальными ядрами: [Ограничения ресурсов на основе виртуальных ядер](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
   
 Следующие правила применяются к аргументам MAXSIZE и EDITION:  
   
@@ -601,16 +650,39 @@ ALTER DATABASE db1 FAILOVER
  [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Системные базы данных](../../relational-databases/databases/system-databases.md)  
 
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[Управляемый экземпляр Базы данных SQL](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Логический сервер<br />Базы данных SQL</a></th>
+>   <th><strong><em>* Управляемый экземпляр<br />Базы данных SQL</th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
 В управляемом экземпляре Базы данных SQL Azure эта инструкция используется для настройки параметров базы данных.
 
-Так как синтаксис ALTER DATABASE имеет значительную длину, мы разделили его описание на несколько разделов.  
+Так как синтаксис ALTER DATABASE имеет значительную длину, мы разделили его описание на несколько статей.  
 
 ALTER DATABASE  
-Этот раздел содержит синтаксис для настройки параметров файлов и файловых групп, настройки параметров базы данных и установки уровня совместимости базы данных, а также дополнительную информацию.  
+Эта статья приводит синтаксис и сопутствующие сведения по настройке параметров файлов и файловых групп, баз данных и уровня совместимости баз данных.  
   
 [Параметры инструкции ALTER DATABASE для файлов и файловых групп](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi). Синтаксис для добавления или удаления файлов и файловых групп в базе данных, для изменения атрибутов файлов и файловых групп, а также дополнительная информация об этом.  
   
@@ -652,6 +724,7 @@ ALTER DATABASE { database_name | CURRENT }
   | <target_recovery_time_option> 
   | <temporal_history_retention>  
 }  
+
 ```
   
 ## <a name="arguments"></a>Аргументы  
@@ -686,13 +759,17 @@ CURRENT
 > [!IMPORTANT]  
 >  Владелец базы данных не может изменять базу данных, если он не является членом роли `dbmanager`.  
   
-## <a name="examples"></a>Примеры  
-  
-### <a name="a-what-examples-here"></a>A. Какие здесь могут быть примеры??
+## <a name="examples"></a>Примеры
+В следующих примерах показано, как задать автоматическую настройку и как добавить файл в управляемый экземпляр.
 
 ```sql
+ALTER DATABASE WideWorldImporters
+    SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON)
+
+ALTER DATABASE WideWorldImporters
+    ADD FILE (NAME = 'data_17')
 ```
-  
+
 ## <a name="see-also"></a>См. также раздел
   
 [CREATE DATABASE — база данных SQL Azure](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
@@ -709,7 +786,30 @@ CURRENT
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [Системные базы данных](../../relational-databases/databases/system-databases.md)  
 
-# <a name="sql-data-warehousetabsqldw"></a>[Хранилище данных SQL](#tab/sqldw)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Логический сервер<br />Базы данных SQL</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Управляемый экземпляр<br />Базы данных SQL</a></th>
+>   <th><strong><em>* Хранилище данных<br />SQL*</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-data-warehouse"></a>Хранилище данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
@@ -812,15 +912,37 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[CREATE DATABASE (хранилище данных SQL Azure)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[Список разделов справки по хранилищу данных SQL](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
-  
+[CREATE DATABASE (хранилище данных SQL Azure)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
+[Список справочных статей по Хранилищу данных SQL](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+ 
+::: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
 
-# <a name="sql-parallel-data-warehousetabsqlpdw"></a>[SQL Parallel Data Warehouse](#tab/sqlpdw)
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Логический сервер<br />Базы данных SQL</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Управляемый экземпляр<br />Базы данных SQL</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
+>   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
 
 ## <a name="overview"></a>Обзор
 
-Изменяет параметры максимального размера базы данных для реплицированных таблиц, распределенных таблиц и журнала транзакций в параллельном хранилище данных. С помощью этой инструкции можно управлять выделением дискового пространства для базы данных по мере изменения ее размера. В разделе также описан синтаксис, связанный с установкой параметров базы данных в Parallel Data Warehouse.
+Изменяет параметры максимального размера базы данных для реплицированных таблиц, распределенных таблиц и журнала транзакций в параллельном хранилище данных. С помощью этой инструкции можно управлять выделением дискового пространства для базы данных по мере изменения ее размера. В статье также описан синтаксис, связанный с настройкой параметров баз данных в Parallel Data Warehouse.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -868,13 +990,13 @@ SET AUTO_CREATE_STATISTICS { ON | OFF } Если параметр AUTO_CREATE_ST
 
 Параметр включен по умолчанию для новых баз данных, созданных после обновления до AU7. Параметр отключен по умолчанию для баз данных, созданных до обновления. 
 
-Дополнительные сведения о статистике см. в статье [Статистика](/sql/relational-databases/statistics/statistics).
+Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md).
 
 SET AUTO_UPDATE_STATISTICS { ON | OFF } Если параметр AUTO_UPDATE_STATISTICS (автоматическое обновление статистики) включен, оптимизатор запросов определяет, устарела ли статистика, и при необходимости обновляет ее, если она используется в запросе. Статистика становится устаревшей, если операции вставки, обновления, удаления или слияния изменяют распределение данных в таблице или индексированном представлении. Оптимизатор запросов определяет, когда статистика может оказаться устаревшей, подсчитывая операции изменения данных с момента последнего обновления статистики и сравнивая количество изменений с пороговым значением. Пороговое значение основано на количестве строк в таблице или индексированном представлении.
 
 Параметр включен по умолчанию для новых баз данных, созданных после обновления до AU7. Параметр отключен по умолчанию для баз данных, созданных до обновления. 
 
-Дополнительные сведения о статистике см. в статье [Статистика](/sql/relational-databases/statistics/statistics).
+Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md).
 
 
 SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } Параметр AUTO_UPDATE_STATISTICS_ASYNC, который управляет асинхронным обновлением статистики, определяет, какой режим обновления статистики использует оптимизатор запросов — синхронный или асинхронный. Параметр AUTO_UPDATE_STATISTICS_ASYNC применяется к объектам статистики, создаваемым для индексов, отдельных столбцов в предикатах запросов, и к статистике, создаваемой инструкцией CREATE STATISTICS.
@@ -1012,5 +1134,5 @@ ALTER DATABASE CustomerSales
 ## <a name="see-also"></a>См. также:  
  [CREATE DATABASE (Parallel Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md)  
-  
- 
+
+::: moniker-end

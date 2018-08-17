@@ -18,19 +18,19 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
-ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
+ms.openlocfilehash: 53f49ad6acc123634143eec72b0f9b5b084cd929
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066004"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609663"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Создание или настройка прослушивателя группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается создание или настройка одного *прослушивателя группы доступности* для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  Для создания прослушивателя первой группы доступности настоятельно рекомендуется использовать [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или Powershell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Старайтесь не создавать прослушиватель непосредственно в кластере WSFC, кроме случаев, когда необходимо, например, создать дополнительный прослушиватель.  
+>  Для создания первого прослушивателя группы доступности настоятельно рекомендуется использовать [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Старайтесь не создавать прослушиватель непосредственно в кластере WSFC, кроме случаев, когда необходимо, например, создать дополнительный прослушиватель.  
   
 -   **Перед началом работы**  
   

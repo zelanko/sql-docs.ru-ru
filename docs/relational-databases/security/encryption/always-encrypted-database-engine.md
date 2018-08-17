@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4ed0905805e3d7bed8841e29739f559bbbbdc9ac
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558884"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662486"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (ядро СУБД)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,30 @@ ms.locfileid: "39558884"
 
 Дополнительные сведения о разработке приложений с помощью постоянного шифрования с определенными клиентскими драйверами см. в разделе [Постоянное шифрование (разработка клиентских приложений)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
+## <a name="remarks"></a>Remarks
+
+Расшифровка происходит с помощью клиента. Это означает, что некоторые действия, которые происходят только на стороне сервера, при использовании Always Encrypted работать не будут. 
+
+Пример инструкции "update", которая пытается переместить данные из зашифрованного столбца в незашифрованный, не возвращая в клиент результирующий набор: 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+Если SSN — столбец с шифрованием Always Encrypted, инструкция "update" выше не сработает и выдаст подобную ошибку:
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+Чтобы обновить столбец, сделайте следующее.
+
+1. Выберите (SELECT) данные в столбце SSN и сохраните их в приложении как результирующий набор. Это позволит приложению (*драйвер* клиента) расшифровать столбец.
+2. Вставьте (INSERT) данные из результирующего набора в SQL Server. 
+
+ >[!IMPORTANT]
+ > В этом сценарии при обратной отправке на сервер данные будут расшифрованы, так как целевой столбец имеет обычный тип "varchar" и не принимает зашифрованные данные. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Выбор детерминированного или случайного шифрования  
  Database Engine никогда не работает с данными в виде обычного текста, хранимыми в зашифрованных столбцах, но поддерживает определенные запросы, адресованные зашифрованным данным, в зависимости от типа шифрования для столбца. Постоянное шифрование поддерживает два типа шифрования: случайное и детерминированное.  

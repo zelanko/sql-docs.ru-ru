@@ -27,12 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401496"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020648"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Контроль доступа для конфиденциальных данных в пакетах
   Для защиты данных в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно задать уровень защиты, способствующий защите или только конфиденциальных данных, или всех данных в пакете. Более того, эти данные можно зашифровать с паролем или ключом пользователя или возложить задачу шифрования данных на базу данных. Кроме того, используемый уровень защиты пакета не обязательно является статическим и изменяется в течение жизненного цикла пакета. Часто один уровень защиты устанавливается во время развертывания, а другой — сразу после развертывания пакета.  
@@ -98,7 +98,7 @@ ms.locfileid: "35401496"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Установка или изменение уровня защиты пакета в SQL Server Data Tools  
   
-1.  Просмотрите доступные значения свойства **ProtectionLevel** в разделе [Установка уровня защиты пакетов](#set_protection)и выберите подходящее значение для своего пакета.  
+1.  Просмотрите доступные значения свойства **ProtectionLevel** в разделе [Уровни защиты](#protection-levels) и определите подходящее значение для своего пакета.  
   
 2.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий пакет.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35401496"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Установка или изменение уровня защиты пакетов в командной строке  
   
-1.  Просмотрите доступные значения свойства **ProtectionLevel** в разделе [Установка уровня защиты пакетов](#set_protection) и выберите подходящее значение для своего пакета.  
+1.  Просмотрите доступные значения свойства **ProtectionLevel** в разделе [Уровни защиты](#protection-levels) и определите подходящее значение для своего пакета.  
   
 2.  Просмотрите сопоставления для параметра **Encrypt** в разделе [dtutil Utility](../../integration-services/dtutil-utility.md)и выберите подходящее целое число, которое будет значением выбранного свойства **ProtectionLevel** .  
   

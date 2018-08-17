@@ -18,12 +18,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29c9a2ee3c323c9689e7ece0b2b1318a7051321e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d973be20ee14975fce34e7712d44ea8338931fa
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011741"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661457"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Система отслеживания измененных данных и другие функции SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,11 @@ ms.locfileid: "33011741"
   
 -   [Репликация транзакций](#TransReplication)  
   
--   [Восстановление или прикрепление базы данных, активированной для системы отслеживания измененных данных](#RestoreOrAttach)  
+-   [Восстановление или прикрепление базы данных, активированной для системы отслеживания измененных данных](#RestoreOrAttach)
+
+-   [Contained Databases](#Contained)
   
-##  <a name="ChangeTracking"></a> Change Tracking  
+##  <a name="ChangeTracking"></a> Отслеживание изменений  
  Отслеживание измененных данных и [отслеживание изменений](../../relational-databases/track-changes/about-change-tracking-sql-server.md) можно активировать на одной и той же базе данных. Никаких особых предосторожностей не требуется. Дополнительные сведения см. в разделе [Работа с отслеживанием изменений (SQL Server)](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
 ##  <a name="DatabaseMirroring"></a> Зеркальное отображение базы данных  
@@ -79,6 +81,9 @@ ms.locfileid: "33011741"
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   
  Процедуру [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) можно использовать для отключения отслеживания измененных данных в восстановленной или присоединенной базе данных.  
+  
+##  <a name="Contained"></a> Автономные базы данных  
+ Отслеживание измененных данных не поддерживается в [автономных базах данных](../../relational-databases/databases/contained-databases.md).
   
 ## <a name="change-data-capture-and-always-on"></a>Система отслеживания измененных данных и AlwaysOn  
  При использовании AlwaysOn перечисление изменений необходимо выполнять во вторичной реплике для уменьшения загрузки диска в первичной.  

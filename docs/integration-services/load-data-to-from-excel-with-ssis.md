@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: 610bb894ca3cf2bc974f980c6879351d70cf6bee
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137933"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609814"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 
@@ -30,7 +30,7 @@ ms.locfileid: "37137933"
 
 2.  [Файлы](#files-you-need), которые вам потребуются.
 
-3.  Сведения о подключении, которые вы должны предоставить и параметры, которые необходимо настроить для загрузки данных из или в Excel.
+3.  Сведения о подключении, которые необходимо предоставить, и параметры, которые необходимо настроить для загрузки данных в/из Excel с использованием SSIS.
     -   [Укажите Excel](#specify-excel) в качестве источника данных.
     -   Укажите [имя файла Excel и путь к нему](#excel-file).
     -   Выберите [версию Excel](#excel-version).
@@ -44,15 +44,15 @@ ms.locfileid: "37137933"
 
 ## <a name="tools"></a> Средства, которые можно использовать
 
-Вы можете импортировать данные из Excel или экспортировать данные в Excel, используя одно из следующих средств.
+Вы можете импортировать и экспортировать данные в Excel с использованием SSIS при помощи любого из следующих инструментов.
 
--   **SQL Server Integration Services (SSIS)**. Создайте пакет SSIS, настроив для него Excel в качестве источника или назначения с помощью диспетчера подключений Excel. (В этой статье не рассматривается разработка пакетов SSIS.)
+-   **SQL Server Integration Services (SSIS)**. Создайте пакет SSIS, настроив для него Excel в качестве источника или назначения с помощью диспетчера подключений Excel. (В этой статье не рассматривается создание пакетов SSIS.)
 
 -   **Мастер импорта и экспорта SQL Server**, основанный на SSIS. Дополнительные сведения см. в статьях [Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) и [Подключение к источнику данных Excel (мастер импорта и экспорта SQL Server)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="files-you-need"></a> Получение файлов, необходимых для подключения к Excel
 
-Прежде чем импортировать данные из приложения Excel или экспортировать данные в него, вам может потребоваться скачать компоненты подключений для Excel, если они еще не установлены. По умолчанию компоненты подключений для Excel не устанавливаются.
+Прежде чем импортировать или экспортировать данные в Excel с использованием SSIS, вам может потребоваться скачать компоненты подключения для Excel, если они еще не установлены. По умолчанию компоненты подключений для Excel не устанавливаются.
 
 Скачать последнюю версию компонентов подключения для Excel можно на следующей странице: [Распространяемый пакет ядра СУБД Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920). Последняя версия компонентов позволяет открывать файлы, созданные в более ранних версиях Excel.
 
