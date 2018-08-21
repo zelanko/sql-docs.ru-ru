@@ -15,12 +15,12 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ce71e2b7a1991b6ebf4b495907c74c1e59c939
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022691"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175301"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по использованию
 Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и по просмотру отчетов в мобильных приложениях Power BI.
@@ -70,7 +70,7 @@ ms.locfileid: "33022691"
    
 ## <a name="shared-dataset">Создание общего набора данных</a>  
   
-Для создания общего набора данных используйте существующее клиентское средство [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , например конструктор отчетов в [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  В этом пошаговом руководстве используется [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Установите построитель отчетов](https://msdn.microsoft.com/library/ff519551.aspx)или запустите его на веб-портале. Вы создадите три набора данных: один для значения ключевого показателя эффективности, второй для тренда ключевого показателя эффективности и один с дополнительными полями для мобильного отчета служб Reporting Services.     
+Для создания общего набора данных используйте существующее клиентское средство [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , например конструктор отчетов в [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  В этом пошаговом руководстве используется [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Установите построитель отчетов](../install-windows/install-report-builder.md) или запустите его на своем веб-портале. Вы создадите три набора данных: один для значения ключевого показателя эффективности, второй для тренда ключевого показателя эффективности и один с дополнительными полями для мобильного отчета служб Reporting Services.     
   
 1. Чтобы запустить [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , на веб-портале **щелкните** > **Создать** Отчет с разбивкой на страницы [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   

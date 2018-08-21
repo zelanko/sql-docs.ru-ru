@@ -1,7 +1,7 @@
 ---
 title: Источник Azure Data Lake Store | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/16/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8bcab4b05afd22e06951e31f3037075830fba22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3d179247f8d76a06c154ee2585a79ba6d1193554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409306"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175313"
 ---
 # <a name="azure-data-lake-store-source"></a>Источник Azure Data Lake Store
   Компонент **Источник Azure Data Lake Store** позволяет пакету служб SSIS считывать данные из Azure Data Lake Store. Поддерживаются следующие форматы файлов: текст и AVRO.
@@ -44,3 +44,7 @@ ms.locfileid: "35409306"
         Если формат файла — "Текст", необходимо указать значение **символа-разделителя столбцов** . Также выберите **Имена столбцов в первой строке данных** , если первая строка файла содержит имена столбцов.  
   
 3.  После указания сведений о соединении переключитесь на страницу **Столбцы** , чтобы сопоставить столбцы источника со столбцами назначения для потока данных служб SSIS.   
+
+## <a name="text-qualifier"></a>Ограничитель текста
+
+**Источник Azure Data Lake Storage** не поддерживает квалификатор текста. Если вам нужно указать квалификатор текста для корректной обработки файлов, попробуйте скачать файлы на локальный компьютер и обработать их с помощью **источника "Неструктурированный файл"**. Источник "Неструктурированный файл" позволяет указать квалификатор текста. Дополнительные сведения: [Источник "Неструктурированный файл"](flat-file-source.md).

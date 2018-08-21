@@ -13,12 +13,12 @@ caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cf0814bacd6c47d86f21709d24acaf2af742f0d5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bf0b1b5a0455fcc35e35614b5abbd2e350aa108e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768660"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175325"
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Базовые группы доступности (группы доступности AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34768660"
 ## <a name="configuration"></a>Конфигурация  
  Базовые группы доступности AlwaysOn можно создать на любых двух серверах SQL Server 2016 Standard Edition. В процессе создания основной группы доступности вам потребуется указать обе реплики.  
   
- Чтобы создать базовую группу доступности, используйте команду transact-SQL **CREATE AVAILABILITY GROUP** и укажите параметр **WITH BASIC** (значение параметра по умолчанию — **ADVANCED**). Дополнительные сведения см. в разделе [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md). В настоящее время в SQL Server Management Studio не предусмотрен пользовательский интерфейс для создания основных групп доступности.  
+ Чтобы создать базовую группу доступности, используйте команду transact-SQL **CREATE AVAILABILITY GROUP** и укажите параметр **WITH BASIC** (значение параметра по умолчанию — **ADVANCED**). Вы также можете создать базовую группу доступности, используя пользовательский интерфейс SQL Server Management Studio в версиях от 17.8. Дополнительные сведения см. в разделе [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md). 
   
 > [!NOTE]  
 >  При использовании команды **CREATE AVAILABILITY GROUP** с параметром **WITH BASIC** применяются соответствующие ограничения основных групп доступности. Например, при попытке создания основной группы доступности с доступом для чтения появится ошибка. Таким же образом действуют и другие ограничения. Подробности см. в разделе "Ограничения" этого документа.  

@@ -15,12 +15,12 @@ caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0a62aafb5512562339ad387dcb1bf8f34efac09d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cd9099b3f814fd65ac0c5d54e187fcfbc9cffb86
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981216"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175308"
 ---
 # <a name="reporting-services-data-alerts"></a>Предупреждения об изменении данных в службах Reporting Services
 
@@ -124,7 +124,7 @@ SQL Server Reporting Services — это управляемое данными
   
  Чтобы узнать больше об установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, включая общую службу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], представленную в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], а также приложение службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], которое необходимо создать и настроить, чтобы получить возможность использования функций [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. руководство по [установке служб Reporting Services в режиме SharePoint для SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) в библиотеке MSDN.  
   
- Как показано на приведенной выше диаграмме, предупреждения об изменении данных используют задания агента SQL Server. Чтобы можно было создавать задания, должен работать агент SQL Server. Агент SQL Server мог быть настроен для автоматического запуска при установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Если это не было сделано, вы можете запустить агент SQL Server вручную. Дополнительные сведения см. в статьях [Настройка агента SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) и [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Как показано на приведенной выше диаграмме, предупреждения об изменении данных используют задания агента SQL Server. Чтобы можно было создавать задания, должен работать агент SQL Server. Агент SQL Server мог быть настроен для автоматического запуска при установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Если это не было сделано, вы можете запустить агент SQL Server вручную. Дополнительные сведения см. в статьях [Настройка агента SQL Server](../ssms/agent/configure-sql-server-agent.md) и [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента и службы обозревателя SQL Server](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  Страницу **Подготовка подписок и предупреждений** в центре администрирования SharePoint можно использовать, чтобы узнать, выполняется ли агент SQL Server, а также чтобы создавать и загружать пользовательские скрипты [!INCLUDE[tsql](../includes/tsql-md.md)] , которые впоследствии запускаются для предоставления разрешений агенту SQL Server. С ее помощью также можно создавать скрипты [!INCLUDE[tsql](../includes/tsql-md.md)] с использованием PowerShell. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -252,7 +252,7 @@ SQL Server Reporting Services — это управляемое данными
   
 -   ReadSentAlerts  
   
- Для выполнения хранимых процедур по расписанию можно использовать агент SQL Server. Дополнительные сведения см. в статье [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec).  
+ Для выполнения хранимых процедур по расписанию можно использовать агент SQL Server. Дополнительные сведения см. в статье [SQL Server Agent](../ssms/agent/sql-server-agent.md).  
   
 #### <a name="report-server-execution-log"></a>Журнал выполнения сервера отчетов  
  Отчеты выполняются для создания веб-каналов данных, на основе которых создаются определения предупреждений об изменении данных. Журнал выполнения сервера отчетов в базе данных сервера отчетов отслеживает сведения при каждом запуске отчета. Вы можете выполнить запрос к представлению ExecutionLog2 в базе данных для получения более подробной информации. Дополнительные сведения см. в разделе [Журнал выполнения сервера отчетов и представление ExecutionLog3](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
