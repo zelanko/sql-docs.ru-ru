@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50a8d11c653e7b31dd27a8705d925f60d795a7a0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984096"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175361"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "38984096"
   
  Порядок создания подписанного URL-адреса см. в примерах [Создание подписанного URL-адреса](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) далее в этом разделе, и порядок создания учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в примерах [Создание учетных данных](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) далее в этом разделе.  
   
- Общие сведения об учетных данных см. в разделе [Учетные данные](http://msdn.microsoft.com/library/ms161950.aspx).  
+ Общие сведения об учетных данных см. в разделе [Учетные данные](../security/authentication-access/credentials-database-engine.md).  
   
- Сведения о других примерах использования учетных данных см. в разделе [Создание прокси-агента SQL Server](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Сведения о других примерах использования учетных данных см. в разделе [Создание прокси-агента SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Ограничения  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccbf65c2b1d297b8fd36ef75f84a6a8c09b21175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470355f14c589d5ef62d9de2493d64ef4b8f48aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950499"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175316"
 ---
 # <a name="sql-server-agent-jobs-object"></a>Агент SQL Server, объект Jobs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32950499"
   
  Приведенная ниже таблица содержит счетчики объекта **SQLAgent:Jobs** .  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |**Активные задания**|Данный счетчик отображает количество выполняемых в данный момент заданий.|  
 |**Невыполненные задания**|Этот счетчик отображает количество заданий, завершенных с ошибкой.|  
@@ -43,7 +43,7 @@ ms.locfileid: "32950499"
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Экземпляр|Description|  
+|Экземпляр|Описание|  
 |--------------|-----------------|  
 |**_Total**|Сведения обо всех заданиях.|  
 |**Предупреждения**|Сведения о заданиях, запущенных по предупреждению.|  
@@ -51,8 +51,8 @@ ms.locfileid: "32950499"
 |**Расписания**|Сведения о заданиях, запущенных по расписанию.|  
   
 ## <a name="see-also"></a>См. также:  
- [Реализация заданий](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [Использование объектов производительности](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Реализация заданий](../../ssms/agent/implement-jobs.md)   
+ [Использование объектов производительности](../../ssms/agent/use-performance-objects.md)   
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

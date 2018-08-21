@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d2156c3523e6dcc53c04ebf011406b715abe530
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543074"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175305"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Настройка постоянного шифрования с помощью среды SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ WHERE [SSN] = @SSN;
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>Выполнение операций обновления DAC, когда база данных или пакет DAC использует постоянное шифрование
 
-[Операции DAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) поддерживаются в базах данных и DACPAC-файлах со схемами, содержащими зашифрованные столбцы. К операции обновления DAC применяются особые требования — сведения о выполнении операции обновления приложения уровня данных в различных средствах, включая среду SSMS, см. в разделе [Обновление приложения уровня данных](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) . 
+[Операции DAC](../../data-tier-applications/data-tier-applications.md) поддерживаются в базах данных и DACPAC-файлах со схемами, содержащими зашифрованные столбцы. К операции обновления DAC применяются особые требования — сведения о выполнении операции обновления приложения уровня данных в различных средствах, включая среду SSMS, см. в разделе [Обновление приложения уровня данных](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) . 
 
 Если при обновлении базы данных с помощью DACPAC в этом файле или целевой базе данных имеются зашифрованные столбцы, операция обновления запустит операцию шифрования данных в случае выполнения всех указанных ниже условий.
 - База данных содержит столбец с данными.
@@ -418,7 +418,7 @@ WHERE [SSN] = @SSN;
 
 ## <a name="migrating-databases-with-encrypted-columns-using-bacpac"></a>Миграция баз данных с зашифрованными столбцами с помощью BACPAC
 
-При экспорте базы данных все данные, хранящиеся в зашифрованных столбцах, извлекаются и помещаются в итоговый файл [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) (в зашифрованном виде). Итоговый BACPAC также содержит метаданные для ключей постоянного шифрования.
+При экспорте базы данных все данные, хранящиеся в зашифрованных столбцах, извлекаются и помещаются в итоговый файл [BACPAC](../../data-tier-applications/data-tier-applications.md) (в зашифрованном виде). Итоговый BACPAC также содержит метаданные для ключей постоянного шифрования.
 
 При импорте BACPAC в базу данных зашифрованные данные из BACPAC загружаются в базу данных и происходит повторное создание метаданных ключа постоянного шифрования.
 

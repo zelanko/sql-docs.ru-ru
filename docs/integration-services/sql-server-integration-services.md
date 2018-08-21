@@ -23,16 +23,16 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1872cef23e9680cbec037b1d2170e8e3b02c8564
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: e143abb330c114a9d03e0cd7c8a40a7f422e6134
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909864"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175340"
 ---
 # <a name="sql-server-integration-services"></a>Службы SQL Server Integration Services
 
- > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Службы SQL Server Integration Services](https://msdn.microsoft.com/library/ms141026(SQL.120).aspx).
+ > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Службы SQL Server Integration Services](sql-server-integration-services.md).
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — это платформа для построения решений по интеграции и преобразованию данных уровня предприятия. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] можно использовать при решении сложных бизнес-задач путем копирования и загрузки файлов, загрузки хранилищ данных, очистки и интеллектуального анализа данных, а также управления объектами и данными [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
