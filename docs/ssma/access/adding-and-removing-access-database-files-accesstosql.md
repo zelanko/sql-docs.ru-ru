@@ -35,24 +35,24 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f188e762ada8dd4f6da324af9e8ba6bfb8c28942
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b624a8375f0726dc73b8b71af7a75d0756e52e60
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983366"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395397"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Добавление и удаление файлов баз данных Access (AccessToSQL)
-Для переноса данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, необходимо добавить один или несколько баз данных Access проекта SSMA. Эти базы данных должны быть Access 97 или более поздней версии. При наличии баз данных из более ранней версии Access, необходимо преобразовать баз данных до более новой версии. Для этого, открытие и сохранение базы данных в Access 97 или более поздней версии, прежде чем добавить их SSMA.  
+Для переноса данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, необходимо добавить один или несколько баз данных Access проекта SSMA. Эти базы данных должны быть Access 97 или более поздней версии. При наличии баз данных из более ранней версии Access, необходимо преобразовать баз данных до более новой версии. Для этого, открытие и сохранение базы данных в Access 97 или более поздней версии, прежде чем добавить их SSMA.  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>Что происходит при добавлении файлов баз данных Access?  
-При добавлении базы данных Access в проект SSMA SSMA считывает метаданные базы данных и добавляет эти метаданные в файл проекта. Эти метаданные описание базы данных и ее объектов. SSMA использует метаданные, когда он преобразует объекты для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или синтаксис SQL Azure, и когда оно переносит данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Можно просматривать эти метаданные в обозревателе метаданных доступ и просмотрите свойства отдельных объектов базы данных.  
+При добавлении базы данных Access в проект SSMA SSMA считывает метаданные базы данных и добавляет эти метаданные в файл проекта. Эти метаданные описание базы данных и ее объектов. SSMA использует метаданные, когда он преобразует объекты для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или синтаксис SQL Azure, и когда оно переносит данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно просматривать эти метаданные в обозревателе метаданных доступ и просмотрите свойства отдельных объектов базы данных.  
   
 > [!NOTE]  
-> Базы данных Access можно разбить на несколько файлов: серверной базы данных, который содержит таблицы и интерфейсные базы данных, содержащие запросы, формы, отчеты, макросы, модули и ярлыки. Если вы хотите перенести базу данных разбиения [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, добавить SSMA клиентской базы данных.  
+> Базы данных Access можно разбить на несколько файлов: серверной базы данных, который содержит таблицы и интерфейсные базы данных, содержащие запросы, формы, отчеты, макросы, модули и ярлыки. Если вы хотите перенести базу данных разбиения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, добавить SSMA клиентской базы данных.  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>Разрешения, которые требуются SSMA  
-Для переноса базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, в группу пользователей, а администратор должен иметь разрешение на администрирование. Сведения о том, как выполнить миграцию баз данных с защитой рабочей группы, см. в разделе [Подготовка базы данных Access для миграции](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+Для переноса базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, в группу пользователей, а администратор должен иметь разрешение на администрирование. Сведения о том, как выполнить миграцию баз данных с защитой рабочей группы, см. в разделе [Подготовка базы данных Access для миграции](preparing-access-databases-for-migration-accesstosql.md).  
   
 ## <a name="selecting-databases-to-add"></a>Выбор баз данных для добавления  
 Если вы хотите добавить один или несколько баз данных в проект SSMA, а файлы находятся в одном месте известных, можно добавить файлы, используя следующую процедуру.  
@@ -138,6 +138,6 @@ ms.locfileid: "38983366"
 Следующий шаг в процессе миграции является [подключение к SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
 ## <a name="see-also"></a>См. также  
-[Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Создание и управление проектами](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
+[Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Создание и управление проектами](creating-and-managing-projects-accesstosql.md)  
   

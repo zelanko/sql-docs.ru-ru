@@ -5,8 +5,7 @@ ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a1df515a5a88c94e52d376394905a819d361281
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf1b1d02ac8e36795703d233feb152339bd775eb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316204"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392855"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (оптимизация в памяти)
   Новое в [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] может значительно улучшить производительность приложения базы данных OLTP. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] является оптимизированным для памяти ядром СУБД, встроенным в ядро [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], оптимизированное для OLTP.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cc5f2caba4f82a34c64fdaafdfef137739bc19e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd81f459f09b06e0be06d53658b98b929eff5d6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313804"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392426"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP
   Сборщик данных о производительности транзакции в [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] помогает оценить, улучшит ли In-Memory OLTP производительность приложения базы данных. В отчете об анализе производительности транзакции также показано, сколько работы необходимо выполнить, чтобы включить In-Memory OLTP в приложении. После определения дисковой таблицы, которая переносится в In-Memory OLTP, можно для упрощения миграции таблицы использовать [советник по оптимизации для выполнения в памяти](memory-optimization-advisor.md). Аналогичным образом [Native Compilation Advisor](native-compilation-advisor.md) позволяет перенести хранимую процедуру в изначально скомпилированную хранимую процедуру.  
@@ -35,7 +34,7 @@ ms.locfileid: "37313804"
   
 -   Создайте отчеты анализа производительности транзакции, чтобы определить таблицы и хранимые процедуры, оказывающие критическое влияние на производительность.  
   
- Сведения о методиках миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Дополнительные сведения о методологиях миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](http://msdn.microsoft.com/library/dn673538.aspx).  
   
  Сборщик данных о производительности транзакции и отчеты анализа производительности транзакции позволяют выполнить следующие задачи.  
   

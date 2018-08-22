@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobschedule (Transact-SQL) | Документы Microsoft
+title: sp_help_jobschedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edaebbc89b6422bd529963dc851371747f7d22be
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac24c12f2ec6f7228857b013c8478db070a52e64
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395599"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +49,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Аргументы  
  [  **@job_id=** ] *job_id*  
- Идентификационный номер задания. *Аргумент job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
+ Идентификационный номер задания. *job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name=** ] **"***job_name***"**  
- Имя задания. *job_name*— **sysname**, значение по умолчанию NULL.  
+ [  **@job_name=** ] **"***имя_задания***"**  
+ Имя задания. *имя_задания*— **sysname**, значение по умолчанию NULL.  
   
-> **Примечание:** либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
+> **Примечание:** либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
  [  **@schedule_name=** ] **"***schedule_name***"**  
  Имя элемента расписания для задания. *schedule_name*— **sysname**, значение по умолчанию NULL.  
@@ -73,7 +74,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Идентификационный номер расписания.|  
 |**schedule_name**|**sysname**|Имя расписания.|  
-|**Включен**|**int**|Расписание задействовано (**1**) или не включено (**0**).|  
+|**включен**|**int**|Расписание задействовано (**1**) или не включено (**0**).|  
 |**freq_type**|**int**|Значение, указывающее, когда должно выполняться задание.<br /><br /> **1** = однократно<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячно, относительно **freq_interval**<br /><br /> **64** = выполнять, когда **SQLServerAgent** запуске службы.|  
 |**freq_interval**|**int**|Дни, в которые выполняется задание. Значение зависит от значения **freq_type**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Единицы измерения для **freq_subday_interval**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -91,10 +92,10 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Идентификатор расписания.|  
 |**job_count**|**int**|Возвращенное количество заданий.|  
   
-> **Примечание:****sp_help_jobschedule** возвращает значения из **dbo.sysjobschedules** и **dbo.sysschedules** системных таблиц в **базы данных msdb** . **sysjobschedules** обновляется каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
+> **Примечание:****sp_help_jobschedule** возвращает значения из **dbo.sysjobschedules** и **dbo.sysschedules** системных таблиц в **msdb** .   **sysjobschedules** обновляется каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
   
-## <a name="remarks"></a>Замечания  
- Параметры **sp_help_jobschedule** может использоваться только в определенных сочетаниях. Если *schedule_id* указано, ни *job_id* , ни *job_name* можно указать. В противном случае *job_id* или *job_name* параметры могут использоваться с *schedule_name*.  
+## <a name="remarks"></a>Примечания  
+ Параметры **sp_help_jobschedule** может использоваться только в определенных сочетаниях. Если *schedule_id* указано, ни *job_id* , ни *имя_задания* можно указать. В противном случае *job_id* или *имя_задания* параметры могут быть использованы *schedule_name*.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
@@ -105,9 +106,9 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Члены **SQLAgentUserRole** могут лишь просматривать свойства расписаний заданий, которыми они владеют.  
+ Членами **SQLAgentUserRole** могут лишь просматривать свойства расписаний заданий, которыми они владеют.  
   
 ## <a name="examples"></a>Примеры  
   

@@ -36,29 +36,29 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9519ef6b157b1f1d951b93c791f856d6066e7b19
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3db879598974e798c91fc274c0c2dff0d2205358
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981936"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393554"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Преобразование объектов базы данных Access (AccessToSQL)
-После добавления базы данных Access и подключены к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, SSMA отображает метаданные для доступа и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты базы данных SQL Azure. Теперь Выбор объектов базы данных Access и затем преобразовать схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или схем SQL Azure.  
+После добавления базы данных Access и подключены к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, SSMA отображает метаданные для доступа и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных SQL Azure. Теперь Выбор объектов базы данных Access и затем преобразовать схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или схем SQL Azure.  
   
 ## <a name="the-conversion-process"></a>Процесс преобразования  
-Преобразование объектов базы данных принимает определения объектов из доступ к метаданным, преобразует их в эквивалентные [!INCLUDE[tsql](../../includes/tsql_md.md)] синтаксис, а затем загружает эту информацию в проект. Затем можно просмотреть [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов SQL Azure и их свойства с помощью или [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или обозреватель метаданных SQL Azure.  
+Преобразование объектов базы данных принимает определения объектов из доступ к метаданным, преобразует их в эквивалентные [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, а затем загружает эту информацию в проект. Затем можно просмотреть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов SQL Azure и их свойства с помощью или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или обозреватель метаданных SQL Azure.  
   
 > [!IMPORTANT]  
-> Преобразование объектов не создает объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Только преобразует определения объектов и эти сведения хранятся в проекта SSMA.  
+> Преобразование объектов не создает объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Только преобразует определения объектов и эти сведения хранятся в проекта SSMA.  
   
-Во время преобразования SSMA выводит состояние в области вывода и ошибки, предупреждения и информационные сообщения на панель список ошибок. Эти сведения можно используйте для определения, нужно ли изменять базы данных Access или процесс преобразования, чтобы получить результаты требуемое преобразование. Можно также использовать сведения в [Подготовка базы данных Access для миграции](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114) раздел, чтобы определить, что будет и не будут преобразованы.  
+Во время преобразования SSMA выводит состояние в области вывода и ошибки, предупреждения и информационные сообщения на панель список ошибок. Эти сведения можно используйте для определения, нужно ли изменять базы данных Access или процесс преобразования, чтобы получить результаты требуемое преобразование. Можно также использовать сведения в [Подготовка базы данных Access для миграции](preparing-access-databases-for-migration-accesstosql.md) раздел, чтобы определить, что будет и не будут преобразованы.  
   
 ## <a name="setting-conversion-options"></a>Установка параметров преобразования  
 Прежде чем выполнять преобразование объектов, просмотрите параметры преобразования проекта в **параметры проекта** диалоговое окно. В этом диалоговом окне, можно задать как SSMA преобразует столбцов типа memo индексированных, первичные ключи, ограничения внешнего ключа, отметки времени и таблицы без индексов. Дополнительные сведения см. в разделе [параметры проекта (преобразование)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>Результаты преобразования  
-В следующей таблице показаны объекты доступа преобразуются, в результате чего [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объектов SQL Azure:  
+В следующей таблице показаны объекты доступа преобразуются, в результате чего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объектов SQL Azure:  
   
 |Объект доступа|Полученный объект SQL Server|  
 |-----------------|-------------------------------|  
@@ -107,11 +107,11 @@ ms.locfileid: "38981936"
 4.  Просмотрите сообщения в **вывода** области и все ошибки и предупреждения в **список ошибок** области.  
   
 ## <a name="altering-tables-and-indexes"></a>Изменение таблиц и индексов  
-После преобразования доступ к метаданным для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или метаданных SQL Azure, и до загрузки объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, можно изменить [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или таблиц SQL Azure, так и индексов.  
+После преобразования доступ к метаданным для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или метаданных SQL Azure, и до загрузки объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, можно изменить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или таблиц SQL Azure, так и индексов.  
   
 **Изменить свойства таблицы или индекса**  
   
-1.  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или обозреватель метаданных SQL Azure, выберите таблицу или индекс, которые требуется изменить.  
+1.  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или обозреватель метаданных SQL Azure, выберите таблицу или индекс, которые требуется изменить.  
   
 2.  На **таблицы** щелкните свойство, необходимо изменить, а затем введите или выберите новый параметр. Например можно изменить nvarchar(15) для nvarchar(20), или установите флажок, чтобы сделать столбец таблицы допускает значение NULL.  
   
@@ -122,8 +122,8 @@ ms.locfileid: "38981936"
 Теперь можно просмотреть изменения в коде на **SQL** вкладки.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующим шагом в процессе миграции является [загрузка объектов преобразованный базы данных в SQL Server](http://msdn.microsoft.com/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba)  
+Следующим шагом в процессе миграции является [загрузка объектов преобразованный базы данных в SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## <a name="see-also"></a>См. также  
-[Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

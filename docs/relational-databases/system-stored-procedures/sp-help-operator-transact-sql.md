@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_help_operator (Transact-SQL) | Документы Microsoft
+title: Хранимая процедура sp_help_operator (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fc94dd72bdb96516c6cd65f1e405951cbf8ff45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2e95006d991f9a3c8380c2144c5744e2e798c34c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258798"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395791"
 ---
 # <a name="sphelpoperator-transact-sql"></a>Хранимая процедура sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@operator_name=** ] **"***operator_name***"**  
- Имя оператора. *operator_name* — **sysname**. Если *operator_name* — не указано, возвращаются сведения обо всех операторах.  
+ [  **@operator_name=** ] **"***имя_оператора***"**  
+ Имя оператора. *имя_оператора* — **sysname**. Если *имя_оператора* является не указан, возвращаются сведения обо всех операторах.  
   
  [  **@operator_id=** ] *operator_id*  
  Идентификатор оператора, о котором запрашиваются сведения. *operator_id*— **int**, значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *operator_id* или *operator_name* должен быть указан, но не оба аргумента одновременно.  
+>  Либо *operator_id* или *имя_оператора* должен быть указан, но не оба аргумента одновременно.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -65,7 +65,7 @@ sp_help_operator
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификационный номер оператора.|  
 |**name**|**sysname**|Имя оператора.|  
-|**Включен**|**tinyint**|Доступность оператора для получения уведомлений:<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
+|**включен**|**tinyint**|Доступность оператора для получения уведомлений:<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
 |**email_address**|**Nvarchar(100)**|Адрес электронной почты оператора.|  
 |**last_email_date**|**int**|Дата, когда оператор получил последнее уведомление по электронной почте.|  
 |**last_email_time**|**int**|Время, когда оператор получил последнее уведомление по электронной почте.|  
@@ -84,7 +84,7 @@ sp_help_operator
 |**last_netsend_time**|**int**|Время, когда оператор получил последнее всплывающее сетевое уведомление.|  
 |**category_name**|**sysname**|Имя категории операторов, к которой принадлежит этот оператор.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Хранимая процедура sp_help_operator** должна запускаться из **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -96,7 +96,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример предоставляет сведения об операторе `François Ajenstat`.  
@@ -110,7 +110,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

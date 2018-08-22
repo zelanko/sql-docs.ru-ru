@@ -15,12 +15,12 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8930abc8ead43bed31d53ed8e412d5d367b6051c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290960"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396396"
 ---
 # <a name="back-up-database-general-page"></a>Резервное копирование базы данных (страница «Общие»)
   Страница **Общие** диалогового окна **Резервное копирование базы данных** служит для просмотра и изменения параметров резервного копирования базы данных.  
@@ -37,7 +37,7 @@ ms.locfileid: "37290960"
 -   [Создание разностной резервной копии базы данных (SQL Server)](create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  Для создания резервных копий базы данных можно составить план обслуживания базы данных. Дополнительные сведения см. в разделе [Планы обслуживания базы данных](http://msdn.microsoft.com/library/ms187658.aspx) в электронной документации по [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+    >  Для создания резервных копий базы данных можно составить план обслуживания базы данных. Дополнительные сведения см. в разделе [Планы обслуживания базы данных](../maintenance-plans/maintenance-plans.md) в электронной документации по [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
  **Создание частичной резервной копии**  
   

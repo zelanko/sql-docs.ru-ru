@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (Transact-SQL) | Документы Microsoft
+title: sp_help_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a64cf35c51d4857b666798debb633828b6c66b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0cfde22d702fa71b46ae4795beca42b8e7bd37d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393290"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,8 +65,8 @@ sp_help_proxy
 |CmdExec|Операционная система (CmdExec)|  
 |Моментальный снимок|Агент моментальных снимков репликации|  
 |LogReader|Агент чтения журнала репликации|  
-|Distribution|Агент распространителя репликации|  
-|Объединить|Агент слияния репликации|  
+|Distribution|Агент распространения репликации|  
+|Объединить|Replication Merge Agent|  
 |QueueReader|Агент чтения очереди репликации|  
 |ANALYSISQUERY|Команда служб Analysis Services|  
 |ANALYSISCOMMAND|Запрос служб Analysis Services|  
@@ -73,7 +74,7 @@ sp_help_proxy
 |PowerShell|Скрипт PowerShell|  
   
  [ **@name** =] '*имя*"  
- Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого должны быть перечислены учетные записи-посредники. Имя — **nvarchar(256)**, значение по умолчанию NULL. Когда *имя* указано, *subsystem_name* также должен быть указан.  
+ Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого должны быть перечислены учетные записи-посредники. Имя **nvarchar(256)**, значение по умолчанию NULL. Когда *имя* указано, *subsystem_name* также должен быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -84,25 +85,25 @@ sp_help_proxy
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
 |**name**|**sysname**|Имя учетной записи-посредника.|  
-|**credential_identity**|**sysname**|Имя домена и имя пользователя Microsoft Windows для учетных данных, относящихся к учетной записи-посреднику.|  
-|**Включен**|**tinyint**|Указывает, включена ли учетная запись-посредник. { **0** — не включено, **1** = включена}|  
+|**столбец credential_identity**|**sysname**|Имя домена и имя пользователя Microsoft Windows для учетных данных, относящихся к учетной записи-посреднику.|  
+|**включен**|**tinyint**|Указывает, включена ли учетная запись-посредник. { **0** — не включено, **1** = включена}|  
 |**Описание**|**nvarchar(1024)**|Описание этой учетной записи-посредника.|  
 |**user_sid**|**varbinary(85)**|Идентификатор безопасности Windows для пользователя Windows, соответствующего этой учетной записи-посреднику.|  
 |**credential_id**|**int**|Идентификатор учетных данных, связанных с учетной записью-посредником.|  
 |**credential_identity_exists**|**int**|Указывает, существует ли столбец credential_identity. { 0 = не существует, 1 = существует }|  
   
-## <a name="remarks"></a>Замечания  
- Если параметры не указаны, **sp_help_proxy** выводятся сведения обо всех прокси-серверов в экземпляре.  
+## <a name="remarks"></a>Примечания  
+ Если параметры не указаны, **sp_help_proxy** выводит сведения для всех учетных записей-посредников в экземпляре.  
   
- Чтобы определить, какие учетные записи-посредники определенное имя входа можно использовать для данной подсистемы, укажите *имя* и *subsystem_name*. Если эти аргументы определены, **sp_help_proxy** перечислены учетные записи-посредники, которым указанное имя входа может доступа, которые могут использоваться для указанной подсистемы.  
+ Чтобы определить, какие учетные записи-посредники определенное имя входа можно использовать для данной подсистемы, укажите *имя* и *subsystem_name*. Если эти аргументы указаны, **sp_help_proxy** перечислены учетные записи-посредники, имя входа, указанное может доступ и может быть использована для указанной подсистемы.  
   
 ## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена предопределенная роль базы данных **SQLAgentOperatorRole** в базе данных **msdb** .  
   
- Дополнительные сведения о **SQLAgentOperatorRole**, в разделе [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о **SQLAgentOperatorRole**, см. в разделе [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 > [!NOTE]  
->  **Credential_identity** и **user_sid** столбцы возвращаются только в результирующий набор, если члены **sysadmin** выполнения этой хранимой процедуры.  
+>  **Credential_identity** и **user_sid** столбцы возвращаются только в результирующий набор, когда члены **sysadmin** выполнения этой хранимой процедуры.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -130,7 +131,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Хранимая процедура sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   

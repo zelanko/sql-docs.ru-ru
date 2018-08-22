@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Документы Microsoft
+title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c80739e4a888316837b22838b92f6d5919c998d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c19e54fe6f9d9280d19ab6861cf27ffa20df636
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392885"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,12 +59,12 @@ sp_revoke_proxy_from_subsystem
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**2**|ActiveX-скрипт<br /><br /> **\*\* Важные \* \***  подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
+|**2**|ActiveX-скрипт<br /><br /> **\*\* Важные \* \***  подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент в будущих версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
 |**3**|Операционная система (CmdExec)|  
 |**4**|Агент моментальных снимков репликации|  
 |**5**|Агент чтения журнала репликации|  
 |**6**|Агент распространения репликации|  
-|**7**|Агент слияния репликации|  
+|**7**|Replication Merge Agent|  
 |**8**|Агент чтения очереди репликации|  
 |**9**|Команда служб Analysis Services|  
 |**10**|Запрос служб Analysis Services|  
@@ -80,21 +81,21 @@ sp_revoke_proxy_from_subsystem
 |Моментальный снимок|Агент моментальных снимков репликации|  
 |LogReader|Агент чтения журнала репликации|  
 |Distribution|Агент распространения репликации|  
-|Объединить|Агент слияния репликации|  
+|Объединить|Replication Merge Agent|  
 |QueueReader|Агент чтения очереди репликации|  
 |ANALYSISQUERY|Команда служб Analysis Services|  
 |ANALYSISCOMMAND|Запрос служб Analysis Services|  
 |Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] выполнение пакетов служб|  
 |PowerShell|Скрипт PowerShell|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  При отмене доступа к подсистеме разрешения для участника, указанного в учетной записи-посреднике, не изменяются.  
   
 > [!NOTE]  
->  Чтобы определить, какие шаги задания ссылаются на учетную запись-посредник, щелкните правой кнопкой мыши **учетные записи-посредники** узле **агента SQL Server** в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и нажмите кнопку **свойства**. В **свойства учетной записи-посредника** выберите **ссылки** страницу для просмотра всех шагов задания, которые ссылаются на этот прокси-сервер.  
+>  Чтобы определить, какие шаги задания ссылаются на учетную запись-посредник, щелкните правой кнопкой мыши **учетные записи-посредники** в узле **агента SQL Server** в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем нажмите кнопку **свойства**. В **свойства учетной записи-посредника** выберите **ссылки** страницу, чтобы просмотреть все шаги задания, которые ссылаются на этот прокси-сервер.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_revoke_proxy_from_subsystem**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_revoke_proxy_from_subsystem**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере отменяется доступ к подсистеме служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] у учетной записи-посредника `Catalog application proxy`.  
@@ -109,8 +110,8 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Обеспечение безопасности агента SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

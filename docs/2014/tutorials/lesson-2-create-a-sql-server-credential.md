@@ -14,19 +14,19 @@ caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 358c88c0fef9c4ffaf7c7fc93458be1b1563d94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dbf7ee01520d139ce6b56912f6b35500ee35352
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163823"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392860"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lesson 2: Create a SQL Server Credential
   **Учетные данные.** Учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] являются объектом, который используется для хранения информации о проверке подлинности, необходимой для подключения к ресурсу за пределами SQL Server.  Здесь [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] процессы резервного копирования и восстановления используют учетные данные для проверки подлинности в службе хранилища больших двоичных объектов Windows Azure. Учетные данные хранят имя учетной записи хранилища и значения **ключа доступа** учетной записи хранилища. После создания учетных данных их необходимо указать в параметре WITH CREDENTIAL при выполнении инструкций BACKUP/RESTORE. Дополнительную информацию о просмотре, копировании или повторном создании учетной записи хранилища **access keys**см. в разделе [Ключи доступа к учетной записи](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- Общие сведения об учетных данных см. в разделе [Учетные данные](http://msdn.microsoft.com/library/ms161950.aspx).  
+ Общие сведения об учетных данных см. в разделе [учетные данные](../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- Сведения о других примерах использования учетных данных см. в разделе [Создание учетной записи-посредника агента SQL Server](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Сведения о других примерах использования учетных данных, см. в разделе [создание прокси-агента SQL Server](../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 > [!IMPORTANT]  
 >  Требования для создания учетных данных SQL Server, описанные ниже, характерны для процессов резервного копирования SQL Server ([SQL Server Backup to URL-адрес](../relational-databases/backup-restore/sql-server-backup-to-url.md), и [SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server, при доступе к хранилищу Azure для записи или чтения резервных копий, использует информацию об имени и ключе доступа учетной записи хранилища.  Дополнительные сведения о создании учетных данных для хранения файлов базы данных в хранилище Azure, см. в разделе [занятия 3: создание учетных данных SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  

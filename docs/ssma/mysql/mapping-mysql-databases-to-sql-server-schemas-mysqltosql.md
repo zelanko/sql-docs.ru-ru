@@ -19,25 +19,25 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 87720daab47ce4d21e7232b08b81e97b8171f43d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d28d1ddd205d56ad57a0566485c91bc83ac26593
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980536"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395804"
 ---
-# <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Сопоставление баз данных MySQL со схемами SQL Server (MySQLToSQL)
-По умолчанию SSMA для MySQL переносит все объекты в схеме MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базы данных SQL Azure с именем схемы. Тем не менее, можно настроить сопоставление между схемами MySQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или баз данных SQL Azure.  
+# <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Сопоставление баз данных MySQL со схемами SQL Server (MySQLToSQL)
+По умолчанию SSMA для MySQL переносит все объекты в схеме MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure с именем схемы. Тем не менее, можно настроить сопоставление между схемами MySQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или баз данных SQL Azure.  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL и SQL Server или SQL Azure схемы  
 Концепция MySQL схемы сопоставляется понятия SQL Server базу данных и один из его схемы. SSMA относится к SQL Server как схема сочетание базы данных и схемы.  
   
-Концепция MySQL схемы сопоставляется понятия SQL Server базу данных и один из его схемы. Например, MySQL может быть схема с именем **HR**. Экземпляр SQL Server может иметь базу данных с именем **HR**, а схемы содержат эту базу данных. Одна схема является **dbo** (или владелец базы данных) схемы. По умолчанию схемы MySQL **HR** будут сопоставлены с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных и схемы **HR.dbo**. SSMA ссылается на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] сочетание базы данных и схемы как схема.  
+Концепция MySQL схемы сопоставляется понятия SQL Server базу данных и один из его схемы. Например, MySQL может быть схема с именем **HR**. Экземпляр SQL Server может иметь базу данных с именем **HR**, а схемы содержат эту базу данных. Одна схема является **dbo** (или владелец базы данных) схемы. По умолчанию схемы MySQL **HR** будут сопоставлены с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных и схемы **HR.dbo**. SSMA ссылается на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сочетание базы данных и схемы как схема.  
   
-Можно изменить сопоставление между MySQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или Azure схемы.  
+Можно изменить сопоставление между MySQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure схемы.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Изменение целевой базы данных и схемы  
-В SSMA, вы можете сопоставить схемы MySQL любой доступный [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или схемы SQL Azure.  
+В SSMA, вы можете сопоставить схемы MySQL любой доступный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или схемы SQL Azure.  
   
 **Для изменения базы данных и схемы**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "38980536"
   
 2.  В области справа щелкните **сопоставление схемы** вкладки.  
   
-    Вы увидите список всех схем, MySQL, а затем целевое значение. Этот целевой объект обозначается в нотации двух частей (*database.schema*) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, где объекты и данные будут перенесены.  
+    Вы увидите список всех схем, MySQL, а затем целевое значение. Этот целевой объект обозначается в нотации двух частей (*database.schema*) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, где объекты и данные будут перенесены.  
   
 3.  Выберите строку, которая содержит сопоставление, которое вы хотите изменить и нажмите кнопку **изменить**.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "38980536"
   
 -   Сопоставление с SQL Server  
   
-База данных-источник можно сопоставить с любой целевой базы данных. По умолчанию сопоставлено базы данных-источника к целевому объекту [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных, с которым вы подключились, с помощью SSMA. Если целевую базу данных, сопоставляемого несуществующий на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], то появляется сообщение **«базы данных или схемы не существует в целевом объекте [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] метаданных. Он будет создан во время синхронизации. Вы действительно хотите продолжить?»** Нажмите "Да". Аналогичным образом можно сопоставить схемы и схемы не существует в целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных, который будет создан во время синхронизации.  
+База данных-источник можно сопоставить с любой целевой базы данных. По умолчанию сопоставлено базы данных-источника к целевому объекту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, с которым вы подключились, с помощью SSMA. Если целевую базу данных, сопоставляемого несуществующий на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то появляется сообщение **«базы данных или схемы не существует в целевом объекте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] метаданных. Он будет создан во время синхронизации. Вы действительно хотите продолжить?»** Нажмите "Да". Аналогичным образом можно сопоставить схемы и схемы не существует в целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, который будет создан во время синхронизации.  
   
 -   Сопоставление с SQL Azure  
   
-База данных-источник можно сопоставить с подключенным целевым [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных или ни одной схеме в подключенном целевом [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. Если сопоставить источник схемы ни одной схеме, не существует в списке подключенных целевую базу данных, то появится сообщение **«схемы не существует в целевой объект метаданных. Он будет создан во время синхронизации. Вы действительно хотите продолжить? «** Нажмите "Да".  
+База данных-источник можно сопоставить с подключенным целевым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных или ни одной схеме в подключенном целевом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных. Если сопоставить источник схемы ни одной схеме, не существует в списке подключенных целевую базу данных, то появится сообщение **«схемы не существует в целевой объект метаданных. Он будет создан во время синхронизации. Вы действительно хотите продолжить? «** Нажмите "Да".  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Восстановление базы данных по умолчанию и схемы  
 Если настроить сопоставление схемы MySQL и схемы SQL Server, можно вернуть сопоставление значения по умолчанию.  
@@ -73,7 +73,7 @@ ms.locfileid: "38980536"
 1.  На вкладке схемы сопоставления, щелкните любую строку и нажмите кнопку **восстановить значения по умолчанию** для возврата в базу данных по умолчанию и схему.  
   
 ## <a name="next-steps"></a>Следующие шаги  
-Если вы хотите проанализировать преобразование объектов MySQL в объекты SQL Server или SQL Azure, вы можете [создать отчет о преобразовании](http://msdn.microsoft.com/2a56a003-3b0f-453a-963c-00c9e40933ec) в противном случае вы можете [преобразовать определения объектов базы данных MySQL](http://msdn.microsoft.com/ac21850b-fb32-4704-9985-5759b7c688c7) в SQL Схемы Server или SQL Azure  
+Если вы хотите проанализировать преобразование объектов MySQL в объекты SQL Server или SQL Azure, вы можете [создать отчет о преобразовании](assessing-mysql-databases-for-conversion-mysqltosql.md) в противном случае вы можете [преобразовать определения объектов базы данных MySQL](converting-mysql-databases-mysqltosql.md) в SQL Схемы Server или SQL Azure  
   
 ## <a name="see-also"></a>См. также  
 [Параметры проекта &#40;преобразования&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  

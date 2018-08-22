@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
@@ -14,12 +13,12 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe4388cff478cf3d8f8fd773c8b0926793b0cc0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdcf9d6be713b77c2fd7f3a43872026eebce5c50
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258860"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394367"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP
   Оптимизированные для памяти таблицы и скомпилированные хранимые процедуры не поддерживают полную контактную зону [!INCLUDE[tsql](../../includes/tsql-md.md)], которая поддерживается дисковыми таблицами и интерпретируемыми хранимыми процедурами [!INCLUDE[tsql](../../includes/tsql-md.md)]. При попытке использовать одну из неподдерживаемых функций сервер возвращает ошибку.  

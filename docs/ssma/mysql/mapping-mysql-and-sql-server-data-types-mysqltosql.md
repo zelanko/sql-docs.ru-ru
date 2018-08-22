@@ -19,15 +19,15 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4690c8db938d53dd290ce642a7fa4ae3884b2a29
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a66311fcb2a02e5366fad180a648bcdce117dec8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982566"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394776"
 ---
-# <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Сопоставление MySQL и типы данных SQL Server (MySQLToSQL)
-Типы базы данных MySQL отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или типы базы данных SQL Azure. При преобразовании объектов базы данных MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты, SQL Azure, необходимо указать способ сопоставления типов данных из MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих процедурах.  
+# <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Сопоставление типов данных MySQL и SQL Server (MySQLToSQL)
+Типы базы данных MySQL отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или типы базы данных SQL Azure. При преобразовании объектов базы данных MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты, SQL Azure, необходимо указать способ сопоставления типов данных из MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих процедурах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
 SSMA имеет набор по умолчанию сопоставления типов данных. Список сопоставлений по умолчанию, см. в разделе [параметры проекта &#40;сопоставления типов&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -86,7 +86,7 @@ SSMA имеет набор по умолчанию сопоставления т
     2.  Щелкните **Удалить**.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующим шагом в процессе миграции является либо [создать отчет об оценке](http://msdn.microsoft.com/2a56a003-3b0f-453a-963c-00c9e40933ec) или [объектов базы данных MySQL, преобразовать в SQL Server или SQL Azure синтаксис](http://msdn.microsoft.com/ac21850b-fb32-4704-9985-5759b7c688c7). При создании отчета, объекты MySQL автоматически преобразуются во время оценки.  
+Следующим шагом в процессе миграции является либо [создать отчет об оценке](assessing-mysql-databases-for-conversion-mysqltosql.md) или [объектов базы данных MySQL, преобразовать в SQL Server или SQL Azure синтаксис](converting-mysql-databases-mysqltosql.md). При создании отчета, объекты MySQL автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также  
 [Миграция MySQL базы данных в SQL Server — база данных Azure SQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

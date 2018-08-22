@@ -1,5 +1,5 @@
 ---
-title: Power Pivot минимальными правами пример – SharePoint 2013 | Документы Microsoft
+title: Power Pivot с минимальными правами пример — SharePoint 2013 | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c58a33f7a8c1ab0e8676f6d32b14b03274707c9e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0f26430a70d3ff6f2688727b135e8bf46649af62
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020011"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395385"
 ---
-# <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot минимальными правами пример – SharePoint 2013
+# <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot с минимальными правами пример — SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   В этом разделе описывается пример настройки [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2013 с минимальными правами доступа. В конфигурации используется отдельная учетная запись для каждого из трех компонентов и каждая учетная запись имеет минимальный уровень прав доступа.  
   
 ## <a name="summary-of-accounts"></a>Сводка учетных записей  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2013 позволяет использовать учетную запись сетевой службы для учетной записи служб Analysis Services. Учетная запись сетевой службы не поддерживается в SharePoint 2010. Дополнительные сведения об учетных записях служб см. в разделе [Настройка учетных записей службы Windows и разрешений](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2013 позволяет использовать учетную запись сетевой службы для учетной записи служб Analysis Services. Учетная запись сетевой службы не поддерживается в SharePoint 2010. Дополнительные сведения об учетных записях службы см. в разделе [Настройка учетных записей службы Windows и разрешений](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  В следующей таблице представлены три учетные записи, используемые в данном примере конфигурации с минимальными правами доступа.  
   
-|Область действия|Название|  
+|Область действия|Имя|  
 |-----------|----------|  
 |Учетная запись администратора SharePoint|**SPAdmin**|  
 |Учетная запись фермы SharePoint|**SPFarm**|  

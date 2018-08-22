@@ -1,5 +1,5 @@
 ---
-title: sp_update_proxy (Transact-SQL) | Документы Microsoft
+title: sp_update_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 072c36097eb465fa43a785c59d4b0ef73d6d351f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 31154f48d9d13e6ebb67b25919a45ff7a1f7db8b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393095"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,12 +76,12 @@ sp_update_proxy
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Либо **@proxy_name** или **@proxy_id** должен быть указан. Если указаны оба аргумента, они должны ссылаться на одну и ту же учетную запись-посредник, в противном случае хранимая процедура завершается ошибкой.  
   
- Либо **@credential_name** или **@credential_id** должен быть указан для изменения учетных данных учетной записи-посредника. Если указаны оба аргумента, они должны ссылаться на одни и те же учетные данные, в противном случае хранимая процедура завершается ошибкой.  
+ Либо **@credential_name** или **@credential_id** должен быть указан для изменения учетных данных прокси-сервер. Если указаны оба аргумента, они должны ссылаться на одни и те же учетные данные, в противном случае хранимая процедура завершается ошибкой.  
   
- Эта процедура вносит изменения в учетную запись-посредник, но не меняет порядок доступа к нему. Изменение доступа к учетной записи-посредника, используйте **sp_grant_login_to_proxy** и **sp_revoke_login_from_proxy**.  
+ Эта процедура вносит изменения в учетную запись-посредник, но не меняет порядок доступа к нему. Изменение доступа к учетной записи-посредника, использовать **sp_grant_login_to_proxy** и **sp_revoke_login_from_proxy**.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** фиксированной роли безопасности могут выполнить эту процедуру.  
@@ -99,8 +100,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Обеспечение безопасности агента SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)   
  [Хранимая процедура sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   

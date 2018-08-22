@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
@@ -14,12 +13,12 @@ caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 171af425cfa479dcf9be3f555250de9a246daa1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2922d77122bdf87616e8869e6e03b29eb9a4cbf0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248504"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392862"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
   Это пример демонстрирует улучшение производительности при использовании In-Memory OLTP путем сравнения различий времени ответа при выполнении идентичного запроса Transact-SQL или таблиц, оптимизированных для памяти, и таблиц на диске. Кроме того, в нем также создается (на основе того же запроса) и выполняется компилированная в собственном коде хранимая процедура для демонстрации того, что наилучшего времени ответа, как правило, можно добиться при запросе таблицы, оптимизированной для памяти, с помощью компилированной в собственном коде хранимой процедуры. Это пример показывает лишь один аспект улучшений производительности при доступе к данным в таблицах, оптимизированных для памяти: эффективность доступа к данным при выполнении вставки. В этом примере реализован только один поток, который не позволяет воспользоваться преимуществами параллелизма In-Memory OLTP. Рабочая нагрузка, которая использует параллелизм, получит более заметное повышение производительности.  

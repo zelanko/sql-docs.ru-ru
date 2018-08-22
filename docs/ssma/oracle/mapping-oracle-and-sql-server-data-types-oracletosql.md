@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6948b81ca2460d4de74393aa880f95fe3f11dfb1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979327"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392663"
 ---
-# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Сопоставление Oracle и типы данных SQL Server (OracleToSQL)
-Типы базы данных Oracle отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типы базы данных. При преобразовании объектов базы данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов, необходимо указать способ сопоставления типов данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих разделах.  
+# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Сопоставление типов данных Oracle и SQL Server (OracleToSQL)
+Типы базы данных Oracle отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы базы данных. При преобразовании объектов базы данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов, необходимо указать способ сопоставления типов данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих разделах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
 SSMA имеет набор по умолчанию сопоставления типов данных. Список сопоставлений по умолчанию, см. в разделе [параметры проекта &#40;сопоставления типов&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
@@ -62,11 +62,11 @@ SSMA имеет набор по умолчанию сопоставления т
   
         Это позволяет настраивать сопоставление данных для уменьшении и увеличении значения одного типа данных.  
   
-    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных.  
+    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
   
         Для некоторых типов требуется длина типа данных целевой объект. Если это необходимо, введите новый длину данных в **замените** поле.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Чтобы изменить сопоставление типов данных, сделайте следующее:  
   
@@ -78,9 +78,9 @@ SSMA имеет набор по умолчанию сопоставления т
   
         Это позволяет настраивать сопоставление данных для уменьшении и увеличении значения одного типа данных.  
   
-    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных.  
+    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
   
-        Для некоторых типов требуется длина типа данных целевой объект. Если это необходимо, введите новый длину данных в **замените** поле, а затем [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Для некоторых типов требуется длина типа данных целевой объект. Если это необходимо, введите новый длину данных в **замените** поле, а затем [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Чтобы удалить сопоставление типа пользовательских данных, сделайте следующее:  
   
@@ -91,7 +91,7 @@ SSMA имеет набор по умолчанию сопоставления т
         Нельзя удалить унаследованные сопоставления. Тем не менее наследуемые сопоставления переопределяются пользовательские сопоставления на отдельный объект или объект категории.  
   
 ## <a name="next-steps"></a>Следующие шаги  
-Следующим шагом в процессе миграции является либо [создать отчет об оценке](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) или [преобразовать объекты базы данных Oracle в SQL Server синтаксис](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272). Если вы создаете отчет об оценке, объектов Oracle автоматически преобразуются во время оценки.  
+Следующим шагом в процессе миграции является либо [создать отчет об оценке](assessing-oracle-schemas-for-conversion-oracletosql.md) или [преобразовать объекты базы данных Oracle в SQL Server синтаксис](converting-oracle-schemas-oracletosql.md). Если вы создаете отчет об оценке, объектов Oracle автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также  
 [Переход с Oracle баз данных в SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

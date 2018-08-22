@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe1353a72ac4780356835fec88ff0d05f3d74e66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 599ee919bdd158b76790c113a83c5aa94f0c9c99
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263370"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392618"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Миграция проверочных ограничений и ограничений внешнего ключа
   Проверочные ограничения и ограничения внешнего ключа не поддерживаются в [!INCLUDE[hek_2](../includes/hek-2-md.md)] из [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Эти конструкции обычно используются для обеспечения логической целостности данных в схеме и могут быть очень важны для поддержания правильности функционирования приложений.  

@@ -45,12 +45,12 @@ caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0830bee31cf48de3903584fcb1d9941a6c97d6c8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171165"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392406"
 ---
 # <a name="getting-sql-server-assistance"></a>Получение помощи по SQL Server
   Существует три основных источника сведений из [!INCLUDE[msCoName](../includes/msconame-md.md)] о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -68,7 +68,7 @@ ms.locfileid: "37171165"
   
  Получить доступ к электронной документации можно следующими способами.  
   
--   Копия электронной документации по [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] опубликована в библиотеке MSDN и в библиотеке TechNet в Интернете. Разделы этих копий электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержат комментарии членов сообщества, в том числе дополнительные сведения и примеры кода от других клиентов. Можно просмотреть копию в библиотеке MSDN в [электронной документации по SQL Server 2014](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
+-   Копия электронной документации по [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] опубликована в библиотеке MSDN и в библиотеке TechNet в Интернете. Разделы этих копий электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержат комментарии членов сообщества, в том числе дополнительные сведения и примеры кода от других клиентов. Можно просмотреть копию в библиотеке MSDN в [электронной документации по SQL Server 2014](../2014-toc/index.md).  
   
 -   Чтобы установить электронную документацию по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на локальный компьютер, можно воспользоваться диспетчером библиотек справки. Дополнительные сведения см. в разделе [Добавление или удаление документации по продукту SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
   

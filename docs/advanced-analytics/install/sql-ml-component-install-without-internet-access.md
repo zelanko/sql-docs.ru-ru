@@ -1,6 +1,6 @@
 ---
-title: Установка компонентов SQL Server машинного обучения без доступа к Интернету | Документация Майкрософт
-description: Подключитесь к серверу R для машинного обучения и Pytyon установки изолированного экземпляра SQL Server.
+title: Установка SQL Server в машинном обучении компоненты R и Python без доступа к Интернету | Документация Майкрософт
+description: Подключитесь к серверу R для машинного обучения и Python установки изолированного экземпляра SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/02/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546264"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437654"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>Установка SQL Server в машинном обучении функции R и Python на компьютерах без доступа к Интернету
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Установка SQL Server в машинном обучении R и Python на компьютерах без доступа к Интернету
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 По умолчанию установщики соединиться с узлов загрузки корпорации Майкрософт, чтобы получить необходимые и обновленных компонентов для машинного обучения на сервере SQL Server. Если ограничения брандмауэра запретить установщику достижение этих сайтов, можно использовать устройства, подключенного к Интернету для загрузки файлов, передачи файлов на сервер вне сети и затем запустите программу установки.

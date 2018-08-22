@@ -5,8 +5,7 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
@@ -14,12 +13,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a6d943e02529785fdef26baeee82b6d11ddd433
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef26babe0f79bf3343c26748c560b6a7a41ba164
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231099"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392852"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Размер строк и таблицы для таблиц, оптимизированных для памяти
   Таблица, оптимизированная для памяти, представляет собой набор строк, а также индексов, которые содержат указатели на строки. В таблице с оптимизацией для памяти строки не могут быть длиннее 8060 байт. Основные сведения о размере таблицы с оптимизацией для памяти помогут понять, имеет ли компьютер достаточно памяти.  
@@ -38,7 +37,7 @@ ms.locfileid: "37231099"
   
  На следующей схеме показана таблица с индексами и строками, которые в свою очередь содержат заголовки и текст:  
   
- ![Таблица, оптимизированная для памяти.] (../../database-engine/media/hekaton-guide-1.gif "Таблица, оптимизированная для памяти.")  
+ ![Таблица, оптимизированная для памяти.](../../database-engine/media/hekaton-guide-1.gif "Таблица, оптимизированная для памяти.")  
 Таблица, оптимизированная для памяти, состоящая из индексов и строк.  
   
  Размер, занимаемый таблицей в памяти (в байтах) вычисляется следующим образом.  

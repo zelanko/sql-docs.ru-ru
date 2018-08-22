@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobschedule (Transact-SQL) | Документы Microsoft
+title: sp_add_jobschedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e71329e07595e2deb448bfd2635845c52c4f3a67
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0ddbc13c682ae6748144402dc244e59ff57922bf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240254"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392657"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +57,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 ## <a name="arguments"></a>Аргументы  
  [  **@job_id=** ] *job_id*  
- Идентификационный номер задания, которому добавляется расписание. *Аргумент job_id* — **uniqueidentifier**, не имеет значения по умолчанию.  
+ Идентификационный номер задания, которому добавляется расписание. *job_id* — **uniqueidentifier**, не имеет значения по умолчанию.  
   
- [  **@job_name=** ] **"***job_name***"**  
- Имя задания, которому добавляется расписание. *job_name* — **nvarchar(128)**, не имеет значения по умолчанию.  
+ [  **@job_name=** ] **"***имя_задания***"**  
+ Имя задания, которому добавляется расписание. *имя_задания* — **nvarchar(128)**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
->  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
+>  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
  [  **@name=** ] **"***имя***"**  
  Имя расписания. *имя* — **nvarchar(128)**, не имеет значения по умолчанию.  
@@ -91,14 +91,14 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |-----------|------------|  
 |**1** (один раз)|*frequency_interval* не используется.|  
 |**4** (ежедневно)|Каждый *frequency_interval* дней.|  
-|**8** (еженедельно)|*frequency_interval* — один или несколько из следующих (объединены логическим оператором OR):<br /><br /> 1 = воскресенье<br /><br /> 2 = понедельник<br /><br /> 4 = Вторник<br /><br /> 8 = среда<br /><br /> 16 = четверг<br /><br /> 32 = Пятница<br /><br /> 64 = суббота|  
+|**8** (еженедельно)|*frequency_interval* равно одному или нескольким из следующих (объединены логическим оператором OR):<br /><br /> 1 = воскресенье<br /><br /> 2 = понедельник<br /><br /> 4 = Вторник<br /><br /> 8 = среда<br /><br /> 16 = четверг<br /><br /> 32 = Пятница<br /><br /> 64 = суббота|  
 |**16** (ежемесячно)|На *frequency_interval* день месяца.|  
 |**32** (относительно ежемесячно)|*frequency_interval* является одним из следующих:<br /><br /> 1 = воскресенье<br /><br /> 2 = понедельник<br /><br /> 3 = вторник<br /><br /> 4 = среда<br /><br /> 5 = четверг<br /><br /> 6 = пятница<br /><br /> 7 = суббота<br /><br /> 8 = Ежедневно<br /><br /> 9 = рабочий день<br /><br /> 10 = выходной|  
 |**64** (при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запуске службы агента)|*frequency_interval* не используется.|  
 |**128**|*frequency_interval* не используется.|  
   
  [ **@freq_subday_type=** ] *frequency_subday_type*  
- Указывает единицы изменения для *frequency_subday_interval*. *frequency_subday_type* — **int**, без значения по умолчанию и может принимать одно из следующих значений:  
+ Указывает единицы измерения для *frequency_subday_interval*. *frequency_subday_type* — **int**, по умолчанию и может принимать одно из следующих значений:  
   
 |Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
@@ -110,9 +110,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  Число *frequency_subday_type* периодов должно пройти между выполнениями задания. *frequency_subday_interval* — **int**, значение по умолчанию 0.  
   
  [  **@freq_relative_interval=** ] *frequency_relative_interval*  
- Далее описывается *frequency_interval* при *frequency_type* равно **32** (относительно ежемесячно).  
+ Далее описывается *frequency_interval* при *frequency_type* присваивается **32** (относительно ежемесячно).  
   
- *frequency_relative_interval* — **int**, без значения по умолчанию и может принимать одно из следующих значений:  
+ *frequency_relative_interval* — **int**, по умолчанию и может принимать одно из следующих значений:  
   
 |Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
@@ -122,15 +122,15 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**8**|Четвертая|  
 |**16**|Последняя|  
   
- *frequency_relative_interval* показывает вхождения интервалов. Например если *frequency_relative_interval* равно **2**, *frequency_type* равно **32**, и *frequency_ интервал* равно **3**, планируемые задания будут выполняться во второй вторник каждого месяца.  
+ *frequency_relative_interval* показывает вхождения интервалов. Например если *frequency_relative_interval* присваивается **2**, *frequency_type* присваивается **32**, и *frequency_ интервал* присваивается **3**, планируемые задания будут выполняться во второй вторник каждого месяца.  
   
  [  **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
- Число недель или месяцев между запланированными выполнениями задания. *frequency_recurrence_factor* используется только в том случае, если *frequency_type* равно **8**, **16**, или **32**. *frequency_recurrence_factor* — **int**, значение по умолчанию 0.  
+ Число недель или месяцев между запланированными выполнениями задания. *frequency_recurrence_factor* используется только в том случае, если *frequency_type* присваивается **8**, **16**, или **32**. *frequency_recurrence_factor* — **int**, значение по умолчанию 0.  
   
  [  **@active_start_date=** ] *active_start_date*  
  Дата, когда может начаться выполнение задания. *active_start_date* — **int**, не имеет значения по умолчанию. Формат даты: ГГГГMMДД. Если *active_start_date* не установлен, дата должна быть больше или равна 19900101.  
   
- После создания расписания проверьте дату начала и убедитесь, что она задана правильно. Дополнительные сведения см в разделе «Планирование даты начала» [Создание и присоединение расписаний к заданиям](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
+ После создания расписания проверьте дату начала и убедитесь, что она задана правильно. Дополнительные сведения см в разделе «Планирование даты начала» [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  [  **@active_end_date=** ] *active_end_date*  
  Дата, когда может быть остановлено выполнение задания. *active_end_date* — **int**, не имеет значения по умолчанию. Формат даты: ГГГГMMДД.  
@@ -151,10 +151,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
- Расписанием задач теперь можно управлять независимо от них самих. Чтобы добавить расписание задания, используйте **sp_add_schedule** для создания расписания и **sp_attach_schedule** присоединение расписания к заданию.  
+## <a name="remarks"></a>Примечания  
+ Расписанием задач теперь можно управлять независимо от них самих. Чтобы добавить расписание задания, используйте **sp_add_schedule** для создания расписания и **sp_attach_schedule** Чтобы присоединить расписание к заданию.  
   
 ## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
@@ -165,10 +165,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
  
  ## <a name="example"></a>Пример
- В следующем примере назначается расписание задания для `SaturdayReports` которой будет выполнен каждую субботу в 2:00.
+ В следующем примере назначается, чтобы расписание задания `SaturdayReports` которой будет выполнен каждую субботу в 2 часа НОЧИ.
 ```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name
@@ -180,10 +180,10 @@ EXEC msdb.dbo.sp_add_jobschedule
 ```
   
 ## <a name="see-also"></a>См. также  
- [Создание и присоединение расписаний к заданиям](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
- [Планирование задания](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
- [Создание расписания](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
- [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
+ [Планирование выполнения заданий](../../ssms/agent/schedule-a-job.md)   
+ [Создание расписания](../../ssms/agent/create-a-schedule.md)   
+ [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

@@ -18,17 +18,17 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c14e4422f0033df05dc259ad180f4f2baa380e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 62c56e876a3579d136eb2bff7a594d651b4e084e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982346"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395607"
 ---
-# <a name="command-line-options-in-ssma-console-sybasetosql"></a>Параметры командной строки в консоли SSMA (SybaseToSQL)
+# <a name="command-line-options-in-ssma-console-sybasetosql"></a>Параметры командной строки в консоли SSMA (SybaseToSQL)
 Майкрософт предоставляет широкий набор параметров командной строки для выполнения и SSMA действия управления. В последующих разделах подробно описано же.  
   
-## <a name="command-line-options-in-ssma-console"></a>Параметры командной строки в консоли SSMA  
+## <a name="command-line-options-in-ssma-console"></a>Параметры командной строки в консоли SSMA  
 Описанные здесь, параметры команд консоли.  
   
 В этом разделе термин «параметр» также называется «switch».  
@@ -128,7 +128,7 @@ ms.locfileid: "38982346"
 ### <a name="secure-password-option-psecurepassword"></a>Безопасный вариант пароля: – p/securepassword  
 Этот параметр указывает зашифрованный пароль для соединения с сервером. Он отличается от всех других вариантов: параметр не выполняет все сценарии и не помогает в любых действиях, связанные с миграцией, но помогает управлять шифрование пароля для соединения сервера, используемые в проекте миграции.  
   
-Невозможно ввести любой параметр или пароль в качестве параметра командной строки. В противном случае он приводит к ошибке. Дополнительные сведения см. [управление паролями](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) раздел.  
+Невозможно ввести любой параметр или пароль в качестве параметра командной строки. В противном случае он приводит к ошибке. Дополнительные сведения см. [управление паролями](managing-passwords-sybasetosql.md) раздел.  
   
 Следующие вложенные параметры поддерживаются для `–p/securepassword`:  
   

@@ -19,15 +19,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6400c9ef82a9e787cf818f21d06048c02b1d28f3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9efd87a25802bd5610393beb4de0728807ea827d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985326"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393295"
 ---
-# <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Сопоставление Sybase ASE и типы данных SQL Server (SybaseToSQL)
-Типы базы данных Sybase Adaptive Server Enterprise (ASE) отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или типы базы данных SQL Azure. При преобразовании ASE объекты базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты, SQL Azure, необходимо указать способ сопоставления типов данных из ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих разделах.  
+# <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Сопоставление типов данных Sybase ASE и SQL Server (SybaseToSQL)
+Типы базы данных Sybase Adaptive Server Enterprise (ASE) отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или типы базы данных SQL Azure. При преобразовании ASE объекты базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты, SQL Azure, необходимо указать способ сопоставления типов данных из ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих разделах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
 SSMA имеет набор по умолчанию сопоставления типов данных. Список сопоставлений по умолчанию, см. в разделе [параметры проекта &#40;сопоставления типов&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
@@ -66,7 +66,7 @@ SSMA имеет набор по умолчанию сопоставления т
   
         Это позволяет настраивать сопоставление данных для уменьшении и увеличении значения одного типа данных.  
   
-    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или тип данных SQL Azure.  
+    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или тип данных SQL Azure.  
   
         Для некоторых типов требуется длина типа данных целевой объект. Если это необходимо, введите новый длину данных в **замените** поле.  
   
@@ -82,7 +82,7 @@ SSMA имеет набор по умолчанию сопоставления т
   
         Это позволяет настраивать сопоставление данных для уменьшении и увеличении значения одного типа данных.  
   
-    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или тип данных SQL Azure.  
+    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или тип данных SQL Azure.  
   
         Для некоторых типов требуется длина типа данных целевой объект. Если это необходимо, введите новый длину данных в **замените** , а затем щелкните **ОК**.  
   
@@ -95,7 +95,7 @@ SSMA имеет набор по умолчанию сопоставления т
         Нельзя удалить унаследованные сопоставления. Тем не менее наследуемые сопоставления переопределяются пользовательские сопоставления на отдельный объект или объект категории.  
   
 ## <a name="next-steps"></a>Следующие шаги  
-Следующим шагом в процессе миграции является либо [создать отчет об оценке](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) или [объектов базы данных Sybase ASE преобразовать синтаксису SQL Server или SQL Azure](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3). Если вы создаете отчет об оценке, объекты Sybase ASE, автоматически преобразуются во время оценки.  
+Следующим шагом в процессе миграции является либо [создать отчет об оценке](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) или [объектов базы данных Sybase ASE преобразовать синтаксису SQL Server или SQL Azure](converting-sybase-ase-database-objects-sybasetosql.md). Если вы создаете отчет об оценке, объекты Sybase ASE, автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также  
 [Миграция баз данных Sybase ASE в SQL Server — база данных Azure SQL &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

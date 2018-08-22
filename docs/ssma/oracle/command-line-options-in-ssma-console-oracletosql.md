@@ -18,17 +18,17 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5606acac52bae2a97d0be1f6844970e81c051376
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2323c7c53571285d0e34365783b8b8d501de10c5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982247"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392864"
 ---
-# <a name="command-line-options-in-ssma-console-oracletosql"></a>Параметры командной строки в консоли SSMA (OracleToSQL)
+# <a name="command-line-options-in-ssma-console-oracletosql"></a>Параметры командной строки в консоли SSMA (OracleToSQL)
 Майкрософт предоставляет надежные параметры командной строки для выполнения и SSMA действия управления. В последующих разделах подробно описано же.  
   
-## <a name="command-line-options-in-ssma-console"></a>Параметры командной строки в консоли SSMA  
+## <a name="command-line-options-in-ssma-console"></a>Параметры командной строки в консоли SSMA  
 Описанные здесь, параметры команд консоли.  
   
 В этом разделе термин «параметр» также называется «switch».  
@@ -128,7 +128,7 @@ ms.locfileid: "38982247"
 ### <a name="secure-password-option-psecurepassword"></a>Безопасный вариант пароля: – p/securepassword  
 Этот параметр указывает зашифрованный пароль для соединения с сервером. Он отличается от всех других вариантов: параметр не выполняет все сценарии и не помогает в любых действиях, связанные с миграцией, но помогает управлять шифрование пароля для соединения сервера, используемые в проекте миграции.  
   
-Невозможно ввести любой параметр или пароль в качестве параметра командной строки. В противном случае он приводит к ошибке. Дополнительные сведения см. [управление паролями](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c) раздел.  
+Невозможно ввести любой параметр или пароль в качестве параметра командной строки. В противном случае он приводит к ошибке. Дополнительные сведения см. [управление паролями](managing-passwords-oracletosql.md) раздел.  
   
 Следующие вложенные параметры поддерживаются для `–p/securepassword`:  
   

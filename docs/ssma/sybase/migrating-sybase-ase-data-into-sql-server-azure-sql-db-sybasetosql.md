@@ -19,25 +19,25 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 55f9a09e9c0ce4a3b4f290c9b8b23185e09f415e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e39d74143e21d6b75a5a35a1f8dbde4f62f285f4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982336"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392419"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Миграция данных Sybase ASE в SQL Server — база данных Azure SQL (SybaseToSQL)
-После успешной загрузки объектов базы данных Sybase Adaptive Server Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или база данных SQL Azure, можно перенести данные из ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базе данных SQL Azure.  
+После успешной загрузки объектов базы данных Sybase Adaptive Server Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или база данных SQL Azure, можно перенести данные из ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базе данных SQL Azure.  
   
 > [!IMPORTANT]  
 > Если используется обработчик модуль переноса данных на стороне сервера, затем перед переносом данных, необходимо установить SSMA для Sybase ASE Extension Pack и поставщиков Sybase ASE на компьютере, на котором выполняется SSMA. Также должна запущена служба агента SQL Server. Дополнительные сведения о том, как установить пакет расширений см. в разделе [Установка компонентов SSMA в SQL Server (SybaseToSQL)](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## <a name="setting-migration-options"></a>Настройка параметров миграции  
-Перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или база данных SQL Azure, проверьте параметры проекта миграции в **параметры проекта** диалоговое окно.  
+Перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или база данных SQL Azure, проверьте параметры проекта миграции в **параметры проекта** диалоговое окно.  
   
 -   В этом диалоговом окне можно задать параметры, такие как размер пакета миграции, блокировка таблицы, проверку ограничений, порядок обработки значений null и обработки значений идентификаторов. Дополнительные сведения о параметрах проекта миграции, см. в разделе [параметры проекта (миграция) (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
   
-    Дополнительные сведения о **расширенные параметры миграции данных**, см. в разделе [параметры миграции данных](http://msdn.microsoft.com/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)  
+    Дополнительные сведения о **расширенные параметры миграции данных**, см. в разделе [параметры миграции данных](data-migration-settings-sybasetosql.md)  
   
 -   **Модуль переноса** в **параметры проекта** диалоговом окне пользователь может выполнить процесс миграции, используя два типа обработчиков миграции данных, находящие отклик у.:  
   

@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0e2a7465cc46e5ca2bb69ba4c7ef61dd85bf9882
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3a218ba28025f882d96cdfc122ceda01464419a3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985406"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394373"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Начало работы с SSMA для доступа к консоли (AccessToSQL)
 В этом разделе описывается, как запустить и приступить к работе с приложением доступа к консоли. Также в списке, в данном документе, соглашения используются в типичного окна выходных данных консоли SSMA.  
@@ -48,9 +48,9 @@ ms.locfileid: "38985406"
   
 Дополнительные функции:  
   
-1.  [Укажите пароль](http://msdn.microsoft.com/b099d0f9-dd37-4c87-8b6f-ed0177881ea4) и экспортировать и импортировать его на других компьютерах окна  
+1.  [Укажите пароль](managing-passwords-accesstosql.md) и экспортировать и импортировать его на других компьютерах окна  
   
-2.  [Создание отчетов](http://msdn.microsoft.com/abb4264a-622e-4215-af5b-14e309b8a399) для просмотра подробных xml вывод отчетов для оценки /conversion и миграции данных. Подробные сведения об ошибке отчеты также могут формироваться для команд обновления и синхронизации.  
+2.  [Создание отчетов](generating-reports-accesstosql.md) для просмотра подробных xml вывод отчетов для оценки /conversion и миграции данных. Подробные сведения об ошибке отчеты также могут формироваться для команд обновления и синхронизации.  
   
 ## <a name="ssma-console-output-conventions"></a>Соглашения о выходных данных консоли SSMA  
 При выполнении команды сценария SSMA и параметры, консольная программа отображает результаты и сообщения (сведения, ошибка, и т.д.) для пользователя на консоли или при необходимости перенаправляет выходные данные в XML-файл. Каждый тип сообщения в выходных данных принятое уникальный цвет. Например текстовое сообщение в белый цвет обозначает команд файла скрипта; этому параметру в зеленый цвет представляет запрос для ввода данных пользователем и т. д.  
@@ -69,5 +69,5 @@ ms.locfileid: "38985406"
 |Голубой|Начала, окончания и результат операции|  
   
 ## <a name="see-also"></a>См. также  
-[Установка SQL Server Migration Assistant для Access](http://msdn.microsoft.com/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)  
+[Установка SQL Server Migration Assistant для Access](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

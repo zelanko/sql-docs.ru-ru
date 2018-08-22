@@ -1,5 +1,5 @@
 ---
-title: Создание файлов подключения сервера (OracleToSQL) | Документы Microsoft
+title: Создание файлов подключения к серверу (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +16,15 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9657dc521ea0130f0f322c423dad906d0759197a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7a892b34da2b631371f70f6f6beee0c8c6c321fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776960"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396642"
 ---
-# <a name="creating-the-server-connection-files-oracletosql"></a>Создание файлов подключения сервера (OracleToSQL)
-Сведения о сервере можно указать в разделе серверы файла скрипта или в файле подключения отдельный сервер. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, считается определение сервера в файле скрипта.  
+# <a name="creating-the-server-connection-files-oracletosql"></a>Создание файлов подключения к серверу (OracleToSQL)
+В разделе "серверы" файла скрипта или в файле подключения отдельный сервер можно указать сведения о сервере. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, тогда считается определение сервера в файле скрипта.  
   
 **Пример: 1**  
   
@@ -106,8 +106,8 @@ ms.locfileid: "34776960"
 ```  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [выполнение консоли SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+Следующий шаг в работе консоли — [выполнение команд консоли SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Выполнение команд консоли SSMA](executing-the-ssma-console-oracletosql.md)  
   
