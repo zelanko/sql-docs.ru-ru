@@ -1,5 +1,5 @@
 ---
-title: sp_attach_schedule (Transact-SQL) | Документы Microsoft
+title: sp_attach_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 788afc8121948fa628cd9e0d2e1162464357dbc6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c1ec7f73e6fefadb9e73ca8295afb858f6d1d6a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238361"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393045"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_attach_schedule
   
 ## <a name="arguments"></a>Аргументы  
  [  **@job_id=** ] *job_id*  
- Идентификационный номер задания, добавляемого в расписание. *Аргумент job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
+ Идентификационный номер задания, добавляемого в расписание. *job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name =** ] **"***job_name***"**  
- Имя задания, к которому добавляется расписание. *job_name*— **sysname**, значение по умолчанию NULL.  
+ [  **@job_name =** ] **"***имя_задания***"**  
+ Имя задания, к которому добавляется расписание. *имя_задания*— **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
+>  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
  [  **@schedule_id =** ] *schedule_id*  
  Идентификационный номер расписания, задаваемого для задания. *schedule_id*— **int**, значение по умолчанию NULL.  
@@ -65,7 +65,7 @@ sp_attach_schedule
 > [!NOTE]  
 >  Либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Расписание и задание должны иметь одного и того же владельца.  
   
  Расписание может быть назначено более чем одному заданию. Задание может выполняться более чем в одном расписании.  
@@ -83,7 +83,7 @@ sp_attach_schedule
   
  Заметьте, что владелец задания может присоединять его к расписанию и отсоединять от расписания, не являясь владельцем расписания. Однако расписание нельзя удалить, если в результате отсоединения в нем не останется ни одного задания и вызов выполняется не владельцем расписания.  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет, является ли пользователь владельцем и задания и расписания.  
   

@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303034"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392392"
 ---
 # <a name="thread-pool-properties"></a>Свойства пула потоков
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует многопоточность во многих операциях, повышая общую производительность сервера за счет параллельного выполнения нескольких заданий. Чтобы эффективнее управлять потоками, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует пулы потоков для предварительного выделения ресурсов и обеспечения доступности потоков для последующих заданий.  
@@ -279,9 +279,9 @@ ms.locfileid: "37303034"
 >  Инструкции по заданию этих свойств см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [О процессах и потоках](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Несколько процессоров](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Группы процессоров](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [О процессах и потоках](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Несколько процессоров](/windows/desktop/ProcThread/multiple-processors)   
+ [Группы процессоров](/windows/desktop/ProcThread/processor-groups)   
  [Службы Analysis Services изменения пула потоков в SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Параметры анализа конфигурации Services 2012 (блог Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Поддержка систем, оснащенных более чем 64 процессорами](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

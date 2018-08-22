@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: f9207a9ccee4917b8c2aa1e7731da4afe6e15658
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085846"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393713"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Установка SQL Server Full-Text Search в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Следующие шаги, чтобы установить [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-fts**) на платформе Linux. Компонент Full-Text Search позволяет выполнять полнотекстовые запросы к символьным данным в таблицах SQL Server. Известные проблемы в этом выпуске см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
+Следующие шаги, чтобы установить [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) на платформе Linux. Компонент Full-Text Search позволяет выполнять полнотекстовые запросы к символьным данным в таблицах SQL Server. Известные проблемы в этом выпуске см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
 
 > [!NOTE]
 > Перед установкой SQL Server Full-Text Search, сначала [Установка SQL Server](sql-server-linux-setup.md#platforms). Это позволит настроить ключи и репозитории, которые можно использовать при установке **mssql-server-fts** пакета.

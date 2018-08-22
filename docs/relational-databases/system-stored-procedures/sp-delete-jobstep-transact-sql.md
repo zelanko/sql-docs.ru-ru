@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobstep (Transact-SQL) | Документы Microsoft
+title: sp_delete_jobstep (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f877431a45f475bee0adb303724b63b544c943bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e47c28276cd555138c4360060186515cf6f5ecf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248139"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394528"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 ## <a name="arguments"></a>Аргументы  
  [  **@job_id=** ] *job_id*  
- Идентификационный номер задания, из которого удаляется этап. *Аргумент job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
+ Идентификационный номер задания, из которого удаляется этап. *job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name=** ] **"***job_name***"**  
- Имя задания, из которого удаляется этап. *job_name*— **sysname**, значение по умолчанию NULL.  
+ [  **@job_name=** ] **"***имя_задания***"**  
+ Имя задания, из которого удаляется этап. *имя_задания*— **sysname**, значение по умолчанию NULL.  
   
-> **Примечание:** либо *job_id* или *job_name* должно быть указано; невозможно указать одновременно.  
+> **Примечание:** либо *job_id* или *имя_задания* должен быть указан, нельзя указать одновременно.  
   
  [  **@step_id=** ] *step_id*  
  Идентификатор удаляемого этапа задания. *step_id*— **int**, не имеет значения по умолчанию.  
@@ -61,14 +61,14 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  При удалении шага задания автоматически обновляются и другие этапы, ссылающиеся на удаляемый шаг.  
   
- Дополнительные сведения об этапах, связанных с конкретными заданиями запуска **sp_help_jobstep**.  
+ Дополнительные сведения об этапах, связанных с конкретными заданиями, выполните **sp_help_jobstep**.  
   
-> **Примечание:** вызов **sp_delete_jobstep** с *step_id* нулевое значение удаляет все шаги задания.  
+> **Примечание:** вызова **sp_delete_jobstep** с *step_id* нулевое значение удаляет все шаги задания для задания.  
   
  Среда Microsoft SQL Server Management Studio предоставляет простой наглядный способ управления заданиями и рекомендуется для создания заданий и работы с ними.  
   
@@ -81,9 +81,9 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены **sysadmin** может удалить шаг задания, владельцем которого является другой пользователь.  
+ Только члены **sysadmin** можно удалить шаг задания, который принадлежит другому пользователю.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере производится удаление шага `1` из задания `Weekly Sales Data Backup`.  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Просмотр или изменение заданий](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Просмотр или изменение заданий](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

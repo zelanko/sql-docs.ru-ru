@@ -21,18 +21,18 @@ caps.latest.revision: 40
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 881075f22468cb384aa3c3b5a4677a6e0d70bdf7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216594"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393240"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Запуск помощника по обновлению (пользовательский интерфейс)
   Советник по переходу может быть запущен для анализа локальных или удаленных компонентов в процессе планирования обновления. Для каждого проанализированного компонента и экземпляра помощник по обновлению создает отчет.  
   
 > [!IMPORTANT]  
->  Помощник по обновлению не анализирует удаленные экземпляры служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Чтобы выполнить анализ экземпляра служб [!INCLUDE[ssRS](../../includes/ssrs-md.md)], необходимо установить помощник по обновлению на компьютере, где установлены службы [!INCLUDE[ssRS](../../includes/ssrs-md.md)].  
+>  Помощник по обновлению не анализирует удаленные экземпляры служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Чтобы выполнить анализ экземпляра служб [!INCLUDE[ssRS](../../includes/ssrs.md)], необходимо установить помощник по обновлению на компьютере, где установлены службы [!INCLUDE[ssRS](../../includes/ssrs.md)].  
 >   
 >  Для анализа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы Integration Services, необходимо иметь [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] установлен и [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] установлен на том же компьютере.  
   

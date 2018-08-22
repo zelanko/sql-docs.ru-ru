@@ -2,7 +2,7 @@
 title: Новые возможности в SSMA для Access(AccessToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/05/2018
+ms.date: 08/14/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,32 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eabb6b1364b36a84da8acd4f70fe82f962b31081
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: b3fba0ce4efe8f168aa06aa27adb350d4d288dc6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556594"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393051"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Новые возможности в SSMA для Access (AccessToSQL)
-В этом разделе перечислены SSMA для Access изменения в каждом выпуске.  
+В этой статье перечислены SSMA для Access изменения в каждом выпуске.  
+
+## <a name="ssma-v79"></a>SSMA v7.9
+В выпуске v7.9 SSMA для Access содержит следующие изменения:
+- Целевых исправлений, повышающих качество и преобразования метрики.
+- Поддержка в SSMA командной строки, чтобы изменить сопоставление типов данных и настройки проекта.
+- Диалоговое окно подключения базы данных SQL Azure в SSMA также был изменен, чтобы указать полное имя сервера. В предыдущих версиях SSMA пришлось явно указаны в параметрах проектов префикс базы данных SQL Azure.
+
+> [!IMPORTANT]
+> SSMA v7.4 и более поздних версий .net 4.5.2 является необходимым условием установки.
+
+## <a name="ssma-v78"></a>SSMA v7.8
+В выпуске v7.8 SSMA для Access содержит следующие изменения:
+- Сопоставление типа изменения в параметрах проекта.
+- Предоставляется возможность для пользователей отключить сбор данных телеметрии.
+
+> [!IMPORTANT]
+> SSMA v7.4 и более поздних версий .net 4.5.2 является необходимым условием установки.
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 В выпуске v7.7 SSMA для Access содержит следующие изменения:
@@ -143,8 +160,8 @@ ms.locfileid: "39556594"
 ## <a name="april-2011"></a>Апреля 2011 г.  
 Апреля 2011 г. выпуск SSMA для Access содержит следующие изменения.  
   
--   Добавлен один устанавливаемые из «SSMA для Access», которая поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] «Denali» и Azure SQL.  
--   Добавлена возможность подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] «Denali».  
+-   Добавлен один устанавливаемые из «SSMA для Access», которая поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] «Denali» и Azure SQL.  
+-   Добавлена возможность подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] «Denali».  
 -   Добавлена SSMA для доступа к консоли версии поддерживают для обеспечения обратной совместимости. Вы можете открыть проекты, созданные в версии более ранней версии в версии 5.0 SSMA.
 -   Добавлена возможность установки продукта v5.0 SSMA рядом друг с другом (SxS) с более ранними версиями продукта SSMA.  
   
@@ -173,10 +190,10 @@ ms.locfileid: "39556594"
 ## <a name="november-2006"></a>Ноябрь 2006 г.  
 В выпуске за ноябрь 2006 г. SSMA для Access содержит следующие изменения:  
   
--   Добавлен новый мастер миграции баз данных, который поможет выполнить миграцию одной базы данных от доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
--   Добавлен новый Convert, нагрузки, и команда Migrate, который преобразует базы данных Access, загружает преобразованные объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], и переносит данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] за один шаг.  
--   Миграция повышена запросов. Запрос миграции теперь преобразует более выбрать запросы к представлениям. Дополнительные сведения см. в разделе [преобразование объектов базы данных Access](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
--   Добавлена возможность изменить свойства таблиц и индексов на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **таблицы** вкладки.  
+-   Добавлен новый мастер миграции баз данных, который поможет выполнить миграцию одной базы данных от доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Добавлен новый Convert, нагрузки, и команда Migrate, который преобразует базы данных Access, загружает преобразованные объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и переносит данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] за один шаг.  
+-   Миграция повышена запросов. Запрос миграции теперь преобразует более выбрать запросы к представлениям. Дополнительные сведения см. в разделе [преобразование объектов базы данных Access](converting-access-database-objects-accesstosql.md).  
+-   Добавлена возможность изменить свойства таблиц и индексов на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **таблицы** вкладки.  
 -   Добавлены новые глобальные параметры:  
     -   Вы можете выбрать для отображения номеров строк в окнах редактора.  
     -   Можно настроить SSMA для запроса для замены дубликатов объектов или всегда или никогда не заменить повторяющиеся объекты во время преобразования схемы.  

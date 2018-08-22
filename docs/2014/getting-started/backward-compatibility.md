@@ -29,12 +29,12 @@ caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631bdc9fe69f16e3cb5b98e85a62fe30eccbdc46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8bf37ee58a365fdd2135e91d4d71e1818c407d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152685"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393023"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   В следующих разделах содержатся сведения об обратной совместимости для компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Содержимое этих разделов включает сведения об устаревших и больше неподдерживаемых возможностях, критических изменениях и изменениях в поведении.  
@@ -47,7 +47,7 @@ ms.locfileid: "37152685"
 |[Обратная совместимость компонента ядра СУБД SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)|Содержит подразделы, описывающие изменения в [!INCLUDE[ssDE](../includes/ssde-md.md)], которые относятся к службам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и могут потребовать внесения изменений в приложения.|  
 |[Обратная совместимость служб Analysis Services](../../2014/analysis-services/analysis-services-backward-compatibility.md)|Содержит подразделы, описывающие изменения в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], которые относятся к службам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и могут потребовать внесения изменений в приложения.|  
 |[Обратная совместимость служб Integration Services](../integration-services/integration-services-backward-compatibility.md)|Описывает изменения в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие приложения служб DTS.|  
-|[Обратная совместимость служб Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)|Содержит подразделы, которые описывают изменения в службах [!INCLUDE[ssRS](../includes/ssrs-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие решения [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
+|[Обратная совместимость служб Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)|Содержит подразделы, которые описывают изменения в службах [!INCLUDE[ssRS](../includes/ssrs.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие решения [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
 |[Обратная совместимость &#40;службы Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|Содержит подразделы, которые описывают изменения в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие решения [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
 |[Обратная совместимость репликации](../../2014/relational-databases/replication/replication-backward-compatibility.md)|Содержит подразделы, описывающие изменения в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие решения репликации.|  
   

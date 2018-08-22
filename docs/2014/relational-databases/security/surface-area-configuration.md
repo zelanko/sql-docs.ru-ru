@@ -20,12 +20,12 @@ caps.latest.revision: 79
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 7032966cb0fb1975b65847ac1e6e0a6c5dc43b1d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ed369dbd8cd63f7d1cb9e63adf0721fcb07e612
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172195"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392130"
 ---
 # <a name="surface-area-configuration"></a>Настройка контактной зоны
   В конфигурации по умолчанию для новых установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]многие из функций отключены. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выборочно устанавливает и запускает только ключевые службы и функции, чтобы свести к минимуму количество функций, которые могут подвергнуться атаке злоумышленника. Системный администратор может изменить эти значения по умолчанию в ходе установки, а также включать или отключать функции работающего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по своему выбору. Кроме того, при подключении с других компьютеров определенные компоненты могут быть недоступны до настройки протоколов.  
@@ -65,7 +65,7 @@ ms.locfileid: "37172195"
   
  Также можно задать параметры компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] при помощи хранимой процедуры `sp_configure`. Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
- Чтобы изменить свойство **Включить встроенную безопасность** [!INCLUDE[ssRS](../../includes/ssrs-md.md)], используйте настройки свойств в службах [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы изменить свойство **Планирование событий и доставка отчетов** и свойство **Доступ к веб-службам и HTTP** , измените файл конфигурации **RSReportServer.config** .  
+ Чтобы изменить свойство **Включить встроенную безопасность** [!INCLUDE[ssRS](../../includes/ssrs.md)], используйте настройки свойств в службах [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы изменить свойство **Планирование событий и доставка отчетов** и свойство **Доступ к веб-службам и HTTP** , измените файл конфигурации **RSReportServer.config** .  
   
 ## <a name="command-prompt-options"></a>Параметры командной строки  
  Используйте командлет PowerShell **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для вызова политик конфигурации контактной зоны. Дополнительные сведения см. в разделе [Использование командлетов компонента Database Engine](../../database-engine/use-the-database-engine-cmdlets.md).  

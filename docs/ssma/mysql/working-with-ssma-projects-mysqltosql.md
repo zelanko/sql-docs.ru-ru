@@ -21,14 +21,14 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: be87a57525fb154723443bd1984206b8c72f739e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7a67cd1b6678fec80397e8ac31358ae2c6b32e0a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979497"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392583"
 ---
-# <a name="working-with-ssma-projects-mysqltosql"></a>Работа с проектами SSMA (MySQLToSQL)
+# <a name="working-with-ssma-projects-mysqltosql"></a>Работа с проектами SSMA (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Server или SQL Azure, необходимо сначала создать проект SSMA. Проект — это файл, который содержит следующие сведения:  
   
 -   Метаданные о базах данных MySQL, которые требуется перенести в SQL Server или SQL Azure.  
@@ -80,15 +80,15 @@ SSMA содержит несколько параметров для преоб�
   
 3.  В **расположение** введите или выберите папку для проекта.  
   
-4.  В **миграции для** раскрывающийся список, выберите версию целевого сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] используется для миграции. Доступны следующие варианты:  
+4.  В **миграции для** раскрывающийся список, выберите версию целевого сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется для миграции. Доступны следующие варианты:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   База данных Azure SQL  
   

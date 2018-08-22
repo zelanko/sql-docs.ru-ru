@@ -1,5 +1,5 @@
 ---
-title: Работа с SSMA для Sybase консоли (SybaseToSQL) | Документы Microsoft
+title: Работа с SSMA для Sybase консоли (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,33 +16,33 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1b498ad1e10815caa39b9c613e188015d48a7a4a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 028fa397959b62b1adba3d83448acb5ddde05d1d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779620"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392816"
 ---
-# <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Работа с SSMA для Sybase консоли (SybaseToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA), выпуск для Sybase адаптивной Server Enterprise (ASE), теперь доступен с помощью консольного приложения командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. В консольном приложении SSMA включает взаимодействия на уровне сценария, уменьшает цикл миграции и масштабирует усилий миграции.  
+# <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Работа с консолью SSMA для Sybase (SybaseToSQL)
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA), выпуска для Sybase Adaptive Server Enterprise (ASE), теперь доступна через консольное приложение командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. Как консольное приложение SSMA обеспечивает взаимодействие на уровне сценария позволяет сократить цикл миграции и масштабирует мероприятий по миграции.  
   
-В этом разделе объясняется процедуры для переноса базы данных ASE, с помощью приложения консоли SSMA.  
+В этом разделе Описание процедуры миграции базы данных ASE с помощью команд консоли SSMA приложения.  
   
-В этом разделе рассмотрены следующие темы.  
+В этом разделе рассматриваются:  
   
 |||  
 |-|-|  
 |**Разделы**|**Описание**|  
-|[Начало работы с SSMA для консоли Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|Описание процедуры для выполнения консольного приложения.|  
-|[Параметры командной строки в консоли SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|Описывает параметры командной строки и параметры для работы приложения консоли SSMA.|  
-|[Создание файлов скриптов &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|Объясняется, как создать файл скрипта.|  
-|[Создание файлов значение переменной &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)|Объясняется, как создать файл значение переменной.|  
-|[Создание файлов подключения сервера &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)|Объясняется, как создать файл соединения сервера.|  
-|[Выполнение консоли SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)|Описание команд файла скрипта для работы приложения консоли SSMA.|  
-|[Работа с файлами скриптов образца консоли &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)|Описывает способ легко настроить, сценарии, которые были предоставлены в образцах файлов вместе с продуктом|  
-|[Управление паролями &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)|Описывает о пароль шифрования и расшифровки и импорт / экспорт сведения о пароле.|  
+|[Начало работы с SSMA для Sybase консоли &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|Описание процедуры для выполнения консольного приложения.|  
+|[Параметры командной строки в консоли SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|Описывает параметры командной строки и параметры для работы с SSMA консольного приложения.|  
+|[Создание файлов сценария &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|В этой статье описывается создание файла скрипта.|  
+|[Создание файлов переменных значений &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)|В этой статье описывается создание файла значение переменной.|  
+|[Создание файлов подключения к серверу &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)|В этой статье описывается создание файла соединения сервера.|  
+|[Выполнение команд консоли SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)|Описание команд файла скрипта для работы приложения консоли SSMA.|  
+|[Работа с образцами файлов сценария консоли &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)|Описывает способ легко настроить сценарии, которые были предоставлены в примерах файлов вместе с продуктом|  
+|[Управление паролями &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)|Посвящена пароль шифрования и расшифровки и импорт / экспорт сведения о пароле.|  
 |[Создание отчетов &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|Список команд для создания отчетов.|  
-|[Устранение неполадок &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Предоставляет краткие сведения о решении проблем миграции.|  
+|[Устранение неполадок &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Предоставляет краткие сведения об устранении проблемы при миграции.|  
   
 ## <a name="see-also"></a>См. также  
 [Начало работы с SSMA для Sybase Console(SybaseToSQL)](http://msdn.microsoft.com/en-us/43219dbe-bcfa-427d-9242-f07b1455f15f)  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
@@ -14,12 +13,12 @@ caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04a293e7377a92e36b96678859a132869b04fb4f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207104"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392609"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Оценка требований к объему памяти для таблиц, оптимизированных для памяти
   При создании новой, оптимизированной для памяти таблицы [!INCLUDE[hek_2](../../includes/hek-2-md.md)] или переносе существующей на диске таблицы в таблицу, оптимизированную для памяти, важно иметь оценку требований к памяти для каждой таблицы, чтобы подготовить сервер с достаточным объемом памяти. В этом разделе описывается, как определить объем памяти, необходимый для хранения данных в таблице, оптимизированной для памяти.  

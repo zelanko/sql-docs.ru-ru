@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea8ea712579b4d9c96d793a0c633c63508c376b1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050605"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393512"
 ---
 # <a name="thread-pool-properties"></a>Свойства пула потоков
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -272,9 +272,9 @@ ms.locfileid: "38050605"
 >  Инструкции по заданию этих свойств см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [О процессах и потоках](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Несколько процессоров](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Группы процессоров](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [О процессах и потоках](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Несколько процессоров](/windows/desktop/ProcThread/multiple-processors)   
+ [Группы процессоров](/windows/desktop/ProcThread/processor-groups)   
  [Службы Analysis Services изменения пула потоков в SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Параметры анализа конфигурации Services 2012 (блог Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Поддержка систем, оснащенных более чем 64 процессорами](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

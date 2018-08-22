@@ -20,12 +20,12 @@ caps.latest.revision: 126
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dac6134987f8a6d3964d919d1aff7688b74da7fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02aa7277a06857f415143fd4497b0971773a03b6
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312314"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392574"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Возможности, поддерживаемые различными выпусками SQL Server 2014
   В этом разделе подробно описаны функции, поддерживаемые различными выпусками [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -446,7 +446,7 @@ ms.locfileid: "37312314"
   
 |Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]|Да|Да|Да|||||  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|Да|Да|Да|||||  
 |Надстройки интеллектуального анализа данных для Excel и Visio 2010|Да|Да|Да|||||  
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Да|Да||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Да|Да||||||  

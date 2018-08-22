@@ -1,5 +1,5 @@
 ---
-title: Отчет о миграции данных (AccessToSQL) | Документы Microsoft
+title: Отчет о миграции данных (AccessToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +16,15 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: abe41ca0672776faae966d375daca718c6769434
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d030ca48bee67e322d27365a80c97d9b02071e7d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774990"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394931"
 ---
 # <a name="data-migration-report-accesstosql"></a>Отчет о миграции данных (AccessToSQL)
-**Отчет о миграции данных** диалоговое окно после переноса данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+**Отчет о миграции данных** диалоговое окно после переноса данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
 **Состояние**  
@@ -40,14 +40,14 @@ ms.locfileid: "34774990"
 Количество строк данных в исходной таблице.  
   
 **Число успешно перенесенных строк**  
-Количество строк данных успешно перенесен на целевой таблицы.  
+Количество строк данных успешно перенесены в целевой таблице.  
   
 **Отношение**  
 Процент строк, успешно перенесены.  
   
 **Сведения**  
-Если сбой миграции данных, нажмите кнопку для отображения сведений о миграции для выбранной строки в отчете. SSMA отображает причину сбоя.  
+Если сбой миграции данных, щелкните, чтобы отобразить сведения о миграции для выбранной строки в отчете. SSMA будет указана причина сбоя.  
   
 **Сохранение отчета**  
-Сохраняет отчет. CSV (значения, разделенные запятыми) файл, который может быть проанализирована с помощью Microsoft Excel.  
+Сохраняет отчет. CSV (значения с разделителями запятыми) файл, который можно проверить с помощью Microsoft Excel.  
   

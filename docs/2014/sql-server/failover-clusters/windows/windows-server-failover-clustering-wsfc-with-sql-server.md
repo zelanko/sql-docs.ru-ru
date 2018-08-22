@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3fa961c07b1a4fbf9d688d31b2451598e5c8ca2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd03ce75d23d7cb98a8b1fcc8181fc6fcfa9523c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187741"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395967"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server
   Новая *Отказоустойчивая кластеризация Windows Server* (WSFC) представляет собой группу независимых серверов, совместная работа которых позволяет повысить доступность приложений и служб. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] поддержка экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] осуществляется с использованием служб и возможностей WSFC.  
@@ -65,7 +65,7 @@ ms.locfileid: "37187741"
  Принудительный кворум  
  Процесс запуска кластера несмотря на то, что на связи недостаточное количество элементов для кворума.  
   
- Дополнительные сведения см. в статье [Глоссарий отказоустойчивого кластера](http://msdn.microsoft.com/library/aa372869\(VS.85\).aspx)  
+ Дополнительные сведения см. в статье [Глоссарий отказоустойчивого кластера](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Обзор отказоустойчивого кластера Windows Server  
  Отказоустойчивая кластеризация Windows Server предусматривает инфраструктурные компоненты, поддерживающие сценарии высокого уровня доступности и аварийного восстановления для таких размещенных серверных приложений, как Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и Microsoft Exchange. При отказе узла кластера или службы все службы, которые размещались на этом узле, могут автоматически или вручную переноситься на другой доступный узел в рамках процесса под названием *отработка отказа*.  

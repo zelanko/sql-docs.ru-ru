@@ -19,14 +19,14 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8f33769bee5c8d6d9e134eb9dd5dcf8549d651cb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5ec1b7d62e3e765ee43624f0e97aef60c91309ee
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983086"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393499"
 ---
-# <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Начало работы с SSMA для MySQL консоли (MySQLToSQL)
+# <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Начало работы с консолью SSMA для MySQL (MySQLToSQL)
 В этом разделе описывается, как запустить и начало работы с MySQL консольного приложения. Также в списке, в данном документе, соглашения используются в типичного окна выходных данных консоли SSMA.  
   
 ## <a name="launching-ssma-console"></a>Запуск консоли SSMA  
@@ -51,9 +51,9 @@ ms.locfileid: "38983086"
   
 Дополнительные функции:  
   
-1.  [Защита пароля](http://msdn.microsoft.com/4ffbc587-ea3f-49ad-bc42-a654f672325e) и экспортировать и импортировать его на других компьютерах окна  
+1.  [Защита пароля](managing-passwords-mysqltosql.md) и экспортировать и импортировать его на других компьютерах окна  
   
-2.  [Создание отчетов](http://msdn.microsoft.com/1c0202e8-546d-4cb3-a37f-1d2e35d53839) для просмотра подробных xml вывод отчетов для оценки /conversion и миграции данных. Подробные сведения об ошибке отчеты также могут формироваться для команд обновления и синхронизации.  
+2.  [Создание отчетов](generating-reports-mysqltosql.md) для просмотра подробных xml вывод отчетов для оценки /conversion и миграции данных. Подробные сведения об ошибке отчеты также могут формироваться для команд обновления и синхронизации.  
   
 ## <a name="ssma-console-output-conventions"></a>Соглашения о выходных данных консоли SSMA  
 При выполнении команды сценария SSMA и параметры, консольная программа отображает результаты и сообщения (сведения, ошибка, и т.д.) для пользователя на консоли или при необходимости перенаправляет выходные данные в XML-файл. Каждый тип сообщения в выходных данных принятое уникальный цвет. Например текстовое сообщение в белый цвет обозначает команд файла скрипта; этому параметру в зеленый цвет представляет запрос для ввода данных пользователем и т. д.  
@@ -72,5 +72,5 @@ ms.locfileid: "38983086"
 |Голубой|Начала, окончания и результат операции|  
   
 ## <a name="see-also"></a>См. также  
-[Установка SSMA для MySQL](http://msdn.microsoft.com/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
+[Установка SSMA для MySQL](installing-ssma-for-mysql-mysqltosql.md)  
   

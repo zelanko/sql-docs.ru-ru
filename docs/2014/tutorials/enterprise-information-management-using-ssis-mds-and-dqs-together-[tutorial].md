@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf4106c531dbb1f386f8c1b6745f773bbe3c0f4b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2a31abaefd1fe55e3df24fab24a35ed4af336ac
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189661"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392606"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Информационный менеджмент предприятия совместным использованием SSIS, MDS и DQS [учебник]
   Для управления информацией на предприятии, как правило, требуется интеграция данных со всего предприятия и из-за его пределов, очистка данных, проверка данных на наличие повторений, стандартизация данных, обогащение данных, согласование данных с юридическими и нормативными требованиями и последующее сохранение данных в централизованном расположении со всеми необходимыми параметрами безопасности.  
@@ -38,7 +38,7 @@ ms.locfileid: "37189661"
   
  Службы SQL Server Data Quality Services (DQS) позволяют очистить, сопоставить, стандартизировать и обогатить данные, чтобы вы могли предоставлять надежные данные для рабочих нагрузок бизнес-аналитики, хранилища данных и обработки транзакций. См. в разделе [Знакомство с Data Quality Services](http://msdn.microsoft.com/library/ff877917.aspx) раздел для потребность бизнеса в DQS и возможностей DQS, позволяющих необходимость.  
   
- Службы SQL Server Master Data Services (MDS) предоставляют центральный концентратор данных, который обеспечивает целостность информации и согласованность данных в различных приложениях. См. в разделе [Master Data Services Overview](http://msdn.microsoft.com/library/ff487003.aspx) разделе Краткое описание важных функций служб MDS.  
+ Службы SQL Server Master Data Services (MDS) предоставляют центральный концентратор данных, который обеспечивает целостность информации и согласованность данных в различных приложениях. См. в разделе [Master Data Services Overview](../master-data-services/master-data-services-overview-mds.md) разделе Краткое описание важных функций служб MDS.  
   
  См. в разделе [Очистка и сопоставление основных данных с помощью технологий EIM](http://msdn.microsoft.com/library/hh403491.aspx) технические документы, подробные рекомендации по реализации решения EIM, совместное использование этих технологий Microsoft EIM и наблюдать [Enterprise Управление данными (EIM): Объединение служб SSIS, DQS и MDS](http://go.microsoft.com/fwlink/?LinkId=258672) видео "холодного" демонстрационный сценарий EIM.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "37189661"
   
     4.  SQL Server Data Tools (SSDT)  
   
-         См. в разделе [руководство по установке SQL Server 2012](http://msdn.microsoft.com/library/bb500469.aspx) Дополнительные сведения об установке продукта.  
+         См. в разделе [руководство по установке SQL Server 2012](../database-engine/install-windows/installation-for-sql-server.md) Дополнительные сведения об установке продукта.  
   
 2.  [Настройка MDS с помощью диспетчера конфигурации Master Data Services](http://msdn.microsoft.com/library/ee633884.aspx)  
   

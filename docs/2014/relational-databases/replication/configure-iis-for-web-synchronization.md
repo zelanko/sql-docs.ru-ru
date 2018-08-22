@@ -18,12 +18,12 @@ caps.latest.revision: 86
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5556c3e3392dd52fdd27acacd6c3320b7d9fbff0
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307594"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393464"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>настроить сервер IIS для веб-синхронизации
   Описанные в данном разделе процедуры составляют второй этап настройки веб-синхронизации при репликации слиянием. Эти процедуры выполняют после включения веб-синхронизации для публикации. Обзор этого процесса настройки см. в разделе [Настроить веб-синхронизацию](configure-web-synchronization.md). После завершения выполнения процедур, описанных в этом разделе, перейдите к третьему этапу — настройке подписки для использования веб-синхронизации. Этот этап описывается в следующих разделах:  
@@ -34,7 +34,7 @@ ms.locfileid: "37307594"
   
 -   RMO: [Как настроить подписку для использования веб-синхронизации (программирование объектов RMO)](http://msdn.microsoft.com/library/ms345207.aspx).  
   
- Веб-синхронизация использует сервер служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS для синхронизации подписок по запросу на публикации слиянием. Поддерживаются службы IIS версий 5.0, 6.0 и [!INCLUDE[iisver](../../includes/iisver-md.md)] . Мастер настройки веб-синхронизации не поддерживается в версии [!INCLUDE[iisver](../../includes/iisver-md.md)].  
+ Веб-синхронизация использует сервер служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS для синхронизации подписок по запросу на публикации слиянием. Поддерживаются службы IIS версий 5.0, 6.0 и 7.0. Мастер настройки веб-синхронизации не поддерживается в версии служб IIS 7.0.  
   
 > [!IMPORTANT]  
 >  Убедитесь в том, что приложение использует только [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] или более позднюю версию, а более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на IIS-сервере не установлены. Более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] могут вызывать ошибки. В частности: "Недопустимый формат сообщения во время веб-синхронизации. Убедитесь в том, что компоненты репликации на веб-сервере настроены правильно».  

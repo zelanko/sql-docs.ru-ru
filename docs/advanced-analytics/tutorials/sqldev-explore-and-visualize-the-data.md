@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 057d7d988fd6f7f5d490cbf30f06e83270438983
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042889"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393508"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Занятие 3: Анализ и визуализация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -277,8 +277,8 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>Следующее занятие
 
-[Занятие 4: Создание функций данных с помощью T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
+[Занятие 3: Создание функций данных с помощью T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
-[Занятие 2: Подготовка учебника среды с помощью PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Занятие 1: Настройка демонстрационных данных о такси Нью-ЙОРКА](sqldev-download-the-sample-data.md)

@@ -1,5 +1,5 @@
 ---
-title: Новый проект (SSMA) (AccessToSQL) | Документы Microsoft
+title: Новый проект (SSMA) (AccessToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,42 +18,42 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d819ecae91a1c5438e678ab3c62206c3fe76c785
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 81a1936393d725167eef04f9145b6be4ba75f0c7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774720"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393251"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Новый проект (SSMA) (AccessToSQL)
-Используйте **новый проект** диалоговое окно «» для создания нового проекта SSMA. Чтобы получить доступ к **новый проект** в диалоговом **файл** меню, нажмите кнопку **новый проект**.  
+Используйте **новый проект** диалоговое окно для создания нового проекта SSMA. Чтобы получить доступ к **новый проект** диалоговом окне **файл** меню, щелкните **новый проект**.  
   
 ## <a name="options"></a>Параметры  
 **Название**  
   
-Введите имя проекта. SSMA будет добавлять расширение файла.  
+Введите имя проекта. SSMA добавляет расширение файла.  
   
 **Местоположение**  
   
-Введите или найдите папку или сетевую папку, чтобы сохранить проект.  
+Укажите или перейдите к папке или сетевое расположение для сохранения проекта.  
   
-**Миграция**  
+**MigrateTo**  
   
-Выберите один из целевой версии базы данных ниже список  
+Выберите один из целевой версии базы данных, находящийся под списком  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> Новый проект типа «SQL Azure» требуется SQL Server Native Client (SNAC) версии 10.5 или выше для связывания доступа таблицы к базе данных SQL Azure.   
+> Требуется новый проект типа «SQL Azure», SQL Server Native Client (SNAC) версии 10.5 или выше для связывания доступа таблицы к базе данных SQL Azure.   
 > Можно получить последнюю версию SNAC из [пакет дополнительных компонентов Microsoft® SQL Server® 2008 R2](http://go.microsoft.com/fwlink/?LinkId=196940).  
   

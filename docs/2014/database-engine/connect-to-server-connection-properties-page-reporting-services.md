@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7ba5192de960d24bb918e9ec751e8c27c1e9d78
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308034"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393472"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Соединение с сервером (страница «Свойства соединения») (службы Reporting Services)
-  Используйте эту вкладку для просмотра или указания параметров при соединении с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] или при регистрации служб [!INCLUDE[ssRS](../includes/ssrs-md.md)] в списке **Зарегистрированные серверы**. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssRS](../includes/ssrs-md.md)].  
+  Используйте эту вкладку для просмотра или указания параметров при соединении с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] или при регистрации служб [!INCLUDE[ssRS](../includes/ssrs.md)] в списке **Зарегистрированные серверы**. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssRS](../includes/ssrs.md)].  
   
 ## <a name="options"></a>Параметры  
  **Время ожидания соединения (в мс)**  
@@ -40,7 +40,7 @@ ms.locfileid: "37308034"
  Выберите этот пункт, чтобы изменить диалоговое окно и скрыть такие дополнительные параметры соединения сервера, как запоминание пароля.  
   
  **Проверить**  
- При регистрации компонента [!INCLUDE[ssRS](../includes/ssrs-md.md)] в списке **Зарегистрированные серверы**выберите этот параметр для проверки соединения.  
+ При регистрации компонента [!INCLUDE[ssRS](../includes/ssrs.md)] в списке **Зарегистрированные серверы**выберите этот параметр для проверки соединения.  
   
  **Сохранить**  
  Сохраняет параметры в списке **Зарегистрированные серверы**.  

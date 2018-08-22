@@ -16,18 +16,18 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d6c63b66a52f0fbc6a676a2143299b7ee5b13208
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3eb32a285ceca0ab080216f0d7e9dd387d0949da
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980706"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392381"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Преобразование схем DB2 (DB2ToSQL)
-После подключения к DB2, подключенных к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], и задание проекта и параметры сопоставления данных, можно преобразовать объекты базы данных DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов базы данных.  
+После подключения к DB2, подключенных к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и задание проекта и параметры сопоставления данных, можно преобразовать объекты базы данных DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов базы данных.  
   
 ## <a name="the-conversion-process"></a>Процесс преобразования  
-Преобразование объектов базы данных принимает определения объектов из DB2, преобразует их в аналогичные [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов и затем загружает эту информацию в метаданные SSMA. Она не загружает данные в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Затем можно просмотреть объекты и их свойства с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозреватель метаданных.  
+Преобразование объектов базы данных принимает определения объектов из DB2, преобразует их в аналогичные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов и затем загружает эту информацию в метаданные SSMA. Она не загружает данные в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Затем можно просмотреть объекты и их свойства с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозреватель метаданных.  
   
 Во время преобразования SSMA выводит сообщения об ошибках на панели списка ошибок и выходных сообщений в области вывода. Чтобы определить, есть ли у вас для изменения базы данных DB2 и процесс преобразования, чтобы получить результаты требуемое преобразование, используйте выходные данные и сведения об ошибке.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "38980706"
 Прежде чем выполнять преобразование объектов, просмотрите параметры преобразования проекта в **параметры проекта** диалоговое окно. В этом диалоговом окне, можно задать как SSMA преобразует функции и глобальные переменные. Дополнительные сведения см. в разделе [параметры проекта &#40;преобразования&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md).  
   
 ## <a name="conversion-results"></a>Результаты преобразования  
-В следующей таблице показаны объекты DB2 преобразуются, в результате чего [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов:  
+В следующей таблице показаны объекты DB2 преобразуются, в результате чего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов:  
   
 |Объекты DB2|Полученные объекты SQL Server|  
 |-----------|----------------------------|  
@@ -150,7 +150,7 @@ ms.locfileid: "38980706"
   
 -   Можно изменить объект в базе данных DB2 для удаления или изменения неисправного кода. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. в разделе [подключение к базе данных DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
--   Объект можно исключить из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозревателя метаданных и обозреватель метаданных DB2, снимите флажок рядом с элементом перед загрузкой объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и перенос данных из DB2.  
+-   Объект можно исключить из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателя метаданных и обозреватель метаданных DB2, снимите флажок рядом с элементом перед загрузкой объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и перенос данных из DB2.  
   
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в процессе миграции является [загрузит преобразованные объекты в SQL Server](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  

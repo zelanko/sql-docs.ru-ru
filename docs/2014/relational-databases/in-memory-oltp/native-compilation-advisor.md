@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,17 +16,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f156bee0da5d94043fa0ab04e5b74acdcd7f4f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3218596e2f627eb8f330dbb161e178ffbac16648
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256373"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393060"
 ---
 # <a name="native-compilation-advisor"></a>Помощник по собственной компиляции
   Средство создания отчетов о производительности транзакций (см. [Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) информирует о том, какие интерпретируемые хранимые процедуры в базе данных смогут воспользоваться преимуществами перехода на компиляцию в собственном коде. После определения хранимой процедуры, для которой вы собираетесь использовать собственную компиляцию, можно запустить помощник по собственной компиляции, который облегчит миграцию интерпретированной хранимой процедуры для собственной компиляции. Дополнительные сведения о скомпилированных в собственном коде хранимых процедурах см. в разделе [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
   
- Чтобы начать, подключитесь к экземпляру, содержащему интерпретированную хранимую процедуру. Можно подключиться к экземпляру [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Однако если необходимо выполнить операцию миграции с помощником, необходимо подключиться к экземпляру [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , на котором включена функциональность In-Memory OLTP. Дополнительные сведения о требованиях In-Memory OLTP см. в разделе [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
+ Чтобы начать, подключитесь к экземпляру, содержащему интерпретированную хранимую процедуру. Можно подключиться к экземпляру [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Однако если необходимо выполнить операцию миграции с помощником, необходимо подключиться к экземпляру [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , на котором включена функциональность In-Memory OLTP. Дополнительные сведения о требованиях In-Memory OLTP см. в разделе [Требования для использования таблиц, оптимизированных для памяти](memory-optimized-tables.md).  
   
  Дополнительные сведения о методологиях миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](http://msdn.microsoft.com/library/dn673538.aspx).  
   

@@ -1,6 +1,6 @@
 ---
-title: Системные представления — Analytics платформы системы Parallel Data Warehouse | Документы Microsoft
-description: Системные представления для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
+title: Системные представления - Analytics платформы системы Parallel Data Warehouse | Документация Майкрософт
+description: Системные представления для аналитической Platform System (APS) SQL Server Parallel Data хранилища (PDW).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 35cf9252b43fd4ec52b81cd02fa1e7e777bdbe93
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539614"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393053"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Системные представления для Analytics платформы системы Parallel Data Warehouse
-Системные представления для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
+Системные представления для аналитической Platform System (APS) SQL Server Parallel Data хранилища (PDW).
 
 ## <a name="parallel-data-warehouse-catalog-views"></a>Представления каталога параллельного хранилища данных
 * [sys.pdw_column_distribution_properties](http://msdn.microsoft.com/library/mt204022.aspx)
@@ -37,7 +37,7 @@ ms.locfileid: "31539614"
 * [sys.pdw_table_distribution_properties](http://msdn.microsoft.com/library/mt203896.aspx)
 * [sys.pdw_table_mappings](http://msdn.microsoft.com/library/mt203876.aspx)
 
-## <a name="parallel-data-warehouse-dynamic-management-views-dmvs"></a>Параллельные хранилища данных, динамические административные представления (DMV)
+## <a name="parallel-data-warehouse-dynamic-management-views-dmvs"></a>Параллельные хранилища данных динамические административные представления (DMV)
 * [sys.dm_pdw_dms_cores](http://msdn.microsoft.com/library/mt203911.aspx)
 * [sys.dm_pdw_dms_external_work](../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-external-work-transact-sql.md)
 * [sys.dm_pdw_dms_workers](http://msdn.microsoft.com/library/mt203878.aspx)
@@ -57,8 +57,8 @@ ms.locfileid: "31539614"
 * [sys.dm_pdw_wait_stats](http://msdn.microsoft.com/library/mt203909.aspx)
 * [sys.dm_pdw_waits](http://msdn.microsoft.com/library/mt203909.aspx)
 
-## <a name="sql-server-dmvs-applicable-to-parallel-data-warehouse"></a>SQL Server динамических административных представлений применимы к Parallel Data Warehouse
-Следующие представления DMV применимы к параллельного хранилища данных, но необходимо выполнить, подключившись к **master** базы данных.
+## <a name="sql-server-dmvs-applicable-to-parallel-data-warehouse"></a>SQL Server динамические административные представления применимо к Parallel Data Warehouse
+Следующие представления DMV, применимы к Parallel Data Warehouse, но необходимо выполнять, подключившись к **master** базы данных.
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
 * [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
@@ -131,16 +131,16 @@ ms.locfileid: "31539614"
 * [sys.views](http://msdn.microsoft.com/library/ms190334.aspx)
 
 ## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>SQL Server динамические административные представления доступны в Parallel Data Warehouse
-Параллельное хранилище данных поддерживает множество динамические административные представления (DMV) SQL Server. Эти представления при запросе в Parallel Data Warehouse отчет о состоянии базы данных SQL Server, работающих на распределения.
+Parallel Data Warehouse включает многие динамические административные представления (DMV) SQL Server. Эти представления, при запросе в Parallel Data Warehouse, сообщается состояние баз данных SQL Server, которой выполняются распределения.
 
-Каждый из этих динамических административных Представлений имеет определенные столбец с именем pdw_node_id. Это идентификатор для вычислительных узлов. 
+Каждый из этих динамическое административное Представление включает отдельный столбец с именем pdw_node_id. Это идентификатор вычислительного узла. 
 
 > [!NOTE]
-> Чтобы использовать эти представления, вставьте «pdw_nodes_» в имени, как показано в следующей таблице.
+> Чтобы использовать эти представления, вставьте 'текст pdw_nodes_' в имя, как показано в следующей таблице.
 > 
 > 
 
-| Имя динамического административного Представления в Parallel Data Warehouse | Ссылки на раздел справки SQL Server T-SQL |
+| Имя DMV в Parallel Data Warehouse | Ссылки на раздел справки SQL Server T-SQL |
 |:--- |:--- |
 | sys.dm_pdw_nodes_db_file_space_usage |[sys.dm_db_file_space_usage](http://msdn.microsoft.com/library/ms174412.aspx) |
 | sys.dm_pdw_nodes_db_index_usage_stats |[sys.dm_db_index_usage_stats](http://msdn.microsoft.com/library/ms188755.aspx); |
@@ -214,18 +214,18 @@ ms.locfileid: "31539614"
 * [sys.dm_exec_external_work](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
 
 ## <a name="sql-server-informationschema-views"></a>Представления SQL Server INFORMATION_SCHEMA
-* [CHECK_CONSTRAINTS](http://msdn.microsoft.com/library/ms189772.aspx)
-* [COLUMNS](http://msdn.microsoft.com/library/ms188348.aspx)
-* [PARAMETERS](http://msdn.microsoft.com/library/ms173796.aspx)
+* [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
+* [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
+* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
 * [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
 * [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
-* [TABLES](http://msdn.microsoft.com/library/ms186224.aspx)
+* [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](http://msdn.microsoft.com/library/ms181381.aspx)
+* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>Следующие шаги
-Дополнительные справочные сведения см. в разделе [элементы языка T-SQL](tsql-language-elements.md) и [инструкции T-SQL](tsql-statements.md).
+Дополнительные справочные сведения см. в разделе [элементы языка T-SQL](tsql-language-elements.md) и [инструкций T-SQL](tsql-statements.md).
 
 <!--Image references-->
 

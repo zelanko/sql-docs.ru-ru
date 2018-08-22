@@ -1,5 +1,5 @@
 ---
-title: sp_update_job (Transact-SQL) | Документы Microsoft
+title: sp_update_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e36396f911c7506660fd82c5540307e95023950
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7412bc6defa6d25520570e23556e77e8824c8a88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393715"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +62,12 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 ## <a name="arguments"></a>Аргументы  
  [  **@job_id =**] *job_id*  
- Идентификатор обновляемого задания. *Аргумент job_id*— **uniqueidentifier**.  
+ Идентификатор обновляемого задания. *job_id*— **uniqueidentifier**.  
   
- [  **@job_name =**] **"***job_name***"**  
- Имя задания. *job_name*— **nvarchar(128)**.  
+ [  **@job_name =**] **"***имя_задания***"**  
+ Имя задания. *имя_задания*— **nvarchar(128)**.  
   
-> **Примечание:** либо *job_id* или *job_name* должно быть указано, но не оба аргумента одновременно.  
+> **Примечание:** либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
  [  **@new_name =**] **"***новое_имя***"**  
  Новое имя задания. *новое_имя*— **nvarchar(128)**.  
@@ -84,7 +85,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Категория задания. *Категория*— **nvarchar(128)**.  
   
  [  **@owner_login_name =**] **"***входа***"**  
- Имя входа, которое владеет заданием. *Имя входа*— **nvarchar(128)** только члены **sysadmin** предопределенной роли сервера могут менять владельца задания.  
+ Имя входа, которое владеет заданием. *Имя входа*— **nvarchar(128)** только членами **sysadmin** предопределенной роли сервера можно изменить владельца задания.  
   
  [ **@notify_level_eventlog =**] *eventlog_level*  
  Указывает, следует ли помещать запись в журнал приложений Microsoft Windows для данного задания. *eventlog_level*— **int**, и может принимать одно из следующих значений.  
@@ -97,16 +98,16 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**3**|Всегда|  
   
  [ **@notify_level_email =**] *email_level*  
- Указывает, нужно ли отправить сообщение электронной почты по завершении этого задания. *email_level*— **int**. *email_level*использует те же значения, как *eventlog_level*.  
+ Указывает, нужно ли отправить сообщение электронной почты по завершении этого задания. *email_level*— **int**. *email_level*использует те же значения, что *eventlog_level*.  
   
  [ **@notify_level_netsend =**] *netsend_level*  
- Указывает, нужно ли отправить сетевое сообщение по завершении этого задания. *netsend_level*— **int**. *netsend_level*использует те же значения, как *eventlog_level*.  
+ Указывает, нужно ли отправить сетевое сообщение по завершении этого задания. *netsend_level*— **int**. *netsend_level*использует те же значения, что *eventlog_level*.  
   
  [ **@notify_level_page =**] *page_level*  
- Указывает, необходимо ли отправить страницу по завершении этого задания. *page_level*— **int**. *page_level*использует те же значения, как *eventlog_level*.  
+ Указывает, необходимо ли отправить страницу по завершении этого задания. *page_level*— **int**. *page_level*использует те же значения, что *eventlog_level*.  
   
- [  **@notify_email_operator_name =**] **"***operator_name***"**  
- Имя оператора, которому отправляется сообщение электронной почты при *email_level* достигается. *имя_электронной_почты* — **nvarchar(128)**.  
+ [  **@notify_email_operator_name =**] **"***имя_оператора***"**  
+ Имя оператора, которому отправляется сообщение электронной почты при *email_level* достижения. *имя_электронной_почты* — **nvarchar(128)**.  
   
  [  **@notify_netsend_operator_name =**] **"***netsend_operator***"**  
  Имя оператора, которому отправляется сетевое сообщение. *netsend_operator* — **nvarchar(128)**.  
@@ -115,7 +116,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Имя оператора, которому отправляется страница. *page_operator* — **nvarchar(128)**.  
   
  [ **@delete_level =**] *delete_level*  
- Указывает, когда необходимо удалить задание. *delete_value*— **int**. *delete_level*использует те же значения, как *eventlog_level*.  
+ Указывает, когда необходимо удалить задание. *delete_value*— **int**. *delete_level*использует те же значения, что *eventlog_level*.  
   
  [  **@automatic_post =**] *automatic_post*  
  Зарезервировано.  
@@ -123,10 +124,10 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_update_job** должна запускаться из **msdb** базы данных.  
   
- **sp_update_job** изменяет только те параметры, для которых параметр заданы значения. Если параметр пропущен, сохраняется текущая настройка.  
+ **sp_update_job** изменяет только те установки, о параметрах которого предоставляются значения. Если параметр пропущен, сохраняется текущая настройка.  
   
 ## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
@@ -137,9 +138,9 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены **sysadmin** можно использовать эту хранимую процедуру для редактирования атрибутов заданий, принадлежащих другим пользователям.  
+ Только члены **sysadmin** можно использовать эту хранимую процедуру для редактирования атрибутов заданий, принадлежащие другим пользователям.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере изменяются имя, описание и включенное состояние задания `NightlyBackups`.  
