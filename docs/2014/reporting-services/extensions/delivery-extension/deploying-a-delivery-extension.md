@@ -19,12 +19,12 @@ caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 653369ef20b2febbf90c34e059c9105cdfeaafbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 112fd1263b0dce321093a271964173e924c703d2
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194889"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40396336"
 ---
 # <a name="deploying-a-delivery-extension"></a>Развертывание модуля доставки
   Сведения о конфигурации модулей доставки предоставляются в виде XML-файлов конфигурации. XML-файл соответствует схеме XML, определенной для модулей доставки. Модули доставки предоставляют инфраструктуру для настройки и изменения файла конфигурации.  
@@ -91,7 +91,7 @@ ms.locfileid: "37194889"
     </CodeGroup>  
     ```  
   
-     URL-членство — это лишь одно из множества условий членства, которые можно выбрать для модуля доставки. Дополнительные сведения об управлении доступом для кода в [!INCLUDE[ssRS](../../../includes/ssrs-md.md)]см. в разделе [Безопасная разработка (службы Reporting Services)](../secure-development/secure-development-reporting-services.md).  
+     URL-членство — это лишь одно из множества условий членства, которые можно выбрать для модуля доставки. Дополнительные сведения об управлении доступом для кода в [!INCLUDE[ssRS](../../../includes/ssrs.md)]см. в разделе [Безопасная разработка (службы Reporting Services)](../secure-development/secure-development-reporting-services.md).  
   
 ## <a name="deploying-the-extension-to-report-manager"></a>Развертывание модуля в диспетчере отчетов  
  Если модуль доставки реализует интерфейс <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>, то этот модуль можно использовать со страницей «Подписка диспетчера отчетов». Чтобы сделать доступным пользовательский интерфейс подписки, необходимо выполнить развертывание модуля в диспетчере отчетов.  
@@ -138,7 +138,7 @@ ms.locfileid: "37194889"
     </CodeGroup>  
     ```  
   
-     URL-членство — это лишь одно из множества условий членства, которые можно выбрать для модуля доставки. Дополнительные сведения об управлении доступом для кода в [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] см. в разделе [Безопасная разработка (службы Reporting Services)](../secure-development/secure-development-reporting-services.md).  
+     URL-членство — это лишь одно из множества условий членства, которые можно выбрать для модуля доставки. Дополнительные сведения об управлении доступом для кода в [!INCLUDE[ssRS](../../../includes/ssrs.md)] см. в разделе [Безопасная разработка (службы Reporting Services)](../secure-development/secure-development-reporting-services.md).  
   
 ## <a name="verifying-the-deployment"></a>Проверка развертывания  
  Проверить, успешно ли был развернут модуль доставки на сервере отчетов, можно с помощью метода веб-службы <xref:ReportService2010.ReportingService2010.ListExtensions%2A>. Можно также открыть диспетчер отчетов и убедиться, что модуль включен в список доступных модулей доставки для подписки. Дополнительные сведения о диспетчере отчетов и подписок, см. в разделе [подписки и доставка &#40;служб Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
