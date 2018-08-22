@@ -1,5 +1,5 @@
 ---
-title: sp_update_schedule (Transact-SQL) | Документы Microsoft
+title: sp_update_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed8a500af524796cf98a16f9da75aae003375c1a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ab45f997cbe9713a5d48646884c61ee5eaf967dc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262867"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393099"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,18 +88,18 @@ sp_update_schedule
  [  **@freq_interval =** ] *freq_interval*  
  Дни, когда выполняется задание. *freq_interval* — **int**, значение по умолчанию **0**и зависит от значения *freq_type*.  
   
-|Значение *freq_type*|Воздействие на *freq_interval*|  
+|Значение атрибута *freq_type*|Воздействие на *freq_interval*|  
 |---------------------------|--------------------------------|  
 |**1** (один раз)|*freq_interval* не используется.|  
 |**4** (ежедневно)|Каждый *freq_interval* дней.|  
-|**8** (еженедельно)|*freq_interval* — один или несколько из следующих (объединены с **или** логический оператор):<br /><br /> **1** = воскресенье<br /><br /> **2** = понедельник<br /><br /> **4** = Вторник<br /><br /> **8** = среда<br /><br /> **16** = четверг<br /><br /> **32** = Пятница<br /><br /> **64** = суббота|  
+|**8** (еженедельно)|*freq_interval* равно одному или нескольким из следующих (в сочетании с **OR** логический оператор):<br /><br /> **1** = воскресенье<br /><br /> **2** = понедельник<br /><br /> **4** = Вторник<br /><br /> **8** = среда<br /><br /> **16** = четверг<br /><br /> **32** = Пятница<br /><br /> **64** = суббота|  
 |**16** (ежемесячно)|На *freq_interval* день месяца.|  
 |**32** (относительно ежемесячно)|*freq_interval* является одним из следующих:<br /><br /> **1** = воскресенье<br /><br /> **2** = понедельник<br /><br /> **3** = Вторник<br /><br /> **4** = среда<br /><br /> **5** = четверг<br /><br /> **6** = Пятница<br /><br /> **7** = суббота<br /><br /> **8** = день<br /><br /> **9** = рабочий день<br /><br /> **10** = выходной день|  
 |**64** (когда запускается служба SQLServerAgent)|*freq_interval* не используется.|  
 |**128**|*freq_interval* не используется.|  
   
  [ **@freq_subday_type =** ] *freq_subday_type*  
- Указывает единицы изменения для *freq_subday_interval **.* *freq_subday_type*— **int**, значение по умолчанию **0**, и может принимать одно из следующих значений.  
+ Указывает единицы измерения для *freq_subday_interval **.* *freq_subday_type*— **int**, значение по умолчанию **0**, и может принимать одно из следующих значений.  
   
 |Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
@@ -112,7 +112,7 @@ sp_update_schedule
  Число *freq_subday_type* периодов должно пройти между выполнениями задания. *freq_subday_interval*— **int**, значение по умолчанию **0**.  
   
  [  **@freq_relative_interval =** ] *freq_relative_interval*  
- Задание вхождения *freq_interval* в каждом месяце, если *freq_interval* — **32** (относительно ежемесячно). *freq_relative_interval*— **int**, значение по умолчанию **0**, и может принимать одно из следующих значений.  
+ Появления задания *freq_interval* в каждом месяце, если *freq_interval* — **32** (относительно ежемесячно). *freq_relative_interval*— **int**, значение по умолчанию **0**, и может принимать одно из следующих значений.  
   
 |Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
@@ -126,21 +126,21 @@ sp_update_schedule
  Число недель или месяцев между запланированными выполнениями задания. *freq_recurrence_factor* используется только в том случае, если *freq_type* — **8**, **16**, или **32**. *freq_recurrence_factor*— **int**, значение по умолчанию **0**.  
   
  [  **@active_start_date =** ] *active_start_date*  
- Дата, когда может начаться выполнение задания. *active_start_date*— **int**, и значение по умолчанию NULL, которое указывает текущую дату. Формат даты: ГГГГMMДД. Если *active_start_date* не равно NULL, дата должна быть больше или равна 19900101.  
+ Дата, когда может начаться выполнение задания. *active_start_date*— **int**, значение по умолчанию NULL, который указывает на сегодняшнюю дату. Формат даты: ГГГГMMДД. Если *active_start_date* не равно NULL, дата должна быть больше или равна 19900101.  
   
- После создания расписания проверьте дату начала и убедитесь, что она задана правильно. Дополнительные сведения см в разделе «Планирование даты начала» [Создание и присоединение расписаний к заданиям](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
+ После создания расписания проверьте дату начала и убедитесь, что она задана правильно. Дополнительные сведения см в разделе «Планирование даты начала» [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  [  **@active_end_date =** ] *active_end_date*  
- Дата, когда может быть остановлено выполнение задания. *active_end_date*— **int**, значение по умолчанию **99991231**, что означает 31 декабря 9999 года. Используется формат ГГГГММДД.  
+ Дата, когда может быть остановлено выполнение задания. *active_end_date*— **int**, значение по умолчанию **99991231**, означающее 31 декабря 9999 года. Используется формат ГГГГММДД.  
   
  [  **@active_start_time =** ] *active_start_time*  
- Время в любой день между *active_start_date* и *active_end_date* для начала выполнения задания. *active_start_time*— **int**, значение по умолчанию 000000, которое соответствует 12:00:00 по в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
+ Время в любой день между *active_start_date* и *active_end_date* начинается выполнение задания. *active_start_time*— **int**, значение по умолчанию 000000, которое соответствует 12:00:00 по в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
  [  **@active_end_time =** ] *active_end_time*  
- Время в любой день между *active_start_date* и *active_end_date* завершения выполнения задания. *active_end_time*— **int**, значение по умолчанию **235959**, что означает 23:59:59. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
+ Время в любой день между *active_start_date* и *active_end_date* завершения выполнения задания. *active_end_time*— **int**, значение по умолчанию **235959**, означающее 23:59:59. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
- [ **@owner_login_name**=] **"***owner_login_name***"**]  
- Имя сервера-участника, владеющего расписанием. *owner_login_name* — **sysname**, и значение по умолчанию NULL, которое указывает, что расписание будет владеет его создатель.  
+ [ **@owner_login_name**=] **"***аргумента***"**]  
+ Имя сервера-участника, владеющего расписанием. *том* — **sysname**, и по умолчанию NULL, которое указывает, что владельцем расписания является создателем.  
   
  [  **@automatic_post =**] *automatic_post*  
  Зарезервировано.  
@@ -148,7 +148,7 @@ sp_update_schedule
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Все задания, которые используют расписание, немедленно используют новые установки. Однако изменение расписания не останавливает выполнение заданий.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -160,9 +160,9 @@ sp_update_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены **sysadmin** можно изменить расписание, принадлежащий другому пользователю.  
+ Только члены **sysadmin** могут изменять расписания, которыми владеют другие пользователи.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример изменяет состояние расписания `NightlyJobs` на состояние `0` и устанавливает владельцем `terrid`.  
@@ -179,10 +179,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание и присоединение расписаний к заданиям](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
- [Планирование задания](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
- [Создание расписания](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
- [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
+ [Планирование выполнения заданий](../../ssms/agent/schedule-a-job.md)   
+ [Создание расписания](../../ssms/agent/create-a-schedule.md)   
+ [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
