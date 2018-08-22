@@ -1,5 +1,5 @@
 ---
-title: Подготовка базы данных Access для миграции (AccessToSQL) | Документы Microsoft
+title: Подготовка баз данных Access для миграции (AccessToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -27,60 +27,60 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: eca76e8b1a585c4d97528792cef161ef68771f7e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: dd412dee3a9265d19e255d23900125691d1a0f9a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774200"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396371"
 ---
-# <a name="preparing-access-databases-for-migration-accesstosql"></a>Подготовка к миграции (AccessToSQL) базы данных Access
-Перед переносом базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], необходимо определить, какие базы данных для миграции и убедитесь, что эти базы данных все готово для миграции.  
+# <a name="preparing-access-databases-for-migration-accesstosql"></a>Подготовка баз данных Access для миграции (AccessToSQL)
+Прежде чем выполнять миграцию баз данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо определить, какие базы данных для переноса и убедитесь, что эти базы данных готовы к миграции.  
   
-## <a name="determining-when-to-migrate-to-sql-server"></a>Определение необходимости миграции в SQL Server  
-Базы данных Jet, который используется как компонент database engine для доступа, — это гибкий и простой в использовании решение для управления данными. А слишком больших баз данных и дополнительные критически важных, многие пользователи найти что требуют повышения производительности, безопасности и доступности. Для приложений, требующих более надежную платформу данных, рассмотрите перемещение основных баз данных для этих приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения о том, когда следует выполнять перенос см. в разделе [страница сведений о миграции](http://go.microsoft.com/fwlink/?LinkId=68571) на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] веб-сайта.  
+## <a name="determining-when-to-migrate-to-sql-server"></a>Определение условий к переходу на SQL Server  
+Базы данных Jet, который используется в качестве ядра базы данных для доступа, — это гибкий и простой в использовании решение для управления данными. Тем не менее слишком больших баз данных и дополнительные критически важна, многие пользователи найти что они требуют повышения производительности, безопасности и доступности. Для приложений, требующих более надежную платформу данных, рассмотрите возможность перехода основных баз данных для этих приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о том, когда следует выполнять перенос см. в разделе [страница сведений о миграции](http://go.microsoft.com/fwlink/?LinkId=68571) на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайта.  
   
-После переноса базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно продолжать использовать доступ с помощью связанных таблиц, или можно вручную переместить приложения, чтобы [!INCLUDE[msCoName](../../includes/msconame_md.md)] код на основе .NET Framework напрямую взаимодействует с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+После переноса базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно продолжать использовать доступ с помощью связанных таблиц, или можно вручную перенести приложения на [!INCLUDE[msCoName](../../includes/msconame_md.md)] кода на основе .NET Framework, который взаимодействует непосредственно с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="determining-which-databases-to-migrate"></a>Определить, какие базы данных для миграции  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Для вас Migration Assistant (SSMA) для доступа можно найти базы данных Access. Затем можно экспортировать метаданные об этих базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения о способах экспорта и запрос метаданных см. в разделе [Экспорт инвентаризацию доступа](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для доступа можно найти базы данных Access для вас. Затем можно экспортировать метаданные об этих базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о том, как экспортировать и запросить метаданные, см. в разделе [Экспорт инвентаризации Access](exporting-an-access-inventory-accesstosql.md).  
 
    > [!NOTE]
-   > Не все функции доступа и параметры поддерживаются, или можно легко преобразовать, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Перед началом миграции баз данных, в разделе [несовместимые возможности доступа](http://msdn.microsoft.com/99d45b9c-e3b9-4d56-8c25-b594b887ace1).
+   > Не все функции доступа и параметры поддерживаются, или может быть просто преобразована, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перед началом миграции баз данных, см. в разделе [несовместимые возможности доступа](incompatible-access-features-accesstosql.md).
   
 ## <a name="preparing-for-migration"></a>Подготовка к миграции  
-Следуйте приведенным ниже рекомендациям для подготовки баз данных Access для миграции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Следуйте приведенным ниже рекомендациям для подготовки базы данных Access к миграции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="upgrading-older-access-databases"></a>Обновление старых баз данных Access  
-SSMA для Access поддерживает Access 97 и более поздних версиях. При наличии баз данных из более ранних версий Access, откройте и сохраните баз данных Microsoft Access 97 или более поздней версии.  
+SSMA для Access поддерживает Access 97 и более поздних версий. Если у вас есть баз данных из более ранних версиях Access, открывать и сохранять базы данных в Access 97 или более поздней версии.  
   
 ### <a name="removing-workgroup-protection"></a>Удаление рабочей группы защиты  
-SSMA невозможно выполнить миграцию баз данных, использующих рабочей группы защиты. Чтобы снять защиту рабочей группы в базе данных Access, выполните следующие действия.  
+SSMA невозможно выполнить миграцию баз данных, использующих рабочей группы защиты. Чтобы снять защиту рабочей базы данных Access, выполните следующие действия.  
   
-1.  Скопируйте файл базы данных Access в другое место.  
+1.  Скопируйте файл базы данных Access в другое расположение.  
   
-2.  Откройте скопированной базы данных.  
+2.  Откройте копии базы данных.  
   
 3.  На **средства** последовательно выберите пункты **безопасности**, а затем выберите **разрешения пользователей и групп**.  
   
 4.  Выберите **пользователей** выберите **администратора** пользователя и убедитесь, что **Администрирование** задано разрешение.  
   
-5.  Выберите **группы** выберите **пользователей** группы, а затем убедитесь, что **Администрирование** задано разрешение.  
+5.  Выберите **группы** выберите **пользователей** группе, а затем убедитесь, что **Администрирование** задано разрешение.  
   
-6.  Нажмите кнопку **ОК**, а затем на **файл** меню, нажмите кнопку **выхода**.  
+6.  Нажмите кнопку **ОК**, а затем на **файл** меню, щелкните **выхода**.  
   
-SSMA теперь можно использовать для переноса копии базы данных. После загрузки схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно вручную защитить базу данных на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+SSMA теперь можно использовать для переноса копии базы данных. После загрузки схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], вы можете защитить базы данных вручную на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="backing-up-databases"></a>Резервное копирование баз данных  
-Перед переносом базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], создайте резервную копию обе доступа базы данных, для которого будет миграция а также [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] баз данных, в которых выполняется миграция, доступ к объектам и данным.  
+Перед переносом базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сделайте резервные копии обе доступа базы данных, которую необходимо перенести, а также [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных, в которые будут перенесены, доступ к объектам и данным.  
   
-Резервное копирование базы данных, на **средства** последовательно выберите пункты **Служебные**, а затем выберите **резервное копирование базы данных**.  
+Для резервного копирования базы данных, на **средства** последовательно выберите пункты **Служебные**, а затем выберите **резервной копии базы данных**.  
   
-Сведения о резервном копировании [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] баз данных, в разделе «Резервное копирование и восстановление баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] электронной документации.  
+Сведения о создании резервной копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных, см. в разделе «Резервное копирование и восстановление баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ### <a name="documenting-databases"></a>Документирование баз данных  
-Можно также описываются свойства, такие как списки объектов базы данных, размер файла и разрешений баз данных Access. Для создания этой документации в режиме доступа на **средства** последовательно выберите пункты **анализ**, а затем нажмите кнопку **Documented**.  
+Можно также свойства, такие как списки объектов базы данных, размеров файлов и разрешения, баз данных Access документа. Для создания этой документации в режиме доступа на **средства** последовательно выберите пункты **анализ**, а затем нажмите кнопку **документированное**.  
   
 ## <a name="see-also"></a>См. также  
-[Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Связывание приложения Access в SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)
+[Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Связь приложений Access SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

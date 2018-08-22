@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -16,12 +15,12 @@ caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f4b47ee3a3f4274ca94175060f10722fa45b6693
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66edebe05c59ca8bcb0d755f3e6d530718cf1388
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190394"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393960"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Требования для использования таблиц, оптимизированных для памяти
   В дополнение к [оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), ниже приведены требования для использования In-Memory OLTP:  
@@ -56,7 +55,7 @@ ms.locfileid: "37190394"
   
 -   Если вы пытаетесь удалить большой пакет строк, в то время как происходит одновременная вставка или обновление рабочей нагрузки, которая влияет на количество строк, которые вы стараетесь удалить, удаление, вероятно, завершиться ошибкой. Обходным приемом является остановка вставки или обновления рабочей нагрузки перед выполнением удаления. Вы также можете настроить транзакцию на мелкие транзакции, которые, скорее всего, не прервутся конкурентной рабочей нагрузкой. Как и со всеми операциями записи в таблицах, оптимизированных для памяти, используйте логику повторных попыток ([Guidelines for Retry Logic для транзакции на оптимизированных для памяти таблицах](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
   
--   Если создается одна или несколько баз данных с таблицами, оптимизированными для памяти, необходимо включить быструю инициализацию файлов (предоставьте стартовой учетной записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] право SE_MANAGE_VOLUME_NAME) для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Без быстрой инициализации файлов оптимизированные для памяти файлы хранилища (файлы данных и разностные файлы) будут инициализироваться при создании и могут отрицательно повлиять на производительность рабочей нагрузки. Дополнительные сведения о быстрой инициализации файлов см. в разделе [Инициализация файлов базы данных](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx). Сведения о включении быстрой инициализации файлов см. в разделе [Как и зачем необходимо включать быструю инициализацию файлов](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
+-   Если создается одна или несколько баз данных с таблицами, оптимизированными для памяти, необходимо включить быструю инициализацию файлов (предоставьте стартовой учетной записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] право SE_MANAGE_VOLUME_NAME) для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Без быстрой инициализации файлов оптимизированные для памяти файлы хранилища (файлы данных и разностные файлы) будут инициализироваться при создании и могут отрицательно повлиять на производительность рабочей нагрузки. Дополнительные сведения о быстрой инициализации файлов см. в разделе [Инициализация файлов базы данных](../databases/database-instant-file-initialization.md). Сведения о включении быстрой инициализации файлов см. в разделе [Как и зачем необходимо включать быструю инициализацию файлов](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы слушаем  
  Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [ sqlfeedback@microsoft.com ](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  

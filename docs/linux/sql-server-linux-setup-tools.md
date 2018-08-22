@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: ac69b80773b1554c6f0b920aaff146871beb40ab
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4dc9dd24bc3bdfa918ffdc7d02688303d8dcde5e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086416"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395800"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установка sqlcmd и bcp средства командной строки SQL Server в Linux
 
@@ -63,7 +63,7 @@ ms.locfileid: "39086416"
 1. При наличии предыдущей версии **mssql-tools** установлен, удалите старые пакеты unixODBC.
 
    ```bash
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
+   sudo yum remove mssql-tools unixODBC-utf16-devel
    ```
 
 1. Выполните следующие команды для установки **mssql-tools** с пакетом разработчика unixODBC.

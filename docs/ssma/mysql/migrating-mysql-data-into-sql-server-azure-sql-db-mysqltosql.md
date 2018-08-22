@@ -19,25 +19,25 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6143733af6824518b8a54ed856844c5e01702d0a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4651ec2de2680d9c1c855f352768228e1835f22b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985216"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396202"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>Миграция данных MySQL в SQL Server — база данных Azure SQL (MySQLToSQL)
-После успешной синхронизации преобразованных объектов с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, можно перенести данные из MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure.  
+После успешной синхронизации преобразованных объектов с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, можно перенести данные из MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
   
 > [!IMPORTANT]  
-> Если обработчик используется модуль переноса данных на стороне сервера, затем, перед переносом данных, необходимо установить SSMA для MySQL Extension Pack и поставщиков MySQL на компьютере, на котором выполняется SSMA. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Также должна запущена служба агента. Дополнительные сведения о том, как установить пакет расширений см. в разделе [Установка компонентов SSMA в SQL Server (MySQL to SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+> Если обработчик используется модуль переноса данных на стороне сервера, затем, перед переносом данных, необходимо установить SSMA для MySQL Extension Pack и поставщиков MySQL на компьютере, на котором выполняется SSMA. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Также должна запущена служба агента. Дополнительные сведения о том, как установить пакет расширений см. в разделе [Установка компонентов SSMA в SQL Server (MySQL to SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 ## <a name="setting-migration-options"></a>Настройка параметров миграции  
-Перед переносом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, проверьте параметры проекта миграции в **параметры проекта** диалоговое окно.  
+Перед переносом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, проверьте параметры проекта миграции в **параметры проекта** диалоговое окно.  
   
 -   В этом диалоговом окне можно задать параметры, такие как размер пакета миграции, блокировка таблицы, проверку ограничений, порядок обработки значений null и обработки значений идентификаторов. Дополнительные сведения о параметрах проекта миграции, см. в разделе [параметры проекта (миграция)](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9).  
   
-    Дополнительные сведения о **расширенные параметры миграции данных**, см. в разделе [параметры миграции данных](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)  
+    Дополнительные сведения о **расширенные параметры миграции данных**, см. в разделе [параметры миграции данных](data-migration-settings-mysqltosql.md)  
   
 -   **Модуль переноса** в **параметры проекта** диалоговом окне пользователь может выполнить процесс миграции, с помощью двух типов обработчиков миграции данных:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "38985216"
 > **Перенос данных на стороне клиента** доступен для SQL Azure только.  
   
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>Перенос данных в SQL Server или SQL Azure  
-Перенос данных является операцией массовой загрузки, которая перемещает строки данных из таблиц MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или таблиц SQL Azure в транзакциях. Число строк, загруженных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при каждой транзакции, настроенный в параметрах проекта.  
+Перенос данных является операцией массовой загрузки, которая перемещает строки данных из таблиц MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или таблиц SQL Azure в транзакциях. Число строк, загруженных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при каждой транзакции, настроенный в параметрах проекта.  
   
 Для просмотра сообщений миграции, убедитесь, что отображается на панели вывода. В противном случае из **представление** меню, выберите **вывода**.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "38985216"
   
         1.  SSMA для MySQL Extension Pack устанавливается на экземпляре SQL Server.  
   
-        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] На экземпляре SQL Server запущена служба агента  
+        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] На экземпляре SQL Server запущена служба агента  
   
     -   Для выполнения **переноса данных на стороне сервера**выберите **модуль переноса данных на стороне сервера** в диалоговом окне **параметры проекта** диалоговое окно.  
   

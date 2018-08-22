@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62c8430e36fe0982d4dc8e9ec56e14d124ccd106
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6fb21b7859b3666ef4d62743cb8f641745c33daf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431823"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395577"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Использование ADO с собственным клиентом SQL Server
   Чтобы воспользоваться преимуществами новых возможностей, представленных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] несколько активных результирующих наборов (MARS), уведомления о запросах, определяемые пользователем типы (UDT) или новый **xml** тип данных, существующие приложения, использующие ActiveX Data Objects (ADO) следует использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента в качестве поставщика доступа к данным.  
@@ -33,10 +33,10 @@ ms.locfileid: "37431823"
 > [!NOTE]  
 >  Если проектируется новое приложение, рекомендуется использовать ADO.NET и поставщик данных .NET Framework для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вместо собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для доступа ко всем новым функциям последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения о поставщике данных .NET Framework для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. в документации по пакету SDK платформы .NET Framework для ADO.NET.  
   
- Чтобы позволить ADO использовать новые возможности последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], были внесены некоторые улучшения в поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], расширяющие базовую функциональность OLE DB. Эти улучшения позволяют приложениям ADO использовать новые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функции и использовать два типа данных, введенных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** и **определяемого пользователем типа**. Эти улучшения также используют усовершенствования **varchar**, **nvarchar**, и **varbinary** типов данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет свойство инициализации SSPROP_INIT_DATATYPECOMPATIBILITY к набору свойств DBPROPSET_SQLSERVERDBINIT для использования приложениями ADO, чтобы новые типы данных представлены в совместимым с ADO образом. Кроме того [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента также определяет новое ключевое слово строки подключения с именем `DataTypeCompatibility` , задается в строке подключения.  
+ Чтобы позволить ADO использовать новые возможности последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], были внесены некоторые улучшения в поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], расширяющие базовую функциональность OLE DB. Эти улучшения позволяют приложениям ADO использовать новые возможности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и применять два типа данных, появившихся в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** и **udt**. Эти улучшения также используют усовершенствования типов данных **varchar**, **nvarchar** и **varbinary**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет свойство инициализации SSPROP_INIT_DATATYPECOMPATIBILITY к набору свойств DBPROPSET_SQLSERVERDBINIT для использования приложениями ADO, чтобы новые типы данных представлены в совместимым с ADO образом. Кроме того [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента также определяет новое ключевое слово строки подключения с именем `DataTypeCompatibility` , задается в строке подключения.  
   
 > [!NOTE]  
->  Существующие приложения ADO могут обращаться к полям XML определяемых пользователем типов, текстовым полям больших значений и полям двоичных значений, а также обновлять их значения с помощью поставщика SQLOLEDB. Новый большего размера **varchar(max)**, **nvarchar(max)**, и **varbinary(max)** типы данных возвращаются как типы ADO **adLongVarChar**, **adLongVarWChar** и **adLongVarBinary** соответственно. XML-столбцы возвращаются в виде **adLongVarChar**, а столбцы определяемых пользователем ТИПОВ возвращаются как **adVarBinary**. Однако при использовании поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11) вместо SQLOLEDB обязательно следует установить для ключевого слова `DataTypeCompatibility` значение «80», чтобы новые типы данных правильно сопоставлялись с типами данных ADO.  
+>  Существующие приложения ADO могут обращаться к полям XML определяемых пользователем типов, текстовым полям больших значений и полям двоичных значений, а также обновлять их значения с помощью поставщика SQLOLEDB. Новые типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** увеличенного размера возвращаются как типы ADO **adLongVarChar**, **adLongVarWChar** и **adLongVarBinary** соответственно. XML-столбцы возвращаются как **adLongVarChar**, а столбцы пользовательских типов возвращаются как **adVarBinary**. Однако при использовании поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11) вместо SQLOLEDB обязательно следует установить для ключевого слова `DataTypeCompatibility` значение «80», чтобы новые типы данных правильно сопоставлялись с типами данных ADO.  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>Включение собственного клиента SQL Server из ADO  
  Чтобы включить использование [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, приложения ADO должны реализовать следующие ключевые слова в строке подключения:  
@@ -65,7 +65,7 @@ con.Open
  В следующих разделах приведены примеры того, как можно использовать ADO с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента.  
   
 ### <a name="retrieving-xml-column-data"></a>Получение данных XML-столбца  
- В этом примере набор записей используется для получения и отображения данных из XML-столбец [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks** образца базы данных.  
+ В этом примере набор записей используется для извлечения и отображения данных из XML-столбца в образце базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks**.  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -101,7 +101,7 @@ Set con = Nothing
 >  Фильтрация наборов записей для XML-столбцов не поддерживается. При попытке ее использования возвращается ошибка.  
   
 ### <a name="retrieving-udt-column-data"></a>Получение данных столбца определяемого пользователем типа  
- В этом примере **команда** объект используется для выполнения SQL-запрос, возвращающий определяемого пользователем ТИПА, определяемого пользователем ТИПА данных обновляется и затем новые данные вставляются в базе данных. В этом примере предполагается, что **точки** определяемого пользователем ТИПА уже зарегистрирован в базе данных.  
+ В этом примере объект **Command** используется для выполнения запроса SQL, который возвращает пользовательский тип, после чего данные пользовательского типа обновляются и вставляются в базу данных. В этом примере предполагается, что пользовательский тип **Point** был заранее зарегистрирован в базе данных.  
   
 ```  
 Dim con As New ADODB.Connection  

@@ -30,12 +30,12 @@ caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189841"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394915"
 ---
 # <a name="reporting-services-report-server"></a>Сервер отчетов служб Reporting Services
   В этом разделе приведен обзор сервера отчетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — центрального компонента установки [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Он состоит из пары модулей обработки, к которым прилагается коллекция модулей специального назначения, обеспечивающих выполнение операций проверки подлинности, обработки данных, подготовки отчетов и доставки. Сервер отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] может работать в одном из двух режимов развертывания: в собственном режиме или в режиме интеграции с SharePoint. В разделе [Сравнение функций режима интеграции с SharePoint и собственного режима](#bkmk_featuresupport) можно найти сравнительную таблицу функций.  
@@ -119,7 +119,7 @@ ms.locfileid: "37189841"
  Сторонние разработчики могут создавать дополнительные модули, заменяющие или дополняющие возможности сервера отчетов. Дополнительные сведения о программных интерфейсах, доступных разработчикам приложений, см. в [техническом справочнике](../../2014/reporting-services/technical-reference-ssrs.md).  
   
 ###  <a name="bkmk_nativewithwebparts"></a> Собственный режим с веб-части SharePoint  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет два веб-частей, которые можно установить и зарегистрировать на экземпляре [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 или более поздней версии, или [!INCLUDE[spPortalServ](../includes/spportalserv-md.md)] 2003 или более поздней версии. На сайте SharePoint можно использовать эти веб-части для поиска и просмотра отчетов, которые хранятся и обрабатываются на сервере отчетов, работающем в собственном режиме. Эти веб-части появились в предыдущих версиях служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет два веб-частей, которые можно установить и зарегистрировать на экземпляре [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 или более поздней версии, или SharePoint Portal Server 2003 или более поздней версии. На сайте SharePoint можно использовать эти веб-части для поиска и просмотра отчетов, которые хранятся и обрабатываются на сервере отчетов, работающем в собственном режиме. Эти веб-части появились в предыдущих версиях служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_sharepointmode"></a> Режим интеграции с SharePoint  
  В режиме интеграции с SharePoint сервер отчетов должен выполняться на ферме серверов SharePoint. Функции обработки, отрисовки и управления сервера отчетов представлены сервером приложений SharePoint, работающим [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint общие службы и один или несколько [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] приложения-службы. Сайт SharePoint обеспечивает клиентский доступ к содержимому и функциям сервера отчетов.  

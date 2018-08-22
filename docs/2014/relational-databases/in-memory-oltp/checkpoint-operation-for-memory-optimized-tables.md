@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47975bd5-373f-43cd-946a-da8e8088b610
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a53fc8ba07f4a890467096983e2edd73c140d2c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f99093f0277a0cd8b03d18440cda562c1b4dfcf8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211184"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395561"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Работа контрольной точки для оптимизированных для памяти таблиц
   Контрольную точку нужно периодически обрабатывать для данных, оптимизированных для памяти, в файлах данных и разностных файлах, чтобы дополнять активную часть журнала транзакций. Контрольная точка позволяет восстанавливать таблицы, оптимизированные для памяти, до последней успешной контрольной точки, после чего применяется активная часть журнала транзакций для обновления таблиц, оптимизированных для памяти, и завершения восстановления. Процессы работы контрольной точки для таблиц на диске и оптимизированных для памяти таблиц отличаются. Ниже описываются различные сценарии и режим работы контрольной точки для таблиц на диске и таблиц, оптимизированных для памяти.  

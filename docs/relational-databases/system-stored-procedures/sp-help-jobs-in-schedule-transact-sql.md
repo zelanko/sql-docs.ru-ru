@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobs_in_schedule (Transact-SQL) | Документы Microsoft
+title: sp_help_jobs_in_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78bffc1432bb650d5c1a7f37c0a712c34236dca1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5160cd777567d671a170d31d3638e7ef9dc74a34
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395562"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,19 +63,19 @@ sp_help_jobs_in_schedule
 |**job_id**|**uniqueidentifier**|Уникальный идентификатор задания.|  
 |**originating_server**|**nvarchar(30)**|Имя сервера, от которого поступило задание.|  
 |**name**|**sysname**|Имя задания.|  
-|**Включен**|**tinyint**|Показывает, разрешено ли задание к выполнению.|  
+|**включен**|**tinyint**|Показывает, разрешено ли задание к выполнению.|  
 |**Описание**|**nvarchar(512)**|Описание задания.|  
 |**start_step_id**|**int**|Идентификатор шага задания, с которого должно начаться выполнение.|  
-|**Категория**|**sysname**|Категория задания.|  
+|**Категории**|**sysname**|Категория задания.|  
 |**Владелец**|**sysname**|Владелец задания.|  
-|**notify_level_eventlog**|**int**|Битовая маска, указывающая, при каких обстоятельствах событие уведомления должно записываться в журнал приложений Microsoft Windows. Может принимать одно из следующих значений:<br /><br /> **0** = никогда<br /><br /> **1** = при успешном выполнении задания;<br /><br /> **2** = при ошибке задания<br /><br /> **3** = каждый раз по завершении задания (вне зависимости от результата выполнения)|  
-|**notify_level_email**|**int**|Битовая маска, показывающая, при каких обстоятельствах должно посылаться уведомление по электронной почте при завершении выполнения задания. Возможные значения: аналогичны **notify_level_eventlog**.|  
-|**notify_level_netsend**|**int**|Битовая маска, показывающая, при каких обстоятельствах должно посылаться сообщение по сети при завершении выполнения задания. Возможные значения: аналогичны **notify_level_eventlog**.|  
-|**notify_level_page**|**int**|Битовая маска, показывающая, при каких обстоятельствах должно посылаться сообщение на пейджер при завершении выполнения задания. Возможные значения: аналогичны **notify_level_eventlog**.|  
+|**notify_level_eventlog**|**int**|Битовая маска, указывающая, при каких обстоятельствах событие уведомления должно записываться в журнал приложений Microsoft Windows. Может принимать одно из следующих значений:<br /><br /> **0** = никогда<br /><br /> **1** = при успешном выполнении задания<br /><br /> **2** = при ошибке задания<br /><br /> **3** = каждый раз по завершении задания (вне зависимости от результата выполнения)|  
+|**notify_level_email**|**int**|Битовая маска, показывающая, при каких обстоятельствах должно посылаться уведомление по электронной почте при завершении выполнения задания. Возможные значения: так же, как **notify_level_eventlog**.|  
+|**notify_level_netsend**|**int**|Битовая маска, показывающая, при каких обстоятельствах должно посылаться сообщение по сети при завершении выполнения задания. Возможные значения: так же, как **notify_level_eventlog**.|  
+|**notify_level_page**|**int**|Битовая маска, показывающая, при каких обстоятельствах должно посылаться сообщение на пейджер при завершении выполнения задания. Возможные значения: так же, как **notify_level_eventlog**.|  
 |**notify_email_operator**|**sysname**|Имя адреса электронной почты уведомляемого оператора.|  
 |**notify_netsend_operator**|**sysname**|Имя компьютера или пользователя, используемое при отправке сетевых сообщений.|  
 |**notify_page_operator**|**sysname**|Имя компьютера или пользователя, используемое при отправке сообщения на пейджер.|  
-|**delete_level**|**int**|Битовая маска, показывающая, при каких обстоятельствах задание должно удаляться при завершении выполнения задания. Возможные значения: аналогичны **notify_level_eventlog**.|  
+|**delete_level**|**int**|Битовая маска, показывающая, при каких обстоятельствах задание должно удаляться при завершении выполнения задания. Возможные значения: так же, как **notify_level_eventlog**.|  
 |**date_created**|**datetime**|Дата создания задания.|  
 |**date_modified**|**datetime**|Дата последнего изменения задания.|  
 |**version_number**|**int**|Версия задания (автоматически обновляется каждый раз при изменении задания).|  
@@ -92,7 +93,7 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|Число целевых серверов в задании.|  
 |**type**|**int**|Тип задания:<br /><br /> **1** = локальное задание.<br /><br /> **2** = многосерверное задание.<br /><br /> **0** = задание не имеет целевых серверов.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта процедура заносит в список сведения о заданиях, присоединенных к указанному расписанию.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -104,9 +105,9 @@ sp_help_jobs_in_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Члены **SQLAgentUserRole** можно просматривать состояние только тех заданий, которыми они владеют.  
+ Членами **SQLAgentUserRole** можно просматривать состояние только тех заданий, которыми они владеют.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере в список заносятся задания, присоединенные к расписанию `NightlyJobs`.   
@@ -121,7 +122,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

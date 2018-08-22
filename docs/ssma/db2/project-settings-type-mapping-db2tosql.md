@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509223"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395142"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Параметры проекта (сопоставление типов) (DB2ToSQL)
-На странице сопоставления типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных.  
+На странице сопоставления типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.  
   
 Страница сопоставления типов доступна в **параметры проекта** и **параметры проекта по умолчанию** диалоговым окнам.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "39509223"
 Сопоставленный тип данных DB2.  
   
 **Тип целевого объекта**  
-Целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных для указанного типа данных DB2.  
+Целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных для указанного типа данных DB2.  
   
 См. в таблицах в следующем разделе по умолчанию SSMA для DB2 сопоставления типов.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "39509223"
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>По умолчанию тип аргумента и возвращают значение сопоставление типов  
 Следующая таблица содержит сопоставление типов данных по умолчанию для аргументов и возвращаемых значений.  
   
-|DB2 Тип данных|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных|  
+|DB2 Тип данных|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|число с плавающей запятой [53]|  
@@ -119,7 +119,7 @@ ms.locfileid: "39509223"
 ### <a name="default-column-type-mapping"></a>По умолчанию сопоставление типа столбца  
 Следующая таблица содержит сопоставление типов по умолчанию для столбцов.  
   
-|DB2 Тип данных|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных|  
+|DB2 Тип данных|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|число с плавающей запятой [53]|  
@@ -187,7 +187,7 @@ ms.locfileid: "39509223"
 ### <a name="default-local-variable-type-mapping"></a>Сопоставление по умолчанию тип локальной переменной  
 Следующая таблица содержит сопоставление типов по умолчанию для локальных переменных.  
   
-|DB2 Тип данных|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных|  
+|DB2 Тип данных|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|число с плавающей запятой [53]|  

@@ -22,15 +22,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4868bbe408b96c95a44c82516ce9bb6c9035397e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 604fe25d0b08ddc997baf381adb4a967ed8e9462
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979606"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392651"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Сопоставление исходного и целевого типов данных (AccessToSQL)
-Типы доступа базы данных отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типы базы данных. При преобразовании объектов базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов, необходимо указать способ сопоставления типов данных из Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих процедурах.  
+Типы доступа базы данных отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы базы данных. При преобразовании объектов базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов, необходимо указать способ сопоставления типов данных из Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих процедурах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
 SSMA имеет набор по умолчанию сопоставления типов данных. Список сопоставлений по умолчанию, см. в разделе [параметры проекта (сопоставление типов)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
@@ -70,7 +70,7 @@ SSMA имеет набор по умолчанию сопоставления т
   
         Это позволяет настраивать сопоставление данных для уменьшении и увеличении значения одного типа данных.  
   
-    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных.  
+    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
   
         Для некоторых типов требуется длина типа данных целевой объект. Если это необходимо, введите новый длину данных в **заменить на** , а затем щелкните **ОК**.  
   
@@ -84,7 +84,7 @@ SSMA имеет набор по умолчанию сопоставления т
   
         Это позволяет настраивать сопоставление данных для уменьшении и увеличении значения одного типа данных.  
   
-    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] тип данных.  
+    4.  В разделе **целевой тип**, выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
   
         Для некоторых типов требуется длина типа данных целевой объект. Если это необходимо, введите новый длину данных в **заменить на** , а затем щелкните **ОК**.  
   
@@ -95,8 +95,8 @@ SSMA имеет набор по умолчанию сопоставления т
     2.  Щелкните **Удалить**.  
   
 ## <a name="next-steps"></a>Следующие шаги  
-Следующим шагом в процессе миграции является [преобразование объектов базы данных access в объекты SQL Server](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+Следующим шагом в процессе миграции является [преобразование объектов базы данных access в объекты SQL Server](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>См. также  
-[Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobschedule (Transact-SQL) | Документы Microsoft
+title: sp_delete_jobschedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7909cb6689db9610cd9a9a24482f7ce21d98f060
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 456295211427b07e0f6bbda7069e3d645b31286a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245385"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395164"
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "33245385"
  **sp_delete_jobschedule** предоставляется только для обратной совместимости.  
   
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Расписанием задач теперь можно управлять независимо от них самих. Чтобы удалить расписание из задания, используйте **процедуру sp_detach_schedule**. Чтобы удалить расписание, используйте **sp_delete_schedule**.  
   
-> **Примечание:****sp_delete_jobschedule** не поддерживает расписания, которые присоединены к нескольким заданиям. Если существующий скрипт вызывает **sp_delete_jobschedule** для удаления расписания, присоединенного к более чем одному заданию, процедура возвращает ошибку.  
+> **Примечание:****sp_delete_jobschedule** не поддерживает расписания, которые присоединены к нескольким заданиям.   Если вызывается из существующего скрипта **sp_delete_jobschedule** Удаление расписания, подключенного к более чем одному заданию, процедура возвращает ошибку.  
   
 ## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
@@ -51,16 +51,16 @@ ms.locfileid: "33245385"
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Члены **sysadmin** роли можно удалять любые расписания заданий. Пользователи, не являющиеся членами из **sysadmin** роли можно удалять только те расписания заданий, которыми они владеют.  
+ Членами **sysadmin** роли можно удалять любые расписания заданий. Пользователи, не являющиеся членами из **sysadmin** роль можно удалить только принадлежащие им расписания задания.  
   
 ## <a name="see-also"></a>См. также  
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [процедуру sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [Просмотр или изменение заданий](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Просмотр или изменение заданий](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_help_jobschedule & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)   
+ [sp_help_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)   
  [sp_update_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobschedule-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
@@ -14,12 +13,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1dc0e7ad2e0e1d897faad46e02b4ca7dc15e0c14
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177831"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396598"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Руководство по обработке запросов для таблиц, оптимизированных для памяти
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]In-Memory OLTP вводятся оптимизированные для памяти таблицы и скомпилированные в собственном коде хранимые процедуры. В данной статье приводится обзор обработки запросов для таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде.  
@@ -243,7 +242,7 @@ END
  Пробное сохранение параметров не используется для компиляции хранимых процедур, скомпилированных в собственном коде. Предполагается, что у всех параметров хранимой процедуры значения UNKNOWN (неизвестны). Как и интерпретируемые хранимые процедуры, скомпилированные хранимые процедуры также поддерживают `OPTIMIZE FOR` подсказку. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Получение плана выполнения запроса для скомпилированных в собственном коде хранимых процедур  
- План выполнения запроса для скомпилированной в собственном коде хранимой процедуры можно получить с помощью **предполагаемого плана выполнения** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]или с помощью параметра SHOWPLAN_XML в [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Например:  
+ План выполнения запроса для скомпилированной в собственном коде хранимой процедуры можно получить с помощью **предполагаемого плана выполнения** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]или с помощью параметра SHOWPLAN_XML в [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Пример:  
   
 ```tsql  
 SET SHOWPLAN_XML ON  

@@ -1,5 +1,5 @@
 ---
-title: sp_grant_proxy_to_subsystem (Transact-SQL) | Документы Microsoft
+title: sp_grant_proxy_to_subsystem (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a52e19c374c0b1ac14749e1e1bcc53f3a30d2b2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6c8764394ad12a3080a03970a252bfc5a7f56099
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396168"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +57,12 @@ sp_grant_proxy_to_subsystem
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**2**|Скрипт [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> **\*\* Важные \* \***  подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
+|**2**|Скрипт [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> **\*\* Важные \* \***  подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент в будущих версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
 |**3**|Операционная система (**CmdExec**)|  
 |**4**|Агент моментальных снимков репликации|  
 |**5**|Агент чтения журнала репликации|  
 |**6**|Агент распространения репликации|  
-|**7**|Агент слияния репликации|  
+|**7**|Replication Merge Agent|  
 |**8**|Агент чтения очереди репликации|  
 |**9**|Запрос служб Analysis Services|  
 |**10**|Команда служб Analysis Services|  
@@ -77,19 +78,19 @@ sp_grant_proxy_to_subsystem
 |**CmdExec**|Операционная система (**CmdExec**)|  
 |**Моментальный снимок**|Агент моментальных снимков репликации|  
 |**LogReader**|Агент чтения журнала репликации|  
-|**Distribution**|Агент распространителя репликации|  
-|**Объединить**|Агент слияния репликации|  
+|**Distribution**|Агент распространения репликации|  
+|**Объединить**|Replication Merge Agent|  
 |**QueueReader**|Агент чтения очереди репликации|  
 |**ANALYSISQUERY**|Запрос служб Analysis Services|  
 |**ANALYSISCOMMAND**|Команда служб Analysis Services|  
 |**Dts**|Выполнение пакетов служб SSIS|  
 |**PowerShell**|Скрипт PowerShell|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Предоставление подсистеме доступа к учетной записи-посреднику не изменяет разрешений, предоставленных участнику, указанному в учетной записи-посреднике.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_grant_proxy_to_subsystem**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_grant_proxy_to_subsystem**.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -120,7 +121,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Обеспечение безопасности агента SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_revoke_proxy_from_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [Хранимая процедура sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   

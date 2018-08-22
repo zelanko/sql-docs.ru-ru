@@ -26,19 +26,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
-ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
+ms.openlocfilehash: 673f1bffeea908da211cd5ff76bad9d96dabcded
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39164215"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396174"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Возвращает одну строку, описывающие конфигурацию объекта задания, управляющий процесс SQL Server, а также определенные статистику потребления ресурсов на уровне объекта задания. Возвращает пустой набор, если SQL Server не работает в объект задания. 
 
-Объект задания — это конструкция Windows, который реализует управление ресурсами Процессора, памяти и ввода-ВЫВОДА на уровне операционной системы. Дополнительные сведения о объекты заданий, см. в разделе [объекты заданий](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
+Объект задания — это конструкция Windows, который реализует управление ресурсами Процессора, памяти и ввода-ВЫВОДА на уровне операционной системы. Дополнительные сведения о объекты заданий, см. в разделе [объекты заданий](/windows/desktop/ProcThread/job-objects). 
   
 |Столбцы|Тип данных|Описание|  
 |-------------|---------------|-----------------|  

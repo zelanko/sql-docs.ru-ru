@@ -16,30 +16,30 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9298d8148c375c47b2db52e11685dcae0dd917e2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f75f7f1d1296c3ad45bd65bfe19f066ee3cfdea9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984946"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395953"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Загрузка преобразованных объектов базы данных, в SQL Server (DB2ToSQL)
-После преобразования схем DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Можно иметь SSMA создания объектов, или можно внести в скрипт объекты и запускать сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные с фактическое содержимое [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.  
+После преобразования схем DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно иметь SSMA создания объектов, или можно внести в скрипт объекты и запускать сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные с фактическое содержимое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>Выбор между синхронизации и сценарии  
-Если вы хотите загрузить объекты преобразованный базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] без изменений, может иметь SSMA непосредственного создания или повторного создания объектов базы данных. Этот метод выполняется быстро и просто, но не позволяет настраивать [!INCLUDE[tsql](../../includes/tsql_md.md)] код, который определяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов, отличных от хранимых процедур.  
+Если вы хотите загрузить объекты преобразованный базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без изменений, может иметь SSMA непосредственного создания или повторного создания объектов базы данных. Этот метод выполняется быстро и просто, но не позволяет настраивать [!INCLUDE[tsql](../../includes/tsql-md.md)] код, который определяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов, отличных от хранимых процедур.  
   
-Если вы хотите изменить [!INCLUDE[tsql](../../includes/tsql_md.md)] , используемый для создания объектов, или если требуется больший контроль над создания объектов, используйте SSMA для создания скриптов. Можно затем изменить скрипты, создайте каждый объект по отдельности и даже использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] агента для планирования, создания этих объектов.  
+Если вы хотите изменить [!INCLUDE[tsql](../../includes/tsql-md.md)] , используемый для создания объектов, или если требуется больший контроль над создания объектов, используйте SSMA для создания скриптов. Можно затем изменить скрипты, создайте каждый объект по отдельности и даже использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента для планирования, создания этих объектов.  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>С помощью SSMA для синхронизации объектов с SQL Server  
-Создать с помощью SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объекты базы данных, выберите объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозреватель метаданных и затем выполнить синхронизацию объектов с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], как показано в следующей процедуре. По умолчанию, если объект уже существует в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], и если новее, чем объект в метаданные SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA изменим определения объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Поведение по умолчанию можно изменить путем редактирования **параметры проекта**.  
+Создать с помощью SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных, выберите объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозреватель метаданных и затем выполнить синхронизацию объектов с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как показано в следующей процедуре. По умолчанию, если объект уже существует в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и если новее, чем объект в метаданные SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA изменим определения объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поведение по умолчанию можно изменить путем редактирования **параметры проекта**.  
   
 > [!NOTE]  
-> Можно выбрать имеющиеся [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объекты, которые не были преобразованы из баз данных DB2 базы данных. Тем не менее эти объекты не будет создан повторно или изменен с SSMA.  
+> Можно выбрать имеющиеся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты, которые не были преобразованы из баз данных DB2 базы данных. Тем не менее эти объекты не будет создан повторно или изменен с SSMA.  
   
 **Для синхронизации объектов с SQL Server**  
   
-1.  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозреватель метаданных, разверните верхней [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] узел, а затем разверните **баз данных**.  
+1.  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозреватель метаданных, разверните верхней [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] узел, а затем разверните **баз данных**.  
   
 2.  Выберите объекты для обработки:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "38984946"
   
     -   Для синхронизации или пропуск отдельных объектов или категории объектов, установите или снимите флажок рядом с объектом или папки.  
   
-3.  После выбора объектов для обработки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозреватель метаданных, щелкните правой кнопкой мыши **баз данных**, а затем нажмите кнопку **синхронизация с базой данных**.  
+3.  После выбора объектов для обработки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозреватель метаданных, щелкните правой кнопкой мыши **баз данных**, а затем нажмите кнопку **синхронизация с базой данных**.  
   
     Вы также можете синхронизировать отдельных объектов или категории объектов, щелкнув правой кнопкой мыши объект или ее родительскую папку и нажмите кнопку **синхронизация с базой данных**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "38984946"
 Щелкните знак "действие" для изменения состояния. Реальная синхронизация выполняется при нажатии кнопки **ОК** кнопки **синхронизация с базой данных** диалоговое окно.  
   
 ## <a name="scripting-objects"></a>Создание скриптов для объектов  
-Чтобы сохранить [!INCLUDE[tsql](../../includes/tsql_md.md)] определений объектов преобразованный базы данных, или для изменения определения объектов и самостоятельно выполнять скрипты можно сохранить ее определения объектов, [!INCLUDE[tsql](../../includes/tsql_md.md)] сценариев.  
+Чтобы сохранить [!INCLUDE[tsql](../../includes/tsql-md.md)] определений объектов преобразованный базы данных, или для изменения определения объектов и самостоятельно выполнять скрипты можно сохранить ее определения объектов, [!INCLUDE[tsql](../../includes/tsql-md.md)] сценариев.  
   
 **Для сохранения объектов в виде скриптов**  
   
@@ -72,42 +72,42 @@ ms.locfileid: "38984946"
   
     Можно также создать сценарий отдельных объектов или категории объектов, щелкнув правой кнопкой мыши объект или ее родительскую папку и нажмите кнопку **сохранить в виде скрипта**.  
   
-2.  В **Сохранить как** диалоговом окне перейдите в папку, где требуется сохранить скрипт, введите имя файла в **имя файла** поле и затем [!INCLUDE[clickOK](../../includes/clickok_md.md)]. SSMA добавляет расширение имени файла .sql.  
+2.  В **Сохранить как** диалоговом окне перейдите в папку, где требуется сохранить скрипт, введите имя файла в **имя файла** поле и затем [!INCLUDE[clickOK](../../includes/clickok-md.md)]. SSMA добавляет расширение имени файла .sql.  
   
 ### <a name="modifying-scripts"></a>Изменение скриптов  
-После сохранения [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определения объектов, как один или несколько сценариев, можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] для просмотра и изменения скриптов.  
+После сохранения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определения объектов, как один или несколько сценариев, можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для просмотра и изменения скриптов.  
   
 **Изменение сценария**  
   
-1.  На [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **файл** последовательно выберите пункты **откройте**, а затем нажмите кнопку **файл**.  
+1.  На [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **файл** последовательно выберите пункты **откройте**, а затем нажмите кнопку **файл**.  
   
 2.  В **откройте** диалоговом окне выберите файл сценария и нажмите кнопку ОК.
   
 3.  Измените файл скрипта с помощью редактора запросов.  
   
-    Дополнительные сведения о редакторе запросов, см. в разделе «Редактор удобных команд и компоненты» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+    Дополнительные сведения о редакторе запросов, см. в разделе «Редактор удобных команд и компоненты» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 4.  Чтобы сохранить скрипт, в меню файл, щелкните **Сохранить**.  
   
 ### <a name="running-scripts"></a>Выполнение сценариев  
-Вы можете запустить сценарий или отдельные инструкции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Вы можете запустить сценарий или отдельные инструкции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **Для выполнения скрипта**  
   
-1.  На [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **файл** последовательно выберите пункты **откройте**, а затем нажмите кнопку **файл**.  
+1.  На [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **файл** последовательно выберите пункты **откройте**, а затем нажмите кнопку **файл**.  
   
-2.  В **откройте** диалоговое окно, выберите файл сценария, а затем [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+2.  В **откройте** диалоговое окно, выберите файл сценария, а затем [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Чтобы выполнить весь скрипт, нажмите клавишу **F5** ключ.  
   
 4.  Чтобы выполнить набор инструкций, инструкции select в окно редактора запросов и нажмите клавишу **F5** ключ.  
   
-Дополнительные сведения о том, как использовать редактор запросов для выполнения скриптов см. в разделе "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] запроса» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+Дополнительные сведения о том, как использовать редактор запросов для выполнения скриптов см. в разделе "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
-Можно также выполнять сценарии из командной строки с использованием **sqlcmd** служебной программы и из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] агента. Дополнительные сведения о **sqlcmd**, см. в разделе «программы sqlcmd» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] агента, см. в разделе «Автоматизация административных задач ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] агента)» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+Можно также выполнять сценарии из командной строки с использованием **sqlcmd** служебной программы и из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Дополнительные сведения о **sqlcmd**, см. в разделе «программы sqlcmd» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента, см. в разделе «Автоматизация административных задач ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента)» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## <a name="securing-objects-in-sql-server"></a>Защита объектов в SQL Server  
-После загрузки объекты преобразованный базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно предоставлять и запрещать разрешения для этих объектов. Рекомендуется сделать это перед миграцией данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Сведения о способах обеспечения безопасности объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], см. в разделе «Безопасность вопросы для баз данных и базы данных приложений» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+После загрузки объекты преобразованный базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно предоставлять и запрещать разрешения для этих объектов. Рекомендуется сделать это перед миграцией данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о способах обеспечения безопасности объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе «Безопасность вопросы для баз данных и базы данных приложений» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в процессе миграции является [миграция данных DB2 в SQL Server](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  

@@ -1,5 +1,5 @@
 ---
-title: Создание файлов подключения сервера (SybaseToSQL) | Документы Microsoft
+title: Создание файлов подключения к серверу (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 758d450a9e47605a05cb411d532babfaefe109e1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c51bc4e86c14fa1f7f45818f8ca18f751c8cd892
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779300"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394340"
 ---
-# <a name="creating-the-server-connection-files-sybasetosql"></a>Создание файлов подключения сервера (SybaseToSQL)
-Сведения о сервере можно указать в разделе серверы файла скрипта или в файле подключения отдельный сервер. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, считается определение сервера в файле скрипта.  
+# <a name="creating-the-server-connection-files-sybasetosql"></a>Создание файлов подключения к серверу (SybaseToSQL)
+В разделе "серверы" файла скрипта или в файле подключения отдельный сервер можно указать сведения о сервере. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, тогда считается определение сервера в файле скрипта.  
   
 **Пример:**  
   
@@ -109,11 +109,11 @@ ms.locfileid: "34779300"
 ```  
   
 ## <a name="server-connection-file-validation"></a>Проверка файла подключения сервера  
-Пользователь легко может проверить свой файл подключения сервера соответствие файлу определения схемы **S2SSConsoleScriptServersSchema.xsd** доступны в папке «Схемы».  
+Пользователь может просто проверять его/ее файл подключения сервера соответствие файлу определения схемы **S2SSConsoleScriptServersSchema.xsd** доступны в папке «Схемы».  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [выполнение консоли SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+Следующий шаг в работе консоли — [выполнение команд консоли SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Выполнение команд консоли SSMA](executing-the-ssma-console-sybasetosql.md)  
   

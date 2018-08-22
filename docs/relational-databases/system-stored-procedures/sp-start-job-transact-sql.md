@@ -1,5 +1,5 @@
 ---
-title: sp_start_job (Transact-SQL) | Документы Microsoft
+title: sp_start_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58fb415b74bf26880c1000e1f3122b5f6b86f2e4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9f640f88382653b5de1c70d1d9a22a8dbacbc283
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393748"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +50,17 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_name=** ] **"***job_name***"**  
- Имя запускаемого задания. Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно. *job_name* — **sysname**, значение по умолчанию NULL.  
+ [  **@job_name=** ] **"***имя_задания***"**  
+ Имя запускаемого задания. Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
  [  **@job_id=** ] *job_id*  
- Идентификационный номер запускаемого задания. Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+ Идентификационный номер запускаемого задания. Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
  [ **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@server_name=** ] **'***server_name***'**  
- Имя целевого сервера, на котором запускается задание. *имя_сервера* — **nvarchar(128)**, значение по умолчанию NULL. *имя_сервера* должен быть один из целевых серверов, к которым в настоящее время нацелено задания.  
+ Имя целевого сервера, на котором запускается задание. *имя_сервера* — **nvarchar(128)**, значение по умолчанию NULL. *имя_сервера* должен быть одним из целевых серверов, на которых задание в настоящее время нацелено.  
   
  [  **@step_name=** ] **"***step_name***"**  
  Имя этапа, с которого начинается выполнение задания. Применяется только к локальным заданиям. *step_name* — **sysname**, значение по умолчанию NULL  
@@ -71,9 +72,9 @@ sp_start_job
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта хранимая процедура находится в **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -85,9 +86,9 @@ sp_start_job
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Члены **SQLAgentUserRole** и **SQLAgentReaderRole** можно запускать только задания, которыми они владеют. Члены **SQLAgentOperatorRole** можно запускать все локальные задания, включая те, которыми владеют другие пользователи. Члены **sysadmin** доступен запуск всех локальных и многосерверных заданий.  
+ Членами **SQLAgentUserRole** и **SQLAgentReaderRole** можно запускать только задания, которыми они владеют. Членами **SQLAgentOperatorRole** можно запускать все локальные задания, включая те, которыми владеют другие пользователи. Членами **sysadmin** доступен запуск всех локальных и многосерверных заданий.  
   
 ## <a name="examples"></a>Примеры  
  На следующем примере показано, как запускается задание с именем `Weekly Sales Data Backup`.  

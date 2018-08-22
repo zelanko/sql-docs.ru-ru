@@ -19,15 +19,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8a268b123663b213f3702dde24eba905e38bf1ac
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0881a10fa739b6a6539c12af6f29c78934c315a9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980007"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395533"
 ---
 # <a name="assessment-report-accesstosql"></a>Отчет об оценке (AccessToSQL)
-Отчет об оценке окна показаны результаты преобразования объектов базы данных, чтобы [!INCLUDE[tsql](../../includes/tsql_md.md)] синтаксис, и может также помочь оценить сложность и стоимость проектов миграции.  
+Отчет об оценке окна показаны результаты преобразования объектов базы данных, чтобы [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, и может также помочь оценить сложность и стоимость проектов миграции.  
   
 Чтобы создать отчет об оценке, выберите объекты для преобразования в обозревателе метаданных исходным кодом, щелкните правой кнопкой мыши **баз данных**, а затем выберите **создать отчет**. Также можно отобразить этот отчет автоматически после преобразования схемы. Тем не менее отчет будет называться отчет о преобразовании. Дополнительные сведения см. в разделе [параметры проекта (GUI) (SSMA распространено)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   

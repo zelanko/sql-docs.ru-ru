@@ -18,17 +18,17 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 43efa0e2ed9f58f59fa8b77d74824e094f90edc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979486"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392633"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Мастер поиска баз данных (выбор расположений) (AccessToSQL)
 На странице Выбор расположений мастер поиска баз данных введите параметры поиска для нахождения баз данных Access.  
   
-Чтобы открыть мастер поиска баз данных, в **файл** меню, щелкните **найти баз данных**. Дополнительные сведения о том, как использовать это диалоговое окно, см. в разделе [Добавление и удаление файлов баз данных Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+Чтобы открыть мастер поиска баз данных, в **файл** меню, щелкните **найти баз данных**. Дополнительные сведения о том, как использовать это диалоговое окно, см. в разделе [Добавление и удаление файлов баз данных Access](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## <a name="options"></a>Параметры  
 **Обзор**  
@@ -65,6 +65,6 @@ ms.locfileid: "38979486"
 Введите полное имя пользователя Windows владельца. Это может быть в формате *домена*\\*пользователя*.  
   
 ## <a name="see-also"></a>См. также  
-[Добавление и удаление файлов баз данных Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Добавление и удаление файлов баз данных Access](adding-and-removing-access-database-files-accesstosql.md)  
 [Reference(Access) интерфейса пользователя](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

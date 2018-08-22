@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobschedule (Transact-SQL) | Документы Microsoft
+title: sp_update_jobschedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a87b927a80a634c6640837e328355ef34c67b295
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5b38499fce019f6f1f9b16ee489e413b1c0068a0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253038"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394523"
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "33253038"
  **sp_update_jobschedule** предоставляется только для обратной совместимости.  
   
 > [!IMPORTANT]  
->  Дополнительные сведения о синтаксисе, используемом в более ранних версиях Microsoft SQL Server см. в разделе Transact-SQL Referencefor Microsoft SQL Server 2000 *.*  
+>  Дополнительные сведения о синтаксисе, используемом в более ранних версиях Microsoft SQL Server, см. в разделе Transact-SQL Referencefor Microsoft SQL Server 2000 *.*  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Расписанием задач теперь можно управлять независимо от них самих. Чтобы обновить расписание, используйте **sp_update_schedule**.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -51,12 +51,12 @@ ms.locfileid: "33253038"
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены **sysadmin** можно использовать эту хранимую процедуру для обновления расписаний заданий, принадлежащих другим пользователям.  
+ Только члены **sysadmin** можно использовать эту хранимую процедуру для обновления расписаний заданий, принадлежащие другим пользователям.  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   
   

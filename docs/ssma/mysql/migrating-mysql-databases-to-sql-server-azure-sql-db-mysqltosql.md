@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 094e74a3f4d63e46b21d74346b21132b6c616497
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 32da2824f4c169a76455293e09f334d6739230d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985766"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394531"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>Миграция баз данных MySQL в SQL Server — база данных Azure SQL (MySQLToSql)
 SQL Server Migration Assistant (SSMA) для MySQL — это комплексное среда, которая поможет вам быстро перенести базы данных MySQL в SQL Server или SQL Azure. С помощью SSMA для MySQL, можно просмотреть объекты базы данных и данных, оценить баз данных для миграции, миграция объектов базы данных в SQL Server или SQL Azure и затем перенести данные в SQL Server или SQL Azure.  
@@ -45,7 +45,7 @@ SQL Server Migration Assistant (SSMA) для MySQL — это комплексн
   
 7.  [Преобразование баз данных MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [Синхронизация](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+8.  [Синхронизация](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. Это можно сделать одним из следующих способов:  
   

@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb5bb2c0a02de9d4be433203996072bb218b8c0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0147922c6b52d83cde9dc9a3724e82a5e4f30a3a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157825"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394554"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Создание детализированного (RDLC) отчета с параметрами с помощью ReportViewer (учебник SSRS)
-  [Детализированный](http://technet.microsoft.com/library/ff519554.aspx) отчет — это отчет, открываемый пользователем щелчком по ссылке в другом отчете. Обычно детализированный отчет содержит подробности об элементе, содержащемся в исходном сводном отчете. Этот учебник содержит следующие занятия по созданию детализированного отчета с параметрами и запросом в [локальном режиме составления отчетов](http://msdn.microsoft.com/library/ff487969.aspx).  
+  [Детализированный](http://technet.microsoft.com/library/ff519554.aspx) отчет — это отчет, открываемый пользователем щелчком по ссылке в другом отчете. Обычно детализированный отчет содержит подробности об элементе, содержащемся в исходном сводном отчете. Этот учебник содержит следующие занятия по созданию детализированного отчета с параметрами и запросом, в [локального режима отчетности](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
   
 ## <a name="requirements"></a>Требования  
  Чтобы использовать в этом пошаговом руководстве, необходимо иметь доступ к **AdventureWorks2008** образца базы данных. Запрос, используемый в этом пошаговом руководстве также будут работать с **AdventureWorks2012** базы данных. Дополнительные сведения о том, как получить **AdventureWorks2008** образца базы данных, см. в разделе [Пошаговое руководство: Установка базы данных AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) для Microsoft Visual Studio 2010.  

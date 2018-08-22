@@ -17,12 +17,12 @@ caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 14ec583360509be356aa12751c0a090b2a7dc676
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70b692948215315a4cafaec1389a4c1996e84a97
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191694"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394297"
 ---
 # <a name="data-processing-extensions-overview"></a>Общие сведения о модулях обработки данных
   Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. Модули обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] построены на наборе интерфейсов поставщиков данных платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "37191694"
 |Модуль обработки данных для Oracle|Использует поставщик данных платформы .NET Framework для Oracle. С этим модулем сервер отчетов может обращаться к источникам данных Oracle через клиентское ПО Oracle.|  
 |Модуль обработки данных для ODBC|Использует поставщик данных платформы .NET Framework для ODBC. С этим модулем сервер отчетов может обращаться к данным в базе данных, для которой имеется драйвер ODBC.|  
   
- Можно использовать API-интерфейс обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] для добавления на сервер отчетов пользовательской обработки данных.  
+ Можно использовать API-интерфейс обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs.md)] для добавления на сервер отчетов пользовательской обработки данных.  
   
 > [!NOTE]  
 >  Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] имеют встроенную поддержку для поставщиков данных на платформе [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Если уже реализован полный поставщик данных, нет необходимости реализовывать модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Однако следует подумать о расширении поставщика данных, включив в него функции служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, в том числе учетные данные безопасного соединения и агрегаты на сервере.  

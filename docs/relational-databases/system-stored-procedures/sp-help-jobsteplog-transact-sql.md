@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobsteplog (Transact-SQL) | Документы Microsoft
+title: sp_help_jobsteplog (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0957fff641ef4306d66c3ee4a233062503008b9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f8ce4b84dc7fd8e049cc9fafd71995dfb09bca7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392878"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +48,13 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Аргументы  
  [ **@job_id =**] **'***job_id***'**  
- Идентификационный номер задачи, для которого возвращаются сведения из журнала шагов задания. *Аргумент job_id* — **int**, значение по умолчанию NULL.  
+ Идентификационный номер задачи, для которого возвращаются сведения из журнала шагов задания. *job_id* — **int**, значение по умолчанию NULL.  
   
- [  **@job_name =**] **"***job_name***"**  
- Имя задания. *job_name* — **sysname**, значение по умолчанию NULL.  
+ [  **@job_name =**] **"***имя_задания***"**  
+ Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
+>  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
  [  **@step_id =**] *step_id*  
  Идентификатор этапа задания. Если не указан, включаются все этапы задания. *step_id* — **int**, значение по умолчанию NULL.  
@@ -70,7 +71,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Уникальный идентификатор задания.|  
 |**job_name**|**sysname**|Имя задания.|  
-|**step_id**|**int**|Идентификатор для этапа задачи. Например, если этап является первым шагом в задании его *step_id* -1.|  
+|**step_id**|**int**|Идентификатор для этапа задачи. Например, если этот шаг является первым шагом в задание его *step_id* -1.|  
 |**step_name**|**sysname**|Имя шага задания.|  
 |**step_uid**|**uniqueidentifier**|Уникальный идентификатор этапа (задается системой) задачи.|  
 |**date_created**|**datetime**|Дата создания этапа.|  
@@ -78,7 +79,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|Размер журнала шага задания в мегабайтах (МБ).|  
 |**журнал**|**nvarchar(max)**|Вывод журнала шага задания.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_help_jobsteplog** в **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -90,9 +91,9 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Члены **SQLAgentUserRole** могут только просматривать метаданные из журнала шага задания для шагов задания, которыми они владеют.  
+ Членами **SQLAgentUserRole** могут только просматривать метаданные из журнала шага задания для шагов задания, которыми они владеют.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -127,6 +128,6 @@ GO
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_delete_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
- [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

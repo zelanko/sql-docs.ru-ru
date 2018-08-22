@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
@@ -14,12 +13,12 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf535c9c4c7acf24d5fb3c51c500af4565bd8af5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3faa68bd3c20aeb5b358899f0a33ef97be61f0c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262730"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394315"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Миграция в In-Memory OLTP
   В данном разделе рассматривается миграция объектов базы данных для использования In-Memory OLTP.  
@@ -48,7 +47,7 @@ ms.locfileid: "37262730"
   
 -   [Реализация IDENTITY в оптимизированной для памяти таблице](implementing-identity-in-a-memory-optimized-table.md)  
   
- Сведения о методиках миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Дополнительные сведения о методологиях миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](http://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="see-also"></a>См. также  
  [In-Memory OLTP (оптимизация в памяти)](in-memory-oltp-in-memory-optimization.md)   

@@ -25,15 +25,15 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 52e29fb03a3bcc0436f69447caa4e96fc146c3a7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 297526a299cc1b24c0426254a2cc5759e0b5dfa9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985496"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394551"
 ---
 # <a name="migration-wizard-accesstosql"></a>Мастер миграции (AccessToSQL)
-Мастер миграции поможет выполнить перенос один или несколько баз данных с доступом к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. С помощью мастера, будет создание проекта, добавьте в проект базы данных, выберите объекты для переноса и подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Также будет преобразовать, загрузить и перенести схем доступа и данные. При необходимости вы можете связать доступа к таблицам для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] таблиц или SQL Azure.  
+Мастер миграции поможет выполнить перенос один или несколько баз данных с доступом к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. С помощью мастера, будет создание проекта, добавьте в проект базы данных, выберите объекты для переноса и подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Также будет преобразовать, загрузить и перенести схем доступа и данные. При необходимости вы можете связать доступа к таблицам для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблиц или SQL Azure.  
   
 Большинство страниц мастера миграции содержит существующие диалоговые окна SSMA с теми же параметрами. Таким образом здесь описываются страницы мастера, и затем приводятся ссылки, чтобы узнать подробнее об отдельных параметрах. Если страница содержит уникальные параметры, эти сведения приведены здесь.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "38985496"
 ## <a name="add-access-databases-page"></a>Добавить страницу базы данных Access  
 На странице добавления базы данных Access является, который можно добавить один или несколько баз данных Access в проект. Отдельные базы данных можно добавить, щелкнув **баз данных, добавить**и затем выбрав базы данных из **откройте** окна. Или можно найти базы данных с помощью **найти баз данных** кнопки. Дополнительные сведения см. в следующих разделах:  
   
--   [Добавление и удаление файлов баз данных Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+-   [Добавление и удаление файлов баз данных Access](adding-and-removing-access-database-files-accesstosql.md)  
   
 -   [Мастер поиска баз данных (выбор расположений)](http://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
   
@@ -82,30 +82,30 @@ ms.locfileid: "38985496"
 Дополнительные сведения о фильтрации см. в раздел Options [Расширенный выбор объектов (SSMA распространено)](http://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## <a name="connect-to-sql-server-page"></a>Подключение к странице SQL Server  
-На странице подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] странице Укажите свойства соединения, а затем подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения см. в разделе [подключение к SQL Server](http://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+На странице подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] странице Укажите свойства соединения, а затем подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [подключение к SQL Server](http://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
   
 > [!IMPORTANT]  
 > Возникает сразу после успешного подключения **связь с таблицами** страницы, где предусмотрена возможность связывания в таблицах. Нажмите кнопку **Далее** и запускает миграции.  
   
 ## <a name="connect-to-sql-azure-page"></a>Подключение к SQL Azure страницы  
-На странице подключение к SQL Azure укажите свойства соединения и подключитесь к SQL Azure. Чтобы создать новую базу данных azure, это можно сделать с помощью **Создание базы данных Azure** вариант, который отображается при щелчке **Обзор** кнопки. Дополнительные сведения см. в разделе [подключение к SQL Azure](http://msdn.microsoft.com/bf44b236-d9be-41ae-a5fd-bd73038e505f)  
+На странице подключение к SQL Azure укажите свойства соединения и подключитесь к SQL Azure. Чтобы создать новую базу данных azure, это можно сделать с помощью **Создание базы данных Azure** вариант, который отображается при щелчке **Обзор** кнопки. Дополнительные сведения см. в разделе [подключение к SQL Azure](connect-to-azure-sql-db-accesstosql.md)  
   
 > [!IMPORTANT]  
 > Возникает сразу после успешного подключения **связь с таблицами** страницы, где предусмотрена возможность связывания в таблицах. Нажмите кнопку **Далее** кнопку на странице "ссылки", чтобы начать миграцию.  
   
 ## <a name="link-tables-page"></a>Страница связи таблиц  
-На странице таблицы ссылок можно связать исходные таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или таблиц SQL Azure. Связывание таблиц изменяет базу данных Access, таким образом, чтобы ваши запросы, формы, отчеты и данные доступа к страницам использовать данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базы данных SQL Azure вместо данных в базе данных.  
+На странице таблицы ссылок можно связать исходные таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или таблиц SQL Azure. Связывание таблиц изменяет базу данных Access, таким образом, чтобы ваши запросы, формы, отчеты и данные доступа к страницам использовать данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure вместо данных в базе данных.  
   
 **Связь с таблицами**  
-Выберите **связывание таблиц** флажок, чтобы связать таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или таблиц SQL Azure. Чтобы начать миграцию, следует нажать кнопку **Далее** кнопки.  
+Выберите **связывание таблиц** флажок, чтобы связать таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или таблиц SQL Azure. Чтобы начать миграцию, следует нажать кнопку **Далее** кнопки.  
   
 ## <a name="migration-status-page"></a>Страница состояния миграции  
-На странице состояния миграции отображается ход выполнения преобразования схем доступа [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или схем SQL Azure, загрузке преобразованный схем в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, и затем перенос данных.  
+На странице состояния миграции отображается ход выполнения преобразования схем доступа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или схем SQL Azure, загрузке преобразованный схем в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, и затем перенос данных.  
   
 Дополнительные сведения об этой странице см. в разделе [преобразование, загрузка и миграция](http://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   
 ## <a name="see-also"></a>См. также  
 [Приступая к работе с SQL Server Migration Assistant для Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Reference(Access) интерфейса пользователя](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

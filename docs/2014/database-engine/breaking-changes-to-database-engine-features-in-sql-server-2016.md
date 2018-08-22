@@ -17,12 +17,12 @@ caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64ca4f9c72739d9b5875e7adeec38e5a59f590fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254756"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396591"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Критические изменения в функциях компонента ядра СУБД в SQL Server 2014
   В этой статье описаны критические изменения в компоненте [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] и предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При обновлении могут возникнуть следующие проблемы. Дополнительные сведения см. в разделе [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -266,7 +266,7 @@ ms.locfileid: "37254756"
 ||Получите сертификат для короткого имени.<br /><br /> — Этот параметр работает для всех приложений.|  
   
 ##  <a name="Yukon"></a> Критические изменения в SQL Server 2005  
- Список критических изменений в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], см. в разделе [критические изменения в функциях ядра СУБД в SQL Server 2005](http://msdn.microsoft.com/library/ms143179\(SQL.90\).aspx).  
+ Список критических изменений в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], см. в разделе [критические изменения в функциях ядра СУБД в SQL Server 2005](breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
 ## <a name="see-also"></a>См. также  
  [Нерекомендуемые функции ядра СУБД в SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   

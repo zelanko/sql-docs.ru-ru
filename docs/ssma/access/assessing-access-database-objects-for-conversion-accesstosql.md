@@ -25,18 +25,18 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d2d804734432cfd396acb017d6358310debeec1f
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dc8649b028ba925e215d21ca9c7f4f52a8e69ec5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979426"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395574"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Оценка объектов базы данных Access для преобразования (AccessToSQL)
-Прежде чем загружать объекты и перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, вы должны определить, какой объем миграции будет успешным, и как долго может потребоваться преобразование. SSMA можно создать отчет об оценке, показывающий процент объектов, которые были успешно преобразованы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или синтаксис SQL Azure и время оценки для миграции. SSMA также позволяет просматривать конкретные проблемы, которые вызвали ошибки преобразования.  
+Прежде чем загружать объекты и перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, вы должны определить, какой объем миграции будет успешным, и как долго может потребоваться преобразование. SSMA можно создать отчет об оценке, показывающий процент объектов, которые были успешно преобразованы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или синтаксис SQL Azure и время оценки для миграции. SSMA также позволяет просматривать конкретные проблемы, которые вызвали ошибки преобразования.  
   
 ## <a name="creating-assessment-reports"></a>Создание отчетов с оценкой  
-Когда он создает отчет об оценке, SSMA преобразует выбранные объекты базы данных доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или синтаксис SQL Azure, а затем отображает результаты.  
+Когда он создает отчет об оценке, SSMA преобразует выбранные объекты базы данных доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или синтаксис SQL Azure, а затем отображает результаты.  
   
 **Чтобы создать отчет об оценке**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "38979426"
   
     SSMA показывает ход выполнения в строке состояния в нижней части окна. Если область вывода, вы увидите сообщения в области вывода.  
   
-По завершении оценки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] помощника по миграции для доступа: откроется окно отчета об оценке.  
+По завершении оценки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощника по миграции для доступа: откроется окно отчета об оценке.  
   
 ## <a name="using-assessment-reports"></a>С помощью отчетов с оценкой  
 Отчет об оценке окно содержит три панели: проводник, область сведений и панель сообщений.  
@@ -64,8 +64,8 @@ ms.locfileid: "38979426"
 Следует исправить ошибки, прежде чем вы снова запустите отчет об оценке или преобразовать схемы. Чтобы найти ошибки, нажмите кнопку **ошибки** кнопку на панели сообщения, а затем разверните каждой ошибки, чтобы просмотреть список объектов, где произошла ошибка. Если щелкнуть объект на панели сообщения, все ошибки и предупреждения для этого объекта будет отображаться в области сведений.  
   
 ## <a name="next-step"></a>Следующий шаг  
-[Преобразование объектов базы данных Access](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[Преобразование объектов базы данных Access](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>См. также  
-[Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

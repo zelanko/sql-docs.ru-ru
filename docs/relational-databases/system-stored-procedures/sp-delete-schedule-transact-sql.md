@@ -1,5 +1,5 @@
 ---
-title: sp_delete_schedule (Transact-SQL) | Документы Microsoft
+title: sp_delete_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14fd520f5447092e5f82dc786696148f3dbe3bd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a531b3673320e3c1e521e68c511e21b7976d1af
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394338"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,15 +56,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 > **Примечание:** либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
   
  [ **@force_delete** =] *force_delete*  
- Указывает, будет ли процедура завершаться с ошибкой, если расписание прикреплено к заданию. *Force_delete* имеет тип bit и значение по умолчанию **0**. Когда *force_delete* — **0**, хранимая процедура завершается ошибкой, если расписание прикреплено к заданию. Когда *force_delete* — **1**, расписание удаляется независимо от того, прикреплено ли оно к заданию.  
+ Указывает, будет ли процедура завершаться с ошибкой, если расписание прикреплено к заданию. *Force_delete* имеет тип bit и значение по умолчанию **0**. Когда *force_delete* — **0**, хранимая процедура завершается неудачей, если расписание прикреплено к заданию. Когда *force_delete* — **1**, расписание удаляется независимо от того, прикреплено ли оно к заданию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  По умолчанию расписание нельзя удалить, если оно прикреплено к заданию. Удаление расписания, прикрепленного к заданию, укажите значение **1** для *force_delete*. Удаление расписания не приведет к остановке запущенных заданий.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -77,9 +78,9 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
  Заметьте, что владелец задания может присоединять его к расписанию и отсоединять от расписания, не являясь владельцем расписания. Однако расписание нельзя удалить, если в результате отсоединения в нем не останется ни одного задания и вызов выполняется не владельцем расписания.  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены **sysadmin** роли можно удалять расписание заданий, принадлежащее другому пользователю.  
+ Только члены **sysadmin** роли можно удалять расписание заданий, которая принадлежит другому пользователю.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -109,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Реализация заданий](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [Реализация заданий](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

@@ -15,15 +15,15 @@ caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7322f12605256fe25bb533c0360467510be92e2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277600"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396592"
 ---
 # <a name="entitytype-element-csdlbi"></a>Элемент EntityType (CSDLBI)
-  Элемент `EntityType` — это сложный тип, представляющий структуру сущности высокого уровня, например клиента или заказа, в модели данных. `bi:EntityType` Элемент расширяет определение [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) используется в [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
+  Элемент `EntityType` — это сложный тип, представляющий структуру сущности высокого уровня, например клиента или заказа, в модели данных. `bi:EntityType` Элемент расширяет определение [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) используется в [Entity Data Framework](/dotnet/framework/data/adonet/ef/overview).  
   
  Элемент EntityType должен быть указан для каждой из сущностей, включенных в модель данных. Вложенные элементы EntityType описывают столбцы и меры в таблице. Связи между таблицами включены в `EntityContainer`.  
   

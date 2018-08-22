@@ -1,5 +1,5 @@
 ---
-title: О SQL Server Analysis Services | Документы Microsoft
+title: О SQL Server Analysis Services | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,27 +9,27 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 704c2f1638676bd838c7aac367a1b610143fd85d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 35ff5f5fc101b048510d439d0bee1cfadaa9b8d8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707042"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394316"
 ---
-# <a name="about-sql-server-analysis-services"></a>О SQL Server Analysis Services
+# <a name="about-sql-server-analysis-services"></a>Сведения о SQL Server Analysis Services
 
-Службы Analysis Services — это ядро аналитических данных, используемых в решение о поддержке и бизнес-аналитике. Он предоставляет корпоративного уровня данных семантических моделей бизнес-отчетах и клиентских приложений, таких как Power BI, Excel, отчеты и другие средства визуализации данных Reporting Services.  
+Службы Analysis Services — это подсистема аналитики данных, используемых в принятии решений и бизнес-аналитике. Он предоставляет корпоративного уровня семантические модели данных для бизнес-отчеты и клиентские приложения, например Power BI, Excel, отчеты служб Reporting Services и других инструментах визуализации данных.  
 
-Типичный рабочий процесс включает создание проекта модели табличных или многомерных данных в Visual Studio, развертывание модели в качестве базы данных к экземпляру сервера, Настройка повторяющегося обработки данных и назначение разрешений на доступ к данным конечным пользователем. Когда она будет готова к работе, ваш семантическую модель данных может осуществляться клиентских приложений, поддерживающих служб Analysis Services в качестве источника данных.  
+Типичный рабочий процесс включает в себя создание проекта модели табличных или многомерных данных в Visual Studio, развертывания моделей в качестве базы данных к экземпляру сервера, Настройка повторяющегося обработки данных и назначение разрешений на доступ к данным конечным пользователем. Когда она готова к работе, в семантическую модель данных может осуществляться клиентскими приложениями, которые поддерживают Analysis Services в качестве источника данных.  
 
-Службы Analysis Services можно найти в двух разных платформ: 
+Службы Analysis Services доступна в двух разных платформ: 
 
-**Azure Analysis Services** -поддерживает табличные модели на уровне совместимости 1200 и выше. DirectQuery, секции, безопасность на уровне строк, двунаправленные связи и переводы полностью поддерживаются. Дополнительные сведения см. в разделе [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/).
+**Службы Azure Analysis Services** -поддерживает табличные модели на уровнях совместимости 1200 и выше. DirectQuery, секции, безопасность на уровне строк, двунаправленные связи и переводы полностью поддерживаются. Дополнительные сведения см. в разделе [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/).
 
-**SQL Server Analysis Services** -поддерживает табличные модели на всех уровнях совместимости, многомерных моделях, интеллектуальный анализ данных и Power Pivot для SharePoint.
+**SQL Server Analysis Services** -поддерживают табличные модели на всех уровнях совместимости, многомерных моделях, интеллектуальный анализ данных и Power Pivot для SharePoint.
  
  ## <a name="documentation-by-area"></a>Документация по разделам  
-Как правило [документации по службам аналитики Azure](https://docs.microsoft.com/azure/analysis-services/) входит в состав документации Azure. Если вас интересует с табличными моделями в облаке, лучше начать прямо отсюда. Это статье и документация в этом разделе является главным образом для SQL Server Analysis Services. Тем не менее по крайней мере для табличных моделей, как создавать и развертывать проекты табличной модели является так же, независимо от используемой платформы. В этих разделах, чтобы получить дополнительные сведения см.
+В общем случае [документации по Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/) входит в состав документации по Azure. Если вы заинтересованы в табличных моделях в облаке, лучше начать с этого. Этой статье и на документацию в этом разделе подходит в основном для SQL Server Analysis Services. Тем не менее по крайней мере для табличных моделей, как создавать и развертывать проекты табличной модели очень похоже на, независимо от платформы, которую вы используете. Просмотрите эти разделы, чтобы узнать больше.
 
    
 *  [Сравнение табличных и многомерных решений](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
@@ -40,7 +40,7 @@ ms.locfileid: "34707042"
 *  [Power Pivot для SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
 *  [Руководства](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [Управление сервером](../analysis-services/instances/analysis-services-instance-management.md)    
-*  [Документация для разработчиков](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
+*  [Документация для разработчиков](analysis-services-developer-documentation.md)  
 *  [Технический справочник](../analysis-services/powershell/technical-reference-ssas.md)
 
 См. также

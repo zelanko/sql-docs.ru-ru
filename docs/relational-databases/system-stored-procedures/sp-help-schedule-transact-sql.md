@@ -1,5 +1,5 @@
 ---
-title: sp_help_schedule (Transact-SQL) | Документы Microsoft
+title: sp_help_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1803a5a2842d40700cc4b0f82c800cfbb6cc2e05
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a77859fd5c113d9b40832c81472e62aaef05fcda
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394163"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_help_schedule
  Имя расписания, сведения о котором следует возвратить. *schedule_name* — **sysname**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
   
  [ **@attached_schedules_only** =] *этот аргумент* ]  
- Этот аргумент указывает, следует ли возвратить информацию только о расписаниях, связанных с заданиями. *Этот аргумент* — **бит**, значение по умолчанию **0**. Когда *этот аргумент* — **0**, всех расписаниях. Когда *этот аргумент* — **1**, результирующий набор содержит только те расписания, прикрепленного к заданию.  
+ Этот аргумент указывает, следует ли возвратить информацию только о расписаниях, связанных с заданиями. *Этот аргумент* — **бит**, значение по умолчанию **0**. Когда *этот аргумент* — **0**, всех расписаниях. Когда *этот аргумент* — **1**, результирующий набор содержит только те расписания, подключенные к заданию.  
   
  [ **@include_description** =] *этот аргумент*  
  Этот аргумент указывает, следует ли включить в результирующий набор описания. *Этот аргумент* — **бит**, значение по умолчанию **0**. Когда *этот аргумент* — **0**, *schedule_description* столбец результирующего набора содержит заполнитель. Когда *этот аргумент* — **1**, в результирующий набор включается описание расписания.  
@@ -70,7 +71,7 @@ sp_help_schedule
 |**schedule_id**|**int**|Идентификационный номер расписания.|  
 |**schedule_uid**|**uniqueidentifier**|Идентификатор расписания.|  
 |**schedule_name**|**sysname**|Имя расписания.|  
-|**Включен**|**int**|Расписание задействовано (**1**) или не включено (**0**).|  
+|**включен**|**int**|Расписание задействовано (**1**) или не включено (**0**).|  
 |**freq_type**|**int**|Значение, указывающее, когда должно выполняться задание.<br /><br /> **1** = однократно<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячно, относительно **freq_interval**<br /><br /> **64** = запуск при запуске службы SQLServerAgent.|  
 |**freq_interval**|**int**|Дни, в которые выполняется задание. Значение зависит от значения **freq_type**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Единицы измерения для **freq_subday_interval**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -85,7 +86,7 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|Описание расписания на английском языке (если запрошено).|  
 |**job_count**|**int**|Число заданий, ссылающихся на данное расписание.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если параметры не указаны, **sp_help_schedule** выводит сведения о всех расписаниях в экземпляре.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -97,9 +98,9 @@ sp_help_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Члены **SQLAgentUserRole** могут только просматривать принадлежащие им расписания.  
+ Членами **SQLAgentUserRole** могут только просматривать принадлежащие им расписания.  
   
 ## <a name="examples"></a>Примеры  
   

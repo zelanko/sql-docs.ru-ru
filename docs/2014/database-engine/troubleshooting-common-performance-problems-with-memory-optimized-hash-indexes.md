@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
@@ -14,12 +13,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96153240af41f0942f93fe0a6dddc0f2149c2d9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28fea2aed82e86d58264311914a341fb6ecca4fc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316944"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395962"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Диагностика общих проблем с производительностью хэш-индексов оптимизированными для памяти таблиц
   В этом разделе рассматривается устранение неполадок и обходные пути для распространенных проблем с хэш-индексами.  
@@ -52,7 +51,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  Таблица содержит хэш-индекс для двух столбцов (o_id, od_id), в то время как в запросе есть предикат равенства для (o_id). Так как запрос имеет предикаты равенства только для подмножества ключевых столбцов индекса, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не сможет выполнить поиск по индексу с помощью PK_od, вместо этого [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] вынужденно вернется к полному просмотру индекса.  
   
- **Обходные пути:** существует несколько возможных решений. Например:  
+ **Обходные пути:** существует несколько возможных решений. Пример:  
   
 -   Создайте заново индекс некластеризованного типа вместо некластеризованного хэша. Оптимизированный для памяти некластеризованный индекс упорядочен, поэтому [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] сможет выполнить поиск по индексу в тех ключевых столбцах индекса, которые находятся в начале. Результирующее определение первичного ключа в этом примере будет следующим: `constraint PK_od primary key nonclustered`.  
   

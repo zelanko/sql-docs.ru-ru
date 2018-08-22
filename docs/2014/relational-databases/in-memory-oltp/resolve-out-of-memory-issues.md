@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253986"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394146"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Устранение проблем нехватки памяти
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] использует больше памяти, чем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и делает это по-другому. Возможно, что объем памяти, установленный и выделенный для [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , станет недостаточным для растущих потребностей. В таком случае может возникнуть нехватка памяти. В этом разделе описывается восстановление из ситуации с нехваткой памяти. В статье [Наблюдение и устранение неисправностей при использовании памяти](monitor-and-troubleshoot-memory-usage.md) вы найдете рекомендации, которые помогут вам избежать многих ситуаций нехватки памяти.  
@@ -80,7 +79,7 @@ ms.locfileid: "37253986"
 ###  <a name="bkmk_openDAC"></a> Откройте выделенное административное соединение  
  В Microsoft SQL Server есть выделенное административное соединение. С помощью выделенного административного соединения администратор может обращаться к запущенному экземпляру компонента SQL Server Database Engine для устранения неполадок на сервере, даже если сервер не отвечает на другие клиентские соединения. Выделенные административные соединения доступны в программе `sqlcmd` и в среде SQL Server Management Studio (SSMS).  
   
- Рекомендации по использованию `sqlcmd` и выделенных административных соединений см. в разделе [Использование выделенного административного соединения](http://msdn.microsoft.com/library/ms189595\(v=sql.100\).aspx/css). Использование выделенного административного соединения в среде SSMS описано в статье [Как применять выделенное административное соединение с помощью среды SQL Server Management Studio](http://msdn.microsoft.com/library/ms178068.aspx).  
+ Рекомендации по использованию `sqlcmd` и выделенных административных соединений см. в разделе [Использование выделенного административного соединения](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Использование выделенного административного соединения в среде SSMS описано в статье [Как применять выделенное административное соединение с помощью среды SQL Server Management Studio](http://msdn.microsoft.com/library/ms178068.aspx).  
   
 ###  <a name="bkmk_takeCorrectiveAction"></a> Примените действие по исправлению  
  Для устранения проблемы с нехваткой памяти необходимо либо освободить имеющуюся память путем сокращения объема ее использования, либо выделить дополнительный объем памяти таблицам в памяти.  

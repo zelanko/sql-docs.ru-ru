@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
@@ -14,12 +13,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dbb50c928f066e595b48737da2cc2fc6b9f45eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a81a446b1635359853656305f0a8a5ee8ab3218
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306179"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395968"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Определение правильного числа контейнеров для хэш-индексов
   Необходимо указать значение для `BUCKET_COUNT` при создании оптимизированной для памяти таблицы. Этот раздел содержит рекомендации по определению соответствующего значения для параметра `BUCKET_COUNT`. Если не удается определить нужное число контейнеров, пользуйтесь вместо этого некластеризованным индексом.  Неверное значение `BUCKET_COUNT`, особенно слишком низкое, может значительно повлиять на производительность рабочей нагрузки, а также на время восстановления базы данных. Рекомендуется пересмотреть число контейнеров.  

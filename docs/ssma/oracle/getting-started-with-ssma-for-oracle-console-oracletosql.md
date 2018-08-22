@@ -16,14 +16,14 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 86b8adc8841e06d91d164c2c35e2329511ac0e28
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b15f982d6da89d669fbf80507459e0c419afbe73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985756"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393937"
 ---
-# <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Начало работы с SSMA для Oracle консоли (OracleToSQL)
+# <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Начало работы с консолью SSMA для Oracle (OracleToSQL)
 В этом разделе описывается, как запустить и приступить к работе с Oracle консольного приложения. Также в списке, в данном документе, соглашения используются в типичного окна выходных данных консоли SSMA.  
   
 ## <a name="launching-ssma-console"></a>Запуск консоли SSMA  
@@ -31,7 +31,7 @@ ms.locfileid: "38985756"
   
 1.  Перейдите к **запустить** и пункты **все программы**.  
   
-2.  Нажмите кнопку  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant для Oracle командной строки** ярлык.  
+2.  Нажмите кнопку  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant для Oracle командной строки** ярлык.  
   
     Он отображает меню использования команд консоли SSMA и `(/? Help)`, чтобы помочь вам приступить к работе с консольного приложения.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "38985756"
   
 Дополнительные функции:  
   
-1.  [Укажите пароль](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c) и экспортировать и импортировать его на других компьютерах окна  
+1.  [Укажите пароль](managing-passwords-oracletosql.md) и экспортировать и импортировать его на других компьютерах окна  
   
-2.  [Создание отчетов](http://msdn.microsoft.com/ccad6262-01e1-447a-bd2b-c105154c80ce) для просмотра подробных xml вывод отчетов для оценки /conversion и миграции данных. Подробные сведения об ошибке отчеты также могут формироваться для команд обновления и синхронизации.  
+2.  [Создание отчетов](generating-reports-oracletosql.md) для просмотра подробных xml вывод отчетов для оценки /conversion и миграции данных. Подробные сведения об ошибке отчеты также могут формироваться для команд обновления и синхронизации.  
   
 ## <a name="ssma-console-output-conventions"></a>Соглашения о выходных данных консоли SSMA  
 При выполнении команды сценария SSMA и параметры, консольная программа отображает результаты и сообщения (сведения, ошибка, и т.д.) для пользователя на консоли или при необходимости перенаправляет выходные данные в XML-файл. Каждый тип сообщения в выходных данных принятое уникальный цвет. Например текстовое сообщение в белый цвет обозначает команд файла скрипта; этому параметру в зеленый цвет представляет запрос для ввода данных пользователем и т. д.  
@@ -69,5 +69,5 @@ ms.locfileid: "38985756"
 |Голубой|Начала, окончания и результат операции|  
   
 ## <a name="see-also"></a>См. также  
-[Установка SSMA для Oracle](http://msdn.microsoft.com/9211013a-ab24-4c52-9b26-87994b35e502)  
+[Установка SSMA для Oracle](installing-ssma-for-oracle-oracletosql.md)  
   

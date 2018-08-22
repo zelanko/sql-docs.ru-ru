@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e29e979597563511f91977cf9815aa0e06290ae1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f5acb0977326b148667a62ae0c86bb47f443174
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983316"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395769"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Справочник по пользовательскому интерфейсу (MySQLToSQL)
 В этом разделе содержатся справочные сведения для SQL Server Migration Assistant (SSMA) для MySQL.  
@@ -39,7 +39,7 @@ ms.locfileid: "38983316"
 |[Подключение к базе данных Azure SQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Используйте **подключение к SQL Azure** диалоговое окно для подключения к экземпляру SQL Azure, к которому необходимо выполнить миграцию.|  
 |[Параметры преобразования (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Используйте **параметры** tab, чтобы задать параметры на уровне узла.|  
 |[Отчет о миграции данных &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Отображает результаты перенос данных из MySQL в SQL Server или SQL Azure.|  
-|[Параметры миграции данных](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|Используйте **расширенные параметры миграции данных** tab, чтобы создавать пользовательские запросы для переноса данных.|  
+|[Параметры миграции данных](data-migration-settings-mysqltosql.md)|Используйте **расширенные параметры миграции данных** tab, чтобы создавать пользовательские запросы для переноса данных.|  
 |[Изменение сопоставления типов &#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Используйте **изменить сопоставление типов** диалоговое окно, чтобы создать или изменить сопоставление типов данных между исходной и целевой баз данных и объектов базы данных.|  
 |[Глобальные параметры &#40;редактор&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Страница редактора **глобальные параметры** диалоговое окно для настройки параметров редактора кода.|  
 |[Глобальные параметры &#40;диалоговые окна&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Используйте страницу диалоговые окна **глобальные параметры** диалоговое окно для настройки по умолчанию диалоговое окно и параметры предупреждения.|  

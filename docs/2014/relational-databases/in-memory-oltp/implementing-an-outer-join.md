@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
@@ -14,12 +13,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae156babe1859686386274c029b2aa34748f2f1d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ffbf7857c83f9be53c8747c210736f242f04dd48
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327524"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394751"
 ---
 # <a name="implementing-an-outer-join"></a>Создание внешнего соединения
   Внешние соединения не поддерживаются в скомпилированных в собственном коде хранимых процедурах. В следующем примере показан способ реализации функциональности левого внешнего соединения в скомпилированной в собственном коде хранимой процедуре.  

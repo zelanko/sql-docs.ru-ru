@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobserver (Transact-SQL) | Документы Microsoft
+title: sp_add_jobserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: c2bcb3132902669a6ea544b9962942ed3adadc4a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262318"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396606"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>Аргументы  
  [  **@job_id =** ] *job_id*  
- Идентификационный номер задания. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+ Идентификационный номер задания. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name =** ] **"***job_name***"**  
- Имя задания. *job_name* — **sysname**, значение по умолчанию NULL.  
+ [  **@job_name =** ] **"***имя_задания***"**  
+ Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
+>  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
  [ **@server_name =** ] **'***server***'**  
  Имя сервера, на который направляется задание. *сервер* — **nvarchar(30)**, значение по умолчанию N'(LOCAL)'. *сервер* может быть либо **(LOCAL)** для локального сервера или имя существующего целевого сервера.  
@@ -64,7 +64,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  None  
   
 ## <a name="remarks"></a>Примечания  
- **@automatic_post** существует в **sp_add_jobserver**, но отсутствует в списке аргументов. **@automatic_post** Зарезервировано для внутреннего использования.  
+ **@automatic_post** существует в **sp_add_jobserver**, но не указан в списке аргументов. **@automatic_post** зарезервирован для внутреннего использования.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   
@@ -77,9 +77,9 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_add_jobserver** для заданий, использующих несколько серверов.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_add_jobserver** для заданий, использующих несколько серверов.  
   
 ## <a name="examples"></a>Примеры  
   

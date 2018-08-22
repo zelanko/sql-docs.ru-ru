@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_create_collection_set (Transact-SQL) | Документы Microsoft
+title: sp_syscollector_create_collection_set (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cefec5de4c7bba8d2b184a202f5a21c4a25901c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e709e05834ed30701d2944547945ba439b8d418d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394527"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,13 +75,13 @@ sp_syscollector_create_collection_set
   
  1 — режим без кэширования. Сбор и передача данных выполняются по общему расписанию. Укажите некэшированный режим для нерегламентированного сбора или создания моментального снимка.  
   
- Значение по умолчанию для *collection_mode* — 0. Когда *collection_mode* равно 0, *schedule_uid* или *schedule_name* должен быть указан.  
+ Значение по умолчанию для *collection_mode* равно 0. Когда *collection_mode* равно 0, *schedule_uid* или *schedule_name* должен быть указан.  
   
  [  **@days_until_expiration =** ] *days_until_expiration*  
- Число дней, в течение которых собранные данные хранятся в хранилище данных управления. *days_until_expiration* — **smallint** со значением по умолчанию 730 (два года). *days_until_expiration* должно быть 0 или положительным целым числом.  
+ Число дней, в течение которых собранные данные хранятся в хранилище данных управления. *days_until_expiration* — **smallint** со значением по умолчанию 730 (два года). *days_until_expiration* должно равняться 0 или положительным целым числом.  
   
  [  **@proxy_id =** ] *proxy_id*  
- Уникальный идентификатор учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* — **int** со значением по умолчанию NULL. Если указано, *proxy_name* должен иметь значение NULL. Для получения *proxy_id*, запрос системной таблицы sysproxies. Предопределенная роль базы данных dc_admin должна иметь разрешение на доступ к посреднику. Дополнительные сведения см. в разделе [создать прокси-агента SQL Server](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+ Уникальный идентификатор учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* — **int** со значением по умолчанию NULL. Если указано, *proxy_name* должен иметь значение NULL. Для получения *proxy_id*, запрос системной таблицы sysproxies. Предопределенная роль базы данных dc_admin должна иметь разрешение на доступ к посреднику. Дополнительные сведения см. в разделе [создание прокси-агента SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
  [  **@proxy_name =** ] "*proxy_name*"  
  Имя учетной записи-посредника. *proxy_name* — **sysname** со значением по умолчанию NULL. Если указано, *proxy_id* должен иметь значение NULL. Для получения *proxy_name*, запрос системной таблицы sysproxies.  
@@ -119,16 +120,16 @@ sp_syscollector_create_collection_set
  [  **@description =** ] "*описание*"  
  Описание набора элементов сбора. *Описание* — **nvarchar(4000)** со значением по умолчанию NULL.  
   
- [  **@collection_set_id =** ] *collection_set_id, чтобы выделить*  
- Уникальный локальный идентификатор набора элементов сбора. *collection_set_id, чтобы выделить* — **int** с ВЫВОДОМ и является обязательным.  
+ [  **@collection_set_id =** ] *collection_set_id*  
+ Уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int** с выходными данными и является обязательным.  
   
- [  **@collection_set_uid =** ] "*аргумент collection_set_uid*"  
+ [  **@collection_set_uid =** ] "*collection_set_uid*"  
  Идентификатор GUID набора элементов сбора. *Аргумент collection_set_uid* — **uniqueidentifier** с выходными данными со значением по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Функция sp_syscollector_create_collection_set должна выполняться в контексте системной базы данных msdb.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -19,12 +19,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 827bffa5df372d2f55a52b6da0fc10d169df97aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d9fa625bbd9ebb661fb0ebad8b191b6075e8397
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219434"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395742"
 ---
 # <a name="rebuild-system-databases"></a>Перестроение системных баз данных
   Системные базы данных необходимо перестроить, чтобы устранить повреждения данных в системных базах данных [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)и [resource](resource-database.md) или изменить параметры сортировки по умолчанию на уровне сервера. В этом разделе приводятся пошаговые инструкции по перестроению системных баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -156,7 +156,7 @@ ms.locfileid: "37219434"
 > [!WARNING]  
 >  Перестроение `msdb` базы данных с помощью **instmsdb** скрипт исключит все данные, хранящиеся в `msdb` таких как задания, оповещения, операторы, планы обслуживания, журнал резервного копирования, параметры управления на основе политик , Database Mail, хранилище данных о производительности и т. д.  
   
-1.  Остановите все службы, подключающиеся к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)], включая агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , службы [!INCLUDE[ssRS](../../includes/ssrs-md.md)], службы [!INCLUDE[ssIS](../../includes/ssis-md.md)]и все приложения, использующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как хранилище данных.  
+1.  Остановите все службы, подключающиеся к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)], включая агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , службы [!INCLUDE[ssRS](../../includes/ssrs.md)], службы [!INCLUDE[ssIS](../../includes/ssis-md.md)]и все приложения, использующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как хранилище данных.  
   
 2.  Запустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки с помощью команды: `NET START MSSQLSERVER /T3608`  
   

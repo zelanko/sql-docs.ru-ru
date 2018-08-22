@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264880"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395977"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
   В данном разделе представлены основные понятия, требования и компоненты, необходимые для использования службы хранилища больших двоичных объектов Windows Azure в качестве места назначения резервного копирования. Функции резервного копирования и восстановления аналогичны при использовании DISK и TAPE, но имеют некоторые отличия. В данном разделе описаны различия и все важные исключения, а также приведено несколько примеров кода.  
@@ -86,9 +86,9 @@ ms.locfileid: "37264880"
   
  Пошаговые инструкции о способах создания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетных данных, см. в разделе [Создание учетных данных](#credential) пример далее в этом разделе.  
   
- Общие сведения об учетных данных см. в разделе [Учетные данные](http://msdn.microsoft.com/en-us/library/ms161950.aspx).  
+ Общие сведения об учетных данных см. в разделе [Учетные данные](../security/authentication-access/credentials-database-engine.md).  
   
- Сведения о других примерах использования учетных данных см. в разделе [Создание учетной записи-посредника агента SQL Server](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Сведения о других примерах использования учетных данных, см. в разделе [создание прокси-агента SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Ограничения  
   
@@ -282,7 +282,7 @@ ms.locfileid: "37264880"
 ###  <a name="credential"></a> Создание учетных данных  
  В следующем примере создаются учетные данные для хранения сведений о проверке подлинности информации хранилища Windows Azure.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -327,7 +327,7 @@ ms.locfileid: "37264880"
 ###  <a name="complete"></a> Резервное копирование всей базы данных  
  Следующий пример производит резервное копирование базы данных AdventureWorks2012 в службу хранилища больших двоичных объектов Windows Azure.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -385,7 +385,7 @@ ms.locfileid: "37264880"
 ###  <a name="databaselog"></a> Резервное копирование базы данных и журнала  
  В следующем примере используется образец базы данных AdventureWorks2012, которая по умолчанию использует простую модель восстановления. Для поддержки резервного копирования журналов база данных AdventureWorks2012 перенастраивается на использование модели полного восстановления. Затем выполняется полное резервное копирование базы данных в большой двоичный объект Windows Azure и после обновления — резервное копирование журнала. В этом примере будет создано имя резервной копии файла с меткой времени.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -496,7 +496,7 @@ ms.locfileid: "37264880"
 ###  <a name="filebackup"></a> Создание полной резервной копии первичной файловой группы  
  В следующем примере создается полная резервная копия файлов первичной файловой группы.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -563,7 +563,7 @@ ms.locfileid: "37264880"
 ###  <a name="differential"></a> Создание разностной резервной копии файлов первичной файловой группы  
  В следующем примере создается разностная резервная копия файлов первичной файловой группы.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -635,7 +635,7 @@ ms.locfileid: "37264880"
 ###  <a name="restoredbwithmove"></a> Восстановление базы данных и перемещение файлов  
  Чтобы восстановить полную резервную копию базы данных и переместить восстановленную базу данных в папку C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data, выполните следующие действия.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -752,7 +752,7 @@ ms.locfileid: "37264880"
 ###  <a name="PITR"></a> Восстановление состояния на определенный момент времени с помощью STOPAT  
  В следующем примере производится восстановление базы данных к состоянию на определенный момент времени и демонстрируется операция восстановления.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   
