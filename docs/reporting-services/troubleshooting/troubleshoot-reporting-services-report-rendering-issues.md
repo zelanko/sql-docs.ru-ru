@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1e067f6a03b839f9de233bc71eccbf6631bb599f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e98809ab3981cc1af2482ef518be3ddfc639a574
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047126"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "40406531"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Устранение неполадок при подготовке отчетов служб Reporting Services
 После объединения данных и макета отчета скомпилированный отчет отправляется в средство подготовки отчета к просмотру. Например, при локальном просмотре отчета используется средство подготовки данных к просмотру в HTML-формате для просмотра скомпилированных отчетов. Материал этого раздела используется для устранения проблем, связанных с подготовкой отчета к просмотру.   
@@ -78,5 +78,5 @@ ms.locfileid: "38047126"
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
