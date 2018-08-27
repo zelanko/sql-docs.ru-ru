@@ -1,67 +1,66 @@
+items:
 - name: Обзор
   href: xquery-language-reference-sql-server.md
-- name: Новые и обновленные статьи
-  href: new-updated-xquery.md
-- name: "Модули и прологи\_— пролог\_XQuery"
+- name: Модули и прологи — пролог XQuery
   href: modules-and-prologs-xquery-prolog.md
 - name: Основы языка XQuery
   href: xquery-basics.md
   items:
-    - name: "Система типов\_— сопоставление типов последовательности"
-      href: type-system-sequence-type-matching.md
-    - name: Последовательность и QNames (XQuery)
-      href: sequence-and-qnames-xquery.md
-    - name: Контекст выражения и вычисление запросов (XQuery)
-      href: expression-context-and-query-evaluation-xquery.md
-    - name: Атомизация (XQuery)
-      href: atomization-xquery.md
-    - name: Действительное логическое значение (XQuery)
-      href: effective-boolean-value-xquery.md
-    - name: Система типов (XQuery)
-      href: type-system-xquery.md
-    - name: Обработка ошибок (XQuery)
-      href: error-handling-xquery.md
-    - name: Комментарии в XQuery
-      href: comments-in-xquery.md
-    - name: XQuery и статическая типизация
-      href: xquery-and-static-typing.md
+  - name: Система типов — сопоставление типов последовательности
+    href: type-system-sequence-type-matching.md
+  - name: Последовательность и QNames (XQuery)
+    href: sequence-and-qnames-xquery.md
+  - name: Контекст выражения и вычисление запросов (XQuery)
+    href: expression-context-and-query-evaluation-xquery.md
+  - name: Атомизация (XQuery)
+    href: atomization-xquery.md
+  - name: Действительное логическое значение (XQuery)
+    href: effective-boolean-value-xquery.md
+  - name: Система типов (XQuery)
+    href: type-system-xquery.md
+  - name: Обработка ошибок (XQuery)
+    href: error-handling-xquery.md
+  - name: Комментарии в XQuery
+    href: comments-in-xquery.md
+  - name: XQuery и статическая типизация
+    href: xquery-and-static-typing.md
 - name: Выражения языка XQuery
   href: xquery-expressions.md
   items:
-    - name: "Выражения пути\_— указание оси"
-      href: path-expressions-specifying-axis.md
-    - name: "Выражения пути\_— указание проверки узла"
-      href: path-expressions-specifying-node-test.md
-    - name: "Выражения пути\_— указание предикатов"
-      href: path-expressions-specifying-predicates.md
-    - name: "Выражения пути\_— использование сокращенного синтаксиса"
-      href: path-expressions-using-abbreviated-syntax.md
-    - name: Первичные выражения (XQuery)
-      href: primary-expressions-xquery.md
-    - name: Выражения пути (XQuery)
-      href: path-expressions-xquery.md
-    - name: Выражения последовательности (XQuery)
-      href: sequence-expressions-xquery.md
-    - name: Арифметические выражения (XQuery)
-      href: arithmetic-expressions-xquery.md
-    - name: Выражения сравнения (XQuery)
-      href: comparison-expressions-xquery.md
-    - name: Логические выражения (XQuery)
-      href: logical-expressions-xquery.md
-    - name: Построение XML (XQuery)
-      href: xml-construction-xquery.md
-    - name: Итерация и инструкция FLWOR (XQuery)
-      href: flwor-statement-and-iteration-xquery.md
-    - name: Упорядоченные и неупорядоченные выражения (XQuery)
-      href: ordered-and-unordered-expressions-xquery.md
-    - name: Выражения условий (XQuery)
-      href: conditional-expressions-xquery.md
-    - name: Выражения с квантором (XQuery)
-      href: quantified-expressions-xquery.md
-    - name: Выражения SequenceType (XQuery)
-      href: sequencetype-expressions-xquery.md
-    - name: Проверка выражений (XQuery)
-      href: validate-expressions-xquery.md
+  - name: Выражения пути — указание оси
+    href: path-expressions-specifying-axis.md
+  - name: Выражения пути — указание проверки узла
+    href: path-expressions-specifying-node-test.md
+  - name: Выражения пути — указание предикатов
+    href: path-expressions-specifying-predicates.md
+  - name: Выражения пути — использование сокращенного синтаксиса
+    href: path-expressions-using-abbreviated-syntax.md
+  - name: Первичные выражения (XQuery)
+    href: primary-expressions-xquery.md
+  - name: Выражения пути (XQuery)
+    href: path-expressions-xquery.md
+  - name: Выражения последовательности (XQuery)
+    href: sequence-expressions-xquery.md
+  - name: Арифметические выражения (XQuery)
+    href: arithmetic-expressions-xquery.md
+  - name: Выражения сравнения (XQuery)
+    href: comparison-expressions-xquery.md
+  - name: Логические выражения (XQuery)
+    href: logical-expressions-xquery.md
+  - name: Построение XML (XQuery)
+    href: xml-construction-xquery.md
+  - name: Итерация и инструкция FLWOR (XQuery)
+    href: flwor-statement-and-iteration-xquery.md
+  - name: Упорядоченные и неупорядоченные выражения (XQuery)
+    href: ordered-and-unordered-expressions-xquery.md
+  - name: Выражения условий (XQuery)
+    href: conditional-expressions-xquery.md
+  - name: Выражения с квантором (XQuery)
+    href: quantified-expressions-xquery.md
+  - name: Выражения SequenceType (XQuery)
+    href: sequencetype-expressions-xquery.md
+  - name: Проверка выражений (XQuery)
+    href: validate-expressions-xquery.md
 - name: Модули и прологи (XQuery)
   href: modules-and-prologs-xquery.md
 - name: Правила приведения типов в запросах XQuery
@@ -69,88 +68,94 @@
 - name: Функции XQuery для типа данных xml
   href: xquery-functions-against-the-xml-data-type.md
   items:
-    - name: "Функции, связанные с\_QName\_— expanded-QName"
-      href: functions-related-to-qnames-expanded-qname.md
-    - name: "Функции, связанные с\_QName\_— local-name-from-QName"
-      href: functions-related-to-qnames-local-name-from-qname.md
-    - name: "Функции, связанные с\_QName\_— namespace-uri-from-QName"
-      href: functions-related-to-qnames-namespace-uri-from-qname.md
-    - name: "Агрегатные функции\_— count"
-      href: aggregate-functions-count.md
-    - name: "Агрегатные функции\_— min"
-      href: aggregate-functions-min.md
-    - name: "Агрегатные функции\_— max"
-      href: aggregate-functions-max.md
-    - name: "Агрегатные функции\_— avg"
-      href: aggregate-functions-avg.md
-    - name: "Агрегатные функции\_— sum"
-      href: aggregate-functions-sum.md
-    - name: "Функции с последовательностями\_— empty"
-      href: functions-on-sequences-empty.md
-    - name: "Функции с последовательностями\_— distinct-values"
-      href: functions-on-sequences-distinct-values.md
-    - name: "Функции с последовательностями\_— id"
-      href: functions-on-sequences-id.md
-    - name: "Функции с узлами\_— number"
-      href: functions-on-nodes-number.md
-    - name: "Функции с узлами\_— local-name"
-      href: functions-on-nodes-local-name.md
-    - name: "Функции с узлами\_— namespace-uri"
-      href: functions-on-nodes-namespace-uri.md
-    - name: "Функции со строковыми значениями\_— concat"
-      href: functions-on-string-values-concat.md
-    - name: "Функции со строковыми значениями\_— contains"
-      href: functions-on-string-values-contains.md
-    - name: "Функции со строковыми значениями\_— substring"
-      href: functions-on-string-values-substring.md
-    - name: "Функции со строковыми значениями\_— string-length"
-      href: functions-on-string-values-string-length.md
-    - name: "Функции со строковыми значениями\_— lower-case"
-      href: functions-on-string-values-lower-case.md
-    - name: "Функции со строковыми значениями\_— upper-case"
-      href: functions-on-string-values-upper-case.md
-    - name: "Функции с числовыми значениями\_— ceiling"
-      href: numeric-values-functions-ceiling.md
-    - name: "Функции с числовыми значениями\_— floor"
-      href: numeric-values-functions-floor.md
-    - name: "Функции с числовыми значениями\_— round"
-      href: numeric-values-functions-round.md
-    - name: "Функции расширения\_XQuery\_— sql:column()"
-      href: xquery-extension-functions-sql-column.md
-    - name: "Функции расширения\_XQuery\_— sql:variable()"
-      href: xquery-extension-functions-sql-variable.md
-    - name: "Функции метода доступа к данным\_— string\_(XQuery)"
-      href: data-accessor-functions-string-xquery.md
-    - name: "Функции метода доступа к данным\_— data\_(XQuery)"
-      href: data-accessor-functions-data-xquery.md
-    - name: "Функции контекста\_— last\_(XQuery)"
-      href: context-functions-last-xquery.md
-    - name: "Функции контекста\_— position\_(XQuery)"
-      href: context-functions-position-xquery.md
-    - name: "Функции логического конструктора\_— true\_(XQuery)"
-      href: boolean-constructor-functions-true-xquery.md
-    - name: "Функции логического конструктора\_— false\_(XQuery)"
-      href: boolean-constructor-functions-false-xquery.md
-    - name: "Функции с логическими значениями\_— функция\_not"
-      href: functions-on-boolean-values-not-function.md
-    - name: Функции метода доступа к данным
-      href: data-accessor-functions.md
-    - name: Функции-конструкторы (XQuery)
-      href: constructor-functions-xquery.md
+  - name: Функции, связанные с QName — expanded-QName
+    href: functions-related-to-qnames-expanded-qname.md
+  - name: Функции, связанные с QName — local-name-from-QName
+    href: functions-related-to-qnames-local-name-from-qname.md
+  - name: Функции, связанные с QName — namespace-uri-from-QName
+    href: functions-related-to-qnames-namespace-uri-from-qname.md
+  - name: Агрегатные функции — count
+    href: aggregate-functions-count.md
+  - name: Агрегатные функции — min
+    href: aggregate-functions-min.md
+  - name: Агрегатные функции — max
+    href: aggregate-functions-max.md
+  - name: Агрегатные функции — avg
+    href: aggregate-functions-avg.md
+  - name: Агрегатные функции — sum
+    href: aggregate-functions-sum.md
+  - name: Функции с последовательностями — empty
+    href: functions-on-sequences-empty.md
+  - name: Функции с последовательностями — distinct-values
+    href: functions-on-sequences-distinct-values.md
+  - name: Функции с последовательностями — id
+    href: functions-on-sequences-id.md
+  - name: Функции с узлами — number
+    href: functions-on-nodes-number.md
+  - name: Функции с узлами — local-name
+    href: functions-on-nodes-local-name.md
+  - name: Функции с узлами — namespace-uri
+    href: functions-on-nodes-namespace-uri.md
+  - name: Функции со строковыми значениями — concat
+    href: functions-on-string-values-concat.md
+  - name: Функции со строковыми значениями — contains
+    href: functions-on-string-values-contains.md
+  - name: Функции со строковыми значениями — substring
+    href: functions-on-string-values-substring.md
+  - name: Функции со строковыми значениями — string-length
+    href: functions-on-string-values-string-length.md
+  - name: Функции со строковыми значениями — lower-case
+    href: functions-on-string-values-lower-case.md
+  - name: Функции со строковыми значениями — upper-case
+    href: functions-on-string-values-upper-case.md
+  - name: Функции с числовыми значениями — ceiling
+    href: numeric-values-functions-ceiling.md
+  - name: Функции с числовыми значениями — floor
+    href: numeric-values-functions-floor.md
+  - name: Функции с числовыми значениями — round
+    href: numeric-values-functions-round.md
+  - name: Функции расширения XQuery — sql:column()
+    href: xquery-extension-functions-sql-column.md
+  - name: Функции расширения XQuery — sql:variable()
+    href: xquery-extension-functions-sql-variable.md
+  - name: Функции метода доступа к данным — string (XQuery)
+    href: data-accessor-functions-string-xquery.md
+  - name: Функции метода доступа к данным — data (XQuery)
+    href: data-accessor-functions-data-xquery.md
+  - name: Функции контекста — last (XQuery)
+    href: context-functions-last-xquery.md
+  - name: Функции контекста — position (XQuery)
+    href: context-functions-position-xquery.md
+  - name: Функции логического конструктора — true (XQuery)
+    href: boolean-constructor-functions-true-xquery.md
+  - name: Функции логического конструктора — false (XQuery)
+    href: boolean-constructor-functions-false-xquery.md
+  - name: Функции с логическими значениями — функция not
+    href: functions-on-boolean-values-not-function.md
+  - name: Функции метода доступа к данным
+    href: data-accessor-functions.md
+  - name: Функции-конструкторы (XQuery)
+    href: constructor-functions-xquery.md
 - name: Сравнение операторов XQuery с XML-данными
   href: xquery-operators-against-the-xml-data-type.md
 - name: Дополнительные примеры запросов на языке XQuery к XML-данным
   href: additional-sample-xqueries-against-the-xml-data-type.md
   items:
-    - name: Общие способы применения запросов XQuery
-      href: general-xquery-use-cases.md
-    - name: 'Запросы XQuery, использующие иерархию'
-      href: xqueries-involving-hierarchy.md
-    - name: 'Запросы XQuery, использующие упорядочивание'
-      href: xqueries-involving-order.md
-    - name: 'Запросы XQuery, обрабатывающие реляционные данные'
-      href: xqueries-handling-relational-data.md
-    - name: Поиск строки в XQuery
-      href: string-search-in-xquery.md
-    - name: Поддержка пространств имен в XQuery
-      href: handling-namespaces-in-xquery.md
+  - name: Общие способы применения запросов XQuery
+    href: general-xquery-use-cases.md
+  - name: Запросы XQuery, использующие иерархию
+    href: xqueries-involving-hierarchy.md
+  - name: Запросы XQuery, использующие упорядочивание
+    href: xqueries-involving-order.md
+  - name: Запросы XQuery, обрабатывающие реляционные данные
+    href: xqueries-handling-relational-data.md
+  - name: Поиск строки в XQuery
+    href: string-search-in-xquery.md
+  - name: Поддержка пространств имен в XQuery
+    href: handling-namespaces-in-xquery.md
+ms.openlocfilehash: 309cf4404c149701b3ab2f271f16a229b39c02c2
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899452"

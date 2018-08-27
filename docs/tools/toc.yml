@@ -1,7 +1,6 @@
+items:
 - name: Обзор средств и служебных программ SQL Server
   href: ../tools/overview-sql-tools.md
-- name: Новые и обновленные статьи
-  href: new-updated-tools.md
 - name: SQL Operations Studio (предварительная версия)
   href: ../sql-operations-studio/what-is.md
 - name: SQL Server Management Studio (SSMS)
@@ -25,35 +24,41 @@
 - name: Программы командной строки
   href: command-prompt-utility-reference-database-engine.md
   items:
-    - name: Программа массового копирования (bcp)
-      href: bcp-utility.md
-    - name: Программа SqlLocalDB
-      href: sqllocaldb-utility.md
-    - name: Программа osql
-      href: osql-utility.md
-    - name: Приложение SQL Profiler
-      href: profiler-utility.md
-    - name: 'sqlagent90, приложение'
-      href: sqlagent90-application.md
-    - name: Служебная программа sqlcmd
-      href: sqlcmd-utility.md
-    - name: 'SQLdiag, программа'
-      href: sqldiag-utility.md
-    - name: 'sqlmaint, программа'
-      href: sqlmaint-utility.md
-    - name: Приложение sqllogship
-      href: sqllogship-application.md
-    - name: программа sqlps
-      href: sqlps-utility.md
-    - name: Приложение sqlservr
-      href: sqlservr-application.md
-    - name: 'tablediff, программа'
-      href: tablediff-utility.md
+  - name: Программа массового копирования (bcp)
+    href: bcp-utility.md
+  - name: Программа SqlLocalDB
+    href: sqllocaldb-utility.md
+  - name: Программа osql
+    href: osql-utility.md
+  - name: Приложение SQL Profiler
+    href: profiler-utility.md
+  - name: sqlagent90, приложение
+    href: sqlagent90-application.md
+  - name: Служебная программа sqlcmd
+    href: sqlcmd-utility.md
+  - name: SQLdiag, программа
+    href: sqldiag-utility.md
+  - name: sqlmaint, программа
+    href: sqlmaint-utility.md
+  - name: Приложение sqllogship
+    href: sqllogship-application.md
+  - name: программа sqlps
+    href: sqlps-utility.md
+  - name: Приложение sqlservr
+    href: sqlservr-application.md
+  - name: tablediff, программа
+    href: tablediff-utility.md
 - name: sqlpackage
   items:
-    - name: Установка sqlpackage
-      href: sqlpackage-download.md
-    - name: Заметки о выпуске
-      href: sqlpackage-release-notes.md
-    - name: Справочник по sqlpackage
-      href: sqlpackage.md
+  - name: Установка sqlpackage
+    href: sqlpackage-download.md
+  - name: Заметки о выпуске
+    href: sqlpackage-release-notes.md
+  - name: Справочник по sqlpackage
+    href: sqlpackage.md
+ms.openlocfilehash: 9d141d9c690b017185f7cfd790fbf9b009ecf1e5
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899554"

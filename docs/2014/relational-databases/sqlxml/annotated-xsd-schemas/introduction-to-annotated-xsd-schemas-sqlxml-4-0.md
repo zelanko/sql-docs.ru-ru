@@ -123,15 +123,15 @@ ms.locfileid: "37216894"
 ## <a name="other-resources"></a>Другие ресурсы  
  Дополнительные сведения о языке XSD, языке XPath и преобразованиях XSLT находятся на следующих веб-сайтах.  
   
--   XML Schema Part 0: Учебник для начинающих, W3C рекомендации ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Учебник для начинающих, W3C рекомендации (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Структуры, W3C (рекомендацияhttp://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Структуры, W3C рекомендация (http://www.w3.org/TR/xmlschema-1/)  
   
--   Схема XML, часть 2: типы данных, W3C (рекомендацияhttp://www.w3.org/TR/xmlschema-2/)  
+-   Схема XML, часть 2: типы данных, W3C рекомендация (http://www.w3.org/TR/xmlschema-2/)  
   
--   FOR XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
+-   FOR XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
--   (XSL) преобразований (XSLT)http://www.w3.org/TR/xslt)  
+-   (XSL) преобразований (XSLT) (http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>См. также  
  [С заметками о безопасности схемы &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   

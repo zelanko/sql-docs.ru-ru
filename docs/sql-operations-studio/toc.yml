@@ -1,3 +1,4 @@
+items:
 - name: SQL Operations Studio (предварительная версия)
   href: what-is.md
 - name: Установить
@@ -6,62 +7,66 @@
   href: release-notes.md
 - name: Краткие руководства
   items:
-    - name: Подключение и отправка запроса к SQL Server
-      href: quickstart-sql-server.md
-    - name: Подключение и отправка запроса к базе данных SQL Azure
-      href: quickstart-sql-database.md
-    - name: Подключение и отправка запроса к хранилищу данных SQL Azure
-      href: quickstart-sql-dw.md
+  - name: Подключение и отправка запроса к SQL Server
+    href: quickstart-sql-server.md
+  - name: Подключение и отправка запроса к базе данных SQL Azure
+    href: quickstart-sql-database.md
+  - name: Подключение и отправка запроса к хранилищу данных SQL Azure
+    href: quickstart-sql-dw.md
 - name: Учебники
   items:
-    - name: Редактор T-SQL
-      href: tutorial-sql-editor.md
-    - name: 'Пример аналитических сведений: медленные запросы'
-      href: tutorial-qds-sql-server.md
-    - name: 'Пример аналитических сведений: использование табличного пространства'
-      href: tutorial-table-space-sql-server.md
-    - name: Создание настраиваемых аналитических сведений
-      href: tutorial-build-custom-insight-sql-server.md
-    - name: Резервное копирование и восстановление
-      href: tutorial-backup-restore-sql-server.md
+  - name: Редактор T-SQL
+    href: tutorial-sql-editor.md
+  - name: 'Пример аналитических сведений: медленные запросы'
+    href: tutorial-qds-sql-server.md
+  - name: 'Пример аналитических сведений: использование табличного пространства'
+    href: tutorial-table-space-sql-server.md
+  - name: Создание настраиваемых аналитических сведений
+    href: tutorial-build-custom-insight-sql-server.md
+  - name: Резервное копирование и восстановление
+    href: tutorial-backup-restore-sql-server.md
 - name: Практические руководства
   items:
-    - name: Панели мониторинга и мини-приложения аналитических сведений
-      href: insight-widgets.md
-    - name: Модули
-      href: extensions.md
-      items:
-        - name: Агент SQL Server
-          href: sql-server-agent-extension.md
-        - name: Приложение SQL Server Profiler
-          href: sql-server-profiler-extension.md
-    - name: Фрагменты кода
-      href: code-snippets.md
-    - name: 'Интегрированный терминал (PowerShell, Bash)'
-      href: integrated-terminal.md
-    - name: сочетания клавиш
-      href: keyboard-shortcuts.md
-    - name: Группы серверов
-      href: server-groups.md
-    - name: Система управления версиями
-      href: source-control.md
-    - name: Параметры рабочей области и пользователя
-      href: settings.md
-    - name: Проверка подлинности Windows (Kerberos)
-      href: enable-kerberos.md
-    - name: Сбор данных об использовании
-      href: usage-data-collection.md
+  - name: Панели мониторинга и мини-приложения аналитических сведений
+    href: insight-widgets.md
+  - name: Модули
+    href: extensions.md
+    items:
+    - name: Агент SQL Server
+      href: sql-server-agent-extension.md
+    - name: Приложение SQL Server Profiler
+      href: sql-server-profiler-extension.md
+  - name: Фрагменты кода
+    href: code-snippets.md
+  - name: Интегрированный терминал (PowerShell, Bash)
+    href: integrated-terminal.md
+  - name: сочетания клавиш
+    href: keyboard-shortcuts.md
+  - name: Группы серверов
+    href: server-groups.md
+  - name: Система управления версиями
+    href: source-control.md
+  - name: Параметры рабочей области и пользователя
+    href: settings.md
+  - name: Проверка подлинности Windows (Kerberos)
+    href: enable-kerberos.md
+  - name: Сбор данных об использовании
+    href: usage-data-collection.md
 - name: Ресурсы
   items:
-    - name: Справочник по Transact-SQL
-      href: ../t-sql/language-reference.md
-    - name: Репозиторий GitHub для SQL Operations Studio (preview)
-      href: 'https://www.github.com/Microsoft/SqlOpsStudio'
-    - name: Блог по SQL Server
-      href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-    - name: Новые и обновленные статьи
-      href: new-updated-sql-operations-studio.md
+  - name: Справочник по Transact-SQL
+    href: ../t-sql/language-reference.md
+  - name: Репозиторий GitHub для SQL Operations Studio (preview)
+    href: https://www.github.com/Microsoft/SqlOpsStudio
+  - name: Блог по SQL Server
+    href: https://blogs.technet.microsoft.com/dataplatforminsider/
 - name: ВОПРОСЫ И ОТВЕТЫ
   href: faq.md
 - name: Сообщить о проблемах и внести предложения
-  href: 'https://github.com/microsoft/sqlopsstudio/issues'
+  href: https://github.com/microsoft/sqlopsstudio/issues
+ms.openlocfilehash: f62cf466022cb065ec4b21d0b2d89a927b430c7b
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899402"

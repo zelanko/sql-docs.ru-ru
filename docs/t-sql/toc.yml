@@ -1,7 +1,6 @@
+items:
 - name: Обзор
   href: language-reference.md
-- name: Новые и обновленные статьи
-  href: new-updated-t-sql.md
 - name: Типы данных
   href: ../t-sql/data-types/data-types-transact-sql.md
 - name: Команды консоли базы данных
@@ -17,9 +16,15 @@
 - name: Учебник. Составление инструкций Transact-SQL
   href: tutorial-writing-transact-sql-statements.md
   items:
-    - name: 'Урок 1: Создание объектов базы данных и запросов к ним'
-      href: lesson-1-creating-database-objects.md
-    - name: "Урок\_2. Настройка разрешений для объектов базы данных"
-      href: lesson-2-configuring-permissions-on-database-objects.md
-    - name: "Урок\_3. Удаление объектов базы данных"
-      href: lesson-3-deleting-database-objects.md
+  - name: 'Урок 1: Создание объектов базы данных и запросов к ним'
+    href: lesson-1-creating-database-objects.md
+  - name: Урок 2. Настройка разрешений для объектов базы данных
+    href: lesson-2-configuring-permissions-on-database-objects.md
+  - name: Урок 3. Удаление объектов базы данных
+    href: lesson-3-deleting-database-objects.md
+ms.openlocfilehash: fb01b88cf3a43481d18c932755520fcda2ac48b2
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899654"

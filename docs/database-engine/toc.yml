@@ -1,25 +1,24 @@
+items:
 - name: Обзор
   href: sql-server-database-engine-overview.md
-- name: "Новые возможности в SQL Server\_2017"
+- name: Новые возможности в SQL Server 2017
   href: whats-new-in-sql-server-2017.md
-- name: "Новые возможности в SQL Server\_2016"
+- name: Новые возможности в SQL Server 2016
   href: whats-new-in-sql-server-2016.md
 - name: Заметки о выпуске
   items:
-    - name: обратная совместимость
-      href: sql-server-database-engine-backward-compatibility.md
-    - name: "Устаревшие функции в SQL Server\_2017"
-      href: deprecated-database-engine-features-in-sql-server-2017.md
-    - name: "Устаревшие функции в SQL Server\_2016"
-      href: deprecated-database-engine-features-in-sql-server-2016.md
-    - name: "Неподдерживаемые функции в SQL Server\_2016"
-      href: discontinued-database-engine-functionality-in-sql-server-2016.md
-    - name: "Критически важные изменения в SQL Server\_2017"
-      href: breaking-changes-to-database-engine-features-in-sql-server-2017.md
-    - name: "Критически важные изменения в SQL Server\_2016"
-      href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
-    - name: Новые и обновленные статьи
-      href: new-updated-database-engine.md
+  - name: обратная совместимость
+    href: sql-server-database-engine-backward-compatibility.md
+  - name: Устаревшие функции в SQL Server 2017
+    href: deprecated-database-engine-features-in-sql-server-2017.md
+  - name: Устаревшие функции в SQL Server 2016
+    href: deprecated-database-engine-features-in-sql-server-2016.md
+  - name: Неподдерживаемые функции в SQL Server 2016
+    href: discontinued-database-engine-functionality-in-sql-server-2016.md
+  - name: Критически важные изменения в SQL Server 2017
+    href: breaking-changes-to-database-engine-features-in-sql-server-2017.md
+  - name: Критически важные изменения в SQL Server 2016
+    href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
 - name: Установить
   href: ../database-engine/install-windows/installation-for-sql-server-2016.md
 - name: Configure
@@ -27,9 +26,15 @@
 - name: Высокий уровень доступности
   href: sql-server-business-continuity-dr.md
   items:
-    - name: Группы доступности
-      href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
-    - name: Зеркальное отображение базы данных
-      href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
-    - name: доставка журналов;
-      href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+  - name: Группы доступности
+    href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+  - name: Зеркальное отображение базы данных
+    href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
+  - name: доставка журналов;
+    href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+ms.openlocfilehash: d062458e981895baf22659fd9541535bc30f32a9
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899437"
