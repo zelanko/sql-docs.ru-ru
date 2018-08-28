@@ -17,15 +17,15 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0ab84785d74c876e67784d1781f0503a1771be18
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08fd8749f2d5756192aa2e05a5b01a3a0ff7dce
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985136"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405214"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Учебник. Отчет-карта (построитель отчетов)
-Этот учебник по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] позволяет изучить функции карты, которые можно использовать для отображения данных отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы в географическом контексте. 
+Этот учебник по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] позволяет изучить функции карты, которые можно использовать для отображения данных отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы в географическом контексте. 
   
 Карты строятся по пространственным данным, которые обычно представляют собой набор точек, линий и многоугольников. Например, многоугольник может представлять очертания страны, линия — дорогу, а точка может обозначать местоположение города. Все типы пространственных данных отображаются на отдельном слое карты в виде набора элементов карты.  
   

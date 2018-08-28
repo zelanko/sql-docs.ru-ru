@@ -15,12 +15,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8919be74352e38cd1065cf8834fea930fcaef90a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 243a098b6da484f3a78b4a2f743b1095a89f6991
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546644"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405248"
 ---
 # <a name="always-encrypted-cryptography"></a>Системы шифрования c технологиями постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39546644"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Ключи, хранилища ключей и алгоритмы шифрования ключей  
  В технологии постоянного шифрования используются два типа ключей: главные ключи столбца и ключи шифрования столбца.  
   
- Главный ключ столбца — это ключ, который используется для шифрования других ключей. Он находится под контролем клиента и хранится во внешнем хранилище ключей. Драйвер клиента с поддержкой постоянного шифрования взаимодействует с хранилищем ключей через поставщика хранилища главного столбца ключа, который может быть либо частью библиотеки драйверов (системный поставщик или поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)]), либо частью клиентского приложения (пользовательский поставщик). На данный момент клиентские библиотеки драйверов включают поставщики хранилища ключей [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для [хранилища сертификатов Windows](https://msdn.microsoft.com/library/windows/desktop/aa388160) и аппаратные модули безопасности (HSM).  (Текущий список поставщиков см. в статье [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Разработчик приложения может задать пользовательского поставщика для произвольного хранилища.  
+ Главный ключ столбца — это ключ, который используется для шифрования других ключей. Он находится под контролем клиента и хранится во внешнем хранилище ключей. Драйвер клиента с поддержкой постоянного шифрования взаимодействует с хранилищем ключей через поставщика хранилища главного столбца ключа, который может быть либо частью библиотеки драйверов (системный поставщик или поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)]), либо частью клиентского приложения (пользовательский поставщик). На данный момент клиентские библиотеки драйверов включают поставщики хранилища ключей [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для [хранилища сертификатов Windows](/windows/desktop/SecCrypto/using-certificate-stores) и аппаратные модули безопасности (HSM).  (Текущий список поставщиков см. в статье [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Разработчик приложения может задать пользовательского поставщика для произвольного хранилища.  
   
  Ключ шифрования столбца — это ключ шифрования содержимого (используется для защиты данных). Он защищен главным ключом столбца.  
   
