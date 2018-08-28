@@ -5,15 +5,15 @@ title: Документация по Microsoft SQL | Документация М
 description: Сведения об SQL
 author: craigg-msft
 ms.author: craigg
-ms.topic: hub-page
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: install
-ms.openlocfilehash: 8b5da9ceb421d6802e0d0f75bc684bfbffb76893
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 48562de9521387f6d40a31828fba7e508171c79a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40430144"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031180"
 ---
 <div id="main" class="v2">
     <div class="container">

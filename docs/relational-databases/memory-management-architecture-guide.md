@@ -19,13 +19,13 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008896"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073063"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "40008896"
 ## <a name="windows-virtual-memory-manager"></a>Диспетчер виртуальной памяти Windows  
 Определенные области адресного пространства сопоставляются с физической памятью диспетчером виртуальной памяти Windows (VMM).  
   
-Дополнительные сведения об объеме физической памяти, поддерживаемой различными операционными системами, см. в разделе [Предельный объем памяти для выпусков Windows](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx) в документации Windows.  
+Дополнительные сведения об объеме физической памяти, поддерживаемой различными операционными системами, см. в разделе [Предельный объем памяти для выпусков Windows](/windows/desktop/Memory/memory-limits-for-windows-releases) в документации Windows.  
   
 Система виртуальной памяти позволяет превышать объем физической памяти, при этом соотношение виртуальной памяти к физической может быть больше 1:1. В результате чего на компьютерах с разными конфигурациями физической памяти могут работать большие программы. Тем не менее, если объем используемой виртуальной памяти значительно превышает общий объем рабочих множеств всех процессов, производительность может ухудшиться. 
 

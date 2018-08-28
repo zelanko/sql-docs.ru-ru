@@ -14,13 +14,13 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b7418258c6b79e5cbc9f8af254fb849e06140b33
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8613f9fc6a92519f2ffaf584919ab3d65c88f3de
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561114"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083337"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39561114"
 
 -   Вы можете импортировать данные напрямую из Excel в SQL за одно действие, используя одно из следующих средств:
     -   [мастер импорта и экспорта SQL Server](#wiz);
-    -   службы [SQL Server Integration Services (SSIS)] (#ssis);
+    -   [Службы SQL Server Integration Services](#ssis)
     -   функция [OPENROWSET](#openrowset).
 -   Вы можете импортировать данные в два этапа, сначала экспортировав их из Excel в виде текста, а затем импортировав текстовый файл с помощью одного из следующих средств:
     -   [мастер импорта неструктурированных файлов](#import-wiz);

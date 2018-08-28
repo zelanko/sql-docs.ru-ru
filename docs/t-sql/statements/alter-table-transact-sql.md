@@ -62,13 +62,13 @@ caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f6855a5f92cd6f8b25d3a7ea9ecf4f4d05e7a015
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a471595321fba0e33f5ea37ea7bff68b528dafe5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452748"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083938"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -630,13 +630,13 @@ ADD
 > Без использования инструкции ALTER TABLE инструкции CREATE INDEX, DROP INDEX и ALTER INDEX не поддерживаются для индексов в таблицах, оптимизированных для памяти. 
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-**Применимо к**: с [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: с [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Указывает имена столбцов, которые система будет использовать для обозначения периода действия записи. Можно указать существующие столбцы или создать новые столбцы как часть аргумента ADD PERIOD FOR SYSTEM_TIME. Столбцы должны иметь тип данных datetime2 и быть определены как NOT NULL. Если столбец периода определен как NULL, возникает ошибка. Можно определить [column_constraint (Transact-SQL)](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) и (или) [указать значения по умолчанию для столбцов](../../relational-databases/tables/specify-default-values-for-columns.md) system_start_time и system_end_time. См. пример A в разделе [Системное управление версиями](#system_versioning) ниже, где показано использование значения по умолчанию для столбца system_end_time примерах.  
   
  Используйте этот аргумент вместе с аргументом SYSTEM_VERSIONING для включения системного управления версиями в существующей таблице. Дополнительные сведения см. в разделах [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md) и [Приступая к работе с темпоральными таблицами в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- В [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] пользователи смогут пометить один или оба столбца периода флагом **HIDDEN**, чтобы эти столбцы были неявно скрыты и инструкция **SELECT \* FROM***\<table>* не возвращала значения этих столбцов. По умолчанию столбцы периода не скрыты. Чтобы использовать скрытые столбцы, их необходимо явно указывать во всех запросах, обращающихся к темпоральной таблице.  
+ В [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] пользователи смогут пометить один или оба столбца периода флагом **HIDDEN**, чтобы эти столбцы были неявно скрыты и инструкция **SELECT \* FROM***\<table>* не возвращала значения этих столбцов. По умолчанию столбцы периода не скрыты. Чтобы использовать скрытые столбцы, их необходимо явно указывать во всех запросах, обращающихся к темпоральной таблице.  
   
 DROP  
 Указывает, что удаляется одно или несколько определений столбца, определений вычисляемого столбца или ограничений таблиц либо удаляется спецификация столбцов, которые будут использоваться для системного управления версиями.  

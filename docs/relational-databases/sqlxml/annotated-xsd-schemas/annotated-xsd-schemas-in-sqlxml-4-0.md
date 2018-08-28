@@ -25,7 +25,7 @@ manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4209bf6b0ffbeef97e65b6c70896055d38c7478d
 ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/06/2018
 ms.locfileid: "39537954"
@@ -53,11 +53,11 @@ ms.locfileid: "39537954"
 ## <a name="other-resources"></a>Другие ресурсы  
  Дополнительные сведения о языке XSD, языке XPath и преобразованиях XSLT находятся на следующих веб-сайтах.  
   
--   XML Schema Part 0: Учебник для начинающих, W3C рекомендации ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Учебник для начинающих, W3C рекомендации (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Структуры, W3C (рекомендацияhttp://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Структуры, W3C рекомендация (http://www.w3.org/TR/xmlschema-1/)  
   
--   Схема XML, часть 2: типы данных, W3C (рекомендацияhttp://www.w3.org/TR/xmlschema-2/)  
+-   Схема XML, часть 2: типы данных, W3C рекомендация (http://www.w3.org/TR/xmlschema-2/)  
   
 -   FOR XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
   

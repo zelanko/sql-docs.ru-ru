@@ -27,13 +27,13 @@ caps.latest.revision: 45
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d14a95638b567c548e11646c8d2acdc834054cba
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 59851026a13056619e94953e71bc248109905423
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459958"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43068397"
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |BEGIN TRANSACTION|GRANT|SELECT (См. исключение ниже.)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
 |DELETE|OPEN|UPDATE|  
-|DROP|, и делает это по-другому.|, и делает это по-другому.|  
+|DROP|.|.|  
   
  Если задано значение OFF, каждая из предыдущих инструкций T-SQL ограничена невидимыми инструкциями BEGIN TRANSACTION и COMMIT TRANSACTION. При значении OFF транзакция выполняется в режиме *автофиксации*. Если ваш код T-SQL выдает видимую инструкцию BEGIN TRANSACTION, транзакция выполняется в *явном* режиме.  
   

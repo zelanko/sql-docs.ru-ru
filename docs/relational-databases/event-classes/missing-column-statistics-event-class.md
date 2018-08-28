@@ -15,13 +15,13 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5ec5d952b66880877782dd749cd2c2f670b0bb28
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0892d5fbd8ceb67ca50576873369a7001843fba4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558444"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43069131"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,6 +58,6 @@ ms.locfileid: "39558444"
 ## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
- [Наблюдение и обработка событий](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)  
+ [Наблюдение и обработка событий](../../ssms/agent/monitor-and-respond-to-events.md)  
   
   

@@ -14,13 +14,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c14fc0032b2b7bf6c36ce6f8cd592e82603265d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 54e46ce9630ed8ae84a5998946f36d05544df34c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549834"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073745"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Создание и хранение главных ключей столбцов (постоянное шифрование)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $reso
 
 Чтобы модуль HSM был доступен для приложений на данном компьютере, на компьютере должен быть установлен и настроен поставщик хранилища ключей (KSP), реализующий CNG. Клиентский драйвер с постоянным шифрованием (поставщик хранилища главных ключей столбцов в драйвере) использует KSP для шифрования и расшифровки ключей шифрования столбцов, защищенных главным ключом столбца, который хранится в хранилище ключей.
 
-В состав Windows входит ПО поставщика хранилища ключей Microsoft Software Key Storage Provider — программный поставщик KSP, который можно использовать для тестирования. См. раздел [CNG Key Storage Providers](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx)(Поставщики хранилища ключей CNG).
+В состав Windows входит ПО поставщика хранилища ключей Microsoft Software Key Storage Provider — программный поставщик KSP, который можно использовать для тестирования. См. раздел [CNG Key Storage Providers](/windows/desktop/SecCertEnroll/cng-key-storage-providers)(Поставщики хранилища ключей CNG).
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>Создание главных ключей столбцов в хранилище ключей с помощью CNG или KSP
 

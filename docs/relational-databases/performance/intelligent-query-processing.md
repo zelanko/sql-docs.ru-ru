@@ -15,16 +15,16 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 20c453617ccef36166ca3b9fae62ee0430959e51
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f36910f24b976b1c27f51ab45db40265a71c3c02
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562958"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43072997"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Интеллектуальная обработка запросов в базах данных SQL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Семейство функций **интеллектуальной обработки запросов** включает средства, которые значительно повышают производительность существующих рабочих нагрузок и требуют минимальных усилий при реализации.
 

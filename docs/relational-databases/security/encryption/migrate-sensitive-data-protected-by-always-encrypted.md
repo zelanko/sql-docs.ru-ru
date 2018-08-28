@@ -16,20 +16,20 @@ caps.latest.revision: 11
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2f957c9579d5474f2f8d33593ceb37e4fc9c8de3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1343e82e7d02feb2b4b9c164bf3b871999d6dffd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39551474"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43059777"
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Перенос конфиденциальных данных с помощью функции постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
  Чтобы во время операций массового копирования загрузить зашифрованные данные, не проверяя метаданные на сервере, создайте пользователя с параметром **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Этот параметр предназначен для средств устаревших версий сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , выпущенных до выпуска [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (например, bcp.exe), или для сторонних рабочих процессов извлечения, преобразования и загрузки (ETL), которые не могут использовать функцию постоянного шифрования. Таким образом пользователи могут безопасно перемещать зашифрованные данные из одного набора таблиц, содержащего зашифрованные столбцы, в другой набор таблиц с зашифрованными столбцами (в той же или другой базе данных).  
  -  
  ## <a name="the-allowencryptedvaluemodifications-option"></a>Параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
- Команды [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) и [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) имеют параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Если задано значение ON (значение по умолчанию — OFF), этот параметр отключает проверки шифрованных метаданных на сервере в операциях массового копирования, что позволяет пользователю массово копировать зашифрованные данные из одной таблицы или базы данных в другую и при этом не расшифровывать данные.  
+ Команды [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) и [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) имеют параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Если задано значение ON (значение по умолчанию — OFF), этот параметр отключает проверки шифрованных метаданных на сервере в операциях массового копирования, что позволяет пользователю массово копировать зашифрованные данные из одной таблицы или базы данных в другую и при этом не расшифровывать данные.  
   
 ## <a name="data-migration-scenarios"></a>Сценарии переноса данных  
 В таблице ниже показаны рекомендуемые параметры, подходящие для нескольких сценариев переноса.  

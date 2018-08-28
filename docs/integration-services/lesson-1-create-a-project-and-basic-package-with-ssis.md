@@ -15,16 +15,16 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead61697c2db5bc574699ac460584225564e5774
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c042f48873cec072e5aac7d48509244975e4ce2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332708"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410369"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Занятие 1. Создание проекта и основного пакета с помощью служб SSIS
 
- > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Занятие 1. Создание проекта и основного пакета](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx).
+ > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Занятие 1. Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md).
 
 На этом занятии будет рассмотрено создание простого ETL-пакета, который будет извлекать данные из отдельного источника неструктурированных файлов, преобразовывать полученные данные при помощи двух компонентов преобразования «Уточняющий запрос», а затем записывать эти данные в таблицу фактов **FactCurrency** , находящуюся в базе данных **AdventureWorksDW2012**. На этом занятии предстоит узнать, как создавать новые пакеты, добавлять и настраивать соединения с источниками данных и назначениями, а также работать с новыми компонентами потока управления и потока данных.  
   
@@ -81,19 +81,19 @@ ms.locfileid: "35332708"
   
 -   [Шаг 1. Создание нового проекта служб Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Шаг 2. Добавление и настройка диспетчера подключения неструктурированных файлов](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Шаг 3. Добавление и настройка диспетчера соединений OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Шаг 3. Добавление и настройка диспетчера подключений OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Этап 4. Добавление задачи потока данных в пакет](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Шаг 4. Добавление задачи потока данных в пакет](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Шаг 5. Добавление и настройка источника неструктурированных файлов](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Шаг 6. Добавление и настройка преобразований «Уточняющий запрос»](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Шаг 6. Добавление и настройка преобразований "Уточняющий запрос"](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [Шаг 7. Добавление и настройка назначения OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Шаг 8. Облегчение чтения пакета, созданного на занятии 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Шаг 8. Упрощение чтения пакета, созданного на занятии 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 -   [Шаг 9. Проверка учебного пакета, созданного на занятии 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   

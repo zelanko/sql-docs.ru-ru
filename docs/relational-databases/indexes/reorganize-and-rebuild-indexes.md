@@ -34,19 +34,19 @@ caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 67c5b75e86ca504f0dfde749902da6f2f1a7dd98
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 67dac44e6d59e89e1d05f9e0f9a81bb1dd944fac
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39539134"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058981"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Реорганизация и перестроение индексов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!NOTE]
-> Материалы по предыдущим версиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Реорганизация и перестроение индексов](https://msdn.microsoft.com/library/ms189858(SQL.120).aspx).
+> Материалы по предыдущим версиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Реорганизация и перестроение индексов](reorganize-and-rebuild-indexes.md).
 
 В этом разделе описывается реорганизация или перестроение фрагментированного индекса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически изменяет индексы при вставке, обновлении или удалении базовых данных. Со временем эти изменения могут привести к тому, что данные в индексе окажутся разбросанными по базе данных (фрагментированными). Фрагментация имеет место в тех случаях, когда в индексах содержатся страницы, для которых логический порядок, основанный на значении ключа, не совпадает с физическим порядком в файле данных. Существенно фрагментированные индексы могут серьезно снижать производительность запросов и служить причиной замедления отклика приложения, особенно операций сканирования.  
   

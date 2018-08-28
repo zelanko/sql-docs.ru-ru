@@ -15,13 +15,13 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 12058aef871aa14ec5daa8a92c22598cb9067350
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: dbe71d4b5b1f668651898b48d869ecfd4db8690e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558334"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083013"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Введение в таблицы, оптимизированные для памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "39558334"
   
  На следующем рисунке показана работа с несколькими версиями строк. На схеме показана таблица с тремя строками, у каждой строки своя версия.  
   
-![Управление версиями.] (../../relational-databases/in-memory-oltp/media/hekaton-tables-1.gif "Управление версиями.")  
+![Управление версиями.](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.gif "Управление версиями.")  
   
  Таблица содержит три строки: r1, r2 и r3. r1 содержит три версии, r2 — 2 версии, и r3 — 4 версии. Обратите внимание, что разные версии одной и той же строки не обязательно занимают последовательные области памяти. Различные версии строк могут быть распределены по всей структуре данных таблицы.  
   

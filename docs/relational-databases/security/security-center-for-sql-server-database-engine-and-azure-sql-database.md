@@ -21,13 +21,13 @@ caps.latest.revision: 55
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 02cd230fa1ec5201d58daffeb3adcfb1c776258c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: efce93db98cf9b030ed45ce38611a5506904cadc
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559294"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43071635"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "39559294"
   
  Дополнительные ссылки для программистов приложений.  
   
--   [Сценарии безопасности приложений в SQL Server](https://msdn.microsoft.com/library/bb669057.aspx)  
+-   [Сценарии безопасности приложений в SQL Server](/dotnet/framework/data/adonet/sql/application-security-scenarios-in-sql-server)  
   
--   [Написание безопасного динамического кода SQL в SQL Server](https://msdn.microsoft.com/library/bb669091.aspx)  
+-   [Написание безопасного динамического кода SQL в SQL Server](/dotnet/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server)  
   
 -   [Практическое руководство. Защита от внедрения кода SQL в ASP.NET](https://msdn.microsoft.com/library/ff648339.aspx)  
   
