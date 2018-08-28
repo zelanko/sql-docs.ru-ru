@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52f6f4c0406bd1aa90585723025ce5456c34c1e9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d661cde875e4bbec00f503c86d623279fa97622d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980136"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776134"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38980136"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом разделе описан процесс создания и определения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] шагов заданий агента [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] , которые выполняют команды и запросы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Analysis Services с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] или управляющих объектов SQL Server (SMO).  
+В этом разделе описан процесс создания и определения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] шагов заданий агента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которые выполняют команды и запросы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов SQL Server (SMO).  
   
 -   **Перед началом работы**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "38980136"
   
 ### <a name="Restrictions"></a>Ограничения  
   
--   Если шаг задания использует команду служб Analysis Services, то инструкция команды должна быть методом XMLA **Execute** . Инструкция не может содержать полный конверт SOAP или метод **Discover** XML для аналитики. Хотя в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] поддерживаются полные конверты SOAP и метод **Discover** , шаги заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в ней не поддерживаются. Дополнительные сведения о XML для служб Analysis Services см. в разделе [Общие сведения о XML для аналитики (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
+-   Если шаг задания использует команду служб Analysis Services, то инструкция команды должна быть методом XMLA **Execute** . Инструкция не может содержать полный конверт SOAP или метод **Discover** XML для аналитики. Хотя в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживаются полные конверты SOAP и метод **Discover** , шаги заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в ней не поддерживаются. Дополнительные сведения о XML для служб Analysis Services см. в разделе [Общие сведения о XML для аналитики (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
   
 -   Если шаг задания использует запрос служб Analysis Services, то инструкция запроса команды должна быть запросом многомерных выражений (MDX). Дополнительные сведения о многомерных выражениях см. в разделе [Общие сведения об инструкциях многомерных выражений](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
@@ -59,9 +59,9 @@ ms.locfileid: "38980136"
   
 #### <a name="Permissions"></a>Permissions  
   
--   Чтобы запустить шаг задания, использующий подсистему служб Analysis Services, пользователь должен быть членом предопределенной роли сервера **sysadmin** или обладать правом доступа к правильной учетной записи-посреднику, определенной для использования этой подсистемы. К тому же учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или его учетная запись-посредник должна быть учетной записью администратора служб Analysis Services и правильной учетной записью домена Windows.  
+-   Чтобы запустить шаг задания, использующий подсистему служб Analysis Services, пользователь должен быть членом предопределенной роли сервера **sysadmin** или обладать правом доступа к правильной учетной записи-посреднику, определенной для использования этой подсистемы. К тому же учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или его учетная запись-посредник должна быть учетной записью администратора служб Analysis Services и правильной учетной записью домена Windows.  
   
--   Записывать выходные данные шага задания в файл могут только элементы предопределенной роли сервера **sysadmin** . Если шаги задания выполняются пользователями, которые являются элементами роли базы данных **SQLAgentUserRole** в базе данных **msdb** , то выходные данные можно записать только в таблицу. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] записывает выходные данные шага задания в таблицу **sysjobstepslog** базы данных **msdb** .  
+-   Записывать выходные данные шага задания в файл могут только элементы предопределенной роли сервера **sysadmin** . Если шаги задания выполняются пользователями, которые являются элементами роли базы данных **SQLAgentUserRole** в базе данных **msdb** , то выходные данные можно записать только в таблицу. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывает выходные данные шага задания в таблицу **sysjobstepslog** базы данных **msdb** .  
   
 -   Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "38980136"
   
 8.  Введите инструкцию в поле **Команда** или нажмите кнопку **Открыть** , чтобы выбрать инструкцию.  
   
-9. Перейдите на страницу **Дополнительно** , чтобы определить параметры данного шага задания, например действия, которые должны быть выполнены агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в случае успешного или неуспешного выполнения этого шага, количество попыток выполнения шага задания, а также место записи результатов шага задания.  
+9. Перейдите на страницу **Дополнительно** , чтобы определить параметры данного шага задания, например действия, которые должны быть выполнены агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в случае успешного или неуспешного выполнения этого шага, количество попыток выполнения шага задания, а также место записи результатов шага задания.  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Создание шага задания запроса служб Analysis Services  
   
@@ -105,7 +105,7 @@ ms.locfileid: "38980136"
   
 8.  Введите инструкцию в поле **Команда** или нажмите кнопку **Открыть** , чтобы выбрать инструкцию.  
   
-9. Перейдите на страницу **Дополнительно** , чтобы определить параметры данного шага задания, например действия, которые должны быть выполнены агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в случае успешного или неуспешного выполнения этого шага, количество попыток выполнения шага задания, а также место записи результатов шага задания.  
+9. Перейдите на страницу **Дополнительно** , чтобы определить параметры данного шага задания, например действия, которые должны быть выполнены агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в случае успешного или неуспешного выполнения этого шага, количество попыток выполнения шага задания, а также место записи результатов шага задания.  
   
 ## <a name="TSQL"></a>Использование Transact-SQL  
   

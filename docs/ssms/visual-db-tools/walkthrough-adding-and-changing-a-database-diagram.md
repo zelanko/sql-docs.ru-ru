@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a81fc1d6a60bc4bbb1d9ef2f67c3f5c32f60dc7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6d7190bb75167f55a8cf5c741d46f7f0134f5bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054971"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776672"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Пошаговое руководство. Добавление и изменение диаграммы базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33054971"
 ## <a name="prerequisites"></a>предварительные требования  
 Для выполнения задач этого руководства необходимы:  
   
--   Доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)]  
+-   Доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
   
 -   Учетная запись с правами владельца базы данных **dbo**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33054971"
   
 1.  В меню **Вид** выберите **Обозреватель объектов**.  
   
-2.  Откройте узел «Базы данных», а затем узел [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] .  
+2.  Откройте узел «Базы данных», а затем узел [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 3.  Щелкните правой кнопкой узел "Диаграммы баз данных" и выберите **Создать диаграмму базы данных**.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "33054971"
 [Настройка конструктора диаграмм баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [Добавление таблиц в диаграммы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
 [Создание связи между таблицами на диаграмме (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
-[Создание XML-индексов](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[Создание XML-индексов](../../relational-databases/xml/create-xml-indexes.md)  
 [Копирование изображения диаграммы базы данных в буфер обмена (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [Работа с макетом диаграммы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   

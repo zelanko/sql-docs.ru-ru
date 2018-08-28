@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f8d98cb48a3aebe741b134920cfe7b82aebca9f4
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fc6f138002a8ecc7f17f86b334f967c0cd19670f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979096"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776403"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "38979096"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В данном разделе содержатся инструкции по настройке агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] для включения сообщений трассировки выполнения в журнал ошибок агента в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+В данном разделе содержатся инструкции по настройке агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для включения сообщений трассировки выполнения в журнал ошибок агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **В этом разделе**  
   
@@ -51,14 +51,14 @@ ms.locfileid: "38979096"
   
 ### <a name="Restrictions"></a>Ограничения  
   
--   Узел агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] отображается в обозревателе объектов только при наличии у пользователя разрешения на использование узла.  
+-   Узел агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображается в обозревателе объектов только при наличии у пользователя разрешения на использование узла.  
   
--   Включайте сообщения трассировки выполнения в журнал ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] только при возникновении конкретной проблемы в работе агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , поскольку его использование приводит к резкому увеличению объема журнала ошибок.  
+-   Включайте сообщения трассировки выполнения в журнал ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только при возникновении конкретной проблемы в работе агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поскольку его использование приводит к резкому увеличению объема журнала ошибок.  
   
 ### <a name="Security"></a>безопасность  
   
 #### <a name="Permissions"></a>Permissions  
-Для выполнения своих функций агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] должен быть настроен на использование учетных данных записи, которая является членом предопределенной роли сервера **sysadmin** в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Эта учетная запись должна иметь следующие разрешения Windows.  
+Для выполнения своих функций агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть настроен на использование учетных данных записи, которая является членом предопределенной роли сервера **sysadmin** в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта учетная запись должна иметь следующие разрешения Windows.  
   
 -   Вход в систему в качестве службы (SeServiceLogonRight)  
   
@@ -68,12 +68,12 @@ ms.locfileid: "38979096"
   
 -   Назначение квот памяти процессам (SeIncreaseQuotaPrivilege)  
   
-Дополнительные сведения о разрешениях Windows, необходимых для учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , см. в разделах [Выбор учетной записи для службы агента SQL Server](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) и [Настройка учетных записей служб Windows](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014).  
+Дополнительные сведения о разрешениях Windows, необходимых для учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделах [Выбор учетной записи для службы агента SQL Server](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) и [Настройка учетных записей служб Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## <a name="SSMSProcedure"></a>  
 #### <a name="to-write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server  
   
-1.  В **обозревателе объектов**щелкните знак «плюс», чтобы развернуть сервер, содержащий журнал ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , в который необходимо записать сообщения трассировки выполнения.  
+1.  В **обозревателе объектов**щелкните знак «плюс», чтобы развернуть сервер, содержащий журнал ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в который необходимо записать сообщения трассировки выполнения.  
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server** и выберите пункт **Свойства**.  
   

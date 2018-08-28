@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 62474c013c8d70f32f81c68afcb74e5f5c655535
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d4127493bbf07f3880789d0eead687eedd8d1453
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983666"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774972"
 ---
 # <a name="create-a-wmi-event-alert"></a>Создание предупреждения о событии WMI
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "38983666"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом разделе описано, как создать предупреждение агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , вызываемое при возникновении определенного события [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , которое отслеживается поставщиком WMI для событий сервера, в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] или [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+В этом разделе описано, как создать предупреждение агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вызываемое при возникновении определенного события [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое отслеживается поставщиком WMI для событий сервера, в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-Дополнительные сведения об использовании поставщика WMI для наблюдения за событиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] см. в разделе [Поставщик инструментария WMI для классов событий и свойств сервера](http://msdn.microsoft.com/80767fe0-32ac-406a-81a0-8212cd6ce7e4). Дополнительные сведения о разрешениях, которые требуются для получения уведомлений о событиях WMI, см. в разделе [Выбор учетной записи для службы агента SQL Server](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md). Дополнительные сведения о языке WQL см. в разделе [Использование WQL с поставщиком WMI для событий сервера](http://msdn.microsoft.com/58b67426-1e66-4445-8e2c-03182e94c4be).  
+Дополнительные сведения об использовании поставщика WMI для наблюдения за событиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Поставщик инструментария WMI для классов событий и свойств сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md). Дополнительные сведения о разрешениях, которые требуются для получения уведомлений о событиях WMI, см. в разделе [Выбор учетной записи для службы агента SQL Server](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md). Дополнительные сведения о языке WQL см. в разделе [Использование WQL с поставщиком WMI для событий сервера](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md).  
   
 **В этом разделе**  
   
@@ -53,11 +53,11 @@ ms.locfileid: "38983666"
   
 ### <a name="Restrictions"></a>Ограничения  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] обеспечивает простой графический способ управления всей системой предупреждений и рекомендуется для настройки инфраструктуры предупреждений.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает простой графический способ управления всей системой предупреждений и рекомендуется для настройки инфраструктуры предупреждений.  
   
 -   События, сформированные посредством процедуры **xp_logevent** , появляются в базе данных master. Поэтому **xp_logevent** не вызывает срабатывание предупреждения, если только значение аргумента **@database_name** для предупреждения не равно **'master'** или NULL.  
   
--   На компьютере, где запущен агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , поддерживаются только пространства имен WMI.  
+-   На компьютере, где запущен агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживаются только пространства имен WMI.  
   
 ### <a name="Security"></a>безопасность  
   

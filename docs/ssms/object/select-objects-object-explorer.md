@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57d472c063bd4b2cf697186323942842f8d037c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbff0ee5307e9f0d6d7e53a740c950c869dc93c5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041881"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776529"
 ---
 # <a name="select-objects-object-explorer"></a>Выбор объектов (обозреватель объектов)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33041881"
   
 ## <a name="options"></a>Параметры  
 **Выберите типы объектов**  
-Отображает список типов, к которым принадлежат выбираемые объекты. В число этих типов входят основные и защищаемые типы уровня [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и уровня базы данных. Это окно заполняется значениями, которые были выбраны в диалоговом окне **Выбор типов объектов** , доступном при нажатии кнопки **Тип объектов** .  
+Отображает список типов, к которым принадлежат выбираемые объекты. В число этих типов входят основные и защищаемые типы уровня [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и уровня базы данных. Это окно заполняется значениями, которые были выбраны в диалоговом окне **Выбор типов объектов** , доступном при нажатии кнопки **Тип объектов** .  
   
 **Введите имена объектов для выбора**  
 Введите разделенный точками с запятой список имен объектов, которые должны быть выбраны. Выбираемые объекты должны принадлежать к типу из числа указанных в окне **Выберите типы объектов** . Объекты могут быть выбраны из списка, доступного при нажатии кнопки **Обзор** .  

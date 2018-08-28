@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee8da38abc3b4725530abaf812381d0197812fe6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e74ee9c4579071b14072dcccbab493126d69a0cb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049541"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776512"
 ---
 # <a name="print-dialog-box"></a>Диалоговое окно «Печать»
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33049541"
   
 ## <a name="printer"></a>Принтерный  
 **Название**  
-Задает принтер. Выберите принтер из списка. Выбранный принтер становится принтером по умолчанию до тех пор, пока не будет закрыта среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] или выбран другой принтер. Сведения, отображаемые в полях под списком, относятся к выбранному принтеру.  
+Задает принтер. Выберите принтер из списка. Выбранный принтер становится принтером по умолчанию до тех пор, пока не будет закрыта среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или выбран другой принтер. Сведения, отображаемые в полях под списком, относятся к выбранному принтеру.  
   
 **Состояние**  
 Описывает состояние выбранного принтера, например, занят или готов к работе.  

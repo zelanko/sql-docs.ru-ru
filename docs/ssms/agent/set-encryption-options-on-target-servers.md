@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 40e37404acd0fd59db0362c53b084b313a5a48e0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f1d4585c67f243e461dc57342fda09d83144bf13
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036032"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776537"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Установка параметров шифрования на целевых серверах
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "38036032"
 
 Если нельзя использовать сертификат для шифрованной связи по протоколу SSL между главными серверами и некоторыми или всеми целевыми серверами, но канал между ними необходимо шифровать, настройте целевой сервер на использование необходимого уровня безопасности.  
   
-Чтобы настроить соответствующий уровень безопасности, необходимый для конкретного канала связи главного и целевого серверов, задайте для подраздела реестра **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*имя_экземпляра*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] на целевом сервере одно из следующих значений: Для параметра \<*имя_экземпляра*> используйте значение **MSSQL.***n*. Например, **MSSQL.1** или **MSSQL.3**.  
+Чтобы настроить соответствующий уровень безопасности, необходимый для конкретного канала связи главного и целевого серверов, задайте для подраздела реестра **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*имя_экземпляра*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на целевом сервере одно из следующих значений: Для параметра \<*имя_экземпляра*> используйте значение **MSSQL.***n*. Например, **MSSQL.1** или **MSSQL.3**.  
   
 |Значение|Описание|  
 |---------|---------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "38036032"
 Если задано **1** или **2** , необходимо, чтобы SSL-шифрование было включено и на главном, и на целевом серверах. Если задано значение **2** , необходимо, чтобы на главном сервере присутствовал сертификат, подписанный должным образом.  
   
 > [!CAUTION]  
-> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry_md.md)]  
+> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
 [Практическое руководство. Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](http://msdn.microsoft.com/en-us/e1e55519-97ec-4404-81ef-881da3b42006)  

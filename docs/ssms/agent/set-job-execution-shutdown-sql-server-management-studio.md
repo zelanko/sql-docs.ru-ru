@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5b85b37b7bde8853528e5de026c565a2e36fbf24
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 21defc87149780d1306c28f4e99a69d62bf45d38
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000296"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774829"
 ---
 # <a name="set-job-execution-shutdown-sql-server-management-studio"></a>Настройка интервала ожидания задания при завершении работы (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "38000296"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом разделе описано, как задать время, в течение которого агент [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] будет ожидать завершения выполнения заданий, прежде чем агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] завершит работу в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] , в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+В этом разделе описано, как задать время, в течение которого агент [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет ожидать завершения выполнения заданий, прежде чем агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершит работу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **В этом разделе**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "38000296"
 ### <a name="Security"></a>безопасность  
   
 #### <a name="Permissions"></a>Permissions  
-По умолчанию члены предопределенной роли сервера **sysadmin** могут задавать время, в течение которого агент [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] будет ожидать выполнения заданий до того момента, как он завершит работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в базе данных **msdb** :  
+По умолчанию члены предопределенной роли сервера **sysadmin** могут задавать время, в течение которого агент [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет ожидать выполнения заданий до того момента, как он завершит работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -69,5 +69,5 @@ ms.locfileid: "38000296"
   
 3.  В разделе **Выбор страницы**выберите пункт **Система заданий**.  
   
-4.  Установите **Интервал ожидания при завершении работы** в секундах, чтобы увеличить или уменьшить длительность ожидания завершения работы. Этот параметр определяет, как долго агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] будет ожидать завершения выполняющихся заданий перед завершением работы самого агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+4.  Установите **Интервал ожидания при завершении работы** в секундах, чтобы увеличить или уменьшить длительность ожидания завершения работы. Этот параметр определяет, как долго агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет ожидать завершения выполняющихся заданий перед завершением работы самого агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

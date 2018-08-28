@@ -23,16 +23,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 637a674bcbbc22e0a10ac2e49c7ea0c875b85c44
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60450ac29e788921557a76bde211775fecbc4734
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052982"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774715"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Обновление диаграмм баз данных из предыдущих версий (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Схемы баз данных, созданные для баз предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , автоматически обновляются, если построение диаграмм базы данных установлено в состояние [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]. Дополнительные шаги настройки построения диаграмм см. в разделе [Настройка конструктора диаграмм баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
+Схемы баз данных, созданные для баз предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], автоматически обновляются, если построение диаграмм базы данных установлено в состояние [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные шаги настройки построения диаграмм см. в разделе [Настройка конструктора диаграмм баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Обновление старых диаграмм базы данных  
   

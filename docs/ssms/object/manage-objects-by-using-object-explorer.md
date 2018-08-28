@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75d7f222b5fb12856a1248020142a11600df803e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f3af3160f5d6774921faa6de14b2bff0a47ac5c0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983976"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774718"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Управление объектами с помощью обозревателя объектов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "38983976"
 Когда обозреватель объектов подключен к серверу, то, используя настройки соединения обозревателя объектов, можно открыть новое окно «Редактор кода». Чтобы открыть новое окно "Редактор кода", щелкните правой кнопкой мыши имя сервера в обозревателе объектов, а затем выберите пункт **Создать запрос**. Чтобы открыть окно "Редактор кода" для конкретной базы данных, щелкните правой кнопкой мыши имя базы данных, а затем выберите пункт **Создать запрос**. При открытии нового запроса к серверу служб Analysis Services можно выбирать запросы расширений интеллектуального анализа данных, многомерных выражений MDX или XML для аналитики.  
   
 ### <a name="start-powershell"></a>Запустить PowerShell  
-Сеанс PowerShell можно запустить, щелкнув любую папку или объект в дереве обозревателя объектов правой кнопкой мыши и выбрав пункт **Запустить Powershell**. В результате этого запускается сеанс PowerShell с поддержкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell, в котором установлен путь к объекту, выбранному щелчком правой кнопкой мыши в обозревателе объектов. После этого можно вводить команды PowerShell в интерактивной среде PowerShell. Дополнительные сведения см. в статье [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+Сеанс PowerShell можно запустить, щелкнув любую папку или объект в дереве обозревателя объектов правой кнопкой мыши и выбрав пункт **Запустить Powershell**. В результате этого запускается сеанс PowerShell с поддержкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, в котором установлен путь к объекту, выбранному щелчком правой кнопкой мыши в обозревателе объектов. После этого можно вводить команды PowerShell в интерактивной среде PowerShell. Дополнительные сведения см. в статье [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель объектов](../../ssms/object/object-explorer.md)  

@@ -19,16 +19,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96e5484ed59b0852f0099602b5a4e3ff359d1b6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95fd70beb5892cdffae5f2223deb1eace2ca8705
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042391"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776516"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>Перемещение или удаление элемента или проекта
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Элементами проекта в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] являются очереди, соединения и различные файлы. Запросы и прочие файлы проектов можно удалять из решения без удаления соответствующих им файлов из хранилища. Переместите проект или элемент, если он не нужен в текущем решении, но его надо использовать в другом решении.  
+Элементами проекта в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] являются очереди, соединения и различные файлы. Запросы и прочие файлы проектов можно удалять из решения без удаления соответствующих им файлов из хранилища. Переместите проект или элемент, если он не нужен в текущем решении, но его надо использовать в другом решении.  
   
 ### <a name="to-remove-a-project-item"></a>Исключение элемента проекта  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33042391"
   
 3.  В диалоговом окне подтверждения нажмите кнопку **ОК**для исключения проекта из решения.  
   
-Проект можно удалить окончательно, но для этого сначала необходимо удалить все ссылки на проект из решений среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , а затем с помощью проводника [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows окончательно удалить связанные с проектом файлы из хранилища.  
+Проект можно удалить окончательно, но для этого сначала необходимо удалить все ссылки на проект из решений среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , а затем с помощью проводника [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows окончательно удалить связанные с проектом файлы из хранилища.  
   
 #### <a name="to-delete-a-project"></a>Удаление проекта  
   

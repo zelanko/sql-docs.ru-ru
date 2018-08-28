@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7c8f83f6ea1a3a2c3a25d73d8af4b5efa2329ae
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: aec9c5c9f1c5a076719f3efe18e0d991527e39d8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981276"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776131"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "38981276"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом разделе описано, как создать и определить шаг задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , выполняющий скрипт PowerShell, в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] или [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+В этом разделе описано, как создать и определить шаг задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполняющий скрипт PowerShell, в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **В этом разделе**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "38981276"
   
 7.  В поле **Команда** введите синтаксис скрипта PowerShell, который будет выполняться в данном шаге. Или нажмите кнопку **Открыть** и выберите файл, содержащий скрипт. В качестве примера скрипта PowerShell см. подраздел **Использование Transact-SQL** ниже.  
   
-8.  Выберите страницу **Дополнительно** , чтобы задать следующие параметры шага задания: какие действия предпринять в случае успешного или неуспешного выполнения шага задания, сколько раз агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] пытаться его выполнить и как часто повторять эти попытки.  
+8.  Выберите страницу **Дополнительно** , чтобы задать следующие параметры шага задания: какие действия предпринять в случае успешного или неуспешного выполнения шага задания, сколько раз агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытаться его выполнить и как часто повторять эти попытки.  
   
 ## <a name="TSQL"></a>Использование Transact-SQL  
   

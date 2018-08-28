@@ -26,18 +26,18 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 100c84e221b7add9eab09cd7b2b0bf4c3ab0669b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e0bad4aef18b77c53f850cbcfe2dafd5d8181ac4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060182"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776671"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
- > Материалы по предыдущим версиям SQL Server см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](configure-the-windows-firewall-to-allow-sql-server-access.md).
 
 Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Если брандмауэр включен, но настроен неправильно, попытка соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может оказаться заблокированной.  
   

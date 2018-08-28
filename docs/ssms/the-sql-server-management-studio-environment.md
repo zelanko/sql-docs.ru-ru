@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 31f3a7f0efa120cae62d2390d2d4bf5b571ee6f0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981317"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775063"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Среда SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] имеет богатые функциональные возможности по созданию запросов и управлению ими в [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] имеет богатые функциональные возможности по созданию запросов и управлению ими в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  
 [Общие элементы пользовательского интерфейса](../ssms/general-user-interface-elements.md)  
@@ -36,5 +36,5 @@ ms.locfileid: "38981317"
 Знакомство с обозревателем решений, который представляет в упорядоченном виде проекты и их файлы, а также дает возможность быстрого вызова команд для управления ими.  
   
 [Обозреватель решений системы управления версиями](https://msdn.microsoft.com/library/ms173879.aspx)  
-Описание интеграции среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] с продуктами для управления версиями.  
+Описание интеграции среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] с продуктами для управления версиями.  
   

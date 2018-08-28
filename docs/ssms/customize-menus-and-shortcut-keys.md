@@ -25,12 +25,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4152bca5efcafb59de4f08c299b4ff3c9a66b9d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bcca6b82d28f350571105826131c0fd99152a12
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045871"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774691"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Настройка меню и сочетаний клавиш
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,7 +164,7 @@ ms.locfileid: "33045871"
 6.  В диалоговом окне **Настройка** нажмите **Закрыть**.  
   
 > [!NOTE]  
-> Некоторые команды доступны только при отображении в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] соответствующего содержимого. Если команды в меню недоступны, элемент меню будет также недоступен.  
+> Некоторые команды доступны только при отображении в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] соответствующего содержимого. Если команды в меню недоступны, элемент меню будет также недоступен.  
   
 ## <a name="see-also"></a>См. также:  
 [Возможности среды SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  

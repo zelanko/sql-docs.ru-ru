@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0c79369a1486f175fb23321e706a799059c92c9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 35f4eaba0ff477e6577b4805a02db2c668f647ae
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971406"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774460"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>Свойства агента SQL Server (страница «Дополнительно»)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,38 +31,38 @@ ms.locfileid: "37971406"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Эта страница используется для просмотра и изменения дополнительных свойств службы агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Эта страница используется для просмотра и изменения дополнительных свойств службы агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Параметры  
 **Пересылка событий SQL Server**  
 Параметры в данной категории активируют и настраивают пересылку событий.  
   
 **Переслать события на другой сервер**  
-Перенаправляет события агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] другому серверу.  
+Перенаправляет события агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] другому серверу.  
   
 **Server**  
 Выберите имя сервера, которому нужно перенаправить события.  
   
 **Необработанные события**  
-Переправляет заданному серверу только необработанные события. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] перенаправляет только события, на которые не реагирует ни одно предупреждение.  
+Переправляет заданному серверу только необработанные события. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перенаправляет только события, на которые не реагирует ни одно предупреждение.  
   
 **Все события**  
-Переправляет все события. Если предупреждение локального экземпляра реагирует на событие, агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] перенаправит этот событие и обработает предупреждение.  
+Переправляет все события. Если предупреждение локального экземпляра реагирует на событие, агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перенаправит этот событие и обработает предупреждение.  
   
 **Если серьезность события равна или превышает**  
 Пересылает только события, уровень серьезности которых равен указанному или превышает его.  
   
 **Условие простоя ЦП**  
-Параметры в данной категории определяют условия, при которых агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] запускает задания, запланированные к выполнению в расписании простоя ЦП.  
+Параметры в данной категории определяют условия, при которых агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускает задания, запланированные к выполнению в расписании простоя ЦП.  
   
 **Определить условие простоя ЦП**  
-Определяет условия, при которых агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] считает, что ЦП простаивает.  
+Определяет условия, при которых агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считает, что ЦП простаивает.  
   
 **Среднее время использования ЦП сократилось до**  
 Процент использования ЦП сократился до уровня, при котором считается, что ЦП простаивает.  
   
 **И остается ниже этого уровня в течение**  
-Отрезок времени, который средний ЦП должен простаивать, прежде чем агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] запустит задания по расписанию простоя ЦП.  
+Отрезок времени, который средний ЦП должен простаивать, прежде чем агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запустит задания по расписанию простоя ЦП.  
   
 ## <a name="see-also"></a>См. также:  
 [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  

@@ -18,16 +18,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e29b71abbcba7e5b37ff1547321b6bd6d27d339c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c103c7149b26a1d87be4436a91ba4ae211440aff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047171"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774942"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Диалоговое окно «Параметры сортировки» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Это диалоговое окно позволяет указать параметры сортировки для столбца. Параметры сортировки столбца используются во всех операциях, сравнивающих значение столбца с другим столбцом или значением константы. Он также воздействует на некоторые символьные функции, например SUBSTRING или CHARINDEX. Подробный список воздействий параметров сортировки для столбца см. в документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Это диалоговое окно позволяет указать параметры сортировки для столбца. Параметры сортировки столбца используются во всех операциях, сравнивающих значение столбца с другим столбцом или значением константы. Он также воздействует на некоторые символьные функции, например SUBSTRING или CHARINDEX. Подробный список воздействий параметров сортировки для столбца см. в документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Оно отображается:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33047171"
   
 ## <a name="options"></a>Параметры  
 **Параметры сортировки SQL**  
-Выберите из раскрывающегося списка один из параметров сортировки, определяемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Выберите из раскрывающегося списка один из параметров сортировки, определяемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Параметры сортировки Windows**  
 Выберите из раскрывающегося списка один из параметров сортировки, определенных в Windows.  

@@ -21,12 +21,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54714f5d4c1cd0db5c9117e3812107caf039676e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dfa43eb6ced096a5ae4facd215cf06a87a97976f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997666"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775073"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Настройка конструктора диаграмм баз данных (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "37997666"
 3.  Нажмите кнопку **Да** , когда получите подсказку о необходимости настроить создание диаграмм баз данных.  
   
     > [!NOTE]  
-    > В базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] создаются таблица диаграмм базы данных, системные хранимые процедуры и системная функция.  
+    > В базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаются таблица диаграмм базы данных, системные хранимые процедуры и системная функция.  
   
-4.  Visual Studio создает следующие объекты в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
+4.  Visual Studio создает следующие объекты в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
     1.  таблица sysdiagrams;  
   

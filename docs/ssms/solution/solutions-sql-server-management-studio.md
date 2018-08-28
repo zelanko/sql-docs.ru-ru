@@ -21,19 +21,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9741b7db06a3be3adb6eb86f044fd7403fe1c2c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a69fb847726732f3b1321593655f29c3bb2f6d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043471"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776363"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Решения (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Решение [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] — это набор из одного или нескольких взаимосвязанных проектов. Проекты — это контейнеры, используемые разработчиками для организации взаимосвязанных файлов (например, для создания наборов широко используемых скриптов администрирования).  
+Решение [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это набор из одного или нескольких взаимосвязанных проектов. Проекты — это контейнеры, используемые разработчиками для организации взаимосвязанных файлов (например, для создания наборов широко используемых скриптов администрирования).  
   
 ## <a name="solution-overview"></a>Общие сведения о решении  
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] может использоваться как платформа для разработки скриптов для компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Используйте редакторы кода [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] для разработки скриптов и запросов для реляционных и многомерных баз данных, а также для создания наборов взаимосвязанных скриптов и запросов.  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может использоваться как платформа для разработки скриптов для компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Используйте редакторы кода [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для разработки скриптов и запросов для реляционных и многомерных баз данных, а также для создания наборов взаимосвязанных скриптов и запросов.  
   
 Проекты могут включать:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33043471"
   
 -   Сведения о соединении и файлы, используемые запросами и скриптами.  
   
-Один или несколько взаимосвязанных проектов могут составлять решение. Управлять решениями и проектами можно с помощью панели обозревателя решений в [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Один или несколько взаимосвязанных проектов могут составлять решение. Управлять решениями и проектами можно с помощью панели обозревателя решений в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 Решения и проекты могут интегрироваться в базы данных Visual SourceSafe (VSS) [!INCLUDE[msCoName](../../includes/msconame_md.md)] или сторонних поставщиков систем управления версиями для отслеживания изменений при разработке и управления жизненным циклом.  
   

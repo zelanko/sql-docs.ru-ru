@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20f698a0f85f54a31b18f74ad364de1fc1dfb187
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 839d26440ad4f6d00c4992feb76211daba49617f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997926"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775852"
 ---
 # <a name="open-file-dialog-box"></a>Диалоговое окно «Открытие файла»
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37997926"
 Для доступа к этому диалоговому окну выберите пункт **Открыть** в меню **Файл** , а затем выберите **Файл**. Это диалоговое окно отображается также при открытии файлов с помощью других элементов интерфейса, например диалогового окна **Внешние средства** . В меню **Файл** выберите команду **Открыть**и пункт **Решение или проект** , чтобы открыть похожее диалоговое окно **Открытие проекта** .  
   
 > [!NOTE]  
-> Прежде чем открыть проект или компонент в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], определите, заслуживает ли его код доверия. Даже само действие по открытию проекта или компонента в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] может привести к выполнению его кода в доверенном процессе на локальном компьютере.  
+> Прежде чем открыть проект или компонент в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], определите, заслуживает ли его код доверия. Даже само действие по открытию проекта или компонента в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к выполнению его кода в доверенном процессе на локальном компьютере.  
   
 ## <a name="option"></a>Параметр  
 **Папка**  

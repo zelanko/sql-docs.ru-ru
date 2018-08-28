@@ -18,20 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba51c2cba1f2032fe6c55fc27dac7c3f5416cb8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef2fe44791cc401c5f71ee3c3bd6ff09d33d45b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038781"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776387"
 ---
 # <a name="about-dialog-box"></a>Диалоговое окно "О программе"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
-В диалоговом окне **О программе** содержатся сведения о продукте, а также предоставляется доступ к сведениям о компьютере, на котором он запущен. Для копий с ограниченным сроком действия запись [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] содержит число дней, оставшихся до прекращения срока действия установленной копии. Это диалоговое окно открывается из меню **Справка** .  
+В диалоговом окне **О программе** содержатся сведения о продукте, а также предоставляется доступ к сведениям о компьютере, на котором он запущен. Для копий с ограниченным сроком действия запись [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] содержит число дней, оставшихся до прекращения срока действия установленной копии. Это диалоговое окно открывается из меню **Справка** .  
   
 ## <a name="options"></a>Параметры  
 **Название компонента**  
-Содержит имя каждого установленного элемента [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] .  
+Содержит имя каждого установленного элемента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 **Версия**  
 Содержит версию каждого установленного компонента.  

@@ -17,23 +17,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc7a585b40acca4658174b403207ad8480abf46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7684bccbeb7151730cdfdd541ecf02850f24c377
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042641"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774456"
 ---
 # <a name="options-environment---help---general-page"></a>Параметры ("Среда" — "Справка" — "Общие")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-В диалоговом окне **Параметры** можно выбрать наборы документации, а также выбрать отображение разделов внутри среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] либо в отдельном внешнем окне. Чтобы открыть это диалоговое окно, в меню **Сервис** выберите команду **Параметры** , в узле **Среда** разверните элемент **Справка** , а затем щелкните элемент **Общие**.  
+В диалоговом окне **Параметры** можно выбрать наборы документации, а также выбрать отображение разделов внутри среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] либо в отдельном внешнем окне. Чтобы открыть это диалоговое окно, в меню **Сервис** выберите команду **Параметры** , в узле **Среда** разверните элемент **Справка** , а затем щелкните элемент **Общие**.  
   
 > [!NOTE]  
 > Изменения параметров на этой странице вступят в силу только после перезапуска среды.  
   
 ## <a name="settings"></a>Настройки  
 **Отображать справку, используя**  
-Указывает способ отображения справки. Чтобы разделы справки отображались во внешнем плавающем окне, в раскрывающемся списке выберите пункт **Внешнее средство просмотра справки** . Чтобы разделы справки отображались в окне браузера, закрепленном внутри среды [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], выберите пункт **Собственное средство просмотра справки**.  
+Указывает способ отображения справки. Чтобы разделы справки отображались во внешнем плавающем окне, в раскрывающемся списке выберите пункт **Внешнее средство просмотра справки** . Чтобы разделы справки отображались в окне браузера, закрепленном внутри среды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], выберите пункт **Собственное средство просмотра справки**.  
   
 **Результатов поиска на странице**  
 Указывает количество разделов, отображаемых на одной странице **Результаты поиска** .  

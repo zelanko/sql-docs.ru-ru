@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce474af9d4c5753dd6b4c064338ca7cdb22db5cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce3a1ab49b33bd8b4f4fd79f3c216a99797f3405
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054701"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776617"
 ---
 # <a name="open-a-template"></a>Открытие шаблона
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33054701"
   
 Нужные значения аргументов открытого шаблона задаются в окне **Замена параметров шаблона** .  
   
-При открытии шаблона запускается новое окно редактора. Окно редактора откроется с учетными данными текущего активного соединения. Например, если выбрать экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] в обозревателе объектов при открытии шаблона CREATE DATABASE, откроется новое окно редактора кода с подключением к этому экземпляру. Если активных соединений нет, [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] представит диалоговое окно входа.  
+При открытии шаблона запускается новое окно редактора. Окно редактора откроется с учетными данными текущего активного соединения. Например, если выбрать экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] в обозревателе объектов при открытии шаблона CREATE DATABASE, откроется новое окно редактора кода с подключением к этому экземпляру. Если активных соединений нет, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] представит диалоговое окно входа.  
   
 ## <a name="see-also"></a>См. также:  
 [Вид](../../ssms/template/template-explorer.md)  

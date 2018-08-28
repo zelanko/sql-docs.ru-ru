@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7eef59e5e20ff33936e0db32849c4f1be4bf6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06ce90737135ad4eb6e098d6d8005663c1e47338
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050101"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774554"
 ---
 # <a name="use-the-toolbox"></a>Использование панели элементов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Из области элементов можно выбирать и перетаскивать элементы, текст и элементы управления на формы, страницы и в окна конструкторов, а также перетаскивать элементы из этих источников обратно в область элементов для повторного использования. Например, в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] можно перетащить задачу на узел плана обслуживания.  
+Из области элементов можно выбирать и перетаскивать элементы, текст и элементы управления на формы, страницы и в окна конструкторов, а также перетаскивать элементы из этих источников обратно в область элементов для повторного использования. Например, в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно перетащить задачу на узел плана обслуживания.  
   
 Элементы в области элементов группируются в разделы, называемые вкладками. Ниже приведено описание выполнения типичных операций с областью элементов.  
   

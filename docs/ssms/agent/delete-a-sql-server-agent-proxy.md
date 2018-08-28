@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 407db08417a3226b4e5b58e3c1758504ecc0ec79
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 48fb0b5800e405e5a544c4c02bf2bfb232b29075
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980856"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774582"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "38980856"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом разделе описывается, как удалить учетную запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] или [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+В этом разделе описывается, как удалить учетную запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **В этом разделе**  
   
@@ -53,11 +53,11 @@ ms.locfileid: "38980856"
   
 ### <a name="Restrictions"></a>Ограничения  
   
--   При удалении учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] убедитесь в том, что она не ссылается ни на какие активные шаги задания. Чтобы узнать, на какие шаги задания ссылается учетная запись-посредник, щелкните ее правой кнопкой мыши, выберите **Свойства** и в диалоговом окне *Свойства учетной записи-посредника***имя_учетной_записи-посредника* перейдите на страницу **Ссылки**. При удалении учетной записи-посредника существует возможность переназначить все шаги задания, которые ее используют, в диалоговом окне **Удаление объекта** .  
+-   При удалении учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] убедитесь в том, что она не ссылается ни на какие активные шаги задания. Чтобы узнать, на какие шаги задания ссылается учетная запись-посредник, щелкните ее правой кнопкой мыши, выберите **Свойства** и в диалоговом окне *Свойства учетной записи-посредника***имя_учетной_записи-посредника* перейдите на страницу **Ссылки**. При удалении учетной записи-посредника существует возможность переназначить все шаги задания, которые ее используют, в диалоговом окне **Удаление объекта** .  
   
--   Учетные записи-посредники агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] используют учетные данные для хранения сведений об учетных записях пользователей Windows. Указанный в учетных данных пользователь должен иметь разрешение «Вход в систему в качестве пакетного задания» на компьютере, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+-   Учетные записи-посредники агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют учетные данные для хранения сведений об учетных записях пользователей Windows. Указанный в учетных данных пользователь должен иметь разрешение «Вход в систему в качестве пакетного задания» на компьютере, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] проверяет действительность доступа к подсистеме учетной записи-посредника и предоставляет ей доступ при каждом выполнении шага задания. Если учетная запись-посредник больше не имеет доступа к подсистеме, шаг задания завершается ошибкой. В противном случае агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] олицетворяет пользователя, указанного в учетной записи-посреднике, и запускает шаг задания.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет действительность доступа к подсистеме учетной записи-посредника и предоставляет ей доступ при каждом выполнении шага задания. Если учетная запись-посредник больше не имеет доступа к подсистеме, шаг задания завершается ошибкой. В противном случае агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] олицетворяет пользователя, указанного в учетной записи-посреднике, и запускает шаг задания.  
   
 -   Если имени входа пользователя предоставлен доступ к учетной записи-посреднику или пользователь принадлежит к любой роли с доступом к учетной записи-посреднику, то он может использовать учетную запись-посредник в шаге задания.  
   

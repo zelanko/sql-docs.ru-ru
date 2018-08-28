@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 493e81d1d245920b391374ef146d6b4dfb0586a9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a9a27740fe2aaa85a4341baf44dcb8b8e99e1fd2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035946"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776408"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Свойства агента SQL Server (страница «Система предупреждений»)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "38035946"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Данная страница используется для просмотра и изменения параметров сообщений, отправляемых предупреждениями агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Данная страница используется для просмотра и изменения параметров сообщений, отправляемых предупреждениями агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
 **Почтовый сеанс**  
-Параметры в данном разделе предназначены для настройки почты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Параметры в данном разделе предназначены для настройки почты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Включить почтовый профиль**  
-Включает почту агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . По умолчанию почта агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] не включена.  
+Включает почту агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию почта агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не включена.  
   
 **Почтовая система**  
-Устанавливает почтовую систему для использования агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Database Mail  
+Устанавливает почтовую систему для использования агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Database Mail  
   
 > [!NOTE]  
-> После изменений системы электронной почты необходимо перезапустить службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , чтобы эти изменения вступили в силу.  
+> После изменений системы электронной почты необходимо перезапустить службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы эти изменения вступили в силу.  
   
 **Профиль электронной почты**  
-Устанавливает профиль для использования агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Для создания нового профиля вы можете также выбрать пункт **\<новый профиль Database Mail...>**.  
+Устанавливает профиль для использования агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для создания нового профиля вы можете также выбрать пункт **\<новый профиль Database Mail...>**.  
   
 **Электронные сообщения на пейджер**  
 Параметры в этом разделе позволяют настроить электронные сообщения, отправляемые на адреса пейджеров для работы с вашей пейджинговой системой.  
@@ -104,18 +104,18 @@ ms.locfileid: "38035946"
 Устанавливает метод для использования при уведомлении резервного оператора.  
   
 **Замена токенов**  
-Данный раздел позволяет включить токены шагов заданий, которые могут использоваться в заданиях, выполняемых предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Дополнительные сведения о токенах шагов заданий см. в разделе [Использование токенов в шагах задания](../../ssms/agent/use-tokens-in-job-steps.md).  
+Данный раздел позволяет включить токены шагов заданий, которые могут использоваться в заданиях, выполняемых предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о токенах шагов заданий см. в разделе [Использование токенов в шагах задания](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
-> Все пользователи Windows с разрешением на запись в журнал событий Windows могут получить доступ к шагам заданий, которые активированы предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Чтобы избежать этого нарушения безопасности, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] токены агента, которые могут использоваться в заданиях, активированных предупреждениями, по умолчанию отключены. К этим токенам относятся: **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)** и **$(A-MSG)**.  
+> Все пользователи Windows с разрешением на запись в журнал событий Windows могут получить доступ к шагам заданий, которые активированы предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы избежать этого нарушения безопасности, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] токены агента, которые могут использоваться в заданиях, активированных предупреждениями, по умолчанию отключены. К этим токенам относятся: **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)** и **$(A-MSG)**.  
 >   
-> При необходимости использовать эти токены перед их включением убедитесь, что только члены доверенных групп безопасности Windows, таких как группа «Администраторы», обладают разрешением на работу с журналом событий компьютера, на котором находится [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+> При необходимости использовать эти токены перед их включением убедитесь, что только члены доверенных групп безопасности Windows, таких как группа «Администраторы», обладают разрешением на работу с журналом событий компьютера, на котором находится [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Заменить токенами всех ответов заданий на предупреждения**  
-Установите этот флажок, чтобы включить замену токенов для заданий, активизированных предупреждениями [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Установите этот флажок, чтобы включить замену токенов для заданий, активизированных предупреждениями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
 [Операторы](../../ssms/agent/operators.md)  
-[Настройка почты агента SQL Server на использование компонента Database Mail](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
-[Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Настройка почты агента SQL Server на использование компонента Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
+[Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

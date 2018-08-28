@@ -19,16 +19,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93f7d71a0e3a1a4421f1d3503fddb66831fe553d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de6befec7a8a614d69c1c23072e39885eb1d3429
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049551"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774433"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>Веб-браузер среды SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] интегрирована версия веб-обозревателя [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer. Этот веб-браузер позволяет переходить по URL-адресам, а также просматривать разделы справки библиотеки MSDN, не покидая среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. Чтобы открыть веб-браузер, в меню **Вид** выберите пункт **Веб-браузер** , а затем **Показать браузер**.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] интегрирована версия веб-обозревателя [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer. Этот веб-браузер позволяет переходить по URL-адресам, а также просматривать разделы справки библиотеки MSDN, не покидая среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Чтобы открыть веб-браузер, в меню **Вид** выберите пункт **Веб-браузер** , а затем **Показать браузер**.  
   
 ## <a name="see-also"></a>См. также:  
 [Общие элементы пользовательского интерфейса](../ssms/general-user-interface-elements.md)  
