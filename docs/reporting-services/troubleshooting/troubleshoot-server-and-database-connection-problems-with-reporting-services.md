@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3e639f2f410584a4b9d1cefc991e9c6540f9ea7f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 020a53efdc65a1460698eb631b516832ab31f057
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969326"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40415846"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Устранение неполадок с подключением к серверу и базе данных в Reporting Services
 Используйте этот раздел, чтобы решать проблемы, возникающие при подключении к серверу отчетов. Также в этом разделе описываются сообщения о непредвиденных ошибках. Дополнительные сведения о настройке источников данных и настройке данных о подключении сервера отчетов см. в разделах [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) и [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -125,5 +125,5 @@ ms.locfileid: "37969326"
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

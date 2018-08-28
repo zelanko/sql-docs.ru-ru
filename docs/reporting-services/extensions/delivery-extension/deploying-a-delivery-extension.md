@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 99ada408d4f2a783d2a545d00f780763b7a27796
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c348f71719a25ae4b4ea6c180fb7dfe8a08157f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016371"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410362"
 ---
 # <a name="deploying-a-delivery-extension"></a>Развертывание модуля доставки
   Сведения о конфигурации модулей доставки предоставляются в виде XML-файлов конфигурации. XML-файл соответствует схеме XML, определенной для модулей доставки. Модули доставки предоставляют инфраструктуру для настройки и изменения файла конфигурации.  
@@ -40,7 +40,7 @@ ms.locfileid: "33016371"
   
  В приведенной ниже таблице описаны атрибуты для элемента **Extension** модулей доставки.  
   
-|attribute|Description|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |**Название**|Уникальное имя модуля (например, «Электронная почта сервера отчетов» для модуля доставки по электронной почте или «Общие папки сервера отчетов» для модуля доставки в общие папки). Длина атрибута **Name** не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extension** файла конфигурации. Если присутствует повторяющееся имя, сервер отчетов возвращает ошибку.|  
 |**Тип**|Список с разделителями-запятыми, содержащий полное пространство имен и имя сборки.|  
@@ -93,7 +93,7 @@ ms.locfileid: "33016371"
     </CodeGroup>  
     ```  
   
-     URL-членство — это лишь одно из множества условий членства, которые можно выбрать для модуля доставки. Дополнительные сведения об управлении доступом для кода в [!INCLUDE[ssRS](../../../includes/ssrs-md.md)]см. в разделе [Безопасная разработка (службы Reporting Services)](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
+     URL-членство — это лишь одно из множества условий членства, которые можно выбрать для модуля доставки. Дополнительные сведения об управлении доступом для кода в [!INCLUDE[ssRS](../../../includes/ssrs.md)]см. в разделе [Безопасная разработка (службы Reporting Services)](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
    
 ## <a name="verifying-the-deployment"></a>Проверка развертывания  
  Проверить, успешно ли был развернут модуль доставки на сервере отчетов, можно с помощью метода веб-службы <xref:ReportService2010.ReportingService2010.ListExtensions%2A>. Можно также открыть веб-портал и убедиться, что модуль включен в список доступных модулей доставки для подписки. Дополнительные сведения веб-портале и подписках см. в разделе [Подписки и доставка (службы Reporting Services)](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  

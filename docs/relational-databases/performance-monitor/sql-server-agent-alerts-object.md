@@ -19,12 +19,12 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ea269c45f065e03f5583e62ca98f0084e2fb4772
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d310d463d0cb20135b1318f6ffd27c0b602f33e4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951279"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415872"
 ---
 # <a name="sql-server-agent-alerts-object"></a>Агент SQL Server, объект Alerts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32951279"
   
  В таблице ниже перечислены счетчики **SQLAgent:Alerts** .  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |**Активированные предупреждения**|Этот счетчик показывает полное число предупреждений, которые активировал агент SQL Server со своего последнего перезапуска.|  
 |**Предупреждения, активированные за минуту**|Этот счетчик показывает количество предупреждений, активированных агентом SQL Server за последнюю минуту.|  
@@ -41,8 +41,8 @@ ms.locfileid: "32951279"
 >  Чтобы использовать этот объект агента SQL Server, необходимо быть членом предопределенной роли сервера **sysadmin** .  
   
 ## <a name="see-also"></a>См. также:  
- [Alerts](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)   
- [Использование объектов производительности](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Alerts](../../ssms/agent/alerts.md)   
+ [Использование объектов производительности](../../ssms/agent/use-performance-objects.md)   
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

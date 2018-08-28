@@ -28,11 +28,12 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b3275cf1deed00bb838144825b8cef243a6aa8e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37dd984acf7af31ba65772d038c30ac84dfed47c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412672"
 ---
 # <a name="manage-the-database-engine-services"></a>Управление службами компонента Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 |[Настройка автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
   
 ## <a name="related-content"></a>См. также  
- [Настройка агента SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+ [Настройка агента SQL Server](../../ssms/agent/configure-sql-server-agent.md)  
   
  [Вход в систему SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   

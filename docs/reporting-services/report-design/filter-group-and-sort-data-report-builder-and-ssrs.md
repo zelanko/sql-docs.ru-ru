@@ -1,7 +1,7 @@
 ---
 title: Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -24,12 +24,12 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c2173ba773d10cb443c3c8b973cd64cd453ce567
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11081d98ab0f182e81a499b9222c15f3cf979141
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027371"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405859"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)
   Выражения в отчетах используются для управления, организации и сортировки данных отчетов. По умолчанию по мере создания наборов данных и разработки макета отчета свойства элементов отчета задаются автоматически выражениями, исходя из полей набора данных, параметров и других элементов, появляющихся на панели данных отчета. Можно также добавить кнопку интерактивной сортировки к таблице или ячейке матрицы, чтобы пользователь мог в интерактивном режиме изменять порядок сортировки рядов для групп или строк внутри групп.  
@@ -119,7 +119,7 @@ ms.locfileid: "33027371"
 ### <a name="sorting-data-in-a-dataset-query"></a>Сортировка данных в запросе к набору данных  
  Сортировку можно включить в запрос к набору данных для предварительной сортировки данных до их возвращения в отчет. При сортировке внутри запроса все операции по сортировке выполняются источником данных, а не обработчиком отчетов.  
   
- Для типа источника данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в запрос к набору данных можно добавить предложение ORDER BY. Например, в следующем запросе [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется сортировка столбцов Sales и Region по значениям Sales в нисходящем порядке в таблице SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Дополнительные сведения см. в разделе «Сортировка строк при помощи предложения ORDER BY» [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ Для типа источника данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в запрос к набору данных можно добавить предложение ORDER BY. Например, в следующем запросе [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется сортировка столбцов Sales и Region по значениям Sales в нисходящем порядке в таблице SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`.  
   
 > [!NOTE]  
 >  Не все источники данных поддерживают указание порядка сортировки в запросе.  

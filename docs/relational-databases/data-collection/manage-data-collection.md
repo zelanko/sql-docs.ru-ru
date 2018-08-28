@@ -19,11 +19,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 777204c7192a9b74f8730f47898a3fb175b5c322
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2405449dad69e386aa267f683c672533b3c02276
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405570"
 ---
 # <a name="manage-data-collection"></a>Управление сбором данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,14 +68,14 @@ ms.lasthandoff: 05/04/2018
   
 >**ВАЖНО!** В отличие от обычных хранимых процедур, в хранимых процедурах сборщика данных используются жестко типизированные параметры и не поддерживается автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет создавать и выполнять представленные образцы кода. Дополнительные сведения см. в статье [Семантический поиск](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2). В качестве альтернативы можно создать запрос в любом редакторе и сохранить его в текстовом файле с расширением SQL. Выполнить запрос из командной строки Windows можно с помощью программы **sqlcmd** . Дополнительные сведения см. в статье [Программа sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет создавать и выполнять представленные образцы кода. Дополнительные сведения см. в статье [Семантический поиск](../../ssms/object/object-explorer.md). В качестве альтернативы можно создать запрос в любом редакторе и сохранить его в текстовом файле с расширением SQL. Выполнить запрос из командной строки Windows можно с помощью программы **sqlcmd** . Дополнительные сведения см. в статье [Программа sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Хранимые процедуры и представления  
  **Работа со сборщиком данных**  
   
  В следующей таблице описаны хранимые процедуры, используемые при работе со сборщиком данных.  
   
-|Имя процедуры|Description|  
+|Имя процедуры|Описание|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|Включить сборщик данных.|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|Выключить сборщик данных.|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/04/2018
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с наборами сбора.  
   
-|Имя процедуры|Description|  
+|Имя процедуры|Описание|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|Запускает набор сбора по запросу.|  
 |[sp_syscollector_start_collection_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|Запуск набора сбора.|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/04/2018
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с элементами сбора.  
   
-|Имя процедуры|Description|  
+|Имя процедуры|Описание|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|Создание элемента коллекции.|  
 |[sp_syscollector_delete_collection_item (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|Удаление элемента коллекции.|  
@@ -107,7 +108,7 @@ ms.lasthandoff: 05/04/2018
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с типами сборщиков.  
   
-|Имя процедуры|Description|  
+|Имя процедуры|Описание|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|Создание типа сборщика.|  
 |[sp_syscollector_update_collector_type (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|Обновление типа сборщика.|  
@@ -117,7 +118,7 @@ ms.lasthandoff: 05/04/2018
   
  В следующей таблице описаны представления, используемые для получения сведений о конфигурации и данных журнала выполнения.  
   
-|Имя представления|Description|  
+|Имя представления|Описание|  
 |---------------|-----------------|  
 |[syscollector_config_store (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|Получение конфигурации сборщика данных.|  
 |[syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|Получение сведений об элементе коллекции.|  
@@ -131,7 +132,7 @@ ms.lasthandoff: 05/04/2018
   
  В следующей таблице описаны хранимые процедуры, используемые для настройки доступа к хранилищу данных управления.  
   
-|Имя процедуры|Description|  
+|Имя процедуры|Описание|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|Укажите имя базы данных, определенное в строке соединения с хранилищем управляющих данных.|  
 |[sp_syscollector_set_warehouse_instance_name (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|Укажите экземпляр, определенный в строке соединения с хранилищем управляющих данных.|  
@@ -140,7 +141,7 @@ ms.lasthandoff: 05/04/2018
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с конфигурацией хранилища данных управления.  
   
-|Имя процедуры|Description|  
+|Имя процедуры|Описание|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|Создание моментального снимка сбора в хранилище управляющих данных.|  
 |[core.sp_update_data_source (Transact-SQL)](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|Обновление источника данных для сбора данных.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/04/2018
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с пакетами передачи.  
   
-|Имя процедуры|Description|  
+|Имя процедуры|Описание|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|Настройка количества попыток передачи данных.|  
 |[sp_syscollector_set_cache_directory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|Указание временного хранилища данных между попытками передачи.|  
@@ -161,14 +162,14 @@ ms.lasthandoff: 05/04/2018
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с журналом выполнения сбора данных.  
   
-|Имя процедуры|Description|  
+|Имя процедуры|Описание|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Удаление записей о наборах сбора из журнала выполнения.|  
   
 ### <a name="functions"></a>Функции  
  В следующей таблице описаны функции, используемые для получения сведений о выполнении и трассировке.  
   
-|Имя функции|Description|  
+|Имя функции|Описание|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details (Transact-SQL)](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|Получение данных журнала выполнения служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] для определенного пакета.|  
 |[fn_syscollector_get_execution_stats (Transact-SQL)](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Получение статистики выполнения для пакета или набора сбора. Эти сведения включают записанные в журнал ошибки.|  

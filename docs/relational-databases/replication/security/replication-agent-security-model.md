@@ -25,12 +25,12 @@ caps.latest.revision: 72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ec5d963309568078b0fa942c8285f7189e7e7eb
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 676a3f07347ed69d68661c2406f26c0c00c901fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358366"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406651"
 ---
 # <a name="replication-agent-security-model"></a>Модель безопасности агента репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "37358366"
   
  Агенты репликации, как и все исполняемые объекты, запускаются в контексте учетной записи Windows. Агенты выполняют соединения встроенной безопасности Windows, используя эту учетную запись. Учетная запись, под которой выполняется агент, зависит от того, как он был запущен:  
   
--   Запуск агента из задания агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (по умолчанию): когда для запуска агента репликации используется задание агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , агент репликации выполняется в контексте учетной записи, указанной при настройке репликации. Дополнительные сведения об агенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и репликации см. в подразделе «Безопасность агентов под управлением агента SQL Server» ниже в этом разделе. Сведения о разрешениях, необходимых для учетной записи, от имени которой выполняется агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в статье [Настройка агента SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900).  
+-   Запуск агента из задания агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (по умолчанию): когда для запуска агента репликации используется задание агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , агент репликации выполняется в контексте учетной записи, указанной при настройке репликации. Дополнительные сведения об агенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и репликации см. в подразделе «Безопасность агентов под управлением агента SQL Server» ниже в этом разделе. Сведения о разрешениях, необходимых для учетной записи, от имени которой выполняется агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в статье [Настройка агента SQL Server](../../../ssms/agent/configure-sql-server-agent.md).  
   
 -   Запуск агента из командной строки MS-DOS или непосредственно, или с помощью скрипта: агент выполняется в контексте учетной записи пользователя, запустившего его из командной строки.  
   

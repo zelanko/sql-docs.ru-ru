@@ -21,12 +21,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bc4b141721417b3097dc9142e2f47404021f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae2466902ae6cd60a69687b33aab38fc6a72fd5
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932953"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406195"
 ---
 # <a name="rebuild-system-databases"></a>Перестроение системных баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "32932953"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=ИмяЭкземпляра /SQLSYSADMINACCOUNTS=учетные записи [ /SAPWD= НадежныйПароль ] [ /SQLCOLLATION=ИмяПараметровСортировки]**  
   
-    |Имя параметра|Description|  
+    |Имя параметра|Описание|  
     |--------------------|-----------------|  
     |/QUIET или /Q|Указывает, что программа установки будет работать без пользовательского интерфейса.|  
     |/ACTION=REBUILDDATABASE|Указывает, что программа установки создает системные базы данных заново.|  
@@ -168,7 +168,7 @@ ms.locfileid: "32932953"
 > [!WARNING]  
 >  Когда база данных **msdb** создается заново скриптом **instmsdb** , удаляется вся информация, которая хранилась в **msdb** , то есть задания, оповещения, операторы, планы обслуживания, журналы резервных копий, параметры системы управления на основе политик, компоненты Database Mail, хранилище данных о производительности и т. д.  
   
-1.  Остановите все службы, подключающиеся к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)], включая агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , службы [!INCLUDE[ssRS](../../includes/ssrs-md.md)], службы [!INCLUDE[ssIS](../../includes/ssis-md.md)]и все приложения, использующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как хранилище данных.  
+1.  Остановите все службы, подключающиеся к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)], включая агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , службы [!INCLUDE[ssRS](../../includes/ssrs.md)], службы [!INCLUDE[ssIS](../../includes/ssis-md.md)]и все приложения, использующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как хранилище данных.  
   
 2.  Запустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки с помощью команды: `NET START MSSQLSERVER /T3608`  
   

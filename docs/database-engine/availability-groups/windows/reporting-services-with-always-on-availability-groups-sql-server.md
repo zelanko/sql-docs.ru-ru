@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 19844b1f626177e2a49144963f2f185565a86213
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769920"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405553"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "34769920"
   
 -   **Режим SharePoint.** Для отчетов, которые уже опубликованы на сервере SharePoint, пользуйтесь страницами конфигурации SharePoint в библиотеках документов.  
   
--   **Конструирование отчетов:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] или [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения приведены в разделе «Конструирование отчетов» этой главы.  
+-   **Конструирование отчетов:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] или [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения приведены в разделе «Конструирование отчетов» этой главы.  
   
  **Дополнительные ресурсы**  
   
@@ -112,11 +112,11 @@ ms.locfileid: "34769920"
  При использовании доступной только для чтения вторичной реплики в качестве источника данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] важно обеспечить соответствие задержки обновления данных потребностям пользователей отчетов.  
   
 ##  <a name="bkmk_reportdesign"></a> Конструирование отчетов и группы доступности  
- При конструировании отчетов в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] или проекта отчета в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]пользователь может настроить строку подключения к источнику данных отчета с помощью новых свойств соединения, предусмотренных в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Поддержка новых свойств соединения зависит от того, где пользователь просматривает отчеты.  
+ При конструировании отчетов в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] или проекта отчета в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]пользователь может настроить строку подключения к источнику данных отчета с помощью новых свойств соединения, предусмотренных в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Поддержка новых свойств соединения зависит от того, где пользователь просматривает отчеты.  
   
--   **Локальный предварительный просмотр:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] используют .Net Framework 4.0 и поддерживают свойства строки подключения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+-   **Локальный предварительный просмотр:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] используют .Net Framework 4.0 и поддерживают свойства строки подключения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
--   **Удаленный или серверный режим просмотра.** После публикации отчета на сервере отчетов или при просмотре в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)]вы можете увидеть приведенное ниже сообщение об ошибке. Это означает, что вы просматриваете отчет на сервере отчетов, и на этом сервере не установлено исправление платформы .Net Framework 3.5 с пакетом обновления 1 (SP1) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+-   **Удаленный или серверный режим просмотра.** После публикации отчета на сервере отчетов или при просмотре в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]вы можете увидеть приведенное ниже сообщение об ошибке. Это означает, что вы просматриваете отчет на сервере отчетов, и на этом сервере не установлено исправление платформы .Net Framework 3.5 с пакетом обновления 1 (SP1) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
 > **Сообщение об ошибке.** «Ключевое слово "applicationintent" не поддерживается»  
   

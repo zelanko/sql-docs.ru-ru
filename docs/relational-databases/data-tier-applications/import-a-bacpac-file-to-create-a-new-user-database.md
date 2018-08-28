@@ -32,13 +32,13 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1ece4cfc83ce8abf9eede88183bcca9c04816391
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 22669d2c229ef88ea6e953cf69d1b9e73bff9f21
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558464"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076880"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "39558464"
  Импорт приложения уровня данных можно выполнить в среду [!INCLUDE[ssSDS](../../includes/sssds-md.md)]или в экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , запущенный в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) или более поздней версии. После экспорта приложения уровня данных из более поздней версии приложение может содержать объекты, не поддерживаемые [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Невозможно развернуть данные приложения уровня данных для экземпляров [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="prerequisites"></a>предварительные требования  
- Рекомендуется не выполнять импорт файла экспорта приложения уровня данных, полученного из неизвестных или ненадежных источников. В данных файлах может содержаться вредоносный код Transact-SQL, вызывающий выполнение непредусмотренных инструкций или появление ошибок из-за изменения схемы. Перед тем как использовать файл экспорта из неизвестного или ненадежного источника, распакуйте его и изучите код, например хранимые процедуры или другой пользовательский код. Дополнительные сведения о том, как выполнить эти проверки, см. в разделе [Validate a DAC Package](https://msdn.microsoft.com/library/ee633948(SQL.130).aspx).  
+ Рекомендуется не выполнять импорт файла экспорта приложения уровня данных, полученного из неизвестных или ненадежных источников. В данных файлах может содержаться вредоносный код Transact-SQL, вызывающий выполнение непредусмотренных инструкций или появление ошибок из-за изменения схемы. Перед тем как использовать файл экспорта из неизвестного или ненадежного источника, распакуйте его и изучите код, например хранимые процедуры или другой пользовательский код. Дополнительные сведения о том, как выполнить эти проверки, см. в разделе [Validate a DAC Package](validate-a-dac-package.md).  
   
 ## <a name="security"></a>безопасность  
  Для повышения безопасности имена входа в SQL Server хранятся в файле экспорта приложения уровня данных без пароля. При импорте файла имя входа создается как отключенное имя входа с созданным паролем. Чтобы включить имена входа, войдите в систему под учетной записью, имеющей разрешение ALTER ANY LOGIN и с помощью команды ALTER LOGIN включите имя входа и присвойте ему новый пароль, который можно передать пользователю. Это не требуется для имен входа, использующих проверку подлинности Windows, поскольку SQL Server не управляет их паролями.  

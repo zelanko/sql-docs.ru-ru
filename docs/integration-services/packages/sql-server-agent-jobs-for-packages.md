@@ -19,12 +19,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 454daed366316554c181249414dd899d5d02c836
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405156"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405574"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Пакеты служб из заданий агента SQL Server
   Выполнение пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно автоматизировать и запланировать в расписании при помощи агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно задать расписание выполнения пакетов, равернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , хранимых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в файловой системе.  
@@ -121,7 +121,7 @@ ms.locfileid: "35405156"
   
 6.  Выберите **Пакет служб Integration Services** для типа шага задания.  
   
-7.  В списке **Запуск от имени** выберите **Учетная запись службы агента SQL Server** или выберите учетную запись-посредник с учетными данными, которые будут использоваться шагом задания. Дополнительные сведения о создании учетной записи-посредника см. в разделе [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+7.  В списке **Запуск от имени** выберите **Учетная запись службы агента SQL Server** или выберите учетную запись-посредник с учетными данными, которые будут использоваться шагом задания. Дополнительные сведения о создании учетной записи-посредника см. в разделе [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
      Использование учетной записи-посредника вместо **учетной записи службы агента SQL Server** может решить наиболее распространенные проблемы, которые иногда возникают при выполнении пакета с помощью агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о таких проблемах см. в статье базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Пакет служб SSIS не выполняется при его вызове из шага задания агента SQL Server](http://support.microsoft.com/kb/918760).  
   
@@ -188,7 +188,7 @@ ms.locfileid: "35405156"
     >   
     >  Серверная среда, содержащая переменную, не выбрана в списке на вкладке **Конфигурация** .  
   
-10. Чтобы создать расписание для шага задания, нажмите кнопку **Расписания** на панели **Выбор страницы** . Сведения о настройке расписания см. в разделе [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c).  
+10. Чтобы создать расписание для шага задания, нажмите кнопку **Расписания** на панели **Выбор страницы** . Сведения о настройке расписания см. в разделе [Schedule a Job](../../ssms/agent/schedule-a-job.md).  
   
     > [!TIP]  
     >  При задании имени расписания используйте уникальное и описательное имя, чтобы было легче отличить это расписание от других расписаний агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

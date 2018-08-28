@@ -14,13 +14,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bf032b05c962c1dc9788e890c59491ef81ea16da
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 330ba9c9f8703a31b2686327e6ed1b36d80be331
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538304"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43100087"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Смена ключей постоянного шифрования с помощью PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "39538304"
 
 | Задача | Статья | Доступ к ключам с открытым текстом или хранилищу ключей| Доступ к базе данных
 |:---|:---|:---|:---
-|Шаг 1. Создание нового главного ключа столбца в хранилище ключей.<br><br>**Примечание.** Этот шаг не поддерживается в модуле SqlServer PowerShell. Для выполнения этой задачи из командной строки используйте средства, поддерживаемые выбранным хранилищем ключей. | Создание и хранение главных ключей столбцов (постоянное шифрование)| Да | нет
+|Шаг 1. Создание нового главного ключа столбца в хранилище ключей.<br><br>**Примечание.** Этот шаг не поддерживается в модуле SqlServer PowerShell. Для выполнения этой задачи из командной строки используйте средства, поддерживаемые выбранным хранилищем ключей. | [Создание и хранение главных ключей столбцов (постоянное шифрование)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Да | нет
 |Шаг 2. Запуск среды PowerShell и импорт модуля SqlServer. | [Импорт модуля SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | нет | нет
 |Шаг 3. Соединение с сервером и базой данных. | [Соединение с базой данных](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | нет | Да
 |Шаг 4. Создание объекта SqlColumnMasterKeySettings, содержащего сведения о расположении нового главного ключа столбца. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Для его создания используйте командлет, поддерживаемый хранилищем ключей. |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | нет | нет

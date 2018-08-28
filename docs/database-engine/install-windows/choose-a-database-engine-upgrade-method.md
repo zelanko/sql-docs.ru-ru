@@ -11,13 +11,14 @@ ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e5970629622e5f1e219bcdb80ec31341c12d585e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46b231d5402bef7b9a092278dfd5b0f809411c1e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206014"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412619"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
 
@@ -79,7 +80,7 @@ ms.locfileid: "37206014"
  После переноса пользовательской базы данных перенаправьте новых пользователей в новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью одного из имеющихся методов (например, переименовав сервер, используя запись DNS или изменив строки подключения).  Метод новой установки сокращает риски и время простоя по сравнению с обновлением на месте и упрощает обновление оборудования и операционной системы, необходимые для обновления до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Если уже имеется решение высокой доступности или какие-либо другие среды с несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перейдите к разделу [Последовательное обновление](#RollingUpgrade). Если решения высокой доступности нет, можно временно настроить [зеркальное отображение базы данных](http://msdn.microsoft.com/library/ms190941.aspx) , чтобы дополнительно сократить время простоя для упрощения обновления, или воспользоваться этой возможностью для настройки [группы доступности AlwaysOn](http://msdn.microsoft.com/library/hh510260.aspx) в качестве постоянного решения высокой доступности.  
+>  Если уже имеется решение высокой доступности или какие-либо другие среды с несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перейдите к разделу [Последовательное обновление](#RollingUpgrade). Если решения высокой доступности нет, можно временно настроить [зеркальное отображение базы данных](../database-mirroring/setting-up-database-mirroring-sql-server.md) , чтобы дополнительно сократить время простоя для упрощения обновления, или воспользоваться этой возможностью для настройки [группы доступности AlwaysOn](http://msdn.microsoft.com/library/hh510260.aspx) в качестве постоянного решения высокой доступности.  
   
  Например, этот подход можно использовать для обновления:  
   

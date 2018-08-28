@@ -15,15 +15,15 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 343372d210fa960ca85ca672e96b0e1aaedf6277
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ea2db3668b6be4f71aa5e7d8f325f3032e203e50
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550075"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40415849"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Среда разработки построителя отчетов (службы SSRS)
-  Построитель отчетов [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] — изолированная среда разработки для создания отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы вне Visual Studio. При создании отчета задается, откуда брать данные, какие данные брать и как их отображать. При запуске отчета обработчик получает все указанные сведения, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Его можно установить с веб-портала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или из Центра загрузки Майкрософт.  
+  Построитель отчетов [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] — изолированная среда разработки для создания отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы вне Visual Studio. При создании отчета задается, откуда брать данные, какие данные брать и как их отображать. При запуске отчета обработчик получает все указанные сведения, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Его можно установить с веб-портала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или из Центра загрузки Майкрософт.  
   
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) из Центра загрузки Майкрософт.  
   

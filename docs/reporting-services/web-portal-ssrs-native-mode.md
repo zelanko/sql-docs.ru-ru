@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0c88c0e5710a85b8e29e3d0852ac608f5cfca30d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cd0de35d2bf5b18e1ccb9cdeadd8198f522c4135
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018069"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40411026"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Веб-портал (основной режим служб SSRS)
 
@@ -61,7 +61,7 @@ ms.locfileid: "38018069"
 
 Используйте веб-портал только для сервера отчетов, работающего в основном режиме. Он не поддерживается для сервера отчетов, настроенного для работы в режиме интеграции с SharePoint.
 
-Некоторые функции веб-портала доступны только в определенных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion.md)]. Дополнительные сведения см. в статье [Функции, поддерживаемые выпусками SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Некоторые функции веб-портала доступны только в определенных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Функции, поддерживаемые выпусками SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
 При новой установке только у локальных администраторов есть достаточные разрешения для работы с содержимым и параметрами. Для предоставления разрешений другим пользователям локальный администратор должен создать назначения ролей, которые обеспечат доступ к серверу отчетов. Страницы приложения и задачи, к которым пользователь впоследствии сможет получить доступ, зависят от назначений ролей этому пользователю. Дополнительные сведения см. в статье [Предоставление пользователям доступа к серверу отчетов](security/grant-user-access-to-a-report-server-report-manager.md).
 

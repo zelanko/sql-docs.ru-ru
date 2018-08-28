@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216935"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40411024"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -543,7 +543,7 @@ column_name <data_type>
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Указывает размещение данных FILESTREAM для таблицы при создании кластеризованного индекса. Предложение FILESTREAM_ON позволяет перемещать данные FILESTREAM в другую файловую группу FILESTREAM или схему секционирования.  
   
@@ -606,7 +606,7 @@ column_name <data_type>
   
  FILESTREAM  
    
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Допустимо только для столбцов типа **varbinary(max)**. Указывает хранилище FILESTREAM для данных больших двоичных объектов типа **varbinary(max)**.  
   

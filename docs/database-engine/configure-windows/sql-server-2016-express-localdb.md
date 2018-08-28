@@ -20,18 +20,18 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9ffd3813cef86b31c439981ab03aa318b152620c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984506"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411827"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Материалы по предыдущим версиям SQL Server см. в статье [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
-**LocalDB** в Microsoft SQL Server 2016 Express — это компонент [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) , ориентированный на разработчиков. Он доступен в SQL Server 2016 Express с дополнительными службами.  
+**LocalDB** в Microsoft SQL Server 2016 Express — это компонент [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) , ориентированный на разработчиков. Он доступен в SQL Server 2016 Express с дополнительными службами.  
 
  При установке**LocalDB** выполняется копирование минимального набора файлов, необходимых для запуска компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. После установки LocalDB вы можете установить соединение с помощью специальной строки подключения. При соединении необходимая инфраструктура [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается и запускается автоматически, что позволяет приложению использовать базу данных без выполнения сложной настройки. Средства разработчика позволяют использовать [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для написания и проверки кода [!INCLUDE[tsql](../../includes/tsql-md.md)] без необходимости управления полным экземпляром сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  

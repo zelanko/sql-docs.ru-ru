@@ -19,12 +19,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21835671518515b1efe02698a0f01f4dcd051179
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4746f6d8cdc836f98d8f2d33369e65af2d111a81
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951819"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406009"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>Агент SQL Server, объект JobSteps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32951819"
   
  В следующей таблице представлены счетчики **SQLAgent:JobSteps** .  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |**Активные шаги**|Этот счетчик сообщает о текущем количестве выполняющихся шагов заданий.|  
 |**Шаги в очереди**|Этот счетчик сообщает о количестве шагов заданий, готовых к запуску, но еще не выполняющихся агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -40,7 +40,7 @@ ms.locfileid: "32951819"
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Экземпляр|Description|  
+|Экземпляр|Описание|  
 |--------------|-----------------|  
 |**_Total**|Сведения для всех шагов задания.|  
 |**ActiveScripting**|Сведения о шагах задания, использующих подсистему **ActiveScripting** .|  
@@ -57,8 +57,8 @@ ms.locfileid: "32951819"
 |**TSQL**|Сведения о шагах задания, выполняющих инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="see-also"></a>См. также:  
- [Управление шагами задания](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [Использование объектов производительности](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Управление шагами задания](../../ssms/agent/manage-job-steps.md)   
+ [Использование объектов производительности](../../ssms/agent/use-performance-objects.md)   
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

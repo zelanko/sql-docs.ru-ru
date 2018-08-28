@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7785f0ad361b88931123f2dd9eb229064a9ca953
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983126"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405559"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016
 
@@ -96,13 +96,13 @@ ms.locfileid: "38983126"
   
 |Имя средства|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl и .rds)|Да|Да|||||Да|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|Да||||||Да|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl и .rds)|Да|Да|||||Да|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|Да||||||Да|  
 |Приложения Power BI для мобильных устройств (iOS, Windows 10, Android) (.rsmobile)|Да||||||Да|  
   
 > [!NOTE]  
 > 1.  В таблице выше указаны выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , необходимые для включения этих клиентских средств, но сами инструменты могут обращаться к данным, размещенным в любом выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] является единственной точкой для создания мобильных отчетов. Подключитесь к серверу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , чтобы получить доступ к источникам данных и создать отчеты. Затем публикуйте их на сервере [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , чтобы другие пользователи организации могли работать с ними (на сервере или мобильных устройствах). Можно также использовать [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] автономно с локальными источниками данных  
+> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] является единственной точкой для создания мобильных отчетов. Подключитесь к серверу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , чтобы получить доступ к источникам данных и создать отчеты. Затем публикуйте их на сервере [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , чтобы другие пользователи организации могли работать с ними (на сервере или мобильных устройствах). Можно также использовать [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] автономно с локальными источниками данных  
 > 3.  Независимо от того, используете ли  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] локально, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] в облаке или оба решения в качестве системы доставки отчетов, для доступа к панелям мониторинга и мобильным отчетам на мобильных устройствах требуется только одно мобильное приложение. Приложения [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] доступны для загрузки из магазинов приложений Windows, iOS или Android.  
 
 ## <a name="next-steps"></a>Следующие шаги

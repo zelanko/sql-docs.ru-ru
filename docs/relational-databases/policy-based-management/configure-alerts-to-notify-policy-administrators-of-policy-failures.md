@@ -18,12 +18,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d74d77229e88e04c2d661da827b4d6183ab2d2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 070b34a724914147f87f48df00a1e5778695e3a5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952539"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415880"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>Настройка предупреждений для уведомления администраторов политик об ошибках политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "32952539"
   
  Сведения о настройке предупреждений в ответ на сообщения об ошибках управления на основе политик см. в следующих разделах:  
   
--   [Создание оператора](http://msdn.microsoft.com/library/1359d790-5905-4927-a208-e7155e7768a2)  
+-   [Создание оператора](../../ssms/agent/create-an-operator.md)  
   
--   [Создание предупреждения по номеру сообщения](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [Создание предупреждения по номеру сообщения](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Назначение предупреждений оператору](http://msdn.microsoft.com/library/aa818155-6fa2-4565-a09f-5c7e31c89754)  
+-   [Назначение предупреждений оператору](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
 ## <a name="permissions"></a>Разрешения  
  Когда политики вычисляются по запросу, они выполняются в контексте безопасности пользователя. Для записи в журнал ошибок пользователь должен иметь разрешения ALTER TRACE или быть членом предопределенной роли сервера sysadmin. Политики, вычисляемые пользователем, обладающим меньшими правами доступа, не регистрируются в журнале событий и не формируют предупреждений.  
