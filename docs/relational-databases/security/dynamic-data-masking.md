@@ -9,16 +9,16 @@ ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 47b18665bc519b58d387ca6529d4feab69ffb9c7
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2af994f717072803902289473d102f1e2535c8cf
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543104"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43085267"
 ---
 # <a name="dynamic-data-masking"></a>Динамическое маскирование данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "39543104"
 |Компонент|Описание|Примеры|  
 |--------------|-----------------|--------------|  
 |По умолчанию|Полное маскирование в соответствии с типами данных назначенных полей.<br /><br /> Для строковых типов данных используйте XXXX или меньшее количество X, если размер поля меньше 4 символов (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Для числовых данных типов используйте нулевое значение (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Для типов данных даты и времени используйте 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Для двоичных типов данных используйте однобайтовое значение 0 ASCII (**binary**, **varbinary**, **image**).|Пример синтаксиса для определения столбца: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|Метод маскирования, который раскрывает первую букву адреса электронной почты и постоянный суффикс .com, в формате адреса электронной почты. , и делает это по-другому. `aXXX@XXXX.com`.|Пример определения синтаксиса: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
+|Email|Метод маскирования, который раскрывает первую букву адреса электронной почты и постоянный суффикс .com, в формате адреса электронной почты. . `aXXX@XXXX.com`.|Пример определения синтаксиса: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Случайные|Функция случайного маскирования для использования с любым числовым типом, которая маскирует исходное значение случайным значением в указанном диапазоне.|Пример определения синтаксиса: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Пользовательская строка|Метод маскирования, который раскрывает первую и последнюю буквы и добавляет пользовательскую строку заполнения в середине. `prefix,[padding],suffix`<br /><br /> Примечание. Если исходное значение слишком короткое для заполнения всей маски, часть префикса или суффикса не раскрывается.|Пример определения синтаксиса: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Дополнительные примеры<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   

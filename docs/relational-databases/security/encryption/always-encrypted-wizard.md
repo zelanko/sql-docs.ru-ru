@@ -18,13 +18,13 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a202d9dfb063979fbae76d6402909674bd163033
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 133881d4ca8e77684ca5ea941f80aeda21ec7621
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549704"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094643"
 ---
 # <a name="always-encrypted-wizard"></a>Мастер постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "39549704"
  
  - Выберите, где будет храниться главный ключ столбца.  
  
-   - **Хранение главного ключа в хранилище сертификатов Windows** : дополнительные сведения см. в статье [Using Certificate Stores (Использование хранилищ сертификатов)](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
+   - **Хранение главного ключа в хранилище сертификатов Windows** : дополнительные сведения см. в статье [Using Certificate Stores (Использование хранилищ сертификатов)](/windows/desktop/SecCrypto/using-certificate-stores)  
  
    - **Хранение главного ключа в AKV** : дополнительные сведения см. в статье [Приступая к работе с хранилищем ключей Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  

@@ -25,16 +25,16 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 092f2829dec8a0dee65d21c7bac5527ec6826172
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ef9d9b41c17801c355f03281ee023e15e7faefe8
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39550854"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43109827"
 ---
 # <a name="get-information-about-a-view"></a>Получение сведений о представлении
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
   Получить сведения об определении или свойствах представления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Возможность просмотреть определение представления может понадобиться, чтобы понять, как его данные извлекаются из исходных таблиц, или чтобы увидеть данные, определенные представлением.  
   
 > [!IMPORTANT]  

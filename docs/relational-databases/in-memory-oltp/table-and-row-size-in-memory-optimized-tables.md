@@ -15,13 +15,13 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9d1daa6d4210ef7a36ed4a23d2a2811cf829feff
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f60a828dd0c41c60f5fbc9b8f64b9198b7e55ff4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39565178"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43111799"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Размер строк и таблицы для таблиц, оптимизированных для памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "39565178"
 
   Таблица, оптимизированная для памяти, представляет собой набор строк, а также индексов, которые содержат указатели на строки. На следующей схеме показана таблица с индексами и строками, которые в свою очередь содержат заголовки и текст:  
   
- ![Таблица, оптимизированная для памяти.] (../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Таблица, оптимизированная для памяти.")  
+ ![Таблица, оптимизированная для памяти.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Таблица, оптимизированная для памяти.")  
 Таблица, оптимизированная для памяти, состоящая из индексов и строк.  
 
 ##  <a name="bkmk_TableSize"></a> Вычисление размера таблицы

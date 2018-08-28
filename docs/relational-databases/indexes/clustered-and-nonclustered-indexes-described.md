@@ -17,18 +17,18 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 430377402c841f890dab08c63f1a32e99664cfd5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 31bf15921dfdae21e6bc5a3180018ad45fe8c563
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552184"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43097553"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Описания кластеризованных и некластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
- > Материалы по предыдущим версиям SQL Server см. в разделе [Описание кластеризованных и некластеризованных индексов](https://msdn.microsoft.com/library/ms190457(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Описание кластеризованных и некластеризованных индексов](clustered-and-nonclustered-indexes-described.md).
 
   Индекс является структурой на диске, которая связана с таблицей или представлением и ускоряет получение строк из таблицы или представления. Индекс содержит ключи, построенные из одного или нескольких столбцов в таблице или представлении. Эти ключи хранятся в виде структуры сбалансированного дерева, которая поддерживает быстрый поиск строк по их ключевым значениям в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

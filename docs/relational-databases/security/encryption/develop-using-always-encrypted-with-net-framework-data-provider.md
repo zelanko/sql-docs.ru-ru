@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cfe7a86be6ae9af1e9e17cd680353a6795751841
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538144"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094123"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Разработка с использованием постоянного шифрования с поставщиком данных .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 В этом примере показана вставка строки в таблицу Patients. Следует отметить следующее.
 - В образце кода нет ничего, связанного с шифрованием. Поставщик данных .NET Framework для SQL Server автоматически обнаруживает и шифрует параметры *paramSSN* и *paramBirthdate* , предназначенные для зашифрованных столбцов. В этом случае шифрование является прозрачным для приложения. 
 - Значения, вставляемые в столбцы базы данных, включая зашифрованные столбцы, передаются как объекты [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) . Несмотря на то, что при отправке значений в незашифрованные столбцы использовать параметр **SqlParameter** необязательно (но настоятельно рекомендуется, так как он помогает предотвратить внедрение кода SQL), он требуется для значений, предназначенных для зашифрованных столбцов. Если значения, вставленные в столбцы SSN или BirthDate, были переданы в качестве литералов, внедренных в инструкцию запроса, выполнение запроса завершится ошибкой, так как поставщик данных .NET Framework для SQL Server не сможет определить значения в зашифрованных столбцах и поэтому не сможет зашифровать значения. В результате сервер отклонит их как несовместимые с зашифрованными столбцами.
-- Для типа данных параметра, предназначенного для столбца SSN, задана строка ANSI (отличная от Юникода), которая сопоставляется с типом данных char и varchar SQL Server. Если для типа параметра была задана строка в Юникоде (String), которая сопоставляется с типом данных char и varchar, выполнение запроса завершится ошибкой, так как постоянное шифрование не поддерживает преобразования из зашифрованных значений nchar и nvarchar в зашифрованные значения char и varchar. Сведения о сопоставлении типов данных см. в разделе [Сопоставления типов данных SQL Server](https://msdn.microsoft.com/library/cc716729.aspx) .
+- Для типа данных параметра, предназначенного для столбца SSN, задана строка ANSI (отличная от Юникода), которая сопоставляется с типом данных char и varchar SQL Server. Если для типа параметра была задана строка в Юникоде (String), которая сопоставляется с типом данных char и varchar, выполнение запроса завершится ошибкой, так как постоянное шифрование не поддерживает преобразования из зашифрованных значений nchar и nvarchar в зашифрованные значения char и varchar. Сведения о сопоставлении типов данных см. в разделе [Сопоставления типов данных SQL Server](/dotnet/framework/data/adonet/sql-server-data-type-mappings) .
 - В качестве типа данных параметра, вставляемого в столбец BirthDate, явным образом задан целевой тип данных SQL Server. Для этого использовалось свойство [SqlParameter.SqlDbType Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), а не неявное сопоставление типов .NET с типами данных SQL Server, применяемыми при работе со свойством [SqlParameter.DbType Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx). По умолчанию [структура DateTime](https://msdn.microsoft.com/library/system.datetime.aspx) сопоставляется с типом данных datetime SQL Server. Так как типом данных столбца BirthDate является date и постоянное шифрование не поддерживает преобразование зашифрованных значений datetime в зашифрованные значения date, использование сопоставления по умолчанию приведет к ошибке. 
 
 ```

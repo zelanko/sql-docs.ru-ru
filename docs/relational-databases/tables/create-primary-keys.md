@@ -16,18 +16,18 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e6fab6666fd5f0d28462d4f8ff90fbb80fbce23b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3e2e15595c348aa3c57f0d9ae8b8a82c9ac9d8d4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39539115"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43085016"
 ---
 # <a name="create-primary-keys"></a>Создание первичных ключей
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > Материалы по предыдущим версиям SQL Server см. в разделе [Создание первичных ключей](https://msdn.microsoft.com/library/ms189039(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Создание первичных ключей](create-primary-keys.md).
 
   Определить первичный ключ в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Создание первичного ключа автоматически приводит к созданию соответствующего уникального кластеризованного индекса (или некластеризованного при наличии такого указания).  
   

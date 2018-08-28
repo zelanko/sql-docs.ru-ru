@@ -27,13 +27,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7d1df8ab9434915e891cdb98c86bc26bdf9b4b38
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 72d889e8be30c90a61627379d53ca41156fe0a27
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535195"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096992"
 ---
 # <a name="create-a-database-user"></a>Создание пользователя базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "39535195"
      Просмотрите или укажите расширенные свойства объекта. Каждое расширенное свойство состоит из пары имя/значение метаданных, связанных с объектом.  
   
      **Многоточие (…)**  
-     Нажмите многоточие **(…)** рядом с полем **Значение** , чтобы открыть диалоговое окно **Значение для расширенного свойства** . Введите или просмотрите значение расширенного свойства в этом более просторном окне. Дополнительные сведения см. в разделе [Диалоговое окно «Значение для расширенного свойства»](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Нажмите многоточие **(…)** рядом с полем **Значение** , чтобы открыть диалоговое окно **Значение для расширенного свойства** . Введите или просмотрите значение расширенного свойства в этом более просторном окне. Дополнительные сведения см. в разделе [Диалоговое окно «Значение для расширенного свойства»](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Удаление**  
      Удаляет выбранное расширенное свойство.  

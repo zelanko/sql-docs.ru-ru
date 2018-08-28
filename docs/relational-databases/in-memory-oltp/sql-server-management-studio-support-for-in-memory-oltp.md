@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 042d7aa32742f0cddf18963a7a50ac1cc2dc9ec6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 881a2a42a8140502ca0d50765339a8c1cd0194c0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558274"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43098561"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Поддержка среды SQL Server Management Studio для In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39558274"
   
 2.  Для замены параметров шаблона щелкните **Указать значения для параметров шаблона** в меню **Запрос** .  
   
-     Дополнительные сведения об использовании шаблонов см. в разделе [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+     Дополнительные сведения об использовании шаблонов см. в разделе [Template Explorer](../../ssms/template/template-explorer.md).  
   
 3.  В **обозревателе объектов**таблицы будут упорядочены сначала по таблицам на диске, а затем по оптимизированным для памяти таблицам. Используйте **Сведения обозревателя объектов** , чтобы увидеть все таблицы, упорядоченные по имени.  
   
