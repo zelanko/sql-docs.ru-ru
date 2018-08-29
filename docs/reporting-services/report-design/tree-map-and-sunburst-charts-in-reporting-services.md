@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 106d85def85002e9cb917cf3cc9be7ac55c57ee4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002946"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405437"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Диаграммы "дерево" и "солнечные лучи" в Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "38002946"
   
   
 ##  <a name="bkmk_sample_data"></a> Образец данных AdventureWorks  
- В этом разделе приводится образец запроса и основные инструкции по созданию источника данных и набора данных в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Если в вашем отчете уже имеются источник данных и набор данных, этот раздел можно пропустить.  
+ В этом разделе приводится образец запроса и основные инструкции по созданию источника данных и набора данных в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Если в вашем отчете уже имеются источник данных и набор данных, этот раздел можно пропустить.  
   
  Запрос возвращает подробные данные заказа на продажу AdventureWorks с территорией продажи, категорией продукта, подкатегорией продукта и данными по причине покупки.  
   

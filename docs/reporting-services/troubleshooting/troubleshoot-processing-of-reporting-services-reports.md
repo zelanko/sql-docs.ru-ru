@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9d24a053e325bda0be8ca5e9f2797922e4d85b2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 22790e8572c9a14812946df7454cb9674f9980f9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299074"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412747"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Устранение неполадок при обработке отчетов служб Reporting Services
 После получения данных отчета обработчик отчетов объединяет данные и сведения о макете. Свойство каждого элемента отчета, имеющее выражение, вычисляется в контексте объединенных данных и макета. Этот раздел помогает устранять эти проблемы.   
@@ -56,5 +56,5 @@ ms.locfileid: "37299074"
   
 ## <a name="see-also"></a>См. также:  
 [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

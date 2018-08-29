@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3c2e4f0eb18863a51fc7fa1b81870ff74ed47ca7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f888ef097c3377d61dbac91a0d448e08b77baa1b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942479"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411029"
 ---
 # <a name="toolbox-component-f1-help"></a>Справка F1 компонента «Область элементов»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "32942479"
  Пакет дополнительных компонентов Azure для служб Integration Services содержит диспетчеры подключений для соединения с источниками данных Azure, а также задачи для выполнения общих операций Azure. Установите пакет дополнительных компонентов, чтобы добавить эти элементы в область элементов. Дополнительные сведения см. в статье [Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Использование панели элементов](http://msdn.microsoft.com/library/16733e39-4dc5-416f-ab10-c1d823f79d2d)   
+ [Использование панели элементов](../../ssms/use-the-toolbox.md)   
  [Выбор элементов инструментария (страница "Задачи обслуживания")](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
   
   

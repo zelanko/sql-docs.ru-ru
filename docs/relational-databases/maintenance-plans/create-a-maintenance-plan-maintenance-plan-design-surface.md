@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c05923ff7be5c1264f5801c1190c7297ea793b55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d67c538bb27eddd84ee7b254fd1beec8f22ed
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948399"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406224"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Создание планов обслуживания (область конструктора планов обслуживания)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "32948399"
      Открывает диалоговое окно **Отчеты и ведение журнала** . Дополнительные сведения об этом диалоговом окне см. ниже.  
   
      **Серверы**  
-     Отображает диалоговое окно **Серверы** , которое используется для выбора серверов, на которых будут выполняться задачи вложенного плана. Этот параметр доступен только на главных серверах в многосерверном окружении. Дополнительные сведения см. в статье [Создание многосерверной среды](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) и [План обслуживания (серверы)](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
+     Отображает диалоговое окно **Серверы** , которое используется для выбора серверов, на которых будут выполняться задачи вложенного плана. Этот параметр доступен только на главных серверах в многосерверном окружении. Дополнительные сведения см. в статье [Создание многосерверной среды](../../ssms/agent/create-a-multiserver-environment.md) и [План обслуживания (серверы)](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
      **Название**  
      Отображает имя плана обслуживания. Имя нового плана обслуживания необходимо указать в диалоговом окне до открытия конструктора планов обслуживания. Чтобы переименовать план обслуживания, щелкните правой кнопкой мыши план в обозревателе объектов и выберите **Переименовать**.  

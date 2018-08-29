@@ -15,18 +15,18 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0aefc9bac8fc8ca26b759f1229bbe98cbb20ba93
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: a7fba093060622267bef43624a349b3220a8d540
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326185"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405845"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Настройка предупреждения базы данных SQL Server (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Вы можете использовать системный монитор для создания предупреждения, которое будет выводиться, когда счетчик системного монитора достигает порогового значения. В ответ на оповещение системный монитор может запустить то или иное приложение — скажем, приложение, решающее связанную с оповещением проблему. Например, можно создать предупреждение, которое будет выводиться, когда число взаимоблокировок превысит заданное значение. 
   
- Оповещения можно также определять c помощью среды Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Предупреждения](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
+ Оповещения можно также определять c помощью среды Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Предупреждения](../../ssms/agent/alerts.md).  
   
 ## <a name="set-up-a-sql-server-database-alert"></a>Настройка оповещения базы данных SQL Server  
   

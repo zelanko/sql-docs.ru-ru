@@ -18,11 +18,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 574677284e2614f665fb1cf663d78b898dcdafe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ceeadd0f4608d241b9609bf050bc97de264e98
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409546"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Настройки резервного копирования журналов транзакций для доставки журналов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/03/2018
 |**Не сжимать резервные копии**|Щелкните для создания резервной копии без сжатия, независимо от уровня сервера по умолчанию.|  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка пользователя для создания заданий агента SQL Server и управления заданиями](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
+ [Настройка пользователя для создания заданий агента SQL Server и управления заданиями](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

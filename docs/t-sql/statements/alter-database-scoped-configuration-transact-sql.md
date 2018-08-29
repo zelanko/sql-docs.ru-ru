@@ -25,12 +25,12 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 811376d76608af8d75ab68649f0eea61bfb8a5c3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041942"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409421"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -242,7 +242,7 @@ WHEN_SUPPORTED
   
 **DacFx**  
   
- Так как инструкция ALTER DATABASE SCOPED CONFIGURATION — это новая функция в базе данных SQL Azure и SQL Server, начиная с SQL Server 2016, которая влияет на схему базы данных, экспорты схемы (с данными или без них) невозможно импортировать в более старую версию SQL Server, например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Например, экспорт в [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) или [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.  
+ Так как инструкция ALTER DATABASE SCOPED CONFIGURATION — это новая функция в базе данных SQL Azure и SQL Server, начиная с SQL Server 2016, которая влияет на схему базы данных, экспорты схемы (с данными или без них) невозможно импортировать в более старую версию SQL Server, например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Например, экспорт в [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) или [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.  
 
 **ELEVATE_ONLINE** 
 

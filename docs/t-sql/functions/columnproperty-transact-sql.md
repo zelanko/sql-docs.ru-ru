@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 04725560e4a39903a9f0a9e1ca580443cdb7504e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782595"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412612"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ COLUMNPROPERTY ( id , column , property )
 |**IsCursorType**|Параметр процедуры имеет тип CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsDeterministic**|Столбцы являются детерминированными (предсказуемыми). Это свойство применимо только к вычисляемым столбцам и столбцам представлений.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные. Невычисляемый столбец или не столбец представлений.|  
 |**IsFulltextIndexed**|Столбцы зарегистрированы для полнотекстовой индексации.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
-|**IsHidden**|Значение столбца создано системой. Соответствует **sys.columns.is_hidden**|**Применимо к**: с [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: не скрытый<br /><br /> 1: скрытый|  
+|**IsHidden**|Значение столбца создано системой. Соответствует **sys.columns.is_hidden**|**Применимо к**: с [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: не скрытый<br /><br /> 1: скрытый|  
 |**IsIdentity**|Столбец использует свойство IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsIdNotForRepl**|Столбец проверяет настройку IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsIndexable**|Столбцы не могут быть индексированы.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  

@@ -1,7 +1,7 @@
 ---
 title: Диалоговое окно "Преобразование пользовательских элементов отчета" (построитель отчетов) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-builder
@@ -20,12 +20,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: acf14f5921a63b5fb27eb9027afb10235d590172
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d199a22eb7d853a81130de658915cafa0b512dcd
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019061"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405366"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>Диалоговое окно «Преобразование пользовательских элементов отчета» (построитель отчетов)
   Этот отчет содержит пользовательские элементы отчетов с неподдерживаемыми функциями. Пользовательские элементы отчетов представляют собой расширения языка определения отчетов, которые поддерживают пользовательские объекты, отображающие данные в отчете. Пользовательские элементы отчета включают компоненты времени разработки и времени выполнения, поставляемые сторонними поставщиками программного обеспечения.  
@@ -46,8 +46,6 @@ ms.locfileid: "33019061"
  Для отчетов, которые передаются вместо публикации на сервере отчетов, обработчик отчета отчета определяет, можно ли обновить отчет при первом использовании. Отчеты, которые нельзя обновить, обрабатываются в режиме обратной совместимости и продолжают отображаться, как в предыдущей версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. в разделе [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
  Инструкции по определению текущей версии формата определения отчета для сервера отчетов или средства разработки отчетов см. в разделе [Определение версии схемы определения отчета (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
-  
-## <a name="see-also"></a>См. также:  
- [Справка построителя отчетов для диалоговых окон, панелей и мастеров](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+
   
   

@@ -21,18 +21,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5065bda0d38d08c71ca85288c407ecac36271963
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e75e0f70138c2ef6d783e72e80cfd0544f1bfa5e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509083"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40415844"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — решение высокого уровня доступности и аварийного восстановления, появившееся в [!INCLUDE[sssql11](../../../includes/sssql11_md.md)]. Требует наличия отказоустойчивого кластера Windows Server (WSFC). Кроме того, хотя [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] не зависит от отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на экземпляре отказоустойчивого кластера (FCI) можно размещать реплику для группы доступности. При проектировании среды [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] важно знать роль каждой из технологий кластеризации, а также иметь представления о необходимых требованиях.  
+   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — решение высокого уровня доступности и аварийного восстановления, появившееся в [!INCLUDE[sssql11](../../../includes/sssql11-md.md)]. Требует наличия отказоустойчивого кластера Windows Server (WSFC). Кроме того, хотя [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] не зависит от отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на экземпляре отказоустойчивого кластера (FCI) можно размещать реплику для группы доступности. При проектировании среды [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] важно знать роль каждой из технологий кластеризации, а также иметь представления о необходимых требованиях.  
   
 > [!NOTE]  
 >  Сведения о концепциях [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

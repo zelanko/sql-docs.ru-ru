@@ -21,12 +21,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3dde38b3052627ab201b77a8dfef9573469a20
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: fbecd5e6f94269b5e10efea681ae81993bf56ce4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352216"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412632"
 ---
 # <a name="create-a-pull-subscription"></a>Создание подписки по запросу
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "37352216"
   
     -   Если значение столбца **allow_pull** равно **0**, то необходимо выполнить процедуру [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав значение **allow_pull** в параметре **@property** и значение **true** в параметре **@value**.  
   
-2.  На подписчике выполните процедуру [sp_addpullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Укажите параметр **@publisher** и **@publication**. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](https://msdn.microsoft.com/library/ms152769.aspx).   
+2.  На подписчике выполните процедуру [sp_addpullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Укажите параметр **@publisher** и **@publication**. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).   
   
 3.  На подписчике выполните процедуру [sp_addpullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Укажите следующее.  
   

@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2e826686c4b6fd42d8d5ba7755fa2d4cb8d0f3e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9c2edfdfde4bf02097e9a4470e21cbefd68aa2f3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331478"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410520"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Работа с файлами Excel в задаче "Скрипт"
   Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют диспетчер соединений Excel, источник «Excel» и назначение «Excel» для работы с данными, хранящимися в электронных таблицах в формате [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Технологии, описанные в этом разделе, используют задачу «Скрипт» для получения сведений о доступных базах данных Excel (файлах книги) и таблицах (листах и именованных диапазонах).
@@ -69,7 +69,7 @@ ms.locfileid: "35331478"
   
 4.  **Ссылки**. Для образцов кода, выполняющих чтение данных схемы из файлов Excel, в проекте скрипта требуется дополнительная ссылка на пространство имен **System.Xml**.  
   
-5.  Установите язык скрипта по умолчанию для компонента скрипта, воспользовавшись параметром **Язык скрипта** страницы **Общие** диалогового окна **Параметры**. Дополнительные сведения см. в разделе [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+5.  Установите язык скрипта по умолчанию для компонента скрипта, воспользовавшись параметром **Язык скрипта** страницы **Общие** диалогового окна **Параметры**. Дополнительные сведения см. в разделе [General Page](../general-page-of-integration-services-designers-options.md).  
   
 ##  <a name="example1"></a> Описание примера 1. Проверка существования файла Excel  
  В этом примере определяется, существует ли файл книги Excel, указанной в переменной `ExcelFile`, а затем присваивается логическое значение переменной `ExcelFileExists` в соответствии с результатом. С помощью этого логического значения можно реализовать ветвление в рабочем процессе пакета.  

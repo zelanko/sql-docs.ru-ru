@@ -17,19 +17,19 @@ caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d737e132369afdfe6d45d72d4c769e3970786bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756aa4f5a4b03ffea76d907e8e2205428b565065
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031471"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405818"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Службы Reporting Services в среде SQL Server Management Studio (SSRS)
   Администраторы сервера отчетов могут использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы сделать следующее:  
   
 -   Включить функции, задать параметры сервера по умолчанию и управлять выполнением заданий.  
   
--   Просматривать и создавать пользовательские отчеты. В обозревателе объектов многие узлы показывают стандартный набор отчетов, который устанавливается с [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Необходимо иметь разрешения администратора. Схема пользовательского отчета должна соответствовать схеме установленных отчетов. Дополнительные сведения см. в статьях [Пользовательские отчеты в среде Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979) и [Определение версии схемы определения отчета (службы SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Просматривать и создавать пользовательские отчеты. В обозревателе объектов многие узлы показывают стандартный набор отчетов, который устанавливается с [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Необходимо иметь разрешения администратора. Схема пользовательского отчета должна соответствовать схеме установленных отчетов. Дополнительные сведения см. в статьях [Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md) и [Определение версии схемы определения отчета (службы SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
  Авторы отчетов могут использовать [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , чтобы делать следующее:  
   

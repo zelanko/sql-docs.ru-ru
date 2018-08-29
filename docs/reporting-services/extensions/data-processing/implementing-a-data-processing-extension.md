@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e4aaea407128642cb8ce9e8696eac0236cd60379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f1a83936f219fb95e03554383f6374b9f696f47
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015641"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410089"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Реализация модуля обработки данных
   Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. Модули обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] построены на наборе интерфейсов поставщиков данных платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -59,9 +59,6 @@ ms.locfileid: "33015641"
   
  [Отладка кода модуля обработки данных](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  Описывается процесс отладки кода модулей обработки данных.  
-  
- [Удаление модуля обработки данных](../../../reporting-services/extensions/data-processing/removing-a-data-processing-extension.md)  
- Описывается процесс удаления модуля обработки данных из сервера отчетов или из конструктора отчетов.  
   
  Образец полностью реализованного модуля обработки данных см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

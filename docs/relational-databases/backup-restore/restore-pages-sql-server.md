@@ -23,11 +23,12 @@ caps.latest.revision: 67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ad3206ff6ccec7db89dcf745b4dd03066e076589
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d62309de45f34f341857c806051df372145e1e64
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410373"
 ---
 # <a name="restore-pages-sql-server"></a>Восстановление страниц (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -189,7 +190,7 @@ ms.lasthandoff: 05/03/2018
     |-----------------------|-----------|  
     |**msdb.suspect_pages**|[Управление таблицей suspect_pages (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |Журнал ошибок|[Просмотр журнала ошибок SQL Server (среда SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |История событий|[Наблюдение и обработка событий](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
+    |История событий|[Наблюдение и обработка событий](../../ssms/agent/monitor-and-respond-to-events.md)|  
     |DBCC|[DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |Поставщик WMI|[Основные понятия о поставщике WMI для событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   

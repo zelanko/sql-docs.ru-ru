@@ -16,12 +16,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0ad1044ab981ced7802b050988ab2780c98cce10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 775a90dd61febaa140eef057ac299ded7e5531c8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946319"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405830"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Использование проводника служебных программ для управления служебной программой SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,6 +74,6 @@ ms.locfileid: "32946319"
 ## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Настройка политик исправности (служебная программа SQL Server)](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
- [Обозреватель объектов](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
+ [Обозреватель объектов](../../ssms/object/object-explorer.md)  
   
   

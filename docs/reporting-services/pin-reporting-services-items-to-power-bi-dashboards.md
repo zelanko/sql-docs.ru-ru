@@ -21,12 +21,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: caf018aab189a27901effcdc95204881b5b903b9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4065422e0be3f8570e91cc05d6c5cd2c86af24ec
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980326"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405435"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Закрепление элементов служб Reporting Services на информационных панелях Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] позволяют пользователям закрепить элементы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] из панели инструментов средства просмотра отчетов на информационной панели [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] в качестве новой плитки.   Для этого администратор должен сначала интегрировать сервер отчетов с Azure Active Directory и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "38980326"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Элемент закрепляется из средства просмотра отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], например `http://myserver/Reports`.  Невозможно закрепить элемент из [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], из конструктора отчетов в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]или с URL-адреса сервера отчетов.  Например: `http://myserver/ReportServer`.  
+-   Элемент закрепляется из средства просмотра отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], например `http://myserver/Reports`.  Невозможно закрепить элемент из [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], из конструктора отчетов в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]или с URL-адреса сервера отчетов.  Например: `http://myserver/ReportServer`.  
   
 -   В браузере необходимо разрешить всплывающие окна на сайте сервера отчетов.  
   
