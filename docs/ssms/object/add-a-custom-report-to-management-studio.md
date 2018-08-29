@@ -17,16 +17,16 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4459d482fad2639e8aa3ff35dccb38e2aa5cd25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4be2922f005d96a7db71ff642a1a05054e5e479
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045241"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776038"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Добавление пользовательского отчета в среду Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-В данном разделе описывается процесс создания простого отчета служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] , который сохраняется как файл в формате RDL, а затем добавляется в среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] в качестве пользовательского отчета. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] могут создавать разнообразные сложные отчеты. Чтобы создать отчет по материалам этого раздела, на компьютере необходимо установить среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] . Для запуска пользовательского отчета с помощью среды [!INCLUDE[ssRS](../../includes/ssrs_md.md)] устанавливать на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] службы [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]не обязательно.  
+В данном разделе описывается процесс создания простого отчета служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который сохраняется как файл в формате RDL, а затем добавляется в среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в качестве пользовательского отчета. [!INCLUDE[ssRS](../../includes/ssrs.md)] могут создавать разнообразные сложные отчеты. Чтобы создать отчет по материалам этого раздела, на компьютере необходимо установить среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] . Для запуска пользовательского отчета с помощью среды [!INCLUDE[ssRS](../../includes/ssrs.md)] устанавливать на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]не обязательно.  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>Создание простого отчета, сохраняемого в файле в формате RDL  
@@ -47,11 +47,11 @@ ms.locfileid: "33045241"
   
 8.  В диалоговом окне **Свойства соединения** в поле **Имя сервера** введите имя экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-9. В поле **Выберите или введите имя базы данных** введите имя любой базы данных на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], например [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)], а затем нажмите кнопку **ОК**.  
+9. В поле **Выберите или введите имя базы данных** введите имя любой базы данных на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], а затем нажмите кнопку **ОК**.  
   
 10. На странице **Выбор источника данных** нажмите кнопку **Далее**.  
   
-11. На странице **Создание запроса** в поле **Строка запроса** введите следующую инструкцию [!INCLUDE[tsql](../../includes/tsql_md.md)] , указывающую текущие соединения с компонентом [!INCLUDE[ssDE](../../includes/ssde_md.md)], а затем нажмите кнопку **Далее**. В поле запроса мастера отчетов нельзя вводить параметры отчета. Более сложные отчеты необходимо создавать вручную.  
+11. На странице **Создание запроса** в поле **Строка запроса** введите следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] , указывающую текущие соединения с компонентом [!INCLUDE[ssDE](../../includes/ssde_md.md)], а затем нажмите кнопку **Далее**. В поле запроса мастера отчетов нельзя вводить параметры отчета. Более сложные отчеты необходимо создавать вручную.  
   
     **SELECT session_id, net_transport FROM sys.dm_exec_connections;**  
   
@@ -59,13 +59,13 @@ ms.locfileid: "33045241"
   
 13. На странице **Завершение работы мастера** в поле **Имя отчета** введите **ConnectionsReport**, затем нажмите кнопку **Готово** , чтобы создать и сохранить отчет.  
   
-14. Закройте среду [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio_md.md)].  
+14. Закройте среду [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 15. Скопируйте файл **ConnectionsReport.rdl** в папку, созданную на сервере баз данных для пользовательских отчетов.  
   
 ### <a name="to-add-a-report-to-management-studio"></a>Добавление отчета в среду Management Studio  
   
--   В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]щелкните узел в обозревателе объектов, укажите **Отчеты**и выберите **Пользовательские отчеты**. В диалоговом окне **Открытие файла** выберите папку пользовательских отчетов, укажите файл **ConnectionsReport.rdl** и нажмите кнопку **Открыть**.  
+-   В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]щелкните узел в обозревателе объектов, укажите **Отчеты**и выберите **Пользовательские отчеты**. В диалоговом окне **Открытие файла** выберите папку пользовательских отчетов, укажите файл **ConnectionsReport.rdl** и нажмите кнопку **Открыть**.  
   
     При первом открытии пользовательского отчета из узла в обозревателе этот отчет добавляется к списку недавно использовавшихся **пользовательских отчетов** в контекстном меню этого узла. При первом открытии стандартного отчета он также отобразится в списке недавно использовавшихся **пользовательских отчетов**. Если удалить пользовательский отчет, при следующем выборе этого элемента появится запрос на удаление его из списка недавно использовавшихся отчетов.  
   
@@ -77,5 +77,5 @@ ms.locfileid: "33045241"
 [Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Использование пользовательских отчетов совместно со свойствами узлов обозревателя объектов](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
 [Отмена подавления предупреждений для пользовательских отчетов](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[службы SQL Server Reporting Services](http://msdn.microsoft.com/en-us/b8d18d3d-9db0-43e7-8286-7b46cc3a37ed)  
+[службы службы SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

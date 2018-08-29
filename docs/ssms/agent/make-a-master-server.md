@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 65b89207e6a532b7e9583da0c571857663a885d6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5939da9370b1ac155697b740e7f957d1b25c17f8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985486"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775876"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "38985486"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом разделе описывается, как создать главный сервер [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] или [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+В этом разделе описывается, как создать главный сервер [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **В этом разделе**  
   
@@ -84,7 +84,7 @@ ms.locfileid: "38985486"
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server**, укажите **Администрирование нескольких серверов**и выберите пункт **Сделать главным**. **Мастер настройки главного сервера** служит проводником по созданию главного сервера и добавлению целевых серверов.  
   
-3.  На странице **Оператор главного сервера** настройте оператора для главного сервера. Чтобы отправлять уведомления операторам по электронной почте или на пейджеры, необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] для отправки электронной почты. Для отправки уведомлений операторам с использованием команды **net send**на сервере, где установлен агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , должна быть запущена служба сообщений.  
+3.  На странице **Оператор главного сервера** настройте оператора для главного сервера. Чтобы отправлять уведомления операторам по электронной почте или на пейджеры, необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для отправки электронной почты. Для отправки уведомлений операторам с использованием команды **net send**на сервере, где установлен агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна быть запущена служба сообщений.  
   
     **Адрес электронной почты**  
     Адрес электронной почты оператора.  
@@ -98,7 +98,7 @@ ms.locfileid: "38985486"
 4.  На странице **Целевой сервер** выберите целевые серверы для главного сервера.  
   
     **зарегистрированные серверы**  
-    Выводит серверы, зарегистрированные в среде Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , которые еще не являются целевыми.  
+    Выводит серверы, зарегистрированные в среде Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , которые еще не являются целевыми.  
   
     **Целевые серверы**  
     Выводит серверы, являющиеся целевыми серверами.  

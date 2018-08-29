@@ -19,16 +19,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c803d45b83e7fdacd51ecf43019b0877d68bea5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3a617f8ef38026621c49ad39120ce4fbad99397
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042811"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775524"
 ---
 # <a name="move-items-in-a-solution"></a>Перемещение элементов в решении
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Элементами проекта в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] являются очереди, соединения и различные файлы. В обозревателе решений можно перемещать запросы и прочие файлы между проектами, но соединения перемещать нельзя.  
+Элементами проекта в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] являются очереди, соединения и различные файлы. В обозревателе решений можно перемещать запросы и прочие файлы между проектами, но соединения перемещать нельзя.  
   
 ### <a name="to-move-items-in-solution-explorer"></a>Перемещение элемента в обозревателе решений  
   

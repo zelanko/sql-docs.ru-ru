@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2e7ded81d62f01ec739cd02358410bbae299451
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 428b2e0c4dd2ac3657f209fbdc2e1bcacbc69f48
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981856"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774814"
 ---
 # <a name="poll-servers"></a>Опрос серверов
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 Если вы используете следующие элементы, явно публиковать операции не требуется:  
   
--   при использовании среды Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] для контроля многосерверных заданий;  
+-   при использовании среды Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для контроля многосерверных заданий;  
   
 -   при использовании хранимых процедур заданий, не изменяющих расписания выполнения заданий и шагов заданий.  
   

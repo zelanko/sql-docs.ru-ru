@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 106c73db70f12616f85920067863a25c529810a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d851d79c7fcfd79779395259ddb60c3154420273
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040511"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775285"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>Скрыть системные объекты в обозревателе объектов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-В этом разделе описывается, как скрыть системные объекты в обозревателе объектов [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Узел **Базы данных** в обозревателе объектов содержит системные объекты, такие как системные базы данных. На страницах **Сервис**/**Параметры** можно скрыть системные объекты. На некоторые системные объекты, например системные функции и типы данных, эта настройка не влияет.  
+В этом разделе описывается, как скрыть системные объекты в обозревателе объектов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Узел **Базы данных** в обозревателе объектов содержит системные объекты, такие как системные базы данных. На страницах **Сервис**/**Параметры** можно скрыть системные объекты. На некоторые системные объекты, например системные функции и типы данных, эта настройка не влияет.  
   
 ## <a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
   

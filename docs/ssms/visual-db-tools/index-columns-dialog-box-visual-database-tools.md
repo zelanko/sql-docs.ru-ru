@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ed5aca3c9f33ac691306d1c68a199975518003c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8b46b7a869b37518051555dd802e989b92f918da
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023721"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775332"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Столбцы индекса» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "38023721"
 Выберите порядок сортировки для указанного столбца. Доступные параметры: **По возрастанию** и **По убыванию**.  
   
 ## <a name="see-also"></a>См. также:  
-[Создание кластеризованных индексов](http://msdn.microsoft.com/en-us/47148383-c2c7-4f08-a9e4-7016bf2d1d13)  
-[Создание некластеризованных индексов](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)  
+[Создание кластеризованных индексов](../../relational-databases/indexes/create-clustered-indexes.md)  
+[Создание некластеризованных индексов](../../relational-databases/indexes/create-nonclustered-indexes.md)  
 [Индексы — диалоговое окно "Ключи" (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

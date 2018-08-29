@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06ca866e29f6499224bdaa03ce723ac13befd6ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03a98a1e29f251663c962795fac0e64382526ff9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041801"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775288"
 ---
 # <a name="open-and-configure-object-explorer"></a>Открытие и настройка обозревателя объектов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Откройте обозреватель объектов с помощью меню **Просмотр** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Проведите настройку параметров обозревателя объектов с помощью пункта **Параметры** меню **Сервис** .  
+Откройте обозреватель объектов с помощью меню **Просмотр** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Проведите настройку параметров обозревателя объектов с помощью пункта **Параметры** меню **Сервис** .  
   
 ## <a name="viewing-object-explorer"></a>Просмотр обозревателя объектов  
-Обозреватель объектов отображается в [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] по умолчанию. Если обозреватель объектов не виден, откройте меню **Вид** и выберите пункт **Обозреватель объектов**.  
+Обозреватель объектов отображается в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] по умолчанию. Если обозреватель объектов не виден, откройте меню **Вид** и выберите пункт **Обозреватель объектов**.  
   
 ## <a name="configuring-object-explorer-options"></a>Настройка параметров обозревателя объектов  
 Чтобы настроить параметры обозревателя объектов, нажмите кнопку **Параметры** в меню **Средства**, а затем щелкните **Обозреватель объектов SQL Server**.  

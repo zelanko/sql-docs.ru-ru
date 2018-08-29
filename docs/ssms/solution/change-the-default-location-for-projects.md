@@ -18,19 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 275fb31571f9f57df40eb146b80b76e0c7dfd95b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e42c55f9a6f1239ad035d12d6ac3c0a76049765
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775629"
 ---
 # <a name="change-the-default-location-for-projects"></a>Изменение местоположения проектов по умолчанию
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-По умолчанию файлы и проекты размещаются во вложенной папке Projects папки «Мои документы» среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+По умолчанию файлы и проекты размещаются во вложенной папке Projects папки «Мои документы» среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="to-change-the-default-location-for-projects"></a>Изменение расположения проектов по умолчанию  
   
-1.  Измените расположение по умолчанию, открыв или сохранив файл или проект из другого расположения. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] запоминает расположение последнего открытого проекта и использует его при последующем открытии или сохранении проекта.  
+1.  Измените расположение по умолчанию, открыв или сохранив файл или проект из другого расположения. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] запоминает расположение последнего открытого проекта и использует его при последующем открытии или сохранении проекта.  
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  

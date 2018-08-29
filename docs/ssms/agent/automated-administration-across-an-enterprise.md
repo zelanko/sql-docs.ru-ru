@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f0245dbc2322c5a0e19fcd18eb5b213422403094
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13403b3941f1d5c14779b0230ede0d1d85a02f11
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044391"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775659"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Автоматизация администрирования в масштабах предприятия
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33044391"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Автоматическое администрирование нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] называется *администрированием нескольких серверов*. Оно предназначено для выполнения следующих задач.  
+Автоматическое администрирование нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] называется *администрированием нескольких серверов*. Оно предназначено для выполнения следующих задач.  
   
 -   Управления двумя или несколькими серверами.  
   
@@ -69,10 +69,10 @@ ms.locfileid: "33044391"
 Содержит сведения о создании главного и целевых серверов и управлении ими.  
   
 [Выбор правильной учетной записи службы агента SQL Server для многосерверной среды](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)  
-Содержит сведения о влиянии использования неадминистративных учетных записей Windows или учетной записи Local System службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] на многосерверное окружение.  
+Содержит сведения о влиянии использования неадминистративных учетных записей Windows или учетной записи Local System службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на многосерверное окружение.  
   
 [Установка параметров шифрования на целевых серверах](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-Содержит сведения о настройке подраздела реестра MsxEncryptChannelOptions агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] на целевых серверах.  
+Содержит сведения о настройке подраздела реестра MsxEncryptChannelOptions агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на целевых серверах.  
   
 [Управление заданиями в масштабе предприятия](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Содержит сведения о проверке состояния задания, изменения для него целевых серверов, синхронизации времени на целевых серверах и опросе главных серверов о состоянии текущих заданий.  
@@ -87,20 +87,20 @@ ms.locfileid: "33044391"
 Содержит сведения о пересылке событий от целевых серверов к главному.  
   
 [Настройка автоматизированного администрирования в организации](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
-Содержит сведения о том, как автоматизированное администрирование в многосерверном окружении использует функции самонастройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Содержит сведения о том, как автоматизированное администрирование в многосерверном окружении использует функции самонастройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
-[Разделы, посвященные обратной совместимости при установке ядра СУБД SQL Server](http://msdn.microsoft.com/en-us/10de5ec6-d3cf-42ef-aa62-1bdf3fbde841)  
-[Регистрация серверов](http://msdn.microsoft.com/en-us/c2a2513e-fa09-419c-99e7-a12d57c5a0db)  
-[sp_add_targetservergroup](http://msdn.microsoft.com/en-us/acb69343-d766-46ff-b771-0c7655c5231a)  
-[sp_delete_targetserver, хранимая процедура](http://msdn.microsoft.com/en-us/cc438701-ad91-419d-9f23-ebc4c548c700)  
-[sp_delete_targetservergroup](http://msdn.microsoft.com/en-us/d8dd838e-64aa-419f-9ccb-ff04908cf3e4)  
-[sp_help_downloadlist](http://msdn.microsoft.com/en-us/745b265b-86e8-4399-b928-c6969ca1a2c8)  
-[sp_help_jobserver](http://msdn.microsoft.com/en-us/57971787-f9f5-4199-9f64-c2b61a308906)  
-[sp_help_targetservergroup](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)  
-[sp_resync_targetserver](http://msdn.microsoft.com/en-us/40e44df7-d3e3-44ee-b149-08aba629a21f)  
-[sp_update_targetservergroup](http://msdn.microsoft.com/en-us/4ac65ed6-e07e-40e4-a282-13bfd92dfa41)  
-[sysjobservers](http://msdn.microsoft.com/en-us/9abcc20f-a421-4591-affb-62674d04575e)  
-[syslogins](http://msdn.microsoft.com/en-us/4cb34f17-a4bb-469f-a218-71f074e6308f)  
-[systargetservers](http://msdn.microsoft.com/en-us/479d1314-be37-4d19-ac9c-419fc9110e53)  
+[Разделы, посвященные обратной совместимости при установке ядра СУБД SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+[Регистрация серверов](../register-servers/register-servers.md)  
+[sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  
+[sp_delete_targetserver, хранимая процедура, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)  
+[sp_delete_targetservergroup](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)  
+[sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)  
+[sp_help_jobserver](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)  
+[sp_help_targetservergroup](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)  
+[sp_resync_targetserver](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)  
+[sp_update_targetservergroup](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)  
+[sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
+[syslogins](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
+[systargetservers](../../relational-databases/system-tables/dbo-systargetservers-transact-sql.md)  
   

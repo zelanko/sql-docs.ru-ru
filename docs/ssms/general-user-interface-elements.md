@@ -18,26 +18,26 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68f0894a8b02d730d71684dcfb5e5a3e2861c7ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 761d807f6b2490cdd456d03f935d2293a5a7cbb3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040361"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775276"
 ---
 # <a name="general-user-interface-elements"></a>Общие элементы пользовательского интерфейса
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Примерами базовых элементов [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] являются **Редактор**, окно **Свойства**, а также **область элементов**.  
+Примерами базовых элементов [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] являются **Редактор**, окно **Свойства**, а также **область элементов**.  
   
 ## <a name="in-this-section"></a>в этом разделе  
 [Диалоговое окно «О продукте»](../ssms/about-dialog-box.md)  
-Описывает диалоговое окно, содержащее сведения о среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] и компьютере, на котором она работает.  
+Описывает диалоговое окно, содержащее сведения о среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и компьютере, на котором она работает.  
   
 [Веб-браузер среды SQL Server Management Studio](../ssms/sql-server-management-studio-web-browser.md)  
-Содержит описание запуска веб-браузера в окне документа [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] .  
+Содержит описание запуска веб-браузера в окне документа [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .  
   
 [Диалоговое окно «Внешние средства»](../ssms/external-tools-dialog-box.md)  
-Позволяет добавлять в меню **Сервис** инструменты, не входящие в состав среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+Позволяет добавлять в меню **Сервис** инструменты, не входящие в состав среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 [Окно "Свойства" (среда Management Studio)](../ssms/properties-window-management-studio.md)  
 Позволяет просматривать свойства и события выбранных объектов, открытых в редакторах и конструкторах. Также позволяет изменять и просматривать свойства файлов, проектов и решений. Некоторые свойства можно изменять в окне «Свойства».  

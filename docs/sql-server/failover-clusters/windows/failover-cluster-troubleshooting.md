@@ -16,12 +16,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc6b8d884857ef39716e1a5b0e05fc1a148252fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997326"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775549"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Диагностика отказоустойчивого кластера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "37997326"
   
      Восстановление по журналу после сбоя ОС может занять значительное время. Если восстановить ОС после сбоя можно более простым способом, не прибегайте к этому методу.  
   
-     Дополнительные сведения см. в статье [Создание нового отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) и [Как воспроизвести восстановление после сбоя отказоустойчивого кластера в сценарии 2](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx).  
+     Дополнительные сведения см. в статье [Создание нового отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) и [Как воспроизвести восстановление после сбоя отказоустойчивого кластера в сценарии 2](recover-from-failover-cluster-instance-failure.md).  
   
 ## <a name="resolving-common-problems"></a>Разрешение общих проблем  
  В следующем списке приведено описание общих проблем и даны объяснения по их устранению.  

@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 037dce27c8c237b28a5575de76d0f9adb36a4054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0227077885117994437fc6f2d9bb4aa712706d70
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046431"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775313"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Параметры (обозреватель объектов SQL Server — страница "Скрипты")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33046431"
   
 ### <a name="general-scripting-options"></a>Общие параметры скрипта  
 **Разделить отдельные инструкции**  
-Разделяет отдельные инструкции [!INCLUDE[tsql](../../includes/tsql_md.md)] с помощью пакетного разделителя. Чтобы изменить пакетный разделитель по умолчанию для **редактора запросов**, выберите **Сервис**/**Параметры**/**Выполнение запроса**/**SQL Server**/**Общие**/**Разделитель пакетов**. Значение по умолчанию — False. Дополнительные сведения см. в разделе [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
+Разделяет отдельные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью пакетного разделителя. Чтобы изменить пакетный разделитель по умолчанию для **редактора запросов**, выберите **Сервис**/**Параметры**/**Выполнение запроса**/**SQL Server**/**Общие**/**Разделитель пакетов**. Значение по умолчанию — False. Дополнительные сведения см. в разделе [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
   
 **Включить описательные заголовки**  
 Добавляет к скрипту описательные комментарии, разделяя его на разделы для каждого объекта. Значение по умолчанию — True. Дополнительные сведения см. в разделе [/*...*/ (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
@@ -70,7 +70,7 @@ ms.locfileid: "33046431"
 Формирует скрипт для дополнительных объектов, необходимых при выполнении скрипта для выбранного объекта. Значение по умолчанию — False.  
   
 **Имена объектов квалификаторов схемы**  
-Квалифицирует имена объектов по схеме объектов. Значение по умолчанию — False. Дополнительные сведения см. в разделе [Создание схемы базы данных](https://msdn.microsoft.com/ed2a5522-f4d2-4111-95a4-d3e1e5081739).  
+Квалифицирует имена объектов по схеме объектов. Значение по умолчанию — False. Дополнительные сведения см. в разделе [Создание схемы базы данных](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
 
 **Создать скрипт с параметрами сжатия данных**. Включает в скрипт параметры сжатия данных. Значение по умолчанию — False.
 
@@ -81,7 +81,7 @@ ms.locfileid: "33046431"
 Включает владельца в созданный скрипт. Значение по умолчанию — False.  
   
 **Внести в скрипт разрешения**  
-Включает в скрипт разрешения для объектов базы данных. Значение по умолчанию — True. Дополнительные сведения см. в разделе [Разрешения](https://msdn.microsoft.com/f28e3dea-24e6-4a81-877b-02ec4c7e36b9).  
+Включает в скрипт разрешения для объектов базы данных. Значение по умолчанию — True. Дополнительные сведения см. в разделе [Разрешения](../../relational-databases/security/permissions-database-engine.md).  
   
 ### <a name="tableview-options"></a>Параметры таблицы или представления  
 Следующие параметры применяются только к скриптам таблиц и представлений.  
@@ -93,7 +93,7 @@ ms.locfileid: "33046431"
 Добавляет инструкцию SET ANSI_PADDING до и после каждой инструкции CREATE TABLE. Значение по умолчанию — True. Дополнительные сведения см. в разделе [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0).  
   
 **Включить сортировку**  
-Включить параметры сортировки в определение столбца. Значение по умолчанию — True. Дополнительные сведения см. в статье [Collation and Unicode Support](https://msdn.microsoft.com/92d34f48-fa2b-47c5-89d3-a4c39b0f39eb).  
+Включить параметры сортировки в определение столбца. Значение по умолчанию — True. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 **Включить свойство IDENTITY**  
 Включает определения для начального значения свойства IDENTITY и шага приращения значения свойства IDENTITY. Значение по умолчанию — True. Дополнительные сведения см. в разделе [IDENTITY (Property) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c).  
@@ -105,7 +105,7 @@ ms.locfileid: "33046431"
 Включает вызовы хранимых процедур привязки **sp_bindefault** и **sp_bindrule** . Значение по умолчанию — True. Дополнительные сведения см. в разделах [sp_bindefault (Transact-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) и [sp_bindrule (Transact-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67).  
   
 **Внести в скрипт ограничения CHECK**  
-Добавляет в скрипт [ограничения CHECK](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) . Значение по умолчанию — True.  
+Добавляет в скрипт [ограничения CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . Значение по умолчанию — True.  
   
 **Внести в скрипт значения по умолчанию**  
 Включает в скрипт значения по умолчанию для столбца. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE DEFAULT (Transact-SQL)](https://msdn.microsoft.com/08475db4-7d90-486a-814c-01a99d783d41).  
@@ -114,7 +114,7 @@ ms.locfileid: "33046431"
 Указывает файловую группу в предложении ON для определений таблиц. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE TABLE (Transact-SQL)](https://msdn.microsoft.com/1e068443-b9ea-486a-804f-ce7b6e048e8b).  
   
 **Внести в скрипт внешние ключи**  
-Включает в скрипт [ограничения FOREIGN KEY](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) . Значение по умолчанию — False.  
+Включает в скрипт [ограничения FOREIGN KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md) . Значение по умолчанию — False.  
   
 **Внести в скрипт полнотекстовые индексы**  
 Включает в скрипт полнотекстовые индексы. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd).  
@@ -126,7 +126,7 @@ ms.locfileid: "33046431"
 Включить в скрипт схемы секционирования таблиц. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE PARTITION SCHEME (Transact-SQL)](https://msdn.microsoft.com/5b21c53a-b4f4-4988-89a2-801f512126e4).  
   
 **Внести в скрипт первичные ключи**  
-Включает в скрипт [ограничения первичных и внешних ключей](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) . Значение по умолчанию — True.  
+Включает в скрипт [ограничения первичных и внешних ключей](../../relational-databases/tables/primary-and-foreign-key-constraints.md) . Значение по умолчанию — True.  
   
 **Внести в скрипт команды сбора статистики**  
 Включает в скрипт определяемые пользователем команды сбора статистики. Значение по умолчанию — False. Дополнительные сведения см. в разделе [CREATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/b23e2f6b-076c-4e6d-9281-764bdb616ad2).  
@@ -135,7 +135,7 @@ ms.locfileid: "33046431"
 Включает в скрипт триггеры. Значение по умолчанию — False. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](https://msdn.microsoft.com/edeced03-decd-44c3-8c74-2c02f801d3e7).  
   
 **Внести в скрипт уникальные ключи**  
-Включает в скрипт [ограничения уникальности и ограничения проверки](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) . Значение по умолчанию — False.  
+Включает в скрипт [ограничения уникальности и ограничения проверки](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . Значение по умолчанию — False.  
   
 **Внести в скрипт столбцы просмотра**  
 Объявляет столбцы представления в заголовках представлений. Значение по умолчанию — False. Дополнительные сведения см. в статье [CREATE VIEW (Transact-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9).  
@@ -152,7 +152,7 @@ ms.locfileid: "33046431"
 **Скрипт для типа ядра СУБД**. Создаваемые скрипты будут предназначены для указанного [типа ядра СУБД](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.databaseenginetype.aspx).
 
 **Скрипт для версии сервера**  
-Создаваемые скрипты будут предназначены для указанной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Новые функции [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] нельзя внести в скрипты для более ранних версий. Некоторые скрипты, созданные для [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] , нельзя выполнять на серверах, где выполняется более ранняя версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], или в базе данных с более ранним значением [уровня совместимости баз данных](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6).  
+Создаваемые скрипты будут предназначены для указанной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Новые функции [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] нельзя внести в скрипты для более ранних версий. Некоторые скрипты, созданные для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , нельзя выполнять на серверах, где выполняется более ранняя версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или в базе данных с более ранним значением [уровня совместимости баз данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ## <a name="see-also"></a>См. также раздел  
 [Формирование скриптов (среда SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  

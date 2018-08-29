@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6687b8dd57301ae62f6b5fbe6d11a70aad18c141
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 420fdd127b50a21dda67b681976462e553d9882e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045601"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774724"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Соединение с сервером (страница "Свойства подключения") ядра СУБД
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "33045601"
 **Подключиться к базе данных**  
 Выберите базу данных для подключения из списка. При выборе **<default>** будет выполнено подключение к базе данных по умолчанию для сервера. Если выбрано значение **<Browse server>**, можно найти на сервере базу данных для подключения.  
   
-При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] через [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
+При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
   
-По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] соединяется с базой данных **master**. Если при подключении к [!INCLUDE[ssSDS](../../includes/sssds_md.md)] указать пользовательскую базу данных, то в обозревателе объектов будет показана только эта база данных и ее объекты. Если же подключиться к **master**, можно будет увидеть все базы данных. Дополнительные сведения см. в разделе [Общие сведения о базе данных SQL Windows Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
+По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если при подключении к [!INCLUDE[ssSDS](../../includes/sssds-md.md)] указать пользовательскую базу данных, то в обозревателе объектов будет показана только эта база данных и ее объекты. Если же подключиться к **master**, можно будет увидеть все базы данных. Дополнительные сведения см. в разделе [Общие сведения о базе данных SQL Windows Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
   
 **Сетевой протокол**  
 Выберите протокол из списка. Доступные клиентские протоколы настраиваются в разделе "Управление компьютером" — "Конфигурации клиентской сети".  

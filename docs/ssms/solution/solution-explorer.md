@@ -22,21 +22,21 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02ac675f7dd209cb538e90142f6b9049068e2ad7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6c5f45b7445b3ef0d35869a10e291cbc5f6a8678
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045962"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774558"
 ---
 # <a name="solution-explorer"></a>Обозреватель решений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Панель обозревателя решений в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] содержит контейнеры (проекты) для управления такими элементами, как скрипты базы данных, запросы, подключения к данным и файлы. Один или несколько связанных между собой проектов могут быть объединены в контейнер, который называется решением.  
+Панель обозревателя решений в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] содержит контейнеры (проекты) для управления такими элементами, как скрипты базы данных, запросы, подключения к данным и файлы. Один или несколько связанных между собой проектов могут быть объединены в контейнер, который называется решением.  
   
 Решение содержит один или несколько проектов, а также файлы и метаданные, которые позволяют определить решение как единое целое. Проект — это набор файлов и относящихся к ним метаданных, например сведений о соединении. Решения и проекты содержат элементы, которые представляют собой скрипты, запросы, сведения о соединениях и файлы, необходимые для создания решения базы данных.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid_md.md)]  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="benefits-of-using-solutions"></a>Преимущества использования решений  
 Эти контейнеры позволяют:  
@@ -51,7 +51,7 @@ ms.locfileid: "38045962"
   
 -   работать с различными файлами, формат которых не зависит от решений и проектов.  
   
-Элементы, содержащиеся в проектах, зависят от типа проекта и от того, используется ли среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Элементы, содержащиеся в проектах, зависят от типа проекта и от того, используется ли среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="related-tasks"></a>Связанные задачи  
 Используйте следующие разделы для начала работы с решениями SQL Server.  
@@ -61,5 +61,5 @@ ms.locfileid: "38045962"
 |**Описание**|**Раздел**|  
 |Описывает, как добавить один или несколько проектов в решение.|[Решения (среда SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Описывает, как создать проект и добавить элементы, например скрипты и соединения.|[Проекты (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)|  
-|Сведения о файлах, используемых средой [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] для управления решениями и файлами.|[Файлы для управления решениями и проектами](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
+|Сведения о файлах, используемых средой [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для управления решениями и файлами.|[Файлы для управления решениями и проектами](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   

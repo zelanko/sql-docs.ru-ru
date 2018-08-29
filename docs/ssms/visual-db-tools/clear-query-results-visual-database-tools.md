@@ -21,16 +21,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87ad2f292481d44c10dba92fe6e122ac71560f91
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dc8b19a65fa85972915774d14315ac67ef85391b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988895"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775857"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Очистка результатов запросов (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Выполнив запрос в **конструкторе запросов и представлений**, можно очистить панель результатов. Эта процедура применима к запросам, созданным с использованием параметров **Открыть представление** или **Открыть таблицу** в обозревателе объектов. В среде[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]после выполнения запроса в редакторе запросов невозможно очистить панель результатов до закрытия окна редактора запросов или выполнения другого запроса.  
+Выполнив запрос в **конструкторе запросов и представлений**, можно очистить панель результатов. Эта процедура применима к запросам, созданным с использованием параметров **Открыть представление** или **Открыть таблицу** в обозревателе объектов. В среде[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]после выполнения запроса в редакторе запросов невозможно очистить панель результатов до закрытия окна редактора запросов или выполнения другого запроса.  
   
 > [!NOTE]  
 > Это не отменит изменения, выполненные в базе данных. Дополнительные сведения о функционировании панели результатов см. в разделе [Работа с данными на панели результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

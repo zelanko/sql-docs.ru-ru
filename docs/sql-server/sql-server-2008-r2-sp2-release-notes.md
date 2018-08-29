@@ -16,12 +16,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: a6918f65a2330062165b8b39b4dd930187122867
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: d57f8ffc3d6fb9d1bd85bfa96f4ba431dd7fb114
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926255"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774608"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>Заметки о выпуске пакета обновления 2 (SP2) для SQL Server 2008 R2
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "36926255"
 ## <a name="20-before-you-install"></a>2.0 Перед началом установки  
 Сведения об установке обновлений [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] см. в [Документации по службам SQL Server 2008 R2](http://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Для получения общих сведений о начале работы и установке SQL Server 2008 R2 см. файл сведений для SQL Server 2008 R2. Файл сведений имеется на установочном носителе. Дополнительные сведения также можно найти в [электронной документации по SQL Server](http://msdn.microsoft.com/library/ms130214.aspx) и на [форумах по SQL Server](http://social.msdn.microsoft.com/Forums/category/sqlserver/).  
+Для получения общих сведений о начале работы и установке SQL Server 2008 R2 см. файл сведений для SQL Server 2008 R2. Файл сведений имеется на установочном носителе. Дополнительные сведения также можно найти в [электронной документации по SQL Server](sql-server-technical-documentation.md) и на [форумах по SQL Server](http://social.msdn.microsoft.com/Forums/category/sqlserver/).  
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Выбор правильного файла для скачивания и установки  
 Используйте следующую таблицу, чтобы определить, какой файл необходимо загрузить и установить. Перед установкой пакета обновления убедитесь, что соблюдены все требования к системе. Требования к системе приведены на страницах загрузки, ссылки на которые указаны в таблице.  

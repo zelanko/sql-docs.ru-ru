@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26112fd5fa3052e6aa5f873a436aafce7430d498
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76ca616057ba53fa60fb9d53bd7ff79ff2598864
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047311"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776029"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Диалоговое окно «Выражение проверочного ограничения» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ NOT (payment_method = 'credit card') OR
   
 Синтаксис SQL состоит из следующих параметров:  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |-------------|---------------|  
 |constant|Символьное значение, например численные или символьные данные. Символьные данные должны быть заключены в одинарные кавычки (').|  
 |column_name|Указывает столбец.|  
@@ -71,6 +71,6 @@ NOT (payment_method = 'credit card') OR
 |NOT|Инвертирует любое логическое выражение (которое может содержать ключевые слова LIKE, NULL, BETWEEN, IN и EXISTS).<br /><br />Если в инструкции используется несколько логических операторов, то первым обрабатывается оператор NOT. Можно изменить порядок выполнения, используя скобки.|  
   
 ## <a name="see-also"></a>См. также:  
-[Ограничения уникальности и проверочные ограничения](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[Создание ограничений уникальности](http://msdn.microsoft.com/en-us/a86f9d6f-f242-43be-b65d-b3435b71b62a)  
+[Ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
+[Создание ограничений уникальности](../../relational-databases/tables/create-unique-constraints.md)  
   

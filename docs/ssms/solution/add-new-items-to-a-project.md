@@ -18,18 +18,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01a3d385d52f90eb48cf9c4ca6f9b19c9639e596
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d5c47238cd5e12cd2260eec1d83f09f726ebd1b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045411"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775551"
 ---
 # <a name="add-new-items-to-a-project"></a>Добавление в проект новые элементы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Для расширения возможностей приложения в проект можно добавлять новые элементы. В качестве нового элемента может быть выбран запрос или соединение. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] имеет два типа проектов: проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и проект скрипта служб Analysis Services. Тип проекта определяет элементы, которые можно добавлять в проект. Например, запрос [!INCLUDE[tsql](../../includes/tsql_md.md)] (SQL-файл) можно добавить в проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , но нельзя добавить в проект скрипта служб Analysis Services.  
+Для расширения возможностей приложения в проект можно добавлять новые элементы. В качестве нового элемента может быть выбран запрос или соединение. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеет два типа проектов: проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проект скрипта служб Analysis Services. Тип проекта определяет элементы, которые можно добавлять в проект. Например, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] (SQL-файл) можно добавить в проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но нельзя добавить в проект скрипта служб Analysis Services.  
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] не разрешает добавлять папки внутри проекта. Для организации работы следует создавать несколько проектов внутри решения.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не разрешает добавлять папки внутри проекта. Для организации работы следует создавать несколько проектов внутри решения.  
   
 ### <a name="to-add-a-new-query-to-an-existing-project"></a>Добавление нового запроса в существующий проект  
   
@@ -59,7 +59,7 @@ ms.locfileid: "33045411"
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
-[Связывание расширений файлов с редактором кода](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[Связывание расширений файлов с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
 [Добавление существующих элементов в проект](../../ssms/solution/add-existing-items-to-a-project.md)  
 [Перемещение или удаление элемента или проекта](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
   

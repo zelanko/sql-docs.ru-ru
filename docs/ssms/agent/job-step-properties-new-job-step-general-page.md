@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d284bd4cd7dc81ebf1e5915854613b41680033b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3a9b661c2f4529ed3e6731dc5c38d05953ec43f6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031008"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775320"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Свойства шага задания — создание шага задания (страница "Общие")
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "38031008"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Эта страница используется для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или для определения нового шага задания.  
+Эта страница используется для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или для определения нового шага задания.  
   
-Для перехода к данной странице в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] разверните агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , щелкните правой кнопкой мыши **Задания**, выберите пункт **Создать задание**, страницу **Шаги** и нажмите кнопку **Создать**. Перейти к этой странице можно также, щелкнув правой кнопкой мыши задание в обозревателе объектов, наведя курсор мыши на пункт **Свойства**, затем выбрав страницу **Шаги** и нажав кнопку **Создать**, **Вставить**или **Изменить**.  
+Для перехода к данной странице в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] разверните агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , щелкните правой кнопкой мыши **Задания**, выберите пункт **Создать задание**, страницу **Шаги** и нажмите кнопку **Создать**. Перейти к этой странице можно также, щелкнув правой кнопкой мыши задание в обозревателе объектов, наведя курсор мыши на пункт **Свойства**, затем выбрав страницу **Шаги** и нажав кнопку **Создать**, **Вставить**или **Изменить**.  
   
 ## <a name="options"></a>Параметры  
 **Имя шага**  
@@ -70,7 +70,7 @@ ms.locfileid: "38031008"
 ## <a name="options-for-activex-script-job-steps"></a>Параметры шагов задания скриптов ActiveX  
   
 > [!IMPORTANT]  
-> Подсистема сценариев ActiveX будет удалена из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в последующей версии [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.  
+> Подсистема сценариев ActiveX будет удалена из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в последующей версии [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.  
   
 **VBScript**  
 Указывает [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic Scripting Edition в качестве языка, используемого шагами задания.  
@@ -213,7 +213,7 @@ ms.locfileid: "38031008"
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Параметры шагов задания выполнения пакетов служб Integration Services  
   
 ### <a name="general-tab"></a>Вкладка «Общие»  
-Позволяет указать размещение пакета [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] (службы[!INCLUDE[ssIS](../../includes/ssis_md.md)]) и используемый метод проверки подлинности. При выборе этой вкладки доступны следующие параметры.  
+Позволяет указать размещение пакета [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (службы[!INCLUDE[ssIS](../../includes/ssis_md.md)]) и используемый метод проверки подлинности. При выборе этой вкладки доступны следующие параметры.  
   
 **Источник пакета**  
 Позволяет указать, где хранится пакет служб [!INCLUDE[ssIS](../../includes/ssis_md.md)] . Выберите один из следующих вариантов:  
@@ -228,19 +228,19 @@ ms.locfileid: "38031008"
 Введите имя сервера, на котором хранится пакет служб [!INCLUDE[ssIS](../../includes/ssis_md.md)] . Этот параметр доступен только в случае, если в поле **Источник пакета** указано значение **SQL Server** или **Хранилище пакетов служб SSIS**.  
   
 **Использовать проверку подлинности Windows**  
-Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] используют проверку подлинности [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
+Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют проверку подлинности [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
   
 **Использовать проверку подлинности SQL Server**  
-Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] используют проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . При выборе этого метода проверки подлинности введите соответствующие **Имя пользователя** и **Пароль**.  
+Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При выборе этого метода проверки подлинности введите соответствующие **Имя пользователя** и **Пароль**.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] поддерживается для обратной совместимости. Для повышения безопасности, по возможности, используйте проверку подлинности Windows.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживается для обратной совместимости. Для повышения безопасности, по возможности, используйте проверку подлинности Windows.  
   
 **Пакет**  
 Введите местонахождение пакета.  
   
 > [!IMPORTANT]  
-> Для защищенных паролем пакетов [!INCLUDE[ssIS](../../includes/ssis_md.md)] перейдите на вкладку **Конфигурации** и введите пароль в диалоговом окне **Пароль пакета** . В противном случае задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , выполняющее защищенный паролем пакет, завершится с ошибкой.  
+> Для защищенных паролем пакетов [!INCLUDE[ssIS](../../includes/ssis_md.md)] перейдите на вкладку **Конфигурации** и введите пароль в диалоговом окне **Пароль пакета** . В противном случае задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполняющее защищенный паролем пакет, завершится с ошибкой.  
   
 ### <a name="configurations-tab"></a>Вкладка «Конфигурации»  
 Позволяет задать параметры конфигурации пакета служб [!INCLUDE[ssIS](../../includes/ssis_md.md)] . При выборе этой вкладки доступны следующие параметры.  
@@ -379,6 +379,6 @@ ms.locfileid: "38031008"
   
 ## <a name="see-also"></a>См. также:  
 [Управление шагами задания](../../ssms/agent/manage-job-steps.md)  
-[Пакеты служб из заданий агента SQL Server](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
-[Управление агентами репликации](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
+[Пакеты служб из заданий агента SQL Server](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
+[Управление агентами репликации](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

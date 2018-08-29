@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ba89c1f12638f4a9ed4698d82dca0f97d3d931a0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 771869ddfa25e6b19fe0545e638a7b305441e2fa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987836"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775420"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Свойства шага задания — создание шага задания (страница "Дополнительно")
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,20 +31,20 @@ ms.locfileid: "37987836"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Используйте эту страницу для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Используйте эту страницу для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
 **Действие при успехе**  
-Устанавливается действие, выполняемое агентом сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при успешном завершении шага задания.  
+Устанавливается действие, выполняемое агентом сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при успешном завершении шага задания.  
   
 **Повторные попытки**  
-Устанавливается количество повторных попыток агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполнить неудачно завершившийся шаг задания.  
+Устанавливается количество повторных попыток агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнить неудачно завершившийся шаг задания.  
   
 **Интервал повтора (в минутах)**  
-Устанавливается интервал времени ожидания агентом сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] между последовательными повторными попытками.  
+Устанавливается интервал времени ожидания агентом сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между последовательными повторными попытками.  
   
 **Действие при ошибке**  
-Устанавливается действие, выполняемое агентом сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при неудачном завершении шага задания.  
+Устанавливается действие, выполняемое агентом сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при неудачном завершении шага задания.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Параметры для шагов задания языка Transact-SQL  
 **Выходной файл**  
@@ -54,7 +54,7 @@ ms.locfileid: "37987836"
 Перейдите к файлу, используемому для вывода из шага задания.  
   
 **Вид**  
-В сервере [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
+В сервере [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
   
 **Дописать выходные данные в существующий файл**  
 Выходные данные добавляются к существующему содержимому таблицы. В противном случае содержимое файла переписывается каждый раз при выполнении шага задания.  
@@ -82,7 +82,7 @@ ms.locfileid: "37987836"
 Перейдите к файлу, используемому для вывода из шага задания.  
   
 **Вид**  
-В сервере [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
+В сервере [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
   
 **Дописать выходные данные в существующий файл**  
 При каждом выполнении шага задания его вывод добавляется к имеющемуся содержимому файла.  
@@ -107,7 +107,7 @@ ms.locfileid: "37987836"
 Перейдите к файлу, используемому для вывода из шага задания.  
   
 **Вид**  
-В сервере [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
+В сервере [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
   
 **Дописать выходные данные в существующий файл**  
 При каждом выполнении шага задания его вывод добавляется к имеющемуся содержимому файла.  
@@ -139,7 +139,7 @@ ms.locfileid: "37987836"
 Перейдите к файлу, используемому для вывода из шага задания.  
   
 **Вид**  
-В сервере [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
+В сервере [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
   
 **Дописать выходные данные в существующий файл**  
 Выходные данные добавляются к существующему содержимому таблицы. В противном случае содержимое файла переписывается каждый раз при выполнении шага задания.  

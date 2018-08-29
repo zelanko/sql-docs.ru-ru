@@ -19,12 +19,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: debf80be51388ab413d2ca7c08f189e03b9154e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 535dde08108a8917591f2b81c22996fbcfe12339
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042681"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775856"
 ---
 # <a name="delete-objects"></a>Удаление объектов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33042681"
 Отображаются имена, типы, владельцы и состояние объектов, которые будут удалены, а также любые сообщения об ошибках во время выполнения.  
   
 > [!NOTE]  
-> Команда **Удалить** , применяемая к базе данных, соответствует команде DROP DATABASE в [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+> Команда **Удалить** , применяемая к базе данных, соответствует команде DROP DATABASE в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **Показать зависимости**  
 Нажмите, чтобы отобразить объекты, зависимые от выбранного объекта, и объекты, от которых зависит выбранный объект (восходящая или нисходящая зависимость). Данные, отображаемые в диалоговом окне **Показать зависимости** , доступны только для чтения.  

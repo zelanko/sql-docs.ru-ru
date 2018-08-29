@@ -17,18 +17,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef9e1bc117338fe66816b32634c188730caf4244
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fd0d50155ff76ef5860913e071fc35350fb71f88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981876"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775437"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Диалоговое окно «Пространственные индексы» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Используйте диалоговое окно **Пространственные индексы** для создания индексов для столбцов с типом данных **geometry** или **geography** (*пространственный столбец*), которые не могут быть индексированы с использованием диалогового окна **Индексы/Ключи** . Для каждого пространственного столбца может существовать несколько пространственных индексов, но их следует создавать по очереди.  
   
-Сведения об ограничениях, накладываемых на создание пространственных индексов, см. в разделе [Общие сведения о пространственных индексах](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293).  
+Сведения об ограничениях, накладываемых на создание пространственных индексов, см. в разделе [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
 ## <a name="options"></a>Параметры  
 **Выбранный пространственный индекс**  
@@ -122,5 +122,5 @@ ms.locfileid: "38981876"
 Указывает, разрешить или запретить блокировку на уровне строк для данного индекса. Разрешение или запрещение блокировок на уровне строк влияет на производительность базы данных.  
   
 ## <a name="see-also"></a>См. также:  
-[Общие сведения о пространственных индексах](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)  
   

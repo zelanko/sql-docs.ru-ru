@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ff86333b6e6a052df014bb3dca44acde669d8bf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1de6ff95460264026cd3284e0da4ca873b1f1ac5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044511"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775077"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Определение параметров для шагов заданий Transact-SQL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33044511"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-В этом разделе описано, как определить параметры шагов заданий [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  [!INCLUDE[tsql](../../includes/tsql_md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] или управляющих объектов SQL Server.  
+В этом разделе описано, как определить параметры шагов заданий [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или управляющих объектов SQL Server.  
   
 **В этом разделе**  
   
@@ -70,9 +70,9 @@ ms.locfileid: "33044511"
   
 7.  Выберите из списка **Действие при ошибке** действие, которое будет инициироваться при неудачном выполнении задания.  
   
-8.  Если задание является скриптом [!INCLUDE[tsql](../../includes/tsql_md.md)] , возможен выбор из следующих вариантов.  
+8.  Если задание является скриптом [!INCLUDE[tsql](../../includes/tsql-md.md)] , возможен выбор из следующих вариантов.  
   
-    -   Введите имя **файла вывода**. По умолчанию файл перезаписывается при каждом выполнении шага задания. Если не нужно перезаписывать файл вывода, поставьте флажок **Дописать выходные данные в существующий файл**. Этот параметр доступен только элементам предопределенной роли сервера **sysadmin** . Имейте в виду, что среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] не позволяет пользователям просматривать произвольные файлы файловой системы, поэтому нельзя просмотреть в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] шаги заданий, записанные в файловую систему.  
+    -   Введите имя **файла вывода**. По умолчанию файл перезаписывается при каждом выполнении шага задания. Если не нужно перезаписывать файл вывода, поставьте флажок **Дописать выходные данные в существующий файл**. Этот параметр доступен только элементам предопределенной роли сервера **sysadmin** . Имейте в виду, что среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не позволяет пользователям просматривать произвольные файлы файловой системы, поэтому нельзя просмотреть в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] шаги заданий, записанные в файловую систему.  
   
     -   Установите флажок **Сохранять данные журнала в таблице** , если журнал шага задания необходимо вести в таблице базы данных. По умолчанию содержимое таблицы перезаписывается при каждом выполнении шага задания. Если не нужно, чтобы содержимое таблицы перезаписывалось, поставьте флажок **Дописать выходные данные в существующую запись в таблице**. После выполнения шага задания можно просмотреть содержимое этой таблицы, нажав **Просмотр**.  
   

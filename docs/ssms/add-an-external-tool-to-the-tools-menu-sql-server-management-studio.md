@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a6c1ce8380a7f64e688a9483d84d5d0cea90af8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e044b58e6b8db0eab591e19f129f9da3863f5022
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039611"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775522"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Добавление внешнего средства в меню «Сервис» (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Любое приложение [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows или [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] можно запустить из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. В меню **Сервис** можно добавлять и затем запускать внешние приложения.  
+Любое приложение [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows или [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] можно запустить из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. В меню **Сервис** можно добавлять и затем запускать внешние приложения.  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>Добавление внешнего средства в меню «Сервис»  
   

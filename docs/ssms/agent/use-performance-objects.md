@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01d245a9ac6eb32bd38978bd2ed4189f774332ca
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 01be4cebd589f5d30c4036a0a66f9fa29a4b48c7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982416"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775329"
 ---
 # <a name="use-performance-objects"></a>Использование объектов производительности
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,27 +39,27 @@ ms.locfileid: "38982416"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент включает объекты и счетчики производительности, позволяющие отслеживать работу служб. Эти объекты производительности дают возможность использования системного монитора, средства Windows для определения задач, выполняемых службой агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в фоновом режиме. Например, можно узнать, сколько активных заданий запущено в данный момент в службе агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , и определить заблокированные задания.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент включает объекты и счетчики производительности, позволяющие отслеживать работу служб. Эти объекты производительности дают возможность использования системного монитора, средства Windows для определения задач, выполняемых службой агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в фоновом режиме. Например, можно узнать, сколько активных заданий запущено в данный момент в службе агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и определить заблокированные задания.  
   
-Объекты и счетчики производительности службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] предусмотрены для каждого установленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Имена объектам производительности присваиваются в соответствии с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , которые они представляют.  
+Объекты и счетчики производительности службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены для каждого установленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Имена объектам производительности присваиваются в соответствии с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые они представляют.  
   
-В следующей таблице содержатся правила именования объектов производительности службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+В следующей таблице содержатся правила именования объектов производительности службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Тип экземпляра|Имя объекта|  
 |-----------------|---------------|  
 |По умолчанию|**SQLAgent:***объект*:*счетчик*|  
 |Именованный|**SQLAgent$**<br /> **&#42;имя_экземпляра&#42; :***объект*:*счетчик*|  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] содержит следующие объекты производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующие объекты производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Имя объекта|Описание|  
 |---------------|---------------|  
-|[SQLAgent:Jobs](http://msdn.microsoft.com/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|Сведения о производительности запущенных заданий, проценте успешных попыток и текущем состоянии.|  
-|[SQLAgent:JobSteps](http://msdn.microsoft.com/44f9983c-1753-4fe0-8475-973aa2460b3a)|Сведения о состоянии шагов заданий.|  
-|[SQLAgent:Alerts](http://msdn.microsoft.com/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|Сведения о количестве предупреждений и уведомлений.|  
-|[SQLAgent:Statistics](http://msdn.microsoft.com/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|Общие сведения о производительности.|  
+|[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Сведения о производительности запущенных заданий, проценте успешных попыток и текущем состоянии.|  
+|[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|Сведения о состоянии шагов заданий.|  
+|[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Сведения о количестве предупреждений и уведомлений.|  
+|[SQLAgent:Statistics](../../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|Общие сведения о производительности.|  
   
 ## <a name="see-also"></a>См. также:  
-[Наблюдение и настройка производительности](http://msdn.microsoft.com/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
+[Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
 [Практическое руководство. Запуск системного монитора (Windows)](http://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

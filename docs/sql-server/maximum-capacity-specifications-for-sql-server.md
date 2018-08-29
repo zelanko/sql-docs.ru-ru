@@ -24,16 +24,16 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4007806d8db8c22b6f6e1ac1d1969db026bb6912
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 185353af9af9e65ec67e932b4b7da30238f9915f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36833382"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775333"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Задание максимальной вместимости SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Материалы по предыдущим версиям SQL Server см. в статье [Спецификации максимально допустимых параметров SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в статье [Спецификации максимально допустимых параметров SQL Server](maximum-capacity-specifications-for-sql-server.md).
 
   В следующих таблицах приведены максимальные размеры и количество для различных объектов, определяемых в компонентах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Чтобы перейти к таблице, относящейся к технологии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , щелкните ссылку на нее:  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36833382"
 |Файлов журналов на одну базу данных||1|  
 |Томов на компьютер||3|  
   
- * Максимальное число управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживаемых служебной программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , может меняться в зависимости от конфигурации оборудования сервера. Дополнительные сведения о начале работы см. в разделе [Функции и задачи служебной программы SQL Server](https://msdn.microsoft.com/library/ee210548.aspx). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступна не во всех выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
+ * Максимальное число управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживаемых служебной программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , может меняться в зависимости от конфигурации оборудования сервера. Дополнительные сведения о начале работы см. в разделе [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступна не во всех выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Объекты приложений уровня данных  
  Максимальные размеры и количество различных объектов, которые были протестированы в приложениях уровня данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

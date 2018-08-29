@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0988084d539c6e6b581bbde831be10789fcd923a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc1562108e35f34c417d2472a9930a2e47502b13
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981466"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774592"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "38981466"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-При создании задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] можно определить действия [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при возникновении ошибки в ходе его выполнения. Определите действия, которые должен предпринять [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при успешном и неуспешном завершении каждого шага задания. Затем с помощью агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] настройте логику потока действий на шаге.  
+При создании задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно определить действия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при возникновении ошибки в ходе его выполнения. Определите действия, которые должен предпринять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при успешном и неуспешном завершении каждого шага задания. Затем с помощью агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настройте логику потока действий на шаге.  
   
 -   **Перед началом:**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "38981466"
   
 7.  В списке **Действия при неуспешном выполнении** выберите действие, которое необходимо выполнить в случае неуспешного завершения шага задания.  
   
-8.  Если задание является скриптом [!INCLUDE[tsql](../../includes/tsql_md.md)] , возможен выбор из следующих вариантов.  
+8.  Если задание является скриптом [!INCLUDE[tsql](../../includes/tsql-md.md)] , возможен выбор из следующих вариантов.  
   
     -   В поле **Выходной файл** введите имя выходного файла, в который будет происходить запись выходных данных скрипта. По умолчанию файл перезаписывается при каждом выполнении шага задания. Если не нужно перезаписывать файл вывода, поставьте флажок **Дописать выходные данные в существующий файл**.  
   

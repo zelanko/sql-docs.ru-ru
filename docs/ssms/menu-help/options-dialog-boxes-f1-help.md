@@ -18,16 +18,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74dc369cb88d644f02a6db142fbf3e320fe15e8a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fac8561bcc2fb119918937b00e91c48afc3749fa
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979856"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774811"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Справка F1 по диалоговым окнам «Параметры»
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-В этом разделе содержатся материалы справки F1 для диалоговых окон, доступ к которым осуществляется выбором пункта **Параметры** меню **Сервис** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+В этом разделе содержатся материалы справки F1 для диалоговых окон, доступ к которым осуществляется выбором пункта **Параметры** меню **Сервис** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Параметры ("Конструкторы" — "Конструкторы служб Analysis Services" — "Общие")](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2329d95d6f93ad639d85ce85f3d1f35752eaef0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60f0a9ef2b0d1345d7f1ef7605a861e9283f8c18
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045031"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774705"
 ---
 # <a name="projects-sql-server-management-studio"></a>Проекты (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Проект [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] представляет собой коллекцию логически связанных скриптов и файлов, которые можно хранить вместе для администрирования и разработки базы данных.  
+Проект [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] представляет собой коллекцию логически связанных скриптов и файлов, которые можно хранить вместе для администрирования и разработки базы данных.  
   
 ## <a name="script-project-overview"></a>Обзор проекта скрипта  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] отображаются в обозревателе решений среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]. Проект скрипта может содержать 0 или более файлов проекта. В решение можно добавить один проект или объединить в одном решении несколько проектов.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображаются в обозревателе решений среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Проект скрипта может содержать 0 или более файлов проекта. В решение можно добавить один проект или объединить в одном решении несколько проектов.  
   
 Проекты могут включать следующее:  
   
@@ -42,11 +42,11 @@ ms.locfileid: "33045031"
 Проекты также могут интегрироваться в системы управления исходным кодом.  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>Подключение к экземпляру SQL Server из проекта скриптов  
-Проект скриптов может содержать соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Чтобы подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в проекте, нужно щелкнуть соединение. Откроется окно скрипта SQL, которое подключено к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , указанному в выбранном соединении. Если открыть [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или скрипт многомерных выражений при помощи соединения, в котором используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , то после запуска редактора и загрузки скрипта будет предложено ввести пароль в диалоговом окне **Подключение к SQL Server** .  
+Проект скриптов может содержать соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в проекте, нужно щелкнуть соединение. Откроется окно скрипта SQL, которое подключено к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , указанному в выбранном соединении. Если открыть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или скрипт многомерных выражений при помощи соединения, в котором используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то после запуска редактора и загрузки скрипта будет предложено ввести пароль в диалоговом окне **Подключение к SQL Server** .  
   
 Соединение закрывается, как только закроется соответствующее окно.  
   
-Чтобы изменить сведения о соединении, используйте окно свойств в [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Чтобы изменить сведения о соединении, используйте окно свойств в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="project-tasks"></a>Задачи проекта  
   

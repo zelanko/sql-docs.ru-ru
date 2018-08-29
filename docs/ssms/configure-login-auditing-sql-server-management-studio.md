@@ -19,16 +19,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2adb4b06480baf0411f8564a2de4815624cf470
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 341344db9bd0e33d044ab9746bc89c8a7d648837
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040061"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775891"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>Настройка аудита входа в систему (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-В этом разделе описывается, как настроить аудит входа в [!INCLUDE[ssCurrent](../includes/sscurrent_md.md)] для контроля подключения к компоненту [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)]. Аудит входа в систему может быть настроен на запись в журнал ошибок при следующих событиях.  
+В этом разделе описывается, как настроить аудит входа в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] для контроля подключения к компоненту [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)]. Аудит входа в систему может быть настроен на запись в журнал ошибок при следующих событиях.  
   
 -   Неуспешные входы в систему  
   
@@ -36,13 +36,13 @@ ms.locfileid: "33040061"
   
 -   Все попытки входа  
   
-Чтобы этот параметр вступил в силу, перезапустите [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] .  
+Чтобы этот параметр вступил в силу, перезапустите [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
   
 #### <a name="to-configure-login-auditing"></a>Настройка аудита входа в систему  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] с помощью обозревателя объектов.  
+1.  В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] с помощью обозревателя объектов.  
   
 2.  В обозревателе объектов щелкните правой кнопкой мыши имя сервера и выберите пункт **Свойства**.  
   

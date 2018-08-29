@@ -13,12 +13,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 521fac21807393cfce0bffd7f2c6219c3a07359b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ce07cf1898291221f0c33111468d3f8e7187ce6c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322455"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775664"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Использование Windows PowerShell в шагах агента SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34322455"
 ##  <a name="PShellJob"></a> Создание шага задания PowerShell  
  **Создание шага задания PowerShell**  
   
-1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
+1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](../ssms/agent/create-jobs.md).  
   
 2.  В диалоговом окне **Свойства задания** выберите страницу **Шаги** и нажмите кнопку **Добавить**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34322455"
 ##  <a name="CmdExecJob"></a> Создание шага задания командной строки  
  **Создание шага задания CmdExec**  
   
-1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
+1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](../ssms/agent/create-jobs.md).  
   
 2.  В диалоговом окне **Свойства задания** выберите страницу **Шаги** и нажмите кнопку **Добавить**.  
   
