@@ -17,16 +17,16 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8818331ee958d1a8458d057015c1f79e787af8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a141439653310878c9650a980dff2fc5ec189ead
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036401"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406189"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Учебник. Добавление спарклайна в отчет (построитель отчетов)
 
-В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]вы создадите простую таблицу со спарклайн-графиком в отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы.   
+В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]вы создадите простую таблицу со спарклайн-графиком в отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы.   
   
 Спарклайны и гистограммы — это небольшие простые диаграммы, которые содержат много сведений в небольшом пространстве и часто бывают встроены в таблицы и матрицы в отчетах [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . На приведенном ниже рисунке показан отчет, похожий на тот, который будет в итоге создан.  
   

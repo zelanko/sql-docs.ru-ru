@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13deb284a73027321bd0bd051dce91f642078c96
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 96a8a4e87167adc8243f8f313b9801966c1c32f0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509113"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405840"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Создание кластеризованного DTC для группы доступности AlwaysOn
 
@@ -29,7 +29,7 @@ ms.locfileid: "39509113"
 
 В рамках этого пошагового руководства создается кластеризованный ресурс DTC и группы доступности SQL Server в соответствии с требованиями из раздела [Кластеризация DTC для групп доступности SQL Server](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
 
-В руководстве используются скрипты PowerShell и Transact-SQL (T-SQL).  Для работы многих скриптов T-SQL требуется включить **Режим SQLCMD** .  Дополнительные сведения о **режиме SQLCMD**см. в разделе [Включение режима скриптов SQLCMD в редакторе запросов](https://msdn.microsoft.com/library/ms174187.aspx#Anchor_1).  Требуется импортировать модуль PowerShell **FailoverClusters** .  Дополнительные сведения об импорте модуля PowerShell см. в разделе [Импорт модуля PowerShell](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).  Это пошаговое руководство основано на следующих допущениях.
+В руководстве используются скрипты PowerShell и Transact-SQL (T-SQL).  Для работы многих скриптов T-SQL требуется включить **Режим SQLCMD** .  Дополнительные сведения о **режиме SQLCMD**см. в разделе [Включение режима скриптов SQLCMD в редакторе запросов](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  Требуется импортировать модуль PowerShell **FailoverClusters** .  Дополнительные сведения об импорте модуля PowerShell см. в разделе [Импорт модуля PowerShell](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).  Это пошаговое руководство основано на следующих допущениях.
 - Выполнены все требования из раздела [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
 - Используется домен `contoso.lab`.
 - Пользователь имеет разрешение на создание объектов-компьютеров в том подразделении, где будет создан ресурс сетевого имени DTC.

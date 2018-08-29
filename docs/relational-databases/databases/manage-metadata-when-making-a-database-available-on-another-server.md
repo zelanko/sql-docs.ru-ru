@@ -40,12 +40,12 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993956"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406215"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Управление метаданными при предоставлении доступа к базе данных на другом сервере
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "37993956"
   
  **Создание оповещения WMI в среде SQL Server Management Studio**  
   
--   [Создание предупреждения о событии WMI](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [Создание предупреждения о событии WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>Принцип работы уведомлений о событиях зеркальной базы данных  
  Межбазовая доставка уведомлений о событиях, в которой участвует зеркально отображенная база данных, по определению является удаленной, потому что зеркально отображенная база данных может выполнить переход на другой ресурс. [!INCLUDE[ssSB](../../includes/sssb-md.md)] поддерживает зеркально отображенные базы данных в форме *маршрутов зеркального отображения*. Маршрут зеркального отображения имеет два адреса: один для экземпляра основного сервера и другой — для экземпляра зеркального сервера.  
@@ -214,11 +214,11 @@ ms.locfileid: "37993956"
   
 -   Имя входа, используемое заданием  
   
-     Для создания или выполнения заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на целевой экземпляр сервера сначала нужно добавить необходимые ему имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Настройка пользователя для создания заданий агента SQL Server и управления заданиями](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef).  
+     Для создания или выполнения заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на целевой экземпляр сервера сначала нужно добавить необходимые ему имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Настройка пользователя для создания заданий агента SQL Server и управления заданиями](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Стартовая учетная запись службы агента  
   
-     Стартовая учетная запись службы определяет учетную запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также его сетевые разрешения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как заданная учетная запись пользователя. Контекст службы агента влияет на настройки задания и его среды выполнения. Учетной записи должен быть предоставлен доступ к необходимым для задания сетевым и другим ресурсам. Сведения о выборе и изменении стартовой учетной записи службы см. в разделе [Выбор учетной записи для службы агента SQL Server](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7).  
+     Стартовая учетная запись службы определяет учетную запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также его сетевые разрешения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как заданная учетная запись пользователя. Контекст службы агента влияет на настройки задания и его среды выполнения. Учетной записи должен быть предоставлен доступ к необходимым для задания сетевым и другим ресурсам. Сведения о выборе и изменении стартовой учетной записи службы см. в разделе [Выбор учетной записи для службы агента SQL Server](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
      Для обеспечения правильности работы стартовые учетные записи служб должны быть настроены на верный домен, файловую систему и разрешения реестра. Кроме этого, заданию может потребоваться общий сетевой ресурс, который также необходимо настроить для учетной записи службы. Сведения см. в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -229,35 +229,35 @@ ms.locfileid: "37993956"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Учетные записи-посредники агента  
   
-     Учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет контекст безопасности для указанного шага задания. Для задания, выполняющегося на целевом экземпляре сервера, все необходимые заданию учетные записи-посредники должны быть повторно созданы на этом экземпляре вручную. Дополнительные сведения см. в разделах [Создание учетной записи-посредника агента SQL Server](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) и [Устранение неполадок, связанных с многосерверными заданиями, использующими учетные записи-посредники](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280).  
+     Учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет контекст безопасности для указанного шага задания. Для задания, выполняющегося на целевом экземпляре сервера, все необходимые заданию учетные записи-посредники должны быть повторно созданы на этом экземпляре вручную. Дополнительные сведения см. в разделах [Создание учетной записи-посредника агента SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md) и [Устранение неполадок, связанных с многосерверными заданиями, использующими учетные записи-посредники](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
  Дополнительные сведения см. также в следующих разделах:  
   
--   [Реализация заданий](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [Реализация заданий](../../ssms/agent/implement-jobs.md)  
   
 -   [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (для зеркального отображения базы данных)  
   
 -   [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (при установке экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Настройка агента SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) (при установке экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Настройка агента SQL Server](../../ssms/agent/configure-sql-server-agent.md) (при установке экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Обеспечение безопасности агента SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **Просмотр существующих заданий и их свойств**  
   
--   [Наблюдение за активностью заданий](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [Наблюдение за активностью заданий](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Просмотр сведений о шаге задания](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [Просмотр сведений о шаге задания](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs (Transact-SQL)](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **Создание задания**  
   
--   [Создание задания](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Создание задания](../../ssms/agent/create-a-job.md)  
   
--   [Создание задания](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Создание задания](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>Рекомендуемые методы использования скриптов для повторного создания заданий  
  Рекомендуется начать с написания скрипта для простого задания, затем попробовать создать задание повторно для другой службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и запустить задание, чтобы убедиться в правильности его работы. Это позволит обнаружить несовместимости и попробовать их исправить. Если созданное задание не работает в новой среде, как положено, рекомендуется создать подобное задание, которое будет правильно работать в этой среде.  
