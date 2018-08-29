@@ -1,5 +1,5 @@
 ---
-title: sp_mergearticlecolumn (Transact-SQL) | Документы Microsoft
+title: sp_mergearticlecolumn (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e426586be6229cb62e36d8fdcab13663785240b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50886bd5bd4ab34852362e678a2f8c2f4a2fc459
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999561"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023932"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +54,14 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  [  **@publication =**] **"***публикации***"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article =**] **"***статьи***"**  
+ [  **@article =**] **"***статье***"**  
  Имя статьи в публикации. *статья* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@column =**] **"***столбца***"**  
- Определяет столбцы, по которым создается вертикальная секция. *столбец* — **sysname**, значение по умолчанию NULL. Если значение равно NULL и `@operation = N'add'`, все столбцы исходной таблицы по умолчанию добавятся к статье. *столбец* не может иметь значение NULL, если *операции* равно **drop**. Чтобы исключить столбцы из статьи, выполните **sp_mergearticlecolumn** и укажите *столбца* и `@operation = N'drop'` для каждого столбца должны быть удалены из указанного *статьи*.  
+ [  **@column =**] **"***столбец***"**  
+ Определяет столбцы, по которым создается вертикальная секция. *столбец* — **sysname**, значение по умолчанию NULL. Если значение равно NULL и `@operation = N'add'`, все столбцы исходной таблицы по умолчанию добавятся к статье. *столбец* не может иметь значение NULL, если *операции* присваивается **drop**. Чтобы исключить столбцы из статьи, выполните **sp_mergearticlecolumn** и укажите *столбец* и `@operation = N'drop'` для каждого столбца, удаляемый из указанного *статье*.  
   
  [  **@operation =**] **"***операции***"**  
- Состояние репликации. *Операция* — **nvarchar(4)**, значение по умолчанию ADD. **Добавить** отметить столбец для репликации. **Удалить** очищает столбец.  
+ Состояние репликации. *Операция* — **nvarchar(4)**, значение по умолчанию ADD. **Добавление** столбец для репликации. **DROP** очищает столбец.  
   
  [  **@schema_replication=**] **"***schema_replication***"**  
  Этот аргумент определяет, будут ли распространены изменения схемы при запуске агента слияния. *schema_replication* — **nvarchar(5)**, значение по умолчанию FALSE.  
@@ -74,19 +74,19 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
  **0** указывает, что изменения статьи слияния не приведут к недействительности моментального снимка.  
   
- **1** указывает, что изменения статьи слияния может сделать моментальный снимок недействительным, и если это так, значение **1** дает разрешение нового моментального снимка.  
+ **1** изменения статьи слияния могут привести к недействительности моментального снимка; Если это происходит, значение **1** дает разрешение нового моментального снимка.  
   
  [* *@force_reinit_subscription =] *** этот*  
  Включает или отключает возможность повторной инициализации подписки. *Этот* имеет тип bit и значение по умолчанию **0**.  
   
  **0** указывает, что изменения статьи слияния не приведут к повторной инициализации подписки.  
   
- **1** изменения статьи слияния могут привести к повторной инициализации подписки и если это так, значение **1** дает разрешение произвести повторную инициализацию подписки.  
+ **1** изменения статьи слияния могут привести к повторной инициализации подписки; Если это происходит, значение **1** дает разрешение произвести повторную инициализацию подписки.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_mergearticlecolumn** используется в репликации слиянием.  
   
  Если осуществляется автоматическое управление диапазоном идентификаторов, столбец идентификаторов не может быть сброшен из статьи. Дополнительные сведения см. в статье [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md).  
@@ -99,10 +99,10 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_mergearticlecolumn**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_mergearticlecolumn**.  
   
 ## <a name="see-also"></a>См. также  
- [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Определение и изменение фильтра соединения между статьями публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Фильтрация опубликованных данных](../../relational-databases/replication/publish/filter-published-data.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

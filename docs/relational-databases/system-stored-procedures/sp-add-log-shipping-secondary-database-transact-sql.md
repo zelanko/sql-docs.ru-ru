@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_database (Transact-SQL) | Документы Microsoft
+title: sp_add_log_shipping_secondary_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_database
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70abdc5cb67beeb779af3722d3b5e7f91b923e21
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 56090e1f012bb0e9d490997c9b3dcc7e497641c9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239784"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035546"
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ sp_add_log_shipping_secondary_database
  Предупреждение, создаваемое при превышении порогового значения. *threshold_alert* — **int**, значение по умолчанию 14 420.  
   
  [ **@threshold_alert_enabled** =] '*threshold_alert_enabled*"  
- Указывает, формируется ли предупреждение при *backup_threshold* превышено. При значении, равном единице (1), устанавливаемом по умолчанию, предупреждение будет инициировано. *threshold_alert_enabled* — **бит**.  
+ Указывает, нужно ли создавать оповещение при *backup_threshold* превышено. При значении, равном единице (1), устанавливаемом по умолчанию, предупреждение будет инициировано. *threshold_alert_enabled* — **бит**.  
   
  [ **@history_retention_period** =] '*history_retention_period*"  
  Длительность времени в минутах, в течение которого сохраняется журнал. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, используется значение 14 420.  
@@ -110,24 +109,24 @@ sp_add_log_shipping_secondary_database
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_add_log_shipping_secondary_database** должна запускаться из **master** базы данных на сервере-получателе. Эта хранимая процедура выполняет следующее:  
   
-1.  **sp_add_log_shipping_secondary_primary** должен быть вызван до этой хранимой процедуры для инициализации первичного сведения о базе данных на сервер-получатель в доставке журналов.  
+1.  **sp_add_log_shipping_secondary_primary** должен вызываться перед Эта хранимая процедура для инициализации источника сведения о базе данных на сервере-получателе доставки журнала.  
   
-2.  Добавляет запись базы данных-получателя в **log_shipping_secondary_databases** с указанными аргументами.  
+2.  Добавляет запись для базы данных-получателя в **log_shipping_secondary_databases** с указанными аргументами.  
   
 3.  Добавляет запись локального монитора в **log_shipping_monitor_secondary** на сервере-получателе, используя указанные аргументы.  
   
-4.  Если сервер мониторинга отличается от сервера-получателя, добавляет запись монитора в **log_shipping_monitor_secondary** на мониторе сервере, используя указанные аргументы.  
+4.  Если сервер мониторинга отличается от сервера-получателя, добавляет запись монитора в **log_shipping_monitor_secondary** на мониторе сервере, используя предоставленные аргументы.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
   
 ## <a name="examples"></a>Примеры  
- Этот пример иллюстрирует использование **sp_add_log_shipping_secondary_database** хранимую процедуру, чтобы добавить базу данных **LogShipAdventureWorks** как базы данных-получателя в конфигурации доставки журналов с базой данных-источником [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на сервере-источнике TRIBECA.  
+ Этот пример иллюстрирует использование **sp_add_log_shipping_secondary_database** хранимую процедуру для добавления базы данных **LogShipAdventureWorks** как базу данных-получатель в конфигурацию доставки журналов с помощью базы данных-источника [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на сервере-источнике TRIBECA.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   
@@ -144,7 +143,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

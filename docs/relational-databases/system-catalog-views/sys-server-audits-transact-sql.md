@@ -1,5 +1,5 @@
 ---
-title: sys.server_audits (Transact-SQL) | Документы Microsoft
+title: sys.server_audits (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,25 +21,26 @@ helpviewer_keywords:
 - sys.server_audits catalog view
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f71da894aa31fa192c5abc6f64683fa1c2036f99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f6dd82c3232e941d4db08f9e5079d9e821e84804
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024536"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит по одной строке для каждого аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Содержит по одной строке для каждого аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Идентификатор аудита.|  
 |**name**|**sysname**|Имя аудита.|  
-|**audit_guid**|**uniqueidentifier**|Идентификатор GUID аудита, используемый для перечисления аудитов со Server&#124;подсоединения спецификации аудита базы данных во время запуска сервера и базы данных.|  
+|**audit_guid**|**uniqueidentifier**|Идентификатор GUID аудита, который используется для перечисления аудитов со Server&#124;операции присоединения спецификации аудита базы данных во время запуска сервера и базы данных.|  
 |**create_date**|**datetime**|Дата и время создания аудита в формате UTC.|  
 |**modify_date**|**datetime**|Дата и время последнего изменения аудита в формате UTC.|  
 |**principal_id**|**int**|Идентификатор владельца аудита, зарегистрированного на сервере.|  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/04/2018
 |**предикат**|**nvarchar(3000)**|Выражение предиката, применяемое к событию.|  
   
 ## <a name="permissions"></a>Разрешения  
- Участники **ALTER ANY SERVER AUDIT** или **VIEW ANY DEFINITION** разрешение имеют доступ к этому представлению каталога. Кроме того, участник не должно быть запрещено **VIEW ANY DEFINITION** разрешение.  
+ Участники с **ALTER ANY SERVER AUDIT** или **VIEW ANY DEFINITION** разрешение имеют доступ к этому представлению каталога. Кроме того, участник не должно быть запрещено **VIEW ANY DEFINITION** разрешение.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_addscriptexec (Transact-SQL) | Документы Microsoft
+title: sp_addscriptexec (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e3122de37c27e8372c2aca77f4dde0b267a8d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50606c2b80e5aeae4cb68c453a130dc557111988
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035196"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ sp_addscriptexec [ @publication = ] publication
   
  **1** = агент пропустит ошибку и продолжит выполнение скрипта.  
   
- [  **@publisher=** ] **"***издатель***"**  
- Указывает значение, отличное от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+ [  **@publisher=** ] **"***издателя***"**  
+ Указывает, отличный от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не должны использоваться при публикации из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
@@ -69,16 +69,16 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_addscriptexec** используется в транзакционной репликации и репликации слиянием.  
   
- **sp_addscriptexec** не используется в репликации моментальных снимков.  
+ **sp_addscriptexec** не используется для репликации моментальных снимков.  
   
- Для использования **sp_addscriptexec**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы должна чтение и запись разрешения для разрешения расположения и чтения моментальных снимков в расположении, где сценарии хранятся.  
+ Чтобы использовать **sp_addscriptexec**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы должна чтение и запись разрешения для разрешения расположения "и" чтение моментальных снимков в расположении, где сценарии хранятся.  
   
- [Программы sqlcmd](../../tools/sqlcmd-utility.md) используется для выполнения сценария на стороне подписчика, и сценарий выполняется в контексте безопасности, используемый агентом распространителя или агентом слияния при подключении к базе данных подписки. При запуске агента в предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [osql, программа](../../tools/osql-utility.md) используется вместо [sqlcmd](../../tools/sqlcmd-utility.md).  
+ [Служебная программа sqlcmd](../../tools/sqlcmd-utility.md) используется для выполнения сценария на подписчике, а сценарий выполняется в контексте безопасности, используемый агентом распространителя или агентом слияния при подключении к базе данных подписки. Когда агент выполняется на предыдущую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [программа osql](../../tools/osql-utility.md) используется вместо [sqlcmd](../../tools/sqlcmd-utility.md).  
   
- **sp_addscriptexec** полезен применения скриптов к подписчикам и использует [sqlcmd](../../tools/sqlcmd-utility.md) для применения содержимое скрипта к подписчику. Однако, поскольку конфигурации подписчика могут различаться, скрипты, протестированные до отправки к издателю, могут по-прежнему вызывать ошибки у подписчика. *skiperror* предоставляет возможность агента распространителя или агенту слияния пропускать ошибки и продолжать работу. Используйте [sqlcmd](../../tools/sqlcmd-utility.md) Чтобы протестировать скрипты перед запуском **sp_addscriptexec**.  
+ **sp_addscriptexec** полезен применения скриптов к подписчикам и использует [sqlcmd](../../tools/sqlcmd-utility.md) для применения содержимое скрипта к подписчику. Однако, поскольку конфигурации подписчика могут различаться, скрипты, протестированные до отправки к издателю, могут по-прежнему вызывать ошибки у подписчика. *skiperror* предоставляет возможность агент распространителя или агенту слияния пропускать ошибки и продолжать работу. Используйте [sqlcmd](../../tools/sqlcmd-utility.md) Чтобы протестировать скрипты перед запуском **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Пропущенные ошибки по-прежнему будут фиксироваться в журнале агента для последующей справки.  
@@ -86,10 +86,10 @@ sp_addscriptexec [ @publication = ] publication
  С помощью **sp_addscriptexec** для файла скрипта для публикаций, использующих FTP для доставки моментальных снимков поддерживается только для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_addscriptexec**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addscriptexec**.  
   
 ## <a name="see-also"></a>См. также  
- [Выполнять скрипты во время синхронизации &#40;программирование репликации Transact-SQL&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
+ [Выполнение скриптов во время синхронизации &#40;программирование репликации Transact-SQL&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Синхронизация данных](../../relational-databases/replication/synchronize-data.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_cursor_list (Transact-SQL) | Документы Microsoft
+title: Хранимая процедура sp_cursor_list (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 368c1b64a7c6eea9d338a1698e5a20d90948b696
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 249b6789d6242a982e3b23b577740fdca9bafcdd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239594"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018086"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  Имя объявленной переменной курсора. *cursor_variable_name* — **курсор**, не имеет значения по умолчанию. Этот аргумент является динамическим, прокручиваемым и предназначенным только для чтения.  
   
  [ @cursor_scope=] *cursor_scope*  
- Определяет, какие уровни курсоров включаются в отчет. *cursor_scope* — **int**, без значения по умолчанию и может принимать одно из следующих значений.  
+ Определяет, какие уровни курсоров включаются в отчет. *cursor_scope* — **int**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -59,7 +59,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |3|Представить как локальные, так и глобальные курсоры.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="cursors-returned"></a>Возвращенные курсоры  
  Хранимая процедура sp_cursor_list возвращает свой отчет в виде выходного параметра-курсора [!INCLUDE[tsql](../../includes/tsql-md.md)], не в виде результирующего набора. Позволяет пакетам, хранимым процедурам и триггерам [!INCLUDE[tsql](../../includes/tsql-md.md)] работать с выходными данными по одной строке за раз. Это также означает, что процедуру нельзя вызвать напрямую из API-функций базы данных. Выходной параметр-курсор должен быть привязан к программной переменной, но API-интерфейсы баз данных не поддерживают привязку параметров-курсоров или переменных.  
@@ -83,7 +83,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|Последняя операция, выполненная с данным курсором.<br /><br /> 0 = операции c курсором не выполнялись.<br /><br /> 1 = OPEN;<br /><br /> 2 = FETCH;<br /><br /> 3 = ВСТАВКА<br /><br /> 4 = UPDATE;<br /><br /> 5 = DELETE;<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Уникальное значение, определяющее курсор в пределах области сервера.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Хранимая процедура sp_cursor_list представляет список текущих серверных курсоров, открытых соединением, и описывает атрибуты, являющиеся глобальными по отношению к каждому курсору, такие как возможность прокрутки и обновления курсора. Курсоры, представленные в хранимой процедуре sp_cursor_list, включают:  
   
 -   серверные курсоры [!INCLUDE[tsql](../../includes/tsql-md.md)];  

@@ -1,5 +1,5 @@
 ---
-title: sp_add_notification (Transact-SQL) | Документы Microsoft
+title: sp_add_notification (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a79b98fb3f44f3c69e7b4108502a3e6ea14e5c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d17936912a9adca46ddf64724401432c7ef9d43f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238411"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038294"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  Оператор, которому будут отправляться уведомления о предупреждении. *оператор* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@notification_method=** ] *notification_method*  
- Метод уведомления оператора. *notification_method* — **tinyint**, не имеет значения по умолчанию. *notification_method* может иметь одно или несколько из следующих значений, объединенных с **или** логический оператор.  
+ Метод уведомления оператора. *notification_method* — **tinyint**, не имеет значения по умолчанию. *notification_method* может иметь одно или несколько из следующих значений в сочетании с **OR** логический оператор.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -64,9 +63,9 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_add_notification** должна запускаться из **msdb** базы данных.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает простой графический способ управления всей системой предупреждений. Использование среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] рекомендуется для настройки инфраструктуры предупреждений.  
@@ -76,7 +75,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  Ошибки, возникающие при отправке сообщения по электронной почте или уведомления по пейджеру, регистрируются в журнале ошибок службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_add_notification**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_add_notification**.  
   
 ## <a name="examples"></a>Примеры  
  Следующий код добавляет уведомление по электронной почте для предупреждения `Test Alert`.  
@@ -94,7 +93,7 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

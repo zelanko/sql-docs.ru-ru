@@ -14,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8debb182069b7294f1fb8027c072a3fb720b62c8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238784"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022072"
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
   *Аудит* экземпляра среды [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] или отдельной базы данных включает в себя отслеживание и протоколирование событий, происходящих в компоненте [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Аудит среды[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет проводить аудит сервера, который может включать в себя спецификации аудита сервера для событий на уровне сервера, а также спецификации аудита базы данных для событий на уровне базы данных. События аудита могут записываться в журналы событий или файлы аудита.  
@@ -191,7 +190,7 @@ ms.locfileid: "37238784"
 > [!CAUTION]  
 >  Члены роли sysadmin могут изменять любой компонент аудита; члены роли db_owner могут изменять спецификации аудита в базе данных. Подсистема аудита[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполнит проверку наличия у имени входа, пытающегося выполнить создание или изменение спецификации аудита (хотя бы разрешения ALTER ANY DATABASE AUDIT). Однако при присоединении базы данных проверка не производится. Следует считать, что спецификации аудита базы данных настолько надежны, насколько надежны участники, имеющие роли sysadmin или db_owner.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Создание аудита сервера и спецификации аудита сервера](create-a-server-audit-and-server-audit-specification.md)  
   
  [Создание спецификации аудита для сервера и базы данных](create-a-server-audit-and-database-audit-specification.md)  

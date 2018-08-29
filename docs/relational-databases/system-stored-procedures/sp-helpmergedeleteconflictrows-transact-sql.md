@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergedeleteconflictrows (Transact-SQL) | Документы Microsoft
+title: sp_helpmergedeleteconflictrows (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a624b6ef69048375b671112f138d3f2ed7477604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8bb0cf7dfa6b5eb44a7d30320f1beb0f90fbca7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025662"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +54,19 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
  [  **@source_object=**] **"***source_object***"**  
  Имя исходного объекта. *source_object* — **nvarchar(386)**, значение по умолчанию NULL.  
   
- [  **@publisher=**] **"***издатель***"**  
- — Это имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+ [  **@publisher=**] **"***издателя***"**  
+ — Имя издателя. *издателя* — **sysname**, значение по умолчанию NULL.  
   
  [  **@publisher_db=**] **"***publisher_db***"**  
- — Это имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL.  
+ — Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|Исходный объект для конфликта удаления.|  
-|**ROWGUID**|**uniqueidentifier**|Идентификатор строки для конфликта удаления.|  
-|**conflict_type**|**int**|Код, указывающий на тип конфликта.<br /><br /> **1** = UpdateConflict: конфликт обнаружен на уровне строк.<br /><br /> **2** = ColumnUpdateConflict: конфликт обнаружен на уровне столбца.<br /><br /> **3** = UpdateDeleteWinsConflict: конфликт разрешен удалением.<br /><br /> **4** = UpdateWinsDeleteConflict: удаленный идентификатор rowguid, которая уступает в конфликте, записывается в данную таблицу.<br /><br /> **5** = UploadInsertFailed: инструкция Insert от подписчика не может быть применена на издателе.<br /><br /> **6** = DownloadInsertFailed: инструкция Insert от издателя не может быть применена на подписчике.<br /><br /> **7** = UploadDeleteFailed: не удалось загрузить удаления со стороны подписчика на издатель.<br /><br /> **8** = DownloadDeleteFailed: не удалось загрузить удаления со стороны издателя на подписчик.<br /><br /> **9** = UploadUpdateFailed: инструкция Update на подписчике не может быть применена на издателе.<br /><br /> **10** = DownloadUpdateFailed: обновления на стороне издателя оказалось невозможным подписчику.|  
+|**столбец ROWGUID**|**uniqueidentifier**|Идентификатор строки для конфликта удаления.|  
+|**conflict_type**|**int**|Код, указывающий на тип конфликта.<br /><br /> **1** = UpdateConflict: конфликт обнаружен на уровне строк.<br /><br /> **2** = ColumnUpdateConflict: конфликт обнаружен на уровне столбца.<br /><br /> **3** = UpdateDeleteWinsConflict: конфликт разрешен удалением.<br /><br /> **4** = UpdateWinsDeleteConflict: удаленный идентификатор rowguid, которая уступает в конфликте, записывается в этой таблице.<br /><br /> **5** = UploadInsertFailed: инструкция Insert от подписчика не может быть применена на издателе.<br /><br /> **6** = DownloadInsertFailed: инструкция Insert от издателя не может быть применена на подписчике.<br /><br /> **7** = UploadDeleteFailed: Delete на подписчике не удалось загрузить на издатель.<br /><br /> **8** = DownloadDeleteFailed: не удалось загрузить удаления со стороны издателя на подписчик.<br /><br /> **9** = UploadUpdateFailed: обновления на подписчике не может быть применена на издателе.<br /><br /> **10** = DownloadUpdateFailed: не удалось применить обновления со стороны издателя на подписчик.|  
 |**reason_code**|**Int**|Код ошибки, который может зависеть от контекста.|  
 |**reason_text**|**varchar(720)**|Описание ошибки, которое может зависеть от контекста.|  
 |**origin_datasource**|**varchar(255)**|Источник конфликта.|  
@@ -75,11 +76,11 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_helpmergedeleteconflictrows** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergedeleteconflictrows**.  
+ Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_helpmergedeleteconflictrows**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

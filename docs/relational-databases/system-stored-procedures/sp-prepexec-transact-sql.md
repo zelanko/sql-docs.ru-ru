@@ -1,5 +1,5 @@
 ---
-title: sp_prepexec (Transact-SQL) | Документы Microsoft
+title: sp_prepexec (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 caps.latest.revision: 6
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca8dd4639c4c2382ef17c4de89eee6fde1fdf9b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 863aa34286ba6ed55f27a32bd1862c5f7e5896ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250008"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025223"
 ---
 # <a name="spprepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Подготавливает и выполняет параметризованную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции. процедура sp_prepexec объединяет процедуры sp_prepare и sp_execute. Вызывается с ID =13 в пакете потока табличных данных (TDS).  
+  Подготавливает и выполняет параметризованную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции. sp_prepexec объединяет в себе процедуры sp_prepare и sp_execute. Вызывается с ID =13 в пакете потока табличных данных (TDS).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,16 +46,16 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>Аргументы  
  *Дескриптор*  
- — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Создан *обработки* идентификатор. *обрабатывать* является обязательным параметром с **int** возвращаемое значение.  
+ — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Созданный *обрабатывать* идентификатор. *обрабатывать* является обязательным параметром с **int** возвращаемое значение.  
   
- *Params*  
- Указывает параметризованные инструкции. *Params* определение переменных подставляется вместо маркеров параметров в инструкции. *params* является обязательным параметром, который вызывает для **ntext**, **nchar**, или **nvarchar** входного значения. Если инструкция не параметризована, необходимо ввести значение NULL.  
+ *params*  
+ Указывает параметризованные инструкции. *Params* определения переменных подставляется вместо маркеров параметров в инструкции. *params* является обязательным параметром, который вызывает для **ntext**, **nchar**, или **nvarchar** входного значения. Если инструкция не параметризована, необходимо ввести значение NULL.  
   
- *инструкции*  
+ *stmt*  
  Определяет результирующий набор курсора. *Stmt* параметр является обязательным и требует **ntext**, **nchar** или **nvarchar** входного значения.  
   
  *bound_param*  
- Означает необязательное использование дополнительных параметров. *bound_param* вызывает в качестве входного значения любого типа данных для обозначения дополнительных параметров.  
+ Означает необязательное использование дополнительных параметров. *bound_param* вызывает для входного значения любого типа данных для обозначения дополнительных параметров.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере подготавливается и выполняется простая инструкция.  

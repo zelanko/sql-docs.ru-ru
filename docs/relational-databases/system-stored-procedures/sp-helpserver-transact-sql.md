@@ -1,5 +1,5 @@
 ---
-title: sp_helpserver (Transact-SQL) | Документы Microsoft
+title: sp_helpserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa1a9a5841f5b43a6dea6f0650a7686f499b4965
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5252f299a0d542fe2f91f75d658ff63aec980712
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038637"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="arguments"></a>Аргументы  
  [ **@server =** ] **'***server***'**  
- Сервер, о котором возвращаются сведения. Когда *сервера* не указан, обо всех серверах в **master.sys.servers**. *сервер* — **sysname**, значение по умолчанию NULL.  
+ Сервер, о котором возвращаются сведения. Когда *server* не указан, обо всех серверах в **master.sys.servers**. *сервер* — **sysname**, значение по умолчанию NULL.  
   
  [  **@optname =** ] **"***параметр***"**  
  Параметр, описывающий сервер. *параметр* — **varchar (** 35 **)**, значение по умолчанию NULL, и должен иметь одно из следующих значений.  
@@ -54,7 +55,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |Значение|Описание|  
 |-----------|-----------------|  
 |**совместимые параметры сортировки**|Влияет на выполнение распределенных запросов на связанных серверах. Если значение этого параметра равно true.|  
-|**Доступ к данным**|Разрешает и запрещает доступ распределенных запросов к связанному серверу.|  
+|**доступ к данным**|Разрешает и запрещает доступ распределенных запросов к связанному серверу.|  
 |**dist**|Распространитель.|  
 |**dpub**|Удаленный издатель для этого распространителя.|  
 |**Отложенная проверка схемы**|Пропускает проверку схемы удаленных таблиц в начале запроса.|  
@@ -76,14 +77,14 @@ sp_helpserver [ [ @server = ] 'server' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя сервера.|  
-|**имя_сети**|**sysname**|Сетевое имя сервера.|  
+|**сетевое_имя**|**sysname**|Сетевое имя сервера.|  
 |**status**|**varchar (** 70 **)**|Состояние сервера.|  
 |**идентификатор**|**char (** 4 **)**|Идентификационный номер сервера.|  
 |**collation_name**|**sysname**|Параметры сортировки сервера.|  
 |**connect_timeout**|**int**|Значение времени ожидания для подключения к связанному серверу.|  
 |**query_timeout**|**int**|Значение времени ожидания для запросов к связанному серверу.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  У сервера может быть несколько состояний.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -110,7 +111,7 @@ EXEC sp_helpserver 'SEATTLE2';
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0cf0256c337d8851f6223ea895eb7e6d90e30665
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979826"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787931"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Практическое руководство. Отправка и получение ASCII-данных в Linux и macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "37979826"
 ## <a name="example"></a>Пример  
 Следующие примеры демонстрируют, как отправлять и получать данные в формате ASCII с помощью драйверов PHP для SQL Server, указав перед подключением конкретного языкового стандарта. Национальные настройки в различных платформах Linux из языковых стандартов в macOS может называться по-разному. Например, языковой стандарт нам ISO-8859-1 (Latin 1) является `en_US.ISO-8859-1` в Linux, хотя в macOS имеет имя `en_US.ISO8859-1`.
   
-В примерах предполагается, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] устанавливается на сервере. При запуске примеров в браузере все выходные данные выводятся в браузер.  
+В примерах предполагается, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается на сервере. При запуске примеров в браузере все выходные данные выводятся в браузер.  
   
 ```  
 <?php  

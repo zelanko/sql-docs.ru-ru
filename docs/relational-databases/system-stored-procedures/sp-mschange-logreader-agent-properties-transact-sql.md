@@ -1,5 +1,5 @@
 ---
-title: sp_MSchange_logreader_agent_properties (Transact-SQL) | Документы Microsoft
+title: sp_MSchange_logreader_agent_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_MSchange_logreader_agent_properties
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a9e1e011e762002a227db93146cc8350eea88ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: daf6a59d9d9a07393516de37868069b547690ff1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001831"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038034"
 ---
 # <a name="spmschangelogreaderagentproperties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издатель***"**  
+ [ **@publisher** =] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publisher_db=** ] **"***publisher_db***"**  
@@ -63,16 +63,16 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
   
- **1** указывает проверку подлинности Windows.  
+ **1** задает проверку подлинности Windows.  
   
  [ **@publisher_login**=] **"***publisher_login***"**  
- Имя входа, используемое для соединения с издателем. *publisher_login* — **sysname**, не имеет значения по умолчанию. *publisher_login* должен быть указан, если *publisher_security_mode* — **0**. Если *publisher_login* имеет значение NULL и *publisher_security_mode* — **1**, учетная запись Windows, указанная в *job_login* будет использоваться При соединении с издателем.  
+ Имя входа, используемое для соединения с издателем. *publisher_login* — **sysname**, не имеет значения по умолчанию. *publisher_login* должен быть указан, если *publisher_security_mode* — **0**. Если *publisher_login* имеет значение NULL и *publisher_security_mode* — **1**, то учетная запись Windows, указанных в *job_login* будет использоваться При соединении с издателем.  
   
  [ **@publisher_password**=] **"***publisher_password***"**  
  Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@job_login**=] **"***job_login***"**  
- Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. *Это единственный предусмотренный отличается от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*  
+ Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. *Это единственно возможный отличается от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*  
   
  [ **@job_password**=] **"***job_password***"**  
  Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
@@ -86,19 +86,19 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 |**ORACLE**|Задает стандартного издателя Oracle.|  
 |**ORACLE GATEWAY**|Используется издатель Oracle Gateway.|  
   
- Дополнительные сведения о различиях между издателем Oracle и издатель Oracle Gateway см. в разделе [Обзор публикации Oracle](../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
+ Дополнительные сведения о различиях между издателями Oracle и издатель Oracle Gateway см. в разделе [Обзор публикации Oracle](../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_MSchange_logreader_agent_properties** используется в репликации транзакций.  
   
- Необходимо указать все параметры, при выполнении **sp_MSchange_logreader_agent_properties**. Выполнение [sp_helplogreader_agent &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) для получения текущих свойств задания агента чтения журнала.  
+ Необходимо указать все параметры при выполнении **sp_MSchange_logreader_agent_properties**. Выполнение [sp_helplogreader_agent &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) для получения текущих свойств задания агента чтения журнала.  
   
  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
- Если издатель запущен на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует использовать [sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) для изменения свойств агента чтения журнала.  
+ Если издатель выполняется на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует использовать [sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) для изменения свойств агента чтения журнала.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера на распространителе могут выполнять **sp_MSchange_logreader_agent_properties**.  
+ Только члены **sysadmin** предопределенной роли сервера на распространителе могут выполнять процедуру **sp_MSchange_logreader_agent_properties**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_addlogreader_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  

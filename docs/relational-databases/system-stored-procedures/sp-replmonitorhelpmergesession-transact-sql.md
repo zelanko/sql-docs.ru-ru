@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesession (Transact-SQL) | Документы Microsoft
+title: sp_replmonitorhelpmergesession (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1d59aba126e66d523e23c680c55f679cbbfa6ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25bacdedf9ed9be6baa5e467cf81b809ff9cab1f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003591"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037677"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="arguments"></a>Аргументы  
  [ **@agent_name** =] **"***agent_name***"**  
- Имя агента. *agent_name* — **nvarchar(100)** без значения по умолчанию.  
+ Имя агента. *agent_name* — **nvarchar(100)** не имеет значения по умолчанию.  
   
  [ **@hours** =] *часов*  
- Интервал времени в часах, в течение которого выполняется возврат сведений о сеансе агента истории. *часы* — **int**, может принимать одно из следующих диапазонов.  
+ Интервал времени в часах, в течение которого выполняется возврат сведений о сеансе агента истории. *часы* — **int**, который может принимать одно из следующих интервалов.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |< **0**|Возвращает сведения о последних запусках агента, максимум до 100 раз.|  
 |**0** (по умолчанию)|Возвращает сведения обо всех последних запусках агента.|  
-|> **0**|Возвращает сведения о агент запускается, произошедших за последние *часы* количество часов.|  
+|> **0**|Возвращает сведения о агента запусков, произошедших за последние *часов* количество часов.|  
   
  [ **@session_type** =] *session_type*  
  Фильтрует результирующий набор на основе результата завершения сеанса. *session_type* — **int**, и может принимать одно из следующих значений.  
@@ -70,7 +70,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**1** (по умолчанию)|Сеанс агента с успешным результатом или с требованием повторения.|  
 |**0**|Сеанс агента с неудачным результатом.|  
   
- [ **@publisher** =] **"***издатель***"**  
+ [ **@publisher** =] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
   
  [ **@publisher_db** =] **"***publisher_db***"**  
@@ -83,8 +83,8 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|Идентификатор сеанса для задания агента.|  
-|**Состояние**|**int**|Состояние запуска агента:<br /><br /> **1** = начало<br /><br /> **2** = успешно<br /><br /> **3** = выполняется<br /><br /> **4** = бездействует<br /><br /> **5** = Повтор<br /><br /> **6** = ошибка|  
+|**Session_id**|**int**|Идентификатор сеанса для задания агента.|  
+|**Состояние**|**int**|Состояние запуска агента:<br /><br /> **1** = start<br /><br /> **2** = успешно<br /><br /> **3** = выполняется<br /><br /> **4** = бездействует<br /><br /> **5** = повторение<br /><br /> **6** = неуспешное завершение|  
 |**StartTime**|**datetime**|Время начала сеанса для задания агента.|  
 |**EndTime**|**datetime**|Время завершения сеанса для задания агента.|  
 |**Длительность**|**int**|Совокупная продолжительность сеанса выполнения задания, в секундах.|  
@@ -94,19 +94,19 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**Идентификатор ошибки**|**int**|Идентификатор возникшей ошибки.|  
 |**PercentageDone**|**decimal**|Приближенный процент общих изменений, которые уже были переданы в активном сеансе.|  
 |**TimeRemaining**|**int**|Приблизительное число секунд, оставшееся до завершения активного сеанса.|  
-|**CurrentPhase**|**int**|Текущая фаза активного сеанса, которая может принимать одно из следующих значений:<br /><br /> **1** = выгрузка<br /><br /> **2** = загрузка|  
+|**CurrentPhase**|**int**|Текущая фаза активного сеанса, которая может принимать одно из следующих значений:<br /><br /> **1** = выгрузка<br /><br /> **2** = загрузки|  
 |**LastMessage**|**nvarchar(500)**|Последнее сообщение, которое было записано в журнал агентом слияния во время сеанса.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_replmonitorhelpmergesession** используется для наблюдения за репликацией слиянием.  
   
  При выполнении на подписчике, **sp_replmonitorhelpmergesession** возвращает только сведения о последних пяти сеансах агента слияния.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **db_owner** или **replmonitor** предопределенной роли базы данных на базу данных распространителя на распространителе или на базе данных подписки на подписчике могут выполнять **sp_ replmonitorhelpmergesession**.  
+ Только члены **db_owner** или **replmonitor** предопределенной роли базы данных в базе данных распространителя на распространителе или в базе данных подписки на подписчике могут выполнять процедуру **sp_ replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>См. также  
  [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

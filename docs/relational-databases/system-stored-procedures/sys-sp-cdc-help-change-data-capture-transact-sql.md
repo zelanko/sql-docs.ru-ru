@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_help_change_data_capture (Transact-SQL) | Документы Microsoft
+title: sys.sp_cdc_help_change_data_capture (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1fd52d38d96f83c6be7c0a327fca797f934a466
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263220"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027250"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +52,14 @@ sys.sp_cdc_help_change_data_capture
  [ @source_schema =] '*source_schema*"  
  Имя схемы, к которой относится исходная таблица. *source_schema* — **sysname**, значение по умолчанию NULL. Когда *source_schema* указано, *source_name* также должен быть указан.  
   
- Если значение NULL, *source_schema* должен существовать в текущей базе данных.  
+ Если не NULL, *source_schema* должен существовать в текущей базе данных.  
   
  Если *source_schema* отлично от NULL, *source_name* также должен иметь значение NULL.  
   
  [ @source_name =] '*source_name*"  
  Имя исходной таблицы. *source_name* — **sysname**, значение по умолчанию NULL. Когда *source_name* указано, *source_schema* также должен быть указан.  
   
- Если значение NULL, *source_name* должен существовать в текущей базе данных.  
+ Если не NULL, *source_name* должен существовать в текущей базе данных.  
   
  Если *source_name* отлично от NULL, *source_schema* также должен иметь значение NULL.  
   
@@ -78,8 +77,8 @@ sys.sp_cdc_help_change_data_capture
 |source_object_id|**int**|Идентификатор исходной таблицы.|  
 |start_lsn|**binary(10)**|Регистрационный номер LSN, представляющий нижнюю конечную точку для запроса к таблице изменений.<br /><br /> NULL = не установлена нижняя конечная точка.|  
 |end_lsn|**binary(10)**|Номер LSN, представляющий верхнюю конечную точку для запроса к таблице изменений. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] этот столбец всегда имеет значение NULL.|  
-|supports_net_changes|**бит**|Включена поддержка отслеживания сетевых изменений.|  
-|has_drop_pending|**бит**|Не используется в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
+|supports_net_changes|**bit**|Включена поддержка отслеживания сетевых изменений.|  
+|has_drop_pending|**bit**|Не используется в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
 |имя_роли|**sysname**|Имя роли базы данных, которая использовалась для управления доступом к информации об изменениях.<br /><br /> NULL = роль не используется.|  
 |index_name|**sysname**|Имя индекса, который использовался для уникальной идентификации строк в исходной таблице.|  
 |filegroup_name|**sysname**|Имя файловой группы, в которой расположена таблица изменений.<br /><br /> NULL = таблица изменений расположена в файловой группе по умолчанию для базы данных.|  
@@ -87,11 +86,11 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Список столбцов индекса, который использовался для уникальной идентификации строк в исходной таблице.|  
 |captured_column_list|**nvarchar(max)**|Список отслеживаемых исходных столбцов.|  
   
-## <a name="remarks"></a>Замечания  
- Если оба *source_schema* и *source_name* по умолчанию значение NULL или значение NULL, явно заданные Эта хранимая процедура возвращает сведения обо всех базы данных экземпляры отслеживания, выделенных вызывающий объект доступ к. Когда *source_schema* и *source_name* имеют значение NULL, возвращаются сведения только об определенной включенной таблице с именем.  
+## <a name="remarks"></a>Примечания  
+ Когда оба *source_schema* и *source_name* по умолчанию значение NULL, или явно не задано значение NULL, эта хранимая процедура возвращает сведения обо всех базы данных экземпляры отслеживания, которые вызывающий объект имеет выбрать доступ к. Когда *source_schema* и *source_name* являются отличное от NULL, возвращаются сведения только об определенной включенной таблице с именем.  
   
 ## <a name="permissions"></a>Разрешения  
- Когда *source_schema* и *source_name* имеют значение NULL, определяемые авторизацией вызывающего объекта включена, включаемые в результирующем наборе. Чтобы включать сведения о таблице, вызывающие объекты должны иметь разрешение SELECT для всех отслеживаемых столбцов в экземпляре отслеживания, а также входить во все определенные шлюзовые роли. Члены роли db_owner database могут просматривать сведения обо всех определенных экземплярах отслеживания. Когда запрашиваются сведения об определенной активной таблице, к именованной таблице применяются те же требования относительно разрешений SELECT и членства в роли.  
+ Когда *source_schema* и *source_name* имеют значение NULL, вызывающей стороны авторизация определяет, в результирующий набор включаются активные таблицы. Чтобы включать сведения о таблице, вызывающие объекты должны иметь разрешение SELECT для всех отслеживаемых столбцов в экземпляре отслеживания, а также входить во все определенные шлюзовые роли. Члены роли db_owner database могут просматривать сведения обо всех определенных экземплярах отслеживания. Когда запрашиваются сведения об определенной активной таблице, к именованной таблице применяются те же требования относительно разрешений SELECT и членства в роли.  
   
 ## <a name="examples"></a>Примеры  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_addlinkedserver (Transact-SQL) | Документы Microsoft
+title: sp_addlinkedserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-caps.latest.revision: 70
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 54fc43ecec6c26435165c9c3491bfba2f1f675ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f219d4af3de0915333801eea412c6f0e232c1b5d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240534"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020703"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  Введите название продукта для источника данных OLE DB, который добавляется в качестве связанного сервера. *product_name* — **nvarchar (** 128 **)**, значение по умолчанию NULL. Если **SQL Server**, *provider_name*, *источник_данных*, *расположение*, *provider_string*, и *каталога* не должны быть указаны.  
   
  [  **@provider=** ] **"***provider_name***"**  
- Введите уникальный программный идентификатор (PROGID) поставщика OLE DB, соответствующий этому источнику данных. *provider_name* должно быть уникальным для указанного поставщика OLE DB, который установлен на данном компьютере. *provider_name* — **nvarchar (** 128 **)**, значение по умолчанию NULL; тем не менее, если *provider_name* — этот параметр опущен, используется значение SQLNCLI. (При использовании SQLNCLI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использовать последнюю версию поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Предполагается, что поставщик OLE DB будет зарегистрирован в реестре с указанным идентификатором PROGID.  
+ Введите уникальный программный идентификатор (PROGID) поставщика OLE DB, соответствующий этому источнику данных. *provider_name* должно быть уникальным для указанного поставщика OLE DB, который установлен на текущем компьютере. *provider_name* — **nvarchar (** 128 **)**, значение по умолчанию NULL; тем не менее, если *provider_name* — этот параметр опущен, используется значение SQLNCLI. (При использовании SQLNCLI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использовать последнюю версию поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Предполагается, что поставщик OLE DB будет зарегистрирован в реестре с указанным идентификатором PROGID.  
   
  [  **@datasrc=** ] **"***источник_данных***"**  
  Имя источника данных, как оно интерпретируется поставщиком OLE DB. *источник_данных* — **nvarchar (** 4000 **)**. *источник_данных* передается как свойство DBPROP_INIT_DATASOURCE для инициализации поставщика OLE DB.  
@@ -65,12 +64,12 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  Введите местонахождение базы данных, понятное поставщику OLE DB. *расположение* — **nvarchar (** 4000 **)**, значение по умолчанию NULL. *расположение* передается как свойство DBPROP_INIT_LOCATION для инициализации поставщика OLE DB.  
   
  [  **@provstr=** ] **"***provider_string***"**  
- Строка подключения для конкретного поставщика OLE DB, указывающая уникальный источник данных. *provider_string* — **nvarchar (** 4000 **)**, значение по умолчанию NULL. *provstr* передаваемый IDataInitialize или задается как свойство DBPROP_INIT_PROVIDERSTRING для инициализации поставщика OLE DB.  
+ Строка подключения для конкретного поставщика OLE DB, указывающая уникальный источник данных. *provider_string* — **nvarchar (** 4000 **)**, значение по умолчанию NULL. *provstr* передается IDataInitialize или задается как свойство DBPROP_INIT_PROVIDERSTRING для инициализации поставщика OLE DB.  
   
- При создании связанного сервера для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента экземпляра можно указать с помощью ключевого слова SERVER как сервер =*servername*\\*instancename*для указания определенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ServerName* — имя компьютера, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает, и *instancename* имя конкретного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к которой будет подключен пользователь.  
+ При создании связанного сервера с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, используя ключевое слово SERVER в качестве сервера можно задать экземпляра =*servername*\\*instancename*для указания определенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ServerName* — имя компьютера, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает, и *instancename* имя конкретного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к которой будет подключен пользователь.  
   
 > [!NOTE]  
->  Чтобы получить доступ к зеркальной базе данных, строка соединения должна содержать имя базы данных. Это имя необходимо, чтобы предоставить поставщику доступа к данным возможность пытаться отработать отказ. Базы данных могут быть указаны в **@provstr** или **@catalog** параметра. Кроме того, строка соединения может содержать имя партнера по обеспечению отработки отказа.  
+>  Чтобы получить доступ к зеркальной базе данных, строка соединения должна содержать имя базы данных. Это имя необходимо, чтобы предоставить поставщику доступа к данным возможность пытаться отработать отказ. Базы данных может быть указано в **@provstr** или **@catalog** параметра. Кроме того, строка соединения может содержать имя партнера по обеспечению отработки отказа.  
   
  [  **@catalog=** ] **"***каталога***"**  
  Каталог, который должен использоваться при подключении к поставщику OLE DB. *каталог* — **sysname**, значение по умолчанию NULL. *каталог* передается как свойство DBPROP_INIT_CATALOG для инициализации поставщика OLE DB. Если связанный сервер определен для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то каталог ссылается на базу данных по умолчанию, с которой сопоставлен связанный сервер.  
@@ -81,8 +80,8 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Замечания  
- В следующей таблице показаны способы настройки связанного сервера для источников данных, доступных через поставщик OLE DB. Связанный сервер может быть настроен несколькими способами для конкретного источника данных; для одного типа источника данных возможны несколько строк. В этой таблице также показаны **sp_addlinkedserver** значения параметров, используемые для настройки связанного сервера.  
+## <a name="remarks"></a>Примечания  
+ В следующей таблице показаны способы настройки связанного сервера для источников данных, доступных через поставщик OLE DB. Связанный сервер может быть настроен несколькими способами для конкретного источника данных; для одного типа источника данных возможны несколько строк. В этой таблице также показаны **sp_addlinkedserver** значения параметров для настройки связанного сервера.  
   
 |Удаленный источник данных OLE DB|Поставщик OLE DB|product_name|provider_name|data_source|location|provider_string|catalog|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
@@ -95,15 +94,15 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 |Источник данных ODBC|Поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для ODBC|Любой|**MSDASQL**|||Строка подключения ODBC||  
 |Файловая система|Поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для службы индексирования|Любой|**MSIDXS**|Имя каталога службы индексирования||||  
 |Электронная таблица [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel|Поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для Jet|Любой|**Microsoft.Jet.OLEDB.4.0**|Полный путь к файлу Excel||Excel 5.0||  
-|База данных IBM DB2|Поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для DB2|Любой|**DB2OLEDB**|||В разделе [!INCLUDE[msCoName](../../includes/msconame-md.md)] поставщик OLE DB для документации DB2.|Имя каталога базы данных DB2|  
+|База данных IBM DB2|Поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для DB2|Любой|**DB2OLEDB**|||См. в разделе [!INCLUDE[msCoName](../../includes/msconame-md.md)] поставщик OLE DB для документации DB2.|Имя каталога базы данных DB2|  
   
- <sup>1</sup> этом способе настройки связанного сервера заставляет имя связанного сервера должен совпадать с сетевое имя удаленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте *источник_данных* для указания этого сервера.  
+ <sup>1</sup> этом способе настройки связанного сервера приводит имя связанного сервера, чтобы совпадал сетевое имя удаленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте *источник_данных* для указания этого сервера.  
   
  <sup>2</sup> «Любой» указывает, что имя продукта может быть любым.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента — это поставщик, используемый с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Если имя поставщика не указано или если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указывается как имя продукта. Даже если указано имя предыдущего поставщика (SQLOLEDB), оно все равно будет изменено на SQLNCLI при сохранении в каталог.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента является поставщиком, который используется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Если имя поставщика не указано или если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указывается как имя продукта. Даже если указано имя предыдущего поставщика (SQLOLEDB), оно все равно будет изменено на SQLNCLI при сохранении в каталог.  
   
- *Источник_данных*, *расположение*, *provider_string*, и *каталога* параметры идентификации базы данных, связанные Указывает сервер. Если значение одного из этих аргументов равно NULL, то соответствующее свойство инициализации поставщика OLE DB не установлено.  
+ *Источник_данных*, *расположение*, *provider_string*, и *каталога* параметры определяют базы данных, связанные Указывает сервер. Если значение одного из этих аргументов равно NULL, то соответствующее свойство инициализации поставщика OLE DB не установлено.  
   
  В кластеризованной среде при указании имен файлов для указания источников данных OLE DB используйте формат UNC или общие диски для указания расположения.  
   
@@ -113,7 +112,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 >  При создании связанного сервера с помощью **sp_addlinkedserver**, для всех локальных имен входа добавляется Самосопоставление по умолчанию. Поставщики, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которых выполнена проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], могут получить доступ к поставщику под учетной записью службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторам нужно рассмотреть применение процедуры `sp_droplinkedsrvlogin <linkedserver_name>, NULL` для удаления глобального сопоставления.  
   
 ## <a name="permissions"></a>Разрешения  
- `sp_addlinkedserver` Оператора требуется `ALTER ANY LINKED SERVER` разрешение. (SSMS **создать связанный сервер** диалоговое окно реализуется в виде, необходимо быть членом `sysadmin` предопределенной роли сервера.)  
+ `sp_addlinkedserver` Инструкция требует `ALTER ANY LINKED SERVER` разрешение. (SSMS **создать связанный сервер** диалоговое окно реализуется в виде, требуется членство в `sysadmin` предопределенной роли сервера.)  
   
 ## <a name="examples"></a>Примеры  
   
@@ -143,7 +142,7 @@ EXEC sp_addlinkedserver
  Поставщик Microsoft.Jet.OLEDB.4.0 соединяется с базами данных Microsoft Access в формате 2002–2003. В следующем примере показано создание связанного сервера с именем `SEATTLE Mktg`.  
   
 > [!NOTE]  
->  В этом примере предполагается, что оба [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access и образец **Northwind** установлены базы данных и что **Northwind** база данных находится в C:\Msoffice\Access\Samples.  
+>  В этом примере предполагается, что оба [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access и образец **Northwind** устанавливаются базы данных и что **Northwind** база данных находится в C:\Msoffice\Access\Samples.  
   
 ```  
 EXEC sp_addlinkedserver   
@@ -157,7 +156,7 @@ GO
  Поставщик Microsoft.ACE.OLEDB.12.0 соединяется с базами данных Microsoft Access в формате 2007. В следующем примере показано создание связанного сервера с именем `SEATTLE Mktg`.  
   
 > [!NOTE]  
->  В этом примере предполагается, что оба [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access и образец **Northwind** установлены базы данных и что **Northwind** база данных находится в C:\Msoffice\Access\Samples.  
+>  В этом примере предполагается, что оба [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access и образец **Northwind** устанавливаются базы данных и что **Northwind** база данных находится в C:\Msoffice\Access\Samples.  
   
 ```  
 EXEC sp_addlinkedserver   
@@ -184,7 +183,7 @@ GO
 ```  
   
 ### <a name="d-using-the-microsoft-ole-db-provider-for-excel-spreadsheet"></a>Г. Использование поставщика Microsoft OLE DB для электронных таблиц Excel  
- Для создания определения связанного сервера с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] поставщик OLE DB для Jet для доступа к электронным таблицам Excel в формате 1997-2003, сначала необходимо создать именованный диапазон в Excel путем указания столбцов и строк на листе Excel для выбора. Затем на имя диапазона можно будет ссылаться в распределенном запросе как на имя таблицы.  
+ Чтобы создать определение связанного сервера с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] поставщик OLE DB для Jet для доступа к электронной таблице Excel в формате 1997-2003, сначала создайте именованный диапазон в Excel, указав столбцы и строки в таблице Excel для выбора. Затем на имя диапазона можно будет ссылаться в распределенном запросе как на имя таблицы.  
   
 ```  
 EXEC sp_addlinkedserver 'ExcelSource',  
@@ -271,14 +270,14 @@ EXEC sp_addlinkedserver
        Default Schema=admin;';  
 ```  
   
-### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premise-databases"></a>Ж. Добавить [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] как связанный сервер для использования с распределенными запросами на облачных и локальных баз данных  
- Можно добавить [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] как связанный сервер и затем с помощью распределенные запросы, которые в локальной и облачной базы данных. Это компонент для базы данных гибридные решения охват корпоративной сети в локальной среде и облаке Windows Azure.  
+### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premise-databases"></a>Ж. Добавление [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] как связанный сервер для использования с распределенными запросами на облачных и локальных баз данных  
+ Вы можете добавить [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] как связанный сервер и затем его с помощью распределенных запросов, разделенные между локальной средой и облаком баз данных. Это компонент для гибридных решений базы данных, объединив локальных корпоративных сетях и облаке Windows Azure.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Продукт поле содержит компонентом распределенного запроса, который позволяет составлять запросы, чтобы объединить данные из локальных источников данных и данные из удаленных источников (включая данные, отличными от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источники данных) определенным как связанные серверы. Каждый [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (кроме master виртуальный) можно добавить в качестве отдельного связанного сервера и затем непосредственно использовать в приложениях базы данных как и любые другие базы данных.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Готового продукта содержит функцию распределенного запроса, которая позволяет разработчикам писать запросы для объединения данных из локальных источников данных и данных из удаленных источников (включая данные, отличными от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источников данных) определенным как связанные серверы. Каждый [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (за исключением виртуальную базу данных master) можно добавить в качестве отдельного связанного сервера, а затем использовать непосредственно в приложениях базы данных как и любые другие базы данных.  
   
- Преимущества использования [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] включают управляемость, высокий уровень доступности, масштабируемость, знакомую модель разработки и реляционную модель данных. Определить требования приложения базы данных, как его использовать [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] в облаке. Перемещение всех данных за один раз в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], или постепенно переместить некоторые данные, сохранив оставшихся данных локальной. Для таких гибридное приложение базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] возможность добавления как связанные серверы и базы данных приложения может выдавать распределенные запросы для объединения данных из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и локальными источниками данных.  
+ Преимущества использования [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] включают управляемость, высокий уровень доступности, масштабируемости, работа с знакомую модель разработки и реляционную модель данных. Определить требования приложения базы данных, как его использовать [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] в облаке. Можно переместить все данные за один раз до [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], или постепенно переместить часть своих данных, сохранив остальные данные локально. Для таких гибридное приложение базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] теперь можно добавлять как связанные серверы и базы данных приложения выполнять распределенные запросы для объединения данных из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и локальные источники данных.  
   
- Ниже приведен простой пример, объясняющий, как подключиться к [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] использования распределенных запросов:  
+ Ниже приведен простой пример, объясняя, как подключиться к [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] с помощью распределенных запросов:  
   
 ```  
 ------ Configure the linked server  
@@ -309,7 +308,7 @@ select * from myLinkedServer.myDatabase.dbo.myTable
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Распределенные запросы хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Распределенные запросы, хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   

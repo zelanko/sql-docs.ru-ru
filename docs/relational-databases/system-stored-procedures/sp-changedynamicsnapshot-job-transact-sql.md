@@ -1,5 +1,5 @@
 ---
-title: sp_changedynamicsnapshot_job (Transact-SQL) | Документы Microsoft
+title: sp_changedynamicsnapshot_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c31883e19d688dd7158ece061144ae7d44ccf30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a87e787339fec7991d1cc4a1bee5e14b79a1a3fc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992171"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018397"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@dynamic_snapshot_jobname =** ] **"***dynamic_snapshot_jobname***"**  
- Имя изменяемого задания создания моментального снимка. *dynamic_snapshot_jobname*— **sysname**, и значение по умолчанию N '%'. Если *dynamic_snapshot_jobid* указано, необходимо использовать значение по умолчанию для *dynamic_snapshot_jobname*.  
+ Имя изменяемого задания создания моментального снимка. *dynamic_snapshot_jobname*— **sysname**, значение по умолчанию N '%'. Если *dynamic_snapshot_jobid* указано, необходимо использовать значение по умолчанию для *dynamic_snapshot_jobname*.  
   
  [  **@dynamic_snapshot_jobid =** ] **"***dynamic_snapshot_jobid***"**  
- Идентификатор изменяемого задания создания моментального снимка. *dynamic_snapshot_jobid* — **uniqueidentifier**, и значение по умолчанию NULL. Если *dynamic_snapshot_jobname*указано, необходимо использовать значение по умолчанию для *dynamic_snapshot_jobid*.  
+ Идентификатор изменяемого задания создания моментального снимка. *dynamic_snapshot_jobid* — **uniqueidentifier**, значение по умолчанию NULL. Если *dynamic_snapshot_jobname*указано, необходимо использовать значение по умолчанию для *dynamic_snapshot_jobid*.  
   
  [  **@frequency_type =** ] *frequency_type*  
  Частота запуска агента по расписанию. *frequency_type* — **int**, и может принимать одно из следующих значений.  
@@ -115,7 +115,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Интервал для *frequency_subday*. *frequency_subday_interval* — **int**, значение по умолчанию NULL.  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Дата запуска агента слияния. Этот параметр используется при *frequency_type* равно **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+ Дата запуска агента слияния. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -142,10 +142,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Время плановой остановки агента слияния в формате ЧЧММСС. *active_end_time_of_day* — **int**, значение по умолчанию NULL.  
   
  [  **@job_login=** ] **"***job_login***"**  
- Учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которой выполняется агент моментальных снимков при формировании снимка для подписки с помощью параметризованного фильтра строк. *job_login* — **nvarchar(257)**, значение по умолчанию NULL.  
+ Учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которой выполняется агент моментальных снимков при формировании снимка для подписки с помощью параметризованного фильтра строк. *job_login* — **nvarchar(257)**, со значением по умолчанию NULL.  
   
  [  **@job_password=** ] **"***job_password***"**  
- Пароль учетной записи Windows, под которой выполняется агент моментальных снимков при формировании снимка для подписки с помощью параметризованного фильтра строк. *job_password* — **nvarchar(257)**, значение по умолчанию NULL.  
+ Пароль учетной записи Windows, под которой выполняется агент моментальных снимков при формировании снимка для подписки с помощью параметризованного фильтра строк. *job_password* — **nvarchar(257)**, со значением по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
@@ -153,13 +153,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_changedynamicsnapshot_job** используется в репликации слиянием для публикаций с параметризованными фильтрами строк.  
   
  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_changedynamicsnapshot_job**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_changedynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

@@ -1,5 +1,5 @@
 ---
-title: процедуру sys.sp_cdc_get_captured_columns (Transact-SQL) | Документы Microsoft
+title: процедуру sys.sp_cdc_get_captured_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: a53411c8be883f65f511473415dfc0226b21dcf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34550585"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024149"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sys.sp_cdc_get_captured_columns
  [ @capture_instance =] '*capture_instance*"  
  Имя экземпляра отслеживания, связанного с исходной таблицей. *capture_instance* — **sysname** и не может иметь значение NULL.  
   
- Для отчета о экземпляры отслеживания для таблицы, запустите [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) хранимой процедуры.  
+ Чтобы создать отчет на экземпляры отслеживания для таблицы, выполните [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) хранимой процедуры.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -75,9 +74,9 @@ sys.sp_cdc_get_captured_columns
 |datetime_precision|**smallint**|Точность для столбца типа datetime; в противном случае — NULL.|  
   
 ## <a name="remarks"></a>Примечания  
- Чтобы получить сведения об отслеживаемых столбцах, возвращенное в результате запроса функций запроса экземпляра отслеживания, используйте процедуру sys.sp_cdc_get_captured_columns [cdc.fn_cdc_get_all_changes_ < экземпляр_отслеживания >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) или [cdc.fn_cdc_get_net_changes_ < экземпляр_отслеживания >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Имена, идентификаторы и положение столбцов не изменяются в течение всего времени существования экземпляра отслеживания. Изменяется только тип данных столбца, если изменяется тип данных базового исходного столбца отслеживаемой таблицы. Столбцы, которые добавлены или удалены из исходной таблицы оказывает влияния на существующие экземпляры отслеживания отслеживаемых столбцов.  
+ Чтобы получить сведения об отслеживаемых столбцах, возвращаемых функций запроса системы отслеживания измененных экземпляра, используйте процедуру sys.sp_cdc_get_captured_columns [cdc.fn_cdc_get_all_changes_ < экземпляр_отслеживания >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) или [cdc.fn_cdc_get_net_changes_ < экземпляр_отслеживания >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Имена, идентификаторы и положение столбцов не изменяются в течение всего времени существования экземпляра отслеживания. Изменяется только тип данных столбца, если изменяется тип данных базового исходного столбца отслеживаемой таблицы. Столбцы, добавлении или удалении из исходной таблицы не оказывают влияния на существующие экземпляры отслеживания отслеживаемых столбцов.  
   
- Используйте [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) для получения сведений об определении данных инструкции языка DDL, применяемые к исходной таблице. Результирующий набор содержит сведения обо всех изменениях DDL, изменивших структуру отслеживаемого исходного столбца.  
+ Используйте [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) для получения сведений об определении данных инструкции языка DDL, применяется к исходной таблице. Результирующий набор содержит сведения обо всех изменениях DDL, изменивших структуру отслеживаемого исходного столбца.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner. Всем остальным пользователям необходимо разрешение SELECT для всех отслеживаемых столбцов в исходной таблице. Кроме того, если для экземпляра отслеживания была определена шлюзовая роль, требуется членство в этой роли базы данных. Если вызывающий объект не имеет разрешения на просмотр исходных данных, то функция возвращает ошибку 22981 (Объект не существует или доступ запрещен).  

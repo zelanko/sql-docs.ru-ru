@@ -1,5 +1,5 @@
 ---
-title: sp_redirect_publisher (Transact-SQL) | Документы Microsoft
+title: sp_redirect_publisher (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8df59d709ef04d94626ac2ab6a3ba268d63ab76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8085bbdea45ba9d537f110fb4979d29b8b72d04f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999911"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022234"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Указывает перенаправленного издателя для существующей пары «издатель/база данных». Если база данных издателя входит в группы доступности AlwaysOn, перенаправленный издатель — это имя прослушивателя группы доступности, связанное с группой доступности.  
+  Указывает перенаправленного издателя для существующей пары «издатель/база данных». Если база данных издателя принадлежит к группе доступности AlwaysOn, перенаправленный издатель — имя прослушивателя группы доступности, связанное с группой доступности.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,15 +61,15 @@ sp_redirect_publisher
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
- **sp_redirect_publisher** используется для разрешения издателем репликации перенаправляться к текущей первичной реплике группы доступности Always On, связав пары «издатель-база данных» с прослушивателем группы доступности. Выполнение **sp_redirect_publisher** после настройки прослушивателя AG для группы доступности, которая содержит опубликованную базу данных.  
+## <a name="remarks"></a>Примечания  
+ **sp_redirect_publisher** используется для разрешения является издателем репликации перенаправляться в текущей первичной группы доступности AlwaysOn, связав пару издатель/база данных с помощью прослушивателя группы доступности. Выполнение **sp_redirect_publisher** после настройки прослушивателя группы Доступности для группы доступности, которая содержит опубликованную базу данных.  
   
- Если база данных публикации на уровне первоначального издателя удаляется из группы доступности первичной реплики, выполните **sp_redirect_publisher** без указания значения для *@redirected_publisher* параметр, чтобы удалить перенаправление для пары «издатель-база данных». Дополнительные сведения о перенаправлении издателя см. когда [обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Если базе данных публикации на первоначальном издателе удаляется из группы доступности на первичной реплике, выполнение **sp_redirect_publisher** без указания значения для *@redirected_publisher* параметр, чтобы удалить перенаправление для пары «издатель/база данных». Дополнительные сведения о перенаправлении издателя, см. в разделе [обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Вызывающий объект должен быть либо членом **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа публикации для определенной публикации связанные с базой данных издателя.  
+ Вызывающий объект должен быть либо членом **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа публикации для определенной публикации связанные с базой данных издателя.  
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

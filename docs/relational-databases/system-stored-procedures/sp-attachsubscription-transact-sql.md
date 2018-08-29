@@ -1,5 +1,5 @@
 ---
-title: sp_attachsubscription (Transact-SQL) | Документы Microsoft
+title: sp_attachsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_attachsubscription
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f01aa56a511e6a9800e543bb034cf21a9f3496ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7bc27f24669cb85c748b6f41715316a3390399e0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993841"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022023"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "32993841"
   Присоединяет существующую базу данных подписки к любому подписчику. Эта хранимая процедура выполняется в базе данных master на новом подписчике.  
   
 > [!IMPORTANT]  
->  Данная функция является устаревшей и в следующей версии будет удалена. Использовать эту функцию для новых разработок не рекомендуется. Для публикаций слиянием, секционированных с помощью параметризованных фильтров, рекомендуется использовать новые возможности секционированных снимков, которые упрощают инициализацию большого числа подписок. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md). Для несекционированных публикаций можно инициализировать подписку с помощью резервной копии. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+>  Данная функция является устаревшей и в следующей версии будет удалена. Использовать эту функцию для новых разработок не рекомендуется. Для публикаций слиянием, секционированных с помощью параметризованных фильтров, рекомендуется использовать новые возможности секционированных снимков, которые упрощают инициализацию большого числа подписок. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md). Для несекционированных публикаций можно инициализировать подписку с помощью резервной копии. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,28 +70,28 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  Режим безопасности, используемый подписчиком для подключения к нему при синхронизации. *subscriber_security_mode* — **int**, значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Необходимо использовать проверку подлинности Windows. Если *subscriber_security_mode* не **1** (проверка подлинности Windows), возвращается сообщение об ошибке.  
+>  Необходимо использовать проверку подлинности Windows. Если *subscriber_security_mode* не **1** (проверка подлинности Windows), будет возвращена ошибка.  
   
  [  **@subscriber_login=** ] **"***subscriber_login***"**  
  Имя входа подписчика, используемое для подключения к нему при синхронизации. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если *subscriber_security_mode* не **1** и *subscriber_login* будет указано, возвращается сообщение об ошибке.  
+>  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если *subscriber_security_mode* не **1** и *subscriber_login* будет указано, будет возвращена ошибка.  
   
  [  **@subscriber_password=** ] **"***subscriber_password***"**  
  Пароль подписчика. *subscriber_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если *subscriber_security_mode* не **1** и *subscriber_password* будет указано, возвращается сообщение об ошибке.  
+>  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если *subscriber_security_mode* не **1** и *subscriber_password* будет указано, будет возвращена ошибка.  
   
  [  **@distributor_security_mode=** ] *distributor_security_mode*  
- Режим безопасности, используемый для подключения к распространителю при синхронизации. *distributor_security_mode* — **int**, значение по умолчанию **0**. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** указывает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ Режим безопасности, используемый для подключения к распространителю при синхронизации. *distributor_security_mode* — **int**, значение по умолчанию **0**. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** задает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login=** ] **"***имя_входа_распространителя***"**  
- Имя входа распространителя, используемое для подключения к нему при синхронизации. *имя_входа_распространителя* является обязательным, если *distributor_security_mode* равно **0**. *имя_входа_распространителя* — **sysname**, значение по умолчанию NULL.  
+ [  **@distributor_login=** ] **"***distributor_login***"**  
+ Имя входа распространителя, используемое для подключения к нему при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_login* — **sysname**, значение по умолчанию NULL.  
   
  [  **@distributor_password=** ] **"***distributor_password***"**  
- Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* равно **0**. *distributor_password* — **sysname**, значение по умолчанию NULL. Значение *distributor_password* должно быть меньше 120 символов Юникода.  
+ Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_password* — **sysname**, значение по умолчанию NULL. Значение *distributor_password* должно содержать менее 120 символов Юникода.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
@@ -104,7 +103,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  Имя входа, используемое для подключения к издателю при синхронизации. *publisher_login* — **sysname**, значение по умолчанию NULL.  
   
  [  **@publisher_password=** ] **"***publisher_password***"**  
- Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL. Значение *publisher_password* должно быть меньше 120 символов Юникода.  
+ Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL. Значение *publisher_password* должно содержать менее 120 символов Юникода.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
@@ -113,13 +112,13 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows.  
   
  [  **@job_password=** ] **"***job_password***"**  
- Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию. Значение *job_password* должно быть меньше 120 символов Юникода.  
+ Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию. Значение *job_password* должно содержать менее 120 символов Юникода.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
  [  **@db_master_key_password=** ] **"***db_master_key_password***"**  
- Пароль определяемого пользователем главного ключа базы данных. *db_master_key_password* — **nvarchar(524)**, значение по умолчанию NULL. Если *db_master_key_password* не указан, существующий главный ключ базы данных будет удалена и создана заново.  
+ Пароль определяемого пользователем главного ключа базы данных. *db_master_key_password* — **nvarchar(524)**, со значением по умолчанию NULL. Если *db_master_key_password* не указан, существующий главный ключ базы данных будет удалена и создана заново.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
@@ -127,13 +126,13 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_attachsubscription** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
  Подписка не может быть присоединена к публикации, если срок хранения публикации истек. При указании подписки с истекшим сроком хранения публикации возникает ошибка при присоединении или первой синхронизации подписки. Публикации со сроком хранения **0** (никогда не истекает) учитываются.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_attachsubscription**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_attachsubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

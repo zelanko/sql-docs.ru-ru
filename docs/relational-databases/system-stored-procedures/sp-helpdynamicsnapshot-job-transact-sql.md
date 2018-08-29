@@ -1,5 +1,5 @@
 ---
-title: sp_helpdynamicsnapshot_job (Transact-SQL) | Документы Microsoft
+title: sp_helpdynamicsnapshot_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17a7d69869e9879d485f1a8cac107836a5984a44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00ed352027fb4779142b56e3f5c87a3f13df80c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001251"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036347"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@publication =** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**, возвращающий сведения по всем заданиям моментального снимка отфильтрованных данных, соответствующих указанному *dynamic_ snapshot_jobid*и *dynamic_snapshot_jobname*для всех публикаций.  
+ Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**, котором возвращаются сведения обо всем заданиям моментальных снимков отфильтрованных данных, соответствующих указанному *dynamic_ snapshot_jobid*и *dynamic_snapshot_jobname*для всех публикаций.  
   
  [  **@dynamic_snapshot_jobname =** ] **"***dynamic_snapshot_jobname***"**  
- Имя задания моментального снимка фильтрованных данных. *dynamic_snapshot_jobname*— **sysname**, по умолчанию **%**", возвращаются все динамические задания для публикации с указанным *dynamic_ snapshot_jobid*. Если имя задания было задано явно во время создания задания, оно будет в следующем формате:  
+ Имя задания моментального снимка фильтрованных данных. *dynamic_snapshot_jobname*— **sysname**, значение по умолчанию **%**", возвращаются все динамические задания для публикации с указанным *dynamic_ snapshot_jobid*. Если имя задания было задано явно во время создания задания, оно будет в следующем формате:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -76,11 +76,11 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**dynamic_filter_login**|**sysname**|Значение, используемое для вычисления [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) функции в параметризованном фильтре строк, определенных для публикации.|  
 |**dynamic_filter_hostname**|**sysname**|Значение, используемое для вычисления [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) функции в параметризованном фильтре строк, определенных для публикации.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Путь к папке, откуда считываются файлы моментального снимка, если используется параметризованный фильтр строк.|  
-|**frequency_type**|**int**|Частота, с которой агент выполняется по расписанию, может иметь одно из следующих значений.<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное расписание<br /><br /> **64** = автозапуск;<br /><br /> **128** = повторять|  
+|**frequency_type**|**int**|Частота, с которой агент выполняется по расписанию, может иметь одно из следующих значений.<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное расписание<br /><br /> **64** = автозапуск<br /><br /> **128** = повторять|  
 |**frequency_interval**|**int**|День, когда агент выполняется, может иметь одно из следующих значений.<br /><br /> **1** = воскресенье<br /><br /> **2** = понедельник<br /><br /> **3** = Вторник<br /><br /> **4** = среда<br /><br /> **5** = четверг<br /><br /> **6** = Пятница<br /><br /> **7** = суббота<br /><br /> **8** = день<br /><br /> **9** = рабочие дни<br /><br /> **10** = выходные дни|  
 |**frequency_subday_type**|**int**|— Тип, который определяет, как часто запускается агент, если *frequency_type* — **4** (ежедневно) и может принимать одно из следующих значений.<br /><br /> **1** = в указанное время<br /><br /> **2** = секунды<br /><br /> **4** = минуты<br /><br /> **8** = часы|  
 |**frequency_subday_interval**|**int**|Число интервалов *frequency_subday_type* , которые проходят между запланированными выполнениями агента.|  
-|**frequency_relative_interval**|**int**|Неделя, когда запускается агент в данном месяце при *frequency_type* — **32** (относительно ежемесячно), и может принимать одно из следующих значений.<br /><br /> **1** = первый<br /><br /> **2** = секунды<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = последний|  
+|**frequency_relative_interval**|**int**|Неделя, когда запускается агент в данном месяце при *frequency_type* — **32** (по месячному расписанию), и может принимать одно из следующих значений.<br /><br /> **1** = первый<br /><br /> **2** = второй<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = последний|  
 |**frequency_recurrence_factor**|**int**|Число недель или месяцев между запланированными выполнениями агента.|  
 |**active_start_date**|**int**|Дата, когда агент будет впервые выполнен, в формате ГГГГММДД.|  
 |**active_end_date**|**int**|Дата, когда агент будет выполнен в последний раз, в формате ГГГГММДД.|  
@@ -90,13 +90,13 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_helpdynamicsnapshot_job** используется в репликации слиянием.  
   
  Если для всех аргументов используются значения по умолчанию, возвращаются сведения по всем заданиям моментального снимка секционных данных для всей базы данных публикации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера **db_owner** фиксированной роли базы данных, а в списке доступа к публикации для публикации могут выполнять процедуру **sp_helpdynamicsnapshot_job**.  
+ Только члены **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных, а в списке доступа к публикации для публикации можно выполнить **sp_helpdynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

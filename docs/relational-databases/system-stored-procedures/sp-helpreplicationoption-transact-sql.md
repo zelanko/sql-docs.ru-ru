@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_helpreplicationoption (Transact-SQL) | Документы Microsoft
+title: Хранимая процедура sp_helpreplicationoption (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 462d7532b3f5eefe7d933cd4801ee45cfc028d04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cefbf375ec5e952f2c3c69d7cc0b934c9f5757b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994981"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020439"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>Хранимая процедура sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,16 +59,16 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|Имя параметра репликации, может быть одним из следующих:<br /><br /> **Транзакций**<br /><br /> **Слияние**|  
-|**value**|**бит**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Значение**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**основная_версия**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**вспомогательная_версия**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Версия**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**редакция**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **Хранимая процедура sp_helpreplicationoption** используется для получения сведений о параметрах репликации, включенных на конкретном сервере. Чтобы получить сведения о конкретной базы данных, используйте **sp_helpreplicationdboption**.  
   
 ## <a name="permissions"></a>Разрешения  

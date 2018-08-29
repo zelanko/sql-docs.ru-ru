@@ -1,5 +1,5 @@
 ---
-title: sp_helpsrvrole (Transact-SQL) | Документы Microsoft
+title: sp_helpsrvrole (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3addbb80d8423147a34c5b9fd9b1e3eab29471ab
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 03da770b709c30d02ef785f747bde2d4c403b105
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020759"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@srvrolename=** ] **"***роль***"**  
+ [  **@srvrolename=** ] **"***роли***"**  
  Имя предопределенной роли сервера. *роль* — **sysname**, значение по умолчанию NULL. *роль* может принимать одно из следующих значений.  
   
 |Предопределенная роль сервера|Описание|  
@@ -67,14 +68,14 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |ServerRole|**sysname**|Имя роли сервера|  
 |Описание|**sysname**|Описание ServerRole|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Предопределенные роли сервера определены на уровне сервера и имеют разрешения на выполнение специальных административных действий на уровне сервера. Предопределенные роли сервера не могут быть добавлены, удалены или изменены.  
   
- Чтобы добавлять или удалять членов ролей сервера, см. раздел [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Чтобы добавлять или удалять членов ролей сервера, см. в разделе [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Все имена входа является членом группы public. sp_helpsrvrole не распознает роль public, так как внутри системы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не реализует открытый как роль.  
+ Все имена входа являются членами public. sp_helpsrvrole не распознает роль public, так как внутри системы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не реализует открытый как роль.  
   
- sp_helpsrvrole не принимает роль сервера, определяемого пользователем в качестве аргумента. Для получения списка ролей сервера, определяемых пользователем, см. в примерах в [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrole не принимает в качестве аргумента определяемой пользователями серверной роли. Чтобы получить список определяемых пользователями серверных ролей, см. в примерах в [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  

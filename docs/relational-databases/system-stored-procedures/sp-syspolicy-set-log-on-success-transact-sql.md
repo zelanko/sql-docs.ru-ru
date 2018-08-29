@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_set_log_on_success (Transact-SQL) | Документы Microsoft
+title: процедура sp_syspolicy_set_log_on_success (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_set_log_on_success
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f4a5673eaea6d0bd77467274641b0c5dd10a55aa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3a24dbe06ef91bb46b5fb81dbd3cc59709a767e8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255274"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025065"
 ---
 # <a name="spsyspolicysetlogonsuccess-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +54,10 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_set_log_on_success должна выполняться в контексте системной базы данных msdb.  
   
- Когда *значение* имеет значение 0 или 'false', только со сбоем заносится политик.  
+ Когда *значение* только значение 0 или значение «false», ошибка заносится в журнал политик.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  

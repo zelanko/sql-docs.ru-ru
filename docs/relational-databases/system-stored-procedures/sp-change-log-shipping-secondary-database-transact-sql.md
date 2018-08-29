@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_secondary_database (Transact-SQL) | Документы Microsoft
+title: sp_change_log_shipping_secondary_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_database
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e4ee6324e92130f3f887fe3a36ecd5469cd9d99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bee5104ed19e6d7d7454a0fc91fb5059153bb8b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239144"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023633"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,20 +92,20 @@ sp_change_log_shipping_secondary_database
  Указывает, будет ли предупреждение возникает, когда *restore_threshold*превышено. 1 = включены; 0 = отключены. *threshold_alert_enabled* — **бит** и не может иметь значение NULL.  
   
  [  **@history_retention_period =** ] "*history_retention_period*"  
- Отрезок времени в минутах, в течение которого сохраняются данные журнала. *history_retention_period* — **int**. Если значение не указано, будет использоваться значение 1440.  
+ Отрезок времени в минутах, в течение которого сохраняются данные журнала. *history_retention_period* — **int**. Если ничего не указано, используется значение 1440.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_change_log_shipping_secondary_database** должна запускаться из **master** базы данных на сервере-получателе. Эта хранимая процедура выполняет следующее:  
   
 1.  Изменяет параметры в **log_shipping_secondary_database** записывает при необходимости.  
   
-2.  Изменяет запись локального монитора в **log_shipping_monitor_secondary** на сервере-получателе, используя указанные аргументы при необходимости.  
+2.  Изменяет запись локального монитора в **log_shipping_monitor_secondary** на сервере-получателе, используя указанные аргументы, при необходимости.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
@@ -127,7 +126,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

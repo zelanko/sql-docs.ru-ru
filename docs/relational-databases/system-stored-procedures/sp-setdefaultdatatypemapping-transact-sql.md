@@ -1,5 +1,5 @@
 ---
-title: sp_setdefaultdatatypemapping (Transact-SQL) | Документы Microsoft
+title: sp_setdefaultdatatypemapping (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b8d3751448d553666f7b7301c42329f32a7713a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c980adc28cfa99348cd771652d23df424c92d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003751"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019327"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Помечает существующее сопоставление типов данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и значение, отличное от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных системы управления (СУБД) по умолчанию. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
+  Помечает существующее сопоставление типов данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отличным от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных системы управления (СУБД) по умолчанию. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +63,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@mapping_id=** ] *mapping_id*  
- Идентифицирует сопоставление типа данных.  *mapping_id* — **int**, и значение по умолчанию NULL. При указании *mapping_id*, а затем остальные параметры не требуются.  
+ Идентифицирует сопоставление типа данных.  *mapping_id* — **int**, значение по умолчанию NULL. Если указать *mapping_id*, а затем остальные параметры не требуются.  
   
  [ **@source_dbms**=] **"***source_dbms***"**  
  Это имя СУБД, с которой сопоставлены типы данных. *source_dbms* — **sysname**, и может принимать одно из следующих значений.  
@@ -77,31 +77,31 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  Этот параметр обязателен, если *mapping_id* имеет значение NULL.  
   
  [  **@source_version=** ] **"***source_version***"**  
- Номер версии исходной СУБД. *source_version* — **varchar(10)**, значение по умолчанию NULL.  
+ Номер версии исходной СУБД. *source_version* — **varchar(10)**, со значением по умолчанию NULL.  
   
  [ **@source_type**=] **"***source_type***"**  
  Тип данных в исходной СУБД. *source_type* — **sysname**. Этот параметр обязателен, если *mapping_id* имеет значение NULL.  
   
  [  **@source_length_min=** ] *source_length_min*  
- Минимальная длина типа данных в исходной СУБД. *source_length_min* — **bigint**, значение по умолчанию NULL.  
+ Минимальная длина типа данных в исходной СУБД. *source_length_min* — **bigint**, со значением по умолчанию NULL.  
   
  [  **@source_length_max=** ] *source_length_max*  
- Максимальная длина типа данных в исходной СУБД. *source_length_max* — **bigint**, значение по умолчанию NULL.  
+ Максимальная длина типа данных в исходной СУБД. *source_length_max* — **bigint**, со значением по умолчанию NULL.  
   
  [  **@source_precision_min=** ] *source_precision_min*  
- Минимальная точность типа данных в исходной СУБД. *source_precision_min* — **bigint**, значение по умолчанию NULL.  
+ Минимальная точность типа данных в исходной СУБД. *source_precision_min* — **bigint**, со значением по умолчанию NULL.  
   
  [  **@source_precision_max=** ] *source_precision_max*  
- Максимальная точность типа данных в исходной СУБД. *source_precision_max* — **bigint**, значение по умолчанию NULL.  
+ Максимальная точность типа данных в исходной СУБД. *source_precision_max* — **bigint**, со значением по умолчанию NULL.  
   
  [  **@source_scale_min=** ] *source_scale_min*  
- Минимальный масштаб типа данных в исходной СУБД. *source_scale_min* — **int**, значение по умолчанию NULL.  
+ Минимальный масштаб типа данных в исходной СУБД. *source_scale_min* — **int**, со значением по умолчанию NULL.  
   
  [  **@source_scale_max=** ] *source_scale_max*  
- Максимальный масштаб типа данных в исходной СУБД. *source_scale_max* — **int**, значение по умолчанию NULL.  
+ Максимальный масштаб типа данных в исходной СУБД. *source_scale_max* — **int**, со значением по умолчанию NULL.  
   
  [  **@source_nullable=** ] *source_nullable*  
- Показывает, что тип данных в исходной СУБД поддерживает значение NULL. *source_nullable* — **бит**, значение по умолчанию NULL. **1** означает, что значения NULL поддерживаются.  
+ Показывает, что тип данных в исходной СУБД поддерживает значение NULL. *source_nullable* — **бит**, со значением по умолчанию NULL. **1** означает, что значения NULL допустимы.  
   
  [ **@destination_dbms** =] **"***destination_dbms***"**  
  Название целевой СУБД. *destination_dbms* — **sysname**, и может принимать одно из следующих значений.  
@@ -115,33 +115,33 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |NULL (по умолчанию)||  
   
  [ **@destination_version**=] **"***destination_version***"**  
- Версия продукта целевой СУБД. *destination_version* — **varchar(10)**, значение по умолчанию NULL.  
+ Версия продукта целевой СУБД. *destination_version* — **varchar(10)**, со значением по умолчанию NULL.  
   
  [ **@destination_type**=] **"***destination_type***"**  
- Тип данных, приведенных в списке целевой СУБД. *destination_type* — **sysname**, значение по умолчанию NULL.  
+ Тип данных, приведенных в списке целевой СУБД. *destination_type* — **sysname**, со значением по умолчанию NULL.  
   
  [  **@destination_length=** ] *destination_length*  
- Длина типа данных в целевой СУБД. *destination_length* — **bigint**, значение по умолчанию NULL.  
+ Длина типа данных в целевой СУБД. *destination_length* — **bigint**, со значением по умолчанию NULL.  
   
  [  **@destination_precision=** ] *destination_precision*  
- Точность типа данных в целевой СУБД. *destination_precision* — **bigint**, значение по умолчанию NULL.  
+ Точность типа данных в целевой СУБД. *destination_precision* — **bigint**, со значением по умолчанию NULL.  
   
  [  **@destination_scale=** ] *destination_scale*  
- Масштаб типа данных в целевой СУБД. *destination_scale* — **int**, значение по умолчанию NULL.  
+ Масштаб типа данных в целевой СУБД. *destination_scale* — **int**, со значением по умолчанию NULL.  
   
  [  **@destination_nullable=** ] *destination_nullable*  
- Показывает, что тип данных в целевой СУБД поддерживает значение NULL. *destination_nullable* — **бит**, значение по умолчанию NULL. **1** означает, что значения NULL поддерживаются.  
+ Показывает, что тип данных в целевой СУБД поддерживает значение NULL. *destination_nullable* — **бит**, со значением по умолчанию NULL. **1** означает, что значения NULL допустимы.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_setdefaultdatatypemapping** используется во всех типах репликации между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и значение, отличное от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] СУБД.  
+## <a name="remarks"></a>Примечания  
+ **sp_setdefaultdatatypemapping** используется во всех типах репликации между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отличным от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] СУБД.  
   
  Сопоставления типов данных по умолчанию применяются ко всем топологиям репликации, включенным в указанную СУБД.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_setdefaultdatatypemapping**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_setdefaultdatatypemapping**.  
   
 ## <a name="see-also"></a>См. также  
  [Указание сопоставления типов данных для издателя Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   

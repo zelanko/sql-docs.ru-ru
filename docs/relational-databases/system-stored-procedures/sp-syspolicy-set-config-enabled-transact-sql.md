@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_set_config_enabled (Transact-SQL) | Документы Microsoft
+title: процедура sp_syspolicy_set_config_enabled (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_set_config_enabled
 ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0edbae112ffb67834c26dceede75e4e6aa58a60a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1bbf37f36157e462c11bf1300d78e8b8057710a3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019473"
 ---
 # <a name="spsyspolicysetconfigenabled-transact-sql"></a>sp_syspolicy_set_config_enabled (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_set_config_enabled должна выполняться в контексте системной базы данных msdb.  
   
 ## <a name="permissions"></a>Разрешения  

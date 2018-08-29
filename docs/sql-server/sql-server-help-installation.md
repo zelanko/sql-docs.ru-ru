@@ -16,12 +16,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 537b5ed189edfb66b2842179ad44b2da81a064dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e43296dc139f2e8b53454f088fc341ab40656f5f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036022"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774744"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Автономная справка SQL Server и окно справки
 
@@ -105,7 +105,7 @@ ms.locfileid: "38036022"
 |Справочник по языку XQuery (SQL Server) | Справочник по языку XQuery (SQL Server)|
 
 > [!NOTE]
-> Если окно справки перестает отвечать на запросы во время добавления содержимого, измените значение в строке Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" в файле %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings или HlpViewer_VisualStudiox_en-US.settings на дату в будущем. Сведения об этой проблеме см. в разделе [Окно справки Visual Studio зависает](https://msdn.microsoft.com/en-us/library/dd831853.aspx).
+> Если окно справки перестает отвечать на запросы во время добавления содержимого, измените значение в строке Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" в файле %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings или HlpViewer_VisualStudiox_en-US.settings на дату в будущем. Сведения об этой проблеме см. в разделе [Окно справки Visual Studio зависает](/visualstudio/welcome-to-visual-studio).
 
 **Просмотр автономного содержимого справки в SQL Server Management Studio с помощью окна справки версии 2.x**
 

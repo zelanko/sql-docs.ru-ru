@@ -1,5 +1,5 @@
 ---
-title: sp_changemergepullsubscription (Transact-SQL) | Документы Microsoft
+title: sp_changemergepullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31e745e3ab75ae237a440db10c05b3ed4cd7d29e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81b03ee49bb3184490d8ba8182b70557e5b0d8a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018279"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [  **@publication=**] **"***публикации***"**  
  Имя публикации. *Публикация* — **sysname**, значение по умолчанию %.  
   
- [  **@publisher=**] **"***издатель***"**  
+ [  **@publisher=**] **"***издателя***"**  
  Имя издателя. *издатель*— **sysname**, значение по умолчанию %.  
   
  [  **@publisher_db=**] **"***publisher_db***"**  
@@ -63,12 +64,12 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [  **@value=**] **"***значение***"**  
  Новое значение для указанного свойства. *значение*— **nvarchar(255)**, и может принимать одно из значений в таблице.  
   
-|property|Значение|Описание|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Местоположение папки моментальных снимков, если оно отлично от местоположения по умолчанию или дополняет его.|  
 |**Описание**||Описание подписки слиянием по запросу.|  
-|**Распространитель**||Имя распространителя.|  
-|**имя_входа_распространителя**||Идентификатор входа, используемый на стороне распространителя для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**распространитель**||Имя распространителя.|  
+|**distributor_login**||Идентификатор входа, используемый на стороне распространителя для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Пароль (шифрованный), используемый на распространителе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows.|  
 ||**0**|При подключении к подписчику используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -86,12 +87,12 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||UR-адрес, который представляет собой адрес средства прослушивания репликации для веб-синхронизации.|  
 |**merge_job_login**||Имя входа учетной записи Windows, от имени которой выполняется агент.|  
 |**merge_job_password**||Пароль учетной записи Windows, от имени которой выполняется агент.|  
-|**priority**||Доступно только в целях обратной совместимости; Запустите [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) на издателе вместо этого для изменения приоритета подписки.|  
+|**priority**||Для обратной совместимости. Запустите [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) на издателе вместо Чтобы изменить приоритет подписки.|  
 |**publisher_login**||Идентификатор входа, используемый на издателе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**||Пароль (шифрованный), используемый на издателе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_security_mode**|**0**|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**1**|При подключении к подписчику используется проверка подлинности Windows.|  
-||**2**|Триггеры синхронизации используют статическую **sysservers** для выполнения удаленного вызова процедур (RPC), а издатель должен быть определен в **sysservers** как удаленный сервер или связанный сервер.|  
+||**2**|Триггеры синхронизации используют статическую **sysservers** для выполнения удаленного вызова процедур (RPC), а издатель должен быть определен в **sysservers** таблицу как удаленный сервер или связанный сервер.|  
 |**sync_type**|**Автоматически**|Схема и начальные данные для опубликованных таблиц вначале передаются подписчику.|  
 ||**Нет**|Подписчик уже имеет схему и начальные данные для опубликованных таблиц; системные таблицы и данные передаются всегда.|  
 |**use_ftp**|**true**|Для получения моментальных снимков используется FTP вместо обычного протокола.|  
@@ -101,12 +102,12 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**use_interactive_resolver**|**true**|При проверке используется интерактивный сопоставитель.|  
 ||**false**|Интерактивный сопоставитель не используется.|  
 |**working_directory**||Полный путь к каталогу, куда передаются файлы моментальных снимков по протоколу FTP, если указан соответствующий параметр.|  
-|NULL (по умолчанию)||Возвращает список поддерживаемых значений для *свойства*.|  
+|NULL (по умолчанию)||Возвращает список поддерживаемых значений для *свойство*.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_changemergepullsubscription** используется в репликации слиянием.  
   
  Подразумевается, что текущий сервер и текущая база данных являются соответственно подписчиком и базой данных подписчика.  
@@ -114,7 +115,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_changemergepullsubscription**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_changemergepullsubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

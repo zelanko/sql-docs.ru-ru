@@ -1,5 +1,5 @@
 ---
-title: KEY_COLUMN_USAGE (Transact-SQL) | Документы Microsoft
+title: KEY_COLUMN_USAGE (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.KEY_COLUMN_USAGE view
 - KEY_COLUMN_USAGE view
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c120549e950fe204c86c0e00562c2b2506196770
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40906461927c21d557588841d9a853368db525a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037924"
 ---
 # <a name="keycolumnusage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

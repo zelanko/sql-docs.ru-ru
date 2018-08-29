@@ -1,5 +1,5 @@
 ---
-title: процедура sp_indexoption (Transact-SQL) | Документы Microsoft
+title: процедура sp_indexoption (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6bc44ee2cbce8c96b314172a2bb856a9c3346e2a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 07e18340d595a133311a05fc1a788aee92233053
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260730"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036421"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Устанавливает блокирующие значения параметров для определенных пользователем кластеризованных и некластеризованных индексов или таблиц, не имеющих кластеризованного индекса.  
   
- Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически делает выбор уровня блокировки: страница, строка, таблица. Необязательно задавать эти параметры вручную. **процедура sp_indexoption** предназначена для опытных пользователей, которые знают о конкретных типах блокировки.  
+ Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически делает выбор уровня блокировки: страница, строка, таблица. Необязательно задавать эти параметры вручную. **процедура sp_indexoption** предназначена для опытных пользователей, которые знают конкретных типах блокировки.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Вместо этого используйте [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
@@ -70,20 +70,20 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или больше чем 0 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- XML-индексы не поддерживаются. Если указаны XML-индексы, или имя таблицы указано без имени индекса, и таблица содержит XML-индекс, то инструкция завершается ошибкой. Чтобы задать эти параметры, используйте [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) вместо него.  
+## <a name="remarks"></a>Примечания  
+ XML-индексы не поддерживаются. Если указаны XML-индексы, или имя таблицы указано без имени индекса, и таблица содержит XML-индекс, то инструкция завершается ошибкой. Чтобы задать эти параметры, используйте [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) вместо этого.  
   
  Чтобы отобразить текущую строку и на страницы свойств, используйте [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) или [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представления каталога.  
   
--   Строки, страницы и блокировки уровня таблицы допустимы при доступе к индексу при **AllowRowLocks** = TRUE или **DisAllowRowLocks** = FALSE, и **AllowPageLocks** = TRUE или  **DisAllowPageLocks** = FALSE. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выбирает соответствующую блокировку и может повышать уровень с блокировки строки или страницы до блокировки таблицы.  
+-   Строки, страницы и блокировки на уровне таблицы разрешены при доступе к индексу при **AllowRowLocks** = TRUE или **DisAllowRowLocks** = FALSE, и **AllowPageLocks** = TRUE или  **DisAllowPageLocks** = FALSE. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выбирает соответствующую блокировку и может повышать уровень с блокировки строки или страницы до блокировки таблицы.  
   
- При доступе к индексу, допускается только блокировка на уровне таблицы при **AllowRowLocks** = FALSE или **DisAllowRowLocks** = TRUE и **AllowPageLocks** = FALSE или  **DisAllowPageLocks** = TRUE.  
+ При доступе к индексу допускается только блокировка на уровне таблицы при **AllowRowLocks** = FALSE или **DisAllowRowLocks** = TRUE и **AllowPageLocks** = FALSE или  **DisAllowPageLocks** = TRUE.  
   
  Если имя таблицы указано без индекса, то настройка применяется ко всем индексам этой таблицы. Если базовая таблица не имеет кластеризованного индекса (т.е. имеется куча), то настройки применяются следующим образом:  
   
--   Когда **AllowRowLocks** или **DisAllowRowLocks** , задано значение TRUE или FALSE, то установка применяется к куче и любым связанным некластеризованным индексам.  
+-   Когда **AllowRowLocks** или **DisAllowRowLocks** , значение TRUE или FALSE, то установка применяется к куче и любым связанным некластеризованным индексам.  
   
--   Когда **AllowPageLocks** параметр имеет значение TRUE или **DisAllowPageLocks** имеет значение false, то установка применяется к куче и любым связанным некластеризованным индексам.  
+-   Когда **AllowPageLocks** параметр имеет значение TRUE или **DisAllowPageLocks** имеет значение false, этот параметр применяется к куче и любым связанным некластеризованным индексам.  
   
 -   Когда **AllowPageLocks** параметр имеет значение FALSE или **DisAllowPageLocks** имеет значение TRUE, установка полностью применяется к некластеризованным индексам. Таким образом, все блокировки страниц не допускаются для некластеризованных индексов. В куче, для страницы недопустимы только совмещаемая (S), обновления (U) и монопольная (X) блокировки. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может запросить намеренную блокировку страницы (IS, IU или IX) для внутренних целей.  
   
@@ -93,7 +93,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. Настройка параметра на указанный индекс  
- Следующий пример запрещает блокировки страниц на `IX_Customer_TerritoryID` индекс `Customer` таблицы.  
+ Следующий пример запрещает блокировки страниц на `IX_Customer_TerritoryID` индекс для столбца `Customer` таблицы.  
   
 ```sql  
 USE AdventureWorks2012;  

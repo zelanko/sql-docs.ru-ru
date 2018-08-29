@@ -1,5 +1,5 @@
 ---
-title: sp_MSchange_merge_agent_properties (Transact-SQL) | Документы Microsoft
+title: sp_MSchange_merge_agent_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - sp_MSchange_merge_agent_properties
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0a56df34ca780de662d11d826af1b3b88e847e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 375d4799f4345fa354c6d6731ec3b98ca3db571f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019972"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издатель***"**  
+ [ **@publisher** =] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publisher_db=** ] **"***publisher_db***"**  
@@ -71,7 +72,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  В данной таблице описаны свойства задания агента слияния, которые можно изменить, и ограничения на значения этих свойств.  
   
-|property|Значение|Описание|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**Описание**||Краткое описание подписки.|  
 |**merge_job_login**||Имя входа учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой выполняется агент.|  
@@ -91,13 +92,13 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_MSchange_merge_agent_properties** используется в репликации слиянием.  
   
- Если издатель запущен на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует использовать [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) для изменения свойств задания агента слияния, синхронизирующего принудительную подписку, выполняется на распространителе.  
+ Если издатель выполняется на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует использовать [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) для изменения свойств задания агента слияния, синхронизирующего принудительную подписку, запускается на распространителе.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера на распространителе могут выполнять **sp_MSchange_merge_agent_properties**.  
+ Только члены **sysadmin** предопределенной роли сервера на распространителе могут выполнять процедуру **sp_MSchange_merge_agent_properties**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   

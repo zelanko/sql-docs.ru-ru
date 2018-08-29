@@ -1,5 +1,5 @@
 ---
-title: sp_columns_ex (Transact-SQL) | Документы Microsoft
+title: sp_columns_ex (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7f075de05288823c1ed290527de4005b1160c20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4d8fdd18d2bad59801a92f511537777496ba5dea
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240074"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026796"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает сведения о столбцах для указанных таблиц связанного сервера по одной строке на столбец. **sp_columns_ex** возвращает сведения о столбцах только определенный столбец, если *столбца* указано.  
+  Возвращает сведения о столбцах для указанных таблиц связанного сервера по одной строке на столбец. **sp_columns_ex** возвращает сведения о столбце, если *столбец* указан.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
  Имя связанного сервера, для которого возвращаются сведения о столбцах. *table_server* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@table_name =** ] **"***table_name***"**  
- Имя таблицы, для которой возвращаются сведения о столбцах. *имя_таблицы* — **sysname**, значение по умолчанию NULL.  
+ Имя таблицы, для которой возвращаются сведения о столбцах. *TABLE_NAME* — **sysname**, значение по умолчанию NULL.  
   
  [  **@table_schema =** ] **"***table_schema***"**  
  Имя схемы таблицы, для которой возвращаются сведения о столбцах. *table_schema* — **sysname**, значение по умолчанию NULL.  
@@ -61,14 +61,14 @@ sp_columns_ex [ @table_server = ] 'table_server'
  [  **@table_catalog =** ] **"***значениям table_catalog***"**  
  Имя каталога таблицы, для которой возвращаются сведения о столбцах. *значениям table_catalog* — **sysname**, значение по умолчанию NULL.  
   
- [  **@column_name =** ] **"***столбца***"**  
+ [  **@column_name =** ] **"***столбец***"**  
  Имя столбца базы данных, для которого возвращаются сведения. *столбец* — **sysname**, значение по умолчанию NULL.  
   
  [  **@ODBCVer =** ] **"***Аргумент ODBCVer***"**  
  Версия используемого протокола ODBC. *Аргумент ODBCVer* — **int**, значение по умолчанию 2. Это значение соответствует ODBC версии 2. Допустимы значения 2 или 3. Сведения о различиях между версиями 2 и 3 см. в спецификации ODBC SQLColumns.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -78,16 +78,16 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**ПО ЗНАЧЕНИЯМ TABLE_SCHEM**|**sysname**|Имя владельца таблицы или представления. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, который создал таблицу. Это поле всегда возвращает значение.|  
 |**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя таблицы или представления. Это поле всегда возвращает значение.|  
 |**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца **TABLE_NAME** возвращается. Это поле всегда возвращает значение.|  
-|**ТИП ДАННЫХ**|**smallint**|Целочисленное значение, соответствующий индикатор типа ODBC. Если это тип данных, который не может быть сопоставлен с типом данных ODBC, возвращается значение NULL. Собственное имя типа данных возвращается в **TYPE_NAME** столбца.|  
+|**DATA_TYPE**|**smallint**|Целочисленное значение, соответствующий индикатор типа ODBC. Если это тип данных, который не может быть сопоставлен с типом данных ODBC, возвращается значение NULL. Имя типа данных в собственном формате возвращается в **TYPE_NAME** столбца.|  
 |**TYPE_NAME**|**varchar (** 13 **)**|Тип данных в символьном представлении. Название типа предоставляется базовой СУБД.|  
-|**COLUMN_SIZE**|**int**|Количество значащих цифр. Возвращаемое значение для **точности** столбец имеет десятичную форму.|  
+|**COLUMN_SIZE**|**int**|Количество значащих цифр. Возвращаемое значение для **точности** основано на десятичной системе счисления.|  
 |**BUFFER_LENGTH**|**int**|Размер буфера при передаче данных.|  
 |**DECIMAL_DIGITS**|**smallint**|Число цифр справа от десятичной запятой.|  
 |**NUM_PREC_RADIX**|**smallint**|Основание системы счисления для числовых типов данных.|  
-|**ДОПУСКАЮЩИЕ ЗНАЧЕНИЯ NULL**|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значение NULL допустимо.<br /><br /> 0 = значение NULL недопустимо.|  
-|**ПРИМЕЧАНИЯ**|**varchar (** 254 **)**|Это поле всегда возвращает значение NULL.|  
+|**ДОПУСКАЮЩИЙ ЗНАЧЕНИЕ NULL**|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значение NULL допустимо.<br /><br /> 0 = значение NULL недопустимо.|  
+|**"ПРИМЕЧАНИЯ"**|**varchar (** 254 **)**|Это поле всегда возвращает значение NULL.|  
 |**COLUMN_DEF**|**varchar (** 254 **)**|Значение столбца по умолчанию.|  
-|**SQL_DATA_TYPE**|**smallint**|Значение типа данных SQL в том же виде, что и в поле TYPE дескриптора. Этот столбец содержит то же, как **DATA_TYPE** столбца, за исключением **datetime** и SQL-92 **интервал** типов данных. Этот столбец всегда возвращает значение.|  
+|**SQL_DATA_TYPE**|**smallint**|Значение типа данных SQL в том же виде, что и в поле TYPE дескриптора. Этот столбец совпадает со значением **DATA_TYPE** столбца, за исключением **datetime** и SQL-92 **интервал** типов данных. Этот столбец всегда возвращает значение.|  
 |**SQL_DATETIME_SUB**|**smallint**|Код подтипа для **datetime** и SQL-92 **интервал** типов данных. Для других типов данных этот столбец возвращает значение NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Максимальная длина столбца символьного или целочисленного типа в байтах. Для всех других типов данных этот столбец возвращает значение NULL.|  
 |**ORDINAL_POSITION**|**int**|Порядковый номер столбца в таблице. Первый столбец в таблице имеет порядковый номер 1. Этот столбец всегда возвращает значение.|  
@@ -96,16 +96,16 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  Дополнительные сведения см. в документации по Microsoft ODBC.  
   
-## <a name="remarks"></a>Замечания  
- **sp_columns_ex** выполняется путем запроса СТОЛБЦОВ набора строк **IDBSchemaRowset** интерфейса поставщика OLE DB, соответствующий *table_server*. *Table_name*, *table_schema*, *значениям table_catalog*, и *столбца* параметры передаются этому интерфейсу для ограничения строк возвращается.  
+## <a name="remarks"></a>Примечания  
+ **sp_columns_ex** выполняется путем запроса набор строк COLUMNS **IDBSchemaRowset** интерфейс поставщика OLE DB, соответствующий *table_server*. *Table_name*, *table_schema*, *значениям table_catalog*, и *столбец* параметры передаются этому интерфейсу для ограничения строк возвращается.  
   
- **sp_columns_ex** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк COLUMNS **IDBSchemaRowset** интерфейса.  
+ **sp_columns_ex** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк COLUMNS **IDBSchemaRowset** интерфейс.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
   
-## <a name="remarks"></a>Замечания  
- **sp_columns_ex** соответствует требованиям для идентификаторов с разделителями. Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+## <a name="remarks"></a>Примечания  
+ **sp_columns_ex** соответствует требованиям к идентификаторам с разделителями. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается тип данных для столбца `JobTitle` в таблице `HumanResources.Employee` в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на связанном сервере `Seattle1`.  
@@ -122,7 +122,7 @@ EXEC sp_columns_ex 'Seattle1',
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

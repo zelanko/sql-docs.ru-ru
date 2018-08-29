@@ -1,5 +1,5 @@
 ---
-title: sp_check_for_sync_trigger (Transact-SQL) | Документы Microsoft
+title: sp_check_for_sync_trigger (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f389415adf06d6c7fce1862d42655bf4e96e2c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ed3cd29b694e0e87f207376ad54b06fc0827b45b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020263"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
   
 ## <a name="arguments"></a>Аргументы  
  [ **@tabid =** ] "*tabid*"  
- Идентификатор объекта таблицы, проверяемой на предмет немедленного обновления триггеров. *tabid* — **int** без значения по умолчанию.  
+ Идентификатор объекта таблицы, проверяемой на предмет немедленного обновления триггеров. *tabid* — **int** не имеет значения по умолчанию.  
   
  [ **@trigger_op =** ] "*trigger_output_parameters*" выходные данные  
  Указывает, будет ли выходной параметр возвращать тип вызывающего триггера. *trigger_output_parameters* — **char(10)** и может принимать одно из следующих значений.  
@@ -60,12 +61,12 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |NULL (по умолчанию)||  
   
  [  **@fonpublisher =** ] *fonpublisher*  
- Указывает место выполнения хранимой процедуры. *fonpublisher* — **бит**, значение по умолчанию 0. Если значение равно 0, тогда выполнение происходит на подписчике, а если 1, то выполнение происходит на издателе.  
+ Указывает место выполнения хранимой процедуры. *fonpublisher* — **бит**, со значением по умолчанию 0. Если значение равно 0, тогда выполнение происходит на подписчике, а если 1, то выполнение происходит на издателе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 указывает на то, что хранимая процедура не вызывается внутри контекста немедленно обновляющегося триггера. 1 показывает, что вызов происходит внутри контекста немедленно обновляющегося триггера, а тип триггера записывается в *@trigger_op*.  
+ 0 указывает на то, что хранимая процедура не вызывается внутри контекста немедленно обновляющегося триггера. 1 указывает, что он вызывается внутри контекста немедленно обновляющегося триггера и тип триггера записывается в аргументе *@trigger_op*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_check_for_sync_trigger** используется в репликации моментальных снимков и репликации транзакций.  
   
  **sp_check_for_sync_trigger** используется для координации между репликацией и пользовательскими триггерами. Эта хранимая процедура определяет, была ли она вызвана в контексте триггера репликации. Например, можно вызвать процедуру **sp_check_for_sync_trigger** в теле определяемого пользователем триггера. Если **sp_check_for_sync_trigger** возвращает **0**, пользовательский триггер продолжает обработку. Если **sp_check_for_sync_trigger** возвращает **1**, пользовательский триггер завершает работу. Это гарантирует, что определяемый пользователем триггер не срабатывает при обновлении таблицы триггером репликации.  
@@ -82,7 +83,7 @@ RETURN
 ```  
   
 ## <a name="example"></a>Пример  
- Код можно также добавить в триггер таблицы на издателе. Это аналогичный код, однако вызов **sp_check_for_sync_trigger** содержит дополнительный параметр.  
+ Код можно также добавить в триггер таблицы на издателе. используемый код аналогичен, но вызов **sp_check_for_sync_trigger** содержит дополнительный параметр.  
   
 ```  
 DECLARE @retcode int, @trigger_op char(10), @table_id int, @fonpublisher int  
@@ -94,7 +95,7 @@ RETURN
 ```  
   
 ## <a name="permissions"></a>Разрешения  
- **sp_check_for_sync_trigger** хранимая процедура может выполняться в любой пользователь, обладающий разрешениями SELECT в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) системного представления.  
+ **sp_check_for_sync_trigger** хранимая процедура может выполняться любой пользователь, обладающий разрешениями SELECT в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) системное представление.  
   
 ## <a name="see-also"></a>См. также  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_ivindexhasnullcols (Transact-SQL) | Документы Microsoft
+title: sp_ivindexhasnullcols (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4431ae915c43d6ceb96200c3ebbf6aa976dd4ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7ca9be2e67f49a2881171dcfb4e0a99a6672bd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995061"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023734"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,21 +50,21 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
  Имя представления, для которого требуется проверка. *view_name* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@fhasnullcols**=] *field_has_null_columns* выходных данных  
- Флаг, указывающий, имеются ли в индексе представления столбцы, допускающие значение NULL. *view_name* — **sysname**, не имеет значения по умолчанию. Возвращает значение **1** Если в индексе представления есть столбцы, допускающие значение NULL. Возвращает значение **0** Если представление не содержит столбцов, допускающих значение NULL.  
+ Флаг, указывающий, имеются ли в индексе представления столбцы, допускающие значение NULL. *view_name* — **sysname**, не имеет значения по умолчанию. Возвращает значение **1** Если в индексе представления есть столбцы, допускающие значение NULL. Возвращает значение **0** Если представление не содержит столбцов, допускающих значения NULL.  
   
 > [!NOTE]  
->  Если сама хранимая процедура возвращает код возврата **1**, то есть выполнение хранимой процедуры завершилось ошибкой, то это значение является **0** и его следует игнорировать.  
+>  Если сама хранимая процедура возвращает код возврата **1**, то есть выполнение хранимой процедуры завершилось ошибкой, то это значение равно **0** и его следует игнорировать.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_ivindexhasnullcols** используется при репликации транзакций.  
+## <a name="remarks"></a>Примечания  
+ **sp_ivindexhasnullcols** используется репликацией транзакций.  
   
  По умолчанию, статьи индексированного представления в публикации создаются как таблицы на подписчиках. Однако если индексированные столбцы допускают значения NULL, индексированное представление создается на подписчике как индексированное представление, а не как таблица. Выполнив данную хранимую процедуру, можно предупредить пользователя о существовании (или отсутствии) данной проблемы в текущем индексированном представлении.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_ivindexhasnullcols**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_ivindexhasnullcols**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

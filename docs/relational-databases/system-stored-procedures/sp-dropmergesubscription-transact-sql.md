@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergesubscription (Transact-SQL) | Документы Microsoft
+title: sp_dropmergesubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0fb4d9bcd2f72db252380fe3ee0d914645255b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d639b189f1b271f6563c32090992c376113ccfa2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990229"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027217"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
  Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
  [  **@subscriber_db=** ] **"***subscriber_db***"**  
- Имя базы данных подписки. *база_данных_подписки*— **sysname**, значение по умолчанию NULL.  
+ Имя базы данных подписки. *subscription_database*— **sysname**, значение по умолчанию NULL.  
   
  [  **@subscription_type=** ] **"***subscription_type***"**  
  Тип подписки. *subscription_type*— **nvarchar(15)**, и может принимать одно из следующих значений.  
@@ -79,14 +79,14 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_dropmergesubscription** используется в репликации слиянием.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_dropmergesubscription**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_dropmergesubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md)   

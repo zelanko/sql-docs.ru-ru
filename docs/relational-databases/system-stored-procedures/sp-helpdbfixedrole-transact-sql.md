@@ -1,5 +1,5 @@
 ---
-title: sp_helpdbfixedrole (Transact-SQL) | Документы Microsoft
+title: sp_helpdbfixedrole (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_helpdbfixedrole
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1ca726e6770fd4a36e34651a83c55ab1e5475b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 387ea35ed6e2c6be10eb738e0c53f26bbbbf60da
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022096"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +44,8 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@rolename =** ] **"***роль***"**  
- Имя предопределенной роли базы данных. *роль* — **sysname**, значение по умолчанию NULL. Если *роли* будет указано, возвращаются сведения только об этой роли; в противном случае возвращается список и описание всех предопределенных ролей базы данных.  
+ [  **@rolename =** ] **"***роли***"**  
+ Имя предопределенной роли базы данных. *роль* — **sysname**, значение по умолчанию NULL. Если *роли* будет указан, возвращаются только сведения об этой роли; в противном случае возвращается список и описание всех предопределенных ролей базы данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -54,9 +55,9 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Имя предопределенной роли базы данных.|  
-|**Description**|**nvarchar(70)**|Описание **DbFixedRole.**|  
+|**Описание**|**nvarchar(70)**|Описание **DbFixedRole.**|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Предопределенные роли базы данных, как показано в таблице, определены на уровне базы данных и обладают специальными разрешениями для выполнения определенных административных функций. Предопределенные роли базы данных не могут быть добавлены или удалены. Нельзя изменить разрешения, предоставленные предопределенной роли базы данных.  
   
 |Предопределенная роль базы данных|Описание|  
@@ -80,7 +81,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**sp_droprolemember**|Удаляет член из предопределенной роли базы данных.|  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public** .  
+ Необходимо быть членом роли **public**.  
   
  Полученные данные подлежат ограничениям на доступ к метаданным. Сущности, на которые участник не имеет разрешения, не показаны. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -96,7 +97,7 @@ GO
  [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

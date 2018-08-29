@@ -1,5 +1,5 @@
 ---
-title: sp_addrole (Transact-SQL) | Документы Microsoft
+title: sp_addrole (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addrole
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01a51141bc5e28c09879667dee69721f6e5d4473
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cde14d46a81f26d7d41cc83bdca15b668622c8bf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238451"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038827"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "33238451"
   Создает новую роль базы данных в текущей базе данных.  
   
 > [!IMPORTANT]  
->  **sp_addrole** включен для обеспечения совместимости с более ранними версиями [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и может не поддерживаться в будущих выпусках. Используйте [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) вместо него.  
+>  **sp_addrole** включен для обеспечения совместимости с более ранними версиями [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и могут не поддерживаться в будущих выпусках. Используйте [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) вместо этого.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +46,17 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@rolename =** ] **"***роль***"**  
+ [  **@rolename =** ] **"***роли***"**  
  Имя новой роли базы данных. *роль* — **sysname**, не имеет значения по умолчанию. *роль* должен быть допустимым идентификатором (ID) и не должен существовать в текущей базе данных.  
   
  [  **@ownername =**] **"***владельца***"**  
- Владелец новой роли базы данных. *владелец* — **sysname**, значение по умолчанию — текущий пользователь. *владелец* должен быть пользователем базы данных или роли базы данных в текущей базе данных.  
+ Владелец новой роли базы данных. *владелец* — **sysname**, значение по умолчанию текущий пользователь. *владелец* должен быть пользователем базы данных или роли базы данных в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- Имена ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена ролей базы данных не могут: содержать обратную косую черту (\\), иметь значение NULL, или пустой строкой (**''**).  
+## <a name="remarks"></a>Примечания  
+ Имена ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена ролей базы данных не могут: содержать символ обратной косой черты (\\), иметь значение NULL, или пустая строка (**''**).  
   
  После добавления роли базы данных, используйте [sp_addrolemember &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) Добавление участников к роли. При использовании инструкций GRANT, DENY или REVOKE для назначения разрешений роли базы данных члены данной роли наследуют эти разрешения, как если бы они были применены напрямую к их учетным записям.  
   
@@ -67,7 +66,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  **sp_addrole** нельзя использовать внутри пользовательской транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо наличие разрешения CREATE ROLE в базе данных. При создании схемы необходимо наличие разрешения CREATE SCHEMA в этой базе данных. Если *владельца* указан как пользователь или группа, требует разрешения IMPERSONATE на этого пользователя или группу. Если *владельца* указан как роль, необходимо разрешение ALTER для этой роли или члена этой роли. Если владелец указан как роль приложения, то для этой роли приложения необходимо разрешение ALTER.  
+ Необходимо наличие разрешения CREATE ROLE в базе данных. При создании схемы необходимо наличие разрешения CREATE SCHEMA в этой базе данных. Если *владельца* указан как пользователь или группа, требует разрешения IMPERSONATE на этого пользователя или группы. Если *владельца* указан как роль, необходимо разрешение ALTER для этой роли или члена этой роли. Если владелец указан как роль приложения, то для этой роли приложения необходимо разрешение ALTER.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере в текущую базу данных добавляется новая роль с именем `Managers`.  

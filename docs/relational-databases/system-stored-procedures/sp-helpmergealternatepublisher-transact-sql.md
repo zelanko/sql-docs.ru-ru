@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergealternatepublisher (Transact-SQL) | Документы Microsoft
+title: sp_helpmergealternatepublisher (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergealternatepublisher
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f51c69c6034963dff80377570120dcd65027b762
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8cba4d17060e32ef24b8e5b07e689992982ca94
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995331"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035257"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"***издатель***"**  
- — Это имя альтернативного издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+ [  **@publisher=**] **"***издателя***"**  
+ — Имя альтернативного издателя. *издателя* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publisher_db=**] **"***publisher_db***"**  
- — Это имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+ — Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publication=**] **"***публикации***"**  
  — Имя публикации. *публикации* — **sysname**, не имеет значения по умолчанию.  
@@ -62,19 +62,19 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publisher_db**|**sysname**|Имя базы данных публикации.|  
 |**alternate_publication**|**sysname**|Имя публикации.|  
 |**alternate_distributor**|**sysname**|Имя распространителя.|  
-|**Аргумент**|**nvarchar(255)**|Описание альтернативного издателя.|  
-|**Включен**|**бит**|Определяет, является ли сервер альтернативным издателем. **1** указывает, что издатель альтернативного издателя. **0** указывает, что он не включен.|  
+|**Имя**|**nvarchar(255)**|Описание альтернативного издателя.|  
+|**включен**|**bit**|Определяет, является ли сервер альтернативным издателем. **1** указывает, что издатель альтернативный издатель. **0** указывает, что он не включен.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_helpmergealternatepublisher** используется в репликации слиянием.  
   
  Во время каждого сеанса слияния система запрашивает у издателя и подписчика список их альтернативных издателей. Процесс слияния добавляет или удаляет записи в список альтернативных издателей, в результате создается список альтернативных издателей, которые присутствуют и в списке издателя и в списке подписчика.  
   
 ## <a name="permissions"></a>Разрешения  
- Можно выполнять только члены списка доступа публикации для публикации **sp_helpmergealternatepublisher**.  
+ Только члены списка доступа публикации для публикации могут выполнять **sp_helpmergealternatepublisher**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

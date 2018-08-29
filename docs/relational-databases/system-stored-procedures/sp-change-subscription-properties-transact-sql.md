@@ -1,5 +1,5 @@
 ---
-title: sp_change_subscription_properties (Transact-SQL) | Документы Microsoft
+title: sp_change_subscription_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c049bd3ede58a884028cf3f1415660ebf2365f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 352a97795452a73837fb6111dd62c915844cd373
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036686"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"***издатель***"**  
+ [  **@publisher=**] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publisher_db=**] **"***publisher_db***"**  
@@ -76,17 +76,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Эта таблица описывает свойства статей и значения этих свойств.  
   
-|property|Значение|Описание|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Указывает местоположение альтернативной папки для моментального снимка. Если это свойство имеет значение NULL, файлы моментальных снимков выбираются из места по умолчанию, задаваемого издателем.|  
 |**distrib_job_login**||Имя входа учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой выполняется агент.|  
 |**distrib_job_password**||Пароль учетной записи Windows, от имени которой выполняется агент.|  
-|**имя_входа_распространителя**||Имя входа распространителя.|  
+|**distributor_login**||Имя входа распространителя.|  
 |**distributor_password**||Пароль распространителя.|  
 |**distributor_security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows.|  
 ||**0**|При подключении к подписчику используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**dts_package_name**||Указывает имя пакета служб SQL Server 2000 Data Transformation Services (DTS). Это значение может задаваться, если только публикация является транзакционной или публикацией моментальных снимков.|  
-|**dts_package_password**||Указывает пароль на пакет. *dts_package_password* — **sysname** значение по умолчанию NULL, при которой указывает, что свойство пароля должно быть оставлено без изменений.<br /><br /> Примечание: Пакет служб DTS должен иметь пароль.<br /><br /> Это значение может задаваться, если только публикация является транзакционной или публикацией моментальных снимков.|  
+|**dts_package_password**||Указывает пароль на пакет. *dts_package_password* — **sysname** значение по умолчанию NULL, который указывает, что свойство пароля должно быть оставлено без изменений.<br /><br /> Примечание: Пакет служб DTS должен иметь пароль.<br /><br /> Это значение может задаваться, если только публикация является транзакционной или публикацией моментальных снимков.|  
 |**dts_package_location**||Местоположение, где хранится пакет служб DTS. Это значение может задаваться, если только публикация является транзакционной или публикацией моментальных снимков.|  
 |**dynamic_snapshot_location**||Указывает путь к папке, в которой сохраняются файлы моментальных снимков. Это значение может задаваться, если только публикация является публикацией слиянием.|  
 |**ftp_address**||Только для обратной совместимости.|  
@@ -96,7 +96,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**Имя узла**||Имя узла, используемое при соединении с издателем.|  
 |**internet_login**||Имя входа, используемое агентом слияния для подключения к веб-серверу, на котором доступна веб-синхронизация с обычной проверкой подлинности.|  
 |**internet_password**||Пароль, используемый агентом слияния для подключения к веб-серверу, на котором доступна веб-синхронизация с обычной проверкой подлинности.|  
-|**internet_security_mode**|**1**|Для веб-синхронизации используется встроенная проверка подлинности Windows. При веб-синхронизации рекомендуется использовать обычную проверку подлинности. Дополнительные сведения см. в статье [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md).|  
+|**internet_security_mode**|**1**|Для веб-синхронизации используется встроенная проверка подлинности Windows. При веб-синхронизации рекомендуется использовать обычную проверку подлинности. Дополнительные сведения см. в разделе [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
 ||**0**|Для веб-синхронизации используется обычная проверка подлинности.<br /><br /> Примечание: Веб-синхронизации требуется подключение SSL на веб-сервер.|  
 |**internet_timeout**||Время (в секундах) перед отменой запроса на веб-синхронизацию.|  
 |**internet_url**||UR-адрес, который представляет собой адрес средства прослушивания репликации для веб-синхронизации.|  
@@ -115,7 +115,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_change_subscription_properties** используется во всех типах репликации.  
   
  **sp_change_subscription_properties** используется для подписок по запросу.  
@@ -123,7 +123,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  Для издателей Oracle значение *publisher_db* учитывается, поскольку Oracle допускает только одной базы данных на экземпляре сервера.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_change_subscription_properties**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_change_subscription_properties**.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

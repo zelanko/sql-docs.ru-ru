@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistpublisher (Transact-SQL) | Документы Microsoft
+title: sp_dropdistpublisher (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistpublisher
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf5001349f38cf69a130d35f57424b8820af61fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc49942492078a1659d36fd4ad00d2116918cd5f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990439"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018224"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=** ] **"***издатель***"**  
+ [  **@publisher=** ] **"***издателя***"**  
  Издатель, которого следует удалить. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@no_checks=** ] *no_checks*  
- Указывает, является ли **sp_dropdistpublisher** проверяет сервер в качестве распространителя издателя. *no_checks* — **бит**, значение по умолчанию **0**.  
+ Указывает, является ли **sp_dropdistpublisher** проверяет, что издатель отменил установку сервера в качестве распространителя. *no_checks* — **бит**, значение по умолчанию **0**.  
   
  Если **0**, репликация проверяет, что удаленный издатель отменил установку локального сервера в качестве распространителя. Если издатель является локальным, репликация проверит отсутствие на локальном сервере объектов публикации или распространителя.  
   
@@ -60,23 +60,23 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
  [  **@ignore_distributor=** ] *ignore_distributor*  
  Указывает, остались ли на распространителе объекты распространения после удаления издателя. *ignore_distributor* — **бит** и может принимать одно из следующих значений:  
   
- **1** = объекты распространения, принадлежащие *издатель* остаются на распространителе.  
+ **1** = объекты распространения, принадлежащие *издателя* остаются на распространителе.  
   
- **0** = объекты распространения *издатель* очищаются на распространителе.  
+ **0** = объекты распространения *издателя* очищаются на распространителе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_dropdistpublisher** используется во всех типах репликации.  
   
- При удалении издателя Oracle, если не удалось удалить издатель **sp_dropdistpublisher** возвращает ошибку, а объекты распространителя для издателя удаляются.  
+ При удалении издателя Oracle, если не удается удалить издатель **sp_dropdistpublisher** возвращает ошибку, а объекты распространителя для издателя удаляются.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_dropdistpublisher**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_dropdistpublisher**.  
   
 ## <a name="see-also"></a>См. также  
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Отключение публикации и распространения)  

@@ -1,5 +1,5 @@
 ---
-title: sp_replsetoriginator (Transact-SQL) | Документы Microsoft
+title: sp_replsetoriginator (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replsetoriginator
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 680fdf8c36c87549de43825ffd2a7aa5c8fba0f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bfba001bb6890c4a15975c78aee7818f02835b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996141"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026823"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +55,8 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_replsetoriginator** выполняется агентом распространителя для записи источника транзакций, применяемых при репликации. Данные сведения используются для запуска механизма распознавания замыкания на себя для двунаправленных транзакционных подписок, которые имеют набор свойств обратной связи.  
+## <a name="remarks"></a>Примечания  
+ **sp_replsetoriginator** выполняется агентом распространителя для записи источника транзакций, применяемых репликацией. Данные сведения используются для запуска механизма распознавания замыкания на себя для двунаправленных транзакционных подписок, которые имеют набор свойств обратной связи.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера на издателе, члены **db_owner** предопределенной роли базы данных в базе данных публикации или пользователи в списке доступа к публикации (PAL) могут выполнять процедуру **sp_replsetoriginator**.  

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_generate_wrapper_function (Transact-SQL) | Документы Microsoft
+title: sys.sp_cdc_generate_wrapper_function (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f8f81b97ad6b1c1bf09ee33bd460aab01872327
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6ddf84aa517b7f7e21e605264e1efa7ca1977d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022944"
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ sys.sp_cdc_generate_wrapper_function
 |**function_name**|**nvarchar(145)**|Имя формируемой функции.|  
 |**create_script**|**nvarchar(max)**|Скрипт, создающий функцию-оболочку экземпляра отслеживания.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Скрипт, создающий функцию-оболочку для запроса всех изменений на экземпляре отслеживания, формируется обязательно. Если экземпляр отслеживания поддерживает запросы сетевых изменений, также формируется скрипт создания оболочки для такого запроса.  
   
 ## <a name="examples"></a>Примеры  
@@ -109,6 +109,6 @@ DEALLOCATE #hfunctions;
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [Сбор данных об изменениях &#40;служб SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
+ [Система отслеживания измененных данных &#40;служб SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

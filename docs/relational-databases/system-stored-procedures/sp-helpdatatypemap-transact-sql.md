@@ -1,5 +1,5 @@
 ---
-title: sp_helpdatatypemap (Transact-SQL) | Документы Microsoft
+title: sp_helpdatatypemap (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f19860d48b00b5eb9276c62ec46f18e2f5842c81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff316e5f4d39954f95d54c0ab164e64c425b053e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021623"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает сведения по сопоставлениям определенного типа данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных системы управления (СУБД). Эта хранимая процедура выполняется на распространителе в любой базе данных.  
+  Возвращает сведения о сопоставления типов данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных системы управления (СУБД). Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,7 +82,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  Тип данных, приведенных в списке целевой СУБД. *destination_type*— **sysname**, и если не указан, возвращаются сопоставления для всех типов данных в целевой СУБД. Позволяет фильтровать результирующий набор по типу данных целевой СУБД.  
   
  [ **@defaults_only**=] *defaults_only*  
- Показывает, что возвращаются только сопоставления типов данных по умолчанию. *defaults_only* — **бит**, значение по умолчанию **0**. **1** означает, что сопоставления типов только данные по умолчанию возвращаются. **0** , значение по умолчанию и все данные определяемого пользователем типа сопоставления означает возвращаются.  
+ Показывает, что возвращаются только сопоставления типов данных по умолчанию. *defaults_only* — **бит**, значение по умолчанию **0**. **1** означает, что сопоставления типов только данные по умолчанию возвращаются. **0** означает, что чтобы сопоставления типов по умолчанию и пользовательские данные возвращаются.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -92,13 +93,13 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**source_type**|Тип данных в исходной СУБД.|  
 |**destination_dbms**|Название целевой СУБД.|  
 |**destination_type**|Тип данных в целевой СУБД.|  
-|**is_default**|Является ли сопоставление сопоставлением по умолчанию или альтернативным. Значение **0** указывает, что данное сопоставление является пользовательским.|  
+|**is_default**|Является ли сопоставление сопоставлением по умолчанию или альтернативным. Значение **0** указывает, что такое сопоставление определяется пользователем.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_helpdatatypemap** определяет сопоставление типа данных как из издателей, отличных от SQL Server, так и из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличное от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
+## <a name="remarks"></a>Примечания  
+ **sp_helpdatatypemap** определяет сопоставление типа данных как из издателей, отличных от SQL Server, так и из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей отличное[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
   
  Если указанное сочетание исходной и целевой СУБД не поддерживается, **sp_helpdatatypemap** возвращает пустой результирующий набор.  
   

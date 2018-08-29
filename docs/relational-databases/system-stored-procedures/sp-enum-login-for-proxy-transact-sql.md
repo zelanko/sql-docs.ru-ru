@@ -1,5 +1,5 @@
 ---
-title: sp_enum_login_for_proxy (Transact-SQL) | Документы Microsoft
+title: sp_enum_login_for_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 18
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f3c4751f3d9dfaa60110f7e859bc8157de2c9246
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7faec16e49bb2776babb126a5f4d314889b70c2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249936"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036276"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ sp_enum_login_for_proxy
   
 ## <a name="arguments"></a>Аргументы  
  [ **@name**=] '*имя*"  
- Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] участника, имя входа, роли сервера или **msdb** роли базы данных должны быть перечислены посредники. Имя — **nvarchar(256)**, значение по умолчанию NULL.  
+ Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] участника, имя входа, роли сервера или **msdb** роли базы данных должны быть перечислены посредники. Имя **nvarchar(256)**, значение по умолчанию NULL.  
   
  [ **@proxy_id**=] *идентификатор*  
  Идентификационный номер учетной записи-посредника, для которой необходимо вывести список сведений. *Proxy_id* — **int**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
@@ -66,19 +64,19 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
 |**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
 |**name**|**sysname**|Имя субъекта безопасности для связи.|  
-|**flags**|**int**|Тип субъекта безопасности.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа<br /><br /> **1** = Фиксированная системная роль<br /><br /> **2** = роль базы данных в **базы данных msdb**|  
+|**flags**|**int**|Тип субъекта безопасности.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа<br /><br /> **1** = Фиксированная системная роль<br /><br /> **2** = роль базы данных в **msdb**|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если параметры не указаны, **sp_enum_login_for_proxy** выводит сведения обо всех именах входа в экземпляре для каждого прокси-сервера.  
   
- Если предоставлен идентификатор или имя прокси-сервера, **sp_enum_login_for_proxy** отображает все имена входа, которые имеют доступ к учетной записи-посредника. Если указано имя входа, **sp_enum_login_for_proxy** перечислены учетные записи-посредники, имя входа имеет доступ к.  
+ Если идентификатор или имя прокси-сервера, **sp_enum_login_for_proxy** отображает все имена входа, имеющие доступ к прокси-сервер. Если указано имя входа, **sp_enum_login_for_proxy** прокси-серверы, имя входа имеет доступ к списки.  
   
  Если заданы и сведения об учетной записи-посредника, и имя входа, результирующий набор возвращает строку, если указанное имя входа имеет доступ к указанной учетной записи-посредника.  
   
  Эта хранимая процедура находится в **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения на выполнение для этой процедуры по умолчанию членам **sysadmin** предопределенной роли сервера.  
+ Разрешений на выполнение этой процедуры по умолчанию членами **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
   

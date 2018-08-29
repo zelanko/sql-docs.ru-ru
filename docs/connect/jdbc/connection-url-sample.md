@@ -14,18 +14,18 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8150ae02c014d7460be10845e38d3e13be133d3
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 5b2199e1e45a0ab503b7b7cbcfe4f20aed16990d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452558"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784996"
 ---
 # <a name="connection-url-sample"></a>Образец URL-адреса соединения
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Этот пример приложения, использующего драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], показывает, как соединиться с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] по URL-адресу соединения. Приложение также показывает, как извлечь данные из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при помощи инструкции SQL.
+Этот пример приложения, использующего драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], показывает, как соединиться с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по URL-адресу соединения. Приложение также показывает, как извлечь данные из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи инструкции SQL.
 
 Файл кода для этого образца имеет имя СonnectURL.java и находится в следующей папке:
 

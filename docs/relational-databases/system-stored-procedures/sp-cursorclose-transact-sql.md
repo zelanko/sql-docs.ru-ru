@@ -1,5 +1,5 @@
 ---
-title: sp_cursorclose (Transact-SQL) | Документы Microsoft
+title: sp_cursorclose (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursorclose
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3db5049ff370a9dccad98dd7e90efb2e346f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1556ebbfd0f5e01cfccae734036122360e68944
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237130"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022010"
 ---
 # <a name="spcursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Закрывает и отменяет распределение курсора, а также освобождает все связанные ресурсы; то есть удаляется временная таблица, используемая типа KEYSET или STATIC **курсор**. sp_cursorclose вызывается указанием ID = 9 в пакете потока табличных данных.  
+  Закрывает и освобождает курсор, а также освобождает все связанные ресурсы; то есть удаляется временная таблица, используемая KEYSET или STATIC **курсор**. sp_cursorclose вызывается указанием ID = 9 в пакете потока табличных данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,13 +45,13 @@ sp_cursorclose cursor
   
 ## <a name="arguments"></a>Аргументы  
  *курсор*  
- Является курсором *обработки* значение, сформированное [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и возвращенное процедурой sp_cursoropen. *курсор* является обязательным параметром, который вызывает для **int** входного значения.  
+ Является курсором *обрабатывать* значение, сформированное [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и возвращаемое процедурой sp_cursoropen. *курсор* является обязательным параметром, который вызывает для **int** входного значения.  
   
 > [!NOTE]  
 >  Входное значение -1 относится ко всем курсорам в текущем соединении.  
   
-## <a name="remarks"></a>Замечания  
- *курсор* вернет сообщение об ошибке, если процедура выполняется после закрытия курсора или указан недопустимый дескриптор.  
+## <a name="remarks"></a>Примечания  
+ *курсор* возвращает сообщения об ошибках, если процедура выполняется после закрытия курсора, или если указан недопустимый дескриптор.  
   
  Состояние RPC обозначает общий успех или общий неуспех.  
   

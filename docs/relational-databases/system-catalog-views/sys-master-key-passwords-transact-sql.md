@@ -1,5 +1,5 @@
 ---
-title: sys.master_key_passwords (Transact-SQL) | Документы Microsoft
+title: sys.master_key_passwords (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,26 +21,27 @@ helpviewer_keywords:
 - sys.master_key_passwords catalog view
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5753296ea9c8b5fb90b92d1c612b4966e89b6db
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8a0aa45dc4ee0e54e7880837e289b2331b5ff11e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017724"
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает по одной строке для каждого пароля главного ключа базы данных, добавленные с помощью **sp_control_dbmasterkey_password** хранимой процедуры. Пароли, используемые для защиты главного ключа, хранятся в хранилище учетных данных. Имя учетных данных имеет следующий формат: ## DBMKEY_ < database_family_guid > _ < random_password_guid > ##. Пароль хранится как секретные учетные данные. Для каждого пароля, добавленного с помощью **sp_control_dbmasterkey_password**, строка в **sys.credentials**.  
+  Возвращает строку для каждого пароля главного ключа базы данных с помощью **sp_control_dbmasterkey_password** хранимой процедуры. Пароли, используемые для защиты главного ключа, хранятся в хранилище учетных данных. Имя учетных данных имеет следующий формат: ## DBMKEY_ < database_family_guid > _ < random_password_guid > ##. Пароль хранится как секретные учетные данные. Для каждого пароля, добавленного с помощью **sp_control_dbmasterkey_password**, содержится по одной строке в **sys.credentials**.  
   
- Каждая строка в этом представлении содержит **credential_id** и **family_guid** главный ключ которой защищен паролем, связанные с этими учетными данными базы данных. Соединения с **sys.credentials** на **credential_id** возвратит полезные поля, такие как **create_date** и имя учетных данных.  
+ Каждая строка в этом представлении содержит **credential_id** и **family_guid** главный ключ которой защищен пароль, связанный с этими учетными данными базы данных. Соединения с **sys.credentials** на **credential_id** возвратит полезные поля, такие как **create_date** и имя учетных данных.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**credential_id**|**int**|Идентификатор учетных данных, которым принадлежит данный пароль. Этот идентификатор уникален в экземпляре сервера.|  
-|**family_guid**|**uniqueidentifier**|Уникальный идентификатор оригинальной базы данных в момент создания. Этот идентификатор GUID остается неизменным после восстановления или присоединения базы данных, даже если имя базы данных изменилось.<br /><br /> Если автоматическая расшифровка главного ключа службы завершается ошибкой, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует **family_guid** для идентификации учетных данных, которые могут содержать пароль, используемый для защиты главного ключа базы данных.|  
+|**family_guid**|**uniqueidentifier**|Уникальный идентификатор оригинальной базы данных в момент создания. Этот идентификатор GUID остается неизменным после восстановления или присоединения базы данных, даже если имя базы данных изменилось.<br /><br /> Автоматическая расшифровка главного ключа службы в случае сбоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует **family_guid** для идентификации учетных данных, которые могут содержать пароль, используемый для защиты главного ключа базы данных.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

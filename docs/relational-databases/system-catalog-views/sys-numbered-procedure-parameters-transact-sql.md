@@ -1,5 +1,5 @@
 ---
-title: sys.numbered_procedure_parameters (Transact-SQL) | Документы Microsoft
+title: sys.numbered_procedure_parameters (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,14 +21,15 @@ helpviewer_keywords:
 - sys.numbered_procedure_parameters catalog view
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c64c6eadb57cf8e1c2d431a7d8af5164f704e21b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0594feab6b69a9917b084cfa20c71af9885a880a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021901"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +51,10 @@ ms.lasthandoff: 05/04/2018
 |**system_type_id**|**tinyint**|Идентификатор системного типа аргумента.|  
 |**user_type_id**|**int**|Идентификатор определяемого пользователем типа аргумента.|  
 |**max_length**|**smallint**|Максимальная длина аргумента в байтах.<br /><br /> -1 = тип данных столбца: varchar(max), nvarchar(max) или varbinary(max).|  
-|**precision**|**tinyint**|Для числового аргумента — точность; иначе 0.|  
-|**масштаб**|**tinyint**|Масштаб числового аргумента; иначе 0.|  
-|**is_output**|**бит**|1 = аргумент помечен как OUTPUT или RETURN; иначе 0|  
-|**is_cursor_ref**|**бит**|1 = аргумент представляет собой ссылку на курсор.|  
+|**Точность**|**tinyint**|Для числового аргумента — точность; иначе 0.|  
+|**Масштаб**|**tinyint**|Масштаб числового аргумента; иначе 0.|  
+|**is_output**|**bit**|1 = аргумент помечен как OUTPUT или RETURN; иначе 0|  
+|**is_cursor_ref**|**bit**|1 = аргумент представляет собой ссылку на курсор.|  
   
 > [!NOTE]  
 >  Аргументы, связанные с языком XML и средой CLR, для нумерованных процедур не поддерживаются.  

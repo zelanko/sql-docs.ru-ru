@@ -1,5 +1,5 @@
 ---
-title: sp_browsesnapshotfolder (Transact-SQL) | Документы Microsoft
+title: sp_browsesnapshotfolder (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsesnapshotfolder
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90371326d42ab34fcf5d20b92d5a19f479ab1b6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f399ac4baf1191ec4bc554e1921519300f315744
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989769"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017361"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,15 +64,15 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(512)**|Полный путь к каталогу моментальных снимков.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_browsesnapshotfolder** используется в репликации моментальных снимков и репликации транзакций.  
   
- Если *подписчика* и *subscriber_db* поля содержат значение NULL, хранимая процедура возвращает последний моментальный снимок для публикации можно найти папку моментальных снимков. Если *подписчика* и *subscriber_db* поля заданы, хранимая процедура возвращает папку моментальных снимков для указанной подписки. Если для данной публикации не был создан моментальный снимок, то возвращается пустой результирующий набор.  
+ Если *подписчика* и *subscriber_db* поля содержат значение NULL, хранимая процедура возвращает последний моментальный снимок для публикации его можно найти папку с моментальным снимком. Если *подписчика* и *subscriber_db* поля указаны, хранимая процедура возвращает папки моментальных снимков для указанной подписки. Если для данной публикации не был создан моментальный снимок, то возвращается пустой результирующий набор.  
   
  Если публикация настроена так, что моментальные снимки создаются и в рабочем каталоге издателя, и в папке моментальных снимков, то результирующий набор состоит из двух строк. Первая строка содержит папку моментальных снимков публикации, а вторая — рабочий каталог издателя. **sp_browsesnapshotfolder** полезно для определения каталога, в котором формируются файлы моментальных снимков.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_browsesnapshotfolder**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_browsesnapshotfolder**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

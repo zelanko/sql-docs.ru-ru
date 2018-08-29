@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_publication_access (Transact-SQL) | Документы Microsoft
+title: sp_revoke_publication_access (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_revoke_publication_access
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3b3dc5b01c23ca0bf504c92845f2083d1f640d5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4db18f8ac085e3b01748dcc45e33300a6141f6d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996231"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036596"
 ---
 # <a name="sprevokepublicationaccess-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +53,13 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_revoke_publication_access** используется в моментальных снимков, транзакций и репликации слиянием.  
   
  **sp_revoke_publication_access** может вызываться несколько раз.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_revoke_publication_access**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_revoke_publication_access**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   

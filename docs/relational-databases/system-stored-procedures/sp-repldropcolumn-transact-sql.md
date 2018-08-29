@@ -1,5 +1,5 @@
 ---
-title: sp_repldropcolumn (Transact-SQL) | Документы Microsoft
+title: sp_repldropcolumn (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_repldropcolumn
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2613b4c2aded7ee192bdd456b3d9d51ec1587eda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06d0015da7f02085cbe61765042d90328295f735
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021168"
 ---
 # <a name="sprepldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   Удаляет столбец из существующей статьи таблицы, которая была опубликована. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
 > [!IMPORTANT]  
->  Данная хранимая процедура устарела и поддерживается в основном для обеспечения обратной совместимости. Должен использоваться только с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] издателей и [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] переиздающих подписчиков. Эта процедура не должна использоваться в столбцах с типами данных, которые были представлены в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии.  
+>  Данная хранимая процедура устарела и поддерживается в основном для обеспечения обратной совместимости. Он должен использоваться только с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] издателей и [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] переиздающих подписчиков. Эта процедура не должна использоваться в столбцах с типами данных, которые были представлены в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,23 +53,23 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
   
 ## <a name="arguments"></a>Аргументы  
  [ @source_object =] '*source_object*"  
- Имя статьи таблицы, которая содержит столбец, подлежащий удалению. *source_object* имеет тип nvarchar(258) и не имеет значения по умолчанию.  
+ Имя статьи таблицы, которая содержит столбец, подлежащий удалению. *source_object* является значение типа nvarchar(258), не имеет значения по умолчанию.  
   
- [ @column =] '*столбца*"  
+ [ @column =] '*столбец*"  
  Имя удаляемого столбца таблицы. *столбец* имеет тип sysname и значение по умолчанию.  
   
  [ @from_agent =] *from_agent*  
- Выполняется ли хранимая процедура агентом репликации. *from_agent* имеет тип int и значение по умолчанию 0, где используется значение 1, если эта хранимая процедура выполняется агентом репликации, и во всех остальных случаях должно использоваться значение по умолчанию 0.  
+ Выполняется ли хранимая процедура агентом репликации. *from_agent* — целое число, значение по умолчанию 0, где используется значение 1, если эта хранимая процедура выполняется агентом репликации, и во всех остальных случаях должно использоваться значение по умолчанию 0.  
   
  [ @schema_change_script =] '*сценарий schema_change_script*"  
- Указывает имя и путь к скрипту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используемому для изменения пользовательских хранимых процедур, сформированных системой. *сценарий schema_change_script* имеет тип nvarchar(4000) и значение по умолчанию NULL. При репликации транзакций допустимо заменять одну или несколько хранимых процедур по умолчанию пользовательскими. *сценарий schema_change_script* выполняется после изменения схемы реплицируемой таблицы статьи, используя sp_repldropcolumn и может использоваться одно из следующих действий:  
+ Указывает имя и путь к скрипту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используемому для изменения пользовательских хранимых процедур, сформированных системой. *сценарий schema_change_script* имеет тип nvarchar(4000) и значение по умолчанию NULL. При репликации транзакций допустимо заменять одну или несколько хранимых процедур по умолчанию пользовательскими. *сценарий schema_change_script* выполняется после изменения схемы реплицируемой статьи таблицы с помощью sp_repldropcolumn вносится и может использоваться для выполните одно из следующих:  
   
--   Если пользовательские хранимые процедуры автоматически восстанавливаются, *сценарий schema_change_script* может использоваться для удаления этих пользовательских хранимых процедур и замените их определяемых пользователем пользовательских хранимых процедур, которые поддерживают новую схему.  
+-   Если пользовательские хранимые процедуры автоматически восстанавливаются, *сценарий schema_change_script* может использоваться для удаления этих пользовательских хранимых процедур и замените их пользовательские пользовательские хранимые процедуры, которые поддерживают новую схему.  
   
 -   Если пользовательские хранимые процедуры не восстанавливаются автоматически, *сценарий schema_change_script*может использоваться для повторного создания этих хранимых процедур или для создания пользовательских хранимых процедур.  
   
  [ @force_invalidate_snapshot =] *подписки потребуют*  
- Определяет возможность недействительности моментального снимка. *подписки потребуют* имеет тип bit и значение по умолчанию 1.  
+ Определяет возможность недействительности моментального снимка. *подписки потребуют* является bit и значение по умолчанию 1.  
   
  Значение 1 указывает, что изменения в статье могут сделать моментальный снимок недействительным. В этом случае значение 1 дает разрешение на создание нового моментального снимка.  
   
@@ -88,7 +89,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
  Для выполнения хранимой процедуры sp_repldropcolumn необходимо быть членом предопределенной роли сервера sysadmin на издателе либо членом предопределенной роли db_ddladmin или db_ddladmin базы данных публикации.  
   
 ## <a name="see-also"></a>См. также  
- [Устаревшие возможности репликации SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)   
+ [Устаревшие функции репликации в SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

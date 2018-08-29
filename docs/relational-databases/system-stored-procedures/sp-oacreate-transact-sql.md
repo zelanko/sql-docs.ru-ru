@@ -1,5 +1,5 @@
 ---
-title: sp_OACreate (Transact-SQL) | Документы Microsoft
+title: sp_OACreate (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c7f4598f309549a34cc9dbc39b0ba1a964160bc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 02a05fb8b97c1ae74682b442c45ca54552052236
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263502"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019453"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  *Идентификатор ProgID*  
  Программный идентификатор (ProgID) создаваемого OLE-объекта. Данная строка символов описывает класс OLE-объекта и имеет следующий вид: **"***OLEComponent***. ***Объект***"**  
   
- *OLEComponent* — это имя компонента сервера OLE-автоматизации и *объекта* — имя OLE-объекта. Указанный OLE-объект должен быть допустимым и должен поддерживать **IDispatch** интерфейса.  
+ *OLEComponent* имя компонента сервера OLE-автоматизации, и *объект* — имя OLE-объекта. Указанный OLE-объект должен быть допустимым и должен поддерживать **IDispatch** интерфейс.  
   
- Например, SQLDMO. SQLServer — это идентификатор ProgID объекта SQL-DMO **SQLServer** объекта. SQL-DMO имеет имя компонента Sqldmo, **SQLServer** объект является допустимым и (как и все объекты SQL-DMO объектов) **SQLServer** поддерживает **IDispatch**.  
+ Например, SQLDMO. SQLServer — это идентификатор ProgID объекта SQL-DMO **SQLServer** объекта. SQL-DMO содержит имя компонента — Sqldmo, **SQLServer** объект является допустимым и (как и все объекты SQL-DMO объектов) **SQLServer** поддерживает **IDispatch**.  
   
- *Идентификатор CLSID*  
- Идентификатор класса (CLSID) создаваемого OLE-объекта. Данная строка символов описывает класс OLE-объекта и имеет следующий вид: **"{***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}"**. Указанный OLE-объект должен быть допустимым и должен поддерживать **IDispatch** интерфейса.  
+ *CLSID*  
+ Идентификатор класса (CLSID) создаваемого OLE-объекта. Данная строка символов описывает класс OLE-объекта и имеет следующий вид: **"{***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}"**. Указанный OLE-объект должен быть допустимым и должен поддерживать **IDispatch** интерфейс.  
   
- Например, {00026BA1-0000-0000-C000-000000000046} — это CLSID объекта SQL-DMO **SQLServer** объекта.  
+ Например, {00026BA1-0000-0000-C000-000000000046} — это идентификатор CLSID объекта SQL-DMO **SQLServer** объекта.  
   
  *objecttoken* **выходных данных**  
- Токен, возвращенный объект, а должен быть локальной переменной типа данных **int**. Токен объекта идентифицирует созданный OLE-объект и используется в вызовах других хранимых процедур OLE-автоматизации.  
+ Токен, возвращаемый объект, и должен быть локальной переменной типа данных **int**. Токен объекта идентифицирует созданный OLE-объект и используется в вызовах других хранимых процедур OLE-автоматизации.  
   
  *Контекст*  
  Указывает контекст выполнения, в котором запускается созданный OLE-объект. Если аргумент указан, то его значение должно быть одним из следующих:  
@@ -66,11 +66,11 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  **4** = local (.exe) OLE только для сервера.  
   
- **5** = в процессе и локальный OLE-сервер разрешен  
+ **5** = и внутри процесса, так и локальный OLE-сервер разрешено  
   
  Если не указан, значение по умолчанию — **5**. Это значение передается в качестве *dwClsContext* параметра вызова **CoCreateInstance**.  
   
- Если внутрипроцессный OLE-сервер может быть (с помощью значения контекста **1** или **5** или, если не задавать значение контекста), он имеет доступ к памяти и других ресурсов, принадлежащих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Внутрипроцессный OLE-сервер может повредить память или другие ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и привести к непредсказуемым результатам, например к нарушению прав доступа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Если внутрипроцессный OLE-сервер может (с помощью значения контекста **1** или **5** или, не указывая значение контекста), он имеет доступ к памяти и другие ресурсы, принадлежащие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Внутрипроцессный OLE-сервер может повредить память или другие ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и привести к непредсказуемым результатам, например к нарушению прав доступа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  При указании значения контекста **4**, локальный OLE-сервер не имеет доступа к любому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ресурсы и не может повредить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] памяти или ресурсов.  
   
@@ -82,8 +82,8 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Дополнительные сведения о кодах возврата HRESULT см. в разделе [OLE Automation коды возврата и сведения об ошибках](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Замечания  
- Если процедуры OLE-автоматизации включены, вызов **sp_OACreate** запустит среду общего выполнения OLE-автоматизации. Дополнительные сведения о включении OLE-автоматизации см. в разделе [Ole Automation процедуры параметр конфигурации сервера](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md).  
+## <a name="remarks"></a>Примечания  
+ Если процедуры OLE-автоматизации включены, вызов **sp_OACreate** начнется OLE-автоматизации общую среду выполнения. Дополнительные сведения о включении OLE-автоматизации, см. в разделе [Ole Automation процедуры параметр конфигурации сервера](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md).  
   
  Созданный OLE-объект автоматически уничтожается по завершении пакета инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -93,7 +93,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-progid"></a>A. Использование идентификатора ProgID  
- В следующем примере создается объект SQL-DMO **SQLServer** объекта с помощью его ProgID.  
+ В следующем примере создается объект SQL-DMO **SQLServer** объекта с помощью идентификатора ProgID.  
   
 ```  
 DECLARE @object int;  
@@ -110,7 +110,7 @@ GO
 ```  
   
 ### <a name="b-using-clsid"></a>Б. Использование идентификатора CLSID  
- В следующем примере создается объект SQL-DMO **SQLServer** объекта с помощью его идентификатора.  
+ В следующем примере создается объект SQL-DMO **SQLServer** объекта с помощью идентификатора CLSID.  
   
 ```  
 DECLARE @object int;  
@@ -129,7 +129,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [OLE Automation хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
- [Параметр конфигурации сервера процедуры автоматизации OLE](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
+ [Параметр конфигурации сервера OLE Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

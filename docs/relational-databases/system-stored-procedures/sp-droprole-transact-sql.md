@@ -1,5 +1,5 @@
 ---
-title: sp_droprole (Transact-SQL) | Документы Microsoft
+title: sp_droprole (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39ef6031494b8e5bd4718c26d7635be4f916517e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cdc97dbb75487300d228a53b7550f4687abf8a0f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024714"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   Удаляет роль базы данных из текущей базы данных.  
   
 > [!IMPORTANT]  
->  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** была заменена на инструкцию DROP ROLE. **sp_droprole** включается только для совместимости с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и может не поддерживаться в будущих выпусках.  
+>  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** была заменена на инструкцию DROP ROLE. **sp_droprole** включается только для совместимости с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и могут не поддерживаться в будущих выпусках.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,16 +47,16 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@rolename =** ] **"***роль***"**  
+ [  **@rolename =** ] **"***роли***"**  
  Имя роли базы данных для удаления из текущей базы данных. *роль* — **sysname**, не имеет значения по умолчанию. *роли* уже должен существовать в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Можно удалить только роли базы данных с помощью **sp_droprole**.  
   
- Роль базы данных, содержащая членов, не может быть удалена. Прежде чем удалить роли базы данных, необходимо удалить всех ее членов. Чтобы удалить пользователей из роли, используйте **sp_droprolemember**. Если все пользователи по-прежнему являются членами роли, **sp_droprole** отображает их.  
+ Роль базы данных, содержащая членов, не может быть удалена. Прежде чем удалить роли базы данных, необходимо удалить всех ее членов. Чтобы удалить пользователей из роли, используйте **sp_droprolemember**. Если все пользователи по-прежнему являются членами этой роли, **sp_droprole** отображает их.  
   
  Предопределенные роли и **открытый** роль не может быть удалена.  
   

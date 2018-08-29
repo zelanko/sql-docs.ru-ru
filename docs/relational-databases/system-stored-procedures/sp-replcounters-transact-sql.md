@@ -1,5 +1,5 @@
 ---
-title: sp_replcounters (Transact-SQL) | Документы Microsoft
+title: sp_replcounters (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_replcounters
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cc67b000b231146c9544ea7ef1bc1e2a3b6b667
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 314f7f24ededf85927205f0615af39138898c795
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997091"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027141"
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ sp_replcounters
 |-----------------|---------------|-----------------|  
 |**База данных**|**sysname**|Имя базы данных.|  
 |**Реплицированные транзакции**|**int**|Количество транзакций в журнале, ожидающих доставки в базу данных распространителя|  
-|**Скорость репликации транзакций/с**|**float**|Среднее количество транзакций, переданных в базу данных распространителя в секунду.|  
+|**Скорость репликации транзакций в секунду**|**float**|Среднее количество транзакций, переданных в базу данных распространителя в секунду.|  
 |**Задержка репликации**|**float**|Среднее время в секундах, в течение которого транзакции находились в журнале и до того момента, как они были отправлены.|  
 |**Replbeginlsn**|**binary(10)**|Указывает регистрационный номер транзакции в журнале (LSN) для текущей точки усечения журнала.|  
 |**Replnextlsn**|**binary(10)**|Номер LSN следующей записи фиксации, ожидающей доставки в базу данных распространителя.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_replcounters** используется в репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

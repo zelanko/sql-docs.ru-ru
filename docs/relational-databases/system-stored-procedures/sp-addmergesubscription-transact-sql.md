@@ -1,5 +1,5 @@
 ---
-title: sp_addmergesubscription (Transact-SQL) | Документы Microsoft
+title: sp_addmergesubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d5b8cf744909969166b2d391604735c1a2a7db4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5848206d391b324c4e0d221af560fb9ee92120ee
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993671"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026238"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Имя базы данных подписки. *subscriber_db*— **sysname**, значение по умолчанию NULL.  
   
  [  **@subscription_type=**] **"***subscription_type***"**  
- Тип подписки. *subscription_type*— **nvarchar(15)**, значение по умолчанию PUSH. Если **принудительной**, принудительная подписка, и на распространителе добавляется агент слияния. Если **запросу**, не агент слияния на распространителе добавляется подписка по запросу.  
+ Тип подписки. *subscription_type*— **nvarchar(15)**, значение по умолчанию PUSH. Если **принудительной**, добавляется принудительной подписки, и на распространителе добавляется агент слияния. Если **по запросу**, подписки по запросу добавляется без добавления агент слияния на распространителе.  
   
 > [!NOTE]  
 >  Анонимные подписки не нуждаются в использовании этой хранимой процедуры.  
@@ -95,13 +94,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях локальные подписки называются клиентскими подписками, а глобальные подписки — серверными подписками.  
   
  [  **@subscription_priority=**] *subscription_priority*  
- Число, показывающее приоритет подписки. *subscription_priority*— **реальные**, значение по умолчанию NULL. Для локальных и анонимных подписок приоритет равен 0,0. Для глобальных подписок приоритет должен быть меньше чем 100,0.  
+ Число, показывающее приоритет подписки. *subscription_priority*— **реальных**, значение по умолчанию NULL. Для локальных и анонимных подписок приоритет равен 0,0. Для глобальных подписок приоритет должен быть меньше чем 100,0.  
   
  [  **@sync_type=**] **"***sync_type***"**  
- Тип синхронизации подписки. *sync_type*— **nvarchar(15)**, значение по умолчанию **автоматического**. Может быть **автоматического** или **нет**. Если **автоматического**, схема и начальные данные для опубликованных таблиц переносятся подписчику сначала. Если **нет**, предполагается, что подписчик уже имеет схему и начальные данные для опубликованных таблиц. Системные таблицы и данные переносятся всегда.  
+ Тип синхронизации подписки. *sync_type*— **nvarchar(15)**, значение по умолчанию **автоматического**. Может быть **автоматического** или **none**. Если **автоматического**, схема и начальные данные для опубликованных таблиц передаются подписчику сначала. Если **none**, он считается подписчик уже имеет схему и начальные данные для опубликованных таблиц. Системные таблицы и данные переносятся всегда.  
   
 > [!NOTE]  
->  Рекомендуется не указывать значение **нет**.  
+>  Мы рекомендуем не указав значение **none**.  
   
  [  **@frequency_type=**] *frequency_type*  
  Значение, указывающее режим работы агента слияния. *frequency_type* — **int**, и может принимать одно из следующих значений.  
@@ -160,7 +159,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |NULL (по умолчанию)||  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Частота для *frequency_subday* должно пройти между каждого слияния. *frequency_subday_interval* — **int**, значение по умолчанию NULL.  
+ Частота для *frequency_subday* между каждого слияния. *frequency_subday_interval* — **int**, значение по умолчанию NULL.  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
  Время суток, на которое запланирован первый запуск агента слияния, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию NULL.  
@@ -199,30 +198,30 @@ sp_addmergesubscription [ @publication= ] 'publication'
  *@merge_job_name* Аргумент является устаревшим и не может быть задано. *merge_job_name* — **sysname**, значение по умолчанию NULL.  
   
  [ **@hostname**=] **"***hostname***"**  
- Переопределяет значение, возвращаемое [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) при использовании этой функции в предложении WHERE параметризованного фильтра. *Имя узла* — **sysname**, значение по умолчанию NULL.  
+ Переопределяет значение, возвращенное [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) при использовании этой функции в предложении WHERE параметризованного фильтра. *Имя узла* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
->  Для обеспечения высокой производительности не рекомендуется применять функции к именам столбцов в выражениях параметризованных фильтров строк, таких как `LEFT([MyColumn]) = SUSER_SNAME()`. Если вы используете [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) в предложении фильтра и переопределении значения HOST_NAME, может возникнуть необходимость преобразования типов данных с помощью [преобразовать](../../t-sql/functions/cast-and-convert-transact-sql.md). Дополнительные сведения см. в подразделе «Переопределение значения HOST_NAME()» раздела [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+>  Для обеспечения высокой производительности не рекомендуется применять функции к именам столбцов в выражениях параметризованных фильтров строк, таких как `LEFT([MyColumn]) = SUSER_SNAME()`. Если вы используете [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) в предложении фильтра и переопределении значения HOST_NAME, возможно, необходимо выполнить преобразование типов данных с помощью [преобразовать](../../t-sql/functions/cast-and-convert-transact-sql.md). Дополнительные сведения см. в подразделе «Переопределение значения HOST_NAME()» раздела [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_addmergesubscription** используется в репликации слиянием.  
   
- Когда **sp_addmergesubscription** выполняется членом **sysadmin** предопределенной роли сервера для создания принудительной подписки задание агента слияния неявно создается и запускается под [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента Учетная запись службы. Рекомендуется выполнять [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) и укажите учетные данные учетной записи Windows различия, зависящие от агента для **@job_login** и **@job_password**. Дополнительные сведения см. в разделе [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Когда **sp_addmergesubscription** выполняется членом **sysadmin** предопределенной роли сервера для создания принудительной подписки задание агента слияния неявно создается и запускается под [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента Учетная запись службы. Мы рекомендуем выполнить [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) и укажите учетные данные учетной записи Windows различные, конкретного агента для **@job_login** и **@job_password**. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_addmergesubscription**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addmergesubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Интерактивное разрешение конфликтов](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
- [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  

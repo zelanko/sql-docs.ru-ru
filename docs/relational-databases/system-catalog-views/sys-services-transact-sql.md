@@ -1,5 +1,5 @@
 ---
-title: sys.Services (Transact-SQL) | Документы Microsoft
+title: sys.Services (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,14 +21,15 @@ helpviewer_keywords:
 - sys.services catalog view
 ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9d8006702213646f1b9f3a5dd6a50e8a91717e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7a73a4d2f0d2a5b96908296c1f5d7cf655c0c3ac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035398"
 ---
 # <a name="sysservices-transact-sql"></a>sys.services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

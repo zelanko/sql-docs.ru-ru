@@ -1,5 +1,5 @@
 ---
-title: использованием sp_db_selective_xml_index (Transact-SQL) | Документы Microsoft
+title: использованием sp_db_selective_xml_index (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_db_selective_xml_index procedure
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af5f2cd7f027c583c8eeb262834ce90700b37ae0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7cbf1ef48a7cdc66a7e895c371a83e2648c6a602
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237041"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022174"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33237041"
   Включает и выключает функциональность селективного XML-индекса в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При вызове без параметров хранимая процедура возвращает 1, если селективный XML-индекс включен в определенной базе данных.  
   
 > [!NOTE]  
->  Чтобы отключить Селективный XML-индекс, с помощью этой хранимой процедуры, базы данных необходимо перевести в режим простого восстановления с помощью [параметры ALTER DATABASE SET &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) команды.  
+>  Чтобы отключить Селективный XML-индекс, с помощью этой хранимой процедуры, базы данных должен быть помещен в режим простого восстановления с помощью [параметры ALTER DATABASE SET &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) команды.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33237041"
  [ **@ db_name =** ] **"***db_name***"**  
  Имя базы данных, где включается или отключается селективный XML-индекс. Если *db_name* имеет значение NULL, предполагается текущая база данных.  
   
- [  **@action =** ] **"***действия***"**  
+ [  **@action =** ] **"***действие***"**  
  Определяет, следует включить или отключить индекс. Если передается значение, отличное от «on», «off», «true» или «false», то возникает ошибка.  
   
 ```  

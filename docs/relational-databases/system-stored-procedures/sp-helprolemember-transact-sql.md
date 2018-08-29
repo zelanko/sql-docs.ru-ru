@@ -1,5 +1,5 @@
 ---
-title: sp_helprolemember (Transact-SQL) | Документы Microsoft
+title: sp_helprolemember (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_helprolemember
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbe422aff07694ee7358f3be9906890d795f46b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c7e59f3c4b97beaa700fab07a66d60ddb447dcd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022224"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@rolename =** ] **"** *роли* **"**  
- Имя роли в текущей базе данных. *роль* — **sysname**, значение по умолчанию NULL. *роль* должен существовать в текущей базе данных. Если *роли* не указан, возвращаются все роли, которые содержат по крайней мере один элемент из текущей базы данных.  
+ Имя роли в текущей базе данных. *роль* — **sysname**, значение по умолчанию NULL. *роль* должен существовать в текущей базе данных. Если *роли* не указан, возвращаются все роли, которые содержат хотя бы один член из текущей базы данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -55,12 +56,12 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|Имя роли в текущей базе данных.|  
 |**Имя пользователя**|**sysname**|Имя члена **DbRole.**|  
-|**MemberSID**|**varbinary(85)**|Идентификатор безопасности **имя пользователя.**|  
+|**MemberSID**|**varbinary(85)**|Идентификатор безопасности **MemberName.**|  
   
-## <a name="remarks"></a>Замечания  
- Если база данных содержит вложенные роли, **MemberName** может представлять собой имя роли. **sp_helprolemember** отображаются сведения о членстве, полученном через вложенные роли. Например, если пользователь User1 является членом роли Role1, а роль Role1 — членом роли Role2, `EXEC sp_helprolemember 'Role2'`, происходит возврат роли Role1, но не членов роли Role1 (в этом примере — пользователя User1). Чтобы вернуть вложенных группах, необходимо выполнить **sp_helprolemember** несколько раз для каждой вложенной роли.  
+## <a name="remarks"></a>Примечания  
+ Если база данных содержит вложенные роли, **MemberName** может быть именем роли. **sp_helprolemember** отображаются сведения о членстве, полученном через вложенные роли. Например, если пользователь User1 является членом роли Role1, а роль Role1 — членом роли Role2, `EXEC sp_helprolemember 'Role2'`, происходит возврат роли Role1, но не членов роли Role1 (в этом примере — пользователя User1). Для возврата вложенной в группах, необходимо выполнить **sp_helprolemember** несколько раз для каждой вложенной роли.  
   
- Используйте **sp_helpsrvrolemember** для отображения членов в предопределенную роль сервера.  
+ Используйте **sp_helpsrvrolemember** для отображения членов предопределенной роли сервера.  
   
  Используйте [IS_ROLEMEMBER &#40;Transact-SQL&#41; ](../../t-sql/functions/is-rolemember-transact-sql.md) для проверки членства в роли для указанного пользователя.  
   
@@ -77,7 +78,7 @@ EXEC sp_helprolemember 'Sales';
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

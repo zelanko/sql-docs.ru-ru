@@ -1,5 +1,5 @@
 ---
-title: sp_removedistpublisherdbreplication (Transact-SQL) | Документы Microsoft
+title: sp_removedistpublisherdbreplication (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedistpublisherdbreplication
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02194543d95dc03491d4b882555e48698c100ba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a99244a59c0022ed92797fc8c5e10bd3bf3dae63
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996061"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022572"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=** ] **"***издатель***"**  
+ [  **@publisher=** ] **"***издателя***"**  
  Имя сервера издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publisher_db=** ] **"***publisher_db***"**  
- Имя базы данных публикации. *publisher_db* — **sysname** без значения по умолчанию.  
+ Имя базы данных публикации. *publisher_db* — **sysname** не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_removedistpublisherdbreplication** используется в репликации моментальных снимков и транзакций.  
+## <a name="remarks"></a>Примечания  
+ **sp_removedistpublisherdbreplication** используется в репликации транзакций и моментальных снимков.  
   
- **sp_removedistpublisherdbreplication** используется, когда опубликованной базы данных необходимо создать заново, не удаляя базу данных распространителя. Следующие метаданные будут удалены:  
+ **sp_removedistpublisherdbreplication** используется, когда опубликованной базы данных необходимо создать заново, не удаляя базы данных распространителя. Следующие метаданные будут удалены:  
   
 -   все метаданные публикаций;  
   

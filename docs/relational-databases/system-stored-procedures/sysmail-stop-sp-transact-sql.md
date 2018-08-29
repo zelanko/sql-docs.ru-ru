@@ -1,5 +1,5 @@
 ---
-title: sysmail_stop_sp (Transact-SQL) | Документы Microsoft
+title: sysmail_stop_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_stop_sp
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f304337470d0117b6f44d03bf7e459c6b9f51d5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0d52e7f18373303673afc3e5ef67aeb91e094360
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021138"
 ---
 # <a name="sysmailstopsp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +43,28 @@ sysmail_stop_sp
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Нет  
+ None  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта хранимая процедура находится в **msdb** базы данных.  
   
  Она останавливает обработку очереди компонента Database Mail, содержащей исходящие запросы, и выполняет деактивацию компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для внешней программы.  
   
  Когда обработка очередей остановлена, внешняя программа, работающая с компонентом Database Mail, не обрабатывает сообщения. Эта хранимая процедура позволяет остановить работу компонента Database Mail для диагностики или обслуживания.  
   
- Для запуска компонента Database Mail, используйте **sysmail_start_sp**. Обратите внимание, что **sp_send_dbmail** по-прежнему принимает почты, когда [!INCLUDE[ssSB](../../includes/sssb-md.md)] остановки объектов.  
+ Для запуска компонента Database Mail, используйте **sysmail_start_sp**. Обратите внимание, что **sp_send_dbmail** продолжает принимать почты, когда [!INCLUDE[ssSB](../../includes/sssb-md.md)] остановки объектов.  
   
 > [!NOTE]  
->  Эта хранимая процедура останавливает только обработку очередей компонента Database Mail. Эта хранимая процедура не приводит к деактивации доставки сообщений компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] в базе данных. Эта системная процедура не отключает расширенные хранимые процедуры компонента Database Mail, т. е. не сокращает контактную зону. Для отключения расширенных хранимых процедур см [параметр Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) из **sp_configure** системной хранимой процедуры.  
+>  Эта хранимая процедура останавливает только обработку очередей компонента Database Mail. Эта хранимая процедура не приводит к деактивации доставки сообщений компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] в базе данных. Эта системная процедура не отключает расширенные хранимые процедуры компонента Database Mail, т. е. не сокращает контактную зону. Чтобы отключить расширенные хранимые процедуры, см. в разделе [параметр Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) из **sp_configure** системной хранимой процедуры.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию членам выполнение **sysadmin** предопределенной роли сервера.  
+ Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере показано остановка компонента Database Mail в **msdb** базы данных. Пример предполагает, что компонент Database Mail активирован.  
+ В следующем примере показано, остановка компонента Database Mail в **msdb** базы данных. Пример предполагает, что компонент Database Mail активирован.  
   
 ```  
 USE msdb ;  

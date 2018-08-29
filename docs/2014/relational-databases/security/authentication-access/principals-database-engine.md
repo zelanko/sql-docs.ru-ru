@@ -27,16 +27,15 @@ helpviewer_keywords:
 - users [SQL Server], principals
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: 54
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55f86aa023d1c5ddfb03c24d9c97797b22a93973
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 178753d52a6a88d8f8d94c6b788d8dd306b48f1b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318044"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023567"
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
   *Субъекты* — это сущности, которые могут запрашивать ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния субъекта зависит от его области определения (Windows, сервер, база данных) и того, неделимый это субъект или коллективный. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID).  
@@ -93,7 +92,7 @@ ms.locfileid: "37318044"
 ## <a name="client-and-database-server"></a>Клиент и сервер базы данных  
  По определению клиент и сервер базы данных являются защищаемыми субъектами безопасности. Данные сущности могут пройти взаимную проверку подлинности перед установкой безопасного сетевого соединения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) протокола проверки подлинности, который определяет, как клиенты взаимодействуют со службой проверки подлинности в сети.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Данный раздел электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит следующие подразделы.  
   
 -   [Инструкции по управлению именами входа, пользователями и схемами](managing-logins-users-and-schemas-how-to-topics.md)  

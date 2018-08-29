@@ -1,5 +1,5 @@
 ---
-title: sp_indexes (Transact-SQL) | Документы Microsoft
+title: sp_indexes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95940aac67d5f525503721246025ff25bbfc7e1c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3185e5b5fe0af7db68fd8bb91dfdf568bb14d354
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034731"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +53,19 @@ sp_indexes [ @table_server = ] 'table_server'
  Имя связанного сервера с запущенным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого запрашиваются сведения о таблице. *table_server* — **sysname**, не имеет значения по умолчанию.  
   
  [ @table_name=] '*table_name*"  
- Имя удаленной таблицы, для которой возвращаются сведения об индексе. *имя_таблицы* — **sysname**, значение по умолчанию NULL. Если NULL, возвращаются все таблицы указанной базы данных.  
+ Имя удаленной таблицы, для которой возвращаются сведения об индексе. *TABLE_NAME* — **sysname**, значение по умолчанию NULL. Если NULL, возвращаются все таблицы указанной базы данных.  
   
  [ @table_schema=] '*table_schema*"  
  Задает схему таблицы. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы. *table_schema* — **sysname**, значение по умолчанию NULL.  
   
  [ @table_catalog=] '*table_db*"  
- Имя базы данных, в котором *table_name* находится. *table_db* — **sysname**, значение по умолчанию NULL. Если значение равно NULL, *table_db* по умолчанию используется значение **master**.  
+ Имя базы данных, в котором *table_name* находится. *table_db* — **sysname**, значение по умолчанию NULL. Если значение равно NULL, *table_db* по умолчанию используется **master**.  
   
  [ @index_name=] '*index_name*"  
  Имя индекса, для которого запрашиваются сведения. *Индекс* — **sysname**, значение по умолчанию NULL.  
   
  [ @is_unique=] '*is_unique*"  
- Тип индекса, для которого запрашиваются сведения. *is_unique* — **бит**, значение по умолчанию NULL и может принимать одно из следующих значений.  
+ Тип индекса, для которого запрашиваются сведения. *is_unique* — **бит**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -80,7 +81,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |TABLE_SCHEM|**sysname**|Схема для таблицы.|  
 |TABLE_NAME|**sysname**|Имя удаленной таблицы.|  
 |NON_UNIQUE|**smallint**|Является ли индекс уникальным или неуникальным:<br /><br /> 0 = уникальное<br /><br /> 1 = неуникальное|  
-|INDEX_QUALIFER|**sysname**|Имя владельца индекса. В некоторых СУБД пользователям, не являющимся владельцами таблицы, разрешено создавать индексы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот столбец всегда имеет то же, что **TABLE_NAME**.|  
+|INDEX_QUALIFER|**sysname**|Имя владельца индекса. В некоторых СУБД пользователям, не являющимся владельцами таблицы, разрешено создавать индексы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот столбец всегда является таким же, как **TABLE_NAME**.|  
 |INDEX_NAME|**sysname**|Имя индекса.|  
 |TYPE|**smallint**|Тип индекса:<br /><br /> 0 = статистика по таблице<br /><br /> 1 = кластеризованный<br /><br /> 2 = хэшированный<br /><br /> 3 = other|  
 |ORDINAL_POSITION|**int**|Порядковый номер столбца в индексе. Номер первого столбца в таблице равен 1. Этот столбец всегда возвращает значение.|  
@@ -104,11 +105,11 @@ EXEC sp_indexes @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Распределенные запросы хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Распределенные запросы, хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

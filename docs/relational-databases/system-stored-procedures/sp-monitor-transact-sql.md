@@ -1,5 +1,5 @@
 ---
-title: sp_monitor (Transact-SQL) | Документы Microsoft
+title: sp_monitor (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 277062160e01f0111eeade2dc4a05b3c6a3ab59d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f7e84891d55949751645e3b3d35d8b13fc3a742
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024059"
 ---
 # <a name="spmonitor-transact-sql"></a>Хранимая процедура sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ sp_monitor
 |-----------------|-----------------|  
 |**last_run**|Время **sp_monitor** последнего запуска.|  
 |**current_run**|Время **sp_monitor** запущена.|  
-|**секунд**|Число секунд, прошедших с момента **sp_monitor** была запущена.|  
+|**секунд**|Число секунд, прошедших с **sp_monitor** была запущена.|  
 |**CPU_BUSY**|Время в секундах, которое ЦП сервера затратил на работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**IO_BUSY**|Время в секундах, которое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] затратил на операции ввода и вывода.|  
 |**Простоя**|Время простоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в секундах.|  
@@ -63,10 +64,10 @@ sp_monitor
 |**total_errors**|Количество ошибок, с которыми столкнулся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время чтения и записи.|  
 |**Подключения**|Количество входов или попыток входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Замечания  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью набора функций отслеживает объем проделанной работы. Выполнение **sp_monitor** отображает текущие значения, возвращенные этими функциями и показывает, насколько они изменились со времени последнего запуска этой процедуры.  
+## <a name="remarks"></a>Примечания  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью набора функций отслеживает объем проделанной работы. Выполнение **sp_monitor** отображает текущие значения, возвращаемые этими функциями и показывает, насколько они изменились с момента последнего запуска этой процедуры.  
   
- Для каждого столбца, статистика выводится в виде *номер*(*номер*)-*номер*% или *номер*(*номер*). Первый *номер* определяет количество секунд (для **cpu_busy**, **io_busy**, и **простоя**) или общее количество (для других переменные) с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была перезапущена. *Номер* в скобках отображает количество секунд или общее количество с момента последнего **sp_monitor** была запущена. Процент — это доля времени с момента **sp_monitor** последнего запуска. Например, если в отчете отображается **cpu_busy** равно 4250 (215)-68%, ЦП был загружен 4250 секунд со времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вверх, 215 секунд с момента последнего запуска **sp_monitor** был последнего выполнения и 68 процентов Общее время с момента **sp_monitor** последнего запуска.  
+ Для каждого столбца, статистика выводится в виде *номер*(*номер*)-*номер*% или *номер*(*номер*). Первый *номер* ссылается на число секунд (для **cpu_busy**, **io_busy**, и **простоя**) или общее количество (для других переменные) с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был перезагружен. *Номер* в скобках отображает количество секунд или общее количество с момента последнего **sp_monitor** была запущена. Процент — это доля времени с момента **sp_monitor** последнего запуска. Например, если в отчете отображаются **cpu_busy** 4250 (215)-68%, ЦП был загружен 4250 секунд с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вверх, 215 секунд с момента последнего запуска **sp_monitor** был последнего выполнения и 68 процентов Общее время с момента **sp_monitor** последнего запуска.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  

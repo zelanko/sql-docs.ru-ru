@@ -1,5 +1,5 @@
 ---
-title: sp_reinitpullsubscription (Transact-SQL) | Документы Microsoft
+title: sp_reinitpullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1f044d6ae29565326b130e248e4e0e770ab8e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ed19307a7a79856b808ade07338e2e8d595fdf4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018257"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,34 +47,34 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"***издатель***"**  
+ [  **@publisher=**] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publisher_db=**] **"***publisher_db***"**  
  Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publication=**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию all, что означает пометку всех подписок для повторной инициализации.  
+ Имя публикации. *Публикация* — **sysname**, по умолчанию все, что означает пометку всех подписок для повторной инициализации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_reinitpullsubscription** используется в репликации транзакций.  
   
- **sp_reinitpullsubscription** не поддерживается для-одноранговой репликации транзакций.  
+ **sp_reinitpullsubscription** не поддерживается для репликации транзакций peer-to-peer.  
   
- **sp_reinitpullsubscription** может вызываться из подписчика для повторной инициализации подписки, во время следующего запуска агента распространителя.  
+ **sp_reinitpullsubscription** могут вызываться из подписчика повторной инициализации подписки, во время следующего запуска агента распространителя.  
   
- Подписки к публикациям, созданным со значением **false** для **@immediate_sync** нельзя инициализировать повторно с подписчика.  
+ Подписки к публикациям, созданным со значением **false** для **@immediate_sync** не могут повторно инициализироваться из подписчика.  
   
- Повторная инициализация подписки по запросу, выполнив либо процедуру **sp_reinitpullsubscription** на подписчике или **sp_reinitsubscription** на издателе.  
+ Повторная инициализация подписки по запросу, либо выполнив **sp_reinitpullsubscription** на подписчике или **sp_reinitsubscription** на издателе.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_reinitpullsubscription**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [Повторная инициализация подписки](../../relational-databases/replication/reinitialize-a-subscription.md)   

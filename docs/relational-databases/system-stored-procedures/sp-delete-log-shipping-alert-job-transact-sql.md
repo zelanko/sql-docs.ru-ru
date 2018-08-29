@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_alert_job (Transact-SQL) | Документы Microsoft
+title: sp_delete_log_shipping_alert_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_alert_job
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b2a41f6d453fd1d029426afb5753f558a73ba08
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1979d0e4493d76d628d4a65974bb5a13760a5229
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245830"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021878"
 ---
 # <a name="spdeletelogshippingalertjob-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_delete_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Отсутствуют.  
+ Нет.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -53,7 +52,7 @@ sp_delete_log_shipping_alert_job
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_delete_log_shipping_alert_job** должна запускаться из **master** базы данных на сервере мониторинга.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -69,7 +68,7 @@ EXEC sp_delete_log_shipping_alert_job;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

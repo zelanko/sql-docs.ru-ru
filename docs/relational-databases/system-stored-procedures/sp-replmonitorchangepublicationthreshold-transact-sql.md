@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorchangepublicationthreshold (Transact-SQL) | Документы Microsoft
+title: sp_replmonitorchangepublicationthreshold (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc9b3ad0f67fa462db098a44603cc9cb1a4d586
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7d8b21453e2622eb80e5eba69d3688649f0a350
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001671"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036512"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издатель***"**  
+ [ **@publisher** =] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@publisher_db** =] **"***publisher_db***"**  
@@ -73,7 +73,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |NULL (по умолчанию)|Репликация пытается определить тип публикации.|  
   
  [ **@metric_id** =] *metric_id*  
- Идентификатор публикации, изменяемой пороговый показатель. *metric_id* — **int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
+ Идентификатор публикации, изменяемой пороговый показатель. *metric_id* — **int**, со значением по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Имя метрики|  
 |-----------|-----------------|  
@@ -88,21 +88,21 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  Необходимо указать либо *metric_id* или *thresholdmetricname*. Если *thresholdmetricname* указан, то *metric_id* должен иметь значение NULL.  
   
  [ **@thresholdmetricname** =] **"***thresholdmetricname***"**  
- Имя изменяемого порогового показателя публикации. *thresholdmetricname* — **sysname**, значение по умолчанию NULL. Необходимо указать либо *thresholdmetricname* или *metric_id*. Если *metric_id* указан, то *thresholdmetricname* должен иметь значение NULL.  
+ Имя изменяемого порогового показателя публикации. *thresholdmetricname* — **sysname**, со значением по умолчанию NULL. Необходимо указать либо *thresholdmetricname* или *metric_id*. Если *metric_id* указан, то *thresholdmetricname* должен иметь значение NULL.  
   
  [ **@value** =] *значение*  
- Новое значение для пороговой метрики публикации. *значение* — **int**, значение по умолчанию NULL. Если **null**, а затем значение метрики не обновляется.  
+ Новое значение для пороговой метрики публикации. *значение* — **int**, со значением по умолчанию NULL. Если **null**, а затем значение метрики не обновляется.  
   
  [ **@shouldalert** =] *shouldalert*  
- Указывает, создается ли предупреждение при достижении пороговой метрики публикации. *shouldalert* — **бит**, значение по умолчанию NULL. Значение **1** означает, что оповещение создается, а значение **0** означает, что оповещение не создается.  
+ Указывает, создается ли предупреждение при достижении пороговой метрики публикации. *shouldalert* — **бит**, значение по умолчанию NULL. Значение **1** означает, что предупреждение создается и значение **0** означает, что предупреждение не создается.  
   
  [ **@mode** =] *режим*  
- Определяет, активна ли метрика порогового показателя публикации. *режим* — **tinyint**, значение по умолчанию **1**. Значение **1** означает, что включено наблюдение за данной метрикой, а значение **2** означает, что наблюдение за данной метрикой отключен.  
+ Определяет, активна ли метрика порогового показателя публикации. *режим* — **tinyint**, значение по умолчанию **1**. Значение **1** означает, что включено наблюдение за данной метрикой и значением **2** означает, что наблюдение за данной метрикой отключен.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_replmonitorchangepublicationthreshold** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  

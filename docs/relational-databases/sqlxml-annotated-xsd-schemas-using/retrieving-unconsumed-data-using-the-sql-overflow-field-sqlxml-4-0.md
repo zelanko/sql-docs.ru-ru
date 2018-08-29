@@ -22,17 +22,17 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 51f9fe6c3e8053b1a03174d5e9ba3fce738c5231
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f060fe7fdabc3c629dbd27ef632c85b510c7c88c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559214"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43061766"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Получение невостребованных данных с помощью sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При получении данных из базы данных с использованием аннотированных схем, можно указать **SQL: Overflow-поле** атрибут для идентификации столбца в таблице, в котором хранятся данные переполнения. **SQL: Overflow-поле** атрибут может быть указан в ** \<элемент >**.  
+  Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При получении данных из базы данных с использованием аннотированных схем, можно указать **SQL: Overflow-поле** атрибут для идентификации столбца в таблице, в котором хранятся данные переполнения. **SQL: Overflow-поле** атрибут может быть указан в  **\<элемент >**.  
   
  Затем эти данные можно получить одним из трех способов.  
   

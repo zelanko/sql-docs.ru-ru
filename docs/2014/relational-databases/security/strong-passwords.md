@@ -17,16 +17,15 @@ helpviewer_keywords:
 - characters [SQL Server], password policies
 - strong passwords [SQL Server]
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 58aea76071a92e1ea9638a745d7a8493f9b778ec
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bf9bac77913385c4cdf2d219fbacb5a380e5101b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083016"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025931"
 ---
 # <a name="strong-passwords"></a>Надежные пароли
   Пароли могут быть самым слабым звеном в развертывании системы безопасности сервера. При выборе пароля всегда следует проявлять особую внимательность. Надежный пароль имеет следующие характеристики:  
@@ -53,7 +52,7 @@ ms.locfileid: "39083016"
   
 -   содержат пробел или начинаются с пробела;  
   
--   Начинается с $ или \@ символ.  
+-   начинаются с символа $ или \@.  
   
  При использовании в строке подключения OLE DB или ODBC имя входа или пароль не должны содержать следующие символы: [] {} () , ; ? * ! \@. Эти символы используются для инициализации соединения или для указания его отдельных значений.  
   

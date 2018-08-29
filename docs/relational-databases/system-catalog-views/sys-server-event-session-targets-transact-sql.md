@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_targets (Transact-SQL) | Документы Microsoft
+title: sys.server_event_session_targets (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 - xe
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54af7feefe5241df2af127a4e684f3dce2b3b7a8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9b38bfd00a699cb997f6cc73776daf6bed5f4cb8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024003"
 ---
 # <a name="sysservereventsessiontargets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +41,14 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Идентификатор сеанса событий. Не допускает значение NULL.|  
 |target_id|**int**|Идентификатор цели. Идентификатор уникален внутри объекта сеанса событий. Не допускает значение NULL.|  
-|имя|**sysname**|Имя цели события. Не допускает значение NULL.|  
+|name|**sysname**|Имя цели события. Не допускает значение NULL.|  
 |пакет|**sysname**|Имя пакета событий, который содержит цель события. Не допускает значение NULL.|  
 |module|**sysname**|Имя модуля, который содержит цель события. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Это представление имеет следующее количество элементов связей.  
   
 ||||  

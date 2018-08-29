@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Документы Microsoft
+title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_change_log_shipping_secondary_primary
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 499c95fc980bd6e8d996b14c47907b814cbb94aa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 284aca27c2c75cb23d489e915acf1ef48a082c7a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240004"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019490"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,20 +84,20 @@ sp_change_log_shipping_secondary_primary
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_change_log_shipping_secondary_primary** должна запускаться из **master** базы данных на сервере-получателе. Эта хранимая процедура выполняет следующее:  
   
 1.  Изменяет параметры **log_shipping_secondary** записывает при необходимости.  
   
-2.  Если сервер мониторинга отличается от сервера-получателя, изменяет контрольную запись **log_shipping_monitor_secondary** мониторинга сервера, используя указанные аргументы при необходимости.  
+2.  Если сервер мониторинга отличается от сервера-получателя, изменения отслеживать записи в **log_shipping_monitor_secondary** на мониторе server, используя указанные аргументы, при необходимости.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

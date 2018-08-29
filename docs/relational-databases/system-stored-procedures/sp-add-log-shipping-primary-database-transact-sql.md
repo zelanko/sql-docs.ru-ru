@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_primary_database (Transact-SQL) | Документы Microsoft
+title: sp_add_log_shipping_primary_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_database
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
-caps.latest.revision: 35
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39627cca65071d2f08fe990c63d6e3ce836ce3b0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b73ec62b6b0abc8ab8334efdc5f26c5bd2748605
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240034"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034742"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
  [  **@backup_threshold=** ] *backup_threshold*  
- — Это период времени в минутах после последнего резервного копирования до *threshold_alert* возникает ошибка. *backup_threshold* — **int**, значение по умолчанию 60 минут.  
+ — Это продолжительность времени в минутах после последнего резервного копирования до *threshold_alert* возникает ошибка. *backup_threshold* — **int**, значение по умолчанию 60 минут.  
   
  [  **@threshold_alert=** ] *threshold_alert*  
  Предупреждение, создаваемое при превышении порогового значения. *threshold_alert* — **int**, значение по умолчанию 14 420.  
@@ -110,32 +109,32 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  Идентификатор базы данных-источника в конфигурации доставки журналов. *primary_id* — **uniqueidentifier** и не может иметь значение NULL.  
   
  [ **@backup_compression**=] *backup_compression_option*  
- Указывает, использует ли конфигурации доставки журналов [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
+ Указывает, использует ли конфигурация доставки журналов [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
   
  0 = отключено. Не сжимать резервные копии журналов.  
   
  1 = включено. Всегда сжимать резервные копии журналов.  
   
- 2 = использовать значение параметра [Просмотр или настройка параметра конфигурации сервера по умолчанию сжатие резервных копий](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Это значение по умолчанию.  
+ 2 = использовать значение параметра [Просмотр или настройка параметра сжатия резервных копий по умолчанию параметр конфигурации сервера](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Это значение по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_add_log_shipping_primary_database** должна запускаться из **master** базы данных на сервере-источнике. Эта хранимая процедура выполняет следующие действия:  
   
-1.  Создает первичный идентификатор и добавляет запись базы данных-источника в таблице **log_shipping_primary_databases** с указанными аргументами.  
+1.  Создает первичный идентификатор и добавляет запись для базы данных-источника в таблице **log_shipping_primary_databases** с указанными аргументами.  
   
 2.  создает задание резервного копирования для базы данных-источника, если она отключена;  
   
-3.  Задает идентификатор задания резервного копирования в **log_shipping_primary_databases** входа идентификатору задания резервного копирования.  
+3.  Задает идентификатор задания резервного копирования в **log_shipping_primary_databases** запись идентификатору задания резервного копирования.  
   
-4.  Добавляет запись локального монитора в таблице **log_shipping_monitor_primary** на основном сервере, используя указанные аргументы.  
+4.  Добавляет запись локального монитора в таблице **log_shipping_monitor_primary** на сервере-источнике, используя указанные аргументы.  
   
-5.  Если сервер мониторинга отличается от сервера-источника, добавляет запись монитора в **log_shipping_monitor_primary** на мониторе сервере, используя указанные аргументы.  
+5.  Если сервер мониторинга отличается от сервера-источника, добавляет запись монитора в **log_shipping_monitor_primary** на мониторе сервере, используя предоставленные аргументы.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
@@ -167,7 +166,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

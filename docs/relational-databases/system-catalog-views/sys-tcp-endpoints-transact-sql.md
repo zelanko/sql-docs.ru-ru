@@ -1,5 +1,5 @@
 ---
-title: sys.tcp_endpoints (Transact-SQL) | Документы Microsoft
+title: sys.tcp_endpoints (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - sys.tcp_endpoints catalog view
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c04be5f76337422601486d08ff41316c7c98192
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5ca1f1dae30d432ec339825cc5ab5815351150b4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33221295"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034883"
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит по одной строке для каждой из конечных точек TCP, имеющихся в системе. Конечные точки, которые описаны в документах **sys.tcp_endpoints** представляют собой объекты для предоставления или отмены прав доступа на соединение. Отображаемые сведения о портах и IP-адресах не используются для настройки протоколов и могут не соответствовать фактической конфигурации протоколов. Для просмотра и настройки протоколов следует использовать диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Содержит по одной строке для каждой из конечных точек TCP, имеющихся в системе. Конечные точки, которые описаны **sys.tcp_endpoints** представляют собой объекты для предоставления или отмены прав доступа на соединение. Отображаемые сведения о портах и IP-адресах не используются для настройки протоколов и могут не соответствовать фактической конфигурации протоколов. Для просмотра и настройки протоколов следует использовать диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**< унаследованные столбцы >**||Наследует столбцы из [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**< наследуемые столбцы >**||Наследует столбцы из [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**port**|ssNoversion|Номер порта, который прослушивается конечной точкой. Не допускает значение NULL.|  
 |**is_dynamic_port**|bit|1 = Номер порта назначается динамически.<br /><br /> Не допускает значение NULL.|  
 |**IP-адрес**|**nvarchar(45)**|IP-адрес средства прослушивания, указанный в предложении LISTENER_IP. Допускает значение NULL.|  

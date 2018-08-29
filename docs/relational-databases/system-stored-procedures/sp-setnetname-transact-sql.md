@@ -1,5 +1,5 @@
 ---
-title: sp_setnetname (Transact-SQL) | Документы Microsoft
+title: sp_setnetname (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671aea34c2a6ffb4e8da9791a535f0dfd0d0baf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 71dcca516c1533c048d424e68d6aaae197d032ba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024888"
 ---
 # <a name="spsetnetname-transact-sql"></a>Хранимая процедура sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +46,11 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **@server = "** *сервера* **"**  
- Имя удаленного сервера в синтаксисе вызова удаленных хранимых процедур, написанных пользователем. Только одну строку в **sys.servers** уже должен существовать для использования этой *сервера*. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
+ **@server = "** *server* **"**  
+ Имя удаленного сервера в синтаксисе вызова удаленных хранимых процедур, написанных пользователем. Ровно одна строка в **sys.servers** уже должен существовать для этого *сервера*. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- **@netname = "** *имя_сети* **"**  
- Сетевое имя компьютера, на который направляются вызовы удаленных хранимых процедур. *имя_сети* — **sysname**, не имеет значения по умолчанию.  
+ **@netname = "** *сетевое_имя* **"**  
+ Сетевое имя компьютера, на который направляются вызовы удаленных хранимых процедур. *сетевое_имя* — **sysname**, не имеет значения по умолчанию.  
   
  Это имя должно совпадать с именем компьютера [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и может содержать символы, использование которых в качестве идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрещено.  
   
@@ -57,12 +58,12 @@ sp_setnetname
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Некоторые удаленные хранимые процедуры, обращающиеся к Windows-компьютерам, могут вызвать проблемы, если имя компьютера содержит недопустимые символы.  
   
- Так как связанные серверы размещены в одном пространстве имен, они не могут иметь одинаковое имя. Тем не менее, можно определить как связанный сервер, так и удаленного сервера с указанного сервера, назначив другие имена и с помощью **sp_setnetname** для присвоения сетевого имени одного из них сетевому имени базового сервера.  
+ Так как связанные серверы размещены в одном пространстве имен, они не могут иметь одинаковое имя. Тем не менее, можно определить как связанный сервер, так и удаленный сервер на определенных серверах, присваивая им различные имена и используя **sp_setnetname** для присвоения сетевого имени одного из них сетевому имени базового сервера.  
   
 ```  
 --Assume sqlserv2 is actual name of SQL Server   
@@ -75,7 +76,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ```  
   
 > [!NOTE]  
->  С помощью **sp_setnetname** для переключения связанного сервера обратно на локальный сервер не поддерживается. Серверы, которые описаны таким образом, не могут участвовать в распределенной транзакции.  
+>  С помощью **sp_setnetname** указывают связанный сервер на локальном сервере не поддерживается. Серверы, которые описаны таким образом, не могут участвовать в распределенной транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **sysadmin** и **setupadmin** предопределенных ролей сервера.  
@@ -92,7 +93,7 @@ EXEC Win_1.master.dbo.sp_who;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.server_file_audits (Transact-SQL) | Документы Microsoft
+title: sys.server_file_audits (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,24 +21,25 @@ helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e10ec5dc755f1a8487aecd40b620eb0a3eefe8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0ac050160e62718a87a5dfa920471861eaadcfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035934"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит расширенные сведения о типах аудита файлов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аудита на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Содержит расширенные сведения о типах аудита файлов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аудита на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|Идентификатор аудита.|  
-|имя|**sysname**|Имя аудита.|  
+|name|**sysname**|Имя аудита.|  
 |audit_guid|**uniqueidentifier**|Идентификатор GUID аудита.|  
 |create_date|**datetime**|Дата создания аудита файлов в формате UTC.|  
 |modify_date|**значения даты и времени**|Дата последнего изменения аудита файлов в формате UTC.|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/04/2018
 |log_file_name|**nvarchar(260)**|Базовое имя для файла журнала, предоставленного в CREATE AUDIT DDL. Добавочное число прибавлено к файлу base_log_name в качестве суффикса, чтобы создать имя файла журнала.|  
   
 ## <a name="permissions"></a>Разрешения  
- Участники **ALTER ANY SERVER AUDIT** или **VIEW ANY DEFINITION** разрешение имеют доступ к этому представлению каталога. Кроме того, участник не должно быть запрещено **VIEW ANY DEFINITION** разрешение.  
+ Участники с **ALTER ANY SERVER AUDIT** или **VIEW ANY DEFINITION** разрешение имеют доступ к этому представлению каталога. Кроме того, участник не должно быть запрещено **VIEW ANY DEFINITION** разрешение.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

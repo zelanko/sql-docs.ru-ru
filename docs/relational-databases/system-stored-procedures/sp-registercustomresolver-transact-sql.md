@@ -1,5 +1,5 @@
 ---
-title: работу sp_registercustomresolver (Transact-SQL) | Документы Microsoft
+title: sp_registercustomresolver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_registercustomresolver
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56bc885e9c149b736bee5f5662816fdb90a144eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d891a458c6f150a72d5c04393825e49b5a0dabe2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027151"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,22 +56,22 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
  Указывает значение идентификатора CLSID регистрируемого объекта COM. Пользовательская бизнес-логика *resolver_clsid* — **nvarchar(50)**, значение по умолчанию NULL. Значение этого аргумента должно быть равным допустимому идентификатору CLSID или NULL (в случае регистрации сборки обработчиков бизнес-логики).  
   
  [  **@is_dotnet_assembly=** ] **"***is_dotnet_assembly***"**  
- Указывает тип регистрируемой пользовательской бизнес-логики. *is_dotnet_assembly* — **nvarchar(50)**, значение по умолчанию FALSE. **значение true,** указывает, что пользовательские бизнес-логики, зарегистрированный обработчик бизнес-логики сборкой. **false** указывает, что COM-компонента.  
+ Указывает тип регистрируемой пользовательской бизнес-логики. *is_dotnet_assembly* — **nvarchar(50)**, значение по умолчанию FALSE. **значение true,** указывает, что регистрируемая пользовательских бизнес-логика обработчика бизнес-логики сборкой. **false** означает, что COM-компонента.  
   
  [  **@dotnet_assembly_name=** ] **"***dotnet_assembly_name***"**  
- Имя сборки, в которой реализован обработчик бизнес-логики. *dotnet_assembly_name* — **nvarchar(255)**, значение по умолчанию NULL. Если полный путь к сборке не описан в том же каталоге, что и исполняемый объект агента слияния, необходимо указать его в каталоге приложения, синхронно запускающего агент слияния, или в глобальном кэше сборок (GAC).  
+ Имя сборки, в которой реализован обработчик бизнес-логики. *dotnet_assembly_name* — **nvarchar(255)**, со значением по умолчанию NULL. Если полный путь к сборке не описан в том же каталоге, что и исполняемый объект агента слияния, необходимо указать его в каталоге приложения, синхронно запускающего агент слияния, или в глобальном кэше сборок (GAC).  
   
  [  **@dotnet_class_name=** ] **"***dotnet_class_name***"**  
- Имя класса, который замещает класс <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. Имя должно быть указано в виде **пространствоИмен.ИмяКласса**. *dotnet_class_name* — **nvarchar(255)**, значение по умолчанию NULL.  
+ Имя класса, который замещает класс <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. Следует указать имя в форме **пространствоИмен.ИмяКласса**. *dotnet_class_name* — **nvarchar(255)**, со значением по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **работу sp_registercustomresolver** используется в репликации слиянием.  
+## <a name="remarks"></a>Примечания  
+ **sp_registercustomresolver** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **работу sp_registercustomresolver**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_registercustomresolver**.  
   
 ## <a name="see-also"></a>См. также  
  [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   

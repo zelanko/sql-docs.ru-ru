@@ -14,25 +14,25 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdfaa0fa75c8ff37ed3c165b5e080cee9cd7a0ba
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f5878e83f9b23f273da46f356b05f8ce6563712e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662386"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785629"
 ---
 # <a name="working-with-a-connection"></a>Работа с соединением
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-В следующих разделах приведены примеры различных способов соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+В следующих разделах приведены примеры различных способов соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
 > [!NOTE]  
-> При возникновении неполадок с соединением с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью драйвера JDBC см. раздел [Профилактика подключений](../../connect/jdbc/troubleshooting-connectivity.md), где можно найти сведения по их устранению.
+> При возникновении неполадок с соединением с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью драйвера JDBC см. раздел [Профилактика подключений](../../connect/jdbc/troubleshooting-connectivity.md), где можно найти сведения по их устранению.
 
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>Создание соединения с помощью класса DriverManager
 
-Простейший способ соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] — загрузка драйвера JDBC и вызов метода getConnection класса DriverManager:
+Простейший способ соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — загрузка драйвера JDBC и вызов метода getConnection класса DriverManager:
 
 ```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  

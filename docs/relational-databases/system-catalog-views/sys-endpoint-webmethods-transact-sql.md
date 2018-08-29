@@ -23,15 +23,15 @@ helpviewer_keywords:
 - sys.endpoint_webmethods catalog view
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56939639112a61054b6896a00a978f84fc4c51fb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: be8d6d8eb8f7e46d0967fa9ab5a0dc2a5ec12140
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998072"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035954"
 ---
 # <a name="sysendpointwebmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "37998072"
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|Идентификатор конечной точки, относительно которой определен веб-метод.|  
 |пространство имен|**nvarchar(384)**|Пространство имен для веб-метода.|  
-|method_alias|**nvarchar(64)**|Псевдоним для веб-метода.<br /><br /> Примечание: [!INCLUDE[tsql](../../includes/tsql-md.md)] идентификаторы допускаются символы, неразрешенные в именах методов WSDL.<br /><br /> Псевдоним используется для установки сопоставления имени в описании WSDL для конечной точки с фактическим базовым исполняемым объектом [!INCLUDE[tsql](../../includes/tsql-md.md)], который вызывается при запуске веб-метода.|  
+|method_alias|**Nvarchar(64)**|Псевдоним для веб-метода.<br /><br /> Примечание: [!INCLUDE[tsql](../../includes/tsql-md.md)] идентификаторы допускаются символы, неразрешенные в именах методов WSDL.<br /><br /> Псевдоним используется для установки сопоставления имени в описании WSDL для конечной точки с фактическим базовым исполняемым объектом [!INCLUDE[tsql](../../includes/tsql-md.md)], который вызывается при запуске веб-метода.|  
 |object_name|**nvarchar(776)**|Имя объекта, к которому перенаправляется веб-метод, заданное в виде ИМЯ = параметр. Части имени разделяются точкой (.) и выделяются квадратными скобками, `[``]`.<br /><br /> Имя объекта должно быть трехкомпонентным именем, заданным параметром WSDL.|  
 |result_schema|**tinyint**|Аргумент, определяющий, какое определение XSD, если таковое имеется, отправляется в ответе:<br /><br /> 0 = нет<br /><br /> 1 = Стандартное<br /><br /> 2 = По умолчанию|  
 |result_schema_desc|**nvarchar(60)**|Описание аргумента, определяющего, какое определение XSD, если таковое имеется, отправляется в ответе:<br /><br /> None<br /><br /> STANDARD<br /><br /> DEFAULT|  

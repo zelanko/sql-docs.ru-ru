@@ -1,5 +1,5 @@
 ---
-title: sp_addmergepullsubscription_agent (Transact-SQL) | Документы Microsoft
+title: sp_addmergepullsubscription_agent (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a728fc2fff24001355a59a9df1f9701d83bd75fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 86af98d30aa9c892472b4226f30dafd63531cc21
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993859"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019609"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@name =** ] **"***имя***"**  
  Имя агента. *имя* — **sysname**, значение по умолчанию NULL.  
   
- [  **@publisher =** ] **"***издатель***"**  
+ [  **@publisher =** ] **"***издателя***"**  
  Имя сервера издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publisher_db =** ] **"***publisher_db***"**  
@@ -140,31 +139,31 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Агент слияния всегда подключается к локальному подписчику с использованием проверки подлинности Windows. Если для этого аргумента указано значение, оно не будет учитываться и будет возвращено предупреждающее сообщение.  
   
  [  **@subscriber_login =** ] **"***subscriber_login***"**  
- Имя входа подписчика, используемое для подключения к нему при синхронизации. *subscriber_login* является обязательным, если *subscriber_security_mode* равно **0**. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
+ Имя входа подписчика, используемое для подключения к нему при синхронизации. *subscriber_login* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если для этого аргумента указано значение, оно не будет учитываться и будет возвращено предупреждающее сообщение.  
   
  [  **@subscriber_password =** ] **"***subscriber_password***"**  
- Пароль подписчика для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *subscriber_password* является обязательным, если *subscriber_security_mode* равно **0**. *subscriber_password* — **sysname**, значение по умолчанию NULL.  
+ Пароль подписчика для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *subscriber_password* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если для этого аргумента указано значение, оно не будет учитываться и будет возвращено предупреждающее сообщение.  
   
  [  **@distributor =** ] **"***распространителя***"**  
- Имя распространителя. *распространитель* — **sysname**, значение по умолчанию *издатель*; то есть издатель является и распространителем.  
+ Имя распространителя. *распространитель* — **sysname**, значение по умолчанию *издателя*; то есть издатель является и распространителем.  
   
  [  **@distributor_security_mode =** ] *distributor_security_mode*  
- Режим безопасности, используемый для подключения к распространителю при синхронизации. *distributor_security_mode* — **int**, значение по умолчанию 0. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** указывает проверку подлинности Windows.  
+ Режим безопасности, используемый для подключения к распространителю при синхронизации. *distributor_security_mode* — **int**, значение по умолчанию 0. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** задает проверку подлинности Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login =** ] **"***имя_входа_распространителя***"**  
- Имя входа распространителя, используемое для подключения к нему при синхронизации. *имя_входа_распространителя* является обязательным, если *distributor_security_mode* равно **0**. *имя_входа_распространителя* — **sysname**, значение по умолчанию NULL.  
+ [  **@distributor_login =** ] **"***distributor_login***"**  
+ Имя входа распространителя, используемое для подключения к нему при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_login* — **sysname**, значение по умолчанию NULL.  
   
  [  **@distributor_password =** ] **"***distributor_password***"**  
- Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* равно **0**. *distributor_password* — **sysname**, значение по умолчанию NULL.  
+ Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] При возможности предлагать пользователю ввод учетных данных безопасности во время выполнения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
@@ -188,7 +187,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |NULL (по умолчанию)||  
   
 > [!NOTE]  
->  При указании значения **64** агент слияния запускается в непрерывном режиме. Это соответствует параметру **-непрерывного** параметром для агента. Дополнительные сведения см. в статье [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+>  Указав значение **64** агент слияния запускается в непрерывном режиме. Это соответствует вводу параметра **-непрерывной** параметром для агента. Дополнительные сведения см. в статье [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  День или дни запуска агента слияния. *frequency_interval* — **int**, и может принимать одно из следующих значений.  
@@ -208,7 +207,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |NULL (по умолчанию)||  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Дата агента слияния. Этот параметр используется при *frequency_type* равно **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+ Дата агента слияния. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -290,29 +289,29 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
  [  **@offloadagent =** ] **"***remote_agent_activation***"**  
  > [!NOTE]  
->  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. Установка *remote_agent_activation* для значения, отличного от **false** выдаст ошибку.  
+>  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. Установка *remote_agent_activation* на значение, отличное от **false** приведет к ошибке.  
   
  [  **@offloadserver =** ] **"***remote_agent_server_name***"**  
  > [!NOTE]  
 >  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. Установка *remote_agent_server_name* любое значение, отличное от NULL, будут вызывать ошибку.  
   
- [  **@job_name =** ] **"***job_name***"** ]  
- Имя существующего задания агента. *job_name* — **sysname**, значение по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом **sysadmin** предопределенной роли сервера, необходимо указать *job_login* и *job_password* при указании *job_name*.  
+ [  **@job_name =** ] **"***имя_задания***"** ]  
+ Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом **sysadmin** предопределенной роли сервера, необходимо указать *job_login* и *job_password* при указании *имя_задания*.  
   
- [  **@dynamic_snapshot_location =** ] **"***размещение_динамического_моментального_снимка***"** ]  
- Путь к папке, из которой будут считываться файлы моментальных снимков, при использовании моментального снимка фильтруемых данных. *размещение_динамического_моментального_снимка* — **nvarchar(260)**, значение по умолчанию NULL. Дополнительные сведения см. в статье [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ [  **@dynamic_snapshot_location =** ] **"***dynamic_snapshot_location***"** ]  
+ Путь к папке, из которой будут считываться файлы моментальных снимков, при использовании моментального снимка фильтруемых данных. *dynamic_snapshot_location* — **nvarchar(260)**, значение по умолчанию NULL. Дополнительные сведения см. в статье [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  [  **@use_web_sync =** ] *use_web_sync*  
  Указывает, включена ли веб-синхронизация. *use_web_sync* — **бит**, значение по умолчанию 0. **1** указывает, что подписки по запросу могут синхронизироваться через Интернет по протоколу HTTP.  
   
  [  **@internet_url =** ] **"***internet_url***"**  
- Расположение прослушивателя репликации (REPLISAPI.DLL) для веб-синхронизации. *internet_url* — **nvarchar(260)**, значение по умолчанию NULL. *internet_url* является полный URL-адрес в формате `http://server.domain.com/directory/replisapi.dll`. Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
+ Расположение прослушивателя репликации (REPLISAPI.DLL) для веб-синхронизации. *internet_url* — **nvarchar(260)**, значение по умолчанию NULL. *internet_url* — это полный URL-адрес в формате `http://server.domain.com/directory/replisapi.dll`. Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
   
  [  **@internet_login =** ] **"***internet_login***"**  
  Имя входа, используемое агентом слияния при подключении к веб-серверу, на котором размещены службы веб-синхронизации с обычной проверкой подлинности HTTP. *internet_login* — **sysname**, значение по умолчанию NULL.  
   
  [  **@internet_password =** ] **"***internet_password***"**  
- Пароль, используемый агентом слияния при подключении к веб-серверу, на котором размещены службы веб-синхронизации, с обычной проверкой подлинности HTTP. *internet_password* — **nvarchar(524)**, значение по умолчанию NULL.  
+ Пароль, используемый агентом слияния при подключении к веб-серверу, на котором размещены службы веб-синхронизации, с обычной проверкой подлинности HTTP. *internet_password* — **nvarchar(524)**, со значением по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -326,7 +325,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1** (по умолчанию)|Используется встроенная проверка подлинности Windows.|  
   
 > [!NOTE]  
->  При веб-синхронизации рекомендуется использовать обычную проверку подлинности. Для использования веб-синхронизации необходимо подключиться к веб-серверу с использованием шифруемого соединения SSL. Дополнительные сведения см. в статье [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md).  
+>  При веб-синхронизации рекомендуется использовать обычную проверку подлинности. Для использования веб-синхронизации необходимо подключиться к веб-серверу с использованием шифруемого соединения SSL. Дополнительные сведения см. в разделе [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
  [  **@internet_timeout =** ] *internet_timeout*  
  Время в секундах до истечения срока действия запроса на веб-синхронизацию. *internet_timeout* — **int**, значение по умолчанию **300** секунд.  
@@ -346,20 +345,20 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_addmergepullsubscription_agent** используется в репликации слиянием и включает функциональность, аналогичную [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
+## <a name="remarks"></a>Примечания  
+ **sp_addmergepullsubscription_agent** используется в репликации слиянием и располагает функциональностью, аналогичной [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
- Пример правильного указания настроек безопасности при выполнении **sp_addmergepullsubscription_agent**, в разделе [создать подписку по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
+ Пример правильного указания настроек безопасности при выполнении **sp_addmergepullsubscription_agent**, см. в разделе [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_addmergepullsubscription_agent**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addmergepullsubscription_agent**.  
   
 ## <a name="see-also"></a>См. также  
- [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

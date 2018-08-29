@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_get_distributor (Transact-SQL) | Документы Microsoft
+title: sp_get_distributor (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f4cd34760ff4bd447bc5a2621508629264adee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 088b2d2c6e334d48fae3e9257f76c5fd8129c15d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021293"
 ---
 # <a name="spgetdistributor-transact-sql"></a>Хранимая процедура sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +48,17 @@ sp_get_distributor
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Установлен**|**int**|**0** = нет; **1** = Да|  
+|**установлен**|**int**|**0** = нет; **1** = yes|  
 |**сервер распространения**|**sysname**|Имя сервера распространителя|  
-|**базы данных распространителя установлена**|**int**|**0** = нет; **1** = Да|  
-|**— издатель распространителя**|**int**|**0** = нет; **1** = Да|  
-|**имеется Удаленный распространяющий издатель**|**int**|**0** = нет; **1** = Да|  
+|**базы данных распространителя установлена**|**int**|**0** = нет; **1** = yes|  
+|**является распространяющий издатель**|**int**|**0** = нет; **1** = yes|  
+|**имеется Удаленный распространяющий издатель**|**int**|**0** = нет; **1** = yes|  
   
-## <a name="remarks"></a>Замечания  
- **Хранимая процедура sp_get_distributor** используется в основном [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в моментальных снимков, транзакций и репликации слиянием.  
+## <a name="remarks"></a>Примечания  
+ **sp_get_distributor** используется преимущественно средой [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в моментальных снимков, транзакций и репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Любой пользователь может выполнять **sp_get_distributor**. НЕНУЛЕВОЙ результирующий набор возвращается, если эта хранимая процедура выполняется членами **db_owner** или **replmonitor** фиксированных ролей базы данных распространителя или членами  **db_owner** предопределенной роли базы данных по крайней мере одной опубликованной базы данных. Набор НЕНУЛЕВОЙ результат также возвращается, если эта хранимая процедура выполняется для пользователей в списке доступа к публикации (PAL) из по крайней мере одной опубликованной базы данных, либо в списке доступа к публикации базы данных распространителя для издателя, отличном от издателя SQL Server можно также выполнять **sp _get_distributor**.  
+ Любой пользователь может выполнить **sp_get_distributor**. Отличное от NULL результирующий набор возвращается, если эта хранимая процедура выполняется членами **db_owner** или **replmonitor** предопределенных ролей базы данных в базу данных распространителя или членами  **db_owner** предопределенной роли базы данных по крайней мере одной опубликованной базы данных. Набор НЕНУЛЕВОЙ результат также возвращается, если эта хранимая процедура выполняется пользователями в списке доступа к публикации (PAL) из по крайней мере одной опубликованной базы данных, либо в список доступа к публикации базы данных распространителя для издателя, отличном от издателя SQL Server, также можно выполнить **sp _get_distributor**.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   

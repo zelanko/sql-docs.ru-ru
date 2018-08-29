@@ -1,5 +1,5 @@
 ---
-title: sp_deletetracertokenhistory (Transact-SQL) | Документы Microsoft
+title: sp_deletetracertokenhistory (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_deletetracertokenhistory
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fdfe59e931fe224106eddb9358a5cba06e57c61a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2734c4f1922ccd7258383dd5e79665cf26c8b4fc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989659"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023518"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,34 +53,34 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
  Имя публикации, в которую была вставлена запись трассировочного токена. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@tracer_id=** ] *tracer_id*  
- Идентификатор трассировочного токена, который требуется удалить. *tracer_id* — **int**, значение по умолчанию NULL. Если **null**, то все трассировочные токены публикации удаляются.  
+ Идентификатор трассировочного токена, который требуется удалить. *tracer_id* — **int**, со значением по умолчанию NULL. Если **null**, то все трассировочные токены публикации удаляются.  
   
  [  **@cutoff_date=** ] *cutoff_date*  
- Задает конечную дату так, что все трассировочные токены, созданные ранее указанной даты, удаляются. *cutoff_date* имеет тип datetime и значение по умолчанию NULL.  
+ Задает конечную дату так, что все трассировочные токены, созданные ранее указанной даты, удаляются. *cutoff_date* — datetime со значением по умолчанию NULL.  
   
- [  **@publisher=** ] **"***издатель***"**  
+ [  **@publisher=** ] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Этот параметр должен быть указан только для не -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей.  
   
  [  **@publisher_db=** ] **"***publisher_db***"**  
- Имя базы данных публикации. *publisher_db* — **sysname**, значение по умолчанию NULL. Этот параметр не учитывается, если хранимая процедура выполняется на издателе.  
+ Имя базы данных публикации. *publisher_db* — **sysname**, со значением по умолчанию NULL. Этот параметр не учитывается, если хранимая процедура выполняется на издателе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_deletetracertokenhistory** используется в репликации транзакций.  
   
  При выполнении **sp_deletetracertokenhistory**, можно указать только один из *tracer_id* или *cutoff_date*. При задании обоих параметров возвращается ошибка.  
   
- Если не выполнить **sp_deletetracertokenhistory** для удаления метаданных по трассировочным токенам, данные будут удалены при плановой очистки журнала.  
+ Если вы не выполняйте **sp_deletetracertokenhistory** для удаления метаданных по трассировочным токенам, информация удаляется при выполнении плановой очистки журнала.  
   
- Идентификаторы трассировочных токенов, которые можно определить, выполнив [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) или запросив [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) системной таблицы.  
+ Идентификаторы трассировочных токенов, которые можно определить, выполнив [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) или запросив [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) системная таблица.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных в базе данных публикации или **db_owner** базы данных или  **replmonitor** роли в базе данных распространителя могут выполнять процедуру **sp_deletetracertokenhistory**.  
+ Только члены **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных в базе данных публикации или **db_owner** базы данных или  **replmonitor** ролей в базе данных распространителя могут выполнять процедуру **sp_deletetracertokenhistory**.  
   
 ## <a name="see-also"></a>См. также  
  [Измерение задержки и проверка правильности соединений для репликации транзакций](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

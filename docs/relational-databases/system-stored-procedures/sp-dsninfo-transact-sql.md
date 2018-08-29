@@ -1,5 +1,5 @@
 ---
-title: sp_dsninfo (Transact-SQL) | Документы Microsoft
+title: sp_dsninfo (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a9c04611a342f81b6aa0a0b403eb6ff4ce8a643
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63e4783420f9298e2e820341993774b81bbab7e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992581"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017497"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sp_dsninfo [ @dsn =] 'dsn'
  Имя связанного сервера ODBC DSN или OLE DB. *DSN* — **varchar(128)**, не имеет значения по умолчанию.  
   
  [  **@infotype =**] **"***Тип_информации***"**  
- Возвращаемый тип информации. Если *Тип_информации* не указан или если указано значение NULL, возвращаются все типы информации. *Тип_информации* — **varchar(128)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
+ Возвращаемый тип информации. Если *Тип_информации* не указан или если указано значение NULL, возвращаются все типы информации. *Тип_информации* — **varchar(128)**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**: DBMS_NAME**|Указывает имя поставщика источника данных.|  
 |**DBMS_VERSION**|Указывает версию источника данных.|  
-|**ИМЯ_БАЗЫ_ДАННЫХ**|Указывает имя базы данных.|  
+|**DATABASE_NAME**|Указывает имя базы данных.|  
 |**SQL_SUBSCRIBER**|Указывает, что источник данных может быть подписчиком.|  
   
  [  **@login =**] **"***входа***"**  
@@ -83,16 +83,16 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Тип данных**|**nvarchar(64)**|Типы данных, например: DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
+|**Тип сведений**|**Nvarchar(64)**|Типы данных, например: DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Value**|**nvarchar(512)**|Значение связанного типа данных.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_dsninfo** используется во всех типах репликации.  
   
- **sp_dsninfo** извлекает ODBC или OLE DB для источника данных, показывает, является ли база данных может использоваться для репликации или запросы.  
+ **sp_dsninfo** извлекает ODBC или OLE DB для источника данных, показывающий, является ли база данных может использоваться для репликации или запросы.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_dsninfo**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_dsninfo**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_enumdsn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   

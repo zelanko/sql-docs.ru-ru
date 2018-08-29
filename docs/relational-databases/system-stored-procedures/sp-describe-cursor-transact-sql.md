@@ -1,5 +1,5 @@
 ---
-title: процедура sp_describe_cursor (Transact-SQL) | Документы Microsoft
+title: процедура sp_describe_cursor (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72278631cebc617666317df77fd62e28442b9706
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 81b6e932fb824d636b06dc92980114fbb956ff08
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034828"
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
   
 ## <a name="arguments"></a>Аргументы  
  [ @cursor_return=] *output_cursor_variable* выходных данных  
- Имя объявленной переменной для получения выходных данных курсора. *output_cursor_variable* — **курсор**, не по умолчанию, и не быть связан с одним курсором при вызове процедуры sp_describe_cursor. Возвращаемый курсор является прокручиваемым, динамическим и доступным только для чтения.  
+ Имя объявленной переменной для получения выходных данных курсора. *output_cursor_variable* — **курсор**, не по умолчанию, и не быть связан ни с одним курсором при вызове процедуры sp_describe_cursor. Возвращаемый курсор является прокручиваемым, динамическим и доступным только для чтения.  
   
  [ @cursor_source=] {N'local' | N'global' | N'variable'}  
  Указывает, задан ли возвращаемый курсор с помощью имени локального курсора, глобального курсора или курсорной переменной. Параметр — **nvarchar(30)**.  
@@ -69,10 +70,10 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  Имя переменной курсора, связанной с открытым курсором. *input_cursor_variable* — **nvarchar(128)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="cursors-returned"></a>Возвращенные курсоры  
- процедура sp_describe_cursor помещает результирующий набор [!INCLUDE[tsql](../../includes/tsql-md.md)] **курсор** выходной параметр. Это позволяет пакетам [!INCLUDE[tsql](../../includes/tsql-md.md)], хранимым процедурам и триггерам построчно обрабатывать выходные данные. Это также означает, что процедуру нельзя вызывать непосредственно из функций API баз данных. **Курсор** выходной параметр должен быть привязан к программной переменной, но API базы данных не поддерживают привязку **курсор** параметры или переменные.  
+ процедура sp_describe_cursor помещает результирующий набор [!INCLUDE[tsql](../../includes/tsql-md.md)] **курсор** выходного параметра. Это позволяет пакетам [!INCLUDE[tsql](../../includes/tsql-md.md)], хранимым процедурам и триггерам построчно обрабатывать выходные данные. Это также означает, что процедуру нельзя вызывать непосредственно из функций API баз данных. **Курсор** выходной параметр должен быть привязан к программной переменной, но API базы данных не поддерживают привязку **курсор** параметры или переменные.  
   
  В приведенной ниже таблице показан формат курсора, возвращенного процедурой sp_describe_cursor. Формат курсора такой же, что и формат, возвращаемый процедурой sp_cursor_list.  
   
@@ -93,10 +94,10 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |last_operation|**tinyint**|Последняя операция, выполненная над курсором.<br /><br /> 0 = операции c курсором не выполнялись.<br /><br /> 1 = OPEN;<br /><br /> 2 = FETCH;<br /><br /> 3 = ВСТАВКА<br /><br /> 4 = UPDATE;<br /><br /> 5 = DELETE;<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Уникальное значение для курсора в пределах сервера.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Процедура sp_describe_cursor описывает такие глобальные для серверного курсора атрибуты как возможность прокрутки и обновления. Используйте процедуру sp_describe_cursor_columns для описания атрибутов результирующего набора, возвращаемого курсором. Процедура sp_describe_cursor_tables используется для получения отчета по базовым таблицам, на которые ссылается курсор. Чтобы получить отчет по серверным курсорам [!INCLUDE[tsql](../../includes/tsql-md.md)], видимым в соединении, используется процедура sp_cursor_list.  
   
- Инструкция DECLARE CURSOR может затребовать тип курсора, который не поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции SELECT, содержащейся в DECLARE CURSOR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] неявно преобразует курсор в тип, который может поддерживаться с использованием инструкции SELECT. Если в инструкции DECLARE CURSOR указано ключевое слово TYPE_WARNING, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет в приложение информационное сообщение о завершении преобразования. процедура sp_describe_cursor затем может вызываться для определения типа полученного курсора был реализован.  
+ Инструкция DECLARE CURSOR может затребовать тип курсора, который не поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции SELECT, содержащейся в DECLARE CURSOR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] неявно преобразует курсор в тип, который может поддерживаться с использованием инструкции SELECT. Если в инструкции DECLARE CURSOR указано ключевое слово TYPE_WARNING, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет в приложение информационное сообщение о завершении преобразования. затем sp_describe_cursor можно вызвать для определения типа курсора, который был реализован.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
@@ -145,7 +146,7 @@ GO
  [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Хранимая процедура sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [sp_describe_cursor_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [процедура sp_describe_cursor_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
  [процедура sp_describe_cursor_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
   

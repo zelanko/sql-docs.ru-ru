@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscription (Transact-SQL) | Документы Microsoft
+title: sp_changesubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47ce4c99261b7b7fd5ee7b3af4636d5ced5cf4f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64a34ed640dc9efac57d948475071690ed266d2e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991831"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023335"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "32991831"
   Изменяет свойства моментального снимка или транзакционной принудительной подписки или подписки по запросу, участвующей в репликации транзакций, обновляемой посредством очередей. Для изменения свойств всех других типов подписок по запросу, используйте [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** выполняется на издателе в базе данных публикации.  
   
 > [!IMPORTANT]  
->  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_changesubscription [ @publication = ] 'publication'
  [ **@publication**=] **"***публикации***"**  
  Имя публикации, которую нужно изменить. *Публикация*— **sysname**, не имеет значения по умолчанию  
   
- [ **@article** =] **"***статьи***"**  
+ [ **@article** =] **"***статье***"**  
  Имя изменяемой статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@subscriber** =] **"***подписчика***"**  
@@ -72,27 +72,27 @@ sp_changesubscription [ @publication = ] 'publication'
  Свойство, изменяемое для данной подписки. *Свойство* — **nvarchar(30)**, и может принимать одно из значений в таблице.  
   
  [  **@value=**] **"***значение***"**  
- Новое значение для указанного *свойства*. *значение* — **nvarchar(4000)**, и может принимать одно из значений в таблице.  
+ Новое значение для указанного *свойство*. *значение* — **nvarchar(4000)**, и может принимать одно из значений в таблице.  
   
-|property|Значение|Описание|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Имя входа учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой выполняется агент.|  
 |**distrib_job_password**||Пароль учетной записи Windows, от имени которой выполняется агент.|  
-|**subscriber_catalog**||Каталог, используемый при соединении с поставщиком OLE DB. Данное свойство допустимо только для не -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.|  
-|**subscriber_datasource**||Имя источника данных, понятное поставщику OLE DB. *Данное свойство допустимо только для не -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков.*|  
-|**subscriber_location**||Местоположение базы данных, понятное поставщику OLE DB. *Данное свойство допустимо только для не -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков.*|  
+|**subscriber_catalog**||Каталог, используемый при соединении с поставщиком OLE DB. Это свойство допустимо только для не -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.|  
+|**subscriber_datasource**||Имя источника данных, понятное поставщику OLE DB. *Это свойство допустимо только для не -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков.*|  
+|**subscriber_location**||Местоположение базы данных, понятное поставщику OLE DB. *Это свойство допустимо только для не -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков.*|  
 |**subscriber_login**||Имя входа на подписчик.|  
 |**subscriber_password**||Надежный пароль для указанного имени входа.|  
 |**subscriber_security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows.|  
 ||**0**|При подключении к подписчику используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**subscriber_provider**||Уникальный программный идентификатор (PROGID), с которым зарегистрирован поставщик OLE DB для источника данных, не относящихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Данное свойство допустимо только для не -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков.*|  
-|**subscriber_providerstring**||Идентифицирующая источник данных строка соединения, зависящая от поставщика OLE DB. *Данное свойство допустимо только для не -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков.*|  
-|**потоки подписки**||Количество дозволенных соединений на каждого агента распространителя при применении пакета изменения параллельно с подписчиком. Диапазон значений от **1** для **64** поддерживается для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей. Это свойство должно быть **0** для отличного[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, издателей Oracle или одноранговых для подписки.|  
+|**subscriber_provider**||Уникальный программный идентификатор (PROGID), с которым зарегистрирован поставщик OLE DB для источника данных, не относящихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Это свойство допустимо только для не -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков.*|  
+|**subscriber_providerstring**||Идентифицирующая источник данных строка соединения, зависящая от поставщика OLE DB. *Это свойство допустимо только для не -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *подписчиков.*|  
+|**SubscriptionStreams**||Количество дозволенных соединений на каждого агента распространителя при применении пакета изменения параллельно с подписчиком. Диапазон значений от **1** для **64** поддерживается для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей. Это свойство должно быть **0** для отличных[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, издателей Oracle или peer-to-peer подписок.|  
 |**subscriber_type**|**1**|Сервер источника данных ODBC|  
 ||**3**|Поставщик OLE DB|  
-|**оптимизированные для памяти**|**бит**|Указывает, что подписка поддерживает оптимизированные для памяти таблицы. *memory_optimized* — **бит**, где 1 равен true (подписка поддерживает оптимизированные для памяти таблицы).|  
+|**memory_optimized**|**bit**|Указывает, что данная подписка поддерживает оптимизированные для памяти таблицы. *memory_optimized* — **бит**, где 1 соответствует true (данная подписка поддерживает оптимизированные для памяти таблицы).|  
   
- [  **@publisher =** ] **"***издатель***"**  
+ [  **@publisher =** ] **"***издателя***"**  
  Задает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -101,15 +101,15 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_changesubscription** используется в моментальных снимков и репликации транзакций.  
+## <a name="remarks"></a>Примечания  
+ **sp_changesubscription** используется в репликации моментальных снимков и репликации транзакций.  
   
- **sp_changesubscription** может использоваться только для изменения свойств принудительных подписок или подписки по запросу участвующих в репликации транзакций обновление посредством очередей. Для изменения свойств всех других типов подписок по запросу, используйте [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
+ **sp_changesubscription** может использоваться только для изменения свойств принудительной подписки или подписки по запросу участвующих в репликации транзакций обновления посредством очередей. Для изменения свойств всех других типов подписок по запросу, используйте [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
   
  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_changesubscription**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_changesubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   

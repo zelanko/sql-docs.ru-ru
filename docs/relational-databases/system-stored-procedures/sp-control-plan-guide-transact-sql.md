@@ -1,5 +1,5 @@
 ---
-title: sp_control_plan_guide (Transact-SQL) | Документы Microsoft
+title: sp_control_plan_guide (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f7514e07f4a363072dc527827a858becab8dc0d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dd0be5eaefe85082de07b9d815e836016407ee00
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238381"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038424"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>Хранимая процедура sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,24 +59,24 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Задает структуру плана, предназначенную к удалению, включению или отключению. *plan_guide_name* разрешается в текущей базе данных. Если не указан, *plan_guide_name* по умолчанию имеет значение NULL.  
   
  DROP  
- Удаляет структуру плана, заданную с *plan_guide_name*. После удаления структуры плана будущее выполнение запроса, ранее соответствовавшего этой структуре плана, не затрагивается.  
+ Удаляет структуру плана, заданную аргументом *plan_guide_name*. После удаления структуры плана будущее выполнение запроса, ранее соответствовавшего этой структуре плана, не затрагивается.  
   
  DROP ALL  
- Удаляет все структуры планов из текущей базы данных. **N'*** plan_guide_name* не может быть задан при DROP ALL.  
+ Удаляет все структуры планов из текущей базы данных. **N'*** plan_guide_name* не может быть указан, если задан DROP ALL.  
   
  DISABLE  
- Отключает структуру плана, заданные *plan_guide_name*. После отключения структуры плана будущее выполнение запроса, ранее соответствовавшего этой структуре плана, не затрагивается.  
+ Отключает структуру плана, заданную аргументом *plan_guide_name*. После отключения структуры плана будущее выполнение запроса, ранее соответствовавшего этой структуре плана, не затрагивается.  
   
  DISABLE ALL  
- Отключает все структуры планов в текущей базе данных. **N'*** plan_guide_name* не может быть задан при DISABLE ALL.  
+ Отключает все структуры планов в текущей базе данных. **N'*** plan_guide_name* нельзя указать, когда DISABLE ALL задан.  
   
  ENABLE  
- Включает структуру плана, заданные *plan_guide_name*. После включения структуры плана с ней может быть сопоставлен совпадающий запрос. По умолчанию структура плана включается во время создания.  
+ Включает структуру плана, заданную аргументом *plan_guide_name*. После включения структуры плана с ней может быть сопоставлен совпадающий запрос. По умолчанию структура плана включается во время создания.  
   
  ENABLE ALL  
- Включает все структуры планов в текущей базе данных. **N'***plan_guide_name***"** не может быть задан при ВКЛЮЧИТЬ ALL.  
+ Включает все структуры планов в текущей базе данных. **N'***plan_guide_name***"** не может быть указан, если ВКЛЮЧИТЬ все указан.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Попытка удаления или изменения функции, хранимой процедуры или триггера DML, на которые имеется ссылка в структуре плана (как включенных, так и отключенных), приводит к ошибке.  
   
  Отключение уже отключенной структуры плана или включение включенной не имеет силы и не вызывает ошибки.  
@@ -84,7 +84,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Структуры плана доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Тем не менее, можно выполнить **sp_control_plan_guide** с параметром DROP или DROP ALL в любом выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения **sp_control_plan_guide** на структуру плана типа OBJECT (созданного с помощью  **@type = "** ОБЪЕКТА **"** ) требуется разрешение ALTER на объект, ссылка на структуру плана. Все остальные структуры планов требуют разрешения ALTER DATABASE.  
+ Для выполнения **sp_control_plan_guide** на структуру плана типа OBJECT (созданной с помощью  **@type = "** объект **"** ) требуется разрешение ALTER на объект, упоминаемый в структуре плана. Все остальные структуры планов требуют разрешения ALTER DATABASE.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -139,7 +139,7 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.plan_guides (Transact-SQL)](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   

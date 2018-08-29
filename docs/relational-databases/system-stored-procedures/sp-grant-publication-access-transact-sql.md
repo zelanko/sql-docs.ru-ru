@@ -1,5 +1,5 @@
 ---
-title: sp_grant_publication_access (Transact-SQL) | Документы Microsoft
+title: sp_grant_publication_access (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_grant_publication_access
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c6739cd65e016e08773831d0bc87e46ac27ae1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 681e62cea3b5bf9a22cedd1ab1803737b2080642
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994201"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023942"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +56,13 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_grant_publication_access** используется в моментальных снимков, транзакций и репликации слиянием.  
   
  Эту хранимую процедуру можно вызывать повторно.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_grant_publication_access**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_grant_publication_access**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   

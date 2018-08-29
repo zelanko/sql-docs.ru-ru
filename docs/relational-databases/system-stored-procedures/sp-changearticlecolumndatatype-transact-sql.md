@@ -1,5 +1,5 @@
 ---
-title: sp_changearticlecolumndatatype (Transact-SQL) | Документы Microsoft
+title: sp_changearticlecolumndatatype (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04da16aadb8caf05ee28882c11658e81bf5bbfe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 017131fd7bda406fdee178d8e36ab5443c487d4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026630"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   Меняет сопоставление типа данных столбца статьи для публикации Oracle. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
 > [!NOTE]  
->  Сопоставления типов данных между поддерживаемыми типами издателей обеспечиваются по умолчанию. Используйте **sp_changearticlecolumndatatype** только в том случае, если переопределение параметров по умолчанию.  
+>  Сопоставления типов данных между поддерживаемыми типами издателей обеспечиваются по умолчанию. Используйте **sp_changearticlecolumndatatype** только тогда, когда эти параметры по умолчанию.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,13 +57,13 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [  **@publication=** ] **"***публикации***"**  
  Имя публикации Oracle. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article =** ] **"***статьи***"**  
+ [  **@article =** ] **"***статье***"**  
  Имя статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@column**=] **"***столбца***"**  
+ [ **@column**=] **"***столбец***"**  
  Имя столбца, для которого изменяется сопоставление типа данных. *столбец* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@type** =] **"***типа***"**  
+ [ **@type** =] **"***тип***"**  
  Имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных в целевом столбце. *Тип* — **sysname**, значение по умолчанию NULL.  
   
  [ **@length** =] *длина*  
@@ -72,21 +72,21 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [ **@precision**=] *точности*  
  Точность типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в целевом столбце. *точность* — **bigint**, значение по умолчанию NULL.  
   
- [ **@publisher**=] **"***издатель***"**  
+ [ **@publisher**=] **"***издателя***"**  
  Задает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **Sp_changearticlecolumndatatype** используется для переопределения сопоставлений типов данных между поддерживаемыми типами издателей (Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Чтобы просмотреть эти сопоставления типов данных по умолчанию, необходимо выполнить [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
+## <a name="remarks"></a>Примечания  
+ **Sp_changearticlecolumndatatype** используется для переопределения сопоставления типа данных по умолчанию между поддерживаемыми типами издателей (Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Чтобы просмотреть эти сопоставления типов данных по умолчанию, выполните [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
  **sp_changearticlecolumndatatype** поддерживается только для издателей Oracle. Выполнение этой хранимой процедуры для публикации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершится ошибкой.  
   
- **sp_changearticlecolumndatatype** должна выполняться для каждого сопоставления столбцов статьи, который необходимо изменить.  
+ **sp_changearticlecolumndatatype** необходимо выполнить для каждого сопоставления столбцов статьи, который должен быть изменен.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_changearticlecolumndatatype**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_changearticlecolumndatatype**.  
   
 ## <a name="see-also"></a>См. также  
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

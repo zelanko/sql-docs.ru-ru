@@ -1,5 +1,5 @@
 ---
-title: sys.database_audit_specifications (Transact-SQL) | Документы Microsoft
+title: sys.database_audit_specifications (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,34 +21,35 @@ helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91195df8c736b15429d4ac7e339ff19217c91bfd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9581acdf727d46157925010c47f92cea00862d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027302"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|Название|**sysname**|Имя спецификации аудита.|  
+|Имя|**sysname**|Имя спецификации аудита.|  
 |database_specification_id|**int**|Идентификатор спецификации базы данных.|  
 |create_date|**datetime**|Дата создания спецификации аудита.|  
 |modified_date|**datetime**|Дата последнего изменения спецификации аудита.|  
-|is_state_enabled|**бит**|Состояние спецификации аудита:<br /><br /> 0 — ОТКЛЮЧЕН.<br /><br /> 1 — ВКЛЮЧЕН|  
+|is_state_enabled|**bit**|Состояние спецификации аудита:<br /><br /> 0 — ОТКЛЮЧЕН.<br /><br /> 1 — ВКЛЮЧЕН|  
 |audit_GUID|**uniqueidentifer**|Идентификатор GUID аудита, содержащего эту спецификацию. Используется в процессе перечисления спецификаций аудита рядовой базы данных при присоединении или запуске базы данных.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если база данных находится в режиме «только для чтения», компонент аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может добавить спецификацию аудита базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Участники **ALTER ANY DATABASE AUDIT** или **VIEW DEFINITION** разрешений, роль dbo и члены роли базы данных db_owners имеют доступ к этому представлению каталога. Кроме того, участник не должно быть запрещено **VIEW DEFINITION** разрешение.  
+ Участники с **ALTER ANY DATABASE AUDIT** или **VIEW DEFINITION** разрешения, роль dbo и члены роли базы данных db_owners имеют доступ к этому представлению каталога. Кроме того, участник не должно быть запрещено **VIEW DEFINITION** разрешение.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

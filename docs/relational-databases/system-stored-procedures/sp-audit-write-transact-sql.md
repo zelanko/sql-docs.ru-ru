@@ -1,5 +1,5 @@
 ---
-title: sp_audit_write (Transact-SQL) | Документы Microsoft
+title: sp_audit_write (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_audit_write
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84b7ea14b205b2642c8c67c24793310ca8245832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9e52313f827d49200e58910d4fa577d39d91567f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239304"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037896"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Добавляет событие определяемой пользователем аудита **USER_DEFINED_AUDIT_GROUP**. Если **USER_DEFINED_AUDIT_GROUP** не включена, **sp_audit_write** учитывается.  
+  Добавляет событие аудита, определяемые пользователем **USER_DEFINED_AUDIT_GROUP**. Если **USER_DEFINED_AUDIT_GROUP** не включена, **sp_audit_write** учитывается.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +47,7 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
   
 ## <a name="arguments"></a>Аргументы  
  **@user_defined_event_id**  
- Определяемый пользователем параметр, записываются в **user_defined_event_id** столбца журнала аудита. *@user_defined_event_id* Тип **smallint**.  
+ Параметр, определяемый пользователем, который заносится в **user_defined_event_id** столбец журнала аудита. *@user_defined_event_id* является типом **smallint**.  
   
  **@succeeded**  
  Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. *@succeeded* — **бит**.  
@@ -61,8 +60,8 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
   
  Ошибки вызваны неверными входными параметрами или ошибкой записи в целевой журнал аудита.  
   
-## <a name="remarks"></a>Замечания  
- Когда **USER_DEFINED_AUDIT_GROUP** добавляется в спецификацию аудита сервера или спецификацию аудита базы данных, событие, вызванное **sp_audit_write** будут включены в журнал аудита.  
+## <a name="remarks"></a>Примечания  
+ Когда **USER_DEFINED_AUDIT_GROUP** добавляется в спецификацию аудита сервера или спецификацию аудита базы данных, событие, вызванное **sp_audit_write** будут включены в журнале аудита.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **открытый** роли базы данных.  

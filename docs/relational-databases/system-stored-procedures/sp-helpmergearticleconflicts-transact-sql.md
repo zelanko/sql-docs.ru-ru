@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticleconflicts (Transact-SQL) | Документы Microsoft
+title: sp_helpmergearticleconflicts (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d533e2cf1aad3d7ee0b9610e010b42baabf054ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fb4fe8ff1dadebe5f2bb2a7af5209c2e761e0af
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995171"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037307"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,35 +48,35 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@publication=**] **"***публикации***"**  
- — Имя публикации слиянием. *публикации* — **sysname**, значение по умолчанию **%**, который возвращает все статьи в базе данных, содержащие конфликты.  
+ — Имя создаваемой публикации слиянием. *публикации* — **sysname**, значение по умолчанию **%**, который возвращает все статьи в базе данных, содержащие конфликты.  
   
- [  **@publisher=**] **"***издатель***"**  
- — Это имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+ [  **@publisher=**] **"***издателя***"**  
+ — Имя издателя. *издателя* — **sysname**, значение по умолчанию NULL.  
   
  [  **@publisher_db=**] **"***publisher_db***"**  
- — Это имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL.  
+ — Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**В статье**|**sysname**|Имя статьи.|  
+|**Статья**|**sysname**|Имя статьи.|  
 |**source_owner**|**sysname**|Владелец исходного объекта.|  
 |**source_object**|**nvarchar(386)**|Имя исходного объекта.|  
 |**conflict_table**|**nvarchar(258)**|Имя таблицы, хранящей конфликты при операциях вставки или обновления.|  
 |**guidcolname**|**sysname**|Имя RowGuidCol для исходного объекта.|  
 |**centralized_conflicts**|**int**|Указывает, хранятся ли конфликтные записи на заданном издателе.|  
   
- Если у статьи есть только конфликты удаления и нет **conflict_table** строк, имя **conflict_table** в результирующем наборе содержит значение NULL.  
+ Если аргументу статьи только конфликты удаления и нет **conflict_table** rows, имя **conflict_table** в результирующем наборе содержит значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_helpmergearticleconflicts** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergearticleconflicts**.  
+ Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_helpmergearticleconflicts**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_changedistributor_property (Transact-SQL) | Документы Microsoft
+title: sp_changedistributor_property (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_changedistributor_property
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b44507077740162e2d07f9066a13c4eb14fabfa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecdecaef950761b59b1e55dfaf0224a8f442f3ed
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018360"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |Значение|Описание|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Максимальное время работы агента (в минутах) без регистрации сообщения о ходе выполнения.|  
-|NULL (по умолчанию)|Все доступные *свойства* значения выводятся на печать.|  
+|NULL (по умолчанию)|Все доступные *свойство* выводятся значения.|  
   
  [  **@value=**] **"***значение***"**  
  Значение конкретного свойства распространителя. *значение* — **varchar(255)**, значение по умолчанию NULL.  
@@ -59,14 +60,14 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_changedistributor_property** используется во всех типах репликации.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_changedistributor_property**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_changedistributor_property**.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

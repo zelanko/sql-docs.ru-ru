@@ -1,5 +1,5 @@
 ---
-title: sp_addremotelogin (Transact-SQL) | Документы Microsoft
+title: sp_addremotelogin (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addremotelogin
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ec988334611350fdf736b69100b27d79d5374342
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7be04649abd0a9bfdfb502074fa2f80d3209b92c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238824"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023242"
 ---
 # <a name="spaddremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +49,19 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>Аргументы  
  [ @remoteserver **=** ] **"***remoteserver***"**  
- Имя удаленного сервера, к которому применяется удаленный вход. *удаленный сервер* — **sysname**, не имеет значения по умолчанию. Если только *remoteserver* указан, все пользователи на *remoteserver* сопоставляются с существующие имена входа с тем же именем на локальном сервере. Сервер должен быть известен локальному серверу. Его можно добавить с помощью sp_addserver. Когда пользователей на *remoteserver* подключиться к локальному серверу, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры, осуществляется по локальным именам входа, совпадающим с их именами на *remoteserver* . *удаленный сервер* — это сервер, который инициирует удаленный вызов процедур.  
+ Имя удаленного сервера, к которому применяется удаленный вход. *удаленный сервер* — **sysname**, не имеет значения по умолчанию. Если только *remoteserver* указан, все пользователи на *remoteserver* сопоставляются существующие имена входа с тем же именем на локальном сервере. Сервер должен быть известен локальному серверу. Он добавляется с помощью sp_addserver. Когда пользователей на *remoteserver* подключиться к локальному серверу, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры осуществляется по локальным именам входа, совпадающим с их именами на *remoteserver* . *удаленный сервер* — это сервер, который инициирует удаленный вызов процедур.  
   
  [ @loginame **=** ] **"***входа***"**  
- Идентификатор имени входа для пользователя локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа*должен уже существовать на локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если *входа* указано, все пользователи в *remoteserver* сопоставляются этот заданное локальное имя входа. Когда пользователей на *remoteserver* подключиться к локальному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры осуществляется *входа*.  
+ Идентификатор имени входа для пользователя локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа*должен уже существовать на локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если *входа* указано, все пользователи в *remoteserver* сопоставляются, определенным локальным именем входа. Когда пользователей на *remoteserver* подключиться к локальному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры осуществляется по *входа*.  
   
  [ @remotename **=** ] **"***remote_name***"**  
- Идентификатор имени входа пользователя на удаленном сервере. *remote_name* — **sysname**, значение по умолчанию NULL. *remote_name* должен существовать на *remoteserver*. Если *remote_name* указан, пользователь *remote_name* сопоставляется *входа* на локальном сервере. Когда *remote_name* на *remoteserver* подключается к локальному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры, она подключается как *входа*. Идентификатор входа *remote_name* может отличаться от идентификатора входа на удаленном сервере *входа*.  
+ Идентификатор имени входа пользователя на удаленном сервере. *remote_name* — **sysname**, значение по умолчанию NULL. *remote_name* должен существовать на *remoteserver*. Если *remote_name* указан, пользователь *remote_name* сопоставляется *входа* на локальном сервере. Когда *remote_name* на *remoteserver* подключается к локальному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры, она подключается как *входа*. Идентификатор входа *remote_name* может отличаться от идентификатора входа на удаленном сервере, *входа*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- Для выполнения распределенных запросов используйте sp_addlinkedsrvlogin.  
+## <a name="remarks"></a>Примечания  
+ Для выполнения распределенных запросов, используйте sp_addlinkedsrvlogin.  
   
  sp_addremotelogin нельзя использовать внутри пользовательской транзакции.  
   
@@ -99,8 +98,8 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [Хранимая процедура sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [Хранимая процедура sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [Хранимая процедура sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

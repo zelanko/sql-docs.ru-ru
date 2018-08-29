@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_categories (Transact-SQL) | Документы Microsoft
+title: syspolicy_policy_categories (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_groups view
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
-caps.latest.revision: 15
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4ae8c81343cf5792e591e42814feb7c7d9f3d5d4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dde80a20278fc49532e1bbb083a75c0b590d7a39
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024695"
 ---
 # <a name="syspolicypolicycategories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.lasthandoff: 05/04/2018
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |policy_category_id|**int**|Идентификатор категории политики.|  
-|имя|**sysname**|Имя категории политики.|  
-|mandate_database_subscriptions|**бит**|Указывает, применима ли категория политики ко всем базам данных в экземпляре без явной подписки (1), или категория политики должна быть применена к базе данных с помощью явной подписки (0).|  
+|name|**sysname**|Имя категории политики.|  
+|mandate_database_subscriptions|**bit**|Указывает, применима ли категория политики ко всем базам данных в экземпляре без явной подписки (1), или категория политики должна быть применена к базе данных с помощью явной подписки (0).|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Выводит список групп политик управления на основе политик.  
   
 ## <a name="permissions"></a>Разрешения  

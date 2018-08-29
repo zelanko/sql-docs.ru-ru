@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributor (Transact-SQL) | Документы Microsoft
+title: sp_helpdistributor (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - sp_helpdistributor
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e634d01d6bf241d6d626fb6c28038aa6175b2468
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0b7e22c946626c10d08781e00886083d0991d01
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022583"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Выводит сведения о распространителе, базы данных распространителя, рабочем каталоге, и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи агента. Эта хранимая процедура выполняется на издателе для базы данных публикации или любой базы данных.  
+  Выводит сведения о распространителе, базе данных распространителя, рабочем каталоге, и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи агента. Эта хранимая процедура выполняется на издателе для базы данных публикации или любой базы данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +63,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
  [  **@distribdb=**] **"***distribdb***"** выходных данных  
  Имя базы данных распространителя. *distribdb* — **sysname**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
- [  **@directory=**] **"***каталога***"** выходных данных  
+ [  **@directory=**] **"***directory***"** выходных данных  
  Рабочий каталог. *каталог* — **nvarchar(255)**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
  [  **@account=**] **"***учетной записи***" выходные данные**  
@@ -83,7 +84,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
  [  **@distrib_cleanupagent =**] **"***distrib_cleanupagent***" выходные данные**  
  Имя агента очистки распространения. *distrib_cleanupagent* — **nvarchar(100)**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
- [  **@publisher=**] **"***издатель***"**  
+ [  **@publisher=**] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
  [  **@local=**] **"***локального***"**  
@@ -99,7 +100,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Распространитель**|**sysname**|Имя распространителя.|  
+|**распространитель**|**sysname**|Имя распространителя.|  
 |**База данных распространителя**|**sysname**|Имя базы данных распространителя.|  
 |**Каталог**|**nvarchar(255)**|Имя рабочего каталога.|  
 |**Учетная запись**|**nvarchar(255)**|Имя учетной записи пользователя Windows.|  
@@ -115,10 +116,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_helpdistributor** используется во всех типах репликации.  
   
- Если один или несколько выходных параметров задаются при выполнении **sp_helpdistributor**, все выходные параметры, присваивается значение NULL, присваиваются значения при выходе и результирующий набор не возвращается. Если выходных параметров нет, результирующий набор возвращается.  
+ Если один или несколько выходных параметров указаны при выполнении **sp_helpdistributor**, все выходные параметры, присваивается значение NULL, присваиваются значения при выходе, и результирующий набор не возвращается. Если выходных параметров нет, результирующий набор возвращается.  
   
 ## <a name="permissions"></a>Разрешения  
  Следующие столбцы результирующего набора или выходные параметры возвращаются членам **sysadmin** предопределенной роли сервера на издателе и **db_owner** предопределенной роли базы данных в базе данных публикации:  

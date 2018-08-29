@@ -1,5 +1,5 @@
 ---
-title: sp_clean_db_free_space (Transact-SQL) | Документы Microsoft
+title: процедуру sp_clean_db_free_space (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ghost records
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e8f84f3539ea192a132282eee280f26ba80da5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c2870d2f88a3a984b4d8df958e6fac2afd6500c6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689262"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024360"
 ---
 # <a name="spcleandbfreespace-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет остаточные данные, оставляемые на страницах базы данных процедурами изменения данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sp_clean_db_free_space очищает все страницы во всех файлах базы данных.  
+  Удаляет остаточные данные, оставляемые на страницах базы данных процедурами изменения данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. процедура sp_clean_db_free_space очищает все страницы во всех файлах базы данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +63,7 @@ sp_clean_db_free_space
   
  Рекомендуется создать полную резервную копию базы данных, прежде чем выполнить процедуру sp_clean_db_free_space.  
   
- Связанный [sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) хранимой процедуры можно очистить отдельный файл.  
+ Связанные [sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) хранимой процедуры можно очистить отдельный файл.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли базы данных db_owner.  
@@ -79,7 +79,7 @@ EXEC sp_clean_db_free_space
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
  <br>[Руководство по процессу очистки фантомных записей](../ghost-record-cleanup-process-guide.md) 
   
   

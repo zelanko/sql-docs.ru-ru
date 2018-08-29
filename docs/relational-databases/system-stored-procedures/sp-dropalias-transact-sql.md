@@ -1,5 +1,5 @@
 ---
-title: sp_dropalias (Transact-SQL) | Документы Microsoft
+title: sp_dropalias (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/18/2015
 ms.prod: sql
@@ -13,21 +13,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 46615017-c4f2-4586-91d9-4d66b5311ae9
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5e19d143cc978d4635d785ddc6832f931bb8018c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b461f0f1c9f6d3d3696e544ec479faca4138e1ed
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242251"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017798"
 ---
 # <a name="spdropalias-transact-sql"></a>sp_dropalias (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_dropalias** был удален для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Синтаксис см. в разделе [sp_dropalias (Transact-SQL)](https://msdn.microsoft.com/library/ms177513\(v=sql.105\).aspx) в более ранних документации.  
+  **sp_dropalias** был удален для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Синтаксис, см. в разделе [sp_dropalias (Transact-SQL)](https://msdn.microsoft.com/library/ms177513\(v=sql.105\).aspx) в более ранних документации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,5 +33,5 @@ ms.locfileid: "33242251"
 See previous version.  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   

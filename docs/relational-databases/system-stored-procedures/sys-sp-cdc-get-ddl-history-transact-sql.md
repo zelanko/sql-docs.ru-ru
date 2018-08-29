@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_ddl_history (Transact-SQL) | Документы Microsoft
+title: sys.sp_cdc_get_ddl_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cafbdcab4ad480493181cc7b2f6b160e34ea681
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2a5b652807c0392e7c55c51173aa1aeecbae4dba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036362"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,13 +60,13 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |source_schema|**sysname**|Имя схемы исходной таблицы.|  
 |source_table|**sysname**|Имя исходной таблицы.|  
 |capture_instance|**sysname**|Имя экземпляра отслеживания.|  
-|required_column_update|**бит**|Указывает, что изменение DDL требует обновления столбца в таблице изменений, чтобы отразить изменения типа данных в исходном столбце.|  
+|required_column_update|**bit**|Указывает, что изменение DDL требует обновления столбца в таблице изменений, чтобы отразить изменения типа данных в исходном столбце.|  
 |ddl_command|**nvarchar(max)**|Инструкция DDL, примененная к исходной таблице.|  
 |ddl_lsn|**binary(10)**|Регистрационный номер транзакции в журнале (LSN), связанный с изменением DDL.|  
 |ddl_time|**datetime**|Время изменения DDL.|  
   
-## <a name="remarks"></a>Замечания  
- Изменения DDL в исходной таблице, изменить структуру столбцов, такие как добавление или удаление столбца или изменить тип данных существующего столбца, сохраняются в [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) таблицы. Эти изменения доступны хранимым процедурам. Записи в таблицу «cdc.ddl_history» добавляются во время считывания процессом отслеживания транзакций DDL в журнале.  
+## <a name="remarks"></a>Примечания  
+ Изменения DDL в исходной таблице, которые изменяют структуру столбцов, таких как добавление или удаление столбца или изменения существующего столбца, тип данных сохраняются в [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) таблицы. Эти изменения доступны хранимым процедурам. Записи в таблицу «cdc.ddl_history» добавляются во время считывания процессом отслеживания транзакций DDL в журнале.  
   
 ## <a name="permissions"></a>Разрешения  
  Для возвращения строк всех экземпляров отслеживания в базе данных необходимо членство в предопределенной роли базы данных «db_owner». Всем остальным пользователям необходимо разрешение SELECT для всех отслеживаемых столбцов в исходной таблице. Кроме того, если для экземпляра отслеживания была определена шлюзовая роль, требуется членство в этой роли базы данных.  

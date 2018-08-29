@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (Transact-SQL) | Документы Microsoft
+title: sp_helpdistributiondb (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02065dbaa89a16c0d00ce8737bb79f29c5256495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df4a44be4ef3271e6af8e7148bfee50f40c71617
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996931"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018300"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@database=**] **"***имя_базы_данных***"**  
- Имя базы данных, для которой возвращаются свойства. *database_name* — **sysname**, значение по умолчанию **%** для всех баз данных, связанным с распространителем, для которых у пользователя есть разрешения.  
+ Имя базы данных, для которой возвращаются свойства. *database_name* — **sysname**, значение по умолчанию **%** для всех баз данных, связанным с распространителем, для которых пользователь имеет разрешения.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -69,11 +69,11 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_helpdistributiondb** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Члены **db_owner** предопределенной роли базы данных или **replmonitor** роли в базе данных распространителя и пользователи в списке доступа к публикации, публикации, использующей базу данных распространителя могут выполнять процедуру **sp_helpdistributiondb** для возврата сведений, относящихся к файлам. Члены **открытый** могут выполнять процедуру **sp_helpdistributiondb** для возврата сведений не относящиеся к файлу для базы данных распространителя, к которым они имеют доступ.  
+ Членами **db_owner** предопределенной роли базы данных или **replmonitor** роли в базе данных распространителя и пользователей в списке доступа к публикации, публикации, использующей базу данных распространителя могут выполнять процедуру **sp_helpdistributiondb** для возврата сведений с файлами. Членами **открытый** роли могут выполнять процедуру **sp_helpdistributiondb** для возврата не относящихся к файлу сведений для базы данных распространителя, к которым они имеют доступ.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

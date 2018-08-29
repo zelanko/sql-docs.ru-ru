@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Документы Microsoft
+title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f4f5ef8c72155b83595f04c92cdeb2c1cf16a34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40e4e8e4ab9603648abe6f92ae99a287755390a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239214"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019944"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,10 +73,10 @@ sp_add_log_shipping_secondary_primary
  Имя создаваемого задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для копирования резервных копий журналов транзакций на сервер-получатель. *copy_job_name* — **sysname** и не может иметь значение NULL.  
   
  [ **@restore_job_name** =] '*restore_job_name*"  
- Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента на сервере-получателе, которое восстанавливает резервные копии баз данных-получателей. *restore_job_name* — **sysname** и не может иметь значение NULL.  
+ Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание агента на сервере-получателе, которое восстанавливает резервные копии базы данных-получателя. *restore_job_name* — **sysname** и не может иметь значение NULL.  
   
  [ **@file_retention_period** =] '*file_retention_period*"  
- Время в минутах, в которых файл резервной копии хранится на сервере-получателе в каталоге, указанном @backup_destination_directory параметров перед их удалением. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
+ Продолжительность времени в минутах, в которых файл резервной копии хранится на сервере-получателе в пути, указанному свойством @backup_destination_directory параметров перед их удалением. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
  [ **@monitor_server** =] '*monitor_server*"  
  Имя сервера мониторинга. *Monitor_server* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
@@ -110,9 +109,9 @@ sp_add_log_shipping_secondary_primary
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_add_log_shipping_secondary_primary** должна запускаться из **master** базы данных на сервере-получателе. Эта хранимая процедура выполняет следующее:  
   
 1.  Формирует идентификатор получателя для указанного сервера-источника и базы данных-источника.  
@@ -123,11 +122,11 @@ sp_add_log_shipping_secondary_primary
   
     2.  создает отключенное задание копирования для идентификатора получателя;  
   
-    3.  Задает идентификатор задания копирования в **log_shipping_secondary** входа идентификатору задания копирования.  
+    3.  Задает идентификатор задания копирования в **log_shipping_secondary** запись идентификатору задания копирования.  
   
     4.  создает отключенное задание восстановления для идентификатора получателя;  
   
-    5.  Задать идентификатор задания восстановления в **log_shipping_secondary** входа идентификатору задания восстановления.  
+    5.  Задайте идентификатор задания восстановления **log_shipping_secondary** запись идентификатору задания восстановления.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
@@ -153,7 +152,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_configure (Transact-SQL) | Документы Microsoft
+title: процедура sp_syspolicy_configure (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_configure
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c51d30c8453cd5a9c2a92a3eb2ad22016c461b8f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b6214cd4658ac5ad9b6bd0b959a3040223dc1c3c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020980"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 ## <a name="arguments"></a>Аргументы  
  [  **@name =** ] **"***имя***"**  
- Имя параметра, который нужно настроить. *имя* — **sysname**является обязательным и не может быть NULL или пустая строка.  
+ Имя параметра, который нужно настроить. *имя* — **sysname**является обязательным и не может быть NULL или пустую строку.  
   
- *имя* может иметь любое из следующих значений:  
+ *имя* может быть любым из следующих значений:  
   
 -   Enabled — определяет, включено ли управление на основе политик.  
   
@@ -56,7 +56,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 -   LogOnSuccess — указывает, заносится ли успешное выполнение политик в журнал управления на основе политик.  
   
  [  **@value =** ] *значение*  
- Значение, которое связано с указанным значением для *имя*. *значение* — **sql_variant**и является обязательным.  
+ Является значением, связанный с указанным значением для *имя*. *значение* — **sql_variant**и является обязательным.  
   
 -   Если указать «Enabled» для *имя*, воспользуйтесь одним из следующих значений:  
   
@@ -75,7 +75,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_configure должна выполняться в контексте системной базы данных msdb.  
   
  Чтобы просмотреть текущие значения этих параметров, запросите системное представление msdb.dbo.syspolicy_configuration.  

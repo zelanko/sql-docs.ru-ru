@@ -1,5 +1,5 @@
 ---
-title: sp_helplinkedsrvlogin (Transact-SQL) | Документы Microsoft
+title: sp_helplinkedsrvlogin (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9615c833939c18b3653fa4035258b91bb5bdfc8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 74f2885b8b1226afbcd7f4aceb4d6f5835e20a0b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33253267"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036576"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
  Имя связанного сервера, к которому применяется сопоставление имен входа. *серверу rmtsrvname* — **sysname**, значение по умолчанию NULL. При значении NULL возвращаются все сопоставления имен входа, определенные для всех связанных серверов, определенных на локальном компьютере, где выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [  **@locallogin=**] **"***locallogin***"**  
- — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Входа на локальном сервере, сопоставленный со связанным сервером *серверу rmtsrvname*. *locallogin* — **sysname**, значение по умолчанию NULL. Значение NULL указывает, что все сопоставления имен входа определены на *серверу rmtsrvname* возвращаются. Если не равно NULL, сопоставление для *locallogin* для *серверу rmtsrvname* должен уже существовать. *locallogin* может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или пользователя Windows. В таком случае пользователь Windows должен иметь права на доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], полученные напрямую или через членство в группе Windows, имеющей такие права.  
+ — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Входа на локальном сервере, сопоставленный со связанным сервером *серверу rmtsrvname*. *locallogin* — **sysname**, значение по умолчанию NULL. Значение NULL указывает, что все сопоставления имен входа определены на *серверу rmtsrvname* возвращаются. В противном случае значение NULL, сопоставление для *locallogin* для *серверу rmtsrvname* должен уже существовать. *locallogin* может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа или пользователя Windows. В таком случае пользователь Windows должен иметь права на доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], полученные напрямую или через членство в группе Windows, имеющей такие права.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -60,11 +60,11 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |-----------------|---------------|-----------------|  
 |**Связанный сервер**|**sysname**|Имя связанного сервера.|  
 |**Локальное имя входа**|**sysname**|Локальное имя входа, для которого применяется сопоставление.|  
-|**Собственный сопоставление**|**smallint**|0 = **локальное имя входа** сопоставляется **удаленного входа** при подключении к **связанного сервера**.<br /><br /> 1 = **локальное имя входа** сопоставляется имя входа и пароль при подключении к **связанного сервера**.|  
-|**Удаленное имя входа**|**sysname**|Имя входа на **LinkedServer** сопоставленный **LocalLogin** при **IsSelfMapping** — 0. Если **IsSelfMapping** -1, **RemoteLogin** имеет значение NULL.|  
+|**Собственный сопоставления**|**smallint**|0 = **локальное имя входа** сопоставляется **удаленного входа** при подключении к **связанного сервера**.<br /><br /> 1 = **локальное имя входа** сопоставляется одно и то же имя входа и пароль при подключении к **связанного сервера**.|  
+|**Удаленный вход**|**sysname**|Имя входа на **LinkedServer** , сопоставленный с **LocalLogin** при **IsSelfMapping** равно 0. Если **IsSelfMapping** -1, **RemoteLogin** имеет значение NULL.|  
   
 ## <a name="remarks"></a>Примечания  
- Перед удалением сопоставлений имен входа с помощью **sp_helplinkedsrvlogin** для определения связанных серверов, которые участвуют.  
+ Перед удалением сопоставлений имен входа, используйте **sp_helplinkedsrvlogin** для определения связанных серверов, участвующих.  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешения не проверяются.  

@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (Transact-SQL) | Документы Microsoft
+title: sp_server_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0715ea7f2f58b8212b48e990c3e2d2f76301b373
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9355b4a6ca344111c5b3d9365823b2175942bcea
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026211"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
  Представляет целочисленный идентификатор атрибута. *attribute_id* — **int**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -57,7 +58,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Имя атрибута.|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Текущее значение атрибута.|  
   
- В следующей таблице перечислены атрибуты. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Библиотеки клиента ODBC сейчас используют атрибуты **1**, **2**, **18**, **22**, и **500** в соединении время.  
+ В следующей таблице перечислены атрибуты. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Библиотеки клиента ODBC сейчас используют атрибуты **1**, **2**, **18**, **22**, и **500** при подключении время.  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME, описание|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -74,12 +75,12 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**18**|COLLATION_SEQ<br /><br /> Определяет упорядочивание кодировок на данном сервере.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> Определяет, поддерживает ли базовая СУБД именованные точки сохранения.|Да|  
 |**20**|MULTI_RESULT_SETS<br /><br /> Определяет, поддерживает ли базовая база данных или сам шлюз множественные результирующие наборы (т.е. могут ли несколько инструкций отправляться через шлюз, возвращая клиенту несколько результирующих наборов).|Да|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> Указывает, следует ли в **sp_tables**, шлюз возвращать только таблицы, представления и т.п., доступны для текущего пользователя (пользователь, имеющий разрешения по крайней мере SELECT для таблицы).|Да|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> Указывает, следует ли в **sp_tables**, шлюз возвращать только таблицы, представления и т.д., доступным для текущего пользователя (то есть пользователь, у кого есть разрешения по крайней мере SELECT для таблицы).|Да|  
 |**100**|USERID_LENGTH<br /><br /> Указывает максимальное количество символов в имени пользователя.|128|  
-|**101**|QUALIFIER_TERM<br /><br /> Указывает термин поставщика СУБД для квалификатора таблицы (первой части трехкомпонентного имени таблицы).|базой данных|  
+|**101**|QUALIFIER_TERM<br /><br /> Указывает термин поставщика СУБД для квалификатора таблицы (первой части трехкомпонентного имени таблицы).|База данных|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> Определяет, поддерживает ли базовая СУБД именованные транзакции.|Да|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> Определяет, могут ли хранимые процедуры выполняться как события языка.|Да|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> Указывает, следует ли в **sp_stored_procedures**, шлюз возвращать только хранимые процедуры, исполняемых текущим пользователем.|Да|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> Указывает, следует ли в **sp_stored_procedures**, шлюз возвращать только хранимые процедуры, которые текущий пользователь.|Да|  
 |**105**|MAX_INDEX_COLS<br /><br /> Определяет максимальное количество столбцов в индексе для СУБД.|16|  
 |**106**|RENAME_TABLE<br /><br /> Определяет, возможно ли переименование таблиц.|Да|  
 |**107**|RENAME_COLUMN<br /><br /> Определяет, возможно ли переименование столбцов.|Да|  
@@ -91,8 +92,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> Определяет, возможно ли выполнение хранимых процедур через функции работы с удаленными хранимыми процедурами из DB-Library.|Да|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Определяет версию хранимых процедур каталога, реализованных на данный момент.|Номер текущей версии|  
   
-## <a name="remarks"></a>Замечания  
- **sp_server_info** возвращает подмножество сведений, предоставляемых **SQLGetInfo** в ODBC.  
+## <a name="remarks"></a>Примечания  
+ **sp_server_info** возвращает подмножество сведений, предоставленных **SQLGetInfo** в ODBC.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  

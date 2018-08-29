@@ -1,5 +1,5 @@
 ---
-title: sp_browsereplcmds (Transact-SQL) | Документы Microsoft
+title: sp_browsereplcmds (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19c4c3b162d882f3d7a31701ad2cc838fcaaed74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 744f28362bcb64d0d4e294e464cbd94c26f13d60
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036558"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Указывает, если команды с указанным *article_id* возвращаются. *article_id* — **int**, значение по умолчанию NULL.  
   
  [  **@command_id =**] *command_id*  
- Расположение команды в [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) для декодирования. *command_id* — **int**, значение по умолчанию NULL. Если указано, все остальные параметры должны быть также, указаны и *xact_seqno_start*должен быть идентичен *xact_seqno_end*.  
+ — Это расположение команды в [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) для декодирования. *command_id* — **int**, значение по умолчанию NULL. Если указан, все остальные параметры должны быть указаны также и *xact_seqno_start*должен быть идентичен *xact_seqno_end*.  
   
  [  **@agent_id =**] *agent_id*  
- Указывает, что возвращены только команды для конкретного агента репликации. *agent_id* — **int**, значение по умолчанию NULL.  
+ Указывает, что возвращены только команды для конкретного агента репликации. *agent_id* — **int**, со значением по умолчанию NULL.  
   
  [  **@compatibility_level =**] *compatibility_level*  
- Версия [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выступающей *compatibility_level* — **int**, значение по умолчанию 9000000.  
+ — Это версия [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором *compatibility_level* — **int**, со значением по умолчанию 9000000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -87,7 +87,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_db**|**sysname**|База данных, в которой была начата транзакция.|  
 |**article_id**|**int**|Идентификатор статьи.|  
 |**type**|**int**|Тип команды.|  
-|**partial_command**|**бит**|Обозначает, является ли эта команда частичной.|  
+|**partial_command**|**bit**|Обозначает, является ли эта команда частичной.|  
 |**hashKey**|**int**|Только для внутреннего применения.|  
 |**originator_publication_id**|**int**|Идентификатор публикации, в которой началась транзакция.|  
 |**originator_db_version**|**int**|Версия базы данных, в которой началась транзакция.|  
@@ -97,11 +97,11 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
  Длинные команды в результирующих наборах могут быть разбиты на несколько строк.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_browsereplcmds** используется в репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или члены **db_owner** или **replmonitor** фиксированных ролей базы данных в базе данных распространителя могут выполнять процедуру **sp_browsereplcmds**.  
+ Только члены **sysadmin** предопределенной роли сервера или членами **db_owner** или **replmonitor** предопределенных ролей базы данных в базе данных распространителя могут выполнять процедуру **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

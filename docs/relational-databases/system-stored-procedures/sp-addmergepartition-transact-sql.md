@@ -1,5 +1,5 @@
 ---
-title: sp_addmergepartition (Transact-SQL) | Документы Microsoft
+title: sp_addmergepartition (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepartition
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8fde5c3b05a29e173e823141d4d34c06860518e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6087f6ee00305eae2ccbef0aef496377f2c9a57e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988559"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026475"
 ---
 # <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_addmergepartition [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Аргументы  
  [ **@publication**=] **"***публикации***"**  
- Публикация слиянием, на которой создается секция. *Публикация* — **sysname**, не имеет значения по умолчанию. Если *suser_sname* указано, значение *hostname* должен иметь значение NULL.  
+ Публикация слиянием, на которой создается секция. *Публикация* — **sysname**, не имеет значения по умолчанию. Если *suser_sname* указан, значение *hostname* должен иметь значение NULL.  
   
  [ **@suser_sname**=] **"***suser_sname***"**  
- Значение, используемое при создании секции для подписки, которая фильтруется по значению [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) на стороне подписчика. *функция SUSER_SNAME* — **sysname**, не имеет значения по умолчанию.  
+ Значение, используемое при создании секции для подписки, которая фильтруется по значению [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) на стороне подписчика. *SUSER_SNAME* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@host_name**=] **"***host_name***"**  
  Значение, используемое при создании секции для подписки, которая фильтруется по значению [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) на стороне подписчика. *HOST_NAME* — **sysname**, не имеет значения по умолчанию.  
@@ -59,17 +58,17 @@ sp_addmergepartition [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_addmergepartition** используется в репликации слиянием.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/sp-addmergepartition-tra_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_addmergepartition**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addmergepartition**.  
   
 ## <a name="see-also"></a>См. также  
  [Создать моментальный снимок для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

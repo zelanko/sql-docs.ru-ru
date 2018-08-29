@@ -1,5 +1,5 @@
 ---
-title: sp_clean_db_file_free_space (Transact-SQL) | Документы Microsoft
+title: sp_clean_db_file_free_space (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 52f5fb5b32a49ef6bcb4922069dc7f5250c771c9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bcd6c21404593244104bc58cc9beab4164c4283a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689132"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036666"
 ---
 # <a name="spcleandbfilefreespace-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_clean_db_file_free_space
   
  Перед выполнением хранимой процедуры sp_clean_db_file_free_space рекомендуется создать полную резервную копию базы данных.  
   
- Связанный [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) хранимая процедура удаляет все файлы в базе данных.  
+ Связанные [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) хранимая процедура очищает все файлы в базе данных.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли базы данных db_owner.  
@@ -83,7 +83,7 @@ EXEC sp_clean_db_file_free_space
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
  <br>[Руководство по процессу очистки фантомных записей](../ghost-record-cleanup-process-guide.md) 
   
   

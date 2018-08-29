@@ -1,5 +1,5 @@
 ---
-title: процедура sp_describe_cursor_tables (Transact-SQL) | Документы Microsoft
+title: процедура sp_describe_cursor_tables (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 767cf7be622e557f78e207cfc8fecb9c4b0707e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ea3ceaa425321202c14c3df6f1d2c225a7ec16b7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038837"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ sp_describe_cursor_tables
   
 ## <a name="arguments"></a>Аргументы  
  [ @cursor_return=] *output_cursor_variable*выходных данных  
- Имя объявленной переменной для получения выходных данных курсора. *output_cursor_variable* — **курсор**, не по умолчанию, и не быть связан с какими-либо курсорами во время вызова sp_describe_cursor_tables. Возвращаемый курсор является прокручиваемым, динамическим и доступным только для чтения.  
+ Имя объявленной переменной для получения выходных данных курсора. *output_cursor_variable* — **курсор**, не по умолчанию, и не может быть связан с какими-либо курсорами во время вызова sp_describe_cursor_tables. Возвращаемый курсор является прокручиваемым, динамическим и доступным только для чтения.  
   
  [ @cursor_source=] {N'local' | N'global' | N'variable'}  
  Указывает, задан ли возвращаемый курсор с помощью имени локального курсора, глобального курсора или курсорной переменной. Параметр — **nvarchar(30)**.  
@@ -62,16 +63,16 @@ sp_describe_cursor_tables
  Имя курсора, созданного с помощью инструкции DECLARE CURSOR c ключевым словом LOCAL или параметром LOCAL по умолчанию. *local_cursor_name* — **nvarchar(128)**.  
   
  [ @cursor_identity=] N'*global_cursor_name*"  
- Имя курсора, созданного с помощью инструкции DECLARE CURSOR с ключевым словом GLOBAL или параметром GLOBAL по умолчанию. *global_cursor_name* также может быть именем серверного курсора API, открытого приложением ODBC, которое затем дало имя курсору, вызвав SQLSetCursorName. *global_cursor_name* — **nvarchar(128)**.  
+ Имя курсора, созданного с помощью инструкции DECLARE CURSOR с ключевым словом GLOBAL или параметром GLOBAL по умолчанию. *global_cursor_name* также может быть именем серверного курсора API, открывающиеся приложением ODBC, которое затем назначило курсору, вызвав SQLSetCursorName. *global_cursor_name* — **nvarchar(128)**.  
   
  [ @cursor_identity=] N'*input_cursor_variable*"  
  Имя переменной курсора, связанной с открытым курсором. *input_cursor_variable* — **nvarchar(128)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="cursors-returned"></a>Возвращенные курсоры  
- процедура sp_describe_cursor_tables инкапсулирует отчет в виде [!INCLUDE[tsql](../../includes/tsql-md.md)] **курсор** выходной параметр. Это позволяет пакетам [!INCLUDE[tsql](../../includes/tsql-md.md)], хранимым процедурам и триггерам построчно обрабатывать выходные данные. Это также означает, что процедуру нельзя вызвать напрямую из функций API-интерфейса. **Курсор** выходной параметр должен быть привязан к программной переменной, но API-интерфейсы не поддерживают привязку **курсор** параметры или переменные.  
+ процедура sp_describe_cursor_tables инкапсулирует отчет в виде [!INCLUDE[tsql](../../includes/tsql-md.md)] **курсор** выходного параметра. Это позволяет пакетам [!INCLUDE[tsql](../../includes/tsql-md.md)], хранимым процедурам и триггерам построчно обрабатывать выходные данные. Это также означает, что процедуру нельзя вызвать напрямую из функций API-интерфейса. **Курсор** выходной параметр должен быть привязан к программной переменной, но API-интерфейсы не поддерживают привязку **курсор** параметры или переменные.  
   
  В следующей таблице показан формат курсора, возвращенного процедурой sp_describe_cursor_tables.  
   
@@ -86,7 +87,7 @@ sp_describe_cursor_tables
 |dbid|**int**|Идентификатор базы данных, в которой расположена указанная таблица. 0, если используются предложения OPENQUERY или OPENROWSET.|  
 |dbname|**sysname**, **допускает значения NULL**|Имя базы данных, в которой расположена указанная таблица. NULL, если используются предложения OPENQUERY или OPENROWSET.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Процедура sp_describe_cursor_tables описывает базовые таблицы, на которые ссылается серверный курсор. Используйте процедуру sp_describe_cursor_columns для описания атрибутов результирующего набора, возвращаемого курсором. Для описания общих характеристик курсора, таких как прокручивание и возможность обновления, используйте процедуру sp_describe_cursor. Для получения списка серверных курсоров [!INCLUDE[tsql](../../includes/tsql-md.md)], видимых при соединении, используйте процедуру sp_cursor_list.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -139,7 +140,7 @@ GO
  [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Хранимая процедура sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [процедура sp_describe_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
- [sp_describe_cursor_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [процедура sp_describe_cursor_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

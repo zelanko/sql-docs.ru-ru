@@ -22,13 +22,13 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4209bf6b0ffbeef97e65b6c70896055d38c7478d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
-ms.translationtype: HT
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e623697e6dc3a47e37beed5c453a9e51b602551
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39537954"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058445"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Схемы XSD с заметками в SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,8 +59,8 @@ ms.locfileid: "39537954"
   
 -   Схема XML, часть 2: типы данных, W3C рекомендация (http://www.w3.org/TR/xmlschema-2/)  
   
--   FOR XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
+-   FOR XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
--   (XSL) преобразований (XSLT)http://www.w3.org/TR/xslt)  
+-   (XSL) преобразований (XSLT) (http://www.w3.org/TR/xslt)  
   
   

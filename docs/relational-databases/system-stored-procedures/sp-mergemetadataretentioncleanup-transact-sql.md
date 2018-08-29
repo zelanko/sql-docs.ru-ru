@@ -1,5 +1,5 @@
 ---
-title: sp_mergemetadataretentioncleanup (Transact-SQL) | Документы Microsoft
+title: sp_mergemetadataretentioncleanup (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergemetadataretentioncleanup
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ac0c7820ab4f336057a3d747409b0e1af09248d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00f34d410b8ada86f93fe92d59415d5f0ea5ff8e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996091"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025813"
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,13 +63,13 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 > [!IMPORTANT]  
->  Если имеется несколько публикаций в базе данных, а один из этих публикаций использует бесконечный срок хранения публикации, на котором запущен **sp_mergemetadataretentioncleanup** не очистки отслеживания изменений репликации слиянием метаданные для базы данных. По этой причине, при использовании неограниченного срока хранения публикации необходимо помнить об осторожности. Чтобы определить, имеет ли публикация неограниченный срок хранения, выполните [sp_helpmergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) на издателе и обратите внимание любых публикаций в результирующий набор со значением **0** для **хранения**.  
+>  Если имеется несколько публикаций в базе данных, и любого из этих публикаций использует бесконечный срок хранения публикации, под управлением **sp_mergemetadataretentioncleanup** не обеспечивает очистки отслеживания изменений репликации слиянием метаданные для базы данных. По этой причине, при использовании неограниченного срока хранения публикации необходимо помнить об осторожности. Чтобы определить, использует ли публикация неограниченный срок хранения, выполните [sp_helpmergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) на издателе и обратите внимание любых публикаций в результирующий набор со значением **0** для **хранения**.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **db_owner** фиксированной роли базы данных или пользователей в список доступа к публикации для опубликованной базы данных можно выполнить **sp_mergemetadataretentioncleanup**.  
+ Только члены **db_owner** предопределенной роли базы данных или пользователям в списке доступа к публикации для опубликованной базы данных можно выполнить **sp_mergemetadataretentioncleanup**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

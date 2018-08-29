@@ -1,5 +1,5 @@
 ---
-title: sysmail_start_sp (Transact-SQL) | Документы Microsoft
+title: sysmail_start_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sysmail_start_sp
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9513e95d52aed4ee7fb525504dfb112092e1807d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2fa805836387ae94cca2cba189eb4a9a9b20d8a3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024183"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,29 +44,29 @@ sysmail_start_sp
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Нет  
+ None  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
- Компонент Database Mail не включен или не установлена на[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки. Чтобы включить и установить объекты компонента Database Mail, используйте мастер настройки компонента Database Mail.  
+## <a name="remarks"></a>Примечания  
+ Компонент Database Mail не включен или не установлен[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки. Чтобы включить и установить объекты компонента Database Mail, используйте мастер настройки компонента Database Mail.  
   
  Эта хранимая процедура находится в **msdb** базы данных. Эта хранимая процедура запускает очередь компонента Database Mail, которая хранит запросы на исходящие сообщения и включает активацию компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для внешней программы.  
   
- Если очереди запущены, внешняя программа компонента Database Mail может обрабатывать сообщения. Эта процедура позволяет перезапускать очереди, очереди были остановлены с **sysmail_stop_sp** хранимой процедуры.  
+ Если очереди запущены, внешняя программа компонента Database Mail может обрабатывать сообщения. Эта процедура позволяет перезапускать очереди, после они были остановлены с **sysmail_stop_sp** хранимой процедуры.  
   
 > [!NOTE]  
 >  Эта хранимая процедура запускает только очереди для компонента Database Mail. Эта хранимая процедура не активирует доставку сообщений компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] в базе данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию членам выполнение **sysadmin** предопределенной роли сервера.  
+ Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример показывает запуск компонента Database Mail **msdb** базы данных. Пример предполагает, что компонент Database Mail активирован.  
+ В следующем примере показано, начиная с версии компонента Database Mail **msdb** базы данных. Пример предполагает, что компонент Database Mail активирован.  
   
 ```  
 USE msdb ;  
@@ -77,7 +78,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Параметр Database Mail XPs сервера конфигурации](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
+ [Параметр конфигурации сервера Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
  [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)   
  [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   

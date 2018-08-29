@@ -1,5 +1,5 @@
 ---
-title: sp_OASetProperty (Transact-SQL) | Документы Microsoft
+title: sp_OASetProperty (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aeadb381a7bb5c55d9a26e5e0e8b9e148f7b120
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 689549b2741e4b334f664cf7662204702686a93f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023744"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
 ## <a name="arguments"></a>Аргументы  
  *objecttoken*  
- Токен OLE-объекта, который был создан ранее с **sp_OACreate**.  
+ Токен объекта OLE, которая ранее была создана с **sp_OACreate**.  
   
  *propertyname*  
  Имя свойства OLE-объекта, которому присваивается новое значение.  
@@ -69,7 +70,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере задается `HostName` свойство (созданного ранее **SQLServer** объекта) с новым значением.  
+ В следующем примере задается `HostName` свойство (созданного ранее **SQLServer** объекта) на новое значение.  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  

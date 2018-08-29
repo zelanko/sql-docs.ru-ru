@@ -1,5 +1,5 @@
 ---
-title: sp_addserver (Transact-SQL) | Документы Microsoft
+title: sp_addserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,21 +21,20 @@ helpviewer_keywords:
 - machine names [SQL Server]
 - computer names
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4263ae95f80518504fca71cf5622b4d3c65c850b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f1727c6388cf70b5df3a620b281cefffb701ac4e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238501"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024434"
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Определяет имя локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если компьютер, где размещена [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является переименован, используйте **sp_addserver** для информирования экземпляр [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] нового имени компьютера. Эта процедура должна быть выполнена на всех экземплярах компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], размещенных на компьютере. Имя экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] не может быть изменено. Чтобы изменить имя экземпляра, установите новый экземпляр с нужным именем, отключите файлы базы данных от старого экземпляра, подключите базы данных к новому экземпляру и удалите старый экземпляр. Кроме того, вы можете создать имя псевдонима клиента на клиентском компьютере, перенаправив подключение на другой сервер, и имя экземпляра или комбинацию **сервер:порт** , не изменяя имя экземпляра на сервере.  
+  Определяет имя локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда для компьютера, на котором размещается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет переименован, используйте **sp_addserver** чтобы сообщить экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] нового имени компьютера. Эта процедура должна быть выполнена на всех экземплярах компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], размещенных на компьютере. Имя экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] не может быть изменено. Чтобы изменить имя экземпляра, установите новый экземпляр с нужным именем, отключите файлы базы данных от старого экземпляра, подключите базы данных к новому экземпляру и удалите старый экземпляр. Кроме того, вы можете создать имя псевдонима клиента на клиентском компьютере, перенаправив подключение на другой сервер, и имя экземпляра или комбинацию **сервер:порт** , не изменяя имя экземпляра на сервере.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,22 +51,22 @@ sp_addserver [ @server = ] 'server' ,
  [ **@server =** ] **'***server***'**  
  Имя сервера. Имена серверов должны быть уникальными и соответствовать правилам именования [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, за исключением того, что пробелы не допускаются. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- Если несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливаются на компьютере, каждый экземпляр работает, как если бы он находится на отдельном сервере. Укажите именованный экземпляр, обратившись к *сервера* как *имя_сервера\имя_экземпляра*.  
+ Когда несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливаются на компьютере, то каждый экземпляр работает, если это на отдельном сервере. Указать именованный экземпляр, ссылаясь на *server* как *имя_сервера\имя_экземпляра*.  
   
  [  **@local =** ] **'LOCAL'**  
- Указывает, что добавляемый сервер — локальный. **@local** — **varchar(10)**, значение по умолчанию NULL. Указание **@local** как **ЛОКАЛЬНОГО** определяет **@server** как имя локального сервера и причины @@SERVERNAME функция, возвращающая значение из *сервера*.  
+ Указывает, что добавляемый сервер — локальный. **@local** — **varchar(10)**, значение по умолчанию NULL. Указание **@local** как **ЛОКАЛЬНОГО** определяет **@server** как имя локального сервера, а @ @@SERVERNAME функция, возвращающая значение из *сервера*.  
   
- Программа настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время установки присваивает этой переменной в качестве значения имя компьютера. По умолчанию имя компьютера является подключении пользователей к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без дополнительной настройки.  
+ Программа настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время установки присваивает этой переменной в качестве значения имя компьютера. По умолчанию имя компьютера — подключении пользователей к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без дополнительной настройки.  
   
  Локальное переопределение вступает в силу только после перезагрузки компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. На каждом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] может быть определен только один локальный сервер.  
   
  [  **@duplicate_ok =** ] **«duplicate_OK»**  
- Указывает, допустимо ли совпадение имен серверов. **@duplicate_OK** — **varchar(13)**, значение по умолчанию NULL. **@duplicate_OK** может иметь только значение **duplicate_OK** или иметь значение NULL. Если **duplicate_OK** указан и имя сервера, который добавляется уже существует, ошибка не возникает. Если именованные параметры не используются, **@local** должен быть указан.  
+ Указывает, допустимо ли совпадение имен серверов. **@duplicate_OK** — **varchar(13)**, значение по умолчанию NULL. **@duplicate_OK** может иметь только значение **duplicate_OK** или значение NULL. Если **duplicate_OK** указан и имя сервера, который добавляется уже существует, ошибка не возникает. Если именованные параметры не используются, **@local** должен быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Чтобы задать или Очистить параметры сервера, используйте **sp_serveroption**.  
   
  **sp_addserver** нельзя использовать внутри пользовательской транзакции.  
@@ -88,7 +87,7 @@ sp_addserver 'ACCOUNTS', 'local';
  [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   

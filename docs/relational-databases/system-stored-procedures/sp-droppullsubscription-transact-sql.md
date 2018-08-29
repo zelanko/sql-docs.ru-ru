@@ -1,5 +1,5 @@
 ---
-title: sp_droppullsubscription (Transact-SQL) | Документы Microsoft
+title: sp_droppullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droppullsubscription
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87d5298d9f67c349a71faf8cff95b2ac23304d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c7f78803805c03acef7e0c7055c60eab2b1924
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989682"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021117"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=** ] **"***издатель***"**  
- Имя удаленного сервера. *издатель* — **sysname**, не имеет значения по умолчанию. Если **все**, удаляется подписка на всех издателей.  
+ [  **@publisher=** ] **"***издателя***"**  
+ Имя удаленного сервера. *издатель* — **sysname**, не имеет значения по умолчанию. Если **все**, подписка удаляется на всех издателях.  
   
  [  **@publisher_db=** ] **"***publisher_db***"**  
  Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию. **все** означает все базы данных издателя.  
@@ -63,7 +63,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_droppullsubscription** используется в репликации моментальных снимков и репликации транзакций.  
   
  **sp_droppullsubscription** удаляет соответствующую строку в [MSreplication_subscriptions &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) таблицы и соответствующего агента распространителя на подписчике. Если ни одной строки остаются в [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), он удаляет таблицу.  
@@ -72,7 +72,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или пользователь, создавший подписку по запросу могут выполнять процедуру **sp_droppullsubscription**. **Db_owner** предопределенной роли базы данных может выполнять только в том случае **sp_droppullsubscription** Если пользователь, создавший подписку по запросу, принадлежит к этой роли.  
+ Только члены **sysadmin** предопределенной роли сервера или пользователь, создавший подписку по запросу могут выполнять процедуру **sp_droppullsubscription**. **Db_owner** только предопределенной роли базы данных будет выполнять **sp_droppullsubscription** Если пользователь, создавший подписку по запросу, принадлежит к этой роли.  
   
 ## <a name="see-also"></a>См. также  
  [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_setsubscriptionxactseqno (Transact-SQL) | Документы Microsoft
+title: sp_setsubscriptionxactseqno (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f59325c709b8d16d5e120a135d5d9f9697692b1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96592ae1f8f2b1de9e2d294c27d68598d2718ed7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037981"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +51,14 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=** ] **"***издатель***"**  
+ [  **@publisher=** ] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publisher_db=** ] **"***publisher_db***"**  
- Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию. Для SQL Server издателем, *publisher_db* имя базы данных распространителя.  
+ Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию. Для SQL Server издателем, *publisher_db* — имя базы данных распространителя.  
   
  [  **@publication=** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию. Если агент распространителя является общим для нескольких публикаций, необходимо указать значение всех для *публикации*.  
+ Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию. Если агент распространителя является общим для нескольких публикаций, необходимо указать значение ALL для *публикации*.  
   
  [  **@xact_seqno=** ] *xact_seqno*  
  Номер LSN следующей транзакции на распространителе, которая должна быть применена на подписчике. *xact_seqno* — **varbinary(16)**, не имеет значения по умолчанию.  
@@ -73,20 +74,20 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_setsubscriptionxactseqno** используется в репликации транзакций.  
   
- **sp_setsubscriptionxactseqno** не может использоваться в топологии репликации транзакций для коллег.  
+ **sp_setsubscriptionxactseqno** не может использоваться в топологии репликации транзакций peer-to-peer.  
   
- **sp_setsubscriptionxactseqno** может использоваться для пропуска определенной транзакции, вызывающей ошибку при применении на подписчике. Если происходит сбой, и после остановки агента распространителя, вызовите [sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) на распространителе для получения значения xact_seqno поврежденной транзакции, а затем вызвать **sp_setsubscriptionxactseqno**, передав это значение для *xact_seqno*. Тем самым будет обеспечена обработка только одной команды после этого номера LSN.  
+ **sp_setsubscriptionxactseqno** может использоваться для пропуска определенной транзакции, вызывающей ошибку при применении на подписчике. При сбое, а также после остановки агента распространителя, вызовите [sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) на распространителе для получения значения xact_seqno поврежденной транзакции, а затем вызовите **sp_setsubscriptionxactseqno**, передав это значение для *xact_seqno*. Тем самым будет обеспечена обработка только одной команды после этого номера LSN.  
   
- Укажите значение **0** для *xact_seqno* для доставки всех ожидающих применения команд в базе данных распространителя на подписчик.  
+ Укажите значение **0** для *xact_seqno* для доставки всех ожидающих применения команд в базе данных распространителя к подписчику.  
   
  **sp_setsubscriptionxactseqno** может завершиться ошибкой, если агент распространителя использует потоки нескольких подписок.  
   
  При возникновении этой ошибки необходимо запустить агент распространителя с потоком одной подписки. Дополнительные сведения см. в статье [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_setsubscriptionxactseqno**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_setsubscriptionxactseqno**.  
   
   

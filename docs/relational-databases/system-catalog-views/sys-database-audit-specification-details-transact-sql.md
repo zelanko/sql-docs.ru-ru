@@ -1,5 +1,5 @@
 ---
-title: sys.database_audit_specification_details (Transact-SQL) | Документы Microsoft
+title: sys.database_audit_specification_details (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - sys.database_audit_specification_details catalog view
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95acf20e3ec873910eeecf6e9c3b66b5c9ededa0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4cf364f771797a16302fcdcb09e19bf60dba77e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019751"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера для всех баз данных. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Список всех audit_action_id и их имена, запрашивать [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера для всех баз данных. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Список всех audit_action_id и соответствующих имен, запрос [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -43,13 +44,13 @@ ms.lasthandoff: 05/04/2018
 |**Class**|**int**|Определяет класс объекта, для которого выполняется аудит.|  
 |**class_ desc**|**nvarchar(60)**|Описание класса объекта, для которого выполняется аудит:<br /><br /> - SCHEMA;<br /><br /> - TABLE.|  
 |**major_id**|**int**|Основной идентификатор объекта, для которого проводится аудит, такой как идентификатор таблицы действия аудита таблицы.|  
-|**то столбец minor_id**|**Int**|Вторичный идентификатор объекта, для которого проводится аудит, интерпретируемый в соответствии с классом, такой как идентификатор столбца действия аудита таблицы.|  
+|**minor_id**|**Int**|Вторичный идентификатор объекта, для которого проводится аудит, интерпретируемый в соответствии с классом, такой как идентификатор столбца действия аудита таблицы.|  
 |**audited_principal_id**|**int**|Участник, для которого выполняется аудит.|  
 |**audited_result**|**nvarchar(60)**|Результаты действия аудита:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|Показывает, является ли объект группой:<br /><br /> 0 — не группа;<br /><br /> 1 — группа.|  
   
 ## <a name="permissions"></a>Разрешения  
- Участники **ALTER ANY DATABASE AUDIT** или **VIEW DEFINITION** разрешения, **dbo** и членами роли **db_owners** предопределенной роли базы данных имеют доступ к этому представлению каталога. Кроме того, участник не должно быть запрещено **VIEW DEFINITION** разрешение.  
+ Участники с **ALTER ANY DATABASE AUDIT** или **VIEW DEFINITION** разрешения, **dbo** роли и члены **db_owners** предопределенной роли базы данных имеют доступ к этому представлению каталога. Кроме того, участник не должно быть запрещено **VIEW DEFINITION** разрешение.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_fields (Transact-SQL) | Документы Microsoft
+title: sys.server_event_session_fields (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 - xe
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b9aae1c5666203ac57ccb3ca4f762226cdca151
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3aed898936ab65dab5646dc12379a6eb9ba90bb6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020380"
 ---
 # <a name="sysservereventsessionfields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +41,13 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Идентификатор сеанса событий. Не допускает значение NULL.|  
 |object_id|**int**|Идентификатор объекта, с которым связано это поле. Не допускает значение NULL.|  
-|имя|**sysname**|Имя поля. Не допускает значение NULL.|  
+|name|**sysname**|Имя поля. Не допускает значение NULL.|  
 |value|**sql_variant**|Значение поля. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Это представление имеет следующее количество элементов связей.  
   
 ||||  

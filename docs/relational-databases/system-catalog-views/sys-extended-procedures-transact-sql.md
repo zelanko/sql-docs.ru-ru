@@ -1,5 +1,5 @@
 ---
-title: sys.extended_procedures (Transact-SQL) | Документы Microsoft
+title: sys.extended_procedures (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,24 +21,25 @@ helpviewer_keywords:
 - sys.extended_procedures catalog view
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be24a61208f854976b45a7ba927e83a4c87fecb5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a753cdd737512d8a450e1a7156c477e19b5e45fd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021271"
 ---
 # <a name="sysextendedprocedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит по одной строке для каждого объекта, являющегося расширенной хранимой процедуры с **sys.objects.type** = X. Так как расширенные хранимые процедуры устанавливаются в **master** базы данных, они видимы только в контексте этой базы данных. При выборе из **sys.extended_procedures** представления в любом другом контексте базы данных вернет пустой результирующий набор.  
+  Содержит по одной строке для каждого объекта, являющегося расширенной хранимой процедуры, с помощью **sys.objects.type** = X. Так как расширенные хранимые процедуры устанавливаются в **master** базы данных, они видимы только в контексте этой базы данных. Выбрав **sys.extended_procedures** представления в любом другом контексте базы данных вернет пустой результирующий набор.  
 
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Столбцы, наследуемые из sys.objects >**||Список столбцов, наследуемых этим представлением см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Столбцы, наследуемые из sys.objects >**||Список столбцов, наследуемых этим представлением, см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**dll_name**|**nvarchar(260)**|Имя, включая путь, библиотеки DLL для данной расширенной хранимой процедуры.|  
   
 ## <a name="permissions"></a>Разрешения  

@@ -1,5 +1,5 @@
 ---
-title: процедуру sp_replflush (Transact-SQL) | Документы Microsoft
+title: sp_replflush (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_replflush
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfab78fd3cbb9fb6750c7259ab2c0efd20b23006
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44a23ee5d38ba1caf9a16297215d5b21bb1401f7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037992"
 ---
 # <a name="spreplflush-transact-sql"></a>sp_replflush (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +50,15 @@ sp_replflush
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_replflush** используется в репликации транзакций.  
   
  Определения статей сохраняются в кэше с целью повышения эффективности. **sp_replflush** используется другими хранимыми процедурами репликации при модификации или удаления определений статей.  
   
- Только одно соединение с клиентом может иметь доступ к данной базе данных для чтения журнала. Если клиент имеет доступ для чтения журнала для базы данных, выполняют **sp_replflush** заставляет клиента высвобождение доступа. Другие клиенты можно затем сканирования журнала транзакций с помощью **sp_replcmds** или **sp_replshowcmds**.  
+ Только одно соединение с клиентом может иметь доступ к данной базе данных для чтения журнала. Если клиент имеет доступ для чтения журнала для базы данных, выполняют **sp_replflush** заставляет клиента заносить в высвобождение доступа. Другие клиенты можно затем проверять журнал транзакций с помощью **sp_replcmds** или **sp_replshowcmds**.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_replflush**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_replflush**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

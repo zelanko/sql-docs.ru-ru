@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Документы Microsoft
+title: процедура sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_delete_policy_execution_history
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d4e7f496124727389993c1e249b80aeaa7414b5f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b87056b364b5861c771496622176024a8748008c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019240"
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_delete_policy_execution_history должна выполняться в контексте системной базы данных msdb.  
   
- Чтобы получить значения для *policy_id*, и чтобы просмотреть данные журнала выполнения, можно использовать следующий запрос:  
+ Чтобы получить значения для *policy_id*, чтобы просмотреть данные журнала выполнения, можно использовать следующий запрос:  
   
 ```  
 SELECT a.name AS N'policy_name', b.policy_id, b.start_date, b.end_date  
@@ -69,11 +69,11 @@ ON a.policy_id = b.policy_id
   
 -   Чтобы удалить весь журнал выполнения, укажите значение NULL для обоих *policy_id* и *oldest_date*.  
   
--   Чтобы удалить весь журнал выполнения для определенной политики, укажите идентификатор политики для *policy_id*, и укажите значение NULL как *oldest_date*.  
+-   Чтобы удалить весь журнал выполнения для конкретной политики, укажите идентификатор политики в параметре *policy_id*, и значение NULL в *oldest_date*.  
   
 -   Чтобы удалить журнал выполнения для всех политик до определенной даты, укажите значение NULL для *policy_id*и укажите дату для *oldest_date*.  
   
- Чтобы поместить журнал выполнения политик в архив, можно открыть журнал политик в обозревателе объектов и экспортировать журнал выполнения в файл. Чтобы открыть журнал политик, разверните **управления**, щелкните правой кнопкой мыши **Управление политиками**и нажмите кнопку **Просмотр журнала**.  
+ Чтобы поместить журнал выполнения политик в архив, можно открыть журнал политик в обозревателе объектов и экспортировать журнал выполнения в файл. Чтобы открыть журнал политик, разверните **управления**, щелкните правой кнопкой мыши **Управление политиками**, а затем нажмите кнопку **Просмотр журнала**.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  

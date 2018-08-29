@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorsubscriptionpendingcmds (Transact-SQL) | Документы Microsoft
+title: sp_replmonitorsubscriptionpendingcmds (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorsubscriptionpendingcmds
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c94d01031094e03ddde2fc9bcdf234729ecd11c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7be00206267ea37c74c3b1055598ac9a2770a622
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001051"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038537"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издатель***"**  
+ [ **@publisher** =] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@publisher_db** =] **"***publisher_db***"**  
@@ -66,7 +66,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
  Имя базы данных подписки. *subscriber_db* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@subscription_type** =] *subscription_type*  
- Тип подписки. *publication_type* — **int**, без значения по умолчанию и может принимать одно из следующих значений.  
+ Тип подписки. *publication_type* — **int**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -83,11 +83,11 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_replmonitorsubscriptionpendingcmds** используется с репликацией транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера на распространителе или члены **db_owner** предопределенной роли базы данных в базе данных распространителя могут выполнять процедуру **sp_ replmonitorsubscriptionpendingcmds**. Список членов доступа к публикации для публикации, использующей базу данных распространителя могут выполнять процедуру **sp_replmonitorsubscriptionpendingcmds** чтобы вернуть ожидающие выполнения команды для данной публикации.  
+ Только члены **sysadmin** предопределенной роли сервера на распространителе или члены **db_owner** предопределенной роли базы данных в базе данных распространителя могут выполнять процедуру **sp_ replmonitorsubscriptionpendingcmds**. Список членов, доступа к публикации, для публикации, использующей базу данных распространителя могут выполнять процедуру **sp_replmonitorsubscriptionpendingcmds** чтобы вернуть ожидающие выполнения команды для данной публикации.  
   
 ## <a name="see-also"></a>См. также  
  [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

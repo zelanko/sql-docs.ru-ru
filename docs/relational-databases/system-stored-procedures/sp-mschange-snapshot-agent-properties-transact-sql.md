@@ -1,5 +1,5 @@
 ---
-title: sp_MSchange_snapshot_agent_properties (Transact-SQL) | Документы Microsoft
+title: sp_MSchange_snapshot_agent_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_MSchange_snapshot_agent_properties
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ad2369da53ddd339fadafac0b16e9c9a2bd2ac4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 67bd8a178ba3e7759257567fdb46af6ddd79daa4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003491"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019683"
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издатель***"**  
+ [ **@publisher** =] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publisher_db=** ] **"***publisher_db***"**  
@@ -87,7 +87,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**40**|При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
  [  **@frequency_interval =** ] *frequency_interval*  
- Представляет значение, которое применяется к частоте, установленной аргументом *frequency_type*. *frequency_interval* — **int**, не имеет значения по умолчанию.  
+ — Это значение, которое применяется к частоте, задаваемой аргументом *frequency_type*. *frequency_interval* — **int**, не имеет значения по умолчанию.  
   
  [  **@frequency_subday =** ] *frequency_subday*  
  Единицы измерения для *freq_subday_interval*. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
@@ -124,10 +124,10 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  Имя существующего задания агента моментальных снимков, если оно используется. *snapshot_agent_name* — **nvarchar(100)**, не имеет значения по умолчанию.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
- Режим безопасности, используемый агентом при установке соединения с издателем. *publisher_security_mode* — **int**, не имеет значения по умолчанию. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности, и **1** указывает проверку подлинности Windows. Значение **0** должен быть указан для отличного[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ Режим безопасности, используемый агентом при установке соединения с издателем. *publisher_security_mode* — **int**, не имеет значения по умолчанию. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности, и **1** задает проверку подлинности Windows. Значение **0** должен быть указан для отличных[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **"***publisher_login***"**  
- Имя входа, используемое для соединения с издателем. *publisher_login* — **sysname**, не имеет значения по умолчанию. *publisher_login* должен быть указан, если *publisher_security_mode* — **0**. Если *publisher_login* равно NULL, а издатель *_ ** security_mode* — **1**, учетная запись Windows, указанная в *job_login* будет используется при соединении с издателем.  
+ Имя входа, используемое для соединения с издателем. *publisher_login* — **sysname**, не имеет значения по умолчанию. *publisher_login* должен быть указан, если *publisher_security_mode* — **0**. Если *publisher_login* равно NULL, а издатель *_ ** security_mode* — **1**, то учетная запись Windows, указанных в *job_login* будет используется при соединении с издателем.  
   
  [ **@publisher_password**=] **"***publisher_password***"**  
  Пароль, используемый при соединении с издателем. *publisher_password* — **nvarchar(524)**, не имеет значения по умолчанию.  
@@ -136,7 +136,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 >  Не храните данные проверки подлинности в файлах скриптов. В целях повышения безопасности рекомендуется вводить имена входа и пароли во время выполнения.  
   
  [ **@job_login**=] **"***job_login***"**  
- Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков. *Это единственный предусмотренный отличается от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*  
+ Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков. *Это единственно возможный отличается от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*  
   
  [ **@job_password**=] **"***job_password***"**  
  Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
@@ -153,20 +153,20 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**ORACLE**|Задает стандартного издателя Oracle.|  
 |**ORACLE GATEWAY**|Используется издатель Oracle Gateway.|  
   
- Дополнительные сведения о различиях между издателем Oracle и издатель Oracle Gateway см. в разделе [Обзор публикации Oracle](../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
+ Дополнительные сведения о различиях между издателями Oracle и издатель Oracle Gateway см. в разделе [Обзор публикации Oracle](../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_MSchange_snapshot_agent_properties** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
- Необходимо указать все параметры, при выполнении **sp_MSchange_snapshot_agent_properties**. Выполнение [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) для получения текущих свойств задания агента моментальных снимков.  
+ Необходимо указать все параметры при выполнении **sp_MSchange_snapshot_agent_properties**. Выполнение [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) для получения текущих свойств задания агента моментальных снимков.  
   
- Если издатель запущен на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует использовать [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) для изменения свойств задания агента моментальных снимков.  
+ Если издатель выполняется на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует использовать [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) для изменения свойств задания агента моментальных снимков.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера на распространителе могут выполнять **sp_MSchange_snapshot_agent_properties**.  
+ Только члены **sysadmin** предопределенной роли сервера на распространителе могут выполнять процедуру **sp_MSchange_snapshot_agent_properties**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  

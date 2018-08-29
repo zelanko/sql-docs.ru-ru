@@ -1,5 +1,5 @@
 ---
-title: sp_lookupcustomresolver (Transact-SQL) | Документы Microsoft
+title: sp_lookupcustomresolver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_lookupcustomresolver
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65770490b7a04efed2a4d7e70a2863fe45d5d453
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d2e70f21cd9b0cc15a0b895a7e52b88a885edf0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998451"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020103"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,24 +57,24 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  Значение идентификатора CLSID объекта COM, связанного с именем пользовательской бизнес-логики, указанной в *article_resolver* параметра. *resolver_clsid* — **nvarchar(50)**, значение по умолчанию NULL.  
   
  [  **@is_dotnet_assembly=** ] **"***is_dotnet_assembly***"** выходных данных  
- Указывает тип регистрируемой пользовательской бизнес-логики. *is_dotnet_assembly* — **бит**, значение по умолчанию 0. **1** указывает, что пользовательские бизнес-логики, зарегистрированный обработчик бизнес-логики сборкой. **0** указывает, что COM-компонента.  
+ Указывает тип регистрируемой пользовательской бизнес-логики. *is_dotnet_assembly* — **бит**, значение по умолчанию 0. **1** указывает, что регистрируемая пользовательских бизнес-логика обработчика бизнес-логики сборкой. **0** означает, что COM-компонента.  
   
  [  **@dotnet_assembly_name=** ] **"***dotnet_assembly_name***"** выходных данных  
- Имя сборки, в которой реализован обработчик бизнес-логики. *dotnet_assembly_name* — **nvarchar(255)**, значение по умолчанию NULL.  
+ Имя сборки, в которой реализован обработчик бизнес-логики. *dotnet_assembly_name* — **nvarchar(255)**, со значением по умолчанию NULL.  
   
  [  **@dotnet_class_name=** ] **"***dotnet_class_name***"** выходных данных  
- Имя класса, который замещает класс <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. *dotnet_class_name* — **nvarchar(255)**, значение по умолчанию NULL.  
+ Имя класса, который замещает класс <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. *dotnet_class_name* — **nvarchar(255)**, со значением по умолчанию NULL.  
   
- [  **@publisher=** ] **"***издатель***"**  
- Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. Используйте данный аргумент, если хранимая процедура не вызвана из издателя. Если этот аргумент не указан, то издателем считается локальный сервер.  
+ [  **@publisher=** ] **"***издателя***"**  
+ Имя издателя. *издатель* — **sysname**, со значением по умолчанию NULL. Используйте данный аргумент, если хранимая процедура не вызвана из издателя. Если этот аргумент не указан, то издателем считается локальный сервер.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_lookupcustomresolver** используется в репликации слиянием.  
   
- **sp_lookupcustomresolver** возвращает значение NULL для *resolver_clsid* при компонент не зарегистрирован в распространителе и значение «00000000-0000-0000-0000-000000000000», если регистрация относится к Сборка .NET framework зарегистрирован как обработчик бизнес-логики.  
+ **sp_lookupcustomresolver** возвращает значение NULL для *resolver_clsid* Если компонент не зарегистрирован в распространителе и значение «00000000-0000-0000-0000-000000000000» Если регистрация относится к Сборки .NET framework зарегистрирован как обработчик бизнес-логики.  
   
  **sp_lookupcustomresolver** вызывается [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) для подтверждения указанного *article_resolver*.  
   
@@ -85,8 +85,8 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Выполнение бизнес-логики при синхронизации слиянием](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
- [Укажите арбитра статей публикации слиянием](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
- [работу sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [Указать Сопоставитель слияния статей](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
+ [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
  [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

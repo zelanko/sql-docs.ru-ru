@@ -1,5 +1,5 @@
 ---
-title: sys.parameter_type_usages (Transact-SQL) | Документы Microsoft
+title: sys.parameter_type_usages (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.parameter_type_usages catalog view
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b07b0b29c2aa8fe9a2709e7368776024ce8f698
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 116bec6c18c6b1fe882937913acac09d56550844
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33179650"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036986"
 ---
 # <a name="sysparametertypeusages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33179650"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор объекта, которому принадлежит этот параметр.|  
 |**parameter_id**|**int**|Идентификатор параметра. Уникален в пределах объекта.|  
-|**user_type_id**|**int**|Идентификатор определяемого пользователем типа.<br /><br /> Чтобы вернуть имя типа, присоединение к [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) представления на этот столбец каталога.|  
+|**user_type_id**|**int**|Идентификатор определяемого пользователем типа.<br /><br /> Чтобы вернуть имя типа, присоедините к [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) представления по этому столбцу каталога.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -1,5 +1,5 @@
 ---
-title: sys.login_token (Transact-SQL) | Документы Microsoft
+title: sys.login_token (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - logins [SQL Server], security tokens
 - tokens [SQL Server]
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8ffa2027c83f8aebfb64a936b70cbee527526a51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 62cc40af6ebf3df276f2c0aa3a81eb6703f68c39
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021442"
 ---
 # <a name="syslogintoken-transact-sql"></a>sys.login_token (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/04/2018
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**principal_id**|**int**|Идентификатор участника. Это значение уникально в пределах сервера.|  
-|**ИД безопасности**|**varbinary(85)**|Идентификатор безопасности участника. Если это участник Windows **sid** равно идентификатору безопасности Windows. Если имя входа сопоставлено с сертификатом, **sid** = GUID из сертификата.|  
+|**ИД безопасности**|**varbinary(85)**|Идентификатор безопасности участника. Если это участник Windows, **sid** = идентификатор безопасности Windows. Если имя входа сопоставлено с сертификатом, **sid** равно идентификатору GUID из сертификата.|  
 |**name**|**nvarchar(128)**|Имя участника. Это значение уникально в пределах сервера.|  
 |**type**|**nvarchar(128)**|Описание типа участника. Все типы сопоставляются с **sid**. Значение может быть одним из следующих:<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
 |**Использование**|**nvarchar(128)**|Указывает, что участник задействован в процессе определения разрешений GRANT и DENY или выполняет роль средства проверки подлинности.<br /><br /> Значение может быть одним из следующих.<br /><br /> GRANT OR DENY;<br /><br /> DENY ONLY;<br /><br /> AUTHENTICATOR.|  

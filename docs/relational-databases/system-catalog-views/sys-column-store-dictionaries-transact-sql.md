@@ -1,5 +1,5 @@
 ---
-title: sys.column_store_dictionaries (Transact-SQL) | Документы Microsoft
+title: sys.column_store_dictionaries (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_dictionaries catalog view
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5a68d3d0b898b3acbccccb2a0e87c467692dccbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 95b69733ba755500e98eac062c535d7a17c552b6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181630"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026279"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +38,8 @@ ms.locfileid: "33181630"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**hobt_id**|**bigint**|Идентификатор кучи или индекс сбалансированного дерева (hobt) для таблицы, в которой содержится индекс columnstore.|  
-|**column_id**|**int**|Идентификатор столбца columnstore, начиная с 1. Первый столбец имеет идентификатор = 1, второй столбец содержит идентификатор = 2, и т. д.|  
-|**dictionary_id**|**int**|Возможны два вида словарей: глобальные и локальные, связанные с сегмента столбца. Dictionary_id 0 представляет словарь глобального, общей для всех сегментов по одному для каждой из групп строк, для этого столбца.|  
+|**column_id**|**int**|Идентификатор столбца columnstore, начиная с 1. Первый столбец имеет идентификатор = 1, второй столбец с Идентификатором = 2, и т.д.|  
+|**dictionary_id**|**int**|Может существовать два вида словарей: глобальные и локальные, связанные с сегмента столбца. Dictionary_id 0 представляет глобальный словарь, общей для всех сегментов (по одному для каждой из групп строк) для этого столбца.|  
 |**version**|**int**|Версия формата словаря.|  
 |**type**|**int**|Тип словаря:<br /><br /> 1 — хэш-словарь, содержащий **int** значения<br /><br /> 2 — не используется<br /><br /> 3 — хэш-словарь, содержащий строковые значения<br /><br /> 4 — хэш-словарь, содержащий **float** значения<br /><br /> Дополнительные сведения о словарях см. в разделе [руководство по индексам Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|Последний идентификатор данных в словаре.|  
@@ -49,7 +48,7 @@ ms.locfileid: "33181630"
 |**partition_id**|**bigint**|Указывает идентификатор секции. Уникален в базе данных.|  
   
 ## <a name="permissions"></a>Разрешения  
- Для всех столбцов требуется как минимум разрешение VIEW DEFINITION на таблицу. Следующие столбцы возвращают значение null, если у пользователя также нет **ВЫБЕРИТЕ** разрешение: last_id entry_count, data_ptr.  
+ Для всех столбцов требуется как минимум разрешение VIEW DEFINITION на таблицу. Следующие столбцы возвращают значение null, если у пользователя также нет **ВЫБЕРИТЕ** разрешение: last_id, entry_count, data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

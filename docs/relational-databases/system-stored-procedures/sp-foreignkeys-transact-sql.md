@@ -1,5 +1,5 @@
 ---
-title: sp_foreignkeys (Transact-SQL) | Документы Microsoft
+title: sp_foreignkeys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf14d0f424a81b7e990d33d5dc596676e12505ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bd49a4fd7f1c172c2f46d686cef941d19add2dad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020663"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  Имя каталога с внешним ключом. *fktab_catalog*— **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*каталога ***.*** схемы ***.*** Таблица*), которые представлены в результирующем наборе.  
@@ -87,16 +88,16 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**FKTABLE_NAME**|**sysname**|Имя таблицы (с внешним ключом). Это поле всегда возвращает значение.|  
 |**FKCOLUMN_NAME**|**sysname**|Имена внешних ключевых столбцов для каждого возвращаемого столбца TABLE_NAME. Это поле всегда возвращает значение.|  
 |**KEY_SEQ**|**smallint**|Порядковый номер столбца в первичном ключе, состоящем из нескольких столбцов. Это поле всегда возвращает значение.|  
-|**ПРИЗНАК UPDATE_RULE**|**smallint**|Действие, совершаемое над внешним ключом, когда операция SQL является операцией обновления. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает 0, 1 или 2 для этих столбцов:<br /><br /> 0=CASCADE; каскадное изменение в соответствии с внешним ключом.<br /><br /> 1=NO ACTION; отсутствие изменений при наличии внешнего ключа.<br /><br /> 2=SET_NULL; установка значения внешнего ключа в NULL.|  
+|**UPDATE_RULE**|**smallint**|Действие, совершаемое над внешним ключом, когда операция SQL является операцией обновления. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает 0, 1 или 2 для этих столбцов:<br /><br /> 0=CASCADE; каскадное изменение в соответствии с внешним ключом.<br /><br /> 1=NO ACTION; отсутствие изменений при наличии внешнего ключа.<br /><br /> 2=SET_NULL; установка значения внешнего ключа в NULL.|  
 |**DELETE_RULE**|**smallint**|Действие, совершаемое над внешним ключом, когда операция SQL является операцией удаления. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает 0, 1 или 2 для этих столбцов:<br /><br /> 0=CASCADE; каскадное изменение в соответствии с внешним ключом.<br /><br /> 1=NO ACTION; отсутствие изменений при наличии внешнего ключа.<br /><br /> 2=SET_NULL; установка значения внешнего ключа в NULL.|  
 |**FK_NAME**|**sysname**|Идентификатор внешнего ключа. Возвращает NULL, если не применим к источнику данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает имя ограничения FOREIGN KEY.|  
 |**PK_NAME**|**sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает имя ограничения PRIMARY KEY.|  
-|**ОТСРОЧКИ**|**smallint**|Указывает, допускается ли задержка проверки ограничений.|  
+|**НЕПОДДЕРЖИВАЕМОЕ**|**smallint**|Указывает, допускается ли задержка проверки ограничений.|  
   
  В результирующем наборе столбцы FK_NAME и PK_NAME всегда возвращают NULL.  
   
-## <a name="remarks"></a>Замечания  
- **sp_foreignkeys** запрашивает набор строк FOREIGN_KEYS **IDBSchemaRowset** интерфейса поставщика OLE DB, соответствующий *table_server*. *Table_name*, *table_schema*, *значениям table_catalog*, и *столбца* параметры передаются этому интерфейсу для ограничения строк возвращается.  
+## <a name="remarks"></a>Примечания  
+ **sp_foreignkeys** запрашивает набор строк FOREIGN_KEYS **IDBSchemaRowset** интерфейс поставщика OLE DB, соответствующий *table_server*. *Table_name*, *table_schema*, *значениям table_catalog*, и *столбец* параметры передаются этому интерфейсу для ограничения строк возвращается.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
@@ -114,7 +115,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_requestpeerresponse (Transact-SQL) | Документы Microsoft
+title: sp_requestpeerresponse (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83f5cfcac2f109b88fc63ab96942d7682bdb2a90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b722bac6727e6d64bb0c2c475ca900ea78c8fc1d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998211"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024376"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,21 +53,21 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  [ **@description**=] **"***описание***"**  
  Определяемые пользователем данные, которые могут использоваться для идентификации отдельных запросов состояния. *Описание* — **nvarchar(4000)**, значение по умолчанию NULL.  
   
- [ **@request_id** =] *идентификатор_запроса*  
- Возвращает идентификатор нового запроса. *идентификатор_запроса* — **int** и является ВЫХОДНЫМ параметром. Это значение может использоваться при выполнении [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) для просмотра всех ответов на запрос состояния.  
+ [ **@request_id** =] *request_id*  
+ Возвращает идентификатор нового запроса. *Идентификатор request_id* — **int** и является ВЫХОДНЫМ параметром. Это значение может быть использовано при выполнении [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) для просмотра всех ответов на запрос состояния.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_requestpeerresponse** используется в репликации транзакций, одноранговая сеть.  
+## <a name="remarks"></a>Примечания  
+ **sp_requestpeerresponse** используется в репликации транзакций peer-to-peer.  
   
- **sp_requestpeerresponse** позволяет убедиться, что все команды получены всеми другими узлами перед восстановлением базы данных, опубликованной в топологии одноранговая сеть. Эта процедура используется, если при репликации изменений языка DDL, выполненных, когда узел был в режиме «вне сети», необходимо оценить, когда эти изменения переданы на другие узлы.  
+ **sp_requestpeerresponse** позволяют гарантировать, что все команды были получены всеми другими узлами перед восстановлением базы данных, опубликованной в топологии peer-to-peer. Эта процедура используется, если при репликации изменений языка DDL, выполненных, когда узел был в режиме «вне сети», необходимо оценить, когда эти изменения переданы на другие узлы.  
   
  **sp_requestpeerresponse** не может выполняться внутри пользовательской транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_requestpeerresponse**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_requestpeerresponse**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

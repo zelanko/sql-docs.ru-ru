@@ -1,5 +1,5 @@
 ---
-title: sp_scriptsubconflicttable (Transact-SQL) | Документы Microsoft
+title: sp_scriptsubconflicttable (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptsubconflicttable
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86a5b01b46aee8a08c0e490b0d59e3887211d51e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f9eddd0192cff32db884f153a00b0f5526d16028
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997661"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020853"
 ---
 # <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
  [  **@publication=**] **"***публикации***"**  
  Имя публикации, которая содержит статью. В базе данных это имя должно быть уникальным. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"***статьи***"**  
+ [  **@article=**] **"***статье***"**  
  Имя статьи подписки. *статья* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -60,11 +60,11 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 |-----------------|---------------|-----------------|  
 |**cmdtext**|**nvarchar(4000)**|Возвращает скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания таблицы конфликтов на подписчике для статьи очереди подписок. Этот скрипт выполняется на подписчике в базе данных подписки.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_scriptsubconflicttable** используется для подписчиков, имеющих подписки, где исходный моментальный снимок применяется вручную. Таблица конфликтов является дополнительной таблицей на подписчике.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_scriptsubconflicttable**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_scriptsubconflicttable**.  
   
 ## <a name="see-also"></a>См. также  
  [Обнаружение и разрешение конфликтов обновлений посредством очередей](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   

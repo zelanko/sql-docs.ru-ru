@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services занятие для учебника по 2: получение данных | Документация Майкрософт'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9adeebfbd3c49761adb816a7d28472a61ffca5cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007205"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062215"
 ---
 # <a name="get-data"></a>Получение данных
 
@@ -22,7 +22,7 @@ ms.locfileid: "38007205"
 
 На этом занятии вы использовать **получить данные** для подключения к базе данных AdventureWorksDW, выбора данных, предварительного просмотра и фильтрации и затем импортировать в рабочую область модели.  
   
-С помощью функции получения данных, можно импортировать данные из самых разнообразных источников. Также можно запросить данные с помощью выражения формулы Power Query M или [собственные выражения запроса SQL](../tabular-models/ssas-import-query.md).
+За кулисами получение данных — Power Query, который предоставляет широкий спектр средств для подключения и изменение формы для моделирования и анализа. Дополнительные сведения см. в разделе [документацию по Power Query](https://docs.microsoft.com/power-query/). 
 
 > [!NOTE]
 > Задачи и образов в этом руководстве показано, подключение к базе данных AdventureWorksDW2014 на локальном сервере. В некоторых случаях к базе данных AdventureWorksDW на хранилище данных SQL Azure могут отображаться различные объекты; Тем не менее они по сути одинаковые.

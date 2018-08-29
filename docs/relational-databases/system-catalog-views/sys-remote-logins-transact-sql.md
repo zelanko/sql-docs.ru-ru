@@ -1,5 +1,5 @@
 ---
-title: представление sys.remote_logins (Transact-SQL) | Документы Microsoft
+title: sys.remote_logins (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_logins catalog view
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: df40db329851fbe931cb96f5b1aac99905d705c4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f4c403c86373043cd98ebec8121c696c384be4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023982"
 ---
 # <a name="sysremotelogins-transact-sql"></a>sys.remote_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

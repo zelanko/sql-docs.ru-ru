@@ -1,5 +1,5 @@
 ---
-title: sp_add_category (Transact-SQL) | Документы Microsoft
+title: sp_add_category (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_category
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f98fd4dbccc6b47297c8b0ebb2073dd23d35c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c884d126356f4347616370ce9cd8b8eb41089fc0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238914"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021928"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_add_category
 |ALERT|Добавление категории предупреждений.|  
 |OPERATOR|Добавление категории операторов.|  
   
- [  **@type =** ] **"***типа***"**  
+ [  **@type =** ] **"***тип***"**  
  Тип добавляемой категории. *Тип* — **varchar(12)**, со значением по умолчанию **ЛОКАЛЬНОГО**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -72,13 +71,13 @@ sp_add_category
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_add_category** должна запускаться из **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_add_category**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_add_category**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается локальная категория заданий с именем `AdminJobs`.  
@@ -98,7 +97,7 @@ GO
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo.sysjobs & #40; Transact-SQL & #41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

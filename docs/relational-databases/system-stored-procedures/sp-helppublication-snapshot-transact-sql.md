@@ -1,5 +1,5 @@
 ---
-title: sp_helppublication_snapshot (Transact-SQL) | Документы Microsoft
+title: sp_helppublication_snapshot (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 166ddc44f6543a5c95ee2650504dcd3f71d45236
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 628b07fee13a2d0dc62d3dc5be3dfa131f995a8d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021227"
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
  [  **@publication =** ] **"***публикации***"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher =** ] **"***издатель***"**  
+ [  **@publisher =** ] **"***издателя***"**  
  Задает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -64,14 +65,14 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**publisher_login**|**sysname**|Имя входа в систему, используемое при соединении с издателем.|  
 |**publisher_password**|**nvarchar(524)**|По соображениям безопасности значение **\* \* \* \* \* \* \* \* \* \*** всегда возвращается.|  
 |**job_id**|**uniqueidentifier**|Уникальный идентификатор задания агента.|  
-|**job_login**|**nvarchar(512)**|Является учетная запись Windows, под которой запускается агент моментальных снимков, которая возвращается в формате *домена*\\*username*.|  
+|**job_login**|**nvarchar(512)**|— Это учетная запись Windows, под которой запускается агент моментальных снимков, которая возвращается в формате *домена*\\*username*.|  
 |**job_password**|**sysname**|По соображениям безопасности значение **\* \* \* \* \* \* \* \* \* \*** всегда возвращается.|  
 |**schedule_name**|**sysname**|Имя расписания, которое используется для этого задания агента.|  
-|**frequency_type**|**int**|Частота, с которой агент выполняется по расписанию, может иметь одно из следующих значений.<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное расписание<br /><br /> **64** = автозапуск;<br /><br /> **128** = повторять|  
+|**frequency_type**|**int**|Частота, с которой агент выполняется по расписанию, может иметь одно из следующих значений.<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное расписание<br /><br /> **64** = автозапуск<br /><br /> **128** = повторять|  
 |**frequency_interval**|**int**|День, когда агент выполняется, может иметь одно из следующих значений.<br /><br /> **1** = воскресенье<br /><br /> **2** = понедельник<br /><br /> **3** = Вторник<br /><br /> **4** = среда<br /><br /> **5** = четверг<br /><br /> **6** = Пятница<br /><br /> **7** = суббота<br /><br /> **8** = день<br /><br /> **9** = рабочие дни<br /><br /> **10** = выходные дни|  
 |**frequency_subday_type**|**int**|— Тип, который определяет, как часто запускается агент, если *frequency_type* — **4** (ежедневно) и может принимать одно из следующих значений.<br /><br /> **1** = в указанное время<br /><br /> **2** = секунды<br /><br /> **4** = минуты<br /><br /> **8** = часы|  
 |**frequency_subday_interval**|**int**|Число интервалов *frequency_subday_type* , которые проходят между запланированными выполнениями агента.|  
-|**frequency_relative_interval**|**int**|Неделя, когда запускается агент в данном месяце при *frequency_type* — **32** (относительно ежемесячно), и может принимать одно из следующих значений.<br /><br /> **1** = первый<br /><br /> **2** = секунды<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = последний|  
+|**frequency_relative_interval**|**int**|Неделя, когда запускается агент в данном месяце при *frequency_type* — **32** (по месячному расписанию), и может принимать одно из следующих значений.<br /><br /> **1** = первый<br /><br /> **2** = второй<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = последний|  
 |**frequency_recurrence_factor**|**int**|Число недель или месяцев между запланированными выполнениями агента.|  
 |**active_start_date**|**int**|Дата, когда агент будет впервые выполнен, в формате ГГГГММДД.|  
 |**active_end_date**|**int**|Дата, когда агент будет выполнен в последний раз, в формате ГГГГММДД.|  
@@ -81,7 +82,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_help_publication_snapshot** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
