@@ -15,16 +15,15 @@ f1_keywords:
 - sql12.swb.common.columnperm.f1
 - sql12.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8f925690ea8d8c008a2ebffa0dda2f39c7118563
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0fff329718cd3cc54a186928f78fd20dffe84a92
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186211"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034123"
 ---
 # <a name="permissions-or-securables-page"></a>Страница «Разрешения» или «Защищаемые объекты»
   Страница **Разрешения** или **Защищаемые объекты** используется для просмотра или установки разрешений для защищаемых объектов. Эта страница может быть открыта из нескольких мест. Содержимое страницы может немного измениться в зависимости от того, как открыта страница и ее содержимого. Верхняя сетка страницы может быть заполнена при открытии страницы или может быть пустой. Нажмите кнопку **Поиск**для добавления элементов в верхнюю сетку. Выберите элемент в верхней сетке, затем установите нужные разрешения на вкладке **Явное** . Чтобы увидеть суммарные разрешения, используйте вкладку **Действующие** .  

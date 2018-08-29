@@ -1,5 +1,5 @@
 ---
-title: sp_get_redirected_publisher (Transact-SQL) | Документы Microsoft
+title: sp_get_redirected_publisher (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ f1_keywords:
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28785969ea0bab2319d52461aa3e9a60f9be916d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a2abcc6205929146a37be95fa3943cad1b0ce4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994991"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028621"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,17 +67,17 @@ sp_get_redirected_publisher
 |**error_severity**|**int**|Серьезность ошибки проверки.|  
 |**error_message**|**nvarchar(4000)**|Текст сообщения ошибки проверки.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  *redirected_publisher* возвращает имя текущего издателя. Возвращает значение null, если издатель и базы данных публикации не могут быть перенаправлены с использованием **sp_redirect_publisher**.  
   
  Если проверка не запрошена или не существует запись для издателя и базы данных публикации, *error_number* и *error_severity* возвращают 0 и *error_message* Возвращает значение null.  
   
- Если проверка запрошена, хранимая процедура проверки [sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) вызывается, чтобы проверить, что целью перенаправления является подходящий узел для публикации База данных. Если проверка прошла успешно, **sp_get_redirected_publisher** возвращает имя перенаправленного издателя, 0 для *error_number* и *error_severity* столбцов и значений null в *error_message* столбца.  
+ Если проверка запрошена, хранимая процедура проверки [sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) вызывается, чтобы убедиться, что целью перенаправления является подходящий узел для публикации База данных. Если проверка прошла успешно, **sp_get_redirected_publisher** возвращает имя перенаправленного издателя, 0 для *error_number* и *error_severity* столбцов и значений null в *error_message* столбца.  
   
  Если проверка запрошена и завершилась неудачей, имя перенаправленного издателя возвращается вместе с информацией об ошибке.  
   
 ## <a name="permissions"></a>Разрешения  
- Вызывающий объект должен быть либо членом **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа публикации для определенной публикации связанные с базой данных издателя.  
+ Вызывающий объект должен быть либо членом **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа публикации для определенной публикации связанные с базой данных издателя.  
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

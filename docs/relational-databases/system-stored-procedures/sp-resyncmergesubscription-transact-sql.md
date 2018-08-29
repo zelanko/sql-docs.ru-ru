@@ -1,5 +1,5 @@
 ---
-title: sp_resyncmergesubscription (Transact-SQL) | Документы Microsoft
+title: sp_resyncmergesubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f5311da7b2d878a738695ee62a65c947f98693
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78cfd43dfa297f44555d8790e3bea41efcde9652
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033395"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издатель***"**  
+ [ **@publisher** =] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на издателе. Если хранимая процедура выполняется на подписчике, то надо указать издатель.  
   
  [ **@publisher_db** =] **"***publisher_db***"**  
@@ -80,13 +81,13 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_resyncmergesubscription** используется в репликации слиянием.  
   
- Значение **0** для *аргумент resync_type* параметр, который повторно применяет все изменения с момента создания исходного моментального снимка, может быть много ресурсов, но возможно гораздо меньше, чем полная повторная инициализация. Например, если исходный моментальный снимок был отправлен месяц назад, это значение приведет к повторному применению данных прошедшего месяца. Если исходный моментальный снимок содержал 1 ГБ данных, а объем изменений за последний месяц составил 2 МБ измененных данных, более эффективным будет повторное применение данных, а не полного моментального снимка размером в 1 ГБ.  
+ Значение **0** для *аргумент resync_type* параметр, который повторно применяет все изменения с момента исходного моментального снимка, может быть много ресурсов, но возможно гораздо меньше, чем полная повторная инициализация. Например, если исходный моментальный снимок был отправлен месяц назад, это значение приведет к повторному применению данных прошедшего месяца. Если исходный моментальный снимок содержал 1 ГБ данных, а объем изменений за последний месяц составил 2 МБ измененных данных, более эффективным будет повторное применение данных, а не полного моментального снимка размером в 1 ГБ.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_resyncmergesubscription**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_resyncmergesubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

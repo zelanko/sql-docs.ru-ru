@@ -1,5 +1,5 @@
 ---
-title: sp_unbindrule (Transact-SQL) | Документы Microsoft
+title: sp_unbindrule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be14a4885cea481edda6ba7465ac2c5aa969ec1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d7a014b00a5fba5192e3bd9227f88968980dfd89
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028937"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   Отменяет привязку правила к столбцу или псевдониму типа данных в текущей базе данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Рекомендуется создавать определения по умолчанию с помощью ключевого слова DEFAULT в [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) или [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) инструкции вместо него.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Корпорация Майкрософт рекомендует создавать определения по умолчанию с помощью ключевого слова DEFAULT в [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) или [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) инструкции вместо этого.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,20 +52,20 @@ sp_unbindrule [ @objname = ] 'object_name'
  Имя таблицы и столбца или псевдоним типа данных, для которого отменяется привязка правила. *object_name* — **nvarchar(776)**, не имеет значения по умолчанию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается вычислить по идентификаторам, состоящим из двух частей, сначала имена столбцов, а затем псевдонимы типов данных. При отмене привязки правила к псевдониму типа данных для всех столбцов этого типа данных, имеющих то же самое правило, также отменяется привязка. Столбцы этого типа данных с правилами, которые привязаны непосредственно к ним, не затрагиваются.  
   
 > [!NOTE]  
->  *object_name* может содержать квадратные скобки **[]** качестве символов идентификатора с разделителем. Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+>  *object_name* может содержать квадратные скобки **[]** качестве символов идентификатора с разделителем. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
  [  **@futureonly=** ] **"***аргумента futureonly_flag***"**  
- Используется только при отмене привязки правила к псевдониму типа данных. *Аргумент futureonly_flag* — **varchar(15)**, значение по умолчанию NULL. Когда *аргумента futureonly_flag* — **futureonly**, существующие столбцы этого типа данных не теряют указанного правила.  
+ Используется только при отмене привязки правила к псевдониму типа данных. *аргумента futureonly_flag* — **varchar(15)**, значение по умолчанию NULL. Когда *аргумента futureonly_flag* — **futureonly**, существующие столбцы этого типа данных не теряют указанного правила.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Для отображения текста правила выполните процедуру **sp_helptext** с именем правила в качестве аргумента.  
   
- Если отменяется привязка правила, сведения о привязке, удаляется из **sys.columns** таблица, если правило было привязано к столбцу, а также из **sys.types** таблица, если правило было привязано к псевдониму типа данных.  
+ Если правило отсутствует привязка, сведения о привязке, удаляется из **sys.columns** таблица, если правило было привязано к столбцу, а также из **sys.types** таблица, если правило было привязано к псевдониму типа данных.  
   
- Если отменяется привязка правила к псевдониму типа данных, то она отменяется и для всех столбцов, имеющих этот псевдоним. Правило по-прежнему могут быть привязаны к столбцам, типы данных которых изменены позже с помощью предложения ALTER COLUMN инструкции ALTER TABLE, необходимо специально отменить привязку правила из этих столбцов с помощью **sp_unbindrule** и указания Имя столбца.  
+ Если отменяется привязка правила к псевдониму типа данных, то она отменяется и для всех столбцов, имеющих этот псевдоним. Правило по-прежнему могут быть привязаны к столбцам, типы данных которых изменены позже с помощью предложения ALTER COLUMN инструкции ALTER TABLE, необходимо специально отменить привязку правила из этих столбцов с помощью **sp_unbindrule** и указав Имя столбца.  
   
 ## <a name="permissions"></a>Разрешения  
  Чтобы отменить привязку правила к столбцу таблицы, требуется разрешение ALTER на таблицу. Чтобы отменить привязку правила к псевдониму типа данных, требуется разрешение CONTROL для типа или разрешение ALTER для схемы, которой тип принадлежит.  
@@ -110,7 +111,7 @@ EXEC sp_unbindrule '[t.4].c1';
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE (Transact-SQL)](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_bindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   

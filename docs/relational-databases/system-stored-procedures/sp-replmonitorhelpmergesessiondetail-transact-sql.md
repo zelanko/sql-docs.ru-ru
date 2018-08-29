@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Документы Microsoft
+title: sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d76b4c7001f946ad01836c36982d81f90df397c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3f7c7a2ac9ea4230ca286dce90eda3d48458d41
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027730"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +46,14 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="arguments"></a>Аргументы  
  [ **@session_id** =] *session_id*  
- Задает сеанс агента. *session_id* — **int** без значения по умолчанию.  
+ Задает сеанс агента. *session_id* — **int** не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**PhaseID**|**int**|Фаза сеанса синхронизации может принимать одно из следующих значений:<br /><br /> **0** = Строка инициализации или итоговая строка<br /><br /> **1** = выгрузка<br /><br /> **2** = загрузка|  
-|**Столбец ArticleName**|**sysname**|Название синхронизируемой статьи. **Столбец ArticleName** также содержит сводные данные для строк в результирующем наборе, которые не отражают подробности о статье.|  
+|**PhaseID**|**int**|Фаза сеанса синхронизации может принимать одно из следующих значений:<br /><br /> **0** = Строка инициализации или итоговая строка<br /><br /> **1** = выгрузка<br /><br /> **2** = загрузки|  
+|**Имя_статьи**|**sysname**|Название синхронизируемой статьи. **Имя_статьи** также содержит сводные данные для строк в результирующем наборе, которые не отражают подробности о статье.|  
 |**PercentComplete**|**decimal**|Отображает процент общих изменений, сделанных в заданной строке детализации статьи, для выполняемого в данный момент или неудачного сеанса.|  
 |**RelativeCost**|**decimal**|Отображает время, потраченное на синхронизацию статьи, в виде процента от общего времени синхронизации для сеанса.|  
 |**Длительность**|**int**|Продолжительность сеанса агента.|  
@@ -61,20 +62,20 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**Deletes**|**int**|Число удалений за сеанс.|  
 |**Конфликты**|**int**|Число возникших за сеанс конфликтов.|  
 |**Идентификатор ошибки**|**int**|Идентификатор ошибки сеанса.|  
-|**Seqno не**|**int**|Порядок сеансов в результирующем наборе.|  
-|**Язык**|**int**|Указывает, какой тип сведений отражен в каждой строке результирующего набора:<br /><br /> **0** = инициализация<br /><br /> **1** = итоги передачи<br /><br /> **2** = подробности передачи статьи<br /><br /> **3** = итоги загрузки<br /><br /> **4** = подробности загрузки статьи|  
+|**SeqNo**|**int**|Порядок сеансов в результирующем наборе.|  
+|**RowType**|**int**|Указывает, какой тип сведений отражен в каждой строке результирующего набора:<br /><br /> **0** = инициализация<br /><br /> **1** = Сводка передачи<br /><br /> **2** = подробности передачи статьи<br /><br /> **3** = Сводка загрузки<br /><br /> **4** = подробности загрузки статьи|  
 |**Изменений схемы**|**int**|Число изменений схемы за сеанс.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_replmonitorhelpmergesessiondetail** используется для наблюдения за репликацией слиянием.  
   
- При выполнении на подписчике, **sp_replmonitorhelpmergesessiondetail** только возвращает подробные сведения о последних 5 сеансов агента слияния.  
+ При выполнении на подписчике, **sp_replmonitorhelpmergesessiondetail** только возвращает подробные сведения о последних 5 сеансах агента слияния.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **db_owner** или **replmonitor** предопределенной роли базы данных на базу данных распространителя на распространителе или на базе данных подписки на подписчике могут выполнять **sp_ replmonitorhelpmergesessiondetail**.  
+ Только члены **db_owner** или **replmonitor** предопределенной роли базы данных в базе данных распространителя на распространителе или в базе данных подписки на подписчике могут выполнять процедуру **sp_ replmonitorhelpmergesessiondetail**.  
   
 ## <a name="see-also"></a>См. также  
  [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

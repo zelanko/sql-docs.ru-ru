@@ -1,5 +1,5 @@
 ---
-title: sp_adjustpublisheridentityrange (Transact-SQL) | Документы Microsoft
+title: sp_adjustpublisheridentityrange (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8d39485c2ed9519353a2175fa4e127a5900b0e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb3d39fd2c1f4369af598af1c593ea530150d2ab
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032782"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
  Имя публикации, в которой повторно размещается диапазон идентификаторов. *Публикация* — **sysname**, значение по умолчанию NULL.  
   
  [  **@table_name=**] **"***table_name***"**  
- Имя таблицы, в которой повторно размещается диапазон идентификаторов. *имя_таблицы* — **sysname**, значение по умолчанию NULL.  
+ Имя таблицы, в которой повторно размещается диапазон идентификаторов. *TABLE_NAME* — **sysname**, значение по умолчанию NULL.  
   
  [  **@table_owner=**] **"***table_owner***"**  
  Владелец исходной таблицы на стороне издателя. *TABLE_OWNER* — **sysname**, значение по умолчанию NULL. Если *table_owner* не указан, используется имя текущего пользователя.  
@@ -58,15 +58,15 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_adjustpublisheridentityrange** используется во всех типах репликации.  
   
- Агент распространителя или агент слияния являются ответственными за автоматическое изменение границ диапазона идентификаторов публикаций, для которых включено автоматическое определение диапазона на основе пороговых значений. Однако если для какой-либо причине агент распространителя или агент слияния не был выполнен в течение заданного времени, а ресурс диапазона идентификаторов интенсивно потребляет пороговую точку, пользователи могут вызывать **sp_adjustpublisheridentityrange** Чтобы выделить новый диапазон значений для издателя.  
+ Агент распространителя или агент слияния являются ответственными за автоматическое изменение границ диапазона идентификаторов публикаций, для которых включено автоматическое определение диапазона на основе пороговых значений. Тем не менее, если для какой-либо причине агент распространителя или агент слияния не был выполнен в течение заданного времени, а ресурс диапазона идентификаторов были использованы во многом на пороговую точку, пользователи могут вызывать **sp_adjustpublisheridentityrange** Чтобы выделить новый диапазон значений для издателя.  
   
  При выполнении **sp_adjustpublisheridentityrange**, либо *публикации* или *table_name* должен быть указан. Если указаны оба или ни одного, возвращается ошибка.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_adjustpublisheridentityrange**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_adjustpublisheridentityrange**.  
   
 ## <a name="see-also"></a>См. также  
  [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)   

@@ -3,77 +3,83 @@ title: Загружаемые файлы CAB-файла для накопите�
 description: Загрузки CAB-файла для службы машинного обучения SQL Server 2017 и SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/02/2018
+ms.date: 08/28/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6a2893e976e64315a1aad742062e962269439b72
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: e1586f94e21304ce994e5e14bf1b4a57ee796a83
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566325"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152535"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB-файлов загрузки для накопительные пакеты обновления анализа в базе данных SQL Server экземпляры
 
 Экземпляров SQL Server, настроенных для аналитики в базе данных включают функции R и Python, которые поставляются в CAB-файлы, установленные и обслуживаемых через программу установки SQL Server. 
 
-На серверах, подключенных к Интернету CAB обычно обновлений через Центр обновления Windows. Отключенные серверы должны обновляться вручную. В этой статье ссылки загрузки на CAB-файлы для каждого накопительного пакета обновления SQL Server 2017 служб машинного обучения (R и Python) - или SQL Server 2016 R Services - таким образом, можно вручную обновить серверы, без подключения к Интернету. 
+На серверах, подключенных к Интернету CAB обычно обновлений через Центр обновления Windows. Отключенные серверы должны обновляться вручную. Сведения об автономных установок, см. в разделе [Установка SQL Server в машинном обучении компоненты без доступа к Интернету](sql-ml-component-install-without-internet-access.md).
+
+В этой статье ссылки загрузки на CAB-файлы для каждого накопительного пакета обновления SQL Server 2017 служб машинного обучения (R и Python) - или SQL Server 2016 R Services - таким образом, можно вручную обновить серверы, без подключения к Интернету. 
 
 ## <a name="prerequisites"></a>предварительные требования
 
 Начните с установки базовых показателей.
 
 + В SQL Server 2017 служб машинного обучения первоначальным выпуском является базовой установки. 
-
 + В SQL Server 2016 R Services можно начать с первоначального выпуска, SP1 или SP2. 
 
-Дополнительные сведения см. в разделе [Установка SQL Server в машинном обучении компоненты без доступа к Интернету](sql-ml-component-install-without-internet-access.md).
+Затем примените [накопительные пакеты обновления](https://support.microsoft.com/help/4047329) для экземпляра ядра базы данных SQL Server.
 
-После установки базовых показателей, можно выполнить [выполнить интегрированное обновление](sql-ml-component-install-without-internet-access.md#slipstream-upgrades) , включает файлы CAB-файла с помощью функции обновленные машинного обучения.
+После установки базовых показателей и применили накопительные пакеты обновления для SQL Server, можно выполнить [выполнить интегрированное обновление](sql-ml-component-install-without-internet-access.md#slipstream-upgrades) для установки CAB-файлы с обновлены функции машинного обучения.
 
 CAB-файлы, перечислены в обратном хронологическом порядке. При загрузке CAB-файлы и передают их на конечном компьютере, поместить их в папке например **загружает** или папке % temp % пользователя программы установки.
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 CABs
 
-Выпуск  |Ссылка на скачивание  |
----------|---------|
-**SQL Server 2017 CU8-CU9** |
-Microsoft R Open     |без изменений. использовать предыдущее [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874708&clcid=1033)|
-Откройте Microsoft Python     |без изменений. использовать предыдущее [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Сервер Microsoft Python    |[SPS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874707&clcid=1033)]|
-**SQL Server 2017 CU6-накопительным пакетом обновления 7** |
-Microsoft R Open     |без изменений. использовать предыдущее [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
-Откройте Microsoft Python     |без изменений. использовать предыдущее [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Сервер Microsoft Python    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
-**SQL Server 2017 CU5** |
-Microsoft R Open     |без изменений. использовать предыдущее [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)|
-Откройте Microsoft Python     |без изменений. использовать предыдущее [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Сервер Microsoft Python    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)|
-**Накопительным пакетом обновления 4 для SQL Server 2017** |
-Microsoft R Open     |без изменений. использовать предыдущее [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
-Откройте Microsoft Python     |без изменений. использовать предыдущее [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Сервер Microsoft Python    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
-**SQL Server 2017 CU3** |
+Выпуск  |Ссылка на скачивание  | Проблемы | 
+---------|---------------|-------|
+**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Нет изменений. Это предыдущей версии. |
+R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Небольшие исправления.|
+Откройте Microsoft Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Нет изменений. Это предыдущей версии. |
+Сервер Python    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| Python rx_data_step теряет порядок строк при удалять дубликаты. <br/>SPEE сбоя определения типа данных в кластеризованном индексе columnstore. <br/>Возвращает пустую таблицу, когда столбцы содержат все значения null. |
+**[SQL Server 2017 CU8](https://support.microsoft.com/help/4338363)-[CU9](https://support.microsoft.com/help/4341265)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Нет изменений. Это предыдущей версии. |
+R Server      |[SRS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874708&clcid=1033)|
+Откройте Microsoft Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Нет изменений. Это предыдущей версии. |
+Сервер Python    |[SPS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874707&clcid=1033)|
+**[SQL Server 2017 CU6](https://support.microsoft.com/help/4101464)-[накопительным пакетом обновления 7](https://support.microsoft.com/help/4229789)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Нет изменений. Это предыдущей версии. |
+R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
+Откройте Microsoft Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Нет изменений. Это предыдущей версии. |
+Сервер Python    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)| Типы данных даты и времени в запросе SPEES.<br/>улучшены сообщения об ошибках в microsoftml, если предварительно обученные модели отсутствуют.<br/> Исправления для revoscalepy преобразования, функции и переменные.|
+**[SQL Server 2017 CU5](https://support.microsoft.com/help/4092643)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Нет изменений. Это предыдущей версии. |
+R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)| Длинные пути ошибки в rxInstallPackages.<br/>Подключений в замыканием на себя для RxExec.
+Откройте Microsoft Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Нет изменений. Это предыдущей версии. |
+Сервер Python    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)| <br/>Соединения в замыканием на себя для rx_exec.
+**[Накопительным пакетом обновления 4 для SQL Server 2017](https://support.microsoft.com/help/4056498)** |  |   |
+Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Нет изменений. Это предыдущей версии. |
+R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
+Откройте Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Нет изменений. Это предыдущей версии. |
+ Сервер Python    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
+**[SQL Server 2017 CU3](https://support.microsoft.com/help/4052987)** |  |  |
 Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
-Откройте Microsoft Python     |без изменений. использовать предыдущее [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Сервер Microsoft Python    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
-**SQL Server 2017 CU1 — накопительное обновление 2** |
-Microsoft R Open     |без изменений. использовать предыдущее [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
-Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Откройте Microsoft Python     |без изменений. использовать предыдущее [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Сервер Microsoft Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
-**Первоначальный выпуск SQL Server 2017** |
+R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
+Откройте Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Нет изменений. Это предыдущей версии. |
+Сервер Python    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Сериализация в revoscalepy, модель на Python с помощью [rx_serialize_model функция](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/>[Собственная Оценка](../sql-native-scoring.md) поддержки, а также усовершенствования [оценки в реальном времени](../real-time-scoring.md). 
+**SQL Server 2017 [CU1](https://support.microsoft.com/help/4038634)-[накопительным пакетом обновления 2](https://support.microsoft.com/help/4052574)** |  |  |
+Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| Нет изменений. Это предыдущей версии. |
+R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
+Откройте Microsoft Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Нет изменений. Это предыдущей версии. 
+Сервер Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | Добавляет rx_create_col_info для возвращения сведений о схеме. <br/>Усовершенствования [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) для поддержки параллельных сценарии с использованием `RxLocalParallel` контекста вычислений.|
+**Первоначальный выпуск** |  |  |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
-Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
+R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Откройте Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Сервер Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Сервер Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 
 <a name="bkmk_2016Installers"></a>
@@ -88,14 +94,14 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Microsoft R Open     |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039)|
 Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
 **SQL Server 2016 SP1 CU4-CU10**     |
-Microsoft R Open     |без изменений. использовать предыдущее [SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
+Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)
 **SQL Server 2016 SP1 CU1-CU3**     |
 Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 **SQL Server 2016 с пакетом обновления 1**     |
 Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
-Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)=
+Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
 **SQL Server 2016 CU4-CU9**     |
 Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
 Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|

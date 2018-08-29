@@ -1,5 +1,5 @@
 ---
-title: Представления каталога безопасности (Transact-SQL) | Документы Microsoft
+title: Представления каталога безопасности (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], security
 - security catalog views [SQL Server]
 ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
-caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a0a9eb44272ca932831b3084ab6fe2a0eb6840f1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0600ad6384914c4de5467918aa1770ac84040b69
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181330"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027553"
 ---
 # <a name="security-catalog-views-transact-sql"></a>Представления каталога безопасности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

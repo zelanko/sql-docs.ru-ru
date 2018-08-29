@@ -1,5 +1,5 @@
 ---
-title: sp_droparticle (Transact-SQL) | Документы Microsoft
+title: sp_droparticle (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droparticle
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a05199bb255a3ae4050f2bca7a6d2f4352d5533a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc5a59df61730eba41316454c58afc3695689bd9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990869"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033296"
 ---
 # <a name="spdroparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_droparticle [ @publication= ] 'publication'
  [  **@publication=**] **"***публикации***"**  
  Имя публикации, содержащее статью для удаления. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"***статьи***"**  
+ [  **@article=**] **"***статье***"**  
  Имя статьи для удаления. *статья* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
@@ -62,12 +62,12 @@ sp_droparticle [ @publication= ] 'publication'
  [  **@force_invalidate_snapshot =** ] *подписки потребуют*  
  Подтверждает, что действие, выполненное этой хранимой процедурой, может сделать недействительным существующий моментальный снимок. *подписки потребуют* — **бит**, значение по умолчанию **0**.  
   
- **0** указывает, что изменение статьи не приводит к недействительности моментального снимка. Если хранимая процедура определяет, что изменение требует создания нового моментального снимка, возникает ошибка и изменения не выполняются.  
+ **0** означает, что изменения статьи не приводят к недействительности моментального снимка. Если хранимая процедура определяет, что изменение требует создания нового моментального снимка, возникает ошибка и изменения не выполняются.  
   
  **1** указывает, что изменения статьи может привести к недействительности моментального снимка и если существующие подписки потребуют нового моментального снимка, дается разрешение существующий моментальный снимок помечается как устаревшего и создание нового моментального снимка.  
   
- [ **@publisher**=] **"***издатель***"**  
- Указывает значение, отличное от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+ [ **@publisher**=] **"***издателя***"**  
+ Указывает, отличный от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует использовать при изменении свойств статьи на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
@@ -78,10 +78,10 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_droparticle** используется в моментальных снимков и репликации транзакций.  
+## <a name="remarks"></a>Примечания  
+ **sp_droparticle** используется в репликации моментальных снимков и репликации транзакций.  
   
- Для статей с горизонтальной фильтрацией **sp_droparticle** проверяет **тип** столбца статьи в [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) таблицу Определите представление или фильтр также следует ли удалять. Если представление или фильтр были созданы автоматически, они удаляются вместе со статьей. Если они были созданы вручную, они не удаляются.  
+ Для статей с горизонтальной фильтрацией **sp_droparticle** проверяет **тип** столбца статьи в [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) таблицы Определите, представление или фильтр также следует ли удалять. Если представление или фильтр были созданы автоматически, они удаляются вместе со статьей. Если они были созданы вручную, они не удаляются.  
   
  Выполнение **sp_droparticle** удаление статьи из публикации не удаляет объект из базы данных публикации или соответствующий объект из базы данных подписки. При необходимости используйте инструкцию `DROP <object>` для удаления этих объектов вручную.  
   
@@ -89,7 +89,7 @@ sp_droparticle [ @publication= ] 'publication'
  [!code-sql[HowTo#sp_droparticle](../../relational-databases/replication/codesnippet/tsql/sp-droparticle-transact-_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_droparticle**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_droparticle**.  
   
 ## <a name="see-also"></a>См. также  
  [Удаление статьи](../../relational-databases/replication/publish/delete-an-article.md)   

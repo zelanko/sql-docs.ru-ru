@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistributor (Transact-SQL) | Документы Microsoft
+title: sp_dropdistributor (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0288daacc8f88decf6af642d0a864f3f08057fbd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e321b5e5976192146f9cd8d993304d5f5ae55e67
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029064"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,17 +56,17 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
  [  **@ignore_distributor=**] *ignore_distributor*  
  Указывает, исполняется ли данная хранимая процедура без подключения к распространителю. *ignore_distributor* — **бит**, значение по умолчанию **0**.  
   
- Если **0**, **sp_dropdistributor** подключается к распространителю и удаляет все объекты репликации. Если **sp_dropdistributor** не может подключиться к распространителю, хранимая процедура завершается ошибкой.  
+ Если **0**, **sp_dropdistributor** подключается к распространителю и удаляет все объекты репликации. Если **sp_dropdistributor** не удалось соединиться с распространителем, хранимая процедура завершается ошибкой.  
   
- Если **1**, не устанавливаются соединения с распространителем и не удаляются объекты репликации. Этот вариант используется при удалении распространителя или если он постоянно работает в режиме «вне сети». Объекты издателя на распространителе не удаляются до тех пор, пока распространитель не будет переустановлен.  
+ Если **1**, не подключается к распространителю и объекты репликации не удаляются. Этот вариант используется при удалении распространителя или если он постоянно работает в режиме «вне сети». Объекты издателя на распространителе не удаляются до тех пор, пока распространитель не будет переустановлен.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_dropdistributor** используется во всех типах репликации.  
   
- Если других объектов издателя или распространителя существует на сервере, **sp_dropdistributor** завершается ошибкой, если **@no_checks** равно **1**.  
+ Если других объектов издателя или распространения существует на сервере, **sp_dropdistributor** завершается ошибкой, если **@no_checks** присваивается **1**.  
   
  Эта хранимая процедура должна выполняться после удаления базы данных распространителя, выполнив **sp_dropdistributiondb**.  
   
@@ -73,7 +74,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_dropdistributor**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_dropdistributor**.  
   
 ## <a name="see-also"></a>См. также  
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Отключение публикации и распространения)  

@@ -1,5 +1,5 @@
 ---
-title: sp_dbcmptlevel (Transact-SQL) | Документы Microsoft
+title: sp_dbcmptlevel (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 caps.latest.revision: 110
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 416842d369700f0ac7e0ecd18f84fc0b546a49f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: acd4d6a2d87d97bd31b35779a9bc605dde41db04
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236853"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031947"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33236853"
   Настраивает определенное поведение баз данных для обеспечения совместимости с указанной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте [уровень совместимости инструкции ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)вместо него.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте [уровень совместимости ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)вместо этого.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,18 +68,18 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если не указаны параметры или *имя* параметр не указан, **sp_dbcmptlevel** возвращает сообщение об ошибке.  
+ Если параметры не указаны или *имя* параметр не указан, **sp_dbcmptlevel** возвращает сообщение об ошибке.  
   
- Если *имя* указан без *версии*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает сообщение, отображающее текущий уровень совместимости для указанной базы данных.  
+ Если *имя* указан без *версии*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает сообщение, отображающее текущий уровень совместимости указанной базы данных.  
   
-## <a name="remarks"></a>Замечания  
- Описание уровней совместимости см. в разделе [уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+## <a name="remarks"></a>Примечания  
+ Описание уровней совместимости, см. в разделе [уровень совместимости ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Только владелец базы данных, члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных (при изменении текущей базы данных) могут выполнять эту процедуру.  
+ Только владелец базы данных, а члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных (при изменении текущей базы данных) могут выполнять эту процедуру.  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Зарезервированные ключевые слова (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_prepexecrpc (Transact-SQL) | Документы Microsoft
+title: sp_prepexecrpc (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_prepexecrpc
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 536932ef57cc8bb042979dd2332552f34713743d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ab11cbca7177408ed94e79967ab55bad9fbc50b1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250276"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027958"
 ---
 # <a name="spprepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_prepexecrpc handle OUTPUT, RPCCall
  Определяет вызов хранимой процедуры с использованием канонического синтаксиса ODBC. *RPCCall* является обязательным параметром, который вызывает для **ntext** входное строковое значение.  
   
  *bound_param*  
- Означает необязательное использование дополнительных параметров. *bound_param* вызывает в качестве входного значения любого типа данных для обозначения дополнительных параметров.  
+ Означает необязательное использование дополнительных параметров. *bound_param* вызывает для входного значения любого типа данных для обозначения дополнительных параметров.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

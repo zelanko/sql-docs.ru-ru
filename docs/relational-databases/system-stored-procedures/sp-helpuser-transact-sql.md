@@ -1,5 +1,5 @@
 ---
-title: sp_helpuser (Transact-SQL) | Документы Microsoft
+title: sp_helpuser (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 343439dd04f9f74c0a5444afef25921072d9d14c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2f69c77b548de159a6b6c40ceddccb169e477ede
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028947"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   Возвращает сведения об основных участниках уровня базы данных.  
   
 > [!IMPORTANT]  
->  **sp_helpuser** не возвращает сведения о защищаемых объектах, появившихся в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Используйте [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) вместо него.  
+>  **sp_helpuser** не возвращает сведения о защищаемых объектах, появившихся в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Используйте [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) вместо этого.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,14 +54,14 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- В следующей таблице показаны результирующий набор, если ни одна учетная запись пользователя, ни [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или пользователя Windows, указанных в *security_account*.  
+ В следующей таблице показаны результирующий набор, если ни один учетной записи пользователя и не является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или пользователя Windows, заданное для *security_account*.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|Пользователи текущей базы данных.|  
 |**RoleName**|**sysname**|Роли, к которым **UserName** принадлежит.|  
 |**LoginName**|**sysname**|Имя входа для **UserName**.|  
-|**DefDBName**|**sysname**|База данных по умолчанию **UserName**.|  
+|**DefDBName**|**sysname**|База данных по умолчанию из **UserName**.|  
 |**DefSchemaName**|**sysname**|Установленная по умолчанию схема пользователя базы данных.|  
 |**UserID**|**smallint**|Идентификатор **UserName** в текущей базе данных.|  
 |**SID**|**smallint**|Идентификатор безопасности вошедшего в систему пользователя.|  
@@ -72,20 +73,20 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**LoginName**|**sysname**|Имена входа, назначенные пользователям текущей базы данных.|  
 |**UserNameAliasedTo**|**sysname**|Имя пользователя текущей базы данных, которому присвоено данное имя входа.|  
   
- В следующей таблице показаны результирующий набор, если роль указан для *security_account*.  
+ В следующей таблице показаны результирующий набор, если указана роль для *security_account*.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**role_name**|**sysname**|Имя роли в текущей базе данных.|  
+|**Имя_роли**|**sysname**|Имя роли в текущей базе данных.|  
 |**Role_id**|**smallint**|Идентификатор роли в текущей базе данных.|  
 |**Users_in_role**|**sysname**|Член роли в текущей базе данных.|  
-|**идентификатор пользователя**|**smallint**|Идентификатор пользователя для члена роли.|  
+|**Идентификатор пользователя**|**smallint**|Идентификатор пользователя для члена роли.|  
   
-## <a name="remarks"></a>Замечания  
- Чтобы просмотреть сведения о членстве в ролях базы данных, используйте [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Чтобы просмотреть сведения о членстве в ролях сервера, используйте [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)и для отображения сведений об объектах уровня сервера, используйте [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+## <a name="remarks"></a>Примечания  
+ Чтобы просмотреть сведения о членстве в роли базы данных, используйте [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Чтобы просмотреть сведения о членстве в ролях сервера, используйте [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)и чтобы просмотреть сведения об участниках на уровне сервера, используйте [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public** .  
+ Необходимо быть членом роли **public**.  
   
  Полученные данные подлежат ограничениям на доступ к метаданным. Сущности, на которые участник не имеет разрешения, не показаны. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -115,7 +116,7 @@ EXEC sp_helpuser 'db_securityadmin';
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.database_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

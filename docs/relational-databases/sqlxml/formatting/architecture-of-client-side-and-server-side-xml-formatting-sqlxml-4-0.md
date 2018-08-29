@@ -24,19 +24,19 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 35fdd4d3407b31b00e1685f49f86b560b305b464
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 92f5069b41eec016eb599c6f4f43b1df744c6e6f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540124"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43086462"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>Архитектура форматирования XML на стороне клиента и сервера (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   На следующей иллюстрации показана архитектура форматирования XML на стороне сервера.  
   
- ![Архитектура форматирования XML-кода на стороне сервера. ] (../../../relational-databases/sqlxml/formatting/media/serversidexml.gif "Архитектуры из XML-форматирование на стороне сервера.")  
+ ![Архитектура форматирования XML-кода на стороне сервера. ](../../../relational-databases/sqlxml/formatting/media/serversidexml.gif "Архитектуры из XML-форматирование на стороне сервера.")  
   
  В этом примере команда, указанная на стороне клиента, передается на сервер. Сервер создает XML-документ и возвращает его клиенту. В этом случае сервер имеет экземпляр [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы форматировать XML-документ на стороне сервера, можно применять либо поставщик SQLXMLOLEDB, либо SQLOLEDB.  Поставщик SQLXMLOLEDB использует библиотеку Sqlxml4.dll, входящую в SQLXML 4.0. Если используется поставщик SQLOLEDB, по умолчанию получаем функциональность SQLXML, предоставляемую библиотекой Sqlxmlx.dll, входящей в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, или компоненты доступа к данным MDAC 2.6 или более поздней версии. Чтобы использовать библиотеку Sqlxml4.dll с поставщиком SQLOLEDB, необходимо задать свойство версии SQLXML для «SQLXML.4.0» для объекта SQLOLEDB Connection. В любом случае сервер создает XML-документ и передает его клиенту.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "39540124"
   
  На следующей иллюстрации показана архитектура форматирования XML на стороне клиента.  
   
- ![Архитектура форматирования XML-кода на стороне клиента. ] (../../../relational-databases/sqlxml/formatting/media/clientsidexml.gif "Архитектуры из XML-форматирование на стороне клиента.")  
+ ![Архитектура форматирования XML-кода на стороне клиента. ](../../../relational-databases/sqlxml/formatting/media/clientsidexml.gif "Архитектуры из XML-форматирование на стороне клиента.")  
   
  В этом примере клиент использует поставщик SQLXMLOLEDB. В строке подключения свойство поставщика данных должно быть присвоено значение SQLOLEDB. Это единственное допустимое значение в SQLXML 4.0. Выполняемая на клиенте команда отправляется на сервер. Созданный на сервере набор строк отправляется клиенту. Форматирование XML-документа на основе набора строк выполняется на стороне клиента.  
   

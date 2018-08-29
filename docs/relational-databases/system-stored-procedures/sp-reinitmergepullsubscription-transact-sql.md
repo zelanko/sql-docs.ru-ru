@@ -1,5 +1,5 @@
 ---
-title: sp_reinitmergepullsubscription (Transact-SQL) | Документы Microsoft
+title: sp_reinitmergepullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitmergepullsubscription
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20c701adf431f550f107a9cef08f1a3e49a9d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54245be4b829b4dc6bffe59d79c93d63576338f6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996951"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031196"
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издатель***"**  
- Имя издателя. *издатель* — **sysname**, по умолчанию ALL.  
+ [ **@publisher** =] **"***издателя***"**  
+ Имя издателя. *издатель* — **sysname**, значение по умолчанию все.  
   
  [ **@publisher_db** =] **"***publisher_db***"**  
- Имя базы данных издателя. *publisher_db* — **sysname**, по умолчанию ALL.  
+ Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию все.  
   
  [ **@publication** =] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, по умолчанию ALL.  
+ Имя публикации. *Публикация* — **sysname**, значение по умолчанию все.  
   
  [ **@upload_first** =] **"***upload_first***"**  
- Показывает, будут ли изменения на подписчике переданы перед повторной инициализацией подписки. *upload_first* — **nvarchar(5)**, значение по умолчанию FALSE. Если **true**, перед повторной инициализацией подписки передаются изменения. Если **false**, изменения не передаются.  
+ Показывает, будут ли изменения на подписчике переданы перед повторной инициализацией подписки. *upload_first* — **nvarchar(5)**, значение по умолчанию FALSE. Если **true**, изменения передаются перед повторной инициализацией подписки. Если **false**, изменения не передаются.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_reinitmergepullsubscription** используется в репликации слиянием.  
   
  Если добавить, удалить или изменить параметризованный фильтр, ожидающие обработки изменения подписчика нельзя будет передать издателю во время повторной инициализации. Если нужно передать изменения, ожидающие обработки, то перед изменением фильтра необходимо синхронизировать все подписки.  
@@ -75,7 +75,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_reinitmergepullsubscription**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_reinitmergepullsubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [Повторная инициализация подписки](../../relational-databases/replication/reinitialize-a-subscription.md)   

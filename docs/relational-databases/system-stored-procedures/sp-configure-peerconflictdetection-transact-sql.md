@@ -1,5 +1,5 @@
 ---
-title: sp_configure_peerconflictdetection (Transact-SQL) | Документы Microsoft
+title: sp_configure_peerconflictdetection (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ad2e7b3c0fd877dad8b14360d7c3f65331cb8cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 07555d1f5e26538b1bdf980c65d5f08cfa546717
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991681"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031661"
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @publication=] '*публикации*"  
  Имя публикации, для которой должна быть выполнена настройка обнаружения конфликтов. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [ @action=] '*действия*"  
+ [ @action=] '*действие*"  
  Указывает, должно ли быть включено или отключено обнаружение конфликтов применительно к публикации. *Действие* — **nvarchar(5)**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -65,7 +65,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 |NULL (по умолчанию)||  
   
  [ @originator_id=] *originator_id*  
- Указывает идентификатор в одноранговой топологии. *originator_id* — **int**, значение по умолчанию NULL. Этот идентификатор используется для обнаружения конфликтов, если *действия* равно **включить**. Задайте положительное, ненулевое значение идентификатора, которое никогда не использовалось в топологии. Список использованных идентификаторов запросите в системной таблице [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
+ Указывает идентификатор в одноранговой топологии. *originator_id* — **int**, значение по умолчанию NULL. Этот идентификатор используется для обнаружения конфликтов, если *действие* присваивается **включить**. Задайте положительное, ненулевое значение идентификатора, которое никогда не использовалось в топологии. Список использованных идентификаторов запросите в системной таблице [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
   
  [ @conflict_retention=] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -85,15 +85,15 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- Хранимая процедура sp_configure_peerconflictdetection используется для одноранговой репликации транзакций. Для использования обнаружения конфликтов, все узлы должны работать под управлением [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии; и обнаружения должен быть включен для всех узлов.  
+## <a name="remarks"></a>Примечания  
+ Хранимая процедура sp_configure_peerconflictdetection используется для одноранговой репликации транзакций. Для использования обнаружения конфликтов, все узлы должны работать под управлением [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии; и обнаружения необходимо включить для всех узлов.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner.  
   
 ## <a name="see-also"></a>См. также  
  [Обнаружение конфликтов в одноранговой репликации](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Одноранговая репликация транзакций](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

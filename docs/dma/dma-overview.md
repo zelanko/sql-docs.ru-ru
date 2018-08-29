@@ -2,7 +2,7 @@
 title: Обзор помощника по миграции данных (SQL Server) | Документация Майкрософт
 description: Узнайте, как использовать Data Migration Assistant для переноса баз данных SQL Server на другой сервер SQL или баз данных Azure
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3480f529b5f560f50518fa3af4a810ea0acc0bbb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fbf3441d82f2de405e1a227821834b3943db3285
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781525"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152695"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Общие сведения о Data Migration Assistant
 

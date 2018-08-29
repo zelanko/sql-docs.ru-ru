@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_rename_condition (Transact-SQL) | Документы Microsoft
+title: процедура sp_syspolicy_rename_condition (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_rename_condition
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0c44a683e247b8de88c1223f1320683486611d9c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 09cfb601bbe73d202fcc478edf0160f4c31bd110
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033716"
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,18 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
  Имя условия для переименования. *имя* — **sysname**и должен быть указан, если *condition_id* имеет значение NULL.  
   
  [  **@condition_id=** ] *condition_id*  
- Представляет идентификатор условие, которое требуется переименовать. *condition_id* — **int**и должен быть указан, если *имя* имеет значение NULL.  
+ Является идентификатором для условие, которое требуется переименовать. *condition_id* — **int**и должен быть указан, если *имя* имеет значение NULL.  
   
  [  **@new_name=** ] **"***новое_имя***"**  
- — Новое имя условия. *новое_имя* — **sysname**и является обязательным. Не может быть пустой строкой и не может принимать значение NULL.  
+ — Это новое имя условия. *новое_имя* — **sysname**и является обязательным. Не может быть пустой строкой и не может принимать значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_rename_condition должна выполняться в контексте системной базы данных msdb.  
   
- Необходимо указать значение либо для *имя* или *condition_id*. Они не могут одновременно иметь значения NULL. Чтобы получить эти значения, запросите системное представление msdb.dbo.syspolicy_conditions.  
+ Необходимо указать значение для любого *имя* или *condition_id*. Они не могут одновременно иметь значения NULL. Чтобы получить эти значения, запросите системное представление msdb.dbo.syspolicy_conditions.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  

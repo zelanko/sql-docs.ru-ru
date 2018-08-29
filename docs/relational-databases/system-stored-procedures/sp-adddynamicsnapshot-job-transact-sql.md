@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_adddynamicsnapshot_job (Transact-SQL) | Документы Microsoft
+title: sp_adddynamicsnapshot_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddynamicsnapshot_job
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2a4967dd959be15f8f9bb1ef4654486b6fee6ace
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5592667914cc3109058b81366288dba3d27234da
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993801"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032215"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>Хранимая процедура sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  Имя публикации, к которой требуется добавить задание создания моментального снимка отфильтрованных данных. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@suser_sname**=] **"***suser_sname***"**  
- Значение, используемое во время создания моментального снимка отфильтрованных данных для подписки, отсортированной по значению [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) на стороне подписчика. *функция SUSER_SNAME* — **sysname**, не имеет значения по умолчанию. *функция SUSER_SNAME* должен иметь значение NULL, если эта функция не используется для динамической фильтрации публикации.  
+ Значение, используемое во время создания моментального снимка отфильтрованных данных для подписки, отсортированной по значению [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) на стороне подписчика. *SUSER_SNAME* — **sysname**, не имеет значения по умолчанию. *SUSER_SNAME* должен иметь значение NULL, если эта функция не используется для динамической фильтрации публикации.  
   
  [ **@host_name**=] **"***host_name***"**  
  Значение, используемое во время создания моментального снимка отфильтрованных данных для подписки, отсортированной по значению [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) на стороне подписчика. *HOST_NAME* — **sysname**, не имеет значения по умолчанию. *HOST_NAME* должен иметь значение NULL, если эта функция не используется для динамической фильтрации публикации.  
@@ -101,20 +100,20 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|Повторяющееся задание|  
   
  [  **@frequency_interval =** ] *frequency_interval*  
- Период (в днях), в течение которого выполняется задание создания моментального снимка отфильтрованных данных. *frequency_interval* — **int**, значение по умолчанию 1 и зависит от значения *frequency_type*.  
+ Период (в днях), в течение которого выполняется задание создания моментального снимка отфильтрованных данных. *frequency_interval* — **int**, со значением по умолчанию 1 и зависит от значения *frequency_type*.  
   
-|Значение *frequency_type*|Воздействие на *frequency_interval*|  
+|Значение атрибута *frequency_type*|Воздействие на *frequency_interval*|  
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval* не используется.|  
 |**4** (по умолчанию)|Каждый *frequency_interval* дней, по умолчанию ежедневно.|  
-|**8**|*frequency_interval* — один или несколько из следующих (объединены с [ &#124; &#40;побитовое или&#41; &#40;Transact-SQL&#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) логический оператор):<br /><br /> **1** = воскресенье &#124; **2** = понедельник &#124; **4** = вторник &#124; **8** = среда &#124; **16** = Четверг &#124; **32** = пятница &#124; **64** = суббота|  
+|**8**|*frequency_interval* равно одному или нескольким из следующих (в сочетании с [ &#124; &#40;побитовое или&#41; &#40;Transact-SQL&#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) логический оператор):<br /><br /> **1** = воскресенье &#124; **2** = понедельник &#124; **4** = вторник &#124; **8** = среда &#124; **16** = Четверг &#124; **32** = пятница &#124; **64** = суббота|  
 |**16**|На *frequency_interval* день месяца.|  
 |**32**|*frequency_interval* является одним из следующих:<br /><br /> **1** = воскресенье &#124; **2** = понедельник &#124; **3** = вторник &#124; **4** = среда &#124; **5** = Четверг &#124; **6** = пятница &#124; **7** = суббота &#124; **8** = день &#124; **9** = рабочий день &#124; **10** = выходной день|  
 |**64**|*frequency_interval* не используется.|  
 |**128**|*frequency_interval* не используется.|  
   
  [  **@frequency_subday=**] *frequency_subday*  
- Указывает единицы изменения для *frequency_subday_interval*. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
+ Указывает единицы измерения для *frequency_subday_interval*. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -124,10 +123,10 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Час|  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Число *frequency_subday* периоды, когда пройти между выполнениями задания. *frequency_subday_interval* — **int**, значение по умолчанию 5.  
+ Число *frequency_subday* периодов, которые пройти между выполнениями задания. *frequency_subday_interval* — **int**, значение по умолчанию 5.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Количество выполнений задания моментальных снимков отфильтрованных данных в каждом месяце. Этот параметр используется при *frequency_type* равно **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+ Количество выполнений задания моментальных снимков отфильтрованных данных в каждом месяце. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -156,26 +155,26 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**идентификатор**|**int**|Определяет задание моментального снимка отфильтрованных данных в [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) системной таблицы.|  
+|**идентификатор**|**int**|Определяет задание моментального снимка отфильтрованных данных в [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) системная таблица.|  
 |**dynamic_snapshot_jobname**|**sysname**|Имя задания моментального снимка фильтрованных данных.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Уникально идентифицирует [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание агента на распространителе.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **Хранимая процедура sp_adddynamicsnapshot_job** используется в репликации слиянием для публикаций, использующих параметризованный фильтр.  
+## <a name="remarks"></a>Примечания  
+ **sp_adddynamicsnapshot_job** используется в репликации слиянием для публикаций, использующих параметризованный фильтр.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_adddynamicsnapshot_job**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_adddynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>См. также  
  [Создать моментальный снимок для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [хранимую процедуру sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
+ [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
  [sp_helpdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   
   

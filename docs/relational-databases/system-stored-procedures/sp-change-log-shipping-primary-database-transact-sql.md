@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_primary_database (Transact-SQL) | Документы Microsoft
+title: sp_change_log_shipping_primary_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_primary_database
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fd020ff499dfb230478434e70cee94edb45ba92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b064cf2e2005a495f077682404fb7569f683d245
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238784"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033467"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,13 +82,13 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
  [  **@backup_threshold =** ] "*backup_threshold*"  
- — Это период времени в минутах после последнего резервного копирования до *threshold_alert* возникает ошибка. *backup_threshold* — **int**, значение по умолчанию 60 минут.  
+ — Это продолжительность времени в минутах после последнего резервного копирования до *threshold_alert* возникает ошибка. *backup_threshold* — **int**, значение по умолчанию 60 минут.  
   
  [  **@threshold_alert =** ] "*threshold_alert*"  
  Предупреждение, создаваемое при превышении порогового значения. *threshold_alert* — **int** и не может иметь значение NULL.  
   
  [  **@threshold_alert_enabled =** ] "*threshold_alert_enabled*"  
- Указывает, формируется ли предупреждение при *backup_threshold* превышено.  
+ Указывает, нужно ли создавать оповещение при *backup_threshold* превышено.  
   
  1 = выдается.  
   
@@ -101,34 +100,34 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  Длительность времени в минутах, в течение которого сохраняется журнал. *history_retention_period* — **int**. Если ничего не указано, используется значение 14 420.  
   
  [ **@backup_compression**=] *backup_compression_option*  
- Указывает, использует ли конфигурации доставки журналов [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
+ Указывает, использует ли конфигурация доставки журналов [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
   
  0 = отключено. Не сжимать резервные копии журналов.  
   
  1 = включено. Всегда сжимать резервные копии журналов.  
   
- 2 = использовать значение параметра [Просмотр или настройка параметра конфигурации сервера по умолчанию сжатие резервных копий](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Это значение по умолчанию.  
+ 2 = использовать значение параметра [Просмотр или настройка параметра сжатия резервных копий по умолчанию параметр конфигурации сервера](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Это значение по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_change_log_shipping_primary_database** должна запускаться из **master** базы данных на сервере-источнике. Эта хранимая процедура выполняет следующее:  
   
 1.  Изменяет параметры в **log_shipping_primary_database** записи, при необходимости.  
   
-2.  Изменяет локальную запись в **log_shipping_monitor_primary** на основном сервере, используя указанные аргументы при необходимости.  
+2.  Изменяет локальную запись в **log_shipping_monitor_primary** на сервере-источнике, используя указанные аргументы, при необходимости.  
   
-3.  Если сервер мониторинга отличается от сервера-источника, изменяет запись в **log_shipping_monitor_primary** мониторинга сервера, используя указанные аргументы при необходимости.  
+3.  Если сервер мониторинга отличается от сервера-источника, изменяет запись в **log_shipping_monitor_primary** на мониторе server, используя указанные аргументы, при необходимости.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
   
 ## <a name="examples"></a>Примеры  
- В этом примере показано использование **sp_change_log_shipping_primary_database** для обновления параметров, связанных с базой данных-источником [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ В этом примере показано использование **sp_change_log_shipping_primary_database** для обновления настроек, связанных с основной базой данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   
@@ -145,7 +144,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   

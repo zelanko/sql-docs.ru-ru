@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (Transact-SQL) | Документы Microsoft
+title: sp_helpxactsetjob (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef643efb849a0f178ac98bf439360fca87d21983
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58ebd1b5592a7a4b17f665555689b32e8456d714
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997211"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027520"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@publisher** =] **"***издатель***"**  
+ [**@publisher** =] **"***издателя***"**  
  Имя издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которому принадлежит задача. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -56,8 +56,8 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**lastdate**|**varchar(22)**|Последняя дата выполнения задания.|  
 |**thisdate**|**varchar(22)**|Время изменения.|  
 |**nextdate**|**varchar(22)**|Следующая дата, когда задание будет запущено.|  
-|**Неработающие**|**varchar(1)**|Флаг, означающий неудачное выполнение задания.|  
-|**Интервал**|**varchar(200)**|Интервал для задания.|  
+|**разбить**|**varchar(1)**|Флаг, означающий неудачное выполнение задания.|  
+|**интервал**|**varchar(200)**|Интервал для задания.|  
 |**сбои**|**int**|Количество неудачных выполнений для задания.|  
 |**xactsetjobwhat**|**varchar(200)**|Имя процедуры, выполняемой заданием.|  
 |**xactsetjob**|**varchar(1)**|Показывает состояние задания, может быть одним из следующих:<br /><br /> **1** -задание включено.<br /><br /> **0** -задание отключено.|  
@@ -69,13 +69,13 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_helpxactsetjob** используется в репликации моментальных снимков и репликации транзакций для издателей Oracle.  
   
  **sp_helpxactsetjob** всегда возвращает текущие параметры для задания Xactset (HREPL_XactSetJob) на издателе. Если задание Xactset в данные момент находится в очереди заданий, то оно дополнительно возвращает атрибуты задания из представления словаря данных USER_JOB, созданного под учетной записью администратора на издателе Oracle.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_helpxactsetjob**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_helpxactsetjob**.  
   
 ## <a name="see-also"></a>См. также  
  [Configure the Transaction Set Job for an Oracle Publisher](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)  (Настройка задания для набора транзакции в издателе Oracle)  

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 55408f62c8e66c33bcb58682831970312c51130d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7091aa6596fd66260ae43d39f0f19e5770b6dcdf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998176"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030144"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,12 +46,12 @@ ms.locfileid: "37998176"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных. Если подключение завершилось ошибкой и пользователь не указал имя базы данных, то этот столбец остается пустым.|  
-|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Например:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. Для статистических событий **End_time** — всегда на 5 минут больше, чем соответствующие **start_time** в той же строке. Для событий, которые не объединяются **start_time** и **end_time** равны фактические даты в формате UTC и время события.|  
-|**event_category**|**nvarchar(64)**|Высокоуровневый компонент, вызвавший данное событие.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
-|**event_type**|**nvarchar(64)**|Тип события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
+|**event_category**|**Nvarchar(64)**|Высокоуровневый компонент, вызвавший данное событие.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
+|**event_type**|**Nvarchar(64)**|Тип события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
 |**event_subtype**|**int**|Подтип произошедшего события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
-|**event_subtype_desc**|**nvarchar(64)**|Описание подтипа события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
+|**event_subtype_desc**|**Nvarchar(64)**|Описание подтипа события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
 |**severity**|**int**|Степень серьезности ошибки. Возможны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
 |**event_count**|**int**|Количество раз возникновения этого события для указанной базы данных в интервале времени, указанном (**start_time** и **end_time**).|  
 |**Описание**|**nvarchar(max)**|Подробное описание события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  

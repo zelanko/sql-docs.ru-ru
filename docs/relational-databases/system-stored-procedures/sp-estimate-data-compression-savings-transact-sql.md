@@ -1,5 +1,5 @@
 ---
-title: sp_estimate_data_compression_savings (Transact-SQL) | Документы Microsoft
+title: sp_estimate_data_compression_savings (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25798372f2b949446b746164665dbfe6752443d7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027543"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
  Чтобы оценить размер объекта после сжатия с запрошенными параметрами, эта хранимая процедура создает образец исходного объекта и загружает эти данные в эквивалентную таблицу и индекс, созданные в базе данных tempdb. Созданная в базе данных tempdb таблица или индекс затем сжимается до необходимых настроек, и вычисляется оценка экономии от сжатия.  
   
- Чтобы изменить состояние сжатия таблицы, индекса или секции, используйте [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) или [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) инструкции. Общие сведения о сжатии см. в разделе [сжатие данных](../../relational-databases/data-compression/data-compression.md).  
+ Чтобы изменить состояние сжатия таблицы, индекса или секции, используйте [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) или [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) инструкций. Общие сведения о сжатии см. в разделе [сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   
 > [!NOTE]  
 >  Если существующие данные фрагментированы, можно уменьшить их размер без использования сжатия, перестроив индекс. Для индексов коэффициент заполнения будет применен во время перестроения индекса. Это может увеличить размер индекса.  
@@ -75,7 +76,7 @@ sp_estimate_data_compression_savings
  Чтобы указать раздел, можно также указать [$partition](../../t-sql/functions/partition-transact-sql.md) функции. Чтобы получить сведения обо всех секциях объекта, укажите значение NULL.  
   
  [ @data_compression=] '*data_compression*"  
- Тип сжатия для оценки. *data_compression* может принимать одно из следующих значений: NONE, строки или страницы.  
+ Тип сжатия для оценки. *data_compression* может принимать одно из следующих значений: NONE, СТРОК или СТРАНИЦ.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -94,7 +95,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (КБ)|**bigint**|Размер образца с текущими настройками сжатия. К этим настройкам относится любая фрагментация.|  
 |sample_size_with_requested_compression_setting (КБ)|**bigint**|Размер образца, созданного с использованием запрошенных настроек сжатия, и, если применимо, существующего коэффициента заполнения при отсутствии фрагментации.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Чтобы оценить экономию от сжатия таблицы или секции на уровне строк или страниц, используется процедура sp_estimate_data_compression_savings. Например, если средний размер строки можно уменьшить на 40%, то размер самого объекта также можно потенциально уменьшить на 40%. Но выигрыша можно не получить, поскольку экономия места зависит от коэффициента заполнения и размера строки. Например, если длина строки, составляющая 8 000 байт, уменьшается на 40%, то на странице данных все равно помещается только одна строка. При этом экономия отсутствует.  
   
  Если результаты выполнения хранимой процедуры sp_estimate_data_compression_saving показывают, что размер таблицы будет увеличиваться, это означает, что в таблице используется почти полная точность типов данных, а небольшой объем затрат, необходимый для использования сжатого формата, — больше, чем экономия места от самого сжатия. В этом редком случае сжатие включать не следует.  
@@ -127,7 +128,7 @@ GO
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Реализация сжатия Юникода](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

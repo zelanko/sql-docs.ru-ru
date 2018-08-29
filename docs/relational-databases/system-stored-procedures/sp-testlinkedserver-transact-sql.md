@@ -1,5 +1,5 @@
 ---
-title: процедура sp_testlinkedserver (Transact-SQL) | Документы Microsoft
+title: sp_testlinkedserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_testlinkedserver
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 059f4056b418122c3ee8b89c17dea99909677ce2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b03253014b198a83d2c9516fd7fa3e09ce16fbab
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243521"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032804"
 ---
 # <a name="sptestlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_testlinkedserver [ @servername ] = servername
   
 ## <a name="arguments"></a>Аргументы  
  [  **@servername =** ]*servername*  
- Имя связанного сервера. *ServerName* — **sysname**, и не имеет значения по умолчанию.  
+ Имя связанного сервера. *ServerName* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешения не проверяются, однако у вызывающего объекта должно быть соответствующее сопоставление имени входа.  

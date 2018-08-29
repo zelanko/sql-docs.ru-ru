@@ -22,13 +22,13 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1da5a84c56f27e1068c87ad4e988fdb96e1f22a3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a8a5b0b407e6e9713baa73474a9f61f42c531957
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552074"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43100254"
 ---
 # <a name="mapping-data-types-odbc"></a>Сопоставление типов данных (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "39552074"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Timestamp** тип данных сопоставляется с типом данных ODBC SQL_BINARY или SQL_VARBINARY, так как значения в **timestamp** столбцы не **datetime** значения, но **binary(8)** или **varbinary(8)** значения, которые показывают последовательность операций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для строки. Если драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] встречает значение типа SQL_C_WCHAR (Юникод), что означает нечетное число байт, то последний нечетный байт усекается.  
   
 ## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>Работа с типом данных sql_variant в ODBC  
- **Sql_variant** столбце с типом данных может содержать любые типы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] за исключением большие объекты (LOB), такие как **текст**, **ntext**, и ** изображение**. Например, столбец может содержать **smallint** для некоторых строк значения **float** значений для других строк, и **char/nchar** значения в остальных.  
+ **Sql_variant** столбце с типом данных может содержать любые типы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] за исключением большие объекты (LOB), такие как **текст**, **ntext**, и  **изображение**. Например, столбец может содержать **smallint** для некоторых строк значения **float** значений для других строк, и **char/nchar** значения в остальных.  
   
  **Sql_variant** тип данных аналогичен **Variant** Microsoft Visual Basic® типу данных.  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_getqueuedrows (Transact-SQL) | Документы Microsoft
+title: sp_getqueuedrows (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ec0e31b852a1aea3cfd964a47660fd4953c196d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7aa57cc268f5bc70bc0c2ebf03e0f05a4d8950d8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994421"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029005"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Действие**|**nvarchar(10)**|Тип операции для выполнения при синхронизации.<br /><br /> INS= вставка.<br /><br /> DEL = удаление.<br /><br /> UPD = обновление.|  
-|**Tranid**|**nvarchar(70)**|Идентификатор транзакции, под которым выполнялась команда.|  
+|**tranid**|**nvarchar(70)**|Идентификатор транзакции, под которым выполнялась команда.|  
 |**Таблица column1... n**||Значение для каждого столбца таблицы, указанной в *tablename*.|  
 |**MSrepl_tran_version**|**uniqueidentifier**|Этот столбец используется для отслеживания изменений для реплицируемых данных и для обнаружения конфликтов на издателе. Этот столбец добавлен к таблице автоматически.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_getqueuedrows** используется на подписчиках, участвующих в очереди обновлений.  
   
- **sp_getqueuedrows** находит строки данной таблицы по подписке базы данных, которые участвовали в очереди обновления, но в настоящее время не были разрешены агентом чтения очереди.  
+ **sp_getqueuedrows** находит строки данной таблицы для подписки базы данных, которые участвовали в очереди обновления, но в настоящее время не были разрешены агентом чтения очереди.  
   
 ## <a name="permissions"></a>Разрешения  
  **sp_getqueuedrows** требуются разрешения SELECT на таблицу, указанную в *tablename*.  

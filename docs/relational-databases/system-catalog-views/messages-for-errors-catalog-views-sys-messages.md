@@ -1,5 +1,5 @@
 ---
-title: sys.messages (Transact-SQL) | Документы Microsoft
+title: sys.messages (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - error numbers [SQL Server]
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07a5a426c0a2cf0b4b7c0385850471c3580d4fd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac13b8d68accd744803b7524f9d6d179cca0446b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032437"
 ---
-# <a name="messages-for-errors-catalog-views---sysmessages"></a>Представления каталога сообщений (для ошибок) - sys.messages
+# <a name="messages-for-errors-catalog-views---sysmessages"></a>Представления каталога сообщений (для ошибок) — sys.messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Содержит по одной строке для каждого **message_id** или **language_id** сообщения об ошибках в системе, как системные и определяемые пользователем сообщения. Дополнительные сведения см. в разделе [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
@@ -41,12 +42,12 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|Идентификатор сообщения. Уникален в пределах сервера. Сообщения с идентификаторами, меньшими 50000, являются системными.|  
 |**language_id**|**smallint**|Идентификатор языка, для которого текст в **текст** используется, как определено в **syslanguages**. Он уникален для указанного **message_id**.|  
-|**severity**|**tinyint**|Степень серьезности сообщения, от 1 до 25. Это то же самое для всех языков сообщения в пределах **message_id**.|  
-|**is_event_logged**|**бит**|1 = сообщение заносится в журнал событий при возникновении ошибки. Это то же самое для всех языков сообщения в пределах **message_id**.|  
-|**text**|**nvarchar(2048)**|Текст сообщения, используемого при соответствующих **language_id** активен.|  
+|**severity**|**tinyint**|Степень серьезности сообщения, от 1 до 25. Это то же самое для всех языков в сообщения **message_id**.|  
+|**is_event_logged**|**bit**|1 = сообщение заносится в журнал событий при возникновении ошибки. Это то же самое для всех языков в сообщения **message_id**.|  
+|**text**|**nvarchar(2048)**|Текст сообщения используется, когда соответствующий **language_id** активен.|  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public** . Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
  [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)   

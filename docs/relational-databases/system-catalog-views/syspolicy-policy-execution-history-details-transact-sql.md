@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history_details (Transact-SQL) | Документы Microsoft
+title: syspolicy_policy_execution_history_details (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_execution_history_details view
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1c3c5836dd2811e95db27392e9bd77cbe91f6e38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 252c61b6fbaf5635361df79f89a4f9ec7ec66e50
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220875"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031840"
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +37,16 @@ ms.locfileid: "33220875"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|Идентификатор записи. Каждая запись соответствует попытке выполнить или обеспечить одно условное выражение из политики. Если условие применялось к нескольким целевым объектам, для каждого условия будет выведено несколько детализированных записей — по одной на целевой объект.|  
-|history_id|**bigint**|Идентификатор события в журнале. Каждое событие в журнале соответствует одной попытке выполнения политики. Поскольку одно условие может включать несколько условных выражений и несколько целевых объектов, history_id можно создавать несколько детализированных записей. Использовать для соединения этого представления в столбец history_id [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) представления.|  
+|history_id|**bigint**|Идентификатор события в журнале. Каждое событие в журнале соответствует одной попытке выполнения политики. Поскольку одно условие может включать несколько условных выражений и несколько целевых объектов, history_id можно создавать несколько детализированных записей. Использовать столбец history_id для соединения этого представления [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) представления.|  
 |target_query_expression|**nvarchar(max)**|Целевой объект политики и syspolicy_policy_execution_history представления.|  
 |execution_date|**datetime**|Дата и время создания этой детализированной записи.|  
-|набор по|**бит**|Успешный или неуспешный результат вычисления условного выражения для данного целевого объекта:<br /><br /> 0 (успешное завершение) или 1 (неуспешное завершение)|  
+|набор по|**bit**|Успешный или неуспешный результат вычисления условного выражения для данного целевого объекта:<br /><br /> 0 (успешное завершение) или 1 (неуспешное завершение)|  
 |result_detail|**nvarchar(max)**|Результирующее сообщение. Генерируется только в том случае, когда обеспечивается аспектом.|  
 |exception_message|**nvarchar(max)**|Сообщение, выданное в результате возникшего исключения.|  
 |exception|**nvarchar(max)**|Описание возникшего исключения.|  
   
-## <a name="remarks"></a>Замечания  
- При устранении неполадок политики управления на основе запроса, просмотра syspolicy_policy_execution_history_details, чтобы определить, какие цель и условие выражения результат был неуспешным, если они не удалось и просмотреть соответствующие ошибки.  
+## <a name="remarks"></a>Примечания  
+ При устранении неполадок управления на основе политик, запрос, который syspolicy_policy_execution_history_details, представление, чтобы определить, какие цель и условие выражения результат был неуспешным, если они не удалось и просмотреть соответствующие ошибки.  
   
  Далее приводится запрос, сочетающий представления `syspolicy_policy_execution_history_details`, `syspolicy_policy_execution_history_details` и `syspolicy_policies` и выводящий имя политики, имя условия и подробные сведения об ошибках.  
   

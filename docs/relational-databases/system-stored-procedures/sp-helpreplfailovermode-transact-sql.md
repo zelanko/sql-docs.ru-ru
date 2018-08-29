@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_helpreplfailovermode (Transact-SQL) | Документы Microsoft
+title: sp_helpreplfailovermode (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d54500307b05a5aa6c9cfeca4e55ff92b3062b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b350ac28a53dbdb544f3dde0b3493cd40436bca3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031366"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>Хранимая процедура sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"***издатель***"**  
+ [  **@publisher=**] **"***издателя***"**  
  Имя издателя, участвующего в обновлении этого подписчика. *издатель* — **sysname**, не имеет значения по умолчанию. Издатель уже должен быть настроен для публикации.  
   
  [  **@publisher_db =**] **"***publisher_db***"**  
@@ -66,18 +67,18 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 |Значение|Описание|  
 |-----------|-----------------|  
 |**Немедленно**|Немедленное обновление: изменения, выполненные на подписчике, немедленно распространяются на издатель с использованием протокола двухфазной фиксации (2PC).|  
-|**В очереди**|Запрошенное обновление: изменения, выполненные на подписчике, помещаются в очередь.|  
+|**в очереди**|Запрошенное обновление: изменения, выполненные на подписчике, помещаются в очередь.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **Хранимая процедура sp_helpreplfailovermode** используется в репликации моментальных снимков или репликации транзакций, для которых подписки включены для немедленного обновления с обновлением посредством очередей при отработке отказа в случае сбоя.  
+## <a name="remarks"></a>Примечания  
+ **sp_helpreplfailovermode** используется в репликации моментальных снимков или репликации транзакций, для которых подписки включены для немедленного обновления с обновлением посредством очередей в отработки отказа, в случае сбоя.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_helpreplfailovermode**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_helpreplfailovermode**.  
   
 ## <a name="see-also"></a>См. также  
- [Хранимая процедура sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

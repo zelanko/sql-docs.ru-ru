@@ -1,8 +1,8 @@
 ---
 title: Устранение неполадок в SQL Server в Linux | Документация Майкрософт
 description: Содержит советы по устранению неполадок для использования SQL Server 2017 в Linux.
-author: annashres
-ms.author: anshrest
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 7d8f392177bd83a8fc8764eac080fcc7b76739ed
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 58e4b300a8c9dc3f5c65e884c376ea80b77bc4f0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102202"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43065297"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Устранение неполадок в SQL Server в Linux
 

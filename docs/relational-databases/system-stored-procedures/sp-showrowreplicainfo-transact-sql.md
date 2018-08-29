@@ -1,5 +1,5 @@
 ---
-title: sp_showrowreplicainfo (Transact-SQL) | Документы Microsoft
+title: хранимой процедуре sp_showrowreplicainfo (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be0fcfb203c6f9e5fc72909930433926675c64f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9b56608d6ba26760a0a6da5e841f6ce38848774
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028183"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
  Уникальный идентификатор строки. *ROWGUID* — **uniqueidentifier**, не имеет значения по умолчанию.  
   
  [ **@show**=] **"***Показать***"**  
- Определяет объем сведений, возвращаемых в составе набора результатов. *Показать* — **nvarchar(20)** и по умолчанию BOTH. Если **строки**, возвращаются только сведения о версии строки. Если **столбцы**, возвращаются только сведения о версии столбца. Если **оба**и строк, и возвращаются сведения о столбцах.  
+ Определяет объем сведений, возвращаемых в составе набора результатов. *Показать* — **nvarchar(20)** значение по умолчанию ОБА. Если **строки**, возвращается только сведения о версии строки. Если **столбцы**, возвращается только сведения о версии столбца. Если **оба**, и строк, и возвращаются сведения о столбцах.  
   
 ## <a name="result-sets-for-row-information"></a>Результирующие наборы сведений о строках  
   
@@ -67,7 +68,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Имя базы данных, содержащей данную запись.|  
 |**db_nickname**|**binary(6)**|Псевдоним базы данных, содержащей данную запись.|  
 |**version**|**int**|Версия записи.|  
-|**current_state**|**nvarchar(9)**|Возвращает сведения о текущем состоянии строки.<br /><br /> **y** — данные строки представляют ее текущее состояние строки.<br /><br /> **n** -данные строки не представляют ее текущее состояние строки.<br /><br /> **\<н/д >** — неприменимо.<br /><br /> **\<Неизвестный >** -не удается определить текущее состояние.|  
+|**параметр current_state со значением**|**nvarchar(9)**|Возвращает сведения о текущем состоянии строки.<br /><br /> **y** — данные строки представляют ее текущее состояние строки.<br /><br /> **n** -данных в строке не представляет текущее состояние строки.<br /><br /> **\<н/д >** — неприменимо.<br /><br /> **\<Неизвестный >** -не удается определить текущее состояние.|  
 |**rowversion_table**|**nchar(17)**|Указывает, хранятся ли версии строк в [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) таблицы или [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) таблицы.|  
 |**Комментарий**|**nvarchar(255)**|Дополнительные сведения о данной записи версии строки. Обычно это поле не заполнено.|  
   
@@ -83,13 +84,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**Комментарий**|**nvarchar(255)**|Дополнительные сведения о данной записи версии столбца. Обычно это поле не заполнено.|  
   
 ## <a name="result-set-for-both"></a>Результирующий набор для значения both  
- Если значение **оба** выбирается для *Показать*, то возвращается столбцов и строк результирующих наборов.  
+ Если значение **оба** будет автоматически выбран *Показать*, то возвращается номер строки и столбца результирующих наборов.  
   
-## <a name="remarks"></a>Замечания  
- **sp_showrowreplicainfo** используется в репликации слиянием.  
+## <a name="remarks"></a>Примечания  
+ **хранимой процедуре sp_showrowreplicainfo** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- **sp_showrowreplicainfo** может быть выполнена только членами **db_owner** предопределенной роли базы данных в базе данных публикации, а также члены списка доступа публикации (PAL) в базе данных публикации.  
+ **хранимой процедуре sp_showrowreplicainfo** может быть выполнена только членами **db_owner** предопределенной роли базы данных в базе данных публикации или участники списка доступа публикации (PAL) в базе данных публикации.  
   
 ## <a name="see-also"></a>См. также  
  [Обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   

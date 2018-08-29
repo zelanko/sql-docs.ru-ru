@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_login_from_proxy (Transact-SQL) | Документы Microsoft
+title: sp_revoke_login_from_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_revoke_login_from_proxy
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6275facb81f14269eca19979c115c5ea80844563
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 66a96c8c55bf344c7750e4706ad8c89593a29fde
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253553"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027857"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_revoke_login_from_proxy
   
 ## <a name="arguments"></a>Аргументы  
  [  **@name=** ] **"***имя***"**  
- Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, роли сервера или **msdb** роли базы данных, чтобы удалить права доступа. *имя* — **nvarchar(256)** без значения по умолчанию.  
+ Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа, роли сервера или **msdb** роли базы данных, необходимо удалить доступ. *имя* — **nvarchar(256)** не имеет значения по умолчанию.  
   
  [ **@proxy_id=** ] *id*  
  Идентификатор учетной записи-посредника, для которой удаляется право доступа. Либо *идентификатор* или *proxy_name* должен быть указан, но не оба аргумента одновременно. *Идентификатор* — **int**, значение по умолчанию NULL.  
@@ -59,7 +58,7 @@ sp_revoke_login_from_proxy
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Задания, принадлежащие имени входа, которое ссылается на эту учетную запись-посредник, не смогут запуститься.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -79,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   

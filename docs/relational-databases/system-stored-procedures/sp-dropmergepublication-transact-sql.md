@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepublication (Transact-SQL) | Документы Microsoft
+title: sp_dropmergepublication (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepublication
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a360ce767a80dd9f77f35a22d92b65d3a52777c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8876bc0e1007d942bde42a9a5a2472b58f6fa1f5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990569"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030792"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Аргументы  
  [  **@publication=**] **"***публикации***"**  
- Имя публикации, которую требуется удалить. *Публикация* — **sysname**, не имеет значения по умолчанию. Если **все**, а также задание агента моментальных снимков, связанных с ними удаляются все существующие публикации слиянием. Если указать определенное значение для *публикации*, удаляется только указанная публикация и его соответствующее задание агента моментальных снимков.  
+ Имя публикации, которую требуется удалить. *Публикация* — **sysname**, не имеет значения по умолчанию. Если **все**, а также задание агента моментальных снимков, связанных с ними удаляются все существующие публикации слиянием. Если указать определенное значение для *публикации*, удаляется только указанная публикация и его связанное задание агента моментальных снимков.  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
  Используется для удаления публикации без выполнения задач очистки на распространителе. *ignore_distributor* — **бит**, значение по умолчанию **0**. Данный аргумент также используется при переустановке распространителя.  
@@ -63,18 +63,18 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_dropmergepublication** используется в репликации слиянием.  
   
- **sp_dropmergepublication** рекурсивно сбрасывает все статьи, связанные с публикацией, а затем удаляет саму публикацию. Публикацию нельзя удалить, если у нее есть хотя бы одна подписка. Сведения об удалении подписок см. в разделе [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) и [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md).  
+ **sp_dropmergepublication** рекурсивно сбрасывает все статьи, связанные с публикацией, а затем удаляет саму публикацию. Публикацию нельзя удалить, если у нее есть хотя бы одна подписка. Сведения об удалении подписок см. в разделе [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) и [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- Выполнение **sp_dropmergepublication** для удаления публикации не удаляет опубликованные объекты из базы данных публикации или соответствующие объекты из базы данных подписки. Используйте DROP \<объект > для удаления этих объектов при необходимости.  
+ Выполнение **sp_dropmergepublication** для удаления публикации не удаляет опубликованные объекты из базы данных публикации или соответствующие объекты из базы данных подписки. Используйте DROP \<объект > для удаления этих объектов вручную, при необходимости.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_dropmergepublication**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_dropmergepublication**.  
   
 ## <a name="see-also"></a>См. также  
  [Удаление публикации](../../relational-databases/replication/publish/delete-a-publication.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriber_schedule (Transact-SQL) | Документы Microsoft
+title: sp_changesubscriber_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - sp_changesubscriber_schedule
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f07d6cdb364e6ff4ef03cae49db7c320c9778c4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b5ac5b579a2988e2cd7d1f123d51dad7043c509
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029087"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Частота запуска задачи распространения по расписанию. *frequency_type* — **int**, значение по умолчанию **64**. Существует 10 столбцов расписания.  
   
  [  **@frequency_interval=**] *frequency_interval*  
- Значение, применяемое к частоте, установленной аргументом *frequency_type*. *frequency_interval* — **int**, значение по умолчанию **1**.  
+ Значение, применяемое к частоте, задаваемой аргументом *frequency_type*. *frequency_interval* — **int**, значение по умолчанию **1**.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Дата задачи распределения. *frequency_relative_interval* — **int**, значение по умолчанию **1**.  
@@ -89,8 +90,8 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  [  **@active_end_date=**] *active_end_date*  
  Дата, когда запланирован останов задачи распространения в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию **99991231**, что соответствует 31 декабря 9999 года.  
   
- [ **@publisher**=] **"***издатель***"**  
- Указывает значение, отличное от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+ [ **@publisher**=] **"***издателя***"**  
+ Указывает, отличный от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует использовать при изменении свойств статьи на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
@@ -98,14 +99,14 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_changesubscriber_schedule** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_changesubscriber_schedule**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_changesubscriber_schedule**.  
   
 ## <a name="see-also"></a>См. также  
- [sp_addsubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
+ [Хранимая процедура sp_addsubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

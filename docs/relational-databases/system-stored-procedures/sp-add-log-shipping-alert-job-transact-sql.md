@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_alert_job (Transact-SQL) | Документы Microsoft
+title: процедуру sp_add_log_shipping_alert_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_alert_job
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
-caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be9abd34c98c4a76aca48e95bc3ce30c0cc0ffcd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: acef2a2f92669693107ac2714e1fd7a6188cbf3e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237089"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033581"
 ---
 # <a name="spaddlogshippingalertjob-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Эта хранимая процедура проверяет, было ли создано на сервере задание предупреждения. Если задание предупреждения не существует, эта хранимая процедура создает задание предупреждения и добавляет его идентификатор задания с **log_shipping_monitor_alert** таблицы. По умолчанию, это задание предупреждения включено и запускается по расписанию каждые две минуты.  
+  Эта хранимая процедура проверяет, было ли создано на сервере задание предупреждения. Если задание предупреждения не существует, эта хранимая процедура создает задание предупреждения и добавляет идентификатор этого задания **log_shipping_monitor_alert** таблицы. По умолчанию, это задание предупреждения включено и запускается по расписанию каждые две минуты.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +45,22 @@ sp_add_log_shipping_alert_job
   
 ## <a name="arguments"></a>Аргументы  
  [  **@alert_job_id =** ] *alert_job_id* выходных данных  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Идентификатор задания предупреждения доставки журналов задания агента.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Идентификатор задания агента задания предупреждения доставки журналов.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
- **sp_add_log_shipping_alert_job** должна запускаться из **master** базы данных на сервере мониторинга.  
+## <a name="remarks"></a>Примечания  
+ **процедуру sp_add_log_shipping_alert_job** должна запускаться из **master** базы данных на сервере мониторинга.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
   
 ## <a name="examples"></a>Примеры  
- В этом примере показано выполнение **sp_add_log_shipping_alert_job** для создания идентификатора задания предупреждения.  
+ В этом примере показано выполнение **процедуру sp_add_log_shipping_alert_job** для создания идентификатора задания предупреждения.  
   
 ```  
 USE master  

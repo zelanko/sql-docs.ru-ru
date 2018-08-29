@@ -1,5 +1,5 @@
 ---
-title: sp_addtabletocontents (Transact-SQL) | Документы Microsoft
+title: sp_addtabletocontents (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addtabletocontents
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47400ed08fed28f8b2c6a83189cd640b9c727f9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8b3a99fc475bfe7e3ab7cddfa31f0449c81e05d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988909"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031996"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,24 +47,24 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Аргументы  
  [  **@table_name=**] **"***table_name***"**  
- Имя таблицы. *имя_таблицы* — **sysname**, не имеет значения по умолчанию.  
+ Имя таблицы. *TABLE_NAME* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@owner_name=**] **"***owner_name***"**  
  Имя владельца таблицы. *owner_name* — **sysname**, значение по умолчанию NULL.  
   
  [  **@filter_clause=** ] **"***filter_clause***"**  
- Указывает предложение фильтра, определяющее строки вновь загруженных данных, которые следует добавить в таблицы отслеживания слияния. *filter_clause* — **nvarchar(4000)**, значение по умолчанию NULL. Если *filter_clause* — **null**, все массового добавления загруженные строки.  
+ Указывает предложение фильтра, определяющее строки вновь загруженных данных, которые следует добавить в таблицы отслеживания слияния. *filter_clause* — **nvarchar(4000)**, со значением по умолчанию NULL. Если *filter_clause* — **null**, все массового добавления загруженные строки.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_addtabletocontents** используется только при репликации слиянием.  
   
- Строки в *table_name* под их **rowguidcol** и ссылки добавляются в таблицы отслеживания слияния. **sp_addtabletocontents** можно использовать для массового копирования данных в таблицу, которая опубликована с использованием репликации слиянием. Хранимая процедура инициирует отслеживание строк, которые были скопированы, и обеспечивает их участие в следующей синхронизации.  
+ Строки в *table_name* ссылаются их **rowguidcol** и ссылки добавляются в таблицы отслеживания слияния. **sp_addtabletocontents** следует использовать для массового копирования данных в таблицу, которая опубликована с использованием репликации слиянием. Хранимая процедура инициирует отслеживание строк, которые были скопированы, и обеспечивает их участие в следующей синхронизации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_addtabletocontents**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addtabletocontents**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

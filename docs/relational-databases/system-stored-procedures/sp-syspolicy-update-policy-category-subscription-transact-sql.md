@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Документы Microsoft
+title: процедура sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_update_policy_category_subscription
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 46ca3100a203d3afc9e3b618d4264629ddf1ce58
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d285728aafbfedc3c194ab65351a90d1daba019
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033286"
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
  [  **@target_type=** ] **"** target_type **"**  
  Целевой тип подписки на категорию. *target_type* — **sysname**, значение по умолчанию NULL.  
   
- При указании *target_type*, значение должно быть присвоено «DATABASE».  
+ Если указать *target_type*, должен иметь значение «DATABASE».  
   
  [  **@target_object=** ] **"** target_object **"**  
- — Это имя базы данных, которая будет создана подписка на категорию политики. *target_object* — **sysname**, значение по умолчанию NULL.  
+ — Имя базы данных, которая подписывается на категорию политики. *target_object* — **sysname**, значение по умолчанию NULL.  
   
  [  **@policy_category=** ] **"** policy_category **"**  
  Имя категории политики, на которую подписывается база данных. *policy_category* — **sysname**, значение по умолчанию NULL.  
@@ -63,7 +63,7 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_update_policy_category_subscription должна выполняться в контексте системной базы данных msdb.  
   
  Чтобы получить значения для *policy_category_subscription_id* и *policy_category*, можно использовать следующий запрос:  

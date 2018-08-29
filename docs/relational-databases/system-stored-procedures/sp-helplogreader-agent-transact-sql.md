@@ -1,5 +1,5 @@
 ---
-title: sp_helplogreader_agent (Transact-SQL) | Документы Microsoft
+title: sp_helplogreader_agent (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - sp_helplogreader_agent
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bafe93763e2814b67f7455d2a4918193c5a1c40b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef9fd50728a4bc9ebf661b2dbb22ad8ca4e9f4ad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031825"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher**=] **"***издатель***"**  
+ [ **@publisher**=] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -55,13 +56,13 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |**publisher_login**|**sysname**|Имя входа в систему, используемое при соединении с издателем.|  
 |**publisher_password**|**nvarchar(524)**|По соображениям безопасности значение **\* \* \* \* \* \* \* \* \* \*** всегда возвращается.|  
 |**job_id**|**uniqueidentifier**|Уникальный идентификатор задания агента.|  
-|**job_login**|**nvarchar(512)**|Учетная запись Windows, под которой запускается агент чтения журнала, который возвращается в формате *домена*\\*username*.|  
+|**job_login**|**nvarchar(512)**|— Это учетная запись Windows, под которой запускается агент чтения журнала, которая возвращается в формате *домена*\\*username*.|  
 |**job_password**|**sysname**|По соображениям безопасности значение **\* \* \* \* \* \* \* \* \* \*** всегда возвращается.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_helplogreader_agent** используется в репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -1,5 +1,5 @@
 ---
-title: sp_grant_login_to_proxy (Transact-SQL) | Документы Microsoft
+title: sp_grant_login_to_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
-caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e07e03296c9264245504b65136a467e0fe7040e2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 87c6185eb5da00bd004e56eb45a48ac0d963258e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259614"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033663"
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,14 +65,14 @@ sp_grant_login_to_proxy
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_grant_login_to_proxy** должна запускаться из **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера может выполняться **sp_grant_login_to_proxy**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере пользователь входа `adventure-works\terrid` для использования прокси-сервера `Catalog application proxy`.  
+ Следующий пример разрешает имени входа `adventure-works\terrid` для использования прокси-сервер `Catalog application proxy`.  
   
 ```  
 USE msdb ;  
@@ -87,7 +85,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
  [Хранимая процедура sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

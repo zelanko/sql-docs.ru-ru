@@ -1,5 +1,5 @@
 ---
-title: sp_validatelogins (Transact-SQL) | Документы Microsoft
+title: sp_validatelogins (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_validatelogins
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f8bfcefdd3b43e8a52fce6514583a47ed6aa4119
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: be184539a88e4a89fb841a26594a28eb0f2a2d33
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029541"
 ---
 # <a name="spvalidatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_validatelogins
 |**SID**|**varbinary(85)**|Идентификатор защиты (SID) пользователя или группы Windows.|  
 |**Имя входа для NT**|**sysname**|Имя пользователя или группы Windows.|  
   
-## <a name="remarks"></a>Замечания  
- Если потерянный участник уровня сервера владеет пользователем базы данных, этот пользователь должен быть удален, прежде чем станет возможным удаление потерянного участника. Чтобы удалить пользователя базы данных, используйте [DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Если участник уровня сервера владеет защищаемыми сущностями в базе данных, владение этими сущностями должно быть передано другому участнику или их следует удалить. Для передачи владения такими сущностями базы данных, используйте [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+## <a name="remarks"></a>Примечания  
+ Если потерянный участник уровня сервера владеет пользователем базы данных, этот пользователь должен быть удален, прежде чем станет возможным удаление потерянного участника. Чтобы удалить пользователя базы данных, используйте [DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Если участник уровня сервера владеет защищаемыми сущностями в базе данных, владение этими сущностями должно быть передано другому участнику или их следует удалить. Чтобы передать права владения защищаемые объекты базы данных, используйте [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
- Чтобы удалить сопоставление пользователей и групп, которые больше не существуют Windows, используйте [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md).  
+ Чтобы удалить сопоставления для пользователей Windows и группы, которые больше не существует, используйте [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **sysadmin** или **securityadmin** предопределенной роли сервера.  
@@ -71,8 +71,8 @@ GO
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [УДАЛИТЬ пользователя & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
- [DROP LOGIN & #40; Transact-SQL & #41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP LOGIN (Transact-SQL)](../../t-sql/statements/drop-login-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

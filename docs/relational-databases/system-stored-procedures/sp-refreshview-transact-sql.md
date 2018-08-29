@@ -1,5 +1,5 @@
 ---
-title: sp_refreshview (Transact-SQL) | Документы Microsoft
+title: sp_refreshview (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_refreshview
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9871a4ce62ce2916a1cd27c3ca8735de28cfa1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed5f50b9b95f2f156632fb14c2cd471ef010bcac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249436"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031482"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,8 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- Если представление создано без использования предложения schemabinding, **sp_refreshview** следует запускать при изменении базовых объектов представления, влияющих на определение представления. В противном случае результат запроса представления может быть непредвиденным.  
+## <a name="remarks"></a>Примечания  
+ Если представление создано без привязки к схеме, **sp_refreshview** должен выполняться при изменении базовых объектов представления, которые влияют на определение представления. В противном случае результат запроса представления может быть непредвиденным.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуются разрешение ALTER для представления и разрешение REFERENCES для определяемых пользователями типов данных среды CLR и коллекций XML-схем, на которые ссылаются столбцы представления.  
@@ -81,9 +81,9 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Представление каталога sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
+ [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sp_refreshsqlmodule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

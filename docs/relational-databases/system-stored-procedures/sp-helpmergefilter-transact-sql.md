@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_helpmergefilter (Transact-SQL) | Документы Microsoft
+title: sp_helpmergefilter (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e35fe61b91fb503b87ba0a0195e77ad7ea0de50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327e47c5dbb48b7944a8389c2fd56ccec96b8668
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996041"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030820"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>Хранимая процедура sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
  [  **@publication=**] **"***публикации***"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"***статьи***"**  
+ [  **@article=**] **"***статье***"**  
  Имя статьи. *статья* — **sysname**, значение по умолчанию **%**, которое возвращает имена всех статей.  
   
  [  **@filtername=**] **"***filtername***"**  
@@ -75,11 +75,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **Хранимая процедура sp_helpmergefilter** используется в репликации слиянием.  
+## <a name="remarks"></a>Примечания  
+ **sp_helpmergefilter** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergefilter**.  
+ Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_helpmergefilter**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

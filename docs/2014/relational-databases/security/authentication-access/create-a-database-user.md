@@ -22,16 +22,15 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4b3ae73ca452d15504d59f02f4103f04fced28ec
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6ea43a226b7f390abbf551cdb73818d5f3daea8d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392412"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030656"
 ---
 # <a name="create-a-database-user"></a>Создание пользователя базы данных
   В этом разделе описывается создание пользователя базы данных сопоставляется с именем входа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Пользователь базы данных — это идентификатор имени входа при подключении к базе данных. Имя пользователя базы данных может совпадать с именем входа, но это не является обязательным требованием. Этот раздел предполагает наличие имени входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Сведения о том, как создать имя входа, см. в разделе [Создайте имя входа](create-a-login.md).  

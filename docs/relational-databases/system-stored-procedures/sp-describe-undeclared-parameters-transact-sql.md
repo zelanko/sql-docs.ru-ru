@@ -1,7 +1,7 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/27/2018
+ms.date: 08/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 793223d14b8af6076c5971a055ffd066c86a03c8
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9b6b17565a12cde0148982f82cf4b84bd1fd8db1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39537444"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43099868"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -106,7 +106,7 @@ sp_describe_undeclared_parameters
   
 -   Если входные данные [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет объявляет локальную переменную с тем же именем, как параметр, объявленный в \@params.  
   
--   Если инструкция создает временные таблицы.  
+-   Если оператор ссылается на временные таблицы.  
   
  Если \@tsql не имеет параметров, не объявленных в \@params, процедура возвращает пустой результирующий набор.  
   

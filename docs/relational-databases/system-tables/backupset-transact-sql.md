@@ -24,13 +24,13 @@ caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c167edb697ec4a2691ddccb88358729fdba61cae
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 929126a397db75729002566a25a1d2d9907d50c6
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562258"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073678"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "39562258"
 |**compressed_backup_size**|**Numeric(20,0)**|Общее число байт в резервной копии, хранящейся на диске.<br /><br /> Для вычисления коэффициента сжатия используйте **compressed_backup_size** и **backup_size**.<br /><br /> Во время **msdb** обновления, это значение присваивается значение NULL. Это означает резервное копирование без сжатия.|  
 |**key_algorithm**|**nvarchar(32)**|Алгоритм шифрования резервной копии. Значение NO_Encryption указывает, что резервная копия не была зашифрована.|  
 |**encryptor_thumbprint**|**varbinary(20)**|Отпечаток шифратора, который будет использоваться для поиска сертификата или асимметричного ключа в базе данных. Если резервная копия не была зашифрована, это значение равно NULL.|  
-|**encryptor_type**|**nvarchar(32)**|Тип используемого шифратора: сертификат или асимметричный ключ. , и делает это по-другому. Если резервная копия не была зашифрована, это значение равно NULL.|  
+|**encryptor_type**|**nvarchar(32)**|Тип используемого шифратора: сертификат или асимметричный ключ. . Если резервная копия не была зашифрована, это значение равно NULL.|  
   
 ## <a name="remarks"></a>Примечания  
  Инструкция RESTORE VERIFYONLY FROM *устройство_резервного_копирования* WITH LOADHISTORY заполняет столбец **backupmediaset** таблицу с соответствующими значениями из заголовка набора носителей.  

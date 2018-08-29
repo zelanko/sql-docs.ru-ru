@@ -1,5 +1,5 @@
 ---
-title: sp_scriptdynamicupdproc (Transact-SQL) | Документы Microsoft
+title: sp_scriptdynamicupdproc (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 707a4262c6d4ae31596d01c0194c7bc438af26ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9158cc2bfb9a482a126a199fb7cbec801007ebe5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034672"
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +51,14 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор, состоящий из одного **nvarchar(4000)** столбца. Результирующий набор формирует полную инструкцию CREATE PROCEDURE, служащую для создания пользовательской хранимой процедуры.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_scriptdynamicupdproc** используется в репликации транзакций. По умолчанию, при синтаксисе MCALL в сценарий включаются все столбцы, входящие в инструкцию UPDATE, а для определения измененных столбцов используется битовая карта. Если столбец не изменился, ему присваиваются его же значения, что обычно не приводит ни к каким проблемам. Если столбец является индексированным, выполняются дополнительные операции. При таком динамическом подходе принимаются во внимание только измененные столбцы, в результате чего формируется оптимальная инструкция UPDATE. Однако составление динамической инструкции UPDATE требует дополнительной обработки в период выполнения. Рекомендуется протестировать динамический и статический подходы и выбрать оптимальное решение.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_scriptdynamicupdproc**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_scriptdynamicupdproc**.  
   
 ## <a name="examples"></a>Примеры  
- В этом примере создается статья (со *artid* значение **1**) на **авторов** в таблицу **pubs** базы данных и указывает, что обновление инструкция является пользовательская процедура:  
+ В этом примере создается статья (с *artid* присвоено **1**) на **авторов** в таблицу **pubs** базы данных и указывает, что обновление инструкция является пользовательская процедура:  
   
 ```  
 'MCALL sp_mupd_authors'  

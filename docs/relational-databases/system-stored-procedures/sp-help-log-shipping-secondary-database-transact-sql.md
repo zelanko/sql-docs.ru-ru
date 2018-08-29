@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_secondary_database (Transact-SQL) | Документы Microsoft
+title: sp_help_log_shipping_secondary_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e2a943234d835d1f78cf57c096fd8492849bfa0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bfdfd891065f0a0fa4cf30376fdaa0c55c5e10a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033630"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,8 +90,8 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|Время (в минутах) хранения истории доставки журналов для конкретной базы данных-получателя; по истечении этого времени записи удаляются.|  
 |**last_restored_latency**|Время (в минутах), прошедшее от создания резервной копии журналов в базе данных-источнике до ее восстановления в базу данных-получатель.<br /><br /> Исходное значение равно NULL.|  
   
-## <a name="remarks"></a>Замечания  
- При включении *secondary_database* параметр, результирующий набор будет содержать сведения о базу данных-получатель; при включении *secondary_id* параметра, результирующий набор будет содержать сведения о всех вторичных баз данных, связанных с этим вторичным идентификатором.  
+## <a name="remarks"></a>Примечания  
+ При включении *secondary_database* параметра, результирующий набор будет содержать сведения об этой вторичной базе данных; при включении *secondary_id* параметра, результирующий набор будет содержать сведения о всех баз данных-получателей, связанных с этим вторичным идентификатором.  
   
  **sp_help_log_shipping_secondary_database** должна запускаться из **master** базы данных на сервере-получателе.  
   
@@ -100,7 +100,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="see-also"></a>См. также  
  [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

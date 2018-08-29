@@ -1,5 +1,5 @@
 ---
-title: sp_adddistributiondb (Transact-SQL) | Документы Microsoft
+title: sp_adddistributiondb (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/30/2018
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7c542df69b94ae6022b8914b050f97d4295e6df5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db1cc4feb71c3b7c7bdc09e1c62f5fa1237a3d0d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992501"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029179"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_adddistributiondb [ @database= ] 'database'
  Имя файла журнала. *файл_журнала* — **nvarchar(255)**, значение по умолчанию NULL. Если аргумент имеет значение NULL, то хранимая процедура создает имя файла на основе имени базы данных.  
   
  [  **@log_file_size=**] *log_file_size*  
- Первоначальный размер файла журнала в мегабайтах (МБ). *log_file_size* — **int**, значение по умолчанию 0 МБ, то есть размер файла создается с помощью наименьшее журнала файла размера, разрешенного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Первоначальный размер файла журнала в мегабайтах (МБ). *log_file_size* — **int**, значение по умолчанию 0 МБ, что означает, размер файла создается с помощью журнала наименьшего файла размер, допустимый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [  **@min_distretention=**] *min_distretention*  
  Минимальный срок хранения до удаления транзакций из базы данных распространителя (в часах). *min_distretention* — **int**, значение по умолчанию 0 часов.  
@@ -92,13 +91,13 @@ sp_adddistributiondb [ @database= ] 'database'
  Время хранения журнала (в часах). *history_retention* — **int**, значение по умолчанию 48 часов.  
   
  [  **@security_mode=**] *security_mode*  
- Режим безопасности, используемый для подключения к распространителю. *security_mode* — **int**, значение по умолчанию 1. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности. **1** задает встроенную проверку подлинности Windows.  
+ Режим безопасности, используемый для подключения к распространителю. *security_mode* — **int**, значение по умолчанию 1. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности; **1** задает встроенную проверку подлинности Windows.  
   
  [  **@login=**] **"***входа***"**  
- Имя входа, которое используется при подключении к распространителю для создания базы данных распространителя. Требуется, если *security_mode* равно **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
+ Имя входа, которое используется при подключении к распространителю для создания базы данных распространителя. Это необходимо, если *security_mode* присваивается **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
  [  **@password=**] **"***пароль***"**  
- Пароль, используемый при подключении к распространителю. Требуется, если *security_mode* равно **0**. *пароль* — **sysname**, значение по умолчанию NULL.  
+ Пароль, используемый при подключении к распространителю. Это необходимо, если *security_mode* присваивается **0**. *пароль* — **sysname**, значение по умолчанию NULL.  
   
  [  **@createmode=**] *createmode*  
  *createmode* — **int**, значение по умолчанию 1, и может принимать одно из следующих значений.  
@@ -106,23 +105,23 @@ sp_adddistributiondb [ @database= ] 'database'
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**1** (по умолчанию)|Создание базы данных или использование существующей базы данных, а затем применить **instdist.sql** файла для создания объектов репликации в базе данных распространителя.|  
+|**1** (по умолчанию)|CREATE DATABASE или использование существующей базы данных, а затем применить **instdist.sql** файла для создания объектов репликации в базе данных распространителя.|  
 |**2**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
  [  **@from_scripting =** ] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
  [  **@deletebatchsize_xact=**] *deletebatchsize_xact*  
- Указывает размер пакета для использования во время очистки просроченных операций MSRepl_Transactions таблиц. *deletebatchsize_xact* — **int**, значение по умолчанию 5000. Этот параметр, появившийся в SQL Server 2017 г., следуют версий в SQL Server 2012 SP4 и SQL Server 2016 SP2.  
+ Указывает размер пакета для использования во время очистки транзакции с истекшим сроком из MSRepl_Transactions таблиц. *deletebatchsize_xact* — **int**, значение по умолчанию 5000. Этот параметр, появившийся в SQL Server 2017, следуют выпусков в SQL Server 2012 SP4 и SQL Server 2016 с пакетом обновления 2.  
 
  [  **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
- Указывает размер пакета для использования во время очистки просроченных команд из таблицы MSRepl_Commands. *deletebatchsize_cmd* — **int**, значение по умолчанию 2000. Этот параметр, появившийся в SQL Server 2017 г., следуют версий в SQL Server 2012 SP4 и SQL Server 2016 SP2. 
+ Указывает размер пакета для использования во время очистки просроченных команд из таблицы MSRepl_Commands. *deletebatchsize_cmd* — **int**, значение по умолчанию 2000. Этот параметр, появившийся в SQL Server 2017, следуют выпусков в SQL Server 2012 SP4 и SQL Server 2016 с пакетом обновления 2. 
  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_adddistributiondb** используется во всех типах репликации. Однако эта хранимая процедура может выполняться только на стороне распространителя.  
   
  Необходимо настроить распространитель, выполнив [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) перед выполнением **sp_adddistributiondb**.  
@@ -186,7 +185,7 @@ GO
 ```  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_adddistributiondb**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_adddistributiondb**.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   

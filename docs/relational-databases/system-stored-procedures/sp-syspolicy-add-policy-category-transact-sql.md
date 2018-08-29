@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_add_policy_category (Transact-SQL) | Документы Microsoft
+title: процедура sp_syspolicy_add_policy_category (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_add_policy_category
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 134777b90dcb5213d1f8a747de4bd34151afcca2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 20bf30b2f0ad96ce46f6990d3d4efeab1a1fe398
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254729"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033318"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
   
 ## <a name="arguments"></a>Аргументы  
  [  **@name=** ] **"***имя***"**  
- Имя категории политики. *имя* — **sysname**и является обязательным. *имя* не может быть NULL или пустая строка.  
+ Имя категории политики. *имя* — **sysname**и является обязательным. *имя* не может быть NULL или пустую строку.  
   
  [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
  Определяет, является ли подписка базы данных обязательной для категории политики. *mandate_database_subscriptions* — **бит** значение по умолчанию 1 (включено).  
@@ -58,7 +57,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_add_policy_category должна выполняться в контексте системной базы данных msdb.  
   
 ## <a name="permissions"></a>Разрешения  

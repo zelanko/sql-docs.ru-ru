@@ -1,5 +1,5 @@
 ---
-title: sp_drop_agent_parameter (Transact-SQL) | Документы Microsoft
+title: sp_drop_agent_parameter (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_drop_agent_parameter
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21c04d3e2661608e6dd2f6d1f64826fd0d0f2d8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e97721099ee3abe6d6afc9e9dabaa363e9842d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032051"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +50,16 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
  Идентификатор профиля, из которого предстоит удалить параметр. *profile_id* — **int**, не имеет значения по умолчанию.  
   
  [  **@parameter_name=**] **"***parameter_name***"**  
- Имя параметра, который необходимо удалить. *имя_параметра* — **sysname**, значение по умолчанию **%**. Если **%**, удаляются все параметры из указанного профиля.  
+ Имя параметра, который необходимо удалить. *имя_параметра* — **sysname**, значение по умолчанию **%**. Если **%**, удаляются все параметры для данного профиля.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_drop_agent_parameter** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_drop_agent_parameter**.  
+ Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_drop_agent_parameter**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   

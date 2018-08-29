@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_events (Transact-SQL) | Документы Microsoft
+title: sys.server_event_session_events (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e1422d0b32df504e42c2a94742533bff5fdbc0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 62909fb21035f6cd9415dab60e4ef6b6d0fa99f9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030062"
 ---
 # <a name="sysservereventsessionevents-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Идентификатор сеанса событий. Не допускает значение NULL.|  
 |event_id|**int**|Идентификатор события. Этот идентификатор уникален внутри объекта сеанса событий. Не допускает значение NULL.|  
-|имя|**sysname**|Имя события. Не допускает значение NULL.|  
+|name|**sysname**|Имя события. Не допускает значение NULL.|  
 |пакет|**sysname**|Имя пакета событий, который содержит событие. Не допускает значение NULL.|  
 |module|**sysname**|Имя модуля, который содержит событие. Не допускает значение NULL.|  
 |predicate|**nvarchar(3000)**|Выражение предиката, применяемое к событию. Допускает значение NULL.|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Это представление имеет следующее количество элементов связей.  
   
 ||||  

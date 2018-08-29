@@ -1,5 +1,5 @@
 ---
-title: Объект иерархии синтаксис (Transact-SQL) | Документы Microsoft
+title: Объект иерархии синтаксис (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7b3df2aad780cabe33855374cc5b6372366eeaf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 979d67b930d95817c0c27f671885c9b5fd9fb0d4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238055"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032542"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Синтаксис иерархии объектов (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  *Propertyname* процедур sp_OAGetProperty и sp_OASetProperty и *имя_метода* процедуры sp_OAMethod поддерживают синтаксис иерархии объектов, аналогичный [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. При использовании этого синтаксиса приведенные выше аргументы имеют следующий общий вид:  
+  *Propertyname* параметр sp_OAGetProperty и sp_OASetProperty и *имя_метода* параметр процедуры sp_OAMethod поддерживают синтаксис иерархии объектов, аналогичны [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. При использовании этого синтаксиса приведенные выше аргументы имеют следующий общий вид:  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,11 +39,11 @@ ms.locfileid: "33238055"
   
 ## <a name="arguments"></a>Аргументы  
  *TraversedObject*  
- Является объектом OLE в иерархии под *objecttoken* указан в хранимой процедуре. Серии коллекций, свойства объектов и методы, возвращающие объекты, указываются с помощью синтаксиса [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Описатели объектов в сериях разделяются точкой (.).  
+ Объект OLE, находящийся в иерархии под *objecttoken* указан в хранимой процедуре. Серии коллекций, свойства объектов и методы, возвращающие объекты, указываются с помощью синтаксиса [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Описатели объектов в сериях разделяются точкой (.).  
   
  Элемент в серии может быть именем коллекции. Коллекции указываются с помощью следующего синтаксиса:  
   
- Коллекции («*элемент*»)  
+ Коллекции ("*элемент*")  
   
  Следует обязательно использовать двойные кавычки ("). Синтаксис [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] с восклицательным знаком (!) не поддерживается для коллекций.  
   
@@ -57,23 +56,23 @@ ms.locfileid: "33238055"
   
  Чтобы указать все аргументы индекса или метода внутри скобок (в результате все аргументы индекса или метода процедур sp_OAGetProperty, sp_OASetProperty или sp_OAMethod игнорируются), применяется следующий синтаксис:  
   
- *PropertyOrMethod*([ *Имя_параметра*: =] "*параметр*» [,...])  
+ *PropertyOrMethod*([ *ParameterName*: =] "*параметр*» [,...])  
   
  Следует обязательно использовать двойные кавычки ("). Все именованные параметры должны указываться после указания всех позиционных параметров.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если *TraversedObject* не указан, *PropertyOrMethod* является обязательным.  
   
- Если *PropertyOrMethod* не указан, *TraversedObject* возвращается как OUTPUT токена объекта из хранимой процедуры OLE Automation. Если *PropertyOrMethod* указан, свойство или метод *TraversedObject* вызывается, и значение свойства или возвращаемое значение метода возвращается в виде выходного параметра из OLE-автоматизации Хранимая процедура.  
+ Если *PropertyOrMethod* не указан, *TraversedObject* возвращается в виде объекта маркера выходного параметра из хранимой процедуры OLE Automation. Если *PropertyOrMethod* указан, свойство или метод *TraversedObject* вызывается, и значение свойства или возвращаемое значение метода возвращается в виде выходного параметра из OLE-автоматизации Хранимая процедура.  
   
- Если ни один элемент в *TraversedObject* списка не возвращает объект OLE, возникает ошибка.  
+ Если хотя бы один элемент в *TraversedObject* списка не возвращает объект OLE, возникает ошибка.  
   
  Дополнительные сведения о синтаксисе объектов OLE в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] см. в документации по [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
  Дополнительные сведения о кодах возврата HRESULT см. в разделе [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
- Ниже приведены примеры синтаксиса иерархии объекта, в которых используется объект SQL-DMO SQLServer.  
+ Ниже приведены примеры синтаксиса иерархии объекта для использования объекта SQLServer языка SQL-DMO.  
   
 ```  
 -- Get the AdventureWorks2012 Person.Address Table object.  

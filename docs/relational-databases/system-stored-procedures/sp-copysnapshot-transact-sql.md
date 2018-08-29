@@ -1,5 +1,5 @@
 ---
-title: sp_copysnapshot (Transact-SQL) | Документы Microsoft
+title: sp_copysnapshot (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_copysnapshot
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d21d69faf204e2d6c26f7af2d5fac1bc2e9371eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cecb47009788605b0840be74b720cf064db0ba5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988049"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029885"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,8 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  [  **@publication=**] **"***публикации***"**  
  Имя публикации, из моментального снимка которой копируется содержимое. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@destination_folder=**] **"***destination_folder***"**  
- Имя папки, из которой будет скопировано содержимое моментального снимка публикации. *destination_folder*— **nvarchar(255)**, не имеет значения по умолчанию. *Destination_folder* может быть альтернативное расположение, например на другом сервере, на сетевом диске или на съемном носителе (например, компакт-диске или съемном диске).  
+ [  **@destination_folder=**] **"***папка_назначения***"**  
+ Имя папки, из которой будет скопировано содержимое моментального снимка публикации. *папка_назначения*— **nvarchar(255)**, не имеет значения по умолчанию. *Папка_назначения* может быть альтернативное расположение, например, на другом сервере, на сетевом диске или на съемном носителе (например, компакт-диски или съемные диски).  
   
  [  **@subscriber=**] **"***подписчика***"**  
  Имя подписчика. *подписчик* имеет тип sysname и значение по умолчанию NULL.  
@@ -62,11 +62,11 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_copysnapshot** используется во всех типах репликации. Подписчики, использующие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 и более ранних версий не могут использовать альтернативное расположение моментальных снимков.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_copysnapshot**.  
+ Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_copysnapshot**.  
   
 ## <a name="see-also"></a>См. также  
  [Альтернативные расположения папки моментальных снимков](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   

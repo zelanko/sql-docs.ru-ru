@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_table (Transact-SQL) | Документы Microsoft
+title: sys.sp_cdc_disable_table (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 16356cc8a5d427a9432ac8c753b1e51d915337d4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9450d80191ac611004cc39528820f49949232823
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028332"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +63,16 @@ sys.sp_cdc_disable_table
  [  **@capture_instance=** ] **"***capture_instance***"** | **"** все **"**  
  Имя экземпляра системы отслеживания, отключаемого в указанной исходной таблице. *capture_instance* — **sysname** и не может иметь значение NULL.  
   
- Если указано «all», все экземпляры, определенные для отслеживания *source_name* отключены.  
+ Если выбрано «все», все экземпляры, определенные для отслеживания *source_name* отключены.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
- **sys.sp_cdc_disable_table** удаляет измененных данных изменить таблицу, а также системные функции, связанные с указанной исходной таблицей и экземпляром отслеживания. Удаляются все строки, связанные с указанным экземпляром отслеживания из таблиц системы отслеживания изменений данных и наборы **is_tracked_by_cdc** столбец для записи в таблице в [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) представление каталога значение 0.  
+## <a name="remarks"></a>Примечания  
+ **sys.sp_cdc_disable_table** удаляет измененных данных изменить таблицу, а также системные функции, связанные с указанной исходной таблицы и экземпляр отслеживания. Удаляются все строки, связанные с указанным экземпляром отслеживания из таблицы система захвата данных и наборы **is_tracked_by_cdc** столбец для записи таблицы [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) представление каталога значение 0.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **db_owner** предопределенной роли базы данных.  

@@ -1,5 +1,5 @@
 ---
-title: sys.Configurations (Transact-SQL) | Документы Microsoft
+title: sys.Configurations (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,14 +21,15 @@ helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25de8a6eb70c79551caca8188c4f67a786e62172
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4f006cdbe3fa99f206af97dcae5edf97a6a86be0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030563"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,24 +39,24 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Уникальный идентификатор значения конфигурации.|  
 |**name**|**nvarchar(35)**|Имя параметра конфигурации.|  
-|**value**|**sql_variant**|Установленное значение параметра.|  
+|**Значение**|**sql_variant**|Установленное значение параметра.|  
 |**minimum**|**sql_variant**|Минимальное значение параметра конфигурации.|  
 |**maximum**|**sql_variant**|Максимальное значение параметра конфигурации.|  
 |**value_in_use**|**sql_variant**|Текущее значение параметра.|  
 |**Описание**|**nvarchar(255)**|Описание параметра конфигурации.|  
-|**is_dynamic**|**бит**|1 = переменная, вступающая в силу после выполнения инструкции RECONFIGURE.|  
-|**is_advanced**|**бит**|1 = переменная отображается только тогда, когда **Показать advancedoption** имеет значение.|  
+|**is_dynamic**|**bit**|1 = переменная, вступающая в силу после выполнения инструкции RECONFIGURE.|  
+|**is_advanced**|**bit**|1 = переменная отображается только тогда, когда **Показать advancedoption** имеет значение.|  
   
- Список всех параметров конфигурации сервера см. в разделе [параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Список всех параметров конфигурации сервера, см. в разделе [параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
->  Параметры конфигурации уровня базы данных см. в разделе [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Для настройки программной архитектуры NUMA см [программной архитектуры NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  Параметры конфигурации уровня базы данных, см. в разделе [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Для настройки программной архитектуры NUMA, см. в разделе [программной архитектуры NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public** . Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
- [Представления каталога конфигурации уровня сервера &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
+ [Представления каталогов конфигурации на уровне сервера &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

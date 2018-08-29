@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriptiondtsinfo (Transact-SQL) | Документы Microsoft
+title: sp_changesubscriptiondtsinfo (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55c43914d883ce5f704ad6c7648d473bd38611fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ffbeb38fbdde20f3fdccd9be817c1111e3f651f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034094"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +49,28 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
   
 ## <a name="arguments"></a>Аргументы  
  [  **@job_id=**] *job_id*  
- Идентификатор задания агента распространителя для принудительной подписки. *Аргумент job_id* — **varbinary(16)**, не имеет значения по умолчанию. Чтобы узнать идентификатор задания распространения, запустите **sp_helpsubscription** или **sp_helppullsubscription**.  
+ Идентификатор задания агента распространителя для принудительной подписки. *job_id* — **varbinary(16)**, не имеет значения по умолчанию. Чтобы найти идентификатор задания распространения, выполните **sp_helpsubscription** или **sp_helppullsubscription**.  
   
  [ **@dts_package_name**=] **"***dts_package_name***"**  
  Указывает имя пакета DTS. *dts_package_name* — **sysname**, значение по умолчанию NULL. Например, чтобы указать пакет с именем **DTSPub_Package**, следует указать `@dts_package_name = N'DTSPub_Package'`.  
   
  [ **@dts_package_password**=] **"***dts_package_password***"**  
- Указывает пароль на пакет. *dts_package_password* — **sysname** значение по умолчанию NULL, при которой указывает, что свойство пароля должно быть оставлено без изменений.  
+ Указывает пароль на пакет. *dts_package_password* — **sysname** значение по умолчанию NULL, который указывает, что свойство пароля должно быть оставлено без изменений.  
   
 > [!NOTE]  
 >  У пакета служб DTS должен быть пароль.  
   
  [ **@dts_package_location**=] **"***dts_package_location***"**  
- Указывает местоположение пакета. *dts_package_location* — **nvarchar(12)**, значение по умолчанию NULL, который указывает, что расположение пакета должно быть оставлено без изменений. Можно изменить значение расположения пакета **распространителя** или **подписчика**.  
+ Указывает местоположение пакета. *dts_package_location* — **nvarchar(12)**, значение по умолчанию NULL, который указывает, что расположение пакета должно быть оставлено без изменений. Расположение пакета можно изменить на **распространителя** или **подписчика**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_changesubscriptiondtsinfo** используется для репликации моментальных снимков и репликации транзакций, являющихся принудительными подписками.  
+## <a name="remarks"></a>Примечания  
+ **sp_changesubscriptiondtsinfo** используется для репликации моментальных снимков и репликации транзакций, которые только принудительные подписки.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных, или создатель подписки могут выполнять процедуру **sp_changesubscriptiondtsinfo**.  
+ Только члены **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных, или создатель подписки могут выполнять процедуру **sp_changesubscriptiondtsinfo**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

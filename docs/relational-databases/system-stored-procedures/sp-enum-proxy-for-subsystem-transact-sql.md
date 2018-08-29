@@ -1,5 +1,5 @@
 ---
-title: sp_enum_proxy_for_subsystem (Transact-SQL) | Документы Microsoft
+title: sp_enum_proxy_for_subsystem (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b524d44236cb9c5a070b460a3f3a0d0736b16aca
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53ab72a592ca0d99bf9e19d68a886de8c1e091db
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251922"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030860"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,17 +70,17 @@ sp_enum_proxy_for_subsystem
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
 |**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
   
-## <a name="remarks"></a>Замечания  
- Если параметры не указаны, **sp_enum_proxy_for_subsystem** выводит сведения о всех прокси-серверы для всех подсистем экземпляра.  
+## <a name="remarks"></a>Примечания  
+ Если параметры не указаны, **sp_enum_proxy_for_subsystem** выводит сведения о всех учетных записях-посредниках для всех подсистем экземпляра.  
   
- Если предоставлен идентификатор или имя прокси-сервера, **sp_enum_proxy_for_subsystem** выдает список подсистем, прокси-сервер имеет доступ к. Если предоставлен идентификатор или имя подсистемы, **sp_enum_proxy_for_subsystem** список учетных записей-посредников, имеющих доступ к данной подсистеме.  
+ Если идентификатор или имя прокси-сервера, **sp_enum_proxy_for_subsystem** выдает список подсистем, прокси-сервер имеет доступ к. Если идентификатор или имя подсистемы, **sp_enum_proxy_for_subsystem** перечислены учетные записи-посредники, которые имеют доступ к данной подсистеме.  
   
  Если указываются сведения о конкретной подсистеме и учетной записи-посреднике, то в случае наличия у заданной учетной записи-посредника доступа к заданной подсистеме результирующий набор возвращает строку.  
   
  Эта хранимая процедура находится в **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения на выполнение для этой процедуры по умолчанию членам **sysadmin** предопределенной роли сервера.  
+ Разрешений на выполнение этой процедуры по умолчанию членами **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
   
