@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c3f420269314667729836d0f6f536935ebe6ec5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 395663802627a0dfac8f9fa314fe2a0fe51f8be7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467782"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784812"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Это [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] пример приложения демонстрирует использование методов считывания результирующих наборов для извлечения [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] «SQL обнаружение и классификация данных» из таблиц, содержащих такие сведения.
+Это [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] пример приложения демонстрирует использование методов считывания результирующих наборов для извлечения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] «SQL обнаружение и классификация данных» из таблиц, содержащих такие сведения.
   
 Файл кода для этого образца имеет имя DataDiscoveryAndClassification.java, и его можно найти в следующем расположении:  
 

@@ -14,23 +14,23 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3386121432f918ef447f5d3ad1f4ff79a64c681
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 6c7008b934bea2f4d03336ea0c7d8e7882fa3561
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662446"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787467"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>Использование инструкции SQL для изменения объектов баз данных 
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Для изменения объектов базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с использованием инструкции SQL можно использовать метод [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) класса [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Метод executeUpdate передаст инструкцию SQL базе данных для обработки, а затем возвратит значение 0, так как не было затронуто ни одной строки.
+Для изменения объектов базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием инструкции SQL можно использовать метод [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) класса [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Метод executeUpdate передаст инструкцию SQL базе данных для обработки, а затем возвратит значение 0, так как не было затронуто ни одной строки.
 
 Для этого сначала нужно создать объект SQLServerStatement с помощью метода [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
 
 > [!NOTE]  
-> Инструкции SQL, изменяющие объекты в базе данных, называются инструкциями языка описания данных DDL. К ним относятся инструкции, такие как `CREATE TABLE`, `DROP TABLE`, `CREATE INDEX`, и `DROP INDEX`. Дополнительные сведения о типах инструкций DDL, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], см. в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].
+> Инструкции SQL, изменяющие объекты в базе данных, называются инструкциями языка описания данных DDL. К ним относятся инструкции, такие как `CREATE TABLE`, `DROP TABLE`, `CREATE INDEX`, и `DROP INDEX`. Дополнительные сведения о типах инструкций DDL, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 В приведенном ниже примере функции передается открытое соединение с образцом базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], составляется инструкция SQL, которая создаст простую таблицу TestTable в базе данных, а затем инструкция выполняется, и выводится возвращаемое значение.
 

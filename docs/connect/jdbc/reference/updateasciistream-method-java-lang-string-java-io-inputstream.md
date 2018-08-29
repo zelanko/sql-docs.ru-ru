@@ -1,5 +1,5 @@
 ---
-title: Метод (java.io.InputStream) updateAsciiStream | Документы Microsoft
+title: Метод (java.io.InputStream) updateAsciiStream | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 074b8ddbc5a4973e309b9be96f65518afade2837
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5fbc4cb8b8affaaaf146c9dfcfe5ad833d3d1f9b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850319"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785370"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream"></a>Метод updateAsciiStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateAsciiStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Параметры  
  *ColumnLabel состоит из*  
   
- Объект **строка** , содержащее метку столбца.  
+ Значение типа **String**, содержащее метку столбца.  
   
  *x*  
   
@@ -46,14 +46,14 @@ public void updateAsciiStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод updateAsciiStream указывается с помощью метода updateAsciiStream в интерфейсе java.sql.ResultSet.  
   
- Этот метод передает символы ASCII (в байтах) из объекта InputStream для символьных столбцов, которые находятся в диапазоне ASCII [от 0x00 до 0x7F] от Юникода и 874, 932, 936, 949, 950 и 1250 по 1258 кодовые страницы. Этот метод выполняет преобразование на целевую страницу параметров сортировки. Попытка обновления целевого столбца, не поддерживающего преобразование, приведет к возникновению исключения. В столбцах двоичных значений передаются необработанные байты.  
+ Этот метод передает ASCII-символы (байты) из объекта InputStream в столбцы символьных значений, поддерживающие преобразование, то есть содержащие символы Юникода в диапазоне ASCII (от 0x00 до 0x7F) и соответствующие кодовым страницам 874, 932, 936, 949, 950 и с 1250 по 1258. Этот метод выполняет преобразование на целевую страницу параметров сортировки. Попытка обновления целевого столбца, не поддерживающего преобразование, приведет к возникновению исключения. В столбцах двоичных значений передаются необработанные байты.  
   
- Использование этого метода для **изображения**, **текст**, и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] типов данных может повлиять на производительность.  
+ Использование этого метода **изображение**, **текст**, и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных может повлиять на производительность.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод updateAsciiStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

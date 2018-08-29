@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f43960439d015bb9c23598d1182c13ced74347d2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 0be9716b5b1f48d4d38a374069ba66b5f5d8b37c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454348"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785862"
 ---
 # <a name="modifying-result-set-data-sample"></a>Изменение образца данных результирующего набора
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-В этом примере приложения, где используется [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], показано получение обновляемого набора данных из базы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Затем с помощью методов объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) вставляется, изменяется, и в конечном итоге удаляется строка данных из набора данных.
+В этом примере приложения, где используется [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], показано получение обновляемого набора данных из базы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Затем с помощью методов объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) вставляется, изменяется, и в конечном итоге удаляется строка данных из набора данных.
 
 Файл кода для этого примера с именем UpdateResultSet.java находится в следующей папке:
 

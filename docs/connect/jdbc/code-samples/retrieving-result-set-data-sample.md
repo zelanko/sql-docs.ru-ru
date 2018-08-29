@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7bea017a9fd36dc0e910fc2dfff69df10aabbde
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 0261dc230cd255057a893ba41306bb9e836f85fd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453082"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787938"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Получение образца данных результирующего набора
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-В этом образце приложения [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] показано получение набора данных из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и последующее отображение этих данных.
+В этом образце приложения [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] показано получение набора данных из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и последующее отображение этих данных.
 
 Файл кода для этого примера с именем RetrieveResultSet.java находится в следующей папке:
 

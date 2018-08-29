@@ -17,12 +17,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4371bbb3c202087b88bb5b29ce7ea5976cd6bdf7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5c17fba2f6b8745cb58d829f1c9ac9e28cd682cd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37986014"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785556"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Свойства TCP/IP (вкладка "IP-адреса")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -67,6 +67,6 @@ ms.locfileid: "37986014"
 ## <a name="see-also"></a>См. также:  
  [Выбор сетевого протокола](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [Создание допустимой строки подключения с использованием протокола TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
- [Служба обозревателя SQL Server](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
+ [Служба обозревателя SQL Server](sql-server-browser-service.md)  
   
   

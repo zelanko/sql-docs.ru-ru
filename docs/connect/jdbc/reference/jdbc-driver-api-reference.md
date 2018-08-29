@@ -14,18 +14,18 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14e597d2788e57eb49903f52ebd40132ead9a35f
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1a6949c49dc019e1dc7b9d875fb3ee7f38363a46
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174911"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787477"
 ---
 # <a name="jdbc-driver-api-reference"></a>Справочник интерфейса драйвера JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] предоставляет API-интерфейс, который можно использовать в программном коде Java для подключения к базе данных [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и взаимодействия с ней.
+[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] предоставляет API-интерфейс, который можно использовать в программном коде Java для подключения к базе данных [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и взаимодействия с ней.
 
 
 
@@ -78,8 +78,8 @@ JavaDoc.io имеет наших JDBC справочную документац�
 |Имя интерфейса|Описание|  
 |--------------------|-----------------|  
 |[Интерфейс ISQLServerCallableStatement](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Позволяет указать имя вызываемой хранимой процедуры с входными и выходными параметрами.|  
-|[Интерфейс ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Представляет соединение JDBC с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
-|[Класс SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|Представляет список свойств, относящихся к подключению к базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] с использованием объекта [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
+|[Интерфейс ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Представляет соединение JDBC с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|[Класс SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|Представляет список свойств, относящихся к подключению к базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием объекта [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|Представляет базовую реализацию функциональности подготовленной инструкции JDBC.|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|Представляет результирующий набор JDBC.|  
 |[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|Представляет базовую реализацию функциональности инструкции JDBC.|
@@ -98,9 +98,9 @@ JavaDoc.io имеет наших JDBC справочную документац�
 |[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)|Реализует ISQLServerConnectopn.|  
 |[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)|Представляет физические подключение к базе данных для диспетчеров пулов соединений.|  
 |[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)|Представляет метаданные для базы данных.|  
-|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|Представляет список свойств, относящихся к подключению к базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] с использованием объекта [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
+|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|Представляет список свойств, относящихся к подключению к базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием объекта [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)|Представляет фабрику объектов для материализации источников данных из интерфейса JNDI.|  
-|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|Представляет драйвер JDBC. Этот класс включает методы для соединения с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и для получения данных о драйвере JDBC.|  
+|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|Представляет драйвер JDBC. Этот класс включает методы для соединения с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и для получения данных о драйвере JDBC.|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)|Представляет неуспешное или неполное выполнение инструкции SQL.|  
 |[Класс SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)|Представляет символьный большой двоичный объект, используя национальный набор символов.|  
 |[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)|Представляет метаданные для параметров подготовленных инструкций.|  

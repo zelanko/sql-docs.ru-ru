@@ -14,22 +14,22 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0164fdcfebdf0fb92aac1f37820495ad8e591a41
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 615ffd21ab333a312bd14dd92348146130a6e231
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662206"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783884"
 ---
 # <a name="understanding-data-type-conversions"></a>Общие сведения о преобразованиях типов данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Чтобы упростить преобразование типов данных языка программирования Java в типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] реализует преобразование типов данных в соответствии с требованиями спецификации JDBC. Повышенная гибкость обеспечивается тем, могут преобразовываться в строки и из любого типа **объект**, **строка**, и **byte []** типов данных.
+Чтобы упростить преобразование типов данных языка программирования Java в типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] реализует преобразование типов данных в соответствии с требованиями спецификации JDBC. Повышенная гибкость обеспечивается тем, могут преобразовываться в строки и из любого типа **объект**, **строка**, и **byte []** типов данных.
 
 ## <a name="getter-method-conversions"></a>Преобразование метода считывания
 
-Исходя из типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], на следующей диаграмме показана схема преобразования для драйвера JDBC для методов get\<Type>() класса [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), а также поддерживаемое преобразование для методов get\<Type> класса [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
+Исходя из типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на следующей диаграмме показана схема преобразования для драйвера JDBC для методов get\<Type>() класса [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), а также поддерживаемое преобразование для методов get\<Type> класса [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -59,7 +59,7 @@ ms.locfileid: "39662206"
 
 При вызове updateString на **двоичных**, **varbinary**, **varbinary(max)**, или **изображение** тип данных столбца, его значение строки обрабатывается как шестнадцатеричное значение строки.
 
-Если столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имеет тип данных **XML**, то значение данных должно быть допустимым **XML**. При вызове методов updateBlob, updateBinaryStream или updateBytes, значение данных должно быть шестнадцатеричное строковое представление XML-символов. Пример:
+Если столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет тип данных **XML**, то значение данных должно быть допустимым **XML**. При вызове методов updateBlob, updateBinaryStream или updateBytes, значение данных должно быть шестнадцатеричное строковое представление XML-символов. Пример:
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -81,13 +81,13 @@ ms.locfileid: "39662206"
 
 - **Без потерь (x)**. Преобразования для числовых случаев, когда тип задания является таким же или меньшим, чем базовый тип сервера. Например, при вызове метода setBigDecimal для базового **десятичного** столбца сервера преобразование не потребуется. В случае преобразования числовых данных в символьные тип данных Java **numeric** преобразуется в **String**. Например, вызов метода setDouble со значением "53" относительно столбца varchar(50) формирует символьное значение "53" в целевом столбце.
 
-- **С преобразованием (y)**. Преобразования из типа Java **numeric** в базовый тип сервера **numeric**, меньший по размеру. Такое преобразование выполняется обычным образом и следует соглашениям о преобразованиях в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Точные значения всегда усекаются (никогда не округляются), а переполнение выводит ошибку неподдерживаемого преобразования. Например, вызов метода updateDecimal со значением "1,9999" для базового целочисленного столбца приводит к сохранению в целевом столбце значения "1", но, если будет передано значение "3000000000", драйвер вызовет исключение.
+- **С преобразованием (y)**. Преобразования из типа Java **numeric** в базовый тип сервера **numeric**, меньший по размеру. Такое преобразование выполняется обычным образом и следует соглашениям о преобразованиях в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точные значения всегда усекаются (никогда не округляются), а переполнение выводит ошибку неподдерживаемого преобразования. Например, вызов метода updateDecimal со значением "1,9999" для базового целочисленного столбца приводит к сохранению в целевом столбце значения "1", но, если будет передано значение "3000000000", драйвер вызовет исключение.
 
-- **В зависимости от данных (z)**. Преобразования из типа Java **String** в базовый тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] зависят от следующих условий. Драйвер отправляет значение **String** на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], а [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при необходимости выполняет преобразование. Если sendStringParametersAsUnicode имеет значение true, а базовым типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] является **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] не выполнит преобразование **nvarchar** в **image** и вызовет исключение SQLServerException. Если параметр sendStringParametersAsUnicode установлен в значение false и базовый тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] — **image**, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняет преобразование **varchar** в **image**, а исключение не вызывается.
+- **В зависимости от данных (z)**. Преобразования из типа Java **String** в базовый тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависят от следующих условий. Драйвер отправляет значение **String** на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при необходимости выполняет преобразование. Если sendStringParametersAsUnicode имеет значение true, а базовым типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выполнит преобразование **nvarchar** в **image** и вызовет исключение SQLServerException. Если параметр sendStringParametersAsUnicode установлен в значение false и базовый тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — **image**, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет преобразование **varchar** в **image**, а исключение не вызывается.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняет преобразования и передает ошибки обратно драйверу JDBC, если возникают проблемы.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет преобразования и передает ошибки обратно драйверу JDBC, если возникают проблемы.
 
-Если столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имеет тип данных **XML**, то значение данных должно быть допустимым **XML**. При вызове методов updateBlob, updateBinaryStream или updateBytes, значение данных должно быть шестнадцатеричное строковое представление XML-символов. Пример:
+Если столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет тип данных **XML**, то значение данных должно быть допустимым **XML**. При вызове методов updateBlob, updateBinaryStream или updateBytes, значение данных должно быть шестнадцатеричное строковое представление XML-символов. Пример:
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -110,13 +110,13 @@ ms.locfileid: "39662206"
 
 - **Без потерь (x)**. Преобразования для числовых случаев, когда тип задания является таким же или меньшим, чем базовый тип сервера. Например, при вызове метода setBigDecimal для базового **десятичного** столбца сервера преобразование не потребуется. В случае преобразования числовых данных в символьные тип данных Java **numeric** преобразуется в **String**. Например, вызов метода setDouble со значением "53" относительно столбца varchar(50) формирует символьное значение "53" в целевом столбце.
 
-- **С преобразованием (y)**. Преобразования из типа Java **numeric** в базовый тип сервера **numeric**, меньший по размеру. Такое преобразование выполняется обычным образом и следует соглашениям о преобразованиях в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Точные значения всегда усекаются и никогда не округляются, а при переполнении возникает ошибка неподдерживаемого преобразования. Например, вызов метода updateDecimal со значением "1,9999" для базового целочисленного столбца приводит к сохранению в целевом столбце значения "1", но, если будет передано значение "3000000000", драйвер вызовет исключение.
+- **С преобразованием (y)**. Преобразования из типа Java **numeric** в базовый тип сервера **numeric**, меньший по размеру. Такое преобразование выполняется обычным образом и следует соглашениям о преобразованиях в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точные значения всегда усекаются и никогда не округляются, а при переполнении возникает ошибка неподдерживаемого преобразования. Например, вызов метода updateDecimal со значением "1,9999" для базового целочисленного столбца приводит к сохранению в целевом столбце значения "1", но, если будет передано значение "3000000000", драйвер вызовет исключение.
 
-- **В зависимости от данных (z)**. Преобразования из типа Java **String** в базовый тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] зависят от следующих условий. Драйвер отправляет значение **String** на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], а [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при необходимости выполняет преобразование. Если свойство подключения sendStringParametersAsUnicode имеет значение true, а базовым типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] является **image**, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] не выполнит преобразование **nvarchar** в **image** и вызовет исключение SQLServerException. Если параметр sendStringParametersAsUnicode установлен в значение false и базовый тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] — **image**, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняет преобразование **varchar** в **image**, а исключение не вызывается.
+- **В зависимости от данных (z)**. Преобразования из типа Java **String** в базовый тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависят от следующих условий. Драйвер отправляет значение **String** на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при необходимости выполняет преобразование. Если свойство подключения sendStringParametersAsUnicode имеет значение true, а базовым типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является **image**, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выполнит преобразование **nvarchar** в **image** и вызовет исключение SQLServerException. Если параметр sendStringParametersAsUnicode установлен в значение false и базовый тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — **image**, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет преобразование **varchar** в **image**, а исключение не вызывается.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняет ряд заданных преобразований и передает ошибки обратно драйверу JDBC, если возникают проблемы. Преобразование на стороне клиента является исключением и выполняется только в случае использования **даты**, **время**, **timestamp**, **логическое**и  **Строка** значения.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет ряд заданных преобразований и передает ошибки обратно драйверу JDBC, если возникают проблемы. Преобразование на стороне клиента является исключением и выполняется только в случае использования **даты**, **время**, **timestamp**, **логическое**и  **Строка** значения.
 
-Если столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имеет тип данных **XML**, то значение данных должно быть допустимым **XML**. При вызове методов setObject(byte[], SQLXML), setObject(inputStream, SQLXML) или setObject(Blob, SQLXML) значение данных должно быть шестнадцатеричным представлением для строки XML-символов. Пример:
+Если столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет тип данных **XML**, то значение данных должно быть допустимым **XML**. При вызове методов setObject(byte[], SQLXML), setObject(inputStream, SQLXML) или setObject(Blob, SQLXML) значение данных должно быть шестнадцатеричным представлением для строки XML-символов. Пример:
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E

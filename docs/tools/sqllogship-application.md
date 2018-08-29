@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0dbdc7e2ccfdd2afc3e674100605a39d727bf5ec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969090"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786575"
 ---
 # <a name="sqllogship-application"></a>Приложение sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 ## <a name="remarks"></a>Remarks  
  Рекомендуется по возможности применять для выполнения резервирования, копирования и восстановления соответствующие задания. Их запуск производится через вызов хранимой процедуры [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
   
- Журнал доставки журналов, созданный программой **sqllogship** , смешивается с журналом, создаваемым заданиями доставки журналов. При частом использовании программы **sqllogship** в конфигурациях доставки журналов стоит рассмотреть отключение заданий доставки журналов. Дополнительные сведения см. в статье [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
+ Журнал доставки журналов, созданный программой **sqllogship** , смешивается с журналом, создаваемым заданиями доставки журналов. При частом использовании программы **sqllogship** в конфигурациях доставки журналов стоит рассмотреть отключение заданий доставки журналов. Дополнительные сведения см. в статье [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
  Приложение **sqllogship** устанавливается в каталог x:\Program Files\Microsoft SQL Server\130\Tools\Binn.  
   

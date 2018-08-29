@@ -16,18 +16,18 @@ caps.latest.revision: 69
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ef479b95e62c2f489b06905b33318a877a60ad5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946908"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785532"
 ---
 # <a name="list-of-bugs-fixed"></a>Список ошибок, исправленных
 
-Эта страница содержит список ошибок, исправленных в каждом выпуске, начиная с [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+Эта страница содержит список ошибок, исправленных в каждом выпуске, начиная с [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.2 драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.2 драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Исправлено сообщение об ошибке об аутентификации Azure Active Directory
 - Исправлено обнаружение кодировки, если языковой стандарт переменные среды задаются по-разному
@@ -40,7 +40,7 @@ ms.locfileid: "37946908"
 - Устранена проблема кэша при использовании проверки подлинности ADAL для Windows
 - Исправлена проблема, которая блокировок и перезаписи трассировки входит в систему Windows
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.1 драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.1 драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Исправлена 1-секундная задержка при вызове SQLFreeHandle с включенным режимом MARS и атрибут соединения «Encrypt = yes»
 - Исправлена ошибка 22003 сбой в SQLGetData, когда размер буфера, переданного в меньше, а затем извлекаемых данных (Windows)
@@ -50,7 +50,7 @@ ms.locfileid: "37946908"
 - Исправлено предупреждение в MacOS установщика
 - Исправлена отправкой Неправильное состояние в SQL Server во время попытки восстановления сеанса при устойчивость подключения организация пулов соединений, так и включены, вызывая сеанса для удаления сервера
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Исправлена ошибка, если при использовании проверки подлинности Kerberos, инструкции bulk insert может завершиться с ошибкой «отказано в доступе»
 - Удален решение в версии ниже 2.3.1 unixODBC ошибки (драйвер вдвое размеры некоторых буферов, передаваемый unixODBC)

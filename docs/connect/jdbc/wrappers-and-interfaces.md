@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58276b03877423afe86f9c68841656b00ce0a8c6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: ad3412a5d296a7d243d6b73b6275c613da5c962b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457788"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784098"
 ---
 # <a name="wrappers-and-interfaces"></a>Оболочки и интерфейсы
 
@@ -61,7 +61,7 @@ ms.locfileid: "39457788"
 
 ## <a name="interfaces"></a>Интерфейсы
 
-Начиная с версии 3.0 драйвера JDBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] доступны интерфейсы для сервера приложений, позволяющие осуществлять доступ к методу, определяемому драйвером, из связанного класса. Сервер приложений может поместить класс в оболочку, создав класс-посредник, обеспечивающий определяемые драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] функции через интерфейс. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает интерфейсы, имеющие методы и константы, определяемые драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], что позволяет серверу приложений создать для класса класс-посредник.
+Начиная с версии 3.0 драйвера JDBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступны интерфейсы для сервера приложений, позволяющие осуществлять доступ к методу, определяемому драйвером, из связанного класса. Сервер приложений может поместить класс в оболочку, создав класс-посредник, обеспечивающий определяемые драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] функции через интерфейс. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает интерфейсы, имеющие методы и константы, определяемые драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], что позволяет серверу приложений создать для класса класс-посредник.
 
 Эти интерфейсы являются производными от стандартных интерфейсов Java, поэтому тот же объект может быть использован и после получения из оболочки для доступа к функциям, определяемым драйвером, либо к стандартным функциям драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 

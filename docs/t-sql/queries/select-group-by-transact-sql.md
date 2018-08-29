@@ -34,13 +34,13 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1a8bd2df095f771866ca8cb96e25dfb1e4612b6a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455408"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43105915"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT — GROUP BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,19 +108,20 @@ GROUP BY {
   
 Следующие инструкции являются допустимыми.  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
+```  
   
 Следующие инструкции не являются допустимыми.  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+```  
+
 Выражение столбца не может содержать:
 
 - псевдоним столбца, определенный в списке SELECT. Выражение может использовать псевдоним столбца для производной таблицы, определенной в предложении FROM.
@@ -135,7 +136,7 @@ GROUP BY {
 
 Например, этот запрос создает таблицу Sales со столбцами Country, Region и Sales. Он вставляет четыре строки, и две строки имеют совпадающие значения для столбцов Country и Region.  
 
-```
+```sql
 CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
@@ -154,7 +155,7 @@ INSERT INTO sales VALUES (N'United States', N'Montana', 100);
 
 Этот запрос группирует значения столбцов Country и Region и возвращает общую сумму по каждому сочетанию значений.  
  
-``` 
+```sql 
 SELECT Country, Region, SUM(sales) AS TotalSales
 FROM Sales
 GROUP BY Country, Region;
@@ -183,7 +184,7 @@ GROUP BY Country, Region;
 
 Принимая во внимание таблицу из предыдущего примера, этот код выполняет операцию GROUP BY ROLLUP вместо простого предложения GROUP BY.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region);
@@ -206,7 +207,7 @@ GROUP BY CUBE создает группы для всех возможных с�
 
 Принимая во внимание таблицу из предыдущего примера, этот код выполняет операцию GROUP BY CUBE по столбцам Country и Region. 
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY CUBE (Country, Region);
@@ -234,7 +235,7 @@ GROUP BY CUBE (Country, Region);
 
 Если параметр GROUPING SETS имеет два или более элементов, результатом будет объединение элементов. Этот пример возвращает объединение результатов ROLLUP и CUBE для Country и Region.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
@@ -242,15 +243,14 @@ GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
 
 Результаты будут такими же, так как этот запрос возвращает объединение двух инструкций GROUP BY.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region)
 UNION ALL
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
-GROUP BY CUBE (Country, Region)
-;
+GROUP BY CUBE (Country, Region);
 ```
 
 SQL не консолидирует повторяющиеся группы, созданные для списка GROUPING SETS. Например, в `GROUP BY ( (), CUBE (Country, Region) )` оба элемента возвращают строку для общего итога, и в списке результатов будут указаны обе строки. 
@@ -258,7 +258,7 @@ SQL не консолидирует повторяющиеся группы, с�
  ### <a name="group-by-"></a>GROUP BY ()  
 Указывает пустую группу, что приводит к созданию общего итога. Он полезен в качестве одного из элементов GROUPING SET. Например, эта инструкция выводит общий объем продаж для каждой страны, а затем — общий итог по всем странам.
 
-```
+```sql
 SELECT Country, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
@@ -363,7 +363,7 @@ GROUP BY ALL
 ### <a name="a-use-a-simple-group-by-clause"></a>A. Использование простого предложения GROUP BY  
  В следующем примере извлекается сумма для каждого `SalesOrderID` из таблицы `SalesOrderDetail`. В примере используется база данных AdventureWorks.  
   
-```  
+```sql  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
 FROM Sales.SalesOrderDetail AS sod  
 GROUP BY SalesOrderID  
@@ -373,7 +373,7 @@ ORDER BY SalesOrderID;
 ### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>Б. Использование предложения GROUP BY с несколькими таблицами  
  В следующем примере из таблицы `Address`, соединенной с таблицей `EmployeeAddress`, получается количество работников для каждого города `City`. В примере используется база данных AdventureWorks. 
   
-```  
+```sql  
 SELECT a.City, COUNT(bea.AddressID) EmployeeCount  
 FROM Person.BusinessEntityAddress AS bea   
     INNER JOIN Person.Address AS a  
@@ -385,7 +385,7 @@ ORDER BY a.City;
 ### <a name="c-use-a-group-by-clause-with-an-expression"></a>В. Использование предложения GROUP BY в выражениях  
  В следующем примере показано, как извлечь данные об общем объеме продаж за каждый год с помощью функции `DATEPART`. Одно и то же выражение должно присутствовать как в списке `SELECT`, так и в предложении `GROUP BY`.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -396,7 +396,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>Г. Использование предложения GROUP BY с предложением HAVING  
  В следующем примере используется предложение `HAVING`, чтобы указать, какая из групп, сформированная в предложении `GROUP BY`, должна быть включена в результирующий набор.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -410,7 +410,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="e-basic-use-of-the-group-by-clause"></a>Д. Базовое использование предложения GROUP BY  
  В следующем примере вычисляется общий объем всех продаж за каждый день. Выводится только одна строка, содержащая общий объем продаж по каждому дню.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales  
@@ -420,7 +420,7 @@ GROUP BY OrderDateKey ORDER BY OrderDateKey;
 ### <a name="f-basic-use-of-the-distributedagg-hint"></a>Е. Базовое использование указания DISTRIBUTED_AGG  
  В этом примере показано указание запроса DISTRIBUTED_AGG для принудительного перемещения в таблице по столбцу `CustomerKey` перед выполнением статистического вычисления.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT CustomerKey, SUM(SalesAmount) AS sas  
@@ -432,7 +432,7 @@ ORDER BY CustomerKey DESC;
 ### <a name="g-syntax-variations-for-group-by"></a>Ж. Варианты синтаксиса для GROUP BY  
  Если в списке Select статистические вычисления, каждый столбец в списке Select должен быть включен в список GROUP BY. Вычисляемые столбцы в списке Select можно указать в списке GROUP BY (делать это необязательно). Ниже приведены примеры синтаксически правильных инструкций SELECT.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName FROM DimCustomer GROUP BY LastName, FirstName;  
@@ -445,7 +445,7 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 ### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>З. Использование GROUP BY с несколькими выражениями GROUP BY  
  В следующем примере группируются результаты с помощью нескольких критериев `GROUP BY`. Если в каждой группе `OrderDateKey` есть подгруппы, которые могут отличаться по `DueDateKey`, для результирующего набора будет определено новое группирование.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
@@ -457,7 +457,7 @@ ORDER BY OrderDateKey;
 ### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>И. Использование предложения GROUP BY с предложением HAVING  
  В следующем примере используется предложение `HAVING`, чтобы указать, какие группы, сформированные в предложении `GROUP BY`, должны быть включены в результирующий набор. В результаты будут включены только группы с датами заказов в 2004 году или более поздними.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales   

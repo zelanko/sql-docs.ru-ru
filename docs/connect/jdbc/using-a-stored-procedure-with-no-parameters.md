@@ -14,18 +14,18 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bd763d709238c6bd25fbe7a90acb7b617004925
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 01ec347bd34786fe3dc9f8533972c212847b1faa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661836"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785648"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Использование хранимых процедур без параметров
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Простейший вид хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], которую можно вызвать, представляет собой хранимую процедуру, которая не содержит параметров и возвращает один результирующий набор. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] содержит класс [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), который может использоваться для вызова такого вида хранимых процедур и обработки возвращаемых ими данных.
+Простейший вид хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которую можно вызвать, представляет собой хранимую процедуру, которая не содержит параметров и возвращает один результирующий набор. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] содержит класс [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), который может использоваться для вызова такого вида хранимых процедур и обработки возвращаемых ими данных.
 
 При использовании драйвера JDBC для вызова хранимых процедур без параметров необходимо использовать escape-последовательность SQL `call`. Синтаксис escape-последовательности `call` без параметров:
 

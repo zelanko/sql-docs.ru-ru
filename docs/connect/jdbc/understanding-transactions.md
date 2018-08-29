@@ -14,12 +14,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20ec695090a164fb0cb5509833db78bd6b38fe69
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: b6d923bce43ad2f9ed3fd0a7d33d456910125768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662116"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786340"
 ---
 # <a name="understanding-transactions"></a>Основные сведения о транзакциях
 
@@ -43,7 +43,7 @@ ms.locfileid: "39662116"
 
 Распределенная транзакция обновляет данные в двух или более сетевых базах данных, при этом сохраняются свойства атомарности, согласованности, изолированности и устойчивости (ACID) обработки транзакций. Поддержка распределенных транзакций была добавлена в JDBC API в дополнительной спецификации API JDBC 2.0. Распределенные транзакции обычно автоматически управляются диспетчером транзакций Java Transaction Service (JTS) в среде сервера приложений Java EE. Тем не менее драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает распределенные транзакции с любым диспетчером транзакций, совместимым с интерфейсом Java Transaction API (JTA).
 
-Драйвер JDBC интегрируется с координатором распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame_md.md)] (MS DTC), обеспечивая полноценную поддержку распределенных транзакций с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. MS DTC — это средство управления распределенными транзакциями, предоставляемое [!INCLUDE[msCoName](../../includes/msconame_md.md)] для [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. Используя проверенную технологию обработки транзакций [!INCLUDE[msCoName](../../includes/msconame_md.md)], MS DTC поддерживает функции XA, например полный двухфазный распределенный протокол фиксации и восстановление распределенных транзакций.
+Драйвер JDBC интегрируется с координатором распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame_md.md)] (MS DTC), обеспечивая полноценную поддержку распределенных транзакций с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. MS DTC — это средство управления распределенными транзакциями, предоставляемое [!INCLUDE[msCoName](../../includes/msconame_md.md)] для [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. Используя проверенную технологию обработки транзакций [!INCLUDE[msCoName](../../includes/msconame_md.md)], MS DTC поддерживает функции XA, например полный двухфазный распределенный протокол фиксации и восстановление распределенных транзакций.
 
 Дополнительные сведения об использовании распределенных транзакций см. в разделе [основные сведения о транзакциях XA](../../connect/jdbc/understanding-xa-transactions.md).
 

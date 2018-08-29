@@ -14,20 +14,20 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 594e5770335779e0555d0ba9911923e487d5db53
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 98fc3495571a434b21d2e58c55c125f049469663
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661666"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787942"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Основные сведения о типах данных драйвера JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает использование базовых и расширенных типов данных JDBC внутри приложения Java, использующего [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в качестве своей базы данных.  
+Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает использование базовых и расширенных типов данных JDBC внутри приложения Java, использующего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве своей базы данных.  
   
-С этой целью система типов драйвера JDBC включается в процесс преобразования между типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и типами и объектами языка Java. Типы JDBC моделируются на основе типов SQL-92 и SQL-99. Драйвер JDBC соответствует требованиям JDBC и разработан для обеспечения правильного баланса между предсказуемостью и гибкостью.  
+С этой целью система типов драйвера JDBC включается в процесс преобразования между типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и типами и объектами языка Java. Типы JDBC моделируются на основе типов SQL-92 и SQL-99. Драйвер JDBC соответствует требованиям JDBC и разработан для обеспечения правильного баланса между предсказуемостью и гибкостью.  
   
 В подразделах данного раздела приводится описание использования базовых и расширенных типов данных и преобразования типов данных в другие типы данных.  
   

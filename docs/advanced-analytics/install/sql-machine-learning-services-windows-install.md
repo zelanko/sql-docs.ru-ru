@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8297d57ad1a29778e23d2ce02198c426825abf02
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437694"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118582"
 ---
-# <a name="install-sql-server-machine-learning-services-in-database-on-windows"></a>Установка SQL Server службы машинного обучения (в базе данных) на Windows 
+# <a name="install-sql-server-machine-learning-services"></a>Установка SQL Server службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Начиная с SQL Server 2017, R и Python для анализа в базе данных поддерживается в SQL Server служб машинного обучения, преемником служб R впервые появилось в SQL Server 2016. Библиотеки функций в R и Python и запуск от имени внешних скриптов на экземпляр ядра СУБД. 
@@ -100,7 +100,7 @@ ms.locfileid: "40437694"
 
 7. После установки, если будет предложено перезагрузить компьютер, сделайте это сейчас. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## <a name="bkmk_enableFeature"></a>Включить выполнение внешних скриптов
+## <a name="bkmk_enableFeature"></a>Включение сценариев
 
 1. Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 

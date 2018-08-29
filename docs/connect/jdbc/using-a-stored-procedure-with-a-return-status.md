@@ -14,18 +14,18 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0ae22a9fac4333271d564fb242803e4cc8eb0b4
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 2fd75507ca7c1615b0282a9f56a1e8f4b33bc22b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661826"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785649"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Использование хранимых процедур с состояниями возврата
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Вызываемая хранимая процедура [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] — это процедура, которая возвращает параметр состояния или параметр результата. Обычно используется для указания успешного выполнения или ошибки хранимой процедуры. В драйвере [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] имеется класс [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), который можно использовать для вызова этого типа хранимых процедур и обработки возвращаемых ими данных.
+Вызываемая хранимая процедура [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это процедура, которая возвращает параметр состояния или параметр результата. Обычно используется для указания успешного выполнения или ошибки хранимой процедуры. В драйвере [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] имеется класс [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), который можно использовать для вызова этого типа хранимых процедур и обработки возвращаемых ими данных.
 
 При вызове хранимой процедуры этого типа с помощью драйвера JDBC следует использовать escape-последовательность SQL `call` совместно с методом [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Ниже приводится синтаксис escape-последовательности `call` с возвращаемым параметром состояния:
 

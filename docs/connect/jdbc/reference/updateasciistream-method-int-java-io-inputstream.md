@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a98f78397a2bd9b86b788c696ad13c11f5e9dbe9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f5d1ac4c8c6c5a89d365dfc760463323de00f210
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020162"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784823"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream"></a>Метод updateAsciiStream (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateAsciiStream(int columnIndex,
   
  Этот метод передает ASCII-символы (байты) из объекта InputStream в столбцы символьных значений, поддерживающие преобразование, то есть содержащие символы Юникода в диапазоне ASCII (от 0x00 до 0x7F) и соответствующие кодовым страницам 874, 932, 936, 949, 950 и с 1250 по 1258. Этот метод выполняет преобразование на целевую страницу параметров сортировки. Попытка обновления целевого столбца, не поддерживающего преобразование, приведет к возникновению исключения. В столбцах двоичных значений передаются необработанные байты.  
   
- Использование этого метода **изображение**, **текст**, и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] типов данных может повлиять на производительность.  
+ Использование этого метода **изображение**, **текст**, и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных может повлиять на производительность.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateAsciiStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

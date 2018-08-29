@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74cc593c494c80492a96644f25fe4a7b6bc7a85e
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f4a91678f90164a85907a21f50d74b50561ceaff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662216"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785180"
 ---
 # <a name="understanding-isolation-levels"></a>Основные сведения об уровнях изоляции
 
@@ -65,7 +65,7 @@ ms.locfileid: "39662216"
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```
 
-Чтобы использовать новый уровень изоляции моментального снимка [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно использовать одну из констант `SQLServerConnection`:  
+Чтобы использовать новый уровень изоляции моментального снимка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно использовать одну из констант `SQLServerConnection`:  
 
 ```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
@@ -77,7 +77,7 @@ con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```
 
-Дополнительные сведения об уровнях изоляции [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] см. в разделе "Уровни изоляции в компоненте [!INCLUDE[ssDE](../../includes/ssde_md.md)]" электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Дополнительные сведения об уровнях изоляции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе "Уровни изоляции в компоненте [!INCLUDE[ssDE](../../includes/ssde_md.md)]" электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="see-also"></a>См. также:
 

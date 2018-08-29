@@ -16,17 +16,17 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 626f2144d29ba15d162e35c40ebc9b5b9317fded
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041405"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786918"
 ---
 # <a name="connecting-with-bcp"></a>Соединение с помощью bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Служебная программа [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) доступна в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] на платформах Linux и macOS. На этой странице приводятся отличия от версии Windows `bcp`.
+Служебная программа [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) доступна в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформах Linux и macOS. На этой странице приводятся отличия от версии Windows `bcp`.
   
 - Признаком конца поля является символ табуляции ("\t").  
   
@@ -82,7 +82,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 Указывает, что пустые столбцы во время данной операции должны сохранить значение NULL вместо любых вставляемых значений столбцов по умолчанию.  
   
 - -l  
-Указывает время ожидания входа. Параметр – l задает время ожидания (в секундах) для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] при попытке соединения с сервером. По умолчанию время ожидания входа составляет 15 секунд. Время ожидания входа должно быть числом в диапазоне от 0 до 65 534. Если указанное значение не является числом или выходит за пределы указанного диапазона, программа `bcp` выдает сообщение об ошибке. Значение 0 задает бесконечное время ожидания.
+Указывает время ожидания входа. Параметр – l задает время ожидания (в секундах) для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при попытке соединения с сервером. По умолчанию время ожидания входа составляет 15 секунд. Время ожидания входа должно быть числом в диапазоне от 0 до 65 534. Если указанное значение не является числом или выходит за пределы указанного диапазона, программа `bcp` выдает сообщение об ошибке. Значение 0 задает бесконечное время ожидания.
   
 - -L *last_row*  
 Указывает номер последней строки для экспорта из таблицы или импорта из файла данных.  
@@ -97,25 +97,25 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 Указывает пароль для идентификатора имени входа.  
   
 - -Q  
-Выполняет инструкцию SET QUOTED_IDENTIFIERS ON в соединении между программой `bcp` и экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Выполняет инструкцию SET QUOTED_IDENTIFIERS ON в соединении между программой `bcp` и экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -r *row_terminator*  
 Указывает признак конца строки.  
   
 - -r  
-Указывает, что массовое копирование в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] данных в денежном формате, в формате даты и времени выполняется с помощью регионального формата, определенного настройками локали клиентского компьютера.  
+Указывает, что массовое копирование в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] данных в денежном формате, в формате даты и времени выполняется с помощью регионального формата, определенного настройками локали клиентского компьютера.  
   
 - -S *server*  
-Указывает имя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] экземпляр для подключения, либо если -D используется, имя источника данных.  
+Указывает имя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляр для подключения, либо если -D используется, имя источника данных.  
   
 - -t *field_terminator*  
 Указывает признак конца поля.  
   
 - -T  
-Указывает, что служебная программа `bcp` устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] (встроенная безопасность).  
+Указывает, что служебная программа `bcp` устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (встроенная безопасность).  
   
 - -U *login_id*  
-Указывает идентификатор входа, используемый для соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Указывает идентификатор входа, используемый для соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -V  
 Выводит номер версии и сведения об авторских правах для программы `bcp`.  
@@ -144,7 +144,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 Указывает имя файла, который принимает перенаправленные из командной строки выходные данные.  
   
 - -V (80 | 90 | 100)  
-Использует типы данных из более ранней версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Использует типы данных из более ранней версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -X  
 При использовании вместе с параметрами format и -f format_file приводит к созданию файла форматирования на основе XML. По умолчанию создается файл форматирования в формате, отличном от XML.  

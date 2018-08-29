@@ -14,18 +14,18 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4a21ae103b226fb74ffa384b1d0696162d72931
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: d9b5da0ee2138296a4b0c7bf12e6e33a06d029cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453978"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785363"
 ---
 # <a name="data-source-sample"></a>Образец источника данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Этот пример приложения, использующего драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], показывает, как установить соединение с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] через объект источника данных. Приложение также демонстрирует извлечение данных из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью хранимой процедуры.
+Этот пример приложения, использующего драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], показывает, как установить соединение с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через объект источника данных. Приложение также демонстрирует извлечение данных из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью хранимой процедуры.
 
 Файл кода для этого примера с именем ConnectDataSource.java находится в следующей папке:
 

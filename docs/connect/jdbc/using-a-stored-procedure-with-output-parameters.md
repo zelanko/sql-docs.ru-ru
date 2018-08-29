@@ -14,18 +14,18 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2556a8d637b78dbc0c0ab9c8740d1e63f156e3b
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: a463bcd89bd2b38b6f0c6ec316039bc28c49d4f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662176"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787460"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Использование хранимых процедур с выходными параметрами
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Вызываемая хранимая процедура [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] — это процедура, возвращающая один или несколько параметров OUT, т. е. параметров, используемых хранимой процедурой для возврата данных вызывающему приложению. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] содержит класс [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), который может быть использован для вызова этого типа хранимых процедур и обработки возвращаемых ими данных.
+Вызываемая хранимая процедура [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это процедура, возвращающая один или несколько параметров OUT, т. е. параметров, используемых хранимой процедурой для возврата данных вызывающему приложению. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] содержит класс [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), который может быть использован для вызова этого типа хранимых процедур и обработки возвращаемых ими данных.
 
 При вызове хранимой процедуры этого типа с помощью драйвера JDBC следует использовать escape-последовательность SQL `call` совместно с методом [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Ниже приводится синтаксис escape-последовательности `call` с параметрами OUT:
 
@@ -36,12 +36,12 @@ ms.locfileid: "39662176"
 
 При создании escape-последовательности `call` укажите параметры OUT при помощи символа "?". (символ вопросительного знака (?)). Этот символ выполняет роль заполнителя для значений параметра, которые будут возвращены из хранимой процедуры. Чтобы указать значение параметра OUT, необходимо указать тип данных всех параметров с помощью метода [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) класса SQLServerCallableStatement до выполнения хранимой процедуры.
 
-Значение, указываемое для параметра OUT в методе registerOutParameter, должно представлять собой один из типов данных JDBC, содержащихся в java.sql.Types, который, в свою очередь, выполняет сопоставление с одним из собственных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения о JDBC и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных, см. в разделе [основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+Значение, указываемое для параметра OUT в методе registerOutParameter, должно представлять собой один из типов данных JDBC, содержащихся в java.sql.Types, который, в свою очередь, выполняет сопоставление с одним из собственных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о JDBC и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных, см. в разделе [основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 При передаче значения методу registerOutParameter для параметра OUT необходимо указать не только тип данных, который будет использоваться для параметра, но также порядковое размещение или имя параметра в хранимой процедуре. Например, если в хранимой процедуре имеется один параметр OUT, то первое порядковое значение будет 1, а второе порядковое значение — 2.
 
 > [!NOTE]  
-> Драйвер JDBC не поддерживает использование типов данных CURSOR, SQLVARIANT, TABLE и TIMESTAMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в качестве параметров OUT.
+> Драйвер JDBC не поддерживает использование типов данных CURSOR, SQLVARIANT, TABLE и TIMESTAMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве параметров OUT.
 
 Для примера создайте следующую хранимую процедуру в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

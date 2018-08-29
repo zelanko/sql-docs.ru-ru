@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a054717a1d8249e842611b2e07f49631f376049
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1c721a32936bf39d91042d6b7ac89a03a5fd85d6
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042223"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42784624"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "38042223"
 В этой статье описывается использование атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY для указания прямого выполнения инструкции вместо используемого по умолчанию, которое заключается в выполнении подготовленной инструкции. С помощью подготовленной инструкции может привести к более высокую производительность, если инструкция выполняется более одного раза при помощи привязки параметра.  
   
 ## <a name="remarks"></a>Remarks  
-Если вы хотите отправить [!INCLUDE[tsql](../../includes/tsql_md.md)] инструкции непосредственно на сервер без Подготовка инструкции с помощью драйвера, можно задать с помощью атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (или при передаче driver-параметр [PDO::__construct](../../connect/php/pdo-construct.md)) или при вызове [PDO::prepare](../../connect/php/pdo-prepare.md). По умолчанию, PDO::SQLSRV_ATTR_DIRECT_QUERY значение False (в выполнении подготовленной инструкции use).  
+Если вы хотите отправить [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции непосредственно на сервер без Подготовка инструкции с помощью драйвера, можно задать с помощью атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (или при передаче driver-параметр [PDO::__construct](../../connect/php/pdo-construct.md)) или при вызове [PDO::prepare](../../connect/php/pdo-prepare.md). По умолчанию, PDO::SQLSRV_ATTR_DIRECT_QUERY значение False (в выполнении подготовленной инструкции use).  
   
 Если вы используете [PDO::query](../../connect/php/pdo-query.md), может потребоваться прямое выполнение. Перед вызовом [PDO::query](../../connect/php/pdo-query.md), вызовите [PDO::setAttribute](../../connect/php/pdo-setattribute.md) и присвоено значение True, PDO::SQLSRV_ATTR_DIRECT_QUERY.  Каждый вызов [PDO::query](../../connect/php/pdo-query.md) могут выполняться с другими параметрами для PDO::SQLSRV_ATTR_DIRECT_QUERY.  
   

@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f5a705de3823ea04d1cb79f8e6106152599fc0b
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: bb31601b55af1b95c53b37c846c3a8bbf17b10f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467742"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785781"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Это [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] пример приложения демонстрирует использование методов считывания результирующих наборов для извлечения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] «обнаружение данных SQL и классификации сведения» из таблиц, содержащих такие сведения.
+Это [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] пример приложения демонстрирует использование методов считывания результирующих наборов для извлечения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] «обнаружение данных SQL и классификации сведения» из таблиц, содержащих такие сведения.
   
 Файл кода для этого образца имеет имя DataDiscoveryAndClassification.java, и его можно найти в следующем расположении:  
 

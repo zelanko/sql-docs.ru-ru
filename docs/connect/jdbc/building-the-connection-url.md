@@ -14,12 +14,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31cc897383c7ffc8a11bc74a1881b12313da68f4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: ec8254c61cabff08ae788327ee2e5449ed68ec7f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278825"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786557"
 ---
 # <a name="building-the-connection-url"></a>Формирование URL-адреса соединения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "39278825"
 > [!NOTE]  
 >  Хотя в предыдущем примере в строке подключения указывались имя пользователя и пароль, следует использовать встроенную безопасность, так как она более надежна. Дополнительные сведения см. в подразделе [Соединения с использованием встроенной проверки подлинности](#Connectingintegrated) далее в этом разделе.  
   
- Следующая строка подключения дается в качестве примера выполнения соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] со встроенной проверкой подлинности и Kerberos из приложения, работающего в любой операционной системе, поддерживаемой [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
+ Следующая строка подключения дается в качестве примера выполнения соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] со встроенной проверкой подлинности и Kerberos из приложения, работающего в любой операционной системе, поддерживаемой [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -77,7 +77,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Именованные и множественные экземпляры SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обеспечивает возможность установки нескольких экземпляров на одном сервере. Все экземпляры идентифицируются с помощью специального имени. Для соединения с именованным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] можно либо указать номер порта именованного экземпляра (рекомендуется), либо указать имя экземпляра в качестве свойства URL-адреса JDBC или свойства **datasource**. Если имя экземпляра или свойство номера порта не указано, создается соединение с экземпляром по умолчанию. См. следующие примеры.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает возможность установки нескольких экземпляров на одном сервере. Все экземпляры идентифицируются с помощью специального имени. Для соединения с именованным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно либо указать номер порта именованного экземпляра (рекомендуется), либо указать имя экземпляра в качестве свойства URL-адреса JDBC или свойства **datasource**. Если имя экземпляра или свойство номера порта не указано, создается соединение с экземпляром по умолчанию. См. следующие примеры.  
   
  Чтобы использовать номер порта, выполните следующие действия:  
   

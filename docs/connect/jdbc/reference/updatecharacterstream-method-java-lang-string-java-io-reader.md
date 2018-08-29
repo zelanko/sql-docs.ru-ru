@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9c755a658b0a63966a2db4be4e55b09b1004a0a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 88ce3b6db5911aa881907c1b4d80dd59d0f416b2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982516"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784114"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader"></a>Метод updateCharacterStream (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
   
  Этот метод передает символы Юникода от объекта средства чтения выбранным текстовым и двоичным столбцам. Сюда входят все текстовые и **двоичные** столбцы, а также столбцы **varbinary**, **varbinary(max)**, **image** и **xml**, но не входят столбцы **определяемых пользователем типов данных**.  
   
- Использование этого метода **изображение**, **текст**, и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] типов данных может повлиять на производительность.  
+ Использование этого метода **изображение**, **текст**, и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных может повлиять на производительность.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

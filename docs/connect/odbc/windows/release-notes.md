@@ -14,19 +14,19 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 1aa3823813392c660c8e31fc517ec4b7ae2e1e29
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: ff40299845ab92822d223f177cc9674ce9fd67f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661876"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786351"
 ---
 # <a name="release-notes"></a>Заметки о выпуске
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Заметки о выпуске Microsoft ODBC Driver for SQL Server для Windows.  
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows
 
 **Функции, добавленные**:
 
@@ -34,7 +34,7 @@ ms.locfileid: "39661876"
 
 [Исправления ошибок](../bug-fixes.md)
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows
 
 **Функции, добавленные**:
 
@@ -48,7 +48,7 @@ ms.locfileid: "39661876"
 [Исправления ошибок](../bug-fixes.md)
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows
 
 **Функции, добавленные**:
 
@@ -71,11 +71,11 @@ ms.locfileid: "39661876"
 > -   Сообщения об ошибках всегда отображаются на английском языке, вне зависимости от языка параметры (то же, как в Azure) 
   
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows  
- ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] добавлена поддержка [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) и [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) при использовании в сочетании с Microsoft SQL Server 2016.  Соответствующие соединения, регулирования количества запросов ключевые слова и атрибуты описаны в [драйвер Aware Connection Pooling in драйвер ODBC для SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows  
+ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] добавлена поддержка [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) и [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) при использовании в сочетании с Microsoft SQL Server 2016.  Соответствующие соединения, регулирования количества запросов ключевые слова и атрибуты описаны в [драйвер Aware Connection Pooling in драйвер ODBC для SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).
 
- ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-13-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows  
- ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] включает прежние функции от драйвера ODBC 11 для SQL Server и добавляет поддержку для Microsoft SQL Server 2016.
+ ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-13-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows  
+ ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает прежние функции от драйвера ODBC 11 для SQL Server и добавляет поддержку для Microsoft SQL Server 2016.
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows  
  ODBC Driver 11 для SQL Server содержит новые [функции](./features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md), а также все функции, доступные в ODBC в SQL Server 2012 Native Client.  

@@ -14,22 +14,22 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d58e4913be6db14bec53f5e8bbf63055b2a1344
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 61926079d3a9494831e0a182b4217ecb5b8b92b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662356"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783962"
 ---
 # <a name="using-basic-data-types"></a>Использование базовых типов данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] использует базовые типы данных JDBC для преобразования типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в формат языка программирования Java и обратно. Драйвер JDBC обеспечивает поддержку API JDBC 4.0, который включает в себя **SQLXML** тип данных и национальные (Юникод) типы данных, такие как **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, и **NCLOB**.  
+Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] использует базовые типы данных JDBC для преобразования типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формат языка программирования Java и обратно. Драйвер JDBC обеспечивает поддержку API JDBC 4.0, который включает в себя **SQLXML** тип данных и национальные (Юникод) типы данных, такие как **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, и **NCLOB**.  
   
 ## <a name="data-type-mappings"></a>Сопоставление типов данных
 
-В следующей таблице перечислены все сопоставления по умолчанию между базовыми типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], типами данных JDBC и типами данных языка программирования Java:  
+В следующей таблице перечислены все сопоставления по умолчанию между базовыми типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], типами данных JDBC и типами данных языка программирования Java:  
   
 | Типы SQL Server   | Типы JDBC (java.sql.Types)                        | Типы языка Java          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
@@ -70,7 +70,7 @@ ms.locfileid: "39662356"
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) Чтобы использовать java.sql.Time с типом времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], нужно задать для свойства подключения **sendTimeAsDatetime** значение "false" (ложь).  
+(1) Чтобы использовать java.sql.Time с типом времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], нужно задать для свойства подключения **sendTimeAsDatetime** значение "false" (ложь).  
   
 (2) доступны программным образом значения **datetimeoffset** с [класс DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
   

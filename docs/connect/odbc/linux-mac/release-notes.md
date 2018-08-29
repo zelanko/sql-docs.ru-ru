@@ -12,17 +12,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 7395524fd185afa03a317e49400822ad459dbf55
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: a12475a1f759be12949d5642e5af865b10e4af99
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662276"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787943"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server в Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Linux и macOS
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS
 
 **Новый распределение, поддерживаемое**: Ubuntu 18.04
 
@@ -45,7 +45,7 @@ SQLBrowseConnect
 
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Linux и macOS
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS
 
 **Функции, добавленные**:
 
@@ -61,7 +61,7 @@ SQLBrowseConnect
 
 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Linux и macOS
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS
 
 **Новый распределение, поддерживаемое**: macOS High Sierra и Ubuntu 17.10 
 
@@ -87,9 +87,9 @@ SQLBrowseConnect
 > -   MODIFY NAME инструкции ALTER DATABASE [dbname1] = [dbname2] не поддерживается.
 > -   Сообщения об ошибках всегда отображаются на английском языке, вне зависимости от языка параметры (то же, как в Azure) 
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Linux и macOS  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS  
 
-ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] добавлена поддержка Always Encrypted и Azure Active Directory при использовании в сочетании с Microsoft SQL Server 2016.
+ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] добавлена поддержка Always Encrypted и Azure Active Directory при использовании в сочетании с Microsoft SQL Server 2016.
 
 **Новый распределение, поддерживаемое**: OS X 10.11 и macOS 10.12 поддерживаются в первой версии драйвера ODBC в macOS. Ubuntu 16.10 теперь также поддерживается, а также Red Hat 6, 7 и SUSE 12. Каждая платформа имеет соответствующие платформы пакета (RPM или DEB), чтобы упростить установку и настройку.  См. в разделе [установке драйвера](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) инструкции по установке.
 
@@ -97,7 +97,7 @@ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)
 
 **Поддержка API BCP**: драйвер ODBC для Linux и macOS теперь поддерживает использование [функции BCP API (**bcp_init**и т. д.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
-## <a name="whats-new-in-the-microsoft-odbc-driver-130-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>Новые возможности в Microsoft ODBC Driver 13.0 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] на платформе Linux  
+## <a name="whats-new-in-the-microsoft-odbc-driver-130-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Новые возможности в Microsoft ODBC Driver 13.0 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформе Linux  
 С Microsoft ODBC Driver 13.0 для SQL Server SQL Server 2014 и SQL Server 2016 теперь также поддерживаются.  
 
 **Новый распределение, поддерживаемое**:
@@ -110,7 +110,7 @@ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)
 
 **Поддержка TLS 1.2**: The Microsoft ODBC Driver 13.0 для SQL Server в Linux теперь поддерживает TLS 1.2 при использовании защиты обмена данными с SQL Server.
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversionmdmd-on-linux"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Linux  
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux  
 Драйвер ODBC в SUSE Linux (предварительная версия) поддерживает 64-разрядную версию SUSE Linux Enterprise 11 с пакетом обновления 2. Дополнительные сведения см. в статье [Требования к системе](../../../connect/odbc/linux-mac/system-requirements.md).  
 
 Драйвер ODBC для Linux поддерживает [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Дополнительные сведения см. в разделе [драйвера ODBC в Linux Поддержка высокой доступности и аварийного восстановления](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  

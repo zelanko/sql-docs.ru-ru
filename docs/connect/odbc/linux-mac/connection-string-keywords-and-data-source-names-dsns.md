@@ -18,17 +18,17 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878a88fac188f23f48c25fdc54fec7540a9b6771
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: abd4df2a4f08cd8f47bacc4a209375b65a541e1a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982316"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783951"
 ---
 # <a name="connecting-to-sql-server"></a>Подключение к SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-В этой статье описывается, как можно создать подключение к базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+В этой статье описывается, как можно создать подключение к базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="connection-properties"></a>Свойства соединения  
 
@@ -67,7 +67,7 @@ Server = [protocol:]server[,port]
  - **master.INFORMATION_SCHEMA.TABLES bcp out файл OutFile.dat -S <server> - U <name> - P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Использование протокола SSL  
-Для шифрования подключений к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] можно использовать протокол SSL. SSL защищает имена пользователей и пароли [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] по сети. Кроме того, SSL проверяет идентификатор сервера для защиты от атак "злоумышленник в середине".  
+Для шифрования подключений к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно использовать протокол SSL. SSL защищает имена пользователей и пароли [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по сети. Кроме того, SSL проверяет идентификатор сервера для защиты от атак "злоумышленник в середине".  
 
 Включение шифрования повышает безопасность за счет снижения производительности.
 
@@ -78,7 +78,7 @@ Server = [protocol:]server[,port]
 ||**TrustServerCertificate = нет**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Сертификат сервера не проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, не шифруются.|Сертификат сервера не проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, не шифруются.|  
-|**Encrypt=yes**|Сертификат сервера проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, шифруются.<br /><br />Имя (или IP-адрес) в общем имени субъекта (CN) или альтернативном имени субъекта (SAN) в SSL-сертификате [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] должно точно совпадать с именем (или IP-адресом) сервера, указанным в строке подключения.|Сертификат сервера не проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, шифруются.|  
+|**Encrypt=yes**|Сертификат сервера проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, шифруются.<br /><br />Имя (или IP-адрес) в общем имени субъекта (CN) или альтернативном имени субъекта (SAN) в SSL-сертификате [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должно точно совпадать с именем (или IP-адресом) сервера, указанным в строке подключения.|Сертификат сервера не проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, шифруются.|  
 
 По умолчанию зашифрованные соединения всегда проверяют сертификат сервера. Тем не менее, при подключении к серверу с самозаверяющий сертификат, также добавьте `TrustServerCertificate` параметр для обхода проверки сертификата со списком доверенных центров сертификации:  
 

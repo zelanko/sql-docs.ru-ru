@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 775596cb3978254401c27f7584a7694fc65a7a64
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6e455225592c6f8ddd4964f9df80c2159543aade
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979727"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786732"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ mixed PDO::getAttribute ( $attribute )
 |attribute|Обрабатывается|Поддерживаемые значения|Описание|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Указывает, должны ли имена столбцов иметь определенный регистр. PDO::CASE_LOWER принудительно отображает имена столбцов в нижнем регистре, PDO::CASE_NATURA оставляет имена столбцов в том виде, в котором они возвращаются из базы данных, а PDO::CASE_UPPER принудительно отображает имена столбцов в верхнем регистре.<br /><br />Значение по умолчанию — PDO::CASE_NATURAL.<br /><br />Этот атрибут также можно задать с помощью PDO::setAttribute.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Массив строк|Описывает версии драйвера и связанные с ними библиотеки. Возвращает массив со следующими элементами: версия ODBC (*основной_номер*.*дополнительный_номер*), имя и версия DLL-библиотеки [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client, версия [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*основной_номер*.*дополнительный_номер*.*номер_сборки*.*редакция*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Массив строк|Описывает версии драйвера и связанные с ними библиотеки. Возвращает массив со следующими элементами: версия ODBC (*основной_номер*.*дополнительный_номер*), имя и версия DLL-библиотеки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, версия [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*основной_номер*.*дополнительный_номер*.*номер_сборки*.*редакция*)|  
 |PDO::ATTR_DRIVER_NAME|PDO|String|Всегда возвращает "sqlsrv".|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|Показывает версию [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*основной_номер*.*дополнительный_номер*.*номер_сборки*.*редакция*)|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Указывает способ обработки ошибок драйвером.<br /><br />PDO::ERRMODE_SILENT (используется по умолчанию) задает коды ошибок и сведения об ошибках.<br /><br />PDO::ERRMODE_WARNING вызывает E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION вызывает исключение.<br /><br />Этот атрибут также можно задать с помощью PDO::setAttribute.|  

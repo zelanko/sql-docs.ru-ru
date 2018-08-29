@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 125c15caac95f152c6f5009b1a794bd0fb625a2c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 9b2eb246686e69c6c890b069b400662515dc71cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661866"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785009"
 ---
 # <a name="using-savepoints"></a>Использование точек сохранения
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Точки сохранения предоставляют механизм отката части транзакций. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] можно создать точку сохранения с помощью инструкции SAVE TRANSACTION savepoint_name. После выполняется инструкция ROLLBACK TRANSACTION savepoint_name для отката до точки сохранения вместо отката до начала транзакции.
+Точки сохранения предоставляют механизм отката части транзакций. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно создать точку сохранения с помощью инструкции SAVE TRANSACTION savepoint_name. После выполняется инструкция ROLLBACK TRANSACTION savepoint_name для отката до точки сохранения вместо отката до начала транзакции.
 
 Точки сохранения удобно использовать, когда вероятность возникновения ошибок мала. Откат до точки сохранения в ситуации, когда ошибка встречается крайне редко, часто более эффективен, чем подход, когда каждая транзакция проверяет допустимость обновления, прежде чем его выполнить. Операции обновления и отката являются ресурсоемкими, поэтому точки сохранения приносят пользу, только если вероятность ошибок небольшая, а затраты на проверку допустимости обновления относительно высокие.
 

@@ -14,18 +14,18 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cebd655a20c49525585cb414cfd7409745391bdc
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: d00ebf37c52e1b5dc88f4afe758aec7c8af287d1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662126"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785844"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Использование хранимых процедур со счетчиком обновлений
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Для изменения данных в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью хранимой процедуры в драйвере [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] предусмотрен класс [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). С помощью класса SQLServerCallableStatement можно вызывать хранимые процедуры, которые изменяют данные в базе данных и возвращают количество обработанных строк, которое также называется счетчиком обновления.
+Для изменения данных в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью хранимой процедуры в драйвере [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] предусмотрен класс [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). С помощью класса SQLServerCallableStatement можно вызывать хранимые процедуры, которые изменяют данные в базе данных и возвращают количество обработанных строк, которое также называется счетчиком обновления.
 
 После настройки вызова хранимой процедуры с помощью класса SQLServerCallableStatement можно вызывать эту хранимую процедуру с помощью метода [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) или [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md). Метод executeUpdate возвращает значение **int**, которое содержит количество строк, обработанных хранимой процедурой, а метод execute не возвращает это значение. Если используется метод execute и нужно получить количество обработанных строк, можно вызвать метод [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) после выполнения хранимой процедуры.
 

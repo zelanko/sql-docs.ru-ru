@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ROUTINE_COLUMNS view
 - INFORMATION_SCHEMA.ROUTINE_COLUMNS view
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ca7c277ab96cfc12a44b6b650f5f28a1821c08b5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e976804e34e7074b23f89ba8c61eeb46a7d3d9e7
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557664"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43110467"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39557664"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**ЗНАЧЕНИЯМ TABLE_CATALOG**|**nvarchar (** 128 **)**|Имя каталога или базы данных функции с табличным значением.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей функцию с табличным значением.<br /><br /> **\*\* Важные \* \* ** не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей функцию с табличным значением.<br /><br /> **\*\* Важные \* \***  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**ИМЯ_ТАБЛИЦЫ**|**nvarchar (** 128 **)**|Имя функции с табличным значением.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Имя столбца.|  
 |**ORDINAL_POSITION**|**int**|Идентификационный номер столбца.|  
@@ -60,7 +59,7 @@ ms.locfileid: "39557664"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|Всегда возвращает значение NULL.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|Возвращает уникальное имя для порядка сортировки, если столбец содержит символьные данные или **текст** тип данных. В противном случае возвращается значение NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Если столбец имеет тип данных псевдонима, то этот столбец содержит имя базы данных, в которой был создан определяемый пользователем тип данных. В противном случае возвращается значение NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Если столбец имеет пользовательский тип данных, этот столбец является именем схемы, содержащей пользовательский тип данных. В противном случае возвращается значение NULL.<br /><br /> **\*\* Важные \* \* ** не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Если столбец имеет пользовательский тип данных, этот столбец является именем схемы, содержащей пользовательский тип данных. В противном случае возвращается значение NULL.<br /><br /> **\*\* Важные \* \***  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**ИМЯ_ДОМЕНА**|**nvarchar (** 128 **)**|Если столбец имеет определяемый пользователем тип данных, то столбец является именем этого типа данных. В противном случае возвращается значение NULL.|  
   
 ## <a name="see-also"></a>См. также  

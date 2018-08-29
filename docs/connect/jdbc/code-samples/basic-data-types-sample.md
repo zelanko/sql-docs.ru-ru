@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04511587586fc2faef1471a9e6a8d1629fe62c78
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: bec8d747e193f54b1f706a911f3a78a3442e81b4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662416"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784457"
 ---
 # <a name="basic-data-types-sample"></a>Образец базовых типов данных
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-В этом примере приложения, использующем драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], показано использование методов считывания результирующего набора для получения значений базовых типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], а также использование методов обновления результирующего набора для обновления таких значений.  
+В этом примере приложения, использующем драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], показано использование методов считывания результирующего набора для получения значений базовых типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а также использование методов обновления результирующего набора для обновления таких значений.  
   
 Файлу с этим примером кода присвоено имя BasicDataTypes.java. Файл находится в следующем расположении:  
 

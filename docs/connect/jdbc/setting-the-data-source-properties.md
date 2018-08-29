@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9957a3273f2e33fea59560c4af30ec0315eea92
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 000d33df0320333e688051f1888659d152f62dde
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458028"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784283"
 ---
 # <a name="setting-the-data-source-properties"></a>Задание свойств источника данных
 
@@ -29,7 +29,7 @@ ms.locfileid: "39458028"
 
 Продукты Java EE, например серверы приложений и обработчики сервлетов/JSP, как правило, позволяют настроить источники данных для доступа к базе данных. Все свойства, перечисленные в разделе [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md), могут быть заданы там, где конфигурация позволяет вводить свойства в виде пар "свойство=значение".
 
-Дополнительные сведения об источниках данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] см. в описании класса [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Пример использования класса SQLServerDataSource для установки подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных, см. в разделе [образец источника данных](../../connect/jdbc/data-source-sample.md).
+Дополнительные сведения об источниках данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в описании класса [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Пример использования класса SQLServerDataSource для установки подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, см. в разделе [образец источника данных](../../connect/jdbc/data-source-sample.md).
 
 ## <a name="see-also"></a>См. также:
 

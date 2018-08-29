@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - IRowsetFind comparability
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f399bb39db15f16169494d8b33b4f1b1c142efe3
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: e5393cd8e7c715a6fea8bef219c5cda617275735
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109739"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037735"
 ---
 # <a name="comparability-for-irowsetfind"></a>Сравнимость для IRowsetFind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "39109739"
  При попытке любого другого сравнения возвращается ошибка DB_E_BADCOMPAREOP. Это согласуется со спецификацией OLE DB.  
   
 ## <a name="see-also"></a>См. также:  
- [Улучшения функций даты и времени](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Улучшения функций даты и времени &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51310c2848526942e23152b9c02a4ad914118392
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: c582cfcd744d009cae0c966c4640f7406c200246
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459558"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784814"
 ---
 # <a name="sparse-columns"></a>Разреженные столбцы
 
@@ -27,7 +27,7 @@ ms.locfileid: "39459558"
 
 Разреженные столбцы — это обычные столбцы, имеющие оптимизированное хранилище для значений NULL. Разреженные столбцы уменьшают пространство, необходимое для хранения значений NULL, но увеличивают затраты на получение значений, отличных от NULL. Разреженные столбцы следует использовать только в том случае, если экономится не менее чем от 20 до 40 процентов места.
 
-Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 поддерживает разреженные столбцы при подключении к серверу [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] или более поздней версии. Чтобы определить, какие столбцы являются разреженными, а какие относятся к набору столбцов, можно использовать методы [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) или [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md).
+Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0 поддерживает разреженные столбцы при подключении к серверу [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] или более поздней версии. Чтобы определить, какие столбцы являются разреженными, а какие относятся к набору столбцов, можно использовать методы [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) или [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md).
 
 Файл кода для этого примера с именем SparseColumns.java находится в следующей папке:  
 

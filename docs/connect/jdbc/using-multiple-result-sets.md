@@ -14,18 +14,18 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e17da2ae58d76268ec962c007b0fd81b5fc06d60
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 08f1f202ded4c9e0053cfc6c315b87c6f4616eee
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662406"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786743"
 ---
 # <a name="using-multiple-result-sets"></a>Использование нескольких результирующих наборов
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-При работе со встроенным SQL или хранимыми процедурами [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], которые возвращают более одного результирующего набора, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] реализует метод [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) в классе [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) для получения каждого из возвращенных результирующих наборов. Кроме того, при выполнении инструкции, которая возвращает несколько результирующих наборов, можно использовать метод [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) класса SQLServerStatement. Он возвращает **логическое** значение, указывающее, чем является возвращенное значение: результирующим набором или числом обновлений.
+При работе со встроенным SQL или хранимыми процедурами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают более одного результирующего набора, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] реализует метод [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) в классе [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) для получения каждого из возвращенных результирующих наборов. Кроме того, при выполнении инструкции, которая возвращает несколько результирующих наборов, можно использовать метод [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) класса SQLServerStatement. Он возвращает **логическое** значение, указывающее, чем является возвращенное значение: результирующим набором или числом обновлений.
 
 Если метод execute возвращает значение **true**, то выполненная инструкция возвратила один или несколько результирующих наборов. Доступ к первому результирующему набору можно получить, вызвав метод getResultSet. Чтобы определить, есть ли еще доступные результирующие наборы, можно вызвать метод [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md), который возвращает **логическое** значение **true**, если доступны также другие результирующие наборы. Если доступно большее число результирующих наборов, можно снова вызвать метод getResultSet, чтобы получить к ним доступ. Эту процедуру можно продолжать до тех пор, пока не будут обработаны все результирующие наборы. Если метод getMoreResults возвращает **false**, существуют больше нет результирующих наборов для процесса.
 

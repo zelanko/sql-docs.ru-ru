@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15ac2b868066efcf978fc92d17b381e08ce2932d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 091c7a2e7df6a073f7404af9b512a9b6404e6324
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454928"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786898"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Защита приложений драйвера JDBC
 
@@ -36,7 +36,7 @@ ms.locfileid: "39454928"
 | [Обеспечение безопасности строк подключений](../../connect/jdbc/securing-connection-strings.md) | Описывает техники защиты информации, используемые для подключения к источнику данных.                                                                                    |
 | [Проверка вводимых пользователем данных](../../connect/jdbc/validating-user-input.md)             | Описывает техники проверки вводимых пользователем данных.                                                                                                                          |
 | [Безопасность приложений](../../connect/jdbc/application-security.md)               | Описывает использование разрешений политики Java для обеспечения безопасности приложения драйвера JDBC.                                                                                |
-| [Использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md)               | Описывает установление безопасного соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с использованием SSL-шифрования. |
+| [Использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md)               | Описывает установление безопасного соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием SSL-шифрования. |
 | [Режим FIPS](../../connect/jdbc/fips-mode.md)                                     | Описывает способы использования драйвера JDBC в режиме совместимости с FIPS.                                                                                                              |
   
 ## <a name="see-also"></a>См. также:  

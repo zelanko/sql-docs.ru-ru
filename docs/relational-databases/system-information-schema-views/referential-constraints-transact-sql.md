@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS view
 - REFERENTIAL_CONSTRAINTS view
 ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1732ea37cf7a6f84ef2f3a09c9c94fba9413fdfc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2844927e05c33c38134432918027cd2902091374
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39555664"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43106282"
 ---
 # <a name="referentialconstraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "39555664"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Квалификатор ограничения.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей ограничение.<br /><br /> **\*\* Важные \* \* ** не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей ограничение.<br /><br /> **\*\* Важные \* \***  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Имя ограничения.|  
 |**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Квалификатор ограничения UNIQUE.|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей ограничение UNIQUE.<br /><br /> **\*\* Важные \* \* ** не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей ограничение UNIQUE.<br /><br /> **\*\* Важные \* \***  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|Ограничение UNIQUE.|  
 |**MATCH_OPTION**|**varchar (** 7 **)**|Ссылочные условия, соответствующие ограничению. Всегда возвращает SIMPLE. Это означает, что не определено никакого соответствия. Предполагается, что условие соответствует ограничению, если выполняется одно из следующих требований.<br /><br /> Хотя бы одно значение внешнего ключевого столбца равно NULL.<br /><br /> Все значения внешнего ключевого столбца не равны NULL, и в таблице первичного ключа имеется строка с таким же ключом.|  
 |**UPDATE_RULE**|**varchar (** 11 **)**|Операция принимается, если инструкция языка [!INCLUDE[tsql](../../includes/tsql-md.md)] нарушает ссылочную целостность, определенную этим ограничением. Возвращает одно из следующих значений. <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Если на ON UPDATE для этого ограничения указывается NO ACTION, обновление первичного ключа, на который выполняется ссылка в ограничении, не будет распространяться на внешний ключ. Если такое обновление первичного ключа будет вызывать нарушение ссылочной целостности, так как по крайней мере один внешний ключ содержит такое же значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не будет выполнять изменений в родительских и ссылающихся на них таблицах. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также возникнет ошибка.<br /><br /> Если на ON UPDATE для этого ограничения указывается CASCADE, любое изменение первичного ключа автоматически распространяется на значение внешнего ключа.|  

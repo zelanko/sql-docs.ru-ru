@@ -14,17 +14,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 976893003e65ea226e5df03a3d636b20d38018ca
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 534b66f4988ec2bdfbb775a293b3de16bd1eaa82
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052726"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785537"
 ---
 # <a name="sqlserverdriver-class"></a>Класс SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Представляет драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Этот класс включает методы для соединения с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и для получения данных о драйвере JDBC.  
+  Представляет драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Этот класс включает методы для соединения с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и для получения данных о драйвере JDBC.  
   
  **Пакет:** com.microsoft.sqlserver.jdbc  
   

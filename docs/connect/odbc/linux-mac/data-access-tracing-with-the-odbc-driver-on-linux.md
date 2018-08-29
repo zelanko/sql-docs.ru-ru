@@ -17,17 +17,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64a04e7c448161c22ca9a671e5fdbe706829bced
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f5a22a5f4eb06e983f2bc4d81eeb786f32b78751
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982189"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786554"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Трассировка доступа к данным с помощью драйвера ODBC в Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Диспетчер драйверов unixODBC в macOS и Linux поддерживает трассировку входа в вызов ODBC API и выхода драйвера ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Диспетчер драйверов unixODBC в macOS и Linux поддерживает трассировку входа в вызов ODBC API и выхода драйвера ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 Для трассировки поведения приложения ODBC, изменить `odbcinst.ini` файла `[ODBC]` раздел для установки значений `Trace=Yes` и `TraceFile` на путь к файлу, который должен содержать трассировки выходные данные; например:
 

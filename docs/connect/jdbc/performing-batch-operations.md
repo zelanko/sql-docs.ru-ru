@@ -14,24 +14,24 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 39596d1bc481005606a7442d755b3cc9a1ec668b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279019"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786526"
 ---
 # <a name="performing-batch-operations"></a>Выполнение пакетных операций
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Чтобы обеспечить повышение производительности при выполнении нескольких обновлений базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] позволяет передать несколько обновлений в едином фрагменте работы, который называется пакетом.  
+  Чтобы обеспечить повышение производительности при выполнении нескольких обновлений базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] позволяет передать несколько обновлений в едином фрагменте работы, который называется пакетом.  
   
  Для передачи пакетных обновлений можно использовать следующие классы: [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Метод [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) используется для добавления команды. Метод [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) используется для очистки списка команд. Метод [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) используется для передачи всех команд для обработки. В качестве части пакета могут выполняться только инструкции языка описания данных DDL и языка обработки данных DML, возвращающие простой счетчик обновлений.  
   
  Метод executeBatch возвращает массив значений **int**, соответствующих счетчику обновлений каждой команды. В случае сбоя одного из команд создается BatchUpdateException и следует использовать метод getUpdateCounts BatchUpdateException класса для извлечения массива счетчиков обновления. При возникновении ошибки выполнения команды драйвер продолжает обработку остальных команд. Однако при наличии ошибки синтаксиса в команде происходит ошибка инструкций в пакете.  
   
 > [!NOTE]  
->  Если отсутствуют счетчики обновлений, можно сначала отправить инструкцию SET NOCOUNT ON [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Это позволит уменьшить объем сетевого трафика и увеличить производительность приложений.  
+>  Если отсутствуют счетчики обновлений, можно сначала отправить инструкцию SET NOCOUNT ON [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это позволит уменьшить объем сетевого трафика и увеличить производительность приложений.  
   
  Для примера создайте в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] следующую таблицу:  
   

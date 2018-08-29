@@ -14,18 +14,18 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 1ece23b74de9265f28468ae11702c07cdca1cecc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661796"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784456"
 ---
 # <a name="using-the-jdbc-driver"></a>Использование драйвера JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-В этом разделе приведены краткие указания, как установить простое подключение к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Прежде чем подключаться к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], необходимо установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] на сервер или локальный компьютер, а также установить на локальный компьютер драйвер JDBC.  
+В этом разделе приведены краткие указания, как установить простое подключение к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Прежде чем подключаться к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервер или локальный компьютер, а также установить на локальный компьютер драйвер JDBC.  
   
 ## <a name="choosing-the-right-jar-file"></a>Выбор нужного JAR-файла
 

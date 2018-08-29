@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 75e962b9be2acb1d44451081f0aef2bccd5a09fc
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 4f5c39c62b63aa3d2bf8daf83b9212423cf258a1
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437623"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118512"
 ---
-# <a name="install-sql-server-2016-r-services-in-database"></a>Установка служб SQL Server 2016 R Services (в базе данных) 
+# <a name="install-sql-server-2016-r-services"></a>Установка служб SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье объясняется, как установить и настроить **SQL Server 2016 R Services (в базе данных)**. Если у вас есть SQL Server 2016, установите этот компонент позволяет выполнение кода R в SQL Server.
@@ -85,7 +85,7 @@ ms.locfileid: "40437623"
 7. После установки, если будет предложено перезагрузить компьютер, сделайте это сейчас. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 
-##  <a name="bkmk_enableFeature"></a>Включить выполнение внешних скриптов
+##  <a name="bkmk_enableFeature"></a>Включение сценариев
 
 1. Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
