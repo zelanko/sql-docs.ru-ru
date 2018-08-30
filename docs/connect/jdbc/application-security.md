@@ -1,5 +1,5 @@
 ---
-title: Безопасность приложений | Документы Microsoft
+title: Безопасность приложений | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8226badb1031792badc1601cd12c2a0e2f13c9bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4132dfdc915f45f67b267a197dbfeef2004eb36f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827769"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785540"
 ---
 # <a name="application-security"></a>Безопасность приложений
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  При использовании [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], очень важно обеспечить безопасность приложения. В следующих разделах приводится информация о том, как можно обезопасить работу приложения.  
+  При использовании драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] важно обеспечить безопасность приложения. В следующих разделах приводится информация о том, как можно обезопасить работу приложения.  
   
 ## <a name="using-java-policy-permissions"></a>Использование разрешений политики Java  
- При использовании [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], очень важно задать обязательные разрешения политики Java, необходимые для драйвера JDBC. Среда Java Runtime Environment обеспечивает расширенную модель безопасности, которую можно использовать во время выполнения, чтобы определить, имеет ли поток доступ к ресурсу. Файлы политики безопасности могут управлять этим доступом. Сами файлы политики управляются администратором развертывания и системным администратором контейнера, однако разрешения, перечисленные в этом разделе, оказывают влияние на работу драйвера JDBC.  
+ При использовании драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] важно задать обязательные разрешения политики Java, необходимые драйверу JDBC. Среда Java Runtime Environment обеспечивает расширенную модель безопасности, которую можно использовать во время выполнения, чтобы определить, имеет ли поток доступ к ресурсу. Файлы политики безопасности могут управлять этим доступом. Сами файлы политики управляются администратором развертывания и системным администратором контейнера, однако разрешения, перечисленные в этом разделе, оказывают влияние на работу драйвера JDBC.  
   
  Типичное разрешение в файле политики выглядит следующим образом.  
   
@@ -63,11 +63,11 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  Код «file:/install_dir/lib/-« ссылается на каталог установки драйвера JDBC.  
   
 ## <a name="protecting-server-communication"></a>Защита связи сервера  
- При использовании драйвера JDBC для связи с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных, можно защитить канал связи с помощью протокола безопасности Интернета (IPSEC) или Secure Sockets Layer (SSL); или вы можете использовать оба.  
+ При использовании драйвера JDBC для связи с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно обезопасить канал связи за счет использования либо протокола IPSEC, либо SSL-шифрования. Можно использовать оба метода.  
   
- Поддержка SSL обеспечивает дополнительный уровень защиты помимо IPSEC. Дополнительные сведения об использовании SSL см. в разделе [с помощью SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md).  
+ Поддержка SSL обеспечивает дополнительный уровень защиты помимо IPSEC. Дополнительные сведения об использовании SSL см. в разделе [с помощью SSL-шифрование](../../connect/jdbc/using-ssl-encryption.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

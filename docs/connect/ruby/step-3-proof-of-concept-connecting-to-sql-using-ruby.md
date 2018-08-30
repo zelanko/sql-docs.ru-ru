@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 3: Эксперимент подключение к SQL с помощью Ruby | Документы Microsoft'
+title: 'Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java | Документы Майкрософт'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f490f0145eb4be0349cef4defdcc8b5fbce265ad
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b79d404bfc2dc19dc2028f5001a92ec5b9293b55
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310083"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784308"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Шаг 3: Эксперимент подключение к SQL с помощью Ruby
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby
 
-В этом примере следует рассматривать эксперимента только.  В образце кода упрощен для ясности и не представляет рекомендации рекомендуется корпорацией Майкрософт.  
+В этом примере следует рассматривать подтверждение концепции только.  Пример кода упрощен для ясности и не всегда представляет рекомендации, рекомендуемые корпорацией Майкрософт.  
   
 ## <a name="step-1--connect"></a>Шаг 1: подключение  
   
@@ -36,13 +36,13 @@ ms.locfileid: "35310083"
     database: 'AdventureWorks', azure:true  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Шаг 2: Выполнение запроса  
+## <a name="step-2--execute-a-query"></a>Шаг 2. Выполнение запроса  
   
-Скопируйте и вставьте следующий код в пустой файл. Вызовите test.rb. Затем выполните его, введя следующую команду в командной строке:  
+Скопируйте и вставьте следующий код в пустой файл. Назовите его test.rb. Затем выполните его, введя следующую команду в командной строке:  
   
     ruby test.rb  
   
-В образце кода [TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds) функция используется для получения результирующего набора из запроса к базе данных SQL. Эта функция принимает запрос и возвращает результирующий набор. Результирующий набор при итерации по строке с помощью [result.each сделать | строка |](https://github.com/rails-sqlserver/tiny_tds).  
+В образце кода [TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds) функция используется для извлечения результирующего набора из запроса к базе данных SQL. Эта функция принимает запрос и возвращает результирующий набор. Набор результатов выполняется итерация с помощью [result.each do | строка |](https://github.com/rails-sqlserver/tiny_tds).  
   
 ``` ruby 
     require 'tiny_tds'    
@@ -56,13 +56,13 @@ ms.locfileid: "35310083"
     end  
 ```  
   
-## <a name="step-3--insert-a-row"></a>Шаг 3: Вставьте строку  
+## <a name="step-3--insert-a-row"></a>Шаг 3: Вставка строки  
   
-В этом примере показано, как выполнить [вставить](../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передавать параметры, которые защитить приложения от [атаки SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
+В этом примере показано, как выполнить [вставить](../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передать параметры для защиты от атак [путем внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
   
-Чтобы использовать TinyTDS с Azure, рекомендуется выполнить несколько `SET` инструкции для изменения способа обработки определенные сведения в текущем сеансе. Рекомендуется `SET` инструкции приведены в следующем образце кода. Например `SET ANSI_NULL_DFLT_ON` позволит новых столбцов, созданных допустимы значения null, даже если допустимость столбца не указан явно.  
+Чтобы использовать TinyTDS с Azure, рекомендуется выполнить несколько `SET` инструкции, чтобы изменить способ обработки определенной информации в текущий сеанс. Рекомендуется `SET` инструкции приведены в следующем образце кода. Например `SET ANSI_NULL_DFLT_ON` позволит новых столбцов, созданных допустимы значения null, даже если допустимость нулевых значений в столбце не указана явным образом.  
   
-Для выравнивания с Microsoft SQL Server [datetime](http://msdn.microsoft.com/library/ms187819.aspx) формат, используйте [strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) функцию для приведения в соответствующий формат даты и времени.  
+В соответствии с Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md) форматирования, используйте [strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) функция для приведения в соответствующий формат даты и времени.  
   
 ``` ruby
     require 'tiny_tds'  

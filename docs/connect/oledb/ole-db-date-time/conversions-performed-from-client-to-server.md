@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4b68de60f6d1ffa345018478b5abc70ecf2839b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b2339270e54cd05209e4843c66e3339b9aae270f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109826"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028033"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Преобразования, выполняемые при передаче от клиента к серверу
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В этой статье описываются преобразования даты и времени, проводимые между клиентским приложением, написанным с помощью драйвера OLE DB для SQL Server и [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии).  
+  Описывает преобразования даты и времени, проводимые между клиентским приложением, написанным с помощью драйвера OLE DB для SQL Server, и [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версией).  
   
 ## <a name="conversions"></a>Преобразования  
  В этом разделе описываются преобразования, выполняемые на клиенте. Если клиент задает точность в долях секунд для параметра, отличающуюся от определенной на сервере, клиентское преобразование может вызвать сбой, в то время как сервер завершит операцию успешно. А именно, клиент рассматривает любое усечение долей секунды как ошибку, в то время как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] округляет значения времени до ближайшей целой секунды.  

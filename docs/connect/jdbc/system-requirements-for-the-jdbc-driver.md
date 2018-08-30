@@ -14,17 +14,17 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662286"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786182"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Требования к системе для драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Чтобы получить доступ к данным из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] с помощью драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], на компьютере должны быть установлены следующие компоненты:
+  Чтобы получить доступ к данным из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] с помощью драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], на компьютере должны быть установлены следующие компоненты:
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([скачать](download-microsoft-jdbc-driver-for-sql-server.md))
 - Среда выполнения Java
@@ -44,7 +44,7 @@ ms.locfileid: "39662286"
   
 **Microsoft JDBC Driver 7.0 для SQL Server**  
 
-  7.0 драйвер JDBC включает в себя две библиотеки классов JAR в каждом пакете установки: **mssql-jdbc-7.0.0.jre8.jar**, и **mssql-jdbc-7.0.0.jre10.jar**.
+  Драйвер JDBC 7.0 содержит две библиотеки классов JAR: **mssql-jdbc-7.0.0.jre8.jar** и **mssql-jdbc-7.0.0.jre10.jar**.
 
   JDBC Driver 7.0 рассчитан на совместимость и корректную работу со всеми основными эквивалентами виртуальных машин Java от Sun, но протестирован только в Sun JRE 8.0 и 10.0.
   
@@ -68,7 +68,7 @@ ms.locfileid: "39662286"
   
 **Microsoft JDBC Driver 6.4 для SQL Server**  
 
-  JDBC Driver 6.4 включает в себя три библиотеки классов JAR в каждом пакете установки: **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, и **mssql-jdbc-6.4.0.jre9.jar** .
+  Драйвер JDBC 6.4 содержит две библиотеки классов JAR: **mssql-jdbc-6.4.0.jre7.jar** и **mssql-jdbc-6.4.0.jre8.jar**.
 
   JDBC Driver 6.4 рассчитан на поддержку всеми основными эквивалентами виртуальных машин Java Sun, однако протестирован только в Sun JRE 7.0, 8.0 и 9.0.
   
@@ -149,9 +149,9 @@ ms.locfileid: "39662286"
  Драйвер JDBC разработан для использования с любой операционной системой, поддерживающей использование виртуальной машины Java (JVM). Однако официально протестированы только системы Sun Solaris, SUSE Linux и Windows.  
   
 ## <a name="supported-languages"></a>Поддерживаемые языки  
- Драйвер JDBC поддерживает все параметры сортировки столбцов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Дополнительные сведения о параметрах сортировки, поддерживаемых драйвером JDBC, см. в разделе [международные функции драйвера JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ Драйвер JDBC поддерживает все параметры сортировки столбцов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о параметрах сортировки, поддерживаемых драйвером JDBC, см. в разделе [международные функции драйвера JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
- Дополнительные сведения о параметрах сортировки см. в разделе "Использование параметров сортировки" электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+ Дополнительные сведения о параметрах сортировки см. в разделе "Использование параметров сортировки" электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

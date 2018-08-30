@@ -14,17 +14,17 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 08d1c94854e4d073d4cb26a3e2e320a0d93c08f1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047442"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786916"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Драйвер Microsoft ODBC для SQL Server в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Драйвер ODBC Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] — это изолированные драйверы ODBC, которые обеспечивают интерфейс программирования (API) реализация стандартные интерфейсы ODBC для Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Драйвер ODBC Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] — это изолированные драйверы ODBC, которые обеспечивают интерфейс программирования (API) реализация стандартные интерфейсы ODBC для Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 Microsoft ODBC Driver for SQL Server можно использовать для создания приложений. Можно также обновить имеющиеся приложения, использующие старый драйвер ODBC. Драйвер ODBC Driver for SQL Server поддерживает подключения к базе данных SQL Azure, хранилищу данных SQL Azure, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 и SQL Server 2005.  
 
@@ -38,7 +38,7 @@ Microsoft ODBC Driver for SQL Server можно использовать для
 | Драйвер Microsoft ODBC 11 для SQL Server | <ul><li>Организация пулов соединений с учетом драйвера</li><li>Устойчивость подключений</li><li>Асинхронное выполнение (метод опроса)</li></ul> |    
 
 ## <a name="documentation"></a>Документация  
-Эта документация для Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] включает в себя следующее:  
+Эта документация для Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает в себя следующее:  
   
 -   [Заметки о выпуске](../../../connect/odbc/windows/release-notes.md)  
 -   [Функции Microsoft ODBC Driver for SQL Server в Windows](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  

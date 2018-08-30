@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2b27a848773b09d651d748bd321ace69ab2a6b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1acbbfea1c1ce1a477644b64938b3e5c98ff7429
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060335"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785177"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Устойчивость подключения в драйвере ODBC в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38060335"
   
  Дополнительные сведения об устойчивости неактивных подключений см. в статье [Техническая статья — устойчивость неактивных подключений](http://go.microsoft.com/fwlink/?LinkId=393996).  
   
- Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows имеет два параметра для управления поведением повторного подключения:  
+ Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows имеет два параметра для управления поведением повторного подключения:  
   
 -   Число попыток подключения.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "38060335"
   
      Можно изменить число повторных попыток подключения, когда вы:  
   
-    -   определяете или изменяете источник данных, использующий драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] с элементом управления **Число попыток подключения** ;  
+    -   определяете или изменяете источник данных, использующий драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с элементом управления **Число попыток подключения** ;  
   
     -   используете ключевое слово строки подключения **ConnectRetryCount** .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "38060335"
   
      Можно изменить интервал повтора подключения, когда вы:  
   
-    -   определяете или изменяете источник данных, использующий драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] с элементом управления **Интервал повтора подключения** ;  
+    -   определяете или изменяете источник данных, использующий драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с элементом управления **Интервал повтора подключения** ;  
   
     -   используете ключевое слово строки подключения **ConnectRetryInterval** .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "38060335"
 |IMC06|Подключение разорвано, и восстановление невозможно. Соединение помечено клиентом как невосстанавливаемое. Попытки восстановить соединение не предпринимались.|  
   
 ## <a name="example"></a>Пример  
- Следующий пример содержит две функции. **func1** показывает способ подключения с помощью имени источника данных (DSN), использующего драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Windows. Имя DSN использует проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] и задает идентификатор пользователя. **func1** затем извлекает число повторных попыток подключения с **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ Следующий пример содержит две функции. **func1** показывает способ подключения с помощью имени источника данных (DSN), использующего драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows. Имя DSN использует проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и задает идентификатор пользователя. **func1** затем извлекает число повторных попыток подключения с **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** использует **SQLDriverConnect**, ключевое слово строки подключения **ConnectRetryCount** и атрибуты соединения, чтобы получить параметр для повторных попыток подключения и интервала повторных попыток.  
   

@@ -1,5 +1,5 @@
 ---
-title: Класс SQLServerBlob | Документы Microsoft
+title: Класс SQLServerBlob | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83662d032d762eb4109576ab2f2aa253aaabb6fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c6f9ccb8e9a479d026430dece3ec1fed9bc8c33e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845509"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786730"
 ---
 # <a name="sqlserverblob-class"></a>Класс SQLServerBlob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "32845509"
   
  **Расширяет:** java.lang.Object  
   
- **Реализует:** java.sql.Blob, java.io.Serializable  
+ Реализует:** java.sql.Blob, java.io.Serializable  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,11 +44,11 @@ ms.locfileid: "32845509"
 public class SQLServerBlob  
 ```  
   
-## <a name="remarks"></a>Замечания  
- Большой двоичный объект хранится в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] с типом данных IMAGE.  
+## <a name="remarks"></a>Remarks  
+ Большой двоичный объект хранится в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с типом данных IMAGE.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
- [Справочник по API для драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Справка по API драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

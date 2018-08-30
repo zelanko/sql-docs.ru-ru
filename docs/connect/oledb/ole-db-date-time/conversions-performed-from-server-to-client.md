@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 60adf00e05d190f72229b252a3877b417be7f260
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: c5b69cb8fac0d91728e9cef945e83159e3151bc5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109436"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024422"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Преобразования, выполняемые при передаче от сервера к клиенту
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В этой статье описываются преобразования даты и времени, проводимые между [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии) и клиентским приложением, написанным с помощью драйвера OLE DB для SQL Server.  
+  Описывает преобразования даты и времени, проводимые между [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с помощью драйвера OLE DB для SQL Server.  
   
 ## <a name="conversions"></a>Преобразования  
  В следующей таблице описываются преобразования между типом, возвращенным клиенту, и типом в привязке. Для выходных параметров, если был вызван ICommandWithParameters::SetParameterInfo и тип, указанный в *pwszDataSourceType* не соответствует фактическому типу на сервере, неявное преобразование будет выполняться на сервере , и тип, возвращаемый клиенту будет совпадать с типом, заданные с помощью ICommandWithParameters::SetParameterInfo. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от описанных в данной статье. Например, когда требуется предоставить дату по умолчанию, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует значение 1900-1-1, а не 1899-12-30.  
