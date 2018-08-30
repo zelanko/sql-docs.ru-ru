@@ -1,5 +1,5 @@
 ---
-title: sp_get_query_template (Transact-SQL) | Документы Microsoft
+title: Хранимая процедура sp_get_query_template (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fac47c5b84894f681ffc9c6729dd526f9e8488c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e2d96ffa9a2375905246a515601c77afdc50d231
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027750"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +48,22 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Аргументы  
  "*query_text*"  
- Запрос, для которого создается параметризованная версия. "*query_text*" должны быть заключены в одинарные кавычки и предваряться описателем Юникода n. N'*query_text*"имеет значение, присваиваемое @querytext параметра. Тип **nvarchar(max)**.  
+ Запрос, для которого создается параметризованная версия. "*query_text*" должны быть заключены в одинарные кавычки и предваряться описателем Юникода n. N'*query_text*"— это значение, присваиваемое @querytext параметра. Тип **nvarchar(max)**.  
   
  @templatetext  
- Выходной параметр типа **nvarchar(max)**, предназначенный для получения параметризованной формы *query_text* как строковый литерал.  
+ Является выходным параметром типа **nvarchar(max)**, предназначенный для получения параметризованной формы *query_text* как строковый литерал.  
   
  @parameters  
- Выходной параметр типа **nvarchar(max)**, предназначенный для получения строкового литерала типов имен и данных параметров, которые были параметризованы в @templatetext.  
+ Является выходным параметром типа **nvarchar(max)**, предназначенный для получения параметров имена и типы данных, которые были параметризованы в строковый литерал @templatetext.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Процедура sp_get_query_template возвращает ошибку, если:  
   
--   Значения постоянных литералов в невозможно параметризовать *query_text*.  
+-   Невозможно параметризовать значения констант в *query_text*.  
   
--   *query_text* имеет значение NULL, а не строка Юникода, синтаксически неверен или не может быть скомпилирован.  
+-   *query_text* имеет значение NULL, не является строкой Юникода, синтаксически неверен или не удается скомпилировать.  
   
- Если хранимая процедура sp_get_query_template возвращает ошибку, он не изменяет значения @templatetext и @parameters выходные параметры.  
+ Если хранимая процедура sp_get_query_template возвращает ошибку, он не изменяет значения @templatetext и @parameters выходных параметров.  
   
 ## <a name="permissions"></a>Разрешения  
  Требует членства в роли базы данных public.  
@@ -118,7 +119,7 @@ SELECT @my_parameters;
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Компонент Database Engine хранимой процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Указание механизма параметризации запросов с помощью структур плана](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   
