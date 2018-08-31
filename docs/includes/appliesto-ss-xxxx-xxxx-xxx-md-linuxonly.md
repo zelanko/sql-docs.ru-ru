@@ -1,1 +1,1 @@
-<Token>**Эта статья ОТНОСИТСЯ к:** ![Да](media/yes.png)SQL Server (только Linux)![не](media/no.png)базы данных SQL Azure![не](media/no.png)хранилище данных SQL Azure![не](media/no.png) Parallel Data Warehouse </Token>
+<Token>**Область применения:** ![Да](media/yes.png)SQL Server (только Linux) ![не](media/no.png)базы данных SQL Azure ![не](media/no.png)хранилище данных SQL Azure ![не](media/no.png)параллельных Хранилище данных </Token>
