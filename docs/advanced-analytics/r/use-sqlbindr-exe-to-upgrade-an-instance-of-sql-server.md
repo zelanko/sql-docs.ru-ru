@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e781ee8330400a7b6e40ed249ce072cc8f9f83e6
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174801"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795663"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Обновление компонентов машинного обучения (R и Python) в экземплярах SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -163,7 +163,7 @@ OutputDataSet <- data.frame(Name, Version);'
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-Для SQL Server 2016 R Services привязан к Machine Learning Server 9.3 R Base пакету, должен быть 3.4.1 и RevoScaleR должно быть 9.3 вы также должны MicrosoftML 9.3. 
+Для SQL Server 2016 R Services привязан к Machine Learning Server 9.3 R Base пакету, должен быть 3.4.3 и RevoScaleR должно быть 9.3 вы также должны MicrosoftML 9.3. 
 
 Если вы добавили предварительно обученных моделей, внедренных моделей в библиотеке MicrosoftML и их можно вызывать с помощью функции MicrosoftML. Дополнительные сведения см. в разделе [R Примеры для MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml).
 
@@ -183,7 +183,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
     |---------|----------|
     | Чтение       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
-    | Предварительно обученных моделей | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
+    | Предварительно обученная модель | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
 
 1. Передача ZIP-файл и CAB-файлы на целевой сервер.
 

@@ -1,6 +1,6 @@
 ---
-title: 'Занятие 4: Обозначение таблицы дат | Документация Майкрософт'
-ms.date: 05/08/2018
+title: 'Занятие 3: Обозначение таблицы дат | Документация Майкрософт'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77f29250621485f5606a0bf33615e8d15eb7d80b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7cb63b6cb67303dd763263b7d9dbeea30cfc4e3b
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057812"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42791985"
 ---
-# <a name="lesson-3-mark-as-date-table"></a>Занятие 3: Обозначение таблицы дат
+# <a name="lesson-3-mark-as-date-table"></a>Урок 3. Отметка в качестве таблицы дат
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 На занятии 2: Добавление данных, вы импортировали таблицу измерения DimDate. Хотя в вашей модели эта таблица имеет имя DimDate, она также может называться как *таблицу дат*, в том, что он содержит данные даты и времени.  

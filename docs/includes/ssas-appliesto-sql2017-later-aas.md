@@ -1,1 +1,1 @@
-**Область применения:**![да](media/yes.png)SQL Server Analysis Services (начиная с 2017)![да](media/yes.png)Azure Analysis Services
+**Область применения:** ![Да](media/yes.png)SQL Server Analysis Services (начиная с 2017) ![Да](media/yes.png)Azure Analysis Services

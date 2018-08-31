@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6b34de3c71629a1563bf0d480306680dc6253748
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393508"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703627"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Занятие 3: Анализ и визуализация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "40393508"
 
 Чтобы создать график, используйте [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), одно из расширенных функций R, входящих в [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Этот шаг отображает гистограммы на основе данных из [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса. Эту функцию можно включить в хранимой процедуре, **PlotHistogram**.
 
-1. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], в обозревателе объектов щелкните правой кнопкой мыши **TaxiNYC_Sample** базы данных, разверните **программирования**, а затем разверните **хранимые процедуры** для просмотра процедуры, созданные в занятии 2.
+1. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], в обозревателе объектов щелкните правой кнопкой мыши **NYCTaxi_Sample** базы данных, разверните **программирования**, а затем разверните **хранимые процедуры** для просмотра процедуры, созданные в занятии 2.
 
 2. Щелкните правой кнопкой мыши **PlotHistogram** и выберите **изменить** для просмотра исходного кода. Чтобы выполнить эту процедуру, чтобы вызвать **rxHistogram** на данные, содержащиеся в столбце скошенные таблицы nyctaxi_sample.
 
@@ -126,7 +126,9 @@ ms.locfileid: "40393508"
     > [!NOTE]
     > Ключи для bcp учитывается регистр.
   
-3.  Если подключение успешно установлено, появится запрос на ввод дополнительных сведений о формате графического файла. Нажимайте клавишу ВВОД, чтобы принять значения по умолчанию, за исключением указанных ниже изменений.
+3.  Если подключение успешно установлено, появится запрос на ввод дополнительных сведений о формате графического файла. 
+
+   Нажимайте клавишу ВВОД, чтобы принять значения по умолчанию, за исключением указанных ниже изменений.
     
     -   Для **длины префикса диаграммы поля**введите значение 0.
   

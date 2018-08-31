@@ -18,12 +18,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e77e2f11cef4859412c0805d6dd1e082274b82ac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 567b2bf3e75de80ca32ec22f4efb8b353bda173c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772240"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774349"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>переименовать экземпляр отказоустойчивого кластера SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +73,9 @@ ms.locfileid: "34772240"
   
 -   Исправьте имена экземпляра главного сервера (MSX) и целевых серверов (TSX), если сетевое имя компьютеров / кластера было изменено. Дополнительные сведения см. в следующих разделах:  
   
-    -   [Отключение нескольких целевых серверов от главного](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
+    -   [Отключение нескольких целевых серверов от главного](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
-    -   [Создание многосерверной среды](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
+    -   [Создание многосерверной среды](../../../ssms/agent/create-a-multiserver-environment.md)  
   
 -   Измените конфигурацию доставки журналов, чтобы для резервного копирования и восстановления журналов использовалось обновленное имя сервера. Дополнительные сведения см. в следующих разделах:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34772240"
   
     -   [Удаление доставки журналов (SQL Server)](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   Обновите шаги заданий, зависящие от имени сервера. Дополнительные сведения см. в статье [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31).  
+-   Обновите шаги заданий, зависящие от имени сервера. Дополнительные сведения см. в статье [Manage Job Steps](../../../ssms/agent/manage-job-steps.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  

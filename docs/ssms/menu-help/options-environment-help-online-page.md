@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 601439745dffa9c8902aa448cb8ce42c23ed867d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 445c56c70edc8f045ede5efdf921ba34c0ffa291
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042601"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42773969"
 ---
 # <a name="options-environment---help---online-page"></a>Параметры ("Среда" — "Справка" — страница "В сети")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Диалоговое окно **Параметры** позволяет указать источники справки, которые используются при поиске в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , включая справку F1. В меню **Сервис** выберите **Параметры**, разверните папку **Среда** , выберите **Справка**и щелкните **Справка в сети**. Если страница **Справка в сети** отсутствует в списке, установите флажок **Показать все параметры** в диалоговом окне **Параметры** .  
+Диалоговое окно **Параметры** позволяет указать источники справки, которые используются при поиске в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , включая справку F1. В меню **Сервис** выберите **Параметры**, разверните папку **Среда** , выберите **Справка**и щелкните **Справка в сети**. Если страница **Справка в сети** отсутствует в списке, установите флажок **Показать все параметры** в диалоговом окне **Параметры** .  
   
 **Проверить при загрузке содержимого справки**  
 Определяет источники справки и порядок их просмотра при использовании справки F1.  

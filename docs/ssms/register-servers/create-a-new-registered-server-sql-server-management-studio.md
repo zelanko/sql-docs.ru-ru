@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1894d3542613398d50ba0fb998439ce9b57b1af
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c1d2c0f80d80a48005821038b2cb90367fef6cdd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36806979"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774357"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Создание нового зарегистрированного сервера (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "36806979"
  Для выполнения запросов применительно ко всем серверам, зарегистрированным на центральном сервере управления, разверните центральный сервер управления, щелкните правой кнопкой мыши группу серверов, укажите пункт **Соединить**и выберите команду **Создать запрос**. Если запросы выполняются в окне «Редактор запросов», то они будут выполнены для всех серверов в группе серверов с использованием хранимых сведений о соединении и контекста проверки подлинности Windows пользователя.  
   
 ## <a name="see-also"></a>См. также:  
- [Скрытие системных объектов в обозревателе объектов](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
+ [Скрытие системных объектов в обозревателе объектов](../object/hide-system-objects-in-object-explorer.md)   
  [Выполнение экспорта сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [Импорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
   

@@ -31,27 +31,27 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5409a2d155631e72d29752751d8fb294acc8ca8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cb565e830ac0f773299c3cace9afb36d19f1bbb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041561"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774083"
 ---
 # <a name="object-explorer"></a>обозревателе объектов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] предоставляет возможности для управления объектами в экземплярах [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет возможности для управления объектами в экземплярах [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="benefits-of-object-explorer"></a>Преимущества обозревателя объектов  
 В обозревателе объектов представлен иерархический пользовательский интерфейс для просмотра и управления объектами в каждом экземпляре SQL Server. Панель сведений обозревателя объектов предлагает табличное представление объектов экземпляра и возможность поиска указанных объектов. Возможности обозревателя объектов могут незначительно различаться в зависимости от типа сервера, но в общем случае включают функции разработки для баз данных, а также функции управления для всех типов серверов.  
   
 ## <a name="object-explorer-tasks"></a>Задачи обозревателя объектов  
   
-|Description|Раздел|  
+|Описание|Раздел|  
 |---------------|---------|  
 |Содержит описание процесса открытия обозревателя объектов и настройки параметров, определяющих поведение обозревателя.|[Открытие и настройка обозревателя объектов](../../ssms/object/open-and-configure-object-explorer.md)|  
-|Содержит описание процесса подключения обозревателя объектов к экземплярам [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]и [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)].|[Подключение к экземпляру из обозревателя объектов](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
+|Содержит описание процесса подключения обозревателя объектов к экземплярам [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Подключение к экземпляру из обозревателя объектов](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |Содержит описание процесса управления объектами, представленными в виде узлов в иерархии обозревателя объектов.|[Управление объектами с помощью обозревателя объектов](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |Содержит описание панели сведений обозревателя объектов для просмотра всех объектов сервера и управления ими при помощи пользовательского интерфейса.|[Область сведений в обозревателе объектов](../../ssms/object/object-explorer-details-pane.md)|  
-|Содержит описание способов выполнения пользовательских отчетов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].|[Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
+|Содержит описание способов выполнения пользовательских отчетов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
   

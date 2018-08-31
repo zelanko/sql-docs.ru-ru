@@ -14,12 +14,12 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d591227354a950b36e085b350e207c4a8e89ff25
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: 7f588174ea80677066628cb3e756d7c38bd42fba
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890985"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42787499"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>Шаг 1. Настройка среды разработки для использования pyodbc в Python
 
@@ -29,7 +29,7 @@ ms.locfileid: "37890985"
 1. **Скачайте установщик Python**.  
   Если компьютер не имеет Python, установите его. Перейдите к [странице загружаемых файлов Python](https://www.python.org/downloads/windows/) и загрузить соответствующий установщик. Например если вы используете 64-разрядном компьютере, скачайте установщик Python 2.7 или 3.7 (x 64).  
   
-2. **Установите Python**.  После загрузки установщика, выполните следующие действия:. Дважды щелкните файл, чтобы запустить установщик. Б. Выберите язык и примите условия. в. Следуйте инструкциям на экране и Python должен быть установлен на компьютере. г. Убедитесь, что Python установлен, перейдя к `C:\Python27` или `C:\Python37` и запустите `python -v` или `py -v` (для 3.x) 
+2. **Установите Python**.  После загрузки установщика, выполните следующие действия:. Дважды щелкните файл, чтобы запустить установщик. Б. Выберите язык и примите условия. в. Следуйте инструкциям на экране и Python должен быть установлен на компьютере. г. Убедитесь, что Python установлен, перейдя к `C:\Python27` или `C:\Python37` и запустите `python -V` или `py -V` (для 3.x) 
       
 3. [**Установка Microsoft ODBC Driver for SQL Server в Windows**](../../odbc/windows/system-requirements-installation-and-driver-files.md#installing-microsoft-odbc-driver-for-sql-server)
   

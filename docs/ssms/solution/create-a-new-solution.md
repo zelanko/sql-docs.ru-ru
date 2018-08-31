@@ -17,15 +17,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b7a760a15c8ea953e87b8ff9ab550212c29cd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c28c04376a010c3329dcd1df28e716229cab8f27
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42773968"
 ---
 # <a name="create-a-new-solution"></a>Создание решения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-При создании проекта среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] создает решение, в котором будет содержаться проект. Одновременно можно открыть только одно решение. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] не разрешает добавлять папки внутри проекта. В целях организации работы можно создать несколько проектов.  
+При создании проекта среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создает решение, в котором будет содержаться проект. Одновременно можно открыть только одно решение. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не разрешает добавлять папки внутри проекта. В целях организации работы можно создать несколько проектов.  
   
 Для доступа к обозревателю решений выберите в меню **Вид** пункт **Обозреватель решений** .  
   
