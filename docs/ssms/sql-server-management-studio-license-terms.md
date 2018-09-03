@@ -15,17 +15,17 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3138ff1f34120234c47b826195e5102e44aa617
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a054f12d9581204eb6cb0fe66d9c206bc83a47d1
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055071"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899594"
 ---
 # <a name="sql-server-management-studio---license-terms"></a>Условия лицензионного соглашения на использование SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>Доступные языки:  
-[Китайский (КНР)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Китайский (Тайвань)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Английский (США)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Французский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[Китайский (упрощенное письмо)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [китайский (традиционное письмо)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Английский (США)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Французский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
 [Немецкий](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Итальянский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Японский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Корейский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Португальский (Бразилия)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Русский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Испанский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## <a name="microsoft-software-license-terms"></a>УСЛОВИЯ ЛИЦЕНЗИОННОГО СОГЛАШЕНИЯ НА ИСПОЛЬЗОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ КОРПОРАЦИИ МАЙКРОСОФТ  

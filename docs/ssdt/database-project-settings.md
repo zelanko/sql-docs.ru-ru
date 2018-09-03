@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f77719ef5ea1dafa149a00a73ec470162b769f2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087196"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775666"
 ---
 # <a name="database-project-settings"></a>Параметры проекта базы данных
 Параметры проекта базы данных служат для управления разными аспектами базы данных и конфигураций отладки и сборки. Эти параметры можно разделить на следующие категории.  
@@ -108,7 +108,7 @@ ms.locfileid: "39087196"
 Расширенная проверка Transact-SQL — это средство системы проекта базы данных, которое позволяет разработчикам передавать свои проекты базы данных в службу Transact-SQL Compiler Service во время построения для проверки их кода с помощью синтаксического анализатора и интерпретатора SQL Server Engine.  
   
 ### <a name="transact-sql-compiler-service"></a>Служба Transact-SQL Compiler Service  
-Служба Transact-SQL — это компонент, основанный на ядре СУБД Microsoft SQL Server 2012. Эта служба позволяет проверять синтаксис и семантику инструкций DDL с той же достоверностью, что и ядро СУБД Microsoft SQL Server 2012. Это автоматически означает, что служба компилятора не поддерживает синтаксические конструкции или функции, которые стали устаревшими в Microsoft SQL Server 2012. Дополнительные сведения об устаревших средствах см. в разделе [Неподдерживаемые функциональные возможности Database Engine в SQL Server 2012](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx).  
+Служба Transact-SQL — это компонент, основанный на ядре СУБД Microsoft SQL Server 2012. Эта служба позволяет проверять синтаксис и семантику инструкций DDL с той же достоверностью, что и ядро СУБД Microsoft SQL Server 2012. Это автоматически означает, что служба компилятора не поддерживает синтаксические конструкции или функции, которые стали устаревшими в Microsoft SQL Server 2012. Дополнительные сведения об устаревших функциях см. в разделе [Неподдерживаемые функциональные возможности ядра СУБД в SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
 В целях проверки проекта базы данных служба Compiler Service создает частично автономную базу данных и имитирует выполнение инструкций DDL применительно к этой базе данных. Дополнительные сведения см. в разделе [Частично автономные базы данных](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
   

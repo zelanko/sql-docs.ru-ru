@@ -1,6 +1,6 @@
 ---
 title: Участие в работе над документацией по SQL Server | Документы Майкрософт
-ms.date: 04/12/2018
+ms.date: 08/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 57b35b9edbfb257d327f310d526729b7a60215e2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926535"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774095"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Участие в работе над документацией по SQL Server
 
@@ -33,36 +33,14 @@ ms.locfileid: "36926535"
 
 ## <a id="githubui"></a> Редактирование в браузере
 
-Ниже приводятся общие инструкции по внесению небольших правок в содержимое по SQL Server в браузере. Полностью этот процесс описан в статье [Рабочий процесс для участников GitHub: незначительные или эпизодические изменения](https://docs.microsoft.com/contribute/light-workflow).
+Можно вносить простые изменения в содержимое в SQL Server через браузер и отправлять их в корпорацию Майкрософт. Полный процесс описан в статье [Обзор руководства по участию в документации Майкрософт](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). В следующем видеоролике показан сквозной процесс отправки изменений в браузере.
 
-1. В любой статье, в том числе в этой, справа есть кнопка **Изменить**. Найдите статью, которую нужно изменить, и нажмите кнопку **Изменить**, чтобы приступить к работе.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
 
-   ![Кнопка "Изменить" для статьи по SQL](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
-
-   Управление всем содержимым на сайте docs.microsoft.com осуществляется в различных репозиториях GitHub. При нажатии кнопки "Изменить" вы переходите к статье в репозитории **sql-docs**. Если вы редактируете статью, посвященную SQL, в документации по Azure, вы переходите в репозиторий **azure-docs**. 
-
-1. Далее щелкните значок карандаша в правом верхнем углу статьи в GitHub.
-
-   ![Кнопка "Изменить"](./media/sql-server-docs-contribute/edit-button.png)
-
-   > [!NOTE]
-   > Для редактирования статьи необходимо выполнить вход в GitHub. Если у вас нет учетной записи GitHub, см. статью [Настройка учетной записи GitHub](https://docs.microsoft.com/contribute/get-started-setup-github). После создания учетной записи GitHub необходимо подтвердить свой адрес электронной почты, прежде чем вы сможете редактировать статьи.
-
-1. Отредактируйте статью в браузере. Все статьи написаны в разметке Markdown. Если вам нужна помощь по работе с Markdown, ознакомьтесь с [основами Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/). Вы также можете посмотреть, как разметка Markdown преобразовывается для просмотра в опубликованных статьях.
-
-1. Прокрутите содержимое страницы вниз до конца окна редактирования, введите название правки и нажмите кнопку **Propose file change** (Предложить изменение файла).
-
-   ![Предложение запроса на вытягивание](./media/sql-server-docs-contribute/propose-file-change.png)
-
-1. На следующей странице щелкните **Create pull request** (Создать запрос на вытягивание).
-
-   ![Создание запроса на вытягивание](./media/sql-server-docs-contribute/create-pull-request.png)
-
-1. Введите название и описание запроса на вытягивание. Затем снова щелкните **Create pull request**.
-
-   ![Создание запроса на вытягивание](./media/sql-server-docs-contribute/create-pull-request2.png)
-
-Дальнейшие указания будут приводиться в комментариях к запросу на вытягивание. Полное описание процесса и дополнительные сведения можно найти в [руководстве для участников](https://docs.microsoft.com/contribute/light-workflow).
+> [!TIP]
+> Обратите внимание, что расположение кнопки **Изменить** немного отличается от того, что показано в видео, но процесс аналогичен.
+>
+> ![Кнопка "Изменить"](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
 ## <a id="tools"></a> Локальное редактирование с помощью средств
 
@@ -73,7 +51,7 @@ ms.locfileid: "36926535"
 - [Настройка учетной записи GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [Установка средств для создания содержимого](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Локальная настройка репозитория Git для документации](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Использование средств для внесения изменений](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
+- [Использование средств для внесения изменений](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
 
 Если вы отправляете запрос на вытягивание со значительными изменениями, вы получите в GitHub комментарий с просьбой отправить **Лицензионное соглашение на участие (CLA)**. Прежде чем ваш запрос на вытягивание будет принят, необходимо заполнить веб-форму.
 
@@ -115,10 +93,11 @@ ms.locfileid: "36926535"
 
 Чтобы найти подходящий включаемый файл applies-to для статьи, следуйте приведенным ниже советам.
 
+- Список часто используемых включаемых файлов см. в разделе [Версии SQL Server и применяемые включаемые файлы](applies-to-includes.md).
 - Просмотрите другие статьи, посвященные той же функции или связанной задаче. Вы можете начать редактировать эту статью и скопировать разметку Markdown ссылки на включаемый файл applies-to (отменить редактирование можно, не отправляя изменений).
 - Выполните поиск файлов, содержащих текст "applies-to", в каталоге [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes). Чтобы быстро отфильтровать файлы, можно использовать кнопку **Find** (Найти) в GitHub. Щелкните файл, чтобы посмотреть, как он преобразовывается для просмотра.
 - Обратите внимание на соглашение об именовании. Если в имени есть символы "x", обычно они служат заполнителями, указывающими на то, что служба не поддерживается. Например, **appliesto-xx-xxxx-asdw-xxx-md.md** указывает на то, что поддерживается только хранилище данных SQL Azure, так как поле **asdw** указано, а остальные поля заполнены символами "x".
-- В некоторых включаемых файлах указывается номер версии, например **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Используйте такие включаемые файлы, только если вы знаете, что функция появилась в определенной версии SQL Server. 
+- В некоторых включаемых файлах указывается номер версии, например **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Используйте такие включаемые файлы, только если вы знаете, что функция появилась в определенной версии SQL Server.
 
 ## <a name="contributor-resources"></a>Ресурсы для участников
 
