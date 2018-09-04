@@ -1,14 +1,10 @@
 ---
 title: Средства служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -22,16 +18,14 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: 80
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d28fa938f672d008949c745aec10db9a3b5d93ff
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: d56edf40635907c4ba7a91deb358977fd70ed1e6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40410484"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273066"
 ---
 # <a name="reporting-services-tools"></a>Инструментальные средства служб Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат набор графических средств и средств для работы со скриптами, поддерживающих разработку и использование отчетов с широкими возможностями в управляемой среде. В набор средств входят средства разработки, настройки и администрирования, а также средства просмотра отчетов. В этом разделе содержится краткий обзор средств в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и способов доступа к ним.  

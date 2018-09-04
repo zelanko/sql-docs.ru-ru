@@ -13,12 +13,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd177d3094f50cd226ed5613ded8fc0d76e6891
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f71ca47b4927e2ea7c6e73d216c062c253387baa
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769070"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348205"
 ---
 # <a name="configure-distributed-availability-group"></a>Настройка распределенной группы доступности  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ GO
 ## <a name="create-first-availability-group"></a>Создание первой группы доступности
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Создание первичной группы доступности в первом кластере  
-Создайте группу доступности в первом кластере WSFC.   В этом примере это группа доступности с именем `ag1` для базы данных `db1`.      
+Создайте группу доступности в первом кластере WSFC.   В этом примере это группа доступности с именем `ag1` для базы данных `db1`. Первичная реплика первичной группы доступности называется **глобальной первичной** в распределенной группе доступности. Server1 — это глобальная первичная реплика в нашем примере.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -114,7 +114,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>Создание второй группы доступности  
- Создайте вторую группу доступности, `ag2`, во втором кластере WSFC. В этом случае база данных не указана, так как она автоматически заполняется данными из первичной группы доступности.  
+ Создайте вторую группу доступности, `ag2`, во втором кластере WSFC. В этом случае база данных не указана, так как она автоматически заполняется данными из первичной группы доступности.  Первичная реплика вторичной группы доступности называется **сервером пересылки** в распределенной группе доступности. Server3 — это сервер пересылки в нашем примере. 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -217,33 +217,37 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 В настоящее время поддерживается только отработка отказа вручную. Следующая инструкция Transact-SQL проводит отработку отказа в распределенную группу доступности с именем `distributedag`.  
 
 
-1. Задайте в качестве режима доступности синхронную фиксацию для обеих групп доступности. 
+1. Настройте для распределенной группы доступности синхронную фиксацию, выполнив следующий код на *обеих* репликах (глобальной основной и пересылки).   
     
       ```sql  
-      ALTER AVAILABILITY GROUP [distributedag] 
-      MODIFY 
-      AVAILABILITY GROUP ON
-      'ag1' WITH 
-         ( 
-          LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-          FAILOVER_MODE = MANUAL, 
-          SEEDING_MODE = MANUAL 
-          ), 
-      'ag2' WITH  
+      -- sets the distributed availability group to synchronous commit 
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
         ( 
-        LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022', 
-        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-        FAILOVER_MODE = MANUAL, 
-        SEEDING_MODE = MANUAL 
-        );  
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        ), 
+        'ag2' WITH  
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        );
        
+       -- verifies the commit state of the distributed availability group
+       select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+       ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+       join sys.availability_replicas ar on ag.group_id=ar.group_id
+       left join sys.dm_hadr_availability_replica_states ars
+       on ars.replica_id=ar.replica_id
+       where ag.is_distributed=1
+       GO
+
       ```  
    >[!NOTE]
    >Как и в обычных группах доступности, состояние синхронизации между двумя репликами групп доступности, которые входят в распределенную группу доступности, зависит от режима доступности обеих реплик. Например, для синхронной фиксации текущая первичная и вторичная группы доступности должны быть настроены с использованием режима доступности synchronous_commit.  
 
 
-1. Подождите, пока состояние распределенной группы доступности изменится на `SYNCHRONIZED`. Выполните следующий запрос в SQL Server, где размещена первичная реплика основной группы доступности. 
+1. Подождите, пока состояние распределенной группы доступности изменится на `SYNCHRONIZED`. Выполните следующий запрос в глобальной первичной реплике (первичная реплика в первичной группе доступности). 
     
       ```sql  
       SELECT ag.name
@@ -259,7 +263,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
     Продолжите работу, когда параметр **synchronization_state_desc** группы доступности примет значение `SYNCHRONIZED`. Если параметр **synchronization_state_desc** не равен `SYNCHRONIZED`, запускайте команду каждые пять секунд, пока он не изменится. Не продолжайте работу до установки состояния **synchronization_state_desc** = `SYNCHRONIZED`. 
 
-1. На сервере SQL Server, где размещается первичная реплика первичной группы доступности, задайте для роли распределенной группы доступности значение `SECONDARY`. 
+1. В глобальной первичной реплике задайте для роли группы доступности значение `SECONDARY`. 
 
     ```sql
     ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 

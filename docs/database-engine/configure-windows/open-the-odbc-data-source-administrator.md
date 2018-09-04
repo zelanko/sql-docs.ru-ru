@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd3fe488c2ae6bff1b94a11996bc67a88fd72691
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 447f57e753c243958904d6f5c6c380ed157c222e
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863989"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381222"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Открытие администратора источника данных ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

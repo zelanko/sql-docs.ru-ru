@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8d694b0afadd7504b60bd7bcc06df3151e42735
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a7e684df914684b48f9742aee5d67d6769973cb3
+ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40405941"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43321254"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -63,24 +63,10 @@ ms.locfileid: "40405941"
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |**_\* SQL Server \*_** | [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current) | [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [SQL Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) | 
 
-&nbsp;
 
 # <a name="sql-server"></a>SQL Server
 

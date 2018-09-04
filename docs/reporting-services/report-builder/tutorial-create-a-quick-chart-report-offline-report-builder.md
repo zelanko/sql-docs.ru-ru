@@ -1,30 +1,24 @@
 ---
 title: Учебник. Создание стандартного отчета с диаграммой в автономном режиме (построитель отчетов) | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 3fb6a3891e7adb4c0159f2b98e78336c51196dac
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 5bd68bf2dcb6bf366e1773f2510384ff9d0525b8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40410486"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266684"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)
 

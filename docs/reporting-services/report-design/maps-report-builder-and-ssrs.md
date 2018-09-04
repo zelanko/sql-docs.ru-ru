@@ -1,14 +1,10 @@
 ---
 title: Карты (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10508"
@@ -18,16 +14,14 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 0e5a6a0c2bfb86e57f900a89c48e84ca68e6689f
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 823c0a7dfc18ffc7504c65a8967c0f203ade596c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40406244"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267396"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Карты (построитель отчетов и службы SSRS)
   Для визуализации бизнес-данных в географическом контексте можно добавить в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] карту. Выбранный тип карты будет зависеть от того, какую информацию следует взять из отчета. Можно добавить карту, которая отображает только местоположения, или пузырьковую карту, которая изменяет размер пузырьков в зависимости от количества домов в области, или карту с отметками, которая изменяет стиль маркера в зависимости от наиболее доходного продукта в каждом магазине, или линейную карту, которая отображает маршруты между магазинами.  

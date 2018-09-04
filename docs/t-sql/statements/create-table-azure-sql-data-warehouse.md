@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 701de1160cad251691253b32b828c6ad91c945db
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058752"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348324"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnOptions"></a> Параметры столбца
 
  `COLLATE` *параметры_сортировки_Windows*  
- Задает параметры сортировки для выражения. Параметры сортировки должны входить в число параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Имя параметров сортировки Windows (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
+ Задает параметры сортировки для выражения. Параметры сортировки должны входить в число параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Имя параметров сортировки Windows (Transact-SQL)](windows-collation-name-transact-sql.md)/).  
   
  `NULL` | `NOT NULL`  
  Указывает, допустимы ли для столбца значения `NULL`. Значение по умолчанию — `NULL`.  

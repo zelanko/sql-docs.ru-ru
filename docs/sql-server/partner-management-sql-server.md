@@ -1,6 +1,6 @@
 ---
 title: Партнеры по управлению SQL Server | Документация Майкрософт
-description: Списки сторонних партнеров, предлагающих решения для мониторинга сервера.
+description: Списки сторонних партнеров, предлагающих решения для мониторинга SQL Server.
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 09/17/2017
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 14234d252b789532045135cf66a8c8b797d10f40
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 95753150d4b8728b3e69f86a153cc307a0337a09
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029193"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348585"
 ---
 # <a name="sql-server-managing-partners"></a>Партнеры по управлению SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

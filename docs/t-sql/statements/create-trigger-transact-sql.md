@@ -32,12 +32,12 @@ caps.latest.revision: 140
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ecf29c3e591bce67ef204ad8aabdb4eea84fa992
-ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
+ms.openlocfilehash: fb429009395a190380f2200dba7ccd3f6cda4c27
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038141"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240272"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -558,7 +558,7 @@ END;
 ```  
   
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>Ж. Просмотр событий, вызвавших срабатывание триггера  
- В следующем примере выполняются запросы к представлениям каталога `sys.triggers` и `sys.trigger_events` с целью определения, какие события языка [!INCLUDE[tsql](../../includes/tsql-md.md)] вызывали срабатывание триггера `safety`. Создание триггера `safety` показано в предыдущем примере.  
+ В следующем примере выполняются запросы к представлениям каталога `sys.triggers` и `sys.trigger_events` с целью определения, какие события языка [!INCLUDE[tsql](../../includes/tsql-md.md)] вызывали срабатывание триггера `safety`. Триггер `safety`, созданный в примере Г, приведен выше.  
   
 ```sql  
 SELECT TE.*  

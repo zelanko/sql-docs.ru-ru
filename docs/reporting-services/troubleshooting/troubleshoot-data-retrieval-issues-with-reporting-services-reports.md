@@ -1,26 +1,20 @@
 ---
 title: Устранение неполадок с извлечением данных с помощью отчетов служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 961f4e01d9a3a027f7b6cf065103a8076feac52b
-ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
+ms.openlocfilehash: a02761dd1c583c3e58a69cf67709412c4757f2ed
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42432515"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281693"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Устранение неполадок при извлечении данных с помощью отчетов служб Reporting Services
 Первым этапом обработки отчета является получение данных отчета для каждого набора данных при помощи выполнения запроса набора данных. При локальном просмотре отчета соединения с источниками данных и учетные данные должны использовать разрешения, достаточные для извлечения данных в компьютер. При выполнении отчета на сервере отчетов соединения с источниками данных и учетные данные должны использовать разрешения, достаточные для извлечения данных на сервере отчетов. Материал этого раздела используется для устранения проблем, связанных с получением данных отчета.   

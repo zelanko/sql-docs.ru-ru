@@ -1,26 +1,20 @@
 ---
 title: Типы данных в выражениях (построитель отчетов и службы SSRS) | Документация Майкрософт
-ms.custom: ''
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 9030de2c1c189bdbdb036b40df8400c07da8bbb5
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 205d970baa75e34a20633d2a746f40646dc3f2d8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40410409"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271669"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Типы данных в выражениях (построитель отчетов и службы SSRS)
   Типы данных представляют разные виды данных, чтобы их можно было эффективно хранить и обрабатывать. Стандартные типы данных включают текст (строки), числа с десятичными разрядами или без них, даты и время, а также изображения. Значения в отчете должны быть представлены с помощью типов данных языка определения отчетов. При отображении значения в отчете его можно отформатировать в соответствии с конкретными предпочтениями. Например, поле, представляющее валюту, может храниться в определении отчета как число с плавающей запятой, но отображаться в различных форматах в зависимости от выбранного свойства формата.  
