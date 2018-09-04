@@ -1,14 +1,10 @@
 ---
 title: Журнал трассировки для службы сервера отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: df621b94f8fecf5587cead165b88875b8d7dd4c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29efe95c5c8712b7c4423e3412252a8d66485936
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028011"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277131"
 ---
 # <a name="report-server-service-trace-log"></a>Журнал трассировки службы сервера отчетов
   Журналы трассировки сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представляют собой текстовый файл ASCII, содержащий подробные сведения об операциях службы сервера отчетов.  Файл содержит сведения об операциях, выполняемых веб-службой сервера отчетов, веб-порталом и процессом фоновой обработки. Файл журнала трассировки содержит избыточные сведения, которые записываются в другие файлы журналов, а также дополнительные сведения, недоступные иным способом. Данные журнала трассировки могут оказаться полезными при отладке приложения, содержащего сервер отчетов, либо при изучении конкретной проблемы, зафиксированной в журнале событий или журнале выполнения. Например, при устранении неполадок с подписками.  
@@ -67,7 +61,7 @@ ms.locfileid: "33028011"
   
  Сведения об отдельных настройках приведены в следующей таблице.  
   
-|Настройка|Description|Значения|  
+|Настройка|Описание|Значения|  
 |-------------|-----------------|------------|  
 |**RStrace**|Задает пространства имен для ошибок и трассировки.||  
 |**DefaultTraceSwitch**|Задает уровень данных, записываемых в журнал трассировки ReportServerService. Каждый уровень содержит данные, передаваемые более низкими уровнями. Отключать трассировку не рекомендуется.|Допустимые значения:<br /><br /> <br /><br /> 0 = Отключить трассировку Файл журнала ReportServerService.exe включен по умолчанию. Чтобы отключить его, установите уровень трассировки равным 0.<br /><br /> 1 = Исключения и перезапуски<br /><br /> 2 = Исключения, перезапуски, предупреждения<br /><br /> 3 = Исключения, перезапуски, предупреждения, сообщения о состоянии (по умолчанию)<br /><br /> 4 = Подробный режим|  

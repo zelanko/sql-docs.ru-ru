@@ -1,26 +1,20 @@
 ---
 title: Понятия параметров отчета (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: d947f5677377f9770c9f68807f263e578aba32ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01602ba62dae7843a2ca83f1d8cf441a31eb053c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024161"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278740"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Понятия параметров отчета (построитель отчетов и службы SSRS)
   Можно добавлять в отчет параметры, чтобы добавлять ссылки на связанные отчеты, управлять видом отчета, фильтровать данные отчета или ограничить область отчета определенными пользователями или расположениями.  

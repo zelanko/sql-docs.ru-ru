@@ -1,26 +1,20 @@
 ---
 title: Добавление датчика в отчет (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 5f9c8467cb8ea31ef490cd21ff51e675abe1fd17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fec631be68196f8c5b5985c72a5dab9d19ee3159
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020041"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267493"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Добавление датчика в отчет (построитель отчетов и службы SSRS)
   Если в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] необходимо создать сводку данных в визуальном формате, то можно использовать область данных "Датчик". После добавления области данных датчика в область конструктора можно перетаскивать поля набора данных отчета на панель данных в датчике.  

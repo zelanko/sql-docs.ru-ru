@@ -1,26 +1,20 @@
 ---
 title: Установка минимума и максимума на датчике (построитель отчетов и службы SSRS) | Документация Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: b329bd864f471a1dae95c21798ceb9dd88963b6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7bf52826dd74c6f96a775571cc374baaba4f75bd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024871"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264736"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)
   В отличие от диаграммы в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , где определяется несколько групп, датчики выводят только одно значение. Поскольку построитель отчетов и конструктор отчетов определяют контекст или относительную значимость значения, отображаемого на датчике, необходимо определить минимум и максимум шкалы.   

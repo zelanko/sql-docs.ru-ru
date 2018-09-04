@@ -1,26 +1,20 @@
 ---
 title: Управление заголовками строк и столбцов (построитель отчетов и службы SSRS) | Документация Майкрософт
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 696cb735a8ec9c596cc67f6b4c130f77e832e694
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8d5240e64e5b69c187e64cf25324394b108b04ba
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550445"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276642"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Управление заголовками строк и столбцов (построитель отчетов и службы SSRS)
   Табличная область данных, матричная область данных или область списка данных может занимать несколько страниц по горизонтали или по вертикали. Можно указать, нужно ли повторять заголовки строк и столбцов на каждой странице. В интерактивном модуле подготовки отчетов, таком как веб-портал или средство предварительного просмотра отчета, можно также указать, нужно ли закреплять заголовки строк и столбцов, чтобы они оставались видимыми во время прокрутки отчета. В таблице или матрице первая строка обычно содержит заголовки столбцов с метками для данных в каждом столбце, а первый столбец обычно содержит заголовки строк с метками для данных в каждой строке. Для вложенных групп может понадобиться повторить первоначальный набор заголовков строк и столбцов, которые содержат метки групп. По умолчанию в область данных списка заголовки не включаются.  

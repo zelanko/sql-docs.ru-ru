@@ -1,28 +1,22 @@
 ---
 title: Журнал HTTP-запросов сервера отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 55682735cb578c7f01f3c64caa057f5f4bcec6c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a528b55edcadfa54a0b1cad4095b384d89de5c6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028121"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272736"
 ---
 # <a name="report-server-http-log"></a>Журнал HTTP-запросов сервера отчетов
   В файле журнала HTTP сервера отчетов хранится информация для каждого HTTP-запроса и ответа, обработанного сервером отчетов. Сообщения об ошибках, связанных с переполнением очереди запросов и временем ожидания, не достигают сервера отчетов, поэтому не регистрируются в файле журнала.  
@@ -61,7 +55,7 @@ ms.locfileid: "33028121"
 ## <a name="log-file-fields"></a>Поля файла журнала  
  В следующей таблице описаны поля, доступные в журнале. Список полей можно изменить. С помощью параметра конфигурации **HTTPTraceSwitches** можно указать, какие поля необходимо включить. Столбец **По умолчанию** указывает, будет ли поле включено в файл журнала автоматически, если не указано значение **HTTPTraceSwitches**.  
   
-|Поле|Description|По умолчанию|  
+|Поле|Описание|По умолчанию|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Это значение является необязательным. Значением по умолчанию является ReportServerServiceHTTP_. Можно указать другое значение, если требуется использовать другое соглашение об именах (например, чтобы включить имя сервера, если файлы журналов сохраняются в каком-то централизованном расположении).|Да|  
 |HTTPTraceSwitches|Это значение является необязательным. Если указан этот параметр, можно настроить поля, используемые в файле журнала, в формате с разделителями-запятыми.|нет|  

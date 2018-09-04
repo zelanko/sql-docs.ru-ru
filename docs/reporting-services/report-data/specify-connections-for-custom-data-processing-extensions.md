@@ -1,14 +1,10 @@
 ---
 title: Указание соединений для пользовательских модулей обработки данных | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - custom data processing extensions [Reporting Services]
@@ -22,16 +18,14 @@ helpviewer_keywords:
 - external data sources [Reporting Services]
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 7c0b6fa4f93320e0648ffb1923aaf593ff708b53
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 11d465beac74de1198e0803ea704c512fbd45240
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550505"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276204"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Указание соединений для пользовательских модулей обработки данных
   Для расширения возможностей поддерживаемых источников данных или поддержки их дополнительных типов, недоступных при стандартной установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , на сервере отчетов можно создавать пользовательские модули обработки данных или использовать модули сторонних разработчиков. Соединения обрабатываются по-разному, в зависимости от реализации. Для модулей обработки данных существуют следующие реализации.  

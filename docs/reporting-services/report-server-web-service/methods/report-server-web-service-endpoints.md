@@ -1,14 +1,10 @@
 ---
 title: Конечные точки веб-службы сервера отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,15 +15,14 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 66feb1faf61d3d317fdbae4d70d1344782608c6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c7c0362271c57f9e69a3b2d628d95b1ec629a07
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271858"
 ---
 # <a name="report-server-web-service-endpoints"></a>Конечные точки веб-службы сервера отчетов
   Веб-служба сервера отчетов предоставляет несколько конечных точек для управления сервером отчетов, а также для выполнения отчетов и перемещения по ним.  
@@ -69,7 +64,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
 ## <a name="sharepoint-proxy-endpoints"></a>Конечные точки-посредники SharePoint  
  Если сервер отчетов настроен в режиме интеграции с SharePoint и установлена надстройка служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], то на сервере SharePoint устанавливается набор конечных точек-посредников. Конечные точки-посредники являются главным API для разработки решений отчетов, если сервер отчетов настроен для работы в режиме интеграции с SharePoint. Во время разработки на основе конечных точек-посредников надстройка служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] управляет обменом учетными данными между сервером SharePoint и сервером отчетов в режиме проверки подлинности с доверенной учетной записью. Во время разработки с использованием конечных точек сервера отчетов вызывающее приложение должно управлять обменом учетными данными в режиме проверки подлинности с доверенной учетной записью. В следующей таблице перечислены конечные точки, которые устанавливаются с надстройкой служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Конечная точка-посредник|Description|  
+|Конечная точка-посредник|Описание|  
 |--------------------|-----------------|  
 |<xref:ReportService2006>|Предоставляет интерфейсы API для управления сервером отчетов, настроенным для работы в режиме интеграции с SharePoint.<br /><br /> Примечание. Эта конечная точка является устаревшей в [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Предоставляет API-интерфейсы для управления сервером отчетов, настроенным для работы в собственном режиме или в режиме интеграции с SharePoint.|  

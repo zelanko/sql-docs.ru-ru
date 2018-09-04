@@ -1,14 +1,10 @@
 ---
 title: Использование пользовательских сборок с отчетами | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: custom-assemblies
-ms.reviewer: ''
+ms.technology: custom-assemblies
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - assemblies [Reporting Services], custom
 - custom assemblies [Reporting Services], about custom assemblies
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4fc146a14a8237f6def33a0d53acc529cf82780f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fe8eebd23d23d59264b95265a3f140255e3c0ef
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015841"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266672"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Использование пользовательских сборок с отчетами
   В службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно создавать пользовательский код для значений элементов отчета, стилей и форматирования. Так, пользовательский код можно использовать для форматирования валют в зависимости от настроек локали, для применения к определенным значениям специальных методов форматирования или для использования других бизнес-правил, установленных в конкретной компании. В частности, можно включить такой код в отчеты, создав пользовательскую сборку кода с помощью среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], на которую можно будет сослаться из файлов определения отчета. Сервер вызывает функции пользовательских сборок при выполнении отчета. Пользовательские сборки можно применять для получения значений специализированных функций, которые намечено использовать в отчетах.  

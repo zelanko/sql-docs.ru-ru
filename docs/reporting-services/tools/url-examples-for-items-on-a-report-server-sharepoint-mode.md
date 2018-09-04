@@ -1,26 +1,20 @@
 ---
 title: Примеры URL-адресов для элементов на сервере отчетов в режиме интеграции с SharePoint | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 42638cca55a7d567ebe3ec3bfad37880cca6aebe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ed59907caecb5921f7dc72cba16f009269c02b6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036991"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273455"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Примеры URL-адресов для элементов на сервере отчетов в режиме интеграции с SharePoint
   Чтобы опубликовать отчеты и связанные с ними элементы в библиотеке SharePoint, можно опубликовать содержимое с помощью таких средств разработки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , как конструктор отчетов, или передать содержимое средствами сайта SharePoint.  
@@ -36,7 +30,7 @@ ms.locfileid: "33036991"
   
  Для доступа к содержимому сервера отчетов и его защите могут быть использованы следующие элементы веб-иерархии. Прочие объекты (списки, страницы и т. д.) не используются для доступа к содержимому сервера отчетов и в данной таблице не описаны.  
   
-|Объект|Description|  
+|Объект|Описание|  
 |------------|-----------------|  
 |Веб-приложение SharePoint|Веб-приложение SharePoint может быть установлено как на изолированном сервере, так и в составе фермы, содержащей коллекцию виртуальных серверов. Веб-приложение имеет URL-адрес (например, `http:*//servername*`) и может содержать несколько сайтов.|  
 |Сайт|Сайт является либо родительским сайтом для веб-приложения, либо вложенным сайтом.|  

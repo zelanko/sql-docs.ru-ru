@@ -1,28 +1,22 @@
 ---
 title: Свойства сервера (страница "Общие") | Документы Майкрософт
-ms.custom: ''
 ms.date: 06/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 617abb0133a09cb348571509e105b1795be258cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eddd3bd045869a700f8b1e44607b362207bb5963
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031051"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270424"
 ---
 # <a name="report-server-properties-general-page"></a>Свойства сервера отчетов (страница "Общие")
   Данная страница позволяет просмотреть или изменить заголовок, используемый в диспетчере отчетов, включить или отключить папку «Мои отчеты», выбрать определение роли для защиты папки «Мои отчеты», а также включить или отключить клиентское средство управления печатью.  

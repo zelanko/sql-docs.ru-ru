@@ -1,14 +1,10 @@
 ---
 title: Управление источниками данных отчета | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5271a770bc8118ce08cb4794bd4a082204b96656
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 84743e8ca158ed17435c3c6da4c844972320bdf1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550755"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268563"
 ---
 # <a name="manage-report-data-sources"></a>Управление источниками данных отчета
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]отчеты, модели отчетов и управляемые данными подписки получают данные из внешних источников данных. Чтобы подключиться к внешнему источнику данных, сервер отчетов использует сведения соединения с источником данных, которые определены в отчете, модели или подписке или на которые они ссылаются. Свойства соединения с источником данных всегда определяются при создании отчета или модели, но управление ими может выполняться отдельно после публикации отчета или модели на сервере отчетов.  

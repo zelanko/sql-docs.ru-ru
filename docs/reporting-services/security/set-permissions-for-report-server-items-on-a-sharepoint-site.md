@@ -1,29 +1,23 @@
 ---
 title: Задание разрешений для элементов сервера отчетов на сайте SharePoint | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: fbf0ecedbc5b5b698f32f3c7d5549a604a03e1f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cf0d35cd3838e2d57b8c862369f73e97d09ced32
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030111"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275205"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>задать разрешения для элементов сервера отчетов на сайте SharePoint
   Если параметры безопасности по умолчанию не обеспечивают нужного уровня доступа, можно создать разрешения, чтобы предоставить доступ к определенным элементам или операциям сервера отчетов. Пользовательские параметры безопасности могут оказаться полезными, если требуется ограничить доступ к конкретному отчету.  

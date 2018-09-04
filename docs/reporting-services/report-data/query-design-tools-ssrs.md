@@ -1,14 +1,10 @@
 ---
 title: Средства проектирования запросов (SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - graphical query designer [Reporting Services]
@@ -21,16 +17,14 @@ helpviewer_keywords:
 - semantic queries [Reporting Services]
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 43e5f56bb07abeafb9a20bb33841bc62b4e76352
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5fe31040558863332a4037fbb7c9d164b64273ae
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022181"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276014"
 ---
 # <a name="query-design-tools-ssrs"></a>Средства проектирования запросов (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат различные средства проектирования запросов, которые можно использовать для создания запросов набора данных в конструкторе отчетов. Некоторые конструкторы запросов поддерживают альтернативные режимы работы, что позволяет выбирать между работой в визуальном режиме или непосредственно на языке запросов. В этом разделе представлено каждое из этих средств и описаны типы источников данных, поддерживаемых каждым средством. В этом разделе описаны следующие средства.  

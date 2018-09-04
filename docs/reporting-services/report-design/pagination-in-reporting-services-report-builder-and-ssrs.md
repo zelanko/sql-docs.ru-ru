@@ -1,26 +1,20 @@
 ---
 title: Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 537755f62b654301392f209a3dad8a866b18c0bf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd69adfad9cfcc9442c1c452c262b03444296317
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027101"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269520"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)
   От разбиения на страницы зависит количество страниц в отчете и размещение элементов отчета на этих страницах. Результаты разбиения на страницы в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] зависят от модуля подготовки отчетов, применяемого для просмотра и доставки отчета. Если отчет выполняется на сервере отчетов, отчет использует модуль подготовки отчетов в формате HTML. Код HTML следует конкретному набору правил разбиения на страницы. Например, если тот же отчет экспортируется в документ PDF, то используется модуль подготовки отчетов PDF и применяется другой набор правил, поэтому разбиение отчета на страницы происходит по-другому. Чтобы успешно спроектировать удобный для чтения пользователями отчет, оптимизированный для модуля подготовки отчетов, который планируется использовать при доставке отчета, необходимо учитывать, какие правила служат для управления разбиением на страницы в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

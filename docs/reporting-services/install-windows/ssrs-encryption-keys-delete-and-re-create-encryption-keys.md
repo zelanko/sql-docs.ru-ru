@@ -1,13 +1,9 @@
 ---
 title: Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 012333e2584041c42c3901ef22be90f7591fdffb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: b52d7521d46aa19f452f95f9af3381328672dcc1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322273"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264827"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Ключи шифрования служб SSRS — удаление и повторное создание
   Удаление и повторное создание ключей шифрования — действия, которые выходят за пределы обычного обслуживания ключа шифрования. Эти задачи выполняются в ответ на определенную угрозу серверу отчетов или как последнее средство спасения, когда больше нельзя получить доступ к базе данных сервера отчетов.  

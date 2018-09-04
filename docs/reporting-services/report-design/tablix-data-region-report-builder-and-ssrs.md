@@ -1,26 +1,20 @@
 ---
 title: Область данных табликса (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 0d5360091fbf0ece381b8b7444fdd8e225238563
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b3dd5bee9ab18cae9e3ead6bbf334d70450c73f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028881"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269386"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Область данных табликса (построитель отчетов и службы SSRS)
   В [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]область данных табликса представляет собой обобщенный элемент макета отчета, в котором данные отчета отображаются в ячейках, упорядоченных в виде столбцов и строк. Данные отчета могут быть как подробными данными в том виде, в котором они были получены из источника данных, так и статистическими подробными данными, организованными в определенные группы. Каждая ячейка табликса может содержать любой элемент отчета, включая текстовое поле, изображение или другую область данных (например, область табликса, диаграмму или датчик). Чтобы добавить в ячейку несколько элементов отчета, сначала необходимо добавить прямоугольник, который будет выполнять роль контейнера. Затем в прямоугольник можно добавить элементы отчета.  

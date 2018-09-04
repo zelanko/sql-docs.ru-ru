@@ -1,28 +1,22 @@
 ---
 title: Экспорт отчетов (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 9c4b6d1ac7e16cc7260667ffc786b68a5f2d9a18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035452208fbd27c3669239f9177136d71051d854
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022411"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268133"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Экспорт отчетов (построитель отчетов и службы SSRS)
 
@@ -119,7 +113,7 @@ ms.locfileid: "33022411"
 ##  <a name="ExportFormats"></a> Форматы файлов, в которые можно экспортировать отчеты при просмотре  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют модули подготовки отчетов, которые подготавливают отчеты в различных форматах. Структуру отчета следует оптимизировать в соответствии с выбранным форматом файла.  В таблице ниже перечислены форматы файлов, которые можно экспортировать из пользовательского интерфейса.  Существуют дополнительные форматы, которые можно использовать с подписками [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или при экспорте с применением доступа по URL-адресу.  См. раздел [Другие методы экспорта отчетов](#OtherWaysExportingReports)в этой статье.  
   
-|Формат|Тип модуля подготовки отчетов|Description|  
+|Формат|Тип модуля подготовки отчетов|Описание|  
 |------------|------------------------------|-----------------|  
 |Файл Acrobat (PDF)|Жесткие разрывы страниц|Модуль подготовки отчетов в формате PDF создает отчет в файлах, которые можно открыть в Adobe Acrobat и других средствах просмотра PDF сторонних разработчиков, поддерживающих формат PDF 1.3. Хотя формат PDF версии 1.3 совместим с Adobe Acrobat 4.0 и более поздними версиями, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают Adobe Acrobat 6 или более поздние версии. Модуль подготовки отчетов не требует программного обеспечения Adobe для создания отчета. Однако средства просмотра PDF, например Adobe Acrobat, необходимы для просмотра или печати отчетов в формате PDF.<br /><br /> Дополнительные сведения см. в разделе [Экспорт в PDF-файл](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
 |Atom|Данные |Модуль подготовки отчетов Atom создает на основе отчетов веб-канал данных, совместимый с Atom. Веб-каналы данных доступны для чтения и обмена данными с такими приложениями, как Power Pivot и Power BI, работающими с Atom-совместимыми веб-каналами данных.<br /><br /> Выводом является сервисный документ Atom, в котором перечислены веб-каналы данных, доступные из отчета. Для каждой области данных отчета создается по крайней мере один веб-канал данных. В зависимости от типа области данных и самих данных, которые отображает эта область, может быть создано несколько веб-каналов данных.<br /><br /> Дополнительные сведения см. в разделе [Формирование веб-каналов данных из отчетов](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  

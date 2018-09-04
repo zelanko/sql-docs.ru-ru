@@ -1,29 +1,23 @@
 ---
 title: Перемещение или удаление элемента (диспетчер отчетов) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 17849b5e7baf9c09dce0f671ce4f60381b4523ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6f3bd03960cfeff25376186a8b01d417804e46f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025901"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272825"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Перемещение или удаление элемента (диспетчер отчетов)
   Отчеты и связанные с ними элементы, публикуемые на сервере отчетов, хранятся в папках. Элементы можно переместить в другую папку; ссылки на эти элементы будут автоматически обновлены на сервере отчетов. Прежде чем удалить какой-либо элемент, определите, не зависят ли от него другие элементы.  

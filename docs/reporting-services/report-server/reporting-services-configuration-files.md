@@ -1,14 +1,10 @@
 ---
 title: Файлы конфигурации служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], configuration files
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - modifying configuration files
 - configuration files [Reporting Services]
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1ce4e8cb5b6bc1e1bf617d1abbd4b5f1a0afcf1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a9b35e25f5ef9c43c871b4c75437f5a1fbf9f93
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027571"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265182"
 ---
 # <a name="reporting-services-configuration-files"></a>Файлы конфигурации служб Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранят сведения о компонентах в реестре и файлах конфигурации, которые копируются в файловую систему при установке. Файлы конфигурации содержат комбинацию значений только для внутреннего использования и пользовательских значений. Пользовательские значения задаются при установке с помощью средств настройки, программ командной строки, а также посредством ручного редактирования файлов конфигурации.  
@@ -48,7 +42,7 @@ ms.locfileid: "33027571"
 C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER  
 ```  
   
-|Место хранения|Description|Местоположение|  
+|Место хранения|Описание|Местоположение|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|Хранит параметры конфигурации для областей функций службы сервера отчетов: диспетчера отчетов, веб-службы сервера отчетов и фоновой обработки. Дополнительные сведения о каждом параметре см. в разделе [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<каталог_установки>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Хранит политики управления доступом для кода для модулей сервера. Дополнительные сведения об этом файле см. в разделе [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<каталог_установки>\Reporting Services\ReportServer|  
@@ -69,7 +63,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|Место хранения|Description|Местоположение|  
+|Место хранения|Описание|Местоположение|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|Хранит параметры конфигурации для областей функций службы сервера отчетов: диспетчера отчетов, веб-службы сервера отчетов и фоновой обработки. Дополнительные сведения о каждом параметре см. в разделе [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<каталог_установки>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Хранит политики управления доступом для кода для модулей сервера. Дополнительные сведения об этом файле см. в разделе [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<каталог_установки>\Reporting Services\ReportServer|  

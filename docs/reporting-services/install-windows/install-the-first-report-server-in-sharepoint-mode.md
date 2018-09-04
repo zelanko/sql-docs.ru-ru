@@ -1,23 +1,18 @@
 ---
 title: Установка первого сервера отчетов в режиме интеграции с SharePoint | Документы Майкрософт
-ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8c4dc2d101dac523058192a4acd45034f38dadc6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d30bb50979d583452e7ae77d73d0eac26f395fbc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988116"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268399"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Установка первого сервера отчетов в режиме интеграции с SharePoint
 

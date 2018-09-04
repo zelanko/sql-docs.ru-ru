@@ -1,29 +1,23 @@
 ---
 title: Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3bbfb174e1226cc9a514e3293ef313fa942d8b6d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 0f8cf0171429b6577e9a43781ebaed41236be7c0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322003"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275990"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
   URL-адреса для приложений служб Reporting Services определяются в качестве резервирований URL-адресов в компоненте HTTP.SYS. Резервирование URL-адресов определяет синтаксис конечной точки URL-адреса к веб-приложению. При настройке приложений на сервере отчетов резервирование URL-адресов задается как для веб-службы сервера отчетов, так и для диспетчера отчетов. Резервирование URL-адресов создается автоматически при настройке URL-адресов в программе установке или программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

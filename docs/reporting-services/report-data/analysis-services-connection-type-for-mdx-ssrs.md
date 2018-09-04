@@ -1,25 +1,20 @@
 ---
 title: Тип соединения служб Analysis Services для многомерных выражений (службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 553fb7ac9b7346330a3fed798eba0d1e039fe267
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44b3755f118bcd3550f34cb617fa3b71e0879e55
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274292"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Тип соединения служб Analysis Services для многомерных выражений (службы SSRS)
   Чтобы включить в отчет данные из куба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Из куба служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно получить метаданные измерений, иерархий, уровней, ключевых показателей эффективности, мер и атрибутов и использовать их в качестве данных отчета.  

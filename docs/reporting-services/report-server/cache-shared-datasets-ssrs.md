@@ -1,26 +1,20 @@
 ---
 title: Общие наборы данных в кэше (службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1190043f72b862e83a8ef39d6a9f0b1940c896ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fba7c438b937d98522a0ec134976ca95b9b6d34b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026951"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268852"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Общий набор данных в кэше (служба SSRS)
   Результаты запроса для общего набора данных могут быть скопированы в кэш, чтобы предоставить согласованные данные для нескольких отчетов и улучшить время ответа для запроса к набору данных. Как и отчеты, общие наборы данных можно настраивать как подлежащие кэшированию при первом использовании или согласно расписанию.  

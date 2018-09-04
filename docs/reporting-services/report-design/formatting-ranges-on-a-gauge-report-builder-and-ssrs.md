@@ -1,25 +1,20 @@
 ---
 title: Форматирование диапазонов на датчике (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f8c64784cbec532eba746252e2d3928d594af895
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b60a68faa90dc7fa6aa7a49ff55af799518784e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273388"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Форматирование диапазонов на датчике (построитель отчетов и службы SSRS)
  В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы диапазон датчика — это зона или область на шкале датчика, которая указывает важный подраздел значений в датчике. Используя диапазон датчика, можно визуально отобразить момент, когда значение указателя датчика перемещается в определенную область значений. Диапазоны определяются начальным значением и конечным значением.  

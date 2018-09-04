@@ -1,15 +1,11 @@
 ---
 title: Доступ по URL-адресу (SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
 - links [Reporting Services], URL access
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], URL access
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: f0da33c47af1470c917808729ee2aee8a503fa80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8caef22c0eec07e2ec9255136570a3c058d45a1b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033701"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274764"
 ---
 # <a name="url-access-ssrs"></a>Доступ по URL-адресу (SSRS)
   Доступ по URL-адресу сервера отчетов в службах SQL Server Reporting Services (SSRS) позволяет отправлять команды серверу отчетов посредством запроса по URL-адресу. Например, можно настроить подготовку отчета на сервере отчетов, работающем в собственном режиме, или в библиотеке SharePoint. Ранее пользователи могли просматривать отчет с использованием определенного набора значений параметров отчета или просматривать только определенную представляющую интерес страницу отчета. Эти сведения можно инкапсулировать в URL адрес, используя параметры доступа по URL-адресу. Обработку отчета сервером отчетов можно настроить более подробно, внедрив параметры для форматов подготовки к просмотру или для внешнего вида обозревателя отчетов. Затем созданный URL-адрес можно непосредственно вставлять в электронное письмо или веб-страницу, чтобы дать возможность другим пользователям просматривать отчет в браузере в том же формате.  
@@ -111,7 +105,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
  **Примечание.** Список доступных параметров для доступа по URL-адресу см. в статье [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md). Примеры передачи параметров отчета в URL-адресе см. в разделе [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описания задач|Ссылки|  
 |-----------------------|-----------|  

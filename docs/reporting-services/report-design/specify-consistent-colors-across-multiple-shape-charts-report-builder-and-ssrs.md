@@ -1,25 +1,20 @@
 ---
 title: Указание согласованных цветов в нескольких фигурных диаграммах (построитель отчетов и службы SSRS) | Документация Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: fddd1c4466b3b30976bd1008ec7f6d616b71ba89
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ad698b75589f57554f1b80ee841277710055d47
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277274"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)
   На нефигурных диаграммах в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] выбирает новый цвет из палитры, связанной с индексом рядов в диаграмме. Например, первый ряд в диаграмме сопоставлен с первым цветом палитры. Однако в фигурных диаграммах используется другой принцип. В фигурных диаграммах каждый цвет палитры сопоставлен с точкой данных в наборе данных. Так, точка данных 1 сопоставлен с первым цветом палитры, точка данных 2 — со вторым цветом палитры и т. д.  

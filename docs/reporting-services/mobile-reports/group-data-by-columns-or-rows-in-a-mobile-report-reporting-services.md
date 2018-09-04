@@ -1,25 +1,20 @@
 ---
 title: Группирование данных в мобильном отчете по столбцам или строкам | Службы Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 17f93e01d074b243e7b40c708ac65dd1609d8841
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08d4d39d6393ec413f5e72254cca1e82740bd51c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268221"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Группирование данных в мобильном отчете по столбцам или строкам | Службы Reporting Services
 Во многих типах диаграмм в [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]данные можно группировать по столбцам или строкам. Для этого выполните описанные ниже действия.

@@ -1,27 +1,22 @@
 ---
 title: Занятие 2. Изменение свойств источника данных отчета | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 7ec0c1cc3ce7e2be9b058fc881d0971922f5994f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9b1fdf1439544fe349cbeed2c50aa28e7f6def2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272229"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 На этом занятии учебника по службам [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с помощью веб-портала будет выбран отчет, который необходимо доставить получателям. Управляемая данными подписка, которую вы создадите, будет распространять отчет **Заказ на продажу** , созданный при работе с учебником [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  В последующих шагах будут изменены сведения о соединении с источником данных, используемые в отчете для получения данных. Только отчеты, использующие **сохраненные учетные данные** для доступа к источнику данных для отчета, могут распространяться с помощью управляемой данными подписки. Сохраненные учетные данные нужны для автоматической обработки отчета.  
@@ -60,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 10. Нажмите кнопку **Сохранить**.
 11. Нажмите кнопку **Отмена**.  
   
-11. Просмотрите отчет, чтобы убедиться, что он выполняется с указанными учетными данными. , и делает это по-другому.  
+11. Просмотрите отчет, чтобы убедиться, что он выполняется с указанными учетными данными. .  
   
 ## <a name="bkmk_modify_dataset"></a>Изменение набора данных AdventureWorksDataset  
  В последующих шагах вы измените набор данных так, чтобы использовался параметр для фильтрации набора данных по номеру заказа.

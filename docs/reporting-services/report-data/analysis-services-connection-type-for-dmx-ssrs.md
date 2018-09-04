@@ -1,14 +1,10 @@
 ---
 title: Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], DMX
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - data mining [Reporting Services]
 - passing parameters [Reporting Services]
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
-caps.latest.revision: 64
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9293053b1a3a0043b3573c1efc55f4a825ce78a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cde09f46f702a6d1df6fba57feb52fb7f9e25928
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020401"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265162"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)
   При создании набора данных с помощью источника данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] конструктор отчетов отображает конструктор запросов многомерных выражений, если обнаруживает допустимый куб. Если куб не обнаружен, но доступна модель интеллектуального анализа данных, конструктор отчетов отображает конструктор запросов интеллектуального анализа данных (расширения интеллектуального анализа данных). Для переключения между конструкторами MDX и DMX нажимайте кнопку **Расширения интеллектуального анализа данных командного типа** (![Переключение в режим DMX-запросов](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Переключение в режим DMX-запросов")) на панели инструментов. Используйте конструктор DMX-запросов для интерактивного построения запроса расширений интеллектуального анализа данных с применением графических элементов. Чтобы использовать конструктор DMX-запросов, указываемый источник данных должен уже иметь модель интеллектуального анализа данных, которая будет предоставлять данные. Результаты запроса преобразуются в плоский набор строк, который используется в отчете.  

@@ -1,26 +1,20 @@
 ---
 title: Импорт HTML в отчет (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: d1635b53a1a5deffc2289820682d608cedded4bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e460eb7d976cd32cc7dc6fba5f8565de718de637
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023471"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265252"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Импорт HTML в отчет (построитель отчетов и службы SSRS)
   Текстовое поле можно использовать для вставки в отчет текста в формате HTML, выбранного из поля набора данных. Этот текст может исходить из любого простого или сложного выражения, обработка которого приводит к получению правильно отформатированного кода HTML. Отформатированный текст может быть подготовлен к просмотру в любом поддерживаемом формате вывода, включая PDF.  

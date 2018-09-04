@@ -1,26 +1,20 @@
 ---
 title: Данные отчета (SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 94028c673119c7a9af635c7bc9ccb37626eae86e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48721e1b9f57a558346b38e060758e94ea86010e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021781"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266062"
 ---
 # <a name="report-data-ssrs"></a>Данные отчета (SSRS)
   Данные отчета могут поступать из нескольких источников данных в организации. Первым шагом при разработке отчета является создание источников и наборов данных, из которых берутся базовые данные отчета. Каждый источник данных содержит сведения о подключении к данным. У каждого набора данных есть команда запроса, определяющая набор полей для использования в качестве данных из источника данных. Для визуализации данных из каждого набора данных, добавьте область данных, например таблицу, матрицу, диаграмму или карту. При обработке отчета в источнике базы данных выполняются запросы и каждая область данных расширяется настолько, насколько требуется для отображения результатов для набора данных.  
@@ -78,7 +72,7 @@ ms.locfileid: "33021781"
   
 -   Учетные данные источника данных различаются в зависимости от типа источника данных и способа просмотра отчетов: на клиенте, на сервере отчетов или на сайте SharePoint. Дополнительные сведения см. в разделах [Установка разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Сведения об учетных данных для каждого средства см. в разделе [Средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Задачи, связанные с созданием подключений к данным, добавления данных из внешних источников, наборов данных и запросов.  
   
 |||  

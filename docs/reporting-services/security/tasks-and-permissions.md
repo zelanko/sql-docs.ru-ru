@@ -1,14 +1,10 @@
 ---
 title: Задачи и разрешения | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], tasks
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: c5fbec485953e91080607623d07ea8bfaa2751e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d678ada03e625086f54365718b68a0bf63103957
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029041"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279420"
 ---
 # <a name="tasks-and-permissions"></a>Задачи и разрешения
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]под *задачами* понимаются действия, которые может выполнить пользователь или администратор. Набор задач предопределен заранее. Создавать пользовательские задачи или изменять существующие задачи нельзя ни программным способом, ни с помощью инструментальных средств. Всего существует двадцать пять задач. Они охватывают весь набор операций, доступных в рамках безопасности, основанной на ролях. В качестве примеров задач можно привести «Просмотр отчетов», «Управление отчетами», «Управление свойствами сервера отчетов».  
@@ -43,7 +37,7 @@ ms.locfileid: "33029041"
 ## <a name="system-and-item-level-tasks"></a>Задачи системного уровня и задачи уровня элемента  
  Задачи делятся на две категории: задачи системного уровня и задачи уровня элемента. Роль может включать задачи только одной категории. В следующей таблице описана каждая из категорий задач.  
   
-|Категория|Description|  
+|Категория|Описание|  
 |--------------|-----------------|  
 |[Задачи уровня элемента](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|Действия, выполняемые над управляемыми сервером отчетов элементами (папками, отчетами, моделями отчетов и ресурсами).<br /><br /> Задачи уровня элемента выполняются в пространстве имен папок сервера отчетов. Для всех элементов, к которым доступ осуществляется через папки на сервере отчетов или по URL-адресу, защищены с помощью назначений ролей, включающих задачи уровня элемента.|  
 |[Задачи системного уровня](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|Действия, выполняемые на уровне системы (например, управление заданиями или общими расписаниями), которые могут использоваться со многими элементами. Задачи системного уровня выполняются вне пространства имен папок сервера отчетов.|  

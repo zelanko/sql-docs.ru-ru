@@ -1,25 +1,20 @@
 ---
 title: Поведение при подготовке к просмотру (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4ddec1ab7e8252ff65beb241cfd71602fbe00465
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: beb8865f15150d45fa23cfc6e97aab315ab3df04
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268483"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)
   В зависимости от выбранного модуля подготовки отчетов, при обработке отчета к его тексту и содержимому будут применяться некоторые правила. Размещение элементов отчета на странице определяется сочетанием этих факторов.  

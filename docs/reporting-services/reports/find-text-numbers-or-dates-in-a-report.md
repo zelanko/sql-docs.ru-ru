@@ -1,27 +1,22 @@
 ---
 title: Поиск текста, чисел и дат в отчете | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: fb71665a683c050aafcaf1df18c3cdeec6507b50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4bf57cb9eecbf0da8a2cf2bf4f4b17600afe4a00
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267696"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>Поиск текста, числа и даты в отчете
   Можно искать содержимое в отчете, введя слово или фразу, которую нужно найти (максимальная длина искомого термина составляет 256 знаков). Поиск является техникой навигации, которая ищет совпадающее значение и устанавливает фокус на часть отчета, содержащую это значение.  

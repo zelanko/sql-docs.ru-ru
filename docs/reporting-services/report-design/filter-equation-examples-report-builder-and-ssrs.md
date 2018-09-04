@@ -1,28 +1,22 @@
 ---
 title: Примеры уравнений фильтра (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtering data [Reporting Services], filter equation examples
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
-caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8a0a69e9c22d287b8cf1db86e7d62f19a3df7b90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2773a29c98a1807e2fff009155bcc28a796500d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023161"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277079"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Примеры уравнений фильтра (построитель отчетов и службы SSRS)
   Чтобы создать фильтр, необходимо указать одно или несколько уравнений фильтра. Уравнение фильтра состоит из выражения, типа данных, оператора и значения. В этом разделе приведены примеры распространенных фильтров.  
@@ -33,7 +27,7 @@ ms.locfileid: "33023161"
 ## <a name="filter-examples"></a>Примеры фильтров  
  В следующей таблице перечислены примеры уравнений фильтра, использующих различные типы данных и различные операторы. Область сравнения определяется элементом отчета, для которого определен фильтр. Например, для фильтра, определенного для набора данных, **TOP % 10** — это верхние 10% значений в наборе данных; для фильтра, определенного для группы, **TOP % 10** — это верхние 10% значений в группе.  
   
-|Простое выражение|Тип данных|Оператор|Значение|Description|  
+|Простое выражение|Тип данных|Оператор|Значение|Описание|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|Включает все значения данных, превышающие 7.|  
 |`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|Включает 10 верхних значений данных.|  

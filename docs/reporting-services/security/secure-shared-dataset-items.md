@@ -1,26 +1,20 @@
 ---
 title: Защита элементов общего набора данных | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: dff365e2bee4f15ef72892d2a80fa7759161644d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e37457eb57f1276e8a822bf82e28f79769d63ff3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029641"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278922"
 ---
 # <a name="secure-shared-dataset-items"></a>Защита элементов общего набора данных
   На сервере отчетов элементы общего набора данных могут использоваться в нескольких отчетах. В целях управления уровнем доступа, предоставляемого пользователям, общие наборы данных можно защитить. По умолчанию только пользователи, являющиеся членами встроенной группы **Администраторы** , могут просматривать общие наборы данных, изменять свойства, включать кэширование, создавать планы обновления кэша и удалять элементы. Остальные пользователи должны иметь созданные для них назначения ролей, предоставляющие доступ к общему набору данных.  

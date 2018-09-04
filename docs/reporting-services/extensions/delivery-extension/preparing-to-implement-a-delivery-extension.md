@@ -1,14 +1,10 @@
 ---
 title: Подготовка к реализации модуля доставки | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - interfaces [Reporting Services]
 - delivery extensions [Reporting Services], implementing
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1c74178a2f5ece00d7e9fb86943cd5029ee403ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbc1a9e64e2bdd089776c565c33f4a07105a5619
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018071"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271168"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>Подготовка к реализации модуля доставки
   Перед реализацией модуля доставки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] следует определить реализуемые интерфейсы. Вначале необходимо решить, как будет использоваться модуль доставки, какие параметры будут необходимы для модуля и какие функции будет необходимо реализовать для доставки уведомлений об отчетах.  
@@ -44,7 +38,7 @@ ms.locfileid: "33018071"
   
  В следующей таблице описаны доступные интерфейсы и классы для модулей доставки.  
   
-|Интерфейс или класс|Description|  
+|Интерфейс или класс|Описание|  
 |------------------------|-----------------|  
 |<xref:Microsoft.ReportingServices.Interfaces.IExtension> Интерфейс|Представляет модуль в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> Интерфейс|Представляет модуль доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  

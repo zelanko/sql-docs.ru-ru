@@ -1,14 +1,10 @@
 ---
 title: Интеграция служб Reporting Services с помощью элементов управления ReportViewer | Документы Майкрософт
-ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,15 +12,14 @@ helpviewer_keywords:
 - ReportViewer controls
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: bf99e8bbb0286c66ca0b16cea0ccb8ff8a1817cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f121984a363a75ee22a25e515d486b4c99872983
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265878"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls"></a>Интеграция служб Reporting Services с помощью элементов управления ReportViewer
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 предусматривает два элемента управления ReportViewer для внедрения функциональных средств просмотра отчетов в приложения. К ним относятся версия для приложений на базе Windows Forms, а также версия для приложений Web Forms. Эти элементы управления предоставляют одинаковые функциональные возможности, однако каждый из них разработан с учетом особенностей соответствующей среды. Оба элемента управления обрабатывают отчеты, развернутые на сервере отчетов (режим удаленной обработки) или скопированные на компьютер, где еще не установлены службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (режим локальной обработки).  

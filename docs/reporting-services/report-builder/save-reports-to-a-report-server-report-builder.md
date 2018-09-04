@@ -1,26 +1,20 @@
 ---
 title: Сохранение отчетов на сервере отчетов (построитель отчетов) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: ecfaa28215219fba46ddc4d511bcdf368e7726ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 242673ee9d0a17ae38ceb0b59addc88a7de5a094
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019381"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266104"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Сохранение отчетов на сервере отчетов (построитель отчетов)
   В построителе отчетов можно сохранить определение отчета на сервере отчетов (также называется публикацией отчета). Если отчет сохранен на сервере отчетов, его могут просматривать другие пользователи. При каждом запуске опубликованного отчета будут получены самые последние данные. Чтобы сохранить статическую копию отчета, готового к просмотру, экспортируйте отчет в другой формат файла и сохраните его или используйте функцию журнала отчета, чтобы сохранить версию отчета, готового к просмотру.  

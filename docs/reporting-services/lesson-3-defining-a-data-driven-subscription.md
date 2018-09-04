@@ -1,27 +1,22 @@
 ---
 title: Занятие 3. Определение управляемой данными подписки | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e17d01c4ec9d288a3385c96645a3a8080487a201
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08cffbe5d845a9f8161072ac7bc785df21c7ec53
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272835"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 На этом занятии учебника по [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] будут использоваться страницы управляемой данными подписки на веб-порталах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для подключения к источнику данных подписки, построен запрос, получающий данные для этой подписки, а также сопоставлен результирующий набор с отчетом и параметрами доставки.  

@@ -1,14 +1,10 @@
 ---
 title: Запуск и остановка службы сервера отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stopping Report Server service
@@ -16,15 +12,14 @@ helpviewer_keywords:
 - Report Server service, starting
 - starting Report Server service
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5a93f4759fb0c079b843235bd7fb0491fa802e95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df012a7c922a6b329eef6b7c47547fef19faae64
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270189"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Запуск и остановка службы сервера отчетов
   Сервер отчетов реализован в виде службы Windows, которая включает веб-службу сервера отчетов, диспетчер отчетов и приложение фоновой обработки. Чтобы использовать какие-либо функции сервера отчетов, эта служба должна работать. Остановка службы приводит к прекращению всех операций сервера отчетов.  

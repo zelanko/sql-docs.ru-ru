@@ -1,14 +1,10 @@
 ---
 title: Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10538"
@@ -21,15 +17,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 3e78b0319639852d8bb4cac5be3f3b2157ac0703
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12f65c737b17c62c925a1b129a2d527ac849aeaf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278843"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных
   Параметры отображения многоугольников, линий и точек слоя карты управляются настройками слоя, правилами для элементов слоя карты или переопределенными параметрами отдельных внедренных элементов слоя карты.  
@@ -125,7 +120,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице показаны примеры различных доступных форматов.  
   
-|Ключевое слово и формат|Description|Пример отображения текста в условных обозначениях|  
+|Ключевое слово и формат|Описание|Пример отображения текста в условных обозначениях|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Отображает итоговое значение в формате валюты без десятичных разрядов|$400|  
 |`#FROMVALUE {C2}`|Отображает итоговое значение в формате валюты с двумя десятичными разрядами.|$400,55|  

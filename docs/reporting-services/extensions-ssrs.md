@@ -1,26 +1,20 @@
 ---
 title: Расширения (службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 81b925e765918bc1fa83810b1b3a4a8541ee661c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61d8e6684e2d8880541e29fa73e82b170de87f1d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017526"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265888"
 ---
 # <a name="extensions-ssrs"></a>Расширения (SSRS)
   Сервер отчетов в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] использует расширения для разделения на модули различных типов ввода и вывода, которые он принимает для проверки подлинности, обработки данных, подготовки и доставки отчетов. Это облегчает существующим установкам служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] использование таких новых стандартов программного обеспечения в отрасли, как новая схема проверки подлинности или пользовательский тип источника данных. Сервер отчетов поддерживает пользовательские модули проверки подлинности, модули обработки данных, модули обработки отчетов, модули подготовки отчетов и модули доставки, и все модули, доступные пользователям, можно настроить в файле конфигурации RSReportServer.config. Например, можно ограничить форматы экспорта, которые могут использоваться средством просмотра отчетов. Обязательно наличие хотя бы одного модуля проверки подлинности, одного модуля обработки данных и одного модуля подготовки отчетов. Модули доставки и обработки отчетов необязательны, но необходимы, если требуется распространение отчетов или пользовательские элементы управления.  

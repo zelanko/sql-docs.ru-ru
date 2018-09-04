@@ -1,26 +1,20 @@
 ---
 title: Диаграммы с областями (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 15ca22363751493fcb3704657fdfcba0d22090f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5bf277a3df73db64242bfcaf26605a546f90fd69
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019861"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279551"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Диаграммы с областями (построитель отчетов и службы SSRS)
   В диаграммах с областями данные выводятся в виде точек, соединенных линией, с закрашенными ниже этой линии областями. Дополнительные сведения о добавлении данных в диаграммы с областями см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

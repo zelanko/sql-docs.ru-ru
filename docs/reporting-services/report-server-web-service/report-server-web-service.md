@@ -1,14 +1,10 @@
 ---
 title: Веб-служба сервера отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,16 +17,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services]
 - Report Server Web service
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 931bc8fccedfc7147d75a0e5dc9c08d8eb62f2b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 114f50a4fe23fe04948863c0073a5641597fadab
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028781"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274087"
 ---
 # <a name="report-server-web-service"></a>веб-служба сервера отчетов
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют доступ к полному набору функций сервера отчетов с помощью веб-службы сервера отчетов. Веб-службой сервера отчетов является веб-служба XML с API-интерфейсом протокола SOAP. Она применяет протокол SOAP через протокол HTTP и действует как интерфейс связи между клиентскими программами и сервером отчетов. Веб-служба предоставляет две конечные точки — одну для выполнения отчета, а другую для управления отчетом — при помощи методов, которые предоставляют функциональные возможности сервера отчетов и дают возможность создавать пользовательские средства для любого периода жизненного цикла отчетов.  

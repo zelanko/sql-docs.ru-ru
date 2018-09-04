@@ -1,14 +1,10 @@
 ---
 title: Обработка исключений в службах Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service-net-framework-exception-handling
-ms.reviewer: ''
+ms.technology: report-server-web-service-net-framework-exception-handling
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - exceptions [Reporting Services], about exception handling
 - SoapException object
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 75bc7d7f057c9207a0f70525acf61072b82f3469
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65cd20ffca2b8f2915db43c2a0c114ba303594c0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024471"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268061"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Обработка исключений в службах Reporting Services
   Если клиентский запрос API-интерфейса протокола SOAP не может быть выполнен, сервер отчетов возвращает ошибку вместо ожидаемых результатов вызова. Если вызов не может быть выполнен, возвращается ошибка для веб-службы сервера отчетов как XML-элемент **Fault** протокола SOAP. Ключевым описательным элементом ошибки является элемент **detail**, который включает в себя все данные ошибки, предоставляемые сервером отчетов, а также дополнительные данные ошибки из веб-службы. Основными данными в элементе **detail** является код ошибки сервера отчетов. На основании сообщения и кода ошибки можно определить, какое следующее правильное действие следует предпринять в приложении. Дополнительные сведения об ошибках SOAP см. на веб-сайте консорциума W3C: http://www.w3.org/TR/SOAP.  

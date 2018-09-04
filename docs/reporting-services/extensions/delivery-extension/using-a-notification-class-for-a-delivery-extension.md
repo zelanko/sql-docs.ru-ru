@@ -1,14 +1,10 @@
 ---
 title: Использование класса Notification для модуля доставки | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - retry queues
 - Nofication class
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3344e9fac2fc2cefa6c57a7d990f942527603e1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbfc755d6d7e89e3628871f8e43580a68078aaba
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015321"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274102"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Использование класса Notification для модуля доставки
   Класс <xref:Microsoft.ReportingServices.Interfaces.Notification> находится в пространстве имен <xref:Microsoft.ReportingServices.Interfaces> и представляет сведения о подписках, используемые модулями доставки при доставке отчетов. Класс <xref:Microsoft.ReportingServices.Interfaces.Notification> предоставляет ряд свойств, которые могут быть использованы при подготовке отчетов для доставки, при определении состояния уведомления и при указании пользовательских данных.  

@@ -1,26 +1,20 @@
 ---
 title: Добавление или удаление полей из диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: a42d78cca3bc4835771c2e9fcf30a184232aeb38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c416445acce413be66b9781aa10dc37713f3b05e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021081"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264530"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>Добавление или удаление полей из диаграммы (построитель отчетов и службы SSRS)
 В гистограмме и точечной диаграмме в отчетах с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] боковые поля автоматически добавляются по краям оси X. В линейчатой диаграмме боковые поля автоматически добавляются по краям оси X. Для всех остальных диаграмм боковые поля не добавляются. Размер поля изменить нельзя.  

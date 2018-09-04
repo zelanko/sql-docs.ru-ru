@@ -1,29 +1,23 @@
 ---
 title: Настройки сведений об устройстве Word | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Word [Reporting Services]
 - device information settings [Reporting Services], Word
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 642511b02923f36a1fe244ddc777e90eadde0be1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94ac6737ea68794ee0d5a3c547a2a8bd2b4dc28c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031781"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276486"
 ---
 # <a name="word-device-information-settings"></a>Настройки сведений об устройстве Word
   В следующей таблице перечислены настройки сведений об устройстве для подготовки к просмотру в формате [!INCLUDE[ofprword](../includes/ofprword-md.md)] .  

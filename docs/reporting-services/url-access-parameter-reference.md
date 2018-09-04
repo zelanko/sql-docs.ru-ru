@@ -1,28 +1,23 @@
 ---
 title: Справочник по параметрам доступа по URL-адресу | Документы Майкрософт
-ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 76f7e0be913313c56b8f05eeb24e43534407ceec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f35eb564543ff2378a66af4ba3d34cf569acdb62
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270246"
 ---
 # <a name="url-access-parameter-reference"></a>Ссылка на параметр доступа по URL-адресу
   Чтобы настроить внешний вид отчетов служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], можно использовать приведенные здесь параметры как часть URL-адреса. В этом разделе перечислены основные параметры. Параметры не учитывают регистр символов и начинаются с префикса параметра *rs:* , если направлены на сервер отчетов, и с префикса параметра *rc:* , если направлены в средство просмотра HTML-страниц. Также можно указать конкретные параметры устройств или модулей подготовки отчетов. Дополнительные сведения о параметрах, определяемых устройством, см. в разделе [Указание настройки сведений об устройстве в URL-адресе](../reporting-services/specify-device-information-settings-in-a-url.md).  

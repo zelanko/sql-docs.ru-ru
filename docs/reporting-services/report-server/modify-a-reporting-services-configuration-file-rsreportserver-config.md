@@ -1,26 +1,20 @@
 ---
 title: Изменение файла конфигурации служб Reporting Services (RSreportserver.config) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 49575589d605638545dfcc068c240d80faf776ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3bcc1ef9a96baae8f0a98b0b57488b3fb4dcd76
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028081"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268361"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Изменение файла конфигурации служб Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложения в наборе файлов конфигурации. Программа установки создает файлы конфигурации для каждого устанавливаемого экземпляра сервера отчетов. Значения в каждом файла задаются либо во время установки, либо при использовании средств и приложений для настройки сервера и подготовки его к работе. В некоторых случаях приходится изменять непосредственно сам файл, чтобы добавить дополнительные параметры или настроить их. Параметры конфигурации задаются либо как элементы XML, либо как атрибуты. Если вы знакомы с XML и файлами конфигурации, то можете использовать редактор текста или кода для настройки пользовательских параметров.  

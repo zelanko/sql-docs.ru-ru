@@ -1,26 +1,20 @@
 ---
 title: Отображение скрытых наборов данных для значений параметра в многомерных данных | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e95fd161dfadcab075a770e8e6ab6001da6c07e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69acae71d971915406b0e287d420043e2d36bae3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019151"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278895"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Отображение скрытых наборов данных для значений параметра — многомерные данные
   Отчет может включать автоматически создаваемые наборы данных (называемые также скрытыми наборами данных), которые по умолчанию не отображаются на панели данных отчета. Эти наборы данных создаются следующими способами.  

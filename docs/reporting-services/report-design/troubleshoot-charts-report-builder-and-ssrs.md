@@ -1,26 +1,20 @@
 ---
 title: Устранение неполадок с диаграммами (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: e9bd6c14bcc6157b65d851d25019c8090a8f8485
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f74e09afc4be0bf5297f0c7e6e4026fbf57e0dae
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024251"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264574"
 ---
 # <a name="troubleshoot-charts-report-builder-and-ssrs"></a>Устранение неполадок с диаграммами (построитель отчетов и службы SSRS)
   При работе с диаграммами могут возникать следующие вопросы.  

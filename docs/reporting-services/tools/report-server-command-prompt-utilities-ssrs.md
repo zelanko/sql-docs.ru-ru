@@ -1,14 +1,10 @@
 ---
 title: Программы командной строки сервера отчетов (службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rsconfig utility
@@ -17,21 +13,19 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - rskeymgmt utility
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4f52c7216e42d3d0e233446de2521d403cafe610
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da7d30f725a0e30b4e655d968c3e48804125878b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031401"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271679"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Программы командной строки сервера отчетов (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предусмотрено несколько программ командной строки, с помощью которых можно администрировать сервер отчетов. Эти программы автоматически устанавливаются при установке сервера отчетов.  
   
-|Имя|Командный файл|Поддерживаемый режим развертывания|Description|  
+|Имя|Командный файл|Поддерживаемый режим развертывания|Описание|  
 |----------|------------------|-------------------------------|-----------------|  
 |Программа RSS|rs.exe|Собственный режим и режим интеграции с SharePoint. В выпуске [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] появилась поддержка режима с SharePoint.|Программа [rs](../../reporting-services/tools/rs-exe-utility-ssrs.md) является сервером скриптов, который можно применять для выполнения операций, выраженных в форме скриптов. Используйте эту программу для выполнения скриптов [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , предназначенных для копирования данных из одной базы данных сервера отчетов в другую, публикации отчетов, создания объектов в базе данных сервера отчетов и т. д. Использование скриптов для администрирования сервера описывается в разделе [Написание скриптов для задач развертывания и администрирования](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).|  
 |Командлеты PowerShell||Только режим интеграции с SharePoint|Список командлетов Powershell см. в статье [Командлеты PowerShell для служб Reporting Services в режиме SharePoint](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).|  

@@ -1,14 +1,10 @@
 ---
 title: Счетчики производительности для MSRS 2011 в режиме интеграции с SharePoint, объекты производительности | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,15 +14,14 @@ helpviewer_keywords:
 - Scheduling and Delivery Processor performance object [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4b71aab05f6e9fe43b5077ef04cf3d7bd8dbc41d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 934267601abcedd1499e45c5a5eafdcee6ab8f35
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267114"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Счетчики производительности для MSRS 2011 в режиме интеграции с SharePoint, объекты производительности
   В этой статье рассматриваются счетчики производительности для объектов производительности **MSRS 2011 Web Service SharePoint Mode** и **MSRS 2011 Windows Service SharePoint Mode** , которые принадлежат к числу компонентов развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в режиме SharePoint.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице перечислены счетчики, включенные в объект производительности **MSRS 2011 Web Service SharePoint Mode** .  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Активные сеансы**|Число активных сеансов. Этот счетчик ведет подсчет совокупного количества сеансов браузера, создаваемых при выполнении отчета, как активных, так и неактивных.<br /><br /> Значение счетчика уменьшается на единицу при удалении каждой записи сеанса. По умолчанию сеансы удаляются через десять минут неактивности.|  
 |**Попаданий в кэш/с**|Количество запросов в секунду для кэшированных отчетов. Это запросы для повторно подготовленных к просмотру отчетов, а не для отчетов, обрабатываемых непосредственно из кэша. (См. раздел **Всего попаданий в кэш** ниже в этой статье.)|  
@@ -81,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
  В следующей таблице перечислены счетчики, включенные в объект производительности **MSRS 2011 Windows Service SharePoint mode** .  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Активные сеансы**|Количество активных сеансов, хранящихся в базе данных сервера отчетов. Этот счетчик обеспечивает совокупный подсчет всех используемых сеансов браузера, формируемых из подписок на отчет, которые все еще активны или нет.|  
 |**Система предупреждений: длина очереди событий**||  

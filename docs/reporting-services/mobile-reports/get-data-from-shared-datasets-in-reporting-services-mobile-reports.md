@@ -1,26 +1,20 @@
 ---
 title: Получение данных из общих наборов данных в мобильных отчетах служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: fb83dd013101b14ad45da1fb9ef091dcbea727d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ad6b241db1b5bc11c24343607f6932c3bf4f01a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018399"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275432"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Get data from shared datasets in Reporting Services mobile reports
 Помимо [загрузки данных из файлов Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), издатель мобильных отчетов для SQL Server также может получать доступ к данным практически из любого источника. Для доступа к данным требуется общий источник данных, настроенный на веб-портале служб Reporting Services. Узнайте больше о [создании общих источников данных](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) и [создании общих наборов данных](../../reporting-services/report-data/manage-shared-datasets.md).  

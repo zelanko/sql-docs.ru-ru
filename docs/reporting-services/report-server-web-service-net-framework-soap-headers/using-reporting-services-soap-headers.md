@@ -1,14 +1,10 @@
 ---
 title: Использование заголовков SOAP служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service-net-framework-soap-headers
-ms.reviewer: ''
+ms.technology: report-server-web-service-net-framework-soap-headers
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,15 +15,14 @@ helpviewer_keywords:
 - SOAP [Reporting Services], headers
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
-caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9c07ce717a26e4a65f40ce651608c10adeccd3cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 538e54c8f3c9504c9adeed0d4104b54cb606abd0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270276"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Использование заголовков SOAP служб Reporting Services
   Связь с методом веб-службы по протоколу SOAP имеет стандартный формат. Данные, закодированные в XML-документе, являются частью этого формата. XML-документ состоит из корневого элемента **Envelope**, который в свою очередь состоит из обязательного элемента **Body** и дополнительного элемента **Header**. Элемент **Body** содержит данные, соответствующие сообщению. Необязательный элемент **Header** может содержать дополнительную информацию, не связанную напрямую с конкретным сообщением. Каждый дочерний элемент **Header** называется заголовком SOAP.  
@@ -38,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Методы пакетной обработки](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)|Описывает, как объединять в пакет несколько операций в одну транзакцию с помощью класса <xref:ReportService2005.BatchHeader>.|  
 |[Определение состояния выполнения](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)|Описывает, как управлять состоянием сеанса в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с помощью **SessionHeader**.|  

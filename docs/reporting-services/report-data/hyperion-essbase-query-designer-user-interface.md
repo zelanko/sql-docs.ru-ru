@@ -1,14 +1,10 @@
 ---
 title: Пользовательский интерфейс конструктора запросов Hyperion Essbase | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10013"
@@ -20,15 +16,14 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Hyperion Essbase [Reporting Services], query designer
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 256664751bbff5d282da302d6a05df3f40f7f1b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 99390236fdd666bbd8dc01af1608016b898e750b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271352"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов Hyperion Essbase
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
@@ -64,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Панель инструментов графического конструктора запросов в режиме конструктора  
  Панель инструментов конструктора запросов содержит кнопки, которые помогают создавать запросы многомерных выражений с помощью графического интерфейса. В следующей таблице перечислены кнопки и описаны их функции.  
   
-|Кнопка|Description|  
+|Кнопка|Описание|  
 |------------|-----------------|  
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Недоступен для этого типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  

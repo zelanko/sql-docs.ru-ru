@@ -1,14 +1,10 @@
 ---
 title: Форматирование диаграммы (построитель отчетов и службы SSRS) | Документация Майкрософт
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10214"
@@ -52,15 +48,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.chartproperties.border.f1
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 744758362c1c9a9e8b76fbd28dc652ed7a4e4699
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3dafdd7b8eb5b8a96e94c1efe1623c1392d9d3ed
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265231"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Форматирование диаграммы (построитель отчетов и службы SSRS)
   После определения данных для диаграммы и нужного представления диаграммы можно добавить форматирование, чтобы улучшить общий внешний вид и выделить ключевые точки данных. Наиболее общие параметры форматирования могут быть изменены в диалоговом окне «Свойства». Для этого нужно щелкнуть правой кнопкой мыши элемент диаграммы, чтобы отобразить контекстное меню. Каждый элемент диаграммы имеет собственное диалоговое окно. Дополнительные сведения о элементах диаграмм см. в статье [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

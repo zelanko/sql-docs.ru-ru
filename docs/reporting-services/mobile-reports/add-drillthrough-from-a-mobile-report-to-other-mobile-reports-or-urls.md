@@ -1,25 +1,20 @@
 ---
 title: Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса | Документы Майкрософт
-ms.custom: ''
 ms.date: 09/20/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: aec03b03918964a474e04568384f70626d7ab4ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9950fa3211f3cf3cc7b8d595168283b0acf87005
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267653"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса
 Детализацию по любому датчику, графику или сетке данных в мобильном отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] можно добавить в любой другой мобильный отчет или пользовательский URL-адрес. 

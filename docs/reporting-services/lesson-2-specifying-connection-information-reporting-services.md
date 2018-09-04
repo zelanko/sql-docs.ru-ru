@@ -1,28 +1,22 @@
 ---
 title: Занятие 2. Задание информации о соединении (службы Reporting Services) | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: e1c62880fd94706f9f034d86fecd587700019b6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ca21419e841482747410f50809d0d502f495f06
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015991"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274775"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Занятие 2. Задание информации о соединении (службы Reporting Services)
 После добавления разбитого на страницы отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] к проекту Tutorial на занятии 1 следует задать *источник данных*, который представляет собой сведения о соединении, используемые отчетом для доступа к данным, которые располагаются в реляционной базе данных, многомерной базе данных или ином источнике.  

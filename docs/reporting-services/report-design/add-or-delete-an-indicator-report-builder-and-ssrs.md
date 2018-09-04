@@ -1,26 +1,20 @@
 ---
 title: Добавление или удаление индикатора (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 1e5815f3d30e0c34b2cd9d481347eb69b637fc72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71763fe66f40dd3ce208c1223e56a930c6651ef6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020711"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279976"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Добавление или удаление индикатора (построитель отчетов и службы SSRS)
   В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы индикаторы — это минимальные датчики, обеспечивающие возможность быстрого определения состояния одиночного значения данных. Дополнительные сведения см. в разделе [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  

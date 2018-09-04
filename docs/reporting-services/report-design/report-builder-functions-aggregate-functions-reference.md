@@ -1,26 +1,20 @@
 ---
 title: Справочник по агрегатным функциям (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 931cd60d3a2e1691dcb6f9d2c58976ec242d2d68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e396de825687166c9d110c375e3c77e392e1fd89
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028341"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275593"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Функции построителя отчетов — справочник по агрегатным функциям
   Чтобы включить в отчет статистические значения, в выражениях можно использовать агрегатные функции. Агрегатная функция по умолчанию для числовых полей — функция SUM. Можно изменить выражение и использовать другую встроенную агрегатную функцию или указать другую область. Область определяет набор данных, используемый при вычислениях.  
@@ -180,7 +174,7 @@ ms.locfileid: "33028341"
 ##  <a name="TestingforScope"></a> Тестирование области  
  Следующая встроенная функция тестирует текущий контекст элемента отчета, чтобы увидеть, является ли он элементом определенной области.  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Указывает, входит ли текущий экземпляр элемента в пределы указанной области действия.|  
   
@@ -189,7 +183,7 @@ ms.locfileid: "33028341"
 ##  <a name="RetrievingRecursiveLevel"></a> Получение уровня рекурсии  
  Следующая встроенная функция получает текущий уровень при обработке рекурсивной иерархии. Чтобы управлять уровнем отступа визуальной иерархии для рекурсивной группы, используйте результат этой функции вместе со свойством **Padding** в текстовом поле. Дополнительные сведения см. в разделе [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |--------------|-----------------|  
 |[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|Возвращает текущий уровень глубины в рекурсивной иерархии.|  
   

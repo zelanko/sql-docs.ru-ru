@@ -1,13 +1,9 @@
 ---
 title: Настройка ключей шифрования и управление ими (диспетчер конфигураций служб SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4e2cabb811117bd629bd738427e6c535cdaaaa7e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 426093317cb633ac49b350bef914b451d9bf4625
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322483"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280822"
 ---
 # <a name="ssrs-encryption-keys---manage-encryption-keys"></a>Ключи шифрования служб SSRS — управление ключами шифрования
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] пользуются ключами шифрования. Для защиты конфиденциальных данных в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]применяется сочетание открытого, закрытого и симметричного ключей. Симметричный ключ создается при инициализации сервера отчетов в момент его установки или настройки, и используется для шифрования конфиденциальных данных, хранящихся на сервере отчетов. Открытые и закрытые ключи создаются операционной системой, и используются для защиты симметричного ключа. Пара из открытого и закрытого ключей создается для каждого экземпляра, который сохраняет конфиденциальные данные в базе данных сервера отчетов.  

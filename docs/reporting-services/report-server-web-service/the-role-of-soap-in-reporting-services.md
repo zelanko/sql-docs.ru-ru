@@ -1,14 +1,10 @@
 ---
 title: Роль протокола SOAP в службах Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,15 +14,14 @@ helpviewer_keywords:
 - Report Server Web service, SOAP
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5137b89878092328e0b809a988d1255e3dc13c30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d6b46335f95045b6792c86df56567a378e26dd0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025031"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277680"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   Веб-служба сервера отчетов использует обмен сообщениями по протоколу SOAP для отправки текстовых команд по сети. Эти команды имеют вид XML-текста, передаваемого через Интернет по протоколу HTTP. Использование протокола связи SOAP в веб-службе сервера отчетов позволяет приложениям и компонентам обмениваться данными с сервером отчетов, используя широко признанную открытую инфраструктуру. Стандарт SOAP определен на веб-сайте www.w3.org/TR/SOAP.  

@@ -1,30 +1,24 @@
 ---
 title: Работа с отчетами и PowerShell в Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - Reporting Services, scripting
 - scripting [Reporting Services]
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: adc0133a7ed6b82a2c18b94675b959049e0affe3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b2a63000df29e5e8579e8d7e9ce2ba5d4b77ea9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031501"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269426"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Сценарии и PowerShell со службами Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживает целый ряд сценариев разработки и управления посредством скриптов, включая служебную программу командной строки rs.exe, командлеты PowerShell для серверов отчетов в режиме SharePoint и использование объектной модели [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из PowerShell для режима SharePoint и собственного режима.  

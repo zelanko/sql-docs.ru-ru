@@ -1,14 +1,10 @@
 ---
 title: Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
@@ -20,16 +16,14 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: 77
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 03cc0727e6f545f37ebccb716877b89f29f02d09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caaa44aed6413794c3acee1d9dfc8cae8b31a24
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022368"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268266"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Пользовательский код и ссылок на сборки в выражениях в конструкторе отчетов (службы SSRS)
   Можно добавлять ссылки на пользовательский код, внедренный в отчет, или пользовательские сборки, построенные и сохраненные на компьютере и развернутые на сервере отчетов. Используйте внедренный код для пользовательских констант, сложных функций или функций, которые используются в одном отчете несколько раз. Сборки с пользовательским кодом используйте для сохранения кода в одном месте и его общего использования в нескольких отчетах. Пользовательский код может включать новые пользовательские константы, переменные, функции или подпрограммы. Можно включать ссылки, доступные только для чтения, во встроенные коллекции, например коллекцию Parameters. Однако эти наборы значений данных отчета невозможно передать пользовательским функциям (в частности, не поддерживаются пользовательские статистические вычисления).  

@@ -1,26 +1,20 @@
 ---
 title: Добавление фильтров набора данных, фильтров области данных и групповых фильтров | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 58b46f8ae50aaf31318d75a45ad767170c15b575
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ffc0cbb04ab32283c631a8c03a54e05264c19e66
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022621"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272066"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Добавление фильтров набора данных, фильтров области данных и групповых фильтров
   В отчете фильтр является частью набора данных, области данных или группы области данных, созданной для ограничения объема данных, используемого в отчете. Фильтры могут быть использованы для управления данными отчета в случае, когда невозможно изменить запрос к набору данных, например при использовании общего набора данных.  

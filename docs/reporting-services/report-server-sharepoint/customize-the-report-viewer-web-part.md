@@ -1,24 +1,19 @@
 ---
 title: Настройка веб-части "Средство просмотра отчетов" | Документы Майкрософт
-ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server-sharepoint
-ms.reviewer: ''
+ms.technology: report-server-sharepoint
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d2a9368b1617c89dcc85cfddd7fe2ac998a18579
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 808adc6f874453ae9eb2d90eae213ff14bc4da0a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052185"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280309"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Настройка веб-части "Средство просмотра отчетов"
 

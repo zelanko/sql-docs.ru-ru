@@ -1,28 +1,22 @@
 ---
 title: Счетчики производительности для службы ReportServer, объекты производительности | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3a83e69235c79a255d1ba238b6acc24f873d5e51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22afdbbbd970f7362644b69a55b2e63e7dd59c34
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027721"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266824"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Счетчики производительности для службы ReportServer, объекты производительности
   В этом разделе описываются счетчики производительности для объектов производительности **ReportServer:Service** и **ReportServerSharePoint:Service** , входящих в развертывание [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -55,7 +49,7 @@ ms.locfileid: "33027721"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Активные соединения**|Количество активных в текущий момент соединений на сервере.|  
 |**Всего получено байтов**|Число байт, полученных сервером. Этот счетчик ведет подсчет общего приблизительного числа байтов, полученных как диспетчером отчетов, так и сервером отчетов.|  
@@ -88,7 +82,7 @@ ms.locfileid: "33027721"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Состояние нагрузки на память**||  
 |**Объем сжатия памяти**||  

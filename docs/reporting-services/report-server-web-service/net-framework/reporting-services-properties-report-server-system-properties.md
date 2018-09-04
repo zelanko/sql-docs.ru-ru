@@ -1,14 +1,10 @@
 ---
 title: Системные свойства сервера отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,23 +12,21 @@ helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a5c76d55357aeda9c66b2de668eb80426dd8fa22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4d49b97eba1684e7b3ad50209cf2fee2fbfb64f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028631"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274850"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Свойства служб Reporting Services — свойства системы сервера отчетов
   Следующие имена системных свойств являются зарезервированными. Нельзя создавать определяемые пользователем свойства с такими именами. Многие из этих свойств можно считывать или изменять с помощью методов веб-службы.  
   
 ## <a name="properties"></a>Свойства  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |SiteName|Имя сайта сервера отчетов, отображаемое в пользовательском интерфейсе. По умолчанию используется значение **Сервер отчетов Майкрософт**. Значением этого свойства может быть пустая строка. Максимальная длина составляет 8000 символов.|  
 |SystemSnapshotLimit|Максимальное количество моментальных снимков, которые хранятся для отчета. Допустимые значения: от **-1** до **2** **147** **483** **647**. Значение **-1**указывает на то, что число моментальных снимков не ограничено.|  

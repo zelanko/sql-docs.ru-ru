@@ -1,14 +1,10 @@
 ---
 title: Изменение часовых поясов и параметров часов на сервере отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time zones [Reporting Services]
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: f9e613a2212a852f386343de6463d06b9b57b3ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8251e9b599c9970a154d4f4cf4630a261eb25a0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031601"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270594"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Изменение часовых поясов и настроек часов на сервере отчетов
   Сервер отчетов всегда использует локальное время компьютера, на котором он установлен. Задать для сервера отчетов другой часовой пояс нельзя. Если клиентское приложение обращается к серверу отчетов, работающему в другом часовом поясе, запланированная операция выполняется в соответствии с часовым поясом сервера отчетов. На страницах управления диспетчером отчетов и службами SharePoint часовой пояс указывается на каждой странице расписания, чтобы пользователь точно знал, когда будет выполнена запланированная операция. Например, на странице для создания пользовательского расписания указано «Время выражено в (UTC-08:00) по тихоокеанскому времени (США и Канада)».  

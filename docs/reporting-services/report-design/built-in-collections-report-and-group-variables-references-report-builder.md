@@ -1,14 +1,10 @@
 ---
 title: Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10404"
@@ -20,16 +16,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 9dbc763b4e1def5d6ed6243d5d22d458f611ee65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91ff438183c197511ee33ee0f0baa779feb2b768
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021651"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268082"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Встроенные коллекции — ссылки на переменные отчета и группы (построитель отчетов)
   При сложном вычислении, которое используется несколько раз в выражениях отчета, может потребоваться создание переменной. Можно создать переменную отчета или переменную группы. В отчете имена переменных должны быть уникальными.  

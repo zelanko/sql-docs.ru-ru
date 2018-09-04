@@ -1,26 +1,20 @@
 ---
 title: Сортировка данных в области данных (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: df797c994e76d7dd816cd041d3b59cb9d14af052
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: a14dcfdb76fb931bdcc05b79ad2d7669b37b65d7
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40405255"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274005"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Сортировка данных в области данных (построитель отчетов и службы SSRS)
   Чтобы изменить порядок сортировки данных в области данных при первом запуске отчета, необходимо создать выражение сортировки для области данных или в группы. По умолчанию выражению сортировки для группы автоматически присваивается то же значение, что и выражению группы.  

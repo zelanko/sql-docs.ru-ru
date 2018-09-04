@@ -1,14 +1,10 @@
 ---
 title: Развертывание модуля подготовки отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0ed8216bce2b7112c709330f1d65a0bc5d5011c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c31ae1a893448dd2947c0263390a2c55690e602
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018081"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268446"
 ---
 # <a name="deploying-a-rendering-extension"></a>Развертывание модуля подготовки отчетов
   После того как модуль подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] был написан и скомпилирован в библиотеку [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], необходимо сделать его видимым для сервера отчетов и конструктора отчетов. Это можно сделать, скопировав модуль в подходящий каталог и добавив записи в подходящие файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -35,7 +29,7 @@ ms.locfileid: "33018081"
   
  В следующей таблице описываются атрибуты элемента **Extension** для модулей подготовки отчетов.  
   
-|attribute|Description|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |**Название**|Уникальное имя элемента Extension. Длина атрибута **Name** не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extensions** файла конфигурации. Если присутствует повторяющееся имя, сервер отчетов возвращает ошибку.|  
 |**Тип**|Список с разделителями-запятыми, содержащий полное пространство имен и имя сборки.|  

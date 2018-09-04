@@ -1,14 +1,10 @@
 ---
 title: Свойства элементов сервера отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2b3ba4bdc49c822d059ec86b4cb8064877af0d90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 346fefd3cbbeb1e0422401ef22a4ce32106348a2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027011"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267640"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Свойства Reporting Services — свойства элементов сервера отчетов
   Свойства элементов являются свойствами, зависящими от элементов в базе данных сервера отчетов. Такие элементы включают отчеты, связанные отчеты, папки, ресурсы, модели и источники данных.  
@@ -37,7 +31,7 @@ ms.locfileid: "33027011"
 ## <a name="item-properties"></a>Свойства элементов  
  Следующие свойства применимы ко всем элементам в базе данных сервера отчетов.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**CreatedBy**|Имя пользователя, изначально добавившего элемент в базу данных сервера отчетов.|  
 |**CreationDate**|Дата и время, когда элемент был добавлен в базу данных сервера отчетов.|  
@@ -55,14 +49,14 @@ ms.locfileid: "33027011"
 ## <a name="folder-properties"></a>Свойства папки  
  Наряду со свойствами элементов, перечисленных выше, следующее свойство применимо к папкам в базе данных сервера отчетов.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**Reserved**|Значение, возвращаемое методом <xref:ReportService2010.ReportingService2010.GetProperties%2A> для папок, зарезервированных сервером отчетов. Зарезервированными папками являются: Users, My Reports и /. Зарезервированные папки не могут быть изменены или удалены.|  
   
 ## <a name="report-properties"></a>Свойства отчета  
  Наряду со свойствами элементов, перечисленными выше, следующие свойства применимы к отчетам в базе данных сервера отчетов.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**Язык**|Язык, используемый в отчете. Значением является код языка, определенный в спецификации IETF RFC1766. Первая часть — это двухсимвольное обозначение основного языка. Вторая часть отделена дефисом и обозначает вариацию диалекта языка. Если значение не указано в элементе **Style**, связанном с элементом **Body** в определении отчета, значением по умолчанию является язык сервера отчетов.|  
 |**ReportProcessingTimeout**|Время ожидания в секундах отдельного отчета. Если это значение установлено, сервер отчетов пытается остановить обработку отчета по истечении указанного времени. Допустимые значения: от **-1** до **2** **147** **483** **647**. Если значение равно **–1**, то при обработке отчета время ожидания не истекает. Если значение равно **NULL**, для времени ожидания отчета используется значение системного свойства **ReportProcessingTimeout**. Значение по умолчанию — **NULL**. Дополнительные сведения см. в разделе [Системные свойства сервера отчетов](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
@@ -76,7 +70,7 @@ ms.locfileid: "33027011"
 ## <a name="resource-properties"></a>Свойства ресурсов  
  Наряду со свойствами элементов, перечисленных выше, следующее свойство применимо к ресурсам в базе данных сервера отчетов.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**MimeType**|Тип MIME ресурса в базе данных сервера отчетов.|  
   

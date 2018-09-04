@@ -1,25 +1,20 @@
 ---
 title: Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 127f597eef06a3ebb7a1361b2290c53c9479d799
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a222f6443f4ca1fe52251a367a67f9b5dab02b5
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265143"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]присваивание меток круговой диаграммы оптимизируется для отображения меток только для некоторых срезов данных. Метки могут перекрываться, если круговая диаграмма содержит слишком много срезов. Решением проблемы является отображение меток за пределами круговой диаграммы, что создает больше пространства для нанесения дальнейших меток данных. Если метки все еще перекрывают друг друга, можно создать для них больше места путем включения объемных эффектов. Это снижает диаметр круговой диаграммы, создавая больше пространства вокруг диаграммы.  

@@ -1,29 +1,23 @@
 ---
 title: Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10061"
 - sql13.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 68d3df180bd1accea7e8d5be0ee38228c4afcff2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a53fd54a9bd9c6a4271b39049268b9cf8dc7dd4
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018991"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268881"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)
   Прямоугольник добавляется к отчету [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы, если нужно разделить различные области отчета с помощью графического элемента, выделить области отчета или установить фон для одного или нескольких элементов отчета. Прямоугольники используются также в качестве контейнеров, помогающих управлять подготовкой к просмотру областей данных в отчете. Внешний вид прямоугольника можно настроить, изменяя его свойства, например цвета фона и границ. Дополнительные сведения об использовании прямоугольника как контейнера см. в разделах [Прямоугольники и линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md) и [Отображение одних и тех же данных в матрице и на диаграмме (построитель отчетов)](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).    

@@ -1,14 +1,10 @@
 ---
 title: Свойство DatabaseName (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - DatabaseName Property
@@ -18,16 +14,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DatabaseName property
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1a8d046fffdb3cf4369cf16775c1e22e1e5487f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca0762f06560bc7f6e4d6050754105b8842572d0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030501"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281266"
 ---
 # <a name="configurationsetting-property---databasename"></a>Свойство ConfigurationSetting — DatabaseName
   Задает имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором размещается база данных сервера отчетов. Только для чтения.  

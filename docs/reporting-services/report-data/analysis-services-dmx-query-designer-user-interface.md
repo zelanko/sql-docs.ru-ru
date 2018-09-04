@@ -1,14 +1,10 @@
 ---
 title: Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - DMX [Analysis Services], user interface
 - query designers [DMX]
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e86c0d86d0720de660df71e2e3f69a0a1725acac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29d2179f8b20adbf6914c2fbebb49f4b4c50c444
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021241"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273224"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения DMX-запросов и запросов многомерных выражений из источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В этом разделе описан конструктор DMX-запросов. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
@@ -37,7 +31,7 @@ ms.locfileid: "33021241"
 ## <a name="graphical-dmx-query-designer-toolbar"></a>Панель инструментов графического конструктора DMX-запросов  
  На панели инструментов графического конструктора расположены кнопки, помогающие проектировать DMX-запросы с помощью графического интерфейса. В следующей таблице перечислены кнопки и описаны их функции.  
   
-|Кнопка|Description|  
+|Кнопка|Описание|  
 |------------|-----------------|  
 |**Редактировать как текст**|Отключена для этого типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  

@@ -1,30 +1,24 @@
 ---
 title: Авторизация в службах Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8f210359c57cee94ff60e77538c6ec7725ea9888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a98359fb0038902effc86a4f1ac4271da30f6f0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016771"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264843"
 ---
 # <a name="authorization-in-reporting-services"></a>Авторизация в службах Reporting Services
   Авторизация является процессом определения, должен ли быть предоставлен идентификатору запрошенный тип доступа к конкретному ресурсу в базе данных сервера отчетов. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют архитектуру авторизации на основе ролей, которая предоставляет пользователю доступ к конкретному ресурсу на основании назначенной этому пользователю роли в данном приложении. Модули безопасности для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат реализацию компонента авторизации, который используется для предоставления доступа пользователям после прохождения ими проверки подлинности на сервере отчетов. Авторизация вызывается, когда пользователь пытается выполнить операцию в системе или на элементе сервера через API-интерфейс SOAP, либо посредством доступа по URL-адресу. Это стало возможным благодаря интерфейсу модуля безопасности **IAuthorizationExtension2**. Как указывалось выше, все развертываемые модули наследуют от базового интерфейса **IExtension** . Интерфейсы**IExtension** и **IAuthorizationExtension2** являются членами пространства имен **Microsoft.ReportingServices.Interfaces**.  

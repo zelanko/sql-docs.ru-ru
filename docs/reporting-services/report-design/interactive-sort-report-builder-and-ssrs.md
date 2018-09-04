@@ -1,25 +1,20 @@
 ---
 title: Интерактивная сортировка (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 297a60eb5e55e2f7c8c50e2e710b55364a975f6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cf92848c2a7bfd768307d8c653cd27923a02e921
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275864"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Интерактивная сортировка (построитель отчетов и службы SSRS)
   Чтобы пользователи могли менять порядок сортировки строк в таблице либо строк и столбцов в матрице с возрастающего на убывающий и обратно, можно добавить кнопки интерактивной сортировки. Чаще всего используемый метод интерактивной сортировки состоит в добавлении кнопки сортировки в заголовок каждого столбца. Затем пользователь может выбрать столбец, по которому будет выполнена сортировка.  

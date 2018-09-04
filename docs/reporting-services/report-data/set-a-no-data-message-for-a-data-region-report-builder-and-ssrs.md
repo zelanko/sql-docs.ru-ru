@@ -1,26 +1,20 @@
 ---
 title: Установка сообщения об отсутствии данных для области данных (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e9504050aa1cd4923e03121615b525dbb3a08365
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33bfd734ca7184433b4f05d20de187908af8b536
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020841"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270456"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Установка сообщения об отсутствии данных для области данных (построитель отчетов и службы SSRS)
   Чтобы задать текст, который будет отображаться в подготовленном к просмотру отчете в области данных, внутри которой данных нет, задайте свойство NoRowsMessage для таблицы, матрицы или области списка данных или свойство NoDataMessage для диаграммной области данных и NoDataText для цветовой шкалы для схемы. Во время выполнения обработчик запросов производит запрос к каждому из наборов данных в отчете; такие запросы могут не вернуть результирующий набор. Если область данных привязана к пустому набору данных, то можно указать текст, который будет отображаться вместо пустой области данных. Также свойство NoRowsMessage можно задать для вложенных отчетов; сообщение будет отображаться, если во время выполнения во вложенном отчете не будет заполненных наборов данных.  

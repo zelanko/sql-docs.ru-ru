@@ -1,30 +1,24 @@
 ---
 title: Настройка свойств выполнения для отчета (диспетчер отчетов) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - reports [Reporting Services], properties
 - reports [Reporting Services], execution options
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: c06fe377c42a46cfc2adb4bdc7216cc52b6973ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48260aac6f3935d9b3c2010e5cc2c2d7fdcd45aa
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026141"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268812"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Настройка свойств выполнения для отчета (диспетчер отчетов)
   Параметры обработки отчета можно настроить для указания получения данных для отчета. Планирование обработки данных для отчета становится целесообразным, если обновление внешнего источника данных происходит в определенные моменты времени (пример: хранилище данных, которое обновляется ежедневно или еженедельно) и необходимо избежать издержек, связанных с выборкой одних и тех же данных при каждом запросе отчета. Планирование обработки данных становится также необходимым, если требуется управлять рабочей нагрузкой сервера внешней базы данных или обеспечить предоставление согласованных результатов для многочисленных пользователей, которым приходится работать с идентичными наборами данных. Для быстро изменяющихся данных отчеты по требованию могут каждую минуту выдавать различные результаты. Моментальный снимок отчета, напротив, позволяет сопоставить данные различных отчетов и средств аналитики, действительные на один и тот же момент времени.  

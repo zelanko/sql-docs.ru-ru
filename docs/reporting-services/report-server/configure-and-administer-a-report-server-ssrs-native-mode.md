@@ -1,14 +1,10 @@
 ---
 title: Настройка и администрирование сервера отчетов (службы SSRS в собственном режиме) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, components
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - components [Reporting Services], configuring
 - configuring servers [Reporting Services]
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: ca2bbc7549a2616195061a5079918f236e963e28
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c47afb35579380fd35837aae517ed4af1f922155
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550035"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276100"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)
   В этом разделе приводится сводка подходов, которые можно использовать для настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Он также включает список разделов, в которых объясняется, как настраивать конкретные компоненты, функции и возможности сервера. Для настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно.  

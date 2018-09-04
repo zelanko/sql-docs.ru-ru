@@ -1,29 +1,23 @@
 ---
 title: Синтаксис пути к элементу для XML-данных отчета (SSRS) | Документация Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e9ef6761a754f9f25dc47cb033ef491be544ee74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d756cca30be1b6bc74be577c0b5498cd34c11292
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022661"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265280"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Синтаксис пути к элементу для XML-данных отчета (SSRS)
   В конструкторе отчетов для определения данных из источника данных XML, которые должны использоваться в отчете, указывается путь к элементу с учетом регистра. Путь к элементу — это путь по иерархическим XML-узлам в источнике XML-данных и атрибуты этих узлов. Чтобы использовать путь к элементу по умолчанию, оставьте пустым запрос набора данных или XML **ElementPath** для XML- **Query** . При получении данных из источника XML-данных узлы элементов, которые имеют текстовые значения и атрибуты узла элемента, преобразуются в столбцы результирующего набора. При выполнении запроса значения этих узлов и атрибуты преобразуются в данные строк. Эти столбцы появляются в качестве коллекции полей набора данных в области данных отчета. В этом разделе содержится информация о синтаксисе пути к элементу.  

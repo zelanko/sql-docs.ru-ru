@@ -1,29 +1,23 @@
 ---
 title: Журнал выполнения сервера отчетов и представление ExecutionLog3 | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2127c8b47f7b61114b8a2b9aa7bce78df5682f5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 85ebd0ec4668387609781e72becad43e9b52a4a8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028901"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273796"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Журнал выполнения сервера отчетов и представление ExecutionLog3
   Журнал выполнения для сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]содержит сведения об отчетах, которые создаются на одном или нескольких серверах в масштабном развертывании в собственном режиме или в ферме SharePoint. Журнал выполнения отчетов можно использовать для изучения частоты, с которой запрашивается отчет, частоты использования различных форматов вывода и времени обработки в миллисекундах, занимаемого каждой фазой обработки. Журнал содержит сведения о продолжительности времени, затраченного на выполнение запроса набора данных отчета, и времени, затраченного на обработку данных. Администраторы сервера отчетов могут просматривать информацию журнала, выявлять задачи, выполняющиеся продолжительное время, и вносить предложения для разработчиков отчетов в тех областях организации отчета (набор данных или обработка), в которых они могут проводить улучшения.  
@@ -113,7 +107,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  В следующей таблице описаны данные, которые перехватываются в журнале выполнения отчетов  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |InstanceName|Имя экземпляра сервера отчетов, обработавшего запрос. Если в применяемой среде имеется больше одного сервера отчетов, можно анализировать распределение InstanceName для контроля и определения того, распределяет ли программа уравновешивания сетевой нагрузки запросы по серверам отчетов в соответствии с ожидаемым.|  
 |ItemPath|Путь, по которому сохраняется отчет или элемент отчета.|  
@@ -328,7 +322,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  В следующей таблице описаны данные, которые перехватываются в журнале выполнения отчетов  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |InstanceName|Имя экземпляра сервера отчетов, обработавшего запрос.|  
 |ReportPath|Структура пути к отчету.  Например, отчет с именем «test», который находится в корневом каталоге в диспетчере отчетов, будет иметь значение ReportPath, равное «/test».<br /><br /> Отчет с именем «test», который сохранен в папке «samples» в диспетчере отчетов, будет иметь значение ReportPath, равное «/Samples/test/».|  
@@ -360,7 +354,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  В следующей таблице описаны данные, которые перехватываются в журнале выполнения отчетов  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |InstanceName|Имя экземпляра сервера отчетов, обработавшего запрос.|  
 |ReportID|Идентификатор отчета.|  

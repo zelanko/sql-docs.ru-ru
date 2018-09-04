@@ -1,14 +1,10 @@
 ---
 title: Язык определения отчетов (SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
@@ -20,15 +16,14 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5dadddc71c69d9aec0ed47f7fb865374ced3e42a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f1132b02f5a58a26f1c732027f6b72f1903f53c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266047"
 ---
 # <a name="report-definition-language-ssrs"></a>Язык определения отчетов (SSRS)
   Язык определения отчетов — это средство представления определений отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в формате XML. Определение отчета содержит сведения о получении данных и о макете для отчета. Язык определения отчетов состоит из элементов XML, которые соответствуют грамматике XML, созданной для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Предусмотрена возможность добавления пользовательских функций для управления значениями элементов отчета, стилями и форматированием путем обращения к сборкам кода в файлах определения отчета.  
@@ -63,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="bkmk_RDL_Types"></a> Типы RDL  
  Следующая таблица содержит список типов, используемых в элементах и атрибутах RDL.  
   
-|Тип|Description|  
+|Тип|Описание|  
 |----------|-----------------|  
 |**Двоичный**|Свойство с закодированным в base-64 двоичным значением.|  
 |**Boolean**|Свойство объекта со значением **true** или **false** . Если иное не указано, то значением дополнительного объекта Boolean будет **False**.|  

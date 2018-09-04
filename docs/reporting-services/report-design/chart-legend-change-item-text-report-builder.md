@@ -1,26 +1,20 @@
 ---
 title: Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 96bf59c33e72a6271b5b1f6421df2101839f5a1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff6d22f2ed031a64061b0adab3c19f85df706e74
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020851"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275796"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Условные обозначения диаграммы — изменение текста элемента (построитель отчетов)
   При помещении поля в область «Значения» диаграммы автоматически создается элемент условных обозначений, содержащий имя этого поля. Каждый элемент условных обозначений связан с отдельным рядом на диаграмме, за исключением фигурных диаграмм, в которых условные обозначения связаны с конкретными точками данных, а не с отдельными рядами.  
@@ -42,7 +36,7 @@ ms.locfileid: "33020851"
   
  В следующей таблице представлены примеры ключевых слов, относящихся к определенным диаграммам, которые могут использоваться для свойства **Пользовательский текст условных обозначений** . Дополнительные сведения о ключевых словах см. в разделе [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-|Ключевое слово|Description|Пример отображения текста в условных обозначениях|  
+|Ключевое слово|Описание|Пример отображения текста в условных обозначениях|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|Отображает общее значение в процентах с точностью до одного десятичного разряда.|85,0 %|  
 |`#VALY`|Отображает действительное числовое значение поля данных.|17 000|  

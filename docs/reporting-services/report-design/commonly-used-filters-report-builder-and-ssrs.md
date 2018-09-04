@@ -1,14 +1,10 @@
 ---
 title: Часто используемые фильтры (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multivalued parameters [Reporting Services]
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - parameters [Reporting Services], multivalued
 - valid values [Reporting Services]
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4b1dee78e6edf4137d1fa50f2f81492989edd752
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5552d0464fd245cbdad9a133420779b70dd12c31
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021001"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272356"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Часто используемые фильтры (построитель отчетов и службы SSRS)
   Чтобы создать фильтр, необходимо указать одно или несколько уравнений фильтра. Уравнение фильтра состоит из выражения, типа данных, оператора и значения. В этом разделе приведены примеры распространенных фильтров.  
@@ -36,7 +30,7 @@ ms.locfileid: "33021001"
 ## <a name="filter-examples"></a>Примеры фильтров  
  В следующей таблице перечислены примеры уравнений фильтра, использующих различные типы данных и различные операторы. Область сравнения определяется элементом отчета, для которого определен фильтр. Например, для фильтра, определенного для набора данных, **TOP % 10** — это верхние 10% значений в наборе данных; для фильтра, определенного для группы, **TOP % 10** — это верхние 10% значений в группе.  
   
-|Простое выражение|Тип данных|Оператор|Значение|Description|  
+|Простое выражение|Тип данных|Оператор|Значение|Описание|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|Включает все значения данных, превышающие 7.|  
 |`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|Включает 10 верхних значений данных.|  

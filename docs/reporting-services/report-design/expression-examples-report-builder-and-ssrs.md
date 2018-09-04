@@ -1,15 +1,11 @@
 ---
 title: Примеры выражений (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - page breaks [Reporting Services], expressions
 - green-bar reports [Reporting Services]
@@ -26,15 +22,14 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-caps.latest.revision: 101
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: a09dc43bec25c2cd98366b0c093702aaf91417ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54c91dba3d59b4960ca193c5bbb8c1c7e761ba76
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273440"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
 Выражения часто используются в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для управления содержимым и внешним видом отчета. Выражения записываются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], и в них можно использовать встроенные функции, пользовательский код, переменные отчета, групповые переменные и определяемые пользователем переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типах ссылок, которые могут быть включены, см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) и [Добавление выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  

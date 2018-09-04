@@ -1,25 +1,20 @@
 ---
 title: Поиск и просмотр отчетов с помощью браузера (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: b75f352d323a4fa675a31d5c2cd044e565225105
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2568e97b9207b37b4bf490f124e25aaeea5ca77b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268460"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Поиск и просмотр отчетов с помощью браузера (построитель отчетов и службы SSRS)
   Для просмотра отчета при непосредственном соединении с сервером отчетов можно использовать любой поддерживаемый веб-браузер. Каждому отчету на сервере отчетов соответствует URL-адрес. Предусмотрена возможность ввести веб-адрес отчета, чтобы открыть его в окне браузера независимо от веб-приложения. Отчет открывается в формате HTML и включает панель инструментов отчета, с помощью которых можно переходить по страницам или выполнять поиск значений данных в отчете. Можно задать параметры в URL-адресе, чтобы скрыть панель инструментов, или выбрать выходной формат отчета.  

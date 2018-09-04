@@ -1,29 +1,23 @@
 ---
 title: Файл конфигурации RSReportDesigner | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 45a1ca0907f5572f8409503fcb7227bcc8a08a62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e73cebccd25798f067bc807d01c3c110b8084e4d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026781"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281001"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner, файл конфигурации
   Файл конфигурации RSReportDesigner.config хранит параметры подготовки отчета и модулей обработки данных, доступных конструктору отчетов. Сведения о модуле обработки данных хранятся в элементе **Data** . Сведения о модуле обработки данных хранятся в элементе **Render** . Элемент **Designer** перечисляет построители запросов, используемые в конструкторе отчетов.  
@@ -59,7 +53,7 @@ ms.locfileid: "33026781"
   
 ## <a name="configuration-settings"></a>Параметры конфигурации  
   
-|Настройка|Description|  
+|Настройка|Описание|  
 |-------------|-----------------|  
 |**SecureConnectionLevel**|Определяет уровень безопасности подключения в веб-службе. Диапазон допустимых значений от 0 до 3, где 0 — минимальный уровень. Дополнительные сведения см. в статье [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md).|  
 |**InstanceName**|Идентификатор сервера предварительного просмотра. Не изменяйте это значение.|  

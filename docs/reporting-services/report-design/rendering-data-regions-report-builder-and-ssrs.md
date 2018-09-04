@@ -1,25 +1,20 @@
 ---
 title: Отрисовка областей данных (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 567bb447bec9e6ff59269aa23d7ab7fc88fc89e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02b1ef974d7f2e3366e67fd426b10aae3278d477
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277929"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Подготовка к просмотру областей данных (построитель отчетов и службы SSRS)
   В дополнение к общим параметрам подготовки к просмотру, применяющимся ко всем элементам отчета, у областей данных существуют дополнительные параметры, управляющие разбиением на страницы и отображением. Правила отображения, уникальные для областей данных, включают в себя правила, управляющие ростом области данных, правила, управляющие отображением угловой ячейки и ячеек заголовка, и правила, управляющие отображением областей данных, читаемых справа налево. Этот раздел содержит сведения о подготовке к просмотру различных частей области данных.  

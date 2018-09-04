@@ -1,14 +1,10 @@
 ---
 title: Управление доступом для кода в службах Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,15 +16,14 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0a6b82f5b7aae4d92b50334f14d51b0b6d17ac79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e1d6fcf86d77351354f2061182b2613ef3efb86
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269020"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Управление доступом для кода в службах Reporting Services
   Управление доступом для кода основывается на следующих базовых понятиях: свидетельство, группы кода и именованные наборы разрешений. В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] каждый из компонентов (диспетчер отчетов, конструктор отчетов и сервер отчетов) имеет файл политики, в котором задана конфигурация управления доступом для кода для пользовательских сборок, а также для модулей обработки данных, доставки, подготовки отчетов и безопасности. В следующих разделах приведены общие сведения об управлении доступом для кода. Дополнительные сведения по темам, рассматриваемым в этом разделе, см. в разделе "Модель политики безопасности" в документации по пакету SDK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

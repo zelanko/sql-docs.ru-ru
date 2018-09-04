@@ -1,14 +1,10 @@
 ---
 title: Реализация модуля доставки | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], delivery
 - delivery extensions [Reporting Services]
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e4388f157aba6ae590f2bc56109b18696e98ea49
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: c46b8f92f721b9cced60ad41a1abaa2c6da81b43
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40406811"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277642"
 ---
 # <a name="implementing-a-delivery-extension"></a>Реализация модуля доставки
   Службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют пользователям создавать и публиковать отчеты, которые затем могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

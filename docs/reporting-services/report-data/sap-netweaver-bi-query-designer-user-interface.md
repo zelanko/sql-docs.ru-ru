@@ -1,14 +1,10 @@
 ---
 title: Пользовательский интерфейс конструктора запросов SAP NetWeaver BI (построитель отчетов) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.dataview.sapbwquerydesigner.f1
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - SAP NetWeaver Business Intelligence [Reporting Services], query designer
 - query designers [Reporting Services]
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9323e6cf41ff7223634b744900997744c6feb563
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a59f3682f3984b0f7268980aaf81de278a25e80d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022891"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276356"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов BI SAP NetWeaver
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический конструктор запросов, предназначенный для построения запросов многомерных выражений к источнику данных SAP NetWeaver® Business Intelligence. Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из InfoCube, MultiProvider или запроса с поддержкой веб-доступа, определенного на источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
@@ -58,7 +52,7 @@ ms.locfileid: "33022891"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Панель инструментов графического конструктора запросов в режиме конструктора  
  Панель инструментов конструктора запросов содержит кнопки, которые помогают создавать запросы многомерных выражений с помощью графического интерфейса. В следующей таблице перечислены кнопки и описаны их функции.  
   
-|Кнопка|Description|  
+|Кнопка|Описание|  
 |------------|-----------------|  
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Недоступен для этого типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  

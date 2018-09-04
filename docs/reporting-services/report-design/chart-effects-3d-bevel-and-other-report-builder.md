@@ -1,28 +1,22 @@
 ---
 title: Эффекты рельефа, объемные и другие эффекты в диаграмме (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4170454a934fb8f35fff8c353f4bfa42eeec589d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd8856dce7d7671b075316cabfbbe697b79125a6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023081"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280678"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Эффекты диаграммы — трехмерное отображение, багетная рамка и другие (построитель отчетов)
   Объемные (трехмерные) эффекты можно использовать, чтобы добавить глубину и увеличить визуальную привлекательность диаграммы в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы. Например, если нужно выделить отдельный срез разрезанной круговой диаграммы, можно повернуть диаграмму и изменить перспективу так, что пользователи обратят внимание на этот сегмент в первую очередь. После применения объемных эффектов к диаграмме все цвета градиента и стили штриховки отключаются.  

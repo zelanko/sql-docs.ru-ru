@@ -1,29 +1,23 @@
 ---
 title: Настройка URL-адресов сервера отчетов (диспетчер конфигураций служб SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9d49d5cae66834cd9cfd304198fc4f677020fe75
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: db96a1af36bea565d00587096dfdbbc925b1fedf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322323"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273742"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
   В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL-адреса используются для доступа к веб-службам сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Прежде чем использовать любое приложение, необходимо настроить по крайней мере по одному URL-адресу для веб-службы и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для URL-адресов обоих приложений предоставляет значения по умолчанию, которые подходят для большинства сценариев развертывания, в том числе развертывания параллельно с другими веб-службами и приложениями.  

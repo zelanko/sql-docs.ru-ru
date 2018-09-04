@@ -1,14 +1,10 @@
 ---
 title: Развертывание модуля обработки данных | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - Extension element
 - deploying [Reporting Services], extensions
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: bd41f79d89e1514736b3453a4f6f038488b1200f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df6542f3e5035e4aae3d603c8068e37abc78f6d1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015131"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272573"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Развертывание модуля обработки данных
   После создания модуля обработки данных для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и компиляции его в библиотеку платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] необходимо сделать модуль доступным для обнаружения сервером отчетов и конструктором отчетов. Для этого нужно просто скопировать модуль в соответствующие каталоги и добавить записи в соответствующие файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -36,7 +30,7 @@ ms.locfileid: "33015131"
   
  В следующей таблице описаны атрибуты элемента **Extension** для модулей обработки данных.  
   
-|attribute|Description|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |**Название**|Уникальное имя модуля, например «SQL» для модуля обработки данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или «OLEDB» для модуля обработки данных OLE DB. Длина атрибута **Name** не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extension** файла конфигурации.|  
 |**Тип**|Список с разделителями-запятыми, содержащий полное пространство имен и имя сборки.|  
@@ -46,7 +40,7 @@ ms.locfileid: "33015131"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Развертывание модуля обработки данных на сервере отчетов](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md)|Описывает развертывание модуля обработки данных на сервере отчетов.|  
 |[Практическое руководство. Развертывание модуля обработки данных в конструкторе отчетов](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md)|Описывает развертывание модуля обработки данных в конструкторе отчетов.|  

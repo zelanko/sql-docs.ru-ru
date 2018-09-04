@@ -1,30 +1,24 @@
 ---
 title: Режим предварительного просмотра | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a74f2e15acc9d2ab6a9660ee294dff1cb7c30aac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ca0aa6329a06fbcf3a079c61c7d61da6b8d316c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029651"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268550"
 ---
 # <a name="preview-view"></a>Предварительный просмотр
 В конструкторе отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] представление **Предварительный просмотр** отображает отчет, готовый для просмотра. При предварительном просмотре отчета конструктор отчетов выполняет его локально и выводит в представлении «Предварительный просмотр». В режиме просмотра отчет обрабатывается полностью. Если отчет содержит сложный запрос или большой объем данных, при первом предварительном просмотре на его формирование может потребоваться несколько минут. При внесении последующих изменений, затрагивающих только форматирование отчета, в предварительном просмотре используются кэшированные данные.

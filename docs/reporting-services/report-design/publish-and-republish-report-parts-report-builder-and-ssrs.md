@@ -1,26 +1,20 @@
 ---
 title: Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 73fd3ad3b4c715c265ab8baf21d05803c08017a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae50cc2221b4b621e2582897bac787acc739ab05
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024681"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275496"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)
   Части отчета — это элементы отчета с разбиением на страницы, опубликованные отдельно на сервере отчетов, которые можно повторно использовать в других отчетах с разбиением на страницы. Предусмотрена возможность публикации элемента отчета с настройками по умолчанию в заданном по умолчанию местоположении или изменения таких метаданных элемента отчета, как заголовок и описание, с последующим сохранением где-то в другом месте на сервере отчетов. Можно также сохранить ее на сайте SharePoint, который объединен с сервером отчетов (при наличии соответствующих разрешений).  

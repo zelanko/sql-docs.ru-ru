@@ -1,27 +1,21 @@
 ---
 title: URL-адреса в файлах конфигурации (диспетчер конфигурации служб SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL configuration [Reporting Services]
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 69a1e38fe5b14bc67af8e156d3f88fa0a6d7b3dc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: fc31fa09432f2710e21eb3328610eb8f0af15c5d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322763"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269093"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложений в файле RSReportServer.config. В этом файле содержатся как URL-адреса, так и резервирование URL-адресов. Эти параметры имеют различные предназначения и подчиняются различным правилам изменения. Пользователям, имеющим опыт изменения настройки системы через файлы конфигурации, этот раздел поможет узнать назначение каждого из параметров URL-адресов.  

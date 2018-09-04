@@ -1,28 +1,22 @@
 ---
 title: Настройка сервера отчетов в кластере с балансировкой сетевой нагрузки | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: ecf545bf56a9886fa2409b570673ba36ad698eff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06bc8c4f366dadc391be2d6388a4383768c88d00
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027811"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279382"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>настроить сервер отчетов в кластере с балансированием сетевой нагрузки
   Если настраивается масштабное развертывание сервера отчетов для запуска в кластере с балансировкой сетевой нагрузки, необходимо выполнить следующие действия.  
@@ -38,7 +32,7 @@ ms.locfileid: "33027811"
 ## <a name="steps-for-report-server-deployment-on-an-nlb-cluster"></a>Шаги масштабного развертывания сервера отчетов на NLB-кластере  
  Используйте следующие рекомендации для установки и настройки развертывания.  
   
-|Шаг|Description|Дополнительные сведения|  
+|Шаг|Описание|Дополнительные сведения|  
 |----------|-----------------|----------------------|  
 |1|Прежде чем установить службы Reporting Services на серверных узлах в NLB-кластере, проверьте требования к масштабному развертыванию.|[Масштабное развертывание — собственный режим служб Reporting Services (диспетчер конфигурации)](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |2|Настройте NLB-кластер и убедитесь в его правильной работе.<br /><br /> Не забудьте сопоставить имя заголовка узла IP-адресу виртуального сервера NLB-кластера. Имя заголовка узла используется в URL-адресе сервера отчетов; его проще запомнить и ввести, чем IP-адрес.|Дополнительные сведения см. в документации по продукту Windows Server для соответствующей версии операционной системы Windows.|  

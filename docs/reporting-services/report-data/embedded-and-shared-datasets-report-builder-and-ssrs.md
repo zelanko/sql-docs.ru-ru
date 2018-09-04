@@ -1,26 +1,20 @@
 ---
 title: Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d4cca525b1549ad37388f6c4f0c45676c750d0cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43bb57b7bb802e9e806b297880ccabda9a7dca80
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020561"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266748"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Внедренные и общие наборы данных (построитель отчетов и службы SSRS)
   Набор данных в отчете представляет данные отчета, возвращаемые из запроса к внешнему источнику данных. Набор данных зависит от подключения к данным, которое содержит сведения о внешнем источнике данных. Сами по себе данные не включены в определение отчета. Набор данных содержит команду запроса, коллекцию полей, параметры, фильтры и параметры данных, включая учет регистра и параметры сортировки. Существует два типа наборов данных.  

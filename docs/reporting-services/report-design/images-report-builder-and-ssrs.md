@@ -1,26 +1,20 @@
 ---
 title: Изображения (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f20f2ff9de381baa3630892476bafc7c001da942
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da77854324005ed41022dd7f28e6650ddb80108b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023881"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273810"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Изображения (построитель отчетов и службы SSRS)
   Изображение — это элемент отчета, содержащий ссылку на изображение, которое внедрено в отчет или хранится в базе данных, на сервере отчетов или где-либо еще в Интернете. Изображение может быть рисунком, повторяющимся в строках данных. Изображение можно также использовать в качестве фона некоторых элементов отчета.  

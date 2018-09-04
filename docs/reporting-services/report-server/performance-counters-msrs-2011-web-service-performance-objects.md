@@ -1,14 +1,10 @@
 ---
 title: Счетчики производительности для веб-службы MSRS 2011, объекты производительности | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8851d1c5deac3b759452ec23115cb70dd3cf31f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5faebaba96b5162e0c4127f6898256455e7bc561
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028171"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278505"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Счетчики производительности для веб-службы MSRS 2011, объекты производительности
   В этом разделе рассматриваются счетчики производительности для объектов производительности **MSRS 2011 Web Service** и **MSRS 2011 Windows Service** . Эти объекты являются частью развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в собственном режиме.  
@@ -52,7 +46,7 @@ ms.locfileid: "33028171"
   
  В следующей таблице перечислены счетчики, включенные в объект производительности **MSRS 2011 Web Service** .  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Активные сеансы**|Число активных сеансов. Этот счетчик ведет подсчет совокупного количества сеансов браузера, создаваемых при выполнении отчета, как активных, так и неактивных.<br /><br /> Значение счетчика уменьшается на единицу при удалении каждой записи сеанса. По умолчанию сеансы удаляются через десять минут неактивности.|  
 |**Попаданий в кэш/с**|Количество запросов в секунду для кэшированных отчетов. Это запросы для повторно подготовленных к просмотру отчетов, а не для отчетов, обрабатываемых непосредственно из кэша. (См. раздел **Всего попаданий в кэш** ниже в этой статье.)|  
@@ -82,7 +76,7 @@ ms.locfileid: "33028171"
   
  В следующей таблице перечислены счетчики, включенные в объект производительности **MSRS 2011 Windows Service** .  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Активные сеансы**|Количество активных сеансов, хранящихся в базе данных сервера отчетов. Этот счетчик обеспечивает совокупный подсчет всех используемых сеансов браузера, формируемых из подписок на отчет, которые все еще активны или нет.|  
 |**Сбросов кэша/с**|Количество операций записи из кэша на диск в секунду.|  

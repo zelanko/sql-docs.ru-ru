@@ -1,26 +1,20 @@
 ---
 title: Константы в выражениях (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: d639171653906294640e327abb25b08a99bc38dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ffdf75ddf3cf6d2124f3aea7b4af59f1c117a6d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020501"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276163"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>Константы в выражениях (построитель отчетов и службы SSRS)
   Константа состоит из литерального текста или предопределенного текста. Обработчик отчетов имеет доступ к стандартным константам, поэтому при включении их в выражения значения, которые они представляют, заменяются в выражении до его оценки.  
@@ -40,7 +34,7 @@ ms.locfileid: "33020501"
 ## <a name="rdl-constants"></a>Константы языка определения отчетов  
  В выражении можно использовать константы, определенные в языке определения отчетов. В диалоговом окне **Выражение** константы появляются при создании выражения для свойства отчета, которое принимает только некоторые допустимые значения, известные также как перечислимые типы. В следующей таблице показаны два примера.  
   
-|Свойство|Description|Значения|  
+|Свойство|Описание|Значения|  
 |--------------|-----------------|------------|  
 |TextAlign|Допустимые значения для выравнивания текста в текстовом поле.|General, Left, Center, Right|  
 |BorderStyle|Допустимые значения для линии, добавляемой в отчет.|Default, None, Dotted, Dashed, Solid, Double, DashDot, DashDotdot|  
@@ -53,7 +47,7 @@ ms.locfileid: "33020501"
 ## <a name="clr-constants"></a>Константы среды CLR  
  В выражении можно использовать константы, определенные в классах среды CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . В следующей таблице показан пример определенного системой цвета.  
   
-|Константа|Description|  
+|Константа|Описание|  
 |--------------|-----------------|  
 |MistyRose|При создании выражения для свойства отчета, основанного на цвете фона, можно указать цвет по имени. Допустимые имена перечислены в диалоговом окне **Выражение** .|  
   

@@ -1,14 +1,10 @@
 ---
 title: Использование доступа по URL-адресу в приложении Windows | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,15 +15,14 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: dd8e76d7bb66bee51001ab3884a0cd8d9c412685
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb604f69b155d278fe233be16100ea2e0becc8d9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266651"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>Интеграция служб Reporting Services с помощью доступа по URL-адресу — приложения Windows
   Доступ к серверу отчетов по URL-адресу оптимизирован для веб-среды, его также можно использовать для внедрения отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в приложение [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Однако для доступа по URL-адресу, в котором используется Windows Forms, по-прежнему необходимо применение технологии веб-браузера. Для интеграции доступа по URL-адресу и Windows Forms можно использовать следующие сценарии.  

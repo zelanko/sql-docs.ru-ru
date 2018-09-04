@@ -1,25 +1,20 @@
 ---
 title: Управление общими наборами данных | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 7bd03c804791c67128d81eb3d7a6dbc64373e03b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9148b723d2ac5ccb566c28524f54bad48de2a75
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268739"
 ---
 # <a name="manage-shared-datasets"></a>Управление общими наборами данных
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]общие наборы данных получают данные из общих источников данных, которые подключены к внешним источникам данных. Общий набор данных предоставляет способ совместного использования запроса в целях предоставления согласованного набора данных для нескольких отчетов. Запрос к набору данных может включать параметры набора данных. Общий набор данных можно настроить для кэширования результатов запроса для конкретных сочетаний параметров при первом использовании или по расписанию. Кэширование общего набора данных можно использовать в сочетании с кэшированием отчета и потоками данных отчета в целях управления доступом к источнику данных.  
@@ -56,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
  Следующие дополнительные свойства общего набора данных настраиваются автоматически.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |HasDataSourceCredentials|Указывает, имеет ли связанный общий источник данных учетные данные, хранящиеся на сервере отчетов.|  
 |HasUserProfileDependencies|Указывает, содержит ли отчет ссылку на пользовательскую глобальную коллекцию в своем запросе или в выражениях фильтра.|  

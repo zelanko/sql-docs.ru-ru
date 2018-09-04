@@ -1,14 +1,10 @@
 ---
 title: Свойства служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -22,16 +18,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], properties
 - properties [Reporting Services]
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: b74d43ccb647e65f82919ee1544639127df57088
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5970c78650137871a62bf95d82223f604421cb70
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026441"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269288"
 ---
 # <a name="reporting-services-properties"></a>Свойства служб Reporting Services
   Сервер отчетов определяет набор системных свойств, являющихся глобальными для сервера отчетов, и набор свойств элементов, связанных с отдельным элементом, хранимым в базе данных сервера отчетов. Свойства, определенные сервером отчетов, не могут быть удалены; в некоторых случаях они доступны только для чтения. Приложение может расширить системные свойства и свойства элементов, добавив к ним дополнительные определяемые пользователем свойства.  
@@ -47,7 +41,7 @@ ms.locfileid: "33026441"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Свойства элемента сервера отчетов](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-item-properties.md)|Описывает характерные для элементов свойства в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |[Свойства системы сервера отчетов](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)|Описывает характерные для системы свойства в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  

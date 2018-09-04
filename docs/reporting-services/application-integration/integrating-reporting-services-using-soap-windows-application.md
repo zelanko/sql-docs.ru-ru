@@ -1,14 +1,10 @@
 ---
 title: Использование API SOAP в приложении Windows | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - Windows Forms [Reporting Services]
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 7654e12f0455a938cfb3a0761dba1aa3c4219401
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e3337d0912e0249c7ac49523bb4159458ba36e8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015571"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274051"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Интеграция служб Reporting Services с использованием протокола SOAP — приложения Windows
   С помощью API SOAP служб Reporting Services можно получить доступ ко всем функциональным возможностям сервера отчетов. Поскольку API SOAP является веб-службой, к нему легко получить доступ, чтобы предоставить для пользовательских бизнес-приложений функции создания отчетов в масштабе предприятия. Чтобы получить доступ к веб-службе в приложении Windows, можно просто написать код, который вызывает службу. С помощью платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно создать класс-посредник, который делает доступными свойства и методы веб-службы и позволяет воспользоваться привычной инфраструктурой и программными средствами для построения бизнес-приложений на основе технологии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

@@ -1,14 +1,10 @@
 ---
 title: Публикация отчетов на сервере отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
@@ -24,15 +20,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9a69b67fcbc9d047526ff0c30883731543a826a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95427bd5ccb158ede439cb32aa7ebfcb24c61bf9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264441"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Публикация отчетов на сервере отчетов
   После создания и проверки отчета или набора отчетов можно воспользоваться функциями развертывания в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для публикации отчетов на сервере отчетов. Можно опубликовать отдельные отчеты или проект "Сервер отчетов", включающий несколько отчетов и источников данных. Публикация проекта сервера отчетов — это самый простой способ публикации нескольких отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует термин *развернуть*вместо термина *опубликовать*. Два этих термина взаимозаменяемы.  

@@ -1,14 +1,10 @@
 ---
 title: Свойства MSReportServer_ConfigurationSetting | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - MSReportServer_ConfigurationSetting Properties
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 883f52f2c458b3cf99a287818dff1d5c23b0f305
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c38f439e53f3efd60b60ae026f485b61ecb9ee0c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33034171"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277426"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>Свойства MSReportServer_ConfigurationSetting
   Класс MSReportServer_ConfigurationSetting представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации RSReportServer.config.  

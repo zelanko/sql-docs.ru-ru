@@ -1,29 +1,23 @@
 ---
 title: Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10093"
 - sql13.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 99d9838de351295f17729819f223668e407c0c89
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a1134d1a26fdd63a95a9e278c47f7c4041bdf22
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020091"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278293"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS)
   Вложенные отчеты следует использовать в том случае, если необходимо создать основной отчет, являющийся контейнером для нескольких связанных отчетов. Вложенный отчет — это ссылка на другой отчет. Чтобы связать отчеты посредством значений данных (например, для отображения данных из нескольких отчетов одному клиенту), необходимо разработать параметризованный отчет (например отчет, показывающий сведения об определенном клиенте), который будет служить в качестве вложенного отчета. При добавлении вложенного отчета в основной отчет можно указать параметры, которые будут переданы вложенному отчету.  

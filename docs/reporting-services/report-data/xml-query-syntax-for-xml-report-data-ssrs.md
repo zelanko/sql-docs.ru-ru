@@ -1,14 +1,10 @@
 ---
 title: Синтаксис запроса XML для XML-данных отчета (службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - namespaces [Reporting Services]
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d206256152536c562128072ceaf47b88fb78b0de
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 21e89ee1790e7db8c9e163c93262ba0cb2a76f7d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40410526"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272286"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Синтаксис запроса XML для XML-данных отчета (SSRS)
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно создавать наборы данных для источников XML-данных. После определения источника данных можно создать запрос для получения набора данных. В зависимости от типа XML-данных, на которые указывает источник данных, этот запрос создается путем включения либо элемента XML **Query** , либо пути к элементу. Элемент XML **Query** начинается с тега **\<Query>** и включает пространства имен и XML-элементы, зависящие от источника данных. Путь к элементу не зависит от пространства имен и указывает необходимые узлы и атрибуты узлов в базовых XML-данных при помощи XPath-подобного синтаксиса. Дополнительные сведения о путях к элементу см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  

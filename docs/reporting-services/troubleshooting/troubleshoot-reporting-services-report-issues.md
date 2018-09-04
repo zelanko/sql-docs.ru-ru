@@ -1,26 +1,20 @@
 ---
 title: Устранение неполадок с отчетами служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 7566afc5761a094dfad1c27717cd6810415c9511
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 86a841e4e60e0c049bfe1aec0d09960298bb58f0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40409401"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275216"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Устранение неполадок при подготовке отчетов служб Reporting Services
 Этот раздел поможет в устранении проблем в работе [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] при проектировании отчета, предварительном просмотре отчета, публикации отчета на сервере отчетов в основном режиме или режиме SharePoint, а также при просмотре отчета на сервере отчетов или экспорте отчета в другой формат файла.  

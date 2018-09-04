@@ -1,26 +1,20 @@
 ---
 title: Выражения (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2e0630d23d308c061f5d3adf69e17473b5cfbf2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0e20a42c42702e99e1ed607b7ebb7a74a88e6b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024351"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273137"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Выражения (построитель отчетов и службы SSRS)
   Выражения часто используются в отчетах с разбивкой на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] для получения, вычисления, отображения, группирования, сортировки, параметризации и форматирования данных. 
@@ -86,7 +80,7 @@ ms.locfileid: "33024351"
   
  В следующей таблице перечислены типы ссылок, которые можно включать в выражение.  
   
-|Ссылки|Description|Пример|  
+|Ссылки|Описание|Пример|  
 |----------------|-----------------|-------------|  
 |[Константы](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|Описывает константы для свойств, требующих постоянных значений, таких как цвет шрифта; к этим константам можно получить доступ в диалоговом режиме.|`="Blue"`|  
 |[Операторы](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|Описывает операторы, которые можно использовать для объединения ссылок в выражении. Например, оператор **&** используется для объединения строк.|`="The report ran at: " & Globals!ExecutionTime & "."`|  

@@ -1,26 +1,20 @@
 ---
 title: Устранение проблем с проектированием отчетов в Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8269b227a144f8e600ca885adaf5b80f2a521e19
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 69faba99ae28fd4b774f3751c2355c0addb0e9b2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40406537"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269159"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Устранение проблем проектирования отчетов с помощью служб Reporting Services
 Проблемы проектирования отчетов могут возникать при создании макета отчета с помощью конструктора в приложении разработки отчетов. Этот раздел помогает устранять эти проблемы.   

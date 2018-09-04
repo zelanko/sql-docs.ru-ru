@@ -1,30 +1,24 @@
 ---
 title: Режим конструктора | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords:
 - Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: dcd1444d7b340f805189b0de7d01fc1aabf7cb2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9385347fde1964cab65e3ade5d40f1c39b33c744
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031482"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277525"
 ---
 # <a name="design-view"></a>Конструктор
 В конструкторе отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] расположить элементы в отчете можно в режиме конструктора. Конструктор иногда называют областью конструктора или макетом.  

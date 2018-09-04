@@ -1,26 +1,20 @@
 ---
 title: Советы по конструированию отчетов (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 41cedb83e24fecb71089487df2a868b104a1783c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9582c17aef675835049e50ff363dfb860ee113b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027421"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271019"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Советы по конструированию отчетов (построитель отчетов и службы SSRS)
   Следуйте приведенным ниже советам при разработке отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы.  

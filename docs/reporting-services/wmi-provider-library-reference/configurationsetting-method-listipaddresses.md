@@ -1,28 +1,22 @@
 ---
 title: Метод ListIPAddresses (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ListIPAddresses method
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: ba525512304565c76e101e1a76b58f4e7ac1be79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 53d44d44760405f41f7de0393996d500a3e52865
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030011"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265317"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>Метод ConfigurationSetting — ListIPAddresses
   Список IP-адресов для компьютера, на котором размещен сервер отчетов.  

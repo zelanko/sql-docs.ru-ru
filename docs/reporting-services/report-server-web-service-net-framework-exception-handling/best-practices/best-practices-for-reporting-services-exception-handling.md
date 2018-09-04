@@ -1,30 +1,24 @@
 ---
 title: Рекомендации по обработке исключений в службах Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service-net-framework-exception-handling
-ms.reviewer: ''
+ms.technology: report-server-web-service-net-framework-exception-handling
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 helpviewer_keywords:
 - exceptions [Reporting Services], best practices
 ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0e56cbdf3023c2958ee7eb37c2dfc9f606ad45e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b15d32be84cec144c00cd40f2e150718ff0cc414
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025101"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277545"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Рекомендации по обработке исключений в службах Reporting Services
   При разработке приложений служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] существует несколько методик, которые можно использовать для избежания возникновения исключений или сокращения их количества. При возникновении исключений пользователю следует выводить ясное и четкое сообщение об ошибке; кроме того, следует добавить обработку исключений, чтобы приложения не завершались неожиданно.  
@@ -39,7 +33,7 @@ ms.locfileid: "33025101"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Предотвращение использования недопустимых запросов](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md)|Описывает методики предотвращения отправки недопустимых запросов на сервер отчетов.|  
 |[Использование блоков Try-Catch](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)|Описывает, как можно увеличить надежность приложения с использованием блоков TRY и CATCH.|  

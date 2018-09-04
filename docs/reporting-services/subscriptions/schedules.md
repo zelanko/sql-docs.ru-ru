@@ -1,14 +1,10 @@
 ---
 title: Расписания | Документы Майкрософт
-ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: ff16cd9d2794ded1d6b841a14d4ee01f45a9f9d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31b3dc2372f9ac7ac531c6378610774b8b8ef7db
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035521"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266587"
 ---
 # <a name="schedules"></a>Расписания
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют **общие расписания** и **расписания отчетов** , что позволяет управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.

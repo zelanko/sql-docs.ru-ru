@@ -1,14 +1,10 @@
 ---
 title: Изменение или удаление назначения ролей (диспетчер отчетов) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 112f4056b084e183d4651517c99d02b0335a3d36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 372c423131dc4e35d3fd5efcc39b881518c19e2f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028101"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264785"
 ---
 # <a name="role-assignments---modify-or-delete"></a>Изменение или удаление назначений ролей
   Назначение ролей сопоставляет учетную запись группы или пользователя со стандартным определением роли, включающим задачи, которые могут быть выполнены. Оно определяет типы операций, которые пользователь может выполнять с папками, отчетами, моделями и другим типом содержимого. Чтобы создать, изменить или удалить назначения ролей, используется диспетчер отчетов. После создания назначения ролей для конкретного пользователя или группы ее можно изменить, выбрав другую роль. Если нужно отменить разрешения на сервер отчетов, можно удалить на нем назначение ролей.  

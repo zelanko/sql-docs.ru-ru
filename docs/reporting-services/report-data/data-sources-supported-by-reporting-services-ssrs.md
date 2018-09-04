@@ -1,14 +1,10 @@
 ---
 title: Источники данных, поддерживаемые службами Reporting Services (SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
@@ -21,16 +17,14 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-caps.latest.revision: 96
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5b243958293408ce8ebf1f6e41124bb5f9034d05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 075fe551777f293b23a4408ff795622c51ae7b0a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022441"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266246"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  

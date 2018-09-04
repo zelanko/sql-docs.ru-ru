@@ -1,26 +1,20 @@
 ---
 title: Создание матрицы (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8d28d9071a245185e9801d1b1c482a058752e6da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a15a323bdffeac0671cf04c3fd91df120c8b31f6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022101"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279355"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Создание матрицы (построитель отчетов 3.0 и службы SSRS)
   Матрица используется для отображения сгруппированных данных и сводной информации. Данные можно группировать по нескольким полям либо выражениям в группах строк и столбцов. Матрицы обеспечивают функциональность, подобную перекрестным и сводным таблицам. Во время выполнения, по мере объединения данных отчета и областей данных матрица растет на странице в горизонтальном и вертикальном направлении. Значения в ячейках матрицы отображают статистические значения пересечения групп строк и столбцов, которым принадлежит ячейка. Строки и столбцы можно форматировать, чтобы выделить нужные данные. Можно также включить переключатели детализации, которые по умолчанию скрывают подробные данные, чтобы пользователи могли по желанию отобразить подробные сведения.  

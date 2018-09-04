@@ -1,14 +1,10 @@
 ---
 title: Создание прокси веб-службы | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 7cfc77e602a6d5082a9ffc44ed98b1710bcd19e9
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
+ms.openlocfilehash: 319f34f50b4378f71b87b79978fadb011d310b7a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024180"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280295"
 ---
 # <a name="creating-the-web-service-proxy"></a>Создание учетной записи-посредника веб-службы
   Клиент и веб-служба могут обмениваться данными с помощью сообщений SOAP, в который входные и выходные параметры инкапсулируются в формате XML. Класс-посредник сопоставляет параметры с XML-элементами, а затем отправляет сообщения SOAP по сети. Таким образом класс-посредник устраняет необходимость связываться с веб-службой на уровне SOAP и позволяет вызывать методы веб-службы в любой среде разработки, которая поддерживает протокол SOAP и прокси для веб-служб.  

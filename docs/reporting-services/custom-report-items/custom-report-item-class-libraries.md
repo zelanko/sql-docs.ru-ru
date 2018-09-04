@@ -1,14 +1,10 @@
 ---
 title: Библиотеки классов пользовательского элемента отчета | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: custom-report-items
-ms.reviewer: ''
+ms.technology: custom-report-items
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 54ce65329f2be09e833e38be75bea1ddfcdd0149
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47a2ce9ba8cf1073fa5737e8f1291ed49eb0caac
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017891"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272076"
 ---
 # <a name="custom-report-item-class-libraries"></a>Библиотеки классов пользовательского элемента отчета
   Пользовательские элементы отчета используют классы из пространства имен **Microsoft.ReportDesigner**. Классы, используемые для реализации пользовательского элемента отчета, можно разделить на две основные группы: уникальные классы, созданные для поддержки инфраструктуры пользовательских элементов отчетов, и управляемые классы-оболочки, инкапсулирующие функциональные возможности соответствующих элементов языка определения отчетов. Образец кода для использования этих классов см. на странице [Образцы продуктов служб SQL Server Reporting](http://go.microsoft.com/fwlink/?LinkId=177889).  

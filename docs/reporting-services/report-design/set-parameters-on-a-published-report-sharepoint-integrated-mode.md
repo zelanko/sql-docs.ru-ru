@@ -1,29 +1,23 @@
 ---
 title: Настройка параметров опубликованного отчета в режиме интеграции с SharePoint | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 537dfe4f3ef8f6f73cf7bcdeda5c26a0b91265a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 741c377f848c67a71dc34b0191a892e3e1389426
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026301"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269360"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Настройка параметров опубликованного отчета в режиме интеграции с SharePoint
   Параметризованным называется отчет, который принимает вводимые значения, используемые для фильтрации данных при запуске отчета. Параметры определяются на этапе создания отчета. В зависимости от того, как параметр отчета определяется в определении отчета, этот параметр может принимать одно значение, несколько значений или динамические значения, изменяющиеся в ответ на предшествующий выбор (например, когда пользователь выбирает категорию продукта, его следующим шагом может быть выбор конкретного продукта из этой категории). Параметр может иметь значение по умолчанию, которое используется для запуска отфильтрованной версии отчета в автоматическом режиме и может быть заменено другим значением.  

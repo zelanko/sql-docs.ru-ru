@@ -1,28 +1,22 @@
 ---
 title: Альтернативные способы подключения к данным (построитель отчетов) | Документы Майкрософт
-ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8d84cb434338e8174fe74f7466be768bc344e2fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b421f79dd45efdb7b9c0942b6611e88a0dbd7b9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015161"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272170"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Альтернативные способы создания подключения к данным (построитель отчетов)
 Подключение к данным содержит сведения, необходимые для подключения к внешнему источнику данных, например к базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Обычно сведения о соединении и учетные данные, которые будут использоваться при соединении с источником данных, можно получить у владельца источника данных.  

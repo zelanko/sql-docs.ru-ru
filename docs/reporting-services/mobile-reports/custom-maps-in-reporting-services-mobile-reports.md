@@ -1,26 +1,20 @@
 ---
 title: Пользовательские карты в мобильных отчетах Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: ea22c2ea60a681accc747e9426fbecb4aad7b515
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 404f6d888794be50fb0ec153fb291d06ce641a93
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018523"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272968"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Custom maps in Reporting Services mobile reports
 Географические карты в издателе мобильных отчетов для SQL Server определяются в формате, известном как *файлы фигур ESRI*.  

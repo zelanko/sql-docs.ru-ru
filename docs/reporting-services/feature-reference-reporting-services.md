@@ -1,31 +1,25 @@
 ---
 title: Справочник по функциям (службы Reporting Services) | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 2.0, F1 help
 - Reporting Services, getting assistance
 - tools [Reporting Services]
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e6eace09048fd6ba2399e5314d6868efd9e7baf7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ed0deeeda39ade71afc48497bc3f21e6f132e5d1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550085"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270289"
 ---
 # <a name="feature-reference-reporting-services"></a>Справочник по функциям (службы Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают несколько средств и приложений, которые могут использоваться для создания, управления и просмотра отчетов. В этом разделе приводятся конкретные подразделы, описывающие диалоговые окна, веб-страницы и мастера этих инструментальных средств и приложений.  

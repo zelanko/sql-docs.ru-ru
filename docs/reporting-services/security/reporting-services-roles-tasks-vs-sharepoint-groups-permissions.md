@@ -1,14 +1,10 @@
 ---
 title: Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0ec18593b6e7f65116492829f90d8a531c73405d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2d48222374e966110d6079bb2e48d66302b669f4
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028381"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273214"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint
   В этом разделе приводится сравнение функции авторизации на основе ролей и задач служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающих в собственном режиме, со средствами безопасности из продуктов SharePoint. В нем сравнивается терминология и характеристики ролей, задач, групп SharePoint, уровней разрешений и самих разрешений.  

@@ -1,14 +1,10 @@
 ---
 title: Модули служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - Reporting Services, extending
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8b5005c8bbd1b64b31696804e70a1f1556fa9ba1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b7d8ea53f15692c4faae5757214d3623efe2004
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015391"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265833"
 ---
 # <a name="reporting-services-extensions"></a>модули служб Reporting Services
   Модульная архитектура служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обеспечивает возможность расширения. Доступен API управляемого кода, что позволяет легко разрабатывать, устанавливать модули, используемые многими компонентами служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], а также управлять этими модулями. Можно создавать закрытые и общие сборки с помощью платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и добавлять в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] новые функции, чтобы соответствовать растущим требованиям.  

@@ -1,28 +1,22 @@
 ---
 title: Учебник. Добавление параметра к отчету (построитель отчетов) | Документация Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: eb1fa8539eb0ba96edb5c48d29af160507e61998
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fd54e59c30a03cc918bc080ab64b21db8983ba1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037231"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278482"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Учебник. Добавление параметра к отчету (построитель отчетов)
 В этом учебнике вы добавите параметр к отчету [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, чтобы его читатели могли фильтровать данные по одному или нескольким значениям. 

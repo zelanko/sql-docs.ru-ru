@@ -1,29 +1,23 @@
 ---
 title: Защита и обеспечение безопасности служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services]
 - Reporting Services, security
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 079f0302a79a77552deeb0f802e25eb3b0691a6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb833b7cf10bf5e8108d66108d366b4a34a135c1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027071"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278552"
 ---
 # <a name="reporting-services-security-and-protection"></a>Защита и обеспечение безопасности служб Reporting Services
   Этот раздел содержит сведения о средствах безопасности служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В разделе также объясняются модели авторизации и поставщики проверки подлинности, поддерживаемые в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -36,7 +30,7 @@ ms.locfileid: "33027071"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также использует роли и разрешения для контроля доступа пользователей к содержимому каталога сервера отчетов (иными словами, кто к чему имеет доступ и как этот доступ осуществляется). Дополнительные сведения см. в статье [Роли и разрешения (службы Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описания задач|Ссылки|  
 |-----------------------|-----------|  

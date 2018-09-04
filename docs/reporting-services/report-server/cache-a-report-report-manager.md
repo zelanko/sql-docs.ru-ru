@@ -1,14 +1,10 @@
 ---
 title: Кэширование отчета (диспетчер отчетов) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - schedules [Reporting Services], report expiration
 - expiration [Reporting Services]
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 45d43330bae118628a50dec3f8f3ac47f2721e76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f79b12217030912e40ddc501cc6425738f9db568
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025021"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274646"
 ---
 # <a name="cache-a-report-report-manager"></a>кэшировать отчет (диспетчер отчетов)
   Один из способов повышения производительности состоит в настройке свойств кэширования для отчета. При кэшировании отчета копия отчета, подготовленного для хранения, сохраняется на короткий промежуток времени. Первый пользователь, запросивший этот отчет, должен ожидать, пока не закончится вся обработка, прежде чем сможет просмотреть отчет. Последующие пользователи, запрашивающие тот же отчет в пределах времени кэширования, могут сразу же просмотреть его, поскольку обработка уже выполнена.  

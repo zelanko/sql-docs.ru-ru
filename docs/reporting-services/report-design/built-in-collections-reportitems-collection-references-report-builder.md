@@ -1,26 +1,20 @@
 ---
 title: Ссылки на коллекцию ReportItems (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 0779913a4334a1142c8a5c8d7561aaa9ecd980cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dd790d1e739933df2246764cf7d337ea3d2574a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020171"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280577"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Встроенные коллекции — ссылки на коллекцию ReportItems (построитель отчетов)
   Встроенная коллекция **ReportItems** является набором текстовых полей из элементов отчета, например строк области данных или текстовых полей в области конструктора отчетов. Коллекция **ReportItems** включает текстовые поля, находящиеся в текущей области верхнего колонтитула, нижнего колонтитула или текста отчета. Эта коллекция определяется во время выполнения обработчика отчетов и модуля подготовки отчетов. Текущая область изменяется после успешного объединения обработчиком отчетов данных отчета и элементов макета элементов отчета, когда пользователь просматривает страницы отчета. Встроенная коллекция **ReportItems** может использоваться для формирования верхних колонтитулов страницы в стиле словаря, отображающих первый и последний элемент на каждой странице.  

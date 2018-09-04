@@ -1,14 +1,10 @@
 ---
 title: Примеры выражений групп (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data [Reporting Services], grouping
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - expressions [Reporting Services], adding
 - groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
-caps.latest.revision: 24
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 60639da2f409f6468c909cc341c0880150ba144c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e12a7d045f628c67fb07ceb2b25189865723111
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023391"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270863"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Примеры выражений групп (построитель отчетов и службы SSRS)
   В области данных можно группировать данные по одному полю или создавать более сложные выражения, определяющие данные, по которым выполняется группирование. Сложные выражения могут включать ссылки на несколько полей или параметров, условные инструкции или пользовательский код. При определении группы для области данных эти выражения добавляются к свойству **Группировать** . Дополнительные сведения см. в разделе [Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
@@ -38,7 +32,7 @@ ms.locfileid: "33023391"
 ## <a name="examples-of-group-expressions"></a>Примеры выражений группы  
  В следующей таблице приведены примеры выражений группы, которые можно использовать для определения группы.  
   
-|Description|Выражение|  
+|Описание|Выражение|  
 |-----------------|----------------|  
 |Группирование по полю `Region` .|`=Fields!Region.Value`|  
 |Группирование по фамилии и имени.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

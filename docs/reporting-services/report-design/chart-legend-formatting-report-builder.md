@@ -1,14 +1,10 @@
 ---
 title: Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.calculatedseriesproperties.legend.f1
@@ -28,16 +24,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: ece29c4bf152cfe96f79bcf47c6eea5e7e195871
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c60c61b55cdedf09c783e31ff11edfba07d18078
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021551"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268018"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Условные обозначения диаграммы — форматирование (построитель отчетов)
   Условные обозначения диаграммы содержат описание каждой категории на диаграмме. Условные обозначения всегда содержат один или несколько элементов, каждый из которых состоит из цветного прямоугольника, представляющего ряд, и текстовую строку, описывающую этот ряд, как показано на следующем рисунке.  

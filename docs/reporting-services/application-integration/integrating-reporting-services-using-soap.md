@@ -1,14 +1,10 @@
 ---
 title: Интеграция служб Reporting Services с использованием протокола SOAP | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 - Web service [Reporting Services], application integration
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 54a5a16ea0e24db1638654ffed9921bd30551b2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 53fc067c50db33b0f0861e2901eec91ac947902c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014571"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277556"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>Интеграция служб Reporting Services по протоколу SOAP
   Интерфейс API SOAP служб [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет несколько конечных точек веб-служб для разработки пользовательских решений по созданию отчетов. Конечные точки в данный момент делятся на две категории: управления и выполнения. Функции управления реализованы с помощью конечных точек <xref:ReportService2005>, <xref:ReportService2006> и <xref:ReportService2010>. Конечная точка <xref:ReportService2005> используется для управления сервером отчетов, настроенным для работы в собственном режиме; конечная точка <xref:ReportService2006> используется для управления сервером отчетов, настроенным для работы в режиме интеграции с SharePoint. Конечная точка <xref:ReportService2010> объединяет функциональные возможности конечных точек <xref:ReportService2005> и <xref:ReportService2006> и может управлять сервером отчетов, настроенном для работы в собственном режиме или режиме интеграции с SharePoint.  

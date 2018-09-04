@@ -1,26 +1,20 @@
 ---
 title: Добавление данных из внешних источников данных (службы SSRS) | Документация Майкрософт
-ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: fa81a4bd306e62c7f370cb024b5289f8db7421be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db1f03e237914c31dd0e7bd2222fc4db0577d3ee
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021953"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265543"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Добавление данных из внешних источников данных (службы SSRS)
   Чтобы получить данные из внешнего источника данных, используется подключение к данным. Сведения о подключении к данным обычно указываются владельцем внешнего источника данных, ответственным за предоставление разрешений и указывающим тип используемых учетных данных. Сведения о подключении к данным сохраняются в виде источника данных отчета. Тип источника данных определяет модуль обработки данных, который будет использоваться для получения данных.  
@@ -101,7 +95,7 @@ ms.locfileid: "33021953"
 ##  <a name="Related"></a> См. также  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)|Предоставляет общие сведения о доступе к данным отчета.|  
 |[Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Предоставляет сведения о подключениях к данным и источникам данных.|  

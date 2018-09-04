@@ -1,26 +1,20 @@
 ---
 title: Регистрация имени субъекта-службы для сервера отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3f64622d7b0a2a8a2679624e0662f33804650c3d
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: 52f3eebf37464709918a4e92ff13873676a1bda1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238864"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272664"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>зарегистрировать имя участника-службы для сервера отчетов
   При развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в сети, где для взаимной проверки подлинности используется протокол Kerberos, а сервер отчетов настроен для запуска от учетной записи пользователя домена, необходимо создать для службы сервера отчетов имя участника-службы (SPN).  
