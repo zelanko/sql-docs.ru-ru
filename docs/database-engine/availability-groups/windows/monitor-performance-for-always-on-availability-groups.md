@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e576153f1e9f0fc43360bc3ce25af284c402b14e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75b17cc357f3affc8fac293c771fbc63940d4fb4
+ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870059"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40406815"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Мониторинг производительности для групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "32870059"
   
 -   [Полезные расширенные события](#BKMK_XEVENTS)  
   
-##  <a name="BKMK_DATA_SYNC_PROCESS"></a> Процесс синхронизации данных  
+##  <a name="data-synchronization-process"></a>Процесс синхронизации данных  
  Чтобы оценить время полной синхронизации и выявить узкое место, вам нужно понять процесс синхронизации. Узкое место производительности может находиться в любом месте процесса, и его обнаружение может помочь вам лучше разобраться связанных с ним проблемах. Приведенные ниже рисунок и таблица иллюстрируют процесс синхронизации данных:  
   
  ![Синхронизация данных группы доступности](media/always-onag-datasynchronization.gif "Синхронизация данных группы доступности")  
@@ -55,7 +55,7 @@ ms.locfileid: "32870059"
 |5|Сохранение|Журнал записывается во вторичную реплику для сохранения. После записи журнала обратно в первичную реплику отправляется подтверждение.<br /><br /> После сохранения журнала потеря данных исключается.|Счетчик производительности [SQL Server: База данных > Сброшено байтов журнала в секунду](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Тип ожидания [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Повторить|Повторная обработка записанных страниц на вторичной реплике. Страницы хранятся в очереди повтора, так как ожидают повторной обработки.|[SQL Server: Реплика базы данных > Повторено байтов в секунду](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (КБ) и [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Тип ожидания [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
-##  <a name="BKMK_FLOW_CONTROL_GATES"></a> Шлюзы управления потоком  
+##  <a name="flow-control-gates"></a>Шлюзы управления потоком  
  Для групп доступности предусмотрены шлюзы управления потоком на первичной реплике, позволяющие предотвратить чрезмерное потребление ресурсов, например сетевых ресурсов и ресурсов памяти, на всех репликах доступности. Эти шлюзы управления потоком не влияют на состояние работоспособности синхронизации у реплик доступности, но могут повлиять на общую производительность баз данных доступности, включая RPO.  
   
  После сбора журналов на первичной реплике к ним применяется два уровня средств управления потоком, как показано в следующей таблице:  
@@ -72,7 +72,7 @@ ms.locfileid: "32870059"
   
  Два полезных счетчика производительности — [SQL Server: Реплика доступности > Поток управления/с](~/relational-databases/performance-monitor/sql-server-availability-replica.md) и [SQL Server: Реплика доступности > Время потока управления (мс/с)](~/relational-databases/performance-monitor/sql-server-availability-replica.md) — показывают, сколько раз активировалось управление потоком и сколько времени ушло на ожидание управления потоком за последнюю секунду. Повышенное время ожидания управления потоком приводит к завышению RPO. Дополнительные сведения о типах проблем, которые могут привести к высокому времени ожидания для управления потоком, см. в разделе [Устранение неполадок: превышение RPO в группе доступности](troubleshoot-availability-group-exceeded-rpo.md).  
   
-##  <a name="BKMK_RTO"></a> Оценка времени перехода на другой ресурс (RTO)  
+##  <a name="estimating-failover-time-rto"></a>Оценка времени перехода на другой ресурс (RTO)  
  RTO в соглашении об уровне обслуживания зависит от времени перехода на другой ресурс для вашей реализации AlwaysOn в любой момент времени, что можно выразить следующей формулой:  
   
  ![Вычисление значения RTO для групп доступности](media/always-on-rto.gif "Вычисление значения RTO для групп доступности")  
@@ -90,7 +90,7 @@ ms.locfileid: "32870059"
   
  Дополнительные временные затраты при переходе на другой ресурс — Toverhead — включают время, необходимое для перехода кластера WSFC на другой ресурс и перевода базы данных в оперативный режим. Это время обычно короткое и постоянное.  
   
-##  <a name="BKMK_RPO"></a> Оценка возможной потери данных (RPO)  
+## <a name="estimating-potential-data-loss-rpo"></a>Оценка возможной потери данных (RPO)  
  RTO в соглашении об уровне обслуживания зависит от возможной потери данных для вашей реализации AlwaysOn в любой момент времени. Эту возможную потерю данных можно выразить следующей формулой:  
   
  ![Вычисление значения RPO для групп доступности](media/always-on-rpo.gif "Вычисление значения RPO для групп доступности")  
@@ -103,8 +103,234 @@ ms.locfileid: "32870059"
  Очередь отправки журнала представляет все данные, которые могут быть потеряны при неустранимом сбое. На первый взгляд, может показаться странным, что используется скорость создания журнала вместо скорости отправки журнала (см. [log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)). Однако не забывайте, что использование скорости отправки журнала дает вам лишь время для синхронизации, а RPO измеряет потерю данных с учетом скорости их создания или синхронизации.  
   
  Еще проще оценить Tdata_loss можно с помощью [last_commit_time](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md). Динамическое административное представление на первичной реплике сообщает это значение для всех реплик. Вы можете вычислить разницу между значением для первичной и вторичной реплик, чтобы оценить, как быстро журнал во вторичной реплике доходит до первичной реплики. Как уже говорилось ранее, этот расчет не показывает возможную потерю данных в зависимости от скорости создания журнала, однако он обеспечивает довольно точное приближение.  
+
+## <a name="estimate-rto--rpo-with-the-ssms-dashboard"></a>Оценка RTO и RPO с помощью панели мониторинга SSMS
+В группах доступности AlwaysOn значение RTO и RPO вычисляется и отображается для баз данных, размещенных на вторичных репликах. На панели мониторинга первичной реплики RTO и RPO группируются по вторичной реплике. 
+
+Чтобы просмотреть RTO и RPO в панели мониторинга, сделайте следующее.
+1. В SQL Server Management Studio разверните узел **Высокий уровень доступности AlwaysOn**, щелкните правой кнопкой мыши имя группы доступности и выберите команду **Показать панель мониторинга**. 
+1. Выберите пункт **Добавить или удалить столбцы** под вкладкой **Группировка**. Выберите оба варианта: **Оценка времени восстановления (с)** [RTO] и **Оценка потери данных (время)** [RPO]. 
+
+   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+
+### <a name="calculation-of-secondary-database-rto"></a>Расчет RTO базы данных-получателя 
+Вычисление времени восстановления определяет, сколько времени требуется для восстановления *базы данных-получателя* после отработки отказа.  Это время обычно короткое и постоянное. Время обнаружения зависит от параметров на уровне кластера, а не от отдельных реплик доступности. 
+
+
+У базы данных-получателя (DB_sec) вычисление и отображение RTO основаны на значениях **redo_queue_size** и **redo_rate**:
+
+![Вычисление RTO](media/calculate-rto.png)
+
+За исключением тупиковых ситуаций, формула для вычисления RTO базы данных-получателя такова:
+
+![Формула для вычисления RTO](media/formula-calc-second-dba-rto.png)
+
+
+
+### <a name="calculation-of-secondary-database-rpo"></a>Расчет RPO базы данных-получателя
+
+Для базы данных-получателя (DB_sec) вычисление и отображение RPO основаны на значениях is_failover_ready, last_commit_time и коррелированном значении last_commit_time ее базы данных-источника (DB_pri). Если в базе данных-получателе is_failover_ready = 1, то данные синхронизированы и потери данных при отработке отказа не происходит. Если же это значение равно 0, то есть разрыв между **last_commit_time** базы данных-источника и **last_commit_time** базы данных-получателя. 
+
+Для базы данных-источника **last_commit_time** — это время, когда зафиксирована последняя транзакция. Для базы данных-получателя **last_commit_time** — время последнего успешного закрепления фиксации транзакции базы данных-источника в базе данных-получателе. Это число должно быть одинаковым для обеих баз данных. Разрыв между этими двумя значениями — время, в течение которого незавершенные транзакции остаются незафиксированными в базе данных-получателе; они будут потеряны при отработке отказа. 
+
+![Вычисление RPO](media/calculate-rpo.png)
+
+### <a name="performance-counters-used-in-rtorpo-formulas"></a>Счетчики производительности, которые используются в формулах RTO и RPO
+
+- **redo_queue_size** (КБ) [*используется в RTO*]: размер очереди повтора — это размер журнала транзакций между его **last_received_lsn** и **last_redone_lsn**. Значение **last_received_lsn** — это идентификатор блока журнала, указывающий точку, вплоть до которой все блоки журнала были получены вторичной репликой, на которой размещена эта база данных-получатель. Значение **last_redone_lsn** — это фактический регистрационный номер транзакции последней записи в журнале, повторенной в базе данных-получателе. Исходя из этих двух значений, можно найти идентификаторы начала блока журнала (**last_received_lsn**) и конечного блока журнала (**last_redone_lsn**). Расстояние между этими блоками журнала может указывать, какие блоки журнала транзакций еще не были выполнены повторно. Оно измеряется в КБ.
+-  **redo_rate** (КБ/с) [*используется в RTO*]: накапливаемое значение, указывающее на определенный период прошедшего времени, какой объем журнала транзакций (в КБ) был восстановлен в базе данных-получателе. Измеряется в КБ/с. 
+- **last_commit_time** (Datetime) [*используется в RPO*]: для базы данных-источника **last_commit_time** — это время, когда зафиксирована последняя транзакция. Для базы данных-получателя **last_commit_time** — время последнего успешного закрепления фиксации транзакции базы данных-источника в базе данных-получателе. Так как это значение на вторичной реплике должно быть синхронизировано с тем же значением на сервере-источнике, зазор между этими двумя значениями и есть оценка потери данных (RPO).  
+ 
+## <a name="estimate-rto-and-rpo-using-dmvs"></a>Оценка RTO и RPO с помощью динамических административных представлений
+
+Существует возможность запроса динамических административных представлений [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) и [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) для оценки значений RPO и RTO базы данных. Ниже приведены запросы, которые создают хранимые процедуры, выполняющие обе эти задачи. 
+
+  >[!NOTE]
+  > Создание и запуск хранимой процедуры для оценки RTO следует выполнять в первую очередь, так как значения, которые она создает, необходимы хранимой процедуре для оценки RPO. 
+
+### <a name="create-a-stored-procedure-to-estimate-rto"></a>Создание хранимой процедуры для оценки RTO 
+
+1. На целевой вторичной реплике создайте хранимую процедуру **proc_calculate_RTO**. Если эта хранимая процедура уже существует, сначала удалите и заново создайте ее. 
+
+ ```sql
+    if object_id(N'proc_calculate_RTO', 'p') is not null
+        drop procedure proc_calculate_RTO
+    go
+    
+    raiserror('creating procedure proc_calculate_RTO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RTO
+    --
+    -- description: Calculate RTO of a secondary database.
+    -- 
+    -- parameters:  @secondary_database_name nvarchar(max): name of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RTO
+    (
+    @secondary_database_name nvarchar(max)
+    )
+    as
+    begin
+      declare @db sysname
+      declare @is_primary_replica bit 
+      declare @is_failover_ready bit 
+      declare @redo_queue_size bigint 
+      declare @redo_rate bigint
+      declare @replica_id uniqueidentifier
+      declare @group_database_id uniqueidentifier
+      declare @group_id uniqueidentifier
+      declare @RTO float 
+
+      select 
+      @is_primary_replica = dbr.is_primary_replica, 
+      @is_failover_ready = dbcs.is_failover_ready, 
+      @redo_queue_size = dbr.redo_queue_size, 
+      @redo_rate = dbr.redo_rate, 
+      @replica_id = dbr.replica_id,
+      @group_database_id = dbr.group_database_id,
+      @group_id = dbr.group_id 
+      from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs    on dbr.replica_id = dbcs.replica_id and 
+      dbr.group_database_id = dbcs.group_database_id  where dbcs.database_name = @secondary_database_name
+
+      if  @is_primary_replica is null or @is_failover_ready is null or @redo_queue_size is null or @replica_id is null or @group_database_id is null or @group_id is null
+      begin
+        print 'RTO of Database '+ @secondary_database_name +' is not available'
+        return
+      end
+      else if @is_primary_replica = 1
+      begin
+        print 'You are visiting wrong replica';
+        return
+      end
+
+      if @redo_queue_size = 0 
+        set @RTO = 0 
+      else if @redo_rate is null or @redo_rate = 0 
+      begin
+        print 'RTO of Database '+ @secondary_database_name +' is not available'
+        return
+      end
+      else 
+        set @RTO = CAST(@redo_queue_size AS float) / @redo_rate
+    
+      print 'RTO of Database '+ @secondary_database_name +' is ' + convert(varchar, ceiling(@RTO))
+      print 'group_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_id)
+      print 'replica_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @replica_id)
+      print 'group_database_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_database_id)
+    end
+ ```
+
+2. Выполните **proc_calculate_RTO**, указав имя целевой базы данных-получателя:
+  ```sql
+   exec proc_calculate_RTO @secondary_database_name = N'DB_sec'
+  ```
+3. Выходные данные содержат значение RTO для целевой базы данных вторичной реплики. Сохраните *group_id*, *replica_id*, и *group_database_id* для использования в хранимой процедуре оценки RPO. 
+   
+   Вывод образца:
+<br>RTO of Database DB_sec' is 0
+<br>group_id of Database DB4 is F176DD65-C3EE-4240-BA23-EA615F965C9B
+<br>replica_id of Database DB4 is 405554F6-3FDC-4593-A650-2067F5FABFFD
+<br>group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
+
+### <a name="create-a-stored-procedure-to-estimate-rpo"></a>Создание хранимой процедуры для оценки RPO 
+1. На первичной реплике создайте хранимую процедуру **proc_calculate_RPO**. Если эта хранимая процедура уже существует, сначала удалите и заново создайте ее. 
+
+ ```sql
+    if object_id(N'proc_calculate_RPO', 'p') is not null
+                    drop procedure proc_calculate_RPO
+    go
+    
+    raiserror('creating procedure proc_calculate_RPO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RPO
+    --
+    -- description: Calculate RPO of a secondary database.
+    -- 
+    -- parameters:  @group_id uniqueidentifier: group_id of the secondary database.
+    --              @replica_id uniqueidentifier: replica_id of the secondary database.
+    --              @group_database_id uniqueidentifier: group_database_id of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RPO
+    (
+     @group_id uniqueidentifier,
+     @replica_id uniqueidentifier,
+     @group_database_id uniqueidentifier
+    )
+    as
+    begin
+          declare @db_name sysname
+          declare @is_primary_replica bit
+          declare @is_failover_ready bit
+          declare @is_local bit
+          declare @last_commit_time_sec datetime 
+          declare @last_commit_time_pri datetime      
+          declare @RPO nvarchar(max) 
+
+          -- secondary database's last_commit_time 
+          select 
+          @db_name = dbcs.database_name,
+          @is_failover_ready = dbcs.is_failover_ready, 
+          @last_commit_time_sec = dbr.last_commit_time 
+          from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+          dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.replica_id = @replica_id and dbr.group_database_id = @group_database_id
+
+          -- correlated primary database's last_commit_time 
+          select
+          @last_commit_time_pri = dbr.last_commit_time,
+          @is_local = dbr.is_local
+          from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+          dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.is_primary_replica = 1 and dbr.group_database_id = @group_database_id
+
+          if @is_local is null or @is_failover_ready is null
+          begin
+            print 'RPO of database '+ @db_name +' is not available'
+            return
+          end
+
+          if @is_local = 0
+          begin
+            print 'You are visiting wrong replica'
+            return
+          end  
+
+          if @is_failover_ready = 1
+            set @RPO = '00:00:00'
+          else if @last_commit_time_sec is null or  @last_commit_time_pri is null 
+          begin
+            print 'RPO of database '+ @db_name +' is not available'
+            return
+          end
+          else
+          begin
+            if DATEDIFF(ss, @last_commit_time_sec, @last_commit_time_pri) < 0
+            begin
+                print 'RPO of database '+ @db_name +' is not available'
+                return
+            end
+            else
+                set @RPO =  CONVERT(varchar, DATEADD(ms, datediff(ss ,@last_commit_time_sec, @last_commit_time_pri) * 1000, 0), 114)
+          end
+          print 'RPO of database '+ @db_name +' is ' + @RPO
+      end
+ ```
+
+2. Выполните **proc_calculate_RPO**, указав значения *group_id*, *replica_id*, и *group_database_id* целевой базы данных-получателя. 
+
+ ```sql
+   exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
+        @replica_id =  '405554F6-3FDC-4593-A650-2067F5FABFFD',
+        @group_database_id  = '39F7942F-7B5E-42C5-977D-02E7FFA6C392'
+ ```
+3. Выходные данные содержат значение RPO для целевой базы данных вторичной реплики. 
+
   
-##  <a name="BKMK_Monitoring_for_RTO_and_RPO"></a> Отслеживание RTO и RPO  
+##  <a name="monitoring-for-rto-and-rpo"></a>Отслеживание RTO и RPO  
  Этот раздел описывает, как отслеживать метрики RTO и RPO в группах доступности. Эта демонстрация аналогична приведенной в учебнике по графическому пользовательскому интерфейсу [Модель работоспособности AlwaysOn, часть 2. Расширение модели работоспособности](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
  Элементы расчетов для времени перехода на другой ресурс и возможной потери данных, описанные в разделах [Оценка времени перехода на другой ресурс (RTO)](#BKMK_RTO) и [Оценка возможной потери данных (RPO)](#BKMK_RPO), удобно предоставлены в виде метрик производительности в аспекте управления политиками **Состояние реплики базы данных** (см. раздел [Просмотр аспектов управления на основе политик в объекте SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Вы можете отслеживать эти две метрики по расписанию и получать оповещения, когда метрики превышают значения RTO и RPO.  
@@ -232,7 +458,7 @@ ms.locfileid: "32870059"
 ##  <a name="BKMK_SCENARIOS"></a> Сценарии устранения неполадок с производительностью  
  Ниже перечислены распространенные сценарии устранения неполадок, связанные с производительностью.  
   
-|Сценарий|Description|  
+|Сценарий|Описание|  
 |--------------|-----------------|  
 |[Устранение неполадок: превышение RTO в группе доступности](troubleshoot-availability-group-exceeded-rto.md)|После автоматического перехода на другой ресурс или планового перехода на другой ресурс вручную без потери данных время перехода на другой ресурс превышает цель времени восстановления (RTO). Или при оценке времени перехода на другой ресурс для вторичной реплики с синхронной фиксацией (например, партнера по обеспечению автоматической отработки отказа) вы обнаруживаете, что оно превышает RTO.|  
 |[Устранение неполадок: превышение RPO в группе доступности](troubleshoot-availability-group-exceeded-rpo.md)|После принудительного перехода на другой ресурс вручную потеря данных превышает RPO. Или при расчете возможной потери данных для вторичной реплики с асинхронной фиксацией вы обнаруживаете, что она превышает RPO.|  

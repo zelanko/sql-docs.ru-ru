@@ -1,7 +1,7 @@
 ---
 title: Источник BLOB-объекта Azure | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
-ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
+ms.openlocfilehash: 5404b7bc7e7543f85890816973fdbd0c1e39022f
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964356"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40411852"
 ---
 # <a name="azure-blob-source"></a>Компонент Azure Blob Source
   Компонент **Azure Blob Source** позволяет пакету служб SSIS считывать данные из большого двоичного объекта Azure. Поддерживаются следующие форматы файлов: CSV и AVRO.
@@ -39,7 +39,9 @@ ms.locfileid: "36964356"
   
 4.  В поле **Формат файла большого двоичного объекта** укажите требуемый формат: **Text** или **Avro**.  
   
-5.  Если формат файла — **Text**, необходимо указать значение **символа разделителя столбцов**. Также выберите **Имена столбцов в первой строке данных** , если первая строка файла содержит имена столбцов.
+5.  Если формат файла — **Text**, необходимо указать значение **символа разделителя столбцов**. (Многосимвольные разделители не поддерживаются.)
+
+    Также выберите **Имена столбцов в первой строке данных** , если первая строка файла содержит имена столбцов.
 
 6.  Если файл сжат, выберите **Распаковать файл**.
 

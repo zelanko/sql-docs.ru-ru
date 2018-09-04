@@ -1,7 +1,7 @@
 ---
 title: Выбор алгоритма шифрования | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/08/2016
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,13 +18,13 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5056f8097b9fc96448f5a281a5a67d7d047389b3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549604"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096562"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Выбор алгоритма шифрования
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,13 @@ ms.locfileid: "39549604"
   
 -   Использование длинных ключей, как правило, дает более надежные результаты, чем шифрование с помощью коротких ключей.  
   
--   Асимметричное шифрование слабее симметричного шифрования с использованием ключа той же длины, но является относительно медленным.  
+-   Асимметричное шифрование медленнее симметричного.  
   
 -   Блочные шифры с длинными ключами надежнее поточных шифров.  
   
 -   Длинные сложные пароли надежнее, чем короткие пароли.  
+
+-   Симметричное шифрование обычно рекомендуется использовать, только если ключ хранится локально; асимметричное — если ключи должны передаваться по каналу связи.
   
 -   При необходимости шифровать большие объемы данных, шифруйте данные с помощью симметричного ключа, а симметричный ключ — с помощью асимметричного ключа.  
   

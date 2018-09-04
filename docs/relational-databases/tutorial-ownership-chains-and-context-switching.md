@@ -7,10 +7,8 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -18,49 +16,52 @@ helpviewer_keywords:
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: fc70ec0b789ba0873b4e843b77132ec14bf4d7aa
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008806"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024467"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этом учебнике приведен пример, в котором рассматриваются основные понятия безопасности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , включая цепочки владения и переключение контекста.  
   
 > [!NOTE]  
-> Для запуска кода в этом учебнике необходимо, чтобы был настроен режим смешанной безопасности. Кроме того, необходимо установить базу данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Дополнительные сведения о смешанном режиме безопасности см. в разделе [Выбор режима проверки подлинности](../relational-databases/security/choose-an-authentication-mode.md).  
+> Для запуска кода в этом учебнике необходимо, чтобы был настроен режим смешанной безопасности. Кроме того, необходимо наличие установленной базы данных AdventureWorks2017. Дополнительные сведения о смешанном режиме безопасности см. в разделе [Выбор режима проверки подлинности](../relational-databases/security/choose-an-authentication-mode.md).  
   
 ## <a name="scenario"></a>Сценарий  
-В этом сценарии двум пользователям нужны учетные записи для доступа к данным о заказах на покупку, которые хранятся в базе данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Требования:  
+В этом сценарии двум пользователям нужны учетные записи для доступа к данным о заказах на покупку, которые хранятся в базе данных AdventureWorks2017. Требования:  
   
 -   Пользователь первой учетной записи (ТестовыйМенеджер) должен видеть все сведения о каждом заказе на покупку.  
-  
 -   Пользователь второй учетной записи (ТестовыйСотрудник) должен видеть номера заказов на покупку, даты заказов, даты отгрузки, коды продуктов, а также количество отправленных и полученных экземпляров продукта в заказе по номеру заказа (для заказов, получаемых частичной отгрузкой).  
-  
--   Все другие учетные записи должны сохранять текущие разрешения.  
-  
+-   Все другие учетные записи должны сохранять текущие разрешения.   
 Чтобы выполнялись требования этого сценария, этот пример разбит на 4 части, в которых проиллюстрированы основные понятия, касающиеся цепочек владения и переключения контекста.  
   
-1.  Настройка среды.  
-  
-2.  Создание хранимой процедуры для получения доступа к данным по заказам на покупку.  
-  
+1.  Настройка среды.   
+2.  Создание хранимой процедуры для получения доступа к данным по заказам на покупку.   
 3.  Доступ к данным через хранимую процедуру.  
-  
 4.  Сброс среды.  
   
-Каждый блок кода в этом примере объясняется по порядку. Чтобы скопировать весь пример, см. раздел [Пример целиком](#CompleteExample) в конце этого учебника.  
+Каждый блок кода в этом примере объясняется по порядку. Чтобы скопировать весь пример, см. раздел [Пример целиком](#CompleteExample) в конце этого учебника.
+
+## <a name="prerequisites"></a>предварительные требования
+Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
+
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Скачайте [примеры баз данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+
+Инструкции по восстановлению базы данных в SQL Server Management Studio см. в разделе [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Настройка среды  
-С помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и приведенного ниже кода откройте базу данных `AdventureWorks2012`, затем с помощью инструкции `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] проверьте, отображается ли пользователь dbo в качестве контекста.  
+С помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и приведенного ниже кода откройте базу данных `AdventureWorks2017`, затем с помощью инструкции `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] проверьте, отображается ли пользователь dbo в качестве контекста.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -68,7 +69,7 @@ GO
   
 Дополнительные сведения об инструкции CURRENT_USER см. в разделе [CURRENT_USER (Transact-SQL)](../t-sql/functions/current-user-transact-sql.md).  
   
-От имени пользователя dbo создайте с помощью этого кода двух пользователей на сервере и в базе данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
+От имени пользователя dbo создайте с помощью этого кода двух пользователей на сервере и в базе данных AdventureWorks2017.  
   
 ```sql
 CREATE LOGIN TestManagerUser   
@@ -180,6 +181,12 @@ SELECT *
 FROM Purchasing.PurchaseOrderDetail;  
 GO  
 ```  
+
+Возвращается следующая ошибка:
+```
+Msg 229, Level 14, State 5, Line 6
+The SELECT permission was denied on the object 'PurchaseOrderHeader', database 'AdventureWorks2017', schema 'Purchasing'.
+```
   
 Поскольку объекты, на которые ссылается процедура, созданная в предыдущем разделе, принадлежат `TestManagerUser` по причине владения схемой `Purchasing` , `TestEmployeeUser` может получить доступ к базовым таблицам через хранимую процедуру. Следующий код, все еще в контексте `TestEmployeeUser` , проводит заказ на покупку 952 как параметр.  
   
@@ -223,7 +230,7 @@ Last Updated: Books Online
 Conditions:   Execute as DBO or sysadmin in the AdventureWorks database  
 Section 1:    Configure the Environment   
 */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  

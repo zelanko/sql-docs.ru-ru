@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f032e856363bca6d84b420260eed53b734d88d82
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3cd07d9db6cd372a635ddc492064bcaa3ffd92d3
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769350"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40409447"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Режимы доступности (группы доступности AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -143,6 +143,15 @@ ms.locfileid: "34769350"
   
 > [!NOTE]  
 >  Дополнительные сведения о кворуме WSFC и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Режимы кворума и конфигурация голосования WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+
+### <a name="data-latency-on-secondary-replica"></a>Задержка данных на вторичной реплике
+Применение доступа только для чтения ко вторичным репликам полезно, если для нагрузок, связанных с операциями с ними, приемлема некоторая задержка данных. В ситуациях, когда задержка данных неприемлема, рассмотрите возможность выполнения рабочих нагрузок только чтения за счет первичной реплики.
+
+Из основной реплики выполняется отправка журнала изменений в базе данных-источнике на вторичные реплики. На каждой базе данных-получателе выделенный поток повтора применяет записи журнала. В базе данных, доступной для чтения, изменение данных не появляется среди результатов запроса до тех пор, пока запись журнала о данном изменении не будет применена к базе данных-получателю, а транзакция не будет зафиксирована в базе данных-источнике.+
+
+Это означает, что между первичной и вторичной репликами возникает некоторая задержка, обычно порядка нескольких секунд. В нетипичных случаях, например в ситуации, когда проблемы с сетью ухудшают пропускную способность, задержка может стать значительной. Задержка увеличивается из-за наличия узких мест в системе ввода-вывода и в результате приостановки движения данных. Для отслеживания приостановок перемещения данных можно использовать [Панель управления AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) или динамическое административное представление [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+
+Дополнительные сведения об изучении задержки повтора на вторичной реплике см. в разделе [Устранение неполадок при отсутствии повтора изменений в источнике на вторичной реплике](../../../database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md).
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Изменение режима доступности и режима отработки отказа**  

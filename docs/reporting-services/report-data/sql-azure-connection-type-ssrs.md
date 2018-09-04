@@ -1,7 +1,7 @@
 ---
 title: Тип подключения к SQL Azure (службы SSRS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 02/24/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3183a2d7ec717cfd5f00768c16a142727d3fc058
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e8ed9c88cf2e6c77321e26e6704ae64cb2249b3
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022791"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410408"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Тип соединения с SQL Azure (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] это размещаемая реляционная база данных облачного типа на базе технологий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы включить данные из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] в отчет, необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Используйте этот тип источника данных для подключения и извлечения данных из [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -126,7 +126,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  Если у хранимой процедуры есть параметр со значением по умолчанию, доступ к этому значению можно получить с помощью ключевого слова DEFAULT в качестве значения параметра. Если параметр запроса связан с параметром отчета, пользователь может ввести или выбрать слово DEFAULT в поле ввода параметра отчета.  
   
- Дополнительные сведения о хранимых процедурах см. в подразделе "Хранимые процедуры (компонент Database Engine)" [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=98335) на веб-сайте msdn.microsoft.com.  
+ Дополнительные сведения о хранимых процедурах см. в разделе [Хранимые процедуры (ядро СУБД)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
   
 ##  <a name="Parameters"></a> Параметры  

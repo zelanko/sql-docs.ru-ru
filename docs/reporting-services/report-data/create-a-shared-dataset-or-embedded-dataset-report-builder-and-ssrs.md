@@ -15,17 +15,19 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7815346582774bf53034aa368ea6459fe7fcd75
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022681"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432587"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)
 Внедренные наборы данных предназначены для использования в одном отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Общие наборы данных на сервере отчетов можно использовать в нескольких отчетах, как в мобильных, так и с разбиением на страницы. Для создания набора данных необходим внедренный или общий источник данных.  
   
- Используйте **построитель отчетов** для следующих задач.  
+## <a name="report-builder-tasks"></a>Задачи построителя отчетов
+
+Используйте построитель отчетов для следующих задач.  
   
 1.  Создание общих наборов данных в режиме конструктора наборов данных. Общие наборы данных должны использовать опубликованные общие источники данных.  
   
@@ -33,7 +35,9 @@ ms.locfileid: "33022681"
   
 3.   Сохранение наборов данных непосредственно на сервере отчетов или сайте SharePoint.  
   
- Используйте **конструктор отчетов** среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для следующих задач.  
+## <a name="report-designer-tasks"></a>Задачи конструктора отчетов
+
+Используйте конструктор отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для следующих задач.  
   
 1.  Создание общего набора данных в обозревателе решений. Общие наборы данных должны использовать источники данных из папки «Общие источники данных» в обозревателе решений.  
   
@@ -46,7 +50,7 @@ ms.locfileid: "33022681"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>Открытие построителя отчетов и создание общего набора данных  
+## <a name="to-create-a-shared-dataset-in-report-builder"></a>Создание общего набора данных в построителе отчетов
   
 1.  Откройте построитель отчетов. Откроется панель **Создание отчета или набора данных** , как показано на следующих рисунках.  
   

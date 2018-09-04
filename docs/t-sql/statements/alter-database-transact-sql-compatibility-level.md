@@ -27,13 +27,13 @@ caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: edf54224fddb5fce7eafdc978d05535264aa29d0
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2c57b2d89689207885f621e6619b4771a4a217fe
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452678"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43099380"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > Нерекомендуемые функциональные возможности, представленные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не защищены уровнем совместимости. Это относится к возможностям, удаленным из [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > 
 > Например, указание `FASTFIRSTROW` больше не поддерживается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и заменено на указание `OPTION (FAST n )`. Если задать уровень совместимости базы данных 110, нерекомендуемое указание не будет восстановлено.
-> Дополнительные сведения о нерекомендуемых функциях см. в разделах [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Нерекомендуемые функции ядра СУБД в SQL Server 2014](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [Нерекомендуемые функции ядра СУБД в SQL Server 2012](http://msdn.microsoft.com/library/ms144262(v=sql.110)) и [Нерекомендуемые функции ядра СУБД в SQL Server 2008](http://msdn.microsoft.com/library/ms144262(v=sql.100)).
+> Дополнительные сведения о нерекомендуемых функциях см. в разделах [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Нерекомендуемые функции ядра СУБД в SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)), [Нерекомендуемые функции ядра СУБД в SQL Server 2012](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)) и [Нерекомендуемые функции ядра СУБД в SQL Server 2008](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)).
 
 > [!IMPORTANT]
 > Критические изменения, введенные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **могут** не защищаться уровнем совместимости. Это относится к изменениям в поведении между версиями [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Поведение [!INCLUDE[tsql](../../includes/tsql-md.md)] обычно защищено уровнем совместимости. Однако измененные или удаленные системные объекты **не** защищены уровнем совместимости.
@@ -159,7 +159,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > -  Изменение имен столбцов в системных объектах. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] столбец *single_pages_kb* в представлении sys.dm_os_sys_info был переименован в *pages_kb*. Независимо от уровня совместимости запрос `SELECT single_pages_kb FROM sys.dm_os_sys_info` вызывает ошибку 207 (Недопустимое имя столбца).
 > -  Удаление системных объектов. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] столбец `sp_dboption` был удален. Независимо от уровня совместимости инструкция `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` вызовет ошибку 2812 (Не удалось найти хранимую процедуру 'sp_dboption').
 >
-> Дополнительные сведения о критических изменениях см. в разделах [Критические изменения в функциях ядра СУБД в SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Критические изменения в функциях ядра СУБД в SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Критические изменения в функциях ядра СУБД в SQL Server 2014](http://msdn.microsoft.com/library/ms143179(v=sql.120)), [Критические изменения в функциях ядра СУБД в SQL Server 2012](http://msdn.microsoft.com/library/ms143179(v=sql.110)) и [Критические изменения в функциях ядра СУБД в SQL Server 2008](http://msdn.microsoft.com/library/ms143179(v=sql.100)).
+> Дополнительные сведения о критических изменениях см. в разделах [Критические изменения в функциях ядра СУБД в SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Критические изменения в функциях ядра СУБД в SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Критические изменения в функциях ядра СУБД в SQL Server 2014](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)), [Критические изменения в функциях ядра СУБД в SQL Server 2012](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)) и [Критические изменения в функциях ядра СУБД в SQL Server 2008](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)).
   
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Рекомендации по обновлению уровня совместимости базы данных 
 Рекомендуемый рабочий процесс для обновления уровня совместимости см. в разделе [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  

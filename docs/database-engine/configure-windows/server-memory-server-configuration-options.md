@@ -25,12 +25,12 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3544a4530c1650d02952c750d82bb9d51e2d6d50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eabd43020196d312bb954f95e019b720b388410b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870239"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406007"
 ---
 # <a name="server-memory-server-configuration-options"></a>Параметры конфигурации сервера «Server Memory»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,8 @@ ms.locfileid: "32870239"
 Задание этого параметра не повлияет на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [динамическое управление памятью](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management), что позволит расширить или сузить ее по запросу других клерков памяти. При использовании пользовательского права *Блокировка страниц в памяти* рекомендуется задать верхний предел для параметра **Макс. памяти сервера**, как [указано выше](#max_server_memory).
 
 > [!IMPORTANT]
-> Задавать этот параметр следует, только если он необходим, то есть при наличии признаков того, что процесс sqlservr вытесняется из памяти. В этом случае в журнале ошибок появится ошибка 17890, как в примере ниже: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [флаг трассировки 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) не нужен для использования заблокированных страниц в выпуске Standard Edition. 
+> Задавать этот параметр следует, только если он необходим, то есть при наличии признаков того, что процесс sqlservr вытесняется из памяти. В этом случае в журнале ошибок появится ошибка 17890, как в следующем примере: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [флаг трассировки 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) не требуется для использования заблокированных страниц в выпуске Standard Edition. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>Включение блокировки страниц в памяти  
 Включение параметра "Блокировка страниц в памяти"  
@@ -122,7 +123,7 @@ ms.locfileid: "32870239"
  Эти настройки можно изменять без перезапуска экземпляров, поэтому можно легко экспериментировать с целью нахождения наиболее подходящих настроек для данной модели использования.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Выделение максимального объема памяти для SQL Server  
-Для всех выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] память можно выделять вплоть до предела виртуального адресного пространства процесса. Дополнительные сведения см. в разделе [Предельный объем памяти для выпусков Windows и Windows Server](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016).
+Для всех выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] память можно выделять вплоть до предела виртуального адресного пространства процесса. Дополнительные сведения см. в разделе [Предельный объем памяти для выпусков Windows и Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
   
 ## <a name="examples"></a>Примеры  
   
@@ -168,5 +169,5 @@ FROM sys.dm_os_process_memory;
  [Выпуски и поддерживаемые функции SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Выпуски и поддерживаемые функции SQL Server 2017 в Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Предельный объем памяти для выпусков Windows и Windows Server](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
+ [Предельный объем памяти для выпусков Windows и Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases)
  

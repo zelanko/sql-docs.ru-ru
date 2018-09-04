@@ -17,15 +17,15 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c6c7edf99179ba576fbb2a30668768eeca222e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9c3e64d56db1d24a386619a274e293135f3d95d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036391"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405440"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)
-В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] вы добавите ключевой показатель эффективности к отчету [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы.  
+В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] вы добавите ключевой показатель эффективности к отчету [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы.  
 
 Ключевые показатели эффективности представляют собой измеримые значения, имеющие значимость для бизнеса. В данном случае ключевым показателем эффективности является сводка по продажам (по подкатегориям продуктов). Текущее состояние ключевого показателя эффективности отображается с помощью цветов, датчиков и индикаторов.
   

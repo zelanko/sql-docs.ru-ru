@@ -19,23 +19,23 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7ff4d216b7122e3500a99871834029d92d9aa072
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fb6a3891e7adb4c0159f2b98e78336c51196dac
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022421"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410486"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)
 
-  В этом руководстве с помощью мастера будет создана круговая диаграмма в отчете с разбивкой на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Затем вы добавите значения в процентах и немного измените круговую диаграмму. 
+  В этом руководстве с помощью мастера будет создана круговая диаграмма в отчете с разбивкой на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Затем вы добавите значения в процентах и немного измените круговую диаграмму. 
   
 Задания этого учебника вы можете выполнить двумя различными способами. При использовании любого из этих методов будет получен один и тот же результат — круговая диаграмма, похожая на изображенную на рисунке.  
   
  ![Стандартная круговая диаграмма в построителе отчетов](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Стандартная круговая диаграмма в построителе отчетов")  
   
 ## <a name="prerequisites"></a>предварительные требования  
- Независимо от используемого метода (данные XML или запрос [!INCLUDE[tsql](../../includes/tsql-md.md)]) требуется доступ к построителю отчетов. Можно запустить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме или режиме интеграции с SharePoint, а также можно загрузить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из центра загрузки Майкрософт. Дополнительные сведения см. в разделе [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
+ Независимо от используемого метода (данные XML или запрос [!INCLUDE[tsql](../../includes/tsql-md.md)]) требуется доступ к построителю отчетов. Можно запустить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме или режиме интеграции с SharePoint, а также можно загрузить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из центра загрузки Майкрософт. Дополнительные сведения см. в разделе [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Два способа выполнить задания этого учебника  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33022421"
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>Использование запроса [!INCLUDE[tsql](../../includes/tsql-md.md)] , содержащего данные, при работе с этим учебником  
  Можно скопировать запрос с данными, которые содержатся в нем, из этого раздела и вставить в мастер. При этом потребуется имя экземпляра SQL Server и учетные данные, необходимые для доступа к базе данных только для чтения. В запросе набора данных в этом учебнике используются данные литералов, но запрос должен обрабатываться экземпляром SQL Server для возвращения метаданных, необходимых для набора данных отчета.  
   
- Преимущество использования запроса [!INCLUDE[tsql](../../includes/tsql-md.md)] заключается в том, что во всех учебниках [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] используется один и тот же метод, поэтому при выполнении других учебников этот метод будет уже знаком.  
+ Преимущество использования запроса [!INCLUDE[tsql](../../includes/tsql-md.md)] заключается в том, что во всех учебниках [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] используется один и тот же метод, поэтому при выполнении других учебников этот метод будет уже знаком.  
   
  Для выполнения запроса [!INCLUDE[tsql](../../includes/tsql-md.md)] существует несколько других предварительных условий. Дополнительные сведения см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
@@ -227,7 +227,7 @@ ms.locfileid: "33022421"
  Дополнительные сведения о настройке меток диаграммы и условные обозначения см. в разделе [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) и [Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ##  <a name="WhatsNext"></a> Дальнейшая работа  
- Теперь после создания первого отчета в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]можно ознакомиться с другими учебниками и начать создавать отчеты на основе собственных данных. Для запуска [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]понадобятся разрешения для доступа к источникам данных, например к базам данных, и *строка подключения*, которая устанавливает соединение с источником данных. У системного администратора имеются эти данные, и он может установить соответствующие разрешения.  
+ Теперь после создания первого отчета в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]можно ознакомиться с другими учебниками и начать создавать отчеты на основе собственных данных. Для запуска [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]понадобятся разрешения для доступа к источникам данных, например к базам данных, и *строка подключения*, которая устанавливает соединение с источником данных. У системного администратора имеются эти данные, и он может установить соответствующие разрешения.  
   
  Для выполнения других учебников требуется имя экземпляра SQL Server и учетные данные, необходимые для доступа к базе данных только для чтения. Системный администратор также может предоставить такой доступ.  
   

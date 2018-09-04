@@ -34,13 +34,13 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5082f8c97b0bf35534a02fd2b0690f43a99ebc81
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cff08ca1fd9275983fa4af4a9f09efed6d3f0f0f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459918"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43081863"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -104,7 +104,7 @@ DATEDIFF ( datepart , startdate , enddate )
   
 При вычислении возвращаемого значения `DATEDIFF` не учитывает компонент смещения часовых поясов для аргументов *startdate* или *enddate*.
   
-Так как значение типа [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) имеет точность до минуты, то при использовании в аргументах *startdate* и **enddate** возвращаемые значения типа *smalldatetime* секунды и миллисекунды всегда равны 0.
+Так как значение типа [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) имеет точность до минуты, то при использовании в аргументах *startdate* и *enddate* значений типа **smalldatetime** секунды и миллисекунды у возвращаемых значений всегда равны 0.
   
 Если переменной типа данных date присвоено только значение времени, в качестве недостающей части даты `DATEDIFF` задает значение по умолчанию: 1900-01-01. Если переменной типа данных time или date присвоено только значение даты, в качестве недостающей части времени `DATEDIFF` задает значение по умолчанию: 00:00:00. Если в одном из аргументов *startdate* или *enddate* указано только время, а в другом только дата, в качестве недостающей информации `DATEDIFF` задает значения по умолчанию.
   

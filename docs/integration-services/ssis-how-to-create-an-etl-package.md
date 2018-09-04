@@ -1,14 +1,14 @@
 ---
 title: 'Службы SSIS: создание пакета ETL | Документы Майкрософт'
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -23,16 +23,16 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d2af071661576fdcd63a46a424a457fb969aac9
-ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
+ms.openlocfilehash: 1b2863ac1e5a9f9bdf072e674bb4e556eeecc268
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999284"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029600"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Службы SSIS: создание пакета ETL
 
- > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Учебник по службам SSIS. Создание простого ETL-пакета](https://msdn.microsoft.com/library/ms169917(SQL.120).aspx).
+ > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Учебник по службам SSIS. Создание простого ETL-пакета](ssis-how-to-create-an-etl-package.md).
 
 Из этого руководства вы узнаете, как использовать конструктор [!INCLUDE[ssIS](../includes/ssis-md.md)] для создания простого пакета служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Этот пакет получает данные из неструктурированного файла, преобразует их, а затем вставляет преобразованные данные в таблицу фактов. На следующих занятиях пакет будет расширен, чтобы продемонстрировать циклическую обработку, конфигурацию пакетов, ведение журнала и поток ошибок.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "38999284"
 
 -   Пример базы данных **AdventureWorksDW2012**. Чтобы скачать базу данных **AdventureWorksDW2012**, скачайте файл `AdventureWorksDW2012.bak` со страницы с [образцами баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) и выполните восстановление из резервной копии.  
 
--   Файлы с **примерами данных**. Образцы данных включаются в состав с пакетами занятий по службам [!INCLUDE[ssIS](../includes/ssis-md.md)] . Чтобы скачать образец данных и пакеты занятий в виде ZIP-файла, перейдите на страницу скачивания материалов к [учебнику по созданию простого пакета ETL в составе документации по SQL Server Integration Services](https://www.microsoft.com/download/details.aspx?id=56827).
+-   Файлы с **примерами данных**. Образцы данных включаются в состав с пакетами занятий по службам [!INCLUDE[ssIS](../includes/ssis-md.md)] . Чтобы скачать образец данных и пакеты занятий в виде ZIP-файла, перейдите к файлам [учебника в составе документации по SQL Server Integration Services](https://www.microsoft.com/download/details.aspx?id=56827).
 
     - Большая часть файлов в ZIP-файле доступна только для чтения во избежание непреднамеренных изменений. Для записи выходных данных в файл или его изменении может потребоваться отключить атрибут "только для чтения" в свойствах файла.
     - При использовании пакетов примеров предполагается, что файлы данных находятся в папке `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. Если распаковать скачанные файлы в другое расположение, может потребоваться обновить путь к файлу в нескольких местах в пакетах с примерами.

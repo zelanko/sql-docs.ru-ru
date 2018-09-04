@@ -20,15 +20,15 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7b0e65fda3c8aab492d45546428db43b8af7fc1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 482fc7069a480d41122535e139be2726df75f972
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022931"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410359"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Построитель отчетов в SQL Server 2016
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio.  Во время проектирования отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчеты можно предварительно просмотреть из [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , откуда его смогут запустить другие пользователи.  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio.  Во время проектирования отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчеты можно предварительно просмотреть из [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , откуда его смогут запустить другие пользователи.  
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33022931"
   
 -   **Отчеты на основе различных источников данных.** Построение отчетов с использованием данных из любых источников, для которых есть управляемый поставщик данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], поставщик OLE DB или источник данных ODBC. Можно создавать отчеты, использующие реляционные и многомерные данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion и других баз данных. Чтобы получить данные из любого источника XML-данных, можно воспользоваться модулем обработки XML-данных. Для разработки пользовательских источников данных можно использовать функции, возвращающие табличное значение.  
   
--   **Изменение существующих отчетов.** С помощью [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]можно настроить и обновить отчеты, созданные в конструкторе отчетов [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+-   **Изменение существующих отчетов.** С помощью [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]можно настроить и обновить отчеты, созданные в конструкторе отчетов [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 -   **Изменение данных** путем фильтрации, группирования и сортировки либо путем добавления формул и выражений.  
   
@@ -79,15 +79,15 @@ ms.locfileid: "33022931"
   [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md)
 
   [Новые возможности служб Reporting Services и построителя отчетов для SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-  Описываются новые функции этой версии [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
+  Описываются новые функции этой версии [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
   [Учебник. Создание стандартного отчета с диаграммой в режиме «вне сети»](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
- Содержатся общие сведения о [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] и мастерах, которые могут помочь в создании отчетов. Учебник содержит набор данных для работы, поэтому соединяться с источником данных не нужно.  
+ Содержатся общие сведения о [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] и мастерах, которые могут помочь в создании отчетов. Учебник содержит набор данных для работы, поэтому соединяться с источником данных не нужно.  
   
  [Планирование отчета (построитель отчетов)](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Содержит сведения о некоторых соображениях, которые важно учесть перед началом создания отчета.  
   
  [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Определены основные понятия, используемые в документации по [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] .  
+ Определены основные понятия, используемые в документации по [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
  [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Поясняет назначение различных панелей и областей представления конструктора отчетов.  
@@ -96,6 +96,6 @@ ms.locfileid: "33022931"
  Поясняет назначение различных панелей и областей представления конструктора общих наборов данных.  
   
  [Сочетания клавиш (построитель отчетов)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
- Описываются клавиши, которые можно использовать для навигации и проектирования отчетов в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+ Описываются клавиши, которые можно использовать для навигации и проектирования отчетов в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
 

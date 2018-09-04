@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ef72373f91b9104c8ff83f6d1d9b012b283df3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 811c4b01264d16df1091629524823dd14acf3ea0
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036251"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405551"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)
-В этом учебнике с помощью мастера в [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] будет создана линейчатая диаграмма в отчете [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. Затем вы добавите фильтр и расширите возможности диаграммы. 
+В этом учебнике с помощью мастера в [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] будет создана линейчатая диаграмма в отчете [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. Затем вы добавите фильтр и расширите возможности диаграммы. 
 
 В линейчатых диаграммах категории данных отображаются по горизонтали. Это может использоваться для:  
   

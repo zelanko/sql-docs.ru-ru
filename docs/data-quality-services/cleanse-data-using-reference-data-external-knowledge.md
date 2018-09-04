@@ -15,19 +15,22 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b1aa5dfe6a501548a3a7e0914eacda93169a89c6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 75cf72c26c7a9baf1e4361b053325d655797c238
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310023"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42788855"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Очистка данных с использованием знаний о справочных данных (внешних знаний)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   В этом разделе описывается очистка данных с использованием набора знаний из поставщиков ссылочных данных. Все этапы очистки данных с использованием набора знаний из поставщиков эталонных данных точно такие же, как описано в разделе [Очистка данных с использованием набора знаний служб DQS &#40;внутренних&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), а в этом разделе приведены сведения по очистке данных с использованием службы эталонных данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
-  
+
+> [!IMPORTANT]
+> В этой статье упоминаются сторонние службы ссылочных данных, которые ранее были доступны из Azure DataMarket. DataMarket и службы Data Services — включая данные об адресах Melissa — не поддерживаются после 31 декабря 2016 г. Таким образом, вы больше не можете запускать примеры в этой статье с помощью указанных служб из DataMarket. По-прежнему можно использовать службы эталонных данных, доступные через Интернет напрямую от сторонних поставщиков.
+ 
  При очистке данных с использованием функции службы ссылочных данных в DQS процесс очистки служб DQS отправляет сопоставленные значения домена поставщику служб ссылочных данных в виде пакетного запроса. Служба ссылочных данных в ответ отправляет следующие сведения:  
   
 -   Предлагаемые исправления  

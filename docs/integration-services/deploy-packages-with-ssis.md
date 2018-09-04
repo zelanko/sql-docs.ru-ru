@@ -1,14 +1,14 @@
 ---
 title: Развертывание пакетов с помощью служб SSIS | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -24,12 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f7abdad422347e140e230eac9b7f19a78d5ba47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f28ae86cab01c86aa7360618b080ec4ff124e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328268"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028818"
 ---
 # <a name="deploy-packages-with-ssis"></a>Развертывание пакетов с помощью служб SSIS
 Службы[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат средства, облегчающие развертывание пакетов на другом компьютере. Средства развертывания управляют любыми зависимостями, такими как конфигурации или требуемые пакету файлы. В данном учебнике демонстрируется, как с помощью этих средств устанавливать пакеты и их зависимости на целевом компьютере.    
@@ -45,37 +45,49 @@ ms.locfileid: "35328268"
 Наконец, требуется запустить пакеты в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] с помощью программы выполнения пакетов.    
     
 Целью данного учебника является демонстрация сложности некоторых вопросов развертывания, с которыми пользователю приходится сталкиваться при работе. Если по каким-либо причинам у пользователя нет возможности развернуть пакеты на другом компьютере, этот учебник можно выполнить, установив пакеты на локальном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в базе данных msdb и запустив их в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] на этом же экземпляре.    
-    
-## <a name="what-you-will-learn"></a>Обзор учебника    
+
+**Предполагаемое время для выполнения заданий этого учебника:** 2 часа
+
+## <a name="what-you-learn"></a>Что вы узнаете    
 Новые средства, элементы управления и возможности служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] лучше всего изучать на практике. С помощью данного учебника шаг за шагом создается проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , куда затем добавляются пакеты и другие необходимые файлы. Когда проект полностью завершен, пользователь создает комплект развертывания и копирует его на целевой компьютер, куда затем устанавливаются пакеты.    
     
-## <a name="requirements"></a>Требования    
+## <a name="prerequisites"></a>предварительные требования    
 Этот учебник предназначен для пользователей, знакомых с основными операциями файловой системы, но имеющих ограниченное представление о новых возможностях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Для лучшего понимания основных понятий служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , с которыми знакомит этот учебник, может пригодиться предварительное изучение следующего учебника по использованию служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [Службы SSIS: создание пакета ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
-**Компьютер-источник.** На компьютере, где создается пакет развертывания, **должны быть установлены следующие компоненты.**
-- SQL Server  
-- Образцы данных, завершенные пакеты, конфигурации и файл сведений. Эти файлы устанавливаются вместе при скачивании [примеров баз данных Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).     
-> **Примечание.** Пользователь должен иметь разрешение на создание и удаление таблиц в базе данных AdventureWorks, а также других используемых данных.         
+### <a name="on-the-source-computer"></a>Исходный компьютер
+
+На компьютере, где создается пакет развертывания, **должны быть установлены следующие компоненты**:
+
+- SQL Server. (Скачать бесплатный выпуск SQL Server Evaluation или Developer из [скачиваемых файлов SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).)
+
+- Образцы данных, завершенные пакеты, конфигурации и файл сведений. Чтобы скачать образец данных и пакеты занятий в виде ZIP-файла, перейдите к файлам [учебника в составе документации по SQL Server Integration Services](https://www.microsoft.com/download/details.aspx?id=56827). Большая часть файлов в ZIP-файле доступна только для чтения во избежание непреднамеренных изменений. Для записи выходных данных в файл или его изменении может потребоваться отключить атрибут "только для чтения" в свойствах файла.
+
+-   Образец базы данных **AdventureWorks2014**. Чтобы скачать базу данных **AdventureWorks2014**, скачайте файл `AdventureWorks2014.bak` со страницы с [образцами баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) и выполните восстановление из резервной копии.  
+
+-   Нужно разрешение на создание и удаление таблиц в базе данных AdventureWorks.
     
 -   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
     
-**Целевой компьютер.** На компьютере, где будут развернуты пакеты, **должны быть установлены следующие компоненты.**    
+### <a name="on-the-destination-computer"></a>Целевой компьютер
+
+На компьютере, где будут развернуты пакеты, **должны быть установлены следующие компоненты.**    
     
-- SQL Server
-- Образцы данных, завершенные пакеты, конфигурации и файл сведений. Эти файлы устанавливаются вместе при скачивании [примеров баз данных Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550). 
+- SQL Server. (Скачать бесплатный выпуск SQL Server Evaluation или Developer из [скачиваемых файлов SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).)
+
+- Образцы данных, завершенные пакеты, конфигурации и файл сведений. Чтобы скачать образец данных и пакеты занятий в виде ZIP-файла, перейдите к файлам [учебника в составе документации по SQL Server Integration Services](https://www.microsoft.com/download/details.aspx?id=56827). Большая часть файлов в ZIP-файле доступна только для чтения во избежание непреднамеренных изменений. Для записи выходных данных в файл или его изменении может потребоваться отключить атрибут "только для чтения" в свойствах файла.
+
+-   Образец базы данных **AdventureWorks2014**. Чтобы скачать базу данных **AdventureWorks2014**, скачайте файл `AdventureWorks2014.bak` со страницы с [образцами баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) и выполните восстановление из резервной копии.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Чтобы установить службы SSIS, см. руководство по [установке Integration Services](install-windows/install-integration-services.md).
     
--   Пользователь должен иметь разрешение на создание и удаление таблиц в базе данных AdventureWorks, а также на запуск пакетов в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
+-   Нужно разрешение на создание и удаление таблиц в базе данных AdventureWorks и запуск пакетов SSIS в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
     
--   Пользователь должен иметь разрешение на чтение и запись в таблицу sysssispackages в системной базе данных msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .    
+-   Пользователь должен иметь разрешение на чтение и запись в таблицу `sysssispackages` в системной базе данных `msdb` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].    
     
 Если развертывание пакетов предполагается на том же самом компьютере, где создается комплект развертывания, этот компьютер должен удовлетворять требованиям как компьютера-источника, так и целевого компьютера.    
-    
-**Предполагаемое время для выполнения заданий этого учебника:** 2 часа    
-    
+        
 ## <a name="lessons-in-this-tutorial"></a>Занятия этого учебника    
 [Занятие 1. Подготовка к созданию пакета развертывания](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 На этом занятии требуется развернуть ETL-решение путем создания нового проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и добавления пакетов и других необходимых файлов.    

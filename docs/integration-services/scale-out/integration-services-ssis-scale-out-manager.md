@@ -13,12 +13,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3023b3d2847e206aa5646a14aa8a5ee5eff68a9c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 31393f359faccf940178fd1d1a6b9d2e60d4b9e5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331258"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43082471"
 ---
 # <a name="integration-services-scale-out-manager"></a>Диспетчер Integration Services Scale Out
 
@@ -38,13 +38,13 @@ ms.locfileid: "35331258"
 > [!NOTE]
 > Рекомендуется запускать SQL Server Management Studio от имени администратора, так как для выполнения некоторых операций по управлению Scale Out, таких как добавление рабочей роли Scale Out, требуются права администратора.
 
-### <a name="2-open-scale-out-manager-by-running-ismanagerexe"></a>2. Открытие диспетчера Scale Out с помощью файла ISManager.exe
+### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2. Открытие диспетчера Scale Out с помощью программы ManagementTool.exe
 
-Найдите файл `ISManager.exe` в папке `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\Management`. Щелкните файл **ISManager.exe** правой кнопкой мыши и выберите пункт **Запуск от имени администратора**. 
+Найдите файл `ManagementTool.exe` в папке `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management`. Щелкните файл **ManagementTool.exe** правой кнопкой мыши и выберите пункт **Запуск от имени администратора**. 
 
 Когда диспетчер Scale Out откроется, введите имя экземпляра SQL Server для мастера Scale Out и установите подключение к нему для управления средой Scale Out.
 
-![Подключение на портале](media/portal-connect.PNG)
+![Подключение на портале](media/portal-connect-new.png)
 
 ## <a name="tasks-available-in-scale-out-manager"></a>Задачи, доступные в диспетчере Scale Out
 В диспетчере Scale Out вы можете выполнять указанные ниже действия.
@@ -52,42 +52,42 @@ ms.locfileid: "35331258"
 ### <a name="enable-scale-out"></a>Включение Scale Out
 После подключения к SQL Server, если режим Scale Out не включен, его можно активировать, нажав кнопку **Включить**.
 
-![Включение Scale Out на портале](media/portal-enable-scale-out.PNG) 
+![Включение Scale Out на портале](media/portal-enable-scale-out-new.PNG) 
 
 ### <a name="view-scale-out-master-status"></a>Просмотр состояния мастера Scale Out
 Сведения о состоянии мастера Scale Out отображаются на странице **Панель мониторинга**.
 
-![Панель мониторинга на портале](media/portal-dashboard.PNG)
+![Панель мониторинга на портале](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>Просмотр состояния рабочей роли Scale Out
 Состояние рабочей роли Scale Out отображается на странице **Диспетчер рабочих ролей**. Чтобы просмотреть состояние отдельной рабочей роли, выберите ее.
 
-![Диспетчер рабочих ролей на портале](media/portal-worker-manager.PNG)
+![Диспетчер рабочих ролей на портале](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>Добавление рабочей роли Scale Out
 Чтобы добавить рабочую роль Scale Out, нажмите кнопку **+** внизу списка рабочих ролей Scale Out. 
 
 Введите имя компьютера для рабочей роли Scale Out, которую требуется добавить, и нажмите кнопку **Проверить**. Диспетчер Scale Out проверит наличие у текущего пользователя прав доступа к хранилищам сертификатов на компьютерах с мастером Scale Out и рабочей ролью Scale Out.
 
-![Подключение рабочей роли](media/connect-worker.PNG)
+![Подключение рабочей роли](media/connect-worker-new.PNG)
 
 В случае успешного прохождения проверки диспетчер Scale Out пытается считать файл конфигурации для службы рабочей роли и получить отпечаток сертификата для нее. Дополнительные сведения см. в разделе [Рабочая роль Scale Out](integration-services-ssis-scale-out-worker.md). Если считать файл конфигурации для службы рабочей роли не удается, предоставить сертификат рабочей роли можно двумя способами. 
 
-1.  Вы можете ввести отпечаток сертификата рабочей роли напрямую.
+- Вы можете ввести отпечаток сертификата рабочей роли напрямую.
 
-    ![Сертификат рабочей роли 1](media/portal-cert1.PNG)
+    ![Сертификат рабочей роли 1](media/portal-cert1-new.PNG)
 
-2.  Вы также можете предоставить файл сертификата. 
+- Вы также можете предоставить файл сертификата.
 
-    ![Сертификат рабочей роли 2](media/portal-cert2.PNG)
+    ![Сертификат рабочей роли 2](media/portal-cert2-new.PNG)
 
 После сбора сведений диспетчер Scale Out предоставит указания по выполнению необходимых действий. Как правило, эти действия включают установку сертификата, обновление файла конфигурации для службы рабочей роли и перезапуск этой службы.
 
-![Подтверждение добавления на портале 1](media/portal-add-confirm1.PNG)
+![Подтверждение добавления на портале 1](media/portal-add-confirm1-new.PNG)
 
-Если сертификат рабочей роли недоступен, необходимо обновить его вручную и перезапустить службу рабочей роли.
+Если вариант рабочей роли недоступен, необходимо обновить его вручную и перезапустить службу рабочей роли.
 
-![Подтверждение добавления на портале 2](media/portal-add-confirm2.PNG)
+![Подтверждение добавления на портале 2](media/portal-add-confirm2-new.PNG)
 
 Установите флажок **Подтвердить** и нажмите кнопку **ОК**, чтобы приступить к добавлению рабочей роли Scale Out.
 
@@ -100,7 +100,7 @@ ms.locfileid: "35331258"
 ## <a name="edit-a-scale-out-worker-description"></a>Изменение описания рабочей роли Scale Out
 Чтобы изменить описание рабочей роли Scale Out, выберите ее и нажмите кнопку **Изменить**. Завершив изменение описания, нажмите кнопку **Сохранить**.
 
-![Сохранение рабочей роли на портале](media/portal-save-worker.PNG)
+![Сохранение рабочей роли на портале](media/portal-save-worker-new.PNG)
 
 ## <a name="next-steps"></a>Следующие шаги
 Дополнительные сведения см. в следующих статьях:

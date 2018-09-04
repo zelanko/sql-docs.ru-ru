@@ -1,7 +1,7 @@
 ---
 title: Типы данных в выражениях (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61d9e125f12d9c642408316ccb936e54f2a29372
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9030de2c1c189bdbdb036b40df8400c07da8bbb5
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022835"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410409"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Типы данных в выражениях (построитель отчетов и службы SSRS)
   Типы данных представляют разные виды данных, чтобы их можно было эффективно хранить и обрабатывать. Стандартные типы данных включают текст (строки), числа с десятичными разрядами или без них, даты и время, а также изображения. Значения в отчете должны быть представлены с помощью типов данных языка определения отчетов. При отображении значения в отчете его можно отформатировать в соответствии с конкретными предпочтениями. Например, поле, представляющее валюту, может храниться в определении отчета как число с плавающей запятой, но отображаться в различных форматах в зависимости от выбранного свойства формата.  
@@ -143,9 +143,9 @@ ms.locfileid: "33022835"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- Дополнительные сведения о типах данных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделах [Типы данных &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) и [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Дополнительные сведения о типах данных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделах [Типы данных &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) и [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Типы данных в службах Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) [SQL Server Books Onle](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Типы данных в службах Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

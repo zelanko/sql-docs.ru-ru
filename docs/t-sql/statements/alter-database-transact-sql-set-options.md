@@ -2,7 +2,7 @@
 title: Параметры ALTER DATABASE SET (Transact-SQL) | Документы Майкрософт
 description: Сведения о том, как задать параметры базы данных, например автоматическую настройку, шифрование, хранилище запросов в SQL Server и базе данных SQL Azure
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -32,13 +32,13 @@ caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 16505ba07dcd1035ad260b68785eea763c050d1b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 84ee6c7ac1161f53d8878161580cc3fe0f68abd0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560504"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067576"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL) 
 
@@ -46,9 +46,31 @@ ms.locfileid: "39560504"
 
 Щелкните одну из следующих вкладок, чтобы изучить синтаксис, аргументы, примечания, разрешения и примеры для используемой вам версии SQL.
 
-Дополнительные сведения о соглашениях о синтаксисе см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+Дополнительные сведения о синтаксических обозначениях см. в разделе [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntДополнительные сведения о синтаксических обозначениях см. в разделе [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
+## <a name="click-a-product"></a>Выберите продукт!
+
+В следующей строке щелкните имя продукта, который вас интересует. На этой веб-странице отобразится другой контент, относящийся к выбранному продукту.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>SQL Server
   
 Зеркальное отображение базы данных, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] и уровни совместимости баз данных являются параметрами инструкции `SET`, но описаны в отдельных статьях в связи с большим объемом материала. Дополнительные сведения см. в статьях [Зеркальное отображение базы данных ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE (Transact-SQL) SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) и [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -89,7 +111,7 @@ SET
   | <service_broker_option>  
   | <snapshot_option>  
   | <sql_option>   
-  | <target_recovery_time_option>   
+  | <target_recovery_time_option> 
   | <termination>  
 }  
 ;
@@ -118,7 +140,7 @@ SET
    }  
 }  
   
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF }   
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -377,15 +399,15 @@ OFF
   
 FORCE_LAST_GOOD_PLAN = { ON | OFF }  
 ON  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически включает последний известный удачный план для [!INCLUDE[tsql_md](../../includes/tsql_md.md)] запросов, когда новый план SQL приводит к снижению производительности. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] непрерывное отслеживает производительность запроса [!INCLUDE[tsql_md](../../includes/tsql_md.md)] в форсированном плане. В случае повышения производительности [!INCLUDE[ssde_md](../../includes/ssde_md.md)] будет продолжать использовать последний известный удачный план. Если повышений производительности нет, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] создаст новый план SQL. Инструкция завершится ошибкой, если хранилище запросов не включено или не находится в режиме *чтения и записи*.   
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически включает последний известный удачный план для [!INCLUDE[tsql-md](../../includes/tsql-md.md)] запросов, когда новый план SQL приводит к снижению производительности. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] непрерывно отслеживает производительность запроса [!INCLUDE[tsql-md](../../includes/tsql-md.md)] в форсированном плане. В случае повышения производительности [!INCLUDE[ssde_md](../../includes/ssde_md.md)] будет продолжать использовать последний известный удачный план. Если повышений производительности нет, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] создаст новый план SQL. Инструкция завершится ошибкой, если хранилище запросов не включено или не находится в режиме *чтения и записи*.   
 OFF  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] сообщает о потенциальном снижении производительности запросов, вызванном изменениями планов SQL в представлении [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Однако эти рекомендации не применяются автоматически. Пользователь может отслеживать активные рекомендации и устранять выявленные проблемы, применяя сценарии [!INCLUDE[tsql_md](../../includes/tsql_md.md)], которые отображаются в представлении. Это значение по умолчанию.
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] сообщает о потенциальном снижении производительности запросов, вызванном изменениями планов SQL в представлении [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Однако эти рекомендации не применяются автоматически. Пользователь может отслеживать активные рекомендации и устранять выявленные проблемы, применяя сценарии [!INCLUDE[tsql-md](../../includes/tsql-md.md)], которые отображаются в представлении. Это значение по умолчанию.
 
 **\<change_tracking_option> ::=**  
   
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
-Определяет параметры отслеживания изменений. Отслеживание изменений можно включить или отключить, а также установить или изменить параметры. Примеры использования см. далее в этом разделе.  
+Определяет параметры отслеживания изменений. Отслеживание изменений можно включить или отключить, а также установить или изменить параметры. Примеры использования см. далее в этой статье.  
   
 ON  
 Включает отслеживание изменений для базы данных. При включении отслеживания изменений также необходимо задать параметры AUTO CLEANUP и CHANGE RETENTION.  
@@ -1086,7 +1108,7 @@ MINUTES
 Указывает, когда откатывать незавершенные транзакции при переходе базы данных из одного состояния в другое. Если предложение завершения опущено, инструкция ALTER DATABASE бесконечно ожидает блокировки базы данных. Может быть указано только одно предложение завершения, которое должно следовать за предложением SET.  
   
 > [!NOTE]  
->  Не все параметры базы данных могут использоваться с предложением WITH \<termination>. Дополнительные сведения см. в таблице, расположенной в подразделе [Настройка параметров](#SettingOptions) раздела "Примечания".  
+>  Не все параметры базы данных могут использоваться с предложением WITH \<termination>. Дополнительные сведения см. в таблице [Настройка параметров](#SettingOptions) в разделе "Примечания" этой статьи.  
   
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
 Указывает, нужно ли откатить транзакцию через указанное количество секунд или немедленно.  
@@ -1263,8 +1285,27 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# <a name="sql-db-logical-servertabsqldbls"></a>[Логический сервер базы данных SQL](#tab/sqldbls)
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Логический сервер Базы данных SQL Azure
 Уровни совместимости являются параметрами инструкции `SET`, но описаны в отдельной статье [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
@@ -1308,14 +1349,11 @@ SET
 }
 
 <automatic_tuning_option> ::=  
-{  AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
+{   AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
   | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
-}  
-
-ALTER DATABASE current SET AUTOMATIC_TUNING = AUTO | INHERIT | CUSTOM
-ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_INDEX = DEFAULT, DROP_INDEX = OFF)
+}
 
 <change_tracking_option> ::=  
 {  
@@ -1327,7 +1365,7 @@ ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_I
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -1448,7 +1486,7 @@ OFF
   
 > [!NOTE]  
 > В автономной базе данных параметр AUTO_SHRINK недоступен.  
-  
+
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }  
 ON  
 Указывает, что оптимизатор запросов обновляет статистику, если она используется в запросе и может оказаться устаревшей. Статистика становится устаревшей, после того как операции вставки, обновления, удаления или слияния изменяют распределение данных в таблице или индексированном представлении. Оптимизатор запросов определяет, когда статистика может оказаться устаревшей, подсчитывая операции изменения данных с момента последнего обновления статистики и сравнивая количество изменений с пороговым значением. Пороговое значение основано на количестве строк в таблице или индексированном представлении.  
@@ -1485,35 +1523,57 @@ OFF
   
 Дополнительные сведения, описывающие условия применения синхронного и асинхронного обновлений статистики, см. в подразделе "Использование параметров статистики на уровне базы данных" раздела [Статистика](../../relational-databases/statistics/statistics.md).  
 
-**\<automatic_tuning_option> ::=**  
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
 **Применимо к**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-
-Включает или отключает [автоматическую настройку](../../relational-databases/automatic-tuning/automatic-tuning.md) баз данных.
-
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } AUTO Если для автоматической настройки задано значение AUTO, будут применяться значения конфигурации Azure по умолчанию.
-INHERIT При использовании значения INHERIT с родительского сервера будет наследоваться конфигурация по умолчанию. Это особенно полезно, если вы хотите задать на родительском сервере пользовательские параметры автоматической настройки, которые будут наследовать все базы данных. Обратите внимание, что для корректного наследования нужно, чтобы три отдельных параметра настройки (FORCE_LAST_GOOD_PLAN, CREATE_INDEX и DROP_INDEX) имели значение DEFAULT в базах данных.
-CUSTOM Значение CUSTOM потребует ручной настройки всех параметров, доступных в базах данных.
-
-Включает или отключает параметр автоматического управления индексами `CREATE_INDEX` [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md).
-
-CREATE_INDEX = { DEFAULT | ON | OFF } DEFAULT Наследует параметры по умолчанию с сервера. В этом случае параметры включения и отключения отдельных функций автоматической настройки задаются на уровне сервера.
-ON Если этот параметр включен, недостающие индексы в базе данных создаются автоматически. После создания индексов измеряется повышение производительности рабочей нагрузки. Если созданный таким образом индекс больше не повышает производительность, он автоматически отменяется. Автоматически созданные индексы отмечаются как созданные системой.
-OFF Не создает автоматически недостающие индексы в базе данных.
-
-Включает или отключает параметр автоматического управления индексами `DROP_INDEX` [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md).
-
-DROP_INDEX = { DEFAULT | ON | OFF } DEFAULT Наследует параметры по умолчанию с сервера. В этом случае параметры включения и отключения отдельных функций автоматической настройки задаются на уровне сервера.
-ON Автоматически удаляет повторяющиеся или неиспользуемые индексы для повышения производительности рабочей нагрузки. OFF Не удаляет автоматически недостающие индексы в базе данных.
-
-Включает или отключает параметр автоматического исправления плана `FORCE_LAST_GOOD_PLAN` [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md).
-
-FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
-DEFAULT Наследует параметры по умолчанию с сервера. В этом случае параметры включения и отключения отдельных функций автоматической настройки задаются на уровне сервера.
+  
+Управляет автоматическими параметрами для [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }  
+AUTO  
+Если для автоматической настройки задано значение AUTO, будут применяться значения конфигурации Azure по умолчанию.  
+    
+INHERIT  
+При использовании значения INHERIT с родительского сервера будет наследоваться конфигурация по умолчанию. Это особенно полезно, если вы хотите задать на родительском сервере пользовательские параметры автоматической настройки, которые будут наследовать все базы данных. Обратите внимание, что для корректного наследования нужно, чтобы три отдельных параметра настройки (FORCE_LAST_GOOD_PLAN, CREATE_INDEX и DROP_INDEX) имели значение DEFAULT в базах данных.  
+  
+CUSTOM  
+Значение CUSTOM потребует ручной настройки всех параметров, доступных в базах данных.  
+  
+Включает или отключает параметр автоматического управления индексами `CREATE_INDEX` [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+CREATE_INDEX = { DEFAULT | ON | OFF }  
+DEFAULT  
+Наследует параметры по умолчанию с сервера. В этом случае параметры включения и отключения отдельных функций автоматической настройки задаются на уровне сервера.  
+  
 ON  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически включает последний известный удачный план для [!INCLUDE[tsql_md](../../includes/tsql_md.md)] запросов, когда новый план SQL приводит к снижению производительности. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] непрерывное отслеживает производительность запроса [!INCLUDE[tsql_md](../../includes/tsql_md.md)] в форсированном плане. В случае повышения производительности [!INCLUDE[ssde_md](../../includes/ssde_md.md)] будет продолжать использовать последний известный удачный план. Если повышений производительности нет, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] создаст новый план SQL. Инструкция завершится ошибкой, если хранилище запросов не включено или не находится в режиме *чтения и записи*.   
+Если этот параметр включен, недостающие индексы в базе данных создаются автоматически. После создания индексов измеряется повышение производительности рабочей нагрузки. Если созданный таким образом индекс больше не повышает производительность, он автоматически отменяется. Автоматически созданные индексы отмечаются как созданные системой.  
+  
 OFF  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] сообщает о потенциальном снижении производительности запросов, вызванном изменениями планов SQL в представлении [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Однако эти рекомендации не применяются автоматически. Пользователь может отслеживать активные рекомендации и устранять выявленные проблемы, применяя сценарии [!INCLUDE[tsql_md](../../includes/tsql_md.md)], которые отображаются в представлении. Это значение по умолчанию.
-
+Не создает автоматически недостающие индексы в базе данных.  
+  
+Включает или отключает параметр автоматического управления индексами `DROP_INDEX` [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+DROP_INDEX = { DEFAULT | ON | OFF }  
+DEFAULT  
+Наследует параметры по умолчанию с сервера. В этом случае параметры включения и отключения отдельных функций автоматической настройки задаются на уровне сервера.  
+  
+ON  
+Автоматически удаляет повторяющиеся или неиспользуемые индексы для повышения производительности рабочей нагрузки.   
+  
+OFF  
+Не удаляет автоматически недостающие индексы в базе данных.  
+  
+Включает или отключает параметр автоматического исправления плана `FORCE_LAST_GOOD_PLAN` [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
+DEFAULT  
+Наследует параметры по умолчанию с сервера. В этом случае параметры включения и отключения отдельных функций автоматической настройки задаются на уровне сервера.  
+  
+ON  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически включает последний известный удачный план для [!INCLUDE[tsql-md](../../includes/tsql-md.md)] запросов, когда новый план SQL приводит к снижению производительности. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] непрерывно отслеживает производительность запроса [!INCLUDE[tsql-md](../../includes/tsql-md.md)] в форсированном плане. В случае повышения производительности [!INCLUDE[ssde_md](../../includes/ssde_md.md)] будет продолжать использовать последний известный удачный план. Если повышений производительности нет, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] создаст новый план SQL. Инструкция завершится ошибкой, если хранилище запросов не включено или не находится в режиме *чтения и записи*.   
+  
+OFF  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] сообщает о потенциальном снижении производительности запросов, вызванном изменениями планов SQL в представлении [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Однако эти рекомендации не применяются автоматически. Пользователь может отслеживать активные рекомендации и устранять выявленные проблемы, применяя сценарии [!INCLUDE[tsql-md](../../includes/tsql-md.md)], которые отображаются в представлении. Это значение по умолчанию.  
+  
 **\<change_tracking_option> ::=**  
   
 Определяет параметры отслеживания изменений. Отслеживание изменений можно включить или отключить, а также установить или изменить параметры. Примеры использования см. далее в этой статье.  
@@ -2021,7 +2081,26 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[Управляемый экземпляр Базы данных SQL](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
+>   <th><strong><em>* База данных SQL<br />Управляемый экземпляр *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
 Уровни совместимости являются параметрами инструкции `SET`, но описаны в отдельной статье [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -2062,6 +2141,11 @@ SET
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
 
+<automatic_tuning_option> ::=  
+{  
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+}  
+
 <change_tracking_option> ::=  
 {  
   CHANGE_TRACKING 
@@ -2072,7 +2156,7 @@ SET
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -2217,6 +2301,17 @@ OFF
   
 Дополнительные сведения, описывающие условия применения синхронного и асинхронного обновлений статистики, см. в подразделе "Использование параметров статистики на уровне базы данных" раздела [Статистика](../../relational-databases/statistics/statistics.md).  
   
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
+**Применимо к**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+
+Включает или отключает параметр [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md) `FORCE_LAST_GOOD_PLAN`.  
+  
+FORCE_LAST_GOOD_PLAN = { ON | OFF }  
+ON  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически включает последний известный удачный план для [!INCLUDE[tsql-md](../../includes/tsql-md.md)] запросов, когда новый план SQL приводит к снижению производительности. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] непрерывно отслеживает производительность запроса [!INCLUDE[tsql-md](../../includes/tsql-md.md)] в форсированном плане. В случае повышения производительности [!INCLUDE[ssde_md](../../includes/ssde_md.md)] будет продолжать использовать последний известный удачный план. Если повышений производительности нет, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] создаст новый план SQL. Инструкция завершится ошибкой, если хранилище запросов не включено или не находится в режиме *чтения и записи*.   
+OFF  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] сообщает о потенциальном снижении производительности запросов, вызванном изменениями планов SQL в представлении [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Однако эти рекомендации не применяются автоматически. Пользователь может отслеживать активные рекомендации и устранять выявленные проблемы, применяя сценарии [!INCLUDE[tsql-md](../../includes/tsql-md.md)], которые отображаются в представлении. Это значение по умолчанию.
+
 **\<change_tracking_option> ::=**  
   
 Определяет параметры отслеживания изменений. Отслеживание изменений можно включить или отключить, а также установить или изменить параметры. Примеры использования см. далее в этой статье.  
@@ -2695,3 +2790,4 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
+::: moniker-end

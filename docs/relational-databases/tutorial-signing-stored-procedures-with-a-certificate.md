@@ -1,66 +1,59 @@
 ---
 title: Руководство. Подписывание хранимых процедур с помощью сертификата | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b0cfd18b508f13499ce5cf7bdf4cc12be4440562
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2adac6728e7c288a50d525a0760a98a26c5b2b2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011941"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021088"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Учебник. Подписывание хранимых процедур с помощью сертификата
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этом учебнике демонстрируется подписание хранимых процедур с помощью сертификата, созданного [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> Для запуска кода в этом учебнике необходимо, чтобы был настроен режим смешанной безопасности. Кроме того, необходимо установить базу данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Сценарий  
+> Для запуска кода в этом учебнике необходимо, чтобы был настроен режим смешанной безопасности. Кроме того, необходимо наличие установленной базы данных AdventureWorks2017.   
   
 Подписывание хранимой процедуры с помощью сертификата полезно в том случае, если для хранимой процедуры необходимо требовать разрешения, но явно предоставлять пользователям эти права нежелательно. Хотя эту задачу можно выполнить и другими способами, такими как инструкция EXECUTE AS, использование сертификата позволяет применить трассировку, чтобы найти участника, вызвавшего хранимую процедуру. Таким образом обеспечивается высокий уровень аудита, особенно во время выполнения операций безопасности или операций языка описания данных DDL.  
   
-Можно создать сертификат в базе данных master (чтобы предоставлять разрешения уровня сервера) или в любой другой пользовательской базе данных (для предоставления разрешений уровня базы данных). В этом сценарии пользователь, не обладающий правами на базовые таблицы, должен получить доступ к хранимой процедуре в базе данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , при этом необходимо отследить путь доступа к объекту. Вместо того чтобы использовать другие методы цепочки владения, будет создана учетная запись пользователя сервера и базы данных без прав на базовые объекты, а также учетная запись пользователя базы данных с правами на таблицы и хранимые процедуры. Безопасность хранимой процедуры и второй учетной записи пользователя базы данных будет обеспечена сертификатом. Вторая учетная запись пользователя будет обладать доступом ко всем объектам. Она предоставляет доступ к хранимой процедуре первой учетной записи пользователя.  
+Можно создать сертификат в базе данных master (чтобы предоставлять разрешения уровня сервера) или в любой другой пользовательской базе данных (для предоставления разрешений уровня базы данных). В этом сценарии пользователь, не обладающий правами на базовые таблицы, должен получить доступ к хранимой процедуре в базе данных AdventureWorks2017, при этом необходимо проконтролировать след доступа к объекту. Вместо того чтобы использовать другие методы цепочки владения, будет создана учетная запись пользователя сервера и базы данных без прав на базовые объекты, а также учетная запись пользователя базы данных с правами на таблицы и хранимые процедуры. Безопасность хранимой процедуры и второй учетной записи пользователя базы данных будет обеспечена сертификатом. Вторая учетная запись пользователя будет обладать доступом ко всем объектам. Она предоставляет доступ к хранимой процедуре первой учетной записи пользователя.  
   
 В этом сценарии сначала создается сертификат базы данных, хранимая процедура и пользователь, затем весь процесс проверяется с помощью следующих шагов:  
   
-1.  Настройка среды.  
-  
-2.  Создание сертификата.  
-  
-3.  Создание и подписывание хранимой процедуры с помощью сертификата.  
-  
-4.  Создание учетной записи сертификата с помощью сертификата.  
-  
-5.  Предоставление учетной записи сертификата прав на базу данных.  
-  
-6.  Отображение контекста доступа.  
-  
-7.  Сброс среды.  
-  
 Каждый блок кода в этом примере объясняется по порядку. Чтобы скопировать весь пример, см. раздел [Пример целиком](#CompleteExample) в конце этого учебника.  
+
+## <a name="prerequisites"></a>предварительные требования
+Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
+
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Скачайте [примеры баз данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+
+Инструкции по восстановлению базы данных в SQL Server Management Studio см. в разделе [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Настройка среды  
-Чтобы задать начальный контекст в этом примере, откройте в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] новый запрос и выполните следующий код, чтобы открыть базу данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Этот код изменяет контекст базы данных на `AdventureWorks2012`, затем создает новое имя входа сервера и новую учетную запись пользователя базы данных (`TestCreditRatingUser`) с использованием пароля.  
+Чтобы задать начальный контекст в этом примере, откройте в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] новый запрос и откройте базу данных Adventureworks2017 с помощью приведенного ниже кода. Этот код изменяет контекст базы данных на `AdventureWorks2012` , затем создает новое имя входа сервера и новую учетную запись пользователя базы данных (`TestCreditRatingUser`) с использованием пароля.  
   
-```  
-USE AdventureWorks2012;  
+```sql  
+USE AdventureWorks2017;  
 GO  
 -- Set up a login for the test user  
 CREATE LOGIN TestCreditRatingUser  
@@ -78,18 +71,18 @@ GO
   
 Запустите этот код, чтобы создать сертификат базы данных и защитить его паролем.  
   
-```  
+```sql  
 CREATE CERTIFICATE TestCreditRatingCer  
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
       WITH SUBJECT = 'Credit Rating Records Access',   
-      EXPIRY_DATE = '12/05/2014';  
+      EXPIRY_DATE = '12/05/2020';  -- Error 3701 will occur if this date is not in the future
 GO  
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Создание и подписывание хранимой процедуры с помощью сертификата  
 Используйте следующий код, чтобы создать хранимую процедуру, которая выбирает данные из таблицы `Vendor` в схеме базы данных `Purchasing`, ограничивая доступ и предоставляя его только для компаний с уровнем кредитоспособности 1. В первом разделе хранимой процедуры в целях демонстрации основных принципов работы выводится контекст учетной записи пользователя, с которой работает процедура. Удовлетворять требованиям не обязательно.  
   
-```  
+```sql  
 CREATE PROCEDURE TestCreditRatingSP  
 AS  
 BEGIN  
@@ -111,7 +104,7 @@ GO
   
 Запустите этот код, чтобы подписывать хранимую процедуру сертификатом базы данных с использованием пароля.  
   
-```  
+```sql  
 ADD SIGNATURE TO TestCreditRatingSP   
    BY CERTIFICATE TestCreditRatingCer  
     WITH PASSWORD = 'pGFD4bb925DGvbd2439587y';  
@@ -125,8 +118,8 @@ GO
 ## <a name="4-create-a-certificate-account-using-the-certificate"></a>4. Создание учетной записи сертификата с помощью сертификата  
 Запустите этот код, чтобы создать пользователя базы данных (`TestCreditRatingcertificateAccount`) из сертификата. У этой учетной записи нет имени входа сервера. Она в конечном итоге предназначена для управления доступом к базовым таблицам.  
   
-```  
-USE AdventureWorks2012;  
+```sql  
+USE AdventureWorks2017;  
 GO  
 CREATE USER TestCreditRatingcertificateAccount  
    FROM CERTIFICATE TestCreditRatingCer;  
@@ -136,7 +129,7 @@ GO
 ## <a name="5-grant-the-certificate-account-database-rights"></a>5. Предоставление учетной записи сертификата прав на базу данных  
 Запустите этот код, чтобы предоставить учетной записи `TestCreditRatingcertificateAccount` права на базовую таблицу и хранимую процедуру.  
   
-```  
+```sql  
 GRANT SELECT   
    ON Purchasing.Vendor   
    TO TestCreditRatingcertificateAccount;  
@@ -153,7 +146,7 @@ GO
 ## <a name="6-display-the-access-context"></a>6. Отображение контекста доступа  
 Для отображения прав, связанных с доступом хранимой процедуры, запустите следующий код, чтобы предоставить права на запуск хранимой процедуры пользователю `TestCreditRatingUser`.  
   
-```  
+```sql  
 GRANT EXECUTE   
    ON TestCreditRatingSP   
    TO TestCreditRatingUser;  
@@ -162,14 +155,14 @@ GO
   
 После этого с помощью приведенного ниже кода запустите хранимую процедуру от имени входа dbo, которое было использовано на сервере. Просмотрите вывод сведений о контексте пользователя. Учетная запись dbo будет показана как контекст со своими собственными правами, а не через членство в группе.  
   
-```  
+```sql  
 EXECUTE TestCreditRatingSP;  
 GO  
 ```  
   
 Запустите следующий код, чтобы с помощью инструкции `EXECUTE AS` от имени учетной записи `TestCreditRatingUser` выполнить хранимую процедуру. На этот раз будет показано, что задан контекст пользователя USER MAPPED TO CERTIFICATE.  
   
-```  
+```sql  
 EXECUTE AS LOGIN = 'TestCreditRatingUser';  
 GO  
 EXECUTE TestCreditRatingSP;  
@@ -184,7 +177,7 @@ GO
 ## <a name="7-reset-the-environment"></a>7. Сброс среды  
 В приведенном ниже коде с помощью инструкции `REVERT` контекст текущей учетной записи изменяется на dbo. Затем выполняется сброс среды.  
   
-```  
+```sql  
 REVERT;  
 GO  
 DROP PROCEDURE TestCreditRatingSP;  
@@ -204,9 +197,9 @@ GO
 ## <a name="CompleteExample"></a>Пример целиком  
 В этом разделе приведен полный код примера.  
   
-```  
-/* Step 1 - Open the AdventureWorks2012 database */  
-USE AdventureWorks2012;  
+```sql  
+/* Step 1 - Open the AdventureWorks2017 database */  
+USE AdventureWorks2017;  
 GO  
 -- Set up a login for the test user  
 CREATE LOGIN TestCreditRatingUser  
@@ -220,7 +213,7 @@ GO
 CREATE CERTIFICATE TestCreditRatingCer  
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
       WITH SUBJECT = 'Credit Rating Records Access',   
-      EXPIRY_DATE = '12/05/2014';  
+      EXPIRY_DATE = '12/05/2020';   -- Error 3701 will occur if this date is not in the future
 GO  
   
 /* Step 3 - Create a stored procedure and  

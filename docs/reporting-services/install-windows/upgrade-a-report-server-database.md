@@ -1,7 +1,7 @@
 ---
 title: Обновление базы данных сервера отчетов | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.reviewer: ''
@@ -18,20 +18,20 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4a15d4ee21977d16ed3f8b0a49d12b4c9e88cbd2
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9997e0c0d68d01721a33924f8d7b1e7842a9a21a
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322613"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40415893"
 ---
 # <a name="upgrade-a-report-server-database"></a>Обновление базы данных сервера отчетов
 
 База данных сервера отчетов обеспечивает хранение одного или нескольких экземпляров сервера отчетов. Схема базы данных сервера отчетов с каждым новым выпуском служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]может меняться, поэтому версия базы данных должна совпадать с версией используемого экземпляра сервера отчетов. В большинстве случаев обновление базы данных сервера отчетов может быть выполнено автоматически, без необходимости выполнения каких-либо действий со стороны пользователя.  
   
- **Собственный режим.** В собственном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] база данных сервера отчетов на самом деле состоит из двух баз данных с именами по умолчанию ReportServer и ReportServerTempDB.  
+ **Собственный режим**. В собственном режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] база данных сервера отчетов на самом деле состоит из двух баз данных с именами по умолчанию: ReportServer и ReportServerTempDB.  
   
- **Режим SharePoint:** в режиме интеграции служб SQL Server 2016 Reporting Services с SharePoint база данных сервера отчетов фактически является коллекцией баз данных, созданных для каждого экземпляра приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ **Режим SharePoint**: в режиме интеграции служб SQL Server 2016 Reporting Services с SharePoint база данных сервера отчетов фактически является коллекцией баз данных, созданных для каждого экземпляра приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Способы обновления базы данных сервера отчетов в собственном режиме
 
@@ -45,7 +45,7 @@ ms.locfileid: "35322613"
   
      В диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] больше нет отдельной кнопки «Обновить» и скрипта обновления. Эти средства устарели, начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , в связи с появлением в службе сервера отчетов функции автоматического обновления.  
   
- После обновления схемы откат до предыдущей версии становится невозможным. Чтобы иметь возможность повторно создать предыдущую установку, всегда создавайте резервную копию базы данных сервера отчетов.  
+ После обновления схемы откат до предыдущей версии становится невозможным. Чтобы иметь возможность воссоздать предыдущую установку, всегда создавайте резервную копию базы данных сервера отчетов.  
   
 ## <a name="how-the-schema-metadata-and-report-server-content-is-updated"></a>Обновление схемы, метаданных и содержимого сервера отчетов  
  База данных сервера отчетов обновляется в три этапа.  
@@ -73,8 +73,7 @@ ms.locfileid: "35322613"
 ## <a name="next-steps"></a>Следующие шаги
 
 [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[Создание базы данных сервера отчетов](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Мастер изменения базы данных](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[Создание базы данных сервера отчетов](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Перенос установки служб Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 

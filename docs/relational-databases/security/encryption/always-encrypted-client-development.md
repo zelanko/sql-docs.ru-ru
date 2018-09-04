@@ -1,7 +1,7 @@
 ---
 title: Постоянное шифрование (разработка клиентских приложений) | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/29/2016
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -14,13 +14,13 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3f2d372307528366248c5830626aee2b8fd14816
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 887603c4da7eb9a582d8068a98690116dc14128c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39547154"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076471"
 ---
 # <a name="always-encrypted-client-development"></a>Постоянное шифрование (разработка клиентских приложений)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,11 @@ ms.locfileid: "39547154"
 
 - [Using Always Encrypted with the .NET Framework Data Provider for SQL Server (Использование Always Encrypted с поставщиком данных .NET Framework для SQL Server)](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Использование функции Always Encrypted с драйвером JDBC](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
-- [Использование постоянного шифрования с драйвером ODBC Windows](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Использование функции Always Encrypted с драйвером ODBC](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Использование функции Always Encrypted с драйверами PHP](../../../connect/php/using-always-encrypted-php-drivers.md)
 
-
+> [!NOTE]
+> Always Encrypted не поддерживается в настоящее время в [.NET CORE](https://docs.microsoft.com/dotnet/core/).
 
 ## <a name="see-also"></a>См. также:
 

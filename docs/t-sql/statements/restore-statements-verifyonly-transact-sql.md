@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb8fb779fdd28114cdea97abf572315795f7f7d2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 1d7c5b5165b3e67956750203d31904a539469125
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452128"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42441437"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Инструкции RESTORE — VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -124,6 +124,14 @@ FROM <backup_device> [ ,...n ]
   
 ### <a name="permissions"></a>Разрешения  
  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях, чтобы получить сведения о резервном наборе данных или устройстве резервного копирования, необходимо разрешение CREATE DATABASE. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений для базы данных (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
+ 
+## <a name="examples"></a>Примеры  
+ В следующем примере проверяется резервное копирование с диска.
+  
+```  
+RESTORE VERIFYONLY FROM DISK = 'D:\AdventureWorks.bak';
+GO
+```  
   
 ## <a name="see-also"></a>См. также:  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   

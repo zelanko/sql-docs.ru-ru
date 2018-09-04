@@ -20,27 +20,28 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9fd9da00fc99cc47c260c43faa9599b6d2e1d6d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50d270dd6594287229bae2e573bf0fed481e2b88
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406534"
 ---
 # <a name="start-report-builder"></a>Запуск построителя отчетов
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] является изолированной средой создания отчетов. С ее помощью можно создавать отчеты и публиковать их в среде [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающей в основном режиме или режиме интеграции с SharePoint.  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] является изолированной средой создания отчетов. С ее помощью можно создавать отчеты и публиковать их в среде [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающей в основном режиме или режиме интеграции с SharePoint.  
   
- При первом запуске [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] с веб-портала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint вам будет предложено скачать средство из Центра загрузки Майкрософт. 
+ При первом запуске [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] с веб-портала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint вам будет предложено скачать средство из Центра загрузки Майкрософт. 
  
 ![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  Пользователь или администратор может также [установить построитель отчетов на компьютер из Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=219138). См. подраздел "Установка построителя отчетов с помощью Systems Manager Server" в разделе [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md) .
  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] не устанавливается вместе со службами SQL Server Reporting Services. Его необходимо скачать и установить отдельно.  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] не устанавливается вместе со службами SQL Server Reporting Services. Его необходимо скачать и установить отдельно.  
   
- Если при запуске [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] на веб-портале или на сайте SharePoint отобразится более ранняя версия [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , обратитесь к администратору, который может обновить версию на веб-портале или сайте SharePoint.  
+ Если при запуске [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] на веб-портале или на сайте SharePoint отобразится более ранняя версия [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , обратитесь к администратору, который может обновить версию на веб-портале или сайте SharePoint.  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 1.  В веб-браузере введите в адресной строке URL-адрес для сервера отчетов. URL-адрес по умолчанию — http://\<*имя_сервера*>/reports.  
   
@@ -50,9 +51,9 @@ ms.lasthandoff: 05/03/2018
   
      В первый раз будет предложено [установить построитель отчетов](../../reporting-services/install-windows/install-report-builder.md). 
   
-     После этого откроется [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , и можно будет приступить к созданию отчета или открыть отчет с сервера отчетов.  
+     После этого откроется [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], и можно будет приступить к созданию отчета или открыть отчет с сервера отчетов.  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd-in-sharepoint-integrated-mode"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] в режиме интеграции с SharePoint  
+## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-in-sharepoint-integrated-mode"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] в режиме интеграции с SharePoint  
   
 1.  Перейдите на сайт SharePoint, содержащий нужную библиотеку.  
   
@@ -62,9 +63,9 @@ ms.lasthandoff: 05/03/2018
   
 4.  В меню **Создать документ** выберите пункт **Отчет построителя отчетов**.  
   
-     В первый раз будет запущен мастер [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] для SQL Server. Дополнительные сведения см. в разделе [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) .  
+     В первый раз будет запущен мастер [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] для SQL Server. Дополнительные сведения см. в разделе [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) .  
   
-     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , и можно будет приступить к созданию отчета или открыть отчет на сервере отчетов.  
+     Откроется [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], и можно будет приступить к созданию отчета или открыть отчет на сервере отчетов.  
   
      **Примечание** . Если меню **Создать документ** не содержит параметры **Отчет построителя отчетов**, **Модель построителя отчетов**или **Источник данных отчета**, необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 

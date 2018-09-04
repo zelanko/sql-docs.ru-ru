@@ -19,12 +19,12 @@ caps.latest.revision: 88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ffab68d239f7992d7f3b1c3a289f8c67c17b53
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ed503598b4a093876b0323ee1284a7bb9d782171
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358816"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405331"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>настроить сервер IIS для веб-синхронизации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "37358816"
   
 -   RMO: [Как настроить подписку для использования веб-синхронизации (программирование объектов RMO)](http://msdn.microsoft.com/library/ms345207.aspx).  
   
- Веб-синхронизация использует сервер служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS для синхронизации подписок по запросу на публикации слиянием. Поддерживаются службы IIS версий 5.0, 6.0 и [!INCLUDE[iisver](../../includes/iisver-md.md)] . Мастер настройки веб-синхронизации не поддерживается в версии [!INCLUDE[iisver](../../includes/iisver-md.md)].  
+ Веб-синхронизация использует сервер служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS для синхронизации подписок по запросу на публикации слиянием. Поддерживаются службы IIS версий 5.0, 6.0 и 7.0. Мастер настройки веб-синхронизации не поддерживается в версии служб IIS 7.0.  
   
 > [!IMPORTANT]  
 >  Убедитесь в том, что приложение использует только [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] или более позднюю версию, а более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на IIS-сервере не установлены. Более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] могут вызывать ошибки. В частности: "Недопустимый формат сообщения во время веб-синхронизации. Убедитесь в том, что компоненты репликации на веб-сервере настроены правильно».  
@@ -163,7 +163,7 @@ ms.locfileid: "37358816"
   
     2.  Введите путь виртуального каталога в поле **Путь** . Например, если вы ввели **websync1** в поле **Псевдоним** , введите **C:\Inetpub\wwwroot\websync1** в поле **Путь** . Нажмите кнопку **Далее**.  
   
-    3.  В обоих диалоговых окнах нажмите кнопку **Да**. Это означает, что нужно создать новую папку и скопировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL. , и делает это по-другому.  
+    3.  В обоих диалоговых окнах нажмите кнопку **Да**. Это означает, что нужно создать новую папку и скопировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL. .  
   
 7.  На странице **Доступ с проверкой подлинности** выполните следующие действия:  
   

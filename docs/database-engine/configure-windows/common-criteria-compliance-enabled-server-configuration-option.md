@@ -1,13 +1,12 @@
 ---
-title: Параметр конфигурации сервера "common criteria compliance enabled" | Документы Майкрософт
+title: Параметр конфигурации сервера "common criteria compliance enabled" | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/21/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - common criteria compliance
@@ -17,23 +16,22 @@ helpviewer_keywords:
 - Risidual Information Protection [Database Engine]
 - RIP (Residual Information Protection)
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-caps.latest.revision: 24
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 320c81ef93d11e1ebd73c861617be322a99f2655
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 5f259daef42200f05fe3bc495559d1ed4292638f
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863709"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40427284"
 ---
-# <a name="common-criteria-compliance-enabled-server-configuration-option"></a>Параметр конфигурации сервера «common criteria compliance enabled»
+# <a name="common-criteria-compliance-enabled-server-configuration"></a>Конфигурация сервера "common criteria compliance enabled"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Параметр common criteria compliance enabled включает следующие элементы, необходимые для поддержки стандарта Common Criteria.  
+Параметр common criteria compliance включает следующие элементы, необходимые для поддержки стандарта [Общие критерии оценки защищенности информационных технологий](https://www.commoncriteriaportal.org/).  
   
-|Критерии|Description|  
+|Критерии|Описание|  
 |--------------|-----------------|  
 |Защита остаточных данных (RIP)|Критерий RIP требует, чтобы выделяемая память была перезаписана известным битовым шаблоном, прежде чем она будет перераспределена для другого ресурса. Соответствие стандарту RIP может повысить безопасность, однако может привести к снижению производительности. После включения параметра common criteria compliance enabled производится перезапись памяти.|  
 |Возможность просматривать статистику имени входа|После включения параметра common criteria compliance enabled включается аудит входа. Каждый раз, когда пользователь успешно входит в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], становятся доступными сведения о времени последнего успешного входа, времени последней неудачной попытки входа и о количестве попыток между последним успешным уходом и текущим входом. Чтобы увидеть статистику входа, запросите динамическое административное представление [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) .|  
@@ -67,6 +65,4 @@ GO
 Перезапустите [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
   
 ## <a name="see-also"></a>См. также:  
- [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
-  
+ [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

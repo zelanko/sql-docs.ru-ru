@@ -22,19 +22,19 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b28f6079135161b7aeabbb2bebf06a4d8ac883d4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028291"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40415852"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Параметры отчета (Построитель отчетов и Конструктор отчетов)
-  В этом разделе описываются распространенные варианты применения параметров отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , доступные свойства и многое другое. Параметры отчета позволяют управлять данными отчета, объединять связанные отчеты и изменять внешний вид отчетов. Параметры отчета можно использовать в отчетах с разбиением на страницы, создаваемых с помощью таких средств, как [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] и конструктор отчетов, а также в мобильных отчетах, которые создаются, используя [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. Дополнительные сведения о параметрах отчета см. в разделе [Понятия параметров отчета](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+  В этом разделе описываются распространенные варианты применения параметров отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , доступные свойства и многое другое. Параметры отчета позволяют управлять данными отчета, объединять связанные отчеты и изменять внешний вид отчетов. Параметры отчета можно использовать в отчетах с разбиением на страницы, создаваемых с помощью таких средств, как [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] и конструктор отчетов, а также в мобильных отчетах, которые создаются в [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Дополнительные сведения о параметрах отчета см. в разделе [Понятия параметров отчета](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint и в собственном режиме|  
+|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], режим [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint и собственный режим|  
   
  Сведения о самостоятельном добавлении параметра в отчет см. в разделе [Учебник. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
     
@@ -144,7 +144,7 @@ ms.locfileid: "33028291"
 ##  <a name="bkmk_Report_Parameters"></a> Свойства параметров отчета  
  Вы можете изменять свойства параметров отчета, используя диалоговое окно Параметры отчета. В следующей таблице перечислены свойства, которые можно указать для каждого параметра:  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |Имя|Введите имя параметра с учетом регистра. Имя должно начинаться с буквы и может содержать буквы, цифры и подчеркивание (_). Имя не может содержать пробелы. Для автоматически созданных параметров имя соответствует параметру в запросе набора данных. По умолчанию для создаваемых вручную параметров используются имена типа ReportParameter1.|  
 |Запрос|Текст, отображаемый рядом с параметром на панели инструментов средства просмотра отчетов.|  

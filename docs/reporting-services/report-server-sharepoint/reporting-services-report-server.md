@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d8a8ee44c055d9679656ec5cf15b23096dc8c257
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053352"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410050"
 ---
 # <a name="reporting-services-report-server"></a>Сервер отчетов служб Reporting Services
 
@@ -85,7 +85,7 @@ ms.locfileid: "38053352"
   
 ### <a name="native-mode-with-sharepoint-web-parts"></a>Основной режим с веб-частями SharePoint
 
- Службы Reporting Services предоставляют две веб-части, которые можно установить и зарегистрировать в экземпляре [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 или более поздней версии либо [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 или более поздней версии. На сайте SharePoint можно использовать эти веб-части для поиска и просмотра отчетов, которые хранятся и обрабатываются на сервере отчетов, работающем в собственном режиме. Эти веб-части появились в предыдущих версиях служб Reporting Services.  
+ Службы Reporting Services предоставляют две веб-части, которые можно установить и зарегистрировать в экземпляре [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 или более поздней версии либо SharePoint Portal Server 2003 или более поздней версии. На сайте SharePoint можно использовать эти веб-части для поиска и просмотра отчетов, которые хранятся и обрабатываются на сервере отчетов, работающем в собственном режиме. Эти веб-части появились в предыдущих версиях служб Reporting Services.  
   
 ## <a name="sharepoint-mode"></a>Режим интеграции с SharePoint
 

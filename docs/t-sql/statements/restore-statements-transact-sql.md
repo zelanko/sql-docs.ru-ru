@@ -44,12 +44,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7caf240c4f1fa6d0641b91db7061d50752941b6b
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 37bf91db051a3f3a8369ecefea68288139181075
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008946"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410532"
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
 Восстанавливает резервные копии баз данных SQL, созданные с помощью команды BACKUP. 
@@ -72,8 +72,8 @@ ms.locfileid: "40008946"
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">Управляемый экземпляр<br />Базы данных SQL</a></th>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
@@ -725,7 +725,7 @@ RESTORE DATABASE Sales
 > </tr>
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* Управляемый экземпляр<br />базы данных SQL</th>
+>   <th><strong><em>* База данных SQL<br />Управляемый экземпляр *</em></strong></th>
 >   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
@@ -734,7 +734,7 @@ RESTORE DATABASE Sales
 
 # <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
-Эта команда позволяет восстановить всю базу данных из полной резервной копии (полное восстановление).
+Эта команда позволяет восстановить всю базу данных из полной резервной копии (полное восстановление) в учетной записи хранения BLOB-объектов Azure.
 
 Другие поддерживаемые команды RESTORE:
 - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
@@ -763,7 +763,7 @@ DATABASE
   
 FROM URL
 
-Указывает URL-адрес, используемый для операции восстановления. Формат URL-адреса используется для восстановления резервных копий из службы хранилища Microsoft Azure. 
+Указывает одно устройство резервного копирования или несколько по URL-адресам, которые будут использоваться для операции восстановления. Формат URL-адреса используется для восстановления резервных копий из службы хранилища Microsoft Azure. 
 
 > [!IMPORTANT]  
 > Чтобы выполнить восстановление с нескольких устройств при помощи URL-адреса, необходимо использовать токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
@@ -773,7 +773,7 @@ FROM URL
  
 ## <a name="general-remarks"></a>Общие замечания
 
-Асинхронное восстановление будет продолжаться даже в случае разрыва соединения с клиентом. В случае разрыва соединения вы можете просмотреть состояние операции восстановления (а также инструкций CREATE и DROP для базы данных) в представлении [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md). 
+Операция RESTORE асинхронна и будет продолжаться даже в случае разрыва соединения с клиентом. В случае разрыва соединения вы можете просмотреть состояние операции восстановления (а также инструкций CREATE и DROP для базы данных) в представлении [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md). 
 
 Следующие параметры базы данных устанавливаются или переопределяются и в последующем не могут быть изменены:
 
@@ -806,6 +806,7 @@ FROM URL
 ##  <a name="examples"></a> Примеры  
 В следующих примерах при помощи URL-адреса выполняется восстановление резервной копии базы данных только для копирования, а также создаются учетные данные.  
   
+###  <a name="restore-mi-database"></a> A. Восстановление базы данных с трех устройств резервного копирования.   
 ```sql
 
 -- Create credential
@@ -819,16 +820,14 @@ FROM URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/00-Wid
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
-
---The following error is shown if the database already exists:
+```
+Отображается следующая ошибка, если база данных уже существует:
+```
 Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
-
--- An example with variables:
-DECLARE @db_name sysname = 'WideWorldImportersStandard';
-DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';
-RESTORE DATABASE @db_name
-FROM URL = @url
+```
+###  <a name="restore-mi-database-variables"></a> Б. Восстановление базы данных, указанной с помощью переменной.  
+-- Пример с переменными: DECLARE @db_name sysname = 'WideWorldImportersStandard'; DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak'; RESTORE DATABASE @db_name FROM URL = @url
 ```  
 
 ::: moniker-end
@@ -843,23 +842,23 @@ FROM URL = @url
 > </tr>
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">Управляемый экземпляр<br />Базы данных SQL</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+# SQL Parallel Data Warehouse
 
 
-Восстанавливает пользовательскую базу данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] из резервной копии базы данных на устройство [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. База данных восстанавливается из резервной копии, созданной ранее с помощью команды [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE (Parallel Data Warehouse)](../../t-sql/statements/backup-transact-sql.md). Используйте команды резервного копирования и восстановления для создания плана аварийного восстановления или для перемещения баз данных с одного устройства на другое.  
+Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
   
 > [!NOTE]  
->  Восстановления базы данных master включает восстановление учетных данных для входа на устройство. Чтобы восстановить базу данных master, воспользуйтесь страницей [Восстановление базы данных master (Transact-SQL)](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) инструмента **Configuration Manager**. Эту операцию может выполнить администратор, у которого есть доступ к управляющему узлу.  
-Дополнительные сведения о резервном копировании баз данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] см. в разделе "Резервное копирование и восстановление" в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+>  Restoring master includes restoring appliance login information. To restore master, use the [Restore the master Database &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation.  
+For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="syntax"></a>Синтаксис  
+## Syntax  
   
 ```sql  
   
