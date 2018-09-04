@@ -1,26 +1,20 @@
 ---
 title: Карты в мобильных отчетах служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2a3c3ef34d8cbda8dea9d3b03896942d8400bbc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b50dcdf664c0c6f16849252db1962ca034aec37f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019841"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282466"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 Карты — это отличный способ визуализировать географические данные. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] есть три разных типа визуализации карт, а также доступны встроенные карты континентов и некоторых отдельных странах. Вы также можете [передавать и использовать пользовательские карты](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   

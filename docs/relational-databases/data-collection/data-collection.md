@@ -17,11 +17,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39bc4afa05f9f72fcf2ec08cdfd85e65fa8bce04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d5e99d7bfd140af1e26217118211da98a167a93
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348179"
 ---
 # <a name="data-collection"></a>Сбор данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,12 +115,12 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="things-you-can-do"></a>Возможные действия  
   
-|Description|Раздел|  
+|Описание|Раздел|  
 |----------------------|-----------|  
 |Управление разными аспектами сбора данных, например включением или отключением сбора данных, изменением конфигурации набора элементов сбора или просмотром данных в хранилище данных управления.|[Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Использование отчетов для получения сведений о наблюдаемой системе и устранения неполадок ее производительности.|[Отчеты о наборе элементов сбора системных данных](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |Использование хранилища данных управления для сбора данных с сервера, который при сборе данных является целевым.|[Хранилище данных управления](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|Использование возможностей серверной трассировки приложения SQL Server Profiler для экспорта определения трассировки с целью создания набора элементов сбора, использующего общий тип сборщика трассировки SQL.| [Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL (среда SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
+|Использование возможностей серверной трассировки приложения SQL Server Profiler для экспорта определения трассировки с целью создания набора элементов сбора, использующего общий тип сборщика трассировки SQL.| [Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL (среда SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   
 

@@ -1,24 +1,19 @@
 ---
 title: Отправка документов в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint) | Документы Майкрософт
-ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server-sharepoint
-ms.reviewer: ''
+ms.technology: report-server-sharepoint
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: abbc88bd4dea96968cdbcd80a95ecdf5afd4cdb3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e6f7dc5531ea64fb8158ced6c609b678b2247619
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053322"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281105"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Отправка документов в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint)
 

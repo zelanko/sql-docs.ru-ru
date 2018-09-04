@@ -1,28 +1,22 @@
 ---
 title: Метод RemoveURL (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RemoveURL method
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a8c263e2a689bed13813a3fe193038b99b5ed9cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 415b3ecf57bf6fba36ffd10bcb6db2deebebf6f6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031681"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282345"
 ---
 # <a name="configurationsetting-method---removeurl"></a>Метод ConfigurationSetting — RemoveURL
   Удаляет URL-адрес, зарезервированный для сервера отчетов. Если нужно удалить несколько URL-адресов, это должно быть сделано одним вызовом данного API.  

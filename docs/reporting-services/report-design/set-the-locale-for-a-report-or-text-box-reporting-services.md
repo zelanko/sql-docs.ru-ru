@@ -1,28 +1,22 @@
 ---
 title: Задание локали для отчета или текстового поля (службы Reporting Services) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - locales [Reporting Services]
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
-caps.latest.revision: 43
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: e75684210b60c61727fb55eaece1527768f4bcaf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4842a9353f9e059f36004ef78d2f4b4c94ff5d7
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024211"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282426"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>Задание локали для отчета или текстового поля (службы Reporting Services)
   Свойство **Язык** отчета или текстового поля содержит параметр локали, определяющий форматы по умолчанию для отображения данных отчета, зависящих от языка и региона, например даты, валюты или числовых значений. Свойство **Язык** текстового поля переопределяет свойство **Язык** отчета. Если для свойства **Язык**не указано значения, то службы Reporting Services используют языковой стандарт операционной системы сервера отчетов для опубликованных отчетов и локаль компьютера, на котором создается отчет, при предварительном просмотре отчета.  

@@ -1,27 +1,21 @@
 ---
 title: Параметры подписки и учетная запись общей папки (диспетчер конфигураций) | Документы Майкрософт
-ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0501fa856c7fff5ecccc4ca0c59d0ba39e2bce65
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 5b43410d160261cc3b60d675829fd519d11e9ec7
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322633"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280492"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Параметры подписки и учетная запись общей папки (диспетчер конфигураций)
   На странице **Параметры подписки** диспетчера конфигураций [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно настроить учетную запись общей папки для серверов отчетов, работающих в основном режиме, и подписки на общую папку. Учетная запись общей папки позволяет использовать один набор учетных данных в нескольких подписках, доставляющих отчеты в общую папку. Когда требуется изменить учетные данные, достаточно настроить изменение учетной записи общей папки, и вам не придется обновлять каждую подписку по отдельности.  

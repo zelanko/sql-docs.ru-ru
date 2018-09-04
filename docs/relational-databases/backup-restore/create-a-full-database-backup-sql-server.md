@@ -19,16 +19,16 @@ caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a9f8f115dd24f27f1c140677775ba9e29dd7468
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3fbeaf60a67386aff9a286b80dd4f1a60b98b7a5
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982896"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348485"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > При использовании SQL Server 2014 перейдите к разделу [Создание полной резервной копии базы данных (SQL Server)](https://msdn.microsoft.com/library/ms187510(SQL.120).aspx).
+ > При использовании SQL Server 2014 перейдите к разделу [Создание полной резервной копии базы данных (SQL Server)](create-a-full-database-backup-sql-server.md).
 
   В этом разделе описывается создание полной резервной копии базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
   

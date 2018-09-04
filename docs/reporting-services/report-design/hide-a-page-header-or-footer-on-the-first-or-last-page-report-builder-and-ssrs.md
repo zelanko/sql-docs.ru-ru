@@ -1,26 +1,20 @@
 ---
 title: Скрытие верхнего или нижнего колонтитула первой или последней страницы (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 37377fd15be85f17c696c997465d48d37ce0c959
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12d12b93a842ac601e17e263436d7192e521b548
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023351"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281196"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Скрытие верхнего или нижнего колонтитула первой или последней страницы (построитель отчетов и службы SSRS)
   Отчет может содержать верхний и нижний колонтитулы, которые располагаются в верхней и нижней части каждой страницы соответственно. После добавления верхнего или нижнего колонтитула можно выборочно скрыть его на первой и последней странице отчета.  

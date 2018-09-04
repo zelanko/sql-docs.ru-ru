@@ -1,14 +1,10 @@
 ---
 title: Текстовые поля (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10134"
@@ -16,16 +12,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2bc3247b865f84ec30eef610f82dc4247fadafca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e2071dc483285dca2135ba92c296aed881131a4
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026331"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281747"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Текстовые поля (построитель отчетов и службы SSRS)
   Часто под термином "текстовое поле" подразумевается изолированное поле с текстом, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. В отчетах с разбиением на страницы некоторые текстовые поля такие же и могут отображать статический текст для заголовков, определений и меток или динамический текст, основанный на выражениях [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Каждая ячейка в таблице или матрице (области данных табликса) содержит текстовое поле, которое можно форматировать аналогично изолированным текстовым полям в отчете.  

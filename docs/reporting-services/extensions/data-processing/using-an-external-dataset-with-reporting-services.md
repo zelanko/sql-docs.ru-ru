@@ -1,14 +1,10 @@
 ---
 title: Использование внешнего набора данных со службами Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,15 +14,14 @@ helpviewer_keywords:
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: afcf3dd2d15f38b3c7f54e6facbd4692cc1db899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8963d289b2d99e494fb53a9f42d23fc38fb2a038
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281172"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Использование внешнего набора данных со службами Reporting Services
   Объект **DataSet** является центральным элементом поддержки разъединенных распределенных сценариев данных в [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Объект **DataSet** является находящимся в оперативной памяти представлением данных, обеспечивающим согласованную реляционную программную модель, независимо от источника данных. Он может использоваться с несколькими различными источниками данных, XML-данными или для управления данными, локальными по отношению к приложению. Объект **DataSet** представляет полный набор данных, включая связанные таблицы, ограничения и связи между таблицами. В связи с тем, что объект **DataSet** обладает высокой гибкостью хранения и представления данных, данные пользователя могут быть преобразованы в объект **DataSet** перед созданием отчетов по этим данным.  

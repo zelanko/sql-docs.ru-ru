@@ -1,29 +1,23 @@
 ---
 title: Настройка доступной памяти для приложений сервера отчетов | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: cd3c8b2a1d803610d0e1e6f086097d56aead9f77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f9d35736f76dc7795cf4cf1d7fe8317eee723d8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028001"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282576"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Настройка доступной памяти для приложений сервера отчетов
   Хотя службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут использовать всю доступную память, можно переопределить поведение по умолчанию, настроив верхний предел ресурсов памяти, выделяемых серверным приложениям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Можно также задать пороговые значения, которые изменяют способ назначения приоритета и обработки запросов сервером отчетов в зависимости от дефицита свободной памяти. При малом дефиците свободной памяти сервер отчетов назначает чуть более высокий приоритет интерактивной обработке отчетов или обработке отчетов по запросу. При серьезном дефиците свободной памяти сервер отчетов использует многочисленные приемы, чтобы сохранить работоспособность в условиях ограниченных доступных ресурсов.  
@@ -71,7 +65,7 @@ ms.locfileid: "33028001"
   
  В следующей таблице приведены описания параметров **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**и **MemoryThreshold** . Параметры конфигурации задаются в файле [RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |**WorkingSetMaximum**|Порог памяти, после которого больше не будут приниматься новые запросы на предоставление памяти от приложений сервера отчетов.<br /><br /> По умолчанию сервер отчетов устанавливает значение **WorkingSetMaximum** равным объему доступной памяти в компьютере. Это значение обнаруживается при запуске службы.<br /><br /> Этот параметр не появляется в файле конфигурации RSReportServer.config, если не добавить его вручную. Чтобы сервер отчетов использовал меньше памяти, можно изменить файл RSReportServer.config, добавив элемент и значение. Диапазон допустимых значений — от 0 до максимального целого числа. Значение указывается в килобайтах.<br /><br /> При достижении значения **WorkingSetMaximum** сервер отчетов прекращает принимать новые запросы. Обрабатываемые в это время запросы продолжают выполняться. Новые запросы принимаются лишь после того, как объем использованной памяти станет меньше значения, указанного параметром **WorkingSetMaximum**.<br /><br /> Если существующие запросы по-прежнему занимают дополнительную память по достижении значения **WorkingSetMaximum** , все домены приложений сервера отчетов будут очищены. Дополнительные сведения см. в статье [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md).|  
 |**WorkingSetMinimum**|Нижний предел потребления ресурсов; сервер отчетов не будет освобождать память, если общее использование памяти ниже этого предела.<br /><br /> Его значение по умолчанию рассчитывается при запуске службы. В соответствии с этим расчетом, запрашиваемый объем выделенной памяти составляет 60 процентов от **WorkingSetMaximum**.<br /><br /> Этот параметр не появляется в файле конфигурации RSReportServer.config, если не добавить его вручную. Чтобы изменить это значение, необходимо добавить элемент **WorkingSetMinimum** в файл RSReportServer.config. Диапазон допустимых значений — от 0 до максимального целого числа. Значение указывается в килобайтах.|  

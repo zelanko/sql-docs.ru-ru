@@ -1,14 +1,10 @@
 ---
 title: Доступ к поставщику WMI для служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 11/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - Reporting Services WMI Provider
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - WMI provider [Reporting Services]
 - programming [Reporting Services]
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
-caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e888a78694281f6290744eb04c040ba0c76ec106
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7180e91a468443db487ddf1ca62ff695ea429f97
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029771"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280401"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Доступ к поставщику WMI для служб Reporting Services
   Поставщик WMI служб Reporting Services отображает два класса WMI для администрирования экземпляров серверов отчетов, работающих в собственном режиме, путем создания сценариев:  
@@ -35,7 +29,7 @@ ms.locfileid: "33029771"
 > [!IMPORTANT]  
 >  Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , поставщик WMI поддерживается только для серверов отчетов, работающих в собственном режиме. Серверы отчетов служб в режиме интеграции с SharePoint могут управляться со страниц центра администрирования SharePoint и с помощью скриптов PowerShell.  
   
-|Class|Пространство имен|Description|  
+|Class|Пространство имен|Описание|  
 |-----------|---------------|-----------------|  
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v13|Основные сведения, необходимые клиенту для подключения к установленному серверу отчетов.|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v13\Admin|Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.<br /><br /> **\*\* Важно. \*\*** Этот класс доступен только для пользователей с правами администратора.|  

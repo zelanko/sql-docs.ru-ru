@@ -1,28 +1,22 @@
 ---
 title: Разработка отчетов с использованием конструктора отчетов (SSRS) | Документация Майкрософт
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-caps.latest.revision: 77
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 09311458bc7815a7a63d58ad19c8d8b0a3845da4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1607193731e20f4111d38da44ee21375dfff09e0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037041"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282796"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Отчеты с разбивкой на страницы служб Reporting Services проектирования с конструктором отчетов (SSRS)
 
@@ -175,7 +169,7 @@ ms.locfileid: "33037041"
   
  В следующей таблице перечислены уровни ошибок.  
   
-|Уровень ошибки|Description|  
+|Уровень ошибки|Описание|  
 |-----------------|-----------------|  
 |0|Наиболее серьезные и неизбежные проблемы, препятствующие просмотру и развертыванию отчетов.|  
 |1|Серьезные проблемы сборки, которые коренным образом изменяют макет отчета.|  

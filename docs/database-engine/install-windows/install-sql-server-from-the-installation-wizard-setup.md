@@ -18,18 +18,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 03a3e40c8e3fd9fdcb1a40cc5da19ea3779a8e0c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f3e435c7eaf865986d52d83e9b8914f6f24082db
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406755"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348273"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-Эта статья описывает установку SQL Server с помощью мастера установки. Она относится к [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] и [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Материалы по предыдущим версиям SQL Server см. в статье [Установка SQL Server 2014 с помощью мастера установки (программа установки)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
+Эта статья описывает установку SQL Server с помощью мастера установки. Она относится к [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] и [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Материалы по предыдущим версиям SQL Server см. в статье [Установка SQL Server 2014 с помощью мастера установки (программа установки)](install-sql-server-from-the-installation-wizard-setup.md).
 
 В этой статье приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В мастере установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому их не требуется устанавливать по отдельности. Дополнительные сведения об установке отдельных компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Установка SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
 

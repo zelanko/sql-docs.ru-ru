@@ -1,30 +1,24 @@
 ---
 title: Пользовательский интерфейс текстового конструктора запросов (построитель отчетов) | Документация Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2b3989590d436d7440f2ec9904290b3e830fcbda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b68fe0fba5556962bfcff7945f0aa6330752502
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021471"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281784"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)
   Текстовый конструктор запросов предназначен для ввода запроса на языке запросов, поддерживаемом источником данных, его выполнения и просмотра результатов во время разработки. Можно указать несколько инструкций, запросов или команд языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания собственных модулей обработки данных, а также указать запросы, заданные как выражения. Поскольку текстовый конструктор запросов не выполняет предварительную обработку запроса и позволяет использовать любой синтаксис запросов, он представляет собой стандартное средство конструктора запросов для источников данных многих типов.  
@@ -41,7 +35,7 @@ ms.locfileid: "33021471"
 ## <a name="text-based-query-designer-toolbar"></a>Панель инструментов текстового конструктора запросов  
  Текстовый конструктор запросов предоставляет одну панель инструментов для всех типов команд. В следующей таблице перечислены все кнопки панели инструментов и их функции.  
   
-|Кнопка|Description|  
+|Кнопка|Описание|  
 |------------|-----------------|  
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Не все источники данных поддерживают графические конструкторы запросов.|  
 |**Импорт**|Импорт существующего запроса из файла или отчета. Поддерживаются только SQL-файлы и RDL-файлы.|  

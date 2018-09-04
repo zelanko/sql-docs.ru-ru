@@ -1,29 +1,23 @@
 ---
 title: Управляемые данными подписки | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a1aba2e3fe24e781039a436fddad866cf214a9ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4abf60aa2282db00ef29d01bf2d58ec03060c90e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031101"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282365"
 ---
 # <a name="data-driven-subscriptions"></a>управляемая данными подписка
   Управляемая данными подписка обеспечивает возможность использования данных динамической подписки, получаемых от внешнего источника данных во время выполнения. В управляемой данными подписке можно также использовать статический текст и значения по умолчанию, указываемые при определении подписки. С помощью управляемых данными подписок можно осуществлять следующее.  
@@ -56,7 +50,7 @@ ms.locfileid: "33031101"
 ## <a name="working-with-data-driven-subscriptions"></a>Работа с подписками, управляемыми данными  
  В следующих подразделах содержатся дополнительные сведения об управляемых данными подписках.  
   
-|Разделы|Description|  
+|Разделы|Описание|  
 |------------|-----------------|  
 |[Создание, изменение и удаление управляемых данными подписок](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)|Объясняет, как создать, изменить или удалить управляемую данными подписку.|  
 |[Использование внешнего источника данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Содержит сведения об источниках данных, которые можно использовать для управляемой данными подписки.|  

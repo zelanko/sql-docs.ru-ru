@@ -23,16 +23,16 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bed6a93030c854c89ec32658ed086d6b0092a8c9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1cf471808826acbfb8a5574b78a870fce8d8ab30
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984486"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348235"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Материалы по предыдущим версиям SQL Server см. в разделе [Создание связанных серверов (ядро СУБД)](https://msdn.microsoft.com/library/ff772782(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Создание связанных серверов (ядро СУБД)](create-linked-servers-sql-server-database-engine.md).
 
   В этом разделе описано, как создать связанный сервер и производить доступ к данным из другого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Путем создания связанного сервера вы можете работать с данными из нескольких источников. Связанный сервер не обязательно должен быть другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хотя такой вариант часто встречается.  
   

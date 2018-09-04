@@ -1,14 +1,10 @@
 ---
 title: Интеграция служб Reporting Services с помощью доступа по URL-адресу | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - URL access [Reporting Services], about URL access
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 73b3b700a3aee874d2f18a0fb00d342cff9ee02b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fc211bc0c43c5716a9753a2e3df5fe489c81c01
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014451"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281450"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Интеграция служб Reporting Services с помощью доступа по URL-адресу
   Доступ по URL-адресу позволяет получать доступ к отчетам с помощью URL-адреса сервера отчетов. Запрос по URL-адресу позволяет получить доступ к выбранному серверу отчетов, а также к отчетам, ресурсам и другим элементам в базе данных сервера отчетов. Также можно настроить параметры просмотра отчетов и функции навигации для пользователей. Строка запроса URL-адреса содержит настройки сведений об устройстве, а также параметры отчета и выбранный формат подготовки к просмотру. Способ обработки запросов по URL-адресу на сервере отчетов зависит от параметров, префиксов параметров и типа элемента, к которому выполняется доступ по URL-адресу.  

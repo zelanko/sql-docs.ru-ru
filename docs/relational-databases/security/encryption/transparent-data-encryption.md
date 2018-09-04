@@ -19,17 +19,17 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bb9b031042c9653c62f46b901359a79be587975
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 44efdde3da4f8a74305798b4cbee4aa682034392
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43100064"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348105"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Материалы по предыдущим версиям SQL Server см. в разделе [Прозрачное шифрование данных (TDE)](https://msdn.microsoft.com/library/bb934049(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Прозрачное шифрование данных (TDE)](transparent-data-encryption-tde.md).
 
   *Прозрачное шифрование данных* (TDE) позволяет шифровать файлы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]и [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] ; это называется шифрованием хранящихся данных. Чтобы защитить базу данных, можно принять ряд мер предосторожности, например спроектировать систему безопасности, проводить шифрование конфиденциальных ресурсов и поместить серверы базы данных под защиту брандмауэра. Однако если будет похищен физический носитель (например, диск или ленты резервной копии), злоумышленник может легко восстановить или подключить базу данных и получить доступ к данным. Одним из решений может стать шифрование конфиденциальных данных в базе данных и защита ключей, используемых при шифровании, с помощью сертификата. Это не позволит использовать данные ни одному человеку, не имеющему ключей, но такой тип защиты следует планировать заранее.  
   

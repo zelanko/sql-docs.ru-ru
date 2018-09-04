@@ -1,26 +1,20 @@
 ---
 title: Планирование создания отчетов и развертывания отчетов | Службы Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 912d8f3035df4c5698deb9dc78321770f23fdaf2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0de895d281bd3d4b7c8bc48fcb931b86ef1df8bc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021541"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282092"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Планирование создания и развертывания отчетов | Службы Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обеспечивают несколько способов разработки и развертывания отчетов с разбивкой на страницы. Вы можете ознакомиться с дополнительными сведениями о планировании совместной работы функций создания отчетов и среды сервера отчетов.

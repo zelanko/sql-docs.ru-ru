@@ -1,14 +1,10 @@
 ---
 title: Таблицы, матрицы и списки (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.tablixgroup.f1
@@ -36,16 +32,14 @@ f1_keywords:
 - "10043"
 - sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2ee7b2cd3b9a1ea25bf04656af7339e93913af04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a2ebc327ca394fdef1007485ed6d59013cf33968
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028931"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281577"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Таблицы, матрицы и списки (построитель отчетов и службы SSRS)
  В [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]таблицы, матрицы и списки — это *области данных* , где данные отчета с разбиением на страницы отображаются в ячейках, распределенных по строкам и столбцам. Ячейки, как правило, содержат текстовые данные, например текст, даты и числа, но могут также содержать датчики, диаграммы или элементы отчетов, такие как изображения. К таблицам, матрицам и спискам часто применяется общее название — области данных *табликса* .  

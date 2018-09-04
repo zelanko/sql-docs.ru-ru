@@ -1,14 +1,10 @@
 ---
 title: Отслеживание подписок служб Reporting Services | Документы Майкрософт
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 1b81bf16cc4f9352da7b0a4c37cac91dd73f5eff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8f95bd3da2aefb0fc98388231641d94b3442311
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035741"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282636"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Отслеживание подписок служб Reporting Services
   Вы можете отслеживать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательском интерфейсе, Windows PowerShell или в файлах журнала. Параметры, которые можно отслеживать, зависят от того, какой режим сервера отчетов используется.  
@@ -50,7 +44,7 @@ ms.locfileid: "33035741"
   
  В следующей таблице показаны возможные значения для столбца **Состояние** .  
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |------------|-----------------|  
 |Новая подписка|Появляется при создании подписки.|  
 |Неактивный|Появляется, если подписку невозможно обработать. Дополнительные сведения см. ниже в разделе «Управление неактивными подписками».|  
