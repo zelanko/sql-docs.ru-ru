@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40184708"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42780765"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Выпуски и поддерживаемые функции SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -297,12 +297,12 @@ ms.locfileid: "40184708"
   
 |Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Базовая интеграция R|Да|Да|Да|Да|нет|   
-|Продвинутая интеграция R|Да|нет|нет|нет|нет| 
+|Базовая интеграция R <sup>1</sup>|Да|Да|Да|Да|нет|   
+|Расширенная интеграция R <sup>2</sup>|Да|нет|нет|нет|нет| 
 |Базовая интеграция Python|Да|Да|Да|Да|нет|
 |Расширенная интеграция Python|Да|нет|нет|нет|нет| 
 |Сервер машинного обучения (автономный)|Да|нет|нет|нет|нет|   
-|Вычислительный узел PolyBase|Да|Да <sup>1</sup>|Да <sup>1</sup>|Да <sup>1</sup>|Да <sup>1</sup> | 
+|Вычислительный узел PolyBase|Да|Да <sup>3</sup>|Да <sup>3</sup>|Да <sup>3</sup>|Да <sup>3</sup> | 
 |Головной узел PolyBase|Да|нет|нет|нет|нет| 
 |JSON|Да|Да|Да|Да|Да|   
 |Хранилище запросов|Да|Да|Да|Да|Да|   
@@ -322,7 +322,12 @@ ms.locfileid: "40184708"
 |График|Да|Да|Да|Да|Да|  
 
 
-<sup>1</sup> Для масштабного развертывания с несколькими вычислительными узлами требуется головной узел.
+<sup>1</sup> Базовая интеграция ограничена двумя ядрами и наборами данных в памяти. 
+
+<sup>2</sup> В расширенной интеграции можно использовать все доступные ядра для параллельной обработки наборов данных в любом масштабе с учетом ограничений оборудования. 
+
+<sup>3</sup> Для масштабного развертывания с несколькими вычислительными узлами требуется головной узел.
+
 
 ## <a name="IS"></a> Службы Integration Services
 

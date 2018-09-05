@@ -17,13 +17,13 @@ caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78eb769a8f37ca055628a89aeebe7dd444673434
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: 6989aaf0ccef6a9cb7656a23ffdc28062a33839b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988226"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43084933"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачивание и установка SQL Server Data Tools (SSDT) для Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,8 +70,8 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 Этот выпуск **SSDT для Visual Studio 2017** можно установить на следующих языках:  
 
-[Китайский (КНР)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
-[Китайский (Тайвань)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
+[Китайский (упрощенное письмо)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
+[китайский (традиционное письмо)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
 [Английский (США)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
 [Французский]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
 [Немецкий]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
@@ -100,8 +100,8 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
   
 Этот выпуск **SSDT для Visual Studio 2015** можно установить на следующих языках:  
 
-[Китайский (КНР)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
-[Китайский (Тайвань)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
+[Китайский (упрощенное письмо)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
+[китайский (традиционное письмо)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
 [Английский (США)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
 [Французский]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
 [Немецкий]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | 
@@ -119,8 +119,8 @@ ISO-образ SSDT можно использовать в качестве ал
 > [!NOTE]
 > Теперь доступны ISO-образы SSDT для VS 2015 версии 17.4.
 
-[Китайский (КНР)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
-[Китайский (Тайвань)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
+[Китайский (упрощенное письмо)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
+[китайский (традиционное письмо)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
 [Английский (США)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
 [Французский]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
 [Немецкий]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |

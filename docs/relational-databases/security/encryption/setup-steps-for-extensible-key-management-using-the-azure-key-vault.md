@@ -1,7 +1,7 @@
 ---
 title: Расширенное управление ключами SQL Server TDE с помощью Azure Key Vault (SQL Server) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/11/2018
+ms.date: 08/24/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4f8581201f9303c87a848a7456849efa7a09396a
+ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702985"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925994"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Расширенное управление ключами SQL Server TDE с помощью Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,14 +153,14 @@ ms.locfileid: "35702985"
     В этом случае воспользуемся субъектом-службой Azure Active Directory, созданным в части I для авторизации экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     > [!IMPORTANT]  
-    >  Субъект-служба Azure Active Directory должна иметь для хранилища ключей по меньшей мере разрешения `get`, `list`, `wrapKey`и `unwrapKey` .  
+    >  Субъект-служба Azure Active Directory должен иметь для хранилища ключей по меньшей мере разрешения `get`, `wrapKey` и `unwrapKey`.  
   
      Как показано ниже, используйте **идентификатор клиента** из части I для параметра `ServicePrincipalName` . `Set-AzureRmKeyVaultAccessPolicy` выполняется в автоматическом режиме и не выводит никаких данных в случае успешного завершения.  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      Вызовите командлет `Get-AzureRmKeyVault` , чтобы подтвердить разрешения. В разделе Access Policies (Политики доступа) выходных данных инструкции должно присутствовать имя приложения AAD, указанное как другой клиент, имеющий доступ к этому хранилищу ключей.  
