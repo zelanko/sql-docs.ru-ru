@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d3dc4c730ea9c7c9ba0126a50ed4bb8129efc9c
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
+ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152584"
+ms.locfileid: "43193030"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Новые возможности в службах машинного обучения SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,21 @@ ms.locfileid: "43152584"
 
 В этом выпуске добавлена [поддержка Python и ведущими в отрасли алгоритмов машинного обучения](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Переименован в соответствии с новой областью, SQL Server 2017 помечает появлением [службы машинного обучения из состава SQL Server (в базе данных)](what-is-sql-server-machine-learning.md), поддержка языка Python и R. 
 
-Этот выпуск также появился [SQL Server Machine Learning Server (изолированный)](r/r-server-standalone.md), полностью независим от SQL Server, для рабочих нагрузок R и Python, которые вы хотите запустить в выделенной системе более. С автономным сервером можно распределять и масштабировать решения R или Python без использования SQL Server.
+### <a name="r-enhancements"></a>Усовершенствования R
+
+Компонент прокрутки на R для службы машинного обучения SQL Server 2017 является следующим поколением SQL Server 2016 R Services, и обновленных версий базовый R, RevoScaler и других пакетов.
+
+Новые возможности для R включают [ **управление пакетами**](r/install-additional-r-packages-on-sql-server.md), с помощью следующие моменты: 
+
++ Роли базы данных помогают администраторам баз данных управления пакетами и назначение разрешений для установки пакета.
++ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) помогает администраторам баз данных управления пакетами в знакомый язык T-SQL.
++ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) функции помогают установка, удаление или перечисление пакетов, принадлежащие пользователям. Дополнительные сведения см. в разделе [пакетов как использовать функции RevoScaleR для поиска или установки R на SQL Server](r/use-revoscaler-to-manage-r-packages.md).
+
+### <a name="r-libraries"></a>Библиотеки R
+
+| Пакет | Описание |
+|---------|-------------|
+| [**MicrosoftML**](using-the-microsoftml-package.md) | В этом выпуске MicrosoftML включается при установке R по умолчанию, устраняя шаг обновления, необходимые в предыдущем SQL Server 2016 R Services. MicrosoftML обеспечивает состояние современные алгоритмы машинного обучения и преобразования данных, которые можно масштабировать и запустить в контексте удаленных вычислений. Алгоритмы включают настраиваемые глубоких нейронных сетей, быстрые деревья и леса принятия решений, Линейная регрессия и логистической регрессии.  |
 
 ### <a name="python-integration-for-in-database-analytics"></a>Интеграция Python для анализа в базе данных
 
@@ -39,16 +53,13 @@ ms.locfileid: "43152584"
 [**revoscalepy**](python/what-is-revoscalepy.md)| Python — эквивалент RevoScaleR. Можно создавать модели Python для линейных и логистических регрессий, деревьев принятия решений, усиленных деревьев и случайные леса, все параллельно и обрабатывать выполняются в контексте удаленных вычислений. Этот пакет поддерживает использование нескольких источников данных и контексты удаленных вычислений. Специалист по обработке данных или разработчик могут выполнять код Python на удаленном сервере SQL, для просмотра данных или построения моделей без перемещения данных. |
 |[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |Python — эквивалент MicrosoftML R-пакет. |
 
-### <a name="r-libraries"></a>Библиотеки R
-
-| Пакет | Описание |
-|---------|-------------|
-| [**MicrosoftML (R)**](using-the-microsoftml-package.md) | Состояние современные алгоритмы обучения и преобразования данных, который может быть масштабируемого или выполнения в удаленное контексты вычислений. Алгоритмы включают настраиваемые глубоких нейронных сетей, быстрые деревья и леса принятия решений, Линейная регрессия и логистической регрессии.  |
-| [**Управление пакетами R**](r/install-additional-r-packages-on-sql-server.md) | Улучшены в этом выпуске особенности данной: базы данных роли для обеспечения управления пакетами и назначение разрешений для установки пакетов, администратор базы данных [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) инструкции T-SQL, чтобы помочь администраторам баз данных управления пакетами без Зная R, а также широкий набор функций R в [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) для установки, удаление или перечисление пакетов, принадлежащие пользователям. |
-
 ### <a name="pre-trained-models"></a>Предварительно обученная модель
 
 [**Предварительно обученных моделей** ](install/sql-pretrained-models-install.md) , доступных для Python и R. использовать эти модели для распознавания изображений и анализ тональности неотрицательным положительный результат, для создания прогнозов по собственным данным. 
+
+### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>Изолированный сервер в качестве общего компонента в программе установки SQL Server
+
+Этот выпуск также добавлена [SQL Server Machine Learning Server (изолированный)](r/r-server-standalone.md), сервер обработки и анализа данных полностью независимы, поддерживающий статистические и прогнозной аналитики в R и Python. Как со службами R, этот сервер является следующей версии SQL Server 2016 R Server (изолированную версию). С автономным сервером можно распределять и масштабировать решения R или Python без зависимостей на сервере SQL Server.
 
 
 ## <a name="new-in-sql-server-2016"></a>В SQL Server 2016

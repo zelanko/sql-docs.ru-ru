@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fa0197d15869197bf61021d077a57dac399b1e58
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 6f29867351f0fa19817c7f39cbcca5da96a7e862
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240192"
 ---
 # <a name="machine-learning-services-in-sql-server-2017"></a>Службы машинного обучения в SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,11 +41,13 @@ SQL Server 2017 поддерживает R и Python. В следующей т
 | Примеры Python и сценарии | С помощью R, Python, содержит встроенные наборы данных и сценарии.  |
 | Предварительно обученных моделей R и Python | Предварительно обученных моделей создаются для конкретные варианты использования и поддерживаются командой технических специалистов обработки и анализа данных корпорации Майкрософт. Можно использовать предварительно обученных моделей как-— для оценки тональности неотрицательным положительный результат в текст, или определить функции в образы, с помощью новых входных данных, которые вы указываете. Модели выполнения в службах машинного обучения, но нельзя установить через программу установки SQL Server. Дополнительные сведения см. в разделе [Установка предварительно обученных моделей машинного обучения в SQL Server](install/sql-pretrained-models-install.md). |
 
-## <a name="using-in-database-analytics"></a>Использование аналитики в базе данных
+## <a name="using-sql-mls"></a>С помощью SQL MLS
 
-Разработчики и аналитикам часто имеют код, запущенный в локальном экземпляре SQL Server. Наиболее распространенным подходом для аналитики в базе данных является использование [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), передавая скрипт R или Python в качестве входного параметра.
+Разработчики и аналитикам часто имеют код, запущенный в локальном экземпляре SQL Server. Добавление служб машинного обучения и включение выполнении внешних скриптов, вы получаете возможность выполнять код R и Python в SQL Server модальностей: упаковки сценария в хранимых процедурах, хранения моделей в таблице SQL Server или объединение T-SQL и R или Python в запросах.
 
-Классический клиент сервер взаимодействия являются другой модальность. Любой клиентской рабочей станции с интегрированной среды разработки, можно установить [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) или [библиотек Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), а затем написать код, который помещает выполнения (называется *удаленных вычислений контекст*) к данным и операциям на удаленном сервере SQL. 
+Наиболее распространенным подходом для аналитики в базе данных является использование [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), передавая скрипт R или Python в качестве входного параметра.
+
+Классический клиент сервер взаимодействия являются другой подход. Любой клиентской рабочей станции с интегрированной среды разработки, можно установить [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) или [библиотек Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), а затем написать код, который помещает выполнения (называется *удаленных вычислений контекст*) к данным и операциям на удаленном сервере SQL. 
 
 Наконец Если вы используете [изолированный сервер](r/r-server-standalone.md) и Developer edition, можно создавать решения на клиентской рабочей станции, используя те же библиотеки и интерпретаторами, а затем развернуть рабочий код на машинного обучения SQL Server Службы (в базе данных). 
 

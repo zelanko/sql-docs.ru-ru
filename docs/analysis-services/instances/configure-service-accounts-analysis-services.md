@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
-ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
+ms.openlocfilehash: eb4fc34f5f3d86900111301c133e7339b4684e0a
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130610"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348343"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Настройка учетных записей служб (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39130610"
  Единственным членом группы является идентификатор безопасности конкретной службы. Рядом с ним находится учетная запись входа в систему. Имя учетной записи для входа в систему является декоративным и предоставляет контекст для идентификатора безопасности конкретной службы. Если впоследствии изменить учетную запись входа, а затем вернуться на эту страницу, можно заметить, что группа безопасности и идентификатор безопасности по службе остались прежними, но изменилась метка учетной записи входа.  
   
 ##  <a name="bkmk_winpriv"></a> Права доступа Windows, назначенные учетной записи служб Analysis Services  
- Службе Analysis Services необходимы разрешения от операционной системы для запуска службы и для запроса ресурсов системы. Требования различаются в зависимости от режима сервера и от того, является ли экземпляр кластеризованным. Если вы не знакомы с правами доступа Windows, обратитесь к разделу [Права доступа](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) и [Константы прав доступа (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) за дополнительной информацией.  
+ Службе Analysis Services необходимы разрешения от операционной системы для запуска службы и для запроса ресурсов системы. Требования различаются в зависимости от режима сервера и от того, является ли экземпляр кластеризованным. Если вы не знакомы с правами доступа Windows, обратитесь к разделу [Права доступа](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) и [Константы прав доступа (Windows)](/windows/desktop/SecAuthZ/privilege-constants) за дополнительной информацией.  
   
  Всем экземплярам службы Analysis Services необходимо право доступа **Вход в качестве службы** (SeServiceLogonRight). Установка SQL Server назначает для вас право доступа под учетной записью службы, определенной во время установки. Для серверов, запущенных в Многомерном режиме и в режиме Интеллектуального анализа данных, данное право доступа Windows является единственным правом, необходимым учетной записи службы Analysis Services для установок отдельного сервера, а также единственным правом, настраиваемым Установкой для службы Analysis Services. Для кластерных и табличных экземпляров вручную должны быть добавлены дополнительные права доступа Windows.  
   
@@ -147,8 +147,8 @@ ms.locfileid: "39130610"
  [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Учетная запись службы SQL Server и удостоверение безопасности службы (блог)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server использует идентификатор безопасности службы для обеспечения изоляции служб (статья базы Знаний)](http://support.microsoft.com/kb/2620201)   
- [Маркер доступа (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Идентификаторы безопасности (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Маркер доступа (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [Идентификаторы безопасности (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Маркер доступа (Википедия)](http://en.wikipedia.org/wiki/Access_token)   
  [Списки управления доступом (Википедия)](http://en.wikipedia.org/wiki/Access_control_list)  
   

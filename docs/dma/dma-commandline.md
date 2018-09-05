@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 4d4e178247f80cc9b953f093a401b25dfd13e73e
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 3143389d32e1cefcb925bde1b5a92ba2e83fb9fc
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152705"
+ms.locfileid: "43240212"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запустите помощник по миграции данных из командной строки
 В версии 2.1 и выше, когда установки помощника по миграции данных, также устанавливается dmacmd.exe в *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Используйте dmacmd.exe для оценки баз данных в автоматическом режиме и вывода результата JSON или CSV-файл. Этот метод особенно полезен при оценке в нескольких базах данных или огромных баз данных. 
@@ -125,6 +125,9 @@ Catalog=DatabaseName3;Integrated Security=true"***
 ```
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>Рекомендации SKU базы данных SQL Azure с помощью интерфейса командной строки
+
+> [!IMPORTANT]
+> SKU рекомендации для базы данных SQL Azure в настоящее время доступны для миграции из SQL Server 2016 или более поздней версии.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation

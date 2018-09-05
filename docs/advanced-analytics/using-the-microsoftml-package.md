@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 51ffa33bef7ab880704c9c1391a69feb3e194202
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a75ed22e46576c701e281f495d5bc123ca489526
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984566"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348465"
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>Использование пакета MicrosoftML со SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) пакет, который входит в состав Microsoft R Server и SQL Server 2017 включает в себя несколько алгоритмов машинного обучения. Эти интерфейсы API были разработаны корпорацией Майкрософт для внутреннего приложения для машинного обучения и были уточненные годы для поддержки высокой производительности на основе больших данных с помощью многоядерную обработку и быструю потоковую передачу данных. MicrosoftML также включает в себя множество преобразований для обработки изображений и текста.
 
-В SQL Server 2017 CTP 2.0 была добавлена поддержка языка Python. **Microsoftml** пакетом для Python содержит функции, эквивалентные функциям в пакет MicrosoftML для R. 
+В SQL Server 2017 была добавлена поддержка языка Python. **Microsoftml** пакетом для Python содержит функции, эквивалентные функциям в пакет MicrosoftML для R. 
 
 + **MicrosoftML для R**
 

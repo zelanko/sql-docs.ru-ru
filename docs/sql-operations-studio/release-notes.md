@@ -2,7 +2,7 @@
 title: Заметки о выпуске Microsoft SQL Operations Studio (Предварительная версия) | Документация Майкрософт
 description: Заметки о выпуске Microsoft SQL Operations Studio (Предварительная версия)
 ms.custom: tools|sos
-ms.date: 07/19/2018
+ms.date: 08/30/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,71 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5c331fc8b9e95940e0aaca29efbada78083340f
-ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
+ms.openlocfilehash: 8d38e568aba12f8124035505b8ce1565f0c9b2cd
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39188960"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348424"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Заметки о выпуске SQL Operations Studio (Предварительная версия)
 
-**[Скачайте общедоступную предварительную версию июля](download.md)**
+**[Скачивание общедоступной предварительной версии августа](download.md)**
+
+
+## <a name="august-2018-august-public-preview"></a>Августа 2018 г. (август Предварительная версия)
+
+Дата выпуска: 30 августа 2018 г.  
+версия: 0.32.8
+
+*0.32.8 содержит исправления для несколько регрессии в 0.32.7 ([#1971](https://github.com/Microsoft/sqlopsstudio/issues/1971), [#2372](https://github.com/Microsoft/sqlopsstudio/issues/2372)*)
+
+*Общедоступной предварительной версии августа* посвящена на исправления ошибок, стабилизации продукта и заполнения пропусков в существующие сценарии.  
+
+- Объявление о расширении импорта SQL Server
+- SQL Server Profiler сеанса управления
+- Поддержка шаблонов сеанса SQL Server Profiler
+- Усовершенствования агента SQL Server
+- Новое расширение сообщества: первый комплект сетевого ответчика
+- Усовершенствования потратив: строки подключения
+
+### <a name="bug-fixes"></a>Исправления ошибок
+
+- Синтаксический анализ SQL в окно редактора запросов с помощью `Parse Syntax` команды.
+- Исправить [выдавать #143](https://github.com/Microsoft/sqlopsstudio/issues/143): дважды щелкните файл, не выбрав в имя переменной.
+- Исправить [выдавать #387](https://github.com/Microsoft/sqlopsstudio/issues/387): значок DB SQL вкладке отображается красным цветом.
+- Исправить [выдавать #825](https://github.com/Microsoft/sqlopsstudio/issues/825): запрос: Автосоединение для текущего сервера после скрипта как... 
+- Исправить [выдавать #1278](https://github.com/Microsoft/sqlopsstudio/issues/1278): sqlops.desktop [записи Desktop] - избыточных значение для имени & комментарий.
+- Исправить [выдавать #1285](https://github.com/Microsoft/sqlopsstudio/issues/1285): при обновлении значок приложения, чтобы быть удалены или заменены в Windows.
+- Исправить [выдавать #1317](https://github.com/Microsoft/sqlopsstudio/issues/1317): исправление десятичного разделителя.
+- Исправить [выдавать #1474](https://github.com/Microsoft/sqlopsstudio/issues/1474): Отмена изменить соединение отключается текущего соединения.
+- Исправить [выдавать #1497](https://github.com/Microsoft/sqlopsstudio/issues/1497): Просмотр в виде диаграммы параметры обрезаны в нижней.
+- Исправить [выдавать #1524](https://github.com/Microsoft/sqlopsstudio/issues/1524): оболочки/Dashboard: значки viewlet Main перетаскиваемой и могут вызвать сбой приложения.
+- Исправить [выдавать #1578](https://github.com/Microsoft/sqlopsstudio/issues/1578): не удалось развернуть/свернуть удаленной общей папки браузера, щелкнув имя.
+- Исправить [выдавать #1620](https://github.com/Microsoft/sqlopsstudio/issues/1620): функция предложение: получить строку подключения для существующего соединения.
+- Исправить [выдавать #1624](https://github.com/Microsoft/sqlopsstudio/issues/1624): SelectBox не изменяется цвет при отключении.
+- Исправить [выдавать #1728](https://github.com/Microsoft/sqlopsstudio/issues/1728): сохранить в виде JSON или EXCEL и CSV не работают.
+- Исправить [выдавать #1744](https://github.com/Microsoft/sqlopsstudio/issues/1744): панель результатов теряет его позиции прокрутки, при переключении между вкладками.
+- Исправить [выдавать #1748](https://github.com/Microsoft/sqlopsstudio/issues/1748): сообщение об ошибке при сохранении файла, второй (и последующие) Excel.
+- Исправить [выдавать #1782](https://github.com/Microsoft/sqlopsstudio/issues/1782): изменение данных: ячейки не вернуться к исходному значению на нажатие клавиши Escape.
+- Исправить [выдавать #1836](https://github.com/Microsoft/sqlopsstudio/issues/1836): SQL-файлы, не связанные с SQL Operations Studio.
+- Исправить [выдавать #1850](https://github.com/Microsoft/sqlopsstudio/issues/1850): N, введя '' будут автоматически завершаться по до N'' '.
+- Исправить [выдавать #1985](https://github.com/Microsoft/sqlopsstudio/issues/1985): копирование из сетки результатов запроса отключен, столбец: 1.
+- Исправить [выдавать #1998](htpts://github.com/Microsoft/sqlopsstudio/pull/1998): Добавление VS Code версии для о диалоговое окно.
+- Исправить [выдавать #2042](https://github.com/Microsoft/sqlopsstudio/pull/2042): агент: включенной кнопкой, чтобы импортировать запросы из файлов sql.
+- Исправить [выдавать #2091](https://github.com/Microsoft/sqlopsstudio/issues/2091): нельзя использовать сочетания клавиш Ctrl + C для копирования из панель результатов.
+- Исправить [выдавать #2099](https://github.com/Microsoft/sqlopsstudio/pull/2099): добавлены дополнительные параметры saveAsCsv.
+- Исправить [выдавать #2107](https://github.com/Microsoft/sqlopsstudio/issues/2107): значок обновления документа для панели мониторинга и Profiler документов.
+- Исправить [выдавать #2129](https://github.com/Microsoft/sqlopsstudio/pull/2129): позиция прокрутки сохранить изменение данных при переключении вкладок.
+- Исправить [выдавать #2152](https://github.com/Microsoft/sqlopsstudio/issues/2152): строка индикатора результатов сетки ноль основе.
+
+## <a name="known-issues"></a>Известные проблемы
+
+- [Выдача #2371](https://github.com/Microsoft/sqlopsstudio/issues/2371) Сохранить как только сохраняет первую строку данных Excel
+- [Проблема #2150](https://github.com/Microsoft/sqlopsstudio/issues/2150): не удалось подключиться на Ubuntu 16.04 to SQL в контейнере
+
+Дополнительные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/sqlopsstudio/releases).
+
 
 ## <a name="july-2018-july-public-preview"></a>Июля 2018 г. (июль Предварительная версия)
 
@@ -61,10 +116,6 @@ ms.locfileid: "39188960"
  - Исправить [выдавать 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): ошибка de Ortografia
  - Исправить [выдавать 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): задание iconPath в ButtonComponent после вызова component() не приводит к изменению значка
  - Исправить [выдавать 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): организации лучше таблицы
-
-
-Дополнительные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/sqlopsstudio/releases).
-
 
 
 ## <a name="june-2018-june-public-preview"></a>Июня 2018 г. (июнь общедоступную предварительную версию.)

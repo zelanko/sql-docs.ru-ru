@@ -1,5 +1,5 @@
 ---
-title: Правила именования (службы Analysis Services) объектов | Документы Microsoft
+title: Объект правила именования (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0200c7bedb0d0dd7dd990ef8cbe9ed2114978b8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025631"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348645"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Правила именования объектов (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -66,8 +66,8 @@ ms.locfileid: "34025631"
   
 |Объект|Недопустимые символы|  
 |------------|------------------------|  
-|**Server**|При именовании серверных объектов следуйте соглашению об именах для сервера Windows. Дополнительные сведения см. в разделе [Соглашения об именах (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) .|  
-|**DataSource**|: / \ * &#124; ? «[] () {} <>|  
+|**Server**|При именовании серверных объектов следуйте соглашению об именах для сервера Windows. См. в разделе [соглашения об именах (Windows)](/windows/desktop/DNS/naming-conventions) подробные сведения.|  
+|**DataSource**|: / \ * &#124; ? "[] () {} <>|  
 |**Level** или **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
 |**Dimension** или **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
 |Все прочие объекты|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} < >|  
@@ -86,8 +86,8 @@ ms.locfileid: "34025631"
  Базы данных могут иметь ModelType по умолчанию. Типом по умолчанию является многомерная база данных, в связи с чем использование зарезервированных символов в именах столбцов не поддерживается.  
   
 ## <a name="see-also"></a>См. также  
- [Многомерные Выражения зарезервированные слова](../../../mdx/mdx-reserved-words.md)   
- [Поддержка параметров перевода в службы Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
- [XML для аналитики соответствия &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [Зарезервированные слова многомерных Выражений](../../../mdx/mdx-reserved-words.md)   
+ [Поддержка параметров перевода в службах Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
+ [XML для анализа соответствия &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
   
   

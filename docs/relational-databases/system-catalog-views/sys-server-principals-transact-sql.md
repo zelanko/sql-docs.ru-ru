@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc9531e174c95f43d93f0b041094af842c2487a4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9c8a7aeb998b9a79faa644a3d371bb5f4f98c8f5
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106264"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694697"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "43106264"
 |**default_language_name**|**sysname**|Язык участника по умолчанию.|  
 |**credential_id**|**int**|Идентификатор учетных данных, связанный с участником. Если с участником не связаны никакие учетные данные, идентификатор credential_id будет иметь значение NULL.|  
 |**owning_principal_id**|**int**|**Principal_id** владельца роли сервера. NULL, если участник не является ролью сервера.|  
-|**is_fixed_role**|**bit**|Возвращает 1, если участник является одной из предопределенных ролей сервера. Дополнительные сведения см. в статье [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md).|  
+|**is_fixed_role**|**bit**|Возвращает значение 1, если участник является одной из ролей встроенного сервера с предопределенной разрешениями. Дополнительные сведения см. в статье [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## <a name="permissions"></a>Разрешения  
  Любое имя входа может видеть собственное имя входа, системные имена входа и предопределенные роли сервера. Для просмотра других имен входа требуется разрешение ALTER ANY LOGIN или разрешение на имя входа. Для просмотра определяемых пользователем ролей сервера необходимо иметь разрешение ALTER ANY SERVER ROLE или быть членом роли.  
@@ -61,7 +61,7 @@ ms.locfileid: "43106264"
  Следующий запрос перечисляет разрешения, явно предоставленные или отклоненные для участников на уровне сервера.  
   
 > [!IMPORTANT]  
->  Разрешения предопределенных ролей сервера не отображаются в sys.server_permissions. Поэтому участники на уровне сервера могут иметь дополнительные разрешения, не перечисленные здесь.  
+>  Разрешения предопределенных ролей сервера (Кроме открытого) не отображаются в sys.server_permissions. Поэтому участники на уровне сервера могут иметь дополнительные разрешения, не перечисленные здесь.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

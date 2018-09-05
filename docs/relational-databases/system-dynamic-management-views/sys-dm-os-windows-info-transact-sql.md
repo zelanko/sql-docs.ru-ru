@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_windows_info (Transact-SQL) | Документы Microsoft
+title: sys.dm_os_windows_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -22,33 +22,33 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6f6669704242a780d947dc271cb81724429992a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 27896207321b39ef37d4317a6ca8c4e332ccee55
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466290"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348142"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает одну строку с информацией о версии операционной системы Windows.  
   
-  Применяется только к SQL Server, работающей под управлением Windows. Чтобы просмотреть аналогичные informaton для SQL Server, запущенный на узле не под управлением Windows, например в Linux, используйте [sys.dm_os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+  Применяется только к SQL Server на Windows. Чтобы просмотреть аналогичные сведения для SQL Server, запущенный на узле отличных от Windows, например Linux, используйте [sys.dm_os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**windows_release**|**nvarchar(256)**|Для Windows возвращает номер выпуска. Список значений и описания см. в разделе [версии операционной системы (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx). Не может быть NULL.|  
+|**windows_release**|**nvarchar(256)**|Для Windows возвращает номер выпуска. Список значений и описаний, см. в разделе [версии операционной системы (Windows)](/windows/desktop/SysInfo/operating-system-version). Не может быть NULL.|  
 |**windows_service_pack_level**|**nvarchar(256)**| Для Windows возвращает номер пакета обновления. Не может быть NULL. |  
-|**windows_sku**|**int**|Для Windows возвращает идентификатор единицы хранения Stock Windows (SKU) Список идентификаторов SKU и описания см. в разделе [функция GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Допускает значение NULL. |  
-|**os_language_version**|**int**| Для Windows возвращает идентификатор языкового стандарта Windows (LCID) операционной системы. Список значений LCID и описания см. в разделе [языкового стандарта, назначаемые в Майкрософт](http://go.microsoft.com/fwlink/?LinkId=208080). Не может быть NULL.|  
+|**windows_sku**|**int**|Для Windows возвращает идентификатор Windows Stock сохранение номер SKU. Список идентификаторов SKU и описания, см. в разделе [функция GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Значение NULL. |  
+|**os_language_version**|**int**| Для Windows возвращает идентификатор языкового стандарта Windows (LCID) операционной системы. Список значений LCID и описания, см. в разделе [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Не может быть NULL.|  
   
   
 ## <a name="permissions"></a>Разрешения  
 По умолчанию разрешение SELECT на sys.dm_os_windows_info предоставляется роли public. Если отозван, требуется разрешение VIEW SERVER STATE на сервере.  
 
 ## <a name="limitations-and-restrictions"></a>Ограничения
-Чтобы просмотреть informaton для SQL, выполняемыми на узле не под управлением Windows, например в Linux, используйте [sys.dm_os_host_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+Чтобы просмотреть сведения для SQL, работающие на узле отличных от Windows, например Linux, используйте [sys.dm_os_host_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает все столбцы из **sys.dm_os_windows_info** представления.  

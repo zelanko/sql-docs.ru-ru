@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 2804197643c96e21bd0f412cf757ba0b4e2bdfbc
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400707"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381262"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Учебник: Использование Active Directory аутентификации с SQL Server в Linux
 
@@ -34,6 +34,10 @@ ms.locfileid: "39400707"
 > * Настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab службы
 > * Создание имен входа на основе AD в Transact-SQL
 > * Подключение к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с использованием проверки подлинности AD
+
+> [!NOTE]
+>
+> Если вы хотите настроить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux для использования стороннего поставщика AD, см. в разделе [использование сторонних поставщиков Active Directory с SQL Server в Linux](./sql-server-linux-active-directory-third-party-providers.md).
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -93,7 +97,7 @@ ms.locfileid: "39400707"
 
       Теперь убедитесь, что ваш `/etc/resolv.conf` файл содержит строку, как в следующем примере:  
 
-      ```Code
+      ```/etc/resolv.conf
       nameserver **<AD domain controller IP address>**
       ```
 
@@ -115,7 +119,28 @@ ms.locfileid: "39400707"
 
      Теперь убедитесь, что ваш `/etc/resolv.conf` файл содержит строку, как в следующем примере:  
 
-     ```Code
+     ```/etc/resolv.conf
+     nameserver **<AD domain controller IP address>**
+     ```
+
+   - **SLES**:
+
+     Изменить `/etc/sysconfig/network/config` файл, чтобы IP-адрес контроллера домена AD, которые будут использоваться для запросов DNS и доменом AD находится в списке доменов поиска:
+
+     ```/etc/sysconfig/network/config
+     <...>
+     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
+     ```
+
+     Изменив этот файл, перезапустите сетевую службу:
+
+     ```bash
+     sudo systemctl restart network
+     ```
+
+     Теперь убедитесь, что ваш `/etc/resolv.conf` файл содержит строку, как в следующем примере:
+
+     ```/etc/resolv.conf
      nameserver **<AD domain controller IP address>**
      ```
 
@@ -307,19 +332,27 @@ ms.locfileid: "39400707"
    Убедитесь, что вы установили [mssql-tools](sql-server-linux-setup-tools.md) пакета, затем через `sqlcmd` без указания учетных данных:
 
    ```bash
-   sqlcmd -S mssql.contoso.com
+   sqlcmd -S mssql-host.contoso.com
    ```
 
 * SSMS на клиенте Windows, присоединенных к домену
 
-   Войдите на присоединенных к домену клиента Windows, используя свои учетные данные домена. Убедитесь, что [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] установлен, а затем подключиться к вашей [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляра путем указания **проверки подлинности Windows** в **соединение с сервером** диалоговое окно.
+   Войдите на присоединенных к домену клиента Windows, используя свои учетные данные домена. Убедитесь, что [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] установлен, а затем подключиться к вашей [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляра (например «mssql-host.contoso.com»), указав **проверки подлинности Windows** в **соединение с сервером** диалоговое окно.
 
 * С помощью других драйверов клиента проверки подлинности AD
 
   * JDBC: [с помощью Kerberos, встроенная проверка подлинности для подключения к серверу SQL](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [использование встроенной проверки подлинности](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [синтаксис строки подключения](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
- 
+
+## <a name="performance-improvements"></a>Повышение производительности
+Если вы Обратите внимание, что поиск учетной записи AD занимает некоторое время вы проверили AD конфигурация является допустимой с действия, описанные в [использование аутентификации Active Directory с помощью SQL Server в Linux с помощью сторонних поставщиков AD](sql-server-linux-active-directory-third-party-providers.md), вы можете добавить строки ниже, чтобы `/var/opt/mssql/mssql.conf` пропустить вызовы SSSD и непосредственно использовать вызовы LDAP.
+
+```/var/opt/mssql/mssql.conf
+[network]
+disablesssd = true
+```
+
 ## <a name="next-steps"></a>Следующие шаги
 
 В этом учебнике мы рассмотрели способы настройки проверки подлинности Active Directory с SQL Server в Linux. Вы узнали, как для:

@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5020aa262de57eb63849e3aac51a9d8f571a40
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a1bf31190d1dbdcac8506d2306b6cd6ecbd259ac
+ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084782"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43193050"
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "43084782"
 |**class**|**tinyint**|Указывает класс, на который существует разрешение.<br /><br /> 0 = база данных;<br />1 = объект или столбец<br />3 = схема<br />4 = Участник базы данных<br />5 = сборка — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Тип<br />10 = коллекция схем XML - <br />                      **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = Тип сообщения - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = контракт службы - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Service - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = Привязка удаленной службы - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = route - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = полнотекстовый каталог - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = симметричный ключ — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = certificate - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = асимметричный ключ - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**class_desc**|**nvarchar(60)**|Описание класса, на который существует разрешение.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|Идентификатор предмета, на который существует разрешение, интерпретируется в соответствии с классом. Как правило **major_id** — это просто вид идентификатора, к которому применяется этот класс представляет. <br /><br /> 0 = самой базы данных <br /><br /> > 0 = идентификаторы объектов для пользовательских объектов <br /><br /> \<0 = идентификаторы объектов для системных объектов |  
-|**minor_id**|**int**|Вторичный идентификатор предмета, на который существует разрешение, интерпретируется согласно классу. Часто **major_id** равно нулю, так как имеется не подкатегории для класса объекта. В противном случае — это идентификатор столбца таблицы.|  
+|**minor_id**|**int**|Вторичный идентификатор предмета, на который существует разрешение, интерпретируется согласно классу. Часто **minor_id** равно нулю, так как имеется не подкатегории для класса объекта. В противном случае — это идентификатор столбца таблицы.|  
 |**grantee_principal_id**|**int**|Идентификатор участника базы данных, которому предоставлено разрешение.|  
 |**grantor_principal_id**|**int**|Идентификатор участника базы данных, который предоставил данное разрешение.|  
 |**type**|**char(4)**|Тип разрешения в базе данных. Список типов разрешений см. в следующей таблице.|  
