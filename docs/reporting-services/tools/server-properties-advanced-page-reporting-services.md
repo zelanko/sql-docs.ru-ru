@@ -2,25 +2,18 @@
 title: Свойства сервера (страница "Дополнительно") — службы Reporting Services | Документация Майкрософт
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
+ms.technology: tools
 ms.suite: reporting-services
 ms.topic: conceptual
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
-ms.custom: ''
-ms.reviewer: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.date: 08/16/2018
-ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405959"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266272"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Свойства сервера (страница «Дополнительно») — службы Reporting Services
 
@@ -89,12 +82,12 @@ ms.locfileid: "40405959"
 Максимальное количество моментальных снимков, которые хранятся для отчета. Допустимые значения: от **-1** до **2** **147** **483** **647**. Значение **-1**указывает на то, что число моментальных снимков не ограничено.  
 
 **EnableIntegratedSecurity**  
-Определяет, поддерживается ли встроенная безопасность Windows для соединений с источниками данных отчетов. Значение по умолчанию равно **True**. Допустимы следующие значения.
+Определяет, поддерживается ли встроенная система безопасности Windows для соединений с источниками данных для отчетов. Значение по умолчанию равно **True**. Допустимы следующие значения.
 
 |Значения|Описание|
 |---------|---------|
-|**True**|Встроенная безопасность Windows включена.|
-|**False**|Встроенная безопасность Windows отключена. Источники данных отчета, настроенные для использования встроенной безопасности Windows, не будут запущены.|
+|**True**|Встроенная система безопасности Windows включена.|
+|**False**|Встроенная система безопасности Windows отключена. Источники данных для отчетов, использующие встроенную систему безопасности Windows, не будут работать.|
 
 **EnableLoadReportDefinition**  
 Этот параметр определяет, могут ли пользователи выполнять незапланированные запросы из отчета построителя отчетов. Настройка этого параметра определяет значение свойства **EnableLoadReportDefinition** на сервере отчетов.  
@@ -139,15 +132,15 @@ ms.locfileid: "40405959"
 
 **OfficeOnlineDiscoveryURL** ***(только сервер отчетов Power BI)*** Задает адрес экземпляра Office Online Server для просмотра книг Excel.
 
-**RequireIntune** Задайте этот параметр, чтобы затребовать от Intune доступ к отчетам вашей организации через мобильное приложение Power BI. *Значение по умолчанию — False.*
+**RequireIntune**. Для доступа к отчетам организации через мобильное приложение Power BI требуется Intune. *Значение по умолчанию — False.*
 
-**ScheduleRefreshTimeoutMinutes** ***(только сервер отчетов Power BI)*** Задает необходимое время ожидания при обновлении расписания. *Значение по умолчанию — 120.*
+**ScheduleRefreshTimeoutMinutes** ***(только Сервер отчетов Power BI)***. Задает необходимое время ожидания при обновлении по расписанию. *Значение по умолчанию — 120.*
 
-**ShowDownloadMenu** Задайте этот параметр, чтобы включить в меню "Сервис" скачивание клиентских средств. *Значение по умолчанию — True.*
+**ShowDownloadMenu**. Включает меню скачивания для клиентских средств. *Значение по умолчанию — True.*
 
 **TimeInitialDelaySeconds** Задает время начальной задержки в секундах. *Значение по умолчанию — 60.*
 
-**TrustedFileFormat** Задает все внешние форматы файлов, которые могут быть сохранены. *Значение по умолчанию — jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.*
+**TrustedFileFormat**. Список форматов внешних файлов на портале Reporting Services, которые будут открываться в браузере. Для не указанных форматов внешних файлов в браузере будет открываться диалоговое окно скачивания. Значения по умолчанию — jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.
 
 **EnablePowerBIReportExportData** ***(только Сервер отчетов Power BI)***  
 Включите экспорт данных с сервера отчетов Power BI из визуальных элементов Power BI. Возможные значения: True, False.  Значение по умолчанию — True.  
