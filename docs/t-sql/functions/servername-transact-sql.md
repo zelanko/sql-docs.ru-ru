@@ -1,7 +1,7 @@
 ---
 title: '@@SERVERNAME (Transact-SQL) | Документы Майкрософт'
 ms.custom: ''
-ms.date: 09/17/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,20 +22,17 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4335b063b5b8f734be6fe76bb0a1f43c3f7e8622
-ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
+ms.openlocfilehash: 655ca5925558e277ae1516270016368cd27f7bc5
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39582190"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171866"
 ---
 # <a name="x40x40servername-transact-sql"></a>@@SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает имя локального сервера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
  ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  

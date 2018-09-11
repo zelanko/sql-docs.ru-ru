@@ -27,19 +27,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1d7c5b5165b3e67956750203d31904a539469125
-ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
+ms.openlocfilehash: a38b641435f24ec07157b650877a5ac107948f75
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42441437"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171726"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Инструкции RESTORE — VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Проверяет, но не восстанавливает резервную копию, а также проверяет полноту резервного набора данных и возможность его считывания. Однако инструкция RESTORE VERIFYONLY не проверяет структуру данных, содержащихся в томах резервной копии. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкция RESTORE VERIFYONLY была расширена с целью проведения дополнительной проверки данных для увеличения вероятности обнаружения ошибок. Цель — приблизиться к настоящей операции восстановления, насколько это возможно. Дополнительные сведения см. в разделе «Примечания».  
-  
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  Если резервная копия достоверна, то компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает сообщение об успешном выполнении.  
   
