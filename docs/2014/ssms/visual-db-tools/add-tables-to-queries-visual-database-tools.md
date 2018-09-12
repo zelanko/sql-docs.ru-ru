@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 208ed8613c10ffb0408a471ffd9ca66180f07d59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d6d7273d6530c96a286b401b006866b827c9acd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312854"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815650"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Добавление таблиц в запросы (визуальные инструменты для баз данных)
   При создании запроса извлекаются данные из таблицы или других объектов, структурированных подобно таблицам, таких как представления и некоторые пользовательские функции. Чтобы любые из этих объектов можно было использовать в запросе, их следует добавить на **панель диаграммы**.  

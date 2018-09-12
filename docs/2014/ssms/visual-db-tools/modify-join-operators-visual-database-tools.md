@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 865eee3e48d99914e2f04ad0ae59e42443447f59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad48b7e744dc83e5a32bec972383067eb076d470
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304954"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817220"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>изменить операторы соединения (визуальные инструменты для баз данных)
   По умолчанию [Конструктор запросов и представлений](visual-database-tools.md) соединяет таблицы с помощью знака равенства (эквисоединение), при котором значения в двух столбцах соединения совпадают. При необходимости можно изменить оператор, используемый для сравнения значений в столбцах соединения.  

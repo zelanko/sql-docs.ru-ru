@@ -5,8 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d64bf91d18b5bbd1538a3f65d8ca50f74b8019
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 59ca38030ffa52b8a110941f7881fff470cc3f77
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282350"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818100"
 ---
 # <a name="operators"></a>Операторы
   Операторы — это псевдонимы людей или групп, которые могут получать электронные уведомления о завершении заданий или предупреждения. Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает уведомление администраторов через операторов. Операторы включают уведомления и мониторинг возможностей агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -117,7 +116,7 @@ ms.locfileid: "37282350"
   
 -   Для выполнения команды **net send**оператор должен быть зарегистрирован на указанном компьютере, а указанный компьютер должен принимать сообщения от Windows Messenger.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |||  
 |-|-|  

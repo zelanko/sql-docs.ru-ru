@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c59bfb6f5f2c9621d212dc52a92daecd79fad7b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b96e6966afd08b03b086ca61f6e827c1c38c96ef
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313324"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820080"
 ---
 # <a name="create-a-user-defined-event"></a>Создание пользовательского события
   Можно создать пользовательское событие, если нужно производить мониторинг событий, отличных от предопределенных системой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно назначить уровень серьезности для каждого пользовательского события.  
@@ -48,19 +47,19 @@ ms.locfileid: "37313324"
   
  **Создание предупреждения по номеру сообщения**  
   
--   [Среда Среда SQL Server Management Studio](create-an-alert-using-an-error-number.md)  
+-   [Среда SQL Server Management Studio](create-an-alert-using-an-error-number.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
  **Создание предупреждения по уровню серьезности**  
   
--   [Среда Среда SQL Server Management Studio](create-an-alert-using-severity-level.md)  
+-   [Среда SQL Server Management Studio](create-an-alert-using-severity-level.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
  **Определение ответа на предупреждение**  
   
--   [Среда Среда SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+-   [Среда SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   

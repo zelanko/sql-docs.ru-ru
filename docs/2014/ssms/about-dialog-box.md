@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7dbf08b5fdb44c2dc8b843c09b52e3e986093c02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2476fc9b16380da551f4e9752a74c8de22d1fb10
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315194"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818180"
 ---
 # <a name="about-dialog-box"></a>Диалоговое окно "О программе"
   В диалоговом окне **О программе** содержатся сведения о продукте, а также предоставляется доступ к сведениям о компьютере, на котором он запущен. Для копий с ограниченным сроком действия запись [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] содержит число дней, оставшихся до прекращения срока действия установленной копии. Это диалоговое окно открывается из меню **Справка** .  

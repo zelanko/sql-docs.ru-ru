@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd13264cfe88799c50eec23bab8e06d52feb399f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e887cccec4a7f03626639624c2c109280a31614
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265680"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818140"
 ---
 # <a name="select-objects-object-explorer"></a>Выбор объектов (обозреватель объектов)
   Используйте диалоговое окно **Выбор объектов**, чтобы добавить объект к списку в другом диалоговом окне. Заголовок диалогового окна и параметры, доступные в нем, зависят от того, каким способом окно было открыто. Отображаются только доступные параметры; например доступны только имена входа, если необходимо выбрать владельца для нового объекта.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9c7893dcf6f250668b000c07126e62449518698
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8873f15c60c68aaa1a1db07bfd996e4a7be79b9d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168325"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814900"
 ---
 # <a name="browse-for-objects-object-explorer"></a>Обзор объектов (обозреватель объектов)
   Отображает список объектов выбранного типа. Выберите один или несколько объектов из списка, пометив соответствующие флажки. В окне **Обзор объектов** отображаются только элементы, соответствующие действию, и элементы, на просмотр которых есть разрешение.  

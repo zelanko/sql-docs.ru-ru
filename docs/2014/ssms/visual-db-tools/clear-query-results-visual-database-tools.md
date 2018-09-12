@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ce0eaf8e2e0ab319ea040a2c04789fcbc521f68
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29683280c60090a29d50c0cc94f0514dc31a4d23
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268120"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819970"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Очистка результатов запросов (визуальные инструменты для баз данных)
   Выполнив запрос в **конструкторе запросов и представлений**, можно очистить панель результатов. Эта процедура применима к запросам, созданным с использованием параметров **Открыть представление** или **Открыть таблицу** в обозревателе объектов. В среде[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]после выполнения запроса в редакторе запросов невозможно очистить панель результатов до закрытия окна редактора запросов или выполнения другого запроса.  

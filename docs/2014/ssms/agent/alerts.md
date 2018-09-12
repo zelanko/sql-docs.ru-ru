@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1e27e777741fa159a5d0afee7e200af27b1833e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5233e3bcb0ce6b03c754819ead74eef7f014a3d0
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330873"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818510"
 ---
 # <a name="alerts"></a>видны узлы
   События, формируемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , помещаются в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент считывает этот журнал и сравнивает события, которые там содержатся, с определенными пользователем предупреждениями. Как только агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаруживает такое соответствие, в ответ на это событие автоматически создается предупреждение. Кроме событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может отслеживать условия производительности и события инструментария управления Windows (WMI).  
@@ -116,25 +115,25 @@ ms.locfileid: "37330873"
   
  **Создание предупреждения по номеру сообщения**  
   
--   [Среда Среда SQL Server Management Studio](create-an-alert-using-an-error-number.md)  
+-   [Среда SQL Server Management Studio](create-an-alert-using-an-error-number.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
  **Создание предупреждения по уровню серьезности**  
   
--   [Среда Среда SQL Server Management Studio](create-an-alert-using-severity-level.md)  
+-   [Среда SQL Server Management Studio](create-an-alert-using-severity-level.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
  **Создание предупреждения по событию инструментария WMI**  
   
--   [Среда Среда SQL Server Management Studio](create-a-wmi-event-alert.md)  
+-   [Среда SQL Server Management Studio](create-a-wmi-event-alert.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
  **Определение ответа на предупреждение**  
   
--   [Среда Среда SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+-   [Среда SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   

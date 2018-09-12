@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 27
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2fc1ae6eadef04ee183e5551a88ed480a696cf2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9507be8eb78f84ddb775a70a997813166a06d08c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148275"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815780"
 ---
 # <a name="add-projects-to-source-control"></a>Добавление проектов в систему управления версиями
   Решения среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] могут содержать несколько проектов скриптов. Способ добавления проекта к системе управления версиями зависит от того, находится ли под управлением системы решение, к которому относится проект. Если решение контролируется системой управления версиями, то возврат решения добавляет проект к системе управления версиями автоматически. Дополнительные сведения о возврате решений см. в разделе [вернуть файлы](../../2014/database-engine/check-in-files.md).  

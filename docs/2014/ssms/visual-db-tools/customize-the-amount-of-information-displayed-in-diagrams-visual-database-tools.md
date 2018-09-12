@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18288e60d5fd3fe276ac900eb6c7d11aa54caf8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1692a2f0e913486875c44f284a01f18020f0148
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301374"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819900"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Настройка объема сведений, отображаемых в диаграммах (визуальные инструменты для баз данных)
   При добавлении таблицы в диаграмму базы данных эта таблица появляется вместе с рядом отображаемых свойств. Количество отображаемых сведений можно задать в меню вариаций или создавать пользовательский набор свойств.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df296ef140f92e8a035e85d3123b0f1426e6288a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 710f31e492d251347d7be2cb46f917bc04421138
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235284"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816620"
 ---
 # <a name="data-collector-security"></a>Безопасность сборщика данных
   Сборщик данных использует безопасность на основе ролей, реализованную агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта модель позволяет администратору базы данных запускать различные задачи сборщика данных в контексте безопасности, имеющем только те разрешения, которые необходимы для выполнения задачи. Этот подход также используется для операций, затрагивающих внутренние таблицы, доступ к которым можно осуществить только с помощью хранимой процедуры или представления. Внутренним таблицам разрешения не предоставляются. Вместо этого разрешения проверяются у пользователя хранимой процедуры или представления, используемых для доступа к таблице.  

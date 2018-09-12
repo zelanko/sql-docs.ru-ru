@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3693d798e74f0ec342c916846e2892e64f779449
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 145fbb64b5b7ca0098187a96515cd60d26e770e8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154745"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814170"
 ---
 # <a name="manage-checkins"></a>Управление возвратами
   Чтобы сохранить изменения в файле, контролируемом системой управления версиями, необходимо вернуть файл. Когда файл возвращается, созданная версия файла копируется поставщику системы управления версиями и становится последней версией файла, как правило, доступной пользователям с соответствующими разрешениями.  

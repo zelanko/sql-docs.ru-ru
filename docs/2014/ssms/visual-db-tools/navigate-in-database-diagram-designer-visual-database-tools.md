@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6400c5165bd224f680548be1a1f78bb3f1da3a9d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d0c905f1f900fe0ff6ba2567445a161295e48d6
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181009"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818900"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Навигация в конструкторе диаграмм баз данных (визуальные инструменты для баз данных)
   В конструкторе диаграмм баз данных можно работать как при помощи мыши, так и при помощи клавиатуры. Дополнительные сведения об особых методах, использованных в конструкторе диаграмм баз данных, см. в следующих таблицах.  
