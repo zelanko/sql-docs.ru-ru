@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8974a7a44f7f88dedd81e734af5a8b1f86530a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ed5e1d620a5a56848a57f67b92345fc535db3cf
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186491"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888500"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Использование с AUTO Mode для FOR XML
   Как описано в статье [FOR XML (SQL Server)](for-xml-sql-server.md), в режиме AUTO результаты запросов возвращаются в виде вложенных XML-элементов. Такой механизм не обеспечивает достаточное управление структурой XML, формируемой из результатов запроса. Запросы в режиме AUTO полезны, если необходимо формировать простые иерархии. При этом [использование режима EXPLICIT совместно с предложением FOR XML](use-explicit-mode-with-for-xml.md) и [использование режима PATH совместно с FOR XML](use-path-mode-with-for-xml.md) дают больше контроля и гибкости при выборе формы XML из результатов запроса.  

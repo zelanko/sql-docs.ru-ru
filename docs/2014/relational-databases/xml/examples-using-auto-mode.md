@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ad357c6dd37e45200f497a053b6a3a0579adfa9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36ce151c29643e7843f0b2cf86e5c3a12d9cbd44
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208614"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888460"
 ---
 # <a name="examples-using-auto-mode"></a>Примеры. Использование режима AUTO
   В следующем примере иллюстрируется применение режима AUTO. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
@@ -207,7 +206,7 @@ FOR XML AUTO, BINARY BASE64;
   
  По умолчанию при использовании режима AUTO для получения двоичных данных вместо самих двоичных данных возвращается ссылка на относительный URL-адрес виртуального корня базы данных, на которой выполняется запрос. Это происходит, если аргумент BINARY BASE64 не задается.  
   
- Если режим AUTO возвращает ссылку на URL-адрес двоичных данных в базах данных, в которых не учитывается регистр, запрос выполняется, даже если задаваемое в запросе имя таблицы или столбца не соответствует имени таблицы или столбца в базе данных. Однако значение регистра, возвращаемое в ссылке, не будет согласованным. Например:  
+ Если режим AUTO возвращает ссылку на URL-адрес двоичных данных в базах данных, в которых не учитывается регистр, запрос выполняется, даже если задаваемое в запросе имя таблицы или столбца не соответствует имени таблицы или столбца в базе данных. Однако значение регистра, возвращаемое в ссылке, не будет согласованным. Пример:  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  

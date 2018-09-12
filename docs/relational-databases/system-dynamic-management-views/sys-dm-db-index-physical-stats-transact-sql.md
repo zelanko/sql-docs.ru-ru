@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d42c55b62530a47332e4868c3080f3f21be9be8d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 59972833705c4d8ab7c054a1a7aac8d6ee9824f8
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085557"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375707"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|Количество сжатых страниц.<br /><br /> Вновь выделенные для куч страницы не сжаты с использованием сжатия PAGE. Куча — это СТРАНИЦА, сжимаемая при наступлении двух особых условий: при массовом импорте данных или при перестройке кучи. Типичные операции DML, которые вызывают выделение страниц, не связаны со сжатием PAGE. Перестройте кучу, если значение compressed_page_count увеличивается сверх желательного порога.<br /><br /> Для таблиц с кластеризованным индексом значение compressed_page_count указывает эффективность сжатия страниц.|  
 |hobt_id|BIGINT|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Применительно к индексам columnstore только это идентификатор для набора строк, который отслеживает данные внутренней columnstore для секции. Наборы строк, хранимых как кучи данных или двоичного дерева. Они имеют одинаковые Идентификаторы индекса как родительский индекс columnstore. Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> Значение NULL, если|  
 |column_store_delete_buffer_state|TINYINT|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ЗАПИСЬ НА ДИСК<br /><br /> 4 = СНЯТИЯ С УЧЕТА<br /><br /> 5 = ГОТОВНОСТЬ|  
-|column_store_delete_buff_state_desc||**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE — родительский индекс не является индексом columnstore.<br /><br /> OPEN — методов Deleter и сканеры используйте его.<br /><br /> СТОК — методов Deleter сток, но ее по-прежнему использовать сканеры.<br /><br /> Запись на ДИСК — закрытия буфера и строк в буфере, записываются в точечном рисунке delete.<br /><br /> Снятия с УЧЕТА – строк в буфере закрытых delete были записаны в точечном рисунке delete, но буфер не был усечен, поскольку сканеры по-прежнему используют ее. Новый сканеры не нужно использовать эксплуатации буфера, поскольку буфер, open, достаточно.<br /><br /> ГОТОВО – это буфера удаления готов к использованию.|  
+|column_store_delete_buff_state_desc||**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> НЕ является ДОПУСТИМЫМ — родительский индекс не индекс columnstore.<br /><br /> OPEN — методов Deleter и сканеры используйте его.<br /><br /> СТОК — методов Deleter сток, но ее по-прежнему использовать сканеры.<br /><br /> Запись на ДИСК — закрытия буфера и строк в буфере, записываются в точечном рисунке delete.<br /><br /> Снятия с УЧЕТА – строк в буфере закрытых delete были записаны в точечном рисунке delete, но буфер не был усечен, поскольку сканеры по-прежнему используют ее. Новый сканеры не нужно использовать эксплуатации буфера, поскольку буфер, open, достаточно.<br /><br /> ГОТОВО – это буфера удаления готов к использованию.|  
   
 ## <a name="remarks"></a>Примечания  
  Функция динамического управления sys.dm_db_index_physical_stats заменяет инструкцию DBCC SHOWCONTIG.  

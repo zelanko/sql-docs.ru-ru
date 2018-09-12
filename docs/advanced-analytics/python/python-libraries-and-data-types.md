@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7b977d079589dbb4c54d5c31fec644d9f984dd61
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 384c8c94bdef65e41af999848c9bac63fc0c8d40
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434854"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888370"
 ---
 # <a name="python-libraries-and-data-types"></a>Библиотеки и типы данных Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,16 +29,14 @@ SQL Server 2017 Anaconda 4.2 распространения и Python 3.6.
 
 Дополнительные сведения см. в разделе [Какова revoscalepy?](what-is-revoscalepy.md).
 
+Python поддерживает ограниченный набор типов данных по сравнению с SQL Server. В результате каждый раз при использовании данных из SQL Server в скриптах Python, данные могут неявно преобразовываться в совместимый тип данных. Тем не менее часто точное преобразование не может выполняться автоматически и будет возвращена ошибка.
+
 ## <a name="python-and-sql-data-types"></a>Python и типы данных SQL
-
-Python поддерживает ограниченный набор типов данных по сравнению с SQL Server.
-
-Таким образом, при использовании данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в сценарии Python, данные могут быть неявно преобразован в совместимый тип данных. Тем не менее часто точное преобразование не может выполняться автоматически и будет возвращена ошибка.
 
 В этой таблице перечислены неявных преобразований, которые предоставляются. Другие типы данных не поддерживаются.
 
 |SQLtype|Тип Python|
-|-|-|
+|-------|-----------|
 |**bigint**|`numeric`|
 |**binary**|`raw`|
 |**bit**|`bool`|

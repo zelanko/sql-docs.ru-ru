@@ -1,7 +1,7 @@
 ---
 title: sys.Servers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-catalog-views
@@ -25,25 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e8c70890bf8571621cd82aaab7e3d2796eb3bb0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f192a8ba5a7ae18287c13c8c58c6a54f27d14778
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038817"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171756"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Содержит по строке для каждого зарегистрированного связанного или удаленного сервера, а по строке на локальном сервере, где **server_id** = 0.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
-  
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Локальный идентификатор связанного сервера.|  
-|**name**|**sysname**|Когда **server_id** = 0, это имя сервера.<br /><br /> Когда **server_id** > 0, это локальное имя связанного сервера.|  
-|**product**|**sysname**|Имя продукта связанного сервера. «SQL Server» указывает, что это другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**name**|**sysname**|Когда **server_id** = 0, возвращаемое значение является именем сервера.<br /><br /> Когда **server_id** > 0, возвращаемое значение является локальным именем связанного сервера.|  
+|**product**|**sysname**|Имя продукта связанного сервера. Значение «SQL Server» указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Поставщик**|**sysname**|Имя поставщика OLE DB для соединения со связанным сервером.|  
 |**data_source**|**nvarchar(4000)**|Свойство соединения источника данных OLE DB.|  
 |**расположение**|**nvarchar(4000)**|Свойство соединения местоположения OLE DB. NULL — если нет.|  
@@ -72,13 +70,12 @@ ms.locfileid: "43038817"
   
  Разрешения не требуются для просмотра локального сервера (**server_id** = 0).  
   
- При создании связанного или удаленного сервера, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается сопоставление имени входа по умолчанию, **открытый** роли сервера. Это означает, что все имена входа по умолчанию дают возможность просматривать связанные и удаленные сервера. Чтобы ограничить видимость этих серверов, удалите сопоставление имени входа по умолчанию, выполнив [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) и указав значение NULL для *locallogin* параметра.  
+ При создании связанного или удаленного сервера, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается сопоставление имени входа по умолчанию, **открытый** роли сервера. Сопоставление имен входа по умолчанию означает, что все имена входа можно просматривать все связанные и удаленные серверы. Чтобы ограничить видимость этих серверов, удалите сопоставление имени входа по умолчанию, выполнив [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) и указав значение NULL для *locallogin* параметра.  
   
- Если сопоставление удалено, только те пользователи, которые добавлены явно со связанным или удаленным именем входа, могут просматривать связанные или удаленные сервера соответственно. Для просмотра связанных и удаленных серверов после удаления сопоставления имен входа по умолчанию необходимы следующие разрешения.  
+ Если сопоставление удалено, только те пользователи, которые добавлены явно со связанным или удаленным именем входа, могут просматривать связанные или удаленные сервера соответственно.  Чтобы просмотреть все связанные и удаленные серверы после сопоставления имени входа по умолчанию необходимы следующие разрешения:  
   
--   ALTER ANY LINKED SERVER или ALTER ANY LOGIN ON SERVER.  
-  
--   Членство в группе **setupadmin** или **sysadmin** предопределенных ролей сервера  
+- `ALTER ANY LINKED SERVER` или `ALTER ANY LOGIN ON SERVER`  
+- Членство в группе **setupadmin** или **sysadmin** предопределенных ролей сервера  
   
 ## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

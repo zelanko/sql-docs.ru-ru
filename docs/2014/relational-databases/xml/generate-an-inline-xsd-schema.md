@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e629d7c6e23f5e609f0d6734774d58bbc16f83f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 40a1ee49efbd50e9ee0ec57b46fe86abb250291f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194793"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889260"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Создание встроенных схем XSD
   В предложении FOR XML можно запросить, чтобы запрос возвращал встроенную схему вместе с результатами запроса. Если нужно получить XDR-схему, то в предложении FOR XML следует использовать ключевое слово XMLDATA. Если нужно получить XSD-схему, то тогда следует использовать ключевое слово XMLSCHEMA.  
@@ -40,7 +39,7 @@ ms.locfileid: "37194793"
   
  Если в запросе FOR XML задан параметр XMLSCHEMA, то в результат запроса входит и схема, и XML-данные. Каждый элемент данных высшего уровня ссылается на предыдущую схему посредством заданного по умолчанию объявления пространства имен, которое, в свою очередь, ссылается на целевое пространство имен встроенной схемы.  
   
- Например:  
+ Пример:  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  

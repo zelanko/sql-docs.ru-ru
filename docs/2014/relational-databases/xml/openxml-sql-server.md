@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a41c723b75d2170c0e991536bda48157c9915425
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebfe172528ef3881f3c62371350c3f2c7214ab81
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228854"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889870"
 ---
 # <a name="openxml-sql-server"></a>Инструкция OPENXML (SQL Server)
   Ключевое слово OPENXML языка [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет набор строк по XML-документам в памяти, подобный таблице или представлению. OPENXML позволяет получить доступ к XML-данным так, как если бы это был реляционный набор строк. Это делается при помощи представления внутреннего отображения XML-документа в виде набора строк. Записи в наборе строк могут храниться в таблицах базы данных.  

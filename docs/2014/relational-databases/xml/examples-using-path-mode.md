@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 68cfc33604bee9ed3e4b7d0c34c1ebfb6dec2454
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084016"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888560"
 ---
 # <a name="examples-using-path-mode"></a>Примеры, использование режима PATH
   В следующих примерах показано использование режима PATH при формировании XML из запроса SELECT. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel.  
@@ -126,7 +125,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>Указание имен столбцов, подобных синтаксису языка XPath  
- В следующем запросе `ProductModelID` указанное имя столбца начинается с "\@" и не содержит косую черту (/). Поэтому в итоговом XML-документе создается атрибут элемента <`row`>, имеющий соответствующее значение столбца.  
+ В следующем запросе указанное имя столбца `ProductModelID` начинается с символа \@ и не содержит косой черты (/). Поэтому в итоговом XML-документе создается атрибут элемента <`row`>, имеющий соответствующее значение столбца.  
   
 ```  
 USE AdventureWorks2012;  

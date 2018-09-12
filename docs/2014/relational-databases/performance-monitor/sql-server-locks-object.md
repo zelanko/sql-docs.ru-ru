@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cc09f121948ed33c1cb72e510f408235c2db66c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e167f5daa5f49b42fe052738efc1d44df82bb38b
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246209"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820490"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, объект Locks
   Объект **SQLServer: блокировки** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет сведения о блокировках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , полученных для отдельных типов ресурсов. Блокировки выдаются на такие ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , как прочитанные или измененные транзакцией строки, для предотвращения одновременного использования ресурсов несколькими транзакциями. Например, если исключительная (X) блокировка получена транзакцией на строку в таблице, никакая другая транзакция не сможет изменить эту строку, пока блокировка не будет освобождена. Минимизация использования блокировок повышает параллелизм, что может улучшить общую производительность. Одновременно может отслеживаться несколько экземпляров объекта **Locks** , каждый из которых будет представлять собой блокировку отдельного вида ресурсов.  

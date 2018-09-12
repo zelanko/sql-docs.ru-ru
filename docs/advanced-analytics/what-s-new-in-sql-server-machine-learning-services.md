@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
-ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
+ms.openlocfilehash: c49e56331a48921a123f067f32062cd138930d2c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43193030"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888860"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Новые возможности в службах машинного обучения SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,6 +23,8 @@ ms.locfileid: "43193030"
 ## <a name="new-in-sql-server-2017"></a>В SQL Server 2017
 
 В этом выпуске добавлена [поддержка Python и ведущими в отрасли алгоритмов машинного обучения](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Переименован в соответствии с новой областью, SQL Server 2017 помечает появлением [службы машинного обучения из состава SQL Server (в базе данных)](what-is-sql-server-machine-learning.md), поддержка языка Python и R. 
+
+Функция объявлений комплексная, см. в разделе [новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
 ### <a name="r-enhancements"></a>Усовершенствования R
 
@@ -42,7 +44,11 @@ ms.locfileid: "43193030"
 
 ### <a name="python-integration-for-in-database-analytics"></a>Интеграция Python для анализа в базе данных
 
-Интеграция T-SQL и Python, теперь поддерживаются [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) системной хранимой процедуры. Можно вызвать любой код Python, с помощью этой хранимой процедуры. Код выполняется в безопасной, двойной архитектуру, которая обеспечивает развертывание корпоративного уровня модели Python и сценарии, вызываемые из приложения с использованием простой хранимой процедуры. Повышает производительность достигается путем потоковой передачи данных из SQL в процессы Python и параллелизацию кольца MPI.
+Python — это язык, который предлагает большую гибкость и возможности для различных задач машинного обучения. Библиотек с открытым кодом для Python включают несколько платформ для настраиваемых нейронных сетей, а также популярные библиотеки для обработки естественного языка. Теперь этот широко применяемый язык поддерживается в SQL Server 2017 машинного обучения.
+
+Так как Python интегрирована с ядром СУБД, можно поддерживать аналитикой рядом с данными и избежав затрат и рисков, связанных с перемещением данных. Вы можете развернуть решения машинного обучения, основанный на Python с помощью таких средств, как Visual Studio. Рабочие приложения могут получить прогнозы, моделей, или визуальные элементы из среды выполнения Python 3.5, с помощью данных SQL Server получить доступ к методам.
+
+Поддерживается интеграция T-SQL и Python с помощью [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) системной хранимой процедуры. Можно вызвать любой код Python, с помощью этой хранимой процедуры. Код выполняется в безопасной, двойной архитектуру, которая обеспечивает развертывание корпоративного уровня модели Python и сценарии, вызываемые из приложения с использованием простой хранимой процедуры. Повышает производительность достигается путем потоковой передачи данных из SQL в процессы Python и параллелизацию кольца MPI.
 
 Вы можете использовать T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) функцию для выполнения [собственной оценки](sql-native-scoring.md) на предварительно обученной модели, который был ранее сохранен в требуемом двоичном формате.
 
@@ -67,6 +73,8 @@ ms.locfileid: "43193030"
 Этом выпуске представлены возможности машинного обучения в SQL Server с помощью **SQL Server 2016 R Services**, модуль аналитики в базе данных для скрипта обработки R на данных, находящихся в экземпляр ядра СУБД.
 
 Кроме того **SQL Server 2016 R Server (изолированный)** был выпущен как способ установки R Server на сервере Windows. Первоначально программа установки SQL Server содержит единственный способ установить R Server для Windows. В последующих выпусках разработчиков и специалистов по анализу данных, которым было R Server в Windows использовать другой автономный установщик для достижения той же цели. Автономный сервер в SQL Server является функциональным эквивалентом автономная Серверная система [Microsoft R Server для Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
+
+Функция объявлений комплексная, см. в разделе [новые возможности в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
 | Выпуск |Обновления компонентов |
 |---------|----------------|

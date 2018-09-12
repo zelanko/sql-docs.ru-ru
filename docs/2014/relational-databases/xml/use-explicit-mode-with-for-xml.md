@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a970e1572113b7834bdc59fbf0fdca01178b441a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58e0ac44e282d6d2de4b989cd0e0940aa3b6866c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198844"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889700"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Использование режима EXPLICIT совместно с предложением FOR XML
   Как описано в подразделе [Конструирование XML используя FOR XML](../xml/for-xml-sql-server.md), режимы RAW и AUTO не предоставляют больших возможностей контроля формы XML, порождаемого из результата запроса. Однако режим EXPLICIT предоставляет наибольшую гибкость при формировании желаемого XML из результатов запроса.  

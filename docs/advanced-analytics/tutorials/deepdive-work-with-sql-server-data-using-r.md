@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084186"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375677"
 ---
 # <a name="lesson-1-create-a-database-and-permissions"></a>Занятие 1: Создание базы данных и разрешения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     Если схема связана с одного имени определенного пользователя, он _владелец схемы_. Когда вы создаете объект, он всегда создается в вашей собственной схеме, если вы специально не укажете, что он должен быть создан в другой схеме.
   
-    Например, если создать таблицу с именем `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `.db_datareader < имя_базы_данных >. TestData ".
+    Например, если создать таблицу с именем **TestData**, и схема по умолчанию **db_datareader**, создается таблица с именем `<database_name>.db_datareader.TestData`.
   
     По этой причине база данных может содержать несколько таблиц с одинаковыми именами, если они относятся к разным схемам.
    

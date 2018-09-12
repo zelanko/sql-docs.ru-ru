@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,15 +16,15 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5048132c50460475ffe9c04f0f03a75cf6368b7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37926d5ec10cfb5bc92de83e75d4d317d9123047
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166305"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890250"
 ---
 # <a name="load-xml-data"></a>Загрузка XML-данных
-  Есть несколько способов передачи XML-данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Например:  
+  Есть несколько способов передачи XML-данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Пример:  
   
 -   Если в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данные хранятся в столбце типа [n]text или image, то эту таблицу можно импортировать с помощью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Изменить тип столбца на XML можно с использованием инструкции ALTER TABLE.  
   
@@ -48,7 +47,7 @@ FROM    (SELECT *
 ```  
   
 ## <a name="text-encoding"></a>Кодировка текста  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит XML-данные в кодировке Юникод (UTF-16). XML-данные, извлекаемые из баз данных сервера, предоставляются в кодировке UTF-16. Если требуются данные в другой кодировке, извлеченные данные нужно преобразовать. Иногда XML-данные могут быть представлены в другой кодировке. Если это так, во время загрузки данных нужно быть внимательным. Например:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит XML-данные в кодировке Юникод (UTF-16). XML-данные, извлекаемые из баз данных сервера, предоставляются в кодировке UTF-16. Если требуются данные в другой кодировке, извлеченные данные нужно преобразовать. Иногда XML-данные могут быть представлены в другой кодировке. Если это так, во время загрузки данных нужно быть внимательным. Пример:  
   
 -   Если текст XML представлен в кодировке Юникод (UCS-2, UTF-16), можно назначить его XML-столбцу, переменной или параметру без каких-либо проблем.  
   
@@ -66,14 +65,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>Несоответствия кодировок строк  
- При копировании и вставке XML как строкового литерала в окно редактора запросов служб в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]могут возникнуть несоответствия с кодировкой строк типа (N)VARCHAR. Это будет зависеть от кодировки копируемого экземпляра XML. Во многих случаях может возникнуть необходимость удаления XML-декларации. Например:  
+ При копировании и вставке XML как строкового литерала в окно редактора запросов служб в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]могут возникнуть несоответствия с кодировкой строк типа (N)VARCHAR. Это будет зависеть от кодировки копируемого экземпляра XML. Во многих случаях может возникнуть необходимость удаления XML-декларации. Пример:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema …  
 ```  
   
- Затем нужно будет добавить N, чтобы сделать экземпляр XML экземпляром Юникода. Например:  
+ Затем нужно будет добавить N, чтобы сделать экземпляр XML экземпляром Юникода. Пример:  
   
 ```  
 -- Assign XML instance to a variable.  

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ac7345e2e4f71db13801e2813ea77aa88f5cdc69
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084677"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343089"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Руководство: Функции RevoScaleR использующих R с данными SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ RevoScaleR — это пакет Microsoft R, предоставляя расп�
 
 Обычно разработчикам R использовать интегрированные среды разработки для написания и отладки кода на языке R. Вот несколько советов:
 
-- **Инструменты R для Visual Studio** (RTVS) — это бесплатный подключаемый модуль, который предоставляет Intellisense, отладку и поддержка Microsoft R. можно использовать его с R Server и службы машинного обучения SQL Server. Чтобы скачать эти средства, перейдите на страницу [Средства R для Visual Studio](https://www.visualstudio.com/vs/rtvs/).
+- **Инструменты R для Visual Studio** (RTVS) — это бесплатный подключаемый модуль, который предоставляет Intellisense, отладку и поддержку Microsoft R. Его можно использовать с R Server и службы машинного обучения SQL Server. Чтобы скачать эти средства, перейдите на страницу [Средства R для Visual Studio](https://www.visualstudio.com/vs/rtvs/).
 
 - **RStudio** — одна из наиболее популярных сред для разработки на языке R. Дополнительные сведения см. в разделе [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/).
 

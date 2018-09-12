@@ -1,27 +1,28 @@
 ---
 title: Установка служб R SQL Server 2016 (в базе данных) | Документация Майкрософт
+description: R в SQL Server доступна при установке служб R SQL Server 2016 на Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4f5c39c62b63aa3d2bf8daf83b9212423cf258a1
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 4df8391974214452c6b8b3226c3c9a845e4b556b
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118512"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311684"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Установка служб SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье объясняется, как установить и настроить **SQL Server 2016 R Services (в базе данных)**. Если у вас есть SQL Server 2016, установите этот компонент позволяет выполнение кода R в SQL Server.
+В этой статье объясняется, как установить и настроить **SQL Server 2016 R Services**. Если у вас есть SQL Server 2016, установите этот компонент позволяет выполнение кода R в SQL Server.
+
+Интеграция R в SQL Server 2017, предлагаемое в [служб машинного обучения](../r/r-server-standalone.md), отражая Добавление Python. Если вы хотите выполнить интеграцию R и наличие установочного носителя SQL Server 2017, см. в разделе [установить SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) добавить компонент. 
 
 ## <a name="bkmk_prereqs"> </a> Контрольный список перед установкой
-
-+ Программа установки SQL Server 2016 является обязательным, если вы хотите установить R Services. Если вместо этого у вас есть установочный носитель SQL Server 2017, необходимо установить [служб SQL Server 2017 машинного обучения (в базе данных)](sql-machine-learning-services-windows-install.md) для получения интеграция R для данной версии SQL Server.
 
 + Экземпляр ядра СУБД является обязательным. Невозможно установить только R, несмотря на то, что постепенно добавить его к существующему экземпляру.
 
@@ -31,7 +32,7 @@ ms.locfileid: "43118512"
 
 + Не устанавливайте **общие компоненты** > **R Server (изолированный)** на одном компьютере, где запущен экземпляр в базе данных. 
 
-+ Параллельную установку с другими версиями R и Python возможны, так как экземпляр SQL Server использует своими собственными копиями открытым исходным кодом R и Anaconda распределений. Тем не менее код, который использует R и Python на компьютере SQL Server за пределами SQL Server может привести к различным проблемам:
+  Параллельную установку с другими версиями R и Python возможны, так как экземпляр SQL Server использует своими собственными копиями открытым исходным кодом R и Anaconda распределений. Тем не менее код, который использует R и Python на компьютере SQL Server за пределами SQL Server может привести к различным проблемам:
     
   + Используется другая библиотека и другой исполняемый файл и получить разные результаты, чем при выполнении в SQL Server.
   + Скрипты R и Python, выполняющиеся на внешние библиотеки не могут управляться SQL Server, что приводит к конкуренции ресурсов.
@@ -128,7 +129,7 @@ ms.locfileid: "43118512"
 
     Задайте для **run_value** значение 1.
 
-2. Откройте **служб** панели или диспетчер конфигурации SQL Server и проверьте **службы панели запуска SQL Server** выполняется. Вы должны иметь одну службу для каждого экземпляра ядра базы данных с R или Python устанавливается. Дополнительные сведения см. в разделе [компоненты для поддержки интеграции Python](../python/new-components-in-sql-server-to-support-python-integration.md).
+2. Откройте **служб** панели или диспетчер конфигурации SQL Server и проверьте **службы панели запуска SQL Server** выполняется. Вы должны иметь одну службу для каждого экземпляра ядра базы данных с R или Python устанавливается. Дополнительные сведения о службе см. в разделе [Extensibility framework](../concepts/extensibility-framework.md).
 
 7. Если панель запуска работает, можно выполнить простые R, чтобы убедиться, что внешних сред выполнения сценариев может взаимодействовать с SQL Server. 
 

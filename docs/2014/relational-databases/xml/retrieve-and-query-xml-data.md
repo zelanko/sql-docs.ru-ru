@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42311763fddcec6403494c82dca02c29480f7235
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ce925276bae931526d5c36b10337f98bcf96fe3
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313284"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889830"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Получение и запрос XML-данных
   В этом разделе описываются параметры запроса, которые необходимо указать для запроса XML-данных. Кроме того, в нем описаны компоненты экземпляров XML, нефиксируемых при сохранении экземпляров в базах данных.  
@@ -31,7 +30,7 @@ ms.locfileid: "37313284"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняется содержимое экземпляра XML, но не сохраняются его аспекты, которые в модели XML-данных не рассматриваются как значительные. Это означает, что полученный экземпляр XML может отличаться от экземпляра, сохраненного на сервере, но при этом будет содержать те же самые данные.  
   
 ### <a name="xml-declaration"></a>XML-декларация  
- XML-декларация экземпляра не сохраняется при сохранении экземпляра в базе данных. Например:  
+ XML-декларация экземпляра не сохраняется при сохранении экземпляра в базе данных. Пример:  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -83,7 +82,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- Префикс пространства имен в результате может быть другим. Например:  
+ Префикс пространства имен в результате может быть другим. Пример:  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  

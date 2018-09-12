@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f258200f4ffc9a7c95aaac32a932aea9be0a975
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c9326045b48385d592c17d1b275a9e671187965
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321856"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888410"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Пример: конструирование одноуровневых элементов в режиме EXPLICIT
   Предположим, что требуется создать XML, который предоставляет сведения о заказах на продажу. Обратите внимание на то, что элементы <`SalesPerson`> и <`OrderDetail`> имеют одного и того же родителя. Каждый заказ имеет один элемент <`OrderHeader`>, один элемент <`SalesPerson`> или один или несколько элементов <`OrderDetail`>.  
