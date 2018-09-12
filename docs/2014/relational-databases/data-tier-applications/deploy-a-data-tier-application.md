@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - How to [DAC], deploy
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f869a6a88fb13669d6f3196a040272470fecbc8d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154535"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813510"
 ---
 # <a name="deploy-a-data-tier-application"></a>Развертывание приложения уровня данных
   Приложение уровня данных (DAC) вы можете развернуть из пакета DAC на существующем экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] или [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью мастера или скрипта Powershell. Процесс развертывания регистрирует экземпляр приложения уровня данных путем сохранения определения приложения уровня данных в системной базе данных **msdb** (**master** в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), создает базу данных и заполняет ее всеми объектами базы данных, заданными в приложении уровня данных.  
   
--   **Перед началом работы:**  [служебная программа SQL Server](#SQLUtility), [настройка параметров баз данных](#DBOptSettings), [ограничения](#LimitationsRestrictions), [предварительные требования, [безопасность, [разрешения  
+-   **Перед началом работы:**  [служебная программа SQL Server](#SQLUtility), [настройка параметров баз данных](#DBOptSettings), [ограничения](#LimitationsRestrictions), [предварительные требования](#Prerequisites), [безопасность](#Security), [разрешения](#Permissions)  
   
 -   **Развертывание приложения уровня данных с помощью следующих средств:**  [мастер развертывания приложения уровня данных](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
