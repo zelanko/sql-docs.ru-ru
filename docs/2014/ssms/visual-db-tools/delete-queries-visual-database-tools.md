@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9690ed54b747460fe5ee706d50085c53c85c1a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ff4f49b2fac5b9add358b7041a79d803733d9c4
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240050"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807900"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Удаление запросов (визуальные инструменты для баз данных)
   Можно удалить запрос, убрав его из проекта и окончательно удалив его из файловой системы. Запросы, удаленные с использованием нижеследующей процедуры, не отправляются в корзину и не могут быть восстановлены.  

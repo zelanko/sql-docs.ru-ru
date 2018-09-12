@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 838243359ed637ae983254b8203314ed906c2f13
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ac07a6e81dbcd54ef871bc30d9f1962a26d57ed
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194454"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812120"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Автоматическое изменение размера выбранных таблиц в диаграммах (визуальные инструменты для баз данных)
   Таблицы в диаграмме можно быстро преобразовать к наименьшему размеру, при котором будут видны все поля.  

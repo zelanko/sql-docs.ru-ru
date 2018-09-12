@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a8a6e25a518e62c8498fb00fcd45b0217e60d71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 459d771b9f8b79a5194c754a81ab132b18559bf5
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286620"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807540"
 ---
 # <a name="manage-events"></a>Управление событиями
   Все сообщения об ошибках, удовлетворяющие заданному уровню серьезности либо превышающие его, могут быть перенаправлены экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данное действие называется *пересылкой событий*. Сервер пересылки является выделенным сервером, который может также являться главным. Пересылка событий может быть использована для централизации управления предупреждениями в группе серверов, что позволяет снизить рабочую нагрузку на сильно загруженные серверы.  
@@ -77,11 +76,11 @@ ms.locfileid: "37286620"
   
  **Назначение сервера управления предупреждениями**  
   
--   [Среда Среда SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+-   [Среда SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
  **Определение ответа на предупреждение**  
   
--   [Среда Среда SQL Server Management Studio](define-the-response-to-an-alert-sql-server-management-studio.md)  
+-   [Среда SQL Server Management Studio](define-the-response-to-an-alert-sql-server-management-studio.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   

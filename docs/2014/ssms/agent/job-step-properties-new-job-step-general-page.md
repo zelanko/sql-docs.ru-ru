@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa2ee7a5a54c02618230a91b67e0d4c1db8a294e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db65dfaec0688ab7eec9a7597bcf94b2cbcfc131
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224744"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811110"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Свойства шага задания: Создание шага задания (страница "Общие")
+# <a name="job-step-properties-new-job-step-general-page"></a>Свойства шага задания: создание шага задания (страница "Общие")
   Эта страница используется для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или для определения нового шага задания.  
   
  Для перехода к данной странице в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] разверните агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , щелкните правой кнопкой мыши **Задания**, выберите пункт **Создать задание**, страницу **Шаги** и нажмите кнопку **Создать**. Перейти к этой странице можно также, щелкнув правой кнопкой мыши задание в обозревателе объектов, наведя курсор мыши на пункт **Свойства**, затем выбрав страницу **Шаги** и нажав кнопку **Создать**, **Вставить**или **Изменить**.  
@@ -45,7 +44,7 @@ ms.locfileid: "37224744"
  Задайте команду, запускаемую шагом задания.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Параметры для шагов задания языка Transact-SQL  
- **Открыть**  
+ **Открытие**  
  Загрузить команду из файла.  
   
  **Выделить все**  
@@ -74,7 +73,7 @@ ms.locfileid: "37224744"
  **Другое**  
  Введите имя языка для шагов задания, написанных на другом языке сценариев.  
   
- **Открыть**  
+ **Открытие**  
  Загрузить команду из файла.  
   
  **Выделить все**  
@@ -90,7 +89,7 @@ ms.locfileid: "37224744"
  **Код завершения процесса успешной команды**  
  Введите код завершения, возвращаемый командой после успешного выполнения.  
   
- **Открыть**  
+ **Открытие**  
  Загрузить команду из файла.  
   
  **Выделить все**  
@@ -103,7 +102,7 @@ ms.locfileid: "37224744"
  Вставить содержимое буфера обмена.  
   
 ## <a name="options-for-powershell-job-steps"></a>Параметры для шагов задания языка PowerShell  
- **Открыть**  
+ **Открытие**  
  Загрузить скрипт из файла.  
   
  **Выделить все**  
@@ -191,7 +190,7 @@ ms.locfileid: "37224744"
  **База данных**  
  База данных, которая будет использоваться на шаге задания.  
   
- **Открыть**  
+ **Открытие**  
  Загрузить команду из файла.  
   
  **Выделить все**  

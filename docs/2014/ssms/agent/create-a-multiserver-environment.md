@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cecfa64f8aa6656cf055a9e488cfe30d68d5160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 149b7f15a59dd6f3532353e757faac69fc25befd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183601"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811900"
 ---
 # <a name="create-a-multiserver-environment"></a>Создание многосерверной среды
   Администрирование нескольких серверов требует настройки главного сервера (MSX) и одного или более целевых серверов (TSX). Задания, которые будут обрабатываться на всех целевых серверах, сначала определяются на главном сервере, а затем загружаются на целевые.  
@@ -59,7 +58,7 @@ ms.locfileid: "37183601"
   
 -   Службы SQL Server Integration Services поддерживают только серверы, которые имеют такую же или более высокую версию, что и версия главного сервера.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  В следующих разделах описываются типовые задачи при создании многосерверной среды.  
   
 |Описание|Раздел|  

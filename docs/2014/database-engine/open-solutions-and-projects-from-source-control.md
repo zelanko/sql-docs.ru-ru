@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2f034cadd18ea0cf448a2044debe6b081c2a7e2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b307be56b6711f4c51b6bf7b96d03d946296e57
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239414"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807430"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Открытие решений и проектов из системы управления версиями
   Можно использовать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для открытия решения или проекта непосредственно из системы управления версиями. Когда решение открывается из системы управления версиями, среда [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] автоматически получает последнюю версию решения и копирует ее в указанное место.  

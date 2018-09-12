@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f30616dd6f9ee51b929a98740a3d4c4ed320d7bb
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244026"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808010"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Пошаговое руководство. Добавление и изменение диаграммы базы данных
   Это пошаговое руководство показывает, как создавать и изменять диаграмму базы данных и производить изменения в базе данных с помощью компонента диаграмм базы данных. Рассматривается добавление таблиц в диаграммы, создание связей между таблицами, создание ограничений и индексов столбцов и изменение уровня сведений, видимых для каждой таблицы.  

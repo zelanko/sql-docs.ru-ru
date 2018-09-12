@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 843fe6a662c0d77962881683fb8d5842a4f44612
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4ee29da32d79f4c4048323a4b86fd2fbfbe330a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278270"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812340"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Диалоговое окно «Выражение проверочного ограничения» (визуальные инструменты для баз данных)
   При присоединении проверочных ограничений к таблице или столбцу нужно задать выражение SQL. Введите в предоставляемое окно выражение проверочного ограничения.  

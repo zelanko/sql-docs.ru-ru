@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46b84d90174fc77321a8962c45d0689c8c8c19ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee48eae5ae58a6d82ed93a6d678518ce304d7a63
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307444"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807561"
 ---
 # <a name="select-source-dialog-box"></a>Диалоговое окно «Выбор источника»
   Это диалоговое окно позволяет выбрать источник политик, которые будут запущены. Чтобы выбрать один или несколько XML-файлов, содержащих политики, выберите **Файлы**. Чтобы запустить политики, найденные в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите **Сервер**.  

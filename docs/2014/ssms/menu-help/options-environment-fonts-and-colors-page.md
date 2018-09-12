@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e16da651d51054293303f38598a1168eb1474226
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200784"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808460"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Параметры (среда: шрифты и цвета страницы)
+# <a name="options-environment-fonts-and-colors-page"></a>Параметры ("Среда" — "Шрифты и цвета")
   В диалоговом окне **Параметры** можно определить шрифт и цветовую схему для различных элементов пользовательского интерфейса среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. В меню **Сервис** выберите **Параметры** , разверните узел **Среда** и выберите **Шрифты и цвета**.  
   
  Изменения цветовой схемы не затрагивают сеанс, в котором эти изменения были сделаны. Чтобы оценить изменения цвета, можно открыть другой экземпляр среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и создать условия, в которых изменения проявятся.  

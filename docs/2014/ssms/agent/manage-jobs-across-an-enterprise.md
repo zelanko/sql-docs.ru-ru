@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2134acf57d96211a234564acdf49fbca7277818f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adb40ead9f932e2b9de46623ab3c90f94090e28a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208654"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809900"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Управление заданиями в масштабе предприятия
   При внесении изменений в определения многосерверных задач вне среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо поместить их в список скачивания, чтобы целевые серверы могли скачать обновленную задачу. Чтобы убедиться в том, что целевые серверы получили текущие определения заданий, после обновления многосерверной задачи разместите инструкцию INSERT следующим образом:  
@@ -59,7 +58,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  **Изменение целевого сервера для задания**  
   
--   [Среда Среда SQL Server Management Studio](modify-the-target-servers-for-a-job.md)  
+-   [Среда SQL Server Management Studio](modify-the-target-servers-for-a-job.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
@@ -67,7 +66,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  **Изменение местоположения целевого сервера**  
   
--   [Среда Среда SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+-   [Среда SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
@@ -75,13 +74,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  **Синхронизация часов целевых серверов**  
   
--   [Среда Среда SQL Server Management Studio](synchronize-target-server-clocks-sql-server-management-studio.md)  
+-   [Среда SQL Server Management Studio](synchronize-target-server-clocks-sql-server-management-studio.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)  
   
  **Принудительный опрос главного сервера целевым сервером**  
   
--   [Среда Среда SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
+-   [Среда SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)  
   
