@@ -1,382 +1,391 @@
+items:
 - name: Многомерные модели
   href: multidimensional-models-ssas.md
 - name: многомерные решения
   href: multidimensional-model-solutions-ssas.md
   items:
-    - name: Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)
-      href: creating-multidimensional-models-using-sql-server-data-tools-ssdt.md
+  - name: Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)
+    href: creating-multidimensional-models-using-sql-server-data-tools-ssdt.md
+    items:
+    - name: Создание проекта служб Analysis Services (среда SSDT)
+      href: create-an-analysis-services-project-ssdt.md
+    - name: Настройка свойств проекта служб Analysis Services (среда SSDT)
+      href: configure-analysis-services-project-properties-ssdt.md
+    - name: Построение проектов служб Analysis Services (среда SSDT)
+      href: build-analysis-services-projects-ssdt.md
+    - name: Развертывание проектов служб Analysis Services (среда SSDT)
+      href: deploy-analysis-services-projects-ssdt.md
+    - name: Создание и выполнение скрипта многомерных выражений (SSDT)
+      href: create-and-run-an-mdx-script-in-sql-server-data-tools.md
+    - name: Просмотр XML-кода проекта служб Analysis Services (среда SSDT)
+      href: view-the-xml-for-an-analysis-services-project-ssdt.md
+    - name: Подключение в режиме «в сети» к базе данных служб Analysis Services
+      href: connect-in-online-mode-to-an-analysis-services-database.md
+    - name: Работа с проектами и базами данных служб Analysis Services на этапе разработки
+      href: work-with-analysis-services-projects-and-databases-in-development.md
+    - name: Работа с проектами и базами данных служб Analysis Services в рабочей среде
+      href: work-with-analysis-services-projects-and-databases-in-production.md
+  - name: обозревателе решений
+    href: data-sources-in-multidimensional-models.md
+    items:
+    - name: Поддерживаемые источники данных
+      href: supported-data-sources-ssas-multidimensional.md
+    - name: Создание источника данных
+      href: create-a-data-source-ssas-multidimensional.md
+    - name: Удаление источника данных
+      href: delete-a-data-source-in-solution-explorer-ssas-multidimensional.md
+    - name: Задание свойств источника данных
+      href: set-data-source-properties-ssas-multidimensional.md
+    - name: Задание параметров олицетворения для соединения с источником данных
+      href: set-impersonation-options-ssas-multidimensional.md
+    - name: Программирование многомерной модели
+      href: multidimensional-model-programming.md
+  - name: Представления источников данных
+    href: data-source-views-in-multidimensional-models.md
+    items:
+    - name: Источники данных и привязки
+      href: data-sources-and-bindings-ssas-multidimensional.md
+    - name: Определение представления источников данных
+      href: defining-a-data-source-view-analysis-services.md
+    - name: Добавление или удаление таблиц или представлений в представлении источника данных
+      href: adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md
+    - name: Просмотр данных в представлении источника данных
+      href: explore-data-in-a-data-source-view-analysis-services.md
+    - name: Работа с диаграммами в конструкторе представлений источника данных
+      href: work-with-diagrams-in-data-source-view-designer-analysis-services.md
+    - name: Обновление схемы в представлении источника данных
+      href: refresh-the-schema-in-a-data-source-view-analysis-services.md
+    - name: Замена таблицы или именованного запроса в представлении источника данных
+      href: replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md
+    - name: Определение логических связей в представлении источника данных
+      href: define-logical-relationships-in-a-data-source-view-analysis-services.md
+    - name: Определение логических первичных ключей в представлении источника данных
+      href: define-logical-primary-keys-in-a-data-source-view-analysis-services.md
+    - name: Определение именованных вычислений в представлении источника данных
+      href: define-named-calculations-in-a-data-source-view-analysis-services.md
+    - name: Определение именованных запросов в представлении источника данных
+      href: define-named-queries-in-a-data-source-view-analysis-services.md
+    - name: Удаление представления источников данных
+      href: delete-a-data-source-view-analysis-services.md
+    - name: Изменение свойств в представлении источника данных
+      href: change-properties-in-a-data-source-view-analysis-services.md
+    - name: Мастер формирования схем
+      href: schema-generation-wizard-analysis-services.md
       items:
-        - name: Создание проекта служб Analysis Services (среда SSDT)
-          href: create-an-analysis-services-project-ssdt.md
-        - name: Настройка свойств проекта служб Analysis Services (среда SSDT)
-          href: configure-analysis-services-project-properties-ssdt.md
-        - name: Построение проектов служб Analysis Services (среда SSDT)
-          href: build-analysis-services-projects-ssdt.md
-        - name: Развертывание проектов служб Analysis Services (среда SSDT)
-          href: deploy-analysis-services-projects-ssdt.md
-        - name: Создание и выполнение скрипта многомерных выражений (SSDT)
-          href: create-and-run-an-mdx-script-in-sql-server-data-tools.md
-        - name: Просмотр XML-кода проекта служб Analysis Services (среда SSDT)
-          href: view-the-xml-for-an-analysis-services-project-ssdt.md
-        - name: Подключение в режиме «в сети» к базе данных служб Analysis Services
-          href: connect-in-online-mode-to-an-analysis-services-database.md
-        - name: Работа с проектами и базами данных служб Analysis Services на этапе разработки
-          href: work-with-analysis-services-projects-and-databases-in-development.md
-        - name: Работа с проектами и базами данных служб Analysis Services в рабочей среде
-          href: work-with-analysis-services-projects-and-databases-in-production.md
-    - name: обозревателе решений
-      href: data-sources-in-multidimensional-models.md
+      - name: Использование мастера формирования схем
+        href: use-the-schema-generation-wizard-analysis-services.md
+      - name: Основные сведения о схемах баз данных
+        href: understanding-the-database-schemas.md
+      - name: Основные сведения о добавочном создании
+        href: understanding-incremental-generation.md
+      - name: Управление изменениями в источниках данных и представлениях источников данных
+        href: manage-changes-to-data-source-views-and-data-sources.md
+  - name: Измерения
+    href: dimensions-in-multidimensional-models.md
+    items:
+    - name: Создание измерения с помощью мастера измерений
+      href: create-a-dimension-using-the-dimension-wizard.md
+    - name: Создание измерения с помощью существующей таблицы
+      href: create-a-dimension-by-using-an-existing-table.md
+    - name: Создание измерения времени посредством формирования таблицы времени
+      href: create-a-time-dimension-by-generating-a-time-table.md
+    - name: Создание измерения путем формирования в источнике данных таблицы, отличной от таблицы времени
+      href: create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md
+    - name: Измерения базы данных
+      href: define-database-dimensions.md
+    - name: Измерения базы данных — настройка уровня "Все" для иерархий атрибутов
+      href: database-dimensions-configure-the-all-level-for-attribute-hierarchies.md
+    - name: Измерения базы данных — изменение или удаление измерения в обозревателе решений
+      href: database-dimensions-modify-or-delete-a-database-dimension-in-solution-explorer.md
+    - name: Измерения базы данных — обзор данных в конструкторе
+      href: database-dimensions-browse-dimension-data-in-dimension-designer.md
+    - name: Измерения базы данных — мастер бизнес-аналитики в конструкторе
+      href: database-dimensions-bi-wizard-in-dimension-designer.md
+    - name: Измерения базы данных — создание типа Date
+      href: database-dimensions-create-a-date-type-dimension.md
+    - name: Измерения базы данных — создание учетной записи Finance типа "родитель-потомок"
+      href: database-dimensions-finance-account-of-parent-child-type.md
+    - name: Измерения базы данных — создание типа Currency
+      href: database-dimensions-create-a-currency-type-dimension.md
+    - name: Справочник по свойствам атрибута измерения
+      href: dimension-attribute-properties-reference.md
       items:
-        - name: Поддерживаемые источники данных
-          href: supported-data-sources-ssas-multidimensional.md
-        - name: Создание источника данных
-          href: create-a-data-source-ssas-multidimensional.md
-        - name: Удаление источника данных
-          href: delete-a-data-source-in-solution-explorer-ssas-multidimensional.md
-        - name: Задание свойств источника данных
-          href: set-data-source-properties-ssas-multidimensional.md
-        - name: Задание параметров олицетворения для соединения с источником данных
-          href: set-impersonation-options-ssas-multidimensional.md
-    - name: Представления источников данных
-      href: data-source-views-in-multidimensional-models.md
-      items:
-        - name: Источники данных и привязки
-          href: data-sources-and-bindings-ssas-multidimensional.md
-        - name: Определение представления источников данных
-          href: defining-a-data-source-view-analysis-services.md
-        - name: Добавление или удаление таблиц или представлений в представлении источника данных
-          href: adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md
-        - name: Просмотр данных в представлении источника данных
-          href: explore-data-in-a-data-source-view-analysis-services.md
-        - name: Работа с диаграммами в конструкторе представлений источника данных
-          href: work-with-diagrams-in-data-source-view-designer-analysis-services.md
-        - name: Обновление схемы в представлении источника данных
-          href: refresh-the-schema-in-a-data-source-view-analysis-services.md
-        - name: Замена таблицы или именованного запроса в представлении источника данных
-          href: replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md
-        - name: Определение логических связей в представлении источника данных
-          href: define-logical-relationships-in-a-data-source-view-analysis-services.md
-        - name: Определение логических первичных ключей в представлении источника данных
-          href: define-logical-primary-keys-in-a-data-source-view-analysis-services.md
-        - name: Определение именованных вычислений в представлении источника данных
-          href: define-named-calculations-in-a-data-source-view-analysis-services.md
-        - name: Определение именованных запросов в представлении источника данных
-          href: define-named-queries-in-a-data-source-view-analysis-services.md
-        - name: Удаление представления источников данных
-          href: delete-a-data-source-view-analysis-services.md
-        - name: Изменение свойств в представлении источника данных
-          href: change-properties-in-a-data-source-view-analysis-services.md
-        - name: Мастер формирования схем
-          href: schema-generation-wizard-analysis-services.md
-          items:
-            - name: Использование мастера формирования схем
-              href: use-the-schema-generation-wizard-analysis-services.md
-            - name: Основные сведения о схемах баз данных
-              href: understanding-the-database-schemas.md
-            - name: Основные сведения о добавочном создании
-              href: understanding-incremental-generation.md
-            - name: Управление изменениями в источниках данных и представлениях источников данных
-              href: manage-changes-to-data-source-views-and-data-sources.md
-    - name: Измерения
-      href: dimensions-in-multidimensional-models.md
-      items:
-        - name: Создание измерения с помощью мастера измерений
-          href: create-a-dimension-using-the-dimension-wizard.md
-        - name: Создание измерения с помощью существующей таблицы
-          href: create-a-dimension-by-using-an-existing-table.md
-        - name: Создание измерения времени посредством формирования таблицы времени
-          href: create-a-time-dimension-by-generating-a-time-table.md
-        - name: 'Создание измерения путем формирования в источнике данных таблицы, отличной от таблицы времени'
-          href: create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md
-        - name: Измерения базы данных
-          href: define-database-dimensions.md
-        - name: "Измерения базы данных\_— настройка уровня \"Все\" для иерархий атрибутов"
-          href: database-dimensions-configure-the-all-level-for-attribute-hierarchies.md
-        - name: "Измерения базы данных\_— изменение или удаление измерения в обозревателе решений"
-          href: database-dimensions-modify-or-delete-a-database-dimension-in-solution-explorer.md
-        - name: "Измерения базы данных\_— обзор данных в конструкторе"
-          href: database-dimensions-browse-dimension-data-in-dimension-designer.md
-        - name: "Измерения базы данных\_— мастер бизнес-аналитики в конструкторе"
-          href: database-dimensions-bi-wizard-in-dimension-designer.md
-        - name: "Измерения базы данных\_— создание типа Date"
-          href: database-dimensions-create-a-date-type-dimension.md
-        - name: "Измерения базы данных\_— создание учетной записи Finance типа \"родитель-потомок\""
-          href: database-dimensions-finance-account-of-parent-child-type.md
-        - name: "Измерения базы данных\_— создание типа Currency"
-          href: database-dimensions-create-a-currency-type-dimension.md
-        - name: Справочник по свойствам атрибута измерения
-          href: dimension-attribute-properties-reference.md
-          items:
-            - name: "Свойства атрибута\_— переименование атрибута"
-              href: attribute-properties-rename-an-attribute.md
-            - name: "Свойства атрибута\_— добавление атрибута в измерение"
-              href: attribute-properties-add-an-attribute-to-a-dimension.md
-            - name: "Свойства атрибута\_— удаление атрибута из измерения"
-              href: attribute-properties-remove-an-attribute-from-a-dimension.md
-            - name: "Свойства атрибута\_— настройка типов атрибутов"
-              href: attribute-properties-configure-attribute-types.md
-            - name: "Свойства атрибута\_— группирование элементов атрибутов"
-              href: attribute-properties-group-attribute-members.md
-            - name: "Свойства атрибута\_— определение нестандартных формул элементов"
-              href: attribute-properties-define-custom-member-formulas.md
-            - name: "Свойства атрибута\_— определение элемента по умолчанию"
-              href: attribute-properties-define-a-default-member.md
-            - name: "Свойства атрибута\_— просмотр атрибутов в конструкторе измерений"
-              href: attribute-properties-view-attributes-in-dimension-designer.md
-            - name: "Свойства атрибута\_— определение нового атрибута автоматически"
-              href: attribute-properties-define-a-new-attribute-automatically.md
-            - name: "Свойства атрибута\_— просмотр атрибутов в конструкторе измерений"
-              href: view-attributes-in-dimension-designer.md
-            - name: "Свойства атрибута\_— изменение свойства KeyColumn"
-              href: attribute-properties-modify-the-keycolumn-property.md
-            - name: "Свойства атрибута\_— привязка атрибута к ключевому столбцу"
-              href: attribute-properties-bind-an-attribute-to-a-key-column.md
-            - name: "Свойства атрибута\_— привязка атрибута к столбцу имени"
-              href: attribute-properties-bind-an-attribute-to-a-name-column.md
-            - name: "Свойства атрибута\_— установка свойства использования"
-              href: attribute-properties-set-usage-property.md
-            - name: "Свойства атрибута\_— определение групп элементов"
-              href: attribute-properties-define-member-groups.md
-        - name: Измерение "родители-потомки"
-          href: parent-child-dimension.md
-        - name: Атрибуты измерения "родители-потомки"
-          href: parent-child-dimension-attributes.md
-        - name: "Атрибуты измерения \"родители-потомки\"\_— операторы пользовательской свертки"
-          href: parent-child-dimension-attributes-custom-rollup-operators.md
-        - name: "Атрибуты измерения \"родители-потомки\"\_— унарные операторы"
-          href: parent-child-dimension-attributes-unary-operators.md
-        - name: "Пользовательские иерархии\_— создание"
-          href: user-defined-hierarchies-create.md
-        - name: "Пользовательские иерархии\_— неоднородные иерархии"
-          href: user-defined-hierarchies-ragged-hierarchies.md
-        - name: "Пользовательские иерархии\_— добавление или удаление пользовательской иерархии"
-          href: user-defined-hierarchies-add-or-delete-a-user-defined-hierarchy.md
-        - name: "Связи атрибутов\_— определение"
-          href: attribute-relationships-define.md
-        - name: "Связи атрибутов\_— настройка свойств атрибута"
-          href: attribute-relationships-configure-attribute-properties.md
-        - name: "Связи атрибутов\_— создание, изменение или удаление связи атрибутов"
-          href: attribute-relationships-create-modify-or-delete-relationship.md
-        - name: "Связи атрибутов\_— определение типа связи атрибутов"
-          href: attribute-relationships-define-the-relationship-type.md
-        - name: "Связи атрибутов\_— упорядочение фигур в диаграмме связи"
-          href: attribute-relationships-arrange-shapes-in-the-diagram.md
-        - name: "Мастер бизнес-аналитики\_— добавление логики операций со счетами к измерению"
-          href: bi-wizard-add-account-intelligence-to-a-dimension.md
-        - name: "Мастер бизнес-аналитики\_— добавление логики изменения к измерению"
-          href: bi-wizard-add-dimension-intelligence-to-a-dimension.md
-        - name: "Мастер бизнес-аналитики\_— добавление нестандартного статистического выражения к измерению"
-          href: bi-wizard-add-a-custom-aggregation-to-a-dimension.md
-        - name: "Мастер бизнес-аналитики\_— настройка нестандартных формул элементов для атрибутов в измерении"
-          href: bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md
-        - name: "Мастер бизнес-аналитики\_— определение упорядочивания для измерения"
-          href: bi-wizard-define-the-ordering-for-a-dimension.md
-        - name: "Мастер бизнес-аналитики\_— включение обратной записи в измерение"
-          href: bi-wizard-enable-dimension-writeback.md
-        - name: Настройка хранилища строк для измерений и секций
-          href: configure-string-storage-for-dimensions-and-partitions.md
-        - name: Определите связанные измерения
-          href: define-linked-dimensions.md
-    - name: Кубы
-      href: cubes-in-multidimensional-models.md
-      items:
-        - name: Создание куба с помощью мастера кубов
-          href: create-a-cube-using-the-cube-wizard.md
-        - name: Создание куба на основе шаблона без использования представления источников данных
-          href: create-a-cube-from-a-template-without-using-a-data-source-view.md
-        - name: Создание куба с использованием представления источников данных
-          href: create-a-cube-using-a-data-source-view.md
-        - name: Просмотр данных и метаданных в кубе
-          href: browse-data-and-metadata-in-cube.md
-        - name: Просмотр схемы куба
-          href: view-the-cube-schema.md
-        - name: Определение свойств измерения куба
-          href: define-cube-dimension-properties.md
-        - name: Определение свойств иерархии куба
-          href: define-cube-hierarchy-properties.md
-        - name: Определение свойств атрибутов куба
-          href: define-cube-attribute-properties.md
-        - name: Определение обычной связи и ее свойств
-          href: define-a-regular-relationship-and-regular-relationship-properties.md
-        - name: Определение ссылочной связи и свойств ссылочной связи
-          href: define-a-referenced-relationship-and-referenced-relationship-properties.md
-        - name: Определение связей фактов и свойств связей фактов
-          href: define-a-fact-relationship-and-fact-relationship-properties.md
-        - name: Определение связей "многие ко многим" и свойств связей "многие ко многим"
-          href: define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md
-    - name: Меры и их группы
-      href: measures-and-measure-groups.md
-      items:
-        - name: Создание мер и групп мер
-          href: create-measures-and-measure-groups-in-multidimensional-models.md
-        - name: Настройка свойств группы мер
-          href: configure-measure-group-properties.md
-        - name: Настройка свойств мер
-          href: configure-measure-properties.md
-        - name: Использование агрегатных функций
-          href: use-aggregate-functions.md
-        - name: Определение полуаддитивного режима
-          href: define-semiadditive-behavior.md
-        - name: Заданные связанные группы мер
-          href: linked-measure-groups.md
-    - name: Секции
-      href: partitions-in-multidimensional-models.md
-      items:
-        - name: Создание локальных секций
-          href: create-and-manage-a-local-partition-analysis-services.md
-        - name: Создание удаленных секций
-          href: create-and-manage-a-remote-partition-analysis-services.md
-        - name: Смена источника секции
-          href: change-a-partition-source-to-use-a-different-fact-table.md
-        - name: Проектирование статистических схем
-          href: designing-aggregations-analysis-services-multidimensional.md
-        - name: Изменение и удаление секций
-          href: edit-or-delete-partitions-analyisis-services-multidimensional.md
-        - name: осуществить слияние секций
-          href: merge-partitions-in-analysis-services-ssas-multidimensional.md
-        - name: Определение хранилища секции
-          href: set-partition-storage-analysis-services-multidimensional.md
-        - name: Определение среза секции
-          href: set-the-partition-slice-property-analysis-services.md
-        - name: Настройка обратной записи секции
-          href: set-partition-writeback.md
-    - name: Вычисления
-      href: calculations-in-multidimensional-models.md
-      items:
-        - name: Создание вычисляемых элементов
-          href: create-calculated-members.md
-        - name: Создание именованных наборов
-          href: create-named-sets.md
-        - name: Определение назначений и других команд скриптов
-          href: define-assignments-and-other-script-commands.md
-        - name: Определение вычислений логики операций со временем с использованием мастера бизнес-аналитики
-          href: define-time-intelligence-calculations-using-the-business-intelligence-wizard.md
-    - name: Ключевые показатели эффективности
-      href: key-performance-indicators-kpis-in-multidimensional-models.md
+      - name: Свойства атрибута — переименование атрибута
+        href: attribute-properties-rename-an-attribute.md
+      - name: Свойства атрибута — добавление атрибута в измерение
+        href: attribute-properties-add-an-attribute-to-a-dimension.md
+      - name: Свойства атрибута — удаление атрибута из измерения
+        href: attribute-properties-remove-an-attribute-from-a-dimension.md
+      - name: Свойства атрибута — настройка типов атрибутов
+        href: attribute-properties-configure-attribute-types.md
+      - name: Свойства атрибута — группирование элементов атрибутов
+        href: attribute-properties-group-attribute-members.md
+      - name: Свойства атрибута — определение нестандартных формул элементов
+        href: attribute-properties-define-custom-member-formulas.md
+      - name: Свойства атрибута — определение элемента по умолчанию
+        href: attribute-properties-define-a-default-member.md
+      - name: Свойства атрибута — просмотр атрибутов в конструкторе измерений
+        href: attribute-properties-view-attributes-in-dimension-designer.md
+      - name: Свойства атрибута — определение нового атрибута автоматически
+        href: attribute-properties-define-a-new-attribute-automatically.md
+      - name: Свойства атрибута — просмотр атрибутов в конструкторе измерений
+        href: view-attributes-in-dimension-designer.md
+      - name: Свойства атрибута — изменение свойства KeyColumn
+        href: attribute-properties-modify-the-keycolumn-property.md
+      - name: Свойства атрибута — привязка атрибута к ключевому столбцу
+        href: attribute-properties-bind-an-attribute-to-a-key-column.md
+      - name: Свойства атрибута — привязка атрибута к столбцу имени
+        href: attribute-properties-bind-an-attribute-to-a-name-column.md
+      - name: Свойства атрибута — установка свойства использования
+        href: attribute-properties-set-usage-property.md
+      - name: Свойства атрибута — определение групп элементов
+        href: attribute-properties-define-member-groups.md
+    - name: Измерение "родители-потомки"
+      href: parent-child-dimension.md
+    - name: Атрибуты измерения "родители-потомки"
+      href: parent-child-dimension-attributes.md
+    - name: Атрибуты измерения "родители-потомки" — операторы пользовательской свертки
+      href: parent-child-dimension-attributes-custom-rollup-operators.md
+    - name: Атрибуты измерения "родители-потомки" — унарные операторы
+      href: parent-child-dimension-attributes-unary-operators.md
+    - name: Пользовательские иерархии — создание
+      href: user-defined-hierarchies-create.md
+    - name: Пользовательские иерархии — неоднородные иерархии
+      href: user-defined-hierarchies-ragged-hierarchies.md
+    - name: Пользовательские иерархии — добавление или удаление пользовательской иерархии
+      href: user-defined-hierarchies-add-or-delete-a-user-defined-hierarchy.md
+    - name: Связи атрибутов — определение
+      href: attribute-relationships-define.md
+    - name: Связи атрибутов — настройка свойств атрибута
+      href: attribute-relationships-configure-attribute-properties.md
+    - name: Связи атрибутов — создание, изменение или удаление связи атрибутов
+      href: attribute-relationships-create-modify-or-delete-relationship.md
+    - name: Связи атрибутов — определение типа связи атрибутов
+      href: attribute-relationships-define-the-relationship-type.md
+    - name: Связи атрибутов — упорядочение фигур в диаграмме связи
+      href: attribute-relationships-arrange-shapes-in-the-diagram.md
+    - name: Мастер бизнес-аналитики — добавление логики операций со счетами к измерению
+      href: bi-wizard-add-account-intelligence-to-a-dimension.md
+    - name: Мастер бизнес-аналитики — добавление логики изменения к измерению
+      href: bi-wizard-add-dimension-intelligence-to-a-dimension.md
+    - name: Мастер бизнес-аналитики — добавление нестандартного статистического выражения к измерению
+      href: bi-wizard-add-a-custom-aggregation-to-a-dimension.md
+    - name: Мастер бизнес-аналитики — настройка нестандартных формул элементов для атрибутов в измерении
+      href: bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md
+    - name: Мастер бизнес-аналитики — определение упорядочивания для измерения
+      href: bi-wizard-define-the-ordering-for-a-dimension.md
+    - name: Мастер бизнес-аналитики — включение обратной записи в измерение
+      href: bi-wizard-enable-dimension-writeback.md
+    - name: Настройка хранилища строк для измерений и секций
+      href: configure-string-storage-for-dimensions-and-partitions.md
+    - name: Определите связанные измерения
+      href: define-linked-dimensions.md
+  - name: Кубы
+    href: cubes-in-multidimensional-models.md
+    items:
+    - name: Создание куба с помощью мастера кубов
+      href: create-a-cube-using-the-cube-wizard.md
+    - name: Создание куба на основе шаблона без использования представления источников данных
+      href: create-a-cube-from-a-template-without-using-a-data-source-view.md
+    - name: Создание куба с использованием представления источников данных
+      href: create-a-cube-using-a-data-source-view.md
+    - name: Просмотр данных и метаданных в кубе
+      href: browse-data-and-metadata-in-cube.md
+    - name: Просмотр схемы куба
+      href: view-the-cube-schema.md
+    - name: Определение свойств измерения куба
+      href: define-cube-dimension-properties.md
+    - name: Определение свойств иерархии куба
+      href: define-cube-hierarchy-properties.md
+    - name: Определение свойств атрибутов куба
+      href: define-cube-attribute-properties.md
+    - name: Определение обычной связи и ее свойств
+      href: define-a-regular-relationship-and-regular-relationship-properties.md
+    - name: Определение ссылочной связи и свойств ссылочной связи
+      href: define-a-referenced-relationship-and-referenced-relationship-properties.md
+    - name: Определение связей фактов и свойств связей фактов
+      href: define-a-fact-relationship-and-fact-relationship-properties.md
+    - name: Определение связей "многие ко многим" и свойств связей "многие ко многим"
+      href: define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md
+  - name: Меры и их группы
+    href: measures-and-measure-groups.md
+    items:
+    - name: Создание мер и групп мер
+      href: create-measures-and-measure-groups-in-multidimensional-models.md
+    - name: Настройка свойств группы мер
+      href: configure-measure-group-properties.md
+    - name: Настройка свойств мер
+      href: configure-measure-properties.md
+    - name: Использование агрегатных функций
+      href: use-aggregate-functions.md
+    - name: Определение полуаддитивного режима
+      href: define-semiadditive-behavior.md
+    - name: Заданные связанные группы мер
+      href: linked-measure-groups.md
+  - name: Секции
+    href: partitions-in-multidimensional-models.md
+    items:
+    - name: Создание локальных секций
+      href: create-and-manage-a-local-partition-analysis-services.md
+    - name: Создание удаленных секций
+      href: create-and-manage-a-remote-partition-analysis-services.md
+    - name: Смена источника секции
+      href: change-a-partition-source-to-use-a-different-fact-table.md
+    - name: Проектирование статистических схем
+      href: designing-aggregations-analysis-services-multidimensional.md
+    - name: Изменение и удаление секций
+      href: edit-or-delete-partitions-analyisis-services-multidimensional.md
+    - name: осуществить слияние секций
+      href: merge-partitions-in-analysis-services-ssas-multidimensional.md
+    - name: Определение хранилища секции
+      href: set-partition-storage-analysis-services-multidimensional.md
+    - name: Определение среза секции
+      href: set-the-partition-slice-property-analysis-services.md
+    - name: Настройка обратной записи секции
+      href: set-partition-writeback.md
+  - name: Вычисления
+    href: calculations-in-multidimensional-models.md
+    items:
+    - name: Создание вычисляемых элементов
+      href: create-calculated-members.md
+    - name: Создание именованных наборов
+      href: create-named-sets.md
+    - name: Определение назначений и других команд скриптов
+      href: define-assignments-and-other-script-commands.md
+    - name: Определение вычислений логики операций со временем с использованием мастера бизнес-аналитики
+      href: define-time-intelligence-calculations-using-the-business-intelligence-wizard.md
+  - name: Ключевые показатели эффективности
+    href: key-performance-indicators-kpis-in-multidimensional-models.md
+  - name: Действия
+    href: actions-in-multidimensional-models.md
+    items:
     - name: Действия
-      href: actions-in-multidimensional-models.md
+      href: actions-analysis-services-multidimensional-data.md
+    - name: Добавления стандартного действия
+      href: add-a-standard-action.md
+    - name: Проверка действия
+      href: test-an-action.md
+    - name: Использование шаблона для создания действия
+      href: use-a-template-to-create-an-action.md
+  - name: перспективами
+    href: perspectives-in-multidimensional-models.md
+  - name: Translations
+    href: translations-in-multidimensional-models-analysis-services.md
+  - name: Развертывание решений
+    href: multidimensional-model-solution-deployment.md
+    items:
+    - name: Требования и вопросы, связанные с развертыванием служб Analysis Services
+      href: requirements-and-considerations-for-analysis-services-deployment.md
+    - name: Развертывание решений модели с помощью XMLA
+      href: deploy-model-solutions-using-xmla.md
+    - name: Развертывание решений модели с использованием мастера развертывания
+      href: deploy-model-solutions-using-the-deployment-wizard.md
       items:
-        - name: Действия
-          href: actions-analysis-services-multidimensional-data.md
-        - name: Добавления стандартного действия
-          href: add-a-standard-action.md
-        - name: Проверка действия
-          href: test-an-action.md
-        - name: Использование шаблона для создания действия
-          href: use-a-template-to-create-an-action.md
-    - name: перспективами
-      href: perspectives-in-multidimensional-models.md
-    - name: Translations
-      href: translations-in-multidimensional-models-analysis-services.md
-    - name: Развертывание решений
-      href: multidimensional-model-solution-deployment.md
-      items:
-        - name: 'Требования и вопросы, связанные с развертыванием служб Analysis Services'
-          href: requirements-and-considerations-for-analysis-services-deployment.md
-        - name: Развертывание решений модели с помощью XMLA
-          href: deploy-model-solutions-using-xmla.md
-        - name: Развертывание решений модели с использованием мастера развертывания
-          href: deploy-model-solutions-using-the-deployment-wizard.md
-          items:
-            - name: Запуск мастера развертывания служб Analysis Services
-              href: running-the-analysis-services-deployment-wizard.md
-            - name: "Файлы скриптов развертывания\_— входные данные для создания скрипта"
-              href: deployment-script-files-input-used-to-create-deployment-script.md
-            - name: "Файлы скриптов развертывания\_— указание целевого объекта установки"
-              href: deployment-script-files-specifying-the-installation-target.md
-            - name: "Файлы скриптов развертывания\_— указание параметров развертывания секций и ролей"
-              href: deployment-script-files-partition-and-role-deployment-options.md
-            - name: "Файлы скриптов развертывания\_— параметры конфигурации развертывания решения"
-              href: deployment-script-files-solution-deployment-config-settings.md
-            - name: "Файлы скриптов развертывания\_— указание параметров обработки"
-              href: deployment-script-files-specifying-processing-options.md
-            - name: Основные сведения о скрипте развертывания служб Analysis Services
-              href: understanding-the-analysis-services-deployment-script.md
-        - name: Развертывание решений моделей с использованием программы развертывания
-          href: deploy-model-solutions-with-the-deployment-utility.md
+      - name: Запуск мастера развертывания служб Analysis Services
+        href: running-the-analysis-services-deployment-wizard.md
+      - name: Файлы скриптов развертывания — входные данные для создания скрипта
+        href: deployment-script-files-input-used-to-create-deployment-script.md
+      - name: Файлы скриптов развертывания — указание целевого объекта установки
+        href: deployment-script-files-specifying-the-installation-target.md
+      - name: Файлы скриптов развертывания — указание параметров развертывания секций и ролей
+        href: deployment-script-files-partition-and-role-deployment-options.md
+      - name: Файлы скриптов развертывания — параметры конфигурации развертывания решения
+        href: deployment-script-files-solution-deployment-config-settings.md
+      - name: Файлы скриптов развертывания — указание параметров обработки
+        href: deployment-script-files-specifying-processing-options.md
+      - name: Основные сведения о скрипте развертывания служб Analysis Services
+        href: understanding-the-analysis-services-deployment-script.md
+    - name: Развертывание решений моделей с использованием программы развертывания
+      href: deploy-model-solutions-with-the-deployment-utility.md
 - name: Многомерные базы данных
   href: multidimensional-model-databases-ssas.md
   items:
-    - name: Подключение и отключение баз данных служб Analysis Services
-      href: attach-and-detach-analysis-services-databases.md
-    - name: Создание и восстановление резервных копий баз данных служб Analysis Services
-      href: backup-and-restore-of-analysis-services-databases.md
-      items:
-        - name: Параметры резервного копирования
-          href: backup-options.md
-        - name: Параметры восстановления
-          href: restore-options.md
-    - name: Документирование и работа со скриптами в базе данных служб Analysis Services
-      href: document-and-script-an-analysis-services-database.md
-    - name: Изменение или удаление базы данных служб Analysis Services
-      href: modify-or-delete-an-analysis-services-database.md
-    - name: Перемещение базы данных служб Analysis Services
-      href: move-an-analysis-services-database.md
-    - name: Переименование многомерной базы данных
-      href: rename-a-multidimensional-database-analysis-services.md
-    - name: Уровень совместимости
-      href: compatibility-level-of-a-multidimensional-database-analysis-services.md
-    - name: Задание свойств многомерной базы данных
-      href: set-multidimensional-database-properties-analysis-services.md
-      items:
-        - name: Место хранения базы данных
-          href: database-storage-location.md
-        - name: Режимы ReadWriteModes базы данных
-          href: database-readwritemodes.md
-    - name: Синхронизация баз данных служб Analysis Services
-      href: synchronize-analysis-services-databases.md
-    - name: Переключение режимов ReadOnly и ReadWrite
-      href: switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
+  - name: Подключение и отключение баз данных служб Analysis Services
+    href: attach-and-detach-analysis-services-databases.md
+  - name: Создание и восстановление резервных копий баз данных служб Analysis Services
+    href: backup-and-restore-of-analysis-services-databases.md
+    items:
+    - name: Параметры резервного копирования
+      href: backup-options.md
+    - name: Параметры восстановления
+      href: restore-options.md
+  - name: Документирование и работа со скриптами в базе данных служб Analysis Services
+    href: document-and-script-an-analysis-services-database.md
+  - name: Изменение или удаление базы данных служб Analysis Services
+    href: modify-or-delete-an-analysis-services-database.md
+  - name: Перемещение базы данных служб Analysis Services
+    href: move-an-analysis-services-database.md
+  - name: Переименование многомерной базы данных
+    href: rename-a-multidimensional-database-analysis-services.md
+  - name: Уровень совместимости
+    href: compatibility-level-of-a-multidimensional-database-analysis-services.md
+  - name: Задание свойств многомерной базы данных
+    href: set-multidimensional-database-properties-analysis-services.md
+    items:
+    - name: Место хранения базы данных
+      href: database-storage-location.md
+    - name: Режимы ReadWriteModes базы данных
+      href: database-readwritemodes.md
+  - name: Синхронизация баз данных служб Analysis Services
+    href: synchronize-analysis-services-databases.md
+  - name: Переключение режимов ReadOnly и ReadWrite
+    href: switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
 - name: Обработка многомерной модели
   href: processing-a-multidimensional-model-analysis-services.md
   items:
-    - name: Настройка параметров обработки
-      href: processing-options-and-settings-analysis-services.md
-    - name: 'Обработка баз данных, измерений и секций'
-      href: processing-analysis-services-objects.md
-    - name: Средства и способы обработки
-      href: tools-and-approaches-for-processing-analysis-services.md
-    - name: Пакетная обработка
-      href: batch-processing-analysis-services.md
-    - name: Удаленная обработка
-      href: remote-processing-analysis-services.md
-    - name: Конфигурация ошибок
-      href: error-configuration-for-cube-partition-and-dimension-processing.md
+  - name: Настройка параметров обработки
+    href: processing-options-and-settings-analysis-services.md
+  - name: Обработка баз данных, измерений и секций
+    href: processing-analysis-services-objects.md
+  - name: Средства и способы обработки
+    href: tools-and-approaches-for-processing-analysis-services.md
+  - name: Пакетная обработка
+    href: batch-processing-analysis-services.md
+  - name: Удаленная обработка
+    href: remote-processing-analysis-services.md
+  - name: Конфигурация ошибок
+    href: error-configuration-for-cube-partition-and-dimension-processing.md
 - name: Роли и разрешения
   href: roles-and-permissions-analysis-services.md
   items:
-    - name: Предоставление доступа к объектам и операциям
-      href: authorizing-access-to-objects-and-operations-analysis-services.md
-    - name: Разрешения базы данных
-      href: grant-database-permissions-analysis-services.md
-    - name: Разрешения куба или модели
-      href: grant-cube-or-model-permissions-analysis-services.md
-    - name: Разрешения доступа
-      href: grant-process-permissions-analysis-services.md
-    - name: 'Разрешения на Чтение Описания '
-      href: grant-read-definition-permissions-on-object-metadata-analysis-services.md
-    - name: Разрешения измерения
-      href: grant-permissions-on-a-dimension-analysis-services.md
-    - name: Настраиваемый доступ к данным измерений
-      href: grant-custom-access-to-dimension-data-analysis-services.md
-    - name: Настраиваемый доступ к данным ячейки
-      href: grant-custom-access-to-cell-data-analysis-services.md
-    - name: Разрешения объекта Источник Данных
-      href: grant-permissions-on-a-data-source-object-analysis-services.md
-    - name: Разрешения интеллектуального анализа данных
-      href: grant-permissions-on-data-mining-structures-and-models-analysis-services.md
+  - name: Предоставление доступа к объектам и операциям
+    href: authorizing-access-to-objects-and-operations-analysis-services.md
+  - name: Разрешения базы данных
+    href: grant-database-permissions-analysis-services.md
+  - name: Разрешения куба или модели
+    href: grant-cube-or-model-permissions-analysis-services.md
+  - name: Разрешения доступа
+    href: grant-process-permissions-analysis-services.md
+  - name: 'Разрешения на Чтение Описания '
+    href: grant-read-definition-permissions-on-object-metadata-analysis-services.md
+  - name: Разрешения измерения
+    href: grant-permissions-on-a-dimension-analysis-services.md
+  - name: Настраиваемый доступ к данным измерений
+    href: grant-custom-access-to-dimension-data-analysis-services.md
+  - name: Настраиваемый доступ к данным ячейки
+    href: grant-custom-access-to-cell-data-analysis-services.md
+  - name: Разрешения объекта Источник Данных
+    href: grant-permissions-on-a-data-source-object-analysis-services.md
+  - name: Разрешения интеллектуального анализа данных
+    href: grant-permissions-on-data-mining-structures-and-models-analysis-services.md
 - name: Power View для многомерных моделей
   href: power-view-for-multidimensional-models.md
   items:
-    - name: Основные сведения о Power View для многомерных моделей
-      href: understanding-power-view-for-multidimensional-models.md
-    - name: Создание источника данных отчета
-      href: create-a-report-data-source.md
-    - name: Создание отчета Power View
-      href: create-a-power-view-report-with-a-multidimensional-data-source.md
+  - name: Основные сведения о Power View для многомерных моделей
+    href: understanding-power-view-for-multidimensional-models.md
+  - name: Создание источника данных отчета
+    href: create-a-report-data-source.md
+  - name: Создание отчета Power View
+    href: create-a-power-view-report-with-a-multidimensional-data-source.md
 - name: Управление сборками
   href: multidimensional-model-assemblies-management.md
 - name: Справочник
   items:
-    - name: Доступ к данным с помощью многомерных выражений
-      href: mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
+  - name: Доступ к данным с помощью многомерных выражений
+    href: mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
+ms.openlocfilehash: 5987bf7604644931e9b5e9bdaa908ff0d9e3c192
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534066"
