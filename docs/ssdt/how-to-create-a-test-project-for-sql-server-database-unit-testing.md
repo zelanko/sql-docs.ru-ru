@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7997f7b2acf88ea358c9ddd42df5cca073a8f28
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 9f641380e18dbcb042e36704627e1e39e2f9a4e7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087126"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563651"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Практическое руководство. Создание проекта тестов для модульного тестирования базы данных SQL Server
 Перед тем как приступить к написанию модульных тестов для проверки объектов базы данных, сначала следует создать проект тестов. Этот проект содержит модульные тесты SQL Server, но может содержать и другие типы тестов.  
@@ -32,7 +32,7 @@ ms.locfileid: "39087126"
 |Нужны ли разным модульным тестам SQL Server разные подключения к базам данных для выполнения и проверки теста?|Если да, то вам потребуется несколько проектов тестов. Для выполнения теста можно указать только одно подключение к базе данных. Однако для проверки теста можно указать другое подключение к базе данных.|  
 |Нужно ли развертывать разные проекты базы данных для разных модульных тестов?|Если да, то вам потребуется несколько проектов тестов. Проект тестов может развертывать только один проект базы данных.|  
   
-Дополнительные сведения о каждом из этих вопросов см. в статье [Практическое руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Чтобы не создавать несколько тестовых проектов, можно создать собственную реализацию [DatabaseTestService](https://msdn.microsoft.com/en-us/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService.  
+Дополнительные сведения о каждом из этих вопросов см. в статье [Практическое руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Чтобы не создавать несколько тестовых проектов, можно создать собственную реализацию [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService.  
   
 Есть три варианта добавления проекта теста к решению, которое содержит проект базы данных.  
   

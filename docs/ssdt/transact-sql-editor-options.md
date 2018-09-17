@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dd9936b3b100ffc4509369a49cff767094152c97
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085946"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564020"
 ---
 # <a name="transact-sql-editor-options"></a>Параметры редактора Transact-SQL
 Этот раздел содержит сведения о некоторых параметрах редактора Transact-SQL. Чтобы настроить эти параметры, откройте меню **Средства/Параметры** и перейдите в диалоговое окно **Параметр**.  
@@ -57,7 +57,7 @@ ms.locfileid: "39085946"
 |**SET NOEXEC**|При значении **ON** инструктирует Microsoft® SQL Server™ компилировать все пакеты инструкций Transact-SQL, но не выполнять их. При значении **OFF** инструктирует Microsoft® SQL Server™ выполнять все пакеты после компиляции. Дополнительные сведения см. в разделе [SET NOEXEC (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=238770).|  
 |**SET PARSEONLY**|Проверяет синтаксис каждой инструкции Transact-SQL и возвращает сообщения об ошибках без компиляции или выполнения инструкции. Дополнительные сведения см. в разделе [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734).|  
 |**SET CONCAT_NULL_YIELDS_NULL**|Управляет тем, как будут обрабатываться результаты объединения: как значения NULL или как пустые строковые значения. Дополнительные сведения см. в разделе [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=238733).|  
-|**SET ARITHABORT**|Завершает запрос, если во время выполнения запроса возникает ошибка переполнения или деления на нуль. Дополнительные сведения см. в разделе [SET ARITHABORT](http://msdn.microsoft.com/en-us/library/aa259212(v=SQL.80).aspx).|  
+|**SET ARITHABORT**|Завершает запрос, если во время выполнения запроса возникает ошибка переполнения или деления на нуль. Дополнительные сведения см. в разделе [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx).|  
 |**SET SHOWPLAN_TEXT**|Предписывает Microsoft® SQL Server™ не выполнять инструкции Transact-SQL. Вместо этого SQL Server возвращает подробные сведения о ходе выполнения инструкций. Дополнительные сведения см. в разделе [SET SHOWPLAN_TEXT (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=238737).|  
 |**SET STATISTICS TIME**|Отображает время в миллисекундах, необходимое для синтаксического анализа, компиляции и выполнения каждой инструкции.|  
 |**SET STATISTICS IO**|Предписывает Microsoft® SQL Server™ отображать сведения об объеме дисковой активности, создаваемой инструкциями Transact-SQL.|  

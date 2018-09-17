@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea94d533714f17cd251805c5c33ec886ebbfb989
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 37fdcf6fdce41cf69a81eaea0d3ca3c9bd5c0c67
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083786"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563770"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания
 Visual Studio предоставляет точки расширяемости, с помощью которых можно изменять поведение действий сборки и развертывания для проектов базы данных.  
@@ -36,11 +36,11 @@ Visual Studio предоставляет точки расширяемости, 
 ### <a name="supported-extensibility-scenarios"></a>Поддерживаемые сценарии расширяемости  
 Можно реализовать участников сборки или развертывания, чтобы включить следующие сценарии:  
   
--   **Создание документации по схеме во время сборки проекта**. В этом сценарии для создания документации по схеме реализуется [BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) и переопределяется метод OnExecute. Можно создать файл targets, определяющий стандартные аргументы, которые управляют запуском расширений и определяют имя выходного файла.  
+-   **Создание документации по схеме во время сборки проекта**. В этом сценарии для создания документации по схеме реализуется [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) и переопределяется метод OnExecute. Можно создать файл targets, определяющий стандартные аргументы, которые управляют запуском расширений и определяют имя выходного файла.  
   
--   **Создание отчета об отличиях при развертывании проекта SQL**. В этом сценарии реализуется [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx), который создает XML-файл при развертывании проекта SQL.  
+-   **Создание отчета об отличиях при развертывании проекта SQL**. В этом сценарии реализуется [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx), который создает XML-файл при развертывании проекта SQL.  
   
--   **Изменение плана развертывания при перемещении данных**. В этом сценарии реализуется [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx), который выполняет итерацию по плану развертывания. Для каждого действия SqlTableMigrationStep в данном плане изучается результат сравнения для определения того, должно ли выполняться данное действие, или его следует пропустить.  
+-   **Изменение плана развертывания при перемещении данных**. В этом сценарии реализуется [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx), который выполняет итерацию по плану развертывания. Для каждого действия SqlTableMigrationStep в данном плане изучается результат сравнения для определения того, должно ли выполняться данное действие, или его следует пропустить.  
   
 -   **Копирование файлов в сформированный DACPAC при развертывании проекта SQL**. С этом сценарии реализуется участник развертывания и переопределяется метод OnEstablishDeploymentConfiguration для указания файлов, помеченных в проекте как DeploymentExtensionConfiguration. Эти файлы должны быть скопированы в выходную папку и добавлены в сформированный DACPAC. Также можно изменить участника, чтобы выполнялось слияние нескольких файлов в один новый файл, который будет скопирован в выходную папку и добавлен в манифест развертывания. Во время развертывания можно реализовать метод OnApplyDeploymentConfiguration для извлечения этих файлов из DACPAC и подготовки их к использованию в методе onExecute.  
   
@@ -50,9 +50,9 @@ Visual Studio предоставляет точки расширяемости, 
   
 |**Общие задачи**|**Вспомогательное содержимое**|  
 |--------------------|--------------------------|  
-|См. дополнительные сведения о **точках расширяемости.** Изучите документацию к базовым классам, на основе которых реализуются участники сборки и развертывания.|[BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|См. дополнительные сведения о **точках расширяемости.** Изучите документацию к базовым классам, на основе которых реализуются участники сборки и развертывания.|[BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
 |См. дополнительные сведения о **создании базовых участников**. Изучите действия, требуемые для создания участника сборки или развертывания. Если вы воспользуетесь данными пошаговыми руководствами, то сможете:<br /><br />создать участника сборки, который формирует отчет со всеми элементами модели;<br />создать участник развертывания, который изменяет план развертывания до его выполнения;<br />создать участник развертывания, который создает отчет о развертывании проекта SQL.<br /><br />Участники могут быть размещены в одной или в нескольких сборках с учетом того, как должны быть распределены эти модули среди разработчиков.|[Walkthrough: Extend Database Project Build to Generate Model Statistics](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md) (Пошаговое руководство. Расширение сборки для проекта базы данных для создания статистики модели)<br /><br />[Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Walkthrough: Extend Database Project Deployment to Analyze the Deployment Plan](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md) (Пошаговое руководство. Расширение процесса развертывания для проекта базы данных для анализа плана развертывания)|  
   
 ## <a name="see-also"></a>См. также:  
-[Определение пользовательских условий для модульных тестов SQL](http://msdn.microsoft.com/en-us/library/jj860449(v=vs.103).aspx)  
+[Определение пользовательских условий для модульных тестов SQL](http://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
   

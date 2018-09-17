@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc94964bdb6c0f18eb6fc935e12efef3ff0cece2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6670a8710700a168ac134e18e74e781c897c7621
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085766"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564149"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Использование MSDeploy с поставщиком dbSqlPackage
 **DbSqlPackage** — это поставщик **MSDeploy**, который обеспечивает взаимодействие с базами данных SQL Server и SQL Azure. **DbSqlPackage** поддерживает следующие действия:  
@@ -32,7 +32,7 @@ ms.locfileid: "39085766"
   
 -   **Скрипт** — создает скрипт Transact\-SQL, эквивалентный скрипту, который выполняется действием публикации.  
   
-Дополнительные сведения о DACFx можно найти в разделе документации по управляемому API DACFx по адресу [http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.aspx) или описании средства командной строки DACFx [SqlPackage.exe](../tools/sqlpackage.md).  
+Дополнительные сведения о DACFx можно найти в разделе документации по управляемому API DACFx по адресу [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) или описании средства командной строки DACFx [SqlPackage.exe](../tools/sqlpackage.md).  
   
 > [!IMPORTANT]  
 > Компонент поставщика dbSqlPackage будет удален из следующей основной версии Visual Studio. Сведения о публикации базы данных с помощью с веб-развертывания см. в статье [Поставщик dbDacFx для добавочной публикации базы данных](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  

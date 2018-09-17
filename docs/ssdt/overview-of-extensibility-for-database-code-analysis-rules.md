@@ -17,15 +17,15 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82381b0fd553c57353847f714f09c02abc51a5b2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c7f850f6fe3277a0026371d096454c16d0cf5a84
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082797"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563590"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Общие сведения о расширяемости для правил анализа кода базы данных
-Выпуски Visual Studio, содержащие SQL Server Data Tools, включают правила анализа кода, возвращающие предупреждения о проектировании, именовании и производительности Transact\-SQL в отношении кода базы данных. Дополнительные сведения см. в статье [Analyzing Database Code to Improve Code Quality](http://msdn.microsoft.com/en-us/library/dd172133(v=vs.100).aspx) (Анализ кода базы данных для улучшения качества кода).  
+Выпуски Visual Studio, содержащие SQL Server Data Tools, включают правила анализа кода, возвращающие предупреждения о проектировании, именовании и производительности Transact\-SQL в отношении кода базы данных. Дополнительные сведения см. в статье [Analyzing Database Code to Improve Code Quality](http://msdn.microsoft.com/library/dd172133(v=vs.100).aspx) (Анализ кода базы данных для улучшения качества кода).  
   
 Если встроенные правила анализа кода не охватывают конкретную проблему Transact\-SQL, которую вы хотите учесть, можно создать настраиваемые правила анализа кода базы данных. Например, вы можете создать настраиваемое правило, позволяющее избежать оператора WAITFORDELAY, как показано в [пошаговом руководстве по созданию сборки настраиваемого правила анализа статического кода для SQL Server](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md). Для создания настраиваемых правил анализа кода базы данных используются классы в пространстве имен [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "39082797"
   
 ![Компоненты правил для анализа кода базы данных](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "Database Code Analysis Rules Components")  
   
-Когда вы используете компонент правил анализа кода базы данных, выполняя анализ статического кода напрямую (дополнительные сведения см. в статье [Практическое руководство. Анализ кода Transact-SQL для поиска дефектов](http://msdn.microsoft.com/en-us/library/dd172119(v=vs.100).aspx)), или выполняя сборку, правила загружаются и используются в соответствии с их настройкой в вашем проекте. Дополнительные сведения см. в статье [How to: Enable and Disable Specific Rules for Static Analysis of Database Code](http://msdn.microsoft.com/en-us/library/dd172131(v=vs.100).aspx) (Практическое руководство. Включение и отключение определенных правил для статического анализа кода базы данных). Диспетчер расширений также будет загружать все сборки настраиваемых правил, которые вы создали и зарегистрировали. Дополнительные сведения см. в статье [Практическое руководство. Установка расширений компонентов и управление ими](../ssdt/how-to-install-and-manage-feature-extensions.md).  
+Когда вы используете компонент правил анализа кода базы данных, выполняя анализ статического кода напрямую (дополнительные сведения см. в статье [Практическое руководство. Анализ кода Transact-SQL для поиска дефектов](http://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)), или выполняя сборку, правила загружаются и используются в соответствии с их настройкой в вашем проекте. Дополнительные сведения см. в статье [How to: Enable and Disable Specific Rules for Static Analysis of Database Code](http://msdn.microsoft.com/library/dd172131(v=vs.100).aspx) (Практическое руководство. Включение и отключение определенных правил для статического анализа кода базы данных). Диспетчер расширений также будет загружать все сборки настраиваемых правил, которые вы создали и зарегистрировали. Дополнительные сведения см. в статье [Практическое руководство. Установка расширений компонентов и управление ими](../ssdt/how-to-install-and-manage-feature-extensions.md).  
   
 Класс для настраиваемого правила анализа кода наследуется от [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). Класс настраиваемых правил может обращаться к ряду полезных объектов через свой контекст выполнения правил. К ним относятся следующие объекты.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "39082797"
   
 -   Для правил, которые анализируют конкретные элементы, в контекст включается объект Dac.Model.TSqlObject, представляющий этот элемент схемы в модели.  
   
--   Многие объекты схемы также имеют представление [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx), доступ к которому можно получить через этот контекст. Это основанное на AST представление элемента, который может быть полезен при просмотре потенциальных проблем синтаксиса, таких как наличие [SelectStarExpression](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.selectstarexpression.aspx).  
+-   Многие объекты схемы также имеют представление [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx), доступ к которому можно получить через этот контекст. Это основанное на AST представление элемента, который может быть полезен при просмотре потенциальных проблем синтаксиса, таких как наличие [SelectStarExpression](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.selectstarexpression.aspx).  
   
-Правило создает объект Dac.CodeAnalysis.SqlRuleProblem для представления всех обнаруженных проблем. При его создании соответствующий объект Dac.Model.TSqlObject и, возможно, элемент представления [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx) передаются в конструктор, а затем используются для определения источника проблемы в файлах исходного кода. В конце анализа все эти проблемы передаются в диспетчер ошибок и отображаются в списке ошибок.  
+Правило создает объект Dac.CodeAnalysis.SqlRuleProblem для представления всех обнаруженных проблем. При его создании соответствующий объект Dac.Model.TSqlObject и, возможно, элемент представления [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) передаются в конструктор, а затем используются для определения источника проблемы в файлах исходного кода. В конце анализа все эти проблемы передаются в диспетчер ошибок и отображаются в списке ошибок.  
   
 ## <a name="see-also"></a>См. также:  
 [Расширение функций баз данных](../ssdt/extending-the-database-features.md)  

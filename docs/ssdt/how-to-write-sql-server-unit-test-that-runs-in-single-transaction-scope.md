@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab996710a0c88d004b36f7bed1e6304a494bc9eb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b20a2432ae509923b2befd240a66de04c50502c4
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085076"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564130"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции
 Можно изменить модульные тесты для запуска в области действия одной транзакции. При использовании этого подхода после завершения теста реализованные им изменения можно будет отменить. Приведенные ниже инструкции показывают, как выполнить следующие задачи.  
@@ -60,7 +60,7 @@ ms.locfileid: "39085076"
     Дополнительные сведения о том, как инструкция ROLLBACK TRANSACTION работает с хранимыми процедурами и триггерами, см. на следующей странице веб-сайта Майкрософт: [ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927).  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>Создание транзакции для одного метода теста  
-В этом примере при использовании типа [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) будет задействована внешняя транзакция. По умолчанию соединения для выполнения и привилегированные подключения не используют внешнюю транзакцию, так как они создаются до выполнения этого метода. Соединение SqlConnection имеет метод [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction), который связывает активное подключение с транзакцией. При создании внешняя транзакция автоматически регистрируется в качестве текущей транзакции. К ней можно обратиться через свойство [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current). В этом примере транзакция отменяется при уничтожении внешней транзакции. Чтобы зафиксировать изменения, внесенные при запуске модульного теста, используйте метод [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
+В этом примере при использовании типа [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) будет задействована внешняя транзакция. По умолчанию соединения для выполнения и привилегированные подключения не используют внешнюю транзакцию, так как они создаются до выполнения этого метода. Соединение SqlConnection имеет метод [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction), который связывает активное подключение с транзакцией. При создании внешняя транзакция автоматически регистрируется в качестве текущей транзакции. К ней можно обратиться через свойство [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current). В этом примере транзакция отменяется при уничтожении внешней транзакции. Чтобы зафиксировать изменения, внесенные при запуске модульного теста, используйте метод [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>Создание транзакции для одного метода теста  
   

@@ -16,16 +16,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 413ee4cac6f8cb6ca60ad92165f50177e4801cf1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 93aec2aa71e4ab5bcbadd9eb4f7a1d6a400af216
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987946"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564110"
 ---
 # <a name="sql-server-2016-release-notes"></a>Заметки о выпуске SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-  В этой статье описываются ограничения и проблемы, связанные с выпусками SQL Server 2016, включая пакеты обновления. Сведения о новых возможностях см. в разделе [Что нового в SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
+  В этой статье описываются ограничения и проблемы, связанные с выпусками SQL Server 2016, включая пакеты обновления. Сведения о новых возможностях см. в разделе [Что нового в SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
 
 - [![Скачать на странице центра оценки](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Скачать SQL Server 2016 на странице **[центра оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 - [Маленький значок виртуальной машины Azure![](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Есть ли учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016 с пакетом обновления 1 (SP1).
@@ -122,7 +122,7 @@ ms.locfileid: "37987946"
 
 Кроме того, обратите внимание на указанные ниже исправления.
 - На основе отзывов администраторов баз данных и участников сообщества SQL начиная с SQL Server 2016 с пакетом обновления 1 (SP1) сообщения журнала, связанные с Hekaton, сведены к минимуму.
-- Ознакомьтесь с новыми [флагами трассировки](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
+- Ознакомьтесь с новыми [флагами трассировки](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
 - Полные версии образцов баз данных WideWorldImporters работают с выпусками Standard и Express начиная с SQL Server 2016 с пакетом обновления 1 (SP1) и доступны в [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). Вносить изменения в образцы не требуется. Резервные копии баз данных, созданные в версии RTM выпуска Enterprise, работают с выпусками Standard и Express в SQL Server 2016 с пакетом обновления 1 (SP1). 
 
 После установки SQL Server 2016 с пакетом обновления 1 (SP1) может потребоваться перезагрузка. Мы рекомендуем запланировать и выполнить перезагрузку после установки SQL Server 2016 с пакетом обновления 1 (SP1).

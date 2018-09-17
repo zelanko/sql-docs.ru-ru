@@ -14,17 +14,17 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 319abf02d87a12e8df96e6e22666da54ade16d1d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0a26f0ef02fbe9c6b1dd47c9ff0d111a89340469
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084506"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563897"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Как использовать объекты Microsoft SQL Server 2012 в своем проекте
 В этом примере мы добавим в проект базы данных объект последовательности, ориентированный на Microsoft SQL Server 2012.  
   
-Последовательности добавляются в Microsoft SQL Server 2012. Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией, с которой эта последовательность создавалась. Последовательность числовых значений формируется в возрастающем или убывающем порядке с определенным интервалом и может повторяться запрошенным образом.  Дополнительные сведения об объектах последовательности см. в статье [Sequence Numbers](htttp://msdn.microsoft.com/en-us/library/ff878058(SQL.110).aspx) (Порядковые номера). Дополнительные сведения о новых возможностях в Microsoft SQL Server 2012 см. в разделе [What's New in SQL Server 2012](http://msdn.microsoft.com/en-us/library/bb500435(SQL.110).aspx) (Новые возможности SQL Server 2012).  
+Последовательности добавляются в Microsoft SQL Server 2012. Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией, с которой эта последовательность создавалась. Последовательность числовых значений формируется в возрастающем или убывающем порядке с определенным интервалом и может повторяться запрошенным образом.  Дополнительные сведения об объектах последовательности см. в статье [Sequence Numbers](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx) (Порядковые номера). Дополнительные сведения о новых возможностях в Microsoft SQL Server 2012 см. в разделе [What's New in SQL Server 2012](http://msdn.microsoft.com/library/bb500435(SQL.110).aspx) (Новые возможности SQL Server 2012).  
   
 > [!WARNING]  
 > В следующих процедурах используются сущности, созданные с помощью процедур, которые описывались ранее в разделах [Connected Database Development](../ssdt/connected-database-development.md) (Разработка подключенной базы данных) и [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) (Разработка базы данных вне сети с учетом проекта).  
