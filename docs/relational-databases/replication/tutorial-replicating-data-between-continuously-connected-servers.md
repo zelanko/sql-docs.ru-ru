@@ -21,18 +21,18 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcb6a4d0468dc74bbc937a11fd60783897e402cf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 513b0ca3c7cab0556f94f299afdc69207927fd01
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047342"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564170"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Репликация транзакций — это хорошее решение для перемещения данных между постоянно подключенными серверами. С помощью мастера репликации можно легко настроить и администрировать топологию репликации. 
 
-В этом руководстве описано, как настроить топологию для репликации транзакций для постоянно подключенных серверов. См. дополнительные сведения о [репликации транзакций](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication). 
+В этом руководстве описано, как настроить топологию для репликации транзакций для постоянно подключенных серверов. См. дополнительные сведения о [репликации транзакций](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 
   
 ## <a name="what-you-will-learn"></a>Новые знания  
 Из этого руководства вы узнаете, как публиковать данные из одной базы данных в другую, используя репликацию транзакций. 
@@ -56,13 +56,13 @@ ms.locfileid: "38047342"
   
 - На сервере-подписчике (целевом) установите любой выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] не может быть подписчиком при репликации транзакций.  
   
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). См. дополнительные сведения о [восстановлении базы данных в среде SSMS](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). См. дополнительные сведения о [восстановлении базы данных в среде SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
  
 >[!NOTE]
 > - Репликация не поддерживается в экземплярах SQL Server, которые отличаются друг от друга больше, чем на две версии. См. дополнительные сведения о [поддерживаемых версиях SQL Server в топологии репликации](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
-> - В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо подключиться к издателю и подписчику с помощью имени входа, которое является членом предопределенной роли сервера **sysadmin**. Дополнительные сведения о роли см. в статье [Роли уровня сервера](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо подключиться к издателю и подписчику с помощью имени входа, которое является членом предопределенной роли сервера **sysadmin**. Дополнительные сведения о роли см. в статье [Роли уровня сервера](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
 **Предполагаемое время выполнения задач этого руководства: 60 минут.**  
@@ -174,7 +174,7 @@ ms.locfileid: "38047342"
 
    ![Страница "Публикация" с выбранной публикацией](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
   
-4. На странице **Расположение агента распространения** установите флажок **Выполнять все агенты в распространителе** и нажмите кнопку **Далее**.  Дополнительные сведения о подписках см. в статье [Подписка на публикации](https://docs.microsoft.com/en-us/sql/relational-databases/replication/subscribe-to-publications).
+4. На странице **Расположение агента распространения** установите флажок **Выполнять все агенты в распространителе** и нажмите кнопку **Далее**.  Дополнительные сведения о подписках см. в статье [Подписка на публикации](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications).
 
    ![Страница "Расположение агента распространения" с установленным флажком "Выполнять все агенты в распространителе"](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   

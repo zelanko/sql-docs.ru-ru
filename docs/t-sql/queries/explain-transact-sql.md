@@ -13,12 +13,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a7b8a9ee85c7f3d04bc45c21d2605c839bdff01a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9962b3a24c8a19ff253d22c28779259bcb1f292a
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783585"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564070"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ EXPLAIN SQL_statement
 |\<sql>|Отображает *SQL_statement*.|  
 |\<params>|Этот тег в настоящее время не используется.|  
 |\<dsql_operations>|Обобщает и содержит действия запроса, а также включает сведения о стоимости запроса. Также содержит все блоки `<dsql_operation>`. Этот тег содержит сведения о количестве для всего запроса.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* — общее предполагаемое время выполнения запроса (в мс).<br /><br /> *total_number_operations* — общее количество операций запроса. Операция, которая будет обрабатываться параллельно и выполняться на нескольких узлах, считается одной операцией.|  
-|\<dsql_operation>|Описывает одну операцию в плане запроса. Тег \<dsql_operation> содержит тип операции, как атрибут:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* является одним из значений в [запросе данных (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Содержимое в блоке `\<dsql_operation>` зависит от типа операции.<br /><br /> См. таблицу ниже.|  
+|\<dsql_operation>|Описывает одну операцию в плане запроса. Тег \<dsql_operation> содержит тип операции, как атрибут:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* является одним из значений в [запросе данных (SQL Server PDW)](http://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Содержимое в блоке `\<dsql_operation>` зависит от типа операции.<br /><br /> См. таблицу ниже.|  
   
 |Тип операции|Содержимое|Пример|  
 |--------------------|-------------|-------------|  

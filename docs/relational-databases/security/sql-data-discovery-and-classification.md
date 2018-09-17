@@ -13,12 +13,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: b929409e034fb3305ed147ac912580d9e75ab1e4
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95fcaa2334c0d7909b1b03583c3d8cab5ea707ab
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084637"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563840"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "39084637"
 * sys_information_type_name;
 * sys_sensitivity_label_name.
 
-Доступ к метаданным осуществляется с помощью представления каталога расширенных свойств [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+Доступ к метаданным осуществляется с помощью представления каталога расширенных свойств [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
 
 В следующем примере кода возвращаются все классифицированные столбцы с их соответствующими классификациями.
 
@@ -150,8 +150,8 @@ FROM
 
 Рекомендуем защитить конфиденциальные столбцы путем применения механизмов защиты на уровне столбцов:
 
-* [динамическое маскирование данных](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking) для затемнения конфиденциальных столбцов в процессе использования;
-* [Always Encrypted](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine) для шифрования конфиденциальных столбцов в процессе хранения.
+* [динамическое маскирование данных](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) для затемнения конфиденциальных столбцов в процессе использования;
+* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) для шифрования конфиденциальных столбцов в процессе хранения.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

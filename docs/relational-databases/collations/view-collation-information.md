@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ddad036821e735f693a2e2dec031dcb07c76902
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3ccbb7da44967b7be3bb30b218a1b779215755db
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070897"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533906"
 ---
 # <a name="view-collation-information"></a>Просмотр сведений о параметрах сортировки
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
-##  <a name="Top"></a> Просмотреть параметры сортировки сервера, базы данных или столбца в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно, используя команды меню обозревателя объектов или при помощи инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+<a name="Top"></a> Просмотреть параметры сортировки сервера, базы данных или столбца в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно, используя команды меню обозревателя объектов или при помощи инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##  <a name="Procedures"></a> Как просмотреть параметры сортировки  
  Можно использовать один из следующих способов:  
@@ -65,13 +65,13 @@ ms.locfileid: "43070897"
   
 2.  В окне запроса введите следующую инструкцию, которая использует системную функцию SERVERPROPERTY.  
   
-    ```  
+    ```sql  
     SELECT CONVERT (varchar, SERVERPROPERTY('collation'));  
     ```  
   
 3.  Кроме того, можно использовать системную хранимую процедуру sp_helpsort.  
   
-    ```  
+    ```sql  
     EXECUTE sp_helpsort;  
     ```  
   
@@ -81,7 +81,7 @@ ms.locfileid: "43070897"
   
 2.  В окне запроса введите следующую инструкцию, которая использует системную функцию SERVERPROPERTY.  
   
-    ```  
+    ```sql  
     SELECT name, description FROM sys.fn_helpcollations();  
     ```  
   
@@ -91,13 +91,13 @@ ms.locfileid: "43070897"
   
 2.  В окне запроса введите следующую инструкцию, которая использует системное представление каталога sys.databases.  
   
-    ```  
+    ```sql  
     SELECT name, collation_name FROM sys.databases;  
     ```  
   
 3.  Кроме того, можно использовать системную функцию DATABASEPROPERTYEX.  
   
-    ```  
+    ```sql  
     SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
@@ -107,7 +107,7 @@ ms.locfileid: "43070897"
   
 2.  В окне запроса введите следующую инструкцию, которая использует системное представление каталога sys.columns.  
   
-    ```  
+    ```sql  
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
@@ -117,6 +117,7 @@ ms.locfileid: "43070897"
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [Очередность параметров сортировки (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)   
+ [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)      
  [sp_helpsort (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)  
   
   

@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c070d081e622982bbead15826914b01a89179e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2c3ae93bc044f75f502a357df50495f5041b165e
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991897"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563710"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Руководство по резервному копированию и восстановлению SQL Server с помощью службы хранилища BLOB-объектов Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "37991897"
 [Занятие 2. Создание учетных данных SQL Server](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 На этом занятии вы создадите учетные данные для хранения сведений о безопасности, которые будут использоваться для доступа к учетной записи хранения Azure.  
   
-[Занятие 3. Запись полной резервной копии базы данных в службу хранилища BLOB-объектов Azure](https://technet.microsoft.com/en-us/library/jj720552\(v=sql.110\).aspx)  
+[Занятие 3. Запись полной резервной копии базы данных в службу хранилища BLOB-объектов Azure](https://technet.microsoft.com/library/jj720552\(v=sql.110\).aspx)  
 На этом занятии вам предстоит выполнить инструкцию Т-SQL для записи резервной копии базы данных AdventureWorks2012 в службу хранилища BLOB-объектов Azure.  
   
 [Занятие 4. Восстановление базы данных из полной резервной копии](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  

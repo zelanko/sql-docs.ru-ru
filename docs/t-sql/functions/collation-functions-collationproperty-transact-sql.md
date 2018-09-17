@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 070e3ee283862b79833981f1eb4e9933c83c0707
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d466d64a2b5fe7425a86732970a6f7cf18e69bbe
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063975"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563576"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Функции параметров сортировки — COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,8 +52,8 @@ COLLATIONPROPERTY( collation_name , property )
   
 |Имя свойства|Описание|  
 |---|---|
-|**CodePage**|Кодовая страница параметров сортировки не в Юникоде. Сведения о преобразовании этих значений и сопоставлении символов см. в разделах [Приложение Ж. Таблицы сопоставления DBCS и Юникода](https://msdn.microsoft.com/en-us/library/cc194886.aspx) и [Приложение З. Кодовые страницы](https://msdn.microsoft.com/en-us/library/cc195051.aspx).|  
-|**LCID**|Код языка в Windows для параметров сортировки. Сведения о преобразовании этих значений см. в статье [Структура кода языка](https://msdn.microsoft.com/en-us/library/cc233968.aspx) (сначала их необходимо преобразовать в тип **varbinary**).|  
+|**CodePage**|Кодовая страница параметров сортировки не в Юникоде. Сведения о преобразовании этих значений и сопоставлении символов см. в разделах [Приложение Ж. Таблицы сопоставления DBCS и Юникода](https://msdn.microsoft.com/library/cc194886.aspx) и [Приложение З. Кодовые страницы](https://msdn.microsoft.com/library/cc195051.aspx).|  
+|**LCID**|Код языка в Windows для параметров сортировки. Сведения о преобразовании этих значений см. в статье [Структура кода языка](https://msdn.microsoft.com/library/cc233968.aspx) (сначала их необходимо преобразовать в тип **varbinary**).|  
 |**ComparisonStyle**|Стиль сравнения Windows для параметров сортировки. Возвращает значение 0 для всех двоичных параметров сортировки (как (\_BIN), так и (\_BIN2)), а также если все свойства учитывают регистр. Значения битовой маски:<br /><br /> Не учитывать регистр: 1<br /><br /> Не учитывать диакритические знаки: 2<br /><br /> Не учитывать тип японской азбуки: 65536<br /><br /> Не учитывать ширину: 131072<br /><br /> Примечание. Хотя параметр variation-selector-sensitive (\_VSS) влияет на то, как производится сравнение, он не представлен в этом значении.|  
 |**Версия**|Версия параметров сортировки, производная от значения поля версии идентификатора параметров сортировки. Возвращает целое число от 0 до 3.<br /><br /> Параметры сортировки, имя которых содержит "140", возвращают значение 3.<br /><br /> Параметры сортировки, имя которых содержит "100", возвращают значение 2.<br /><br /> Параметры сортировки, имя которых содержит "90", возвращают значение 1.<br /><br /> Все остальные параметры сортировки возвращают 0.|  
   

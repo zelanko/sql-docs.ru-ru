@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 540ecf6bef4dc74d8052a58c96543c5c9b159b5b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a5a475f73f7c6db799bebb4477613679883e470c
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770740"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564030"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Компонент Service Broker с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34770740"
      Дополнительные сведения см. в разделе [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    Компонент SQL Server Broker не поддерживает несколько подсетей. Обязательно используйте параметр registerallprovidersip со значением 0 и проверьте, не используете ли вы статические IP-адреса в системе DNS, предоставив необходимое разрешение кластеру в DNS, как определено в https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. При попытке использовать отключенный IP-адрес компонент Broker может отложить сообщение с состоянием CONVERSING.
+    Компонент SQL Server Broker не поддерживает несколько подсетей. Обязательно используйте параметр registerallprovidersip со значением 0 и проверьте, не используете ли вы статические IP-адреса в системе DNS, предоставив необходимое разрешение кластеру в DNS, как определено в https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. При попытке использовать отключенный IP-адрес компонент Broker может отложить сообщение с состоянием CONVERSING.
 
 3.  **Предоставьте разрешение CONNECT на конечную точку.**  
   

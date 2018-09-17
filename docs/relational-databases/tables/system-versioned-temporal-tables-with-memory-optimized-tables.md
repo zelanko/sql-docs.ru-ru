@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38963e1953e707597ec98530687904c347b49582
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5be615c1f0e672bcd706380ae9adafa9bcbccded
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073527"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563827"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>темпоральные таблицы с системным управлением версиями и таблицы с оптимизацией памяти
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "43073527"
   
 -   Таблица журнала для оптимизированной для памяти таблицы с системным управлением версиями должна размещаться на диске независимо от того, была ли она создана конечным пользователем или системой.  
   
--   Запросы, относящиеся только к текущей таблице (в памяти), можно использовать в [модулях, скомпилированных в T-SQL](https://msdn.microsoft.com/en-us/library/dn133184.aspx). Темпоральные запросы, использующие предложение FOR SYSTEM TIME, не поддерживаются в модулях, скомпилированных в собственном коде. Использование предложения FOR SYSTEM TIME поддерживается с оптимизированными для памяти таблицами в нерегламентированных запросах и в модулях с несобственным кодом.  
+-   Запросы, относящиеся только к текущей таблице (в памяти), можно использовать в [модулях, скомпилированных в T-SQL](https://msdn.microsoft.com/library/dn133184.aspx). Темпоральные запросы, использующие предложение FOR SYSTEM TIME, не поддерживаются в модулях, скомпилированных в собственном коде. Использование предложения FOR SYSTEM TIME поддерживается с оптимизированными для памяти таблицами в нерегламентированных запросах и в модулях с несобственным кодом.  
   
 -   Если **SYSTEM_VERSIONING = ON**, внутренняя промежуточная таблица, оптимизированная для памяти, создается автоматически для принятия последних изменений с системным управлением версиями, которые являются результатами операций обновления и удаления в текущей таблице, оптимизированной для памяти.  
   

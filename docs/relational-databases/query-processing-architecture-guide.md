@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 35c0d964596afc1c072e4cdf191f84b9b9b978bf
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087566"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564210"
 ---
 # <a name="query-processing-architecture-guide"></a>Руководство по архитектуре обработки запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -1023,7 +1023,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 * Чтобы в полной мере реализовать возможности параллельной обработки запросов, используйте сервер с быстрыми процессорами и как можно большим числом процессорных ядер.
 * Обеспечьте достаточную пропускную способность контроллера ввода-вывода для сервера. 
 * Чтобы в полной мере реализовать возможности оптимизированного просмотра сбалансированного дерева, создайте кластеризованный индекс по каждой большой секционированной таблице.
-* При массовой загрузке данных в секционированные таблицы следуйте рекомендациям, приведенным в техническом документе [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx) (Руководство по эффективной загрузке данных).
+* При массовой загрузке данных в секционированные таблицы следуйте рекомендациям, приведенным в техническом документе [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx) (Руководство по эффективной загрузке данных).
 
 ### <a name="example"></a>Пример
 
