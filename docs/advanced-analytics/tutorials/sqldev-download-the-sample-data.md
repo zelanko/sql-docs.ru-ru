@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703607"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724338"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>Демонстрационные данные о такси Нью-ЙОРКА для SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,7 +118,7 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 |**Имя объекта**|**Тип объекта**|**Описание**|
 |----------|------------------------|---------------|
-|**TaxiNYC_Sample** | База данных |Созданный скрипт create-db ТБ Отправка data.sql. Создает базу данных и две таблицы:<br /><br />таблицу dbo.nyctaxi_sample: содержит основной набор данных о такси Нью-ЙОРКА. К таблице добавляется кластеризованный индекс columnstore для оптимизации хранения данных и производительности запросов. В примере 1% набора данных такси Нью-ЙОРКА вставляется в эту таблицу.<br /><br />таблица dbo.nyc_taxi_models: используется для сохранения обученной модели расширенной аналитики.|
+|**NYCTaxi_Sample** | База данных |Созданный скрипт create-db ТБ Отправка data.sql. Создает базу данных и две таблицы:<br /><br />таблицу dbo.nyctaxi_sample: содержит основной набор данных о такси Нью-ЙОРКА. К таблице добавляется кластеризованный индекс columnstore для оптимизации хранения данных и производительности запросов. В примере 1% набора данных такси Нью-ЙОРКА вставляется в эту таблицу.<br /><br />таблица dbo.nyc_taxi_models: используется для сохранения обученной модели расширенной аналитики.|
 |**fnCalculateDistance** |скалярная функция | Создаваемые сценарием fnCalculateDistance.sql. Вычисляет прямое расстояние между местами посадки и высадки. Эта функция используется в [Создание функций данных](sqldev-create-data-features-using-t-sql.md), [обучение и сохранение модели](../r/sqldev-train-and-save-a-model-using-t-sql.md) и [ввод в эксплуатацию моделей R](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |функция с табличным значением | Создаваемые сценарием fnEngineerFeatures.sql. Формирует новые характеристики данных для обучения модели. Эта функция используется в [Создание функций данных](sqldev-create-data-features-using-t-sql.md) и [ввод в эксплуатацию моделей R](sqldev-operationalize-the-model.md).|
 |**PlotHistogram** |хранимая процедура | Создаваемые сценарием PlotHistogram.sql. Вызывает функцию R для построения гистограммы на переменную, а затем возвращает диаграмму в виде двоичного объекта. Эта хранимая процедура используется в [анализ и визуализация данных](sqldev-explore-and-visualize-the-data.md).|

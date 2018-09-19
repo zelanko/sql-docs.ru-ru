@@ -9,20 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
+ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400647"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46289315"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Новые возможности в Analytics Platform System, хранилища данных MPP горизонтального масштабирования
 См. в разделе, новые возможности в последние обновления устройства для Microsoft® Analytics Platform System (APS). APS является горизонтальное масштабирование локальное устройство, на котором размещена MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.1"></a>
+## <a name="aps-cu71"></a>APS CU7.1
+Дата выпуска - июля 2018 г.
 
+### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>Команды DBCC не используют слоты выдачи (изменение поведения)
+APS поддерживает подмножество T-SQL, [команды DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) например [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Ранее, будет использовать эти команды [слот выдачи](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) уменьшению числа пользователь загружает и запросы, которые могут выполняться. `DBCC` Команды теперь выполняются в локальной очереди, которое использует пользователь слот выдачи, повышая общую производительность выполнения запросов.
+
+### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Заменяет некоторые вызовы метаданных объектов каталога
+Использование объектов каталога для вызовов метаданных вместо использования SMO показали повышение производительности в APS. Начиная с CU7.1, некоторые из этих вызовов метаданных теперь используют объекты каталога по умолчанию. Это поведение можно отключить, [переключатель](appliance-feature-switch.md) Если клиенты, использующие запросы метаданных столкнетесь с проблемами.
+
+### <a name="bug-fixes"></a>Исправления ошибок
+Мы обновили для SQL Server 2016 с пакетом обновления 2 CU2 с APS CU7.1. Обновление устраняет некоторые проблемы, описанные ниже.
+
+| Title | Описание |
+|:---|:---|
+| **Взаимоблокировки задачи переноса кортежей кортежа** |Обновление устраняет вероятность, что долгосрочные взаимоблокировки в распределенной транзакции и кортежа задачи переноса кортежей фоновый поток. После установки CU7.1, клиенты, которые работают TF634 остановить кортежей в качестве параметра запуска SQL Server или глобальный флаг трассировки можно безопасно удалить его. | 
+| **Определенные lag или lead запрос завершится с ошибкой** |Некоторые запросы в таблицах CCI с вложенной lag или lead функции, которые бы ошибка теперь исправлена этого обновления. | 
+
+
+<a name="h2-aps-au7"></a>
 ## <a name="aps-au7"></a>APS AU7
-APS 2016 является необходимым условием для обновления до AU7. Ниже приведены возможности APS AU7.
+Дата выпуска - май 2018 г.
+
+APS 2016 является необходимым условием для обновления до AU7. Ниже приведены новые возможности в APS AU7.
 
 ### <a name="auto-create-and-auto-update-statistics"></a>Автоматическое создание и автоматическое обновление статистики
 APS AU7 создает и обновляет статистику автоматически, по умолчанию. Чтобы обновить параметры статистики, администраторы могут использовать новые функции коммутатора пункта меню в [Configuration Manager](appliance-configuration.md#CMTasks). [Переключатель](appliance-feature-switch.md) управляет auto-create, автоматическое обновление и поведение асинхронного обновления статистики. Вы также можете обновить параметры статистики с [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) инструкции.
@@ -42,7 +63,7 @@ APS AU7 вводит переключателя функций в [Configuration
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
-
+<a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 В этом разделе описываются новые функции для AU6 APS 2016.
 
