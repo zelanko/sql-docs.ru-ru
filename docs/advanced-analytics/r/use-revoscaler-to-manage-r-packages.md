@@ -1,5 +1,5 @@
 ---
-title: Как использовать функции RevoScaleR для поиска или установить R пакетов на SQL Server | Документы Microsoft
+title: Как использовать функции RevoScaleR для поиска или установки R пакетов на SQL Server | Документация Майкрософт
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,86 +7,86 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d92b3e993968ce48d7489b0c17d6bdba005809a3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e9009e26a891c031194697de78cac97db6844d58
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707532"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563980"
 ---
-# <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Как использовать функции RevoScaleR для поиска или установка пакетов R в SQL Server
+# <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Как использовать функции RevoScaleR для поиска или установки пакетов R на сервере SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-RevoScaleR 9.0.1 и более поздние версии включают функции для управления пакетами R контекста вычислений SQL Server. Эти функции могут использоваться с удаленным, не являющимся администраторами для установки пакетов на SQL Server, не имеющие прямого доступа к серверу.
+RevoScaleR 9.0.1 и более поздней версии включает функции для управления пакетами R контекста вычислений SQL Server. Эти функции могут использоваться с удаленными, пользователям без прав администратора для установки пакетов на SQL Server, не имеющие прямого доступа к серверу.
 
-Службы SQL Server 2017 г машины обучения уже есть более новая версия RevoScaleR. Клиенты служб SQL Server 2016 R необходимо выполнить [обновления компонента](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) для получения функций управления пакета RevoScaleR. Инструкции о способах получения пакета версии и содержимое, см. в разделе [получить сведения о пакете](determine-which-packages-are-installed-on-sql-server.md).
+Службы машинного обучения SQL Server 2017 уже включает в себя более новая версия RevoScaleR. Клиенты SQL Server 2016 R Services необходимо выполнить [обновления компонента](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) для получения функций управления пакета RevoScaleR. Инструкции о том, как для получения пакетов, версии и содержимым, см. в разделе [получить сведения о пакете](determine-which-packages-are-installed-on-sql-server.md).
 
-## <a name="revoscaler-functions-for-package-management"></a>Функции RevoScaleR для пакета управления
+## <a name="revoscaler-functions-for-package-management"></a>Функции RevoScaleR для управления пакетами
 
-Ниже перечислены функции, которые используются для установки пакетов R и управления.
+Следующая таблица описывает функции, используемые для установки пакетов R и управления.
 
 | Компонент | Описание |
 |----------|-------------|
 | [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Определите путь к библиотеке экземпляра на удаленном сервере SQL. |
 | [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage); | Получает путь для одного или нескольких пакетов на удаленный экземпляр SQL Server. |
-| [rxInstallPackages](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | Эта функция вызывается с удаленного клиента R для установки пакетов в контексте вычислений SQL Server, либо из указанного хранилища, либо путем чтения локально сохраненные ZIP-пакеты. Эта функция проверяет зависимости и гарантирует, что все связанные пакеты могут быть установлены для SQL Server, так же, как установка пакетов R в локальном контексте. Чтобы использовать этот параметр, необходимо включить управление пакетами для сервера и базы данных. Клиентские и серверные среды должны иметь одну и ту же версию RevoScaleR. |
-| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages). | Возвращает список пакетов, установленных в контексте указанной вычислений. |
-| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Скопируйте сведения о библиотеке пакета между файловой системы и базы данных для контекста заданного вычислений. |
-| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Удаление пакетов из контекста указанной вычислений. Также вычисляет зависимости и гарантирует, что пакеты, которые больше не используются другие пакеты в экземпляре SQL Server удаляются для высвобождения ресурсов. |
+| [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | Вызывайте эту функцию с удаленного клиента R для установки пакетов в контексте вычислений SQL Server, либо из указанного репозитория или посредством считывания сжатых пакетов, локально сохраненных. Эта функция проверяет зависимости и гарантирует, что все связанные пакеты могут быть установлены для SQL Server, как и для установки пакетов R в локальном контексте вычисления. Чтобы использовать этот параметр, необходимо включить управление пакетами на сервере и базе данных. Клиентские и серверные среды должен иметь ту же версию RevoScaleR. |
+| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages). | Возвращает список пакетов, установленных в указанном контексте вычислений. |
+| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Скопируйте сведения о библиотеке пакета между файловой системой и базы данных, для указанном контексте вычислений. |
+| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Удаление пакетов в указанном контексте вычислений. Также вычисляет зависимости и гарантирует, что удаляются пакеты, которые больше не используются другими пакетами на сервере SQL Server, чтобы освободить ресурсы. |
 
 ## <a name="prerequisites"></a>предварительные требования
 
-+ [Включение удаленного управления пакета R в SQL Server](r-package-how-to-enable-or-disable.md)
++ [Включение удаленного управления пакетами R на сервере SQL Server](r-package-how-to-enable-or-disable.md)
 
-+ RevoScaleR версии должен совпадать в клиентских и серверных средах. Дополнительные сведения см. в разделе [получить сведения о пакете](determine-which-packages-are-installed-on-sql-server.md).
++ RevoScaleR версии должен быть одинаковым на клиентские и серверные среды. Дополнительные сведения см. в разделе [получить сведения о пакете](determine-which-packages-are-installed-on-sql-server.md).
 
-+ Разрешения для подключения к серверу и базе данных, а также запуска команды R. Необходимо быть членом роли базы данных, которая позволяет установить пакеты на указанном экземпляре и базе данных.
++ Разрешение на подключение к серверу и базе данных и выполнять команды R. Необходимо быть членом роли базы данных, позволяющий установить пакеты на указанном экземпляре и базе данных.
 
-+ Пакеты в **общая область** можно установить с пользователей, принадлежащих `rpkgs-shared` роли в указанной базе данных. Все пользователи в этой роли можно удалить общие пакеты.
++ Пакеты в **общая область** можно установить с пользователей, принадлежащих к `rpkgs-shared` роли в указанной базе данных. Все пользователи с этой ролью можно удалить общие пакеты.
 
-+ Пакеты в **закрытая область** можно установить любой пользователь, принадлежащий `rpkgs-private` роли в базе данных. Тем не менее пользователи могли просматривать и удалять только свои собственные пакеты.
++ Пакеты в **закрытой области** можно установить любой пользователь, принадлежащий `rpkgs-private` роли в базе данных. Тем не менее пользователи могли просматривать и удалять только свои собственные пакеты.
 
 + Владельцы базы данных можно работать с пакетами совместно используемой или закрытой.
 
-## <a name="client-connections"></a>Клиентские соединения
+## <a name="client-connections"></a>Клиентские подключения
 
-На клиентской рабочей станции может быть [клиент Microsoft R](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) или [Microsoft Server обучения машины](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) (специалисты по анализу данных часто используют свободного developer edition) в той же сети.
+На клиентской рабочей станции может быть [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) или [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) (специалисты по анализу данных часто используют бесплатную developer edition) в той же сети.
 
-При вызове функций пакета управления с удаленного клиента R, необходимо создать объект контекста вычислений во-первых, с помощью [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) функции. После этого для каждой функции управления пакета, которая используется, передайте контекст вычислений в качестве аргумента.
+При вызове функции управления пакетами из удаленного клиента R, сначала необходимо создать объект контекста вычислений, с помощью [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) функции. После этого для каждой функции управления пакета, который можно использовать, передайте контекст вычислений в качестве аргумента.
 
-Удостоверение пользователя обычно указывается при настройке контекст вычислений. Если не указать имя пользователя и пароль при создании контекста вычислений, используется идентификатор пользователя, выполняющего этот код R.
+При задании контекста вычислений обычно указаны учетные данные пользователя. Если вы не укажете имя пользователя и пароль при создании контекста вычислений, используется удостоверение пользователя, запустившего код R.
 
-1. Из командной строки R необходимо определите строку соединения для экземпляра и базы данных.
-2. Используйте [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) конструктор, чтобы определить контекст вычислений SQL Server с помощью строки подключения.
+1. Из командной строки R необходимо определите строку подключения к экземпляру и базе данных.
+2. Используйте [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) конструктор, чтобы определить контекст вычислений SQL Server, с помощью строки подключения.
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
     ```
-3. Создайте список пакетов, который вы хотите установить и сохраните список в строковой переменной.
+3. Создайте список из пакетов, которые вы хотите установить и сохранить список в строковой переменной.
 
     ```R
     packageList <- c("e1071", "mice")
     ```
 
-4. Вызовите [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) и передать в контексте вычислений и строковая переменная, содержащая имена пакетов.
+4. Вызовите [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) и передать контекст вычислений и строковая переменная, содержащая имена пакетов.
 
     ```R
     rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)
     ```
 
-    Если зависимые пакеты не требуются, они также будут установлены, при условии, что подключение к Интернету на клиенте.
+    Если требуются зависимые пакеты, они установлены, при условии, что подключение к Интернету доступен на клиенте.
     
     Пакеты устанавливаются с использованием учетных данных пользователя, выполняющего соединение, в области по умолчанию для этого пользователя.
 
-## <a name="call-package-management-functions-in-stored-procedures"></a>Вызов функций пакета управления в хранимых процедурах
+## <a name="call-package-management-functions-in-stored-procedures"></a>Вызов функции управления пакетами в хранимых процедурах
 
-Камера запуск функций пакета управления внутри `sp_execute_external_script`. При этом выполняется функция, используя контекст безопасности вызывающего объекта хранимой процедуры.
+Камера на выполнение функций пакета управления внутри `sp_execute_external_script`. После этого, выполняется функция, используя контекст безопасности вызывающего объекта хранимой процедуры.
 
 ## <a name="examples"></a>Примеры
 
-В этом разделе приведены примеры использования этих функций с удаленного клиента при подключении к экземпляру SQL Server или базы данных в контексте.
+В этом разделе приведены примеры использования этих функций с удаленного клиента при подключении к экземпляру SQL Server или базу данных в качестве контекста вычисления.
 
-Все примеры необходимо указать строку подключения или контекст вычислений, в которой требуется строка подключения. Этот пример показывает один из способов создания контекста вычислений для SQL Server:
+Все примеры необходимо указать строку подключения или контекст вычислений, который требуется строка подключения. В этом примере описывается один из способов создания контекста вычислений для SQL Server:
 
 ```R
 instance_name <- "computer-name/instance-name";
@@ -97,7 +97,7 @@ connString <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", da
 sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOutput = sqlConsoleOutput, numTasks = 4);
 ```
 
-В зависимости от того, где расположен сервер и модель безопасности может потребоваться предоставить спецификацию домена и подсети в строке подключения или используйте имя входа SQL. Например:
+Зависимости от того, где расположен сервер и модель безопасности может потребоваться предоставить спецификацию домена и подсети, в строке подключения или используйте имя входа SQL. Пример:
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
@@ -105,7 +105,7 @@ connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Fi
 
 ### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>Получить путь к пакету в удаленном контексте вычислений SQL Server
 
-В этом примере возвращает путь для **RevoScaleR** пакет в контексте вычислений `sqlcc`.
+В этом примере извлекаются пути для **RevoScaleR** пакет в контексте вычислений `sqlcc`.
 
 ```R
 sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
@@ -114,21 +114,21 @@ print(sqlPackagePaths)
 
 **Результаты**
 
-«C:/Program файлы или Microsoft SQL Server/MSSQL14. MSSQLSERVER/R_SERVICES/библиотека/RevoScaleR»
+«C:/Program файлы или Microsoft SQL Server/MSSQL14. MSSQLSERVER/R_SERVICES/library/RevoScaleR»
 
 > [!TIP]
-> Если включен параметр для просмотра выходных данных консоли SQL может появиться сообщения об изменении состояния из функции, которая предшествует `print` инструкции. После завершения тестирования кода, установите `consoleOutput` значение FALSE в конструкторе контекст вычислений для устранения сообщения.
+> Если вы включили параметр, чтобы просмотреть выходные данные консоли SQL, вы можете получать сообщения о состоянии от функции, которая предшествует `print` инструкции. После завершения тестирования кода, задать `consoleOutput` значение FALSE в конструкторе контекста вычислений, чтобы исключить сообщения.
 
 ### <a name="get-locations-for-multiple-packages"></a>Получение расположений для нескольких пакетов
 
-Следующий пример получает пути для **RevoScaleR** и **решетки** пакетов в контексте вычислений, `sqlcc`. Чтобы получить сведения о нескольких пакетов, передайте строку вектор, содержащий имена пакетов.
+Следующий пример возвращает пути для **RevoScaleR** и **lattice** пакетов в контексте вычислений, `sqlcc`. Чтобы получить сведения о нескольких пакетах, передайте строковый вектор, содержащий имена пакетов.
 
 ```R
 packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlcc)
 print(packagePaths)
 ```
 
-### <a name="get-package-versions-on-a-remote-compute-context"></a>Получение версии пакетов в контексте удаленного вычислений.
+### <a name="get-package-versions-on-a-remote-compute-context"></a>Получение версий пакета в контексте удаленных вычислений
 
 Выполните следующую команду из консоли R: получить номер сборки и номера версий для пакетов, установленных в контексте вычислений, *sqlServer*.
 
@@ -146,7 +146,7 @@ sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), co
 
 ### <a name="install-a-package-on-sql-server"></a>Установка пакета в SQL Server
 
-В этом примере устанавливается **прогноз** пакет и его зависимости в контексте вычислений.
+В этом примере устанавливается **прогноз** пакет и его зависимости в качестве контекста вычисления.
 
   ```R
   pkgs <- c("forecast")
@@ -155,7 +155,7 @@ sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), co
 
 ### <a name="remove-a-package-from-sql-server"></a>Удаление пакета из SQL Server
 
-В этом примере удаляется **прогноз** пакет и его зависимости от контекста вычислений.
+В этом примере удаляется **прогноз** пакет и его зависимости из контекста вычислений.
 
   ```R
   pkgs <- c("forecast")
@@ -164,7 +164,7 @@ sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), co
 
 ### <a name="synchronize-packages-between-database-and-file-system"></a>Синхронизация пакетов между системой базы данных и файла
 
-В следующем примере проверяется в базе данных **TestDB**и определяет, установлены ли все пакеты в файловой системе. Если отсутствуют некоторые пакеты, они устанавливаются в файловой системе.
+В следующем примере проверяется базе **TestDB**и определяет, установлены ли все пакеты в файловой системе. Если некоторые пакеты отсутствуют, они устанавливаются в файловой системе.
 
 ```R
 # Instantiate the compute context
@@ -175,11 +175,11 @@ computeContext <- RxInSqlServer(connectionString = connectionString )
 rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 ```
 
-Синхронизация пакета работает на отдельных баз данных и на пользователя. Дополнительные сведения см. в разделе [синхронизацию пакета R для SQL Server](../r/package-install-uninstall-and-sync.md).
+Пакет синхронизация работает на отдельных баз данных и на пользователя. Дополнительные сведения см. в разделе [синхронизацию пакета R для SQL Server](../r/package-install-uninstall-and-sync.md).
 
-### <a name="use-a-stored-procedure-to-list-packages-in-sql-server"></a>Использование хранимой процедуры, чтобы вывести список пакетов в SQL Server
+### <a name="use-a-stored-procedure-to-list-packages-in-sql-server"></a>Используйте хранимую процедуру, чтобы вывести список пакетов в SQL Server
 
-Выполните следующую команду из среды Management Studio или другое средство, которое поддерживает T-SQL, чтобы получить список установленных пакетов в текущем экземпляре, с помощью `rxInstalledPackages` в хранимой процедуре.
+Выполните следующую команду из Management Studio или другое средство, которое поддерживает T-SQL, чтобы получить список установленных пакетов в текущем экземпляре, с помощью `rxInstalledPackages` в хранимой процедуре.
 
 ```SQL
 EXEC sp_execute_external_script 
@@ -190,7 +190,7 @@ EXEC sp_execute_external_script
     '
 ```
 
-`rxSqlLibPaths` Функцию можно использовать для определения активных библиотека, используемая службами SQL Server машины обучения. Этот скрипт может возвращать только путь к библиотеке для текущего сервера. 
+`rxSqlLibPaths` Функция может использоваться для определения активных библиотеки, используемой службы машинного обучения SQL Server. Этот сценарий может возвращать только путь к библиотеке для выбранного сервера. 
 
 ```SQL
 declare @instance_name nvarchar(100) = @@SERVERNAME, @database_name nvarchar(128) = db_name();
@@ -211,5 +211,5 @@ exec sp_execute_external_script
 
 + [Включение удаленного управления пакетами R](r-package-how-to-enable-or-disable.md)
 + [Синхронизация пакетов R](package-install-uninstall-and-sync.md)
-+ [Советы по установке пакетов r.](packages-installed-in-user-libraries.md)
++ [Советы по установке пакетов R](packages-installed-in-user-libraries.md)
 + [Пакеты по умолчанию](installing-and-managing-r-packages.md)

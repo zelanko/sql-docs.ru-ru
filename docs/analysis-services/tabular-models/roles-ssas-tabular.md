@@ -1,6 +1,6 @@
 ---
 title: Роли | Документация Майкрософт
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981536"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975693"
 ---
 # <a name="roles"></a>Роли
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   В табличной модели роли определяют разрешения члена для модели. Члены роли могут выполнять с моделью действия, заданные в разрешении роли. Роли, которым заданы разрешения на чтение, также могут обеспечивать дополнительную защиту на уровне строк с помощью фильтров уровня строк. 
   
  Для SQL Server Analysis Services роли содержат участников пользователей, имя пользователя Windows или группы Windows и разрешения (чтение, процесс, администратор). Для служб Azure Analysis Services пользователи должны находиться в Azure Active Directory и имена пользователей и групп, указанных необходимо использовать адрес электронной почты организации или имя участника-пользователя. 
-  
+
+> [!IMPORTANT]  
+>  При использовании SSDT для создания ролей и добавьте пользователей организации к табличной модели проекта, который будет развернут в Azure Analysis Services, используйте [интегрированной рабочей области](workspace-database-ssas-tabular.md).
+
 > [!IMPORTANT]  
 >  Чтобы пользователи могли подключаться к развернутой модели с помощью клиентского приложения для создания отчетов, необходимо создать хотя бы одну роль с по крайней мере разрешение, в который эти пользователи являются членами чтение.  
   

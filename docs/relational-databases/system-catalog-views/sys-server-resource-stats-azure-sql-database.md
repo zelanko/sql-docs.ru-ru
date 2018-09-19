@@ -24,12 +24,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 93bb9dd2e67879368522886013772196e08dc17e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a8f595c79a36581bb5a2ff1ce94591134fb546dd
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37095323"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563632"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "37095323"
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Время в формате UTC, с которой начинается 15 секундного интервала отчетности|  
 |end_time|**datetime**|Время в формате UTC, указывающее окончание 15 секундного интервала отчетности|
-|resource_type|Nvarchar(128)|Тип ресурса, для которого предоставляются метрики|
+|resource_type|nvarchar(128)|Тип ресурса, для которого предоставляются метрики|
 |имя_ресурса|nvarchar(128)|Имя ресурса.|
 |sku|nvarchar(128)|Уровень служб управляемого экземпляра экземпляра. Допустимы следующие значения: <br><ul><li>Общее назначение</li></ul><ul><li>Критические задачи для бизнеса</li></ul>|
 |hardware_generation|nvarchar(128)|Идентификатор поколения оборудования: Gen 4 или 5-го поколений|
@@ -59,7 +59,7 @@ ms.locfileid: "37095323"
 
  
 > [!TIP]  
->  Дополнительные сведения об этих ограничениях и уровней обслуживания см. в разделах [уровни служб управляемого экземпляра](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
+>  Дополнительные сведения об этих ограничениях и уровней обслуживания см. в разделах [уровни служб управляемого экземпляра](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
     
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к **master** базы данных.  
@@ -83,4 +83,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>См. также  
- [Управляемый экземпляр уровней служб](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [Управляемый экземпляр уровней служб](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)

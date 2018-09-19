@@ -18,12 +18,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 30865bcccb0085d1b01b61aaef826dc76f081169
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 781ab0fb027a16ab50235221c6118a93dfa53342
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36772089"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563621"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "36772089"
 |end_time|**datetime**|Время, по которому выполнение завершено, ошибкой или был отменен.|Значение NULL для текущих или в очереди рабочих ролей. В противном случае — больше, чем start_time.|  
 |total_elapsed_time|**int**|Общее время, затраченное на выполнение, в миллисекундах.|Больше или равно 0.<br /><br /> Если total_elapsed_time превышает максимальное значение для целого числа, total_elapsed_time будут продолжать максимальное значение. Это условие будет создавать предупреждение «превышено максимальное значение.»<br /><br /> Максимальное значение в миллисекундах соответствует 24,8 дня.|  
   
- Сведения о максимальное число строк, сохраняемых в этом представлении см. в разделе [максимальные значения представление системы](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9).  
+ Сведения о максимальное число строк, сохраняемых в этом представлении см. в разделе [максимальные значения представление системы](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9).  
   
 ## <a name="see-also"></a>См. также  
  [Системные представления &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

@@ -1,6 +1,6 @@
 ---
-title: Создание и управление ролями | Документы Microsoft
-ms.date: 05/07/2018
+title: Создание ролей и управление ими | Документация Майкрософт
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,17 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5d97cd04228b13d0f57d99b6f8808a955bba1bea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: daeef8b6d8b6953e33605816940f81ec04e0d5ab
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975673"
 ---
 # <a name="create-and-manage-roles"></a>Создание ролей и управление ими 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  В табличной модели роли определяют разрешения члена для модели. Роли определяются для проекта модели с помощью диалогового окна «Диспетчер ролей» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. В развернутой модели администраторы баз данных могут управлять ролями с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  В табличной модели роли определяют разрешения члена для модели. Роли определяются для проекта модели с помощью диалогового окна «Диспетчер ролей» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. 
+
+> [!IMPORTANT]
+> Если вы развертываете проект в Azure Analysis Services, используйте **интегрированной рабочей области** как вашей рабочей базе данных. Дополнительные сведения см. в разделе [база данных рабочей области](workspace-database-ssas-tabular.md).
   
- Задачи в этой статье описывается создание и управление ролями во время создания модели с помощью диалогового окна диспетчера ролей в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Сведения об управлении ролями в развернутой модели базы данных см. в разделе [табличной модели роли](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ В этой статье описывается, как создание и управление ролями во время создания модели с помощью диалогового окна диспетчера ролей в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Сведения об управлении ролями в развернутой модели базы данных, см. в разделе [роли табличных моделей](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ## <a name="tasks"></a>Задания  
  Создавать, изменять, копировать и удалять роли можно в диалоговом окне **Диспетчер ролей** . Чтобы открыть диалоговое окно **Диспетчер ролей** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], выберите в меню **Модель** пункт **Диспетчер ролей**.  
@@ -53,17 +57,17 @@ ms.lasthandoff: 05/10/2018
 7.  Чтобы добавить членов роли, перейдите на вкладку **Члены** и нажмите кнопку **Добавить**.  
   
     > [!NOTE]  
-    >  Членов роли также можно добавлять в развернутую модель с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [управление ролями с помощью среды SSMS](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md).  
+    >  Членов роли также можно добавлять в развернутую модель с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [управление ролями с помощью SSMS](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md).  
   
 8.  В диалоговом окне **Выбор пользователей или групп** введите объекты пользователя или группы Windows в качестве членов.  
   
 9. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Роли](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Перспективы](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Анализ в Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME, функция (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [Функция USERNAME (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
  [CUSTOMDATA, функция (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

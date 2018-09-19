@@ -1,7 +1,7 @@
 ---
 title: sys.elastic_pool_resource_stats (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a04b60738a48ddbe09db3eb8d7032d2f08b4ba9c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5f7f13ebb5699fc0fe2174e7ee1af9d6c44bcbfb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997986"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563270"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,8 @@ ms.locfileid: "37997986"
 |**max_worker_percent**|**Decimal(5,2)**|Максимальное количество одновременных рабочих ролей (запросов) в процентах от предела пула.|  
 |**max_session_percent**|**Decimal(5,2)**|Максимальное число одновременных сеансов в процентах от предела пула.|  
 |**elastic_pool_dtu_limit**|**int**|Текущее максимальное значение параметра DTU для этого пула эластичных БД в течение этого интервала.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|Значение для этого пула эластичных БД в мегабайтах во время этого интервала текущего размера хранилища эластичного пула.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Значение для этого пула эластичных БД в мегабайтах во время этого интервала текущего размера хранилища эластичного пула.|
+|**avg_allocated_storage_percent**|**Decimal(5,2)**|Процент пространства данных, выделенной с помощью всех баз данных в эластичном пуле.  Это отношение данных пространства, выделенного для данных максимальный размер для эластичного пула.  Дополнительные сведения см. в разделе: [пространства управление файлами в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>Примечания  
  Это представление существует в базе данных master логического сервера. Необходимо подключение к базе данных master, к запросу **sys.elastic_pool_resource_stats**.  

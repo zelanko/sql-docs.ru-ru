@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795663"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563750"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Обновление компонентов машинного обучения (R и Python) в экземплярах SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Интеграция R и Python в SQL Server содержит пакеты с открытым исходным кодом и корпорации Майкрософт. В разделе Стандартная обслуживания SQL Server, пакеты R и Python обновляются в соответствии со цикла выпуска SQL Server, с помощью исправления для существующих пакетов в текущей версии. 
 
-Большинство специалистов по анализу данных, привыкшему работать с более новые пакеты, как только они станут доступны. Для служб SQL Server 2017 машинного обучения (в базе данных) и SQL Server 2016 R Services (в базе данных), можно получить более новые версии R и Python, изменив *привязки* обслуживания SQL Server для [Microsoft Сервер машинного обучения](https://docs.microsoft.com/en-us/machine-learning-server/index) и [политику поддержки современного жизненного цикла](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+Большинство специалистов по анализу данных, привыкшему работать с более новые пакеты, как только они станут доступны. Для служб SQL Server 2017 машинного обучения (в базе данных) и SQL Server 2016 R Services (в базе данных), можно получить более новые версии R и Python, изменив *привязки* обслуживания SQL Server для [Microsoft Сервер машинного обучения](https://docs.microsoft.com/machine-learning-server/index) и [политику поддержки современного жизненного цикла](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
 Привязки не приводит к изменению основные принципы установки: интеграции R и Python по-прежнему является частью экземпляр ядра СУБД, лицензирования, не изменяется (не дополнительные затраты, связанные с привязкой), а также политики поддержки SQL Server по-прежнему содержат для базы данных модуль. Но повторная привязка приводит к изменению как обслуживаются пакетов R и Python. В оставшейся части этой статьи объясняется механизм привязки и принципах ее работы для каждой версии SQL Server.
 
