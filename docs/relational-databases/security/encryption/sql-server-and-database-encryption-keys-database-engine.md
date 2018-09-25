@@ -3,7 +3,7 @@ title: Ключи шифрования базы данных и SQL Server (яд
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 919cb3039d648c54241526a0c0686bd5f55942df
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8e3b193b9488cfa0c058c92fe63af0e251c2abcf
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695335"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013751"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Ключи шифрования базы данных и SQL Server (компонент Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "35695335"
  [Расширенное управление ключами (EKM)](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
  Объясняется, как использовать сторонние системы управления ключами с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Создание резервной копии главного ключа службы](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
   
  [Восстановление главного ключа службы](../../../relational-databases/security/encryption/restore-the-service-master-key.md)  

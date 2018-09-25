@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34b286651d7fe2fa3683b746d87a461492fdd3e3
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5da18acc813012a6dcca38912cf1c0ee2f6f32b8
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069157"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049694"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Кучи (таблицы без кластеризованных индексов)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ ms.locfileid: "43069157"
 
   
 ## <a name="related-content"></a>См. также  
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
-  
- [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)  
-  
- [Описания кластеризованных и некластеризованных индексов](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
+[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)     
+[DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)     
+[Описание кластеризованных и некластеризованных индексов](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)     
   
   

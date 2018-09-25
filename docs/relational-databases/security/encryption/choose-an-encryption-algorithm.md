@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0ea16b21dcdbf6abe6d92877b241006f5fd629f6
+ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096562"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493775"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Выбор алгоритма шифрования
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "43096562"
 -   Использование длинных ключей, как правило, дает более надежные результаты, чем шифрование с помощью коротких ключей.  
   
 -   Асимметричное шифрование медленнее симметричного.  
-  
--   Блочные шифры с длинными ключами надежнее поточных шифров.  
   
 -   Длинные сложные пароли надежнее, чем короткие пароли.  
 

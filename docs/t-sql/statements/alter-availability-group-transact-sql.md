@@ -26,12 +26,12 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecced10240ac5cc0f14ca64a2f2e2582edb1c01e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8cb006fec0248d22f5ec49e166e767787044a345
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38043291"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713876"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS   
    | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
@@ -87,17 +87,18 @@ ALTER AVAILABILITY GROUP group_name
     )   
   
   <add_replica_option>::=  
-       SEEDING_MODE = { AUTOMATIC | MANUAL }   
+       SEEDING_MODE = { AUTOMATIC | MANUAL }  
      | BACKUP_PRIORITY = n  
      | SECONDARY_ROLE ( {   
-          ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL }   
-        | READ_ONLY_ROUTING_URL = 'TCP://system-address:port'   
-          } )  
+            [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
+     } )  
      | PRIMARY_ROLE ( {   
-          ALLOW_CONNECTIONS = { READ_WRITE | ALL }   
-        | READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE }   
-          } )  
-     | SESSION_TIMEOUT = seconds  
+            [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+     } )  
+     | SESSION_TIMEOUT = integer
   
 <modify_replica_spec>::=  
   <server_instance> WITH  
@@ -130,7 +131,7 @@ ALTER AVAILABILITY GROUP group_name
 <modify_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER_URL = 'TCP://system-address:port'  
+       LISTENER = 'TCP://system-address:port'  
        | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
        | SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
@@ -474,15 +475,15 @@ ALTER AVAILABILITY GROUP group_name
 >  NetBIOS распознает только первые 15 символов в dns_name. При наличии двух кластеров WSFC, которые управляются одной службой Active Directory, и попытке создать в обоих кластерах прослушивателей группы доступности с именами, содержащими более 15 символов, и одинаковым префиксом из 15 символов возникнет ошибка, указывающая, что не удалось подключиться к ресурсу с именем виртуальной сети. Дополнительные сведения о правилах именования префиксов для имен DNS см. в разделе [Присвоение имен доменов](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  JOIN AVAILABILITY GROUP ON  
- Присоединение к *распределенной группе доступности*. Когда вы создаете распределенную группу доступности, группа доступности в кластере, где она создана, является первичной группой доступности. При выполнении JOIN группа доступности на экземпляре локального сервера является вторичной группы доступности.  
+ Присоединение к *распределенной группе доступности*. Когда вы создаете распределенную группу доступности, группа доступности в кластере, где она создана, является первичной группой доступности. Группа доступности, которая соединяется с распределенной группой доступности, является вторичной группой доступности.  
   
  \<ag_name>  
  Указывает имя группы доступности, составляющей половину распределенной группы доступности.  
   
- LISTENER_URL **='** TCP **://***system-address***:***port***'**  
+ LISTENER **='** TCP **://***system-address***:***port***'**  
  Указывает URL-адрес пути для прослушивателя, связанного с группой доступности.  
   
- Требуется предложение LISTENER_URL.  
+ Требуется предложение LISTENER.  
   
  **'** TCP **://***system-address***:***port***'**  
  Указывает URL-адрес для прослушивателя, связанного с группой доступности. Параметры URL-адреса:  
@@ -491,7 +492,7 @@ ALTER AVAILABILITY GROUP group_name
  Это строка, такая как имя системы, полное доменное имя или IP-адрес, однозначно идентифицирующая прослушивателя.  
   
  *port*  
- Номер порта, связанный с конечной точкой зеркального отображения группы доступности. Обратите внимание, что это не порт для клиентского подключения, который настроен на прослушивателе.  
+ Номер порта, связанный с конечной точкой зеркального отображения группы доступности. Это не порт прослушивателя.  
   
  AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  Указывает, должна ли первичная реплика ждать подтверждения фиксации (записи) записей журнала на диск от вторичной группы доступности перед тем, как фиксировать транзакцию в указанной базе данных.  
