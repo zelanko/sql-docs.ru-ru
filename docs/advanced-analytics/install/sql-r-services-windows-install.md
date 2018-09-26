@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4df8391974214452c6b8b3226c3c9a845e4b556b
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: 92d477434460c9395342e1a522173a301b5a0ad8
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311684"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713306"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Установка служб SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "44311684"
     > [!TIP]
     > Можно загрузить и установить соответствующую версию на этой странице: [скачать SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > Можно также попробовать предварительную версию [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is), который поддерживает административных задач и запросов к SQL Server.
+    > Можно также попробовать предварительную версию [Azure Data Studio](../../azure-data-studio/what-is.md), который поддерживает административных задач и запросов к SQL Server.
   
 2. Подключитесь к экземпляру, где установлены службы машинного обучения, щелкните **новый запрос** откройте окно запроса и выполните следующую команду:
 

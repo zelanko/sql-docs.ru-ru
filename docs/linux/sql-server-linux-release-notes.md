@@ -12,18 +12,21 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: bcc1b86da4da46575279b373d288800e5ea6a35c
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 291e38a59212a179683ec0c3eb8ff661a5243fcc
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381182"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049714"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Следующие заметки о выпуске применяются к SQL Server 2017 на платформе Linux. В этой статье разбивается на разделы для каждого выпуска. Выпуск общедоступной версии подробные поддерживаемости и известные проблемы в списке. Каждый пакет обновления (CU) или выпуска для общего распространения (GDR) имеет ссылки поддержки статьи, описывающие CU изменения, а также ссылки на Linux, файлы для загрузки пакета.
+
+> [!TIP]
+> Эти заметки о выпуске предназначены специально для выпусков SQL Server 2017. Дополнительные сведения о новом выпуске предварительной версии SQL Server 2019 см. в разделе [заметки о выпуске для предварительной версии SQL Server 2019 в Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15).
 
 ## <a name="supported-platforms"></a>Поддерживаемые платформы
 
@@ -47,6 +50,7 @@ ms.locfileid: "43381182"
 
 | Выпуск               | Версия       | Дата выпуска |
 |-----------------------|---------------|--------------|
+| [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
 | [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
@@ -64,7 +68,7 @@ ms.locfileid: "43381182"
 
 ## <a id="cuinstall"></a> Установка обновлений
 
-Если вы настроили хранилище накопительное обновление (**mssql-server-2017**), то вы получите последнюю версию пакетов и накопительным Обновлением SQL Server, при выполнении новых установок. Накопительное обновление репозитория по умолчанию для всех статей пакет установки для SQL Server в Linux. Если вы настроили репозиторий GDR (**mssql-server-2017-gdr**), вы получите только критические обновления, выпущенные с момента выхода общедоступной версии. Если вам требуется контейнера Docker и накопительным Обновлением обновления GDR, см. официальные образы для [Microsoft SQL Server в Linux для подсистемы Docker](http://hub.docker.com/r/microsoft/mssql-server-linux/). Дополнительные сведения о конфигурации хранилища, см. в разделе [Настройка репозиториев для SQL Server в Linux](sql-server-linux-change-repo.md).
+Если вы настроили хранилище накопительное обновление (**mssql-server-2017**), то вы получите последнюю версию пакетов и накопительным Обновлением SQL Server, при выполнении новых установок. Накопительное обновление репозитория по умолчанию для всех статей пакет установки для SQL Server в Linux. Если вы настроили репозиторий GDR (**mssql-server-2017-gdr**), вы получите только критические обновления, выпущенные с момента выхода общедоступной версии. Если вам требуется контейнера Docker и накопительным Обновлением обновления GDR, см. официальные образы для [Microsoft SQL Server в Linux для подсистемы Docker](https://hub.docker.com/r/microsoft/mssql-server). Дополнительные сведения о конфигурации хранилища, см. в разделе [Настройка репозиториев для SQL Server в Linux](sql-server-linux-change-repo.md).
 
 При обновлении существующих пакетов SQL Server, выполните команду соответствующие обновления для каждого пакета получить новейший пакет CU. Инструкции по обновлению, определенных для каждого пакета см. следующие руководства по установке:
 
@@ -72,6 +76,20 @@ ms.locfileid: "43381182"
 - [Установите пакет Full-text Search](sql-server-linux-setup-full-text-search.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Включить агент SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU11"></a> CU11 (сентября 2018 г.)
+
+Это накопительное обновление 11 (CU11) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3038.14. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4462262 ](https://support.microsoft.com/en-us/help/4462262).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для установки пакетов вручную или автономном режиме вы можете скачать пакеты RPM и Debian с информацией в следующей таблице:
+
+| Пакет | Версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 14.0.3038.14-2 | [Пакет RPM ядра](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[Пакет RPM поиска полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm)</br>[Пакет служб SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Пакет SLES RPM | 14.0.3038.14-2 | [пакет RPM ядра MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[Пакет RPM поиска полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
+| Пакет Debian Ubuntu 16.04 | 14.0.3038.14-2 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3038.14-2_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU10"></a> CU10 (августа 2018 г.)
 

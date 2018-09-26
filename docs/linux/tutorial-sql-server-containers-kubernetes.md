@@ -1,6 +1,6 @@
 ---
-title: Настройка SQL Server контейнера в Kubernetes для обеспечения высокой доступности | Документация Майкрософт
-description: Этом руководстве показано, как развернуть решение высокой доступности SQL Server с помощью Kubernetes в службе контейнеров Azure.
+title: Развертывание контейнера SQL Server в Kubernetes с помощью службы Azure Kubernetes (AKS) | Документация Майкрософт
+description: Этом руководстве показано, как развернуть решение высокой доступности SQL Server с помощью Kubernetes в службе Azure Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -11,20 +11,20 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 5c6e794fa2e76a0fec58d767d14e9ac73fb72534
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fba598abb0431d2e9a80b0cdc0976f72c6eadc15
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980126"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712686"
 ---
-# <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Настройка контейнера SQL Server в Kubernetes для высокого уровня доступности
+# <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью службы Azure Kubernetes (AKS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Узнайте, как настроить экземпляр SQL Server на платформе Kubernetes в службе контейнеров Azure (AKS) в постоянное хранилище для обеспечения высокой доступности (HA). Решение обеспечивает устойчивость. Экземпляр SQL Server в случае сбоя Kubernetes автоматически повторно создает ее в новый модуль. AKS обеспечивает устойчивость к сбоям узла Kubernetes. 
+Узнайте, как настроить экземпляр SQL Server на платформе Kubernetes в службе Kubernetes Azure (AKS) в постоянное хранилище для обеспечения высокой доступности (HA). Решение обеспечивает устойчивость. Экземпляр SQL Server в случае сбоя Kubernetes автоматически повторно создает ее в новый модуль. Kubernetes предоставляет также устойчивость к сбоям узла.
 
-Этот учебник демонстрирует настройку высокой доступности экземпляра SQL Server в контейнеры, которые используют AKS. 
+Этот учебник демонстрирует настройку высокой доступности экземпляра SQL Server в контейнере в AKS. Вы также можете [создайте группу доступности SQL Server на платформе Kubernetes](tutorial-sql-server-ag-kubernetes.md). Чтобы сравнить две различные решения Kubernetes, см. в разделе [высокий уровень доступности для SQL Server контейнеров](sql-server-linux-container-ha-overview.md).
 
 > [!div class="checklist"]
 > * Создать пароль SA
@@ -33,7 +33,7 @@ ms.locfileid: "38980126"
 > * Подключение с помощью SQL Server Management Studio (SSMS)
 > * Проверка восстановления
 
-## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>Высокая ДОСТУПНОСТЬ решение с использованием Kubernetes, запущенный в службе контейнеров Azure
+## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Решения высокой ДОСТУПНОСТИ на платформе Kubernetes, запущенные в службе Azure Kubernetes
 
 Kubernetes 1.6 и более поздних версий имеется поддержка [классы хранения](http://kubernetes.io/docs/concepts/storage/storage-classes/), [утверждения постоянного тома](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)и [тип тома дисков Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Можно создать и управлять экземплярами SQL Server непосредственно на платформе Kubernetes. Пример в этой статье показано, как создать [развертывания](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) для достижения высокого уровня доступности конфигурации, аналогичную экземпляра отказоустойчивого кластера общий диск. В этой конфигурации Kubernetes играет роль оркестратора кластера. При сбое экземпляру SQL Server в контейнере, orchestrator обеспечивает начальную загрузку другой экземпляр контейнера, который подключается к тем же постоянное хранилище.
 
@@ -43,11 +43,11 @@ Kubernetes 1.6 и более поздних версий имеется подд
 
 На следующей схеме `mssql-server` сбой контейнер. Как orchestrator Kubernetes гарантирует правильное количество работоспособных экземпляров в реплике задать и запускает контейнер в соответствии с конфигурацией. Оркестратор начинает новый pod на одном узле, и `mssql-server` повторно подключается к тем же постоянное хранилище. Служба подключается к создан повторно `mssql-server`.
 
-![Схема кластера Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Схема кластера Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 На следующей схеме для узла, на котором размещается `mssql-server` сбой контейнер. Оркестратор начинает новый pod на другом узле, и `mssql-server` повторно подключается к тем же постоянное хранилище. Служба подключается к создан повторно `mssql-server`.
 
-![Схема кластера Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Схема кластера Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -176,7 +176,7 @@ Kubernetes 1.6 и более поздних версий имеется подд
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: microsoft/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server/mssql-server-linux
            ports:
            - containerPort: 1433
            env:

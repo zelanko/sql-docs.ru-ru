@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 3542ee739d2c5e47a2203b8c2eed9d243f0cb5d8
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a8294523e2e6b74ff461fba6d19287f63a00ee83
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086476"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712116"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Массовое копирование данных с помощью программы bcp для SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье показано, как использовать [bcp](../tools/bcp-utility.md) программа командной строки для массового копирования данных между экземпляром SQL Server 2017 в Linux и файлом данных в указанном пользователем формате.
+В этой статье показано, как использовать [bcp](../tools/bcp-utility.md) программа командной строки для массового копирования данных между экземпляром SQL Server в Linux и файлом данных в указанном пользователем формате.
 
 Можно использовать `bcp` выполнять импорт большого количества строк в таблицы SQL Server или экспорт данных из таблиц SQL Server в файлы данных. За исключением случаев использования с параметром queryout `bcp` не требует знания языка Transact-SQL. `bcp` Программа работает с Microsoft SQL Server локально или в облаке, в Linux, Windows или Docker и базы данных SQL Azure и хранилище данных SQL Azure.
 

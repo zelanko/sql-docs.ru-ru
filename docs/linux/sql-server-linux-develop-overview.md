@@ -12,18 +12,18 @@ ms.custom: sql-linux
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 317c2ea2064f7ffc286671a8fff7eef2f8149ee7
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c50b0ad1798f161d945a54e0e9a080a04a6eca05
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084927"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712976"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Как приступить к разработке приложений для SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Можно создавать приложения, подключения и использования SQL Server 2017 на платформе Linux из различных языков программирования, например C#, Java, Node.js, PHP, Python, Ruby и C++. Можно также использовать популярные веб-платформ и платформ объектно-реляционного сопоставления (ORM).
+Можно создавать приложения, подключения и использовании SQL Server в Linux из различных языков программирования, например C#, Java, Node.js, PHP, Python, Ruby и C++. Можно также использовать популярные веб-платформ и платформ объектно-реляционного сопоставления (ORM).
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
@@ -39,7 +39,7 @@ ms.locfileid: "39084927"
 - Испытайте образцы кода.
 
 > [!TIP]
-> Если вы хотите разрабатывать для SQL Server 2017 в Docker, взгляните на **macOS** учебники.
+> Если вы хотите разрабатывать для SQL Server в Docker, взгляните на **macOS** учебники.
 
 ## <a name="create-new-applications"></a>Создание новых приложений
 
@@ -47,11 +47,11 @@ ms.locfileid: "39084927"
 
 ## <a name="use-existing-applications"></a>Использовать существующие приложения
 
-Если существующее приложение базы данных, можно просто изменить строку соединения для целевого SQL Server 2017 в Linux. Убедитесь в том прочитать о [известные проблемы](sql-server-linux-release-notes.md) в SQL Server 2017 в Linux.
+Если у вас есть существующее приложение базы данных, можно просто изменить строку соединения на целевом сервере SQL Server в Linux. Убедитесь в том прочитать о [известные проблемы](sql-server-linux-release-notes.md) в SQL Server в Linux.
 
 ## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>Используйте существующие средства SQL в Windows с помощью SQL Server в Linux
 
-Средства, которые в настоящее время запущены на Windows, таких как среда SSMS, SSDT и PowerShell, также работать с SQL Server 2017 в Linux. Несмотря на то, что они не выполняются в собственном коде в Linux, вы можете по-прежнему управлять удаленным экземплярам SQL Server в Linux. 
+Средства, которые в настоящее время запущены на Windows, таких как среда SSMS, SSDT и PowerShell, также работать с SQL Server в Linux. Несмотря на то, что они не выполняются в собственном коде в Linux, вы можете по-прежнему управлять удаленным экземплярам SQL Server в Linux. 
 
 См. Дополнительные сведения в следующих разделах:
 

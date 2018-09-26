@@ -12,20 +12,20 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: sql-linux
-ms.openlocfilehash: 72fe3a91c22fd773d921d7b2f1ecb17fef6c4795
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dc95b9372bb62ec184e7810a74c54ee269597812
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087376"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711926"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>Автоматизации миграции баз данных для Linux с помощью SQL Server Migration Assistant
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье рассматриваются [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) , поможет вам легко перенести базы данных SQL Server 2017 на платформе Linux из Microsoft Access, DB2, MySQL, Oracle и Sybase. SSMA — это приложение Windows, поэтому используйте SSMA, если используется компьютер Windows, который может подключиться к удаленному экземпляру SQL Server в Linux. 
+В этой статье рассматриваются [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) , поможет вам легко перенести базы данных в SQL Server на Linux из Microsoft Access, DB2, MySQL, Oracle и Sybase. SSMA — это приложение Windows, поэтому используйте SSMA, если используется компьютер Windows, который может подключиться к удаленному экземпляру SQL Server в Linux. 
 
-SSMA поддерживает широкий набор баз данных источника, включая Oracle, MySQL, Sybase, DB2 и Microsoft Access для SQL Server 2017 в Linux и позволяет автоматизировать задачи миграции, такие как:
+SSMA поддерживает широкий набор баз данных источника, включая Oracle, MySQL, Sybase, DB2 и Microsoft Access в SQL Server на Linux и позволяет автоматизировать задачи миграции, такие как:
 
 - Оценка вашей базы данных-источника
 - Преобразовать исходную схему для схемы Microsoft SQL Server
@@ -40,7 +40,7 @@ SSMA поддерживает широкий набор баз данных ис
 - [SSMA для Oracle](http://aka.ms/ssmafororacle)
 - [SSMA для Sybase ASE](http://aka.ms/ssmaforsybase) 
 
-Затем следует выполнить [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) для переноса базы данных-источника в SQL Server 2017 в Linux.
+Затем следует выполнить [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) для переноса базы данных-источника в SQL Server в Linux.
 
 ## <a name="see-also"></a>См. также
 - [Блог по миграции данных Майкрософт](http://blogs.msdn.microsoft.com/datamigration)

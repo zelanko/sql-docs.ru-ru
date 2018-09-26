@@ -8,28 +8,32 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0afdb02c578de92bc91c5f47e973148136ebd919
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 76087367c1ba24894989038fb6fc22427d8be77b
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892910"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712727"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Конфигурация службы панели запуска SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Отдельный [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] служба создается для экземпляра ядра базы данных, к которому вы добавили интеграции обучения (R или Python) машин SQL Server.
+Отдельный [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] служба создается для каждого экземпляра ядра базы данных, к которому вы добавили интеграции обучения (R или Python) машин SQL Server.
 
-## <a name="service-account-configuration"></a>Настройка учетной записи службы
+## <a name="account-permissions"></a>Разрешения учетной записи
 
 По умолчанию панель запуска SQL Server настроен для запуска под **NT Service\MSSQLLaunchpad**, которой предоставлены все необходимые разрешения для выполнения внешних скриптов. Удаление разрешений из этой учетной записи может привести к панели запуска не удается запустить или получить доступ к экземпляру SQL Server, где должны запускаться внешних скриптов.
 
-Ниже перечислены разрешения, необходимые для этой учетной записи. При изменении учетной записи службы, не забудьте указать **Локальная политика безопасности** приложения добавьте следующие разрешения:
+При изменении учетной записи службы, не забудьте указать **Локальная политика безопасности** приложения (**все приложения** > **средств администрирования Windows**  >  **Локальной политики безопасности**).
 
-+ Назначение квот памяти процессам (SeIncreaseQuotaPrivilege)
-+ Обход проходной проверки (SeChangeNotifyPrivilege)
-+ Вход в систему в качестве службы (SeServiceLogonRight)
-+ Замена токена уровня процесса (SeAssignPrimaryTokenPrivilege)
+В следующей таблице перечислены разрешения, необходимые для этой учетной записи.
+
+| Параметр групповой политики | Постоянное имя |
+|----------------------|---------------|
+| [Настройка квот памяти для процесса](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [Обход перекрестной проверки](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [Вход качестве службы](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [Замена токена уровня процесса](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 Дополнительные сведения о разрешениях, необходимых для запуска служб SQL Server, см. в разделе [Права доступа и права Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
@@ -37,9 +41,14 @@ ms.locfileid: "43892910"
 
 ## <a name="configuration-properties"></a>Свойства конфигурации
 
+Как правило нет причин для изменения конфигурации службы. Следующие свойства можно изменить учетную запись службы, количество внешних процессов (по умолчанию — 20), или пароль, сбросьте политику для рабочих учетных записей.
+
 1. Откройте [диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md). 
 
-2. Щелкните правой кнопкой мыши панель запуска SQL Server и выберите **свойства**.
+  + На начальной странице введите **MMC** для открытия консоли управления.
+  + На **файл** > **Add/Remove Snap-in**, переместите **диспетчер конфигурации SQL Server** из доступны для Выбранные оснастки.
+
+2. В диспетчер конфигурации SQL Server в службы SQL Server, щелкните правой кнопкой мыши панель запуска SQL Server и выберите **свойства**.
 
     + Чтобы изменить учетную запись службы, щелкните **вход в систему** вкладки.
 
@@ -48,7 +57,7 @@ ms.locfileid: "43892910"
 > [!Note]
 > В ранних версиях SQL Server 2016 R Services, можно изменить некоторые свойства службы, изменив [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] файла конфигурации. Этот файл больше не используется для изменения конфигурации. Диспетчер конфигурации SQL Server — это эффективный метод для изменения конфигурации службы, такие как учетная запись службы и число пользователей.
 
-#### <a name="debug-settings"></a>Параметры отладки
+## <a name="debug-settings"></a>Параметры отладки
 
 Некоторые свойства можно изменить только с помощью файла конфигурации панели запуска, который может быть полезен в случаях, например, отладка. Файл конфигурации создается во время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки и по умолчанию сохраняется как обычный текстовый файл в следующем расположении: `<instance path>\binn\rlauncher.config`
 

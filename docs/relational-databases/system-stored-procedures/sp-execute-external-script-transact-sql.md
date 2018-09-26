@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/14/2018
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -25,21 +25,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e866f5a9856fe1308bc5233432e053b18d207f7
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: f49cf4c10ccd16fe229b1d6a5f4089b8d9094f67
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118322"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712847"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Выполняет скрипт, предложенный в качестве аргумента во внешнее расположение. Скрипт должен быть написан на языке поддерживаемых и зарегистрированных (R или Python). Для выполнения **sp_execute_external_script**, необходимо сначала включить внешние скрипты с помощью инструкции, `sp_configure 'external scripts enabled', 1;`.  
+Выполняет скрипт, указанные в качестве входного аргумента в процедуру. Сценарий выполняется в [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Скрипт должен быть написан на языке поддерживаемых и зарегистрированных в ядре СУБД наличие по крайней мере одно расширение: [ **R**](../../advanced-analytics/concepts/extension-r.md), [ **Python** ](../../advanced-analytics/concepts/extension-python.md) , или [ **Java** (в SQL Server 2019 только предварительная версия)](../../advanced-analytics/java/extension-java.md). 
+
+Для выполнения **sp_execute_external_script**, необходимо сначала включить внешние скрипты с помощью инструкции, `sp_configure 'external scripts enabled', 1;`.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
+> [!Note]
+> Машинного обучения (R и Python) и программирования расширений устанавливаются как дополнительный компонент для экземпляра компонента database engine. Поддержка определенных расширений различаются в зависимости от версии SQL Server.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax"></a>Синтаксис
 
 ```
@@ -47,70 +53,98 @@ sp_execute_external_script
     @language = N'language',   
     @script = N'script'  
     [ , @input_data_1 = N'input_data_1' ]   
-    [ , @input_data_1_name = N'input_data_1_name' ]   
+    [ , @input_data_1_name = N'input_data_1_name' ]  
+    [ , @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]    
+    [ , @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]  
     [ , @output_data_1_name = N'output_data_1_name' ]  
     [ , @parallel = 0 | 1 ]  
     [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
 ```
+::: moniker-end
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-2017-and-earlier"></a>Синтаксис для 2017 и более ранних версий
+
+```
+sp_execute_external_script   
+    @language = N'language',   
+    @script = N'script'  
+    [ , @input_data_1 = N'input_data_1' ]   
+    [ , @input_data_1_name = N'input_data_1_name' ]  
+    [ , @output_data_1_name = N'output_data_1_name' ]  
+    [ , @parallel = 0 | 1 ]  
+    [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
+    [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
+```
+::: moniker-end
 
 ## <a name="arguments"></a>Аргументы
- \@Language = N'*языка*"  
- Указывает язык скрипта. *Язык* — **sysname**.  
+ **@language** = N "*языка*"  
+ Указывает язык скрипта. *Язык* — **sysname**.  В зависимости от версии SQL Server допустимые значения: Java (Предварительная версия SQL Server 2019), R (SQL Server 2016 и более поздние версии) и Python (SQL Server 2017 и более поздние версии). 
+  
+ **@script** = N "*скрипт*" внешний язык скрипта, указанных в качестве входных литералом или переменной. *сценарий* — **nvarchar(max)**.  
 
- Допустимые значения: `Python` или `R`. 
-  
- \@сценарий = N'*скрипт*"  
- Скрипт внешним языком, который указан в качестве входных данных литералом или переменной. *сценарий* — **nvarchar(max)**.  
-  
- [ \@input_data_1_name = N'*input_data_1_name*"]  
- Задает имя переменной, которая используется для представления запроса определяется \@input_data_1. Тип данных переменной в внешних скриптов зависит от языка. В случае R Входная переменная — это блок данных. В случае Python входные данные должны быть табличных. *input_data_1_name* — **sysname**.  
-  
- Значение по умолчанию — `InputDataSet`.  
-  
- [ \@input_data_1 = N'*input_data_1*"]  
+  [ **@input_data_1** = N'*input_data_1*"]  
  Указывает входные данные, используемые внешних скриптов в виде [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса. Тип данных *input_data_1* — **nvarchar(max)**.
-  
- [ \@output_data_1_name = N'*output_data_1_name*"]  
- Указывает имя переменной в внешнего скрипта, содержащий данные, возвращаемые для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после завершения вызова хранимой процедуры. Тип данных переменной в внешних скриптов зависит от языка. R выходные данные должны быть кадр данных. Python выходные данные должны быть во фрейм данных pandas. *output_data_1_name* — **sysname**.  
-  
- Значение по умолчанию — «OutputDataSet».  
-  
- [ \@параллельно = 0 | 1]
 
- Включение параллельного выполнения R-скриптов, задав `@parallel` параметр 1. Значение по умолчанию для этого параметра равно 0 (без параллелизма).  
+ [ **@input_data_1_name** = N'*input_data_1_name*"]  
+ Задает имя переменной, которая используется для представления запроса определяется @input_data_1. Тип данных переменной в внешних скриптов зависит от языка. В случае R Входная переменная — это блок данных. В случае Python входные данные должны быть табличных. *input_data_1_name* — **sysname**.  Значение по умолчанию — *InputDataSet*.  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  [ **@input_data_1_order_by_columns** = N'*input_data_1_order_by_columns*"]  
+ Применяется только к SQL Server 2019 и используется для построения моделей каждого раздела. Задает имя столбца, используемого для сортировки результирующего набора, например по названию продукта. Тип данных переменной в внешних скриптов зависит от языка. В случае R Входная переменная — это блок данных. В случае Python входные данные должны быть табличных.
+
+  [ **@input_data_1_partition_by_columns** = N'*input_data_1_partition_by_columns*"]  
+ Применяется только к SQL Server 2019 и используется для построения моделей каждого раздела. Задает имя столбца, используемого для сегментирования данных, например географический регион или дата. Тип данных переменной в внешних скриптов зависит от языка. В случае R Входная переменная — это блок данных. В случае Python входные данные должны быть табличных. 
+::: moniker-end
+
+ [ **@output_data_1_name** = N'*output_data_1_name*"]  
+ Указывает имя переменной в внешнего скрипта, содержащий данные, возвращаемые для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после завершения вызова хранимой процедуры. Тип данных переменной в внешних скриптов зависит от языка. R выходные данные должны быть кадр данных. Python выходные данные должны быть во фрейм данных pandas. *output_data_1_name* — **sysname**.  Значение по умолчанию — *OutputDataSet*.  
+
+ [ **@parallel** = 0 | 1]  
+ Включение параллельного выполнения R-скриптов, задав `@parallel` параметр 1. Значение по умолчанию для этого параметра равно 0 (без параллелизма). Если `@parallel = 1` и выходные данные передаются непосредственно на клиентском компьютере, а затем `WITH RESULTS SETS` предложение является обязательным и должно быть указано схему выходных данных.  
   
- Для скриптов R, не использующих функции RevoScaleR, с помощью `@parallel` параметр может быть полезным для обработки больших наборов данных, при условии, что скрипт можно просто распараллелить. Например, при использовании R `predict` функции с помощью модели, чтобы создать новые прогнозы, задайте `@parallel = 1` как подсказку для ядро запросов. Если запрос может выполняться параллельно, строки распределены в соответствии с **MAXDOP** параметр.  
+ + Для скриптов R, не использующих функции RevoScaleR, с помощью `@parallel` параметр может быть полезным для обработки больших наборов данных, при условии, что скрипт можно просто распараллелить. Например, при использовании R `predict` функции с помощью модели, чтобы создать новые прогнозы, задайте `@parallel = 1` как подсказку для ядро запросов. Если запрос может выполняться параллельно, строки распределены в соответствии с **MAXDOP** параметр.  
   
- Если `@parallel = 1` и выходные данные передаются непосредственно на клиентском компьютере, а затем `WITH RESULTS SETS` предложение является обязательным и должно быть указано схему выходных данных.  
+ + Для скриптов R, использующих функции RevoScaleR, параллельная обработка осуществляется автоматически и не следует указывать `@parallel = 1` для **sp_execute_external_script** вызова.  
   
- Для скриптов R, использующих функции RevoScaleR, параллельная обработка осуществляется автоматически и не следует указывать `@parallel = 1` для **sp_execute_external_script** вызова.  
-  
- [ \@params = N'*\@parameter_name data_type* [OUT | Выходные данные] [,.. .n] "]  
+[ **@params** = N' *@parameter_name data_type* [OUT | Выходные данные] [,.. .n] "]  
  Список объявлений входного параметра, которые используются в внешнего скрипта.  
   
- [ \@parameter1 = "*значение1*" [OUT | Выходные данные] [,.. .n]]  
-
+[ **@parameter1** = "*значение1*" [OUT | Выходные данные] [,.. .n]]  
  Список значений для входных параметров, используемых внешних скриптов.  
 
 ## <a name="remarks"></a>Примечания
 
-Используйте **sp_execute_external_script** для выполнения сценариев, написанных на поддерживаемом языке. В настоящее время поддерживаемых языков, R для SQL Server 2016 и Python и R для SQL Server 2017. 
-
 > [!IMPORTANT]
 > Дерево запроса управляется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователи не могут выполнять произвольные операции с запросом. 
+
+Используйте **sp_execute_external_script** для выполнения сценариев, написанных на поддерживаемом языке. В настоящее время поддерживаемых языков: R для SQL Server 2016 R Services и Python и R для службы машинного обучения SQL Server 2017. 
 
 По умолчанию результирующие наборы, возвращаемые этой хранимой процедурой, выходных данных с помощью безымянные столбцы. Имена столбцов, используемые в сценариях являются локальными для среда скриптов и не отражаются в выводимые результирующего набора. Чтобы присвоить имя результирующего набора столбцов, используйте `WITH RESULTS SET` предложении [ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md).
   
  Помимо возврата результирующего набора, может возвращать скалярные значения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью параметров OUTPUT. В следующем примере показано использование ВЫХОДНОГО параметра для возврата сериализованную модель R, используемый в качестве входных данных для сценария:  
-
-В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] включает в себя серверный компонент, устанавливаемый с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также набор инструментов рабочей станции и библиотек подключений, которые подключаются по анализу данных в среде высокой производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Необходимо установить машинного обучения компонентов при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программу установки, чтобы включить выполнение внешних скриптов. Дополнительные сведения см. в разделе [Настройка службы машинного обучения SQL Server](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).  
   
 Ресурсы, используемые внешних скриптов, настроив внешний пул ресурсов можно управлять. Дополнительные сведения см. в разделе [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Сведения о рабочей нагрузке можно получить из представления каталога регулятора ресурсов, динамические Административные представления и счетчики. Дополнительные сведения см. в разделе [представления каталога регулятора ресурсов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource Governor динамические административные представления &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)и [ SQL Server, объект External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
 
+### <a name="monitor-script-execution"></a>Выполнение скрипта монитора
+
 Мониторинг выполнения сценария с помощью [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) и [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
-## <a name="streaming-execution-for-r-and-python-scripts"></a>Потоковое выполнение сценариев R и Python  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+### <a name="parameters-for-partition-modeling"></a>Параметры для моделирования секции
+
+ В SQL Server 2019 года сейчас в общедоступной предварительной версии, можно задать два дополнительных параметра, позволяющие моделирование с использованием секционированных данных, где секции основаны на один или больше столбцов, которые вы предоставляете, которые естественным образом разделить набор данных на логические разделы создается и используется только во время выполнения скрипта. Столбцы, содержащие повторяющиеся значения для age, gender, географический регион, дата или время, приведено несколько примеров, которые предоставляются для секционированных наборов данных.
+ 
+ Два параметра **input_data_1_partition_by_columns** и **input_data_1_order_by_columns**, где второй параметр используется для упорядочения результирующего набора. Параметры передаются в качестве входных данных для `sp_execute_external_script` с внешнего скрипта выполняется один раз для каждой секции. Дополнительные сведения и примеры см. в разделе [руководство: Создание модели на основе секций](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
+
+ Можно выполнить сценарий в параллельном режиме, указав `@parallel=1`. Если входной запрос может выполняться параллельно, следует задать `@parallel=1` как часть аргументов `sp_execute_external_script`. По умолчанию оптимизатор запросов работает в `@parallel=1` в таблицах, имеющих более 256 строки, но если вы хотите обрабатывать это явным образом, этот сценарий включает в себя параметр в качестве демонстрации.
+
+ > [!Tip]
+> Для обучения workoads, можно использовать `@parallel` для любого сценария произвольные обучения, даже те, с помощью алгоритмов Майкрософт rx. Как правило только алгоритмы RevoScaleR (с префикса rx) предлагают параллелизм в сценариях обучения в SQL Server. Но с помощью новых параметров в SQL Server vNext, можно распараллеливать скрипт, который вызывает функции, разработанная специально не с данной возможностью.
+::: moniker-end
+
+### <a name="streaming-execution-for-r-and-python-scripts"></a>Потоковое выполнение сценариев R и Python  
 
 Потоковая передача позволяет скрипт R или Python для работы с данными большего, чем может поместиться в памяти. Чтобы контролировать число строк, передаваемых во время потоковой передачи, укажите целочисленное значение для параметра, `@r_rowsPerRead` в `@params` коллекции.  Например если обучаем модель, которая использует очень широкие данных, вы можете изменить значение для чтения меньше строк, чтобы убедиться, что все строки могут отправляться в один блок данных. Этот параметр может использоваться для управления количеством строк считываются и обрабатываются одновременно, для устранения проблем производительности сервера. 
   

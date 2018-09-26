@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: f0c6e0e8b6999ce2ebcce009a4ac1c298ededdff
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40009036"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712126"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Шифрование подключений к SQL Server в Linux
 
@@ -34,9 +34,13 @@ ms.locfileid: "40009036"
 - Сертификат должен быть создан с помощью параметра KeySpec AT_KEYEXCHANGE. Как правило свойство использования ключа сертификата (KEY_USAGE) также включает шифрование ключей (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
 - Свойство субъекта сертификата должно указывать, что общее имя (CN) совпадает с именем узла или полное доменное имя (FQDN) сервера. Примечание: поддерживаются групповые сертификаты.
 
+## <a name="configuring-the-openssl-libraries-for-use-optional"></a>Настройка библиотеки OpenSSL для использования (необязательно)
+Можно создать символические ссылки в `/opt/mssql/lib/` каталог, который ссылается `libcrypto.so` и `libssl.so` библиотек следует использовать для шифрования. Это полезно, если нужно, чтобы SQL Server для использования определенной версии OpenSSL используемый по умолчанию, предоставляемые системой. Если эти символических ссылок не существуют, SQL Server будет загружать библиотеки OpenSSL по умолчанию, настроенного в системе.
+
+Эти символические ссылки должен быть назван `libcrypto.so` и `libssl.so` и помещено в `/opt/mssql/lib/` каталога.
+
 ## <a name="overview"></a>Обзор
 TLS используется для шифрования подключения из клиентского приложения к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При правильной настройке TLS обеспечивает конфиденциальность и целостность данных для обмена данными между клиентом и сервером.  TLS-подключения может быть клиент или сервер инициировал. 
-
 
 ## <a name="client-initiated-encryption"></a>Клиент инициировал шифрования 
 - **Создание сертификата** (/ CN должны соответствовать вашей полное доменное имя узла SQL Server)

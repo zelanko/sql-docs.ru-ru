@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f55962069c67fe7907968e024cdacb920b02d4e
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348615"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713156"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Собственная Оценка с помощью функции ПРОГНОЗИРОВАНИЯ T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Собственная Оценка использует встроенные возможности расширения C++, в SQL Server 2017 для формирования прогноза значений или *оценок* для новых входных данных в режиме реального времени. Эту методику предлагает максимальной скорости обработки рабочих нагрузок прогнозирования и прогнозирования, но в состав платформы и библиотеки требования: только функции RevoScaleR и revoscalepy имеют реализации C++.
+Собственный оценки использует [ПРОГНОЗИРОВАНИЯ T-SQL функция](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) и встроенные возможности расширения C++, в SQL Server 2017 для формирования прогноза значений или *оценок* для новых входных данных в режиме реального времени. Эту методику предлагает максимальной скорости обработки возможных прогнозирования и прогнозирования рабочих нагрузок, но поставляется с требованиями платформы и библиотеки: только функции RevoScaleR и revoscalepy имеют реализации C++.
 
-Собственная Оценка необходимо иметь уже обученной модели. В SQL Server 2017 Windows или Linux, или в базе данных SQL Azure можно использовать функцию PREDICT в Transact-SQL для вызова собственной оценки. Функция PREDICT принимает предварительно обученной модели и создает входные данные, указанные вами оценок.
+Собственная Оценка необходимо иметь уже обученной модели. В SQL Server 2017 Windows или Linux, или в базе данных SQL Azure можно вызвать функции PREDICT в Transact-SQL для вызова собственного оценку на основе новых данных, указанных в качестве входного параметра. Функция PREDICT возвращает оценки через входные данные, указанные вами.
 
 ## <a name="how-native-scoring-works"></a>Как неуправляемый код оценки works
 

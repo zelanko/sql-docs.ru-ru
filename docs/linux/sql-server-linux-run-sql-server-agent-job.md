@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: fab956d80dcc7694d3823a030c08507283494d8e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e91385974730facf657d28febe94c4320cf3799
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085816"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713266"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Создание и запуск задания агента SQL Server в Linux
 
@@ -38,7 +38,7 @@ ms.locfileid: "39085816"
 Для работы с этим руководством требуются следующие компоненты:
 
 * Компьютер Linux со следующими компонентами:
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), или [Ubuntu](quickstart-install-connect-ubuntu.md)) с помощью средства командной строки.
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), или [Ubuntu](quickstart-install-connect-ubuntu.md)) с помощью средства командной строки.
 
 Следующие компоненты являются необязательными.
 
@@ -47,7 +47,7 @@ ms.locfileid: "39085816"
 
 ## <a name="enable-sql-server-agent"></a>Включить агент SQL Server
 
-Использовать агент SQL Server в Linux, необходимо сначала включить агент SQL Server на компьютере с уже установленным SQL Server 2017.
+Использовать агент SQL Server в Linux, необходимо сначала включить агент SQL Server на компьютере, который уже установлен SQL Server.
 
 1. Чтобы включить агент SQL Server, выполните следующие шаги.
   ```bash

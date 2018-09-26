@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 276ef0d34d04f58b0b23b213dc52faf5b404693e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
+ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101814"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058903"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Граф, обработка с помощью SQL Server и базы данных SQL Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,11 +74,22 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Полностью интегрированный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ядра 
-Расширения Graph полностью интегрированы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ядра. Мы используем же подсистемы хранилища, метаданные, обработчик запросов, и т.д. для хранения и запросов к данным графа. Это позволяет пользователям запрашивать их graph и реляционных данных в одном запросе. Пользователи также могут выиграть от объединения возможности диаграммы с другими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] технологии, такие как службы R columnstore, высокой ДОСТУПНОСТИ, и т.д. База данных SQL graph также поддерживает все безопасности и соответствия требованиям функции, доступные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Расширения Graph полностью интегрированы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ядра. Используйте такое же ядро хранения, метаданные, обработчик запросов, и т.д. для хранения и запросов к данным графа. Запрос к нескольким graph и реляционных данных в одном запросе. Объединяя возможности диаграммы с другими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] технологии, такие как службы R columnstore, высокой ДОСТУПНОСТИ, и т.д. База данных SQL graph также поддерживает все безопасности и соответствия требованиям функции, доступные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
-### <a name="tooling-and-ecosystem"></a>Инструментарий и экосистема  
-Пользователи получают преимущества существующих средств и экосистема, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предлагает. Такие средства, как резервное копирование и восстановление, Импорт и экспорт BCP просто работать без дополнительной настройки. Другие средства или служб, таких как службы SSIS, SSRS или PowerBI будет работать с таблицами графа, именно так, как они работают с реляционными таблицами.
- 
+### <a name="tooling-and-ecosystem"></a>Инструментарий и экосистема
+
+Преимущества существующих средств и экосистема, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предлагает. Такие средства, как резервное копирование и восстановление, Импорт и экспорт BCP просто работать без дополнительной настройки. Другие средства или служб, таких как службы SSIS, SSRS или Power BI будет работать с таблицами графа, именно так, как они работают с реляционными таблицами.
+
+## <a name="edge-constraints"></a>Ограничения границ
+Ограничение границ определен на край таблицы графика и представляет собой пару таблиц узла, тип заданного edge можно подключиться. Это позволяет лучше контролировать их схему графа. С помощью ограничения границ пользователей можно ограничить типы узлов, заданном краю разрешено подключаться. 
+
+Дополнительные сведения о том, как создать и использовать ограничения границ см. в [ограничения границ](../../relational-databases/tables/graph-edge-constraints.md)
+
+## <a name="merge-dml"></a>Слияние DML 
+[СЛИЯНИЯ](../../t-sql/statements/merge-transact-sql.md) инструкция выполняет вставки, обновления или удаления операций применительно к целевой таблице, на основе результатов соединения с исходной таблицей. Например можно синхронизировать две таблицы путем вставки, обновления или удаления строк в целевой таблице, исходя из различий между целевой и исходной таблицы. С помощью предикатов СОВПАДЕНИЯ в инструкции MERGE теперь поддерживается в базе данных SQL Azure и SQL Server vNext. То есть это теперь возможность объединять данные графа текущего (узла или граничной таблицы) с использованием предикатов СОВПАДЕНИЕ задать граф связей в одной инструкции, а не отдельных инструкций INSERT/UPDATE/DELETE новых данных.
+
+Дополнительные сведения об использовании совпадение при слиянии DML см. в [инструкции MERGE](../../t-sql/statements/merge-transact-sql.md)
+
  ## <a name="next-steps"></a>Следующие шаги  
 Чтение [Graph базы данных SQL — архитектура](./sql-graph-architecture.md)
    

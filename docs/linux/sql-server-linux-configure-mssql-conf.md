@@ -1,6 +1,6 @@
 ---
 title: Настройка параметров SQL Server в Linux | Документация Майкрософт
-description: В этой статье описывается, как использовать средство mssql-conf для настройки параметров SQL Server 2017 на Linux.
+description: В этой статье описывается, как использовать средство mssql-conf для настройки параметров SQL Server на Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,16 +12,19 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 2982ae05fd54a09b6ae5640c969bcb77d73c4a4c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 57ef9a199979c2538f536d3c9a2bf8aa7e0b37fa
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086266"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713536"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql-conf
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 **MSSQL-conf** — это сценарий конфигурации, который устанавливается вместе с SQL Server 2017 для Red Hat Enterprise Linux, SUSE Linux Enterprise Server и Ubuntu. Эта программа позволяет задать следующие параметры:
 
@@ -30,7 +33,7 @@ ms.locfileid: "39086266"
 | [Агент](#agent) | Включить агент SQL Server |
 | [Параметры сортировки](#collation) | Задайте новые параметры сортировки для SQL Server в Linux. |
 | [Отзывы клиентов](#customerfeedback) | Выберите ли SQL Server отправляет отзыв в корпорацию Майкрософт. |
-| [Профиль компонента Database Mail](#dbmail) | Настроить почтовый профиль по умолчанию базы данных для SQL Server в Linux |
+| [Профиль компонента Database Mail](#dbmail) | Настройте почтовый профиль по умолчанию базы данных для SQL Server в Linux. |
 | [Каталог данных по умолчанию](#datadir) | Перейдите в каталог по умолчанию для новых файлов данных базы данных SQL Server (.mdf). |
 | [Каталог журналов по умолчанию](#datadir) | Изменяет каталог по умолчанию для новых файлов журналов (LDF) базы данных SQL Server. |
 | [Каталог файлов базы данных master по умолчанию](#masterdatabasedir) | Изменение каталога по умолчанию для файлов базы данных master на существующую установку SQL.|
@@ -40,12 +43,44 @@ ms.locfileid: "39086266"
 | [Резервным каталогом по умолчанию](#backupdir) | Перейдите в каталог по умолчанию для новых файлов резервной копии. |
 | [Тип дампа](#coredump) | Выберите тип файла дампа памяти дампа для сбора. |
 | [Высокий уровень доступности](#hadr) | Включите группы доступности. |
-| [Каталогу локального аудита](#localaudit) | Задать каталог для добавления файлов локального аудита. |
+| [Каталогу локального аудита](#localaudit) | Задает каталог для добавления файлов локального аудита. |
 | [Локаль](#lcid) | Задание локали для SQL Server для использования. |
 | [Предел памяти](#memorylimit) | Задайте ограничение памяти для SQL Server. |
 | [TCP-порт](#tcpport) | Изменение порта, где SQL Server прослушивает соединения. |
 | [TLS](#tls) | Настройте безопасность на транспортном уровне. |
 | [Флаги трассировки](#traceflags) | Набор флагов трассировки, который планируется использовать службу. |
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+**MSSQL-conf** — это сценарий конфигурации, который устанавливается вместе с [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] для Red Hat Enterprise Linux, SUSE Linux Enterprise Server и Ubuntu. Эта программа позволяет задать следующие параметры:
+
+|||
+|---|---|
+| [Агент](#agent) | Включить агент SQL Server |
+| [Параметры сортировки](#collation) | Задайте новые параметры сортировки для SQL Server в Linux. |
+| [Отзывы клиентов](#customerfeedback) | Выберите ли SQL Server отправляет отзыв в корпорацию Майкрософт. |
+| [Профиль компонента Database Mail](#dbmail) | Настройте почтовый профиль по умолчанию базы данных для SQL Server в Linux. |
+| [Каталог данных по умолчанию](#datadir) | Перейдите в каталог по умолчанию для новых файлов данных базы данных SQL Server (.mdf). |
+| [Каталог журналов по умолчанию](#datadir) | Изменяет каталог по умолчанию для новых файлов журналов (LDF) базы данных SQL Server. |
+| [Каталог файлов базы данных master по умолчанию](#masterdatabasedir) | Изменение каталога по умолчанию для файлов базы данных master на существующую установку SQL.|
+| [Имя файла базы данных master по умолчанию](#masterdatabasename) | Изменяет имя файлов базы данных master. |
+| [Каталог дампа по умолчанию](#dumpdir) | Перейдите в каталог по умолчанию для новых дампы памяти и другие файлы для устранения неполадок. |
+| [Каталог журналов ошибок по умолчанию](#errorlogdir) | Изменяет каталог по умолчанию для новых файлов в журнале ошибок SQL Server, трассировка Profiler по умолчанию, XE сеанс работоспособности системы и Hekaton сеанса XE. |
+| [Резервным каталогом по умолчанию](#backupdir) | Перейдите в каталог по умолчанию для новых файлов резервной копии. |
+| [Тип дампа](#coredump) | Выберите тип файла дампа памяти дампа для сбора. |
+| [Высокий уровень доступности](#hadr) | Включите группы доступности. |
+| [Каталогу локального аудита](#localaudit) | Задает каталог для добавления файлов локального аудита. |
+| [Локаль](#lcid) | Задание локали для SQL Server для использования. |
+| [Предел памяти](#memorylimit) | Задайте ограничение памяти для SQL Server. |
+| [Служба координатора распределенных транзакций](#msdtc) | Настройка и устранение неполадок MSDTC на платформе Linux. |
+| [MLServices лицензионные соглашения.](#mlservices-eula) | Примите лицензионные соглашения Python и R для mlservices пакетов. Применимо к SQL Server 2019 только.|
+| [TCP-порт](#tcpport) | Изменение порта, где SQL Server прослушивает соединения. |
+| [TLS](#tls) | Настройте безопасность на транспортном уровне. |
+| [Флаги трассировки](#traceflags) | Набор флагов трассировки, который планируется использовать службу. |
+
+::: moniker-end
 
 > [!TIP]
 > Некоторые из этих параметров можно также настроить с помощью переменных среды. Дополнительные сведения см. в разделе [SQL Server можно настроить параметры с переменными среды](sql-server-linux-configure-environment-variables.md).
@@ -56,13 +91,13 @@ ms.locfileid: "39086266"
 
 * Для сценария общий диск кластера, не пытайтесь перезапустить **mssql-server** службы, чтобы применить изменения. SQL Server выполняется как приложение. Вместо этого переведите ресурс вне сети и затем восстановлен.
 
-* Эти примеры, запустите mssql-conf, укажите полный путь: **/opt/mssql/bin/mssql-conf**. Если вы решили перейти к этому пути, вместо этого, запустите mssql-conf в контексте текущего каталога: **. / mssql-conf**.
+* Эти примеры запуска mssql-conf, указав полный путь: **/opt/mssql/bin/mssql-conf**. Если вы решили перейти к этому пути, вместо этого, запустите mssql-conf в контексте текущего каталога: **. / mssql-conf**.
 
 ## <a id="agent"></a> Включить агент SQL Server
 
 **Sqlagent.enabled** установка включает [агента SQL Server](sql-server-linux-run-sql-server-agent-job.md). Агент SQL Server функция отключена по умолчанию. Если **sqlagent.enabled** отсутствует в файле параметров mssql.conf, после чего SQL Server внутренне предполагается, что агент SQL Server отключена.
 
-Чтобы изменить эти параметры, используйте следующие действия:
+Чтобы изменить этот параметр, сделайте следующее:
 
 1. Включите агент SQL Server:
 
@@ -70,7 +105,7 @@ ms.locfileid: "39086266"
    sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
    ```
 
-1. Перезапустите службу SQL Server:
+2. Перезапустите службу SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -92,7 +127,7 @@ ms.locfileid: "39086266"
 
 1. Mssql-conf программа попытается изменить значение указанных параметров сортировки и перезапустите службу. При возникновении любой ошибки, откат параметров сортировки к предыдущему значению.
 
-1. Восстановить резервные копии базы данных пользователя.
+1. Восстановите резервные копии базы данных пользователя.
 
 Для получения списка поддерживаемых параметров сортировки, запустите [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) функция: `SELECT Name from sys.fn_helpcollations()`.
 
@@ -379,10 +414,11 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-Сведения, как он используется с группами доступности см. в разделе двух следующих разделах.
+Сведения о том, как они используются для групп доступности см. в разделе двух следующих разделах.
 
 - [Настройка AlwaysOn группы доступности для SQL Server в Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Настройка группы доступности для чтения и масштабирования для SQL Server в Linux](sql-server-linux-availability-group-configure-rs.md)
+
 
 ## <a id="localaudit"></a> Каталог локального аудита набора
 
@@ -447,6 +483,81 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="msdtc"></a> Настройте службу MSDTC
+
+**Network.rpcport** и **distributedtransaction.servertcpport** параметры используются для настройки координатора распределенных транзакций Microsoft (MSDTC). Чтобы изменить эти параметры, выполните следующие команды:
+
+1. Запустите сценарий mssql-conf в качестве привилегированного пользователя с **задать** команду «network.rpcport»:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set network.rpcport <rcp_port>
+   ```
+
+2. Затем установите для параметра «distributedtransaction.servertcpport»:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport <servertcpport_port>
+   ```
+
+В дополнение к настройке этих значений, необходимо также настроить маршрутизацию и обновить брандмауэр для порта 135. Дополнительные сведения о том, как это сделать, см. в разделе [настройка MSDTC на Linux](sql-server-linux-configure-msdtc.md).
+
+Существует несколько других параметров для mssql-conf, который можно использовать для наблюдения и диагностики MSDTC. В следующей таблице кратко описаны эти параметры. Дополнительные сведения по их использованию см. сведения в статье службы поддержки Windows, [как включить диагностическую трассировку для MS DTC](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
+
+| параметр MSSQL-conf | Описание |
+|---|---|
+| distributedtransaction.allowonlysecurerpccalls | Настройте безопасный rpc только вызовы для распределенных транзакций |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Настройка безопасности вызовы rpc только для распределенных |транзакции
+| distributedtransaction.maxlogsize | DTC размером файла журнала транзакций в МБ. Значение по умолчанию — 64 МБ |
+| distributedtransaction.memorybuffersize | Размер циклического буфера, в которой хранятся трассировок. Этот размер является в МБ, и значение по умолчанию — 10 МБ |
+| distributedtransaction.servertcpport | MSDTC rpc-порт сервера |
+| distributedtransaction.trace_cm | Трассировки в диспетчере соединений |
+| distributedtransaction.trace_contact | Отслеживает связи пула и контакты |
+| distributedtransaction.trace_gateway | Источник трассировки шлюза |
+| distributedtransaction.trace_log | Журнал трассировки |
+| distributedtransaction.trace_misc | Трассировки, которые нельзя разделить на другие категории |
+| distributedtransaction.trace_proxy | Трассировки, создаваемые в прокси-сервером MSDTC |
+| distributedtransaction.trace_svc | Отслеживает службы и .exe файла запуска |
+| distributedtransaction.trace_trace | Сама инфраструктура трассировки |
+| distributedtransaction.trace_util | Подпрограммы CRC трассировок, которые вызываются из нескольких расположений |
+| distributedtransaction.trace_xa | Источник трассировки диспетчера транзакций XATM XA (не) |
+| distributedtransaction.tracefilepath | Папка, в трассировке должны сохраняться файлы |
+| distributedtransaction.turnoffrpcsecurity | Включение или отключение безопасности RPC для распределенных транзакций |
+
+::: moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="mlservices-eula"></a> Примите лицензионные соглашения MLServices
+
+Добавление [машинного обучения пакетов R или Python](sql-server-linux-setup-machine-learning.md) к базе данных ядра необходимо принять условия лицензионного соглашения для дистрибутивов с открытым исходным кодом R и Python. В следующей таблице перечислены все доступные команды или параметры, связанные с mlservices лицензионные соглашения. Один и тот же параметр лицензионное соглашение используется для R и Python, в зависимости от того, что вы установили.
+
+```bash
+# For all packages: database engine and mlservices
+# Setup prompts for mlservices EULAs, which you need to accept
+sudo /opt/mssql/bin/mssql-conf setup
+
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
+
+# Alternative valid syntax
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+
+# Rescind EULA acceptance
+sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
+```
+
+Принятие лицензионного соглашения можно также добавить непосредственно в [mssql.conf файл](#mssql-conf-format):
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+```
+
+:::moniker-end
+
 ## <a id="tcpport"></a> Изменение TCP-порт
 
 **Network.tcpport** изменения параметров TCP-порт, где SQL Server прослушивает соединения. По умолчанию этот порт будет присвоено 1433. Чтобы изменить порт, выполните следующие команды:
@@ -457,13 +568,13 @@ sudo systemctl restart mssql-server
    sudo /opt/mssql/bin/mssql-conf set network.tcpport <new_tcp_port>
    ```
 
-1. Перезапустите службу SQL Server:
+2. Перезапустите службу SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-1. При подключении к SQL Server, необходимо указать пользовательский порт запятой (,) после имени узла или IP-адрес. Например чтобы подключиться с помощью SQLCMD, вы выполните команду ниже:
+3. При подключении к SQL Server, необходимо указать пользовательский порт запятой (,) после имени узла или IP-адрес. Например чтобы подключиться с помощью SQLCMD, вы выполните команду ниже:
 
    ```bash
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
@@ -538,9 +649,13 @@ sudo cat /var/opt/mssql/mssql.conf
 
 Обратите внимание на то, что все параметры, не отображаются в этот файл при использовании значения по умолчанию. В следующем разделе приводится пример **mssql.conf** файла.
 
-## <a name="mssqlconf-format"></a>Формат MSSQL.conf
+
+## <a id="mssql-conf-format"></a> Формат MSSQL.conf
 
 Следующие **/var/opt/mssql/mssql.conf** файл содержит пример для каждого параметра. Этот формат можно использовать вручную внести изменения в **mssql.conf** файл при необходимости. Если вы вручную измените файл, необходимо перезапустить SQL Server перед применением изменений. Чтобы использовать **mssql.conf** файла с помощью Docker, необходимо иметь Docker [сохранить данные](sql-server-linux-configure-docker.md). Сначала добавьте полное **mssql.conf** файла в каталоге узла, а затем запустите контейнер. Пример этого [отзывы клиентов](sql-server-linux-customer-feedback.md).
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ```ini
 [EULA]
@@ -589,6 +704,65 @@ traceflag0 = 1204
 traceflag1 = 2345
 traceflag = 3456
 ```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[distributedtransaction]
+servertcpport = 51999
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+rpcport = 13500
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Следующие шаги
 

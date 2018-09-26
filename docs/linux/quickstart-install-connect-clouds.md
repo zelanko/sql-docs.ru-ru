@@ -1,6 +1,6 @@
 ---
-title: Начало работы с SQL Server 2017 в облаке | Документация Майкрософт
-description: В этом кратком руководстве показано, как SQL Server 2017 под управлением Linux в облаке по своему усмотрению.
+title: Начало работы с SQL Server в облаке | Документация Майкрософт
+description: В этом кратком руководстве показано, как SQL Server под управлением Linux в облаке по своему усмотрению.
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -11,18 +11,18 @@ ms.component: ''
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f63fc385171469ad13d21fd844bb130ac0e6e7cd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 638df74c4288f8f1b67232ff99cfd90393a52380
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084196"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713176"
 ---
-# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Краткое руководство: Запуск SQL Server 2017 в облаке
+# <a name="quickstart-run-the-sql-server-in-the-cloud"></a>Краткое руководство: Запуск SQL Server в облаке
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом кратком руководстве будет устанавливаться SQL Server 2017 на Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) или Ubuntu в облаке по своему усмотрению. Перейдите к [Подготовка виртуальной машины SQL Server для Linux на портале Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) SQL Server под управлением Linux в Azure.
+В этом кратком руководстве установит SQL Server в Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) или Ubuntu в облаке по своему усмотрению. Перейдите к [Подготовка виртуальной машины SQL Server для Linux на портале Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) SQL Server под управлением Linux в Azure.
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)

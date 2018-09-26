@@ -11,12 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 448db7c77d26e06651e01a7e790917757aff0e9d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268812"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713606"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server в Linux, часто задаваемые вопросы (FAQ)
 
@@ -60,7 +60,7 @@ ms.locfileid: "39268812"
 
    Нет. Linux под управлением Windows 10 в настоящее время не является поддерживаемой платформой для SQL Server, а также связанные средства.
 
-1. **Какие файловые системы Linux SQL Server 2017 можно использовать для файлов данных?**
+1. **Какие файловые системы Linux SQL Server можно использовать для файлов данных?**
 
    В настоящее время SQL Server в Linux поддерживает ext4 и XFS. Будет добавлена поддержка другие файловые системы, при необходимости в будущем.
 
@@ -80,7 +80,7 @@ ms.locfileid: "39268812"
 
 1. **Есть ли это средство, как среда SSMS, под управлением Linux?**
 
-   Новые операции Microsoft SQL Operations Studio (preview) — это средство кросс платформенных управления SQL Server. Дополнительные сведения см. в разделе [новые возможности Microsoft SQL Operations Studio (Предварительная версия)](../sql-operations-studio/what-is.md).
+   Новый Studio данных Azure (Предварительная версия) — это кросс платформенного средства управления SQL Server. Дополнительные сведения см. в разделе [что такое студия данных Azure (Предварительная версия)](../azure-data-studio/what-is.md).
 
 1. **Команды sqlcmd и bcp доступны на платформе Linux?**
 
@@ -125,7 +125,7 @@ ms.locfileid: "39268812"
 
 1. **Можно ли перенести данные из Oracle и других ядер СУБД SQL Server в Linux?**
 
-   Да. SSMA поддерживается миграция из нескольких типов компонентов database Engine: Microsoft Access, DB2, MySQL, Oracle и SAP ASE (прежнее название — SAP Sybase ASE). Пример использования SSMA, см. в разделе [перенос схемы Oracle для SQL Server 2017 на платформе Linux с помощью SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
+   Да. SSMA поддерживается миграция из нескольких типов компонентов database Engine: Microsoft Access, DB2, MySQL, Oracle и SAP ASE (прежнее название — SAP Sybase ASE). Пример использования SSMA, см. в разделе [перенос схемы Oracle для SQL Server в Linux с помощью SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
 
 1. **Разрешениях, необходимых для файлов SQL Server?**
 

@@ -1,7 +1,7 @@
 ---
 title: Новые возможности в SSMA для SAP ASE (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/14/2017
+ms.date: 09/22/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -16,15 +16,21 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d178cde4f921580c6c9953701d9e2101853400a2
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 3ade0baa7e970639769cf5bdba522e54d3843771
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392833"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362038"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Новые возможности в SSMA для SAP ASE (SybaseToSQL)
 В этой статье перечислены SSMA для SAP ASE (прежнее название — SSMA для Sybase) изменения в каждом выпуске. 
+
+## <a name="ssma-v710"></a>SSMA v7.10
+В выпуске v7.10 SSMA для SAP ASE была улучшена с помощью целевых исправлений, обеспечивает дополнительную безопасность и защиту конфиденциальности в соответствии с изменения в глобальным требованиям.
+
+> [!IMPORTANT]
+> SSMA v7.4 и более поздних версий .net 4.5.2 является необходимым условием установки.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 В выпуске v7.9 SSMA для SAP ASE содержит следующие изменения:
@@ -87,7 +93,7 @@ ms.locfileid: "40392833"
   - Библиотеки, которые могут быть использованы SSMA для выполнения пользовательских преобразований.
     - Можно создавать код, который может обрабатывать пользовательский синтаксис преобразования и преобразования, которые не были устранены ранее SSMA.
       - Инструкции о том, как создать пользовательский преобразователь доступны в записи блога [расширение SQL Server Migration Assistant возможности преобразования](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Можно загрузить пример проекта для преобразования, это [блога](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Скачайте пример проекта для преобразования из этого [блога](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 В выпуске v7.2 SSMA для Sybase содержит следующие изменения:

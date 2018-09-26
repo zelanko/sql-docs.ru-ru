@@ -12,21 +12,21 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: sql-linux
-ms.openlocfilehash: 818920fe2f79a19253f2a0a943a77fe0c067df1f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4571589c84d5faaed82ae251a4af262d51e30f3f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083667"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712882"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Перенос баз данных и структурированных данных в SQL Server в Linux 
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Можно перенести базы данных и данных для SQL Server 2017 на платформе Linux. Метод, который вы решили использовать зависит от исходных данных и от конкретного сценария. Следующие разделы содержат рекомендации для различных сценариев миграции.
+Можно перенести базы данных и данных для SQL Server на Linux. Метод, который вы решили использовать зависит от исходных данных и от конкретного сценария. Следующие разделы содержат рекомендации для различных сценариев миграции.
 
 ## <a name="migrate-from-sql-server-on-windows"></a>Миграция из SQL Server в Windows
-Если вы хотите перенести базы данных SQL Server в Windows для SQL Server 2017 в Linux, рекомендуемым способом является использование SQL Server резервного копирования и восстановления.
+Если вы хотите перенести базы данных SQL Server в Windows для SQL Server в Linux, рекомендуемым способом является использование SQL Server резервного копирования и восстановления.
 
 1. Создание резервной копии базы данных на компьютере Windows.
 2. Передача файла резервной копии SQL Server Linux на целевой компьютер.
@@ -41,7 +41,7 @@ ms.locfileid: "39083667"
 - [Экспорт и импорт базы данных с помощью SSMS или SqlPackage.exe](sql-server-linux-migrate-ssms.md)
 
 ## <a name="migrate-from-other-database-servers"></a>Миграция с других серверов баз данных
-Можно перенести базы данных в других системах базы данных SQL Server 2017 в Linux. Это включает базы данных Microsoft Access, DB2, MySQL, Oracle и Sybase. В этом случае используйте SQL Server Management Assistant (SSMA) для автоматизации миграции на SQL Server в Linux. Дополнительные сведения см. в разделе [используйте SSMA для переноса баз данных в SQL Server на Linux](sql-server-linux-migrate-ssma.md).  
+Вы можете перенести базы данных в других системах базы данных SQL Server в Linux. Это включает базы данных Microsoft Access, DB2, MySQL, Oracle и Sybase. В этом случае используйте SQL Server Management Assistant (SSMA) для автоматизации миграции на SQL Server в Linux. Дополнительные сведения см. в разделе [используйте SSMA для переноса баз данных в SQL Server на Linux](sql-server-linux-migrate-ssma.md).  
 
 ## <a name="migrate-structured-data"></a>Перенос структурированных данных
 Также описаны способы импорта необработанных данных. Возможно, структурированные файлы данных, которые были экспортированы из других баз данных или источников данных. В этом случае можно использовать средство bcp для массовой вставки данных. Или можно запустить SQL Server Integration Services на Windows, чтобы импортировать данные в базу данных SQL Server в Linux. SQL Server Integration Services позволяет выполнять более сложные преобразования к данным во время импорта. 

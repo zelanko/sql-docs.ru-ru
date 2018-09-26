@@ -12,18 +12,18 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 1ce94cb159e552b147ad1798eeacf60b9c7ff25a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 36e18344efe0e3e329d4cb2672b51f23f0900128
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085096"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713186"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Экспорт и импорт базы данных на платформе Linux с помощью SSMS или SqlPackage.exe на Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) и [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) для экспорта и импорта базы данных на SQL Server 2017 в Linux. SSMS и SqlPackage.exe — приложения Windows, поэтому используйте этот метод, если используется компьютер Windows, который может подключиться к удаленному экземпляру SQL Server в Linux.
+В этой статье показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) и [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) для экспорта и импорта базы данных на сервере SQL Server в Linux. SSMS и SqlPackage.exe — приложения Windows, поэтому используйте этот метод, если используется компьютер Windows, который может подключиться к удаленному экземпляру SQL Server в Linux.
 
 Всегда следует устанавливать и использовать самой последней версии из SQL Server Management Studio (SSMS), как описано в разделе [используйте SSMS в Windows для подключения к SQL Server в Linux](sql-server-linux-manage-ssms.md)
 

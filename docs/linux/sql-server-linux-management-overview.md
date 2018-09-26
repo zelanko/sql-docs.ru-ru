@@ -12,18 +12,18 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: d537c4ef2bb84833b4676acebdaf0906ee7a85c9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c87533096357117fda518794d961dfacca2ce481
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395154"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712916"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Выбор подходящего средства для управления SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Существует несколько способов управления SQL Server 2017 в Linux. Следующий раздел содержит краткий обзор управления различных инструментов и методов с указателями на дополнительные ресурсы.
+Существует несколько способов управления SQL Server в Linux. Следующий раздел содержит краткий обзор управления различных инструментов и методов с указателями на дополнительные ресурсы.
 
 ## <a name="mssql-conf"></a>MSSQL-conf 
 
@@ -33,9 +33,9 @@ ms.locfileid: "40395154"
 
 Почти все, что можно сделать в клиентском средстве также может быть выполнено с помощью инструкций Transact-SQL. SQL Server предоставляет [динамические административные представления (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) , запрос состояния и конфигурации SQL Server. Существуют также [команд Transact-SQL](../t-sql/language-reference.md) для задач управления базами данных. Эти команды можно запустить в любой клиентский инструмент, который поддерживает подключение к SQL Server и выполнение запросов Transact-SQL, например [sqlcmd](sql-server-linux-setup-tools.md) или [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
-## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (Предварительная версия)
+## <a name="azure-data-studio-preview"></a>Azure Data Studio (Предварительная версия)
 
-Новые операции Microsoft SQL Operations Studio (preview) — это средство кросс платформенных управления SQL Server. Дополнительные сведения см. в разделе [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
+Новый Studio данных Azure (Предварительная версия) — это кросс платформенного средства управления SQL Server. Дополнительные сведения см. в разделе [Studio данных Azure (Предварительная версия)](../azure-data-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio в Windows
 

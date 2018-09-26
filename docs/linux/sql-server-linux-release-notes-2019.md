@@ -1,0 +1,98 @@
+---
+title: Заметки о выпуске для предварительной версии SQL Server 2019 на платформе Linux | Документация Майкрософт
+description: В этой статье содержатся заметки о выпуске и поддерживаемые функции для SQL Server CTP 2019 под управлением Linux. Заметки о выпуске включены для последнего выпуска и несколько предыдущих выпусков.
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 09/24/2018
+ms.topic: conceptual
+ms.prod: sql
+ms.component: ''
+ms.suite: sql
+ms.custom: sql-linux
+ms.technology: linux
+monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
+ms.openlocfilehash: 54b955609941e1c4f5921486fc5c67716120a499
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049422"
+---
+# <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Заметки о выпуске для предварительной версии SQL Server 2019 в Linux
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
+
+Следующие заметки о выпуске применяются к SQL Server CTP 2019 под управлением Linux. В этой статье разбивается на разделы для каждого выпуска. Каждый выпуск содержит ссылки поддержки статьи, описывающие CU изменения, а также ссылки на Linux, файлы для загрузки пакета.
+
+> [!TIP]
+> Дополнительные сведения о новых возможностях Linux SQL Server 2019, см. в разделе [новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+
+## <a name="supported-platforms"></a>Поддерживаемые платформы
+
+| Платформа | Файловая система | Руководство по установке |
+|-----|-----|-----|
+| Red Hat Enterprise Linux 7.3 или 7.4, рабочая станция, сервер и рабочего стола | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server до версии 12 SP2 | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-ubuntu.md) | 
+| Docker Engine 1.8 + на Windows, Mac или Linux | Недоступно | [Руководство по установке](quickstart-install-connect-docker.md) | 
+
+> [!TIP]
+> Дополнительные сведения см. в [требования к системе](sql-server-linux-setup.md#system) для SQL Server в Linux. Последнюю политику поддержки для SQL Server 2017, см. в разделе [политики технической поддержки для Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+
+## <a name="tools"></a>Инструменты
+
+Большинство существующих клиентских средств, предназначенных для SQL Server без проблем можете ориентироваться на SQL Server на Linux. Некоторые средства могут занимать определенную версию для работы с Linux. Полный список средств SQL Server, см. в разделе [SQL средства и служебные программы для SQL Server](../tools/overview-sql-tools.md).
+
+## <a name="release-history"></a>История выпусков
+
+Ниже перечислены журнал выпуска для SQL Server 2019 г., CTP-версии.
+
+| Выпуск               | Версия       | Дата выпуска |
+|-----------------------|---------------|--------------|
+| [CTP-ВЕРСИИ 2.0](#CTP20) | 15.0.1000.34   | 2018-09-24   |
+
+## <a id="cuinstall"></a> Установка обновлений
+
+Если вы настроили репозиторий предварительной версии (**mssql-server-preview**), то вы получите последнюю версию пакетов CTP-версии SQL Server, при выполнении новых установок. Если требуется, чтобы образы контейнеров Docker, см. официальные образы для [Microsoft SQL Server в Linux для подсистемы Docker](https://hub.docker.com/r/microsoft/mssql-server/). Дополнительные сведения о конфигурации хранилища, см. в разделе [Настройка репозиториев для SQL Server в Linux](sql-server-linux-change-repo.md).
+
+При обновлении существующих пакетов SQL Server, выполните команду соответствующие обновления для каждого пакета получить новейший пакет CU. Инструкции по обновлению, определенных для каждого пакета см. следующие руководства по установке:
+
+- [Установите пакет SQL Server](sql-server-linux-setup.md#upgrade)
+- [Установите пакет Full-text Search](sql-server-linux-setup-full-text-search.md)
+- [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+- [Установка предварительной версии SQL Server 2019 R для служб машинного обучения и поддержки Python в Linux](sql-server-linux-setup-machine-learning.md)
+- [Включить агент SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CTP20"></a> CTP-версии 2.0 (сентября 2018 г.)
+
+В следующих разделах приведены расположения пакетов и известные проблемы для CTP-версии 2.0 выпуске. Дополнительные сведения о новых возможностях для Linux на SQL Server 2019, см. в разделе [новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для установки пакетов вручную или автономном режиме вы можете скачать пакеты RPM и Debian с информацией в следующей таблице:
+
+| Пакет | Версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 15.0.1000.34-2 | [Пакет RPM ядра](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM поиска полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
+| Пакет SLES RPM | 15.0.1000.34-2 | [пакет RPM ядра MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM поиска полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
+| Пакет Debian Ubuntu 16.04 | 15.0.1000.34-2 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1000.34-2_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1000.34-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1000.34-2_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1000.34-2_amd64.deb)</br>[Debian пакета расширения Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility-java_15.0.1000.34-2_amd64.deb)|
+
+### <a name="known-issues"></a>Известные проблемы
+
+#### <a id="msdtc"></a> Служба координатора распределенных транзакций
+
+В настоящее время MSDTC требует транзакции должны быть без проверки подлинности. Например если используется связанный сервер с SQL Server на Windows для SQL Server в Linux или использовать клиентское приложение Windows для запуска распределенной транзакции в SQL Server в Linux, MSDTC в Windows server или клиента, то требуется использовать параметр «No Требуется проверка подлинности».
+
+## <a name="next-steps"></a>Следующие шаги
+
+Чтобы приступить к работе, см. в разделе следующих кратких руководств:
+
+- [Установите на Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Установка на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Установка в Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Запустить в Docker](quickstart-install-connect-ubuntu.md)
+- [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Запуск и подключение — облако](quickstart-install-connect-clouds.md)
+
+Ответы на часто задаваемые вопросы см. в разделе [SQL Server на Linux часто задаваемые вопросы о](sql-server-linux-faq.md).

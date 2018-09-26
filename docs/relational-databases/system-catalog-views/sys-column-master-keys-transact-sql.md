@@ -1,7 +1,7 @@
 ---
 title: sys.column_master_keys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-catalog-views
@@ -32,12 +32,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4251ecafad275e64021729abe54fc243d9077f9f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e683a88fb9490a7041ac02edc02a8ba2f63b1382
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079727"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713546"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,6 +52,10 @@ ms.locfileid: "43079727"
 |**modify_date**|**datetime**|Дата последнего изменения главного ключа столбца.|  
 |**key_store_provider_name**|**sysname**|Имя поставщика хранилища главных ключей столбцов, который содержит ключ CMK. Допустимые значения:<br /><br /> MSSQL_CERTIFICATE_STORE — Если Store сертификат хранилища главных ключей столбцов.<br /><br /> Определяемое пользователем значение, если хранилища главных ключей столбца пользовательского типа.|  
 |**key_path**|**nvarchar(4000)**|Путь конкретного хранилища главного ключа столбца ключа. Формат пути зависит от типа хранилища главного ключа столбца. Пример<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Для хранилища главных ключей пользовательских столбцов, разработчик отвечает за определение — какие путь к ключу для хранилища главных ключей пользовательского столбца.|  
+|**allow_enclave_computations**|**bit**|Указывает, является ли главный ключ столбца поддержкой анклава, (если ключ шифрования столбца, зашифрованный с помощью этого главного ключа, может использоваться для вычислений внутри безопасного enclaves на стороне сервера). Дополнительные сведения см. в разделе [всегда зашифрованы с помощью безопасного enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**signature**|**varbinary(max)**|Цифровую подпись **key_path** и **allow_enclave_computations**, созданных с помощью главного ключа столбца, ссылается **key_path**.|
+
+
   
 ## <a name="permissions"></a>Разрешения  
  Требуется **VIEW ANY COLUMN MASTER KEY** разрешение.  

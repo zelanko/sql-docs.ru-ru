@@ -1,6 +1,6 @@
 ---
-title: Начало работы с SQL Server 2017 в Red Hat Enterprise Linux | Документация Майкрософт
-description: В этом кратком руководстве показано, как установить SQL Server 2017 на Red Hat Enterprise Linux, а затем создать и запрос к базе данных с помощью sqlcmd.
+title: Начало работы с SQL Server в Red Hat Enterprise Linux | Документация Майкрософт
+description: В этом кратком руководстве показано, как установить SQL Server 2017 или SQL Server 2019 в Red Hat Enterprise Linux, а затем создать и запрос к базе данных с помощью sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,18 +12,29 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 4438184f6e14af1097ff05ea6e463f626025bb46
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 6153f964891856b70699d61ec17ac625a481720b
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103751"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713196"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство: Установка SQL Server и создать базу данных в Red Hat
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом кратком руководстве вы сначала установить SQL Server 2017 на Red Hat Enterprise Linux (RHEL) 7.3 +. Затем мы подключимся при помощи **sqlcmd** для создания первой базы данных и выполнения запросов.
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+В этом кратком руководстве вы устанавливаете SQL Server 2017 или SQL Server 2019 на Red Hat Enterprise Linux (RHEL) 7.3 +. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+В этом кратком руководстве вы установите SQL Server 2019 CTP 2.0 на Red Hat Enterprise Linux (RHEL) 7.3 +. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
+
+::: moniker-end
 
 > [!TIP]
 > Этого учебника требуется ввод данных пользователем и подключение к Интернету. Если вы заинтересованы в [автоматической](sql-server-linux-setup.md#unattended) или [автономной](sql-server-linux-setup.md#offline) процедуры установки см. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
@@ -34,48 +45,55 @@ ms.locfileid: "39103751"
 
 Чтобы установить Red Hat Enterprise Linux на своем локальном компьютере, перейдите к [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Кроме того, можно создать виртуальные машины RHEL в Azure. См. в разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image RHEL` в вызове `az vm create`.
 
+Если вы ранее установили CTP-версии или версии-кандидате SQL Server 2017, необходимо сначала удалить старое хранилище, затем выполните следующие действия. Дополнительные сведения см. в разделе [репозиториев Настройка виртуальных машин Linux для SQL Server 2017 и 2019 ](sql-server-linux-change-repo.md).
+
 Другие требования к системе см. в разделе [требования к системе для SQL Server в Linux](sql-server-linux-setup.md#system).
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ## <a id="install"></a>Установка SQL Server
 
 Чтобы настроить SQL Server на RHEL, выполните следующие команды в окне терминала, чтобы установить **mssql-server** пакета:
 
-> [!IMPORTANT]
-> Если вы ранее установили CTP-версии или версии-кандидате SQL Server 2017, необходимо сначала удалить старое хранилище перед регистрацией один из репозиториев общедоступной версии. Дополнительные сведения см. в разделе [изменить репозиториев из репозитория предварительной версии в общедоступную Версию репозиторий](sql-server-linux-change-repo.md).
-
-1. Загрузите файл конфигурации репозитория Microsoft SQL Server Red Hat:
+1. Загрузите файл конфигурации репозитория Microsoft SQL Server 2017 Red Hat:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
 
-   > [!NOTE]
-   > Это накопительное обновление (CU) хранилища. Дополнительные сведения о параметрах репозитория и различий между ними, см. в разделе [Настройка репозиториев для SQL Server в Linux](sql-server-linux-change-repo.md).
+   > [!TIP]
+   > Если вы хотите попробовать SQL Server 2019, вместо этого необходимо зарегистрировать **предварительной версии (2019)** репозитория. Используйте следующую команду для установки SQL Server 2019:
+   >
+   > ```bash
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   > ```
 
-1. Выполните следующие команды для установки SQL Server:
+2. Выполните следующие команды для установки SQL Server:
 
    ```bash
    sudo yum install -y mssql-server
    ```
 
-1. После завершения установки пакета запустите **установки mssql-conf** и следуйте инструкциям на экране, чтобы задать пароль системного Администратора и выберите ваш выпуск.
+3. После завершения установки пакета запустите **установки mssql-conf** и следуйте инструкциям на экране, чтобы задать пароль системного Администратора и выберите ваш выпуск.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
+
    > [!TIP]
-   > Если вы используете SQL Server 2017 в этом руководстве, свободно Лицензируются следующие выпуски: Evaluation, Developer и Express.
+   > В следующих выпусках SQL Server 2017 свободно лицензируются: Evaluation, Developer и Express.
 
    > [!NOTE]
    > Не забудьте указать надежный пароль для учетной записи SA (минимум длина 8 символов, заглавные и строчные буквы, десятичные цифры и не буквенно-цифровых символов).
 
-1. После завершения конфигурации, убедитесь, что служба запущена:
+4. После завершения конфигурации, убедитесь, что служба запущена:
 
    ```bash
    systemctl status mssql-server
    ```
-   
-1. Чтобы разрешить удаленные соединения, откройте порт SQL Server в брандмауэре на RHEL. По умолчанию SQL Server используется порт TCP 1433. Если вы используете **FirewallD** для брандмауэра, можно использовать следующие команды:
+
+5. Чтобы разрешить удаленные соединения, откройте порт SQL Server в брандмауэре на RHEL. По умолчанию SQL Server используется порт TCP 1433. Если вы используете **FirewallD** для брандмауэра, можно использовать следующие команды:
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
@@ -83,6 +101,52 @@ ms.locfileid: "39103751"
    ```
 
 На этом этапе SQL Server работает на вашем компьютере RHEL и готов к использованию!
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="install"></a>Установка SQL Server
+
+Чтобы настроить SQL Server на RHEL, выполните следующие команды в окне терминала, чтобы установить **mssql-server** пакета:
+
+1. Скачайте предварительную версию Microsoft SQL Server 2019 файл конфигурации репозитория Red Hat:
+
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   ```
+
+2. Выполните следующие команды для установки SQL Server:
+
+   ```bash
+   sudo yum install -y mssql-server
+   ```
+
+3. После завершения установки пакета запустите **установки mssql-conf** и следуйте инструкциям на экране, чтобы задать пароль системного Администратора и выберите ваш выпуск.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
+
+   > [!NOTE]
+   > Не забудьте указать надежный пароль для учетной записи SA (минимум длина 8 символов, заглавные и строчные буквы, десятичные цифры и не буквенно-цифровых символов).
+
+4. После завершения конфигурации, убедитесь, что служба запущена:
+
+   ```bash
+   systemctl status mssql-server
+   ```
+
+5. Чтобы разрешить удаленные соединения, откройте порт SQL Server в брандмауэре на RHEL. По умолчанию SQL Server используется порт TCP 1433. Если вы используете **FirewallD** для брандмауэра, можно использовать следующие команды:
+
+   ```bash
+   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
+   sudo firewall-cmd --reload
+   ```
+
+На этом этапе 2019 CTP-версии SQL Server 2.0 работает на вашем компьютере RHEL и готов к использованию!
+
+::: moniker-end
 
 ## <a id="tools"></a>Установка программ командной строки SQL Server
 

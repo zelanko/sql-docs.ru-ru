@@ -108,7 +108,7 @@ QUIT
 
 |||
 |---|---|
-| [SQL Server Operations Studio](../sql-operations-studio/index.md) | Кросс платформенных графического интерфейса пользователя базы данных управления служебной программы. |
+| [Studio данных Azure](../azure-data-studio/index.md) | Кросс платформенных графического интерфейса пользователя базы данных управления служебной программы. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Кросс платформенного интерфейса командной строки для выполнения команд Transact-SQL. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md); | Редактор кода графического пользовательского интерфейса между различными платформами, выполните инструкции Transact-SQL с помощью расширения mssql. |
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4bbe6fc1aa961c3a1e0e699b1d3a8df87233e874
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 31bd8be73051349c122eb4a99dc99417b491669d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072183"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713590"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Отзывы по SQL Server в Linux
 
@@ -60,6 +60,9 @@ SQL Server 2017 всегда собирает и отправляет свед�
 ### <a name="on-docker"></a>В Docker
 Чтобы отключить отправку отзывов пользователей в docker, необходимо иметь Docker [сохранить данные](sql-server-linux-configure-docker.md). 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. Добавить `mssql.conf` файл со строками `[telemetry]` и `customerfeedback = false` в каталоге узла:
  
    ```bash
@@ -69,15 +72,43 @@ SQL Server 2017 всегда собирает и отправляет свед�
    ```bash
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
+
 2. Запуск образа контейнера
+
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
-   
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. Добавить `mssql.conf` файл со строками `[telemetry]` и `customerfeedback = false` в каталоге узла:
+
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'customerfeedback = false' >> <host directory>/mssql.conf
+   ```
+
+2. Запуск образа контейнера
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+::: moniker-end
+
 ## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>Локальный аудит для SQL Server для сбора отзывов об использовании Linux
 
 Microsoft SQL Server 2017 содержит Интернет-функциями, которые можно собирать и отправлять в Майкрософт сведения о компьютере или устройстве («Стандартные сведения о компьютере»). Компонент локального аудита для сбора отзывов об использовании SQL Server может записывать данные, собранные службой, в указанную папку, представляющие данные (журналы), будут отправляться в корпорацию Майкрософт. Локальный аудит позволяет клиентам просмотреть все данные, которые корпорация Майкрософт собирает с помощью этой функции для обеспечения соответствия, выполнения нормативных требований или соблюдения конфиденциальности.
@@ -94,20 +125,20 @@ Microsoft SQL Server 2017 содержит Интернет-функциями, 
    sudo mkdir /tmp/audit
    ```
 
-1. Изменить владельца и группу каталога **mssql** пользователя:
+2. Изменить владельца и группу каталога **mssql** пользователя:
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-1. Запустите сценарий mssql-conf в качестве привилегированного пользователя с **задать** команду для **telemetry.userrequestedlocalauditdirectory**:
+3. Запустите сценарий mssql-conf в качестве привилегированного пользователя с **задать** команду для **telemetry.userrequestedlocalauditdirectory**:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
    ```
 
-1. Перезапустите службу SQL Server:
+4. Перезапустите службу SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -116,13 +147,15 @@ Microsoft SQL Server 2017 содержит Интернет-функциями, 
 ### <a name="on-docker"></a>В Docker
 Чтобы включить локальный аудит в docker, необходимо иметь Docker [сохранить данные](sql-server-linux-configure-docker.md). 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. Целевой каталог для новые журналы локального аудита будет находиться в контейнере. Создайте целевой каталог для нового локального аудита журналов в каталоге узла на вашем компьютере. В следующем примере создается новый **/аудите** каталог:
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
-   
 1. Добавить `mssql.conf` файл со строками `[telemetry]` и `userrequestedlocalauditdirectory = <host directory>/audit` в каталоге узла:
  
    ```bash
@@ -132,15 +165,49 @@ Microsoft SQL Server 2017 содержит Интернет-функциями, 
    ```bash
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
-2. Запуск образа контейнера
+
+1. Запуск образа контейнера
+
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
-   
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. Целевой каталог для новые журналы локального аудита будет находиться в контейнере. Создайте целевой каталог для нового локального аудита журналов в каталоге узла на вашем компьютере. В следующем примере создается новый **/аудите** каталог:
+
+   ```bash
+   sudo mkdir <host directory>/audit
+   ```
+
+1. Добавить `mssql.conf` файл со строками `[telemetry]` и `userrequestedlocalauditdirectory = <host directory>/audit` в каталоге узла:
+ 
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
+   ```
+
+1. Запуск образа контейнера
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+::: moniker-end
+
 ## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения о SQL Server в Linux, см. в разделе [Общие сведения об SQL Server в Linux](sql-server-linux-overview.md).

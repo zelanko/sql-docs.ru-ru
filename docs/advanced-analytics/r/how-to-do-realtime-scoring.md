@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348215"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712476"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Как создавать прогнозы и прогнозы с помощью моделей машинного обучения в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "43348215"
 
 | Метод           | Интерфейс         | Требования к библиотекам | Скорости обработки |
 |-----------------------|-------------------|----------------------|----------------------|
-| Инфраструктура расширяемости | R: [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Нет. Модели могут быть основаны на любую функцию R или Python | Сотен миллисекунд. <br/>Загрузка среды выполнения имеет фиксированные издержки, вычисление среднего значения для шести триста миллисекунд, прежде чем оцениваются все новые данные. |
-| В режиме реального времени оценки расширения CLR | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) в сериализованной модели | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Десятки миллисекунд, в среднем. |
-| Собственным расширением оценки C++| [Функция ПРОГНОЗИРОВАНИЯ T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) в сериализованной модели | R: RevoScaleR <br/>Python: revoscalepy | Менее чем за 20 миллисекунд, в среднем. | 
+| Платформа расширяемости | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Нет. Модели могут быть основаны на любую функцию R или Python | Сотен миллисекунд. <br/>Загрузка среды выполнения имеет фиксированные издержки, вычисление среднего значения для шести триста миллисекунд, прежде чем оцениваются все новые данные. |
+| [В режиме реального времени оценки расширения CLR](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) в сериализованной модели | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Десятки миллисекунд, в среднем. |
+| [Собственным расширением оценки C++](../sql-native-scoring.md) | [Функция ПРОГНОЗИРОВАНИЯ T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) в сериализованной модели | R: RevoScaleR <br/>Python: revoscalepy | Менее чем за 20 миллисекунд, в среднем. | 
 
 Скорость обработки и не вещества выходных данных является функция отличительный. Если же функции и входные данные, результата оценки следует не зависят от подход, который можно использовать.
 
@@ -44,12 +44,13 @@ _Оценки_ представляет собой двухэтапный про
 
 Шаг назад, процесс подготовки модели и затем вычисление оценок сводятся к таким образом:
 
-1. Создайте модель, используя поддерживаемый алгоритм.
-2. Сериализует модель с помощью специальных двоичный формат.
-3. Сделать модель доступной для SQL Server. Как правило, это означает сохранение сериализованную модель в таблице SQL Server.
-4. Вызовите функцию или хранимую процедуру, указав модели и входных данных в качестве параметров.
+1. Создайте модель, используя поддерживаемый алгоритм. Поддержка зависит от выбранного оценки методологии.
+2. Обучение модели.
+3. Сериализует модель с помощью специальных двоичный формат.
+3. Сохраните модель в SQL Server. Как правило, это означает сохранение сериализованную модель в таблице SQL Server.
+4. Вызовите функцию или хранимую процедуру, указав входные данные модели и данных в качестве параметров.
 
-Если входных данных содержит несколько строк данных, обычно это быстрее для вставки значений прогноза в таблицу в ходе процесса оценки.  Создание оценки обычно в сценарии, где получает входные значения из формы или запроса пользователя, а также возвращают оценку клиентскому приложению. Чтобы повысить производительность при создании последовательных оценок, SQL Server может кэшировать модели таким образом, чтобы его можно загрузить в память.
+Если входных данных содержит несколько строк данных, обычно это быстрее для вставки значений прогноза в таблицу в ходе процесса оценки. Создание оценки обычно в сценарии, где получает входные значения из формы или запроса пользователя, а также возвращают оценку клиентскому приложению. Чтобы повысить производительность при создании последовательных оценок, SQL Server может кэшировать модели таким образом, чтобы его можно загрузить в память.
 
 ## <a name="compare-methods"></a>Сравнение методов
 

@@ -24,12 +24,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a867b5d2caf4c21c6b99215b5e7e546d210aabc
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 741c454f78a116f9080e471bcaa49554fd2caf97
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022293"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46361958"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "43022293"
 |**is_sql_language_enabled**|**bit**|1 = BATCHES = ENABLED означает, что нерегламентированные пакеты SQL допустимы для конечной точки.|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|Трехкомпонентное имя хранимой процедуры, которая реализует этот метод.<br /><br /> Для имен методов требуется использовать трехкомпонентные имена. Имена из одного, двух или четырех компонентов недопустимы.|  
 |**default_database**|**sysname**|Имя базы данных по умолчанию, заданное в параметре DATABASE.<br /><br /> NULL = указан параметр DEFAULT.|  
-|**default_namespace**|**nvarchar(384)**|Пространство имен по умолчанию, указанное в параметре NAMESPACE = параметр, или "http://tempuri.org" Если вместо этого указан параметр DEFAULT.|  
+|**default_namespace**|**nvarchar(384)**|Пространство имен по умолчанию, указанное в параметре NAMESPACE = параметр, или `http://tempuri.org` Если вместо этого указан параметр DEFAULT.|  
 |**default_result_schema**|**tinyint**|Значение по умолчанию для параметра SCHEMA:<br /><br /> 0 = нет<br /><br /> 1 = STANDARD|  
 |**default_result_schema_desc**|**nvarchar(60)**|Описание значения по умолчанию параметра SCHEMA:<br /><br /> None<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = указан параметр CHARACTER_SET = SQL.<br /><br /> 1 = указан параметр CHARACTER_SET = XML.|  
