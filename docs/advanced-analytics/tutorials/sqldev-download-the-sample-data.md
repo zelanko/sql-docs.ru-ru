@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724338"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712757"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>Демонстрационные данные о такси Нью-ЙОРКА для SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -127,6 +127,14 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 |**PredictTip**  |хранимая процедура |Создаваемые сценарием PredictTip.sql. Вызывает обученную модель для создания прогнозов с помощью модели. Хранимая процедура принимает запрос в качестве входного параметра и возвращает столбец числовых значений, представляющих оценки для входных строк. Эта хранимая процедура используется в [ввод в эксплуатацию моделей R](sqldev-operationalize-the-model.md).|
 |**PredictTipSingleMode**  |хранимая процедура| Создаваемые сценарием PredictTipSingleMode.sql. Вызывает обученную модель для создания прогнозов с помощью модели. Эта хранимая процедура принимает новое наблюдение в качестве входных данных, причем отдельные значения характеристик передаются как встроенные параметры, и возвращает значение, представляющее прогнозируемый результат для нового наблюдения. Эта хранимая процедура используется в [ввод в эксплуатацию моделей R](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |хранимая процедура|Создаваемые сценарием TrainTipPredictionModel.sql. Обучает модель логистической регрессии, вызывая пакет r. Модель прогнозирует значение для столбца tipped и обучается на основе случайной выборки, содержащей 70 % данных. Выходными данными хранимой процедуры является обученная модель, которая сохраняется в таблице nyc_taxi_models. Эта хранимая процедура используется в [обучение и сохранение модели](../r/sqldev-train-and-save-a-model-using-t-sql.md).|
+
+## <a name="query-data-for-verification"></a>Запрос данных для проверки подлинности
+
+В качестве шага проверки выполните запрос, чтобы убедиться, что данные были отправлены.
+
+1. В обозревателе объектов в базах данных, разверните **NYCTaxi_Sample** выполнить, а затем откройте папку «таблицы».
+
+2. Щелкните правой кнопкой мыши **dbo.nyctaxi_sample** и выберите **выделить 1000 верхних строк** для возврата некоторые данные.
 
 ## <a name="next-steps"></a>Следующие шаги
 

@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: e9bd11aefb01b607e02f11ebecc5adae7acf70ea
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1c6de6fd77de2594f4d2942fa5e5c4c82c614cc6
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086976"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46714036"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Использовать Visual Studio для создания баз данных для SQL Server в Linux
 
@@ -27,7 +27,7 @@ SQL Server Data Tools (SSDT) превращает Visual Studio в это мощ
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Установка Visual Studio и SQL Server Data Tools
 
-1. Если вы еще не установили Visual Studio на компьютере Windows, [загрузки и установки Visual Studio]. Если у вас нет лицензии на Visual Studio, Visual Studio Community edition — это бесплатная полнофункциональная интегрированная среда разработки для учащихся, разработчиков открытого по и отдельных.
+1. Если вы еще не установили Visual Studio на компьютере Windows, [Скачайте и установите Visual Studio]. Если у вас нет лицензии на Visual Studio, Visual Studio Community edition — это бесплатная полнофункциональная интегрированная среда разработки для учащихся, разработчиков открытого по и отдельных.
 
 2. Во время установки Visual Studio, выберите **Custom** для **выберите тип установки** параметр. Нажмите кнопку **Далее**
 
@@ -39,7 +39,7 @@ SQL Server Data Tools (SSDT) превращает Visual Studio в это мощ
 
 ## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>Обновление SQL Server Data Tools до выпуска версии-Кандидата SSDT 17.0
 
-SQL Server 2017 в Linux поддерживается SSDT 17.0, версия-КАНДИДАТ или более поздней версии.
+SQL Server в Linux поддерживается SSDT 17.0, версия-КАНДИДАТ или более поздней версии.
 
 * [Скачать и установить SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 
@@ -79,13 +79,13 @@ SQL Server 2017 в Linux поддерживается SSDT 17.0, версия-К
 
 ## <a name="build-and-validate-the-database"></a>Создание и проверка базы данных
 
-1. Откройте меню "проект базы данных" на **TutorialDB** и выберите **построения**. SSDT компиляция файлов исходного кода .sql в проекте и создает файл пакета (dacpac) приложения уровня данных. Это можно публиковать базу данных к экземпляру SQL Server 2017 в Linux. 
+1. Откройте меню "проект базы данных" на **TutorialDB** и выберите **построения**. SSDT компиляция файлов исходного кода .sql в проекте и создает файл пакета (dacpac) приложения уровня данных. Это можно публиковать базу данных к экземпляру SQL Server в Linux. 
 
     <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. Проверьте сообщение об успешном выполнении сборки **вывода** окно в Visual Studio. 
 
-## <a name="publish-the-database-to-sql-server-2017-instance-on-linux"></a>Опубликовать базу данных к экземпляру SQL Server 2017 в Linux
+## <a name="publish-the-database-to-sql-server-instance-on-linux"></a>Опубликовать базу данных к экземпляру SQL Server в Linux
 
 1. Откройте меню "проект базы данных" на **TutorialDB** и выберите **публикации**.
 
@@ -113,7 +113,7 @@ SQL Server 2017 в Linux поддерживается SSDT 17.0, версия-К
 
 Дополнительные сведения о разработке базы данных с помощью SQL Data Tools, см. в разделе [документы MSDN по SSDT]
 
-[загрузки и установки Visual Studio]:https://www.visualstudio.com/downloads/
+[Скачайте и установите Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [Документы MSDN по SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [Учебник. Составление инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
