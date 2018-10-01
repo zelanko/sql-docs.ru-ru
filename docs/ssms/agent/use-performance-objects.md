@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01be4cebd589f5d30c4036a0a66f9fa29a4b48c7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0838b0d6620e5cfeaf528755ca5abe7d21f694df
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775329"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47440248"
 ---
 # <a name="use-performance-objects"></a>Использование объектов производительности
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "42775329"
   
 |Тип экземпляра|Имя объекта|  
 |-----------------|---------------|  
-|По умолчанию|**SQLAgent:***объект*:*счетчик*|  
-|Именованный|**SQLAgent$**<br /> **&#42;имя_экземпляра&#42; :***объект*:*счетчик*|  
+|По умолчанию|**SQLAgent:**_объект_:_счетчик_|  
+|Именованный|**SQLAgent$**<br /> **&#42;имя_экземпляра&#42; :**_объект_:_счетчик_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующие объекты производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
