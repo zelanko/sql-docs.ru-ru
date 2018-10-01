@@ -102,8 +102,8 @@ GO
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как переключить модель восстановления в базе данных `model` в режим `FULL` с помощью параметра `SET RECOVERY` инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
 ```sql  
-USE master ;  
-ALTER DATABASE model SET RECOVERY FULL ;  
+USE [master] ;  
+ALTER DATABASE [master] SET RECOVERY FULL ;  
 ```  
   
 ##  <a name="FollowUp"></a> Рекомендуемые действия. После изменения модели восстановления  
