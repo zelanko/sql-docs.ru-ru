@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, enabling database
@@ -14,12 +12,12 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a215a5d2e3f64423013f3b23d854dab13f7cef6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eda7f99f93bf7837ec253c52588707d86bd0785c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999486"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753760"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Включение Stretch Database для базы данных
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,8 +42,7 @@ ms.locfileid: "37999486"
   
 -   Убедитесь в наличии информации о подключении и данных входа, необходимых для создания нового сервера Azure или выбора существующего сервера Azure.  
   
-##  <a name="EnableTSQLServer">
-            </a> Обязательное требование: включение Stretch Database на сервере  
+##  <a name="EnableTSQLServer"></a> Обязательное требование: включение Stretch Database на сервере  
  Перед включением Stretch Database в базе данных или таблице необходимо включить ее на локальном сервере. Для этой операции требуются права sysadmin или serveradmin.  
   
 -   При наличии нужных административных разрешений мастер **включения базы данных для Stretch** настроит сервер для Stretch.  
@@ -64,12 +61,10 @@ GO
   
  Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера для удаленного архива данных](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md) и [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-##  <a name="Wizard">
-            </a> Настройка Stretch Database в базе данных с помощью мастера  
+##  <a name="Wizard"></a> Настройка Stretch Database в базе данных с помощью мастера  
  Сведения о мастере включения базы данных для Stretch, включая описание информации, которую необходимо указать, и вариантов, из которых необходимо выбрать, см. в разделе [Запуск мастера включения базы данных для Stretch](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
   
-##  <a name="EnableTSQLDatabase">
-            </a> Настройка Stretch Database в базы данных с помощью Transact-SQL  
+##  <a name="EnableTSQLDatabase"></a> Настройка Stretch Database в базы данных с помощью Transact-SQL  
  Перед включением Stretch Database в отдельных таблицах необходимо включить ее в базе данных.  
   
  Чтобы настроить Stretch Database для таблицы или базы данных, требуются права db_owner. Кроме того, чтобы настроить Stretch Database для базы данных, требуются права CONTROL DATABASE.  
