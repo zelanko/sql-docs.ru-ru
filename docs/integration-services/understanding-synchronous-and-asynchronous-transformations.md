@@ -5,28 +5,23 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - transformations [Integration Services], synchronous and asynchronous
 - asynchronous transformations [Integration Services]
 - data flow components [Integration Services], synchronous and asynchronous
 - synchronous transformations [Integration Services]
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2783138bb6963b59f8edd60df61175edc6306bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f08c85b55f25d1caaf9a02ea86340b14bd361e4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698212"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Основные сведения о синхронных и асинхронных преобразованиях
   Чтобы понять разницу между синхронным и асинхронным преобразованием в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], проще всего начать с основных сведений о синхронном преобразовании. Если синхронное преобразование соответствует требованиям пользователя, может потребоваться асинхронное преобразование.  
@@ -47,7 +42,7 @@ ms.locfileid: "35401536"
   
 -   Между входными и выходными строками нет однозначного соответствия. Примером является преобразование «Статистическая обработка», при котором компонент должен добавить к выходным данным строку, содержащую вычисленные статистические значения.  
   
- При создании сценариев и программ для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] асинхронное преобразование указывается следующим образом: значение 0 назначается свойству **SynchronousInputID** выходных данных компонента. , и делает это по-другому. Подсистема обработки потока данных не отправляет каждую строку автоматически на выход. Затем требуется написать код для явной отправки каждой строки на соответствующий выход, добавив ее в новый выходной буфер, созданный для выходных данных асинхронного преобразования.  
+ При создании сценариев и программ для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] асинхронное преобразование указывается следующим образом: значение 0 назначается свойству **SynchronousInputID** выходных данных компонента. . Подсистема обработки потока данных не отправляет каждую строку автоматически на выход. Затем требуется написать код для явной отправки каждой строки на соответствующий выход, добавив ее в новый выходной буфер, созданный для выходных данных асинхронного преобразования.  
   
 > [!NOTE]  
 >  Поскольку компонент-источник тоже должен явно добавить каждую строку, считываемую из источника данных, в выходные буферы, действия источника напоминают преобразование с асинхронным выходом.  

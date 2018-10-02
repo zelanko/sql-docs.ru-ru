@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85ebd0ec4668387609781e72becad43e9b52a4a8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273796"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808762"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Журнал выполнения сервера отчетов и представление ExecutionLog3
   Журнал выполнения для сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]содержит сведения об отчетах, которые создаются на одном или нескольких серверах в масштабном развертывании в собственном режиме или в ферме SharePoint. Журнал выполнения отчетов можно использовать для изучения частоты, с которой запрашивается отчет, частоты использования различных форматов вывода и времени обработки в миллисекундах, занимаемого каждой фазой обработки. Журнал содержит сведения о продолжительности времени, затраченного на выполнение запроса набора данных отчета, и времени, затраченного на обработку данных. Администраторы сервера отчетов могут просматривать информацию журнала, выявлять задачи, выполняющиеся продолжительное время, и вносить предложения для разработчиков отчетов в тех областях организации отчета (набор данных или обработка), в которых они могут проводить улучшения.  

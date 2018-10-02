@@ -4,17 +4,16 @@ ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 756cde54f9379ad5caabedfe9b0adcace65b1605
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277474"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737742"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)
 Вы можете узнать, как добавить действия гиперссылок в текстовые поля, изображения, диаграммы и датчики в отчеты с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Ссылки могут указывать на другие отчеты, закладки в отчете либо статические или динамические URL-адреса. 

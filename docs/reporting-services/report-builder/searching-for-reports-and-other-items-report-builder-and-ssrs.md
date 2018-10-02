@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e18110351bf1994af911d09cac16e373f522532
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 296857fefd5588418fa6a2b91b81e062b4d1c9f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776582"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Поиск отчетов и других элементов (построитель отчетов и службы SSRS)
   Можно использовать диспетчер отчетов для поиска на сервере отчетов заданных элементов по имени или описанию. Можно искать опубликованные отчеты, модели отчетов, папки, общие источники данных и ресурсы. Нельзя искать расписания, владельцев, назначения ролей, определенные моментальные снимки в журнале отчета или в подписках. Поиск выполняется в базе данных сервера отчетов, в которой хранятся элементы.  

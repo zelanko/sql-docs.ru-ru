@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - studio environments [Integration Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3ce449f815f4137180eb69f4aac4bfccc75f2ab
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 58e52dcfd08a16b405a9564336d4c23404230021
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404996"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811422"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Средства разработки и управления Integration Services (SSIS)
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат две интегрированные среды для работы с пакетами:  
@@ -53,7 +50,7 @@ ms.locfileid: "35404996"
   
  Дополнительные сведения о [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/hh272686.aspx).  
   
-## <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Среда[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предоставляет службу [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , применяемую для управления пакетами и контроля за выполнением пакетов, а также для определения влияния и преобразования данных для объектов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Работая в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], можно выполнять следующие задачи:  

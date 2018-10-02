@@ -5,25 +5,22 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.cacheconnection.f1
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c59042f57bd8e9cd0352d6ec180b135b201d5f1e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 81c0f330803b5e073425ff4540f20bdd08caf8c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837782"
 ---
 # <a name="cache-connection-manager"></a>диспетчер соединений с кэшем
   Диспетчер соединений с кэшем считывает данные из преобразования кэша или из файла кэша (CAW) и может сохранить эти данные в файле кэша. Данные всегда будут храниться в памяти, вне зависимости от того, был ли настроен диспетчер соединений с кэшем для использования файла кэша.  
@@ -130,7 +127,7 @@ ms.locfileid: "35405218"
  **Кодовая страница**  
  Задает кодовую страницу для столбца этого типа. Параметр **Code Page**можно изменить, если он применим к типу данных.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

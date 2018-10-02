@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - time-outs [Reporting Services]
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fec8a23a6bcc205afd858977433bef0d07525c61
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 206c242dc250eb99b5cc00228928238fd4bc779c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847813"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)
   В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно указать значения времени ожидания, чтобы ограничить использование системных ресурсов. Сервер отчетов поддерживает два значения времени ожидания:  

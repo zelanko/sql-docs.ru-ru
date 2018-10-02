@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - AllowPartiallyTrustedCallersAttribute attribute
 - strong-named custom assemblies [Reporting Services]
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b8607bd3b1f40daa45f32af865fb58e625213463
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0c315f5c76c13970d5f3555cb3393ca0877116b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282596"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754342"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>Использование пользовательских сборок со строгими именами
   Строгое имя идентифицирует сборку и включает текстовое имя сборки, четырехкомпонентный номер версии, сведения о культуре (если они указаны), открытый ключ и цифровую подпись, хранящуюся в манифесте сборки. Строгое имя уникальным образом определяет сборку в среде CLR и гарантирует целостность двоичных файлов.  

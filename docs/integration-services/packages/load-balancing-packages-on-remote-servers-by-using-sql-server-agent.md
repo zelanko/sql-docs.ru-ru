@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - load-balancing [Integration Services]
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a44c518c418e1714ee55614d7c897aa53ccb371b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5482768506042643a7878d1b2d86d69d7605054d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401056"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770612"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server
   Если нужно загрузить много пакетов, удобно использовать другие доступные серверы. Балансировка нагрузки — это метод использования других серверов для загрузки пакетов, когда пакеты находятся под контролем родительского пакета. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]балансировка нагрузки — это ручная процедура, которая должна быть разработана владельцами пакетов. Балансировка нагрузки не выполняется серверами автоматически. Кроме того, пакеты, выполняемые на удаленных серверах, должны быть полными, а не отдельными задачами из других пакетов.  
@@ -130,7 +127,7 @@ ms.locfileid: "35401056"
   
  Дополнительные сведения о том, как включить ведение журналов в пакете, см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
 
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Пакеты служб из заданий агента SQL Server](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   

@@ -4,17 +4,16 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e864cbc4eb26cc6b2ea1330c9467faa545a0b59c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fff523b7b6795546c9dcddc4906633be942c829f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264949"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816012"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Добавление или удаление группы в диаграмме (построитель отчетов и службы SSRS)
 В отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы щелкните любое место в диаграммной области данных, чтобы отобразить панель **Данные диаграммы** . Создайте группы, перетащив поля набора данных в области **Группы категорий** и **Группы рядов** . Чтобы добавить вложенные группы, в область добавляют несколько полей.  

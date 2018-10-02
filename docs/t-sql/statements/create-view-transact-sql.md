@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE VIEW
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d9ffdfee5a7347570fc6797d43dabc0beb9d4a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 25b196ffefd3319b96865ebef92bd778bf72ceb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102322"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808462"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +148,7 @@ OR ALTER
  Выполняет шифрование элементов представления [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md), содержащих текст инструкции CREATE VIEW. Использование предложения WITH ENCRYPTION предотвращает публикацию представления в рамках репликации SQL Server.  
   
  SCHEMABINDING  
- Привязывает представление к схеме базовой таблицы или таблиц. Если аргумент SCHEMABINDING указан, нельзя изменить базовую таблицу или таблицы таким способом, который может повлиять на определение представления. Сначала нужно изменить или удалить само представление для сброса зависимостей от таблицы, которую требуется изменить. При использовании аргумента SCHEMABINDING инструкция *select_statement* должна включать двухкомпонентные (*schema ***.*** object*) имена таблиц, представлений или пользовательских функций, упоминаемых в предложении. Все указанные в инструкции объекты должны находиться в одной базе данных.  
+ Привязывает представление к схеме базовой таблицы или таблиц. Если аргумент SCHEMABINDING указан, нельзя изменить базовую таблицу или таблицы таким способом, который может повлиять на определение представления. Сначала нужно изменить или удалить само представление для сброса зависимостей от таблицы, которую требуется изменить. При использовании аргумента SCHEMABINDING инструкция *select_statement* должна включать двухкомпонентные (_schema_**.**_object_) имена таблиц, представлений или пользовательских функций, упоминаемых в предложении. Все указанные в инструкции объекты должны находиться в одной базе данных.  
   
  Представления или таблицы, входящие в представление, созданное при помощи предложения SCHEMABINDING, не могут быть сброшены, пока это представление не будет удалено или изменено таким образом, чтобы оно более не было привязано к схеме. В противном случае компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выдаст ошибку. Кроме того, выполнение инструкций ALTER TABLE для таблиц, которые входят в представления, привязанные к схемам, завершается ошибкой, если эти инструкции влияют на определение представления.  
   

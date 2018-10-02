@@ -5,12 +5,8 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b2d98a184415fe0cf4cc3dd1d13b66db1dd5c27
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8c25471732d4be4f241689c6c2abb3d4dc4d0672
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789632"
 ---
 # <a name="validating-a-data-flow-component"></a>Проверка компонента потока данных
   Метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> базового класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> предназначен для того, чтобы не допустить исполнения неправильно настроенного компонента. С помощью этого метода можно убедиться, что у компонента есть нужное число входных и выходных объектов, его пользовательские свойства имеют допустимые значения и что любые нужные соединения заданы. Этот метод также используется для проверки правильности типов данных во входной и выходной коллекциях столбцов и что свойство <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> всех столбцов настроено в соответствии с типом компонента. Реализация метода в базовом классе участвует в проверке: она проверяет коллекцию входных столбцов компонента, гарантируя, что каждый столбец этой коллекции ссылается на столбец коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> вышестоящего компонента.  

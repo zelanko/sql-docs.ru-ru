@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02785d03d4ca31881b76af7badd97b693dcd2b48
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 6676cceb6f48b4609e14e8b0667db9d6a2c92b28
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796762"
 ---
 # <a name="data-flow"></a>Поток данных
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет три различных типа компонентов потока данных: источники, преобразования и назначения. Источники извлекают данные из хранилищ, таких как таблицы и представления реляционных баз данных, файлы и базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Преобразования изменяют, объединяют и очищают данные. Целевые объекты загружают данные в хранилища или создают наборы данных в памяти.  
@@ -213,7 +210,7 @@ ms.locfileid: "35334608"
   
  Дополнительные сведения о настройке свойств с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Добавление или удаление компонента в потоке данных](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
  [Соединение компонентов в потоке данных](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e67b8ad7112be79d34a1bfa790d5e05fde67377b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406215"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840993"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Управление метаданными при предоставлении доступа к базе данных на другом сервере
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +132,7 @@ ms.locfileid: "40406215"
   
  Чтобы разрешить автоматическое шифрование главного ключа базы данных на экземпляре сервера, копия этого ключа зашифровывается с использованием главного ключа службы. Эта зашифрованная копия хранится как в рабочей базе данных, так и в базе данных **master**. Как правило, копия, которая хранится в базе данных **master** , обновляется без взаимодействия с пользователем при каждом изменении главного ключа. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сначала пытается расшифровать главный ключ базы данных с использованием главного ключа службы экземпляра. Если расшифровка заканчивается неудачей, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет в хранилище учетных данных поиск учетных данных главного ключа, имеющих идентификатор GUID того же семейства, что и у базы данных, для которой нужен главный ключ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается расшифровать главный ключ базы данных с помощью всех подходящих учетных данных, пока не удастся расшифровать ключ или пока не кончатся учетные данные. Главный ключ, который не зашифрован с помощью главного ключа службы, следует открывать с помощью инструкции OPEN MASTER KEY и пароля.  
   
- При копировании, восстановлении или присоединении зашифрованного ключа базы данных на новом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в базе данных **master** целевого сервера не содержится копия главного ключа базы данных, зашифрованного с использованием главного ключа службы. На целевом экземпляре сервера необходимо открыть главный ключ базы данных. Для открытия главного ключа выполните следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***пароль***'**. После этого рекомендуется включить автоматическую расшифровку главного ключа базы данных, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Эта инструкция передает экземпляру сервера копию главного ключа базы данных, зашифрованного с использованием главного ключа службы. Дополнительные сведения см. в разделах [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ При копировании, восстановлении или присоединении зашифрованного ключа базы данных на новом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в базе данных **master** целевого сервера не содержится копия главного ключа базы данных, зашифрованного с использованием главного ключа службы. На целевом экземпляре сервера необходимо открыть главный ключ базы данных. Для открытия главного ключа выполните следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_пароль_**'**. После этого рекомендуется включить автоматическую расшифровку главного ключа базы данных, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Эта инструкция передает экземпляру сервера копию главного ключа базы данных, зашифрованного с использованием главного ключа службы. Дополнительные сведения см. в разделах [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Сведения о включении автоматической расшифровки главного ключа базы данных в зеркальной базе данных см. в разделе [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   

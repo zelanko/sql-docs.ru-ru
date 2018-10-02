@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.mergetrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cadfce8fb92a6d297fad92e43b9d553d2ea910a4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d768351c318d46d0d82b3553f8d12bed7fb817ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795922"
 ---
 # <a name="merge-transformation"></a>преобразование «Слияние»
   Преобразование «Слияние» объединяет два упорядоченных набора данных в один. Строки из каждого набора данных вставляются в выходной набор на основе значений их ключевых столбцов.  
@@ -67,7 +64,7 @@ ms.locfileid: "35402316"
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о способах задания свойств см. в следующих разделах:  
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  

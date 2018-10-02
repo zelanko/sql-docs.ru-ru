@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da585aaf4894c1e37e8aa75585004818622eb8ce
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 260512d99817084b6a7cc4af1e39e6557f6fea37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332488"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720212"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   Задача "Очередь сообщений" позволяет использовать службу очередей сообщений Майкрософт для отправки и получения сообщений между пакетами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или для отправления сообщений в очередь приложений, которая обрабатывается пользовательским приложением. Эти сообщения могут принимать форму простого текста, файлов или переменных и их значений.  
@@ -100,7 +97,7 @@ ms.locfileid: "35332488"
   
  Дополнительные сведения о задании этих свойств программными средствами см. в документации по классу **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** в руководстве для разработчиков.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Редактор задачи «Очередь сообщений» (страница «Общие»)

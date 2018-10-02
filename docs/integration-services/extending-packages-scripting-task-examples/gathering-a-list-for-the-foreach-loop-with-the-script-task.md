@@ -4,30 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Foreach Loop containers
 - Script task [Integration Services], Foreach loops
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e1fa5494f175315ece0f497a6afe69b98a6df026
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c5f5e0b602ae51654159c60513c1bfdab98f2dc1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818177"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Составление списка для цикла по каждому элементу в задаче «Скрипт»
   Перечислитель по объекту из переменной перечисляет элементы в списке, передаваемом ему в переменной, и выполняет одни и те же задачи для каждого элемента. Чтобы заполнить список, можно использовать пользовательский код в задаче «Скрипт». Дополнительные сведения о перечислителе см. в разделе [Контейнер "Цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -254,6 +248,6 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ## <a name="see-also"></a>См. также:  
  [Контейнер "Цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md)   
- [Настройка контейнера «цикл по каждому элементу»](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+ [Настройка контейнера "цикл по каждому элементу"](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   

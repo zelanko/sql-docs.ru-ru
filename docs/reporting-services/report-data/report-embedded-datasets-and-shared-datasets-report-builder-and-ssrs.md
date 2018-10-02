@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adacff369cf262ebfbbc19f79f1013395f9d6662
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b818182169bc3b8ad0a9256621107552a3def04a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269625"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793682"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)
   Набор данных указывает данные, которые надо извлечь через соединение с данными. Набор данных основывается на подключении к данным, сохраненном в отчете как внедренный источник данных или как ссылка на общий источник данных на сервере отчетов. Набор данных включает в себя запрос, указывающий на набор полей. При перетаскивании этих полей в область конструктора создаются выражения, значением которых при выполнении отчета являются фактические данные.  

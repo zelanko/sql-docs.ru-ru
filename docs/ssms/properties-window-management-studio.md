@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f10c4c8373dd34e07651f83bd13434a1043ab31b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d16a701ee01d754c07577d44c4471477c297ba3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043201"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729092"
 ---
 # <a name="properties-window-management-studio"></a>Окно «Свойства» (среда Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "33043201"
   
 ## <a name="options"></a>Параметры  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |-----------|---------------|  
 |**Имя объекта**|Приводит список выбранных объектов. Отображаются только объекты активного редактора или конструктора.|  
 |**По категориям**|Перечисляются все свойства и их значения для выбранного объекта по категориям. Чтобы сократить количество отображаемых свойств, можно свернуть категорию. При развертывании или свертывании категории слева от ее имени отображается знак «плюс» (+) или «минус» (-). Категории перечислены в алфавитном порядке.|  

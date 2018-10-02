@@ -4,7 +4,6 @@ ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b3dc2372f9ac7ac531c6378610774b8b8ef7db
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b36a4528ac1a12ec1a59528e515530b1e009ba2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779672"
 ---
 # <a name="schedules"></a>Расписания
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют **общие расписания** и **расписания отчетов** , что позволяет управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.

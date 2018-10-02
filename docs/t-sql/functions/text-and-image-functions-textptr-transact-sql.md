@@ -5,9 +5,7 @@ ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699df374b814c1332fa32a16b42974355e569e7a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4eb65f9b2d0c19ed2e32e6466beec715790f81c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971116"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755154"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +63,10 @@ TEXTPTR ( column )
   
 |Функция или инструкция|Описание|  
 |---------------------------|-----------------|  
-|PATINDEX **('***%pattern%***' ,** *expression***)**|Возвращает позицию символа указанной символьной строки в столбцах **text** или **ntext**.|  
-|DATALENGTH **(***expression***)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
+|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Возвращает позицию символа указанной символьной строки в столбцах **text** или **ntext**.|  
+|DATALENGTH<b>(</b>_expression_**)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
 |SET TEXTSIZE|Возвращает предельный размер (в байтах) для данных типа **text**, **ntext** или **image**, возвращаемых инструкцией SELECT.|  
-|SUBSTRING**(***text_column*, *start*, *length***)**|Возвращает строку типа **varchar**, указанную с помощью определенного смещения *start* и длины *length*. Длина должна быть меньше 8 KБ.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|Возвращает строку типа **varchar**, указанную с помощью определенного смещения *start* и длины *length*. Длина должна быть меньше 8 KБ.|  
   
 ## <a name="examples"></a>Примеры  
   

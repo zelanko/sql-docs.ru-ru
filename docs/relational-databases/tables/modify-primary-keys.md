@@ -5,25 +5,22 @@ ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying primary keys
 - primary keys [SQL Server], modifying
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b6fa0a121df5743c20acae8ad1d564e1473e8e7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6ee5dd7e4bf1b4f4f6b05ab6ae54c04e5baf0ab1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067973"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830002"
 ---
 # <a name="modify-primary-keys"></a>Изменение первичных ключей
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ ms.locfileid: "43067973"
     |Установка коэффициента заполнения|Разверните категорию **Характеристики заполнения** и введите целое число от 0 до 100 в поле **Коэффициент заполнения** . Дополнительные сведения о коэффициентах заполнения и их использовании см. в разделе [Укажите коэффициент заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).|  
     |Изменение порядка столбцов|Выберите свойство **Столбцы**и нажмите многоточие **(...)** справа от свойства. В диалоговом окне  **Столбцы индекса** удалите столбцы из первичного ключа. Затем снова добавьте эти столбцы в необходимом порядке. Чтобы удалить столбец из ключа, просто удалите имя столбца из списка имен **Столбец** .|  
   
-4.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+4.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Изменение первичного ключа**  

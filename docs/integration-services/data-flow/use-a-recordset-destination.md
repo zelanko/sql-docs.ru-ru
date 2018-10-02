@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f7d21248c998d4d2d1be7470c77d2c7e18c05d1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d47d625bada340c98726a725c03c5e4ae1c6ae72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410606"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808422"
 ---
 # <a name="use-a-recordset-destination"></a>использовать назначение «Набор записей»
   Назначение «Набор записей» не сохраняет данные во внешнем источнике данных. Наоборот, назначение "Набор записей" сохраняет данные в памяти в наборе записей, который хранится в переменной пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , относящейся к типу данных **Object** . После сохранения данных назначением «Набор записей», как правило, используется контейнер «цикл по каждому элементу» с перечислителем ADO по каждой строке для обработки одной строки набора записей за раз. Перечислитель ADO по каждой строке сохраняет значение из каждого столбца текущей строки в отдельной переменной пакета. Затем настроенные в контейнере «цикл по каждому элементу» задания считывают эти значения из переменных и выполняют с ними ряд действий.  

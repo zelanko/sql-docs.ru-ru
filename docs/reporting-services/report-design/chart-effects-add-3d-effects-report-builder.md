@@ -4,17 +4,16 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91a68c4a70831d505556ac144bfb783792fb1ce3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ee8ec4c91498247fc904c1b0e14a71b4e47f3a29
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274427"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848262"
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>Эффекты диаграммы — добавление трехмерных эффектов (построитель отчетов)
   Объемные (трехмерные) эффекты можно использовать, чтобы добавить глубину и увеличить визуальную привлекательность диаграммы в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы. Например, если нужно выделить отдельный срез разрезанной круговой диаграммы, можно повернуть диаграмму и изменить перспективу так, что пользователи обратят внимание на этот сегмент в первую очередь. После применения объемных эффектов к диаграмме все цвета градиента и стили штриховки отключаются.  

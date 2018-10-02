@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OR operator
 - logical OR (||)
 - '|| (logical OR)'
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd728efbc98ea1f9d06e565db4661b29b45dba95
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 25264aeca3953bb7ec4a402a705386ddfc075ca5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409236"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757412"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (логическое ИЛИ) (выражение служб SSIS)
   Выполняет логическую операцию ИЛИ. Выражение принимает значение TRUE, если одно или оба условия имеют значение TRUE.  

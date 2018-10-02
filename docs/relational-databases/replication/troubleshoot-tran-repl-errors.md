@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7fc5893c782794a69a1bcd5ac41bfb3dae693337
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 665ffbd6b0a36bc38a0e7f88b7fbff035a5f2b0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989446"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800982"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Средство устранения неполадок: поиск ошибок, связанных с репликацией транзакций SQL Server 
 Без понимания того, как работает репликация транзакций, устранение ее ошибок может быть затруднительным. Первым шагом при создании публикации является создание моментального снимка агентом моментальных снимков и его сохранение в папке моментальных снимков. Затем агент распространения применяет моментальный снимок к подписчику. 
