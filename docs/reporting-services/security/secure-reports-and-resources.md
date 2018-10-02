@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5320c2a40106c8bbdaa2417fc2a74f19e2c76d6a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dfd46944ef5f54d76f8c426b12656e7652e231f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266336"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620135"
 ---
 # <a name="secure-reports-and-resources"></a>Защищенные отчеты и ресурсы
   Можно управлять степенью предоставляемого пользователям доступа к отдельным отчетам и ресурсам. По умолчанию только пользователи, являющиеся членами встроенной группы **Администраторы** , могут выполнять отчеты, просматривать ресурсы, изменять свойства и удалять элементы. Остальные пользователи должны иметь созданные для них назначения ролей, предоставляющие доступ к отчету или ресурсу.  

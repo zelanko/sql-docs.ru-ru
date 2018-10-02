@@ -1,27 +1,25 @@
 ---
-title: Воспроизведение таблицы трассировки (приложение SQL Server Profiler) | Документы Microsoft
+title: Воспроизведение таблицы трассировки (SQL Server Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4498980615096326288559221d3ee2f4f4a1870
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.openlocfilehash: 2e011b894693539fa2c79ffaa2c922567ee7d5fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736452"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>воспроизвести таблицу трассировки (приложение SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  Выберите либо **Воспроизвести события в порядке трассировки**, либо **Воспроизвести события, используя несколько потоков**. В нижеследующей таблице объясняются различия между этими параметрами.  
   
-    |Параметр|Description|  
+    |Параметр|Описание|  
     |------------|-----------------|  
     |**Воспроизвести события в порядке трассировки**|Воспроизводит события в том порядке, в котором они были записаны. Выбор этого параметра включает возможность отладки.|  
     |**Воспроизвести события, используя несколько потоков**|В этом варианте используются несколько потоков для воспроизведения каждого события независимо от последовательности. Выбор этого параметра способствует оптимальной производительности.|  

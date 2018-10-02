@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], enhanced database failover
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
-caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: baa79f3caab1105b7cf6d7849bd5ef993d72d7f6
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706142"
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Добавление улучшенной отработки отказа базы данных в группу доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ SQL Server 2016 представляет новую функцию под наз
 
 Улучшенную отработку отказа базы данных можно настроить с помощью SQL Server Management Studio или Transact-SQL. Командлеты PowerShell пока не дают такой возможности. По умолчанию улучшенная отработка отказа базы данных отключена.
 
-### <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 Улучшенную отработку отказа базы данных можно включить при создании группы доступности с помощью SQL Server Management Studio. После создания группы доступности включить или отключить эту функцию можно только с использованием Transact-SQL.
 

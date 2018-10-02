@@ -5,22 +5,19 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0ec7ce0ff7a192c151d088fa1c4341432606cbb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 06110a0befbf835e4c2b3efe4ede9b4c22f4e020
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310423"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640502"
 ---
 # <a name="dqs-security"></a>Безопасность DQS
 
@@ -42,7 +39,7 @@ ms.locfileid: "35310423"
 ## <a name="user-management"></a>Управление пользователями  
  Администратор базы данных (DBA) создает пользователей DQS и связывает их с ролями DQS в среде SQL Server Management Studio. Администратор базы данных управляет их разрешениями, добавляя имена входа SQL в качестве пользователей базы данных DQS_MAIN и связывая каждого пользователям с одной из ролей DQS. Каждой роли предоставляются разрешения для набора хранимых процедур в базе данных DQS_MAIN. Эти три роли DQS недоступны для баз данных DQS_PROJECTS и DQS_STAGING_DATA.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

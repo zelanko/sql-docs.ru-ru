@@ -3,7 +3,6 @@ title: Создание базы данных сервера отчетов, р�
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -11,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f2d9b4e4ab3ca5e82294bee4ed337e025a8f1f9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e7fe8ed24590c924a6691834104eaf0d4e018312
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277254"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737242"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Создание базы данных сервера отчетов, работающего в собственном режиме
 

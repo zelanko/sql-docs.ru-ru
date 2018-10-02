@@ -5,24 +5,21 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.paramterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7063c3b5aabc396fc35f05b5a1d271d0a12d7204
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8205582caebddb941d3c5dc512a3952fbf9f8f3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750362"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Параметры пакета и проекта Integration Services (SSIS)
   Параметры служб[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) могут быть использованы для присвоения значений свойствам внутри пакетов во время выполнения пакетов. Можно создать *параметры проекта* на уровне проекта и *параметры пакета* на уровне пакета. Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется.  
@@ -43,7 +40,7 @@ ms.locfileid: "35404376"
   
 -   [Диалоговое окно «Настройка»](../integration-services/service/configure-dialog-box.md)  
   
--   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+-   [Диалоговое окно "Выполнение пакета"](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
 ### <a name="parameter-values"></a>Значения параметров  
  Можно назначить до 3 различных значений для параметра. С началом выполнения пакета для параметра используется одно значение, а параметр разрешается в свое последнее литеральное значение.  

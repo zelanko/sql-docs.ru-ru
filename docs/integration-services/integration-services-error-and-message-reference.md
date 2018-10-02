@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bedb049d518775144b53da2ead7fc1eee5392669
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0d8fdee121bbeea704d53068b6829548ffe7b07b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800742"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Справочник по сообщениям об ошибках служб Integration Services
   Следующие таблицы содержат стандартные ошибки, предупреждения и информационные сообщения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в возрастающей цифровой последовательности в каждой категории вместе с числовыми кодами и символьными именами. Каждая ошибка определена как поле в классе <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> в пространстве имен <xref:Microsoft.SqlServer.Dts.Runtime> .  

@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 344a2aabb3601761d250d18725d11ebc4585fa3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662466"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737262"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Заметки о выпуске для драйвера JDBC
 
@@ -114,7 +111,8 @@ Microsoft JDBC Driver 6.4 для SQL Server полностью соответс�
 
 Драйвер JDBC теперь поддерживает типы данных sql_variant для использования с SQL Server. Sql_variant также поддерживается с помощью функции, такие как возвращающего табличное значение параметров (TVP) и BulkCopy с ниже ограничения:
 
-1. Для значений даты: при использовании возвращающего табличное значение Параметра для заполнения таблицы, содержащей значения datetime, smalldatetime или date, хранящиеся в столбце sql_variant, вызывая методы getDateTime()/getSmallDateTime()/getDate() resultset не работает и вызывает следующее исключение:  `java java.lang.String cannot be cast to java.sql.Timestamp` Обходной путь: вместо этого используйте «getString()» или «getObject()» методов.
+1. Для значений даты: при использовании возвращающего табличное значение Параметра для заполнения таблицы, содержащей значения datetime, smalldatetime или date, хранящиеся в столбце sql_variant, вызывая методы getDateTime()/getSmallDateTime()/getDate() resultset не работает и вызывает следующее исключение: `java java.lang.String cannot be cast to java.sql.Timestamp`
+    Обходное решение: используйте методы "getString()" или "getObject()".
 
 2. Использование возвращающего табличное значение параметра с SQL Variant для значений null
 

@@ -4,7 +4,6 @@ ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 268fa0a3dc73642ffa188a4c5be1d2a123703998
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 42f19fbe37a953ab22f1c9ac3de3cc2c4c8bb0da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278120"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684442"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы Reporting Services принимают запросы, в которых задана проверка подлинности NTLM или Negotiated. Если конфигурация развертывания включает клиентские приложения или браузеры, использующие обычную проверку подлинности, то необходимо добавить обычную проверку подлинности в список поддерживаемых типов. Кроме того, если планируется использование построителя отчетов, то необходимо разрешить анонимный доступ к его файлам.  

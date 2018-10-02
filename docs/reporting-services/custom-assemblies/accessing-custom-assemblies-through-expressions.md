@@ -4,10 +4,7 @@ ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - expressions [Reporting Services], custom assemblies
 - static member calls
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb7b034ff6fa0568a20f9a05ea1d66aaf10b88d7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6adbdb5f718a25453f0a77a297331a7ab17c3849
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280151"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657342"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Доступ к пользовательским сборкам посредством выражений
   После того как пользовательская сборка была создана, сделана доступной для конструктора отчетов или сервера отчетов, добавлена к подходящей политике безопасности, а также после того, как в определение отчета была добавлена ссылка на данную пользовательскую сборку, появится возможность доступа к членам классов сборки посредством выражений отчетов. Для ссылки в выражении на пользовательский код следует вызвать элемент класса этой сборки. Способ создания ссылки зависит от того, является ли метод статическим или основывается на экземпляре.  

@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 39bec0cbaacdc0bcedf88eb9ea188aac1773a101
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8ed5623c2414fd55595e6f5890ae1b461d6bd76f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267124"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764392"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Добавление, перемещение или удаление текстового поля (построитель отчетов и службы SSRS)
   Текстовые поля — это наиболее часто используемые элементы отчета в отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы. В текст отчета можно добавить текстовое поле, в котором будут отображаться такие сведения, как заголовки, выбранные значения параметров, встроенные поля и даты.  

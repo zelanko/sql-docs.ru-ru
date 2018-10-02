@@ -5,9 +5,7 @@ ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88a5fb5fbac36bfa7dc0eb6d7f3495c9306c8513
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 43b3ec688f23d1ba50392c09b115301cfa2ae127
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403496"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707902"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок пакетов после их завершения и развертывания.  
@@ -109,7 +106,7 @@ ms.locfileid: "35403496"
 ## <a name="troubleshoot-errors-without-a-description"></a>Устранение неполадок, когда ошибка выдается без описания  
  Если ошибка служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выдается без описания, это описание можно найти в [Справочнике по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md) , выполнив поиск по номеру ошибки. Этот список сейчас не включает сведения об устранении неполадок.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Отладка потока данных](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>См. также  

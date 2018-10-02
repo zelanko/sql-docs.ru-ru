@@ -6,9 +6,7 @@ ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - clr strict security
@@ -19,23 +17,22 @@ helpviewer_keywords:
 - assemblies [CLR integration], strick security
 - clr strict security option
 ms.assetid: ''
-caps.latest.revision: 0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3889d749e7b50300a42a165c46a029daee5feb56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4816aade2a0b1ce76b56fcda6be9e7afff05114
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32871069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787422"
 ---
 # <a name="clr-strict-security"></a>Строгая безопасность среды CLR   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Управляет интерпретацией разрешения `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 
-|Значение |Description | 
+|Значение |Описание | 
 |----- |----- | 
 |0 |Disabled: обеспечивает обратную совместимость. Использование значение `Disabled` не рекомендуется. | 
 |1 |Enabled: заставляет [!INCLUDE[ssde-md](../../includes/ssde-md.md)] игнорировать сведения `PERMISSION_SET` о сборках и всегда интерпретировать их как `UNSAFE`.  Значение [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] по умолчанию — `Enabled`. | 

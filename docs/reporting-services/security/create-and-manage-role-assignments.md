@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e0579c3d9d48ea9ac833829e571cf09b6c0dcd3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5c0397b5e7cbc8bb5ef53ea4bf1bf6c9a6b1620d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703138"
 ---
 # <a name="create-and-manage-role-assignments"></a>Создание назначений ролей и управление ими
   *Назначение ролей* представляет собой политику безопасности, определяющую, может ли пользователь или группа получить доступ к определенному элементу сервера отчетов или выполнить над ним операцию. Назначение ролей состоит из одного имени учетной записи пользователя или группы пользователей и одного или более определений роли.  

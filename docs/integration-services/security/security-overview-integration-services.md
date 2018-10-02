@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4c6a5c0334798aeae16b4e6dc6f43c7d3209b0f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 86272ee2bd936b84c72e6cbc3fd9083d2d1c39bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616492"
 ---
 # <a name="security-overview-integration-services"></a>Общие сведения о безопасности (службы Integration Services)
   Безопасность служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] обеспечивается несколькими уровнями защиты, которые составляют насыщенную и гибкую среду безопасности. Эти уровни безопасности включают в себя использование цифровых подписей, свойств уровня пакетов, ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и разрешений операционной системы. Большинство этих функций безопасности относятся к категории управления доступом и удостоверениями.  
@@ -135,7 +132,7 @@ ms.locfileid: "35410756"
   
  Важно ограничить доступ к компьютерам, на которых запущены службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , особенно службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые могут перечислить удаленные папки. Любой пользователь, прошедший проверку подлинности, может запрашивать перечисление пакетов. Даже если служба не находит службу, она перечисляет папки. Имена папок могут оказаться полезными сведениями для злоумышленника. Если администратор настроил службу для перечисления папок на удаленном компьютере, пользователи также смогут увидеть имена, которые они в действительности не должны были видеть.  
 
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  В следующем списке приведены ссылки на разделы, в которых описывается выполнение определенных задач в отношении безопасности.  
   
 -   [Создание пользовательской роли](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
