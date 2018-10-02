@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dad3c26c68535c16586c7a31f87600ed7791cc03
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: f0bf343b332a92b88aab32a12eace6052b6b9b60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652822"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания
 Можно создать участников развертывания для выполнения специализированных действий при развертывании проекта SQL. Возможные типы участников — [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) и [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Используйте [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) для изменения плана до его выполнения и [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) для осуществления операций в ходе выполнения плана. В этом пошаговом руководстве показано, как создать [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) с именем SqlRestartableScriptContributor, чтобы добавлять инструкции IF к пакетам в скрипте развертывания. Таким образом можно разрешить в скрипте повторный запуск пакетов, пока они не будут успешно завершены, если в ходе выполнения возникает ошибка.  
