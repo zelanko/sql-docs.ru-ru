@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df35cb91b59e9ea4734864ee9f839b2eef983eaa
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 40151df5effd43cd48f005a0ddfd2e5faa673b40
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086306"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668902"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Практическое руководство. Настройка запуска модульного теста SQL Server
 При настройке тестового проекта можно задать несколько параметров, управляющих аспектами выполнения модульных тестов SQL Server. Эти параметры конфигурации хранятся в файле app.config проекта тестов. При непосредственном изменении этого файла новые значения отображаются в диалоговом окне конфигурации проекта.  
