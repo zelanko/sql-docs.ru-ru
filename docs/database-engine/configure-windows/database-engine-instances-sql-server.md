@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 34db3b2fe4d33fd7680fe22ecca31f5885742916
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807942"
 ---
 # <a name="database-engine-instances-sql-server"></a>Экземпляры компонента Database Engine (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +27,7 @@ ms.locfileid: "32868209"
   
  На каждом компьютере могут работать несколько экземпляров компонентов [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Один экземпляр может быть экземпляром по умолчанию. Экземпляр по умолчанию не имеет имени. Если в запросе на подключение указано только имя компьютера, соединение устанавливается с экземпляром по умолчанию. Экземпляр, которому при установке было задано имя, называется именованным экземпляром. Для подключения к такому экземпляру необходимо указать в запросе на подключение имя компьютера и имя экземпляра. Устанавливать экземпляр по умолчанию необязательно; все экземпляры, работающие на компьютере, могут быть именованными экземплярами.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

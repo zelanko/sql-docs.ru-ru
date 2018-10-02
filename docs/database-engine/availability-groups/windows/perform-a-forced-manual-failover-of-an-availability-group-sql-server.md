@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.forcefailover.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-caps.latest.revision: 83
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2561d24c8d229a74ab4bf3379338c4ba41ae335
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 883252a6b4c7e69c488a497308889db6f7f9ac05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834652"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -277,7 +274,7 @@ ms.locfileid: "34769570"
   
     -   [Создание резервной копии журнала транзакций (SQL Server)](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-##  <a name="ExampleRecoveryFromCatastrophy"></a> Использование принудительной отработки отказа для восстановления после разрушительного сбоя  
+##  <a name="ExampleRecoveryFromCatastrophy"></a> Example Scenario: Using a Forced Failover to Recover from a Catastrophic Failure  
  В случае отказа первичной реплики при отсутствии синхронизированной вторичной реплики может оказаться целесообразной принудительная отработка отказа группы доступности. Целесообразность принудительной отработки отказа зависит от следующего: (1) ожидается ли остановка первичной реплики на время, превышающее допустимое время простоя в соглашении об уровне обслуживания (SLA), и (2) есть ли смысл рисковать возможной потерей данных для обеспечения быстрого доступа к базе данных-источнику. Если принято решение о принудительной отработке отказа группы доступности, сама принудительная отработка отказа является лишь одним этапом многошагового процесса.  
   
  Для иллюстрации шагов, необходимых для восстановления после разрушительного сбоя с помощью принудительной отработки отказа, в данном разделе представлен один из возможных сценариев восстановления. Данный сценарий подразумевает наличие группы доступности, изначальная топология которой состоит из основного центра обработки данных, где размещены три реплики доступности с синхронной фиксацией (в том числе первичная реплика), и удаленного центра обработки данных, где размещены две вторичные реплики с асинхронной фиксацией. На следующем рисунке изображена изначальная топология группы доступности в данном примере: Группа доступности размещается в кластере WSFC со несколькими подсетями; три узла находятся в основном центре обработки данных (**Node 01**, **Node 02**и **Node 03**), и два узла в удаленном центре обработки данных (**Node 04** и **Node 05**).  
