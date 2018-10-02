@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26e0b185a66be83ad649a5b6ccb88326c3421d32
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fc05bd786594cc70836bc6d39e86143d16089979
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617442"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками
   Стандартная подписка — это подписка, созданная конкретным пользователем, который хочет получать отчет по электронной почте или в общую папку. В этом подразделе содержатся сведения о стандартных подписках, создаваемых и управляемых отдельными пользователями. К подпискам, управляемым данными, предъявляются другие требования, и они содержат другие шаги, обсуждаемые в отдельном подразделе. Дополнительные сведения см. в разделе [Создание, изменение и удаление управляемых данными подписок](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  

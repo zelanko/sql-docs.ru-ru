@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a68ee56f7e581a38a075dc4264befbeafe25fa09
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7733d3d68e0c4888d865f34ecae243e803636526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612832"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Управление отображением области данных табликса на странице отчетов
 Ознакомьтесь со свойствами, которые можно задать в отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для таблицы, матрицы или области данных списка, чтобы изменить отображение этих компонентов в отчете.  

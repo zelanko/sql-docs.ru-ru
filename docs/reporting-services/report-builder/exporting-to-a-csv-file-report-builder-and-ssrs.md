@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc9f3587e8b2de883407c3d1b36dafa03db0b1d4
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 697934ebe182f82e4f9c668439afb6ecf2bc5631
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702602"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Экспорт в CSV-файл (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате с разделителями-запятыми (CSV) готовит отчеты с разбиением на страницы для просмотра в виде плоских представлений данных стандартизованного текстового вида. Этот формат легко читается и может использоваться для обмена со многими приложениями.  

@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b6152a89af59acd56478b6dabee5d29f8d009f9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94b010e4b913d6e7259306cceb73d61cebcdb13b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32862559"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629532"
 ---
 # <a name="always-on-availability-groups-extended-events"></a>Расширенные события для групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 #### <a name="event-information"></a>Сведения о событии  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |Имя|availability_replica_state_change|  
 |Категория|alwayson|  
@@ -98,7 +95,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 #### <a name="event-fields"></a>Поля событий  
   
-|Имя|Type_name|Description|  
+|Имя|Type_name|Описание|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Идентификатор группы доступности.|  
 |availability_group_name|unicode_string|Имя группы доступности.|  
@@ -121,7 +118,7 @@ GO
   
 #### <a name="event-information"></a>Сведения о событии  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |Имя|availability_group_lease_expired|  
 |Категория|alwayson|  
@@ -129,7 +126,7 @@ GO
   
 #### <a name="event-fields"></a>Поля событий  
   
-|Имя|Type_name|Description|  
+|Имя|Type_name|Описание|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Идентификатор группы доступности.|  
 |availability_group_name|unicode_string|Имя группы доступности.|  
@@ -149,7 +146,7 @@ GO
   
 #### <a name="event-information"></a>Сведения о событии  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
 |Категория|alwayson|  
@@ -157,7 +154,7 @@ GO
   
 #### <a name="event-fields"></a>Поля событий  
   
-|Имя|Type_name|Description|  
+|Имя|Type_name|Описание|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Идентификатор группы доступности.|  
 |availability_group_name|unicode_string|Имя группы доступности.|  
@@ -186,7 +183,7 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported (несколько номеров ошибки): для проблем с транспортом или подключением  
  Каждое отфильтрованное событие свидетельствует о проблеме подключения в конечной точки зеркального отображения базы данных или транспорта, от которой зависит группа доступности.  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |Имя|error_reported<br /><br /> Числа для фильтрации: 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
 |Категория|ошибки|  
@@ -194,7 +191,7 @@ GO
   
 #### <a name="error-numbers-to-filter"></a>Номера ошибок для фильтрации  
   
-|Номер ошибки|Description|  
+|Номер ошибки|Описание|  
 |------------------|-----------------|  
 |35201|Истекло время ожидания при попытке установить соединение с репликой доступности "%ls".|  
 |35202|Соединение для группы доступности "%ls" от реплики доступности "%ls" с идентификатором [%ls] до реплики доступности "%ls" с идентификатором [%ls] было успешно установлено.  Это информационное сообщение. Вмешательство пользователя не требуется.|  
@@ -249,7 +246,7 @@ GO
   
 #### <a name="event-information"></a>Сведения о событии  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |Имя|data_movement_suspend_resume|  
 |Категория|Alwayson|  
@@ -259,7 +256,7 @@ GO
   
 ||||  
 |-|-|-|  
-|Имя|Type_name|Description|  
+|Имя|Type_name|Описание|  
 |availability_group_id|guid|Идентификатор группы доступности.|  
 |availability_group_name|unicode_string|Имя группы доступности (при его наличии).|  
 |availability_replica_id|guid|Идентификатор реплики доступности.|  
@@ -292,7 +289,7 @@ GO
   
 #### <a name="event-information"></a>Сведения о событии  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |Имя|alwayson_ddl_execution|  
 |Категория|alwayson|  
@@ -300,7 +297,7 @@ GO
   
 #### <a name="event-fields"></a>Поля событий  
   
-|Имя|Type_name|Description|  
+|Имя|Type_name|Описание|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|Идентификатор группы доступности.|  
 |availability_group_name|unicode_string|Имя группы доступности.|  
@@ -325,7 +322,7 @@ GO
   
 #### <a name="event-information"></a>Сведения о событии  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |Имя|availability_replica_manager_state_change|  
 |Категория|alwayson|  
@@ -333,7 +330,7 @@ GO
   
 #### <a name="event-fields"></a>Поля событий  
   
-|Имя|Type_name|Description|  
+|Имя|Type_name|Описание|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|Текущее состояние диспетчера реплики доступности.<br /><br /> Справка в Интернете<br /><br /> Вне сети<br /><br /> WaitingForClusterCommunication|  
   
@@ -356,7 +353,7 @@ GO
   
 #### <a name="event-information"></a>Сведения о событии  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |Имя|error_reported<br /><br /> Номер ошибки 1480: база данных "DATABASE_NAME" REPLICATION_TYPE_MSG меняет роль с "OLD_ROLE" на "NEW_ROLE" по причине REASON_MSG|  
 |Категория|ошибки|  

@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d374f336d2fe70d62bdca2194cfe5ac3250e0d91
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 97d46e8f04afac405e625952b077a00abb29415d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334098"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607238"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Занятие 1–3. Добавление пакетов и других файлов
 В этой задаче к проекту, созданному в предыдущей задаче учебника по развертыванию, добавляются существующие пакеты, вспомогательные файлы для поддержки отдельных пакетов, а также файл сведений. Например, будет добавлен файл XML-данных, содержащий данные для пакета, и текстовый файл Readme с данными о всех пакетах проекта.  

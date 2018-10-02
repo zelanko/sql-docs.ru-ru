@@ -4,10 +4,7 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - initializing custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], initializing
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f2b0db93d96c88fede36acba3b04999a08ca737
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b628a2d2ee2ca21cfb75abadce01293f536b8cbd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280321"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726892"
 ---
 # <a name="initializing-custom-assembly-objects"></a>Инициализация объектов пользовательских сборок
   В некоторых случаях может понадобиться инициализировать значения свойств и полей в классах пользовательских сборок при создании их экземпляров. Вероятнее всего, понадобится инициализировать пользовательские классы значениями, доступными из коллекции глобальных объектов отчета. Это выполняется переопределением метода **OnInit** объекта **Code** отчета. Для доступа к методу **OnInit** используется элемент **Code** определения отчета. Существует два способа инициализации значений свойства или поля классов в пользовательской сборке, которую планируется использовать в отчете: можно объявить и создать новый экземпляр класса с помощью метода **OnInit** или вызвать общедоступный метод с помощью метода **OnInit**.  

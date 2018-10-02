@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdafb729fcdc18b50f2a88a42c2bd4cf9b98adf2
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 790542daa3cf69f5d1cd149a3356545fe69b03e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733872"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Сопоставления столбцов (мастер импорта и экспорта SQL Server)
   Если выбрав существующие таблицы и представления, которые нужно скопировать, или просмотрев свой запрос, вы нажмете **Изменить сопоставления**, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется диалоговое окно **Сопоставления столбцов** . На этой странице можно указать и настроить конечные столбцы, в которые будут отправляться данные, копируемые из исходных столбцов. Зачастую на этой странице не нужно ничего менять.

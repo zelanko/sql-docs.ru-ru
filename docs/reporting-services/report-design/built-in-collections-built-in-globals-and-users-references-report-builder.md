@@ -4,17 +4,16 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d08513ed76a211fe7a6e7b53ecbe04b73f875d45
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bd89bede228d7a54e0bbfe7cab967facdcbec563
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719902"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Встроенные коллекции — глобальные значения и ссылки на пользовательские поля (построитель отчетов)
   Коллекция "Встроенные поля", включающая как коллекцию **Глобальные переменные** , так и коллекцию **Пользователь** , представляет глобальные значения, предоставленные службами Reporting Services при обработке отчета. Коллекция **Globals** предоставляет такие значения, как имя отчета, время начала обработки отчета и текущее количество страниц для верхнего или нижнего колонтитула отчета. Коллекция **User** предоставляет идентификатор пользователя и параметры языка. Эти значения можно использовать в выражениях для фильтрации результатов отчета.  

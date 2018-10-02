@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cde2105ac4291e7553b4a073d62ecb7e43348401
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f4582efcfd91c71e1b40b454712d5d0afeeb8765
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076774"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646452"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Создание, изменение и удаление пространственных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ ms.locfileid: "43076774"
   
 11. На странице **Пространственный** укажите значения, которые необходимо использовать для пространственных свойств индекса.  
   
-     При создании индекса для столбца типа **geometry** необходимо указать координаты **(***X-min***,***Y-min***)** и **(***X-max***,***Y-max***)** ограничивающего прямоугольника. При создании индекса для столбца типа **geography** после задания схемы тесселяции **Географическая сетка** поля ограничивающего прямоугольника становятся доступными только для чтения, так как в тесселяции географической сетки ограничивающий прямоугольник не используется.  
+     При создании индекса для столбца типа **geometry** необходимо указать координаты **(**_X-min_**,**_Y-min_**)** и **(**_X-max_**,**_Y-max_**)** ограничивающего прямоугольника. При создании индекса для столбца типа **geography** после задания схемы тесселяции **Географическая сетка** поля ограничивающего прямоугольника становятся доступными только для чтения, так как в тесселяции географической сетки ограничивающий прямоугольник не используется.  
   
      При необходимости можно указать нестандартные значения для поля **Число ячеек на объект** и для плотности сетки на любом уровне схемы тесселяции. По умолчанию количество ячеек на объект составляет 16 для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или 8 для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или более поздней версии, а плотность сетки — **Средняя** для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.oledbsource.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1cf60d0f7b775e4950b159c237b96e82a1b333f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e7e61bde2da60e033d2d57d193eda750813d70f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083356"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723522"
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -50,7 +47,7 @@ ms.locfileid: "39083356"
   
  При использовании параметризированного запроса можно сопоставить переменные с параметрами, чтобы задать значения для отдельных параметров в инструкциях SQL.  
   
- Данный источник для подключения к источнику данных использует диспетчер соединений OLE DB, в котором задается используемый поставщик OLE DB. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Данный источник для подключения к источнику данных использует диспетчер соединений OLE DB, в котором задается используемый поставщик OLE DB. Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] также предоставляет объект источника данных, из которого можно создать диспетчер соединений OLE DB, делая источники данных и представления источников данных доступными для источника OLE DB.  
   

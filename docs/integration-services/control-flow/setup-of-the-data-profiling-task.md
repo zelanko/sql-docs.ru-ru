@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 483991212cd56bf587d562426357e1c940e61c1a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 2e593351cd5ba5f0aa7efb1ced09af98cc40c3a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333338"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652382"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Установка задачи «Профилирование данных»
   Перед просмотром профиля исходных данных необходимо сначала настроить и выполнить задачу «Профилирование данных». Эта задача создается в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Задача «Профилирование данных» настраивается с помощью редактора задачи «Профилирование данных». Этот редактор позволяет выбрать расположение, в которое будут выводиться профили, в том числе профили, требуемые для вычисления. После настройки задачи запускается пакет, вычисляющий профили данных.  

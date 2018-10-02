@@ -5,22 +5,19 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca04765f81319fee1c6dee09de7ee6834f92ceda
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 81603c1fd153795054897d362d4a2c9df5a88b66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632912"
 ---
 # <a name="data-quality-projects-dqs"></a>Проекты служб Data Quality Services (DQS)
 
@@ -59,7 +56,7 @@ ms.locfileid: "35310673"
 ##  <a name="ProfilingNotification"></a> Профилирование данных и уведомления  
  Во время операций очистки и сопоставления данных в проекте качества данных вы можете получать статистику и информацию о данных, обрабатываемых службами DQS, в реальном времени. Профилирование данных поможет оценить эффективность процессов очистки и сопоставления и определить, насколько очистка и сопоставление помогли улучшить качество данных. Профилирование служб DQS предоставляет два измерения качества данных: *полнота* (степень, в которой представлены данные) и *точность* (степень, в которой данные могут использоваться по намеченному назначению). Кроме того, на основе профилирования данных пользователю выдаются уведомления о действиях, которые можно предпринять для улучшения операций очистки и сопоставления данных. Дополнительные сведения о профилировании данных и уведомлениях см. в разделе [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

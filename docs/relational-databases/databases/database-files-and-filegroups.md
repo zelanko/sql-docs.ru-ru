@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -34,16 +31,15 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3d3c7a580a347a487c31cd6667a76da9c984b90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a80a90c998e02e91546dfe306da558a0a7235df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642722"
 ---
 # <a name="database-files-and-filegroups"></a>Файлы и файловые группы базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ ms.locfileid: "32932609"
 ## <a name="database-files"></a>Файлы базы данных  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеют три типа файлов.  
   
-|Файл|Description|  
+|Файл|Описание|  
 |----------|-----------------|  
 |Первичная|Первичный файл данных содержит сведения, необходимые для запуска базы данных, и ссылки на другие файлы в базе данных. Данные и объекты пользователя могут храниться в данном файле или во вторичном файле данных. В каждой базе данных имеется один первичный файл данных. Для имени первичного файла данных рекомендуется расширение MDF.|  
 |Вторичная|Вторичные файлы данных не являются обязательными; это пользовательские файлы, в которых хранятся данные пользователя. Вторичные файлы могут быть использованы для распределения данных на несколько дисков, в этом случае каждый файл записывается на отдельный диск. Кроме того, если размер базы данных превышает максимальный размер для одного файла Windows, можно использовать вторичные файлы данных, таким образом база данных сможет расти дальше.<br /><br /> Для имени вторичного файла данных рекомендуется расширение NDF.|  
@@ -107,7 +103,7 @@ ms.locfileid: "32932609"
   
  Все файлы данных хранятся в файловых группах, перечисленных в следующей таблице.  
   
-|Файловая группа|Description|  
+|Файловая группа|Описание|  
 |---------------|-----------------|  
 |Первичная|Файловая группа, содержащая первичный файл. Все системные таблицы размещены в первичной файловой группе.|  
 |Данные, оптимизированные для памяти|В основе оптимизированной для памяти файловой группы лежит файловая группа файлового потока.|  

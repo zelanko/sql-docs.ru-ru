@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Wait Statistics object
 - SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6366376f25df6f8407f3ff5a81f585b785fbe759
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c394d7eb40f3b5d9904941b6938b84821dcea7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761922"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, объект Wait Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951079"
   
  В таблице ниже перечислены счетчики, содержащиеся в объекте статистики ожидания.  
   
-|SQL Server, счетчики статистики ожидания|Description|  
+|SQL Server, счетчики статистики ожидания|Описание|  
 |-----------------------------------------|-----------------|  
 |**Ожиданий блокировок**|Статистика процессов, ожидающих в состоянии блокировки.|  
 |**Ожиданий буфера журнала**|Статистика процессов, ожидающих освобождения буфера журнала.|  
@@ -49,7 +45,7 @@ ms.locfileid: "32951079"
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |**Среднее время ожидания блокировки (мс)**|Среднее время для выбранного типа ожидания.|  
 |**Совокупное время ожидания (мс) в секунду**|Общее время ожидания в секунду для выбранного типа ожидания.|  

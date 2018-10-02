@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.conditionalsplittrans.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da8653f0e3b3080e4cbab0baa60d1eb2d9f79b5d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1c4dc3bc656d0c71d0fc33a78ad9ed5016908582
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332978"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728352"
 ---
 # <a name="conditional-split-transformation"></a>преобразование «Условное разбиение»
   Преобразование «Условное разбиение» может направлять строки данных в различные выходы в зависимости от содержимого данных. Применение преобразования «Условное разбиение» похоже на применение структур выбора CASE в языке программирования. Преобразование производит оценку выражений и на основе результатов направляет строку данных на указанный выход. Это преобразование также предоставляет выход по умолчанию, так что если строка не имеет совпадений, то она направляется в выход по умолчанию.  
@@ -69,7 +66,7 @@ ms.locfileid: "35332978"
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Разбиение набора данных с помощью преобразования "Условное разбиение"](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
 ## <a name="conditional-split-transformation-editor"></a>редактор преобразования «Условное разбиение»

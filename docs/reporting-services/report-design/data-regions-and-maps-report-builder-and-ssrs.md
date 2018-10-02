@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f639dd4df8a147835381c0be69dfe673dbe6ade2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e0eb7f32dc0a377b8f0ddf9eda7dd43ee04fe4df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268994"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759562"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Области данных и карты (построитель отчетов и службы SSRS)
   Область данных — это объект отчета, в котором отображаются данные из набора данных отчета. Данные отчета могут выводиться в виде чисел и текста в таблице, матрице или списка, а также представляться графически на диаграмме или на датчике либо в географическом контексте на карте. Таблицы, матрицы и списки основаны на области данных *табликса* , которая разворачивается так, чтобы отобразить все данные из набора данных. Область данных табликса поддерживает несколько групп статических и динамических строк и столбцов. На диаграмме показано несколько рядов и групп категорий в разнообразных форматах диаграммы. На датчике выводится единичное или сводное значение для набора данных. На карте пространственные данные отображаются как различные элементы карты, внешний вид которых может различаться в зависимости от сводных данных набора данных.  

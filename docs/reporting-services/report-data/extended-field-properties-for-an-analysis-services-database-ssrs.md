@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c89595a791ed67dc63730d2591ef0e4ab6ad562d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 28cea40552b79be184c8c600e6be48f2c81fecd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703042"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)
   Модуль обработки данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает расширенные свойства полей. Расширенные свойства полей — это дополнительные свойства, доступные для конкретного источника данных, помимо свойств **Value** и **IsMissing** , и поддерживаемые модулем обработки данных. Расширенные свойства не отображаются в области данных отчетах как часть коллекции полей для набора данных отчета. Значения расширенных свойств полей можно включить в отчет с помощью выражений, которые указывают их по именам во встроенной коллекции **Fields** .  

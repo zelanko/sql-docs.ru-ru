@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d6ef08992dcab31e2631bdc180ddec0d40fae398
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fcb1945bdf5a6cc274a947b407f33f70d5905f9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722252"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Отмена заданий сервера отчетов (среда Management Studio)
   Диалоговое окно **Отмена заданий сервера отчетов** позволяет просмотреть или отменить выполняющиеся отчеты. В этом диалоговом окне отображаются все задания, выполняемые в данный момент на сервере отчетов. Несмотря на то, что выполняемые задания нельзя приостановить или перезапустить, задачи, завершение которых требует слишком долгого времени, можно отменить — все сразу или по отдельности.  

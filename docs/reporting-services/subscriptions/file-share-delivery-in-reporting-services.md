@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 19048897e0f9e90f40a0821ad8275025260f750c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: cc81cc930f901f162ff58dfe6a5615d557878cf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778122"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Доставка отчетов в общие папки с помощью служб Reporting Services
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки в общую папку, позволяющий доставить отчет в любую папку. Модуль доставки в общие папки доступен по умолчанию и не требует какой-либо дополнительной настройки. Для успешной доставки файла необходимо иметь разрешение на запись в общую папку. Учетная запись, требующая разрешения модуля записи, может быть учетными данными, настроенными в подписке, или **учетной записью общей папки** , настроенной для сервера отчетов. Дополнительные сведения об учетной записи общей папки см. в разделе [Параметры подписки и учетная запись общей папки (диспетчер конфигураций)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Кроме того, у пользователей, которым нужен доступ к отчетам, должно быть разрешение на чтение из общей папки.  

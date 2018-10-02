@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f5a9bab3624ebe4c294a29279cb1906f307d8db
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8c463e7146a4b9127696410f04f25d37b8424937
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640772"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Добавление датчиков в мобильные отчеты | Службы Reporting Services
 Датчики представляют собой самые простые и широко используемые визуальные элементы в мобильных отчетах. Они отображают одно значение в наборе данных — просто значение или значение, сравниваемое с целью.

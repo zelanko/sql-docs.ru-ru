@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96c1a70d341160c4916fcfe2a067b4da79df2021
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: cee76028cbc0e416b320a8042eaf577dfeb621ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722942"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   Помимо свойств, общих для большинства объектов потока данных объектной модели служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , многие объекты потока данных обладают настраиваемыми свойствами, специфичными для конкретного объекта. Пользовательские свойства доступны только в среде выполнения и не описаны в справочной документации по программированию служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] для управляемой среды.  
@@ -187,7 +184,7 @@ ms.locfileid: "35332208"
   
 |Свойство|Тип данных|Описание|  
 |--------------|---------------|-----------------|  
-|FastParse|Логическое значение|Значение, определяющее, использует ли столбец более быстрые, но не зависящие от локали процедуры синтаксического анализа, предоставляемые службами [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , или стандартные процедуры, зависящие от локали. Это свойство имеет значение по умолчанию **False**. Дополнительные сведения см. в разделах [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) и [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). , и делает это по-другому.<br /><br /> Примечание. Это свойство недоступно в **редакторе преобразования "Конвертация данных"**, однако его можно установить при помощи **расширенного редактора**.|  
+|FastParse|Логическое значение|Значение, определяющее, использует ли столбец более быстрые, но не зависящие от локали процедуры синтаксического анализа, предоставляемые службами [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , или стандартные процедуры, зависящие от локали. Это свойство имеет значение по умолчанию **False**. Дополнительные сведения см. в разделах [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) и [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Примечание. Это свойство недоступно в **редакторе преобразования "Конвертация данных"**, однако его можно установить при помощи **расширенного редактора**.|  
 |SourceInputColumnLineageId|Целочисленный|Идентификатор **LineageID** входного столбца, являющегося источником для выходного столбца.|  
   
  Вход, входные столбцы и выход преобразования «Конвертация данных» не имеют пользовательских свойств.  

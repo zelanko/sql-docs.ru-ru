@@ -4,7 +4,6 @@ ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - pbi
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ffcd2000c54c25abc7ab417a6c8cb9846ccaabee
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8bca8f07e927dec72690683e0519e181d79d4f79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281858"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710558"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Закрепление элементов служб Reporting Services на информационных панелях Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] позволяют пользователям закрепить элементы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] из панели инструментов средства просмотра отчетов на информационной панели [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] в качестве новой плитки.   Для этого администратор должен сначала интегрировать сервер отчетов с Azure Active Directory и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c795635de7aad15099cb490bf621329a23fcd26
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ee1e6771bc2d4a10ff7c43bfc1d13bec7855529c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681902"
 ---
 # <a name="dtutil-utility"></a>dtutil, программа
   Программа командной строки **dtutil** предназначена для управления пакетами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Программа может копировать, перемещать, удалять пакет или проверять его существование. Эти действия могут выполняться с любым из пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] , который хранится в любом из трех мест: база данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и файловая система. Если программа имеет доступ к пакету, хранимому в **msdb**, в командной строке может быть необходимо ввести имя пользователя и пароль. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в командной строке необходимо ввести и имя пользователя, и пароль. Если имя пользователя отсутствует, **dtutil** попытается войти на сервер [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используя проверку подлинности Windows. Тип хранилища пакета определяется параметрами **/SQL**, **/FILE**и **/DTS** .  

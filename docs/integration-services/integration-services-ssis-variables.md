@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0581f31841e370799039d609501c0a9e76323653
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d87ea7d4e61f2da561728ce66e797b32f2fd17b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785022"
 ---
 # <a name="integration-services-ssis-variables"></a>Переменные в службах Integration Services (SSIS)
   Переменные хранят значения, которые могут использоваться пакетом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а также его контейнерами, задачами и обработчиками событий во время выполнения. Скрипты в задаче «Скрипт» и компоненте скрипта также могут использовать переменные. Управления очередностью, которые упорядочивают задачи и контейнеры в рабочий процесс, могут использовать переменные, если связанные с ними определения ограничений включают в себя выражения.  
@@ -321,7 +318,7 @@ ms.locfileid: "35408826"
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Динамическое обновление переменной с помощью конфигураций  
  Чтобы динамически обновлять переменные, можно создавать конфигурации для переменных, развертывать их вместе с пакетами и обновлять значения переменных в файле конфигурации при развертывании пакета. Во время выполнения пакет будет использовать обновленные значения переменных. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](../integration-services/packages/create-package-configurations.md).  
 
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Использование значений переменных и параметров в дочернем пакете](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Сопоставления параметров запросов с переменными в компонентах потока данных](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

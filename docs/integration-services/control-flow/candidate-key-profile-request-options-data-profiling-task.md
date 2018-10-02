@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2d43d1c2dcded1a862a240c19ed00304bbc97276
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: cd0b38936ce66b1047b225bd87f4c80ebd43f18b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402686"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599213"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Параметры запроса профиля потенциальных ключей (задача «Профилирование данных»)
   Для установки параметров варианта **Запрос профиля потенциальных ключей** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль потенциальных ключей сообщает о том, является ли данный столбец или набор столбцов ключом либо приблизительным ключом для выделенной таблицы. Этот профиль также поможет выявить проблемы в данных, например повторяющиеся значения в потенциальном ключевом столбце.  
