@@ -1,13 +1,11 @@
 ---
-title: Метод registerOutParameter (int, int, int) | Документы Microsoft
+title: Метод registerOutParameter (int, int, int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.registerOutParameter (int, int, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d902d4e0-881f-4182-814c-0ede9a8da7fd
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e8e58c5cffd9f20ac238588de4dbb0f4d07b23f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 043d53b22987c1b459c7668db4ea962a80e303be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841339"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784142"
 ---
 # <a name="registeroutparameter-method-int-int-int"></a>Метод registerOutParameter (int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,29 +40,29 @@ public void registerOutParameter(int index,
 #### <a name="parameters"></a>Параметры  
  *index*  
   
- **Int** , указывающее порядковый номер параметра.  
+ Значение типа **int**, указывающее порядковый номер параметра.  
   
- *SQLtype*  
+ *sqlType*  
   
  Код типа JDBC, определенный в java.sql.Types.  
   
  *масштаб*  
   
- **Int** указывает количество цифр, должен располагаться справа от десятичной запятой.  
+ Значение типа **int**, указывающее количество разрядов, размещаемых справа от десятичного разделителя.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод registerOutParameter указывается с помощью метода registerOutParameter в интерфейсе java.sql.CallableStatement.  
   
- Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] версии 3.0 драйвера JDBC, когда *sqlType* имеет тип Java.SQL.types.Time, изменено поведение данного метода **sendTimeAsDatetime** свойство соединения ([Задание свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md)) и [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии 3.0 драйвера JDBC, когда *sqlType* имеет тип Java.SQL.types.Time, поведение этого метода изменяется параметром **sendTimeAsDatetime** свойство соединения ([Заданию свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md)) и [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Дополнительные сведения см. в разделе [как настройка java.sql.Time отправляются на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Дополнительные сведения см. в разделе [java.sql.Time настройке как значения отправляются на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
-## <a name="see-also"></a>См. также  
- [Метод registerOutParameter &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод registerOutParameter (SQLServerCallableStatement)](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

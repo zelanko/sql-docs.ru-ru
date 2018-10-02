@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038485"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745322"
 ---
 # <a name="configure-distributed-replay"></a>Настройка распределенного воспроизведения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +165,23 @@ ms.locfileid: "38038485"
     </OutputOptions>  
 </Options>  
 ```  
-  
+
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Возможные проблемы при работе с синхронизацией, в режиме виртуализации
+ Могут возникнуть проблемы, в котором функциональные возможности воспроизведения отображается «зависания» или воспроизведения событий очень медленно. Это явление может произойти, если в воспроизводимой трассировке зависит от того, данные и/или событий, которые не существуют в целевой восстановленной базе данных. 
+ 
+ Например, отслеживаемых рабочей нагрузки, использующая WAITFOR, такие как в, как инструкция WAITFOR RECEIVE компонента Service Broker. При использовании режим последовательного выполнения синхронизации, пакеты будут воспроизведены последовательно. Если происходит вставка в исходной базе данных после резервного копирования базы данных, но перед воспроизведение записи начала трассировки, ПОЛУЧАТЬ WAITFOR, выданных во время воспроизведения придется ждать за весь период WAITFOR. События, задайте для воспроизведения после получения WAITFOR будет задержка. Это может привести к счетчика монитора производительности Batch Requests/sec для удаления целевой базы данных воспроизведения до нуля, пока не завершится WAITFOR. 
+ 
+ Если необходимо использовать режим синхронизации и требуется, чтобы избежать этого, выполните следующие действия.
+ 
+1.  Замораживание баз данных, которые вы будете использовать как целевые объекты воспроизведения.
+
+2.  Разрешите все ожидающие действия для завершения.
+
+3.  Резервное копирование баз данных и разрешить выполнятся.
+
+4.  Начать запись трассировки распределенного воспроизведения и возобновления нормальной рабочей нагрузкой. 
+ 
+ 
 ## <a name="see-also"></a>См. также:  
  [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   

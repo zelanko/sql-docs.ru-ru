@@ -1,13 +1,11 @@
 ---
-title: Метод getTableTypes (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод getTableTypes (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getTableTypes
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2bb52a365bedc945395400daa11ab6ca6f724726
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2ca0e9735935aa0ff4eff38fd076822e7bc01021
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700096"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>Метод getTableTypes (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,25 +36,25 @@ public java.sql.ResultSet getTableTypes()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getTableTypes указывается с помощью метода getTableTypes в интерфейсе java.sql.DatabaseMetaData.  
   
- Метод getTableTypes возвращает результирующий набор будет содержать следующие сведения:  
+ Результирующий набор, возвращаемый методом getTableTypes, включает следующие данные:  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |TABLE_TYPE|**String**|Табличный тип.|  
   
 > [!NOTE]  
->  Дополнительные сведения о данных, возвращаемых методом getTableTypes см. в разделе «sp_tables (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.  
+>  Дополнительные сведения о данных, возвращаемых методом getTableTypes, см. в разделе "sp_tables (Transact-SQL)" электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует метод getTableTypes используется для возврата сведений о типе таблиц в [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образца базы данных, учитывая, что база данных указывается в строке соединения.  
+ В следующем примере показано использование метода getTableTypes для возврата сведений о типе таблиц в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)], когда база данных указывается в строке соединения.  
   
 ```  
 public static void executeGetTableTypes(Connection con) {  
@@ -82,7 +79,7 @@ public static void executeGetTableTypes(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

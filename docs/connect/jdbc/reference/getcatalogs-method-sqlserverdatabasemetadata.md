@@ -1,13 +1,11 @@
 ---
-title: Метод getCatalogs (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод getCatalogs (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getCatalogs
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20537ecc2ecb42b1384e52e3e95dd611f7ad8797
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e81c905a483972ab0dfe7b03573bc30bf6d474e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727192"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>Метод getCatalogs (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,25 +36,25 @@ public java.sql.ResultSet getCatalogs()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getCatalogs указывается с помощью метода getCatalogs в интерфейсе java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  В SQL Azure, следует подключиться к базе данных master для вызова **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure не поддерживает возврат всего набора каталогов из пользовательской базы данных. **SQLServerDatabaseMetaData.getCatalogs** использует для получения каталогов представление sys.databases. См. обсуждение разрешений в [sys.databases (база данных SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) для понимания **SQLServerDatabaseMetaData.getCatalogs** в SQL Azure.  
+>  В SQL Azure, следует подключиться к базе данных master для вызова **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData.getCatalogs** использует для получения каталогов представление sys.databases. См. обсуждение разрешений в [sys.databases (база данных SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) для понимания **SQLServerDatabaseMetaData.getCatalogs** поведение в SQL Azure.  
   
- Метод getCatalogs возвращает результирующий набор будет содержать следующие сведения:  
+ Результирующий набор, возвращаемый методом getCatalogs, включает следующие данные:  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Имя каталога, включая системные базы данных в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
+|TABLE_CAT|**String**|Имя каталога, включая системные базы данных [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать метод getCatalogs для возвращения имен всех баз данных, содержащихся в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], включая системные базы данных.  
+ В следующем примере показано использование метода getCatalogs для возвращения имен всех баз данных, содержащихся в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], включая системные базы данных.  
   
 ```  
 public static void executeGetCatalogs(Connection con) {  
@@ -82,7 +79,7 @@ public static void executeGetCatalogs(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

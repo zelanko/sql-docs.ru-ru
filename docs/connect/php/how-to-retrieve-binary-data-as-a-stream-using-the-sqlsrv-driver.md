@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data, as a binary stream
 - streaming data
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d10cc259971d2a81177ee8e04844a54b26cf147c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: aefee98fefc5ae0b47ce3ea734580799c8abe57c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698742"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Практическое руководство. Извлечение двоичных данных в виде потока с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +33,7 @@ ms.locfileid: "37979841"
 ## <a name="example"></a>Пример  
 Следующий пример извлекает двоичные данные (в данном случае это изображение) из таблицы *Production.ProductPhoto* базы данных AdventureWorks. Изображение извлекается в виде потока и отображается в браузере.  
   
-Извлечение данных изображения в виде потока осуществляется с помощью [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) и [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) с типом возвращаемого значения, указанным в виде двоичного потока. Тип возвращаемого значения определяется с помощью константы **SQLSRV_PHPTYPE_STREAM**. Сведения о константах **sqlsrv** см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+Извлечение данных изображения в виде потока осуществляется с помощью [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) и [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) с типом возвращаемого значения, указанным в виде двоичного потока. Тип возвращаемого значения определяется с помощью константы **SQLSRV_PHPTYPE_STREAM**. Сведения о константах **sqlsrv** см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
   

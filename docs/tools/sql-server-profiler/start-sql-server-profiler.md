@@ -1,13 +1,11 @@
 ---
-title: Запустите приложение SQL Server Profiler | Документы Microsoft
+title: Запустите SQL Server Profiler | Документация Майкрософт
 ms.custom: ''
 ms.date: 7/7/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 250ea8227a4bd045883322ba2fec3e923336a5e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.openlocfilehash: bcfe2b2f594eebef121ec56d43ca6eac4cdcb293
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824132"
 ---
 # <a name="run-sql-server-profiler"></a>Выполнение приложения SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,13 +31,13 @@ ms.lasthandoff: 05/03/2018
   
 При первом запуске [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] и выборе в меню **Файл** пункта **Создать трассировку** приложение отображает диалоговое окно **Соединение с сервером**, где можно указать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для подключения.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Запуск приложения SQL Server Profiler из меню "Пуск" Windows 10  
--  Щелкните Windows **запустить** или нажмите клавишу Windows ключа и начните вводить «SQL Server Profiler 17». Когда **SQL Server Profiler 17** плитки, щелкните ее.   
+-  Нажмите кнопку Windows **запустить** значок или нажмите клавишу Windows, ключа и начните вводить «SQL Server Profiler 17». Когда **SQL Server Profiler 17** появится плитка, щелкните его.   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>Запуск SQL Server Profiler в помощнике по настройке ядра СУБД  
 -  В меню [!INCLUDE[ssDE](../../includes/ssde-md.md)] Сервис **помощника по настройке компонента** выберите **SQL Server Profiler**.  
 
-## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>Запуск приложения SQL Server Profiler в SQL Server Management Studio  
- Можно запустить [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] из нескольких мест в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. При запуске приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] загружается контекст подключения, шаблон трассировки и выполняется фильтрация контекста точки запуска. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] запускает каждый сеанс профайлера SQL Server в отдельном экземпляре, а профилировщик продолжается при завершении работы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>Запуск SQL Server Profiler в SQL Server Management Studio  
+ Можно запустить [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] из нескольких мест в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. При запуске приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] загружается контекст подключения, шаблон трассировки и выполняется фильтрация контекста точки запуска. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] запускает каждый сеанс SQL Server Profiler в отдельном экземпляре, и продолжает работать, если вы завершаете работу Profiler [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>Запуск приложения SQL Server Profiler из меню «Инструменты»  
 -  В меню среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Инструменты** выберите **SQL Server Profiler**.  
 
@@ -60,5 +58,5 @@ ms.lasthandoff: 05/03/2018
 - Для выполнения трассировки в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]пользователь должен также иметь разрешение ALTER TRACE.  
 
 ## <a name="next-steps"></a>Следующие шаги  
- [Общие сведения о SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Обзор SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Использование среды SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  

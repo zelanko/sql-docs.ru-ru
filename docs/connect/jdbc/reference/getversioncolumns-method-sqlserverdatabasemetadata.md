@@ -1,13 +1,11 @@
 ---
-title: Метод getVersionColumns (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод getVersionColumns (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getVersionColumns
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 722fd20c9210b14cb503ab3a0189815fa3cc83dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 938cf980a4035684b2e77435d5ab4df9522b4407
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841629"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604012"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>Метод getVersionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,43 +40,43 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Параметры  
  *catalog*  
   
- Объект **строка** , содержащее имя каталога.  
+ Значение типа **String**, содержащее имя каталога.  
   
  *schema*  
   
- Объект **строка** , содержащее шаблон имени схемы.  
+ Значение типа **String**, содержащее шаблон имени схемы.  
   
  *table*  
   
- Объект **строка** , содержащее имя таблицы.  
+ Значение типа **String**, содержащее имя таблицы.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getVersionColumns указывается с помощью метода getVersionColumns в интерфейсе java.sql.DatabaseMetaData.  
   
- Метод getVersionColumns возвращает результирующий набор будет содержать следующие сведения:  
+ Результирующий набор, возвращаемый методом getVersionColumns, включает следующие данные:  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
-|SCOPE|**короткий**|Не поддерживается драйвером JDBC.|  
+|SCOPE|**short**|Не поддерживается драйвером JDBC.|  
 |COLUMN_NAME|**String**|Имя столбца.|  
-|DATA_TYPE|**короткий**|Тип данных SQL из java.sql.Types.|  
+|DATA_TYPE|**short**|Тип данных SQL из java.sql.Types.|  
 |TYPE_NAME|**String**|Имя типа данных.|  
 |COLUMN_SIZE|**int**|Точность столбца.|  
 |BUFFER_LENGTH|**int**|Длина столбца в байтах.|  
-|DECIMAL_DIGITS|**короткий**|Масштаб столбца.|  
-|PSEUDO_COLUMN|**короткий**|Указывает, является ли столбец псевдостолбцом. Может иметь одно из следующих значений.<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
+|DECIMAL_DIGITS|**short**|Масштаб столбца.|  
+|PSEUDO_COLUMN|**short**|Указывает, является ли столбец псевдостолбцом. Может иметь одно из следующих значений.<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
->  Дополнительные сведения о данных, возвращаемых методом getVersionColumns см. в разделе «sp_datatype_info (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.  
+>  Дополнительные сведения о данных, возвращаемых методом getVersionColumns, см. в разделе "sp_datatype_info (Transact-SQL)" электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать метод getVersionColumns для возврата сведений о столбцах, которые автоматически обновляются в таблице Person.Contact [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образца базы данных.  
+ В следующем примере показано использование метода getVersionColumns для возвращения сведений о столбцах, автоматически обновленных в таблице Person.Contact в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetVersionColumns(Connection con) {  
@@ -104,7 +101,7 @@ public static void executeGetVersionColumns(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

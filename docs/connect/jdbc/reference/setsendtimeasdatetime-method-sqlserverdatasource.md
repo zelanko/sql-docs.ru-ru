@@ -1,30 +1,27 @@
 ---
-title: Метод setSendTimeAsDatetime (SQLServerDataSource) | Документы Microsoft
+title: Метод setSendTimeAsDatetime (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 705a0494-b5e2-43db-940a-1b8cec550cdb
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a5e9d17255ac790fbf2d1466555a2e2e877e13d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ad4f7e8cee834619985be1ab140bc39698215060
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798242"
 ---
 # <a name="setsendtimeasdatetime-method-sqlserverdatasource"></a>Метод setSendTimeAsDatetime (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Этот метод добавлен в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] версии 3.0 драйвера JDBC.  
+  Этот метод добавлен в версии 3.0 драйвера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC.  
   
  Изменяет значение **sendTimeAsDatetime** свойство соединения.  
   
@@ -38,16 +35,16 @@ public void setSendTimeAsDatetime(boolean sendTimeAsDateTime)
 #### <a name="parameters"></a>Параметры  
  *sendTimeAsDateTime*  
   
- Значение типа Boolean. Если задано значение true, то значения java.sql.Time отправляемых на сервер в качестве [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** типов. Если задано значение false, то значения java.sql.Time отправляемых на сервер в качестве [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **время** типов.  
+ Значение типа Boolean. Если задано значение true, то значения java.sql.Time отправляются на сервер как типы **datetime** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если задано значение false, то значения java.sql.Time отправляются на сервер как типы **time** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Замечания  
- [SQLServerDataSource.getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md) возвращает значение **sendTimeAsDatetime** свойство соединения.  
+## <a name="remarks"></a>Remarks  
+ [SQLServerDataSource.getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md) возвращает значение свойства соединения **sendTimeAsDatetime**.  
   
- Дополнительные сведения о **sendTimeAsDatetime** свойства соединения в разделе [задание свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md).  
+ Дополнительные сведения о **sendTimeAsDatetime** свойство подключения, см. в разделе [заданию свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md).  
   
- Дополнительные сведения см. в разделе [как настройка java.sql.Time отправляются на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Дополнительные сведения см. в разделе [java.sql.Time настройке как значения отправляются на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Класс SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
