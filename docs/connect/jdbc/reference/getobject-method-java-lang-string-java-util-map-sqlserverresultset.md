@@ -1,13 +1,11 @@
 ---
-title: Метод getObject (java.lang.String, java.util.Map) | Документы Microsoft
+title: Метод getObject (java.lang.String, java.util.Map) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getObject (java.lang.String, java.util.Map)
@@ -15,24 +13,23 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8104406b-417d-4ff5-9aca-183ee0f76762
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3286cd54429926df0906394c9cd06feccc7b6af6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3c3ebc22a58e75d168208c27d022115eea9f11ed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836729"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841654"
 ---
 # <a name="getobject-method-javalangstring-javautilmap-sqlserverresultset"></a>Метод getObject (java.lang.String, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение имени заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде объекта языка программирования Java, используя указанный объект карты.  
+  Получает значение заданного имени столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде объекта на языке программирования Java, используя данный объект Map.  
   
 > [!NOTE]  
->  Этот метод не поддерживается в настоящее время [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Этот метод всегда возвращает сопоставление по умолчанию.  
+>  Сейчас этот метод не поддерживается [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Этот метод всегда возвращает сопоставление по умолчанию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,28 +40,28 @@ public java.lang.Object getObject(java.lang.String colName,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ColName*  
+ *colName*  
   
- Объект **строка** , содержащее имя столбца.  
+ Значение типа **String**, содержащее имя столбца.  
   
- *карты*  
+ *map*  
   
- Объект схемы.  
+ Объект карты.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Объекта** значение.  
+ Значение **Object**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getObject указывается с помощью метода getObject в интерфейсе java.sql.ResultSet.  
   
  Этот метод вернет значение данного столбца в виде объекта Java. Объект Java будет иметь заданный по умолчанию тип, соответствующий типу SQL Server столбца и сопоставленный встроенным типам, указанным в спецификации JDBC. Если значение SQL NULL, то драйвер вернет значение Java NULL.  
   
- Этот метод также может быть использован для чтения абстрактных типов данных, относящихся к базе данных. В JDBC 2.0 API возможности метода getObject расширены и поддерживают материализацию данных определяемых пользователем типов SQL. Если столбец содержит структурированное или уникальное значение, поведение данного метода является, как если бы он был вызов `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
+ Этот метод также может быть использован для чтения абстрактных типов данных, относящихся к базе данных. В API JDBC 2.0 возможности метода getObject расширены и поддерживают материализацию данных определяемых пользователем типов SQL. Если в столбце содержится структурированное или уникальное значение, то выполнение этого метода будет аналогично вызову `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
   
- Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] драйвера JDBC 3.0:  
+ Начиная с версии 3.0 драйвера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC действуют следующие правила:  
   
 -   Значение типа date будет возвращаться в виде объекта java.sql.Date.  
   
@@ -74,8 +71,8 @@ public java.lang.Object getObject(java.lang.String colName,
   
 -   Значение типа datetimeoffset будет возвращаться в виде объекта microsoft.sql.DateTimeOffset.  
   
-## <a name="see-also"></a>См. также  
- [Метод getObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод getObject (SQLServerResultSet)](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,27 +1,24 @@
 ---
-title: Приступая к работе с драйвером JDBC | Документы Microsoft
+title: Приступая к работе с драйвером JDBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f4c5d0d-c8d9-48e6-b0a5-56d308140c51
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a157b4ef5e50effcbb272a05c7d855f54081c42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: efdb01e4488688a4709df36383145c60c4687667
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32826689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805742"
 ---
-# <a name="getting-started-with-the-jdbc-driver"></a>Приступая к работе с драйвером JDBC
+# <a name="getting-started-with-the-jdbc-driver"></a>Начало работы с драйвером JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

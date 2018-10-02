@@ -53,9 +53,9 @@ ms.locfileid: "37303564"
   
 -   XML Schema Part 0: Учебник для начинающих, W3C рекомендации ()http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Структуры, W3C (рекомендацияhttp://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Структуры, W3C (рекомендация http://www.w3.org/TR/xmlschema-1/)  
   
--   Схема XML, часть 2: типы данных, W3C (рекомендацияhttp://www.w3.org/TR/xmlschema-2/)  
+-   Схема XML, часть 2: типы данных, W3C (рекомендация http://www.w3.org/TR/xmlschema-2/)  
   
 -   FOR XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
   
