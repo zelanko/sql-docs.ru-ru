@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, managing
@@ -16,12 +14,12 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fa0896d132d2cb30d6dde49d43af801cae9da12
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6de10b5f30073a33a23549cb4522d90a162ace7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066502"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698562"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Управление Stretch Database и устранение связанных с ней неполадок
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,8 +28,7 @@ ms.locfileid: "38066502"
   Для управления Stretch Database и устранения связанных с ней неполадок используйте средства и методы, описанные в этой статье.  
 ## <a name="manage-local-data"></a>Управление локальными данными  
   
-###  <a name="LocalInfo">
-            </a> Получение сведений о локальных базах данных и таблицах, для которых можно включить Stretch Database  
+###  <a name="LocalInfo"></a> Получение сведений о локальных базах данных и таблицах, для которых можно включить Stretch Database  
  Откройте представления каталога **sys.databases** и **sys.tables** , чтобы просмотреть сведения о базах данных и таблицах SQL Server с поддержкой растяжения. Дополнительные сведения см. в статьях [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) и [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md).  
  
  Чтобы увидеть, сколько места занимает таблица с поддержкой Stretch в SQL Server, выполните указанную ниже инструкцию.
@@ -58,8 +55,7 @@ GO
   
 ## <a name="manage-remote-data"></a>Управление удаленными данными  
   
-###  <a name="RemoteInfo">
-            </a> Получение сведений об удаленных базах данных и таблицах, используемых с Stretch Database  
+###  <a name="RemoteInfo"></a> Получение сведений об удаленных базах данных и таблицах, используемых с Stretch Database  
  Откройте представления каталога **sys.remote_data_archive_databases** и **sys.remote_data_archive_tables** , чтобы увидеть информацию об удаленных базах данных и таблицах, в которых хранятся переносимые данные. Дополнительные сведения см. в статьях [sys.remote_data_archive_databases (Transact-SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md) и [sys.remote_data_archive_tables (Transact-SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).  
  
 Чтобы увидеть, сколько места занимает таблица с поддержкой Stretch в Azure, выполните указанную ниже инструкцию.
