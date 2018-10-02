@@ -5,9 +5,7 @@ ms.date: 11/23/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5cabb4763e85f8f1d052aa797ec6f868d9dac0aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab08ae1055d18b036f34791cbb90ccc95071e16e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869739"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639962"
 ---
 # <a name="database-engine-service-startup-options"></a>Параметры запуска службы Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +49,14 @@ ms.locfileid: "32869739"
   
 ## <a name="list-of-startup-options"></a>Список параметров запуска  
 ### <a name="default-startup-options"></a>Параметры запуска по умолчанию  
-|Параметры|Description|  
+|Параметры|Описание|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Полный путь к файлу базы данных master (обычно это "C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\Master.mdf"). Если этот параметр не задан, используются параметры из реестра.|  
 |**-e**  *error_log_path*|Полный путь к файлу журнала ошибок (обычно это "C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Log\Errorlog"). Если этот параметр не задан, используются параметры из реестра.|  
 |**-l**  *master_log_path*|Полный путь к файлу журнала базы данных master (обычно это "C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf"). Если данный параметр не указан, будут использованы параметры из реестра.|  
   
 ### <a name="other-startup-options"></a>Дополнительные параметры запуска   
-|Параметры |Description|   
+|Параметры |Описание|   
 |---------------------------|-----------------|  
 |**-c**|Ускоряет запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки. Обычно компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] запускается в виде службы путем вызова диспетчера управления службами. Так как [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не запускается как служба при запуске из командной строки, используйте параметр **-c** , чтобы пропустить этот шаг.|  
 |**-f**|Запускает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с минимальной конфигурацией. Эта функция полезна в случае, если установленные значения конфигурации (например, слишком большой объем выделяемой памяти) не позволяют выполнить запуск сервера. При запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме минимальной конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходит в однопользовательский режим. Дополнительные сведения см. в описании параметра **-m** далее.|  
@@ -84,7 +81,7 @@ ms.locfileid: "32869739"
 ## <a name="compatibility-support"></a>Поддержка совместимости  
  Параметр **-h**  не поддерживается в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот параметр использовался в более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Дополнительные сведения см. в разделе [Неподдерживаемые функции SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
 [Настройка параметра конфигураци и сервера scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server или службы обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
 [Настройка параметров запуска сервера &#40;Диспетчер конфигурации SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)

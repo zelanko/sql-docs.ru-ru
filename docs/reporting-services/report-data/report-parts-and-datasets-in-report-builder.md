@@ -4,17 +4,16 @@ ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec098c92b77e317e87c4dd33d4e663f1b247db43
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7ee8ead2185908724b20fa690cabfe67044d15d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611482"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Элементы отчета и наборы данных в построителе отчетов
   В построителе отчетов самым простым способом включения данных в отчет является добавление элементов отчета из коллекции элементов отчета. Части отчетов содержат наборы данных, от которых они зависят, так называемые *зависимые наборы данных*. Зависимые наборы данных основываются на общих источниках данных и могут быть внедренными и общими. Узнайте больше об [элементах отчета](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

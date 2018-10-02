@@ -4,7 +4,6 @@ ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
@@ -21,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d25ce57e3a625059e13de9becbdfac5a94c7630d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 346b348f2df1ccb6cd6373dad130b10c71ea1bcb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268436"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679792"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   В этом подразделе представлены сведения о создании, изменении и удалении общих расписаний [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Для управления общими расписаниями для собственного режима используйте страницу "Расписания" на веб-портале или папку "Общие расписания" в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Для режима интеграции с SharePoint используйте страницы управления для приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

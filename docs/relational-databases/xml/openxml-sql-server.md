@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 13ec9c1cea7a47853b45cb5f60f9161c75a0f0e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3534d1772fcc13ebcd420bc845b004bf20b1d446
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017459"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629863"
 ---
 # <a name="openxml-sql-server"></a>Инструкция OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +139,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  В следующей таблице описывается структура краевой таблицы.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**bigint**|Уникальный идентификатор узла документов.<br /><br /> Корневой элемент имеет значение идентификатора, равное 0. Отрицательные значения идентификаторов зарезервированы.|  
 |**parentid**|**bigint**|Идентифицирует родителя узла. Родительский узел, определенный этим идентификатором, необязательно является родительским элементом. Однако это зависит от типа узла, родительский узел которого определен этим идентификатором. Например, если узел является текстовым, его родительский узел может быть узлом атрибута.<br /><br /> Если узел находится на верхнем уровне XML-документа, то его столбец **ParentID** принимает значение NULL.|  

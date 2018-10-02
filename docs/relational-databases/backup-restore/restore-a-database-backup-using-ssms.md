@@ -5,9 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.locatebackupfileazure.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-caps.latest.revision: 79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 01e55085d117541e2ecb8d8c4ee585afec205b03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cf13f7db56ff7fedd5252283a927f4daff0ec5fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923349"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664435"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +75,7 @@ ms.locfileid: "32923349"
             **Добавить**  
             В зависимости от типа носителя данных, выбранного в поле **Носитель резервной копии** , при нажатии кнопки **Добавить** открывается одно из следующих диалоговых окон. (Если список в поле со списком **Тип носителя резервной копии** заполнен, кнопка **Добавить** недоступна.)
 
-            |Тип носителя данных|.|Description|    
+            |Тип носителя данных|.|Описание|    
             |----------------|----------------|-----------------|    
             |**Файл**|**Локальный файл резервной копии**|В данном диалоговом окне можно выбрать локальный файл из дерева или указать удаленный файл, используя его полное имя в формате UNC. Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
             |**Устройство**|**Выбор устройства резервного копирования**|В данном диалоговом окне из списка можно выбрать логические устройства резервного копирования, определенные на экземпляре сервера.|    

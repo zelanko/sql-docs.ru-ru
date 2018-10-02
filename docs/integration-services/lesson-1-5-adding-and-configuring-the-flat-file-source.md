@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d1b0767564d0e664d14af285617f8ae0947382d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3417579b121d4680b18cfd896bb3ddd676eca920
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600452"
 ---
 # <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Занятие 1–5. Добавление и настройка источника неструктурированных файлов
 В этой задаче рассматривается добавление к пакету и настройка источника неструктурированных файлов. Источник неструктурированных файлов представляет собой компонент потока данных, использующий метаданные, определенные диспетчером соединений с  неструктурированными файлами для описания формата и структуры данных, извлекаемых из неструктурированного файла в процессе преобразования. Источник неструктурированных файлов можно настроить для получения данных из единичного неструктурированного файла путем определения формата этого файла, который предоставляется диспетчером соединений с неструктурированными файлами.  
@@ -48,7 +44,7 @@ ms.locfileid: "35329318"
 9. Убедитесь в том, что в окне "Свойства" свойство **LocaleID** имеет значение **Русский (Россия)**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
-[Шаг 6. Добавление и настройка преобразований «Уточняющий запрос»](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+[Шаг 6. Добавление и настройка преобразований "Уточняющий запрос"](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>См. также:  
 [Источник "Неструктурированный файл"](../integration-services/data-flow/flat-file-source.md)  

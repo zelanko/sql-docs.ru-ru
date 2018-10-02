@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - printing reports, SharePoint Web application
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83ca8538c73574729d6be05c08acccd40491a50d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b4a5339c18b724531609fe27f237157f1ae86116
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617138"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Печать отчетов (службы Reporting Services в режиме SharePoint)
   Для сервера отчетов, работающего в режиме интеграции с SharePoint, существует три способа напечатать отчет из веб-приложения SharePoint.  

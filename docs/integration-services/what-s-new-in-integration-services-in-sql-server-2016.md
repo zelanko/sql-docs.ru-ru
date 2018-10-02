@@ -6,24 +6,21 @@ ms.date: 09/28/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-caps.latest.revision: 183
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16f8ac682f63609b8cfde6e765c9a577be1e5b36
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e5896643e84782c6b0a36fd4ef6da3e487acdab5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020783"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691788"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -256,11 +253,11 @@ ms.locfileid: "38020783"
 ### <a name="expanded-connectivity-on-premises"></a>Расширенные возможности связи в локальной среде
 
 ####  <a name="ODatav4"></a> Поддержка источников данных OData версии 4  
- Источник OData и диспетчер подключений OData теперь поддерживают протоколы OData версии 3 и 4.  
+ Источник OData и диспетчер подключений OData теперь поддерживают протоколы OData версии&3; и&4;.  
   
 -   Для протокола OData версии 3 компонент поддерживает форматы данных ATOM и JSON.  
   
--   Для протокола OData версии 4 компонент поддерживает формат данных JSON.  
+-   Для протокола OData версии&4; компонент поддерживает формат данных JSON.  
   
  Дополнительные сведения см. в разделе [OData Source](../integration-services/data-flow/odata-source.md).  
 
@@ -291,7 +288,7 @@ ms.locfileid: "38020783"
  Соединитель Microsoft® для SAP BW для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Чтобы скачать компоненты пакета дополнительных компонентов, см. страницу [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).
  
 #### <a name="oracleteradata"></a> Выпуск соединителей версии 4.0 для Oracle и Teradata
-Были выпущены соединители Майкрософт версии 4.0 для Oracle и Teradata. Сведения о скачивании соединителей см. в разделе [Соединители Майкрософт версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
+Были выпущены соединители Майкрософт версии&4;.0 для Oracle и Teradata. Сведения о скачивании соединителей см. в разделе [Соединители Майкрософт версии&4;.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
 ### <a name="pdwau5"></a> Выпуск соединителей для системы платформы аналитики (PDW) с обновлением 5
 Были выпущены адаптеры назначения для загрузки данных в PDW с AU5. Сведения о скачивании адаптеров см. в разделе [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610).

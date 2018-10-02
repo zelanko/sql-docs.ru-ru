@@ -5,25 +5,22 @@ ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 877c48ecbe9befaf0bb04f34a866dd8fee6671bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664693"
 ---
 # <a name="the-transaction-log-sql-server"></a>Журнал транзакций (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +102,7 @@ ms.locfileid: "32948079"
   
  На самом деле усечение журнала может быть задержано из-за множества причин. Чтобы узнать причину, препятствующую усечению журнала транзакций в конкретном случае, выполните запрос по столбцам **log_reuse_wait** и **log_reuse_wait_desc** представления каталога [sys.database](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). В следующей таблице описаны значения этих столбцов.  
   
-|Значение столбца log_reuse_wait|Значение столбца log_reuse_wait_desc|Description|  
+|Значение столбца log_reuse_wait|Значение столбца log_reuse_wait_desc|Описание|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING;|Сейчас есть как минимум один [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch), доступный для повторного использования.|  
 |1|CHECKPOINT|С момента последнего усечения журнала новых контрольных точек не было, либо заголовок журнала пока не вышел за пределы [виртуального файла журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Все модели восстановления)<br /><br /> Это широко распространенная причина задержки усечения журнала. Дополнительные сведения см. в разделе [Контрольные точки базы данных (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
