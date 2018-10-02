@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlps
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 395eb782b93042a3edaf5be464748b88f9964083
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: d5a8a136b812ce3807ba63e42edb3b2b52c80169
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600713"
 ---
 # <a name="sqlps-utility"></a>программа sqlps
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,11 +69,11 @@ sqlps
  **-**  
  **-Command** — указывает, что служебная программа **sqlps** считывает входные данные с помощью стандартного ввода.  
   
- *блок_сценария* [ **-args***массив_аргументов* ]  
+ *блок_скрипта* [ **- args**_аргумент\_массива_ ]  
  Указывает блок команд PowerShell для выполнения, который должен быть заключен в фигурные скобки: {}. Параметр*блок_скрипта* можно указывать только в случае вызова служебной программы **sqlps** из **PowerShell** или другого сеанса служебной программы **sqlps** . Параметр *массив_аргументов* представляет собой массив переменных PowerShell, содержащий аргументы для команд PowerShell из параметра *блок_скрипта*.  
   
  *string* [ *параметры_команды* ]  
- Указывает строку, содержащую команды PowerShell для запуска. Используйте формат **"&{***команда***}"**. Кавычки определяют строку, а оператор вызова (&) предписывает служебной программе **sqlps** выполнить команду.  
+ Указывает строку, содержащую команды PowerShell для запуска. Используйте формат **"&{**_команда_**}"**. Кавычки определяют строку, а оператор вызова (&) предписывает служебной программе **sqlps** выполнить команду.  
   
  [ **-?** | **-Help** ]  
  Показывает синтаксис параметров служебной программы **sqlps** .  

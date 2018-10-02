@@ -76,7 +76,7 @@ ms.locfileid: "37218204"
 ##  <a name="bkmk_xmla"></a> Пакетная обработка с использованием XMLA в среде Management Studio  
  Вы можете создать скрипт XMLA, который выполняет пакетную обработку. Сначала создайте скрипт XMLA в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для каждого объекта, а затем объедините их в один запрос XMLA, который выполняется в интерактивном режиме или в рамках запланированной задачи.  
   
- Пошаговые инструкции см. в подразделе **Пример 2** раздела [Schedule SSAS Admразделаistrative Tasks with SQL Server Agent.  
+ Пошаговые инструкции см. в подразделе **Пример 2** раздела [Schedule SSAS Admразделаistrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)  

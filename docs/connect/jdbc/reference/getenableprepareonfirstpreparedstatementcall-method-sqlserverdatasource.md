@@ -1,30 +1,27 @@
 ---
-title: getEnablePrepareOnFirstPreparedStatementCall метод (SQLServerDataSource) | Документы Microsoft
+title: Метод getEnablePrepareOnFirstPreparedStatementCall (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a131964479c0e2f64afa1f316344d446d1df2214
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 721e19f1a4941cacfd18e04a14e6fa6d851cde60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834545"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667523"
 ---
-# <a name="getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource"></a>getEnablePrepareOnFirstPreparedStatementCall метод (SQLServerDataSource)
+# <a name="getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource"></a>Метод getEnablePrepareOnFirstPreparedStatementCall (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Возвращает значение **enablePrepareOnFirstPreparedStatementCall** свойство соединения. Эта конфигурация возвращает значение false первого выполнения подготовленной инструкции вызовите процедуры sp_executesql и не Подготовка инструкции, после второго выполнения происходит его вызывает sp_prepexec и фактически установки дескриптор подготовленной инструкции. После выполнения вызывает sp_execute. Это избавляет от для sp_unprepare для подготовленной инструкции close, если инструкция выполняется только один раз. 
+  Возвращает значение **enablePrepareOnFirstPreparedStatementCall** свойство соединения. Если эта конфигурация возвращает значение false первого выполнения подготовленной инструкции вызова sp_executesql и не Подготовка инструкции, после второго выполнения он будет вызывать sp_prepexec и фактически установки дескриптором подготовленной инструкции. После выполнения вызовет sp_execute. Это избавляет от для процедура sp_unprepare для подготовленной инструкции close Если инструкция выполняется только один раз. 
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,10 +35,10 @@ public boolean getEnablePrepareOnFirstPreparedStatementCall();
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Замечания  
- Этот метод доступен из драйвера JDBC версии 6.4 и далее.
+## <a name="remarks"></a>Remarks  
+ Этот метод, доступные в версии драйвера JDBC 6.4 и далее.
  
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Класс SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
