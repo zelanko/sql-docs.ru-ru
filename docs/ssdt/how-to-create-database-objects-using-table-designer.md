@@ -6,23 +6,20 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4575c8883de401b058cfde52efcead659c3d46d1
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7001819d4603c392b034d54fffaee7b901400c20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779282"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Как создавать объекты базы данных с помощью конструктора таблиц
 Новый узел **SQL Server** в **обозревателе объектов SQL Server** очень похож на среду SSMS не только внешним видом. В нем можно создавать объекты с помощью контекстных меню, которые работают как меню в SSMS.  
