@@ -3,7 +3,6 @@ title: Проверка установки служб Reporting Services | До�
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd9c21493baf9d81cd4d980ec067150ed4a087f2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6373efd4d6bed20b823c931ea20041de5f7f05dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828118"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить в один из двух режимов — в собственном режиме или в режиме интеграции с SharePoint. Шаги, которые необходимо выполнить для проверки установки, зависят от выбранного режима сервера отчетов.  

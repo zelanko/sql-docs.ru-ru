@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.rawfilesource.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - raw data [Integration Services]
 - Raw File source
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c785688d49d3c6754b1c187b99f298f23d5cfa83
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ccea2475e89d0f0fdd5d89e01162ce5ab7271c90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403656"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821095"
 ---
 # <a name="raw-file-source"></a>источник «Необработанный файл»
   Источник «Необработанный файл» считывает необработанные данные из файла. Поскольку данные представлены в собственном формате источника, их преобразование не требуется. Также практически не требуется синтаксический анализ. Это означает, что источник необработанных файлов в состоянии считывать данные быстрее, чем другие источники, такие как источник «Неструктурированный файл» и источник «OLE DB».  
@@ -52,7 +49,7 @@ ms.locfileid: "35403656"
   
 -   [Пользовательские свойства необработанного файла](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>См. также  

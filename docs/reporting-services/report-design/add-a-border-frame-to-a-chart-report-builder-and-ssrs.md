@@ -4,17 +4,16 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 11d6729c56edd60cf3b79bd6beaf1a55f134e2c4
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bc9275d45e9d72dd1cfdffdd8cc8b6b3d09022ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269930"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847122"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS)
   Чтобы улучшить визуальное восприятие диаграммы, можно использовать границы рамки. Границу рамки можно выбрать в диалоговом окне **Свойства диаграммы** или в панели свойств. Границы рамки диаграммы нельзя применить ни к какой другой области данных.  

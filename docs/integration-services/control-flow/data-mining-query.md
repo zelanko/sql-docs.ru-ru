@@ -5,23 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2438aaceb3880068440f44d0bc670a161a6dbeca
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c0d4295ba75c18ea6b3331317bb38a6fadf26256
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400676"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811672"
 ---
 # <a name="data-mining-query"></a>Запрос интеллектуального анализа данных
   Панель конструктора содержит построитель прогнозирующих запросов интеллектуального анализа данных, который можно использовать для построения прогнозирующих запросов интеллектуального анализа данных. Можно строить либо прогнозирующие запросы на основании входных таблиц, либо одноэлементные прогнозирующие запросы. Переключитесь в просмотр результата, чтобы запустить запрос и просмотреть результаты. Просмотр запроса отображает запрос расширения интеллектуального анализа данных, созданный построителем прогнозирующих запросов.  

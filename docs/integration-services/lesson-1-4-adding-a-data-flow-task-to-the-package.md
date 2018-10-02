@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e15337b25cfa8b03a5283d95c974f6d5bc0100b1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f42cdf02129bcd10b373f28e8a35544d3b9906a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855832"
 ---
 # <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Занятие 1–4. Добавление задачи потока данных в пакет
 После того как были созданы диспетчеры соединений для исходных и целевых данных, предстоит добавить в пакет задачу потока данных. Задача потока данных включает в себя подсистему обработки потока данных, которая осуществляет передачу данных между источниками и назначениями, а также преобразует, очищает и изменяет данные при их перемещении. В задаче потока данных сосредоточена большая часть работы в процессе извлечения, преобразования и загрузки.  

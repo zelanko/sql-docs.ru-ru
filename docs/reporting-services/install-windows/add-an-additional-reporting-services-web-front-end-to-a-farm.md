@@ -3,17 +3,16 @@ title: Добавление дополнительного клиентског�
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6007739085d0b1d485d07628f9938e2be6e584a4
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 09d930c7241a2fb0beb7c5455c5e2db7b6caeb61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815612"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме совместимости с SharePoint включают компоненты, необходимые для работы серверов приложений и клиентского веб-интерфейса. Этот раздел посвящен установке компонентов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , необходимых для сервера WFE, включая страницы приложений, используемых такими компонентами служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , как подписки, предупреждения и [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Первичная установка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходима WFE для установки надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint 2016.  

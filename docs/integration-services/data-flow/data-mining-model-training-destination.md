@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b70c19790ca3f9a09b2e18217f48190889c74624
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3c2a2ec4b26bdc216dc96080171ecd0cff0816e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333138"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821952"
 ---
 # <a name="data-mining-model-training-destination"></a>целевой объект «Обучение модели интеллектуального анализа данных»
   Целевой объект «Обучение модели интеллектуального анализа данных» обучает модели анализа данных, пропуская данные, которые получает целевой объект, через алгоритмы модели интеллектуального анализа данных. Несколько моделей интеллектуального анализа данных могут быть обучены одним целевым объектом, если модели построены на одной и той же структуре интеллектуального анализа данных. Дополнительные сведения см. в разделах [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) и [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  

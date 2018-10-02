@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eacef877fe8cd803a06d3cce2b75f7eb445f8b3c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1a5a01a87bb8b8d52f4d3857c3b44aee3dbde52a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847582"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Параметры атрибутов с предысторией (мастер медленно изменяющихся измерений)
   Диалоговое окно **Параметры атрибутов с предысторией** используется для просмотра атрибутов с предысторией по дате начала и окончания, а также для записи атрибутов с предысторией в специально предназначенный для этого столбец.  

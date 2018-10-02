@@ -5,12 +5,8 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,16 +21,15 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c1c8abe94f55ceedc97632ed5ece8d61b5034f7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b64d9d1410e7a5020689b4f057eb2f08051268e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836485"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Разработка пользовательского компонента преобразования с асинхронными выходами
   Если преобразование не может вывести строки до того, как компонент получит все входные строки, или может создавать несколько выходных строк на одну входную, нужно использовать компонент с асинхронным выходом. Например, преобразование «Статистическая обработка» не может вычислить суммарное значение для всех строк, пока не считает все строки. Напротив, компонент с синхронными выходами можно использовать в случае, если каждая строка преобразуется, проходя через этот компонент. Можно изменять данные каждой строки на месте или добавлять к строке один или несколько новых столбцов, каждый из которых содержит значение для каждого входного ряда. Дополнительные сведения о различиях между синхронными и асинхронными компонентами см. в разделе [Основные сведения о синхронных и асинхронных преобразованиях](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

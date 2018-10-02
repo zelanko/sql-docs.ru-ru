@@ -5,24 +5,21 @@ ms.date: 02/13/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - службы master data services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5db1d056725fee435c3e56c7715e7f1ac02695c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32894499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851078"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Требования веб-приложений (службы Master Data Services)
 
@@ -77,7 +74,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>Учетные записи и разрешения  
   
-|Тип|Description|  
+|Тип|Описание|  
 |----------|-----------------|  
 |Учетная запись Windows|Выполнять вход на компьютер веб-сервера необходимо с учетной записью Windows, которая имеет разрешения на настройку ролей Windows, служб ролей и компонентов, а также на создание пулов приложений, веб-сайтов и веб-приложений в службах IIS на локальном компьютере и управление ими.|  
 |Учетная запись службы|При создании веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] в программе [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]необходимо указать удостоверение для пула приложений, в котором оно выполняется. Эта учетная запись может отличаться от учетной записи службы, которая была указана при создании базы данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Данное удостоверение должно быть учетной записью пользователя домена, оно добавляется к роли базы данных mds_exec в базе данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] для доступа к ней. Дополнительные сведения см. в разделе [Имена входа, пользователи и роли базы данных](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Данная учетная запись также добавляется в группу Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, которой предоставляется разрешение на доступ к временному каталогу компиляции **MDSTempDir**в файловой системе. Дополнительные сведения см. в статье [Разрешения для папок и файлов (службы Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  

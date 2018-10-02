@@ -4,7 +4,6 @@ ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], My Subscriptions page
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9303b2111b142bff815053a00ff839c71d5c8db2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 83451b167534f1a94b4cd5324a54b5a8f08cb596
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267322"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828964"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>Использование страницы "Мои подписки" (сервер отчетов в основном режиме)
 На веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] есть страница **Мои подписки** , которая представляет собой единое место для организации подписок. Страницу *Мои подписки* можно использовать для просмотра, изменения, включения, отключения и удаления существующих подписок. Однако ее нельзя использовать для создания подписок.  Страница «Мои подписки» показывает лишь созданные вами подписки. На ней не отображаются ни подписки, принадлежащие другим пользователям (даже если вы на них подписаны), ни управляемые данными подписки.
