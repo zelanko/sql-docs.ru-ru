@@ -1,31 +1,28 @@
 ---
-title: Поля (ADO - синтаксис WFC) | Документы Microsoft
+title: Поля (ADO — синтаксис WFC) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 327bedf139a68496e4d779dc76fd5273b0fdb99d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613842"
 ---
-# <a name="field-ado---wfc-syntax"></a>Поля (ADO - WFC синтаксис)
-## <a name="package-commswfcdata"></a>пакет com.ms.wfc.data  
+# <a name="field-ado---wfc-syntax"></a>Field (ADO — синтаксис WFC)
+## <a name="package-commswfcdata"></a>com.ms.wfc.data пакета  
   
 ### <a name="methods"></a>Методы  
   
@@ -48,7 +45,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- (Дополнительные сведения см. в документации для интерфейса com.ms.wfc.data.IDataFormat.)  
+ (Дополнительные сведения см. документацию по интерфейсу com.ms.wfc.data.IDataFormat).  
   
 ```  
 public int getDefinedSize()  
@@ -68,13 +65,13 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="field-accessor-methods"></a>Методы доступа к полю  
- [Значение](../../../ado/reference/ado-api/value-property-ado.md) свойство [поле](../../../ado/reference/ado-api/field-object.md) объекта Возвращает или задает содержимое этого объекта. Содержимое представляется как значение типа VARIANT, тип объекта, который может быть присвоено значение и любой из нескольких типов данных.  
+ [Значение](../../../ado/reference/ado-api/value-property-ado.md) свойство [поле](../../../ado/reference/ado-api/field-object.md) объект получает или задает содержимое этого объекта. Содержимое представляется как значение типа VARIANT, тип объекта, который может быть присвоено значение и любой из нескольких типов данных.  
   
- Реализует ADO/WFC **значение** свойство с **getValue** метод, возвращающий объект VARIANT; и **setValue** метод, который принимает в качестве аргумента типа VARIANT. Варианты высокоэффективные на некоторых языках, таких как Microsoft Visual Basic.  
+ Реализует ADO и WFC **значение** свойство с **getValue** метод, который возвращает объект типа VARIANT; и **setValue** метод, который принимает в качестве аргумента типа VARIANT. Варианты высокой эффективны в некоторых языках, таких как Microsoft Visual Basic.  
   
- В дополнение к **значение** предоставляет свойство, ADO и WFC *доступа* методы, использующие типы данных Java для получения и установки содержимого **поле** объектов. Большинство из этих методов имеют имена вида **получить *** DataType* или **задать *** DataType*.  
+ В дополнение к **значение** предоставляет свойство, ADO и WFC *доступа* методы, которые используют типы данных Java для получения и задания содержание **поле** объектов. Большинство этих методов имеют имена вида **получить *** DataType* или **задать *** DataType*.  
   
- Существует два исключения внимания: один из **getObject** методов возвращает объект, который преобразуется в указанном классе. Имеется не **getNull** свойства; вместо этого используется **isNull** свойство, которое возвращает значение типа Boolean, указывающее, является ли поле значение null.  
+ Существует два исключения, заслуживающие внимания: один из **getObject** методы возвращают объект преобразуется в заданный класс. Существует не **getNull** свойства; вместо этого используется **isNull** свойство, которое возвращает логическое значение, указывающее, является ли поле значение null.  
   
 ```  
 public native boolean getBoolean();  

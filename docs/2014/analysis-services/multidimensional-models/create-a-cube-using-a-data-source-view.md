@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32d358eef64c43535f8d04944feb445a5190414a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303054"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068314"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Создание куба с использованием представления источников данных
   Этот метод служит для создания нового куба, если планируется использование существующего представления источников данных. Этот метод позволяет задать представление источника данных и выбрать таблицы фактов и таблицы измерений для использования в представлении источника данных. Затем необходимо выбрать измерения и меры для включения в куб.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6cf032b8f36d9329cd3e5ae480ea5d667da2d36f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f59c5a1e4666c2cd1d0603298af62d75c43398f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284270"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112904"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Настройка или восстановление PowerPivot для SharePoint 2010 (средство настройки PowerPivot)
   Использование средства настройки PowerPivot для настройки или восстановления установки [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot для SharePoint 2010. Работа средства настройки начинается со сканирования системы, в результате которого возвращается список действий, необходимых для завершения или восстановления установки. Мастер установки [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] установит средства настройки PowerPivot для SharePoint 2010, а также средство настройки PowerPivot для SharePoint 2013. В этом разделе описывается средство настройки PowerPivot для SharePoint 2010. Дополнительные сведения о SharePoint 2010 см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2013 &#40;средство настройки PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  

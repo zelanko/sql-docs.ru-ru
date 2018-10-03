@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ee22addfb4d7a4b8162a1cd57ca51120c8acc47
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 27f4458299fd82a1afe74122edba3cbf886d9425
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889440"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114104"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Создание переменных и столбцов типа данных XML
   Тип данных `xml` — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как `int` и `varchar`. Как и другие встроенные типы, можно использовать `xml` типа данных как тип столбца при создании таблицы как тип переменной, типа параметра, тип возвращаемого функцией значения, а также в [CAST и CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  

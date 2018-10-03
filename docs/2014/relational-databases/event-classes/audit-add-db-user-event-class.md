@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Add DB User event class
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4d145d63acba86422222ff9fca401933230fece
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebc8777030cd198503bd9f40ba758e3068762255
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260830"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181933"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User, класс событий
   События класса **Audit Add DB User** происходят, когда имя входа добавляется в базу данных как пользователь базы данных или удаляется из нее. Этот класс событий используется для хранимых процедур **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**и **sp_dropuser** .  

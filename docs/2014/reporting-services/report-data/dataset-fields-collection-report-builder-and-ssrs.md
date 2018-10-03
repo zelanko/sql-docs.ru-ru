@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f8890c0ccab740444845180a328f9753c7a50976
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e327923618c4c48073582b7f3a46aba00737788f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183644"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Коллекция полей набора данных (построитель отчетов и службы SSRS)
   Поля набора представляют данные из соединения с данными. Поле может использоваться для представления как числовых, так и нечисловых данных. Примеры включают в себя следующее: объемы продаж, итоговые суммы продаж, имена клиентов, идентификаторы баз данных, URL-адреса, изображения, пространственные данные и адреса электронной почты. В области конструктора поля отображаются в виде выражений в элементах отчета, таких как текстовые поля, таблицы и диаграммы.  

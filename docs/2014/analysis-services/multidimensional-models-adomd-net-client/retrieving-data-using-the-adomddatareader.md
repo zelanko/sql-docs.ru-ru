@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - retrieving data
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5631238b78804bb593e8db90f910aec0ddebb933
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d3f21807b13b9e3a333ad94b8396d09647cf744
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196200"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Получение данных с помощью объекта AdomdDataReader
   Что касается извлечения аналитических данных, объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> обеспечивает достижение приемлемого равновесия между издержками и интерактивностью. Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> извлекает из источника аналитических данных поток данных, предназначенный только для чтения и последовательного доступа, преобразованный в плоский формат. Этот небуферизованный поток данных позволяет применять процедурные средства для последовательной обработки результатов, получаемых из источника аналитических данных, с высокой эффективностью. Поэтому объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> хорошо подходит для извлечения больших объемов данных в целях отображения, поскольку данные не кэшируются в памяти.  

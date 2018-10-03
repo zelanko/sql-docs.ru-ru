@@ -1,41 +1,38 @@
 ---
-title: Удаление источника данных Visual FoxPro | Документы Microsoft
+title: Удаление источника данных Visual FoxPro | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing data sources [ODBC], Visual FoxPro
 - Visual FoxPro data source [ODBC], deleting
 - deleting data sources [ODBC], Visual FoxPro
 ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23ac02ffbe3f241f3abdd5b785bd53b4d33e2d4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9578e5a1b894078b3dfdd33b81893780afc804b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606132"
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>Удаление источника данных Visual FoxPro
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>Удаление источника данных Visual FoxPro  
   
-1.  На компьютерах под управлением Windows 2000 откройте панель управления Windows и дважды щелкните значок Администрирование.  
+1.  На компьютерах под управлением Windows 2000 откройте панель управления Windows, а затем дважды щелкните Администрирование.  
   
-2.  Дважды щелкните источники данных (ODBC), чтобы открыть диалоговое окно администратора источника данных ODBC. Этот значок доступна после установки драйвера ODBC для Visual FoxPro или любое программное обеспечение драйвера ODBC.  
+2.  Дважды щелкните источники данных (ODBC) чтобы открыть диалоговое окно администратора источника данных ODBC. Этот значок доступна после установки драйвера ODBC для Visual FoxPro или программное обеспечение драйвера ODBC.  
   
     > [!NOTE]  
-    >  При использовании предыдущей версии Windows, откройте панель управления Windows и дважды щелкните 32-разрядных ODBC или ODBC, чтобы открыть диалоговое окно администратора источника данных ODBC.  
+    >  Если вы используете предыдущую версию Windows, откройте панель управления Windows и дважды щелкните 32-разрядный ODBC или ODBC, чтобы открыть диалоговое окно администратора источника данных ODBC.  
   
-3.  На вкладке «пользовательский DSN или системный DSN» выберите имя источника данных, которую вы хотите удалить.  
+3.  На вкладке "DSN пользователя или системное имя DSN" выберите имя источника данных, которую вы хотите удалить.  
   
 4.  Щелкните «Удалить».  
   

@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-caps.latest.revision: 5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5991bbfb135ccd0ab65f342bf59648e4c82de36e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b3268898498ff33273eba4aca0c67315001bce6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268100"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161454"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Об условиях лицензионного соглашения SQL Server (SSCM)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Условия лицензионного соглашения, копируются на локальный компьютер при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен. Если на один компьютер устанавливаются нескольких экземпляров одного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном языке, то ко всем экземплярам выпуска на этом языке будет применена одна копия лицензионного соглашения. Файлы записываются в: %ProgramFiles%\Microsoft SQL Server\110\License Terms\ или % ProgramFiles (x86) %\Microsoft SQL Server\110\License условия\\.  
   
  Если на один компьютер устанавливаются несколько экземпляров одного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном языке, то ко всем экземплярам выпуска на этом языке будет применена одна копия лицензионного соглашения.  
   
- Имя файла лицензионного соглашения указывает как выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и язык [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например:  
+ Имя файла лицензионного соглашения указывает как выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и язык [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пример:  
   
 -   для выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer на английском языке файл будет называться License_DEV_ENU.txt;  
   

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - conversion, setting options
 - migration options
@@ -19,16 +14,15 @@ helpviewer_keywords:
 - project settings
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 21cbf6f3a5dac0b77669b940bf27be26198a4456
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f6a49e494c856395364bfbcb38a3d59b19302b78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795532"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Установка параметров преобразования и миграции (AccessToSQL)
 Для каждого проекта SSMA можно задать параметры на уровне проекта. Эти параметры указывают способ преобразования объектов, процесс миграции данных и сопоставлении типов данных источника к целевым типам данных. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure или переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  

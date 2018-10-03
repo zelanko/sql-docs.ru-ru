@@ -1,14 +1,11 @@
 ---
-title: sys.syslockinfo (Transact-SQL) | Документы Microsoft
+title: sys.syslockinfo (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslockinfo_TSQL
@@ -21,15 +18,15 @@ helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e47eefe7a096664068d0762f43478881b532f815
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780882"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|Текстовое описание ресурса блокировки. Содержит часть имени ресурса.|  
-|**rsc_bin**|**binary(16)**|Ресурс двоичной блокировки. Содержит реальный ресурс блокировки, который хранится в диспетчере блокировок. Этот столбец включается для средств, которые знают о формате ресурса блокировки для формирования собственных формате ресурса блокировки, и для выполнения самосоединений на **syslockinfo**.|  
+|**rsc_bin**|**binary(16)**|Ресурс двоичной блокировки. Содержит реальный ресурс блокировки, который хранится в диспетчере блокировок. Этот столбец включается для средств, которые знают о формате ресурса блокировки для создания собственных формате ресурса блокировки, и для выполнения самосоединений на **syslockinfo**.|  
 |**rsc_valblk**|**binary(16)**|Массив значений блокировки. Некоторые типы ресурсов могут включать дополнительные данные в ресурсе блокировки, которые не хэшируются диспетчером блокировок для определения владельца конкретного ресурса блокировки. Например, блокировки страниц не принадлежат конкретному идентификатору объекта. Для укрупнения блокировки и в других целях. Однако идентификатор объекта блокировки страницы может быть включен в массив значений блокировки.|  
 |**rsc_dbid**|**smallint**|Идентификатор базы данных, ассоциированный с ресурсом.|  
 |**rsc_indid**|**smallint**|Идентификатор индекса, ассоциированный с ресурсом, если соответствует.|  

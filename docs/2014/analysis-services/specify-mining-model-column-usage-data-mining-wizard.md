@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycolumnusage.f1
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfe0b051e2fe3a961065a9c89d1b1b202d3b063d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6761a6c8e028ed5c589608886f763aed6455c520
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175634"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Использование столбцов для модели (мастер интеллектуального анализа данных)
   Страница **Использование столбцов для модели** используется для задания того, как будут использоваться столбцы модели интеллектуального анализа данных и для добавления вложенных таблиц.  

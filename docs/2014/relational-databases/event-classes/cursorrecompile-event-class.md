@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorRecompile event class
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d59c35129a5b032c29b549efbdcdeb95215dcfab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cd76a8be5622ede61d40802b9b6f3e586d3d7822
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168804"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile, класс событий
   Класс событий **CursorRecompile** описывает события перекомпилирования курсора, происходящие в курсорах API. События перекомпиляции курсора происходят, когда компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] перекомпилирует курсор Transact-SQL из-за изменения схемы.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3094bd57-5cf4-4860-bf51-fadd1b309f94
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae4b77e5788ac21e6962ad7f4a6679982363cd67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01824587b583483a519a5f2a7d8731dd657aae48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185661"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161436"
 ---
 # <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Задача 11. Добавление преобразования «Условное разбиение» для фильтрации повторений
   В этой задаче в поток данных добавляется преобразование «Условное разбиение». Это преобразование позволяет фильтровать повторения из входящего набора записей. Преобразование «Нечеткое группирование» группирует записи, которые оно распознает как совпадающие, и выбирает одну из записей в качестве сводной записи. Все записи в группе имеют одинаковое значение _key_out. Сводная запись имеет то же значение _key_in, что и значение _key_out. Другие записи в группе имеют различные значения _key_in и _key_out. Поэтому при фильтрации с помощью условия _key_in==_key_out будет получена только сводная строка в группе.  

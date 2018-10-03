@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - C2WTS
 - WSS_WPG
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02ca28f49468adced97c918521a685894bc9e9ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278190"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123084"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Служба Claims to Windows Token Service (C2WTS) и службы Reporting Services
   SharePoint Claims to Windows Token Service (c2WTS) является обязательным при использовании [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режима SharePoint, если вы хотите использовать проверку подлинности windows для источников данных, которые находятся за пределами фермы SharePoint. Это верно, даже если пользователь получает доступ к источникам данных с использованием проверки подлинности Windows, поскольку для связи между клиентским веб-интерфейсом и общей службой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] всегда используется проверка подлинности Claims.  
@@ -103,7 +100,7 @@ ms.locfileid: "37278190"
 4.  Запуск службы SharePoint C2WTS. Запустите службу C2WTS из центра администрирования SharePoint на странице **Управление службами на сервере** . Служба должна быть запущена на сервере, который будет выполнять действие. Например, при наличии сервера, который является интерфейсным веб-сервером, и другого сервера, который служит сервером приложений, где работает общая служба служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , службу c2WTS необходимо запустить только на сервере приложений. Служба c2WTS не требуется на интерфейсном веб-сервере.  
   
 ## <a name="see-also"></a>См. также  
- [Утверждения to Windows Token Service (c2WTS) (Обзорhttp://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
+ [Утверждения to Windows Token Service (c2WTS) (Обзор http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
  [Обзор проверки подлинности Kerberos для продуктов Microsoft SharePoint 2010)http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
   
   

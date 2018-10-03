@@ -1,35 +1,32 @@
 ---
-title: 'Шаг 5: Зафиксировать транзакцию | Документы Microsoft'
+title: 'Шаг 5: Фиксация транзакции | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC], committing transactions
 - committing transactions [ODBC]
 - transaction commit [ODBC]
 ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a311752588742df8f597ce2957c6ba600d8b47c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 341f34afa1dbe65f4b83a46f461bb93f4fb4f4c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914739"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844302"
 ---
-# <a name="step-5-commit-the-transaction"></a>Шаг 5: Фиксация транзакции
-Следующим шагом является зафиксировать транзакцию, как показано на следующем рисунке.  
+# <a name="step-5-commit-the-transaction"></a>Шаг 5. Фиксация транзакции
+Следующий шаг заключается в фиксации транзакции, как показано на следующем рисунке.  
   
- ![Способы фиксации транзакции](../../../odbc/reference/develop-app/media/pr16.gif "pr16")  
+ ![Показано, как зафиксировать транзакцию](../../../odbc/reference/develop-app/media/pr16.gif "pr16")  
   
- Пятым шагом является вызов **SQLEndTran** для фиксации или отката транзакции. Приложение выполняет этот шаг только в том случае, если его значение режима фиксации транзакции ручной фиксации; режим фиксации транзакции в случае автоматической фиксации, используемом по умолчанию, транзакция автоматически завершается при выполнении инструкции. Дополнительные сведения см. в разделе [транзакции](../../../odbc/reference/develop-app/transactions-odbc.md).  
+ Пятый шаг является вызов **SQLEndTran** фиксацию или откат транзакции. Приложение выполняет этот шаг только в том случае, если значение режима фиксации транзакции фиксацией вручную; Если режим фиксации транзакции — автофиксации, который по умолчанию, транзакция автоматически фиксируется, при выполнении инструкции. Дополнительные сведения см. в разделе [транзакции](../../../odbc/reference/develop-app/transactions-odbc.md).  
   
- Выполнить инструкцию в новой транзакции, приложение возвращается к шагу 3. Отключение от источника данных, приложение переходит к шагу 6.
+ Чтобы выполнить инструкцию в новой транзакции, приложение возвращает к шагу 3. Чтобы отключиться от источника данных, приложение переходит к шагу 6.

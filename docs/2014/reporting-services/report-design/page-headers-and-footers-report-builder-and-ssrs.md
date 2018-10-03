@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
@@ -23,16 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 863a4415bb75b5a5cd4fe017de4ebeca975e32a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18228ba7240b2d26462545463d8cf5fdf8636a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328905"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098444"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)
   Отчет может содержать верхний и нижний колонтитулы, которые располагаются в верхней и нижней части каждой страницы соответственно. Верхние и нижние колонтитулы могут содержать статический текст, изображения, линии, прямоугольники, границы, цвет фона, фоновые изображения и выражения. Выражения включают ссылки на поля набора данных для отчетов, имеющих один и только один набор данных, а также вызовы агрегатных функций, которые включают набор данных в качестве области.  
@@ -128,7 +125,7 @@ ms.locfileid: "37328905"
   
  Более точный подсчет страниц основан на логических страницах, соответствующих размерам печатаемых листов. В Excel в нижнем колонтитуле страницы автоматически используются логические номера страниц. Чтобы вывести номер логической страницы в верхнем колонтитуле страницы, необходимо настроить сведения об устройстве в целях применения простых верхних колонтитулов. Но следует знать, что при использовании простых верхних колонтитулов отключается возможность использования в области верхнего колонтитула сложных макетов отчета.  
   
- Дополнительные сведения см. в разделе [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также  
  [Внедрение изображения в отчете &#40;построитель отчетов и службы SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   

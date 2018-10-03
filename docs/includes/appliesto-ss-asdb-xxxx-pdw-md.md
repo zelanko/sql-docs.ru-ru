@@ -1,1 +1,1 @@
-<Token>**Эта статья ОТНОСИТСЯ к:** ![Да](media/yes.png)SQL Server![Да](media/yes.png)базы данных SQL Azure![не](media/no.png)хранилище данных SQL Azure ![Да](media/yes.png)параллельных Хранилище данных </Token>
+<Token>**Область применения:** ![Да](media/yes.png)SQL Server ![Да](media/yes.png)базы данных SQL Azure ![не](media/no.png)хранилище данных SQL Azure ![Да](media/yes.png)параллельных данных Хранилище </Token>

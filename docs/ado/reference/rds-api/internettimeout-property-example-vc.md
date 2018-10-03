@@ -1,35 +1,32 @@
 ---
-title: Пример свойства InternetTimeout (VC ++) | Документы Microsoft
+title: Пример свойства InternetTimeout (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - InternetTimeout property [ADO], VC++ example
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bfc664d024026447b83cf443002b4fe2642d06b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb65234369e646c2dba4544b8729769ac3ebdcb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288115"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789702"
 ---
-# <a name="internettimeout-property-example-vc"></a>Пример свойства InternetTimeout (VC ++)
+# <a name="internettimeout-property-example-vc"></a>Пример свойства InternetTimeout (Visual C++)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере демонстрируется [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) свойство, которое существует на [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) и [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) объектов. В этом случае **InternetTimeout** показано свойство на **DataControl** объекта и значение времени ожидания устанавливается в значение 20 секунд.  
+ В этом примере показано [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) свойство, которое существует на [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) и [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) объектов. В этом случае **InternetTimeout** демонстрируется свойство на **DataControl** объекта и время ожидания составляет 20 секунд.  
   
 ```  
 // BeginInternetTimeoutCpp  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c3018886db19bb51d5dbbfe4f0c3f5a871e88f4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb243fa126fc53282bd310d3bd5d47029e2f4aba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402796"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605843"
 ---
 # <a name="data-flow-performance-features"></a>Возможности для повышения производительности потока данных
   В этом разделе приведены советы по проектированию пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , помогающие избежать общих проблем с производительностью. Кроме того, в этом разделе содержатся сведения по функциям и средствам, позволяющим устранить неполадки с производительностью пакетов.  
@@ -167,7 +164,7 @@ ms.locfileid: "35402796"
   
  Чтобы включить или отключить отображение сообщений на вкладке **Выполнение** , установите или снимите флажок **Отчет о ходе отладки** в меню **Службы SSIS** . Отключение отчетов о состоянии способствует повышению производительности выполнения сложных пакетов в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   

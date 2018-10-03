@@ -1,14 +1,11 @@
 ---
-title: sysdbmaintplans (Transact-SQL) | Документы Microsoft
+title: sysdbmaintplans (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdbmaintplans_TSQL
@@ -18,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysdbmaintplans system table
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee360b16fc92414acc3079846d50198831e28137
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0525a50b30036470336dafe10c78a42218486c63
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774673"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Эта таблица включена в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранить существующие сведения по экземплярам, обновленным с предыдущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не изменяет содержимое этой таблицы. Эта таблица хранится в **msdb** базы данных.  
+  Эта таблица включена в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] чтобы сохранить существующие сведения по экземплярам, обновленным с предыдущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не изменяет содержимое этой таблицы. Эта таблица хранится в **msdb** базы данных.  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
 
@@ -49,6 +46,6 @@ ms.lasthandoff: 05/04/2018
 |**user_defined_2**|**Nvarchar(100)**|Значение по умолчанию — NULL.|  
 |**user_defined_3**|**datetime**|Значение по умолчанию — NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Значение по умолчанию — NULL.|  
-|**log_shipping**|**бит**|Статус доставки журналов:<br /><br /> **0** = отключено **1** = включено|  
+|**log_shipping**|**bit**|Статус доставки журналов:<br /><br /> **0** = отключено **1** = включено|  
   
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 37bbe195179a13d00961f3f33149e3d25b9476e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0748fd29a116ee426f17c3cf12ce67ebcd0c519a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188041"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098045"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)
   От разбиения на страницы зависит количество страниц в отчете и размещение элементов отчета на этих страницах. Разбиение на страницы в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] изменяется в зависимости от модуля подготовки отчетов, можно использовать для просмотра и доставки отчета. Если отчет выполняется на сервере отчетов, отчет использует модуль подготовки отчетов в формате HTML. Код HTML следует конкретному набору правил разбиения на страницы. Например, если тот же отчет экспортируется в документ PDF, то используется модуль подготовки отчетов PDF и применяется другой набор правил, поэтому разбиение отчета на страницы происходит по-другому. Чтобы успешно спроектировать удобный для чтения отчет для пользователей, оптимизированный для модуля подготовки отчетов, который планируется использовать для доставки отчета, необходимо понимать правила, используемые для управления разбиением на страницы в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 517446889205621e4cb9b866e858f53a622bf75d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314544"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191744"
 ---
 # <a name="relationships-ssas-tabular"></a>Связи (табличные службы SSAS)
   В табличных моделях связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах. Например, таблица «Customers» и таблица «Orders» могут быть связаны, чтобы отображалось имя клиента, соответствующее каждому заказу.  

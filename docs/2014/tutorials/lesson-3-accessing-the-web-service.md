@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
-caps.latest.revision: 43
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9e5decf2f1d6c702b3bc3483ffb89bff9a2cd9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c93def5590b634d2fb3f8374b5fb875fd2d740eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108304"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>Занятие 3: Доступ к веб-службы
+# <a name="lesson-3-accessing-the-web-service"></a>Урок 3. Доступ к веб-службе
   После добавления в проект ссылки на веб-службу сервера отчетов будет создан экземпляр класса-посредника этой веб-службы. Теперь можно получить доступ к методам веб-службы путем вызова методов класса-посредника. Когда приложение вызывает эти методы, класса-посредника, код, сгенерированный [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] обрабатывает взаимодействие между приложением и веб-службы.  
   
  Во-первых, вы создадите экземпляр класса прокси-сервера веб службы, <xref:ReportService2010.ReportingService2010>. Затем с помощью класса-посредника нужно вызвать метод веб-службы <xref:ReportService2010.ReportingService2010.GetProperties%2A>. Вызов будет использован для получения имени и описания одного из образцов отчетов под названием Company Sales.  
   
 > [!NOTE]  
->  Во время доступа к веб-службе, запущенной на сервере [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, к пути «ReportServer» необходимо добавить выражение «$SQLExpress». Например:  
+>  Во время доступа к веб-службе, запущенной на сервере [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, к пути «ReportServer» необходимо добавить выражение «$SQLExpress». Пример:  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   

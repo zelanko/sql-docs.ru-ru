@@ -1,37 +1,34 @@
 ---
-title: Пример свойства состояние готовности (VBScript) | Документы Microsoft
+title: Пример свойства ReadyState (VBScript) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30d015d40052b781babc865a099726d1cddd4688
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 47e545cf1b1f99859330f0f0ffbbc72aa3f9393c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826902"
 ---
-# <a name="readystate-property-example-vbscript"></a>Пример свойства состояние готовности (VBScript)
+# <a name="readystate-property-example-vbscript"></a>Пример свойства ReadyState (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как прочитать [состояние готовности](../../../ado/reference/rds-api/readystate-property-rds.md) свойство [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта во время выполнения в код VBScript. **Состояние готовности** доступно только для чтения.  
+ В следующем примере показано, как для чтения [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) свойство [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта во время выполнения в код VBScript. **Свойство ReadyState** является свойством только для чтения.  
   
- Чтобы протестировать этот пример, вырежьте и вставьте следующий код между \<Body > и \</Body > тегов в обычный HTML документа и назовите его **RDSReadySt.asp**. Используйте **найти** для нахождения файла Adovbs.inc и поместите его в каталог, который планируется использовать. Сценарий ASP будет идентификации сервера.  
+ Чтобы протестировать этот пример, вырезать и вставить этот код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **RDSReadySt.asp**. Используйте **найти** найдите файл Adovbs.inc и поместите его в каталог, который вы планируете использовать. Сценарий ASP будет идентификации сервера.  
   
 ```  
 <!-- BeginReadyStateVBS -->  
@@ -114,7 +111,7 @@ body {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Свойство ReadyState (служба удаленных рабочих столов)](../../../ado/reference/rds-api/readystate-property-rds.md)
 
 

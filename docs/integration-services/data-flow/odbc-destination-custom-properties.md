@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 716b80d50d8498f2a3325bd4719ddf0a7f1e9946
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 308898cb506dcfe34b27b7081109c77251e2dc15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334488"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599482"
 ---
 # <a name="odbc-destination-custom-properties"></a>Пользовательские свойства назначений ODBC
   В следующей таблице описаны пользовательские свойства назначения ODBC. Все свойства могут быть заданы на основе выражений свойств служб SSIS.  

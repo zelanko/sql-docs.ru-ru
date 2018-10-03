@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22bfe87f9d0cd09d2d7c7f650d500398b936cde0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad99c202d858bbdf5de47a21fe26070328e2de2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216244"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119634"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Создание решения и источника данных (учебник по интеллектуальному анализу данных — средний уровень)
   Для работы с интеллектуальным анализом данных, необходимо сначала создать проект в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] с помощью шаблона, **Analysis Services — многомерные и проект интеллектуального анализа данных**. После открытия шаблона он загружает в конструктор все схемы, которые могут понадобиться для интеллектуального анализа данных: источники данных, структуры и модели интеллектуального анализа данных и даже кубы, если в структуре интеллектуального анализа данных используются многомерные данные.  

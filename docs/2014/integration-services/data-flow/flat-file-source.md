@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 040069e373761d6d3ad78ea26bea5f8e538c33ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8a06ae3b308c90b2dc789c97f5f262530826229
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125414"
 ---
 # <a name="flat-file-source"></a>источник «Неструктурированный файл»
   Источник «Неструктурированный файл» считывает данные из текстового файла. Текстовый файл может иметь разделители, фиксированную ширину полей или смешанный формат.  
@@ -71,7 +68,7 @@ ms.locfileid: "37229364"
   
 -   [Пользовательские свойства неструктурированного файла](flat-file-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств для компонента потока данных см. в разделе [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>См. также  

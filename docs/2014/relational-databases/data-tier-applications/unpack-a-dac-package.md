@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d256a069213df774519a357d29ab1be8fe5417d8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 74caa8d0ef17bf0b9401662969ce34c8d78cc112
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809670"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125484"
 ---
 # <a name="unpack-a-dac-package"></a>Распаковка пакета DAC
   Чтобы распаковать скрипты и файлы из пакета приложения уровня данных (DAC), используйте диалоговое окно «Распаковка приложения уровня данных». Скрипты и файлы помещаются в папку, где их можно просмотреть перед тем, как использовать пакет для развертывания приложения уровня данных в рабочей системе. Кроме того, содержимое одного приложения уровня данных можно сравнить с содержимым другого пакета, распакованного в другую папку.  

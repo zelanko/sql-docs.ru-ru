@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e73d69738b231b9cfb0d78ccca979b1ed0d5c149
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 468398a30108b79c1a9f48ce42e035f20b9199f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201967"
 ---
 # <a name="security-extensions-overview"></a>Общие сведения о модулях безопасности
   Модуль безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяет проводить проверку подлинности и авторизацию пользователей и групп, то есть этот модуль позволяет пользователям входить на сервер отчетов и в соответствии с их удостоверениями выполнять различные задачи и операции. По умолчанию службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют модуль проверки подлинности Windows, который в свою очередь использует протоколы учетных записей Windows для проверки удостоверений пользователей, которые заявляют, что имеют учетные записи в системе. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют систему безопасности на основе ролей для авторизации пользователей. Модель безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на основе ролей похожа на модели безопасности на основе ролей других технологий.  

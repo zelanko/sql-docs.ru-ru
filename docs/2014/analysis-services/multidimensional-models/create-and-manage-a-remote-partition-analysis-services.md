@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44922bea51081a134410ac7f656cb5e3670001af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 584dea7a48b316a4e78a46b0ef1b014b8cc7cf02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106912"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Создание удаленной секции и управление ей (Analysis Services)
   При секционировании группы мер можно указать в качестве хранилища секции базу данных-получатель на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -114,7 +111,7 @@ ms.locfileid: "37315044"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>Настройте удаленную секцию (в SSDT)  
   
-1.  На главном сервере откройте куб в конструкторе кубов и щелкните вкладку **Секции** . Разверните группу мер. Нажмите кнопку **Создать секцию** , если группа мер уже настроена на работу с несколькими секциями, или нажмите кнопку обзора (. , и делает это по-другому. ) в столбце Source, чтобы изменить текущую секцию.  
+1.  На главном сервере откройте куб в конструкторе кубов и щелкните вкладку **Секции** . Разверните группу мер. Нажмите кнопку **Создать секцию** , если группа мер уже настроена на работу с несколькими секциями, или нажмите кнопку обзора (. . ) в столбце Source, чтобы изменить текущую секцию.  
   
 2.  В мастере секций на странице **Определение исходных сведений**выберите исходное представление данных и таблицу фактов.  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: add8f27df3830fb474f849aa54e21fc4963ab115
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0620aec0c710e513115455388276c72cc4371e9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235264"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171046"
 ---
 # <a name="merge-join-transformation"></a>преобразование «Соединение слиянием»
   Преобразование «Соединение слиянием» предоставляет выход, формируемый объединением двух отсортированных наборов данных при помощи соединения FULL, LEFT или INNER. Например, соединение LEFT может использоваться для объединения таблицы, содержащей данные о товарах, с таблицей, в которой перечисляются страны или регионы, в которых эти товары были произведены. Результатом является таблица, в которой перечисляются все товары и страны или регионы их происхождения.  
@@ -54,7 +51,7 @@ ms.locfileid: "37235264"
 ## <a name="buffer-throttling"></a>Регулировка количества буферов  
  Больше не нужно настроить значение `MaxBuffersPerInput` свойство так, как корпорация Майкрософт внесла изменения, которые уменьшили риск, что преобразования «Соединение слиянием» будет потреблять чрезмерный объем памяти. Эта проблема иногда возникает, если несколько входов операции «Соединение слиянием» производят данные с различной скоростью.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Свойства могут устанавливаться через конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или с помощью программных средств.  
   
  Дополнительные сведения об установке свойств этого преобразования см. в следующих разделах:  

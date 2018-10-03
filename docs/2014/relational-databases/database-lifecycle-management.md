@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - Database migration
 - Database connectivity
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 530f4c02b575601136392e8a3b14c60209e91ea1
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8f1deedcba567045f36bb203dea1d638ed1c9929
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807820"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147854"
 ---
 # <a name="database-lifecycle-management"></a>Управление жизненным циклом базы данных
   Управление жизненным циклом базы данных — это принцип управления базами данных и информационными активами на основе политик. Управление жизненным циклом базы данных — это не продукт, а комплексный подход к управлению схемой базы данных, данными и метаданными для приложения базы данных. Внимательное и проактивное использование принципа управления жизненным циклом баз данных позволяет организации управлять информационными ресурсами в соответствии с актуальным уровнем производительности, защиты, доступности и затрат.  

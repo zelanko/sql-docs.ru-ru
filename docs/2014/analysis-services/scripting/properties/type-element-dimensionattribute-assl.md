@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (DimensionAttribute)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b162bceeb6ffd6f6a2f719d86f27cef07c27103
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293474"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123264"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Элемент Type (DimensionAttribute) (ASSL)
   Содержит тип атрибута.  
@@ -111,7 +108,7 @@ ms.locfileid: "37293474"
 |*DayOfTrimester*|Атрибут представляет порядковый номер дня триместра.|  
 |*DayOfWeek*|Атрибут представляет порядковый номер дня месяца.|  
 |*DayOfYear*|Атрибут представляет порядковый номер дня года.|  
-|*Дней*|Атрибут представляет дни.|  
+|*дней*|Атрибут представляет дни.|  
 |*DaysOfTenDays*|Атрибут представляет порядковый номер дня декады.|  
 |*FiscalDay*|Атрибут представляет дни в финансовом календаре.|  
 |*FiscalDayOfHalfYears*|Атрибут представляет порядковый номер дня полугодия в финансовом календаре.|  
@@ -157,7 +154,7 @@ ms.locfileid: "37293474"
 |*GeoCentroidZ*|Атрибут представляет центроид оси Z для географической области.|  
 |*HalfYears*|Атрибут представляет полугодия.|  
 |*HalfYearsOfYear*|Атрибут представляет порядковый номер полугодия года.|  
-|*Часы*|Атрибут представляет часы.|  
+|*часы*|Атрибут представляет часы.|  
 |*Id*|Атрибут представляет идентификатор или ключ.|  
 |*IsHoliday*|Атрибут указывает на то, является ли дата выходным днем.|  
 |*ISO8601DayOfWeek*|Атрибут представляет порядковый номер дня недели в календаре ISO 8601.|  
@@ -199,7 +196,7 @@ ms.locfileid: "37293474"
 |*MonthOfQuarter*|Атрибут представляет порядковый номер месяца квартала.|  
 |*MonthOfTrimester*|Атрибут представляет порядковый номер месяца триместра.|  
 |*MonthOfYear*|Атрибут представляет порядковый номер месяца года.|  
-|*Месяцев*|Атрибут представляет месяцы.|  
+|*месяцев*|Атрибут представляет месяцы.|  
 |*OrganizationalUnit*|Атрибут представляет организационную единицу.|  
 |*OrgTitle*|Атрибут представляет организационную должность.|  
 |*PercentOwnership*|Атрибут представляет долю собственности.|  

@@ -1,36 +1,33 @@
 ---
-title: Создание тестовых случаев (OracleToSQL) | Документы Microsoft
+title: Создание тестовых случаев (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Test Case Wizard
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e2bf49da49e6b7e79ee62b18925aa60401e4e2a4
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 07b52a71d3f12455bacdd2e9789aadb5ed5967db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604682"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Создание тестовых случаев (OracleToSQL)
-Мастер тестового случая для создания теста. Этот мастер позволяет создавать тестовые случаи, при выборе тестирования и проверки объектов, с помощью параметров тестирования.  
+Создание теста с помощью мастера тестового случая. Этот мастер позволяет создавать тестовые случаи, выбирая и проверите объектов и путем указания параметров тестирования.  
   
 ## <a name="starting-the-test-case-wizard"></a>Запуск мастера тестового случая  
 Для запуска мастера тестового случая выберите **новый тестовый случай...** из **тест-инженер** меню.  
   
-При запуске мастер выполняет поиск схемы SSMATESTER_ORACLE на исходном сервере Oracle. Это расширение схемы тест-инженер, используемой для хранения вспомогательных объектов. Если мастер тестового случая не удается найти SSMATESTER_ORACLE, он отображает диалоговое окно, которое предлагает для создания схемы. (Такой ситуации обычно происходит во время первого выполнения тест-инженер SSMA).  
+При запуске, мастер ищет схемы SSMATESTER_ORACLE на исходном сервере Oracle. Это расширение схемы тест-инженер, используемой для хранения вспомогательных объектов. Если мастер тестового случая не может найти SSMATESTER_ORACLE, отображается диалоговое окно, которое предлагает для создания схемы. (Такая ситуация обычно возникает во время первого запуска SSMA тест-инженер.)  
   
-Если появляется диалоговое окно, нажмите кнопку **Да** для создания схемы SSMATESTER_ORACLE на исходном сервере. Обратите внимание, что необходимо иметь права Oracle для создания нового пользователя и создания объектов в схеме этого пользователя.  
+Если появится диалоговое окно, нажмите кнопку **Да** для создания схемы SSMATESTER_ORACLE на исходном сервере. Обратите внимание на то, что требуются привилегии Oracle для создания нового пользователя и создания объектов в схеме этого пользователя.  
   
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Общие сведения о создании тестовых случаев с помощью мастера  
 Процесс создания тестового случая состоит из пяти шагов:  
@@ -39,12 +36,12 @@ ms.locfileid: "34777230"
   
 2.  [Выбор и настройка объектов для тестирования &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-3.  [Выбор и настройка затронутые объекты &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+3.  [Выбор и настройка обрабатываемых объектов &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 4.  [Настройка порядка вызовов &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [Завершение подготовки тестовый случай &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [Завершение подготовки тестовых случаев &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также  
-[Тестирование перенесенные объекты базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Тестирование объектов базы данных после миграции &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

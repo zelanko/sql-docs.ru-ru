@@ -1,37 +1,34 @@
 ---
-title: Устранение неполадок служб удаленных рабочих СТОЛОВ | Документы Microsoft
+title: Устранение неполадок служб удаленных рабочих СТОЛОВ | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting RDS [ADO]
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 188e1194a3c2f95bf8c97ad608e80a9cebb4a419
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ff122b0a7cf888ec93350da86bf0bc610e47270a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274683"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787819"
 ---
-# <a name="troubleshooting-rds"></a>Устранение неполадок служб удаленных рабочих СТОЛОВ
+# <a name="troubleshooting-rds"></a>Устранение неполадок с RDS
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- См. в этом разделе, для решения конкретных ошибок или проблем с RDS. Этот раздел содержит следующие подразделы.  
+ В этом разделе приведены способы решения определенных ошибок или проблем с RDS. Этот раздел содержит следующие подразделы.  
   
 -   [Настройка RDS в Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   
--   [«Ошибка сервера Интернет: доступ запрещен»](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   [«Ошибка сервера Интернета: доступ запрещен»](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
   
 -   [RDS возвращает ошибку "Поток не прочитан"](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
   

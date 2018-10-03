@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1f8b9d8587c41a45ee60203debee778a88714dd9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e57b58eb5b3a3321397dc17668b92ab10e0c5169
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214794"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093284"
 ---
 # <a name="report-data-ssrs"></a>Данные отчета (SSRS)
   Данные отчета могут поступать из нескольких источников данных в организации. Первым шагом при разработке отчета является создание источников и наборов данных, из которых берутся базовые данные отчета. Каждый источник данных содержит сведения о подключении к данным. У каждого набора данных есть команда запроса, определяющая набор полей для использования в качестве данных из источника данных. Для визуализации данных из каждого набора данных, добавьте область данных, например таблицу, матрицу, диаграмму или карту. При обработке отчета в источнике базы данных выполняются запросы и каждая область данных расширяется настолько, насколько требуется для отображения результатов для набора данных.  
@@ -67,7 +64,7 @@ ms.locfileid: "37214794"
   
 -   Учетные данные источника данных различаются в зависимости от типа источника данных и способа просмотра отчетов: на клиенте, на сервере отчетов или на сайте SharePoint. Дополнительные сведения см. в разделах [Установка разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Задание учетных данных и сведений о соединении для источников данных отчета](../../integration-services/connection-manager/data-sources.md). Сведения об учетных данных для каждого средства см. в разделе [Средства служб Reporting Services](../tools/reporting-services-tools.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Задачи, связанные с созданием подключений к данным, добавления данных из внешних источников, наборов данных и запросов.  
   
 |||  

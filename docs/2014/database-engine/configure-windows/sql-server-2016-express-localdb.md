@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user instances
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d87a85927751b12e3f86d5ce2bc908da9d063b21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676bc7adc3debb0beaee10d09d6fbe8018d42c2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158954"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` — Это режим выполнения [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] предназначенный для разработчиков программ. `LocalDB` Программа установки копирует минимальный набор файлов, необходимых для запуска [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Один раз `LocalDB` — установлен, разработчики могут установить соединение с помощью специальной строки подключения. При соединении необходимая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инфраструктура будет автоматически создана и запущена, что позволяет приложению использовать базу данных без настройки сложным и длительным. Средства разработчика позволяют использовать [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для написания и проверки кода [!INCLUDE[tsql](../../includes/tsql-md.md)] без необходимости управления полным экземпляром сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Экземпляр [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` осуществляется с помощью `SqlLocalDB.exe` служебной программы. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` следует использовать вместо [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] функции пользовательского экземпляра, который является устаревшим.  

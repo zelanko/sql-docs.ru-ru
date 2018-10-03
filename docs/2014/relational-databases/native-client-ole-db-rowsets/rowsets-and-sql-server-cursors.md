@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB rowsets, cursors
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - properties [OLE DB]
 - cursors [OLE DB]
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d7c1768beb903e214260c2b6a37486bfc2583c0c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9c1682525f57c2a251cda46202f06737b87d030b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147264"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Наборы строк и курсоры SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает результирующие наборы пользователям двумя способами.  
@@ -70,13 +67,13 @@ ms.locfileid: "37416364"
 |DBPROP_BOOKMARKS или DBPROP_LITERALBOOKMARKS|VARIANT_TRUE|Обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк невозможно. Этот набор строк является последовательным и поддерживает только прямую прокрутку и выборку. Относительное позиционирование строки поддерживается. Текст команды может содержать предложение ORDER BY.|  
 |DBPROP_OWNUPDATEDELETE, DBPROP_OWNINSERT или DBPROP_OTHERUPDATEDELETE|VARIANT_TRUE|Обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк невозможно. Этот набор строк поддерживает прокрутку и выборку в любом направлении. Относительное позиционирование строки поддерживается. Текст команды может содержать предложение ORDER BY.|  
 |DBPROP_OTHERINSERT|VARIANT_TRUE|Обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк невозможно. Этот набор строк поддерживает прокрутку и выборку в любом направлении. Относительное позиционирование строки поддерживается. Текст команды может включать предложение ORDER BY, если для указанных в ссылке столбцов существует индекс.<br /><br /> Если набор строк содержит закладки, свойство DBPROP_OTHERINSERT не может иметь значение VARIANT_TRUE. При попытке создать набор строк с этим свойством видимости и закладками возникает ошибка.|  
-|DBPROP_IRowsetLocate или DBPROP_IRowsetScroll|VARIANT_TRUE|Обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк невозможно. Этот набор строк поддерживает прокрутку и выборку в любом направлении. Закладки и абсолютное позиционирование при помощи **IRowsetLocate** интерфейс поддерживаются в наборе строк. Текст команды может содержать предложение ORDER BY.<br /><br /> Свойства DBPROP_IRowsetLocate и DBPROP_IRowsetScroll требуют наличия закладок в наборе строк. При попытке создать набор строк с закладками и свойством DBPROP_OTHERINSERT, которому присвоено значение VARIANT_TRUE, возникает ошибка.|  
+|DBPROP_IRowsetLocate или DBPROP_IRowsetScroll|VARIANT_TRUE|Обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк невозможно. Этот набор строк поддерживает прокрутку и выборку в любом направлении. В наборе строк поддерживаются закладки и абсолютное позиционирование с помощью интерфейса **IRowsetLocate**. Текст команды может содержать предложение ORDER BY.<br /><br /> Свойства DBPROP_IRowsetLocate и DBPROP_IRowsetScroll требуют наличия закладок в наборе строк. При попытке создать набор строк с закладками и свойством DBPROP_OTHERINSERT, которому присвоено значение VARIANT_TRUE, возникает ошибка.|  
 |DBPROP_IRowsetChange или DBPROP_IRowsetUpdate|VARIANT_TRUE|Возможно обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк. Этот набор строк является последовательным и поддерживает только прямую прокрутку и выборку. Относительное позиционирование строки поддерживается. Все команды, поддерживающие обновляемые курсоры, могут поддерживать эти интерфейсы.|  
-|DBPROP_IRowsetLocate или DBPROP_IRowsetScroll и DBPROP_IRowsetChange или DBPROP_IRowsetUpdate|VARIANT_TRUE|Возможно обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк. Этот набор строк поддерживает прокрутку и выборку в любом направлении. Закладки и абсолютное позиционирование при помощи **IRowsetLocate** поддерживаются в наборе строк. Текст команды может содержать предложение ORDER BY.|  
+|DBPROP_IRowsetLocate или DBPROP_IRowsetScroll и DBPROP_IRowsetChange или DBPROP_IRowsetUpdate|VARIANT_TRUE|Возможно обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк. Этот набор строк поддерживает прокрутку и выборку в любом направлении. В наборе строк поддерживаются закладки и абсолютное позиционирование с помощью интерфейса **IRowsetLocate**. Текст команды может содержать предложение ORDER BY.|  
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|Обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк невозможно. Этот набор строк поддерживает только прямую прокрутку. Относительное позиционирование строки поддерживается. Текст команды может включать предложение ORDER BY, если для указанных в ссылке столбцов существует индекс.<br /><br /> Свойство DBPROP_IMMOBILEROWS можно использовать только в наборах строк, которые способны показывать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] строки, вставленные командами в рамках других сеансов или другими пользователями. При попытке открыть набор строк с этим свойством, заданным равным VARIANT_FALSE, для любого набора строк, для которого свойство DBPROP_OTHERINSERT не может иметь значение VARIANT_TRUE, возникает ошибка.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|Обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк невозможно. Этот набор строк поддерживает только прямую прокрутку. Относительное позиционирование строки поддерживается. Текст команды может содержать предложение ORDER BY, если это не запрещено другим свойством.|  
   
- Объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаемый серверный курсор набора строк поставщика OLE DB для собственного клиента можно легко создать на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базовой таблицы или представления с помощью **IOpenRowset::OpenRowset** метод. Указывается имя таблицы или представления, передавая требуется набор строк задается *rgPropertySets* параметра.  
+ Объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаемый серверный курсор набора строк поставщика OLE DB для собственного клиента можно легко создать на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базовой таблицы или представления с помощью **IOpenRowset::OpenRowset** метод. Укажите таблицу или представление по имени, передав требуемые наборы свойств набора строк в параметре *rgPropertySets*.  
   
  Если пользователь требует, чтобы набор строк поддерживался серверным курсором, то возможности выбора текста команды, которая создает набор строк, становятся ограниченными. В частности, текст команды ограничивается применением либо одной инструкции SELECT, которая возвращает один результирующий набор строк, либо хранимой процедуры, реализующей одну инструкцию SELECT, которая возвращает результат в виде одного набора строк.  
   
@@ -88,7 +85,7 @@ ms.locfileid: "37416364"
   
  T = VARIANT_TRUE  
   
- \- = VARIANT_TRUE или VARIANT_FALSE  
+ \- = VARIANT_TRUE или VARIANT_FALSE  
   
  Чтобы ввести в действие модель курсора определенного типа, определите столбец, соответствующий этой модели курсора, и найдите все свойства набора строк со значением «Т» в этом столбце. Чтобы воспользоваться данной конкретной моделью курсора, присвойте этим свойствам набора строк значение VARIANT_TRUE. Свойствам набора строк, для которых в качестве значения указано «-», можно присваивать либо значение VARIANT_TRUE, либо значение VARIANT_FALSE.  
   
@@ -149,7 +146,7 @@ ms.locfileid: "37416364"
 ## <a name="sql-server-cursor-block-size"></a>Размер блока курсора SQL Server  
  Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] курсор поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набор строк поставщика OLE DB для собственного клиента, количество элементов в строке обработки параметра массива из **IRowset::GetNextRows** или **IRowsetLocate::GetRowsAt**  методы определяет размер блока курсора. Строки, указанные дескрипторами в массиве, являются элементами блока курсора.  
   
- Для наборов строк, которые поддерживают закладки, дескрипторов строк извлекается с помощью **IRowsetLocate::GetRowsByBookmark** метод определить элементы блока курсора.  
+ Что касается наборов строк, поддерживающих закладки, то элементы блока курсора определяются дескрипторами строк, которые извлекаются с помощью метода **IRowsetLocate::GetRowsByBookmark**.  
   
  Независимо от того, какой метод использовался для заполнения набора строк и формирования блока курсора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот блок курсора остается активным до выполнения следующего метода извлечения строк применительно к этому набору строк.  
   

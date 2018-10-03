@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], data manipulation
 - data manipulation [MDX]
 - Multidimensional Expressions [Analysis Services], data manipulation
 ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ed85590cfc766b1db7eb97a3c373c0cf967f2a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b7fe82be443271e1d679e5da6f0db95dc418cd99
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208014"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188644"
 ---
 # <a name="manipulating-data-mdx"></a>Манипулирование данными (многомерные выражения)
   С помощью многомерных выражений можно осуществлять самые различные операции с данными. В следующих разделах рассказывается о более сложных понятиях работы с данными при помощи языка многомерных выражений  

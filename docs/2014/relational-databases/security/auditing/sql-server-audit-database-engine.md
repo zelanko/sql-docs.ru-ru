@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - audit
@@ -17,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8debb182069b7294f1fb8027c072a3fb720b62c8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022072"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175354"
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
   *Аудит* экземпляра среды [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] или отдельной базы данных включает в себя отслеживание и протоколирование событий, происходящих в компоненте [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Аудит среды[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет проводить аудит сервера, который может включать в себя спецификации аудита сервера для событий на уровне сервера, а также спецификации аудита базы данных для событий на уровне базы данных. События аудита могут записываться в журналы событий или файлы аудита.  

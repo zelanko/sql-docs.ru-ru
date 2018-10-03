@@ -1,45 +1,42 @@
 ---
-title: Терминология Visual FoxPro | Документы Microsoft
+title: Терминология Visual FoxPro | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], glossary
 - FoxPro ODBC driver [ODBC], glossary
 ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 606b57b363956a27ec7ff9d627316c660c87f70d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8aeb7db6f844b5182165146905f6cc9de928726
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800632"
 ---
 # <a name="visual-foxpro-terminology"></a>Терминология Visual FoxPro
 **базой данных**  
- В Visual FoxPro файл базы данных с расширением .dbc и может содержать один или несколько **таблиц**.  
+ В Visual FoxPro, файл базы данных с расширением .dbc и может содержать один или несколько **таблиц**.  
   
- **Таблица базы данных**  
+ **таблицы базы данных**  
  В Visual FoxPro таблицы, связанные с базой данных. Контрастность **свободной таблице**.  
   
- **Бесплатные таблицы**  
- В Visual FoxPro, таблицы, который не связан с базой данных.  
+ **бесплатный таблицы**  
+ В Visual FoxPro, таблицы, не связанного с базой данных.  
   
- DBF-файл создан в FoxPro версии 2.x является бесплатной таблицы, если он преобразуется в таблицы Visual FoxPro и добавить в базу данных Visual FoxPro. Контрастность **таблицы базы данных**.  
+ DBF-файл создан в FoxPro версии 2.x — это бесплатная таблица, если только он преобразуется в таблице Visual FoxPro и добавляются в базу данных Visual FoxPro. Контрастность **таблицы базы данных**.  
   
  **доступный для подготовки инструкции SQL**  
- Инструкции SQL, который уже не был обработан, **SQLPrepare** функции. Дополнительные сведения об этой функции с помощью драйвера ODBC для Visual FoxPro см. в разделе [SQLPrepare (драйвер ODBC)](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
+ Инструкцию SQL, уже не был обработан, **SQLPrepare** функции. Дополнительные сведения об этой функции с помощью драйвера ODBC для Visual FoxPro, см. в разделе [SQLPrepare (драйвер ODBC Visual FoxPro)](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
   
  **table**  
- В Visual FoxPro записи хранятся в таблице. Каждая строка таблицы представляет запись, а столбцы таблицы представляют поля записи. Каждая таблица Visual FoxPro хранится в отдельном файле с расширением .dbf. Таблицы Visual FoxPro, можно связать с базой данных.  
+ В Visual FoxPro записи хранятся в таблице. Каждая строка таблицы представляет запись, а в столбцах таблицы представлены поля записи. Каждая таблица Visual FoxPro хранится в отдельном файле с расширением .dbf. Таблицы Visual FoxPro, можно связать с базой данных.  
   
  FoxPro версии 2. *x* таблицы не связаны с базой данных.

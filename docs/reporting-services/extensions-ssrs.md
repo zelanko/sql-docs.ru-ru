@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61d8e6684e2d8880541e29fa73e82b170de87f1d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5111dc665554f7ee3612d512166c12a6f7b02a65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658762"
 ---
 # <a name="extensions-ssrs"></a>Расширения (SSRS)
   Сервер отчетов в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] использует расширения для разделения на модули различных типов ввода и вывода, которые он принимает для проверки подлинности, обработки данных, подготовки и доставки отчетов. Это облегчает существующим установкам служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] использование таких новых стандартов программного обеспечения в отрасли, как новая схема проверки подлинности или пользовательский тип источника данных. Сервер отчетов поддерживает пользовательские модули проверки подлинности, модули обработки данных, модули обработки отчетов, модули подготовки отчетов и модули доставки, и все модули, доступные пользователям, можно настроить в файле конфигурации RSReportServer.config. Например, можно ограничить форматы экспорта, которые могут использоваться средством просмотра отчетов. Обязательно наличие хотя бы одного модуля проверки подлинности, одного модуля обработки данных и одного модуля подготовки отчетов. Модули доставки и обработки отчетов необязательны, но необходимы, если требуется распространение отчетов или пользовательские элементы управления.  

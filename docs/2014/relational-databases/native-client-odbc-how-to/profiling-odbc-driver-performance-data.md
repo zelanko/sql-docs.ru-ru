@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - driver performance data [ODBC]
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e72536c0e5922949650f8bb1ecb6008e75a20dc3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3d6c9b42b89b20e2a4f72f1cf78a0a67c4f77c64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194724"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>Сбор сведений о производительности драйвера (ODBC)
   В этом образце показаны параметры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для драйвера ODBC, относящиеся к сбору статистики производительности. Образец создает один файл: odbcperf.log.This образец показывает и создание файла журнала производительности данных и отображения данных производительности непосредственно из структуры данных SQLPERF (структура SQLPERF определена в файле Odbcss.h.). Этот образец разработан для ODBC версии 3.0 или более поздней.  
@@ -44,7 +41,7 @@ ms.locfileid: "37432523"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Программная запись сведений о производительности драйвера  
   
-1.  Вызовите [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA_LOG и полный путь и имя файла данных журнала производительности. Например:  
+1.  Вызовите [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA_LOG и полный путь и имя файла данных журнала производительности. Пример:  
   
     ```  
     "C:\\Odbcperf.log"  

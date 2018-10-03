@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c8779496e3e352a59477cf10f12a13011c5c6b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19b4922446f564435970fbb7f0422a3c98de48df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189351"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151964"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>Задача 8. Создание составного правила домена
   В этой задаче вы создаете правило для **проверка адреса** составной домен. Определить междоменное правило: Если **Город** — **Лос-Анджелес**, **состояние** должно быть **ЦС** где **Город** и **состояние** — это два домена.  

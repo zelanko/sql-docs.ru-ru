@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a015f7827b711bf1eb638638a504fd92d886589
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8171edaa6e2265191ae4611fea79dd018b43022c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117884"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services
   Используйте указания и ссылки, приведенные в этом разделе, для установки всех файлов данных и проектов, используемых в учебниках по службам Analysis Services.  
@@ -37,7 +34,7 @@ ms.locfileid: "37218274"
   
      По умолчанию службы Analysis Services устанавливаются как многомерный экземпляр, но это можно переопределить, выбрав табличный режим сервера на странице настройки сервера мастера установки. Если необходимо запускать оба режима сервера, перезапустите программу установки SQL Server на том же компьютере, чтобы установить второй экземпляр служб Analysis Services в другом режиме.  
   
--   Среда SQL Server Management Studio  
+-   SQL Server Management Studio  
   
  При необходимости по ходу работы с учебником можно установить Excel для просмотра многомерных данных. Установка Excel позволит применять функцию **Анализ в Excel** , которая запускает Excel, используя список полей сводной таблицы, связанный с разрабатываемым кубом. Рекомендуется использовать для просмотра данных Excel, так как в этом случае можно быстро строить сводные отчеты, позволяющие взаимодействовать с данными.  
   

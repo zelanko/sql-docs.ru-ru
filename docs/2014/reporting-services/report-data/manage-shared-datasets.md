@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: af52516dccd163380cc6c36be9d0a862f3de94e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 942038c997c9b656f51ebe03875d3c2ec84adff8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168305"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118542"
 ---
 # <a name="manage-shared-datasets"></a>Управление общими наборами данных
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]общие наборы данных получают данные из общих источников данных, которые подключены к внешним источникам данных. Общий набор данных предоставляет способ совместного использования запроса в целях предоставления согласованного набора данных для нескольких отчетов. Запрос к набору данных может включать параметры набора данных. Общий набор данных можно настроить для кэширования результатов запроса для конкретных сочетаний параметров при первом использовании или по расписанию. Кэширование общего набора данных можно использовать в сочетании с кэшированием отчета и потоками данных отчета в целях управления доступом к источнику данных.  
@@ -96,7 +93,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |Изменение свойств элемента общего набора данных.|Диспетчер отчетов|[Страница «Общие свойства», общие наборы данных &#40;диспетчера отчетов&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
 |Указание дополнительных свойств общего набора данных для экземпляра общего набора данных в отчете.|Конструктор отчетов построителя отчетов|[Диалоговое окно "Свойства набора данных" — "Запрос"](../dataset-properties-dialog-box-query.md)|  
 |Привязка к другому общему источнику данных для общего набора данных.|Диспетчер отчетов|[Страница выбора источника данных &#40;диспетчера отчетов&#41;](../data-source-selection-page-report-manager.md)|  
-|Проверка значений по умолчанию для параметров набора данных.|Открытие в построителе отчетов или использование синтаксиса доступа через URL-адрес.|Например:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|Проверка значений по умолчанию для параметров набора данных.|Открытие в построителе отчетов или использование синтаксиса доступа через URL-адрес.|Пример:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |Включение кэширования|Диспетчер отчетов|[Кэширование общих наборов данных &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Страница "кэширование", общие наборы данных &#40;диспетчера отчетов&#41;](../caching-page-shared-datasets-report-manager.md)|  
 |Создание или изменение плана обновления кэша|Диспетчер отчетов|[Параметры обновления кэша (диспетчер отчетов)](../cache-refresh-options-report-manager.md)|  
 |Просмотр схемы определения общего набора данных.|Диспетчер отчетов|`http://<reportserver>/shareddatasetdefinition.xsd`|  

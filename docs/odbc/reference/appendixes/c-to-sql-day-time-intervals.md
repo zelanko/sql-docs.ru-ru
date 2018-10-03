@@ -1,13 +1,11 @@
 ---
-title: 'C в SQL: интервалы времени день | Документы Microsoft'
+title: 'Преобразование из C в SQL: интервалы времени дня | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - day-time intervals [ODBC]
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - converting data from c to SQL types [ODBC], day-time intervals
 - intervals [ODBC], converting
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 400bd47766d45564b8dbced6fec30732cfd02bcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb41d658637258c6d60b5adb4e0d7abb9ae81d91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906999"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757662"
 ---
-# <a name="c-to-sql-day-time-intervals"></a>C в SQL: интервалы времени дня
-Идентификаторы типов данных ODBC C интервал времени дня следующие:  
+# <a name="c-to-sql-day-time-intervals"></a>Преобразование из C в SQL: интервалы времени дня
+Идентификаторы для типов данных ODBC C интервал времени дня следующие:  
   
  SQL_C_INTERVAL_DAY  
   
@@ -49,24 +46,24 @@ ms.locfileid: "32906999"
   
  SQL_C_INTERVAL_MINUTE_TO_SECOND  
   
- Следующая таблица показывает ODBC SQL типы данных, к которым может быть преобразован данных C интервал. Объяснение столбцы и условия в таблице см. в разделе [преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ Следующая таблица показывает ODBC SQL типы данных, к которым могут преобразовываться интервал данных C. Описание столбцов и условия в таблице, см. в разделе [преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR []<br /><br /> SQL_VARCHAR []<br /><br /> SQL_LONGVARCHAR []|Длина столбца в байтах > = байт символов<br /><br /> Длина в байтах столбца < символов длина byte []<br /><br /> Значение данных не допустимый интервал литерала|н/д<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR []<br /><br /> SQL_WVARCHAR []<br /><br /> SQL_WLONGVARCHAR []|Длина столбца символ > = длина символов в данных<br /><br /> Длина столбца символ < длина данных []<br /><br /> Значение данных не допустимый интервал литерала|н/д<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Преобразование интервала одному полю не привел к усечение всего цифр<br /><br /> Преобразование привело к усечению всей цифр|н/д<br /><br /> 22003|  
-|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Преобразовать значение данных было без усечения всех полей<br /><br /> Одно или несколько полей значений данных были усечены во время преобразования|н/д<br /><br /> 22015|  
+|SQL_CHAR [a]<br /><br /> SQL_VARCHAR, [a]<br /><br /> SQL_LONGVARCHAR [a]|Длина столбца в байтах > = байтов символов<br /><br /> Длина в байтах столбца < символов байт []<br /><br /> Значение данных не является допустимое значение литерала интервала|н/д<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Длина столбца символ > = символьную длину данных<br /><br /> Длина столбца символ < символ длину данных, [a]<br /><br /> Значение данных не является допустимое значение литерала интервала|н/д<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Преобразование интервала одному полю не привел к усечение целой части<br /><br /> Преобразование привело к усечению целой части|н/д<br /><br /> 22003|  
+|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Значение данных был преобразован без усечения всех полей<br /><br /> Одно или несколько полей данных значения были усечены во время преобразования|н/д<br /><br /> 22015|  
   
- [] типы данных всех C интервал можно преобразовать в символьный тип данных.  
+ [a] все C интервальных типов данных могут преобразовываться в символьный тип данных.  
   
- [b] Если поле "тип" в структуре интервал таким образом, что интервал состоит из одного поля (SQL_DAY, SQL_HOUR, SQL_MINUTE или SQL_SECOND), тип C интервал могут преобразовываться в любой точное числовое значение (SQL_TINYINT SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT SQL_DECIMAL или SQL_NUMERIC).  
+ [b] тип является ли поле в структуре интервал таким образом, интервал — это единственное поле (SQL_DAY, SQL_HOUR, SQL_MINUTE или SQL_SECOND), интервал тип C могут преобразовываться в любой точное числовое значение (SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT SQL_DECIMAL или SQL_NUMERIC).  
   
- Преобразование типа C интервал по умолчанию — в интервал времени дня в соответствующий тип SQL.  
+ Преобразование по умолчанию тип интервала C — интервал времени дня в соответствующий тип SQL.  
   
- Драйвер не учитывает значение длины/индикатора при преобразовании данных из типа данных C интервал и предполагает, что размер буфера данных размер типа данных C интервал. Переданное значение длины/индикатора *StrLen_or_Ind* аргумент в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумент в **SQLBindParameter**. Буфер данных задается с помощью *DataPtr* аргумент в **SQLPutData** и *ParameterValuePtr* аргумент в **SQLBindParameter**.  
+ Драйвер не учитывает значение длины и индикатора, при преобразовании данных из типа данных интервала C и предполагает, что размер буфера данных размер типа данных interval C. Значение длины и индикатора, переданное в *StrLen_or_Ind* аргумента в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумента в **SQLBindParameter**. Буфер данных указывается с помощью *DataPtr* аргумента в **SQLPutData** и *ParameterValuePtr* аргумента в **SQLBindParameter**.  
   
- В следующем примере показано, как для отправки данных interval C, хранится в структуре SQL_INTERVAL_STRUCT в столбец базы данных. Структура интервала содержит интервал DAY_TO_SECOND; он будет храниться в столбце типа SQL_INTERVAL_DAY_TO_MINUTE базы данных.  
+ Ниже приведен пример, как отправить данные интервала C, хранящуюся в структуре SQL_INTERVAL_STRUCT в столбец базы данных. Структура interval содержит интервал DAY_TO_SECOND; он сохраняется в столбец базы данных типа SQL_INTERVAL_DAY_TO_MINUTE.  
   
 ```  
 SQL_INTERVAL_STRUCT is;  

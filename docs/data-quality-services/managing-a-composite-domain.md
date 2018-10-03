@@ -5,22 +5,19 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec3a5237a00a8c3e4a88010d4bf5a70c24aa2954
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 959b778d613376197774a01de8efb6fa031cee14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621862"
 ---
 # <a name="managing-a-composite-domain"></a>Управление составным доменом
 
@@ -43,7 +40,7 @@ ms.locfileid: "35310843"
 |Создание междоменного правила, если значение одного домена в составном домене влияет на значение в другом домене.|[Создание междоменного правила](../data-quality-services/create-a-cross-domain-rule.md)|  
 |Определение сочетания значений, чтобы с помощью DQS создать отчет об их частоте.|[Использование связей значений в составном домене](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5671d2223c2518972f8947e9e715b6ffc4b7b55d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9edb241dab5b2a1aaeefb5c11c53726f1e46498d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144424"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Создание предупреждения данных в конструкторе предупреждений данных
   Создание определений предупреждений об изменении данных осуществляется в конструкторе предупреждений об изменении данных. После сохранения их можно открыть, изменить, а затем снова сохранить в конструкторе предупреждений об изменении данных. Дополнительные сведения об изменении определений предупреждений см. в разделах [Управление предупреждениями данных в диспетчере предупреждений данных](manage-my-data-alerts-in-data-alert-manager.md) и [Изменение предупреждения данных в конструкторе предупреждений](edit-a-data-alert-in-alert-designer.md).  

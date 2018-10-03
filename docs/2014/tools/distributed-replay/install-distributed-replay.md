@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cc56f35b44636493fe022b7adbc2270bf121e55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7dbc86ff32e0c9ba6e77558a713cda2598221e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126124"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>Установка распределенного воспроизведения из командной строки
   При установке нового экземпляра программы распределенного воспроизведения из командной строки можно указать устанавливаемые компоненты и способ их настройки. Установка из командной строки поддерживает установку, восстановление, обновление и удаление компонентов распределенного воспроизведения. При установке из командной строки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает полностью тихий режим (включается параметром /Q).  

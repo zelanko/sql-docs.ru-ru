@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], getting assistance
 - F1 Help [SQL Server Database Engine]
 ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
-caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: fce976d0d770cbbd0c1bc56883440c93992db005
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206674"
 ---
 # <a name="feature-reference-database-engine"></a>Справочник по компонентам (компонент Database Engine)
   Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] содержит несколько средств и приложений для создания, просмотра объектов и данных базы данных и управления ими. Кроме того, существуют средства, которые можно использовать для мониторинга и диагностики сервера и производительности базы данных, а также включения и отключения функций, служб и сетевых протоколов. В этом разделе приводятся определенные подразделы, описывающие диалоговые окна этих средств и приложений.  

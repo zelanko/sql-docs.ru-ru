@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c89daa9b9ede26b005480abdcfc2dfc2a675d065
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3b164b167de39a8a465e19b1f751ab22c9295c6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278706"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725952"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов
   В этом разделе содержится список разрешений в SharePoint, которые могут быть использованы для предоставления доступа к операциям сервера отчетов, работающего в режиме интеграции с SharePoint. Данный раздел может использоваться в качестве справки при создании пользовательских уровней разрешений.  

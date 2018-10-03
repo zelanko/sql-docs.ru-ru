@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access data types
 - data types, default mappings
@@ -19,16 +14,15 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4f1d6ce53d09c120784505245ac903a6f3833920
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 052681d249d3c93e54c23ebcf2b42cadf5724f2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393732"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855112"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Параметры проекта (сопоставление типов) (AccessToSQL)
 Параметры сопоставления типов проекта позволяет настроить сопоставления типов по умолчанию для проекта SSMA. Можно также указать сопоставления типов для отдельных объектов базы данных. Дополнительные сведения см. в разделе [сопоставление исходного и целевого типов данных](mapping-source-and-target-data-types-accesstosql.md).  

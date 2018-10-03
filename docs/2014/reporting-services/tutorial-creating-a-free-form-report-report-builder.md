@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe42fc3dd5e1398cc0e66ad2c37cd14a3fedd67a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068994"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Учебник. Создание отчета в свободной форме (построитель отчетов)
   В этом учебнике объясняется, как создать отчет SQL Server Reporting Services произвольной формы в виде стандартного письма. Вы можете упорядочить элементы отчета, чтобы создать форму с текстовыми полями, изображениями и другими областями данных.  
@@ -57,7 +54,7 @@ ms.locfileid: "37202814"
 ##  <a name="BlankReport"></a> 1. Создание пустого отчета, источника данных и набора данных  
   
 > [!NOTE]  
->  В этом учебнике запрос содержит значения данных, поэтому отчету не требуется внешний источник данных. Использование этого типа внутренних данных отлично подходит в целях обучения, но делает запрос длинным. , и делает это по-другому.  
+>  В этом учебнике запрос содержит значения данных, поэтому отчету не требуется внешний источник данных. Использование этого типа внутренних данных отлично подходит в целях обучения, но делает запрос длинным. .  
   
 #### <a name="to-create-a-blank-report"></a>Создание пустого отчета  
   

@@ -1,13 +1,11 @@
 ---
-title: 'C в SQL: двоичный | Документы Microsoft'
+title: 'Преобразование из C в SQL: двоичные | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary data type [ODBC]
@@ -15,27 +13,26 @@ helpviewer_keywords:
 - binary data transfers [ODBC]
 - converting data from c to SQL types [ODBC], binary
 ms.assetid: 3e9083f3-357b-41aa-833c-2c8aac2226cd
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6d1e7f422829cce804f401ac98083d066e0f67e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76c2e4673d9b561aeb5af3e61e1e4dc8532195d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849132"
 ---
-# <a name="c-to-sql-binary"></a>C в SQL: двоичный
-Идентификатор для двоичного типа данных ODBC C —:  
+# <a name="c-to-sql-binary"></a>Преобразование из C в SQL: двоичные данные
+Идентификатор двоичного типа данных ODBC C представляет собой:  
   
  SQL_C_BINARY  
   
- В следующей таблице показаны ODBC SQL типы данных, к которым может быть преобразован двоичных данных C. Объяснение столбцы и условия в таблице см. в разделе [преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ Следующая таблица показывает ODBC SQL типы данных, к которым могут преобразовываться двоичных данных C. Описание столбцов и условия в таблице, см. в разделе [преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Байтовая длина данных < = длина столбца в байтах<br /><br /> Байтовая длина данных > длина столбца в байтах|н/д<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина данных символьной < = длина столбца символов<br /><br /> Длина данных символьной > символов столбца|н/д<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER<br /><br /> SQL_BIGINT<br /><br /> SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE<br /><br /> SQL_BIT SQL_TYPE_DATE<br /><br /> SQL_TYPE_TIME<br /><br /> SQL_TYPE_TIMESTAMP|Байтовая длина данных = длина данных SQL<br /><br /> Байтовая длина длина данных SQL <> данных|н/д<br /><br /> 22003|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Байтовая длина данных < = длина столбца в байтах<br /><br /> Длину данных в байтах > длина столбца в байтах|н/д<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина данных < = длина столбца символов<br /><br /> Длина данных символьной > длины столбца символов|н/д<br /><br /> 22001|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER<br /><br /> SQL_BIGINT<br /><br /> SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE<br /><br /> SQL_BIT SQL_TYPE_DATE<br /><br /> SQL_TYPE_TIME<br /><br /> SQL_TYPE_TIMESTAMP|Длину данных в байтах = длина данных SQL<br /><br /> Длину в байтах длину данных SQL <> данных|н/д<br /><br /> 22003|  
 |SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|Длина данных < = длина столбца<br /><br /> Длина данных > длина столбца|н/д<br /><br /> 22001|

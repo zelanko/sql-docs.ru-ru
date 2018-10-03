@@ -1,13 +1,11 @@
 ---
-title: Свойство Index | Документы Microsoft
+title: Свойство Index | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,41 +13,40 @@ f1_keywords:
 helpviewer_keywords:
 - Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe083fa971ad3ce6566d51326ce35163f446838a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4194cf7bea9d2a7cb52ea255ee7a858cdf4de6e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716312"
 ---
 # <a name="index-property"></a>Свойство Index
 Указывает имя индекса в настоящее время действует для [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **строка** значение, которое является имя индекса.  
+ Возвращает или задает **строка** значение, представляющее собой имя индекса.  
   
 ## <a name="remarks"></a>Примечания  
- Индекс с именем **индекс** свойство должно ранее было объявлено для базовой таблицы базового **записей** объекта. То есть индекса должна быть объявлена программными средствами как ADOX [индекс](../../../ado/reference/adox-api/index-object-adox.md) объекта, или при создании базовой таблицы.  
+ Индекс с именем, **индекс** свойство должна быть предварительно объявлена для базовой таблицы базового **записей** объекта. То есть индекс должна быть объявлена программными средствами как ADOX [индекс](../../../ado/reference/adox-api/index-object-adox.md) объекта, или при создании базовой таблицы.  
   
- Ошибка во время выполнения происходит, если индекс не может быть задано. **Индекс** невозможно задать свойство при следующих условиях:  
+ Ошибка во время выполнения возникнет в том случае, если индекс не может быть задано. **Индекс** невозможно задать свойство при следующих условиях:  
   
--   В пределах [WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) или **RecordsetChangeComplete** обработчик событий.  
+-   В рамках [события WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) или **RecordsetChangeComplete** обработчик событий.  
   
--   Если **записей** по-прежнему выполняется операция (которой можно определить с помощью [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство).  
+-   Если **записей** по-прежнему выполняет операцию (которой можно определить с помощью [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство).  
   
--   Если фильтр был установлен **записей** с [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство.  
+-   Если фильтр был настроен на **записей** с [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство.  
   
- **Индекс** свойства всегда задается успешно при **набора записей** закрыто, но **набора записей** не будет успешно открыт, или индекс не будет доступна, если базовый поставщик не поддерживает индексы.  
+ **Индекс** может всегда быть установлено успешно Если **набор записей** закрыто, но **набор записей** не будет успешно открыт, или индекс нельзя использовать, если базовый поставщик не поддерживает индексы.  
   
- Если индекс могут быть установлены, может измениться текущей позиции строки. Это вызовет обновление [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойство и формируют **WillChangeRecordset**, **RecordsetChangeComplete**, [WillMove ](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), и [MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md) события.  
+ Если индекс может быть задано, текущая позиция строки может измениться. Это вызовет обновление [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойство и будет запускаться **события WillChangeRecordset**, **RecordsetChangeComplete**, [события WillMove ](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), и [MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md) события.  
   
- Если индекс может быть задано и [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) свойство **adLockPessimistic** или **adLockOptimistic**, неявное [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) выполняется операция. Это освобождает текущих и уязвимую групп. Любой существующий фильтр освобождается и текущей позиции строки изменяется на первой строке упорядоченный **записей**.  
+ Если индекс может быть задано и [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) свойство **adLockPessimistic** или **adLockOptimistic**, затем неявным [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) выполняется операция. Это освобождает текущие и затронутых групп. Любой существующий фильтр освобождается, и текущая позиция строки изменяется на первую строку переупорядоченных **записей**.  
   
- **Индекс** свойство используется в сочетании с [Seek](../../../ado/reference/ado-api/seek-method.md) метод. Если базовый поставщик не поддерживает **индекс** свойство и, следовательно, **Seek** метод, рассмотрите возможность использования [найти](../../../ado/reference/ado-api/find-method-ado.md) метод вместо него. Определить ли **записей** объект поддерживает индексы с [поддерживает](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** метод.  
+ **Индекс** свойство используется в сочетании с [Seek](../../../ado/reference/ado-api/seek-method.md) метод. Если базовый поставщик не поддерживает **индекс** свойство и, следовательно, **Seek** метод, рассмотрите возможность использования [найти](../../../ado/reference/ado-api/find-method-ado.md) метод вместо этого. Определить ли **записей** объект поддерживает индексы с [поддерживает](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** метод.  
   
  Встроенная **индекс** свойство не относится к динамической [оптимизировать](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) свойство, несмотря на то, что оба они работают с индексами.  
   
@@ -57,6 +54,6 @@ ms.locfileid: "35279183"
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  
- [Поиск метода и пример свойства индекса (Visual Basic)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
- [Объект индекса (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Примеры метода Seek и свойства Index (Visual Basic)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
+ [Объект INDEX (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Метод Seek](../../../ado/reference/ado-api/seek-method.md)

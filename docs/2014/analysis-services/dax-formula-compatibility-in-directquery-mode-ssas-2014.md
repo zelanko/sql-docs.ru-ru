@@ -4,27 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
-caps.latest.revision: 3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68a73fd64b9bba02a917c8538f79062ff85afbdb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189481"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113702"
 ---
-# <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Совместимость формул в режиме DirectQuery (службы SSAS 2014 г.)
+# <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Совместимость формул DAX в режиме DirectQuery (SSAS 2014)
 Язык выражений анализа данных (DAX) может использоваться для создания мер и других пользовательских формул для использования в табличным моделям Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] модели данных в книгах Excel и модели данных Power BI Desktop. В большинстве аспектов модели, создаваемые в этих средах, идентичны, и можно использовать меры, связи и ключевые показатели эффективности, и т.д. Тем не менее если Analysis Services табличной модели и развернуть его в режиме DirectQuery, существуют некоторые ограничения на формулы, которые можно использовать. В этом разделе представлен обзор эти различия, перечисляет функции, которые не поддерживаются в SQL Server 2014 Analysis Services tabulars модели с уровнем совместимости 1100 или 1103 и в режиме DirectQuery, и перечисляет функции, которые поддерживаются, но может возвращать разные результаты.  
   
 В этом разделе мы будем использовать термин *модели в памяти* для обращения к табличным моделям, который полностью размещаются кэшированные данные в памяти на сервере служб Analysis Services, работающем в табличном режиме. Мы используем *моделей DirectQuery* для обращения к табличным моделям, которые были созданы или развернутой в режиме DirectQuery. Сведения о режиме DirectQuery см. в разделе [режим DirectQuery (табличные службы SSAS)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  

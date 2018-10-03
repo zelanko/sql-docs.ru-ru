@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0c0ec3e7f76da7eb908cf2154cd33a2ee55b40
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5d95910ce8874d2a9eacdc28c6abf5d7d3be6efa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103394"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode представляет собой альтернативу [IBCPSession::BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) для указания формата столбца. В отличие от IBCPSession::BCPColFmt, который задает отдельные атрибуты формата столбцов, IBCPSession2::BCPSetBulkMode задает все атрибуты.  
@@ -60,13 +57,13 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |`S_OK`|Метод выполнен успешно.|  
-|`E_FAIL`|Произошла ошибка поставщика, подробные сведения используйте интерфейс ISQLServerErrorInfo.|  
+|`E_FAIL`|Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить с помощью интерфейса ISQLServerErrorInfo.|  
 |`E_UNEXPECTED`|Непредвиденный вызов метода. Например `IBCPSession2::BCPInit` не был вызван метод перед вызовом IBCPSession2::BCPSetBulkMode.|  
 |`E_INVALIDARG`|Недопустимое значение аргумента.|  
 |`E_OUTOFMEMORY`|Ошибка, связанная с нехваткой памяти.|  
   
 ## <a name="remarks"></a>Примечания  
- IBCPSession2::BCPSetBulkMode можно использовать для массового копирования из таблицы или запроса. Когда IBCPSession2::BCPSetBulkMode используется для массового копирования из инструкции запроса, его необходимо вызывать перед вызовом метода `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` для указания инструкции запроса.  
+ IBCPSession2::BCPSetBulkMode можно использовать для массового копирования из таблицы или запроса. При использовании метода IBCPSession2::BCPSetBulkMode для массового копирования из инструкции запроса его необходимо вызывать до вызова метода `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` для указания инструкции запроса.  
   
  В рамках одной команды не следует сочетать синтаксис вызова RPC с синтаксисом пакетных запросов (например,`{rpc func};SELECT * from Tbl`).  В результате ICommandPrepare::Prepare сообщение об ошибке и не позволит получить метаданные. Если в рамках одной команды требуется объединить выполнение хранимой процедуры и пакетный запрос, то следует использовать синтаксис ODBC CALL (например,`{call func}; SELECT * from Tbl`).  
   
@@ -83,7 +80,7 @@ HRESULT BCPSetBulkMode (
   
  Невозможно вызвать IBCPSession::BCPControl с `BCP_OPTION_TEXTFILE` и IBCPSession2::BCPSetBulkMode.  
   
- Если попытаться вызвать IBCPSession2::BCPSetBulkMode с последовательностью вызовов функций, которая включает в себя IBCPSession::BCPColFmt IBCPSession::BCPControl и IBCPSession::BCPReadFmt, один из вызовов функций вернет ошибку последовательности. Если вы решили исправить ошибку, вызовите IBCPSession::BCPInit, чтобы сбросить параметры и начать заново.  
+ Если попытаться вызвать IBCPSession2::BCPSetBulkMode с последовательностью вызовов функций, которая включает в себя IBCPSession::BCPColFmt IBCPSession::BCPControl и IBCPSession::BCPReadFmt, один из вызовов функций вернет ошибку последовательности. Если необходимо исправить ошибку, вызовите IBCPSession::BCPInit, чтобы сбросить параметры и начать заново.  
   
  В следующей таблице приведено несколько примеров вызовов функций, которые вызовут ошибку последовательности.  
   

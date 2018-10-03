@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], URL access
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 11542b799e24e33fea852e8cac9e118349787a03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5550a321e812b84c2d3e2dc8c64efd298e8eb95f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216474"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206344"
 ---
 # <a name="url-access-ssrs"></a>Доступ по URL-адресу (SSRS)
   Доступ по URL-адресу сервера отчетов в службах SQL Server Reporting Services (SSRS) позволяет отправлять команды серверу отчетов посредством запроса по URL-адресу. Например, можно настроить подготовку отчета на сервере отчетов, работающем в собственном режиме, или в библиотеке SharePoint. Ранее пользователи могли просматривать отчет с использованием определенного набора значений параметров отчета или просматривать только определенную представляющую интерес страницу отчета. Эти сведения можно инкапсулировать в URL адрес, используя параметры доступа по URL-адресу. Обработку отчета сервером отчетов можно настроить более подробно, внедрив параметры для форматов подготовки к просмотру или для внешнего вида обозревателя отчетов. Затем созданный URL-адрес можно непосредственно вставлять в электронное письмо или веб-страницу, чтобы дать возможность другим пользователям просматривать отчет в браузере в том же формате.  
@@ -62,14 +59,14 @@ reportpath
   
 ### <a name="syntax-description"></a>Описание синтаксиса  
  *rswebserviceurl*  
- URL-адрес веб-службы сервера отчетов. При работе в собственном режиме это URL-адрес веб-службы экземпляра сервера отчетов, настроенный в диспетчере конфигураций служб Reporting Services (см. статью [Настройка URL-адресов сервера отчетов (диспетчер конфигураций служб SSRS)](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Например:  
+ URL-адрес веб-службы сервера отчетов. При работе в собственном режиме это URL-адрес веб-службы экземпляра сервера отчетов, настроенный в диспетчере конфигураций служб Reporting Services (см. статью [Настройка URL-адресов сервера отчетов (диспетчер конфигураций служб SSRS)](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Пример:  
   
 ```  
 http://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- При работе в режиме интеграции с Sharepoint — URL-адрес прокси-сервера [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] на сайте SharePoint, интегрированном со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Например:  
+ При работе в режиме интеграции с Sharepoint — URL-адрес прокси-сервера [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] на сайте SharePoint, интегрированном со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Пример:  
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
@@ -81,13 +78,13 @@ http://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  Имя относительного пути элемента в базе данных сервера отчетов, работающем в собственном режиме, или полный URL-адрес элемента в каталоге SharePoint.  
   
- Путь элемента в каталоге. При работе в собственном режиме — относительный путь элемента в базе данных сервера отчетов, начиная с символа косой черты (`/`). Например:  
+ Путь элемента в каталоге. При работе в собственном режиме — относительный путь элемента в базе данных сервера отчетов, начиная с символа косой черты (`/`). Пример:  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- При работе в режиме интеграции с Sharepoint — полный URL-адрес элемента в библиотеке SharePoint, включая расширение элемента. Например:  
+ При работе в режиме интеграции с Sharepoint — полный URL-адрес элемента в библиотеке SharePoint, включая расширение элемента. Пример:  
   
 ```  
 http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
@@ -110,7 +107,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
  **Примечание:** список доступных параметров URL-адрес для доступа, см. в разделе [URL Access Parameter Reference](url-access-parameter-reference.md). Примеры передачи параметров отчета в URL-адрес, см. в разделе [передать Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описания задач|Ссылки|  
 |-----------------------|-----------|  

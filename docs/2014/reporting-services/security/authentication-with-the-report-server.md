@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 71382e58d8709c2a0015e40819b74638413441e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a2ad8bfa15d8f6e487ba4fc3b28fa3c7796fbed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266090"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192934"
 ---
 # <a name="authentication-with-the-report-server"></a>Проверка подлинности с использованием сервера отчетов
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) предлагает несколько настраиваемых параметров для проверки подлинности клиентов и клиентских приложений для сервера отчетов. По умолчанию сервер отчетов использует встроенную проверку подлинности Windows и предполагает доверительные связи, когда клиент и сетевые источники находятся в одном и том же домене или в надежном домене. В зависимости от топологии сети и потребностей организации можно задать протокол проверки подлинности, который применяется для встроенного средства проверки подлинности Windows, использовать обычную проверку подлинности или модуль проверки подлинности на основе пользовательских форм. Каждый способ проверки подлинности можно включать и отключать отдельно. Можно включить одновременно несколько типов проверки подлинности, если сервер отчетов должен принимать запросы разных типов.  
@@ -74,7 +71,7 @@ ms.locfileid: "37266090"
   
 -   [Настройка нестандартной аутентификации или аутентификации с помощью форм на сервере отчетов](configure-custom-or-forms-authentication-on-the-report-server.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описания задач|Ссылки|  
 |-----------------------|-----------|  

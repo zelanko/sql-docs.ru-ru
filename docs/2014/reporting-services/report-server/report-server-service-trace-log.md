@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2621f9a8e69cc27d5012e0c6a6f90946bec07dc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270280"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161934"
 ---
 # <a name="report-server-service-trace-log"></a>Журнал трассировки службы сервера отчетов
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Журнал трассировки сервера отчетов представляет собой текстовый файл ASCII, который содержит подробные сведения об операциях службы сервера отчетов, включая операции, выполняемые веб-сервера отчетов, службы, диспетчер отчетов и приложением фоновой обработки. Файл журнала трассировки содержит избыточные сведения, которые записываются в другие файлы журналов, а также дополнительные сведения, недоступные иным способом. Данные журнала трассировки могут оказаться полезными при отладке приложения, содержащего сервер отчетов, либо при изучении конкретной проблемы, зафиксированной в журнале событий или журнале выполнения.  

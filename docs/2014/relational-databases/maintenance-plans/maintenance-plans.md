@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.AG.MAINTPLAN.LEGACY.F1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], database compatibility level displayed in designer
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
-caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6fcdb4c8bdc007d12a2cfc2f778c6e852d593003
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ff42b55ed8aa80c3e099632cdabbdfc49458982
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221284"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114354"
 ---
 # <a name="maintenance-plans"></a>Планы обслуживания
   Планы обслуживания используются для создания рабочего процесса из задач, необходимых для гарантии оптимальной производительности базы данных, ее регулярного резервного копирования и отсутствия в ней несогласованностей. Для создания основных планов обслуживания также можно использовать мастер планов обслуживания, однако создание планов вручную более эффективно.  
@@ -62,7 +59,7 @@ ms.locfileid: "37221284"
   
  Результаты, полученные в задачах обслуживания, можно записывать в виде отчета в текстовый файл или в таблицы плана обслуживания (`sysmaintplan_log` и `sysmaintplan_logdetail`) в `msdb`. Для просмотра результатов в средстве просмотра журнала щелкните правой кнопкой мыши пункт **Планы обслуживания** и выберите пункт **Просмотр журнала**.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Используйте следующие разделы для начала работы с планами обслуживания.  
   
 |||  

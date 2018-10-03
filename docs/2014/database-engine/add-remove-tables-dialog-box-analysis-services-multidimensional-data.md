@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
 helpviewer_keywords:
 - Add/Remove Tables dialog box
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 702d07b93463671335b67f9672f5fff8dcb28c9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235674"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200424"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Добавление и удаление диалоговое окно «таблицы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Добавление или удаление таблиц** в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для добавления или удаления таблиц в источнике данных или представлении источника данных. Способы открытия диалогового окна **Добавление или удаление таблиц**:  
@@ -41,7 +38,7 @@ ms.locfileid: "37235674"
   
  Щелкните **>>** для переноса всех объектов, представленных в списке **Доступные объекты**, в список **Включенные объекты** или выберите один или несколько объектов и щелкните **>** для переноса выбранных объектов в список **Включенные объекты**.  
   
- **Filter**  
+ **Фильтр**  
  Введите фильтр, используемый для ограничения количества объектов, содержащихся в списке **Доступные объекты**, а затем нажмите эту кнопку для фильтрации объектов в списке.  
   
  **Показать системные объекты**  

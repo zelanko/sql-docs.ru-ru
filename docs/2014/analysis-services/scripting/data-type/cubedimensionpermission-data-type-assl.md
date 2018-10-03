@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeDimensionPermission Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDimensionPermission data type
 ms.assetid: d9d39859-5f33-48bc-a402-0071755918de
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17bd5df3cd2dad116384d28e1f427d14a86b6b72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b3eddc79ab599ec57001a33ed5163acec44ac6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180831"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099364"
 ---
 # <a name="cubedimensionpermission-data-type-assl"></a>Тип данных CubeDimensionPermission (ASSL)
   Определяет примитивный тип данных, представляющий разрешения на конкретное измерение в кубе для отдельной роли.  

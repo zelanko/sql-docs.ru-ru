@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -18,17 +16,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99d72a5466996d39cf69da8b153dba0ef050b499
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084424"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846378"
 ---
 # <a name="index-properties-f1-help"></a>Справка F1 свойств индекса
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -187,7 +184,7 @@ ms.locfileid: "43084424"
 ### <a name="bounding-box"></a>Ограничивающий прямоугольник  
  *Ограничивающий прямоугольник* представляет собой периметр сетки верхнего уровня геометрической плоскости. Параметры ограничивающего прямоугольника существуют только в тесселяции геометрической сетки. Эти параметры недоступны, если **Схемой тесселяции** является **Географическая сетка**.  
   
- На панели отображаются координаты **(***X-min***,***Y-min***)** и **(***X-max***,***Y-max***)** ограничивающего прямоугольника. Значения координат по умолчанию отсутствуют. Поэтому при создании нового пространственного индекса для столбца типа **geometry** необходимо указать значения координат.  
+ На панели отображаются координаты **(**_X-min_**,**_Y-min_**)** и **(**_X-max_**,**_Y-max_**)** ограничивающего прямоугольника. Значения координат по умолчанию отсутствуют. Поэтому при создании нового пространственного индекса для столбца типа **geometry** необходимо указать значения координат.  
   
  **X-min**  
  Координата по оси X левого нижнего угла ограничивающего прямоугольника.  

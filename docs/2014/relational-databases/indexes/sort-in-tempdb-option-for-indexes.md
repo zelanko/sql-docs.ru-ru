@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SORT_IN_TEMPDB option
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - indexes [SQL Server], tempdb database
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d8ec82b43cdfd215254c3f16577b1c82af52b47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164735"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145271"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Параметр SORT_IN_TEMPDB для индексов
   При создании или перестроении индекса можно установить параметр SORT_IN_TEMPDB в значение ON, чтобы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовал базу данных **tempdb** для хранения промежуточных результатов сортировки, которые применяются для построения индекса. Данный параметр увеличивает место на диске, временно занимаемое при построении индекса, но с его помощью можно сократить время, необходимое для создания или перестроения индекса, когда **tempdb** находится в наборе дисков, отличном от набора, используемого для размещения пользовательской базы данных. Дополнительные сведения о параметре **tempdb**см. в разделе [Настройка параметра конфигурации сервера index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
@@ -74,7 +71,7 @@ ms.locfileid: "37164735"
   
 -   если параметр SORT_IN_TEMPDB имеет значение OFF, с целью сохранения окончательной таблицы должно быть свободное пространство для целевой файловой группы. Это включает структуры всех индексов. При наличии большего объема свободного пространства может быть повышена степень непрерывности экстента таблицы и индекса.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
  [Реорганизация и перестроение индексов](indexes.md)  

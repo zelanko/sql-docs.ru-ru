@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 59cf6254c290982e8d9c38cbf1ebb77680f12c13
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 892ea8d21d03eafc21a98ec6799aa840fddf96a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094564"
 ---
 # <a name="prediction-queries-data-mining"></a>Прогнозирующие запросы (интеллектуальный анализ данных)
   Целью стандартного проекта интеллектуального анализа данных является создание прогнозов с помощью моделей интеллектуального анализа данных. Например, пользователю может потребоваться спрогнозировать возможное время простоя определенного кластера серверов либо сформировать оценку, показывающую вероятность отклика покупателей из разных сегментов на рекламную кампанию. Чтобы выполнить все это, следует создать прогнозирующий запрос.  

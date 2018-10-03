@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - dependencies [SMO]
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 375a8f90c4864c8f1f3db12c56db1bf0eda3b0a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b58c868536b3f34391dc8db15493c2302a9b6c0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179634"
 ---
 # <a name="scripting"></a>Создание скриптов
   Создание скрипта в SMO управляется объектом <xref:Microsoft.SqlServer.Management.Smo.Scripter> и его дочерними объектами или методом `Script` на отдельных объектах. <xref:Microsoft.SqlServer.Management.Smo.Scripter> Объекта управляет сопоставлением связей зависимости для объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

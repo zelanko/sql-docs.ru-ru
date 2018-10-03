@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4be22e7a2e81ff8c5eeac83d25c7361cc1833078
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c93f9327adf0801898c45a541d935a4d3b34758c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161765"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161886"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Аварийное восстановление WSFC через принудительный кворум (SQL Server)
   Обычно сбой кворума бывает вызван системной аварией, постоянным сбоем связи или ошибкой конфигурации, затрагивающей несколько узлов в кластере WSFC.  Для восстановления после сбоя кворума требуется участие пользователя.  

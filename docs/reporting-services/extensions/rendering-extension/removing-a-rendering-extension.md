@@ -4,10 +4,7 @@ ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - deleting rendering extensions
 - removing rendering extensions
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b676cc7342c83d37aba91e6cc834801fa73d2c37
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bd360d5a4929ab41c7b77e60b59b394f127f6f13
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273988"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723882"
 ---
 # <a name="removing-a-rendering-extension"></a>Удаление модуля подготовки отчетов
   Чтобы удалить модуль подготовки отчетов [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], просто удалите элемент **Extension** для модуля подготовки отчетов из файла rsreportserver.config, находящегося в папке **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Имя экземпляра>\Reporting Services\ReportServer**. Если созданы записи для конструктора отчетов, а также для сервера отчетов, удалите элемент **Extension** из [файла конфигурации RSReportDesigner](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md). После удаления сведений о конфигурации модуль подготовки отчетов становится недоступным компоненту.  
