@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.refdata.f1
 - sql12.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d22efa3a5f3c62915527fd4acc756217fe6556f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51f76ea70542dd354c414f660259fbe4afcf90f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202484"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150004"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Добавление домена или составного домена к ссылочным данным
   В этом разделе описывается процесс добавления доменов или составных доменов базы знаний в службу ссылочных данных на Windows Azure Marketplace с целью создания набора знаний по высококачественным данным в ссылочных данных. Каждая служба ссылочных данных содержит схему (столбцы данных). После добавления домена или составного домена к службе ссылочных данных необходимо сопоставить добавленный домен или отдельные домены в составе составного домена с соответствующими столбцами в схеме службы ссылочных данных. Добавление составного домена в службу ссылочных данных позволяет добавить только один домен в службу ссылочных данных, а затем сопоставить отдельные домены в составе составного домена с соответствующими столбцами в схеме службы ссылочных данных.  
