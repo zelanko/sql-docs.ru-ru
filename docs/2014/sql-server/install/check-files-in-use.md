@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32e2152d93cc49309b6824462f5d413d59d30daf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c18860cf43c31096b984d45b18fba7828de6ea90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242315"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065664"
 ---
 # <a name="check-files-in-use"></a>Проверка используемых файлов
   Чтобы избежать необходимости перезагрузки Windows после установки обновлений для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на странице «Проверка используемых файлов» можно найти процессы, которые блокируют файлы, необходимые программе установки обновлений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

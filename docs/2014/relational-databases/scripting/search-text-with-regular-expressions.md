@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000efcad2db89e05bbfac8e1471ccf4551bc1956
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077634"
 ---
 # <a name="search-text-with-regular-expressions"></a>Поиск текста с помощью регулярных выражений
   Регулярные выражения представляют компактный и гибкий формат записи условий для поиска и замены в тексте по шаблону. Определенный набор регулярных выражений может быть использован в поле **Найти** диалогового окна [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **среды** .  
@@ -45,7 +42,7 @@ ms.locfileid: "37298044"
   
 |Выражение|Синтаксис|Описание|  
 |----------------|------------|-----------------|  
-|Любой символ|, и делает это по-другому.|Совпадает с любым одиночным символом, кроме символа новой строки.|  
+|Любой символ|.|Совпадает с любым одиночным символом, кроме символа новой строки.|  
 |Ноль или более|*|Совпадает с нулем или большим числом вхождений предыдущего выражения, создавая все возможные совпадения.|  
 |Один или более|+|Совпадает с одним и больше вхождений предыдущего выражения.|  
 |Начало строки|^|Совпадает с вхождением, только если оно находится в начале строки текста, в котором производится поиск.|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC], autotranslating character data
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - ODBC data types, autotranslating character data
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7921d0bc0c41fc5053ceb0fbcd95e56dc4b4fd5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076704"
 ---
 # <a name="autotranslation-of-character-data"></a>Автоматическое преобразование символьных данных
   Символьные данные, такие как ANSI символьные переменные, объявленные с помощью SQL_C_CHAR или данные, хранящиеся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **char**, **varchar**, или **текст** типы данных, можно представляют только ограниченный набор символов. Символьные данные, в которых для обозначения одного символа требуется один байт данных, могут представлять только 256 символов. Для интерпретации значений, содержащихся в переменных SQL_C_CHAR, используются кодовые страницы ANSI (ACP) клиентского компьютера. Значения, сохраненные с использованием **char**, **varchar**, или **текст** типов данных на сервере, вычисляются с помощью ACP сервера.  

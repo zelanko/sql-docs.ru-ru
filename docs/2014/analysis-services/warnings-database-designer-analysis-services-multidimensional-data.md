@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44fddc4c62bc9d0fddc71cf2b4249c3fab8d0d68
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d83620c0c6463bd6e752f65a97b2fb14e1d1c03f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233854"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074384"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Предупреждения (конструктор баз данных) (службы Analysis Services — многомерные данные)
   Чтобы просмотреть и отклонить правила глобально, а также просмотреть и повторно включить конкретные экземпляры отклоненных предупреждений, используется вкладка **Предупреждения**. На вкладке **Предупреждения** отображаются две сетки: **Правила предупреждений конструктора** и **Отключенные предупреждения**.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - database engine configuration
 - database engine configuration, user instance
 ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fdba96d79e842f568ba3077c7da0254483b81d60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c9c10d013d6585208a5f30d98169d8eab71b75d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274350"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066674"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Конфигурация компонента Database Engine — пользовательский экземпляр
   Страница **Пользовательский экземпляр** используется для создания отдельного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для пользователей, не имеющих разрешений администратора, и для добавления пользователей к роли администратора.  

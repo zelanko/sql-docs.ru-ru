@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 319b15dec052cdae73c6b1f1a6c0fed1290d447e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e074a41f6d9f5053562dd7b6be453644cb5fa176
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288150"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076634"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Просмотр данных и метаданных в кубе
   Для просмотра данных куба откройте вкладку **Браузер** в конструкторе кубов. Это представление служит для просмотра структуры куба, а также для проверки данных, вычислений, форматирования и безопасности объектов базы данных. Можно быстро просмотреть куб, как его видят конечные пользователи в средствах отчетности и других клиентских приложениях. При просмотре данных куба можно видеть различные измерения, детализировать данные и получать срезы данных по измерениям.  

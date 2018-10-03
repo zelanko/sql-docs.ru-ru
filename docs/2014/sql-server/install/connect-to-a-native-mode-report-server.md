@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.connectiondialog.F1
 helpviewer_keywords:
 - report servers [Reporting Services], configuring
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27b2d2d93d83057fd2de408b4a0cb61dd1cd0771
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb8a192a2d33e2068be75f0acd19fb76166f0705
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321784"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078434"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Соединение с сервером отчетов, работающим в собственном режиме
   Это диалоговое окно используется для подключения к локальному или удаленному [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляра сервера отчетов. Это средство нельзя использовать для подключения к более ранним версиям [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] серверов отчетов. Одновременно можно подключиться только к одному экземпляру.  
@@ -46,7 +43,7 @@ ms.locfileid: "37321784"
  **Имя сервера**  
  Введите сетевое имя компьютера, на котором [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] установлен. Вводите только имя компьютера, не включайте в него ни префикс, ни символы косой черты.  
   
- **Найти**  
+ **найти**  
  Найдите компьютер, указанный в **Имя сервера**.  
   
  **Экземпляр сервера отчетов**  

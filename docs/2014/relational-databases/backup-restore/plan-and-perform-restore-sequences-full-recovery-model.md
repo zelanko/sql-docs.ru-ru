@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restore sequences [SQL Server], planning for
 - full recovery model [SQL Server], planning restore sequences
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e697caee867c78da3c9e3e02bf6e2ee149a6a7f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209224"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064124"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Планирование и выполнение последовательностей восстановления (модель полного восстановления)
   В этой теме приведены рекомендации по планированию и выполнению последовательности восстановления баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] согласно модели полного восстановления. *Последовательность восстановления* — это последовательность из одной или нескольких инструкций [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) . Как правило, она инициализирует содержимое базы данных, файлы или страницы, производя последовательность восстановления (стадия копирования данных), выполняет накат записанных транзакций (стадия повтора) и откатывает нефиксированные транзакции (стадия отката).  

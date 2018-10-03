@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 4fd0abdb6c1bc93d730ccb502d6eb1c2facf891a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 440576ae4c4d89639ec2ca44c9bfec7142a4326d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176421"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076871"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Параметры ("Текстовый редактор" — страница "Расширение файла")
   Используйте диалоговое окно **Параметры**, чтобы задать способ обработки файлов с определенными расширениями в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Для каждого введенного расширения можно выбрать соответствующий редактор. Таким образом, можно выбрать редактор среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], в котором будут открываться документы определенного типа. Чтобы открыть параметры расширений файлов, выберите **Параметры** в меню **Сервис**, разверните **Редактор текстов** и выберите **Расширение файла**.  

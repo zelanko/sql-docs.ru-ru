@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
@@ -22,12 +20,12 @@ ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c063df615f5023c71cbff8700cfddb67aa60b57
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420763"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078334"
 ---
 # <a name="create-nested-triggers"></a>Создание вложенных триггеров
   При выполнении триггером действия, инициирующего другой триггер, триггеры DML и DDL становятся вложенными. Эти действия могут инициировать другие триггеры и т.д. Вложенность триггеров DML и DDL может составлять до 32 уровней. Можно разрешать или запрещать вложенность триггеров AFTER с помощью параметра конфигурации сервера **nested triggers** . Вложенность триггеров INSTEAD OF (только триггеры DML могут быть триггерами INSTEAD OF) не зависит от этого параметра.  
@@ -37,7 +35,7 @@ ms.locfileid: "37420763"
   
  Если вложенные триггеры разрешены и триггер в цепочке начинает бесконечный цикл, это превышает предел уровней вложенности и триггер завершается.  
   
- Можно использовать вложенные триггеры для выполнения полезных функций по обслуживанию, например для сохранения резервной копии строк, затронутых предыдущим триггером. Например, можно создать триггер для таблицы `PurchaseOrderDetail` , который будет сохранять резервную копию строк `PurchaseOrderDetail` , удаленных триггером `delcascadetrig` . Если действует триггер `delcascadetrig` , удаление `PurchaseOrderID` 1965 из таблицы `PurchaseOrderHeader` также повлечет удаление соответствующей строки или строк из таблицы `PurchaseOrderDetail`. Чтобы сохранить данные, можно создать триггер DELETE для таблицы `PurchaseOrderDetail` , который запишет удаленные данные в другую, отдельно созданную таблицу `del_save`. Например:  
+ Можно использовать вложенные триггеры для выполнения полезных функций по обслуживанию, например для сохранения резервной копии строк, затронутых предыдущим триггером. Например, можно создать триггер для таблицы `PurchaseOrderDetail` , который будет сохранять резервную копию строк `PurchaseOrderDetail` , удаленных триггером `delcascadetrig` . Если действует триггер `delcascadetrig` , удаление `PurchaseOrderID` 1965 из таблицы `PurchaseOrderHeader` также повлечет удаление соответствующей строки или строк из таблицы `PurchaseOrderDetail`. Чтобы сохранить данные, можно создать триггер DELETE для таблицы `PurchaseOrderDetail` , который запишет удаленные данные в другую, отдельно созданную таблицу `del_save`. Пример:  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
