@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - fast parse [Integration Services]
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
-caps.latest.revision: 49
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7ae98d9bd29b5d6d444c08fa358500d8da066e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41e7848dff95d531db44bef2b45b11d7c3c5f85a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054294"
 ---
 # <a name="fast-parse"></a>Fast Parse
   Быстрый синтаксический анализ обеспечивает быстрый и простой набор процессов для анализа данных. Эти процедуры не учитывают локали и поддерживают только подмножество форматов дат, времени и целых чисел.  
@@ -39,7 +36,7 @@ ms.locfileid: "37233714"
   
  Дополнительные сведения о форматах данных, поддерживаемых быстрым синтаксическим разбором, см. в разделах [Numeric Data Formats](../../2014/integration-services/numeric-data-formats.md) и [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Установка быстрого анализа](../../2014/integration-services/set-fast-parse.md)  
   
   

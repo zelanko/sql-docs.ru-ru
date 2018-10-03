@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f06fa546153ef62edda97c173a8c4fb9cc4d9362
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 595e05361087ad821b8baeaf6a676936626eb1e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276170"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056525"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)
   Ключевой показатель эффективности (KPI) — это измеримое значение, имеющее деловую значимость. Этот учебник поможет научиться включать ключевые показатели эффективности в отчет. В данном случае ключевым показателем эффективности является сводка по продажам (по подкатегориям продуктов). Текущее состояние ключевого показателя эффективности отображается с помощью цветов, датчиков и индикаторов.  

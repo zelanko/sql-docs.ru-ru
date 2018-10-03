@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0878c78af38a8d8b4d6b5d1c6f17a0188b5a50b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c72d35c92cabae9f9b1f73daa8c665c1b19771b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264470"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053894"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Ссылки на коллекцию ReportItems (построитель отчетов и службы SSRS)
   Встроенная коллекция `ReportItems` является набором текстовых полей из элементов отчета, например строк области данных или текстовых полей в области конструктора отчетов. `ReportItems` Коллекция включает текстовые поля, находящиеся в текущей области из колонтитула, нижнего колонтитула или текста отчета. Эта коллекция определяется во время выполнения обработчика отчетов и модуля подготовки отчетов. Текущая область изменяется после успешного объединения обработчиком отчетов данных отчета и элементов макета элементов отчета, когда пользователь просматривает страницы отчета. Можно использовать `ReportItems` встроенную коллекцию для создания определяемой стилем словаря колонтитулы, которые показывают первый и последний элемент на каждой странице.  
@@ -30,7 +27,7 @@ ms.locfileid: "37264470"
 ## <a name="using-the-reportitems-value-property"></a>Использования свойства значения ReportItems  
  Элементы в `ReportItems` коллекции имеют только одно свойство: значение. Значение элемента `ReportItems` может использоваться для отображения или вычисления данных из другого поля отчета. Чтобы получить доступ к значению текущего текстового поля, можно использовать встроенное в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] глобальное выражение Me.Value или просто Value. Однако в функциях отчета, таких как First и агрегатных функциях, необходимо использовать полный синтаксис.  
   
- Например:  
+ Пример:  
   
 -   Это выражение, помещенное в текстовое поле, отображает значение текстового поля `ReportItem` с именем `Textbox1`:  
   

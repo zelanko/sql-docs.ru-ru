@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb981a6b5de420e90c42246825536816abe9ace5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48eb606a0b575c9ebcc023abea9f491dc7d32445
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154875"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052464"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>Редактор источников SAP BW (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор источников SAP BW** используется для сопоставления выходного столбца с каждым внешним (исходным) столбцом.  

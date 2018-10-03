@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.connection.f1
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 264311beb234f4fcfc815f9b2bf5b21eace779ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 188e0f645c10ba7ee52871513937a09561369a75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054284"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Редактор назначения «Неструктурированный файл» (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения «Неструктурированный файл»** используется для выбора соединения с неструктурированными файлами для назначения, а также для указания, следует ли переписывать существующий целевой файл или добавлять данные в его конец. С помощью назначения «Неструктурированный файл» данные записываются в текстовый файл. Текстовый файл может иметь формат с разделителями, формат фиксированной ширины, фиксированной ширины с разделителями строк или формат без выключки вправо.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 441434839fa15b1f9345ddecf55eef3f7f248724
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307464"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054744"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Создание и управление полнотекстовыми индексами
   Данные полнотекстовых индексов используются средством полнотекстового поиска для компиляции полнотекстовых запросов, способных быстро находить таблицу с теми или иными словами или словосочетаниями. В полнотекстовом индексе хранятся данные о значимых для поиска словах и их расположении в одном или нескольких столбцах таблицы базы данных. Полнотекстовый индекс — это специальный тип функционального индекса на основе токенов, создаваемый и используемый средством полнотекстового поиска для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Процесс создания полнотекстового индекса отличается от создания индексов других типов. Вместо создания сбалансированного дерева на основе значения, хранящегося в конкретной строке, служба полнотекстового поиска создает инвертированную стековую сжатую структуру индекса на основе отдельных токенов индексируемого текста.  Размер полнотекстового индекса ограничен только доступными ресурсами памяти компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

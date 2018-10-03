@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70a5c80424f9260a1e6f6f69554b7f25e00789f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 479021af7c7e15b8f9d0a82a45b4f644f7a7c29b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051354"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Импорт доменов из файла Excel при обнаружении набора знаний
   В этом разделе описывается, как импортировать один или несколько доменов из файла Excel в действие обнаружения знаний [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Процесс импорта упрощает процесс формирования набора знаний, экономя время и силы. Это позволяет пользователям, у которых данные хранятся в файлах Excel или текстовых файлах, создавать базу знаний с применением этих данных. (Дополнительные сведения об импорте значений в домен существующей базы знаний см. в разделе [Импорт значений в домен из файла Excel](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).) Экспорт в файл Excel не поддерживается.  
