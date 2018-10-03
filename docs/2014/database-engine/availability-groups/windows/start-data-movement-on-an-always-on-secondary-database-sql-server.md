@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cbec6a7aa6c1ac92dbf64fe018800a223084e4e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252796"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088104"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)
   В этом разделе приведены сведения о запуске синхронизации данных после добавления базы данных в группу доступности AlwaysOn. Для каждой новой первичной реплики необходимо подготовить базы данных-получатели на экземплярах сервера, размещающих вторичные реплики. Затем каждую из этих баз данных-получателей необходимо вручную присоединить к группе доступности.  

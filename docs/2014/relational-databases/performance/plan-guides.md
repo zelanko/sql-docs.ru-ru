@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TEMPLATE plan guide
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1741595891ebc04a70d70c006a3871c7f39ec07e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085724"
 ---
 # <a name="plan-guides"></a>Руководства планов
   Структуры планов позволяют оптимизировать производительность запросов, если невозможно или нежелательно непосредственно изменять текст фактически имеющегося запроса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Структуры планов влияют на оптимизацию запросов путем присоединения к ним указаний запроса или постоянного плана запроса. Структуры планов полезны, когда небольшое подмножество запросов в приложении базы данных стороннего разработчика выполняются не так, как ожидается. В структуре плана задается инструкция Transact-SQL, которую нужно оптимизировать, и либо предложение OPTION, содержащее указания запросов, либо конкретный план запроса, с помощью которого планируется оптимизировать запрос. При выполнении запроса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставляет инструкцию Transact-SQL со структурой плана и присоединяет предложение OPTION к запросу во время выполнения или использует указанный план запроса.  
@@ -138,7 +135,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Влияние структуры плана на кэш планов  
  Создание структуры плана в модуле стирает план запроса для этого модуля из кэша планов. Создание структуры плана типа OBJECT или SQL в потоке стирает план запроса для потока, который имеет такое же значение хеш-функции. Создание структуры плана типа TEMPLATE стирает все потоки с одним оператором из кэша планов через базу данных.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Задача|Раздел|  
 |----------|-----------|  

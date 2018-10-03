@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24dd9f4ca5b4f551f958a24636a942d50bcc68f3
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 188b3400308c540050793787ced03d69e79ca50c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820090"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090194"
 ---
 # <a name="object-dependencies"></a>Зависимости между объектами
   Некоторые объекты базы данных имеют зависимости от других объектов базы данных. Например, представления и хранимые процедуры зависят от существования таблиц, содержащих данные, которые возвращаются этими таблицами и процедурами. В диалоговом окне **Зависимости объекта (страница "Общие")** для текущего объекта перечислены как объекты базы данных, которые необходимы для правильной работы объекта, так и объекты, зависящие от выбранного объекта. Объект, определение которого содержит ссылку на другой объект и хранится в системном каталоге, называется *ссылающейся сущностью*. Объект, на который ссылается другой объект, называется *упоминаемой сущностью*.  

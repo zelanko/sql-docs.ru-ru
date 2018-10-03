@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8a4c42548e00ec27831639c7d7a147be3fcca1a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082684"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Урок 1: Создание структуры интеллектуального анализа данных для покупателя велосипеда
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Урок 1. Создание структуры интеллектуального анализа данных для покупателя велосипеда
   На этом занятии вы создадите структуры интеллектуального анализа данных, которая позволяет предсказать, купит ли потенциальный клиент [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] велосипед. Если вы не знакомы со структурами интеллектуального анализа данных и их роли в интеллектуальном анализе данных, см. в разделе [структур интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  Структуры интеллектуального анализа «Покупатель велосипеда», созданной на этом занятии, поддерживает добавление моделей интеллектуального анализа данных, на основе [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). На следующих занятиях вы будете использовать кластерные модели интеллектуального анализа данных для исследования других способов группирования клиентов и будете использовать модели интеллектуального анализа данных дерева решений для предсказания, купит ли потенциальный клиент велосипед.  

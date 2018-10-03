@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b31b14603777a98a623dbd80144d400a069a2136
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5f62ec88ad7dc3ad7837a73b57abd215be29c3e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089424"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет характерные для драйвера атрибуты соединения. Некоторые из этих атрибутов доступны для `SQLGetConnectAttr`, и функция используется для определения их текущих значений. Отображаются значения для этих атрибутов не гарантируется до, после подключения или атрибут установлен [SQLSetConnectAttr](sqlsetconnectattr.md).  

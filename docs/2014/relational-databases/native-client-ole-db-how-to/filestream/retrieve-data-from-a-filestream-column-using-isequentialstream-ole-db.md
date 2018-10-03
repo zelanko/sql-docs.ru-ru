@@ -1,24 +1,21 @@
 ---
-title: Извлечение данных из столбца FILESTREAM с помощью интерфейса ISequentialStream (OLE DB) | Документация Майкрософт
+title: Извлечение данных из столбца FILESTREAM с помощью интерфейса ISequentialStream (OLE DB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af1fdbad51d7d6ae1c6c2320a6ac05d103123324
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086394"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Извлечение данных из столбца FILESTREAM с помощью интерфейса ISequentialStream (OLE DB)
   В этом образце используется интерфейс ISequentialStream в интерфейсе ICommandText, чтобы получить одну запись из столбца FILESTREAM.  
@@ -30,9 +27,9 @@ ms.locfileid: "37424863"
   
  С помощью одного из следующих образцов создайте таблицу, из которой образец считывает данные.  
   
--   [Отправлять данные в столбец файлового ПОТОКА, с помощью интерфейса ISequentialStream с привязкой к параметру ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Передача данных в столбец FILESTREAM с использованием интерфейса ISequentialStream с привязкой к параметру ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Отправлять данные в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Передача данных в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Скопируйте первый листинг кода и вставьте его в файл ISSHelper.h.  
   

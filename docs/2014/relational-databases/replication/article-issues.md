@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleissues.f1
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ddd050608557d8a721ad986ea5aa5b1eef5dee66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1d4595ee3b5bb01e32fbd733c97ea65488b9dc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305564"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083754"
 ---
 # <a name="article-issues"></a>Проблемы в статьях
   На странице **Проблемы в статьях** перечисляются условия, определенные для статей, а также изменения, проведение которых необходимо при этих условиях. В следующей таблице перечисляются возможные проблемы и действия, необходимые для гарантированного корректного выполнения репликации и существующих приложений.  

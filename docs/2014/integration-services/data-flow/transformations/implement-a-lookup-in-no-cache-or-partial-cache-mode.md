@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b8b64644a16482028c4334e4e00cefd6a6096cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce09e0765f553d2a884a271b7740118a293a9510
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275600"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089774"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать частичный кэш или не использовать режим кэша.  
@@ -56,7 +53,7 @@ ms.locfileid: "37275600"
   
 6.  В списке **Укажите метод обработки строк без совпадающих элементов** выберите параметр обработки ошибок.  
   
-7.  На странице **Соединение** выберите диспетчер соединений из списка **Диспетчер соединений OLE DB** или нажмите кнопку **Создать** , чтобы создать новый диспетчер соединений. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
+7.  На странице **Соединение** выберите диспетчер соединений из списка **Диспетчер соединений OLE DB** или нажмите кнопку **Создать** , чтобы создать новый диспетчер соединений. Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](../../connection-manager/ole-db-connection-manager.md).  
   
 8.  Выполните следующие действия:  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], DMX
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data mining [Reporting Services]
 - passing parameters [Reporting Services]
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
-caps.latest.revision: 62
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 287f6539400ad87a898340cc7c8709e0ab07fd91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a909c905fd9cb61df019f2db5eca85279cc85a8c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328946"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085664"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)
   При создании набора данных с помощью источника данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] конструктор отчетов отображает конструктор запросов многомерных выражений, если обнаруживает допустимый куб. Если куб не обнаружен, но доступна модель интеллектуального анализа данных, конструктор отчетов отображает конструктор запросов интеллектуального анализа данных (расширения интеллектуального анализа данных). Для переключения между конструкторами MDX и DMX нажимайте кнопку **Расширения интеллектуального анализа данных командного типа** (![Переключение в режим DMX-запросов](../media/rsqdicon-commandtypedmx.gif "Переключение в режим DMX-запросов")) на панели инструментов. Используйте конструктор DMX-запросов для интерактивного построения запроса расширений интеллектуального анализа данных с применением графических элементов. Чтобы использовать конструктор DMX-запросов, указываемый источник данных должен уже иметь модель интеллектуального анализа данных, которая будет предоставлять данные. Результаты запроса преобразуются в плоский набор строк, который используется в отчете.  

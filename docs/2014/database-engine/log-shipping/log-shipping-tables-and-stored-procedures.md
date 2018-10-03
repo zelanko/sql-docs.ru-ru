@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - secondary servers [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fdc9d9c52af95f9b76c882befc9dfc3a1a218259
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169335"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087684"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
   В этом подразделе описываются все таблицы и хранимые процедуры, связанные с конфигурированием доставки журналов. Все таблицы доставки журналов хранятся в базе данных **msdb** на каждом сервере. В приведенной ниже таблице показано, на каких серверах используются какие таблицы и хранимые процедуры в конфигурациях доставки журналов.  

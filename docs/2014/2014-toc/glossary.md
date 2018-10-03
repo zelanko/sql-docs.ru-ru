@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -16,28 +15,26 @@ ms.technology:
 - replication
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
-caps.latest.revision: 1952
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164335"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085534"
 ---
-# Глоссарий
+# <a name="glossary"></a>Глоссарий
   
   
-## Термины  
+## <a name="terms"></a>Термины  
   
 |Термин|Определение|  
 |----------|----------------|  
@@ -1536,7 +1533,7 @@ ms.locfileid: "37164335"
 |автоматическая защита экземпляра SQL Server|Тип защиты, позволяющий DPM автоматически определять и защищать базы данных, добавляемые в экземпляры SQL Server, на которых настроена автоматическая защита.|  
 |имя входа SQL Server|Хранимая в SQL Server учетная запись, которая позволяет пользователям соединяться с SQL Server.|  
 |Управляющие объекты SQL Server|Прикладной программный интерфейс, который поддерживает включение администрирования SQL Server в любое приложение COM- или OLE-автоматизации.|  
-|Среда SQL Server Management Studio|Набор средств управления Microsoft SQL Server для настройки, управления и администрирования всех компонентов Microsoft SQL Server.|  
+|SQL Server Management Studio|Набор средств управления Microsoft SQL Server для настройки, управления и администрирования всех компонентов Microsoft SQL Server.|  
 |Службы SQL Server Master Data Services|Приложение для управления основными данными, предназначенное для единообразного определения и управления важными сущностями данных в организации.|  
 |SQL Server PowerPivot для Excel|Надстройка SQL Server для Excel.|  
 |Приложение SQL Server Profiler|Графический пользовательский интерфейс для наблюдения за экземпляром компонента SQL Server Database Engine или экземпляром служб Analysis Services.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FormatString Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - FormatString element
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a61057708dd430fa6879101cda0dd315bbc82298
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbcc34f0bdc167f61beebb2e97171027759d6c3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273200"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089864"
 ---
 # <a name="formatstring-element-assl"></a>Элемент FormatString (ASSL)
   Описывает формат отображения для [CalculationProperty](../objects/calculationproperty-element-assl.md) элемент или [мер](../objects/measure-element-assl.md) элемент.  
