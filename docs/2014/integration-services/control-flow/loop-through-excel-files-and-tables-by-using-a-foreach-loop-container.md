@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df6de3a81b8ebd1f9ca23ffa1b004c4180c26e81
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98cdf4263025f202279e4496b67f23eb0780b633
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048354"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"
   Процедуры в этом разделе описывают, как выполнить цикл по книгам Excel в папке или цикл по таблицам в книге Excel с помощью контейнера «цикл по каждому элементу» с соответствующим перечислителем.  
@@ -73,7 +70,7 @@ ms.locfileid: "37158995"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Организация цикла по таблицам Excel с помощью перечислителя по набору строк схемы ADO.NET  
   
-1.  Создайте диспетчер соединений ADO.NET, который использует поставщик Microsoft Jet OLE DB для подключения к книге Excel. На странице "Все" диалогового окна **Диспетчер соединений** убедитесь, что в качестве значения расширенных свойств введено Excel 8.0. Дополнительные сведения см. в разделе [Add, Delete, or Share a Connection Manager in a Package](../add-delete-or-share-a-connection-manager-in-a-package.md).  
+1.  Создайте диспетчер соединений ADO.NET, который использует поставщик Microsoft Jet OLE DB для подключения к книге Excel. На странице "Все" диалогового окна **Диспетчер соединений** убедитесь, что в качестве значения расширенных свойств введено Excel 8.0. Дополнительные сведения см. в статье [Добавление, удаление или совместное использование диспетчера соединений в пакете](../add-delete-or-share-a-connection-manager-in-a-package.md).  
   
 2.  Создайте строковую переменную, которая будет принимать имя текущий таблицы на каждой итерации цикла.  
   

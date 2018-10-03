@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - project mode [Analysis Services]
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180981"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173324"
 ---
 # <a name="multidimensional-model-object-processing"></a>Обработка объектов многомерной модели
   Обработка ― это шаг или последовательность шагов, в которых службы Analysis Services загружают данные из реляционного источника данных в многомерную модель. Для объектов, использующих режим хранения MOLAP, данные сохраняются на диске в папке файла базы данных. Для режима хранения ROLAP обработка происходит по запросу, в ответ на запрос многомерных выражений к объекту. Для объектов, использующих режим хранения ROLAP, обработка относится к обновлению кэш-памяти до возврата результатов запроса.  

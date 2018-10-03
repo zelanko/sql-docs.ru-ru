@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a44dd79a67fe38735d54d1d91a9a37fdeb32e0e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 954fcc8806a290ffc171bde9db4af883c30ec9a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120104"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Выполнение операции (мастер импорта и экспорта SQL Server)
   Используйте **выполнение операции** страницу, чтобы просмотреть ход выполнения и результаты операции импорта и экспорта и чтобы прервать операцию, при необходимости.  
@@ -40,7 +37,7 @@ ms.locfileid: "37209624"
  **Сообщение**  
  Отображает уведомления и сообщения об ошибках, которые могут появляться в ходе действия.  
   
- **Filter**  
+ **Фильтр**  
  Позволяет выбрать отображение только ошибок, предупреждений или сообщений об успешно выполненных действиях. Можно вернуться к отображению по умолчанию, выбрав **Показать все действия**.  
   
  **Остановить**  

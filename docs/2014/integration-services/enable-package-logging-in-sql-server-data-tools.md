@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0c34833bf458ce38a8e83a1a3db2a40f0760b2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a93245b97bf7c6c382f533c6d6e317b399f9e54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320674"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172504"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Включение средств ведения журналов в SQL Server Data Tools
   В этой процедуре описывается, как добавлять журналы в пакет, настраивать ведение журналов на уровне пакетов и сохранять настройку ведения журналов в XML-файле. Журнал можно добавить только на уровне пакета, однако пакеты не обязаны осуществлять ведение журналов, чтобы включить ведение журналов в контейнерах, которые содержатся в этих пакетах.  
@@ -41,11 +38,11 @@ ms.locfileid: "37320674"
   
 4.  В столбце **Конфигурация** выберите диспетчер подключений или щелкните **\<Создать соединение>**, чтобы создать диспетчер подключений, соответствующий регистратору. В зависимости от выбранного регистратора может использоваться один из следующих диспетчеров соединений.  
   
-    -   Для текстовых файлов используется диспетчер подключения файлов. Дополнительные сведения см. в разделе [File Connection Manager](connection-manager/file-connection-manager.md).  
+    -   Для текстовых файлов используется диспетчер подключения файлов. Дополнительные сведения см. в разделе [диспетчер подключения файлов](connection-manager/file-connection-manager.md).  
   
     -   Для [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]используется диспетчер подключения файлов.  
   
-    -   Для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]используется диспетчер соединений OLE DB. Дополнительные сведения см. в разделе [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
+    -   Для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]используется диспетчер соединений OLE DB. Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md).  
   
     -   В журнале событий Windows выполнение действий не требуется. [!INCLUDE[ssIS](../includes/ssis-md.md)] автоматически создадут журнал.  
   

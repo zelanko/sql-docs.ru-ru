@@ -1,14 +1,11 @@
 ---
-title: sys.sysaltfiles (Transact-SQL) | Документы Microsoft
+title: sys.sysaltfiles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysaltfiles_TSQL
@@ -21,15 +18,15 @@ helpviewer_keywords:
 - sysaltfiles system table
 - sys.sysaltfiles compatibility view
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
-caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 306318f32608d7014293ef753292a1f4cd1c68a7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 941b51b6e05fd88a8b59b8e4f3b28ee145affe3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636562"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +41,10 @@ ms.lasthandoff: 05/04/2018
 |**fileid**|**smallint**|Идентификационный номер файла. Уникален для каждой базы данных.|  
 |**groupid**|**smallint**|Идентификационный номер файловой группы.|  
 |**size**|**int**|Размер файла, в страницах по 8 килобайт (КБ).|  
-|**параметр MaxSize**|**int**|Максимальный размер файла, в страницах по 8 КБ.<br /><br /> 0 = не возрастает.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Примечание: Баз данных, обновленных с размером файла журнала неограниченного возвращают -1 для максимального размера файла журнала.|  
-|**Увеличение размера**|**int**|Предельный размер базы данных.<br /><br /> 0 = не возрастает. В зависимости от значения состояния может представлять собой либо процент от размера файла, либо число страниц: Если **состояние** равно 0x100000, **рост** процент размера файла; в противном случае — это количество страниц.|  
+|**параметр MaxSize**|**int**|Максимальный размер файла, в страницах по 8 КБ.<br /><br /> 0 = не возрастает.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Примечание: Базы данных, которые обновляются с размером файла журнала неограниченного возвращают -1 для максимального размера файла журнала.|  
+|**рост**|**int**|Предельный размер базы данных.<br /><br /> 0 = не возрастает. В зависимости от значения состояния может представлять собой либо процент от размера файла, либо число страниц: Если **состояние** равно 0x100000, **рост** процент от размера файла; в противном случае, это число страниц.|  
 |**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Производительности**|**int**|Зарезервировано.|  
+|**perf**|**int**|Зарезервировано.|  
 |**dbid**|**smallint**|Идентификационный номер базы данных, которой принадлежит данный файл.|  
 |**name**|**sysname**|Логическое имя файла.|  
 |**Имя файла**|**nvarchar(260)**|Имя физического устройства. Включает полный путь к файлу.|  

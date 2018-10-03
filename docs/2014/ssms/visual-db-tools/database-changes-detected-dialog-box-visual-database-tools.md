@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.schema.databasechangesdetected
 - vdtsql.chm:65543
 - vdtsql.chm:65554
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63105d57b0c63f5877fd5af6b93f86b4f3b3121e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a28783185fd85ed2bb5e60867164f65b80dd3f0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816070"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174084"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Диалоговое окно «Обнаружены изменения базы данных» (визуальные инструменты для баз данных)
   Это диалоговое окно появляется при попытке сохранить диаграмму базы данных или выбранных таблиц, но при этом некоторые объекты базы данных, на которых распространяется действие сохранения, являются устаревшими по сравнению с базой данных. Принятие изменений, показанных в диалоговом окне, обновит базу данных до соответствия с диаграммой и перезапишет изменения, сделанные другими пользователями.  

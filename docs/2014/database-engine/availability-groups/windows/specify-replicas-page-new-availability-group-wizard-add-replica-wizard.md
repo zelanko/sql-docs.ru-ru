@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.listeners.f1
 - sql12.swb.newagwizard.specifyreplicas.f1
 - sql12.swb.addreplicawizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a25a08e57395ca8523b29f976b93179e0989a8ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1928b48145367e2bdd1ed183ac16230c5b7374fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279640"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172364"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Укажите страницу реплик (мастер создания группы доступности: мастер добавления реплики)
   В этом разделе описываются параметры страницы **Выбор реплик** . Эта страница применяется к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] и [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Страницу **Выбор реплик** можно использовать для настройки одной или нескольких реплик доступности и добавления ее в группу доступности. Эта страница содержит четыре вкладки, представленные в следующей таблице. Щелкните имя вкладки в таблице, чтобы перейти в соответствующий подраздел, далее в этом разделе.  

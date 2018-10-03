@@ -1,13 +1,11 @@
 ---
-title: IsolationLevelEnum | Документы Microsoft
+title: IsolationLevelEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,33 +13,32 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fbf9db6b578bc886862069ddc31bc07f18d673b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 366892f51207e7d89f643510f9becb664bb098c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684202"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
-Задает уровень изоляции транзакции для [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
+Указывает уровень изоляции транзакции для [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adXactUnspecified**|-1|Указывает, что поставщик с использованием другой уровень изоляции не указан, но не удается определить уровень.|  
-|**adXactChaos**|16|Указывает, что ожидающие изменения более изолированных транзакций не может быть перезаписан.|  
+|**adXactUnspecified**|-1|Указывает, что поставщик использует другой уровень изоляции, чем указано, но не удается определить уровень.|  
+|**adXactChaos**|16|Указывает, что ожидающие изменения более изолированных транзакций не могут быть перезаписаны.|  
 |**adXactBrowse**|256|Указывает, что в одной транзакции можно просмотреть незафиксированные изменения в других транзакциях.|  
-|**adXactReadUncommitted**|256|То же, что **adXactBrowse**.|  
-|**adXactCursorStability**|4096|Указывает, что из одной операции можно просмотреть изменения в других транзакциях только после их фиксации.|  
-|**adXactReadCommitted**|4096|То же, что **adXactCursorStability**.|  
+|**значения adXactReadUncommitted**|256|Совпадение с кодом **adXactBrowse**.|  
+|**adXactCursorStability**|4096|Указывает, что из одной транзакции можно просмотреть изменения в других транзакциях только после их фиксации.|  
+|**adXactReadCommitted**|4096|Совпадение с кодом **adXactCursorStability**.|  
 |**adXactRepeatableRead**|65536|Указывает, что из одной транзакции нельзя увидеть изменения, сделанные в других транзакциях, но выполнение обновления наборов, можно получить новые **записей** объектов.|  
 |**adXactIsolated**|1048576|Указывает, что транзакции выполняются отдельно от других транзакций.|  
-|**adXactSerializable**|1048576|То же, что **adXactIsolated**.|  
+|**adXactSerializable**|1048576|Совпадение с кодом **adXactIsolated**.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
  Пакет: **com.ms.wfc.data**  
   
 |Константа|  

@@ -1,13 +1,11 @@
 ---
-title: Дескрипторы и системной базы данных драйверы | Документы Microsoft
+title: Дескрипторы и рабочего стола, базы данных драйверы | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], descriptors
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - descriptors [ODBC], Jet-supported descriptor fields
 - ODBC desktop database drivers [ODBC], descriptors
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d827aecfb8b8fdf593291ce179f5c93d638dc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817472"
 ---
-# <a name="descriptors-and-desktop-database-drivers"></a>Дескрипторы и драйверы для настольных баз данных
-Дескриптор является структурой данных, который содержит сведения о данных столбца или динамических параметров. **SQLGetDescField** может использоваться для получения поддерживаемой дескрипторы, перечисленные ниже. Дескрипторов параметра реализации (IPD) не заполняется автоматически из-за **SQLDescribeParam** не поддерживается. Поля дескриптора, которые недоступны через Jet (например, SQL_DESC_BASE_TABLE_NAME) также не поддерживаются.  
+# <a name="descriptors-and-desktop-database-drivers"></a>Дескрипторы и драйверы для баз данных на настольном компьютере
+Дескриптор — это структура данных, в котором содержатся сведения о данных в столбце или динамических параметров. **SQLGetDescField** может использоваться для получения поддерживаемой дескрипторов, перечисленных ниже. Не дескрипторов параметра реализации (IPD) заполняются автоматически, так как **SQLDescribeParam** не поддерживается. Поля дескриптора, которые недоступны через Jet (например, SQL_DESC_BASE_TABLE_NAME) также не поддерживается.  
   
- Дополнительные сведения о полях дескриптора поддерживается Jet см. в разделе *Microsoft Jet базы данных подсистемы Руководство программиста*.  
+ Дополнительные сведения о полях дескриптора поддерживается Jet, см. в разделе *Microsoft Jet Database Engine Programmer's Guide*.  
   
- Дополнительные сведения о дескрипторах см. в разделах, в разделе «Дескрипторы» в *справочнике программиста ODBC*.  
+ Дополнительные сведения о дескрипторах см. в разделах, в разделе «Дескрипторы» в *Справочник по программированию ODBC*.  
   
 |Поля дескриптора|Уровень поддержки|  
 |-----------------------|-------------------|  
@@ -43,8 +40,8 @@ ms.locfileid: "32903809"
 |SQL_DESC_COUNT|Поддерживается|  
 |SQL_DESC_ROWS_PROCESSED_PTR|Поддерживается только для Отменить|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|Поддерживается|  
-|SQL_DESC_BASE_COLUMN_NAME|Поддерживается (новая)|  
-|SQL_DESC_BASE_TABLE_NAME|Поддерживается (новая)|  
+|SQL_DESC_BASE_COLUMN_NAME|Поддерживается (НОВОЕ)|  
+|SQL_DESC_BASE_TABLE_NAME|Поддерживается (НОВОЕ)|  
 |SQL_DESC_CASE_SENSITIVE|Всегда имеет значение FALSE|  
 |SQL_DESC_CATALOG_NAME|Не поддерживается|  
 |SQL_DESC_CONCISE_TYPE|Поддерживается|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-caps.latest.revision: 103
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 192893274803d5c753fa6bd7acd90c7789d7f8b7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9a9a8db6c84bfde40ec7c71012d4cc528d57efd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163544"
 ---
 # <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
   Обновление полнотекстового поиска с переходом к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выполняется во время установки, а также во время присоединения, восстановления или копирования файлов баз данных или полнотекстовых каталогов из более ранней версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера копирования баз данных.  

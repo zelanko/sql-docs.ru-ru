@@ -1,13 +1,11 @@
 ---
-title: Свойство Dialect | Документы Microsoft
+title: Свойство Dialect | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - Dialect property
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 638d02511078028fa6c5b1337fdb1b095d8e5c85
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ef18eb3d6251bc07ae25ef8cbc3445a87b8390b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277923"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810522"
 ---
 # <a name="dialect-property"></a>Свойство Dialect
-Указывает, диалект [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойства. Диалект определяет синтаксис и общие правила, поставщик использует для синтаксического анализа в строку или поток.  
+Указывает диалект [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойства. Диалект определяет синтаксис и общих правил, которые поставщик использует для синтаксического анализа в строку или поток.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- **Диалект** свойство содержит допустимый идентификатор GUID, который представляет разновидность текст команды или поток. Значение по умолчанию для этого свойства — {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, указывающая, что поставщик следует выбирать способ интерпретации текста команды или поток.  
+ **Диалект** свойство содержит допустимый GUID, представляющий разновидность текст команды или поток. Значение по умолчанию для этого свойства — {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, которое указывает, что поставщик следует выбрать способ интерпретации текста команды или поток.  
   
 ## <a name="remarks"></a>Примечания  
- ADO не запрашивает поставщика, когда пользователь считывает значение этого свойства. Возвращает строковое представление значения, хранящегося в [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
+ ADO не запрашивает поставщика, когда он считывает значение этого свойства. Возвращает строковое представление значения, расположенные в данный момент [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
   
- Когда пользователь задает **диалект** свойство ADO проверяет идентификатор GUID и вызывает ошибку, если указанное значение не является допустимым идентификатором GUID. См. в документации к поставщику для определения значения идентификатора GUID, поддерживаемые **диалект** свойство.  
+ Когда пользователь задает **диалект** свойство ADO проверяет идентификатор GUID и выдает ошибку, если указанное значение не является допустимым идентификатором GUID. См. в документации по поставщику для определения значений GUID, поддерживаемых **диалект** свойство.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

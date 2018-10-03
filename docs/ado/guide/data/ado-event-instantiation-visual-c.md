@@ -1,32 +1,29 @@
 ---
-title: 'При создании экземпляра события ADO: Visual C++ | Документы Microsoft'
+title: 'Создание экземпляра события ADO: Visual C++ | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 699432fff2c849f4f89e7cadebe8dd4afabdd8ec
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271083"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605992"
 ---
-# <a name="ado-event-instantiation-visual-c"></a>При создании экземпляра ADO событий: Visual C++
-Это Схематическое Описание способов создания экземпляра ADO событий в Microsoft® Visual C++. В разделе [пример модели событий ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) полное описание.  
+# <a name="ado-event-instantiation-visual-c"></a>Создание экземпляра события ADO: Visual C++
+Это Схематическое Описание способов создания экземпляра события ADO в Microsoft® Visual C++. См. в разделе [пример модели событий ADO (Visual C++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) полное описание.  
   
- Создать классы, производные от **ConnectionEventsVt** и **RecordsetEventsVt** интерфейсы найден в файле adoint.h.  
+ Создание классов, производных от **ConnectionEventsVt** и **RecordsetEventsVt** интерфейсов см. в файле adoint.h.  
   
 ```  
 // BeginEventExampleVC01  
@@ -53,7 +50,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- Реализуйте каждого метода обработчика событий в обоих классах. Его достаточно, что каждый метод просто возвращает значение HRESULT S_OK. Однако при внесении его известных, обработчиками событий доступны, они будут вызваны постоянно по умолчанию. Вместо этого может потребоваться запросить без дальнейших уведомлений при первом входе, установив **adStatus** для **adStatusUnwantedEvent**.  
+ Реализация каждого метода обработчика событий в обоих классах. Этого достаточно, что каждый метод просто возвращает значение HRESULT S_OK. Тем не менее, при внесении его известных обработчиков событий доступны, они будут вызваны постоянно по умолчанию. Вместо этого может потребоваться запросить никакие дальнейшие уведомления после первого выполнения, установив **adStatus** для **adStatusUnwantedEvent**.  
   
 ```  
 // BeginEventExampleVC02  
@@ -69,11 +66,11 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- Классы событий, наследуются **IUnknown**, поэтому также необходимо реализовать **QueryInterface**, **AddRef**, и **выпуска** методы. Также можно реализуйте конструкторы и деструкторы классов. Выбор инструментов Visual C++, с которыми наиболее удобен для упрощения этой части задачи.  
+ Наследование классов событий **IUnknown**, поэтому необходимо также реализовать **QueryInterface**, **AddRef**, и **выпуска** методы. Кроме того, реализуйте, конструкторы и деструкторы классов. Выберите Инструменты Visual C++, с помощью которых вы являетесь наиболее удобен для упрощения этой части задачи.  
   
- Создание его известных, обработчиками событий доступны, выполнив **QueryInterface** на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов для  **IConnectionPointContainer** и **IConnectionPoint** интерфейсов. Затем выдать **IConnectionPoint::Advise** для каждого класса.  
+ Убедитесь, он известен, обработчиков событий доступны, выполнив **QueryInterface** на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов для  **IConnectionPointContainer** и **IConnectionPoint** интерфейсов. Затем выполните **IConnectionPoint::Advise** для каждого класса.  
   
- Предположим, вы используете логической функцией, которая возвращает **True** Если успешно сообщает **записей** объекта наличие доступных обработчиков событий.  
+ Предположим, например, при использовании логической функцией, которая возвращает **True** если она успешно сообщает об **записей** объекта, что у вас есть доступные обработчики событий.  
   
 ```  
 // BeginEventExampleVC03  
@@ -102,9 +99,9 @@ return TRUE;
 // EndEventExampleVC03  
 ```  
   
- На этом этапе события для **RecordsetEvent** семейства включены и свои методы будут вызываться как **записей** событиями.  
+ На этом этапе события для **RecordsetEvent** семейства включены, и ваши методы будут вызываться как **записей** событиями.  
   
- Позже, когда вы хотите сделать недоступным обработчики событий, снова получить точки подключения и выдавать **IConnectionPoint::Unadvise** метод.  
+ Позже, когда вы хотите сделать недоступной обработчики событий, снова получить точку подключения и выдачи **IConnectionPoint::Unadvise** метод.  
   
 ```  
 // BeginEventExampleVC04  
@@ -116,9 +113,9 @@ if (FAILED(hr)) return FALSE;
 // EndEventExampleVC04  
 ```  
   
- Необходимо освободить интерфейсы и уничтожения объектов класса соответствующим образом.  
+ Необходимо освобождать интерфейсы и уничтожения объектов класса соответствующим образом.  
   
- Ниже приведен полный пример **записей** класс приемника событий.  
+ В следующем коде показано с полным примером **записей** класс приемника событий.  
   
 ```  
 // BeginEventExampleVC05.cpp  

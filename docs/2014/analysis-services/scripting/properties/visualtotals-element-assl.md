@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - VisualTotals Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - VisualTotals element
 ms.assetid: 352a05b1-846c-4d58-ac36-1f5ad418ba7d
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf4eb3a172571ee7456f0da1cb0df60852132e03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f47adf2a45c0c1d06371d7f28db8d5051196bc64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101744"
 ---
 # <a name="visualtotals-element-assl"></a>Элемент VisualTotals (ASSL)
   Содержит многомерное выражение, которое определяет, должно ли применяться визуальное отображение итогов для элементов этого атрибута.  

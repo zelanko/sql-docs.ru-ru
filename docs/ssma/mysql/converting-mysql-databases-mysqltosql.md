@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 83cd35918c6d2fbc3190ebcedd3606b622e549f1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8b57e41a2435d37a3408459ae30050a854cdf71a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392599"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651712"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Преобразование баз данных MySQL (MySQLToSQL)
 После подключения к MySQL, подключенных к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure и задание проекта и параметры сопоставления данных, можно преобразовать объекты базы данных MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных SQL Azure.  

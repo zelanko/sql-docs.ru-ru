@@ -1,13 +1,11 @@
 ---
-title: ObjectStateEnum | Документы Microsoft
+title: ObjectStateEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectStateEnum enumeration [ADO]
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46030a27b9a2567f023c2c0d7946536703c91195
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279986"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713742"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
-Указывает, является ли объект открытым или закрытым, соединение с источником данных, выполнение команды или при получении данных.  
+Указывает, является ли объект открытым или закрытым, подключение к источнику данных, выполнение команды или при получении данных.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|Указывает, что данный объект закрыт.|  
 |**adStateOpen**|1|Указывает, что объект является открытым.|  
 |**adStateConnecting**|2|Указывает, что объект подключается.|  
-|**adStateExecuting**|4|Указывает, что объект является выполнение команды.|  
-|**adStateFetching**|8|Указывает, происходит поиск строки объекта.|  
+|**adStateExecuting**|4|Указывает, что объект выполняет команду.|  
+|**adStateFetching**|8|Указывает, что извлекаются строки объекта.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
  Пакет: **com.ms.wfc.data**  
   
 |Константа|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 315a33fc1a946363220c967067f90c67d5ecd895
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4eeb69baf54672514828591ffd4aa6c3dbc2610e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120774"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>Справочник по правилам для определения исправности (PowerPivot для SharePoint)
   В этом справочном разделе описываются правила исправности SharePoint, которые добавляются приложением PowerPivot для SharePoint. Эти правила служат для сообщения о проблемах с работоспособностью сервера, доступностью или конфигурацией приложения службы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] или связанного с ним экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

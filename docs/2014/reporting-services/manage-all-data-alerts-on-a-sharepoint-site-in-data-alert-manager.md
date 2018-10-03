@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ae29372fbed6f61e81c975dfd397a9190354eafc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdd9d9bc6ba4e6a71c0fa3a25424230e88b0b3c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109624"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных
   Администраторы предупреждений SharePoint могут просматривать списки предупреждений об изменении данных, созданных любыми пользователями сайта, и сведения об этих предупреждениях. Администраторы системы предупреждений могут также удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений в диспетчере предупреждений об изменении данных.  

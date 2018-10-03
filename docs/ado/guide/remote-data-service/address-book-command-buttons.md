@@ -1,61 +1,58 @@
 ---
-title: Адрес книги кнопки | Документы Microsoft
+title: Кнопки команд адресной книги | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eaaa41038b741b71be069fb5db2bb921a2a576f9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 64570b9a6f2052fdc3f9e5544a442853110587b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613152"
 ---
-# <a name="address-book-command-buttons"></a>Адрес книги кнопки
-Адресная книга приложение включает следующие кнопки:  
+# <a name="address-book-command-buttons"></a>Кнопки команд адресной книги
+Адресная книга приложение включает в себя следующие кнопки:  
   
 -   Объект **найти** кнопку, чтобы отправить запрос к базе данных.  
   
--   Объект **снимите** кнопку для очистки текстовые поля перед запуском нового поиска.  
+-   Объект **снимите** кнопку, чтобы очистить текстовые поля перед запуском нового поиска.  
   
 -   **Обновить профиль** кнопку, чтобы сохранить изменения в записи о сотруднике.  
   
 -   Объект **Отмена изменений** кнопку, чтобы отменить изменения.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="find-button"></a>Кнопка  
- Щелкнув **найти** кнопку активирует процедуру VBScript Find_OnClick Sub, которая создает и отправляет запрос SQL. При нажатии этой кнопки заполняет таблицу данных.  
+ Щелкнув **найти** кнопку активирует процедуры VBScript Find_OnClick Sub, которая создает и отправляет запрос SQL. После нажатия этой кнопки заполняет таблицу данных.  
   
-## <a name="building-the-sql-query"></a>Создание SQL-запроса  
- Первая часть процедуры Find_OnClick Sub создает SQL-запроса одной фразе одновременно, путем добавления текстовых строк в глобальных инструкции SQL SELECT. Он начинается, установив переменную `myQuery` для инструкции SQL SELECT, которая запрашивает все строки данных из таблицы источника данных. Далее процедуры Sub сканирует каждого из четырех полей ввода на странице.  
+## <a name="building-the-sql-query"></a>Создание SQL-запрос  
+ Первая часть процедуры Find_OnClick Sub создает SQL-запрос, один фразой одновременно, путем добавления текстовых строк к глобальной инструкции SQL SELECT. Он начинается с настройки переменной `myQuery` в инструкцию SQL SELECT, который запрашивает все строки данных из таблицы источника данных. Далее процедуры Sub сканирует каждый из четырех полей ввода на странице.  
   
- Так как программа использует слово `like` при построении инструкции SQL, запросы — поиск подстрок, а не точного совпадения.  
+ Так как программа использует слово `like` в создании инструкций SQL, запросы, которые поиск подстрок, а не точные совпадения.  
   
- Например если **Фамилия** поле содержится запись «Berge» и **заголовок** поле содержится запись «Руководитель программы», инструкции SQL (значение `myQuery`) читает:  
+ Например если **Фамилия** поле содержал запись «Berge» и **Title** поле содержал запись «Руководитель программы», инструкции SQL (значение `myQuery`) будет считывать:  
   
 ```  
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
- При успешном выполнении запроса всех лиц с фамилией, содержащий текст «Berge» (например, Berge и Berger) и с заголовком, содержащих слова «Руководитель» (например, руководитель программы, дополнительные технологии) отображаются в сетке данных HTML.  
+ При успешном выполнении запроса всех лиц с фамилией, содержащее текст «Berge» (например Berge и Berger) и с заголовком, содержащих слова «Руководитель» (например, руководитель программы, передовыми технологиями), отображаются в сетке данных HTML.  
   
 ## <a name="preparing-and-sending-the-query"></a>Подготовка и отправка запроса  
- Последняя часть процедуры Find_OnClick Sub состоит из двух инструкций. Первый оператор назначает [SQL](../../../ado/reference/rds-api/sql-property.md) свойство [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) равное динамически построенного запроса SQL. Вторая инструкция вызывает **RDS. DataControl** объекта (`DC1`) для запроса к базе данных, а затем отображает результаты нового запроса в сетке.  
+ Последняя часть процедуры Find_OnClick Sub состоит из двух операторов. Первый оператор назначает [SQL](../../../ado/reference/rds-api/sql-property.md) свойство [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) равное динамически построенного запроса SQL. Вторая инструкция вызывает **RDS. DataControl** объекта (`DC1`) для запроса к базе данных, а затем отобразите новые результаты запроса в сетке.  
   
 ```  
 Sub Find_OnClick  
@@ -65,8 +62,8 @@ Sub Find_OnClick
 End Sub  
 ```  
   
-## <a name="update-profile-button"></a>Кнопка «Обновить профиль»  
- Щелкнув **обновить профиль** процедуры VBScript Update_OnClick Sub, которая выполняет активирует кнопку [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) и [обновление](../../../ado/reference/rds-api/refresh-method-rds.md) методы.  
+## <a name="update-profile-button"></a>Кнопки "обновить профиль"  
+ Щелкнув **обновить профиль** процедуры VBScript Update_OnClick Sub, которая выполняет активирует кнопку [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) и [обновить](../../../ado/reference/rds-api/refresh-method-rds.md) методы.  
   
 ```  
 Sub Update_OnClick  
@@ -75,10 +72,10 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- Когда `DC1.SubmitChanges` выполняет, пакеты сведения об обновлении удаленной службы данных и отправляет его на сервер по протоколу HTTP. Обновление отдельных; Если часть обновления завершается неудачно, никакие изменения выполняется и возвращается сообщение о состоянии. `DC1.Refresh` не является обязательным после **SubmitChanges** с удаленной службой данных, но это гарантирует свежими данными.  
+ Когда `DC1.SubmitChanges` выполняет, удаленной службы данных упаковывает все сведения об обновлении и отправляет их на сервер по протоколу HTTP. Обновление отдельных; Если в ходе обновления завершится неудачно, ни одно из изменений выполняется и возвращается сообщение об изменении состояния. `DC1.Refresh` Нет необходимости после **SubmitChanges** с удаленной службой данных, но он обеспечивает новые данные.  
   
-## <a name="cancel-changes-button"></a>Кнопка "Отмена"  
- Щелкнув **Отмена изменений** активирует процедуру VBScript Cancel_OnClick Sub, который выполняет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) метод.  
+## <a name="cancel-changes-button"></a>Кнопка "Отмена изменений"  
+ Щелкнув **Отмена изменений** активирует процедуру VBScript Cancel_OnClick Sub, выполняющий [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) метод.  
   
 ```  
 Sub Cancel_OnClick  
@@ -86,10 +83,10 @@ Sub Cancel_OnClick
 End Sub  
 ```  
   
- Когда `DC1.CancelUpdate` выполняется, он отклоняет все изменения, внесенные пользователем в записи о сотруднике в сетке данных с момента последнего запроса или обновления. Он восстанавливает исходные значения.  
+ Когда `DC1.CancelUpdate` выполняет, он отклоняет все изменения, внесенные пользователем в записи о сотруднике в сетке данных с момента последнего запроса или обновления. Он восстанавливает исходные значения.  
   
 ## <a name="see-also"></a>См. также  
- [Адрес книги кнопки навигации](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
+ [Кнопки навигации адресной книги](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

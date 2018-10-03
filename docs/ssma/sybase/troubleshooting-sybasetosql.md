@@ -1,34 +1,28 @@
 ---
-title: Устранение неполадок (SybaseToSQL) | Документы Microsoft
+title: Устранение неполадок (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Sybase Console,Troubleshooting
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 38f374290f7580a25e0be38ba4921476fd821e7e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d2f8fa753623e9b7d978556c16c5c4bbeba6efe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779430"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664362"
 ---
 # <a name="troubleshooting-sybasetosql"></a>Устранение неполадок (SybaseToSQL)
-Довольно часто для запуска в выполнении консоли скрипты или команды, посередине проблемы миграции.  
+Нередко сталкиваются Мидуэй проблемы миграции, выполнение консоли скрипты или команды.  
   
-Могут быть исправлены ошибки может быть связана с:  
+Могут быть исправлены ошибки могут относиться к:  
   
 1.  Компонент  
   
@@ -42,5 +36,5 @@ ms.locfileid: "34779430"
   
 6.  Изменение параметров проекта  
   
-Проблемы можно устранить с помощью пользовательского интерфейса SSMA, открыв файл проекта, созданные с помощью консоли.  
+Проблемы могут быть устранены с помощью пользовательского интерфейса SSMA, открыв файл проекта, созданных с помощью консоли.  
   

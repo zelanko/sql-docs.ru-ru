@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: 89
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7a3603d8d2f8f947a2c708a11015bf031ede8ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d6cd424915692bcdfbe258975b8cf771ad80eba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237184"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084831"
 ---
 # <a name="backup-devices-sql-server"></a>Устройства резервного копирования (SQL Server)
   Во время выполнения операции резервного копирования базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается резервная копия данных (*резервная копия*), которая записывается на физическое устройство резервного копирования. Данное физическое устройство резервного копирования инициализируется при записи на него первой резервной копии в наборе носителей. Резервные копии на наборе из одного или нескольких устройств резервного копирования образуют отдельный набор носителей.  
@@ -91,7 +88,7 @@ ms.locfileid: "37237184"
   
  TO DISK **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Например:  
+ Пример:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -141,7 +138,7 @@ GO
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>Как указать имя в формате UNC  
  Чтобы указать сетевой ресурс в инструкции резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, необходимо использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\***имя_системы***\\***имя_общего_ресурса***\\***путь***\\***имя_файла*.  
   
- Например:  
+ Пример:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -179,7 +176,7 @@ GO
   
  TO TAPE **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Например:  
+ Пример:  
   
 ```  
 BACKUP LOG AdventureWorks2012   

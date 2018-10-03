@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
 helpviewer_keywords:
 - Show Table dialog box
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90ee18b4b16650337255393a392c0b85744aeb3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7148ac75da5ec7184c771c2411750749c15fa192
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284080"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113674"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Отображение таблицы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Показать таблицу** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для добавления таблиц из представления источников данных, связанных с измерением, кубом или структурой интеллектуального анализа данных. Чтобы открыть это диалоговое окно в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , выполните одно из следующих действий.  
@@ -42,7 +39,7 @@ ms.locfileid: "37284080"
  **Выбор дополнительных таблиц для отображения**  
  Выберите таблицы для добавления на панель **Представление источника данных** . Данный параметр отображает сетку доступных объектов и их типы, совпадающие с фильтром, заданным на странице **Фильтр** (или все таблицы, если **Фильтр** не установлен), которые пока не отображаются в данной диаграмме.  
   
- **Filter**  
+ **Фильтр**  
  Задайте фильтр ограничения для объектов в списке, затем нажмите кнопку, чтобы отфильтровать таблицы в списке **Выбор дополнительных таблиц для просмотра**.  
   
 ## <a name="see-also"></a>См. также  

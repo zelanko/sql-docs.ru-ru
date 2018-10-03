@@ -1,37 +1,34 @@
 ---
-title: Минимизация использования пространства журнала файла | Документы Microsoft
+title: Минимизация использования места в файле журнала | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75091ba881fde2c464ae6e184bd747cc70b42790
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 39daf1dd4b3f97628bed17377e7d11f7ecc9c725
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714472"
 ---
-# <a name="minimizing-log-file-space-usage"></a>Минимизация использования пространства для файла журнала
-Файл журнала может быстро заполнить (таким образом, остановка работы сервера) при наличии большого объема действий на базе данных Microsoft SQL Server. Можно задать файл журнала **Truncate на контрольной точке** позволяет значительно увеличить ресурсы файла журнала для базы данных.  
+# <a name="minimizing-log-file-space-usage"></a>Минимизация использования места в файле журнала
+Файл журнала может быстро заполнить (тем самым к остановке сервера), если имеется большое количество действий в базе данных SQL Server. Можно задать файл журнала **Truncate на контрольной точке** значительно расширить жизни файла журнала для базы данных.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
-### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-65"></a>Чтобы включить Truncate на контрольную точку в Microsoft SQL Server 6.5  
+### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-65"></a>Чтобы включить Truncate на контрольной точке в Microsoft SQL Server 6.5  
   
-1.  Запустите Microsoft SQL Server Enterprise Manager, откройте дерево для сервера и откройте дерево базы данных устройства.  
+1.  Запустите Microsoft SQL Server Enterprise Manager, откройте дерево для сервера и откройте дерево устройств базы данных.  
   
 2.  Дважды щелкните имя базы данных, на котором эта функция включена.  
   
@@ -39,7 +36,7 @@ ms.locfileid: "35274183"
   
 4.  Из **параметры** выберите **усечение журнала на контрольной точке**, а затем нажмите кнопку **ОК**.  
   
-### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-70"></a>Чтобы включить Truncate на контрольную точку в Microsoft SQL Server 7.0  
+### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-70"></a>Чтобы включить Truncate на контрольной точке в Microsoft SQL Server 7.0  
   
 1.  Запустите Microsoft SQL Server Enterprise Manager, откройте дерево для сервера и откройте дерево баз данных.  
   
@@ -47,7 +44,7 @@ ms.locfileid: "35274183"
   
 3.  Из **параметры** выберите **усечение журнала на контрольной точке**, а затем нажмите кнопку **ОК**.  
   
- Дополнительные сведения о **Truncate на контрольной точке** компонента, см. в документации Microsoft SQL Server.  
+ Дополнительные сведения о **Truncate на контрольной точке** компонентов, см. в документации Microsoft SQL Server.  
   
 ## <a name="see-also"></a>См. также  
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

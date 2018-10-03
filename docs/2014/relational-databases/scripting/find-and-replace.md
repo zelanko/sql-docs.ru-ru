@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.quickfind
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87780d4f33a3e7674778880423f66ac6369ead5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a21201ee3a3e12e4f091b545b8bd812a20a0505
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324314"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152524"
 ---
 # <a name="find-and-replace"></a>Найти и заменить
   Диалоговое окно **Найти и заменить** позволяет найти текст в файле и при необходимости заменить его. Версии диалогового окна **Найти и заменить** могут несколько отличаться по набору параметров в зависимости от способа вызова этого окна. В меню **Правка** перейдите к пункту **Найти и заменить**, затем щелкните **Быстрый поиск** для открытия этого диалогового окна с параметрами поиска, но без параметров замены. В меню **Правка** перейдите к пункту **Найти и заменить**, затем щелкните **Быстрая замена** для открытия этого диалогового окна с параметрами и поиска, и замены.  

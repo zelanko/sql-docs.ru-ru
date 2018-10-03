@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default members
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], perspectives
 - deleting perspectives
 ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65bda021dbb7f52b9039255226221b3718b61d8b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb1d01e8ba6e6fa55af9e1f63d6d5fb9da29cde0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188931"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104824"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Перспективы в многомерных моделях
   Перспектива представляет собой подмножество куба, созданное для отдельного приложения или группы пользователей. Перспективой по умолчанию является собственно куб. Перспектива открыта для клиента в виде куба. Когда пользователь просматривает перспективу, она отображается в виде другого куба. Изменения, выполненные с данными куба при обратной записи в перспективу, выполняются в исходном кубе. Дополнительные сведения о представлениях см. в разделах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и [Перспективы](../multidimensional-models-olap-logical-cube-objects/perspectives.md).  

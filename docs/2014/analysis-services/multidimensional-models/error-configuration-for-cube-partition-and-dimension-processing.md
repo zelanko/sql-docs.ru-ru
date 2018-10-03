@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3edb4e923424def48ff3cacdd9eb8967f8cb6579
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ec0d1acbe1714159d6777f6cb91056e4e14b356
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275920"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175374"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>Конфигурация ошибок при обработке кубов, секций и измерений (службы SSAS — многомерные данные)
   Свойства конфигурации ошибок для кубов, секций и объектов измерения определяют реакцию сервера на возникновение ошибок целостности данных во время обработки. Обычно такие ошибки вызваны повторяющимися или отсутствующими ключами и значения NULL в ключевом столбце. Хоть запись с ошибкой и не будет добавлена в базу данных, можно задать свойства, которые определят дальнейшую реакцию на ошибку. По умолчанию обработка останавливается. Однако во время разработки куба желательно продолжить обработку при возникновении ошибки для тестирования поведения куба с импортированным данными, даже если они не будут полными.  
@@ -107,7 +104,7 @@ ms.locfileid: "37275920"
   
  Конфигурацию ошибок можно задать для любого объекта, который может быть обработан в отдельной операции.  
   
-#### <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
+#### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши элемент **Свойства** для одного из следующих объектов: измерение, куб или секция.  
   

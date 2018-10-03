@@ -1,14 +1,11 @@
 ---
-title: GetFileNamespacePath (Transact-SQL) | Документы Microsoft
+title: GetFileNamespacePath (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GetFileNamespacePath
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a31ca80ae50906f0789fdfef20fbf4fede9beea8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 72d1842f81a8a4a3558b96d1dbece16f8ea4352d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727162"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +39,9 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="arguments"></a>Аргументы  
  *Имя столбца*  
- Имя столбца VARBINARY(MAX) **file_stream** столбца в таблице FileTable.  
+ Имя столбца типа VARBINARY(MAX) **file_stream** столбца в таблице FileTable.  
   
- *Имя столбца* значение должно быть допустимое имя столбца. Это не может быть выражение или значение, преобразованное или приведенное из столбца другого типа данных.  
+ *Имя_столбца* значение должно быть допустимое имя столбца. Это не может быть выражение или значение, преобразованное или приведенное из столбца другого типа данных.  
   
  *is_full_path*  
  Целочисленное выражение, указывающее, какой путь возвращать: относительный или абсолютный. *is_full_path* может иметь одно из следующих значений:  
@@ -71,7 +68,7 @@ ms.lasthandoff: 05/04/2018
  Если база данных принадлежит к группе доступности Always On, то **FileTableRootPath** функция возвращает имя виртуальной сети (VNN) вместо имени компьютера.  
   
 ## <a name="general-remarks"></a>Общие замечания  
- Путь, **GetFileNamespacePath** функция возвращает логический путь файла или каталога в следующем формате:  
+ Путь, **GetFileNamespacePath** функция возвращает логический путь каталога или файла в следующем формате:  
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
@@ -90,10 +87,10 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N’document.docx’;  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="examples"></a>Примеры  
- В следующих примерах демонстрируется вызов **GetFileNamespacePath** функцию для получения UNC-путь для файла или каталога в таблице FileTable.  
+ Следующие примеры показывают, как вызывать **GetFileNamespacePath** функцию для получения UNC-путь для файла или каталога в таблице FileTable.  
   
 ```  
 -- returns the relative path of the form “\MyFileTable\MyDocDirectory\document.docx”  

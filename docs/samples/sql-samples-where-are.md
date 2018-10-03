@@ -1,10 +1,8 @@
 ---
-title: Примеры Microsoft SQL | Документы Microsoft
+title: Образцы Microsoft SQL | Документация Майкрософт
 description: Документация для образцов баз данных и ссылки на примеры для продуктов Microsoft SQL.
 ms.date: 04/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -12,44 +10,44 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc66cf2e9280d7b2921c551e7144054134785432
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3167bff4f976cbf23c955eea40f63c4a51bc1b76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802598"
 ---
 # <a name="sql-samples"></a>Образцы SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Расположение образцов баз данных и образцы кода для продуктов Microsoft SQL.
+Расположение образцов баз данных и примеры кода для продуктов Microsoft SQL.
 
-## <a name="sql-samples-repository"></a>Репозиторий примеров SQL
+## <a name="sql-samples-repository"></a>Репозитории примеров SQL
 
-Примеры кода для продуктов SQL находятся в [образцы Microsoft SQL Server](https://github.com/microsoft/sql-server-samples) репозитории GitHub. В каждом примере содержится файл сведений, в которой описывается запуск и использование образца. Основной файл README для образцов репозитория объясняется, как принять участие. 
+Примеры кода для продуктов SQL находятся в [образцы Microsoft SQL Server](https://github.com/microsoft/sql-server-samples) репозитория GitHub. Каждый пример включает файл README, объясняющее, как запустить и использовать образец. Основной файл README для репозитория примеров объясняется, как внести свой вклад. 
 
-Примеры и шаблоны лицензируются в рамках лицензии MIT. См. в файле license.txt в корневом каталоге.
+Примеры и шаблоны лицензируются на условиях лицензии MIT. См. в разделе файл license.txt в корневом каталоге.
 
-Вопросы для электронной почты: sqlserversamples@microsoft.com.
+Вопросы, чтобы: sqlserversamples@microsoft.com.
 
 
 ## <a name="wideworldimporters-sample-database"></a>Образец базы данных WideWorldImporters
 
-WideWorldImporters (WWI) база данных образец, демонстрирующий структуры базы данных с помощью текущей функции, инструменты и методы разработки. WideWorldImporters загрузки содержат OLTP и базы данных OLAP, который создан для работы на SQL Server 2016 и более поздней версии. 
+WideWorldImporters (WWI) является образец базы данных, демонстрирующего структуры базы данных с помощью текущих функций, средств и методик проектирования. Загрузка WideWorldImporters относятся OLTP и базы данных OLAP, который предназначены для работы в SQL Server 2016 и более поздних версий. 
 
-Загрузка базы данных и образцы находятся в [образцы SQL Server](https://github.com/Microsoft/sql-server-samples) репозитории GitHub.
+Загрузка базы данных и образцы находятся в [образцы SQL Server](https://github.com/Microsoft/sql-server-samples) репозитория GitHub.
 
 
-- [Образцы и файл WideWorldImporters Readme](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers) на GitHub.
+- [Файл WideWorldImporters Readme и примеры](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers) на сайте GitHub.
 
-- [Учебник: Загрузить WideWorldImportersDW хранилище данных Azure SQL](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
+- [Руководство По загрузке WideWorldImportersDW в хранилище данных Azure SQL](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
 
 
 ## <a name="adventureworks-sample-database"></a>образец базы данных AdventureWorks
 
-Базы данных AdventureWorks доступны в [образцы SQL Server](https://github.com/Microsoft/sql-server-samples) репозитории GitHub.  Следующие адреса загрузки включают в себя все различные версии базы данных AdventureWorks.
+Базы данных AdventureWorks доступны в [образцы SQL Server](https://github.com/Microsoft/sql-server-samples) репозитория GitHub.  Следующие адреса загрузки всех включают в себя различные версии базы данных AdventureWorks.
 
-- [Загружает AdventureWorks для SQL Server 2014 и более поздних версиях](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Включает в себя BAK-файлов для выпусков 2012.
+- [Загружает AdventureWorks для SQL Server 2014 и более поздних версиях](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Включает в себя BAK-файлы для выпусков 2012.
 - [Загружаемые файлы AdventureWorks для SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012).
 - [Загружаемые файлы AdventureWorks для SQL Server 2008 R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2).

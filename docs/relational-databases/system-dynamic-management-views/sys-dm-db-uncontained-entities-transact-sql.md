@@ -1,12 +1,10 @@
 ---
-title: sys.dm_db_uncontained_entities (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_uncontained_entities (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_uncontained_entities
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18f89d3a275a36d32d72524a1c2e650a9e2dc663
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 40235280563039493bdd174de1c314809a424336
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694092"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +35,10 @@ ms.locfileid: "34463900"
   
 ||||  
 |-|-|-|  
-|**Имя столбца**|**Тип**|**Description**|  
+|**Имя столбца**|**Тип**|**Описание**|  
 |*class*|**int**|1 = объект или столбец (включая модули, XP, представления, синонимы и таблицы).<br /><br /> 4 = Участник базы данных<br /><br /> 5 = Сборка<br /><br /> 6 = Тип<br /><br /> 7 = Индекс (полнотекстовый индекс)<br /><br /> 12 = Триггер DDL базы данных<br /><br /> 19 = Маршрут<br /><br /> 30 = Спецификация аудита|  
 |*class_desc*|**nvarchar(120)**|Описание класса сущности. Одно из следующих действий, чтобы соответствовать классу:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|Идентификатор сущности.<br /><br /> Если *класса* = 1, то object_id<br /><br /> Если *класса* = 4, а затем sys.database_principals.principal_id.<br /><br /> Если *класса* = 5, то sys.assemblies.assembly_id.<br /><br /> Если *класса* = 6, а затем sys.types.user_type_id.<br /><br /> Если *класса* = 7, то sys.indexes.index_id.<br /><br /> Если *класса* = 12, то sys.triggers.object_id.<br /><br /> Если *класса* = 19, то sys.routes.route_id.<br /><br /> Если *класса* = 30, то sys. database_audit_specifications.databse_specification_id.|  
+|*major_id*|**int**|Идентификатор сущности.<br /><br /> Если *класс* = 1, то object_id<br /><br /> Если *класс* = 4, а затем sys.database_principals.principal_id.<br /><br /> Если *класс* = 5, а затем sys.assemblies.assembly_id.<br /><br /> Если *класс* = 6, а затем sys.types.user_type_id.<br /><br /> Если *класс* = 7, а затем sys.indexes.index_id.<br /><br /> Если *класс* = 12, а затем sys.triggers.object_id.<br /><br /> Если *класс* = 19, то sys.routes.route_id.<br /><br /> Если *класс* равно 30, то sys. database_audit_specifications.databse_specification_id.|  
 |*statement_line_number*|**int**|Если класс является модулем, возвращает номер строки, в которой используется неавтономная инструкция.  В противном случае — значение NULL.|  
 |*statement_ offset_begin*|**int**|Если класс является модулем, он указывает (в байтах, начиная с 0) положение, откуда начинается неавтономная инструкция. В противном случае возвращается значение null.|  
 |*statement_ offset_end*|**int**|Если класс является модулем, он указывает (в байтах, начиная с 0) положение, где заканчивается неавтономная инструкция. Значение -1 обозначает конец модуля. В противном случае возвращается значение null.|  
@@ -69,7 +66,7 @@ ms.locfileid: "34463900"
 ## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- sys.dm_db_uncontained_entities возвращает только объекты, для которых пользователь имеет определенный тип разрешений. Чтобы полностью оценить Включение базы данных, следует использовать эту функцию, например член привилегированным пользователем **sysadmin** предопределенной роли сервера или **db_owner** роли.  
+ sys.dm_db_uncontained_entities возвращает только объекты, для которых пользователь имеет определенный тип разрешений. Чтобы полностью оценить Включение базы данных, эта функция должна использоваться привилегированным пользователем таким как членом **sysadmin** предопределенной роли сервера или **db_owner** роли.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается процедура с именем P1, а затем отправляется запрос `sys.dm_db_uncontained_entities`. В отчете запроса указывается использование процедурой P1 представления **sys.endpoints** , находящегося за пределами базы данных.  

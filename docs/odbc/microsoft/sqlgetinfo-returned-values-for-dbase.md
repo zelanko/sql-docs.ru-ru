@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo возвращаемые значения для dBASE | Документы Microsoft
+title: Возвращаемые значения SQLGetInfo для dBASE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLGetInfo
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b1d662dd351f8b5a0d0d178b1ed24d2fdd645da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7440c46a8dea10096efc66b4680a2b6c8536695a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904949"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616682"
 ---
-# <a name="sqlgetinfo-returned-values-for-dbase"></a>SQLGetInfo возвращаемые значения для dBASE
-В следующей таблице перечислены языка C# defines для *fInfoType* аргумент и соответствующие значения, возвращаемые методом **SQLGetInfo**. Эти сведения можно получить, передав перечисленных языка C# defines **SQLGetInfo** в *fInfoType* аргумент. Дополнительные сведения о значениях, возвращаемых **SQLGetInfo**, в разделе *справочнике программиста ODBC*.  
+# <a name="sqlgetinfo-returned-values-for-dbase"></a>Возвращаемые значения SQLGetInfo для dBASE
+В следующей таблице перечислены языка C# defines для *fInfoType* аргумент и соответствующие значения, возвращаемые методом **SQLGetInfo**. Эти сведения можно получить, передав перечисленных языка C# defines **SQLGetInfo** в *fInfoType* аргумент. Дополнительные сведения о значениях, возвращаемых **SQLGetInfo**, см. в разделе *Справочник по программированию ODBC*.  
   
 > [!NOTE]  
->  Где **SQLGetInfo** возвращает битовую маску, 32-разрядной, вертикальная черта (&#124;) представляет Побитовый оператор или.  
+>  Где **SQLGetInfo** возвращает битовую маску, 32-разрядной, вертикальная черта (&#124;) представляет операцию побитового или.  
   
 |Свойство|Возвращаемое значение|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|«Y»|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Набор всех|  
+|SQL_AGGREGATE_FUNCTIONS|Все готово|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|Несколько значений|  
 |SQL_ASYNC_MODE|0|  
@@ -48,7 +45,7 @@ ms.locfileid: "32904949"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|«Y»|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|«Directory»|  
+|SQL_CATALOG_TERM|«Каталог»|  
 |SQL_CATALOG_USAGE|Несколько значений|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|«Y»|  
@@ -85,7 +82,7 @@ ms.locfileid: "32904949"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Имя источника данных из Odbc.ini, или «» если в Odbc.ini используется ключевое слово DRIVER|  
+|SQL_DATA_SOURCE_NAME|Имя источника данных из файла Odbc.ini, или «» если в Odbc.ini используется ключевое слово DRIVER|  
 |SQL_DATA_SOURCE_READ_ONLY|«N» (это зависит от источника данных.)|  
 |SQL_DATABASE_NAME|Текущий каталог базы данных|  
 |SQL_DATETIME_LITERALS|0|  
@@ -100,7 +97,7 @@ ms.locfileid: "32904949"
 |SQL_DRIVER_HSTMT|Обрабатываются диспетчером драйверов.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|«4.00.*nnnn*» (*nnnn* Дата сборки)|  
+|SQL_DRIVER_VER|«4.00.*nnnn*"(*nnnn* Дата сборки)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -145,7 +142,7 @@ ms.locfileid: "32904949"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Несколько значений|  
-|СООТВЕТСТВИЕ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ СООТВЕТСТВИЯ|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Из диспетчера драйверов|  
 |SQL_OJ_CAPABILITIES|Несколько значений|  
@@ -164,7 +161,7 @@ ms.locfileid: "32904949"
 |SQL_STRING_FUNCTIONS|Несколько значений|  
 |SQL_SUBQUERIES|Несколько значений|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|«ТАБЛИЦЫ»|  
+|SQL_TABLE_TERM|«ТАБЛИЦА»|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Несколько значений|  

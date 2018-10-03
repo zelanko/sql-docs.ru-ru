@@ -1,27 +1,24 @@
 ---
-title: Свойства объекта соединения, методы и события | Документы Microsoft
+title: Свойства объекта соединения, методы и события | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a414ffc7fea1a269024a56dedd7221c2f5c5fda1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c94b6c03cebb720fae7a64fe8c06ccea96e710f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276953"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744032"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Свойства объекта соединения, методы и события
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -41,22 +38,22 @@ ms.locfileid: "35276953"
   
  [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)  
   
- [Свойство режима](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Свойство Mode](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [Коллекция свойств](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Свойства коллекции](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Свойства поставщика](../../../ado/reference/ado-api/provider-property-ado.md)  
+ [Свойство поставщика](../../../ado/reference/ado-api/provider-property-ado.md)  
   
- [State, свойство](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Свойство State](../../../ado/reference/ado-api/state-property-ado.md)  
   
  [Свойство Version](../../../ado/reference/ado-api/version-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
- [BeginTrans CommitTrans и RollbackTrans методов](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
+ [Примеры BeginTrans, CommitTrans и RollbackTrans методы](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
   
  [Cancel-метод](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
- [Close-метод](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Метод Close](../../../ado/reference/ado-api/close-method-ado.md)  
   
  [Метод Execute (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
   
@@ -67,11 +64,11 @@ ms.locfileid: "35276953"
 ## <a name="events"></a>События  
  [BeginTransComplete, CommitTransComplete и RollbackTransComplete события](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete и отключения событий](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [ConnectComplete и события отключения](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
  [Событие ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   
- [События InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)  
+ [InfoMessage-событие](../../../ado/reference/ado-api/infomessage-event-ado.md)  
   
  [Событие WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)  
   

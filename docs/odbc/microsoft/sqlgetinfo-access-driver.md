@@ -1,42 +1,39 @@
 ---
-title: SQLGetInfo (драйвер доступа) | Документы Microsoft
+title: SQLGetInfo (драйвер для Access) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a761fe38b7d162d7e43ae2f9148626dadff57e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904856"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696282"
 ---
-# <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (драйвер доступа)
+# <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (драйвер для Access)
 > [!NOTE]  
->  В этом разделе сведения драйвера доступа. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе сведения конкретного драйвера доступа. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** поддерживает тип данных SQL_FILE_USAGE. Возвращаемое значение равно 16-разрядное целое число, которое показывает, как драйвер непосредственно обрабатывает файлы в источнике данных:  
+ **SQLGetInfo** поддерживает тип SQL_FILE_USAGE сведения. Возвращаемое значение равно 16-разрядное целое число, которое указывает, как драйвер напрямую обрабатывает файлы в источнике данных:  
   
 -   SQL_FILE_NOT_SUPPORTED — Драйвер не драйвер среднего уровня.  
   
--   SQL_FILE_TABLE — Драйвер одноуровневых обрабатывает файлы в источнике данных, как таблицы.  
+-   SQL_FILE_TABLE — Драйвер одноуровневых считает файлы в источнике данных таблицы.  
   
--   SQL_FILE_QUALIFIER — Драйвер одноуровневых обрабатывает файлы в источнике данных как квалификатор.  
+-   SQL_FILE_QUALIFIER — Драйвер среднего уровня обрабатывает файлы в источнике данных как квалификатор.  
   
- Драйвер ODBC возвращает SQL_FILE_QUALIFIER, так как каждый файл всей базы данных.  
+ Драйвер ODBC возвращает SQL_FILE_QUALIFIER, поскольку каждый файл занимает всей базы данных.  
   
 ## <a name="sqlbookmarkpersistence"></a>SQL_BOOKMARK_PERSISTENCE  
  SQL_BP_SCROLL &AMP;#124; SQL_BP_UPDATE [1]  
@@ -104,7 +101,7 @@ ms.locfileid: "32904856"
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  Версии 1.0 и 1.1, не поддерживаются. Кроме того нет никаких различий в формат данных в Microsoft Access версии 3.0, 7.0 и 97.  
+>  Версии 1.0 и 1.1, не поддерживаются. Кроме того нет никакой разницы в формат данных в Microsoft Access версии 3.0, 7.0 и 97.  
   
 ## <a name="sqlddlindex"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -181,7 +178,7 @@ ms.locfileid: "32904856"
   
  NUMBER  
   
- OLEOBJECT  
+ КЛАССЫ OLEOBJECT  
   
  OWNERACCESS  
   
@@ -193,7 +190,7 @@ ms.locfileid: "32904856"
   
  КОРОТКИЙ  
   
- ОДИН  
+ ЕДИНЫЙ  
   
  SINGLEFLOAT  
   
@@ -219,7 +216,7 @@ ms.locfileid: "32904856"
   
  VARP  
   
- ДАНЕТ  
+ «ДАНЕТ»  
   
 ## <a name="sqlnumericfunctions"></a>SQL_NUMERIC_FUNCTIONS  
  SQL_FN_NUM_ABS &AMP;#124; SQL_FN_NUM_ATAN &AMP;#124; SQL_FN_NUM_CEILING &AMP;#124; SQL_FN_NUM_COS &AMP;#124; SQL_FN_NUM_EXP &AMP;#124; SQL_FN_NUM_FLOOR &AMP;#124; SQL_FN_NUM_LOG &AMP;#124; SQL_FN_NUM_MOD &AMP;#124; SQL_FN_NUM_POWER &AMP;#124; SQL_FN_ NUM_RAND &AMP;#124; SQL_FN_NUM_SIGN &AMP;#124; SQL_FN_NUM_SIN &AMP;#124; SQL_FN_NUM_SQRT &AMP;#124; SQL_FN_NUM_TAN  

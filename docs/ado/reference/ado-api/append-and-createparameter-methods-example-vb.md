@@ -1,13 +1,11 @@
 ---
-title: Добавление и пример CreateParameter методы (Visual Basic) | Документы Microsoft
+title: Append и CreateParameter методы (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - CreateParameter method [ADO], Visual Basic example
 - Append method [ADO], Visual Basic example
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 684c0b96d383558b70176f726cf3f1df992537ea
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 58f8bb0cab715df78926b6a4a70027ff25bcba1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275723"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741922"
 ---
-# <a name="append-and-createparameter-methods-example-vb"></a>Добавление и пример CreateParameter методы (Visual Basic)
+# <a name="append-and-createparameter-methods-example-vb"></a>Примеры методов Append и CreateParameter (Visual Basic)
 В этом примере используется [Append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) методы для выполнения хранимой процедуры с входным параметром.  
   
 ```  
@@ -124,7 +121,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Append-метод (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+ [Метод append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   

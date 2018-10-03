@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082250"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Задание учетных данных и сведениях о соединении для источников данных отчета
   Сервер отчетов использует учетные данные для подключения к внешним источникам данных, предоставляющих содержимое для отчетов или сведения о получателе для подписок, управляемых данными. Можно задать учетные данные, использующие проверку подлинности Windows, проверку подлинности базы данных, нестандартную проверку подлинности, или учетные данные, не использующие проверку подлинности. При отправке по сети запроса на соединение сервер отчетов олицетворяет или учетную запись пользователя, или учетную запись автоматического выполнения. Дополнительные сведения о контексте безопасности, в котором выполняется запрос соединения, см. в подразделе [Настройка источника данных и сетевые подключения](#DataSourceConfigurationConnections) далее в этом разделе.  

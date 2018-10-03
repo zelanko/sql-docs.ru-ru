@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62e2583de85ca20944b4e86c321ca661d98d2825
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 1a3a4cea6424f8bfb89207050719ec0db554fdd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890140"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130284"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Поддержка FOR XML для XML-данных
   Если запрос FOR XML указан столбец `xml` типа в предложении SELECT, значения столбца сопоставляются как элементы в возвращенном коде XML, независимо от того, указаны ли директива ELEMENTS. XML-декларации в `xml`-столбце не сериализуются.  

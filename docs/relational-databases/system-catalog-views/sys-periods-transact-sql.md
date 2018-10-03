@@ -1,32 +1,29 @@
 ---
-title: sys.Periods (Transact-SQL) | Документы Microsoft
+title: sys.Periods (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca6eea06d877ec9a6a92c35d0bd01401300f3974
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 58ee2ac11e86481c57da79d84bc75507c273b829
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702526"
 ---
 # <a name="sysperiods-transact-sql"></a>sys.Periods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает по строке для каждой таблицы, для которого было определено периода.  
+  Возвращает строку для каждой таблицы, для которого определены периодов.  
   
 |Заголовок столбца|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  

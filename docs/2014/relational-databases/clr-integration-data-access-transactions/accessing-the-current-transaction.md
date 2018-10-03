@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - current transaction access
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351816"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181424"
 ---
 # <a name="accessing-the-current-transaction"></a>Доступ к текущей транзакции
   Если транзакция является активной в той точке, в которой вызывается код среды CLR, применяемой в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то транзакция становится доступной через класс `System.Transactions.Transaction`. Для доступа к текущей транзакции используется свойство `Transaction.Current`. В большинстве случаев в получении явного доступа к транзакции нет необходимости. Что касается подключений к базам данных, то в ADO.NET автоматически происходят проверка `Transaction.Current` при вызове метода `Connection.Open` и явное прикрепление соединения к этой транзакции (если только в строке соединения ключевое слово `Enlist` не задано равным false).  

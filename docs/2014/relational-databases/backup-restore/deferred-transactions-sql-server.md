@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - I/O [SQL Server], database recovery
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - deferred transactions
 - modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c02611c020dc7a45303d80a76482488cf6272ddd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264840"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074194"
 ---
 # <a name="deferred-transactions-sql-server"></a>Отложенные транзакции (SQL Server)
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise поврежденная транзакция может быть отложена, если данные, которые требуются для отката (отмены), находятся в режиме "вне сети" во время запуска базы данных. *Отложенная транзакция* представляет собой транзакцию, которая не фиксируется по завершении стадии наката и которая вызывает ошибку, препятствующую ее откату. Поскольку нельзя выполнить откат этой транзакции, она откладывается.  

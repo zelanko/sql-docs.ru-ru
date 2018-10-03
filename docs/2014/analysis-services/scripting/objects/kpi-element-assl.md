@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Kpi Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Kpi element
 ms.assetid: 1979a58f-97a8-4c1a-aa65-dcfb6d2404cf
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27b0bcbe2ddaabcc7b3f9ef16f3fa620a8c2db38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63b7947785976d41cda112b1c14b3829e3f98e3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124154"
 ---
 # <a name="kpi-element-assl"></a>Элемент Kpi (ASSL)
   Определяет ключевой показатель эффективности (KPI) в пределах [куба](cube-element-assl.md) элемент или [перспективы](perspective-element-assl.md) элемент.  

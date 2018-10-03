@@ -1,32 +1,29 @@
 ---
-title: Пример метода (Visual Basic) добавьте индексы | Документы Microsoft
+title: Пример метода (Visual Basic) Append | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af8185f252bedad63f2af7ebc75010b2321e1328
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9e8f0d245da2bde9763a1b940f8253d4c81fe903
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285963"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705531"
 ---
-# <a name="indexes-append-method-example-vb"></a>Индексы Append пример метода (Visual Basic)
-Ниже показано, как создать новый индекс. Индекс создан по два столбца в таблице.  
+# <a name="indexes-append-method-example-vb"></a>Пример метода Append коллекции Indexes (Visual Basic)
+Следующий код демонстрирует создание нового индекса. Он расположен в два столбца в таблице.  
   
 ```  
 Attribute VB_Name = "IndexesAppend"  
@@ -85,6 +82,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Append-метод (ADOX индексы)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Объект индекса (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Append-метод (коллекция Indexes ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Объект INDEX (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Коллекция Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

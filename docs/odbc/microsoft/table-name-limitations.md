@@ -1,39 +1,36 @@
 ---
-title: Имя ограничения таблицы | Документы Microsoft
+title: Ограничения имен таблиц | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC SQL grammar, table name limitations
 - table name limitations [ODBC]
 - Excel driver [ODBC], table name limitations
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c33928107e3094e0e2116170b79352268ec9964
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31c1703bc03a2881e7b9b96989b8949cc81aba7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707052"
 ---
-# <a name="table-name-limitations"></a>Имя ограничения таблицы
-Имена таблиц могут содержать любые допустимые символы (например, пробелы). Если имена таблиц содержит любые символы, кроме буквы, цифры и знаки подчеркивания, имя должны быть разделены заключать в обратной кавычки (').  
+# <a name="table-name-limitations"></a>Ограничения имен таблиц
+Имена таблиц могут содержать любые допустимые символы (например, пробелы). Если имена таблиц, содержать любые символы, кроме буквы, цифры и символы подчеркивания, имя должно быть выделено, заключив его в обратной кавычки (').  
   
- При использовании драйвера Microsoft Excel, ссылку на базу данных не уточняется именем таблицы, подразумевается базы данных по умолчанию. Если имя в Microsoft Excel включает в себя «!» символ, он автоматически преобразуется в символ «$» вместо.  
+ Если используется драйвер Microsoft Excel, и ссылку на базу данных не уточняется именем таблицы, подразумевается базы данных по умолчанию. Если имя в Microsoft Excel содержит «!» символ, он будет автоматически преобразован для символа «$» вместо этого.  
   
- Имя таблицы Microsoft Excel, который ссылается на \<имя файла > поддерживается для Microsoft Excel 3.0 и 4.0 файлы. Имя таблицы Microsoft Excel, который ссылается на \<имя книги > поддерживается для файлов Microsoft Excel 5.0, 7.0 или 97.  
+ Имя таблицы Microsoft Excel, который ссылается на \<filename > поддерживается для Microsoft Excel 3.0 и 4.0 файлов. Имя таблицы Microsoft Excel, который ссылается на \<книги name > поддерживается для файлов Microsoft Excel 5.0, 7.0 или 97.  
   
- При использовании драйвера dBASE символов больше 127 значение ASCII преобразуются в символы подчеркивания.  
+ Если используется драйвер для dBASE, символы значение ASCII-больше 127 преобразуются в символы подчеркивания.  
   
- Когда используется драйвер Microsoft Access, имя таблицы — длиннее 64 символов.  
+ Когда используется драйвером Microsoft Access, имя таблицы ограничено 64 символами.  
   
- При использовании dBASE драйвера Microsoft Excel 3.0 или 4.0, Paradox или текст, ключевые слова MS-DOS, CON, AUX, LPT1, LPT2 не должны использоваться как имена таблиц.
+ Когда используется драйвер для dBASE, Microsoft Excel 3.0 или 4.0, Paradox или текст, ключевые слова MS-DOS, CON, AUX, LPT1, LPT2 не должны использоваться как имена таблиц.

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 61dffb79735ba6dcb7ab0dc8e3be498f00f7db75
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4109625d2f596d095a8b691bc11b164b67506f72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226994"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179224"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Справка F1 по использованию сервера отчетов среде Management Studio
   Этот раздел включает подразделы с описанием диалоговых окон в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , которые можно использовать для управления серверами отчетов.  

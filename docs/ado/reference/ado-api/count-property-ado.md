@@ -1,13 +1,11 @@
 ---
-title: Свойство Count (ADO) | Документы Microsoft
+title: Свойство Count (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bccb2760b124040973baa7ba889d2110ec5efe95
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 988ee3dc6cb4b394ee1da170cb902b88fcb0f1ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277233"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759332"
 ---
 # <a name="count-property-ado"></a>Свойство Count (ADO)
 Указывает количество объектов в коллекции.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает **длинные** значение.  
+ Возвращает **Long** значение.  
   
 ## <a name="remarks"></a>Примечания  
  Используйте **число** свойство, чтобы определить, сколько объектов в данной коллекции.  
   
- Поскольку нумерация для членов коллекции начинается с нуля, всегда следует создавать циклы, начиная с нуля элемента и заканчивая значение **число** свойство минус 1. Если используется Microsoft Visual Basic для перебора элементов коллекции без проверки в **число** свойства, используйте **For Each... Далее** команды.  
+ Поскольку нумерация для членов коллекции начинается с нуля, вам необходимо всегда кодировать циклы, начиная с нуля элемента и заканчивая значение **число** минус единица. Если вы используете Microsoft Visual Basic и хотите циклический перебор элементов коллекции без проверки **число** свойство, используйте **для каждого... Далее** команды.  
   
- Если **число** свойство имеет значение 0, нет ни одного объекта в коллекции.  
+ Если **число** равно нулю, нет объектов в коллекции.  
   
 ## <a name="applies-to"></a>Объект применения  
   
@@ -53,5 +50,5 @@ ms.locfileid: "35277233"
   
 ## <a name="see-also"></a>См. также  
  [Пример свойства Count (Visual Basic)](../../../ado/reference/ado-api/count-property-example-vb.md)   
- [Пример свойства Count (VC ++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
+ [Пример свойства Count (Visual C++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

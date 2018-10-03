@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e4123ae77852bf0ccde4229644393f8160ffb391
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d441d6d6b87799ea33cd25f69027f4ea9704f20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102544"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Доставка отчетов в общие папки с помощью служб Reporting Services
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки в общую папку, позволяющий доставить отчет в любую папку. Модуль доставки в общие папки доступен по умолчанию и не требует какой-либо дополнительной настройки. Для успешной доставки файла необходимо иметь разрешение на запись в общую папку. Кроме того, у пользователей, которым нужен доступ к отчетам, должно быть разрешение на чтение из общей папки.  

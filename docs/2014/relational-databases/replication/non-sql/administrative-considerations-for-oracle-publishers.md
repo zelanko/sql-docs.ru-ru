@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], administrative considerations
 - administering replication, Oracle publishing
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a58cbba3de8fa4ddab30180b644147f7ad33fd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9b46cca225d0c5abdb912910ee7bb9849c81c831
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177721"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050480"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Вопросы управления издателями Oracle
   После завершения настройки издателя Oracle и установки механизмов отслеживания изменения репликаций администраторы систем баз данных Oracle могут использовать стандартные служебные программы Oracle и выполнять типичные задачи системного администратора. Однако необходимо знать о влиянии некоторых административных задач на публикуемые данные.  

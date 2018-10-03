@@ -1,13 +1,11 @@
 ---
-title: Функция SQLWritePrivateProfileString | Документы Microsoft
+title: Функция SQLWritePrivateProfileString | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLWritePrivateProfileString
@@ -19,20 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWritePrivateProfileString [ODBC]
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd2ef7d8e5fdab610c5bc37f9e58c1dd031b80e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aeff68aaa4e4901820054a9bf3079efc7d74cebc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917909"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818852"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>Функция SQLWritePrivateProfileString
-**Соответствия**  
- Появился в версии: ODBC 2.0  
+**Соответствие стандартам**  
+ Версия была введена: ODBC 2.0  
   
  **Сводка**  
  **SQLWritePrivateProfileString** записывает имя и данные в подраздел Odbc.ini информация о системе.  
@@ -50,33 +47,33 @@ BOOL SQLWritePrivateProfileString(
   
 ## <a name="arguments"></a>Аргументы  
  *lpszSection*  
- [Вход] Указывает нулем строка, содержащая имя раздела, в который будут копироваться строки. Если раздел не существует, он создается. Имя раздела, не зависит от случая; Строка может быть любое сочетание букв верхнего и нижнего регистра.  
+ [Вход] Указатель на заканчивающуюся нулем строку, содержащую имя раздела, в которую копируются строки. Если раздел не существует, он создается. Имя раздела не зависит от случая; Строка может быть любое сочетание прописных и строчных букв.  
   
  *lpszEntry*  
- [Вход] Указывает нулем строка, содержащая имя ключа, связываемого со строкой. Если ключ не существует в указанном разделе, он создается. Если этот аргумент равен NULL, удаляется весь раздел, включая все записи в этом разделе.  
+ [Вход] Указывает нулем строка, содержащая имя ключа, связываемого со строкой. Если ключ не существует в указанном разделе, он создается. Если этот аргумент равен NULL, удаляется весь раздел, включая все записи в разделе.  
   
  *lpszString*  
- [Вход] Указывает символом null строку, чтобы записать в файл. Если этот аргумент равен NULL, ключ указывает *lpszEntry* аргумент удаляется.  
+ [Вход] Указатель на заканчивающуюся нулем строку, записываемых в файл. Если этот аргумент равен NULL, ключ указывает *lpszEntry* аргумент удаляется.  
   
  *lpszFilename*  
- [Выход] Указывает строку, завершающуюся значением null, с именем файл инициализации.  
+ [Выход] Указатель на заканчивающуюся нулем строку, имя файла инициализации.  
   
 ## <a name="returns"></a>Возвращает  
- Функция возвращает значение TRUE, если он прошел успешно, FALSE в случае неудачи.  
+ Функция возвращает значение TRUE при успешном выполнении, FALSE в случае неудачи.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLWritePrivateProfileString** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
+ Когда **SQLWritePrivateProfileString** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Установщик Общие ошибки|Произошла ошибка для которого нет ошибок определенного установщика.|  
-|ODBC_ERROR_REQUEST_FAILED|Не удалось выполнить запрос|Не удалось записать запрошенный системной информации.|  
-|ODBC_ERROR_OUT_OF_MEM|Недостаточно памяти|Программе установки не удалось выполнить функцию из-за нехватки памяти.|  
+|ODBC_ERROR_GENERAL_ERR|Ошибки общие установщика|Произошла ошибка для которой нет ошибок определенных установщика.|  
+|ODBC_ERROR_REQUEST_FAILED|Не удалось выполнить запрос|Не удалось записать запрошенный системную информацию.|  
+|ODBC_ERROR_OUT_OF_MEM|Недостаточно памяти|Программа установки не удалось выполнить функцию из-за нехватки памяти.|  
   
 ## <a name="comments"></a>Комментарии  
- **SQLWritePrivateProfileString** предоставляется как простой способ драйверов портов и установки драйвера библиотек DLL из Microsoft® Windows® для Microsoft Windows или Windows 2000. Вызовы **WritePrivateProfileString** , записать строку профиля в файле Odbc.ini следует заменить на вызовы **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** вызывает функции в API-Интерфейсе Win32® Добавление подраздела Odbc.ini информация о системе с заданным именем и данные.  
+ **SQLWritePrivateProfileString** предоставляется как простой способ порт драйверы и настройки драйвера библиотеки DLL из Microsoft® Windows® для Microsoft Windows и Windows 2000. Вызовы **WritePrivateProfileString** , записать строку профиля в файле Odbc.ini следует заменить вызовы **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** вызывает функции в Win32® API для добавления в подраздел Odbc.ini информация о системе с заданным именем и данных.  
   
- Режим настройки указывает, где Odbc.ini запись со списком значений источника данных — сведения о системе. Если имя источника данных DSN пользователя (переменной состояния — USERDSN_ONLY), функция записывает записи Odbc.ini в HKEY_CURRENT_USER. Если имя источника данных DSN системы (SYSTEMDSN_ONLY), функция записывает записи Odbc.ini в разделе HKEY_LOCAL_MACHINE. Если переменной состояния BOTHDSN, выполняется попытка HKEY_CURRENT_USER и используется в случае неудачи HKEY_LOCAL_MACHINE.  
+ Режим настройки указывает, где операция Odbc.ini, список значений имени DSN в сведениях о системе. Если имя DSN пользовательское имя DSN (переменной состояния — USERDSN_ONLY), эта функция записывает записи Odbc.ini в HKEY_CURRENT_USER. Если имя DSN DSN системы (SYSTEMDSN_ONLY), эта функция записывает записи Odbc.ini в HKEY_LOCAL_MACHINE. Если переменной состояния BOTHDSN, следующая HKEY_CURRENT_USER и в случае неудачи HKEY_LOCAL_MACHINE используется.  
   
 ## <a name="related-functions"></a>Связанные функции  
   

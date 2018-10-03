@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8226f0d065620db27ca1046500c89360613d9eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052274"
 ---
 # <a name="formatstring-contents-mdx"></a>Строка формата FORMAT_STRING (многомерные выражения)
   `FORMAT_STRING` Форматы свойство ячейки `VALUE` образуется значение свойства ячейки `FORMATTED_VALUE` свойство ячейки. `FORMAT_STRING` Свойство ячейки обрабатывает строковые и числовые исходные значения. выражение формата к значению, образуя отформатированное значение для применяется `FORMATTED_VALUE` свойство ячейки. В следующих таблицах подробно описан синтаксис и символы форматирования, используемые для обработки строковых и числовых значений.  

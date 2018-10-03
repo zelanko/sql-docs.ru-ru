@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritytable (Transact-SQL) | Документы Microsoft
+title: semanticsimilaritytable (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6b4b36580c35aead16780f4ada0f461dd58754
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bca3fe143308bb7bf3d8a8e7754c018c749786cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232799"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791182"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,10 +78,10 @@ SEMANTICSIMILARITYTABLE
 |**Оценка**|**REAL**|Относительное значение подобия этого документа по отношению ко всем другим подобным документам.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где чем выше показатель, тем больше соответствие, а 1.0 — идеальный показатель.|  
   
 ## <a name="general-remarks"></a>Общие замечания  
- Дополнительные сведения см. в разделе [поиск похожих и связанных документов с использованием семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+ Дополнительные сведения см. в разделе [поиск похожих и связанных документов с помощью семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
- Искать схожие документы по разным столбцам невозможно. **SEMANTICSIMILARITYTABLE** функция извлекает схожие документы только из столбца, совпадающего с исходным столбцом, который определяется **source_key** аргумент.  
+ Искать схожие документы по разным столбцам невозможно. **SEMANTICSIMILARITYTABLE** функция извлекает схожие документы только из столбца, совпадающего с исходным столбцом, определяемым **source_key** аргумент.  
   
 ## <a name="metadata"></a>Метаданные  
  Чтобы получить сведения и состояние извлечения и заполнения данных о семантическом подобии, выполните запрос к следующим динамическим административным представлениям:  

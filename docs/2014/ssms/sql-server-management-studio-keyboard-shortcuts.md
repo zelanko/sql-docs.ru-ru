@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - shortcuts [SQL Server Management Studio]
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a50cf7d5cf3ef1a99e8d10fa22263f0590f08250
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 20fe82c5ca0060d5a373f90fe72b8f4468240af8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085844"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Сочетания клавиш среды SQL Server Management Studio
   Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предлагает пользователям две схемы сочетаний клавиш на выбор. По умолчанию используется схема [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , при которой применяются те же сочетания клавиш, что и в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. Среда [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предлагает схему сочетаний клавиш, аналогичную стандартной схеме из [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Чтобы изменить схему сочетаний клавиш или добавить новые сочетания клавиш, выберите в меню **Сервис** пункт **Параметры**. Выберите предпочтительную клавиатурную схему на вкладке **Среда**страницы **Клавиатура** .  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - failover [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
-caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80db1069e46f6ec8bc8edba6820dad2780f5aacd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181222"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)
   В контексте сеанса зеркального отображения базы данных роли основного и зеркального серверов обычно взаимозаменяемы посредством так называемого *переключения ролей*. Во время переключения ролей зеркальный сервер играет роль *партнера по обеспечению отработки отказа* для основного сервера, принимая роль основного сервера и переводя свою копию базы данных в оперативное состояние в качестве новой основной базы данных. Когда бывший основной сервер входит в строй, он принимает роль зеркального, и его база данных становится новой зеркальной базой данных. Возможно многократное переключение ролей либо в ответ на многочисленные ошибки, либо в целях администрирования.  

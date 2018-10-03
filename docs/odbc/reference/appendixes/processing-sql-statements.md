@@ -1,43 +1,40 @@
 ---
-title: Обработка инструкций SQL | Документы Microsoft
+title: Обработка инструкций SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], statement processing
 - SQL statements [ODBC], cursor library
 - cursor library [ODBC], statement processing
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 603cb680e2986d484074a43d14f56de210da0b4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d5aa94062f90154126fb18c3658adb39bb1d5c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909539"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689752"
 ---
 # <a name="processing-sql-statements"></a>Обработка инструкций SQL
 > [!IMPORTANT]  
->  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этой возможности в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Корпорация Майкрософт рекомендует использовать функциональность курсора драйвера.  
+>  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Корпорация Майкрософт рекомендует использовать функциональные возможности драйвера курсора.  
   
  Библиотека курсоров ODBC передает все инструкции SQL непосредственно к драйверу, за исключением следующих:  
   
--   Располагается update и delete  
+-   Расположенный update и delete  
   
--   **ВЫБЕРИТЕ для обновления** инструкций  
+-   **SELECT FOR UPDATE** инструкций  
   
 -   Пакетные инструкции SQL  
   
- Для выполнения позиционированное обновление и удаление операторов и поместите курсор на строку, чтобы вызвать **SQLGetData** для этой строки библиотеку курсоров создает инструкция по найденному, определяющее строку.  
+ Для выполнения позиционированного обновления и удаления и поместите курсор в строку для вызова **SQLGetData** для этой строки библиотеку курсоров создает инструкция по найденному, которая определяет строку.  
   
  Этот раздел содержит следующие подразделы.  
   

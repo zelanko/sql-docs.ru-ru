@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 744658b00253b96bf6110f4382a7a6a8a8d7abfc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f2b4fa3328f2c504be6c1ff761a558a6102a5299
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176494"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Урок 1. Создание базы знаний поставщиков в службах DQS
   На этом занятии создается база знаний служб DQS **Поставщики** с набором знаний (метаданные) о данных поставщика. База знаний используется для выполнения очистки и действий сопоставления над входными данными о поставщиках. Действие очистки определяет неверные или недопустимые данные, исправляет неверные данные, предлагает исправления и рекомендации, унифицирует данные и вводит в данные дополнительные сведения. Действие сопоставления сравнивает данные и определяет в данных подобные записи (но немного различающиеся), что позволяет удалять повторения из данных.  

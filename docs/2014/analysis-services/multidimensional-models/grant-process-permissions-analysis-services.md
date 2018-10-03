@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], process
 - process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b718fab80ad85ee52cadcc9547c11848de0ee9a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187291"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181274"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Предоставление разрешений доступа (службы Analysis Services)
   В качестве администратора вы можете создать роль, предназначенную для осуществления операций обработки службы Analysis Services, которая позволит вам делегировать это отдельное задание другим пользователям или приложениям, которые используются для автоматической обработки по расписанию. Разрешения на обработку могут быть предоставлены на уровнях базы данных, куба, измерения и структуры интеллектуального анализа данных. Пока вы не работаете с очень большим кубом или табличной базой данных, мы рекомендуем вам предоставить права на обработку на уровне базы данных, включающие все объекты, включая те, которые зависят друг от друга.  

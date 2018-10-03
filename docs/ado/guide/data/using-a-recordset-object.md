@@ -1,30 +1,27 @@
 ---
-title: С помощью объекта набора записей | Документы Microsoft
+title: Использование объекта Recordset | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05a2c989d1f14849ef39b4ec93f4677ebc52510e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 985cb58b860c594e8cfc3e405934fafd9cfb245a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789452"
 ---
-# <a name="using-a-recordset-object"></a>С помощью объекта набора записей
-Кроме того, можно использовать **Recordset.Open** неявно для подключения и команды по этому соединению в одной операции. Например в Visual Basic:  
+# <a name="using-a-recordset-object"></a>Использование объекта Recordset
+Кроме того, можно использовать **Recordset.Open** неявно установить подключение и команду через это подключение в рамках одной операции. Например в Visual Basic:  
   
 ```  
 Dim oRs As ADODB.Recordset  
@@ -51,4 +48,4 @@ oRs.Close
 Set oRs = Nothing  
 ```  
   
- Обратите внимание, что **oRs.Open** принимает строку подключения (*sConn*), вместо **подключения** объекта (*oConn*), в качестве значения его  **ActiveConnection** параметра. Также применяется тип курсор на стороне клиента, задав **CursorLocation** свойство **записей** объекта. Опять же, сравните это с **HelloData** примере.
+ Обратите внимание, что **oRs.Open** принимает строку подключения (*sConn*), вместо **подключения** объекта (*oConn*), в качестве значения его  **ActiveConnection** параметра. Также применяется тип клиентский курсор, задав **CursorLocation** свойство **записей** объекта. Опять же, сравните это с **HelloData** пример.

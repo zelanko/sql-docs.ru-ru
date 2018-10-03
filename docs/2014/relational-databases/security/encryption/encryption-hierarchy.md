@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], hierarchies
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 40
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 292ac985db70fc280185b6f240565857055a8b83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164135"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093146"
 ---
 # <a name="encryption-hierarchy"></a>Иерархия средств шифрования
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] шифрует данные, используя иерархическую структуру средств шифрования и управления ключами. На каждом уровне данные низшего уровня шифруются на основе комбинации сертификатов, асимметричных ключей и симметричных ключей. Асимметричные и симметричные ключи можно хранить вне модуля расширенного управления ключами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -49,7 +46,7 @@ ms.locfileid: "37164135"
   
  На следующем рисунке показаны те же сведения другим образом.  
   
- ![Отображает некоторые сочетания методов шифрования в виде колеса. ] (../../../database-engine/media/encryption-hierarchy-wheel.gif "Отображает некоторые сочетания методов шифрования в виде колеса.")  
+ ![Отображает некоторые сочетания методов шифрования в виде колеса. ](../../../database-engine/media/encryption-hierarchy-wheel.gif "Отображает некоторые сочетания методов шифрования в виде колеса.")  
   
  Диаграмма иллюстрирует следующие дополнительные основные понятия.  
   

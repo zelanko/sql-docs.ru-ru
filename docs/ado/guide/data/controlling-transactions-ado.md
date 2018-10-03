@@ -1,30 +1,27 @@
 ---
-title: Управление транзакциями (ADO) | Документы Microsoft
+title: Управление транзакциями (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b036998fba22c19e47e9e5ced581aabeec9b07b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603624"
 ---
 # <a name="controlling-transactions-ado"></a>Управление транзакциями (ADO)
-ADO поддерживает обработку в рамках подключения с помощью транзакций **BeginTrans**, **CommitTrans**, и **RollbackTrans** методы  **Подключение** объекта. Общее представление о реализации обработки транзакций в ADO проиллюстрирован в следующем фрагменте кода.  
+ADO поддерживает обработку в рамках подключения с помощью транзакций **BeginTrans**, **CommitTrans**, и **RollbackTrans** методы  **Подключение** объекта. В следующем фрагменте кода показано общее представление о реализации обработки транзакций в ADO.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -81,6 +78,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- Здесь обработки транзакций используется, чтобы две записи обновляется как одну единицу работы, и что названия двух продуктов либо взаимозаменяемыми, либо вообще не изменяется.  
+ Здесь обработки транзакций используется для обеспечения этих двух записей будут обновляться, как одну единицу работы, и что названия двух продуктов находятся взаимозаменяемыми или вообще не изменяется.  
   
- Подробные обсуждения обработки транзакций см. в разделе [обновление и сохранение данных](../../../ado/guide/data/updating-and-persisting-data.md).
+ Присоединяйтесь к обсуждению обработки транзакций см. в разделе [обновление и сохранение данных](../../../ado/guide/data/updating-and-persisting-data.md).

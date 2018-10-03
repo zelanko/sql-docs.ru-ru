@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_log_sp (Transact-SQL) | Документы Microsoft
+title: sysmail_delete_log_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_log_sp
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f565100bff8373839e70231b0a99a716efc76ec7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a1a61fa55fc9f2b1209d0f7da7f483c0fedce07f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649213"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +46,13 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
  Удаляет записи до даты и времени, заданного параметром *logged_before* аргумент. *logged_before* — **datetime** и значение по умолчанию NULL. Значение NULL соответствует всем датам.  
   
  [ **@event_type** =] **"***event_type***"**  
- Удаляет журнальные записи определенного типа, заданного аргументом *event_type*. *event_type* — **varchar(15)** без значения по умолчанию. Допустимыми значениями являются **успех**, **предупреждение**, **ошибка**, и **Информационное**. NULL соответствует всем типам событий.  
+ Удаляет журнальные записи определенного типа, заданного аргументом *event_type*. *event_type* — **varchar(15)** не имеет значения по умолчанию. Допустимыми значениями являются **успех**, **предупреждение**, **ошибка**, и **Информационное**. NULL соответствует всем типам событий.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- Используйте **sysmail_delete_log_sp** хранимую процедуру, чтобы окончательно удалить записи из журнала компонента Database Mail. Необязательный аргумент позволяет удалять записи определенной давности. Из этого следует, что удаляются события, созданные ранее даты, заданной в аргументе. Необязательный аргумент позволяет удалять только события определенного типа, указанный как **event_type** аргумент.  
+## <a name="remarks"></a>Примечания  
+ Используйте **sysmail_delete_log_sp** хранимую процедуру, чтобы окончательно удалить записи из журнала компонента Database Mail. Необязательный аргумент позволяет удалять записи определенной давности. Из этого следует, что удаляются события, созданные ранее даты, заданной в аргументе. Необязательный аргумент позволяет удалять только события определенного типа, заданный как **event_type** аргумент.  
   
  При удалении записей из журнала компонента Database Mail записи электронной почты не удаляются из таблиц Database Mail. Используйте [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) для удаления электронной почты из таблиц компонента Database Mail.  
   
@@ -93,6 +90,6 @@ GO
 ## <a name="see-also"></a>См. также  
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
- [Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
+ [Создание задания агента SQL Server по архивации сообщений и журналов событий компонента Database Mail](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

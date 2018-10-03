@@ -1,13 +1,11 @@
 ---
-title: Типы данных даты и времени | Документы Microsoft
+title: Типы данных даты и времени | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time data type [ODBC]
@@ -21,25 +19,25 @@ helpviewer_keywords:
 - compatibility [ODBC], datetime data types
 - data types [ODBC], time
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20d53f9d19845cb55af304ce08a321bfc07d44b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d546fff544c616d4f2750dba76c4b8e68d21aab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619529"
 ---
 # <a name="datetime-data-types"></a>Типы данных даты и времени
-В ODBC 3 *.x*, идентификаторы для даты, времени и типы данных timestamp SQL были изменены из SQL_DATE, SQL_TIME и SQL_TIMESTAMP (экземплярами **#define** в файле заголовка, 9, 10 и 11) для SQL_ TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP (экземплярами **#define** в файле заголовка 91, 92 и 93) соответственно. Соответствующий тип C идентификаторы измененных с SQL_C_DATE, SQL_C_TIME и SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME и SQL_C_TYPE_TIMESTAMP, соответственно и экземпляры **#define** были изменены соответствующим образом.  
+В ODBC 3 *.x*, идентификаторы для даты, времени и типы данных timestamp SQL были изменены относительно SQL_DATE, SQL_TIME и SQL_TIMESTAMP (экземплярами **#define** в файле заголовка, 9, 10 и 11) для SQL_ TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP (экземплярами **#define** в файле заголовка, 91, 92 и 93), соответственно. Соответствующий тип C идентификаторы были изменены относительно SQL_C_DATE SQL_C_TIME и SQL_C_TIMESTAMP SQL_C_TYPE_DATE SQL_C_TYPE_TIME и SQL_C_TYPE_TIMESTAMP, соответственно и в экземплярах **#define** были изменены соответствующим образом.  
   
- Размер столбца и десятичных цифр, возвращаемых для типов данных даты и времени SQL в ODBC 3 *.x* являются таким же, как точность и масштаб возвращается для них в ODBC 2. *x*. Эти значения могут отличаться от значений в полях дескриптора SQL_DESC_PRECISION и SQL_DESC_SCALE. (Дополнительные сведения см. в разделе [размер столбца, десятичных цифр, длина в октетах передачи и отображаемый размер](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) в типах данных приложение г.)  
+ Размер столбца и десятичных цифр, возвращаемых для типов данных даты и времени SQL в ODBC 3 *.x* являются, так же, как точность и масштаб возвращается для них в ODBC 2. *x*. Эти значения могут отличаться от значений в полях дескриптора SQL_DESC_PRECISION и SQL_DESC_SCALE. (Дополнительные сведения см. в разделе [размер столбца, десятичных разрядов, длительность октета передачи и отображаемый размер](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) в типах данных приложение D:.)  
   
  Эти изменения влияют на **SQLDescribeCol**, **SQLDescribeParam**, и **SQLColAttributes**; **SQLBindCol**, **SQLBindParameter**, и **SQLGetData**; и **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, и **SQLSpecialColumns**.  
   
- ODBC 3 *.x* драйвер обрабатывает вызовы функций, перечисленных в предыдущем абзаце согласно настройке атрибута SQL_ATTR_ODBC_VERSION среды. Для **SQLColumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**, **SQLSpecialColumns**, и **SQLStatistics** , если SQL_ATTR_ODBC_VERSION задано значение SQL_OV_ODBC3, функции возвращают SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP в тип данных поля. Столбца COLUMN_SIZE (в результирующий набор, возвращенный **SQLColumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**, и **SQLSpecialColumns**) содержит точность двоичного представления для приблизительный числовой тип. Столбец NUM_PREC_RADIX (в результирующий набор, возвращенный **SQLColumns**, **SQLGetTypeInfo**, и **SQLProcedureColumns**) содержит значение 2. Если SQL_ATTR_ODBC_VERSION имеет значение SQL_OV_ODBC2, то функции возвращаемого SQL_DATE, SQL_TIME и SQL_TIMESTAMP в поле DATA_TYPE, столбца COLUMN_SIZE содержит десятичную точность для приблизительный числовой тип, а столбец NUM_PREC_RADIX содержит значение 10.  
+ ODBC 3 *.x* драйвер обрабатывает вызовы функций, перечисленных в предыдущем абзаце в соответствии с настройкой атрибута SQL_ATTR_ODBC_VERSION среды. Для **SQLColumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**, **SQLSpecialColumns**, и **SQLStatistics** , если SQL_ATTR_ODBC_VERSION присваивается значение SQL_OV_ODBC3, функции возвращают результат SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP в поле DATA_TYPE. В столбце COLUMN_SIZE (в результирующий набор, возвращаемый **SQLColumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**, и **SQLSpecialColumns**) содержит двоичной точностью для приблизительного числового типа. Столбец NUM_PREC_RADIX (в результирующий набор, возвращаемый **SQLColumns**, **SQLGetTypeInfo**, и **SQLProcedureColumns**) содержит значение 2. Если SQL_ATTR_ODBC_VERSION имеет значение SQL_OV_ODBC2, а затем функции возврата SQL_DATE, SQL_TIME и SQL_TIMESTAMP в поле DATA_TYPE, столбца COLUMN_SIZE содержит десятичную точность для приблизительного числового типа, а столбец NUM_PREC_RADIX содержит значение 10.  
   
- Когда запрашиваются все типы данных в вызове **SQLGetTypeInfo**, результирующий набор, возвращаемый функцией будет содержать SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP, как определено в ODBC 3 *.x*, и SQL_DATE, SQL_TIME и SQL_TIMESTAMP, как определено в ODBC 2. *x*.  
+ При запросе всех типов данных в вызове **SQLGetTypeInfo**, результирующий набор, возвращаемый функцией будет содержать SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP, как определено в ODBC 3 *.x*, и SQL_DATE, SQL_TIME и SQL_TIMESTAMP, как определено в ODBC 2. *x*.  
   
- Из-за как ODBC 3 *.x* диспетчера драйверов выполняет сопоставление типов даты, времени и отметок времени данных, ODBC 3 *.x* драйверы нужно будет только выбрать **#defines** 91, 92, и 93 для даты, времени и типы данных timestamp C введено в *TargetType* аргументы **SQLBindCol** и **SQLGetData** или  *ValueType* аргумент **SQLBindParameter**и нужно будет только выбрать **#defines** 91, 92 и 93 для даты, времени и типы данных timestamp SQL, введенных в *ParameterType* аргумент **SQLBindParameter** или *DataType* аргумент **SQLGetTypeInfo**. Дополнительные сведения см. в разделе [изменения типов данных даты и времени](../../../odbc/reference/develop-app/datetime-data-type-changes.md).
+ Из-за как ODBC 3 *.x* диспетчера драйверов выполняет сопоставление типов date, time и timestamp данных, ODBC 3 *.x* драйверы нужно будет только выбрать **#defines** 91, 92, и Введенный 93 для даты, времени и типы данных timestamp C в *TargetType* аргументы **SQLBindCol** и **SQLGetData** или  *ValueType* аргумент **SQLBindParameter**и нужно будет только выбрать **#defines** 91, 92 и 93 для даты, времени и типы данных timestamp SQL, введенные в *ParameterType* аргумент **SQLBindParameter** или *DataType* аргумент **SQLGetTypeInfo**. Дополнительные сведения см. в разделе [изменения типов данных даты и времени](../../../odbc/reference/develop-app/datetime-data-type-changes.md).

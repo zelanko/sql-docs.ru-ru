@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 260183c80e3efaa53ba5c0e7000c54a1102425e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82e3388321e182e866eb229c7613a1950c80eda1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179731"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149024"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
   Выражение с учетом расположения (NEAR) может применяться в предикате [CONTAINS](/sql/t-sql/queries/contains-transact-sql) или функции [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) для поиска слов или фраз, расположенных рядом. Также можно указать максимальное количество слов, которые не включаются в поиск и разделяют первое и последнее из искомых слов. Кроме того, можно искать два слова или две фразы в любом порядке или в порядке, в котором они указаны. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [термин универсальное выражение с учетом](#Generic_NEAR), которое теперь считается устаревшим и [термин настраиваемое выражение с учетом](#Custom_NEAR), которое впервые появилось в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -92,7 +89,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ### <a name="combining-a-custom-proximity-term-with-other-terms"></a>Сочетание настраиваемого выражения с учетом расположения и других выражений  
- Настраиваемое выражение с учетом расположения можно сочетать с некоторыми другими выражениями. Операторы AND (&), OR (|) и AND NOT (&!) позволяют сочетать настраиваемое выражение с учетом расположения с другим настраиваемым выражением с учетом расположения, простым выражением или префиксным выражением. Например:  
+ Настраиваемое выражение с учетом расположения можно сочетать с некоторыми другими выражениями. Операторы AND (&), OR (|) и AND NOT (&!) позволяют сочетать настраиваемое выражение с учетом расположения с другим настраиваемым выражением с учетом расположения, простым выражением или префиксным выражением. Пример:  
   
 -   CONTAINS('NEAR((*выражение1*,*выражение2*),5) AND *выражение3*')  
   
@@ -177,7 +174,7 @@ GO
  Дополнительные сведения см. в подразделе [Дополнительные сведения о поиске по сходству](#Additional_Considerations) далее в этом разделе.  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>Сочетание универсального выражения с учетом расположения и других выражений  
- Операторы AND (&), OR (|) и AND NOT (&!) позволяют сочетать универсальное выражение с учетом расположения с другим универсальным выражением с учетом расположения, простым выражением или префиксным выражением. Например:  
+ Операторы AND (&), OR (|) и AND NOT (&!) позволяют сочетать универсальное выражение с учетом расположения с другим универсальным выражением с учетом расположения, простым выражением или префиксным выражением. Пример:  
   
 ```  
 CONTAINSTABLE (Production.ProductDescription,  

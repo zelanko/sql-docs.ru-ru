@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210224"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165754"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Проверка подлинности и авторизация PowerPivot
   Развертывание PowerPivot для SharePoint, работающее в пределах фермы SharePoin 2010, использует подсистему проверки подлинности и модель авторизации, предоставляемые серверами SharePoint. Инфраструктура безопасности SharePoint распространяется на содержимое и операции PowerPivot, поскольку все содержимое PowerPivot хранится в базах данных содержимого SharePoint, а все операции, связанные с PowerPivot, выполняются общими службами PowerPivot на ферме. Перед запросом книги, содержащей данные PowerPivot, пользователь должен пройти проверку подлинности при помощи удостоверения пользователя SharePoint, которое основано на учетных данных пользователя Windows. Разрешения на просмотр книги определяют, возможно ли выполнение запроса.  

@@ -1,13 +1,11 @@
 ---
-title: Вызов SQLCloseCursor | Документы Microsoft
+title: Вызов SQLCloseCursor | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application upgrades [ODBC], SQLCloseCursor
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - upgrading applications [ODBC], SQLCloseCursor
 - compatibility [ODBC], SQLCloseCursor
 ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d574729d7fa49a65b26e067c54a0af459a36094
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ee139dd652204c750c99d8bad8ab2b17c7c1ba1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685962"
 ---
 # <a name="calling-sqlclosecursor"></a>Вызов SQLCloseCursor
-Поскольку **SQLCloseCursor** практически совпадает **SQLFreeStmt** с SQL_CLOSE, диспетчер драйверов не соответствует этой функции. Функции замены сопоставлены, чтобы существующие ODBC 2 *.x* приложения можно легко переместить в ODBC 3. *x* с помощью новых функций. Это решение упрощает для таких приложений начать использовать новые ODBC 3. *x* функциональность внутри условного кода в модульном варианте. **SQLCloseCursor** не представляет никаких новых функциональных возможностей. Приложения не смогут получить все преимущества, переместив **SQLCloseCursor** из **SQLFreeStmt** с SQL_CLOSE.
+Так как **SQLCloseCursor** практически не отличается от как **SQLFreeStmt** с SQL_CLOSE, диспетчер драйверов не соответствует этой функции. Функции замены сопоставляются таким образом, чтобы существующие ODBC 2 *.x* приложений можно легко переместить в ODBC 3. *x* с помощью новых функций. Это решение упрощает для таких приложений начать работу с новой ODBC 3. *x* функции внутри условного кода в модульном варианте. **SQLCloseCursor** не представляет никаких новых функциональных возможностей. Приложения не смогут получить все преимущества, переместив **SQLCloseCursor** из **SQLFreeStmt** с SQL_CLOSE.

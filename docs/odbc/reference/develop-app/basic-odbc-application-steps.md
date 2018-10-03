@@ -1,31 +1,28 @@
 ---
-title: Базовый ODBC приложение действия | Документы Microsoft
+title: Этапы приложения базовый ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC]
 - application process [ODBC], about application process
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45b9c9b028e6cc3c380ea8f0da754cebb0f860d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb15d3b64496374bed5b16f2661528c7ba1f9aae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908369"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761332"
 ---
-# <a name="basic-odbc-application-steps"></a>Базовый ODBC действия приложения
-В этом разделе описываются общие потока приложений ODBC. Маловероятно, что любое приложение вызывает все эти функции именно в такой последовательности. Однако большинство приложений использует небольшие различия следующие действия. На следующем рисунке показаны шаги основного приложения.  
+# <a name="basic-odbc-application-steps"></a>Общие шаги по работе с приложением ODBC
+В этом разделе описывается общая схема потока приложения ODBC. Маловероятно, что любое приложение вызывает все эти функции именно в такой последовательности. Однако большинство приложений использует некоторую вариацию следующие действия. На следующем рисунке показаны этапы основные приложения.  
   
  ![Основные шаги для приложения ODBC](../../../odbc/reference/develop-app/media/pr10.gif "pr10")  
   

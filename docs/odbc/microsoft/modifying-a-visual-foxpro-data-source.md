@@ -1,42 +1,39 @@
 ---
-title: Изменение источника данных Visual FoxPro | Документы Microsoft
+title: Изменение источника данных Visual FoxPro | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], changing
 - editing data sources [ODBC], Visual FoxPro
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31a455855204b5b608f22955120f3a58c1e6b3f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fabd9efd5e6dcfcabd318584364d8f1d70752ad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899939"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800672"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Изменение источника данных Visual FoxPro
-### <a name="to-modify-a-visual-foxpro-data-source"></a>Чтобы изменить источник данных Visual FoxPro  
+### <a name="to-modify-a-visual-foxpro-data-source"></a>Изменение источника данных Visual FoxPro  
   
-1.  На компьютерах под управлением Windows 2000 откройте панель управления Windows и дважды щелкните значок Администрирование.  
+1.  На компьютерах под управлением Windows 2000 откройте панель управления Windows, а затем дважды щелкните Администрирование.  
   
-2.  Дважды щелкните источники данных (ODBC), чтобы открыть диалоговое окно администратора источника данных ODBC. Этот значок доступна после установки драйвера ODBC для Visual FoxPro или любое программное обеспечение драйвера ODBC.  
+2.  Дважды щелкните источники данных (ODBC) чтобы открыть диалоговое окно администратора источника данных ODBC. Этот значок доступна после установки драйвера ODBC для Visual FoxPro или программное обеспечение драйвера ODBC.  
   
     > [!NOTE]  
-    >  При использовании предыдущей версии Windows, откройте панель управления Windows и дважды щелкните 32-разрядных ODBC или ODBC, чтобы открыть диалоговое окно администратора источника данных ODBC.  
+    >  Если вы используете предыдущую версию Windows, откройте панель управления Windows и дважды щелкните 32-разрядный ODBC или ODBC, чтобы открыть диалоговое окно администратора источника данных ODBC.  
   
-3.  На вкладке «пользовательский DSN или системный DSN» выберите имя источника данных, который вы хотите изменить и нажмите кнопку настроить.  
+3.  На вкладке "DSN пользователя или системное имя DSN" выберите имя источника данных, который вы хотите изменить и щелкните "настроить".  
   
-4.  В [диалоговое окно установки Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), выбрать и изменить элементы, которые необходимо изменить, а затем нажмите кнопку ОК.  
+4.  В [диалоговое окно настройки ODBC для Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), выбрать и изменить элементы, которые необходимо изменить, а затем нажмите кнопку ОК.  
   
 5.  Нажмите кнопку ОК, чтобы сохранить изменения и закрыть диалоговое окно администратора источника данных ODBC.  
   
