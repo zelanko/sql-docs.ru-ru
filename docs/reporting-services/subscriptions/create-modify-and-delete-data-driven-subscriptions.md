@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6cd4519bffe5ff01f579f75e3627219c3ed99cf
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3a7759473698ebdae0a9e97e7487f8812983d5b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849152"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Создание, изменение и удаление управляемых данными подписок
   Управляемая данными подписка — это подписка на основе запроса, которая получает необходимые данные во время выполнения. При запуске такой подписки обрабатывается запрос на получение обновленной информации о получателях, параметрах доставки отчета, форматах подготовки и установки параметров. Результаты запроса объединены с определением подписки для создания динамической подписки, использующей данные, которые уже введены в базу данных служащего, клиента или любую другую базу данных, содержащую информацию, которая может использоваться как данные подписчика.  

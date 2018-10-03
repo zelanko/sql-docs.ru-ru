@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
@@ -24,23 +22,22 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f3254d3356caefcd7f9e15709702970a9b064e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291050"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050184"
 ---
 # <a name="integration-services-ssis-logging"></a>Ведение журналов в службах Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат регистраторы, которые могут использоваться для реализации ведения журналов в пакетах, контейнерах и задачах. При ведении журнала можно записать текущие сведения о пакете, что поможет при каждом выполнении пакета проводить его аудит и устранять неисправности. Например, журнал может записать имя оператора, запускающего пакет, и время, в которое пакет был начат или завершен.  
   
- Вы можете настроить область ведения журнала на время выполнения пакета на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Enable Logging for Package Execution on the SSIS Server](../enable-logging-for-package-execution-on-the-ssis-server.md).  
+ Вы можете настроить область ведения журнала на время выполнения пакета на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Включение ведения журналов при выполнении пакета на сервере служб SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md).  
   
- Можно также включить ведение журнала при выполнении пакета из командной строки с помощью программы **dtexec** . Дополнительные сведения об аргументах командной строки, относящихся к ведению журналов, см. в разделе [dtexec Utility](../packages/dtexec-utility.md).  
+ Можно также включить ведение журнала при выполнении пакета из командной строки с помощью программы **dtexec** . Дополнительные сведения об аргументах командной строки, относящихся к ведению журналов, см. в разделе [служебная программа dtexec](../packages/dtexec-utility.md).  
   
 ## <a name="configure-logging-in-sql-server-data-tools"></a>Настройка ведения журналов в SQL Server Data Tools  
  Журналы ассоциируются с пакетами и настраиваются на уровне пакета. Каждая задача или контейнер пакета может вести журнал в любом журнале пакета. Можно включить ведение журналов задач и контейнеров пакета, даже если ведение журнала содержащего их пакета не включено. Например, можно включить ведение журнала задачи «Выполнение SQL», не включая ведение журнала ее родительского пакета. Пакет, контейнер и задача могут делать записи в нескольких журналах. Можно включить ведение журнала только для пакета либо для любой индивидуальной задачи или контейнера, содержащегося в пакете.  
@@ -78,7 +75,7 @@ ms.locfileid: "37291050"
   
  Регистраторы в пакете являются элементами коллекции регистраторов пакета. При создании пакета и реализации ведения журналов с использованием конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] вы можете видеть список элементов коллекции в папках **Регистратор** на вкладке **Обозреватель пакетов** конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- Настройте регистратор путем предоставления имени и описания для регистратора и указания диспетчера соединений, который используется данным регистратором. Регистратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует диспетчер соединений OLE DB. Регистраторы текстового файла, приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]и XML-файла используют диспетчеры подключения файлов. Регистратор журнала событий Windows не использует диспетчер соединений, потому что он напрямую обращается к журналу регистрации событий Windows. Дополнительные сведения см. в разделах [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md) и [File Connection Manager](../connection-manager/file-connection-manager.md).  
+ Настройте регистратор путем предоставления имени и описания для регистратора и указания диспетчера соединений, который используется данным регистратором. Регистратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует диспетчер соединений OLE DB. Регистраторы текстового файла, приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]и XML-файла используют диспетчеры подключения файлов. Регистратор журнала событий Windows не использует диспетчер соединений, потому что он напрямую обращается к журналу регистрации событий Windows. Дополнительные сведения см. в разделах [Диспетчер соединений OLE DB](../connection-manager/ole-db-connection-manager.md) и [диспетчер подключения файлов](../connection-manager/file-connection-manager.md).  
   
 ### <a name="logging-customization"></a>Настройка ведения журналов  
  Чтобы настроить ведение журнала для события или пользовательского сообщения, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют схему общих записываемых данных для включения в записи журнала. Схема журнала служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] определяет данные, которые можно сохранить в журнал. Можно выбрать элементы схемы журнала для каждой записи.  
@@ -204,7 +201,7 @@ ms.locfileid: "37291050"
   
 -   Преобразование «Статистическая обработка» с именем «Сложение Quantity и LineItemTotalCost» затратило в общей сложности 220 мс (141 на шаге PrimeOutput и 79 на шаге ProcessInput) на вычисление и передачу данных следующему преобразованию.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  В следующем списке приведены ссылки на разделы, в которых описывается выполнение задач, связанных с функцией ведения журналов.  
   
 -   [Диалоговое окно "Настройка журналов служб SSIS"](../configure-ssis-logs-dialog-box.md)  

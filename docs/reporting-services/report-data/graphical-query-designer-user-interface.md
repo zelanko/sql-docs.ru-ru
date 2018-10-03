@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -18,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6aeff0f3d7f49a8f74da7fa5303b337cc34b5efc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: eaa7c799c6897403b085eb55acf7de3e4247aa77
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844658"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Пользовательский интерфейс графического конструктора запросов
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический и текстовый конструкторы запросов, предназначенных для получения данных из реляционной базы данных в качестве набора данных отчета в конструкторе отчетов. Графический конструктор запросов используется для интерактивного создания запроса и для просмотра результатов при работе с источниками данных следующих типов: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB и ODBC. Текстовый конструктор запросов применяется для задания нескольких инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , запросов и команд со сложным синтаксисом и запросов на основе выражений. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c). Дополнительные сведения о работе с конкретными типами источников данных см. в разделе [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  

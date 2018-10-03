@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Designer
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7c5920ede56424510e1a6edca52e6de8d56b099
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7686f2db3e033fa6d38e0f7a7f9616d93c11a1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048784"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Конструктор измерений (службы Analysis Services — многомерные данные)
   Конструктор измерений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] применяется для просмотра данных, содержащихся в измерении, и изменения различных свойств существующего измерения: атрибутов, иерархий, уровней, связей атрибутов и преобразований.  

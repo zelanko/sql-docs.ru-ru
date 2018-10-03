@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 765db574f9db0a4e81dbdbfc4a154e1ccad01491
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050974"
 ---
 # <a name="processing-analysis-services-objects"></a>Обработка объектов служб Analysis Services
   Обрабатываются следующие типы объектов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , кубы, измерения, группы мер, секции, а также структуры и модели интеллектуального анализа данных. Для каждого объекта можно указать уровень обработки или назначить его обработку по умолчанию, чтобы службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могли выбрать его автоматически. Дополнительные сведения об уровнях обработки для каждого объекта см. в разделе [Настройка параметров обработки (службы Analysis Services)](processing-options-and-settings-analysis-services.md).  

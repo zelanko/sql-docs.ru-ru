@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - backups [SQL Server], about
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-caps.latest.revision: 81
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049404"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   В этом разделе представлены сведения о компоненте резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Резервное копирование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет важное значение для защиты данных. Здесь представлено описание типов резервных копий и ограничений резервного копирования. В рамках данной темы также рассмотрены устройства резервного копирования и носители данных резервных копий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -88,7 +85,7 @@ ms.locfileid: "37163035"
   
  **Носитель резервной копии термины и определения**  
   
- [устройство резервного копирования](backup-devices-sql-server.md)  
+ [Устройство резервного копирования](backup-devices-sql-server.md)  
  Диск или ленточное устройство, на которые записываются резервные копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для последующего восстановления. Резервные копии SQL Server можно также записать в службу хранилища больших двоичных объектов Windows Azure, а формат **URL** используется, чтобы указать назначение и имя файла резервной копии. Дополнительные сведения см. в разделе [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [носитель данных резервной копии](media-sets-media-families-and-backup-sets-sql-server.md)  

@@ -4,10 +4,7 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-soap-headers
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 277121625c568b060a560adaa5342f8f40083537
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2652b7ac43daba48c214de00d9787a60c6a7b4c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857072"
 ---
 # <a name="identifying-execution-state"></a>Определение состояния выполнения
   Протокол HTTP является протоколом без установления соединения и без сохранения состояния. Это означает, что он не может автоматически определить, что различные запросы получены от одного клиента или что один экземпляр браузера продолжает активно просматривать страницу или веб-сайт. Сеансы создают логическое соединение, чтобы сохранять состояние между сервером и клиентом по протоколу HTTP. Сведения конкретного пользователя, относящиеся к определенному сеансу, называются «состоянием сеанса».  

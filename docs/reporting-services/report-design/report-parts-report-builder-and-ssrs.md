@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2df778f440624ebbf63d91d8f28fb7dc7b0b1163
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 776c70ad78a8746f261130c7348f92582629c17a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849262"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Элементы отчета (построитель отчетов и службы SSRS)
   Элементы отчетов, такие как таблицы, матрицы, диаграммы и изображения, можно публиковать как *элементы отчета*. Части отчета — это элементы отчета с разбиением на страницы, опубликованные отдельно на сервере отчетов, которые можно повторно использовать в других отчетах с разбиением на страницы. Элементы отчета имеют расширение RSC.  
