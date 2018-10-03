@@ -1,31 +1,28 @@
 ---
-title: Пример Visual Basic формирования данных | Документы Microsoft
+title: Пример формирования данных Visual Basic | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic example of data shaping[ADO], about data shaping
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e6f7fd8431a189a031b44206b13c711ea74e7b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 772fb84482346402133874ff5e177f4d3c8b30c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273353"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645642"
 ---
-# <a name="visual-basic-example-of-data-shaping"></a>Пример Visual Basic формирование данных
+# <a name="visual-basic-example-of-data-shaping"></a>Пример формирования данных (Visual Basic)
 ```  
 ' This application makes use of Microsoft Hierarchical FlexGrid  
 ' Control, which is named as MSHFLexGrid.  
@@ -96,14 +93,14 @@ End Function
   
 #### <a name="try-it"></a>Попробуйте!  
   
-1.  Создайте проект стандартного исполняемого файла Visual Basic приложения  
+1.  Создайте проект приложения Visual Basic, Standard EXE  
   
 2.  Выберите **компоненты** из **проекта** меню в Visual Studio  
   
-3.  Выберите «Microsoft иерархические FlexGrid управления 6.0 (OLE DB)» из **компоненты** всплывающем окне и нажмите кнопку **Сохранить**.  
+3.  Выберите «Microsoft иерархические FlexGrid управления 6.0 (OLEDB)» из **компоненты** во всплывающем окне и нажмите кнопку **Сохранить**.  
   
-4.  Дважды щелкните элемент управления FlexGrid из области элементов в рабочей области Visual Basic. Измените имя данного экземпляра на MSHFLEXGRID.  
+4.  Дважды щелкните элемент управления FlexGrid из области элементов в рабочей области Visual Basic. Измените имя этого экземпляра на MSHFLEXGRID.  
   
-5.  Скопируйте приведенный выше код и вставьте его в **кода** страницу, чтобы заменить существующий код.  
+5.  Скопируйте приведенный выше код и вставьте его в **кода** странице, чтобы заменить существующий код.  
   
-6.  Выберите **запустить** из **запуска** меню для выполнения приложения.
+6.  Выберите **запустить** из **запуска** меню, чтобы выполнить приложение.

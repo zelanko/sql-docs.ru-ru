@@ -1,15 +1,12 @@
 ---
-title: Свойство ExpirationDate (класс SecurityCertificate) | Документы Microsoft
+title: Свойство ExpirationDate (класс SecurityCertificate) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ExpirationDate Property (SecurityCertificate Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - ExpirationDate property
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 29a55c1162604c677430e76658de6b14012a3198
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 660677002e065b901f2c915aa0978093a8155440
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006361"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703309"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Свойство ExpirationDate (класс SecurityCertificate)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +38,15 @@ object.ExpirationDate [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объект*  
+ *object*  
  Объект [класса SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) , представляющий сертификат безопасности.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
- Объект **uint32** значение, указывающее дату истечения срока действия сертификата безопасности.  
+ Объект **uint32** значение, определяющее дату истечения срока действия для сертификата безопасности.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка сетевых протоколов сервера и сетевых библиотек](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

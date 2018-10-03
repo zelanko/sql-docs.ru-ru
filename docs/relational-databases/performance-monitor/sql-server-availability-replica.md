@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -17,22 +14,21 @@ helpviewer_keywords:
 - SQLServer:Availability Replica
 - Availability Groups [SQL Server], performance counters
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e254f66c396071dca0a9eca2ac1ff2e390ae700c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27038f80f725078d51ab6c723c895a2718004f19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951089"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749523"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, реплика доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Объект производительности **SQLServer:Availability Replica** содержит счетчики производительности, которые сообщают сведения о репликах доступности в группах доступности AlwaysOn в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Все счетчики производительности реплик доступности применяются и к первичной реплике, и к вторичным репликам, при этом счетчики отправленных и принятых данных относятся к локальной реплике. В большинстве случаев первичная реплика отправляет большую часть данных, а вторичные реплики данные получают. Однако вторичные реплики отправляют подтверждения и другой фоновый трафик в первичную реплику. Учтите, что для определенной реплики доступности некоторые счетчики будут показывать нулевое значение, что зависит от текущей роли (первичной или вторичной) локальной реплики.  
   
-|Имя счетчика|Description|  
+|Имя счетчика|Описание|  
 |------------------|-----------------|  
 |**Получено из реплики, байт/с**|Число байтов, полученных от реплики доступности за одну секунду. Проверка связи и обновления состояния создают сетевой трафик даже при отсутствии обновлений базы данных со стороны пользователей.|  
 |**Отправлено в реплику, байт/с**|Число байтов, передаваемых в дальнюю реплику доступности в секунду. В первичной реплике это значение показывает число байтов, отправленных во вторичную реплику. Во вторичной реплике это число байтов, переданных в первичную реплику.|  

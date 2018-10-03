@@ -1,13 +1,11 @@
 ---
-title: Свойство Description (ADO MD) | Документы Microsoft
+title: Свойство Description (многомерные Объекты ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -20,27 +18,26 @@ f1_keywords:
 helpviewer_keywords:
 - Description property [ADO MD]
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b073b4719de6554159947502a525d242f37e6707
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 643bcfef67b1f3c5434d7beaac46da2d46bbdd14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655550"
 ---
-# <a name="description-property-ado-md"></a>Свойство Description (ADO MD)
+# <a name="description-property-ado-md"></a>Свойство Description (многомерные объекты ADO)
 Возвращает текстовое описание текущего объекта.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает **строка** и доступно только для чтения.  
+ Возвращает **строка** и доступен только для чтения.  
   
 ## <a name="remarks"></a>Примечания  
- Для [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объектов, **описание** применяется только к меры и формулы элементов. **Описание** возвращает пустую строку ("») для всех других типов элементов. Дополнительные сведения о различных типах элементов см. в разделе [тип](../../../ado/reference/ado-md-api/type-property-ado-md.md) свойства.  
+ Для [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объектов, **описание** применяется только к меры и формулы членов. **Описание** возвращает пустую строку ("») для всех других типов элементов. Дополнительные сведения о разных типах элементов см. в разделе [тип](../../../ado/reference/ado-md-api/type-property-ado-md.md) свойства.  
   
- Это свойство поддерживается только на **член** объектов, принадлежащих [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта. Произошла ошибка при обращении к этому свойству из **член** объектов, принадлежащих [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) объекта.  
+ Это свойство поддерживается только в **член** объектов, принадлежащих [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта. Произошла ошибка при ссылке на это свойство из **член** объекты, принадлежащие [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) объекта.  
   
 ## <a name="applies-to"></a>Объект применения  
   

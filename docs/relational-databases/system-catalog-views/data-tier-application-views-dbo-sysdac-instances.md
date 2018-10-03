@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysdac_instances_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - dbo.sysdac_instances
 - sysdac_instances
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 813a786f68fe02431073033172d37ffe2c682ee0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d6cb75ec737a8342f284179b37bbcd09d1eec335
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031342"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654156"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>Представления приложения уровня данных — dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ ms.locfileid: "38031342"
 |instance_id|**uniqueidentifier**|Идентификатор экземпляра DAC.|  
 |имя_экземпляра|**sysname**|Имя экземпляра приложения уровня данных, указанное при развертывании DAC.|  
 |type_name|**sysname**|Имя DAC, указанное при создании пакета DAC.|  
-|type_version|**nvarchar(64)**|Версия DAC, указанная при создании пакета DAC.|  
+|type_version|**Nvarchar(64)**|Версия DAC, указанная при создании пакета DAC.|  
 |description|**nvarchar(4000)**|Описание DAC, записанное при создании пакета DAC.|  
 |type_stream|**varbinary(max)**|Битовый поток, который содержит закодированное представление логических объектов, таких как таблицы и представления, содержащихся в DAC.|  
 |date_created|**datetime**|Дата и время создания экземпляра DAC.|  

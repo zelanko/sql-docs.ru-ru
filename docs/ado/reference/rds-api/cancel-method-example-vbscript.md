@@ -1,35 +1,32 @@
 ---
-title: Отмена пример метода (VBScript) | Документы Microsoft
+title: Пример метода (VBScript) Cancel | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Cancel method [ADO], VBScript example
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7aaa6af81c27e812886b28c877e77b7497642550
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 37f4f2ee7f0e33504a1133a5927ca8232d952bef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287273"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748902"
 ---
 # <a name="cancel-method-example-vbscript"></a>Пример метода Cancel (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как прочитать [отменить](../../../ado/reference/ado-api/cancel-method-ado.md) метод во время выполнения. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как CancelVBS.asp. Результат можно просмотреть в любом браузере клиента.  
+ В следующем примере показано, как для чтения [отменить](../../../ado/reference/ado-api/cancel-method-ado.md) во время выполнения. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как CancelVBS.asp. Результат можно просмотреть в любом браузере клиента.  
   
 ```  
 <!-- BeginCancelVBS -->  

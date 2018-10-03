@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collection_set (Transact-SQL) | Документы Microsoft
+title: sp_syscollector_update_collection_set (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62867f22c044a42c40499e0a1143557621931db8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261430"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702743"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +56,11 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@collection_set_id =** ] *collection_set_id, чтобы выделить*  
- Уникальный локальный идентификатор набора элементов сбора. *collection_set_id, чтобы выделить* — **int** и должен иметь значение, если *имя* имеет значение NULL.  
+ [  **@collection_set_id =** ] *collection_set_id*  
+ Уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int** и должен иметь значение, если *имя* имеет значение NULL.  
   
  [  **@name =** ] "*имя*"  
- Имя набора элементов сбора. *имя* — **sysname** и должен иметь значение, если *collection_set_id, чтобы выделить* имеет значение NULL.  
+ Имя набора элементов сбора. *имя* — **sysname** и должен иметь значение, если *collection_set_id* имеет значение NULL.  
   
  [  **@new_name =** ] "*новое_имя*"  
  Новое имя для набора элементов сбора. *новое_имя* — **sysname**, и при использовании не может быть пустой строкой. *новое_имя* должно быть уникальным. Чтобы получить список имен текущего набора сбора, выполните запрос системного представления syscollector_collection_sets.  
@@ -82,7 +78,7 @@ sp_syscollector_update_collection_set
  Если изменение с некэшированного на кэшированный (0), необходимо также указать либо *schedule_uid* или *schedule_name*.  
   
  [  **@days_until_expiration=** ] *days_until_expiration*  
- Число дней, в течение которых собранные данные хранятся в хранилище данных управления. *days_until_expiration* — **smallint**. *days_until_expiration* должно быть 0 или положительным целым числом.  
+ Число дней, в течение которых собранные данные хранятся в хранилище данных управления. *days_until_expiration* — **smallint**. *days_until_expiration* должно равняться 0 или положительным целым числом.  
   
  [  **@proxy_id =** ] *proxy_id*  
  Уникальный идентификатор учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* — **int**.  
@@ -129,10 +125,10 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Функция sp_syscollector_update_collection_set должна выполняться в контексте системной базы данных msdb.  
   
- Либо *collection_set_id, чтобы выделить* или *имя* должен иметь значение, и не может иметь значение NULL. Чтобы получить эти значения, выполните запрос системного представления syscollector_collection_sets.  
+ Либо *collection_set_id* или *имя* должен иметь значение, не может быть NULL. Чтобы получить эти значения, выполните запрос системного представления syscollector_collection_sets.  
   
  Если набор сбора выполняется, можно обновить только *schedule_uid* и *описание*. Чтобы остановить набор сбора, используйте [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
   

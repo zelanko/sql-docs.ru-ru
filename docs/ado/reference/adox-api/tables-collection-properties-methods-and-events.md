@@ -1,40 +1,37 @@
 ---
-title: Таблицы в коллекции свойства, методы и события | Документы Microsoft
+title: Таблицы в коллекции свойства, методы и события | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Tables collection [ADOX], members
 ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a559aa919117b4e1ead484f8539f4e5c2ae6481
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d55a8ab4bce917f417e0a99a0ce7c176463484f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644772"
 ---
-# <a name="tables-collection-properties-methods-and-events"></a>Свойства коллекции таблиц, методы и события
+# <a name="tables-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции Tables
 ## <a name="properties"></a>Свойства  
  [Свойство Count](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [Свойства элемента](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Свойство элемента](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
  [Append-метод (таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)  
   
  [Удаление метода (коллекций)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   
- [Метод обновления](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Метод Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>События  
  Нет.  

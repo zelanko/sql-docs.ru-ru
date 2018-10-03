@@ -1,13 +1,11 @@
 ---
-title: ConnectComplete и отключения событий (ADO) | Документы Microsoft
+title: ConnectComplete и события (ADO) отключения | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - Disconnect event [ADO]
 - ConnectComplete event [ADO]
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ac6301a8ed8ab0c84f26225e20c2bfd971ff761
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d1466b8f718318d8224ec2c7dcf3e873139fffed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752772"
 ---
-# <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete и отключения событий (ADO)
-**ConnectComplete** событие вызывается после начала подключения. **Disconnect** событие вызывается после завершения соединения.  
+# <a name="connectcomplete-and-disconnect-events-ado"></a>События ConnectComplete и Disconnect (ADO)
+**ConnectComplete** событие вызывается после начала соединения. **Disconnect** событие вызывается после завершения соединения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,18 +40,18 @@ Disconnect adStatus, pConnection
   
 #### <a name="parameters"></a>Параметры  
  *pError*  
- [Ошибка](../../../ado/reference/ado-api/error-object.md) объекта. Здесь описываются ошибки, возникшей при значение *adStatus* — **adStatusErrorsOccurred**; в противном случае оно не задано.  
+ [Ошибка](../../../ado/reference/ado-api/error-object.md) объекта. Он описывает ошибки, возникшей при значение *adStatus* — **adStatusErrorsOccurred**; в противном случае оно не задано.  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) возвращает значение, всегда **adStatusOK**.  
   
- При **ConnectComplete** — вызывается, этот параметр имеет значение **adStatusCancel** Если **WillConnect** событий запросил отмену ожидающего подключения.  
+ Когда **ConnectComplete** является именем, этот параметр имеет значение **adStatusCancel** Если **WillConnect** событий запросило отмену ожидающего подключения.  
   
- Перед возвратом любого события, присвойте этому параметру значение **adStatusUnwantedEvent** для предотвращения последующих уведомлений. Тем не менее, закрытие и повторное открытие [подключения](../../../ado/reference/ado-api/connection-object-ado.md) вызывает повторного возникновения этих событий.  
+ Перед возвратом любого события, присвойте этому параметру значение **adStatusUnwantedEvent** игнорировать последующие уведомления. Тем не менее, закрытие и повторное открытие [подключения](../../../ado/reference/ado-api/connection-object-ado.md) вызывает эти события к еще раз.  
   
  *pConnection*  
- **Подключения** объектов, для которого применяется это событие.  
+ **Подключения** объекта, для которого применяется это событие.  
   
 ## <a name="see-also"></a>См. также  
- [Пример модели событий ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [Пример модели событий ADO (Visual C++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

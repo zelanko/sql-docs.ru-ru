@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_object_columns (Transact-SQL) | Документы Microsoft
+title: sys.dm_xe_object_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_xe_object_columns
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24b7123f557674afe6016138f05803a8d13753c6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0a00c2aea93b77f65455024d15af13b153d7ebef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465810"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732182"
 ---
 # <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +37,8 @@ ms.locfileid: "34465810"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|имя|**nvarchar(60)**|Имя столбца. имя является уникальным в пределах объекта. Не допускает значение NULL.|  
-|column_id|**int**|Идентификатор столбца. Идентификатор column_id является уникальным в пределах объекта, при использовании с column_type. Не допускает значение NULL.|  
+|name|**nvarchar(60)**|Имя столбца. имя является уникальным в пределах объекта. Не допускает значение NULL.|  
+|column_id|**int**|Идентификатор столбца. Идентификатор column_id является уникальным в пределах объекта при использовании с column_type. Не допускает значение NULL.|  
 |object_name|**nvarchar(60)**|Имя объекта, которому принадлежит столбец. Обеспечивает связь «многие к одному» с sys.dm_xe_objects.id. Не допускает значение NULL.|  
 |object_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, в котором содержится объект. Не допускает значение NULL.|  
 |type_name|**nvarchar(60)**|Имя типа для этого столбца. Не допускает значение NULL.|  

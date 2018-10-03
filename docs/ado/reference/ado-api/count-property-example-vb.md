@@ -1,32 +1,29 @@
 ---
-title: Пример свойства Count (VB) | Документы Microsoft
+title: Пример свойства Count (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5e462bef0846b71a963c1e510fac1e23d00e010
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 902d077cfb46926ce9eade6ea9a99c2df0730916
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277263"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747222"
 ---
 # <a name="count-property-example-vb"></a>Пример свойства Count (Visual Basic)
-В этом примере демонстрируется [число](../../../ado/reference/ado-api/count-property-ado.md) свойство с две коллекции в ***сотрудника*** базы данных. Это свойство получает количество объектов в каждой коллекции и определяет максимальное число циклов, которые перечисляют этих коллекций. Другой способ перечисления без использования этих коллекций **число** свойство будет использовать `For Each...Next` инструкции.  
+В этом примере показано [число](../../../ado/reference/ado-api/count-property-ado.md) свойство с коллекциями в ***сотрудника*** базы данных. Свойство получает число объектов в каждой коллекции и задает верхнюю границу для циклов, которые перечисляют этих коллекций. Другой способ для перечисления этих коллекций без использования **число** свойство было бы использовать `For Each...Next` инструкций.  
   
 ```  
 'BeginCountVB  

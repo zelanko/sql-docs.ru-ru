@@ -1,32 +1,29 @@
 ---
-title: Введите пример свойства (поля) (VC ++) | Документы Microsoft
+title: Введите пример свойства (объект Field) (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb420e129d36c9172837a9d68e631c9bc26086e7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666242"
 ---
-# <a name="type-property-example-field-vc"></a>Пример свойства типа (поле) (VC ++)
-В этом примере демонстрируется [тип](../../../ado/reference/ado-api/type-property-ado.md) свойства выводится имя константы, соответствующее значению **тип** всех [поле](../../../ado/reference/ado-api/field-object.md) объекты в ***Сотрудников*** таблицы. Функция FieldType необходим для выполнения этой процедуры.  
+# <a name="type-property-example-field-vc"></a>Пример свойства Type (объект Field) (Visual C++)
+В этом примере показано [тип](../../../ado/reference/ado-api/type-property-ado.md) свойство, отображая имя константы, которая соответствует значению **тип** всех [поле](../../../ado/reference/ado-api/field-object.md) объектов в ***Сотрудников*** таблицы. Функция FieldType является обязательным для выполнения этой процедуры.  
   
 ## <a name="example"></a>Пример  
   
