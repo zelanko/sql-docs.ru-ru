@@ -1,35 +1,32 @@
 ---
-title: Примеры кода ADOX в Microsoft Visual Basic | Документы Microsoft
+title: Примеры кода ADOX в Microsoft Visual Basic | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADOX code examples, Visual Basic
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f8ca2fab56a9fef224040dd0dcfa56163d8877b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c38902c2e1692dd1a1d2782e8989f480ad5a837d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284669"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645752"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Примеры кода ADOX в Microsoft Visual Basic
-В этих разделах содержатся примеров кода, которые помогут понять, как использовать ADOX. Все примеры кода представлены с помощью Microsoft Visual Basic.  
+В этих разделах обсуждаются образцы кода помогут вам понять, как использовать ADOX. Все примеры кода написаны с помощью Microsoft Visual Basic.  
   
 > [!NOTE]
->  Вставьте полный пример кода, из Sub для End Sub в редакторе кода. Пример может работать неправильно, если используется частичное примеры или при потере форматирования абзаца.  
+>  Вставьте пример весь код, из Sub для End Sub в редакторе кода. Пример могут выполняться неправильно при использовании частичной примеры или утери форматирование абзацев.  
   
 ## <a name="methods"></a>Методы  
   
@@ -47,7 +44,7 @@ ms.locfileid: "35284669"
   
 -   [Пример метода Append коллекции Indexes (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)  
   
--   [Ключи добавить метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule-пример свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Append коллекции Keys метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule свойства пример (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
 -   [Пример метода Append коллекции Procedures (Visual Basic)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)  
   
@@ -71,9 +68,9 @@ ms.locfileid: "35284669"
   
 -   [Примеры свойств Command и CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)  
   
--   [Свойства команды, пример коллекцию параметров (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [Свойство Command, пример коллекции параметров (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
   
--   [Свойство CommandText, пример коллекции представлений (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
+-   [Свойство CommandText, коллекции Views Example (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
   
 -   [Примеры свойств DateCreated и DateModified (Visual Basic)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)  
   
@@ -83,11 +80,11 @@ ms.locfileid: "35284669"
   
 -   [Пример свойства IndexNulls (Visual Basic)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)  
   
--   [Тип ключа, RelatedColumn, RelatedTable и свойства UpdateRule, ключи Append пример метода (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Тип ключа, RelatedColumn, RelatedTable и UpdateRule свойства, ключи метод пример Append (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
--   [Свойство имени, столбцов и таблиц Append примере методы (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
+-   [Свойство Name, столбцы и таблицы Append пример метода (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
   
--   [NumericScale и пример точности свойства (Visual Basic)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
+-   [Свойств NumericScale и Precision (Visual Basic)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
   
 -   [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)  
   
@@ -95,7 +92,7 @@ ms.locfileid: "35284669"
   
 -   [Пример свойства SortOrder (Visual Basic)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)  
   
--   [Пример свойства, метода закрытия соединения, таблицы типа (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [Пример свойства подключения метода Close для объекта типа таблицы (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
   
 ## <a name="collections"></a>Коллекции  
   

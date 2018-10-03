@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_increment_lsn (Transact-SQL) | Документы Microsoft
+title: sys.fn_cdc_increment_lsn (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - fn_cdc_increment_lsn_TSQL
 - sys.fn_cdc_increment_lsn_TSQL
@@ -23,15 +18,15 @@ helpviewer_keywords:
 - fn_cdc_increment_lsn
 - sys.fn_cdc_increment_lsn
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9202afab2c6b0fca9c230a60b1448a3069232d58
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 84f343ebda18e65217b18446707373a743b6a9d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648932"
 ---
 # <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +49,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **binary(10)**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Номер LSN, возвращаемый функцией, всегда больше заданного значения. Между указанными двумя значениями не может быть промежуточных номеров LSN.  
   
  Для систематического отображения информации об изменениях данных с течением времени можно периодически вызывать функцию запроса, каждый раз указывая новые значения границ интервала. Чтобы исключить потерю данных, необходимо в качестве нижней границы последующего запроса использовать верхнюю границу предыдущего запроса. Так как интервал запроса является замкнутым, то новое значение нижней границы должно быть больше, чем значение верхней границы предыдущего запроса. Однако необходимо убедиться, что разница между указанными значениями границ достаточно мала и не включает номеров LSN каких-либо изменений. Для получения этого значения используется функция sys.fn_cdc_increment_lsn.  

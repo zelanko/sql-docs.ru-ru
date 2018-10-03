@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1cd8bd35a642d72a0d3b1b934dbdc1587bd96996
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 38729c2588ce7f779951403e72470b5ab0744e14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409656"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816942"
 ---
 # <a name="functions-ssis-expression"></a>Функции (выражение служб SSIS)
   Язык выражений включает набор функций, которые можно использовать в выражениях. Выражение может использовать только одну функцию, но обычно в выражении используется комбинация операторов и нескольких функций.  
@@ -51,7 +48,7 @@ ms.locfileid: "35409656"
 |[LN (выражение служб SSIS)](../../integration-services/expressions/ln-ssis-expression.md)|Возвращает натуральный логарифм числового выражения.|  
 |[LOG (выражение служб SSIS)](../../integration-services/expressions/log-ssis-expression.md)|Возвращает десятичный логарифм числового выражения.|  
 |[POWER (выражение служб SSIS)](../../integration-services/expressions/power-ssis-expression.md)|Возвращает результат возведения числового выражения в степень.|  
-|[ROUND (выражение служб SSIS)](../../integration-services/expressions/round-ssis-expression.md)|Возвращает числовое выражение, округленное до указанной длины или точности. , и делает это по-другому.|  
+|[ROUND (выражение служб SSIS)](../../integration-services/expressions/round-ssis-expression.md)|Возвращает числовое выражение, округленное до указанной длины или точности. .|  
 |[SIGN (выражение служб SSIS)](../../integration-services/expressions/sign-ssis-expression.md)|Возвращает знак выражения: плюс (+), минус (-) или нуль (0).|  
 |[SQUARE (выражение служб SSIS)](../../integration-services/expressions/square-ssis-expression.md)|Возвращает квадрат числового выражения.|  
 |[SQRT (выражение служб SSIS)](../../integration-services/expressions/sqrt-ssis-expression.md)|Возвращает квадратный корень числового выражения.|  

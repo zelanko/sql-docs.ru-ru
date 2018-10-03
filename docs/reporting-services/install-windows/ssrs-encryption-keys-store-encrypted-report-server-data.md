@@ -3,7 +3,6 @@ title: Хранение зашифрованных данных сервера �
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fbfdcd45e7c8894956a6a8702cc91be41f59e150
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3eb58910390765607514239a43c6059ebcd5c220
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275715"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815372"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Ключи шифрования служб SSRS — хранение зашифрованных данных сервера отчетов
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранят зашифрованные значения в базе данных сервера отчетов и в файлах конфигурации. Зашифрованные значения — это главным образом учетные данные, используемые при подключении к внешним источникам данных, содержащим данные для отчетов. В данном разделе содержатся сведения о шифруемых значениях, о возможностях шифрования в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и о других важных типах конфиденциальных данных.  

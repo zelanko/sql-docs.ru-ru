@@ -1,13 +1,11 @@
 ---
-title: Метод getIndexInfo (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод getIndexInfo (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getIndexInfo
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cef7b37818e5bc7bf46c7181a3816edd5bbad860
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d7d66a175522cd89cf4bd0aca567779244b0a385
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789832"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Метод getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,38 +40,38 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *CAT*  
+ *cat*  
   
- Объект **строка** , содержащее имя каталога.  
+ Значение типа **String**, содержащее имя каталога.  
   
  *schema*  
   
- Объект **строка** , содержащее имя схемы.  
+ Значение типа **String**, содержащее имя схемы.  
   
  *table*  
   
- Объект **строка** , содержащее имя таблицы.  
+ Значение типа **String**, содержащее имя таблицы.  
   
- *Уникальный*  
+ *unique*  
   
  **значение true,** Если возвращаются только индексы для уникальных значений. **false** Если возвращаются все индексы.  
   
- *Приблизительное*  
+ *approximate*  
   
- **значение true,** , если результаты отражают приблизительные или устаревшие значения. **false** Если результаты точны.  
+ **значение true,** Если результаты отражают приблизительные или устаревшие значения. **false** Если результаты точны.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getIndexInfo указывается с помощью метода getIndexInfo в интерфейсе java.sql.DatabaseMetaData.  
   
- Метод getIndexInfo возвращает результирующий набор будет содержать следующие сведения:  
+ Результирующий набор, возвращаемый методом getIndexInfo, включает следующие данные.  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Имя базы данных, в которой расположена указанная таблица.|  
 |TABLE_SCHEM|**String**|Схема таблицы.|  
@@ -82,19 +79,19 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |NON_UNIQUE|**boolean**|Указывает, могут ли значения индекса быть неуникальными.|  
 |INDEX_QUALIFIER|**String**|Имя владельца индекса. Принимает значение NULL, если TYPE равен tableIndexStatistic.|  
 |INDEX_NAME|**String**|Имя индекса.|  
-|TYPE|**короткий**|Тип индекса. Может иметь одно из следующих значений.<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
-|ORDINAL_POSITION|**короткий**|Порядковый номер столбца в индексе. Номер первого столбца в таблице равен 1.|  
+|TYPE|**short**|Тип индекса. Может иметь одно из следующих значений.<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|ORDINAL_POSITION|**short**|Порядковый номер столбца в индексе. Номер первого столбца в таблице равен 1.|  
 |COLUMN_NAME|**String**|Имя столбца.|  
-|ASC_OR_DESC|**String**|Порядок, используемый в параметрах сортировки индекса. Может иметь одно из следующих значений.<br /><br /> A (по возрастанию)<br /><br /> D (по убыванию)<br /><br /> NULL (неприменимо)<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает «A».  |  
+|ASC_OR_DESC|**String**|Порядок, используемый в параметрах сортировки индекса. Может иметь одно из следующих значений.<br /><br /> A (по возрастанию)<br /><br /> D (по убыванию)<br /><br /> NULL (неприменимо)<br /><br /> **Примечание**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всегда возвращает значение A.|  
 |CARDINALITY|**int**|Число строк в таблице или уникальных значений в индексе.|  
 |PAGES|**int**|Число страниц для хранения индекса или таблицы.|  
-|FILTER_CONDITION|**String**|Условие фильтра.<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает значение null.  |  
+|FILTER_CONDITION|**String**|Условие фильтра.<br /><br /> **Примечание**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всегда возвращает значение NULL.|  
   
 > [!NOTE]  
->  Дополнительные сведения о данных, возвращаемых методом getIndexInfo см. в разделе «sp_indexes (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.  
+>  Дополнительные сведения о данных, возвращаемых методом getIndexInfo, см. в разделе "sp_indexes (Transact-SQL)" электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать метод getIndexInfo для возврата сведений об индексах и статистики для таблицы Person.Contact в [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образца базы данных.  
+ В следующем примере показано использование метода getIndexInfo для возврата сведений об индексах и статистики для таблицы Person.Contact в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetIndexInfo(Connection con) {  
@@ -119,7 +116,7 @@ public static void executeGetIndexInfo(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

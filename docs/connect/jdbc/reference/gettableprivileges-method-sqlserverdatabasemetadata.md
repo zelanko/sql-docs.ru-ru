@@ -1,13 +1,11 @@
 ---
-title: Метод getTablePrivileges (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод getTablePrivileges (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getTablePrivileges
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a7bcc60d73aba7e0939d70224a765168738b64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bdea6926543bd95fa66c4b73a48736a3b685859e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840327"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810092"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>Метод getTablePrivileges (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,28 +40,28 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Параметры  
  *catalog*  
   
- Объект **строка** , содержащее имя каталога. Задание значения NULL для этого параметра указывает на то, что имя каталога использовать не нужно.  
+ Значение типа **String**, содержащее имя каталога. Задание значения NULL для этого параметра указывает на то, что имя каталога использовать не нужно.  
   
  *schema*  
   
- Объект **строка** , содержащее шаблон имени схемы. Задание значения NULL для этого параметра указывает на то, что имя схемы использовать не нужно.  
+ Значение типа **String**, содержащее шаблон имени схемы. Задание значения NULL для этого параметра указывает на то, что имя схемы использовать не нужно.  
   
  *table*  
   
- Объект **строка** , содержащее шаблон имени таблицы.  
+ Значение типа **String**, содержащее шаблон имени таблицы.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getTablePrivileges указывается с помощью метода getTablePrivileges в интерфейсе java.sql.DatabaseMetaData.  
   
- Метод getTablePrivileges возвращает результирующий набор будет содержать следующие сведения:  
+ Результирующий набор, возвращаемый методом getTablePrivileges, включает следующие данные:  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Имя каталога.|  
 |TABLE_SCHEM|**String**|Имя схемы для таблицы.|  
@@ -75,10 +72,10 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 |IS_GRANTABLE|**String**|Указывает, разрешается ли получателю прав предоставлять доступ другим пользователям.|  
   
 > [!NOTE]  
->  Дополнительные сведения о данных, возвращаемых методом getTablePrivileges см. в разделе «sp_table_privileges (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.  
+>  Дополнительные сведения о данных, возвращаемых методом getTablePrivileges, см. в разделе "sp_table_privileges (Transact-SQL)" электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует метод getTablePrivileges для возврата прав доступа к таблице Person.Contact в [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образца базы данных.  
+ В следующем примере показано использование метода getTablePrivileges для возврата прав доступа к таблице Person.Contact в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetTablePrivileges(Connection con) {  
@@ -103,7 +100,7 @@ public static void executeGetTablePrivileges(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

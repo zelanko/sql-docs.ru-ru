@@ -1,13 +1,11 @@
 ---
-title: Метод getLong (int) | Документы Microsoft
+title: Метод getLong (int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getLong (int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b7078ca7-fd2a-4474-ab29-989ae28c77e8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2152de272ccfd5f2bcdfa87b2af909b8a2f3950
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: caa1c4eb870f37e7c8bc9e2eb244f8be0ae9abe6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691892"
 ---
 # <a name="getlong-method-int"></a>Метод getLong (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение указанного параметра в виде **длинные** на Java по заданному индексу параметра языка программирования.  
+  Возвращает значение заданного параметра в виде значения типа **long** на языке программирования Java по указанному индексу параметра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,22 +38,22 @@ public long getLong(int index)
 #### <a name="parameters"></a>Параметры  
  *index*  
   
- **Int** , указывающее индекс параметра.  
+ Значение типа **int**, указывающее индекс параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект **длинные** значение.  
+ Объект **long** значение.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод getLong указывается с помощью метода getLong в интерфейсе java.sql.CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Этот метод getLong указывается методом getLong в интерфейсе java.sql.CallableStatement.  
   
- Этот метод поддерживается только в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] типы данных, которые могут безопасно возвращать целочисленное значение, таких как bigint, int, smallint, tinyint и bit. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
+ Этот метод поддерживается только для типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], таких как bigint, int, smallint, tinyint и bit, которые могут безопасно возвращать целочисленные значения. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
-## <a name="see-also"></a>См. также  
- [Метод getLong &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод getLong (SQLServerCallableStatement)](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
