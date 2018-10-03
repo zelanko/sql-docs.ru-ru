@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 15ecb85495a1ca63da17353efe4edabc7abfd646
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a5de816958beb6943ed102931e2e700528e0b140
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775090"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614890"
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,8 +49,7 @@ ms.locfileid: "42775090"
 ## <a name="Components"></a>Компоненты агента SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует следующие компоненты, чтобы определить задачи для выполнения, время для выполнения задач и порядок уведомления об успешном или неудачном завершении задач.  
   
-### <a name="jobs"></a>Задания
-  
+### <a name="jobs"></a>Задания  
 *Задание* — это указанная последовательность действий, выполняемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте задания, чтобы определить задачу управления, которую можно выполнить однажды или неоднократно и контролировать на предмет успешного или неудачного выполнения. Задание может выполняться на одном локальном сервере или на нескольких удаленных серверах.  
   
 > [!IMPORTANT]  
@@ -62,11 +57,9 @@ ms.locfileid: "42775090"
   
 Выполнять задания можно несколькими способами:  
   
--   по одному или нескольким расписаниям;
+-   по одному или нескольким расписаниям;  
   
-  
--   в ответ на одно или несколько предупреждений;
-  
+-   в ответ на одно или несколько предупреждений;  
   
 -   Посредством выполнения хранимой процедуры sp_start_job.  
   
@@ -79,11 +72,9 @@ ms.locfileid: "42775090"
   
 -   при каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
--   каждый раз, когда использование ЦП компьютера будет достигать уровня, который определен как уровень простоя;
+-   каждый раз, когда использование ЦП компьютера будет достигать уровня, который определен как уровень простоя;  
   
-  
--   однажды, в указанные дату и время;
-  
+-   однажды, в указанные дату и время;  
   
 -   Согласно повторяющемуся расписанию.  
   
@@ -98,8 +89,7 @@ ms.locfileid: "42775090"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] условия производительности;  
   
--   события инструментария управления Microsoft Windows (WMI) на компьютере, где работает агент SQL Server;
-  
+-   события инструментария управления Microsoft Windows (WMI) на компьютере, где работает агент SQL Server;  
   
 Предупреждение может выполнять следующие действия:  
   
@@ -114,11 +104,9 @@ ms.locfileid: "42775090"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может уведомлять операторов о предупреждениях одним или несколькими способами из нижеследующих:  
   
--   электронная почта;
+-   электронная почта;  
   
-  
--   пейджер (через электронную почту);
-  
+-   пейджер (через электронную почту);  
   
 -   **команда net send.**  
   
