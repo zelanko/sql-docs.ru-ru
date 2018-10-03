@@ -1,13 +1,11 @@
 ---
-title: AbsolutePage, PageCount и пример свойства PageSize (JScript) | Документы Microsoft
+title: Примеры AbsolutePage, PageCount и пример свойства PageSize (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], JScript example
 - PageSize property [ADO], JScript example
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f165a920b1703d75792da45100eaf848bdb7e08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9ad6da47838b28583bcec3d5c6501d60d317f74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274789"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705092"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage, PageCount и пример свойства PageSize (JScript)
-Этот пример демонстрирует свойства AbsolutePage, PageCount и PageSize. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AbsolutePageJS.asp**.  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>Примеры AbsolutePage, PageCount и пример свойства PageSize (JScript)
+Этот пример показывает примеры AbsolutePage, PageCount и PageSize свойства. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AbsolutePageJS.asp**.  
   
 ```  
 <!-- BeginAbsolutePageJS -->  
@@ -164,5 +161,5 @@ BODY {
 ## <a name="see-also"></a>См. также  
  [Свойство AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [Свойство PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [Свойства PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
+ [Свойство PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

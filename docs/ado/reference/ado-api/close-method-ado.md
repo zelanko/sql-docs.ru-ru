@@ -1,13 +1,11 @@
 ---
-title: Close-метод (ADO) | Документы Microsoft
+title: Метод Close (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,18 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1cf9ee921355368dc9aaffb2905fb79eced5b7d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f43e59ed38dfde8091cb851f75a133c60874a6af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276489"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644698"
 ---
-# <a name="close-method-ado"></a>Close-метод (ADO)
+# <a name="close-method-ado"></a>Метод Close (ADO)
 Закрывает открытый объект и все зависимые объекты.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,23 +36,23 @@ object.Close
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Используйте **закрыть** метод закрытия [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [записи](../../../ado/reference/ado-api/record-object-ado.md), [записей](../../../ado/reference/ado-api/recordset-object-ado.md), или [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта Чтобы освободить все связанные системные ресурсы. Закрывает объект не удаляется из памяти; можно изменить настройки его свойств и открыть его позже. Для полного устранения объекта из памяти, закройте объект и затем присвойте переменной объекта *ничего* (в Visual Basic).  
+ Используйте **закрыть** метод для закрытия [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [записи](../../../ado/reference/ado-api/record-object-ado.md), [записей](../../../ado/reference/ado-api/recordset-object-ado.md), или [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объекта для освобождения любых ресурсов операционной системы. Закрыть объект не удаляется из памяти; можно изменить его параметры свойств и открыть его позже. Для полного устранения объект из памяти, закройте объект и затем присвойте переменной объекта *Nothing* (в Visual Basic).  
   
 ## <a name="connection"></a>Соединение  
- С помощью **закрыть** метод закрытия **подключения** объекта также закрывает все активные **записей** объектов, связанных с подключением. Объект [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, связанного с **подключения** закрытие объекта сохранятся, но больше не будут связаны с **подключения** объекта, то есть его [ ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойству будет присвоено **ничего не**. Кроме того **команда** объекта [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции будет удалено из параметров, определенных поставщиком.  
+ С помощью **закрыть** метод для закрытия **подключения** объекта также закрывает все активные **записей** объекты, связанные с подключением. Объект [команда](../../../ado/reference/ado-api/command-object-ado.md) объект, связанный с **подключения** закрытие объекта сохраняются, но больше не будут связаны с **подключения** объекта, то есть его [ ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойству будет присвоено **ничего не**. Кроме того **команда** объекта [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции будет очищен всех параметров, определяемых поставщиком.  
   
- Позже можно вызвать [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод, чтобы повторно установить подключение к тому же или другой источник данных. Хотя **подключения** объект закрыт, вызов любых методов, которые требуется открытое соединение с источником данных приведет к ошибке.  
+ Позже можно вызвать [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод, чтобы повторно установить подключение к тому же или другой источник данных. Хотя **подключения** объект закрыт, вызова методов, которые требуется открытое соединение с источником данных приводит к ошибке.  
   
- Закрытие **подключения** объекта, пока имеются открытые **записей** объекты для соединения выполняет откат всех изменений, ожидающих во всех **записей** объектов. Явное закрытие **подключения** объекта (вызов **закрыть** метод) во время транзакции выполняется приводит к ошибке. Если **подключения** объект выходит за пределы области во время транзакции, ADO автоматически выполняет откат транзакции.  
+ Закрытие **подключения** пока открыты объект **записей** объекты для соединения откат всех изменений, ожидающих во всех **записей** объектов. Явное закрытие **подключения** объекта (вызов **закрыть** метод) во время транзакции ход выполнения приводит к ошибке. Если **подключения** объект выходит за пределы области действия транзакции во время выполнения, ADO автоматически выполняет откат транзакции.  
   
-## <a name="recordset-record-stream"></a>Набор записей, запишите, потоковую передачу  
- С помощью **закрыть** метод закрытия **набора записей**, **запись**, или **поток** объект освобождает связанные данные и любые монопольного доступа Вы могли к данным с помощью этого конкретного объекта. Позже можно вызвать [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод, чтобы снова открыть объект с таким, или изменения, атрибуты.  
+## <a name="recordset-record-stream"></a>Набор записей, записи Stream  
+ С помощью **закрыть** метод для закрытия **записей**, **записи**, или **Stream** объект освобождает связанные данные и любые монопольный доступ Вы могли к данным с помощью этого конкретного объекта. Позже можно вызвать [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод, чтобы снова открыть объект с тем же, то есть измененные, атрибуты.  
   
- Хотя **записей** объект закрыт, вызов любых методов, в которых требуется динамическая курсора приводит к ошибке.  
+ Хотя **записей** объект закрыт, вызова методов, которые требуют динамический курсор формирует ошибку.  
   
- Если выполняется в режиме немедленного обновления изменения, вызвав **закрыть** метод создает ошибку, вместо этого необходимо вызвать [обновление](../../../ado/reference/ado-api/update-method.md) или [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) метод первой. Если вы закроете **набора записей** объекта в пакетный режим обновления, все изменения с момента последнего [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) вызова будут потеряны.  
+ Если выполняется в режиме немедленного обновления изменения, вызвав **закрыть** метод создает ошибку, вместо этого необходимо вызвать [обновление](../../../ado/reference/ado-api/update-method.md) или [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) метод первой. Если вы закроете **записей** объекта в пакетный режим обновления, все изменения с момента последнего [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) вызова будут потеряны.  
   
- При использовании [клон](../../../ado/reference/ado-api/clone-method-ado.md) метод для создания копий открытого **записей** объекта, закрытие исходные или клон не влияет на все остальные копии.  
+ При использовании [клона](../../../ado/reference/ado-api/clone-method-ado.md) метод для создания копий открытого **записей** объекта, закрытие исходные или клон не влияет на любой из этих копий.  
   
 ## <a name="applies-to"></a>Объект применения  
   
@@ -65,9 +62,9 @@ object.Close
 |[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Открытие и закрытие примере методы (Visual Basic)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
- [Пример методов открытия и закрытия (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
- [Пример методов открытия и закрытия (VC ++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
- [Метод Open (соединение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Примеры методов Open и Close (Visual Basic)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
+ [Примеры методов Open и Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
+ [Примеры методов Open и Close (Visual C++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
+ [Метод Open (объект Connection ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Метод Save](../../../ado/reference/ado-api/save-method.md)

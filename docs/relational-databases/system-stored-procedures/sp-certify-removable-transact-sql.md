@@ -1,14 +1,11 @@
 ---
-title: sp_certify_removable (Transact-SQL) | Документы Microsoft
+title: sp_certify_removable (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
@@ -18,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9ff14bc26b18eaf80dff000f141502a01fcc7b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691412"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Проверяет, правильно ли настроена база данных для установочного или съемного носителя, и сообщает обо всех проблемах пользователю.  
   
-> **ВАЖНО!** [! ВКЛЮЧИТЬ[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) вместо него.  
+> **ВАЖНО!** [! ВКЛЮЧИТЬ[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) вместо этого.  
   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -52,12 +48,12 @@ sp_certify_removable [ @dbname= ] 'dbname'
  Указывает проверяемую базу данных. *DBName* — **sysname**.  
   
  [  **@autofix=**] **«auto»**  
- Делает системного администратора владельцем базы данных и всех ее объектов, а также удаляет все разрешения, не соответствующие разрешениям по умолчанию, и всех пользователей базы данных, созданных пользователями. *Auto* — **nvarchar(4)**, значение по умолчанию NULL.  
+ Делает системного администратора владельцем базы данных и всех ее объектов, а также удаляет все разрешения, не соответствующие разрешениям по умолчанию, и всех пользователей базы данных, созданных пользователями. *Автоматическое* — **nvarchar(4)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если база данных настроена правильно, **sp_certify_removable** выполняет следующее:  
   
 -   Переводит базу данных в режим «вне сети», чтобы позволить копировать файлы.  
@@ -66,9 +62,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Помечает файловые группы данных как «только для чтения», чтобы эти файлы можно было скопировать на носители, предназначенные только для чтения.  
   
- Владельцем базы данных и всех объектов базы данных должен быть системный администратор. Системный администратор — это пользователь, существующий на всех серверах, работающих под управлением [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и может быть должно существовать, если в базе данных распространения и установки.  
+ Владельцем базы данных и всех объектов базы данных должен быть системный администратор. Системный администратор — это пользователь, существующая на всех серверах, работающих под управлением [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и должен существовать в базе данных распространения и установки.  
   
- При запуске **sp_certify_removable** без **автоматически** , она возвращает информацию о любом из следующих условий:  
+ При запуске **sp_certify_removable** без **автоматически** , она возвращает сведения о любом из следующих условий:  
   
 -   Системный администратор не является владельцем базы данных.  
   
@@ -82,7 +78,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Используйте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] средства и процедуры, а затем выполните **sp_certify_removable** еще раз.  
   
--   Просто выполните **sp_certify_removable** с **автоматически** значение.  
+-   Просто запустите **sp_certify_removable** с **автоматически** значение.  
   
  Обратите внимание, что эта хранимая процедура проверяет только пользователей и разрешения пользователей. К базе данных можно добавить группы и предоставить им разрешения. Дополнительные сведения см. в статье [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
   

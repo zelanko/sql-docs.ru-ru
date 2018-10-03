@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data viewers [Integration Services]
 - data flow [Integration Services], data viewers
 - adding data viewers
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-caps.latest.revision: 49
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a92dbd4bcd778ce081ff94e7e16dee75bccaee4c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ab1e8476a7ddb05ff129417ba0493aae90a12852
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267230"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059934"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Добавление средства просмотра данных к потоку данных
   В данном разделе рассматриваются добавление средства просмотра данных к потоку данных и настройка этого средства. Средство просмотра данных отображает данные, перемещаемые между двумя компонентами потока данных. Например, средство просмотра данных может отображать данные, извлеченные из источника данных до того, как преобразование в потоке данных изменит данные.  

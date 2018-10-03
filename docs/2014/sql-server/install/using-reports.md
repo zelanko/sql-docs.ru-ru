@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - warnings [Upgrade Advisor]
 - analyzing system [Upgrade Advisor], reports
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 857f83c12983f7f23fdbedf7f73ce94a2ad91fff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278370"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070904"
 ---
 # <a name="using-reports"></a>Использование отчетов
   Для каждого компонента и, если необходимо, для каждого экземпляра, проанализированного мастером анализа помощника по обновлению на сервере, создается свой отчет. В отчете содержатся сведения об известных проблемах, влияющих на обновление. В отчете содержатся также ссылки на сведения и предлагаются действия по решению выявленных проблем.  

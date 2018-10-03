@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 874137b75fbade0468a284f28397b30334936bd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aff516055e1bfce27408aed1d0779d3956424b82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057775"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Представление конструктора общих наборов данных (построитель отчетов)
   В окне конструктора общих наборов данных создаются запросы к наборам данных, которые будут доступны другим пользователям. Окно позволяет выбрать общий источник данных, указать свойства для общего набора данных и создать запрос в конструкторе запросов.  

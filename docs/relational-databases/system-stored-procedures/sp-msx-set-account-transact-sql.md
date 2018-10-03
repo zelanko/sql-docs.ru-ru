@@ -1,14 +1,11 @@
 ---
-title: sp_msx_set_account (Transact-SQL) | Документы Microsoft
+title: sp_msx_set_account (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_set_account
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_set_account
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2d776a7ad3d29c180a4a2d2b017f5e1e6d0158a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249426"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627942"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +52,13 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует учетные данные для хранения сведений об имени пользователя и пароле, которые целевой сервер использует для подключения к главному серверу. Эта процедура задает учетные данные, которые агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует для входа на главный сервер для этого целевого сервера.  
   
- Указанные учетные данные должны существовать. Дополнительные сведения о создании учетных данных см. в разделе [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
+ Указанные учетные данные должны существовать. Дополнительные сведения о создании учетных данных, см. в разделе [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения на выполнение **sp_msx_set_account** по умолчанию предоставляются членам **sysadmin** предопределенной роли сервера.  
+ Разрешения на выполнение **sp_msx_set_account** назначаются по умолчанию членам **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример устанавливает для сервера учетные данные `MsxAccount` для соединения с главным сервером.  
@@ -76,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_get_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   

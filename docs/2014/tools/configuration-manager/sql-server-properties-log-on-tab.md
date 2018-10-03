@@ -1,25 +1,22 @@
 ---
-title: Свойства SQL Server (вход в систему) | Документация Майкрософт
+title: Свойства SQL Server (вкладка "Вход в систему") | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 942c6734b215c8d6c4acafbb7560d6b762246a44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48746f150d12342b8ab0c5b95ab6a1164d7b2500
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272410"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062884"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Свойства SQL Server (вкладка «Вход в систему»)
   Используйте вкладку **Вход** в диалоговом окне **Свойства SQL Server** для указания учетной записи, используемой службой сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы изменить пароль учетной записи и запустить или остановить службу. Изменение пароля учетной записи вступает в силу немедленно.  

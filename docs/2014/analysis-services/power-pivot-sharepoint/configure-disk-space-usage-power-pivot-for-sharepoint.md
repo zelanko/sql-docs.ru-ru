@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151495"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069644"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Настройка использования места на диске (PowerPivot для SharePoint)
   Чтобы обеспечить ускоренную перезагрузку, PowerPivot для SharePoint кэширует базу данных PowerPivot в свободном месте на диске главного компьютера. Каждая база данных PowerPivot, загружаемая в память, сначала кэшируется на диске, чтобы впоследствии ее можно было быстро перезагрузить для обслуживания поступающих запросов. По умолчанию PowerPivot для SharePoint использует свободное место на диске для кэширования баз данных, однако это можно изменить, задав параметры, ограничивающие использование дискового пространства.  

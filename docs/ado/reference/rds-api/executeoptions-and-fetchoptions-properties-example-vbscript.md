@@ -1,13 +1,11 @@
 ---
-title: ExecuteOptions и пример свойства FetchOptions (VBScript) | Документы Microsoft
+title: ExecuteOptions и FetchOptions примеры свойств (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - FetchOptions property [ADO], VBScript example
 - ExecuteOptions property [ADO]
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14defde3a35bcccd35c741f7f9b681e9197a8a23
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3cc7b120f41613a5797105695c415eea85d08fdd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288223"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695212"
 ---
-# <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions и пример свойства FetchOptions (VBScript)
+# <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>Примеры свойств ExecuteOptions и FetchOptions (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Следующий код показывает, как задать [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) и [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) свойств во время разработки. Если ничего не задано, **ExecuteOptions** по умолчанию используется значение **adcExecSync**. Этот параметр указывает, что при **RDS. Обновить** вызывается метод, он будет выполнен в текущем вызывающем потоке — то есть, синхронно. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ExecuteOptionsDesignVBS.asp**.  
+ Ниже показано, как задать [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) и [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) свойств во время разработки. Если оставить заголовок не задан, **ExecuteOptions** по умолчанию используется **adcExecSync**. Этот параметр указывает, что при **RDS. Обновить** вызывается метод, он будет выполнен в текущем вызывающем потоке, то есть, синхронно. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как **ExecuteOptionsDesignVBS.asp**.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -98,7 +95,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- Следующий пример показывает, как задать **ExecuteOptions** и **FetchOptions** свойства во время выполнения в код VBScript. В разделе [обновление](../../../ado/reference/rds-api/refresh-method-rds.md) метод рабочий пример из этих свойств. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ExecuteOptionsRuntimeVBS.asp**.  
+ В следующем примере показано, как задать **ExecuteOptions** и **FetchOptions** свойства во время выполнения в код VBScript. См. в разделе [обновить](../../../ado/reference/rds-api/refresh-method-rds.md) метод рабочий пример из этих свойств. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как **ExecuteOptionsRuntimeVBS.asp**.  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  
@@ -174,7 +171,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойство ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
+ [Свойство ExecuteOptions (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [Свойство FetchOptions (служба удаленных рабочих столов)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
 
 

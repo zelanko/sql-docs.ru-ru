@@ -1,32 +1,29 @@
 ---
-title: Пример свойства IndexNulls (VB) | Документы Microsoft
+title: Пример свойства IndexNulls (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - IndexNulls property [ADOX], Visual Basic example
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11141a152d680ff843387de3a5998aff007eef06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 895082ffe456e38ccaf120688e2bf77c1b410344
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286533"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688132"
 ---
 # <a name="indexnulls-property-example-vb"></a>Пример свойства IndexNulls (Visual Basic)
-В этом примере демонстрируется [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) свойство [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе ввода пользователя (из список с именем List1). Затем **индекс** добавляется к **сотрудников** [таблицы](../../../ado/reference/adox-api/table-object-adox.md) в *Northwind* [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Новый **индекс** применяется к [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** таблицы и **записей** открыт. Новая запись добавляется в **сотрудников** таблицы, с **Null** значение индексированного поля. Вывод этой новой записи зависит от настройки **IndexNulls** свойство.  
+В этом примере показано [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) свойство [индекс](../../../ado/reference/adox-api/index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе ввода пользователя (из списка с именем List1). Затем **индекс** добавляется к **сотрудников** [таблицы](../../../ado/reference/adox-api/table-object-adox.md) в *Northwind* [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Новый **индекс** применяется к [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** таблицы и **записей** открыт. Добавляется новая запись **сотрудников** таблицы, с помощью **Null** значение индексированного поля. Следует ли отображать этой новой записи зависит от параметра **IndexNulls** свойство.  
   
 ```  
 ' BeginIndexNullsVB  
@@ -113,5 +110,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект индекса (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Объект INDEX (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Свойство IndexNulls (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)

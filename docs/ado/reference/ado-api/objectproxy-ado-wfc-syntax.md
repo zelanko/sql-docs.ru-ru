@@ -1,38 +1,35 @@
 ---
-title: ObjectProxy (ADO - синтаксис WFC) | Документы Microsoft
+title: ObjectProxy (ADO — синтаксис WFC) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - ObjectProxy collection [ADO]
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ce52d661b5fffe6f0263baa81808dc7d1e9fd3b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: af28755fee20c478237edec22936fc694995d554
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678512"
 ---
-# <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - WFC синтаксис)
-**ObjectProxy** объект представляет сервер и возвращается **createObject** метод [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) объекта. Класс ObjectProxy имеет один метод **вызова**, который можно вызвать метод на сервере и вернуть объект, полученный в результате этого вызова.  
+# <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO — синтаксис WFC)
+**ObjectProxy** объект представляет сервер и возвращается **createObject** метод [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) объекта. Класс ObjectProxy имеет один метод **вызвать**, который можно вызвать метод на сервере и возвращает объект, полученный в результате этого вызова.  
   
- **пакет com.ms.wfc.data**  
+ **com.ms.wfc.data пакета**  
   
 ## <a name="methods"></a>Методы  
   
-### <a name="call-method-adowfc-syntax"></a>Вызовите метод (ADO и WFC синтаксис)  
- Вызывает метод для сервера, представленных ObjectProxy. При необходимости аргументы метода может быть передан как массив объектов.  
+### <a name="call-method-adowfc-syntax"></a>Вызовите метод (синтаксис ADO и WFC)  
+ Вызывает метод сервера, представленных ObjectProxy. При необходимости аргументы метода может быть передан как массив объектов.  
   
 #### <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +40,7 @@ public Object ObjectProxy.( String method, Object[] args)
   
 #### <a name="returns"></a>Возвращает  
  Объект  
- Объект, полученный из вызова метода.  
+ Объект, полученный в результате вызова метода.  
   
 #### <a name="parameters"></a>Параметры  
  *ObjectProxy*  
@@ -52,5 +49,5 @@ public Object ObjectProxy.( String method, Object[] args)
  *Метод*  
  Строка, содержащая имя метода для вызова на сервере.  
   
- *args*  
- Необязательный параметр. Массив объектов, являющихся аргументов для метода на сервере. Типы данных Java автоматически преобразуются в типы данных, подходящий для использования на сервере.
+ *аргументы*  
+ Необязательный параметр. Массив объектов, которые являются аргументов метода на сервере. Типами данных Java автоматически преобразуются в типы данных, подходящий для использования на сервере.

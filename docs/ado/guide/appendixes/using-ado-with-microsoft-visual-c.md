@@ -1,32 +1,29 @@
 ---
-title: Использование ADO с Microsoft Visual C++ | Документы Microsoft
+title: Использование ADO с Microsoft Visual C++ | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADO, using with Visual C++
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15fcf82b5a1ce0edd3b20d1784bfd8f4f61a5dd1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c5c01c1b764ad09243ce20d25997036c38d167b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270423"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634872"
 ---
-# <a name="using-ado-with-microsoft-visual-c"></a>Использование ADO с Microsoft Visual C++
-Сведения об использовании ADO в Visual C++ в следующих разделах:  
+# <a name="using-ado-with-microsoft-visual-c"></a>Использование объектов ADO с Microsoft Visual C++
+Сведения об использовании ADO в Visual C++ см. в разделах:  
   
 -   [Программирование объектов ADO с использованием Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md)  
   
@@ -40,8 +37,8 @@ ms.locfileid: "35270423"
   
 ## <a name="see-also"></a>См. также  
  [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [ADO для индекса синтаксис Visual C++ для модели COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
- [ADO для индекса в Visual C++ синтаксис с #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Использование ADO с помощью Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Использование ADO с языки сценариев](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
+ [Индекс синтаксиса Visual C++ для модели COM ADO для](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
+ [ADO для индекс синтаксиса Visual C++ с #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Использование ADO с Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+ [Использование ADO с языками сценариев](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
  [Расширения Visual C++ для ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)

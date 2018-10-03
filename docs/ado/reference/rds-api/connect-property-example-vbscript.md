@@ -1,35 +1,32 @@
 ---
-title: Пример свойства (VBScript) подключения | Документы Microsoft
+title: Пример свойства (VBScript) Connect | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55f60063261a600d57667cc94f6c514eb52af6b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287403"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730752"
 ---
-# <a name="connect-property-example-vbscript"></a>Пример свойства (VBScript) подключения
+# <a name="connect-property-example-vbscript"></a>Пример свойства Connect (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Этот код показывает, как задать [Connect](../../../ado/reference/rds-api/connect-property-rds.md) во время разработки:  
+ Этот код демонстрируется задание [Connect](../../../ado/reference/rds-api/connect-property-rds.md) во время разработки:  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -41,9 +38,9 @@ ms.locfileid: "35287403"
 </OBJECT>  
 ```  
   
- Следующий пример показывает, как задать **Connect** свойства во время выполнения в код VBScript.  
+ В следующем примере показано, как задать **Connect** свойство во время выполнения в код VBScript.  
   
- Чтобы протестировать этот пример, вырежьте и вставьте код между \<Body > и \</Body > тегов в обычный HTML документа и назовите его **ConnectVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ Чтобы протестировать этот пример, вырежьте и вставьте код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **ConnectVBS.asp**. Сценарий ASP будет идентификации сервера.  
   
 ```  
 <!-- BeginConnectVBS -->  

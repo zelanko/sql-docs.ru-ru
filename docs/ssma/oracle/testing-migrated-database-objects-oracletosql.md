@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 037a58fc3fc9402c7148ec49d3a27ea0c0ace309
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684322"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Тестирование объектов баз данных после миграции (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции для Oracle Tester (тестер SSMA) автоматически проверяет преобразования объекта базы данных и переноса данных, произведенные SSMA. После завершения всех шагов миграции SSMA позволяет убедиться, что преобразованные объекты работают так же, как и все данные было передано надлежащим образом тест-инженер SSMA.  
@@ -48,7 +45,7 @@ ms.locfileid: "40393031"
 > [!NOTE]  
 > Внимание! Никогда не используйте SSMA тест-инженер в рабочих системах. Во время выполнения тест-инженер изменяются исходной схемы и данных. В то же время полного восстановления исходного состояния может оказаться невозможным для некоторых типов тестируемого кода.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Если вы хотите использовать тест-инженер SSMA, установите пакет расширения SSMA Oracle с **установить базы данных тест-инженер** включенным параметром.  
   
 Чтобы включить сравнение полученных данных таблицы, задать **ROWID сформировать столбец** равным **Да** перед началом преобразования схемы. SSMA будет добавлен столбец ROWID ко всем таблицам во время выполнения **преобразования схемы** команды.  

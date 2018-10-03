@@ -1,35 +1,32 @@
 ---
-title: Пример свойства InternetTimeout (VB) | Документы Microsoft
+title: Пример свойства InternetTimeout (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - InternetTimeout property [ADO], Visual Basic example
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38db2a80bfbf4087739bbebda3c625250ec9c3aa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 57c0c8e6a7a6bcab7ea5d096ee27ae510065daa8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634802"
 ---
 # <a name="internettimeout-property-example-vb"></a>Пример свойства InternetTimeout (Visual Basic)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере демонстрируется [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) свойство, которое существует на [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) и [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) объектов. В этом примере используется **DataControl** и устанавливает время ожидания до 20 секунд.  
+ В этом примере показано [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) свойство, которое существует на [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) и [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) объектов. В этом примере используется **DataControl** и устанавливает время ожидания до 20 секунд.  
   
 ```  
 'BeginInternetTimeoutVB  
@@ -80,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Объект пространства данных (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Объект DataSpace (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Свойство InternetTimeout (служба удаленных рабочих столов)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
 
 

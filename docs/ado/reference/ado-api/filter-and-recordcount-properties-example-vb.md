@@ -1,13 +1,11 @@
 ---
-title: Фильтр и пример RecordCount свойства (Visual Basic) | Документы Microsoft
+title: Filter и RecordCount свойства (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675422"
 ---
-# <a name="filter-and-recordcount-properties-example-vb"></a>Фильтр и пример RecordCount свойства (Visual Basic)
-В этом примере откройте [записей](../../../ado/reference/ado-api/recordset-object-ado.md) в таблице издателей в ***Pubs*** базы данных. Затем он использует [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство, чтобы ограничить число видимых записей на этих издателях, в определенной страны или региона. **RecordCount** свойство используется для отображения разницу между отфильтрованная, так и нефильтрованные наборы записей.  
+# <a name="filter-and-recordcount-properties-example-vb"></a>Примеры свойств Filter и RecordCount (Visual Basic)
+В этом примере откройте [записей](../../../ado/reference/ado-api/recordset-object-ado.md) в таблице издателей в ***Pubs*** базы данных. Затем он использует [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство, чтобы ограничить количество видимых записей на этих издателях, в определенной страны или региона. **RecordCount** свойство используется для отображения разницу между отфильтрованные и неотфильтрованные наборы записей.  
   
 ```  
 'BeginFilterVB  
@@ -112,13 +109,13 @@ End Sub
 ```  
   
 > [!NOTE]
->  Если вы знаете, необходимо выбрать данные, это обычно более эффективен, чтобы открыть **записей** с помощью инструкции SQL. В этом примере показано, как можно создать только один **записей** и получения записей из определенной страны.  
+>  Когда вы знаете, вы хотите выбрать данные, это обычно более эффективно, чтобы открыть **записей** с помощью инструкции SQL. В этом примере показано, как можно создать только один **записей** и получение записей из определенной страны.  
   
 ```  
 Attribute VB_Name = "Filter"  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойства фильтра](../../../ado/reference/ado-api/filter-property.md)   
+ [Свойство фильтра](../../../ado/reference/ado-api/filter-property.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

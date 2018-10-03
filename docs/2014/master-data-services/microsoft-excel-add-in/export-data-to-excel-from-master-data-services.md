@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
-caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b74f5fc00ea25f434a4191c04b0f890e04d8aca0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 143746cb73100a28fa6ebd2fc85809bc2cfb9d41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316554"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079964"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Загрузка данных из MDS в Excel
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], необходимо загрузить данные из репозитория MDS для работы с ним.  
   
  Если вы хотите отфильтровать перед загрузкой набора данных, см. в разделе [фильтрация данных перед загрузкой &#40;надстройки MDS для Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) вместо этого.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  

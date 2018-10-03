@@ -1,13 +1,11 @@
 ---
-title: ConnectOptionEnum | Документы Microsoft
+title: ConnectOptionEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectOptionEnum enumeration [ADO]
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae0f4a06d6c4f25d1d4cb0fb71d6b94a57a07cb2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f9df3fd695e9bf281133dabf436e5e8b5de7e0b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277193"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646622"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
-Указывает ли [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта должны возвращать после установки подключения (синхронно) или перед (асинхронно).  
+Указывает ли [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта должны возвращать после того как соединение установлено (синхронно) или перед (асинхронно).  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adAsyncConnect**|16|Открывается соединение асинхронно. [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) событие может использоваться для определения, когда подключение станет доступным.|  
-|**adConnectUnspecified**|-1|По умолчанию. Открывает подключение синхронно.|  
+|**adAsyncConnect**|16|Открывает соединение асинхронно. [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) событий может использоваться для определения, когда подключение станет доступным.|  
+|**adConnectUnspecified**|-1|По умолчанию. Открывает соединение синхронно.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
  Пакет: **com.ms.wfc.data**  
   
 |Константа|  
