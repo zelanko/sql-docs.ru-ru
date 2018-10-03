@@ -4,26 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2b8376664eda029cc581861010233f819019d471
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 56e7a30725a4fcad36ffa2df869ecc559056a29e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819232"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Настройка параметров проекта (MySQLToSQL)
 Для каждого проекта SSMA можно задать параметры на уровне проекта. Эти параметры указывают способ преобразования объектов, процесс миграции данных и сопоставлении типов данных источника к целевым типам данных.  Перед началом преобразования объектов в SQL Server или SQL Azure или переноса данных в SQL Server или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  

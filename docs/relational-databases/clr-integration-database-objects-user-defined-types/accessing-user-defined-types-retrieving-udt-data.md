@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,18 +19,17 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2c07349f7bf1cec153ccb1a57d3ba15dea70b4e2
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: aa7a16d3a5caad1ddb742e45ffe2e1534944e118
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802452"
 ---
-# <a name="accessing-user-defined-types---retrieving-udt-data"></a>Доступ к определяемым пользователем типам — извлечение данных определяемого пользователем ТИПА
+# <a name="accessing-user-defined-types---retrieving-udt-data"></a>Доступ к определяемым пользователем типам — извлечение определяемых пользователем данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Чтобы создать на клиенте определяемый пользователем тип, сборка, зарегистрированная в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как определяемый пользователем тип, должна быть доступна для клиентского приложения. Сборку определяемого пользователем типа можно разместить в одном каталоге с приложением или в глобальном кэше сборок. Также можно задать ссылку на сборку в проекте.  
   
@@ -378,7 +375,7 @@ class GetRawBytes
  Определяемые пользователем типы используются в коде ADO.NET как в качестве входных, так и в качестве выходных параметров.  
   
 ## <a name="using-udts-in-query-parameters"></a>Использование определяемых пользователем типов в параметрах запроса  
- Определяемые пользователем типы можно использовать в качестве значений параметров, при настройке **SqlParameter** для **System.Data.SqlClient.SqlCommand** объекта. **SqlDbType.Udt** перечисление **SqlParameter** объект используется для указания, что параметр является определяемого пользователем ТИПА при вызове **добавить** метод ** Параметры** коллекции. **UdtTypeName** свойство **SqlCommand** объект используется для указания полного имени определяемого пользователем типа в базу данных при помощи *database.schema_name.object_name* синтаксис. Несмотря на то, что использование полного имени не требуется, это удаляет неоднозначность из кода.  
+ Определяемые пользователем типы можно использовать в качестве значений параметров, при настройке **SqlParameter** для **System.Data.SqlClient.SqlCommand** объекта. **SqlDbType.Udt** перечисление **SqlParameter** объект используется для указания, что параметр является определяемого пользователем ТИПА при вызове **добавить** метод  **Параметры** коллекции. **UdtTypeName** свойство **SqlCommand** объект используется для указания полного имени определяемого пользователем типа в базу данных при помощи *database.schema_name.object_name* синтаксис. Несмотря на то, что использование полного имени не требуется, это удаляет неоднозначность из кода.  
   
 > [!NOTE]  
 >  Локальная копия сборки определяемого пользователем типа должна быть доступна в проекте клиента.  

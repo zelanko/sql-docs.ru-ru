@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_queue_sp (Transact-SQL) | Документы Microsoft
+title: sysmail_help_queue_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
@@ -18,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5087f212e72f4fa6970aff614983d8116d1f5b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 76f51489a449c44dd7d43bab75d504f68e946374
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796524"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Существует две очереди в компоненте Database Mail: очередь почты и очередь состояний. Очередь почты содержит почтовые сообщения, ожидающие отправки. Очередь состояний содержит информацию о состоянии сообщений, которые уже были отправлены. Эта хранимая процедура позволяет просмотреть состояние очередей почты и состояний. Если параметр **@queue_type** не указан, хранимая процедура возвращает одну строку для каждой из очередей.  
+  Существует две очереди в компоненте Database Mail: очередь почты и очередь состояний. Очередь почты содержит почтовые сообщения, ожидающие отправки. Очередь состояний содержит информацию о состоянии сообщений, которые уже были отправлены. Эта хранимая процедура позволяет просмотреть состояние очередей почты и состояний. Если параметр **@queue_type** не указан, хранимая процедура возвращает одну строку для каждого из очереди.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +41,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 ## <a name="arguments"></a>Аргументы  
  [ **@queue_type** = ] **'***queue_type***'**  
- Дополнительный аргумент удаляет сообщения электронной почты, тип, указанный как *queue_type*. *queue_type* — **nvarchar(6)** без значения по умолчанию. Допустимыми значениями являются **mail** и **состояние**.  
+ Дополнительный аргумент удаляет сообщения электронной почты типа, указанного как *queue_type*. *queue_type* — **nvarchar(6)** не имеет значения по умолчанию. Допустимыми значениями являются **mail** и **состояние**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -53,14 +50,14 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar(6)**|Тип очереди. Возможными значениями являются **mail** и **состояние**.|  
-|**длина**|**int**|Номер почтового сообщения в указанной очереди.|  
-|**state**|**nvarchar(64)**|Состояние монитора. Возможными значениями являются **НЕАКТИВНО** (очередь неактивна), **NOTIFIED** (очередь уведомление запроса), и **RECEIVES_OCCURRING** (очередь получения).|  
+|**queue_type**|**nvarchar(6)**|Тип очереди. Возможные значения: **mail** и **состояние**.|  
+|**Длина**|**int**|Номер почтового сообщения в указанной очереди.|  
+|**state**|**Nvarchar(64)**|Состояние монитора. Возможные значения: **НЕАКТИВНО** (очередь неактивна), **уведомления об** (очередь уведомление запроса о получении возникает), и **RECEIVES_OCCURRING** (очередь получения).|  
 |**last_empty_rowset_time**|**ДАТЫ И ВРЕМЕНИ**|Дата и время, когда очередь в последний раз была пуста. Указывается в военном формате времени относительно часового пояса GMT.|  
 |**last_activated_time**|**ДАТЫ И ВРЕМЕНИ**|Дата и время, когда очередь в последний раз была активирована. Указывается в военном формате времени относительно часового пояса GMT.|  
   
-## <a name="remarks"></a>Замечания  
- При устранении неполадок компонента Database Mail, используйте **sysmail_help_queue_sp** для просмотра, количество элементов в очереди, состояние очереди и во время ее последнего активирован.  
+## <a name="remarks"></a>Примечания  
+ При устранении неполадок компонента Database Mail, используйте **sysmail_help_queue_sp** чтобы увидеть, сколько элементов находятся в очереди, состояние очереди, а также время ее последнего активации.  
   
 ## <a name="permissions"></a>Разрешения  
  По умолчанию только члены **sysadmin** предопределенной роли сервера можно получить доступ к этой процедуре.  

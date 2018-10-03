@@ -1,29 +1,26 @@
 ---
-title: Сервер данных Юникод и кодовые страницы | Документы Microsoft
+title: Данные в Юникоде и Server кодовые страницы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [SQL Server], stored procedures
 - Unicode [SQL Server], extended stored procedures
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d38bf13ae6f80de24e9595d79042b8e3e40ef310
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbf78cf6c3ed1b04dd0a282c016db83837bf0a0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846142"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Данные в Юникоде и кодовые страницы сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,18 +30,18 @@ ms.lasthandoff: 05/03/2018
   
  API-интерфейс расширенных хранимых процедур разрешает использовать данные в кодировке Юникод, однако он не распознает метаданные в Юникоде. Директива #define Unicode не влияет на API-интерфейс расширенных хранимых процедур.  
   
- Все метаданные, возвращаемые API-интерфейсом расширенных хранимых процедур или предоставляемые ему из приложения расширенных хранимых процедур, должны быть в многобайтовой кодовой странице сервера. Кодовую страницу по умолчанию для приложения сервера API расширенных хранимых процедур используется кодовая страница ANSI компьютера, на котором выполняется приложение, можно получить, вызвав **srv_pfield** с параметром в поле SRV_ SPROC_CODEPAGE.  
+ Все метаданные, возвращаемые API-интерфейсом расширенных хранимых процедур или предоставляемые ему из приложения расширенных хранимых процедур, должны быть в многобайтовой кодовой странице сервера. Кодовую страницу по умолчанию для приложения сервера API расширенных хранимых процедур используется кодовая страница ANSI компьютера, на котором выполняется приложение, который можно получить, вызвав **srv_pfield** со значением параметра поля значение SRV_ SPROC_CODEPAGE.  
   
  Если приложение API-интерфейса расширенных хранимых процедур поддерживает Юникод, необходимо преобразовать имена столбцов метаданных, сообщения об ошибках и т. д. в Юникоде в многобайтовые данные, прежде чем передавать эти данные в API-интерфейс расширенных хранимых процедур.  
   
 ## <a name="example"></a>Пример  
  В следующей расширенной хранимой процедуре приведен пример указанного преобразования Юникода. Обратите внимание на следующее.  
   
--   Данные столбца передаются как данные Юникода для **srv_describe** , так как столбец описан быть SRVNVARCHAR.  
+-   Данные столбца передаются как данные Юникода **srv_describe** так, как описано столбца быть SRVNVARCHAR.  
   
 -   Метаданные имени столбца передается **srv_describe** как многобайтовые данные.  
   
-     Расширенная хранимая процедура вызывает **srv_pfield** с параметром поле значение SRV_SPROC_CODEPAGE, чтобы получить многобайтовую кодировку [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Расширенная хранимая процедура вызывает **srv_pfield** с помощью параметра поля SRV_SPROC_CODEPAGE получить многобайтовую кодовую страницу [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Сообщения об ошибках передаются **srv_sendmsg** как многобайтовые данные.  
   

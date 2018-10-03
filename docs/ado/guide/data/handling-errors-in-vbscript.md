@@ -1,13 +1,11 @@
 ---
-title: Обработка ошибок в VBScript | Документы Microsoft
+title: Обработка ошибок в VBScript | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b819e09976e71d0650e942bfa378de2ef58f5f39
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e2ab1fd1fc3bdac98cc8fc23e710ee4067bc46f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271943"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803912"
 ---
 # <a name="handling-errors-in-vbscript"></a>Обработка ошибок в VBScript
-Есть разница между между методы, используемые в Visual Basic и тех, которые используются при использовании VBScript. Основное различие заключается в том, что VBScript не поддерживает концепцию обработку ошибок, продолжение выполнения на метку. Другими словами, нельзя использовать `On Error GoTo` на языке VBScript. Вместо этого используйте `On Error Resume Next` и затем установите флажки **Err.Number** и **число** свойство **ошибки** коллекции, как показано в следующем примере:  
+Есть небольшая разница в методы, используемые в Visual Basic и тех, которые используются с VBScript. Основное различие заключается в том, что VBScript не поддерживает концепцию обработку ошибок, выполнение продолжается на метки. Другими словами, нельзя использовать `On Error GoTo` в VBScript. Вместо этого используйте `On Error Resume Next` и затем выберите оба варианта **Err.Number** и **число** свойство **ошибки** коллекции, как показано в следующем примере:  
   
 ```  
 <!-- BeginErrorExampleVBS -->  

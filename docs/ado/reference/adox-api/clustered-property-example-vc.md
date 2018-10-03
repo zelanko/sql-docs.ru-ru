@@ -1,32 +1,29 @@
 ---
-title: Кластерные примера свойства (VC ++) | Документы Microsoft
+title: Clustered пример свойства (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clustered property [ADOX], VC++ example
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 091bef85e3312507c3924d216e65e125956c4bce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0df3ce437d97f2111aa4f980ce926b1fdaccbded
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285423"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827585"
 ---
-# <a name="clustered-property-example-vc"></a>Пример свойство Clustered (VC ++)
-В этом примере демонстрируется [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) свойство [индекса](../../../ado/reference/adox-api/index-object-adox.md). Обратите внимание, базы данных Microsoft Jet не поддерживают кластеризованные индексы, поэтому этот пример возвращает **False** для **Clustered** свойств всех индексов в *Northwind* База данных.  
+# <a name="clustered-property-example-vc"></a>Пример свойства Clustered (Visual C++)
+В этом примере показано [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) свойство [индекс](../../../ado/reference/adox-api/index-object-adox.md). Обратите внимание, что базы данных Microsoft Jet не поддерживают кластеризованные индексы, поэтому этот пример возвращает **False** для **Clustered** свойства во всех индексах в *Northwind* База данных.  
   
 ```  
 // BeginClusteredCpp.cpp  

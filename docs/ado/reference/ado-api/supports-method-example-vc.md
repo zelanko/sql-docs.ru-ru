@@ -1,32 +1,29 @@
 ---
-title: Пример метода (VC ++) поддерживает | Документы Microsoft
+title: Поддерживает метод пример (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f92a96be897f8cf89a8355d6aaab22b65e1398f4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 98ccc6dfdc904c2789f1ee8a68c0097d5ec6f817
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282653"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828372"
 ---
-# <a name="supports-method-example-vc"></a>Пример метода поддерживает (VC ++)
-В этом примере используется [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод для отображения параметров, поддерживаемых по набору записей, открытой с различные типы курсоров. Функция DisplaySupport является обязательным для выполнения этого примера.  
+# <a name="supports-method-example-vc"></a>Пример метода Supports (Visual C++)
+В этом примере используется [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод для отображения параметров, поддерживаемых набор записей открыт с различные типы курсоров. Функция DisplaySupport является обязательным для выполнения этого примера.  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -230,5 +227,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Supports](../../../ado/reference/ado-api/supports-method.md)

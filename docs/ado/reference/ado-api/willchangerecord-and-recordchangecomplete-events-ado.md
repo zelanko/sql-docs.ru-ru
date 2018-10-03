@@ -1,13 +1,11 @@
 ---
-title: WillChangeRecord и RecordChangeComplete события (ADO) | Документы Microsoft
+title: События WillChangeRecord и Recordchangecomplete (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - RecordChangeComplete
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - WillChangeRecord event [ADO]
 - recordchangecomplete event [ADO]
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: baef6471c753f7a85590a6dd46efb59657fbe9dd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: dd31a75a45bd38bda04655bbb47daca09714803c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822022"
 ---
-# <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord и RecordChangeComplete события (ADO)
-**WillChangeRecord** событие вызывается перед одной или нескольких записей (строк) [записей](../../../ado/reference/ado-api/recordset-object-ado.md) изменения. **RecordChangeComplete** событие вызывается после одного или более записи изменения.  
+# <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>События WillChangeRecord и RecordChangeComplete (ADO)
+**События WillChangeRecord** событие вызывается перед одну или несколько записей (строк) [записей](../../../ado/reference/ado-api/recordset-object-ado.md) изменить. **RecordChangeComplete** событие вызывается после одного или изменить несколько записей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,35 +39,35 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Параметры  
  *adReason*  
- [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) значение, указывающее причину возникновения данного события. Его значение может быть **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, или **adRsnFirstChange**.  
+ [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) значение, указывающее причину для данного события. Его значение может быть **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, или **adRsnFirstChange**.  
   
  *cRecords*  
- Объект **длинные** значение, указывающее количество записей изменение (затронутых).  
+ Объект **Long** значение, указывающее количество записей, изменив (затронутые).  
   
  *pError*  
- [Ошибка](../../../ado/reference/ado-api/error-object.md) объекта. Здесь описываются ошибки, возникшей при значение *adStatus* — **adStatusErrorsOccurred**; в противном случае оно не задано.  
+ [Ошибка](../../../ado/reference/ado-api/error-object.md) объекта. Он описывает ошибки, возникшей при значение *adStatus* — **adStatusErrorsOccurred**; в противном случае оно не задано.  
   
  *adStatus*  
  [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) значение состояния.  
   
- Когда **WillChangeRecord** — вызывается, этот параметр имеет значение **adStatusOK** при успешном выполнении операции, которая вызвала событие. Ему присваивается **adStatusCantDeny** Если это событие не удается запросить отмену отложенной операции.  
+ Когда **события WillChangeRecord** является именем, этот параметр имеет значение **adStatusOK** при успешной операции, которая вызвала событие. Ему будет присвоено **adStatusCantDeny** Если это событие не может запросить отмену отложенной операции.  
   
- Когда **RecordChangeComplete** — вызывается, этот параметр имеет значение **adStatusOK** при успешном выполнении операции, которая вызвала событие или для **adStatusErrorsOccurred** Если Сбой операции.  
+ Когда **RecordChangeComplete** является именем, этот параметр имеет значение **adStatusOK** при успешной операции, которая вызвала событие, или для **adStatusErrorsOccurred** Если Сбой операции.  
   
- Прежде чем **WillChangeRecord** возвращает, присвойте этому параметру значение **adStatusCancel** чтобы запросить отмену операции, которое вызвало это событие или установите этот параметр,  **adStatusUnwantedEvent** для предотвращения последующих уведомлений.  
+ Прежде чем **события WillChangeRecord** возвращает, присвойте этому параметру значение **adStatusCancel** на запрос на отмену операции, вызвавшее данное событие или присвойте этому параметру значение  **adStatusUnwantedEvent** игнорировать последующие уведомления.  
   
- Прежде чем **RecordChangeComplete** возвращает, присвойте этому параметру значение **adStatusUnwantedEvent** для предотвращения последующих уведомлений.  
+ Прежде чем **RecordChangeComplete** возвращает, присвойте этому параметру значение **adStatusUnwantedEvent** игнорировать последующие уведомления.  
   
  *pRecordset*  
  Объект **записей** объекта. **Записей** для возникновения этого события.  
   
 ## <a name="remarks"></a>Примечания  
- Объект **WillChangeRecord** или **RecordChangeComplete** событие может происходить первого поля, измененные в строку из-за следующих **записей** операции: [ Обновление](../../../ado/reference/ado-api/update-method.md), [удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), и [ CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). Значение **записей** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) определяет, какие операции вызывают возникновения событий.  
+ Объект **события WillChangeRecord** или **RecordChangeComplete** событие может происходить первого поля, измененные в строке, из-за следующих **записей** операций: [ Обновление](../../../ado/reference/ado-api/update-method.md), [удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), и [ CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). Значение **записей** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) определяет, какие операции вызывают события, которые происходят.  
   
- Во время **WillChangeRecord** событий, **записей** [фильтра](../../../ado/reference/ado-api/filter-property.md) свойству **adFilterAffectedRecords**. Это свойство нельзя изменить во время обработки события.  
+ Во время **события WillChangeRecord** событий, **записей** [фильтра](../../../ado/reference/ado-api/filter-property.md) свойству **adFilterAffectedRecords**. Это свойство нельзя изменять во время обработки события.  
   
- Необходимо задать **adStatus** параметр **adStatusUnwantedEvent** для каждого возможного **adReason** значение полной остановки уведомление о событии для любого события, которое включает в себя **adReason** параметра.  
+ Необходимо задать **adStatus** параметр **adStatusUnwantedEvent** для каждого возможного **adReason** значение полностью остановить уведомление о событии для любого события, которое включает в себя **adReason** параметра.  
   
 ## <a name="see-also"></a>См. также  
- [Пример модели событий ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [Пример модели событий ADO (Visual C++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)
