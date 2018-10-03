@@ -1,13 +1,11 @@
 ---
-title: Метод getProcedures (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод getProcedures (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getProcedures
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df6101068f9d64ac243666d28c231c88a7926001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f61427cdc3a71ebba5c6d511c3a5c8068b44c496
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778752"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>Метод getProcedures (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,28 +40,28 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 #### <a name="parameters"></a>Параметры  
  *sCatalog*  
   
- Объект **строка** , содержащее имя каталога. Задание значения NULL для этого параметра указывает на то, что имя каталога использовать не нужно.  
+ Значение типа **String**, содержащее имя каталога. Задание значения NULL для этого параметра указывает на то, что имя каталога использовать не нужно.  
   
  *sSchema*  
   
- Объект **строка** , содержащее шаблон имени схемы. Задание значения NULL для этого параметра указывает на то, что имя схемы использовать не нужно.  
+ Значение типа **String**, содержащее шаблон имени схемы. Задание значения NULL для этого параметра указывает на то, что имя схемы использовать не нужно.  
   
  *proc*  
   
- Объект **строка** , содержащее шаблон имени процедуры.  
+ Значение типа **String**, содержащее шаблон имени процедуры.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод getProcedures задается методом getprocedures в интерфейсе java.sql.DatabaseMetaData.  
+## <a name="remarks"></a>Remarks  
+ Этот метод getProcedures указывается методом getProcedures в интерфейсе java.sql.DatabaseMetaData.  
   
- Результирующий набор, возвращаемый методом getprocedures будет содержать следующие сведения:  
+ Результирующий набор, возвращаемый методом getProcedures, включает следующие данные:  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|Имя базы данных, в которой находится указанная хранимая процедура.|  
 |PROCEDURE_SCHEM|**String**|Схема для хранимой процедуры.|  
@@ -72,14 +69,14 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 |NUM_INPUT_PARAMS|**int**|Зарезервировано для использования в будущем, в настоящий момент возвращает значение -1.|  
 |NUM_OUTPUT_PARAMS|**int**|Зарезервировано для использования в будущем, в настоящий момент возвращает значение -1.|  
 |NUM_RESULT_SETS|**int**|Зарезервировано для использования в будущем, в настоящий момент возвращает значение -1.|  
-|REMARKS|**String**|Описание этого столбца процедуры.<br /><br /> <br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] не возвращает значения для этого столбца.  |  
+|REMARKS|**String**|Описание этого столбца процедуры.<br /><br /> <br /><br /> **Примечание**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
 |PROCEDURE_TYPE|**smallint**|Тип хранимой процедуры. Может иметь одно из следующих значений.<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  
->  Дополнительные сведения о данных, возвращаемых методом getprocedures см. в разделе «sp_stored_procedures (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.  
+>  Дополнительные сведения о данных, возвращаемых методом getProcedures, см. в разделе "sp_stored_procedures (Transact-SQL)" электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать метод getProcedures для возврата сведений о хранимой процедуре uspGetBillOfMaterials в [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образца базы данных.  
+ Следующий пример показывает использование метода getProcedures для возврата сведений о хранимой процедуре uspGetBillOfMaterials в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetProcedures(Connection con) {  
@@ -104,7 +101,7 @@ public static void executeGetProcedures(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

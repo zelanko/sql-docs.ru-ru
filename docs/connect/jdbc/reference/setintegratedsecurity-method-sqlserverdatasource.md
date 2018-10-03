@@ -1,13 +1,11 @@
 ---
-title: Метод setIntegratedSecurity (SQLServerDataSource) | Документы Microsoft
+title: Метод setIntegratedSecurity (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.setIntegratedSecurity
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2dca7a3c3cb2f6ac80fd9901c05e03135a42dc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b5919545e08b2de0578080e7dbc538ea2581f587
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690912"
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>Метод setIntegratedSecurity (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Наборы **логическое** значение, указывающее, включено ли свойство integratedSecurity.  
+  Задает значение типа **Boolean**, определяющее, включено ли свойство integratedSecurity.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,19 +36,19 @@ public void setIntegratedSecurity(boolean enable)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Включить*  
+ *enable*  
   
- **значение true,** Если включено integratedSecurity. В противном случае — **false**.  
+ Значение **true**, если включено integratedSecurity. В противном случае — **false**.  
   
-## <a name="remarks"></a>Замечания  
- Значение «**true**» для указания, что учетные данные Windows будет использоваться [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] для проверки подлинности пользователя или приложения. Если «**true**», [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] выполняет поиск в кэше учетных данных локального компьютера учетные данные, которые уже были предоставлены при входе в систему компьютера или сети. Если «**false**», необходимо указать имя пользователя и пароль.  
+## <a name="remarks"></a>Remarks  
+ Установите значение "**true**", чтобы служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовала учетные данные Windows для проверки подлинности пользователя приложения. Если установлено значение "**true**", то [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] выполняет поиск учетных данных, которые уже были предоставлены при входе в сеть или на компьютер, в локальном кэше учетных данных компьютера. Если установлено значение "**false**", необходимо будет предоставить имя пользователя и пароль.  
   
 > [!NOTE]  
->  Это свойство поддерживается только на [!INCLUDE[msCoName](../../../includes/msconame_md.md)] операционных систем Windows.  
+>  Это свойство поддерживается только в операционных системах Windows [!INCLUDE[msCoName](../../../includes/msconame_md.md)].  
   
  Дополнительные сведения об использовании встроенной проверки подлинности см. в разделе [построения URL-АДРЕСЕ соединения](../../../connect/jdbc/building-the-connection-url.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Класс SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

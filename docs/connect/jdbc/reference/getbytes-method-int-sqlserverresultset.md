@@ -1,13 +1,11 @@
 ---
-title: Метод getBytes (int) (SQLServerResultSet) | Документы Microsoft
+title: Метод getBytes (int) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getBytes (int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e9f4e604b90348d8e024228164d474ec6c17e0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 631534e2ca1d0fe7a4c127acb277fc9db7208ace
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722292"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>Метод getBytes (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение индекса заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **байтов** массива в языке программирования Java.  
+  Получает значение индекса заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде массива типа **byte** на языке программирования Java.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +38,7 @@ public byte[] getBytes(int columnIndex)
 #### <a name="parameters"></a>Параметры  
  *columnIndex*  
   
- **Int** , указывающее индекс столбца.  
+ Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Массив **байтов** значения.  
@@ -49,15 +46,15 @@ public byte[] getBytes(int columnIndex)
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getBytes указывается с помощью метода getBytes в интерфейсе java.sql.ResultSet.  
   
  Этот метод поддерживает получение всех столбцов путем прямого считывания байтов с сервера. Он возвращает массив байтов непосредственно с сервера в формате, который хранится на сервере.  
   
- В предыдущей версии [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], можно использовать SQLServerResultSet.getBytes для преобразования значений между массивами байтов и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] тип данных **даты**, **время**,  **datetime2**, или **datetimeoffset**. Теперь при вызове этого метода с такими типами данных возникает исключение, указывающее, что такое преобразование не поддерживается.  
+ В предыдущей версии [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] метод SQLServerResultSet.getBytes мог преобразовывать значения из байтового массива в типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** или **datetimeoffset** и обратно. Теперь при вызове этого метода с такими типами данных возникает исключение, указывающее, что такое преобразование не поддерживается.  
   
-## <a name="see-also"></a>См. также  
- [Метод getBytes &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод getBytes (SQLServerResultSet)](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
