@@ -1,14 +1,11 @@
 ---
-title: sysmail_mailattachments (Transact-SQL) | Документы Microsoft
+title: sysmail_mailattachments (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_mailattachments_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_mailattachments database mail view
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36c5433f51191004a994b1afb3486db89a317acb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c263f7e3df69b6eb3d9517b2dc973a1cb4102f7d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33220695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627312"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +36,14 @@ ms.locfileid: "33220695"
 |**mailitem_id**|**int**|Идентификатор письма, содержавшего вложение.|  
 |**Имя файла**|**nvarchar(520)**|Имя файла вложения. Когда **attach_query_result** -1 и **query_attachment_filename** имеет значение NULL, компонент Database Mail создает произвольное имя файла.|  
 |**размер файла**|**int**|Размер вложения в байтах.|  
-|**Вложение**|**varbinary(max)**|Содержимое вложения.|  
+|**вложение**|**varbinary(max)**|Содержимое вложения.|  
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
 ## <a name="remarks"></a>Примечания  
  Это представление следует использовать для просмотра свойств вложений при устранении неполадок в работе компонента Database Mail.  
   
- Хранение вложений в системных таблицах может привести к **msdb** рост базы данных. Используйте **sysmail_delete_mailitems_sp** для удаления писем и связанных с ними вложений. Дополнительные сведения см. в разделе [создания задания агента SQL Server для архива сообщения компонента Database Mail и журналов событий](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
+ Хранение вложений в системных таблицах может привести к **msdb** рост базы данных. Используйте **sysmail_delete_mailitems_sp** для удаления писем и связанных с ними вложений. Дополнительные сведения см. в разделе [Создание задания агента SQL Server для архива сообщения компонента Database Mail и журналов событий](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Предоставленные **sysadmin** предопределенной роли сервера и **DatabaseMailUserRole** роли базы данных. При выполнении членом **sysadmin** предопределенной роли сервера, в этом представлении отображаются все вложения. Все остальные пользователи могут видеть только вложения, отправленные ими самими.  

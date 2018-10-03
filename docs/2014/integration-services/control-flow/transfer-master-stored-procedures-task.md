@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b89788698662245d69cb8b209286e1e5dd2f93a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b7763c8aeffe60c361a9f54ac3c9657653af40a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150234"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Задача «Передача главных хранимых процедур»
   Задача "Передача главных хранимых процедур" перемещает одну или несколько пользовательских хранимых процедур между базами данных **master** в экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы переместить хранимую процедуру из базы данных **master** , владелец процедуры должен быть dbo.  
@@ -80,7 +77,7 @@ ms.locfileid: "37235324"
   
 ### <a name="configuring-the-transfer-master-stored-procedures-task-programmatically"></a>Программная настройка задачи «Передача главных хранимых процедур»  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
 -   [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md)  

@@ -1,35 +1,32 @@
 ---
-title: Пример метода CreateRecordset (VBScript) | Документы Microsoft
+title: Пример метода CreateRecordset (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CreateRecordset method [RDS], VBScript example
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 752651b81e00e2d4f03e2e8b5a72acefc4fc1b30
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 38c94f73468a9ba9e09142da7a73ad3763488428
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602008"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>Пример метода CreateRecordset (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере кода создается [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на стороне сервера. Он имеет два столбца с четырьмя строками. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **CreateRecordsetVBS.asp**.  
+ В этом примере кода создается [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на стороне сервера. Он содержит два столбца с четырьмя строками. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как **CreateRecordsetVBS.asp**.  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -172,7 +169,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Метод CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
+ [Пример метода CreateRecordset (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 

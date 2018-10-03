@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_profileaccount_sp (Transact-SQL) | Документы Microsoft
+title: sysmail_help_profileaccount_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16355eaa114c10a412db39940a8902d1b361d735
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260407"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700754"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +51,10 @@ sysmail_help_profileaccount_sp
  Имя профиля, который следует включить в список. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
   
  [ **@account_id** =] *account_id*  
- Идентификатор учетной записи, который следует включить в список. *account_id* — **int**, значение по умолчанию NULL. Когда *account_id* и *account_name* имеют значение NULL, приводится список всех учетных записей в профиле.  
+ Идентификатор учетной записи, который следует включить в список. *account_id* — **int**, значение по умолчанию NULL. Когда *account_id* и *account_name* имеют значение NULL, перечисляет все учетные записи в профиле.  
   
  [ **@account_name** =] **"***account_name***"**  
- Имя учетной записи, которую следует включить в список. *account_name* — **sysname**, значение по умолчанию NULL. Когда *account_id* и *account_name* имеют значение NULL, приводится список всех учетных записей в профиле.  
+ Имя учетной записи, которую следует включить в список. *account_name* — **sysname**, значение по умолчанию NULL. Когда *account_id* и *account_name* имеют значение NULL, перечисляет все учетные записи в профиле.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -75,13 +71,13 @@ sysmail_help_profileaccount_sp
 |**account_name**|**sysname**|Имя учетной записи.|  
 |**sequence_number**|**int**|Порядковый номер учетной записи в профиле.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если аргумент *profile_id* или *profile_name* указан, эта хранимая процедура возвращает данные для каждого профиля в экземпляре.  
   
- Хранимая процедура **sysmail_help_profileaccount_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру следует выполнять с трехкомпонентным именем, если текущая база данных не является **msdb**.  
+ Хранимая процедура **sysmail_help_profileaccount_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру необходимо выполнять с трехкомпонентным именем, если текущая база данных не **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию членам выполнение **sysadmin** предопределенной роли сервера.  
+ Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
  **А. Вывод списка учетных записей для конкретного профиля по имени**  
@@ -102,7 +98,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **Б. Вывод списка учетных записей для конкретного профиля по Идентификатору профиля**  
+ **Б. Перечисление учетных записей для конкретного профиля по Идентификатору профиля**  
   
  В следующем примере демонстрируется вывод данных профиля `AdventureWorks Administrator` путем указания идентификатора профиля.  
   
@@ -120,7 +116,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **В. Список учетных записей для всех профилей**  
+ **В. Перечисление учетных записей для всех профилей**  
   
  В следующем примере демонстрируется вывод списка учетных записей для всех профилей экземпляра.  
   
@@ -140,7 +136,7 @@ profile_id  profile_name                 account_id  account_name         sequen
   
 ## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Создайте учетную запись электронной почты базы данных](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Создайте учетную запись почты базы данных](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Объекты конфигурации компонента Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   

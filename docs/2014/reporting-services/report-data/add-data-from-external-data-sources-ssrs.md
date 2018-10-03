@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb750196b31823e604d86a99aabda508a0a06779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f1dff5b37bdf608478105e684a09dab8cae9280
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161954"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Добавление данных из внешних источников данных (службы SSRS)
   Чтобы получить данные из внешнего источника данных, используется подключение к данным. Сведения о подключении к данным обычно указываются владельцем внешнего источника данных, ответственным за предоставление разрешений и указывающим тип используемых учетных данных. Сведения о подключении к данным сохраняются в виде источника данных отчета. Тип источника данных определяет модуль обработки данных, который будет использоваться для получения данных.  

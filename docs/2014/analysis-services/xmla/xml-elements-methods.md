@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - XML for Analysis, methods
 - XMLA, methods
 ms.assetid: c6768dd4-ca06-4a85-93b7-5fd5700886ad
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1baf254e9965153394a3a7b1367ced21c009a7f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1e073eae6637b726a473ea7bf95057ed1548982
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171425"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088594"
 ---
 # <a name="methods-xmla"></a>Методы (XML для аналитики)
   Протокол XML для аналитики (XMLA) с помощью двух методов `Discover` и `Execute`, которые предлагают стандартный способ для приложений для доступа к информации в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Поскольку эти методы вызываются при помощи протокола SOAP, они получают входные данные и предоставляют результаты в формате XML. В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] реализованы оба метода в соответствии со спецификацией XML для аналитики 1.1.  

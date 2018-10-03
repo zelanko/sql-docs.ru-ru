@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 56b90bb24e67b5cdb511a5729c4c7396aed5e93d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a87cf5f7f9f6b81a989b67b2a68484280498aba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285610"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147172"
 ---
 # <a name="flat-file-connection-manager"></a>Диспетчер соединений с неструктурированными файлами
   Диспетчер соединений с неструктурированными файлами дает возможность пакету получить доступ к данным неструктурированного файла. Например, исходные и целевые неструктурированные файлы могут использоваться диспетчерами соединений с неструктурированными файлами для извлечения и загрузки данных.  

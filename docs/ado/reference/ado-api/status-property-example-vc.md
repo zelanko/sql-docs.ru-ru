@@ -1,32 +1,29 @@
 ---
-title: Пример свойства состояния (VC ++) | Документы Microsoft
+title: Пример свойства Status (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Status property [ADO], VC++ example
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 107eb797ac6c7ffbc0ee461e27c4747211b1f614
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8848497ed90909079b9c0142bc570f00466110b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851464"
 ---
-# <a name="status-property-example-vc"></a>Пример свойства состояния (VC ++)
-В этом примере используется [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство для отображения записи, которые были изменены в пакетной операции перед пакетного обновления.  
+# <a name="status-property-example-vc"></a>Пример свойства Status (Visual C++)
+В этом примере используется [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство для отображения записи, которые были изменены в пакетной операции перед произошла пакетного обновления.  
   
 ```  
 // BeginStatusCpp.cpp  

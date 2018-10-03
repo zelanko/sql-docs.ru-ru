@@ -1,35 +1,32 @@
 ---
-title: Коды ошибок в службах IIS | Документы Microsoft
+title: Коды ошибок в службах IIS | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], IIS
 - IIS errors [ADO]
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8883077099379f0cb0f6faf396f3ac1ac7cd0b25
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 24eccf2dee8eb8f72b75d568e31d200c337b2fdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650552"
 ---
-# <a name="internet-information-services-error-codes-for-remote-data-service"></a>Коды ошибок для удаленных данных службы в службах IIS
-В следующей таблице перечислены коды ошибок Microsoft® Internet Information Services (IIS), которые связаны с использованием удаленной службы данных. Положительное десятичное трансляции низкий два байта, показаны отрицательное десятичное преобразование кода ошибки переполнения и шестнадцатеричных значений.
+# <a name="internet-information-services-error-codes-for-remote-data-service"></a>Коды ошибок для удаленной службы данных в службах IIS
+Ниже перечислены коды ошибок Microsoft® Internet Information Services (IIS), связанные с использованием удаленной службы данных. Положительное десятичное преобразование низкой два байта, показаны отрицательное десятичное преобразование кода ошибку переполнения и шестнадцатеричные значения.
 
-|Ошибки в службах IIS|Количество|Описание|
+|Ошибки Internet Information Services|Количество|Описание|
 |------------------------------------------|------------|-----------------|
-|**IDS_IIS_AccessDenied**|8208 -2146820080 0x800A2010|Интернет-ошибка сервера: Доступ запрещен.|
-|**IDS_IIS_ObjectNotFound**|8209 -2146820079 0x800A2011|Интернет-ошибка сервера: / Модуль объекта не найден.|
-|**IDS_IIS_RequestForbidden**|8210 -2146820078 0x800A2012|Интернет-ошибка сервера: Запрос запрещен.|
+|**IDS_IIS_AccessDenied**|8208 -2146820080 0x800A2010|Ошибка сервера Интернета: Доступ запрещен.|
+|**IDS_IIS_ObjectNotFound**|8209 -2146820079 0x800A2011|Ошибка сервера Интернета: / Модуль объекта не найден.|
+|**IDS_IIS_RequestForbidden**|8210 -2146820078 0x800A2012|Ошибка сервера Интернета: Запрос запрещен.|
 |**IDS_IIS_UnexpectedError**|8447 -2146819841 0x800A20FF|Ошибка сервера Интернета.|

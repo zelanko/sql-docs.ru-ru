@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - GranularityAttributeID Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - GranularityAttributeID element
 ms.assetid: 90e6c939-71bd-462a-a377-4854cb9d5266
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d29d88dcc7317388e2baab3415509f52299883f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee0382732198235a2fafc99c55f6c07832e9995c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075844"
 ---
 # <a name="granularityattributeid-element-assl"></a>Элемент GranularityAttributeID (ASSL)
   Содержит идентификатор (ID) атрибута, связанного с родительским [MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md) тип данных.  

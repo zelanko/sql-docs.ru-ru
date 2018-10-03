@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97f88d8b585eca518edf3aebe25e38a79e38bf3b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155134"
 ---
 # <a name="term-extraction-transformation"></a>преобразование «Извлечение терминов»
   Преобразование «Извлечение терминов» извлекает термины из текста во входном столбце преобразования, а затем записывает термины в выходной столбец преобразования. Это преобразование работает только с англоязычным текстом и использует собственный словарь и лингвистические сведения об английском языке.  
@@ -59,7 +56,7 @@ ms.locfileid: "37229394"
   
  При добавлении термина в список исключений все содержащие его термины, будь то слова или субстантивные словосочетания, также исключаются. Например, если список исключений содержит единственное слово *data*, все термины, содержащие это слово, такие как *data*, *data mining*, *data integrity*и *data validation* , тоже будут исключаться. Если надо исключить только сложные слова, содержащие слово *data*, следует явным образом добавить эти составные термины в список исключений. Например, если надо извлекать вхождения слова *data*, но исключать *data validation*, то следует добавить *data validation* в список исключений и убедиться, что слово *data* удалено из списка.  
   
- Ссылочная таблица должна быть таблицей в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или в базе данных Access. Преобразование «Извлечение терминов» использует отдельное соединение OLE DB для подключения к ссылочной таблице. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
+ Ссылочная таблица должна быть таблицей в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или в базе данных Access. Преобразование «Извлечение терминов» использует отдельное соединение OLE DB для подключения к ссылочной таблице. Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](../../connection-manager/ole-db-connection-manager.md).  
   
  Преобразование «Извлечение терминов» работает в режиме с полным предварительным кэшированием. Во время выполнения преобразование «Извлечение терминов» считывает термины-исключения из ссылочной таблицы и сохраняет их в собственной памяти, перед тем как приступать к обработке входных строк преобразования.  
   

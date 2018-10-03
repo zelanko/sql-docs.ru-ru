@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 167e31084d90120a51bd740176b0497b0104b4fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 47cd197168b275762b5fa2faa4790a567171022f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156765"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168144"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Проекты табличной модели (табличные службы SSAS)
   Для создания новой табличной модели сначала необходимо создать новый проект табличной модели в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. При установке [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]предоставляется три новых шаблона проектов бизнес-аналитики для создания проектов табличной модели. Каждый шаблон проекта представляет собой структуру, которую можно использовать для начала создания модели. В подразделах этого раздела описывается создание нового проекта табличной модели с использованием шаблонов проекта.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Раздел|Описание|  
 |-----------|-----------------|  

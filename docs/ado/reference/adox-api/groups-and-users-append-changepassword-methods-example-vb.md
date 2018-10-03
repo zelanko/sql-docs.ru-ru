@@ -1,13 +1,11 @@
 ---
-title: Группы и пользователи присоединения, пример ChangePassword методы (Visual Basic) | Документы Microsoft
+title: Группы и пользователи Append, пример метода ChangePassword (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - ChangePassword method [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8de70dad95da30fb9f64bc587486beef808a164d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ff3e82608c83646198bbf74f537ca76be427d4bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790342"
 ---
-# <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Группы и пользователи присоединения, пример ChangePassword методы (Visual Basic)
-В этом примере демонстрируется [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) метод [группы](../../../ado/reference/adox-api/groups-collection-adox.md), а также [Append](../../../ado/reference/adox-api/append-method-adox-users.md) метод [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) путем добавления новых [Группы](../../../ado/reference/adox-api/group-object-adox.md) и новый [пользователя](../../../ado/reference/adox-api/user-object-adox.md) в системе. Новый **группы** добавляется к **группы** коллекции нового **пользователя**. Следовательно, новый **пользователя** добавляется **группы**. Кроме того [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) метод используется для указания **пользователя** пароль.  
+# <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Примеры методов Append коллекций Groups и Users, а также пример метода ChangePassword (Visual Basic)
+В этом примере показано [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) метод [группы](../../../ado/reference/adox-api/groups-collection-adox.md), а также [Append](../../../ado/reference/adox-api/append-method-adox-users.md) метод [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) путем добавления новых [Группы](../../../ado/reference/adox-api/group-object-adox.md) и новый [пользователя](../../../ado/reference/adox-api/user-object-adox.md) в системе. Новый **группы** добавляется к **группы** коллекции нового **пользователя**. Следовательно, новый **пользователя** добавляется **группы**. Кроме того [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) метод используется для указания **пользователя** пароль.  
   
 > [!NOTE]
->  При подключении к поставщик источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = yes** или **Integrated Security = SSPI** вместо идентификатора пользователя и пароля сведения в строке подключения.  
+>  Если вы подключаетесь к поставщик источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = yes** или **Integrated Security = SSPI** вместо идентификатора пользователя и пароля сведения в строке подключения.  
   
 ```  
 ' BeginGroupVB  
@@ -127,11 +124,11 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Append-метод (ADOX группы)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append-метод (ADOX пользователей)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Append-метод (коллекция Groups ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Append-метод (коллекция Users ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Метод ChangePassword (ADOX)](../../../ado/reference/adox-api/changepassword-method-adox.md)   
- [Объект группы (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)   
- [Коллекция групп (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [Объект пользователя (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
+ [Объект Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)   
+ [Коллекция Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
+ [Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

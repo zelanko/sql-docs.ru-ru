@@ -1,13 +1,11 @@
 ---
-title: Столбцы и таблицы методы добавления, введите имя свойства примере (VC ++) | Документы Microsoft
+title: Столбцов и таблиц методов append для коллекций, назовите пример свойства (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Name property [ADOX], VC++ example
 - Append method [ADOX], VC++ example
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c783914dd96e3545927f308c861eb80e72ef7717
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cadebd87f664f603a94532531432446c015039d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760982"
 ---
-# <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Столбцы и таблицы добавьте методы примера имя свойства (VC ++)
-Следующий код демонстрирует создание новой таблицы.  
+# <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Примеры методов Append для коллекций Columns и Tables, а также пример свойства Name (Visual C++)
+Ниже показано, как создать новую таблицу.  
   
 ```  
 // BeginCreateTableCpp.cpp  
@@ -86,6 +83,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Append-метод (ADOX столбцы)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append-метод (ADOX таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Append-метод (коллекция Columns ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append-метод (коллекция Tables ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

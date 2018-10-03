@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProactiveCachingTablesBinding Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProactiveCachingTablesBinding data type
 ms.assetid: f6b3f6fc-757c-4b1e-bb3a-d26482888d14
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 98091714acb85771972c8c90c6b445744a33cce6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f157503cc77235ad4f249da1390d4504f7d05569
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275610"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065504"
 ---
 # <a name="proactivecachingtablesbinding-data-type-assl"></a>Тип данных ProactiveCachingTablesBinding (ASSL)
   Определяет производный тип данных, представляющий сведения для [ProactiveCaching](../objects/proactivecaching-element-assl.md) об изменениях источника данных в указанных таблицах и представлениях, требующих перестройки кэша.  

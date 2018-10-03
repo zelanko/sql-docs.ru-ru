@@ -1,13 +1,11 @@
 ---
-title: ADCPROP_UPDATERESYNC_ENUM | Документы Microsoft
+title: ADCPROP_UPDATERESYNC_ENUM | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_UPDATERESYNC_ENUM [ADO]
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44358b333ce099281197512ec23f58b3a11f575a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: afaadf62c38c318c759be1c452ff0953ba19c7d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275263"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615582"
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
-Указывает ли [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) метод следуют неявный [Resync](../../../ado/reference/ado-api/resync-method.md) метода операции и если да, область данной операции.  
+Указывает ли [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) метод сопровождается неявным [Resync](../../../ado/reference/ado-api/resync-method.md) работы метода и если да, область этой операции.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adResyncAll**|15|Вызывает **Resync** с комбинацией других членов ADCPROP_UPDATERESYNC_ENUM.|  
-|**adResyncAutoIncrement**|1|По умолчанию. Пытается извлечь нового значения идентификатора для столбцов, которые автоматически увеличивается на единицу или созданные в источнике данных, например Microsoft Jet счетчик полей или столбцов Microsoft SQL Server Identity.|  
-|**adResyncConflicts**|2|Вызывает **Resync** для всех строк, в которых произошел сбой операции обновления или удаления из-за конфликтов параллелизма.|  
-|**adResyncInserts**|8|Вызывает **Resync** для всех успешно вставленных строк. Тем не менее значения столбцов AutoIncrement не синхронизируются. Вместо этого содержимое вставленных строк выполняется повторная синхронизация на основе существующего значения первичного ключа. Если первичный ключ — это значение AutoIncrement **Resync** не получить содержимое нужные строки. Для автоматического увеличения Автоувеличение значений первичного ключа, вызовите **UpdateBatch** с комбинацией **adResyncAutoIncrement** + **adResyncInserts**.|  
+|**adResyncAll**|15|Вызывает **Resync** с комбинацией всех остальных членов ADCPROP_UPDATERESYNC_ENUM.|  
+|**adResyncAutoIncrement**|1|По умолчанию. Пытается получить новое значение идентификатора для столбцов, которые автоматически увеличивается или создаваемых различными источника данных, например Microsoft Jet AutoNumber полей или столбцов Microsoft SQL Server Identity.|  
+|**adResyncConflicts**|2|Вызывает **Resync** для всех строк, в которых произошел сбой операции обновления или удаления из-за конфликта параллелизма.|  
+|**adResyncInserts**|8|Вызывает **Resync** для всех успешно вставленных строк. Тем не менее значения столбцов AutoIncrement не синхронизируются. Вместо этого содержимое только что вставленных строк выполняется повторная синхронизация на основе существующего значения первичного ключа. Если первичный ключ имеет значение «Автоувеличение», **Resync** не получить содержимое нужные строки. Для с автоматически увеличивающимися значениями AutoIncrement значения первичного ключа, вызовите **UpdateBatch** с комбинацией **adResyncAutoIncrement** + **adResyncInserts**.|  
 |**adResyncNone**|0|Не вызывает **Resync**.|  
-|**adResyncUpdates**|4|Вызывает **Resync** для всех строк, успешно обновлен.|  
+|**adResyncUpdates**|4|Вызывает **Resync** для всех строк, успешно обновлены.|  
   
 ## <a name="applies-to"></a>Объект применения  
  [Свойство Update Resync (динамическое) (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)

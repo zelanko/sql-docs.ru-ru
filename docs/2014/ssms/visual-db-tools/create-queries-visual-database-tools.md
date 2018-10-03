@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ce62236dc084f495dff2530141553ca77ee9697
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d6eec2455269026151d285f781ee475934825082
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809600"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160014"
 ---
 # <a name="create-queries-visual-database-tools"></a>Создание запросов (визуальные инструменты для баз данных)
   Запросы позволяют получить данные из таблиц и представлений базы данных. Для создания запросов и работы с ними служит **Конструктор запросов и представлений**, который содержит четыре панели: [панель диаграммы](visual-database-tools.md), [панель SQL](sql-pane-visual-database-tools.md), [панель критериев](criteria-pane-visual-database-tools.md)и [панель результатов](results-pane-visual-database-tools.md).  

@@ -1,34 +1,31 @@
 ---
-title: Пример метода GetString (VB) | Документы Microsoft
+title: Пример метода GetString (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - GetString method [ADO], Visual Basic example
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a5a2ac54d8a177669d94613a2b612f6ce65f8d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9a7210c3680202a0e08e3096f7f58d32e876e1ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278863"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623142"
 ---
 # <a name="getstring-method-example-vb"></a>Пример метода GetString (Visual Basic)
-В этом примере демонстрируется [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) метод.  
+В этом примере показано [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) метод.  
   
- Предполагается отладки проблемы доступа к данных и требуется быстрый и простой способ печати текущее содержимое небольшое [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Предположим, у вас при отладке проблемы доступа данных и требуется быстрый и простой способ печати текущее содержимое с малой [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ```  
 'BeginGetStringVB  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index parallel operations [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - MAXDOP index option, parallel index operations
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
-caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7faf1eea3a528fdba12f7d29323d8f087af0d76a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a70d58caba2b2a443f0017c52611331e9257972
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170781"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142624"
 ---
 # <a name="configure-parallel-index-operations"></a>Настройка параллельных операций с индексами
   В этом разделе определяется параметр max degree of parallelism и описывается порядок изменения этого параметра в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. На многопроцессорных компьютерах, где установлен выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition или более многофункциональный, индексные инструкции могут использовать несколько процессоров для выполнения операций просмотра, сортировки и операций с индексами, связанных с индексной инструкцией, аналогично другим запросам. Число процессоров, задействованных при выполнении одной индексной инструкции, определяется параметром конфигурации [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) , текущей рабочей нагрузкой и статистикой индекса. Параметр max degree of parallelism определяет максимальное число процессоров, используемых при параллельном выполнении плана. Если компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] определяет, что система загружена, степень параллелизма операции с индексами автоматически уменьшается перед началом выполнения инструкции. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] уменьшает также степень параллелизма, если ведущий ключевой столбец несекционированного индекса имеет ограниченное число различных значений или частота появления таких значений существенно изменяется.  

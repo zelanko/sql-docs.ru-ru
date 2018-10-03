@@ -1,35 +1,32 @@
 ---
-title: Пример свойства SQL (VBScript) | Документы Microsoft
+title: Пример свойства SQL (VBScript) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SQL property [ADO], VBScript example
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be02b86efe2aa2c741507d1cfdb93aa9187062f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b76b4bfc372c688101882a7250c54a4d4c0c536c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288873"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673554"
 ---
 # <a name="sql-property-example-vbscript"></a>Пример свойства SQL (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Следующий код показывает, как задать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) параметр SQL во время разработки и привязки его к элементу управления данными, с помощью базы данных называется *Pubs*, который поставляется с Microsoft SQL Server. Чтобы протестировать пример, скопируйте следующий код в обычном ASP документ с именем **SQLDesignVBS.asp** веб-сервера.  
+ Ниже показано, как задать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) параметр SQL во время разработки и привязки его к элементу управления данными, с помощью базы данных называется *Pubs*, который поставляется с Microsoft SQL Server. Чтобы протестировать пример, скопируйте следующий код в обычном ASP документ с именем **SQLDesignVBS.asp** веб-сервера.  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -92,7 +89,7 @@ body {
 <!-- EndSQLDesignVBS -->  
 ```  
   
- В следующем примере показано, как задать необходимые параметры **RDS. DataControl** во время выполнения. Чтобы протестировать этот пример, вырезать и вставьте следующий код в обычном документ ASP и назовите его **SQLRuntimeVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ Приведенный ниже показано, как задать необходимые параметры **RDS. DataControl** во время выполнения. Чтобы протестировать этот пример, вырезать и вставить следующий код в обычном документ ASP и назовите его **SQLRuntimeVBS.asp**. Сценарий ASP будет идентификации сервера.  
   
 ```  
 <!-- BeginSQLRuntimeVBS -->  
@@ -179,7 +176,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Свойство SQL](../../../ado/reference/rds-api/sql-property.md)
 
 

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166404"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Функция LookupSet (построитель отчетов и службы SSRS)
   Возвращает набор совпадающих значений для заданного имени из набора данных, содержащего пары «имя-значение».  

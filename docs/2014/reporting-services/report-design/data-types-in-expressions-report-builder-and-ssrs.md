@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f48846f1cb78a8ea8a21be5a7114bf11017f5ca5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147924"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Типы данных в выражениях (построитель отчетов и службы SSRS)
   Типы данных представляют разные виды данных, чтобы их можно было эффективно хранить и обрабатывать. Стандартные типы данных включают текст (строки), числа с десятичными разрядами или без них, даты и время, а также изображения. Значения в отчете должны быть представлены с помощью типов данных языка определения отчетов. При отображении значения в отчете его можно отформатировать в соответствии с конкретными предпочтениями. Например, поле, представляющее валюту, может храниться в определении отчета как число с плавающей запятой, но отображаться в различных форматах в зависимости от выбранного свойства формата.  
@@ -112,7 +109,7 @@ ms.locfileid: "37319954"
   
  Для преобразования этой даты в одно или несколько значений CLR можно воспользоваться одним из следующих способов.  
   
--   В текстовом поле получите часть строки с помощью выражения. Например:  
+-   В текстовом поле получите часть строки с помощью выражения. Пример:  
   
     -   Следующее выражение возвращает часть строки, относящуюся к часу смещения часового пояса времени в формате UTC, и преобразует ее в минуты: `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   

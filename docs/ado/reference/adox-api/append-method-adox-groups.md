@@ -1,13 +1,11 @@
 ---
-title: Append-метод (ADOX группы) | Документы Microsoft
+title: Append-метод (коллекция Groups ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecd80b3c2affcbbed7bbd50f7e130fa84d1e86ea
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 171aaa250930d5563d8ce6ec3b08b5939710b881
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742532"
 ---
-# <a name="append-method-adox-groups"></a>Append-метод (ADOX группы)
+# <a name="append-method-adox-groups"></a>Метод Append (коллекция Groups ADOX)
 Добавляет новый [группы](../../../ado/reference/adox-api/group-object-adox.md) объект [группы](../../../ado/reference/adox-api/groups-collection-adox.md) коллекции.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,7 +39,7 @@ Groups.Append Group
  **Группы** добавляемый объект или имя группы для создания и добавления.  
   
 ## <a name="remarks"></a>Примечания  
- **Группы** коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет все учетные записи групп в каталоге. **Группы** коллекции для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) представляет группу, к которой принадлежит пользователь.  
+ **Группы** коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет все учетные записи группы каталога. **Группы** коллекции для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) представляет только группы, к которой принадлежит пользователь.  
   
  Если поставщик не поддерживает создание групп, произойдет ошибка.  
   
@@ -53,11 +50,11 @@ Groups.Append Group
  [Коллекция Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
 ## <a name="see-also"></a>См. также  
- [Группы и пользователи присоединения, пример ChangePassword методы (Visual Basic)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
- [Append-метод (ADOX столбцы)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append-метод (ADOX индексы)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append-метод (ADOX ключи)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append-метод (ADOX процедур)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append-метод (ADOX таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append-метод (ADOX пользователей)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [Группы и пользователи Append, пример метода ChangePassword (Visual Basic)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
+ [Append-метод (коллекция Columns ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append-метод (коллекция Indexes ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Append-метод (коллекция Keys ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Append-метод (коллекция Procedures ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Append-метод (коллекция Tables ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Append-метод (коллекция Users ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Метод Append (коллекция Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

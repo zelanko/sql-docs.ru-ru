@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a481a3ea989ec31ea6d3e207633f102e81514940
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: aac010a0dc1d9d6cd23b6ccdfbff5358455cddd6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809780"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080434"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Диалоговое окно «Полнотекстовые индексы» (визуальные инструменты для баз данных)
   Это диалоговое окно позволяет создать полнотекстовый индекс для полнотекстового поиска по столбцам, содержащим текстовые данные, в таблицах базы данных. Полнотекстовый индекс зависит от обычного индекса, поэтому необходимо сначала создать его. Обычный индекс должен быть создан для одного столбца со значениями, отличными от NULL; лучше выбрать столбец с небольшими значениями, чем столбец с большими значениями.  

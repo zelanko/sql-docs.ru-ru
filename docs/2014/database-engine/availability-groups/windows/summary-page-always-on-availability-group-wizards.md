@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.failoverwizard.summary.f1
@@ -14,16 +12,15 @@ f1_keywords:
 - sql12.swb.adddatabasewizard.summary.f1
 - sql12.swb.newagwizard.summary.f1
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88edbfb939c767e31ba7bd1c32f5fa66bbaff179
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140374"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Страница «Сводка» (мастера групп доступности AlwaysOn)
   В этом разделе описываются параметры, приведенные на странице **Сводка** . Эта тема относится к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] и [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. На этой странице приведены заданные пользователем параметры новой группы доступности. Чтобы внести одно или несколько изменений, нажмите кнопку **Назад** , чтобы вернуться на нужную страницу или страницы. После внесения необходимых изменений нажмите кнопку **Далее** , чтобы вернуться на страницу **Сводка** . После проверки выбранных параметров нажмите кнопку **Готово**.  

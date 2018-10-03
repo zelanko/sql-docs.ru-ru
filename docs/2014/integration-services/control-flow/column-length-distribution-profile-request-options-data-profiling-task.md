@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6abc6de76628a022068a25b41c7b70e84ebc5581
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ae900ea29dba0217a9e186007476c12fa15c92e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176531"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098584"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Параметры запроса профиля распределения длины столбцов (задача «Профилирование данных»)
   При помощи панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос профиля распределения длины столбцов** , выбранного на панели запросов. Профиль «Распределение длины столбцов» содержит все точные значения длины строковых значений в выбранном столбце и процент строк таблицы, соответствующий каждому значению длины. Этот профиль помогает выявлять такие проблемы данных, как недопустимые значения. Например, во время профилирования столбца с кодами штатов США, состоящими из двух символов, можно выявить значения длиной более двух символов.  

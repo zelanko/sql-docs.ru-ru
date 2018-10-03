@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02c10662607423a5dba423977572876f18394e22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82d3b33b8c41885d3fa92d1363af6c98443c9deb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172095"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073784"
 ---
 # <a name="tuning-a-workload"></a>Настройка рабочей нагрузки
   Помощник по настройке ядра СУБД можно использовать для определения физической структуры базы данных и выбранных таблиц, оптимальной с точки зрения производительности запросов.  
@@ -30,7 +27,7 @@ ms.locfileid: "37172095"
   
 ### <a name="tune-a-workload-transact-sql-script-file"></a>Настройка файла скрипта рабочей нагрузки Transact-SQL  
   
-1.  Скопируйте образец инструкции или инструкций SELECT из примера «А. Использование инструкции SELECT для получения строк и столбцов" в разделе [Примеры использования инструкции SELECT (Transact-SQL)](/sql/t-sql/queries/select-examples-transact-sql) и вставьте их в редактор запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Сохраните файл как **MyScript.sql** в каталоге, где вы можете легко найти.  
+1.  Скопируйте образец инструкции или инструкций SELECT из примера «А. Использование инструкции SELECT для получения строк и столбцов" в разделе [Примеры использования инструкции SELECT (Transact-SQL)](/sql/t-sql/queries/select-examples-transact-sql) и вставьте их в редактор запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Сохраните файл с именем **MyScript.sql** в каталог, где его будет легко найти.  
   
 2.  Запустите помощник по настройке ядра СУБД. См. раздел [Запуск помощника по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   

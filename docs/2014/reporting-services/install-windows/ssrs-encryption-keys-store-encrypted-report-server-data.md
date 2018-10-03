@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 58b9dbd53149ca710753e8a355d379b21e1c7b5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19434a73f39e0701479f754b5af5dbe9ab4d8030
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186081"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149094"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранят зашифрованные значения в базе данных сервера отчетов и в файлах конфигурации. Зашифрованные значения — это главным образом учетные данные, используемые при подключении к внешним источникам данных, содержащим данные для отчетов. В данном разделе содержатся сведения о шифруемых значениях, о возможностях шифрования в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и о других важных типах конфиденциальных данных.  

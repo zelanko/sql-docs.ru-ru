@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c4b2ae49de561dd7a82785bda955d6701abc770
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73d495f35e09ce893e9f8e763a7daa83851c1463
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251286"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146344"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Задача 5. Создание атрибута на основе домена из Excel
   В этой задаче вы преобразовать **состояние** атрибут **поставщика** сущность как **атрибут на основе домена**. После настройки атрибут ее на основе домена и его публикации в MDS, новую сущность с именем **состояние** будет создана на сервере MDS со всеми значениями в столбце и **состояние** атрибут **Поставщика** сущности будет заполнена значениями из **состояние** сущности. Теперь **поставщики** модель должна иметь две сущности: **поставщика** и **состояние** где **состояние** атрибут  **Поставщик** сущность является атрибутом на основе домена, зависящий от **состояние** сущности.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
-caps.latest.revision: 24
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f8c5e7e322358a12db2bfa8aebb0983951053502
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149164"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Параметры ("запрос выполнения SQL Server ANSI")
   Все вместе эти параметры SET стандарта ANSI (ISO) определяют среду обработки запроса на время выполнения пользовательского запроса, триггера или хранимой процедуры. Однако эти параметры SET включают не все возможности, необходимые для соответствия стандарту ISO. Эта страница позволяет указать, что [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет выполнять запросы с использованием всех или части параметров, заданных в стандарте ISO. Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Для изменения установок текущих запросов выберите в меню **Запрос** пункт **Параметры запроса** или щелкните правой кнопкой мыши в окне запросов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **Параметры запроса**. В диалоговом окне **Параметры запроса** в разделе **Выполнение**щелкните **ANSI**.  
@@ -57,7 +54,7 @@ ms.locfileid: "37173365"
  **SET ANSI_NULLS**  
  -   Позволяет задать поведение операторов сравнения «Равно» (=) и «Не равно» (<>) в соответствии со стандартом ISO, если эти операторы используются со значениями NULL. Если флажок SET ANSI_NULLS установлен, то согласно стандарту ISO все сравнения со значением NULL дают результат UNKNOWN. Если флажок SET ANSI_NULLS не установлен, все сравнения со значением NULL дают значение TRUE. Этот флажок выбран по умолчанию.  
   
- **Восстановить значения по умолчанию**  
+ **Сброс до значений по умолчанию**  
  Позволяет вернуть исходные значения по умолчанию для всех параметров на данной странице.  
   
   

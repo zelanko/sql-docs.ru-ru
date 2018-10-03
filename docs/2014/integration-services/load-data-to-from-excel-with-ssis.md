@@ -5,20 +5,18 @@ ms.date: 04/10/2018
 ms.prod: sql-server-2014
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: ''
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88615f87b31b1c95cd9afc9dc8d915df2995267c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098523"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 
@@ -51,7 +49,7 @@ ms.locfileid: "37197534"
 
 Если на компьютере уже установлена 32-разрядная версия Office, необходимо установить 32-разрядную версию компонентов. Кроме того, следует выполнять пакет служб SSIS в 32-разрядном режиме или 32-разрядную версию мастера импорта и экспорта.
 
-Если у вас есть подписка на Office 365, при запуске программы установки может появиться сообщение об ошибке. Это сообщение свидетельствует о том, что невозможно установить скачанные компоненты вместе с компонентами Office, полученными с помощью технологии "нажми и работай". Чтобы обойти это сообщение, запустите установку в тихом режиме. Для этого откройте окно командной строки и запустите скачанный EXE-файл с параметром `/quiet`. Например:
+Если у вас есть подписка на Office 365, при запуске программы установки может появиться сообщение об ошибке. Это сообщение свидетельствует о том, что невозможно установить скачанные компоненты вместе с компонентами Office, полученными с помощью технологии "нажми и работай". Чтобы обойти это сообщение, запустите установку в тихом режиме. Для этого откройте окно командной строки и запустите скачанный EXE-файл с параметром `/quiet`. Пример:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

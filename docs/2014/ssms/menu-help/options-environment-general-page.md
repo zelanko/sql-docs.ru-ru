@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d58abb6fe742648af351da4f6f2586bdbdd3d29a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4ef59393f889c06094da6c2d96ebbe637f58b7e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820220"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152484"
 ---
 # <a name="options-environment-general-page"></a>Параметры ("Среда" — "Общие")
   Диалоговое окно **Параметры** используется для настройки действий среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] при запуске, общих параметров управления окнами и других общих настроек. В меню **Сервис** выберите пункт **Параметры**, откройте папку **Среда** и выберите пункт **Общие**.  

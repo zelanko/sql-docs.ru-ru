@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SVF
 - scalar-valued functions
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
-caps.latest.revision: 81
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5dee7f6654bdf4e24eb170b968dd8afa366e8211
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350940"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157364"
 ---
 # <a name="clr-scalar-valued-functions"></a>Скалярные функции среды CLR
   Скалярная функция (SVF) возвращает единственное значение, например строку, целочисленное или битовое значение. Определяемые пользователем скалярные функции можно создавать в управляемом коде на любом языке программирования платформы .NET Framework. Эти функции доступны для [!INCLUDE[tsql](../../includes/tsql-md.md)] и другого управляемого кода. Дополнительные сведения о преимуществах интеграции со средой CLR и выборе между управляемым кодом и [!INCLUDE[tsql](../../includes/tsql-md.md)], см. в разделе [Общие сведения об интеграции со средой CLR](../clr-integration/clr-integration-overview.md).  

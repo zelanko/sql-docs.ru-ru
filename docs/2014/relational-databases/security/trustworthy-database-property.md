@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TRUSTWORTHY database property
@@ -14,12 +12,12 @@ ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9ac99b46c31d67b0175fffa882dcf5411194930c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 04f4dbeee8c160e968ee4b9df29e96d21d857e58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025554"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099524"
 ---
 # <a name="trustworthy-database-property"></a>Свойство базы данных TRUSTWORTHY
   Свойство TRUSTWORTHY используется для указания того, доверяет ли экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных и ее содержимому. По умолчанию это свойство имеет значение OFF, но его можно установить в ON при помощи инструкции ALTER DATABASE. Например, `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  

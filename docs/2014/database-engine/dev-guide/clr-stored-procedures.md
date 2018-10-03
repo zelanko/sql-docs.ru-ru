@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -22,22 +20,21 @@ helpviewer_keywords:
 - output parameters [CLR integration]
 - tabular results
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
-caps.latest.revision: 74
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db6d1dd298cba3960189c3983ab9d4781113d569
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0949b6fddf1755da48dd7922a4fbda50d4b2787
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225884"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112055"
 ---
 # <a name="clr-stored-procedures"></a>Хранимые процедуры CLR
   Хранимыми процедурами являются процедуры, которые нельзя использовать в скалярных выражениях. В отличие от скалярных функций, они могут возвращать клиенту табличные результаты и сообщения, вызывать инструкции языка описания данных DDL и языка обработки данных DML, а также возвращать выходные параметры. Дополнительные сведения о преимуществах интеграции со средой CLR и выборе между управляемым кодом и [!INCLUDE[tsql](../../includes/tsql-md.md)], см. в разделе [Общие сведения об интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Требования для хранимых процедур CLR  
- В CLR (CLR), хранимые процедуры реализуются как общие статические методы класса в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сборки. Статический метод может быть объявлен как void или может возвратить целое значение. Если он возвращает целое значение, возвращенное целое число рассматривается как код возврата из процедуры. Например:  
+ В CLR (CLR), хранимые процедуры реализуются как общие статические методы класса в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сборки. Статический метод может быть объявлен как void или может возвратить целое значение. Если он возвращает целое значение, возвращенное целое число рассматривается как код возврата из процедуры. Пример:  
   
  `EXECUTE @return_status = procedure_name`  
   
@@ -153,7 +150,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  Метод `SqlPipe.Send(string)` используется для передачи сообщений в клиентское приложение. Текст сообщения ограничен 8000 символов. Если размер сообщения превышает 8000 символов, сообщение усекается.  
   
 ###### <a name="returning-tabular-results"></a>Возврат табличных результатов  
- Чтобы послать результаты запроса непосредственно клиенту, используется один из перегруженных методов `Execute` на объекте `SqlPipe`. Это наиболее эффективный способ возврата результатов клиенту, поскольку данные передаются в сетевые буферы без копирования в управляемую память. Например:  
+ Чтобы послать результаты запроса непосредственно клиенту, используется один из перегруженных методов `Execute` на объекте `SqlPipe`. Это наиболее эффективный способ возврата результатов клиенту, поскольку данные передаются в сетевые буферы без копирования в управляемую память. Пример:  
   
  [C#]  
   

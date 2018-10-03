@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataItem Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataItem data type
 ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2646dcce64672d98d33ecff3575016269379325
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f16c23941fc1048429ced974b88bba378bc72c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300894"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153484"
 ---
 # <a name="dataitem-data-type-assl"></a>Тип данных DataItem (ASSL)
   Определяет примитивный тип данных, представляющий характеристики элемента данных, связанные с данными, например столбца или атрибута.  

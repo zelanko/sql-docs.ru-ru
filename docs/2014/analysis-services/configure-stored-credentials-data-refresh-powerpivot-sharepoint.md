@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e2e6287e4631a2179fdfcac6dfc28506b21ef9cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c12e62d3a74ca1112ac7983fa6480b49171c308
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161555"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149424"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Настройка сохраненных учетных данных для обновления данных PowerPivot (PowerPivot для SharePoint)
   Задания обновления данных PowerPivot могут работать от любой учетной записи Windows, если в службе Secure Store создано целевое приложение для сохранения нужных учетных данных. Аналогичным образом, если нужно предоставить имя входа базы данных, отличное от указанного при первоначальном импорте данных в PowerPivot для Excel, то эти учетные данные можно сопоставить с целевым приложением службы Secure Store, а затем указать это целевое приложение в расписании обновления данных.  

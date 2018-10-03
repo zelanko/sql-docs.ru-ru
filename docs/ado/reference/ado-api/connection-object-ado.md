@@ -1,13 +1,11 @@
 ---
-title: Объект соединения (ADO) | Документы Microsoft
+title: Объект Connection (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,59 +13,58 @@ f1_keywords:
 helpviewer_keywords:
 - Connection object [ADO]
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08a8c8fd224d2405674b30969cf44f672831f1c5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4a3b13402f20c149c438aa5a2c678afb068fb0f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623992"
 ---
-# <a name="connection-object-ado"></a>Объект соединения (ADO)
-Представляет открытое соединение с источником данных.  
+# <a name="connection-object-ado"></a>Объект Connection (ADO)
+Представляет открытое подключение к источнику данных.  
   
 ## <a name="remarks"></a>Примечания  
- Объект **подключения** представляет уникальный сеанс с источником данных. В системе клиента и сервера базы данных может быть эквивалентно действительное сетевое подключение к серверу. В зависимости от функциональных возможностей, поддерживаемых поставщика, некоторые коллекции, методы или свойства **подключения** могут оказаться недоступными.  
+ Объект **подключения** представляет уникальный сеанс с источником данных. В системе базы данных клиент/сервер может быть эквивалентно действительное сетевое подключение к серверу. В зависимости от функциональных возможностей, поддерживаемых поставщиком, некоторые коллекции, методы или свойства **подключения** могут оказаться недоступными.  
   
- С коллекциями, методы и свойства **подключения** объекта, можно сделать следующее:  
+ С помощью коллекций, методы и свойства **подключения** объекта, можно сделать следующее:  
   
--   Настройка подключения, прежде чем открыть его с [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md), [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md), и [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства. **ConnectionString** — свойство по умолчанию **подключения** объекта.  
+-   Настройка подключения перед его с открытием [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md), [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md), и [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства. **ConnectionString** — свойство по умолчанию **подключения** объекта.  
   
--   Задать [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство клиенту для вызова [службы курсора для OLE DB Microsoft](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md), который поддерживает пакетные обновления.  
+-   Задайте [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство клиенту для вызова [служба курсора Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md), который поддерживает пакетные обновления.  
   
--   Задать базу данных по умолчанию для соединения с [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) свойство.  
+-   Задайте базу данных по умолчанию для соединения с [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) свойство.  
   
--   Уровень изоляции транзакций, открытом в соединении с набора [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойство.  
+-   Уровень изоляции для транзакций, открытом в соединении с набора [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойство.  
   
--   Укажите поставщика OLE DB с [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство.  
+-   Укажите поставщика OLE DB с помощью [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство.  
   
--   Установить и позднее прервать физическое соединение с источником данных с [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) и [закрыть](../../../ado/reference/ado-api/close-method-ado.md) методы.  
+-   Установите, а позже прервать физическое подключение к источнику данных с помощью [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) и [закрыть](../../../ado/reference/ado-api/close-method-ado.md) методы.  
   
 -   Выполнить команду для соединения с [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) метод и настройте выполнение с [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md) свойство.  
   
     > [!NOTE]
     >  Чтобы выполнить запрос без использования объект Command, передать строку запроса для **Execute** метод **подключения** объекта. Тем не менее [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта является обязательным, если вы хотите сохранить текст команды и повторно выполните ее или использовать параметры запроса.  
   
--   Управление транзакциями на открытое соединение, включая вложенные транзакции, если поставщик поддерживает, с [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md), [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md), и [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) методы и [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md) свойство.  
+-   Управление транзакциями на открытое соединение, включая вложенные транзакции, если поставщик поддерживает, с помощью [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md), [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md), и [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) методы и [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md) свойство.  
   
--   Проанализируйте ошибки, возвращенные из источника данных с [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции.  
+-   Проанализируйте ошибки, возвращенные из источника данных с помощью [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции.  
   
 -   Прочитать версию из ADO реализацию, используемую с [версии](../../../ado/reference/ado-api/version-property-ado.md) свойство.  
   
--   Получить данные схемы о базе данных с [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) метод.  
+-   Получение сведений о схеме о базе данных с помощью [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) метод.  
   
  Можно создать **подключения** объектов независимо от любого другого ранее определенного объекта.  
   
- Вы можете выполнить именованных команд или хранимых процедур, как если бы они были собственных методов на **подключения** объекта, как показано в следующем разделе. Когда именованную команду имеет то же имя, что и хранимая процедура, выполнения вызова «собственный метод» на **подключения** объект всегда выполняться именованную команду вместо хранимую процедуру.  
+ Вы можете выполнить именованные команды или хранимых процедур, как если бы они находились собственных методов в **подключения** объекта, как показано в следующем разделе. Если команду с именем имеет то же имя, что хранимые процедуры, вызова неуправляемого кода «собственный метод» на **подключения** объект всегда выполнить команду с именем, а не хранимой процедуры.  
   
 > [!NOTE]
->  Не используйте эту функцию (вызов именованную команду или хранимую процедуру, как если бы оно собственного метода на **подключения** объект) в приложении Microsoft® .NET Framework так как базовая реализация конфликты, функция с тем, как .NET Framework взаимодействует с COM.  
+>  Не используйте эту функцию (вызов именованную команду или хранимую процедуру, как будто собственного метода на **подключения** объекта) в приложении Microsoft® .NET Framework, так как базовая реализация того, функция конфликты с тем, как .NET Framework взаимодействует с COM.  
   
-## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Выполнить команду в качестве собственного метода объекта соединения  
- Для выполнения команды, присвойте команде имя, используя **команда** объекта [имя](../../../ado/reference/ado-api/name-property-ado.md) свойства. Задать **ActiveConnection** свойство **команда** объект соединения. Затем выполните инструкции, где используется имя команды, как если бы это был метод на **подключения** объекта, следуют любые параметры и **набора записей** объекта, если возвращаются все строки. Задать **записей** свойства для настройки результирующего **записей**. Например:  
+## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Выполнение команды как собственный метод объекта подключения  
+ Для выполнения команды, присвойте команде имя, используя **команда** объект [имя](../../../ado/reference/ado-api/name-property-ado.md) свойство. Задайте **ActiveConnection** свойство **команда** объект соединения. Затем предстоит выполнить инструкцию, где используется имя команды, как если бы он был методом на **подключения** объекта, а затем все параметры и **набор записей** объекта, если возвращаются все строки. Задайте **записей** свойства для настройки результирующего **записей**. Пример:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -82,8 +79,8 @@ cmd.ActiveConnection = cnn
 cnn. "parameter", rst  
 ```  
   
-## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>Выполнение хранимой процедуры как собственный метод объекта соединения  
- Для выполнения хранимой процедуры, выполните инструкции, где используется имя хранимой процедуры, как если бы это был метод на **подключения** объекта, следуют любые параметры. ADO сделает «наиболее подходящие» типы параметров. Например:  
+## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>Выполнение хранимой процедуры в качестве собственного метода объекта подключения  
+ Для выполнения хранимой процедуры, выполнить инструкцию, где используется имя хранимой процедуры, как если бы он был методом на **подключения** объекта, а затем все параметры. ADO сделает «наиболее подходящих значений» типов параметров. Пример:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -92,15 +89,15 @@ Dim cnn As New ADODB.Connection
 cnn. "parameter"  
 ```  
   
- **Подключения** объекта безопасные для использования.  
+ **Подключения** объект безопасен для скриптов.  
   
- Этот раздел содержит следующий раздел.  
+ Этот раздел содержит следующие подразделы.  
   
 -   [Свойства объекта соединения, методы и события](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>См. также  
- [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Коллекция ошибок (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

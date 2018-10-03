@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 892b00f07f9a316ba856e8be97e4159fd3889bcc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141894"
 ---
 # <a name="defining-a-referenced-relationship"></a>Определение ссылочной связи
   До сих пор в этом учебнике каждое определенное измерение куба основывалось на таблице, непосредственно связанной с таблицей фактов для группы мер через связь «внешний ключ — первичный ключ». В задачах этого раздела измерение **География** будет связано с таблицей фактов через измерение **Торговый посредник** , которое называется *ссылочным измерением*. Это позволяет пользователям распределить товарооборот посредников по географии. Дополнительные сведения см. в разделе [Определение ссылочной связи и свойств ссылочной связи](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  

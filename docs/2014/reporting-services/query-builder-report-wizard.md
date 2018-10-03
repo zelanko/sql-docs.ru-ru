@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
-caps.latest.revision: 21
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fef45f5ec6c4b9e0682ea625b2cc84bc8aaa089
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bf7bfb94237b34056502d08f5cec8e4d5b80bb9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253466"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056304"
 ---
 # <a name="query-builder-report-wizard"></a>Построитель запросов (мастер отчетов)
   Построитель запросов позволяет определить запрос для получения результирующего набора для отчета. Можно выбрать один из следующих двух построителей запросов.  
@@ -44,7 +41,7 @@ ms.locfileid: "37253466"
  **Импорт**  
  Открывает диалоговое окно **Импорт запроса** и отображает RDL и SQL-файлы для всех имеющихся отчетов. Запрос можно либо использовать «как есть», либо изменить его в построителе запросов.  
   
- **! (Запуск)**  
+ **\! (Запуск)**  
  Выполняет запрос и возвращает результирующий набор, если запрос не содержит ошибок. Обратите внимание, что нельзя выполнить запрос, если он является выражением. Чтобы проверить запрос на основе выражения, необходимо выполнить предварительный просмотр отчета.  
   
  **Тип команды**  

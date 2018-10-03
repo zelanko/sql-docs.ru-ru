@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
-caps.latest.revision: 8
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05f2e3ae157597f4c933e6c7cac710495171e8bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4b9f893a0a8711825062a05c5e78db0440d298c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077734"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Общие сведения о гибридном облаке SQL Server 2014
  Большинство приложений имеют некоторые основные проблемы, например: высокая производительность, ценность для бизнеса, сложные конфигурации оборудования, значительные пиковые нагрузки по запросу и соответствие отраслевым и корпоративным нормам. Построение технологий корпоративного класса с учетом всех этих факторов может представлять значительные сложности. Стратегия гибридного облаке Майкрософт обеспечивает поддержку сред стандартного, частного облака, общедоступного облака и гибридной облачной среды для преодоления этих ключевых сложностей. 

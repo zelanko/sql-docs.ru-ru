@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c93a36d33ed9f0071d396cc736bd10fc06e57c15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4697af2463587fcca244a291be0c8dace2907cc8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143294"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)
   Вкладку **Диаграмма точности интеллектуального анализа** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно использовать для сравнения точности прогнозов моделей интеллектуального анализа данных в структуре интеллектуального анализа.  

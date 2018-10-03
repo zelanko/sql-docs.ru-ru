@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.agentnameagentsecurity.f1
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f1f2cf0d93d00cf062566fdc7d8dea433cc1c8df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf4cb2b1eeff5b6e2235ea181cbeb32001f0849a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157774"
 ---
 # <a name="ltagentnamegt-agent-security"></a>Защита агента &lt;Имя_агента&gt;
   На странице **\<Безопасность агента <имя_агента>** можно указать учетные записи, от имени которых выполняется агент распространителя (для репликации транзакций или репликации моментальных снимков) или агент слияния (для репликации слиянием), а также создать подключения к компьютерам в топологии репликации. Сведения о разрешениях, требуемых агентами, и об оптимальных методах защиты репликации см. в статьях [Модель безопасности агента репликации](security/replication-agent-security-model.md) и [Рекомендации по защите репликации](security/replication-security-best-practices.md).  

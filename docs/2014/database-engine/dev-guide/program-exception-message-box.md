@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - exception message box [SQL Server]
 - displaying exception message box
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52a24c53fcb7efa367b089b4cf5baa0731d7ad5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cf02e2759c36ae6408beed0d72b677e130e105a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151335"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164114"
 ---
 # <a name="program-exception-message-box"></a>Выведение окна сообщения об исключении программы
   Окно сообщения об исключении в приложениях можно использовать для предоставления значительно больше возможностей управления сообщениями, что обеспечивается <xref:System.Windows.Forms.MessageBox> класса. Дополнительные сведения см. в разделе [программирования поле сообщение исключение](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Сведения о том, как получить и развернуть библиотеку DLL окна сообщений исключений см. в разделе [развертывание Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  

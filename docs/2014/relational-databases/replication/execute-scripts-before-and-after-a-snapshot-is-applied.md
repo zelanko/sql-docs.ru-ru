@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], scripts
 - scripts [SQL Server replication], snapshots
 - snapshot replication [SQL Server], scripts
 ms.assetid: b7bb1e4c-5b48-4bb1-9dc8-47c911f2cc82
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46591477bfa12e7439dd5802f94ee15b14dc7f1a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5fdb23fc81a4025ded4bf02a56df06014d4ca3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156135"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155954"
 ---
 # <a name="execute-scripts-before-and-after-a-snapshot-is-applied-sql-server-management-studio"></a>выполнять скрипты до и после применения моментального снимка (среда SQL Server Management Studio)
   Указать дополнительный скрипт для выполнения до или после применения моментального снимка можно на странице **Моментальный снимок** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](publish/view-and-modify-publication-properties.md).  

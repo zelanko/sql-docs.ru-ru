@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching rows
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ef60069c801ed7000677122af6fba7b2e9f7c4a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415063"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057834"
 ---
 # <a name="fetching-rows"></a>Выборка строк
   **IRowset** это интерфейс базового набора строк. **IRowset** интерфейс предоставляет методы для последовательной выборки строк, получение данных из этих строк и управления строками. Потребители используют методы в **IRowset** для всех операций базовый набор строк. Сюда входят выборка и освобождение строк, а также получение значений столбцов.  

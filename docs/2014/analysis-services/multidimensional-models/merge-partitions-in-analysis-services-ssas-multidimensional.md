@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78fcd5ce33ba73b4eb11e6449b84f3afe3f2028a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11f6267cb8546ac21dedeae0c802cbbb9af9ce6b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306574"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063344"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Объединение секций в службах Analysis Services (SSAS — многомерные данные)
   Можно совмещать секции в существующей базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для объединения фактических данных из нескольких секций одной группы мер.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating diagram to match database
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - updating database to match diagram
 - database diagrams [SQL Server], reconciling changes
 ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a72067ce99b37b26fde3fc546a1bb67c5bfc799
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0c93f7c1d22b5f2d41b196eddd20ba5a4ff097cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816450"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141695"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>Согласование диаграммы базы данных с измененной базой данных (визуальные инструменты для баз данных)
   Сохраняйте диаграмму базы данных, когда вы готовы обновить базу данных для согласования с текущей диаграммой. Однако если с момента открытия базы данных другие пользователи внесли изменения в базу данных, то внесенные ими изменения могут повлиять на вашу диаграмму, и наоборот.  

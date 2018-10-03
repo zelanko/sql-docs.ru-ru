@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], elements
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10b125c2dccff68b95ce5bd7578cb052d83d5311
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 300dbf1bc32d6113349eab5fbc1fad4511a92d4c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092824"
 ---
-# <a name="control-flow"></a>Поток управления
+# <a name="control-flow"></a>Управление ходом выполнения
   Пакет состоит из потока управления, а также, одного или нескольких потоков данных (необязательно). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляют три различных типа элементов потока управления: контейнеры, которые обеспечивают структуры в пакетах; задачи, которые обеспечивают функциональность; элементы управления очередностью, соединяющие выполняемые компоненты, контейнеры и задачи в упорядоченный поток управления.  
   
  Дополнительные сведения см. в разделах [Precedence Constraints](precedence-constraints.md), [Integration Services Containers](integration-services-containers.md)и [Integration Services Tasks](integration-services-tasks.md).  
@@ -65,7 +62,7 @@ ms.locfileid: "37295134"
   
  Конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] также включает много возможностей разработки, которые можно использовать для управления областью конструктора и производить самодокументирование потока управления.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Добавление задачи или контейнера в поток управления или удаление их из него](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

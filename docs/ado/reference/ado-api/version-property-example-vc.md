@@ -1,45 +1,42 @@
 ---
-title: Пример свойства версии (VC ++) | Документы Microsoft
+title: Пример свойства Version (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83abd1361cad72644f948316bc24c704e0437c35
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a89f017bba11b5c0ae42df49e54be3ea6b2f14ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282823"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613252"
 ---
-# <a name="version-property-example-vc"></a>Пример свойства версии (VC ++)
-В этом примере используется [версии](../../../ado/reference/ado-api/version-property-ado.md) свойство [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта для отображения текущей версии ADO. Он также использует несколько динамических свойств для отображения:  
+# <a name="version-property-example-vc"></a>Пример свойства Version (Visual C++)
+В этом примере используется [версии](../../../ado/reference/ado-api/version-property-ado.md) свойство [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объект для отображения текущей версии ADO. Он также использует несколько динамических свойств для отображения:  
   
--   Текущее имя СУБД и номер версии.  
+-   Текущее имя СУБД и версия.  
   
 -   Версия OLE DB.  
   
--   Имя поставщика и версии.  
+-   Имя поставщика и версия.  
   
 -   Версия ODBC.  
   
--   Имя драйвера ODBC и версии.  
+-   Имя драйвера ODBC и версия.  
   
 > [!NOTE]
->  При подключении к поставщик источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = yes** или **Integrated Security = SSPI** вместо идентификатора пользователя и пароля сведения в строке подключения.  
+>  Если вы подключаетесь к поставщик источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = yes** или **Integrated Security = SSPI** вместо идентификатора пользователя и пароля сведения в строке подключения.  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -139,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

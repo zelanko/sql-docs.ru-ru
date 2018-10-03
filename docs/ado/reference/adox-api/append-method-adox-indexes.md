@@ -1,13 +1,11 @@
 ---
-title: Append-метод (ADOX индексы) | Документы Microsoft
+title: Append-метод (коллекция Indexes ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,18 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22f3dbde110252950694431040bd943c59344938
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 18e9162c3c9a1b79c28ca6e0ae94f8680db0ac80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284743"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632252"
 ---
-# <a name="append-method-adox-indexes"></a>Append-метод (ADOX индексы)
+# <a name="append-method-adox-indexes"></a>Метод Append (коллекция Indexes ADOX)
 Добавляет новый [индекс](../../../ado/reference/adox-api/index-object-adox.md) объект [индексы](../../../ado/reference/adox-api/indexes-collection-adox.md) коллекции.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,10 +38,10 @@ Indexes.Append Index [,Columns]
  **Индекс** добавляемый объект или имя индекса для создания и добавления.  
   
  *Столбцы*  
- Необязательный параметр. Объект **Variant** значение, указывающее имена столбцов для индексирования. *Столбцы* параметр соответствует параметру со значениями [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md) объекта или объектов.  
+ Необязательный параметр. Объект **Variant** значение, указывающее имена столбцов для индексирования. *Столбцы* параметр соответствует параметру значения [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта или объектов.  
   
 ## <a name="remarks"></a>Примечания  
- *Столбцы* параметр может принимать либо имя столбца или массива имен столбцов.  
+ *Столбцы* параметр может принимать либо имя столбца, либо массив имен столбцов.  
   
  Если поставщик не поддерживает создание индексов, произойдет ошибка.  
   
@@ -52,11 +49,11 @@ Indexes.Append Index [,Columns]
  [Коллекция Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
 ## <a name="see-also"></a>См. также  
- [Индексы Append пример метода (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
- [Append-метод (ADOX столбцы)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append-метод (ADOX группы)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append-метод (ADOX ключи)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append-метод (ADOX процедур)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append-метод (ADOX таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append-метод (ADOX пользователей)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [Пример метода (Visual Basic) Append](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [Append-метод (коллекция Columns ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append-метод (коллекция Groups ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Append-метод (коллекция Keys ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Append-метод (коллекция Procedures ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Append-метод (коллекция Tables ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Append-метод (коллекция Users ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Метод Append (коллекция Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

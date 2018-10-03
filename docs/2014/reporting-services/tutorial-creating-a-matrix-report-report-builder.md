@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a4bb95d4280b2bd411ffdadcddcf3ff58274c69b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268170"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159504"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Учебник. Создание матричного отчета (построитель отчетов)
   Это учебник поможет создать простой матричный отчет на основе образца данных по продажам. Матрица имеет вложенные группы строк и столбцов и смежную группу столбцов. Вы узнаете, как форматировать столбцы и поворачивать текст. На приведенном далее рисунке показан отчет, похожий на тот, который будет в итоге создан.  

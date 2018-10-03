@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - StorageLocation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - StorageLocation element
 ms.assetid: ecf8852f-56a1-4fcf-b0d8-d7eebb75e4ed
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fecb1a20c6c436749913ea9f8f83d284cf1000c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45ba999d7cd7de44eaf6a9abaec55ff796dcc800
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163535"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079274"
 ---
 # <a name="storagelocation-element-assl"></a>Элемент StorageLocation (ASSL)
   Содержит расположение места хранения в файловой системе для содержимого родительского элемента.  

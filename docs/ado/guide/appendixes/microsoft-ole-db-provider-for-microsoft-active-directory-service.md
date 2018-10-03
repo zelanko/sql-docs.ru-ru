@@ -1,13 +1,11 @@
 ---
-title: Поставщик Microsoft OLE DB для службы Microsoft Active Directory | Документы Microsoft
+title: Поставщик Microsoft OLE DB для службы Microsoft Active Directory | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADSI provider [ADO]
@@ -15,31 +13,30 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f26d8a9aa58c45ddb5ac58a6415776a60ed5b80
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 16e7bbd20113c253cbd7a3da183750c8ff566da3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270653"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758592"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Поставщик Microsoft OLE DB для службы Microsoft Active Directory
-Поставщик интерфейсы службы Active Directory (ADSI) позволяет ADO для подключения к службам каталогов разнородных через ADSI. Это дает приложения ADO доступ только для чтения в каталоге служб Microsoft Windows NT 4.0 и Microsoft Windows 2000, помимо любой совместимый с LDAP службы каталогов и Novell Directory Services. Сам интерфейс ADSI основан на модель поставщика, чтобы в случае нового обеспечивающий доступ поставщика в другой каталог приложения ADO будет получить к ним доступ без проблем. Поставщик является поставщиком ADSI свободнопоточный и Юникод.  
+Поставщик интерфейсы служб Active Directory (ADSI) разрешает ADO для подключения к службам разнородных directory через ADSI. Это дает приложения ADO доступ только для чтения в каталоге служб Microsoft Windows NT 4.0 и Microsoft Windows 2000, а также все службы, совместимой с LDAP directory и служб каталога Novell. Сам интерфейс ADSI основан на модели поставщика, таким образом, если имеется новый предоставить доступ поставщика в другой каталог, приложения ADO будет получить к ним доступ без проблем. Поставщик ADSI является свободнопотоковым и Юникод.  
   
 ## <a name="connection-string-parameters"></a>Параметры строки соединения  
- Чтобы подключиться к этому поставщику, задайте **поставщика** аргумент [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) следующее:  
+ Чтобы подключиться к этим поставщиком, задайте **поставщика** аргумент [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) следующие свойства:  
   
 ```  
 ADSDSOObject  
 ```  
   
- Чтение [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство возвратит также этой строки.  
+ Чтение [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство возвратит также эту строку.  
   
-## <a name="typical-connection-string"></a>Обычная строка соединения  
- Для данного поставщика строка соединения выглядит следующим образом:  
+## <a name="typical-connection-string"></a>Типичная строка подключения  
+ Строка соединения для данного поставщика выглядит следующим образом:  
   
 ```  
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
@@ -49,15 +46,15 @@ ADSDSOObject
   
 |Ключевое слово|Описание|  
 |-------------|-----------------|  
-|**Поставщик**|Указывает поставщика OLE DB для службы каталогов Active Directory.|  
-|**Идентификатор пользователя**|Указывает имя пользователя. Если это ключевое слово задан, используется текущая учетная запись.|  
-|**Пароль**|Указывает пароль пользователя. Если это ключевое слово задан. Затем используется текущая учетная запись.|  
+|**Поставщик**|Указывает поставщика OLE DB для службы Active Directory.|  
+|**Идентификатор пользователя**|Указывает имя пользователя. Если это ключевое слово указан, используется текущее имя входа.|  
+|**Пароль**|Указывает пароль пользователя. Если это ключевое слово указан. Затем используется текущее имя входа.|  
   
 > [!NOTE]
->  При подключении к поставщик источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = yes** или **Integrated Security = SSPI** вместо идентификатора пользователя и пароля сведения в строке подключения.  
+>  Если вы подключаетесь к поставщик источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = yes** или **Integrated Security = SSPI** вместо идентификатора пользователя и пароля сведения в строке подключения.  
   
 ## <a name="command-text"></a>Текст команды  
- Строка текста команды из четырех частей распознается поставщиком используется следующий синтаксис:  
+ Команда из четырех частей текстовую строку распознается поставщиком в следующий синтаксис:  
   
 ```  
 "Root; Filter; Attributes[; Scope]"  
@@ -65,18 +62,18 @@ ADSDSOObject
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*Root*|Указывает **ADsPath** объект, из которого следует начинать поиск (то есть корневой поиска).|  
-|*Фильтр*|Указывает фильтр поиска в формате RFC 1960.|  
-|*Атрибуты*|Указывает список с разделителями запятыми атрибутов должны быть возвращены.|  
-|*Область действия*|Необязательный параметр. Объект **строка** , указывающий область поиска. Возможен один из следующих вариантов.<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-OneLevel — Поиск только один уровень.<br />-Поддерево — Поиск всего поддерева.|  
+|*Root*|Указывает **ADsPath** объект, из которого следует начать поиск (то есть корень поиска).|  
+|*Фильтр*|Указывает фильтр поиска в формате RFC 1960 года.|  
+|*Атрибуты*|Указывает список атрибутов, возвращаемых с разделителями запятыми.|  
+|*Область*|Необязательный параметр. Объект **строка** , определяющее область поиска. Возможен один из следующих вариантов.<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Опросы — Поиск только один уровень.<br />-Поддерево, Найдите поддерево целиком.|  
   
- Например:  
+ Пример:  
   
 ```  
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
- Поставщик также поддерживает SQL SELECT в тексте команды. Например:  
+ Поставщик также поддерживает SQL SELECT для текста команды. Пример:  
   
 ```  
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
@@ -84,25 +81,25 @@ objectClass='user' AND objectCategory='Person'"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Поставщик не поддерживает вызовы хранимых процедур и имена простую таблицу (например, [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) всегда будет иметь свойство **adCmdText**). См. в документации интерфейсы служб Active Directory более полное описание элементов текста команды.  
+ Поставщик не поддерживает вызовы хранимых процедур и простую таблицу имена (например, [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) свойство будет всегда **adCmdText**). См. в документации интерфейсы служб Active Directory, более подробное описание элементов текста команды.  
   
 ## <a name="recordset-behavior"></a>Поведение набора записей  
- В следующих таблицах перечислены возможности, доступные в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект открыт с помощью этого поставщика. Только тип статического курсора (**adOpenStatic**) доступен.  
+ В следующих таблицах перечислены функции, доступные при [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект открыт с помощью этого поставщика. Только тип статического курсора (**adOpenStatic**) доступен.  
   
- Дополнительные сведения о **записей** поведение конфигурации поставщика, запустите [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод и перечисление [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекцию  **Набор записей** для определения того, присутствуют ли динамические свойства от поставщика.  
+ Дополнительные сведения о **записей** поведение поставщика конфигурации, запустите [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод и перечисление [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекцию  **Набор записей** чтобы определить, присутствует ли динамические свойства от поставщика.  
   
- **Доступность стандартных свойств набора записей ADO:**  
+ **Доступность стандартных свойств набора записей ADO.**  
   
 |Свойство|Доступность|  
 |--------------|------------------|  
-|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|чтение/запись|  
-|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|чтение/запись|  
+|[Примеры AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|чтение/запись|  
+|[Примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|чтение/запись|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|только для чтения|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|  
 |[Закладка](../../../ado/reference/ado-api/bookmark-property-ado.md)|чтение/запись|  
-|[cacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|чтение/запись|  
+|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|чтение/запись|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|всегда **adUseServer**|  
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|всегда **adOpenStatic**|  
+|[Примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|всегда **adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|всегда **как таковые**|  
 |[КОНЕЦ ФАЙЛА](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|  
 |[Фильтр](../../../ado/reference/ado-api/filter-property.md)|чтение/запись|  
@@ -116,7 +113,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Состояние](../../../ado/reference/ado-api/state-property-ado.md)|только для чтения|  
 |[Состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md)|только для чтения|  
   
- **Доступность стандартных методов набора записей ADO:**  
+ **Доступность стандартных методов набора записей ADO.**  
   
 |Метод|Доступны?|  
 |------------|----------------|  
@@ -135,18 +132,18 @@ objectClass='user' AND objectCategory='Person'"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Да|  
 |[Открытие](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Да|  
-|[Повторный запрос](../../../ado/reference/ado-api/requery-method.md)|Да|  
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Да|  
 |[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Да|  
 |[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Да|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Нет|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Нет|  
   
- Дополнительные сведения о ADSI и подробной информации о поставщике обратитесь к документации интерфейсы служб Active Directory или посетите ADSI веб-странице.  
+ Дополнительные сведения об ADSI и особенности обеспечения поставщика см. в документации интерфейсы служб Active Directory или ADSI веб-странице.  
   
 ## <a name="see-also"></a>См. также  
  [Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Свойство поставщика (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Свойство Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Supports](../../../ado/reference/ado-api/supports-method.md)

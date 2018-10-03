@@ -1,32 +1,29 @@
 ---
-title: Сортировать примера свойства (Visual Basic) | Документы Microsoft
+title: Сортировать пример свойства (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29251f351302fc94c9f55c0ada9c4028408cbe44
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281893"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770092"
 ---
-# <a name="sort-property-example-vb"></a>Пример свойства сортировки (Visual Basic)
-В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [сортировки](../../../ado/reference/ado-api/sort-property.md) свойство для изменения порядка строк **записей** производными ***авторы*** таблицы ***Pubs*** базы данных. Вторичный служебной процедуры выводит каждую строку.  
+# <a name="sort-property-example-vb"></a>Пример свойства Sort (Visual Basic)
+В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [сортировки](../../../ado/reference/ado-api/sort-property.md) свойство для изменения порядка строк **записей** производным от ***авторы*** таблицы ***Pubs*** базы данных. Вторичный служебной процедуры выводит каждую строку.  
   
 ```  
 'BeginSortVB  
@@ -107,12 +104,12 @@ End Sub
 'EndSortVB  
 ```  
   
- Это дополнительный программа подпрограмму, которая выводит заданный заголовок и содержимое указанного **записей**.  
+ Это дополнительный программа подпрограмму, которая выводит заданный заголовок и содержимое указанного объекта **записей**.  
   
 ```  
 Attribute VB_Name = "Sort"  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Sort](../../../ado/reference/ado-api/sort-property.md)

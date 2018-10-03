@@ -1,14 +1,11 @@
 ---
-title: Компонент Full-Text Search и семантический поиск каталога представления (Transact-SQL) | Документы Microsoft
+title: Компонент Full-Text Search и семантический поиск каталога представления (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,15 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], catalog views
 - full-text indexes [SQL Server], catalog views
 ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce32b848982bb16155d7f2661bdec0067b984717
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9a6785c198bedb99ea0fd5b42f54cab431535527
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735032"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>Представления каталога полнотекстового и семантического поиска (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 05/04/2018
  Содержит по одной строке для каждого полнотекстового индекса табличного объекта.  
   
  [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)  
- Содержит одну строку для каждого языка, средства разбиения по словам которого зарегистрированы с помощью SQL Server. Каждая строка отображает код языка и имя языка.  
+ Содержит одну строку для каждого языка, средства разбиения по словам которого зарегистрированы с помощью SQL Server. Каждая строка отображает код и имя языка.  
   
  [sys.fulltext_stoplists](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
  Содержит строку на каждый полнотекстовый список стоп-слов в базе данных.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine], named pipes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-caps.latest.revision: 30
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b5cd4cc03a1b4254e26750b45704d67af62cef04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95c094282aa185f79f9399a26e3b6fe8049cc965
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317444"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167584"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Создание допустимой строки соединения, использующей протокол именованных каналов
   Если не изменено пользователем, когда экземпляр по умолчанию [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает протоколы именованных каналов, он использует `\\.\pipe\sql\query` как имя канала. Точка означает, что компьютер является локальным компьютером, `pipe` указывает, что подключение является именованным каналом, а `sql\query` имя канала. Чтобы подключиться к каналу по умолчанию, псевдоним должен содержать `\\<computer_name>\pipe\sql\query` в качестве имени канала. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был настроен на прослушивание другого канала, то имя канала должно соответствовать этому каналу. Например если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует `\\.\pipe\unit\app` качестве канала, то псевдоним должен использовать `\\<computer_name>\pipe\unit\app` как имя канала.  

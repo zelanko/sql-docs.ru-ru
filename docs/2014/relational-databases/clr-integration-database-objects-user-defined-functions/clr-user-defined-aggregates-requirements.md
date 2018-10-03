@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - aggregate functions [CLR integration]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 - UDTs [CLR integration], user-defined aggregates
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
-caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 93163efb9de969bbca62b46b0f23e8df36b5fa8e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 44aee43742fdc451012a9516249c0558b3ce0d35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354566"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129184"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>Требования для определяемых пользователем статистических функций CLR
   Тип в сборке CLR можно зарегистрировать как определяемую пользователем агрегатную функцию, если он реализует необходимую статистическую обработку. Такой контракт состоит из атрибута `SqlUserDefinedAggregate` и методов статистического контракта. Статистический контракт включает механизм сохранения промежуточного состояния статистической обработки и механизм накопления новых значений, который состоит из четырех методов: `Init`, `Accumulate`, `Merge`, и `Terminate`. При соблюдении этих требований, появится возможность воспользоваться всеми преимуществами определяемых пользователем статистических функций в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующих подразделах этого раздела содержатся подробные сведения о создании определяемых пользователем статистических функций и работе с ними. Например, см. в разделе [Invoking CLR User-Defined агрегатные функции](clr-user-defined-aggregate-invoking-functions.md).  

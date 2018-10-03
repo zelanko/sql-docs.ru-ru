@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5fd39b54d39d559608c8634345fd7c1e59835a9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ad3530b8179989f86cc62c9c18c888575890b26
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285820"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153004"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Базы знаний и домены DQS
   В этом разделе описывается значение базы знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Для очистки данных необходимо иметь знания об этих данных. Чтобы подготовить знания для проекта качества данных, строится и ведется база знаний, которая используется DQS для выявления неверных или недопустимых данных. DQS позволяет использовать автоматические и интерактивные процессы для создания, построения и обновления базы знаний. Знания в базе знаний хранятся в доменах, каждый из которых относится к некоторому полю данных. База знаний является репозиторием знаний о данных, который дает представление о данных и помогает поддерживать их целостность.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.conversiontype.f1
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34fab6780a6c10601b3f5bf31fbb7cffee3fd888
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97ab8896d13bfb19790148fb6f01bb8e054ab270
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267350"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092329"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Выбор типа конвертации валют (мастер бизнес-аналитики)
   Используйте страницу **Выбор типа конвертации валют** для определения связи между локальной и отчетной валютой в транзакциях, хранимых в нескольких валютах. Местная валюта — это валюта, в формате которой хранятся транзакции для мер, выбранных на странице **Выбор мер** . Отчетная валюта представляет собой валюту, в которую преобразуются транзакции, выбранные на странице **Выбор мер** .  

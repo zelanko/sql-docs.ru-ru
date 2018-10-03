@@ -1,12 +1,10 @@
 ---
-title: sys.dm_hadr_availability_replica_cluster_states (Transact-SQL) | Документы Microsoft
+title: sys.dm_hadr_availability_replica_cluster_states (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_availability_replica_cluster_states_TSQL
@@ -20,21 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_availability_replica_cluster_states dynamic management view
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed7ea6041b29c4ce231e9a2f4ba150f440eae5d8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 5e39bd1072f3de3448381d9ac457ef8ab4459184
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806222"
 ---
 # <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает строку для каждого всегда на реплике доступности (независимо от состояния соединения) всех групп доступности AlwaysOn (вне зависимости от расположения реплики) в кластере сервера отказоустойчивой кластеризации Windows (WSFC).  
+  Возвращает строку для каждой реплики доступности AlwaysOn (вне зависимости от состояния соединения) из всех групп доступности AlwaysOn (вне зависимости от расположения реплики) в кластере сервера отказоустойчивой кластеризации Windows (WSFC).  
   
 ##  <a name="connected_state"></a>  
   

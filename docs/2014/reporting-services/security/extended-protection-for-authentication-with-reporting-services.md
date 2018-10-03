@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e1de2e37101fe69c1593169d68f314e23e6b9775
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2a857d433a39958c6018ef8026de2ca3e1efba1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288770"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168264"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Расширенная защита для проверки подлинности служб Reporting Services
   Расширенная защита — это набор усовершенствований, внесенных в последние версии операционной системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. С помощью расширенной защиты приложения могут лучше защищать учетные данные и проверку подлинности. Сама эта функция не обеспечивает защиту от определенных атак, таких как переадресация учетных данных, но эта технология предоставляет инфраструктуру для приложений, таких как [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] для обеспечения расширенной защиты для проверки подлинности.  

@@ -1,13 +1,11 @@
 ---
-title: EditModeEnum | Документы Microsoft
+title: EditModeEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - EditModeEnum enumeration [ADO]
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a98b8dd5b82665aa7416bba67c8a04e46a75babb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 34583128e3da1bec00003fe194d3387783815275
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788782"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 Указывает состояние редактирования записи.  
@@ -33,10 +30,10 @@ ms.locfileid: "35277983"
 |--------------|-----------|-----------------|  
 |**как таковые**|0|Указывает, что ни одна из операций редактирования идет.|  
 |**adEditInProgress**|1|Указывает, что данные в текущей записи были изменены, но не сохранены.|  
-|**adEditAdd**|2|Указывает, что [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) был вызван метод, и текущую запись в буфер копирования считается новой записью, не были сохранены в базе данных.|  
+|**adEditAdd**|2|Указывает, что [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) был вызван метод, и текущую запись в буфер копирования считается новой записью, который не был сохранен в базе данных.|  
 |**adEditDelete**|4|Указывает, что текущая запись была удалена.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
  Пакет: **com.ms.wfc.data**  
   
 |Константа|  

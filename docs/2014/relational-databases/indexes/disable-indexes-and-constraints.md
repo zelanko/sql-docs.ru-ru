@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.disableindexes.f1
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - index disabling [SQL Server]
 - indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2c263fd657d28d00904fbe73ae0219a1be64372
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305634"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050567"
 ---
 # <a name="disable-indexes-and-constraints"></a>Отключение индексов и ограничений
   В этом разделе описывается отключение индекса или ограничений в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Отключение индексов предотвращает доступ пользователя к индексам в случае использования кластеризованных индексов к данным базовой таблицы. Определение индекса остается в метаданных, и статистики индекса сохраняются на некластеризованных индексах. Данные индекса при отключении некластеризованных или кластеризованных индексов в представлении удаляются физически. Отключение кластеризованного индекса в таблице позволяет предотвратить доступ к данным; данные остаются в таблице, но являются недоступными для операций языка обработки данных DML до удаления или перестроения индекса.  

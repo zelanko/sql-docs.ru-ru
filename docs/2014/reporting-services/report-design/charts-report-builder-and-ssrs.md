@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
@@ -20,16 +18,15 @@ f1_keywords:
 - "10251"
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 33e11e05c4678fbbde7c97175498f94e092ffe43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: feab5870c703fbe253923006a6f6ba84c4959cdd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120044"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Диаграммы (построитель отчетов и службы SSRS)
   При необходимости сведения данных в визуальный формат используется диаграммная область данных. Диаграммы позволяют представлять большие объемы статистических данных для быстрого просмотра. Важно внимательно подготовить и осмыслить данные перед созданием диаграммы, так как это поможет создавать диаграммы быстро и качественно. Дополнительные сведения см. в разделе [Добавление диаграммы в отчет (построитель отчетов и службы SSRS)](add-a-chart-to-a-report-report-builder-and-ssrs.md). Чтобы немедленном использовании диаграммы см. в разделе панели, столбца, спарклайн и учебники по круговой диаграммы в [учебники &#40;построитель отчетов&#41; ](../report-builder-tutorials.md) или строке и учебники по круговой диаграммы в [руководствах &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

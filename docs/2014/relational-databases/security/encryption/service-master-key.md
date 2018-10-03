@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server]
 - service master key [SQL Server], about service master key
 ms.assetid: 85f2095d-2590-4f59-8a29-7e100edd02bb
-caps.latest.revision: 17
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: bf45a708f34ed5a22e733287e3ec240817e91a9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ea074466c8075b7fb1746b7d3eb8741425b44c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286990"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147334"
 ---
 # <a name="service-master-key"></a>главный ключ службы
   Главный ключ службы является корнем иерархии шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Он создается автоматически, как только он впервые понадобится для шифрования другого ключа. По умолчанию главный ключ службы шифруется с помощью API-интерфейса защиты данных Windows и ключа локального компьютера. Главный ключ службы может быть открыт только учетной записью службы Windows, под которой он был создан, либо участником, имеющим доступ к имени и паролю учетной записи службы.  
@@ -33,7 +30,7 @@ ms.locfileid: "37286990"
 ## <a name="best-practice"></a>Рекомендации  
  Создайте резервную копию главного ключа службы и храните ее на безопасном автономном компьютере.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [BACKUP SERVICE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/backup-service-master-key-transact-sql)  
   
  [RESTORE SERVICE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/restore-service-master-key-transact-sql)  

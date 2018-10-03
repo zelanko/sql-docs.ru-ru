@@ -1,41 +1,38 @@
 ---
-title: 'C в SQL: бит | Документы Microsoft'
+title: 'Преобразование из C в SQL: бит | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], bit
 - bit data type [ODBC]
 - data conversions from C to SQL types [ODBC], bit
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55843e87c2e26a93c83d2160603b233ae1c60729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9eeeaeaa3bb4af7a244697e992e79e8c66c2a660
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709712"
 ---
-# <a name="c-to-sql-bit"></a>C в SQL: бит
-Идентификатор для типа данных bit ODBC C —:  
+# <a name="c-to-sql-bit"></a>Преобразование из C в SQL: битовые данные
+Идентификатор для типа данных bit ODBC C является:  
   
  SQL_C_BIT  
   
- В следующей таблице показаны ODBC SQL типы данных, к которым может быть преобразован бит данных C. Объяснение столбцы и условия в таблице см. в разделе [преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ Следующая таблица показывает ODBC SQL типы данных, к которым могут преобразовываться данных C битов. Описание столбцов и условия в таблице, см. в разделе [преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Нет|н/д|  
-|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|Нет|н/д|  
-|SQL_BIT|Нет|н/д|  
+|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|None|н/д|  
+|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|None|н/д|  
+|SQL_BIT|None|н/д|  
   
- Драйвер не учитывает значение длины/индикатора при преобразовании данных из типа данных bit C и предполагает, что размер типа данных bit C размер буфера данных. Переданное значение длины/индикатора *StrLen_or_Ind* аргумент в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумент в **SQLBindParameter**. Буфер данных задается с помощью *DataPtr* аргумент в **SQLPutData** и *ParameterValuePtr* аргумент в **SQLBindParameter**.
+ Драйвер не учитывает значение длины и индикатора, при преобразовании данных из типа данных bit C и предполагается, что размер буфера данных размер типа данных bit C. Значение длины и индикатора, переданное в *StrLen_or_Ind* аргумента в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумента в **SQLBindParameter**. Буфер данных указывается с помощью *DataPtr* аргумента в **SQLPutData** и *ParameterValuePtr* аргумента в **SQLBindParameter**.

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d992cdc8536fc0c8e8b93322de191c614b7c51
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c1ec005ab299a8be40e977ccf6a3a8f318591b86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167206"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Преобразования, выполняемые при передаче от сервера к клиенту
   В данном разделе описываются преобразования даты и времени, выполняемые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с использованием OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -65,6 +62,6 @@ ms.locfileid: "37430863"
 |13|Строка анализируется как литерал ISO и преобразуется в целевой тип. Если попытка оказалась неудачной, то строка анализируется как литерал даты OLE (который также содержит компоненты времени) и преобразуется из даты OLE (DBTYPE_DATE) в целевой тип. Строка должна соответствовать синтаксису литералов типа datetime, за исключением случаев, когда назначением является DBTYPE_DATE или DBTYPE_DBTIMESTAMP. В этом случае для успешного завершения синтаксического анализа формата ISO допускаются литералы типа datetime или time. Условием успешного синтаксического анализа OLE является соответствие строки синтаксису, распознаваемому OLE. Если не удалось выполнить синтаксический анализ строки, то устанавливается значение DBSTATUS_E_CANTCONVERTVALUE. Если значения каких-либо компонентов выходят за пределы диапазона, то устанавливается значение DBSTATUS_E_DATAOVERFLOW.|  
   
 ## <a name="see-also"></a>См. также  
- [Привязки и преобразования &#40;OLE DB&#41;](conversions-ole-db.md)  
+ [Привязки и преобразования &#40;OLE DB&#41;](conversions-ole-db.md)  
   
   

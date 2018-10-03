@@ -1,13 +1,11 @@
 ---
-title: Атрибуты свойства (ADO) | Документы Microsoft
+title: Атрибуты свойства (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,35 +15,34 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes property [ADO]
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f440f94b5e3814a45f5ec5871f5073e19c9a5b4d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: db3cb8276a4acda4c5d383252c2d92f51b57c684
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752782"
 ---
-# <a name="attributes-property-ado"></a>Свойства атрибутов (ADO)
+# <a name="attributes-property-ado"></a>Свойство Attributes (ADO)
 Указывает один или несколько характеристик объекта.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **длинные** значение.  
+ Возвращает или задает **Long** значение.  
   
- Для [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, **атрибуты** свойство доступно для чтения/записи, и его значение может быть суммы одного или нескольких [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) значения. Значение по умолчанию равно нулю (0).  
+ Для [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, **атрибуты** свойство чтения/записи и его значение может быть сумма одного или нескольких [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) значения. Значение по умолчанию равно нулю (0).  
   
- Для [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта, **атрибуты** свойство доступно для чтения/записи, и его значение может быть суммы одного или нескольких [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) значения. Значение по умолчанию — **adParamSigned**.  
+ Для [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта, **атрибуты** свойство чтения/записи и его значение может быть сумма одного или нескольких [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) значения. По умолчанию используется **adParamSigned**.  
   
- Для [поле](../../../ado/reference/ado-api/field-object.md) объекта, **атрибуты** свойство может быть суммы одного или нескольких [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) значения. Это обычно доступны только для чтения. Однако для новых **поле** объектов, добавленных в [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [запись](../../../ado/reference/ado-api/record-object-ado.md), **атрибуты** доступен для чтения и записи только После [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство **поле** был указан и новых **поле** успешно добавлен в поставщике данных путем вызова [ Обновление](../../../ado/reference/ado-api/update-method.md) метод **поля** коллекции.  
+ Для [поле](../../../ado/reference/ado-api/field-object.md) объекта, **атрибуты** свойство может быть сумма одного или нескольких [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) значения. Это обычно предназначены только для чтения. Тем не менее, для новых **поле** объекты, добавленные [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md), **атрибуты** доступно для чтения и записи только После [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство для **поле** была определена и новый **поле** успешно добавлен в поставщике данных путем вызова [ Обновление](../../../ado/reference/ado-api/update-method.md) метод **поля** коллекции.  
   
- Для [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекта, **атрибуты** свойство доступно только для чтения, и его значение может быть суммы одного или нескольких [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) значения.  
+ Для [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекта, **атрибуты** свойство доступно только для чтения, и его значение может быть сумма одного или нескольких [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) значения.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте **атрибуты** свойство задание или возврат характеристики **подключения** объектов, **параметр** объектов, **поле** объекты, или **Свойство** объектов.  
+ Используйте **атрибуты** свойство задание или возврат характеристики **подключения** объектов, **параметр** объектов, **поле** объектов, или **Свойство** объектов.  
   
- При установке нескольких атрибутов, можно просуммировать соответствующие константы. Если значение свойства равно сумму, включая несовместимые константы, возникает ошибка.  
+ Если задано несколько атрибутов, можно просуммировать соответствующие константы. Если задать значение свойства с суммой, включая несовместимые константы, возникает ошибка.  
   
 > [!NOTE]
 >  **Удаленное использование службы данных** это свойство доступно не на стороне клиента **подключения** объекта.  
@@ -58,8 +55,8 @@ ms.locfileid: "35276013"
 |[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Атрибуты и примере имя свойства (Visual Basic)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Атрибуты и свойства пример имени (VC ++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [Примеры Attributes и Name свойства (Visual Basic)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
+ [Примеры Attributes и Name свойства (Visual C++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
  [Метод AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [BeginTrans CommitTrans и методы RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Примеры BeginTrans, CommitTrans и RollbackTrans методы (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Метод GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - logs [Integration Services], containers
 ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
-caps.latest.revision: 41
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbe06697e81fd451c02fddf1ea461735b9e1b6be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3c22ca7f44844b434dc74e881830363a79475ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207554"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146394"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>Настройка ведения журналов с помощью сохраненного файла конфигурации
   Эта процедура описывает, как настроить ведение журнала для новых контейнеров в пакете с помощью загрузки предварительно сохраненного файла конфигурации ведения журнала.  

@@ -1,14 +1,11 @@
 ---
-title: Работа с поставщиком WMI для управления конфигурацией | Документы Microsoft
+title: Работа с поставщиком WMI для управления конфигурацией | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - permissions [WMI]
@@ -20,15 +17,15 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, late binding
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 031370656da517eda6d56db89bdcead7aff799da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7046ff2dfa9033d1caeb633dec1e4c02799257de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684122"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Работа с поставщиком WMI для управления конфигурацией
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
  где `instance_name` в установке по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет значение по умолчанию `MSSQLSERVER`.  
   
- **Примечание:** при подключении через брандмауэр Windows, необходимо убедиться, что компьютеры настроены правильно. См. в статье «Подключение через брандмауэр Windows» документации инструментария управления Windows на [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [веб-сайт](http://go.microsoft.com/fwlink/?linkid=15426).  
+ **Примечание:** при подключении через брандмауэр Windows, необходимо будет убедитесь, что компьютеры настроены правильно. См. в статье «Подключение через Windows Firewall» в документации по инструментарию управления Windows на [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [веб-сайт](http://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Разрешения и проверка подлинности сервера  
  Чтобы получить доступ к поставщику WMI для управления конфигурацией, скрипт управления WMI клиента должен выполняться на целевом компьютере в контексте администратора. Необходимо членство в локальной группе администраторов Windows на компьютере, которым требуется управлять.  

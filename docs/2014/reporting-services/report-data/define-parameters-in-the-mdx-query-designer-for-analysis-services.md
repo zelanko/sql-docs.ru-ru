@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c46a722ce7f06e816a6625297ab35c9f5548c236
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179581"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159524"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)
   Чтобы параметризовать запрос многомерных выражений для источника данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , необходимо добавить параметр запроса к этому запросу. В конструкторе запросов многомерных выражений параметр запроса можно добавить как в режиме конструктора, так и в режиме запроса, настроив фильтр. После определения запроса с параметром запроса, службы Reporting Services автоматически создают параметр отчета и набор данных, чтобы предоставить список допустимых значений. Это позволяет пользователю указать значение, которое передается непосредственно запросу.  

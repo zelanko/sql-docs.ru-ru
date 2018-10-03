@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35cbe12526fbd8ead78132f8560368b62e50aa61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153385"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147774"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Изучение модели кластеризации (учебник по интеллектуальному анализу данных — начальный уровень)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Алгоритм кластеризации группировку вариантов в кластеры, имеющие одинаковые характеристики. Такие группирования полезно использовать для просмотра данных, выявления в них аномалий и создания прогнозов.  
@@ -109,7 +106,7 @@ ms.locfileid: "37153385"
   
      Некоторые из более существенных различий между покупателями в **мало покупателей велосипедов** и **много покупателей велосипедов** кластеры включают возраст, владение автомобилем, количество детей и регион.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  В следующих разделах для работы с другими моделями интеллектуального анализа данных.  
   
 -   [Изучение модели дерева принятия решений &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  

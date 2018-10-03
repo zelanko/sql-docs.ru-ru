@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfa10bce2a4cd6462d1555b6b45fe375c6c68e04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093176"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Браузер (конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте вкладку **браузера** в конструкторе кубов для просмотра измерений, мер и ключевых показателей эффективности в кубе. В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]браузер кубов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] интегрирован в конструктор запросов многомерных выражений и предоставляет графические интерфейсы пользователя, которые помогают создавать запросы многомерных выражений, фильтровать кубы и создавать их срезы, а также выполнять детализацию углублением иерархии.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, updating applications
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f4cb945f216c9069be45528fcca02c8b5ac3fec
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bf12faa1dc32044c6dc40c048d463394d6841b2e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393947"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155848"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Обновление приложения с переходом от собственного клиента SQL Server 2005
   В этом разделе рассматриваются критические изменения в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в сравнении с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
