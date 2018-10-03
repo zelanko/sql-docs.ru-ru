@@ -1,13 +1,11 @@
 ---
-title: С помощью SQLGetDiagRec и SQLGetDiagField | Документы Microsoft
+title: Использование SQLGetDiagRec и SQLGetDiagField | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -16,25 +14,24 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 555bc3ba25ba895b54384acb8772a4b4293e61c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37fb095579fd173fd24a5df933e3e1a65edbeada
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626042"
 ---
-# <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>С помощью SQLGetDiagRec и SQLGetDiagField
-Приложения вызывают **SQLGetDiagRec** или **SQLGetDiagField** получения диагностических сведений. Эти функции принимают дескриптор среды, соединения, оператор или дескриптор и возвращают диагностики из функции, которая последний раз этот дескриптор. Диагностики, войти в систему определенного дескриптора удаляются, когда новая функция вызывается с помощью данного дескриптора. Если функция вернула нескольких диагностических записей, приложение вызывает эти функции несколько раз. Общее число записей состояния извлекается путем вызова **SQLGetDiagField** записи в заголовке (запись 0) с параметром SQL_DIAG_NUMBER.  
+# <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Использование SQLGetDiagRec и SQLGetDiagField
+Приложения вызывают **SQLGetDiagRec** или **SQLGetDiagField** получения диагностических сведений. Эти функции принимают дескриптор среды, подключения, инструкции или дескриптора и возвращают диагностики из функции, которая последний раз использовали этот дескриптор. Вход в систему определенного дескриптора диагностики отменяются в том случае, когда новая функция вызывается с помощью данного дескриптора. Если функция возвращает несколько диагностических записей, приложение вызывает эти функции несколько раз. Общее число записей состояния получается путем вызова **SQLGetDiagField** для заголовочной записи (запись 0) с параметром SQL_DIAG_NUMBER.  
   
- Приложения получить отдельные поля диагностики, вызвав **SQLGetDiagField** и выбора поля для извлечения. Определенные диагностические поля не имеют какого-либо значения для определенных типов маркеров. Список полей диагностики и их значений см. в разделе [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) описание функции.  
+ Приложения получить отдельные поля диагностики, вызвав **SQLGetDiagField** и указав извлекаемого поля. Некоторые диагностические поля не имеют какого-либо значения для определенных типов маркеров. Список полей диагностики и их значения, см. в разделе [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) описание функции.  
   
- Приложения получают SQLSTATE, машинный код ошибки и диагностическое сообщение в рамках одного вызова путем вызова **SQLGetDiagRec**; **SQLGetDiagRec** не может использоваться для извлечения сведений из запись заголовка.  
+ Приложения, извлекать SQLSTATE, собственное значение кода ошибки и диагностическое сообщение в одном вызове путем вызова **SQLGetDiagRec**; **SQLGetDiagRec** не может использоваться для получения сведений из записи заголовка.  
   
- Например следующий код запрашивает пользователя для инструкции SQL и выполняет его. Если возвращена все диагностические сведения, он вызывает **SQLGetDiagField** получить число записей состояния и **SQLGetDiagRec** для получения SQLSTATE, машинный код ошибки и диагностическое сообщение по сравнению с записи.  
+ Например следующий код запрашивает у пользователя инструкции SQL и выполняет его. Если любые диагностические сведения, было возвращено, он вызывает **SQLGetDiagField** получить число записей состояния и **SQLGetDiagRec** для получения SQLSTATE, собственное значение кода ошибки и диагностическое сообщение по сравнению с записи.  
   
 ```  
 SQLCHAR       SqlState[6], SQLStmt[100], Msg[SQL_MAX_MESSAGE_LENGTH];  

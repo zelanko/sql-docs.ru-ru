@@ -1,14 +1,11 @@
 ---
-title: Группы доступности AlwaysOn каталога представления (Transact-SQL) | Документы Microsoft
+title: Группы доступности Always On каталога представления (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,22 +13,22 @@ helpviewer_keywords:
 - catalog views [SQL Server], AlwaysOn Availability Groups
 - YY
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88a9b47829b0cd1e2685aff2d3bf6b7d8f1a2883
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 75cab555eef1ffd53226f891a264fb1be3195de2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627482"
 ---
-# <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Представления каталога (Transact-SQL) групп доступности Always On
+# <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Представления каталога (Transact-SQL), группах доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Этот раздел содержит представления каталога и функции, которые связаны с [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |||  
 |-|-|  
@@ -41,13 +38,13 @@ ms.lasthandoff: 05/04/2018
 |[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)||  
   
 > [!NOTE]  
->  Сведения о присоединенных базах данных доступности см. в разделе **replica_id** и **group_database_id** столбцы в [sys.databases (Transact-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+>  Сведения о присоединенных базах данных доступности, см. в разделе **replica_id** и **group_database_id** столбцов в [sys.databases (Transact-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также  
  [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)   
  [sys.database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Отслеживание групп доступности (Transact-SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Динамические административные представления и функции (Transact-SQL) с группами доступности Always On](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+ [Группах доступности AlwaysOn, динамические административные представления и функции (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

@@ -1,34 +1,31 @@
 ---
-title: Пример свойства ActiveCommand (VB) | Документы Microsoft
+title: Пример свойства ActiveCommand (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ActiveCommand property [ADO], Visual Basic example
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30e70c09826344db57ea9152447d2d197bb33ef7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275143"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617152"
 ---
 # <a name="activecommand-property-example-vb"></a>Пример свойства ActiveCommand (Visual Basic)
-В этом примере демонстрируется [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) свойство.  
+В этом примере показано [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) свойство.  
   
- Получает подпрограмме [записей](../../../ado/reference/ado-api/recordset-object-ado.md) которого **ActiveCommand** свойство используется для отображения текста команды и параметра, который создан **записей**.  
+ Предоставляется процедура [записей](../../../ado/reference/ado-api/recordset-object-ado.md) которого **ActiveCommand** свойство используется для отображения текста команды и параметр, который создан **записей**.  
   
 ```  
 'BeginActiveCommandVB  
@@ -94,11 +91,11 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **ActiveCommandXprint** процедуры предоставляется только **записей** объекта, но его необходимо распечатать, текст команды и параметра, который создан **записей**. Это можно сделать, поскольку **записей** объекта **ActiveCommand** свойство дает связанного [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
+ **ActiveCommandXprint** процедуры предоставляется только **записей** объекта, но его необходимо распечатать, текст команды и параметр, который создан **записей**. Это можно сделать, поскольку **записей** объекта **ActiveCommand** свойство возвращает связанный [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
   
- **Команда** объекта [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство дает параметризованной команды, которая создана **записей**. **Команда** объекта [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции дает значение, которое был замещен заполнителя параметра команды («**?**»).  
+ **Команда** объекта [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство вызывает параметризованную команду, которая создана **записей**. **Команда** объекта [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции дает значение, которое было заменителями заполнителя параметра команды («**?**«).  
   
- Наконец выводится сообщение об ошибке или имя автора имя и идентификатор.  
+ Наконец выводятся сообщения об ошибке или автора имя и идентификатор.  
   
 ```  
 'BeginActiveCommandPrintVB  
@@ -125,6 +122,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойство ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Пример свойства ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

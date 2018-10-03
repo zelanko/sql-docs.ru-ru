@@ -1,13 +1,11 @@
 ---
-title: Фильтр и пример использования свойств RecordCount (JScript) | Документы Microsoft
+title: Filter и свойств RecordCount (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 656c981dd242ad7f11768aac0bb79c7214845c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45e3a53bd006302d368b97304a1f6e8eeab438f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278613"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623982"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>Фильтр и пример использования свойств RecordCount (JScript)
-В этом примере открывается **записей** компаний таблицы базы данных Northwind, а затем использует [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство для ограничения записей отображается до тех, где поле CompanyName начинается с буквы Г. Вырезать и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в виде **FilterJS.asp**.  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter и свойств RecordCount (JScript)
+В этом примере открывается **записей** компаний таблицы базы данных "Борей", а затем использует [фильтра](../../../ado/reference/ado-api/filter-property.md) свойства для ограничения записей отображается до тех, где поле CompanyName начинается с буквы Г., вырезать и вставить следующий код в блокноте или другом текстовом редакторе и сохраните его в **FilterJS.asp**.  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -153,6 +150,6 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойства фильтра](../../../ado/reference/ado-api/filter-property.md)   
+ [Свойство фильтра](../../../ado/reference/ado-api/filter-property.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
