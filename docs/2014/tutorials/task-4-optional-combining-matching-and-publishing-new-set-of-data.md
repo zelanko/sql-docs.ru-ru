@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 207f6141338c4d9e44c4fc7763177276ea623686
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167775"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061754"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Задача 4 (дополнительно). Объединение, сопоставление и публикация нового набора данных
   Со временем в репозиторий MDS потребуется добавить дополнительные данные. Перед добавлением может быть полезно сравнить новые данные с данными, которые уже управляются в MDS, чтобы избежать повторения или добавления неточных данных. В надстройке служб Master Data Services для Excel можно объединять данные из двух листов, а также сравнивать данные для обнаружения и удаления повторений перед публикацией данных в MDS. Функция сопоставления надстройки MDS для Excel использует функциональность сопоставления служб DQS для выявления совпадений в данных. В этой задаче будет выполнено объединение данных из двух листов в один, а затем будет выполнено действие для выявления и удаления повторений перед публикацией в MDS. См. в разделе [сопоставление качества данных в надстройке MDS для Excel](http://msdn.microsoft.com/library/hh548681.aspx) и [объединение данных](http://msdn.microsoft.com/library/hh548680.aspx) разделы для получения дополнительных сведений.  

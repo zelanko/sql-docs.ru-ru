@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.POINTINTIMERESTORE.F1
@@ -14,16 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e0e93e56e0ba2dc2f6b6c435085ee8d370d2cd3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060914"
 ---
 # <a name="backup-timeline"></a>Временная шкала резервного копирования
   Диалоговое окно **Временная шкала резервного копирования** служит для поиска и указания резервных копий для восстановления базы данных на момент времени. Чтобы открыть диалоговое окно **Временная шкала резервного копирования** , нажмите кнопку **Временная шкала** на панели **Восстановление базы данных (страница "Общие")** . В этом диалоговом окне можно просмотреть временную шкалу операций восстановления, применявшихся к базе данных.  

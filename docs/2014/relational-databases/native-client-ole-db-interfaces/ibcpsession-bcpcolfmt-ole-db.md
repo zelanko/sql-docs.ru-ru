@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPColFmt (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea0872d071893e7d88a5d52d677702a984e49f02
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058684"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   Создает привязку между переменными программы и столбцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -44,7 +41,7 @@ DBORDINALidxServerCol);
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **BCPColFmt** метод используется для создания привязки между полями файла данных BCP и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбцов. В качестве параметров он принимает длину, тип, признак конца и длину префикса столбца, а также задает каждое из этих свойств для отдельных полей.  
+ Метод **BCPColFmt** используется для создания привязки между полями файла данных BCP и столбцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В качестве параметров он принимает длину, тип, признак конца и длину префикса столбца, а также задает каждое из этих свойств для отдельных полей.  
   
  Если пользователь работает в интерактивном режиме, этот метод вызывается дважды для каждого столбца: один раз, чтобы задать формат столбца согласно значениям по умолчанию (которые соответствуют типу столбца на сервере), а второй раз, чтобы задать формат согласно типу столбца, выбранному клиентом в интерактивном режиме.  
   
@@ -67,11 +64,11 @@ DBORDINALidxServerCol);
  При каждом вызове метода **BCPColFmt** задается формат для одного поля в файле пользователя. Например, чтобы изменить значения по умолчанию трех полей в файле данных пользователя, состоящем из пяти полей, сначала вызовите метод `BCPColumns(5)`, а затем метод **BCPColFmt** пять раз и в трех из этих вызовов задайте нужный формат. При оставшихся двух вызовах для параметра *eUserDataType* установите значение BCP_TYPE_DEFAULT, а параметрам *cbIndicator*, *cbUserData*и *cbUserDataTerm* присвойте значения 0, BCP_VARIABLE_LENGTH и 0 соответственно. Эта процедура копирует все пять столбцов. Для трех применяется заданный измененный формат, а для двух оставшихся — формат по умолчанию.  
   
 > [!NOTE]  
->  [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) метод должен вызываться перед любыми вызовами **BCPColFmt**. Метод **BCPColFmt** необходимо вызывать по одному разу для каждого столбца из файла пользователя. При вызове метода **BCPColFmt** более одного раза для любого столбца из файла пользователя возникает ошибка.  
+>  Необходимо вызывать метод [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) перед любым вызовом метода **BCPColFmt**. Метод **BCPColFmt** необходимо вызывать по одному разу для каждого столбца из файла пользователя. При вызове метода **BCPColFmt** более одного раза для любого столбца из файла пользователя возникает ошибка.  
   
  Копировать все данные из файла пользователя в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обязательно. Чтобы пропустить столбец, укажите формат данных для этого столбца, установив параметр idxServerCol в значение 0. Чтобы поле было пропущено, по-прежнему необходимо добавить все необходимые данные для метода, чтобы он работал правильно.  
   
- **Примечание** [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) функция может использоваться для сохранения спецификации формата, предоставляются через **BCPColFmt**.  
+ **Примечание**. С помощью функции [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) можно сохранить спецификацию формата, предоставленную с помощью метода **BCPColFmt**.  
   
 ## <a name="arguments"></a>Аргументы  
  *idxUserDataCol*[in]  
@@ -118,10 +115,10 @@ DBORDINALidxServerCol);
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка поставщика, для использования подробных сведений [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) интерфейс.  
+ Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить с помощью интерфейса [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).  
   
  E_UNEXPECTED  
- Непредвиденный вызов метода. Например [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) перед вызовом этого метода не был вызван метод.  
+ Непредвиденный вызов метода. Например, перед вызовом этого метода не был вызван метод [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md).  
   
  E_INVALIDARG  
  Недопустимое значение аргумента.  
