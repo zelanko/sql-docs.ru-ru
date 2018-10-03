@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 71344f6e5a1e9ebb1f13cede4c71b933a8c6a893
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 029d59328bf13991cd98c4d5ed5fa186abbd4453
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818230"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111574"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, объект Databases
   Объект **SQLServer:Databases** в SQL Server содержит счетчики для контроля и отслеживания операций массового копирования, пропускной способности создания и восстановления резервных копий, а также действий, связанных с журналом транзакций. Контроль и отслеживание транзакций и журнала транзакций позволяют определить, насколько интенсивна деятельность пользователей в базе данных, и как быстро заполняется журнал транзакций. Уровень активности пользователей определяет производительность базы данных и влияет на размеры журналов, блокировку и репликацию. Отслеживание низкоуровневых операций в журнале для оценки активности пользователей и использования ресурсов помогает определить критические факторы производительности.  

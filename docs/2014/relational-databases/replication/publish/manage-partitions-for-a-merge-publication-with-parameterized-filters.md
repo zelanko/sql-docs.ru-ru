@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [SQL Server replication]
 - merge replication partitions [SQL Server replication], SQL Server Management Studio
 - parameterized filters [SQL Server replication], partition management
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 805bbfaf66f2f24aac284b94952cd6d881d7c832
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62675f5d2464bed9dd07b8a8477644d21ebbe828
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107894"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Управление секциями для публикации слиянием с параметризованными фильтрами
   В данном разделе описывается управление секциями для публикации слиянием с параметризованными фильтрами в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Параметризованные фильтры строк могут быть использованы для формирования неперекрывающихся секций. Такие секции могут быть ограничены таким образом, чтобы каждая данная секция предоставлялась только одной подписке. В таком случае, чем больше число подписчиков, тем большее число секций потребуется, а это, в свою очередь, приведет к необходимости создания такого же числа секционированных моментальных снимков. Дополнительные сведения см. в статье [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  

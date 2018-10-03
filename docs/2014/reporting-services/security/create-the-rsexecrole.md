@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 560b889359a428625131ff69d8aab5589834a39e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfcf78ea493794527d22a0bc1b62051ede2871b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171524"
 ---
 # <a name="create-the-rsexecrole"></a>Создание роли RSExecRole
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] использует стандартную роль базы данных называется `RSExecRole` чтобы предоставить серверу отчетов разрешения в базу данных сервера отчетов. Роль `RSExecRole` создается автоматически с базой данных сервера отчетов. Как правило, никогда не следует изменять ее или назначать другим пользователям. Однако при перемещении базы данных сервера отчетов на новый или иной компонент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] необходимо создать повторно эту роль в системных базах данных master и msdb.  

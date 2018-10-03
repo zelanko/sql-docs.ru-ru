@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6aafcdccb92c093b6ff0e8c2a4a163cc6878b21e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3a2e2ff2fd28004d924f2b06a19b6bab3c52914
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155374"
 ---
 # <a name="xml-source"></a>XML-источник
   XML-источник считывает файл XML-данных и заполняет данными столбцы в выходе источника.  
@@ -95,7 +92,7 @@ ms.locfileid: "37217734"
   
 -   [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Извлечение данных с помощью XML-источника](xml-source.md)  
   
 ## <a name="related-content"></a>См. также  

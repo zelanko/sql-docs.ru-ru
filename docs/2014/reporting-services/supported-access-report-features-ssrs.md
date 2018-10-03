@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-caps.latest.revision: 43
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180614"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Поддерживаемые функции отчетов Access (службы SSRS)
   Когда отчет импортируется в конструктор отчетов, процесс импорта преобразует отчет [!INCLUDE[msCoName](../includes/msconame-md.md)] Access в RDL-файл служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 'Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживает некоторое число функций Access, но из-за различий между Access и [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] часть элементов может быть слегка изменена или не поддерживаться. В этом разделе описано преобразование функций отчетов Access в функции на языке определения отчетов.  

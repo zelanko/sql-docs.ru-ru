@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - Cluster Viewer [Analysis Services]
 - mining models [Analysis Services], clusters
 ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ebba3499c092ab89bacb4011671b0f90df67eb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 185e9a154a7eb51ff15ce1b45bfd82dc2e36adf0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183571"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087774"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Просмотр модели с помощью средства просмотра кластеров (Майкрософт)
   Средство просмотра кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью алгоритма кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом сегментации, он используется для просмотра данных с целью обнаружения аномалий в данных и создания прогнозов. Дополнительные сведения об этом алгоритме см. в статье [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md).  

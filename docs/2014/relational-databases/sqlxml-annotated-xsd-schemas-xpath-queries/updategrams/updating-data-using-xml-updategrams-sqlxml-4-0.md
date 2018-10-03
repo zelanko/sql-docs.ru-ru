@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a8ab9c6c57f2cb9aecfdbe15b2ea2e6cbeb9887
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7611e0c52f4b7e2efab23d55fdacd07e565113d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222846"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Обновление данных при помощи диаграмм обновления XML (SQLXML 4.0)
   При обновлении существующих данных, необходимо указать оба  **\<перед >** и  **\<после >** блоков. Элементы, указанные в  **\<перед >** и  **\<после >** блоки описывают нужное изменение. Диаграмма обновления использует элементы, указанные в  **\<перед >** блока для идентификации существующих записей в базе данных. Соответствующие элементы в  **\<после >** блок указывают, как должна выглядеть запись после выполнения операции обновления. На основе этих данных диаграмма обновления создает инструкцию SQL, который соответствует  **\<после >** блока. Затем диаграмма обновления использует эту инструкцию для обновления базы данных.  

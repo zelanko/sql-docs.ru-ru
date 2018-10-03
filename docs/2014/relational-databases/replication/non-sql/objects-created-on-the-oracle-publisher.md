@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 671058db0556f58d6bd29b8960212b6e180862be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5331597181f8d04ae74dd5d3bc4b8781bd4eb04e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166911"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124824"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
   Репликация[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает объекты базы данных на издателе Oracle для включения отслеживания и перенаправления изменений ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не устанавливает никаких двоичных файлов на издателе Oracle). В следующей таблице перечисляются объекты, которые создаются на издателе Oracle, если он определяется на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как издатель. Описания объектов предоставляются только в информационных целях. Не следует изменять эти объекты.  

@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 f1_keywords:
 - sql12.rtp.rptdesigner.subreportproperties.parameters.f1
 - sql12.rtp.rptdesigner.reportparameters.general.f1
@@ -19,16 +15,15 @@ f1_keywords:
 - "10070"
 - sql12.rtp.rptdesigner.reportparameters.advanced.f1
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 26fdc20f897d904319c9080120aa5770b53145bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e429badf8d6ad656f0ba5f0944a7d6bdf21553c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168295"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107340"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Параметры отчета (Построитель отчетов и Конструктор отчетов)
   Данная тема описывает распространенные варианты применения параметров отчета SSRS, свойства, которые вы можете установить и другую информацию относительно свойств. Параметры отчета позволяют управлять данными отчета, объединять связанные отчеты и изменять внешний вид отчетов.  

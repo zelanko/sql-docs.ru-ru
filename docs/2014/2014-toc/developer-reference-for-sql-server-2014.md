@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql12.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 13
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d28d430ee7401fcdf248d6a5d13da558519a71ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fcc0962d0d810b79a788e86aa987f3b54534a41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192904"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196814"
 ---
-# Справочник разработчика для SQL Server 2014
+# <a name="developer-reference-for-sql-server-2014"></a>Справочник разработчика для SQL Server 2014
   Для разработки приложений, обращающихся к базам данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , можно использовать следующие возможности и технологии.  
   
-## Разделы справочника по программированию  
+## <a name="programming-reference-sections"></a>Разделы справочника по программированию  
  ![Маленький значок папки](../integration-services/media/filefolder-small.gif "маленький значок папки") [среда CLR &#40;CLR&#41; основные понятия о программировании интеграции](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![Маленький значок папки](../integration-services/media/filefolder-small.gif "маленький значок папки") [собственный XML](http://technet.microsoft.com/library/ms191274.aspx)  
@@ -62,7 +59,7 @@ ms.locfileid: "37192904"
   
  ![Маленький значок папки](../integration-services/media/filefolder-small.gif "маленький значок папки") [руководство разработчика служб Reporting Services](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
-## Другие ресурсы по программированию  
+## <a name="other-programming-resources"></a>Другие ресурсы по программированию  
  При разработке приложений доступа к данным может потребоваться одна или несколько следующих технологий.  
   
  [Доступ к данным в Visual Studio](http://go.microsoft.com/fwlink/?LinkId=129902)  

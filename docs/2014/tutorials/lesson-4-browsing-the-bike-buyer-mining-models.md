@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5866ebce4673033bf9be78b81bb65ad705dd331a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36c92e5ebd4ad0e8757d47fd8ce2b58995140670
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278180"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171424"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Занятие 4: Просмотр моделей интеллектуального анализа данных для покупателя велосипеда
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Урок 4. Просмотр моделей интеллектуального анализа данных для покупателя велосипеда
   На этом занятии вы воспользуетесь [SELECT (DMX)](/sql/dmx/select-dmx) Моделирует инструкцию для исследования содержимого дерева принятия решений и кластеризации интеллектуального анализа данных, созданную в [занятии 2: Добавление модели интеллектуального анализа данных к структуре интеллектуального анализа данных прогнозирования](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Столбцы, содержащиеся в модели интеллектуального анализа данных, не являются столбцами, определенными структурой интеллектуального анализа данных, а являются особым набором столбцов, который описывает шаблоны и тренды, найденные алгоритмом. Эти столбцы модели интеллектуального анализа данных описаны в [набор строк DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) набора строк схемы. Например, столбец MODEL_NAME в наборе строк схемы содержимого содержит имя модели интеллектуального анализа данных. Для кластерной модели интеллектуального анализа данных столбец NODE_CAPTION содержит имя каждого кластера, а столбец NODE_DESCRIPTION содержит описание характеристик каждого кластера. Можно просматривать эти столбцы с помощью SELECT FROM \<модели >. СОДЕРЖИМОЕ инструкции расширений интеллектуального анализа данных. Эту инструкцию можно также использовать, чтобы исследовать данные, использованные для создания модели интеллектуального анализа данных. Должна быть включена детализация структуры интеллектуального анализа данных, чтобы использовать эту инструкцию. Дополнительные сведения об инструкции см. в разделе [SELECT FROM &#60;модели&#62;. СЛУЧАЯХ &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/select-from-model-content-dmx).  

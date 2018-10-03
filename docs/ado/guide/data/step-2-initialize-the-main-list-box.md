@@ -1,28 +1,25 @@
 ---
-title: 'Шаг 2: Инициализируйте главном списке | Документы Microsoft'
+title: 'Шаг 2: Инициализация главного списка | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0be38956ee55ba42c02cfe8002ef1b3937aff665
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272853"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735526"
 ---
-# <a name="step-2-initialize-the-main-list-box"></a>Шаг 2: Инициализируйте главном списке
-Чтобы объявить глобальные объекты набора записей и записи, вставьте следующий код (Общие) (объявления) класса Form1:  
+# <a name="step-2-initialize-the-main-list-box"></a>Шаг 2. Инициализация главного списка
+Чтобы объявить глобальные объекты набора записей и записи, вставьте следующий код в (Общие) (объявления) для Form1:  
   
 ```  
 Option Explicit  
@@ -30,10 +27,10 @@ Dim grec As Record
 Dim grs As Recordset  
 ```  
   
- Этот код объявляет глобальный объект ссылки для объектов набора записей и записи, которые будут использоваться позже в этом сценарии.  
+ Этот код объявляет ссылок на глобальный объект для набора записей и записи объектов, которые будут использоваться позже в этом сценарии.  
   
 ## <a name="to-connect-to-a-url-and-populate-lstmain"></a>Чтобы подключиться к URL-адрес и заполнить lstMain  
- Вставьте следующий код в обработчик событий загрузки формы класса Form1:  
+ Вставьте следующий код в обработчик событий загрузки формы для Form1:  
   
 ```  
 Private Sub Form_Load()  
@@ -49,9 +46,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Этот код создает экземпляр глобальных объектов набора записей и записи. Объект записи `grec`, открытом с URL-адрес, указанный как ActiveConnection. Если URL-адрес существует, он открыт; Если он еще не существует, он создается. Обратите внимание, что необходимо заменить «http://servername/foldername/» с допустимый URL-адрес из среды.  
+ Этот код создает экземпляр глобальных объектов набора записей и записи. Объект записи, `grec`, открыт с помощью URL-адрес, заданный как ActiveConnection. Если URL-адрес существует, он открывается; Если он еще не существует, он создается. Обратите внимание, что следует заменить "http://servername/foldername/" с допустимым URL-адресом из среды.  
   
- Объект Recordset, `grs`, открывается на дочерние записи, `grec`. Затем `lstMain` заполняется имена файлов ресурсов, которые опубликованы на URL-адрес.  
+ Объект Recordset, `grs`, открывается на дочерние элементы записи `grec`. Затем `lstMain` заполняется имена файлов ресурсов, которые опубликованы на URL-адрес.  
   
 ## <a name="see-also"></a>См. также  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.slowlychangingdimtrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c326568be4fa1c5f8088e75ca4609975f6f7561c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c417f01f7256863902f4e446bcb04c0732be832c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056196"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>преобразование «Медленно изменяющееся измерение»
   Преобразование «Медленно изменяющееся измерение» согласует обновление и вставку записей в таблицы измерения хранилища данных. Например, это преобразование можно использовать для настройки выходов преобразования, которые вставляют и обновляют записи в таблице DimProduct базы данных [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] данными из таблицы Production.Products OLTP-базы данных.  
@@ -106,7 +103,7 @@ ms.locfileid: "37314254"
   
 -   Мастер загрузки измерений проводит пользователей через последовательность шагов настройки преобразования «Медленно изменяющееся измерение» и создает поток данных для выходов преобразования. Чтобы изменить настройки медленно изменяющихся измерений, запустите мастер загрузки измерений повторно. Дополнительные сведения см. в разделе [Настройка выходов при помощи мастера медленно изменяющихся измерений](configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>См. также  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80548c0ea7ba2b8bf8232a66daf709050f4cdc4f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814160"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185454"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Подробные сведения об управляемом экземпляре (служебная программа SQL Server)
   Представление «Сведения об управляемых экземплярах» проводника служебной программы отображает сведения об использовании для отдельных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], журнал использования ЦП, подробные сведения об использовании хранилища на уровне файлов, а также позволяет просматривать и обновлять пороговые значения политик. Пороговые значения политик могут быть изменены на уровне экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , для компьютера, для файлов баз данных и файлов журналов и на уровне томов хранилища. Также можно просмотреть подробные сведения о свойствах отдельных управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

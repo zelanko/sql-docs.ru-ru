@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], about multidimensional data
 ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4a8f3506cb7b132d9ecdefc9f6609cf6e68c134
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5940856a7d3c5854017af7169ab24939e3b4c3c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234224"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084484"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Основные сведения об архитектуре Microsoft OLAP
   Изучите указанные ниже разделы, чтобы лучше понять работу многомерных баз данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и запланировать способ реализации многомерных баз данных в своем решении бизнес-аналитики.  

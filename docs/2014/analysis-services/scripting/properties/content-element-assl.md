@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Content Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd9e3c237d8009ac153e8c69033ce9cce958aba3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b27152b0c181061e25727270fd89bd423728a5a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097864"
 ---
 # <a name="content-element-assl"></a>Элемент Content (ASSL)
   Описывает содержимое столбца в [MiningStructure](../objects/miningstructure-element-assl.md) элемент.  
@@ -78,7 +75,7 @@ ms.locfileid: "37267480"
 |*StdDev*|Значения для этого столбца указывают стандартное отклонение для столбцов, содержащихся в элементе `ClassifiedColumns` родительского объекта `ScalarMiningStructureColumn`.|  
 |*ProbabilityVariance*|Значения для этого столбца указывают дисперсию вероятности для столбцов, содержащихся в элементе `ClassifiedColumns` родительского объекта `ScalarMiningStructureColumn`.|  
 |*ProbabilityStdDev*|Значения для этого столбца указывают стандартное отклонение вероятности для столбцов, содержащихся в элементе `ClassifiedColumns` родительского объекта `ScalarMiningStructureColumn`.|  
-|*Поддержка*|Значения для этого столбца указывают данные поддержки для столбца, содержащегося в элементе `ClassifiedColumns` родительского объекта `ScalarMiningStructureColumn`. **Примечание:** этот столбец предоставляется как часть стандарта для сторонних поставщиков алгоритма интеллектуального анализа данных. **Примечание:** Майкрософт предоставляет алгоритмы не требуется для этого столбца. <br /><br /> , и делает это по-другому.|  
+|*Поддержка*|Значения для этого столбца указывают данные поддержки для столбца, содержащегося в элементе `ClassifiedColumns` родительского объекта `ScalarMiningStructureColumn`. **Примечание:** этот столбец предоставляется как часть стандарта для сторонних поставщиков алгоритма интеллектуального анализа данных. **Примечание:** Майкрософт предоставляет алгоритмы не требуется для этого столбца. <br /><br /> .|  
 |*Key*|Столбец является ключевым. **Примечание:** данный тип содержимого применяется только к ключевым столбцам, в котором `IsKey` элементу присваивается `True`.|  
   
  Помимо этих стандартных значений, интеллектуального анализа данных поставщиков алгоритмов, в состав [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживают значения в следующей таблице.  

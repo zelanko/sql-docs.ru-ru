@@ -1,14 +1,11 @@
 ---
-title: sys.availability_databases_cluster (Transact-SQL) | Документы Microsoft
+title: sys.availability_databases_cluster (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.availability_databases_cluster_TSQL
@@ -23,21 +20,20 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b0c0cd91b58c4e59cba2440d8f02cd01a93c870
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 7d312a5ecb60e1ab046b0108e01ef1834adaa900
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33179190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842312"
 ---
 # <a name="sysavailabilitydatabasescluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Содержит по одной строке для каждой базы данных доступности на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена реплика доступности для любой группы доступности AlwaysOn в кластере сервера отказоустойчивой кластеризации Windows (WSFC), независимо от ли локальное копирование базы данных была присоединена к группе доступности еще.  
+  Содержит по одной строке для каждой базы данных доступности на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена реплика доступности для любой группы доступности AlwaysOn в кластере сервера отказоустойчивой кластеризации Windows (WSFC), независимо от того, ли локальный копирование базы данных была присоединена к группе доступности.  
   
 > [!NOTE]  
 >  При добавлении базы данных в группу доступности база данных-источник автоматически присоединяется к группе. Базы данных-получатели необходимо подготовить на каждой из вторичных реплик до того, как их можно будет присоединить к группе доступности.   
@@ -45,11 +41,11 @@ ms.locfileid: "33179190"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Уникальный идентификатор группы доступности, в которой участвует база данных, если такая группа имеется.<br /><br /> NULL = база данных не является частью реплики доступности в группе доступности.|  
-|**group_database_id**|**uniqueidentifier**|Уникальный идентификатор базы данных в группе доступности, в которой участвует база данных, если такая группа имеется. **group_database_id** одинаково для этой базы данных на первичной реплике и на каждой вторичной реплике, на котором базы данных была присоединена к группе доступности.<br /><br /> NULL = база данных не является частью реплики доступности в любой группе доступности.|  
+|**group_database_id**|**uniqueidentifier**|Уникальный идентификатор базы данных в группе доступности, в которой участвует база данных, если такая группа имеется. **group_database_id** одинаков для этой базы данных в первичной реплике и на каждой вторичной реплике, на котором базы данных входит в группу доступности.<br /><br /> NULL = база данных не является частью реплики доступности в любой группе доступности.|  
 |**database_name**|**sysname**|Имя базы данных, которая добавлена к группе доступности.|  
   
 ## <a name="permissions"></a>Разрешения  
- Если код, вызывающий **sys.availability_databases_cluster** не является владельцем базы данных минимальные разрешения, необходимые для просмотра соответствующей строки являются ALTER ANY DATABASE или разрешение VIEW ANY DATABASE на уровне сервера и создать Разрешение базы данных в **master** базы данных.  
+ Если вызывающий объект **sys.availability_databases_cluster** не является владельцем базы данных минимальные разрешения, необходимые для просмотра соответствующей строки являются ALTER ANY DATABASE или разрешение уровня сервера VIEW ANY DATABASE или CREATE Разрешение базы данных в **master** базы данных.  
   
 ## <a name="see-also"></a>См. также  
  [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   

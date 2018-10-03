@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - databases [Reporting Services], connections
 - security [Reporting Services], database connections
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 43cf572cca1062471e73ab47be5e687fee40c1db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208554"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202657"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации служб Reporting Services)
   Для функционирования каждого экземпляра сервера отчетов необходимо соединение с базой данных сервера отчетов, в которой хранятся отчеты, модели отчетов, общие источники данных, ресурсы, а также метаданные, управляемые сервером. Исходное соединение может быть создано во время установки сервера отчетов, если производится установка конфигурации по умолчанию. В большинстве случаев после завершения установки настройка соединения осуществляется при помощи программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Такие параметры соединения, как тип учетной записи и учетные данные, можно изменять в любое время. Пошаговые инструкции по созданию базы данных и настройке соединения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  

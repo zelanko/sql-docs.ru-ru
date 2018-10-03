@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa5c34ec3c794cf87b96feefbf15c323fbc43e27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8ab0e95ce4998540e14849bb74b53d1be1c8e15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261380"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207582"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Службы Analysis Services с группами доступности AlwaysOn
   Группа доступности AlwaysOn — это предопределенная коллекция реляционных баз данных SQL Server, которые при отработке отказа все вместе переключаются на другой ресурс, если создаются условия для отработки отказа в любой из них. Запросы перенаправляются в зеркальную базу данных на другом экземпляре в той же группе доступности. Если группы доступности используются для обеспечения высокой доступности, можно использовать базу данных в этой группе в качестве источника данных в табличном или многомерном решении служб Analysis Services. Если используется база данных доступности, все следующие операции службы Analysis Services работают, как ожидалось: обработка или импорт данных, прямые запросы к базе данных (с использованием хранилища ROLAP или режима DirectQuery) и обратная запись.  

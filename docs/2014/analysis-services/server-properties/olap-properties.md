@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AggregationPerfLog property
@@ -95,16 +93,15 @@ helpviewer_keywords:
 - MemoryLimit property
 - AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df4f5871d7892dd8c11329bb3665734ff4c6f110
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e89743de546afbc331259dbe3ff18a0344a4e420
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299034"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122144"
 ---
 # <a name="olap-properties"></a>Свойства OLAP
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают перечисленные в следующих таблицах свойства сервера OLAP. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -435,8 +432,7 @@ ms.locfileid: "37299034"
  `DataCache\ MemoryModel\ Tax`  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="jobs"></a>Задания
-  
+## <a name="jobs"></a>Задания  
  `ProcessAggregation\ MemoryModel\ Income`  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

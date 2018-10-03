@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52aa26064a9a0e80af03649d89140a71a78f41d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f4227b819597573d51b9720006fe6536f774103
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197984"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Шаг 2. Добавление и настройка контейнера "цикл по каждому элементу"
   В этой задаче будет добавлена возможность выполнить циклическую обработку папки неструктурированных файлов и применить для каждого из этих неструктурированных файлов одинаковое преобразование потока данных, использованное на занятии 1. Это будет выполнено путем добавления в поток управления и настройки контейнера «цикл по каждому элементу».  
@@ -69,7 +66,7 @@ ms.locfileid: "37312004"
   
     2.  Перейдите на вкладку **DOWNLOADS** .  
   
-    3.  Перейдите по ГИПЕРССЫЛКЕ «http://msftisprodsamples.codeplex.com/downloads/get/578097"SQL2012. Файл Integration_Services.Create_Simple_ETL_Tutorial.Sample.ZIP.  
+    3.  Перейдите по ГИПЕРССЫЛКЕ « http://msftisprodsamples.codeplex.com/downloads/get/578097"SQL2012. Файл Integration_Services.Create_Simple_ETL_Tutorial.Sample.ZIP.  
   
 6.  В поле **Файлы** введите **Currency_\*.txt**.  
   

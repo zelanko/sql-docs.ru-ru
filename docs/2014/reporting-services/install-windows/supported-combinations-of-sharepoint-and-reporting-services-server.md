@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
 - add-in for sharepoint
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 49b19aaf7d34b052eac0e53c44814a961d6c4b74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b2335e06f5821bedefad8aeb558a3528632ad1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194810"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102724"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2014)
   Сервер отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может быть установлен в режиме интеграции с SharePoint и интегрирован с развертыванием SharePoint. Не все функции поддерживаются во всех сочетаниях сервера отчетов, надстройки служб Reporting Services для SharePoint и продуктов SharePoint. В этом разделе описаны поддерживаемые сочетания. В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] интеграция обеспечивается следующим сочетанием.  

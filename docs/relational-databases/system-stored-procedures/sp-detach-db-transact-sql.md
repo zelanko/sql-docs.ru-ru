@@ -1,14 +1,11 @@
 ---
-title: sp_detach_db (Transact-SQL) | Документы Microsoft
+title: sp_detach_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/30/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0f17581782cea310bcfad9ec6d7ce4823d1d38c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825672"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,27 +50,27 @@ sp_detach_db [ @dbname= ] 'database_name'
  Имя отсоединяемой базы данных. *database_name* — **sysname** значение со значением по умолчанию NULL.  
   
  [  **@skipchecks =** ] **"***параметром skipchecks***"**  
- Указывает, выполнять или нет инструкцию UPDATE STATISTIC. *параметром skipchecks* — **nvarchar(10)** значение со значением по умолчанию NULL. Чтобы пропустить инструкции UPDATE STATISTICS, укажите **true**. Чтобы явно запустить инструкцию UPDATE STATISTICS, укажите **false**.  
+ Указывает, выполнять или нет инструкцию UPDATE STATISTIC. *параметром skipchecks* — **nvarchar(10)** значение со значением по умолчанию NULL. Чтобы выполнять инструкцию UPDATE STATISTICS, укажите **true**. Чтобы явно запустить инструкцию UPDATE STATISTICS, укажите **false**.  
   
  По умолчанию инструкция UPDATE STATISTICS запускается для обновления информации о данных в таблицах и индексах. Выполнение UPDATE STATISTICS имеет смысл для тех баз данных, которые планируется переместить на постоянные носители информации.  
   
- [  **@keepfulltextindexfile=** ] **"***Значение аргумента KeepFulltextIndexFile***"**  
- Указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *Значение аргумента KeepFulltextIndexFile* — **nvarchar(10)** значение по умолчанию **true**. Если *значение аргумента KeepFulltextIndexFile* — **false**, все файлы полнотекстового индекса, связанный с базой данных и метаданные полнотекстового индекса удаляются, если она доступна только для чтения. Если значение равно NULL или **true**, связанного с полнотекстовым поиском хранятся метаданные.  
+ [  **@keepfulltextindexfile=** ] **"***KeepFulltextIndexFile***"**  
+ Указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *KeepFulltextIndexFile* — **nvarchar(10)** значение по умолчанию **true**. Если *KeepFulltextIndexFile* — **false**, все файлы полнотекстового индекса, связанные с базой данных и метаданные полнотекстового индекса удаляются, если она доступна только для чтения. Если значение равно NULL или **true**, связанного с полнотекстовым поиском, хранятся в метаданных.  
   
 > [!IMPORTANT]  
->  **@keepfulltextindexfile** Параметр будет удален в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
+>  **@keepfulltextindexfile** Параметр будет удален в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  При отсоединении базы данных все метаданные удаляются. Если база данных была база данных по умолчанию для учетной записи входа, **master** становится базой данных по умолчанию.  
   
 > [!NOTE]  
->  Сведения о просмотре базы данных по умолчанию для всех учетных записей см. в разделе [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). При наличии необходимых разрешений можно использовать [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) для назначения новой базы данных по умолчанию для имени входа.  
+>  Сведения о просмотре базы данных по умолчанию для всех учетных записей входа см. в разделе [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Если у вас есть необходимые разрешения, можно использовать [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) для назначения новой базы данных по умолчанию для имени входа.  
   
 ## <a name="restrictions"></a>Ограничения  
  Невозможно отсоединить базу данных, если выполняется одно из следующих условий:  
@@ -82,7 +79,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   При репликации база данных публикуется.  
   
-     Перед тем как отсоединить базу данных, необходимо отключить публикацию, выполнив [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
+     Перед отсоединением базы данных, необходимо отключить публикацию, выполнив [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
   
     > [!NOTE]  
     >  Если невозможно использовать процедуру **sp_replicationdboption**, можно удалить репликацию, выполнив процедуру [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
@@ -107,7 +104,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="obtaining-exclusive-access"></a>Получение монопольного доступа  
  Для отсоединения базы данных требуется монопольный доступ к ней. Если база данных, которую необходимо отключить, используется в настоящий момент, следует переключить ее в режим SINGLE_USER для получения монопольного доступа.  
   
- Например, следующая `ALTER DATABASE` инструкция получает монопольный доступ к [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных после отключения всех текущих пользователей от базы данных.  
+ Например, следующая `ALTER DATABASE` инструкция получает монопольный доступ к [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных после отключения всех текущих пользователей из базы данных.  
   
 ```  
 USE master;  
@@ -117,7 +114,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Чтобы принудительно отключить текущих пользователей от базы данных немедленно или через указанное число секунд, также используйте параметр ROLLBACK: ALTER DATABASE *имя_базы_данных* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Дополнительные сведения см. в статье [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Чтобы принудительно отключить текущих пользователей к базе данных немедленно или через указанное число секунд, также используйте параметр ROLLBACK: ALTER DATABASE *имя_базы_данных* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Повторное присоединение базы данных  
  Отсоединенные файлы останутся на диске и могут быть повторно подсоединены с помощью вызова CREATE DATABASE (с параметрами FOR ATTACH или FOR ATTACH_REBUILD_LOG). Файлы можно также переместить на другой сервер и подсоединить там.  
@@ -126,7 +123,7 @@ GO
  Требуется членство в **sysadmin** предопределенной роли сервера или членство в **db_owner** роль базы данных.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере отсоединяется [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных с *параметром skipchecks* задано значение true.  
+ В следующем примере отсоединяется [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных с помощью *параметром skipchecks* задано значение true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

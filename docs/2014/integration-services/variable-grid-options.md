@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variableoptionswindow.f1
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec0b57e2c65080a00ecef30be21a6151d544a9e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36f44d123216d11034092806a4f7d616f8968d90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172985"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172654"
 ---
 # <a name="variable-grid-options"></a>Параметры сетки переменных
   Используйте диалоговое окно **Параметры сетки переменных** для выбора столбцов, которые появятся в окне **Переменные** , и для выбора фильтров, применяемых к списку переменных. Дополнительные сведения о свойствах соответствующей переменной см. в разделе [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring tables [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], about restoring databases
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 72c827235057c77fe42de062dc2c09050dd1a698
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ae93c4d7b9827fd8d3a1a6c67d37f3a305fa51b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216384"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Обзор процессов восстановления (SQL Server)
   Чтобы восстановить базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после сбоя, администратор базы данных должен восстановить набор резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в составе логически верной и содержательной последовательности восстановления. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает восстановление данных из резервных копий целой базы данных, файла данных или страниц данных следующим образом.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], installing
 - SQL Server Installation Wizard, Report Server Installation Options page
 ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8dff91a860d801257d9228dd904cbe36855504cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9afc4e179807d6cc10925d4fb4964cea857427d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327084"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185344"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>параметры конфигурации служб Reporting Services (SSRS)
   Для задания параметров, определяющих способ установки и настройки сервера отчетов, служит страница **Настройка служб Reporting Services** мастера установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Доступность того или иного параметра установки зависит от того, какие параметры были выбраны на странице **Выбор компонентов** , а также от того, устанавливается ли одновременно с сервером отчетов также и локальный экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  

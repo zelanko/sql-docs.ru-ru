@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5dc70e7c8dba2668ee2ef8bf73dbe7dfb9f26175
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154985"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149864"
 ---
 # <a name="clr-transactions-sample"></a>Образец транзакции среды CLR
   В этом образце демонстрируется управление транзакциями с использованием управляемых программных интерфейсов, расположенных в пространстве имен `System.Transactions` . В частности, класс `System.Transactions.TransactionScope` используется для установления границы транзакции, чтобы не допустить изменения значений запасов, кроме как при наличии достаточных запасов для выполнения запроса, а также при наличии запасов, передача которых из одного местоположения в другое происходит неразрывно. Автоматическая регистрация в распределенной транзакции демонстрируется путем записи данных об изменениях товарных запасов на складе в базу данных аудита, хранящуюся в отдельном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

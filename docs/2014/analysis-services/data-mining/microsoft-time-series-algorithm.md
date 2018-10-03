@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134264"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Алгоритм временных рядов (Майкрософт)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм временных рядов обеспечивает алгоритмы регрессии, оптимизированные для прогноза непрерывных значений, таких как продажи продуктов, во времени. В отличие от других алгоритмов [!INCLUDE[msCoName](../../includes/msconame-md.md)] , таких как деревья принятия решений, модель временных рядов не требует дополнительных столбцов новых сведений, чтобы прогнозировать тренд. С помощью модели временных рядов можно прогнозировать тенденции на основе только исходного набора данных, использованного для создания модели. При прогнозировании можно вводить в модель новые данные и автоматически задействовать их при анализе тенденций.  

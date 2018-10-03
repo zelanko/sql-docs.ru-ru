@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 014dfb18c0ca2b54486e5bf61420aec903b4a258
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169714"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Нейронная сеть (средство просмотра моделей интеллектуального анализа данных)
   Средство просмотра **Алгоритм нейронной сети** позволяет просматривать модели интеллектуального анализа с помощью алгоритма нейронной сети [!INCLUDE[msCoName](../includes/msconame-md.md)] или алгоритма логистической регрессии [!INCLUDE[msCoName](../includes/msconame-md.md)] .  

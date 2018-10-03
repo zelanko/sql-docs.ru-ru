@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 094a968fb48c9eabf554bfdccb89efc69e12391a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 078ccc5951bc0bf607bcc14d3bddcd11a9a12264
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142644"
 ---
 # <a name="conversions-from-sql-to-c"></a>Преобразования из SQL в C
   В следующей таблице приводится список вопросов, которые следует учитывать при преобразовании типов даты-времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в типы языка C.  

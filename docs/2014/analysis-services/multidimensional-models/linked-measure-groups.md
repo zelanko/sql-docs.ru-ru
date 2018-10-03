@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - measure groups [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251476"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140354"
 ---
 # <a name="linked-measure-groups"></a>Связанные группы мер
   Связанная группа мер основана на другой группе мер в другом кубе в той же или другой базе данных служб Analysis Services. Можно использовать связанную группу мер, если требуется повторно использовать набор мер и соответствующие значения данных в нескольких кубах.  

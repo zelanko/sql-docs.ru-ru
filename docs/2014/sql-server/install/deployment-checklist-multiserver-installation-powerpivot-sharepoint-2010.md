@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ae1d09ddc1df0d4ff33808c92b708f92b4f4820c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db0a090cd82e1bbcd9caa9ac5542662f67c5aecd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181270"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Контрольный список развертывания: Установка нескольких серверов PowerPivot для SharePoint 2010
   Этот контрольный список поможет выполнить шаги по добавлению [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint в трехуровневой ферме SharePoint 2010, создаваемую с нуля вверх. Трехуровневая ферма содержит три уровня — базы данных, приложений и веб-уровень. Добавление [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] к этой топологии необходимо запустить программу установки SQL Server для установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на уровне приложений. Программные файлы PowerPivot добавляются на веб-уровень, но только в качестве задачи после установки при вы развертывание решения веб-приложения. Хотя развертывание состоит из определенных шагов, оно не предполагает отдельных шагов для установки на веб-уровень или на уровень данных. Установка на шаге установки, необходимо выполнить [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на серверах приложений.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], structure
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data sources [Analysis Services], mining structure columns
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29a8577ee503668dd3bae72441155abc5977073a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b424c87993de202f0164a1e407cda5a203bed6d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284210"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159796"
 ---
 # <a name="mining-structure-columns"></a>Столбцы структуры интеллектуального анализа данных
   Пользователь должен определить столбцы в структуре интеллектуального анализа во время ее создания, выбрав столбцы внешних данных и указав, как данные должны быть использованы для моделирования. Таким образом, столбцы структуры интеллектуального анализа данных — это не просто копии данных из источника данных. Они определяют, как данные из этого источника будут использованы в модели интеллектуального анализа данных. Можно определить свойства, которые определяют, каким образом дискретизируются данные, или свойства, описывающие способ распределения значений данных.  

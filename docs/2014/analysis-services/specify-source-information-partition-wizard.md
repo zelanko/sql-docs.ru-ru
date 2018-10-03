@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6f60f8470c45e8dbc97de12d7a13b19bea9becb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120561"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Определение исходных сведений (мастер секционирования)
   С помощью страницы **Определение исходных сведений** можно выбрать группу мер, в которой создается секция, а также представление источника данных, и отфильтровать таблицы для секции.  

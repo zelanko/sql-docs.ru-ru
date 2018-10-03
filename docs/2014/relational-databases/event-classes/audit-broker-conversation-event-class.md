@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed6c149a48d3658c607a3cefb0424f7636232954
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41a52cbbcfd898b60255779b91e4dd68fb326749
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067124"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Audit Broker Conversation** для выдачи сообщений аудита, относящихся к безопасности диалога компонента Service Broker.  

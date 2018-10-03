@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7d4b9885c1dc28d7786296a220d76f56e24a43e1
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e8606f2ee9afeb0e5e3ab0663290471b0d2d4463
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084656"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206170"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Страница «Общие свойства», отчеты (диспетчер отчетов)
   На странице свойств отчета «Общие» можно переименовывать, удалять, перемещать или заменять определения отчета. Кроме того, на этой странице можно создавать связанные отчеты. Подробности о том, кто создал или изменил отчет, а также о том, когда были внесены изменения, отображаются в верхней части страницы.  

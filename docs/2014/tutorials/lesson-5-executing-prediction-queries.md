@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4240182748de91090e4d4d67dec35eb4ebf74e55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad048ec7efe492b604ad930450c83d3c6da666c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244091"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139974"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>Занятие 5: Выполнение прогнозирующих запросов
+# <a name="lesson-5-executing-prediction-queries"></a>Урок 5. Выполнение прогнозирующих запросов
   На этом занятии вы воспользуетесь [SELECT FROM \<модель > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) форма инструкции SELECT для создания двух различных типов прогнозов на основе дерева принятия решений модели, созданные в [ Занятие 2: Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа взаимосвязей](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Эти типы прогнозов определены ниже.  
   
  Одноэлементный запрос  

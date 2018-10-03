@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.models.algorithmparameters.f1
 helpviewer_keywords:
 - Algorithm Parameters dialog box
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 491605a58b6a30f0f8b86afd0a2354e3c9b81ed9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc3d863889f7e5cb8ca1e79f78e920aedd79f979
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178961"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173004"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Диалоговое окно «Параметры алгоритма» (представление моделей интеллектуального анализа данных)
   Используйте диалоговое окно **Параметры алгоритма** для регулировки параметров алгоритма, которые относятся к выбранной модели. При изменении параметра алгоритма обычно меняются результаты модели интеллектуального анализа. Способ, при котором каждый параметр влияет на результаты, зависит от данных используемого алгоритма. Дополнительные сведения см. в разделе [Настройка структуры и моделей интеллектуального анализа данных](data-mining/customize-mining-models-and-structure.md).  

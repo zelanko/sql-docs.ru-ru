@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9715d64ea8d2df1747a26fc15cf830bab3d5efd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a92df5ff3826ea7febe4bcf0910125f38c30a2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121574"
 ---
 # <a name="measures-ssas-tabular"></a>Меры (табличные службы SSAS)
   В табличных моделях мера представляет собой вычисление, созданное при помощи формулы DAX, специально созданной для использования в клиенте отчетов. Меры оцениваются на основании полей, фильтров и срезов, которые пользователи выбирают в клиентском приложении создания отчетов.  
