@@ -1,32 +1,29 @@
 ---
-title: Значение свойства пример (Visual Basic) | Документы Microsoft
+title: Значение свойства пример (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Value property [ADO], Visual Basic example
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 008ac421a9b99f6d0365f84556609ba52b37f0fb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 00f27eafae8dc375d3c4122c093c1f61abe39391
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758762"
 ---
-# <a name="value-property-example-vb"></a>Пример значения свойства (Visual Basic)
-В этом примере демонстрируется [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство с [поле](../../../ado/reference/ado-api/field-object.md) и [свойство](../../../ado/reference/ado-api/property-object-ado.md) объектов путем отображения значения поля и свойства для ***сотрудников*** таблицы.  
+# <a name="value-property-example-vb"></a>Пример свойства Value (Visual Basic)
+В этом примере показано [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство с [поле](../../../ado/reference/ado-api/field-object.md) и [свойство](../../../ado/reference/ado-api/property-object-ado.md) объектов путем отображения значений поля и свойства для ***сотрудников*** таблицы.  
   
 ```  
 'BeginValueVB  
@@ -106,5 +103,5 @@ End Sub
   
 ## <a name="see-also"></a>См. также  
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
- [Свойства объекта (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Свойство Value (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

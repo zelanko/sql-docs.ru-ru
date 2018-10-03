@@ -1,14 +1,11 @@
 ---
-title: log_shipping_monitor_secondary (Transact-SQL) | Документы Microsoft
+title: log_shipping_monitor_secondary (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_secondary_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_secondary system table
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24542f230eceaf4da58bb10728448ba7cd07c478
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b29942520092a39f218cf7673930682afe78f660
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263555"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772672"
 ---
 # <a name="logshippingmonitorsecondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +34,14 @@ ms.locfileid: "33263555"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**secondary_server**|**sysname**|Имя экземпляра-получателя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов.|  
+|**secondary_server**|**sysname**|Имя экземпляра-получателя из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов.|  
 |**secondary_database**|**sysname**|Имя базы данных-получателя в конфигурации доставки журналов.|  
 |**secondary_id**|**uniqueidentifier**|Идентификатор сервера-получателя в конфигурации доставки журналов.|  
 |**primary_server**|**sysname**|Имя первичного экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журнала.|  
 |**primary_database**|**sysname**|Имя базы данных-источника в конфигурации доставки журналов.|  
 |**restore_threshold**|**int**|Время (в минутах), которое может пройти между операциями восстановления, прежде чем сформируется предупреждение.|  
 |**threshold_alert**|**int**|Предупреждение, создаваемое при истечении порогового срока восстановления.|  
-|**threshold_alert_enabled**|**бит**|Этот аргумент определяет, активированы ли предупреждения об истечении порогового срока восстановления. 1 = включено.<br /><br /> 0 = отключено.|  
+|**threshold_alert_enabled**|**bit**|Этот аргумент определяет, активированы ли предупреждения об истечении порогового срока восстановления. 1 = включено.<br /><br /> 0 = отключено.|  
 |**last_copied_file**|**nvarchar(500)**|Имя последнего файла резервной копии, скопированного на сервер-получатель.|  
 |**last_copied_date**|**datetime**|Дата и время последней операции копирования на сервер-получатель.|  
 |**last_copied_date_utc**|**datetime**|Дата и время последней операции копирования на сервер-получатель по времени в формате UTC.|  
@@ -55,11 +51,11 @@ ms.locfileid: "33263555"
 |**last_restored_latency**|**int**|Время (в минутах), прошедшее от создания резервной копии журналов в базе данных-источнике до ее восстановления в базу данных-получатель.<br /><br /> Исходное значение равно NULL.|  
 |**history_retention_period**|**int**|Время (в минутах) хранения истории доставки журналов для конкретной базы данных-получателя; по истечении этого времени записи удаляются.|  
   
-## <a name="remarks"></a>Замечания  
- Хранится на удаленном сервере мониторинга и сведения, относящиеся к серверу-получателю, также хранится на сервере-получателе в его **log_shipping_monitor_secondary** таблицы.  
+## <a name="remarks"></a>Примечания  
+ Хранится на удаленном сервере мониторинга, а также хранятся сведения, связанные с сервером-получателем на сервере-получателе в его **log_shipping_monitor_secondary** таблицы.  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [sp_add_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_change_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   

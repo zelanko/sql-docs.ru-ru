@@ -1,14 +1,11 @@
 ---
-title: sys.sysservers (Transact-SQL) | Документы Microsoft
+title: sys.sysservers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysservers
@@ -21,15 +18,15 @@ helpviewer_keywords:
 - sysservers system table
 - sys.sysservers compatibility view
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a052eecd27de7767f721bc71a070eb00dad99220
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ede7e1a97ca121073760eaa0c5dcd309b5e3e412
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608080"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,18 +54,18 @@ ms.lasthandoff: 05/04/2018
 |**connecttimeout**|**int**|Время ожидания соединения с сервером.|  
 |**querytimeout**|**int**|Время ожидания выполнения запросов на сервере.|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**isremote**|**бит**|1 = удаленный сервер.<br /><br /> 0 = связанный сервер.|  
-|**rpc**|**бит**|1 = **sp_serveroption@rpc** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@rpc** значение **false** или **off**.|  
-|**pub**|**бит**|1 = **sp_serveroption@pub** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@pub** значение **false** или **off**.|  
-|**sub**|**бит**|1 = **sp_serveroption@sub** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@sub** значение **false** или **off**.|  
-|**dist**|**бит**|1 = **sp_serveroption@dist** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@dist** значение **false** или **off**.|  
-|**dpub**|**бит**|1 = **sp_serveroption@dpub** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@dpub** значение **false** или **off**.|  
-|**rpcout**|**бит**|1 =  **sp_serveroption@rpc out** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@rpc out** значение **false** или **off**.|  
-|**DataAccess**|**бит**|1 =  **sp_serveroption@data доступа** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@data доступа** значение **false** или **off**.|  
-|**collationcompatible**|**бит**|1 =  **sp_serveroption@collation совместимых** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@collation совместимых** значение **false** или **off**.|  
-|**Системы**|**бит**|1 = **sp_serveroption@system** значение **true** или **на**.<br /><br /> 0 = **sp_serveroption@system** значение **false** или **off**.|  
-|**useremotecollation**|**бит**|1 =  **sp_serveroption@remote сортировки** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@remote сортировки** значение **false** или **off**.|  
-|**lazyschemavalidation**|**бит**|1 =  **sp_serveroption@lazy проверки схемы** значение **true** или **на**.<br /><br /> 0 =  **sp_serveroption@lazy проверки схемы** значение **false** или **off**.|  
+|**isremote**|**bit**|1 = удаленный сервер.<br /><br /> 0 = связанный сервер.|  
+|**rpc**|**bit**|1 = **sp_serveroption@rpc** присвоено **true** или **на**.<br /><br /> 0 = **sp_serveroption@rpc** присвоено **false** или **off**.|  
+|**pub**|**bit**|1 = **sp_serveroption@pub** присвоено **true** или **на**.<br /><br /> 0 = **sp_serveroption@pub** присвоено **false** или **off**.|  
+|**sub**|**bit**|1 = **sp_serveroption@sub** присвоено **true** или **на**.<br /><br /> 0 = **sp_serveroption@sub** присвоено **false** или **off**.|  
+|**dist**|**bit**|1 = **sp_serveroption@dist** присвоено **true** или **на**.<br /><br /> 0 = **sp_serveroption@dist** присвоено **false** или **off**.|  
+|**dpub**|**bit**|1 = **sp_serveroption@dpub** присвоено **true** или **на**.<br /><br /> 0 = **sp_serveroption@dpub** присвоено **false** или **off**.|  
+|**rpcout**|**bit**|1 =  **sp_serveroption@rpc out** присвоено **true** или **на**.<br /><br /> 0 =  **sp_serveroption@rpc out** присвоено **false** или **off**.|  
+|**DataAccess**|**bit**|1 =  **sp_serveroption@data доступа** присвоено **true** или **на**.<br /><br /> 0 =  **sp_serveroption@data доступа** присвоено **false** или **off**.|  
+|**collationcompatible**|**bit**|1 =  **sp_serveroption@collation совместимых** присвоено **true** или **на**.<br /><br /> 0 =  **sp_serveroption@collation совместимых** присвоено **false** или **off**.|  
+|**Системы**|**bit**|1 = **sp_serveroption@system** присвоено **true** или **на**.<br /><br /> 0 = **sp_serveroption@system** присвоено **false** или **off**.|  
+|**useremotecollation**|**bit**|1 =  **sp_serveroption@remote параметры сортировки** присвоено **true** или **на**.<br /><br /> 0 =  **sp_serveroption@remote параметры сортировки** присвоено **false** или **off**.|  
+|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy проверка схемы** присвоено **true** или **на**.<br /><br /> 0 =  **sp_serveroption@lazy проверка схемы** присвоено **false** или **off**.|  
 |**Параметры сортировки**|**sysname**|Параметры сортировки сервера, задаваемое при помощи  **sp_serveroption@collation имя**.|  
 |**nonsqlsub**|bit|0 = сервер является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1= сервер не является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   

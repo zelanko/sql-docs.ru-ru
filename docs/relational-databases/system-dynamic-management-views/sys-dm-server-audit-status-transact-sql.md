@@ -1,12 +1,10 @@
 ---
-title: sys.dm_server_audit_status (Transact-SQL) | Документы Microsoft
+title: sys.dm_server_audit_status (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_audit_status_TSQL
@@ -18,30 +16,29 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4797a4e81a0fabd169111e979d661d17517ce3f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467471"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712514"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает строку для каждого аудита сервера, отображая текущее состояние аудита. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Возвращает строку для каждого аудита сервера, отображая текущее состояние аудита. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|Идентификатор аудита. Сопоставляет **audit_id** в **sys.audits** представления каталога.|  
-|**name**|**sysname**|Имя аудита. То же, что **имя** в **sys.server_audits** представления каталога.|  
+|**audit_id**|**int**|Идентификатор аудита. Сопоставляется **audit_id** в **sys.audits** представления каталога.|  
+|**name**|**sysname**|Имя аудита. Совпадение с кодом **имя** в **sys.server_audits** представления каталога.|  
 |**status**|**smallint**|Числовое обозначение состояния аудита сервера:<br /><br /> 0 = не запущен<br /><br /> 1 =<br />        Запущено<br /><br /> 2 =<br />      Сбой среды выполнения<br /><br /> 3 = target создать сбой<br /><br /> 4 = завершение работы|  
 |**status_desc**|**nvarchar(256)**|Строка, которая показывает состояние аудита сервера:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Отметка времени в формате UTC последнего изменения состояния аудита.|  
-|**event_session_address**|**varbinary(8)**|Адрес сеанса расширенных событий, связанного с аудитом. Они связаны с **sys.db_xe_sessions.address** представления каталога.|  
+|**event_session_address**|**varbinary(8)**|Адрес сеанса расширенных событий, связанного с аудитом. Связанные с **sys.db_xe_sessions.address** представления каталога.|  
 |**audit_file_path**|**nvarchar(256)**|Полный путь и имя целевого файла аудита, который используется в настоящее время. Заполняется только для аудитов файлов.|  
 |**audit_file_size**|**bigint**|Приблизительный размер файла аудита, в байтах. Заполняется только для аудитов файлов.|  
   

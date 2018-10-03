@@ -1,14 +1,11 @@
 ---
-title: syscollector_collector_types (Transact-SQL) | Документы Microsoft
+title: syscollector_collector_types (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collector_types
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7951259911347457e4927cb9c3c0133d87cc9cf6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650582"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ ms.lasthandoff: 05/04/2018
 |**upload_package_id**|**uniqueidentifer**|Идентификатор GUID пакета передачи. Не допускает значение NULL.|  
 |**upload_package_path**|**nvarchar(4000)**|Предоставляет путь к пакету передачи. Допускает значение NULL.|  
 |**upload_package_name**|**sysname**|Имя пакета передачи. Не допускает значение NULL.|  
-|**is_system**|**бит**|Включен (1) или off (0), чтобы указать, если тип сборщика был поставлен со сборщиком данных или если он был добавлен пользователем позже **dc_admin**. Данный тип сбора может являться пользовательским типом собственной или сторонней разработки. Не допускает значение NULL.|  
+|**is_system**|**bit**|Включен (1) или off (0), чтобы указать, если тип сборщика был поставлен со сборщиком данных, или если оно было добавлено позже, **dc_admin**. Данный тип сбора может являться пользовательским типом собственной или сторонней разработки. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для **dc_operator**, **dc_proxy**.  
@@ -56,10 +53,10 @@ ms.lasthandoff: 05/04/2018
 |Обновленное содержимое|  
 |---------------------|  
 |Обновить **collection_type_uid** имя столбца, чтобы **аргумент collector_type_uid**.|  
-|Исправлено описание для **parameter_schema** столбец для указания, что он допускает значения NULL.|  
+|Исправлено описание для **parameter_schema** столбец, который указывает, что тип допускает значения NULL.|  
 |Добавлен **parameter_formatter** столбца.|  
-|Исправлен тип данных для **collection_package_path** столбца, обновлено описание, чтобы указать, что он допускает значения NULL.|  
-|Исправлен тип данных для **upload_package_path** столбца, обновлено описание, чтобы указать, что он допускает значения NULL.|  
+|Исправлен тип данных для **collection_package_path** столбца, обновлено описание, чтобы указать, что тип допускает значения NULL.|  
+|Исправлен тип данных для **upload_package_path** столбца, обновлено описание, чтобы указать, что тип допускает значения NULL.|  
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры сборщика данных (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   

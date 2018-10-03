@@ -1,13 +1,11 @@
 ---
-title: Метод GetString (ADO) | Документы Microsoft
+title: Метод GetString (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - GetString method [ADO]
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 824ad1a3223538e724e4430186dcf176e86617a2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1570918c423291b6c4fdd212fcb82f518dfb766e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278883"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708062"
 ---
 # <a name="getstring-method-ado"></a>Метод GetString (ADO)
 Возвращает [записей](../../../ado/reference/ado-api/recordset-object-ado.md) как строка.  
@@ -42,24 +39,24 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
   
 #### <a name="parameters"></a>Параметры  
  *StringFormat*  
- Объект [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) значение, указывающее, как **записей** должны преобразовываться в строку. *RowDelimiter*, *ColumnDelimiter*, и *NullExpr* параметры используются только вместе с *StringFormat* из  **adClipString**.  
+ Объект [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) значение, которое указывает, каким образом **набор записей** должен быть преобразован в строку. *RowDelimiter*, *ColumnDelimiter*, и *NullExpr* параметры используются только совместно с *StringFormat* из  **adClipString**.  
   
  *NumRows*  
- Необязательный параметр. Число строк, которые должны преобразовываться в **записей**. Если *NumRows* не указан, или если это значение превышает общее число строк в **записей**, затем все строки **записей** преобразуются.  
+ Необязательный параметр. Число строк для преобразования в **записей**. Если *NumRows* не указан, или если оно превышает общее число строк в **записей**, затем все строки **записей** преобразуются.  
   
- *columnDelimiter*  
+ *ColumnDelimiter*  
  Необязательный параметр. Разделитель, используемый между столбцами, если указано, в противном случае символ табуляции.  
   
- *rowDelimiter*  
+ *RowDelimiter*  
  Необязательный параметр. Разделитель, используемый между строками, если указано, в противном случае символ возврата каретки.  
   
  *NullExpr*  
- Необязательный параметр. Выражение, используемое вместо значения null, если указано, в противном случае — пустая строка.  
+ Необязательный параметр. Выражение, используемое вместо значение null, если указано, в противном случае пустая строка.  
   
 ## <a name="remarks"></a>Примечания  
- Строки данных, но не данные схемы, сохраняется в строке. Таким образом **записей** нельзя открыть повторно с помощью этой строки.  
+ Данные строк, но не данные схемы, сохраняется в строку. Таким образом **записей** нельзя открыть повторно с помощью этой строки.  
   
- Этот метод эквивалентен методу RDO **GetClipString** метод.  
+ Этот метод эквивалентен RDO **GetClipString** метод.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

@@ -1,13 +1,11 @@
 ---
-title: Реализация SQLGetDiagRec и SQLGetDiagField | Документы Microsoft
+title: Реализация SQLGetDiagRec и SQLGetDiagField | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a6be0d20a2e1171275c3a1ef05d83383a10b763
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab1f808b005afaa91ed93bf8f8ec7a8385c9c945
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771842"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Реализация SQLGetDiagRec и SQLGetDiagField
-**SQLGetDiagRec** и **SQLGetDiagField** реализуются диспетчера драйверов и каждого драйвера. Диспетчер драйверов драйверу Ведение диагностические записи для каждой среды, подключения, инструкции и дескриптора и освободить эти записи только в том случае, если будет вызвана другая функция с дескриптором или дескриптор освобождается.  
+**SQLGetDiagRec** и **SQLGetDiagField** реализуются путем диспетчера драйверов и каждого драйвера. Диспетчер драйверов каждого драйвера обслуживания диагностических записей для каждой среды, подключения, инструкции и дескриптора и освободить записи только в том случае, когда будет вызвана другая функция с маркер или дескриптор освобождается.  
   
- Несмотря на то, что диспетчер драйверов и каждого из драйверов необходимо определить, первая запись состояния в соответствии с рейтингами в [последовательности записей состояния](../../../odbc/reference/develop-app/sequence-of-status-records.md), результирующая последовательность записей определяет диспетчера драйверов.  
+ Несмотря на то, что диспетчер драйверов и каждого драйвера необходимо определить первую запись состояния в соответствии с рейтингами в [последовательность записей состояния](../../../odbc/reference/develop-app/sequence-of-status-records.md), результирующая последовательность записей определяет диспетчера драйверов.  
   
  **SQLGetDiagRec** и **SQLGetDiagField** не размещайте диагностические записи о себе.  
   

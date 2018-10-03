@@ -4,27 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Connecting to SQL Azure, SQL Azure permissions
 - Connecting to SQL Azure, synchronization
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 63d3bb997d7ad9fc32d541202bf07ab66676259d
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 23d018a8d551a5c3a7f2978339b6cf7612f378fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40393235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741872"
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Azure, необходимо подключиться к целевому экземпляру SQL Azure. При подключении, SSMA получает метаданные обо всех базах данных в экземпляре SQL Azure и отображает метаданные базы данных в обозревателе метаданных SQL Azure. SSMA хранятся экземпляра SQL Azure, вы подключены, но не хранит пароли.  

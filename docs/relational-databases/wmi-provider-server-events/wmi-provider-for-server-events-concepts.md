@@ -1,14 +1,11 @@
 ---
-title: Поставщик WMI для Общие сведения о событиях сервера | Документы Microsoft
+title: Поставщик WMI для событий сервера основные понятия | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - server events [WMI]
@@ -17,21 +14,21 @@ helpviewer_keywords:
 - monitoring events [WMI]
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0572bd44ec4fd648b087ceae004aae8d5b529bc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01346a74978cd08eb96a5002c4570f44fee42d67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772992"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Основные понятия о поставщике WMI для событий сервера
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Поставщик WMI для событий сервера позволяет использовать инструментарий управления Windows (WMI) для наблюдения за событиями в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Основные сведения о поставщике WMI для событий сервера](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  
  Содержит основные сведения об архитектуре поставщика и описывает программирование агента SQL Server для работы с поставщиком.  
   
@@ -41,7 +38,7 @@ ms.lasthandoff: 05/03/2018
  [Использование WQL с поставщиком WMI для событий сервера](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
  Рассказывает о синтаксисе языка запросов WMI (WMI Query Language, WQL) и его использовании для программирования работы с поставщиком.  
   
- [Пример: Создание предупреждения агента SQL Server с помощью поставщика WMI для событий сервера](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Создание предупреждения агента SQL Server при помощи поставщика WMI для событий сервера](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Иллюстрирует использование поставщика WMI для возвращения трассировочной информации о событиях сервера, на основании которой создается предупреждение агента SQL Server.  
   
  [Пример: Использование поставщика событий WMI с платформой .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  

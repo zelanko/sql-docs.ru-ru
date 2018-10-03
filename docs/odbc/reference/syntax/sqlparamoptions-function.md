@@ -1,13 +1,11 @@
 ---
-title: Функция SQLParamOptions | Документы Microsoft
+title: Функция SQLParamOptions | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLParamOptions
@@ -19,30 +17,29 @@ f1_keywords:
 helpviewer_keywords:
 - SQLParamOptions function [ODBC]
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35cbc221c09359e1e432ed0960302e1f5292e057
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 631e022e9c424344053153647fcf292c1c3f90db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917005"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658392"
 ---
 # <a name="sqlparamoptions-function"></a>Функция SQLParamOptions
-**Соответствия**  
- Появился в версии: Полное соответствие стандартам 1.0 ODBC: рекомендуется к использованию  
+**Соответствие стандартам**  
+ Версия была введена: ODBC 1.0 соответствует стандартам: устарело  
   
  **Сводка**  
- Функция ODBC 2.0 **SQLParamOptions** был заменен в ODBC 3. *x* вызовы [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ Функция ODBC 2.0 **SQLParamOptions** был заменен в ODBC 3. *x* вызовами [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о какой диспетчера драйверов преобразует эту функцию для при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, в разделе [сопоставление устаревшие функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
+>  Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
   
-## <a name="remarks"></a>Замечания  
- В разделе [сведения ODBC 64-разрядных](../../../odbc/reference/odbc-64-bit-information.md), если приложение будет выполняться на 64-разрядной операционной системе.  
+## <a name="remarks"></a>Примечания  
+ См. в разделе [сведения о ODBC 64-разрядном](../../../odbc/reference/odbc-64-bit-information.md), если приложение выполняется в 64-разрядной операционной системе.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

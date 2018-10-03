@@ -1,32 +1,29 @@
 ---
-title: Обратной совместимости и соответствия стандартам | Документы Microsoft
+title: Обратной совместимости и соответствия стандартам | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], standards compliance
 - compatibility [ODBC], standards compliance
 - standards compliance [ODBC]
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 88fc4b4461c4b91ea4135976800e0dba7b792bbd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c644f7ad008efb10d0397cccb00432da684295fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908659"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772142"
 ---
-# <a name="backward-compatibility-and-standards-compliance"></a>Обратной совместимости и соответствия стандартам
-Обратная совместимость — это способность новых компонентов ODBC для работы с старых компонентов ODBC. В следующих разделах рассматривается влияние этих компонентов, изменяется в ODBC 3 *.x*. Сведения, содержащиеся в них, в основном адреса запись ODBC 3 *.x* приложения и обрабатываются как назад проблемы совместимости драйверов ODBC. Дополнительные инструкции о том, как обратной совместимости проблемы, влияющие на запись ODBC 3 *.x* драйвера, в разделе [приложение G: драйвер рекомендации для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+# <a name="backward-compatibility-and-standards-compliance"></a>Обратная совместимость и соответствие стандартам
+Обратная совместимость — это способность новых компонентов ODBC для работы с старые компоненты ODBC. В следующих разделах рассматривается, как эти компоненты были затронуты изменениями в ODBC 3 *.x*. Сведения, содержащиеся в них, в основном устраняет записи ODBC 3 *.x* приложения и как назад обрабатываются проблемы совместимости с драйверами ODBC. Дополнительные инструкции о том, как обратной совместимости неполадках записи ODBC 3 *.x* драйвера, см. в разделе [приложение G: драйвер рекомендации для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Этот раздел содержит следующие подразделы.  
   

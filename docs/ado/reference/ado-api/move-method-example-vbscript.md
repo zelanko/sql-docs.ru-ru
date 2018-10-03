@@ -1,38 +1,35 @@
 ---
-title: Переместить пример метода (VBScript) | Документы Microsoft
+title: Пример метода (VBScript) Move | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f06ddfa78d0054ec08882b30f16047a842c833
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279463"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602522"
 ---
 # <a name="move-method-example-vbscript"></a>Пример метода Move (VBScript)
-В этом примере используется [переместить](../../../ado/reference/ado-api/move-method-ado.md) метод для перемещения указателя записи на основе ввода пользователя.  
+В этом примере используется [переместить](../../../ado/reference/ado-api/move-method-ado.md) метод для размещения указателя записи, на основе ввода пользователя.  
   
- Используйте следующий пример в активную страницу сервера (ASP). Чтобы просмотреть этот полнофункциональный пример, необходимо иметь данные источника AdvWorks.mdb (устанавливается с помощью пакета SDK), расположенный C:\Program Files\Microsoft платформы SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb или изменить путь в примере кода для отражения Фактическое расположение этого файла. Это файл базы данных Microsoft Access.  
+ Используйте следующий пример в Active Server Page (ASP). Чтобы просмотреть этот полностью функциональный код, необходимо иметь данные источника AdvWorks.mdb (устанавливается с пакетом SDK), расположенный в C:\Program Files\Microsoft платформы SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb или изменить путь в примере кода в соответствии с Фактическое расположение этого файла. Это файл базы данных Microsoft Access.  
   
- Используйте **найти** для нахождения файла Adovbs.inc и поместите его в каталог, который планируется использовать. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **MoveVBS.asp**. Результат можно просмотреть в любом браузере.  
+ Используйте **найти** найдите файл Adovbs.inc и поместите его в каталог, который вы планируете использовать. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **MoveVBS.asp**. Результат можно просмотреть в любом браузере.  
   
- Попробуйте ввести буквы или Нецелочисленные для просмотра рабочих обработки ошибок.  
+ Попробуйте ввести буквы или нецелочисленный для обработки рабочих ошибок см. в разделе.  
   
 ```  
 <!-- BeginMoveVBS -->  
@@ -187,5 +184,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Move-метод (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
+ [Метод Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

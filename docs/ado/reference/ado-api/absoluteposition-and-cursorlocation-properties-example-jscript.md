@@ -1,13 +1,11 @@
 ---
-title: AbsolutePosition и пример свойства CursorLocation (JScript) | Документы Microsoft
+title: Примеры AbsolutePosition и CursorLocation свойства (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - AbsolutePosition property [ADO], JScript example
 - CursorLocation property [ADO], JScript example
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42804caabae25b5c3617b6a17bcb74a77531bbe1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f252bf8a7c4fb7ecac2b226f669f5bd114b90574
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274883"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647972"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition и пример свойства CursorLocation (JScript)
-В этом примере показано, как [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойства можно отслеживать ход выполнения цикла, который перечисляет все записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство, чтобы включить **AbsolutePosition** свойство, задав курсор для клиентского курсора. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AbsolutePositionJS.asp**.  
+# <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>Примеры AbsolutePosition и CursorLocation свойства (JScript)
+В этом примере показано, как [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойство можно отслеживать ход выполнения цикла, который перечисляет все записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство, чтобы включить **примеры AbsolutePosition** свойства, установив курсор для клиентского курсора. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AbsolutePositionJS.asp**.  
   
 ```  
 <!-- BeginAbsolutePositionJS -->  
