@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b162480fef7894a04d2488058a1e21b5bc40b602
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244104"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077744"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Создание обрабатывающего запроса» (службы Analysis Services — многомерные данные)
   Для создания обрабатывающего запроса используйте диалоговое окно **Создание обрабатывающего запроса** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] на вкладке **Уведомления** диалогового окна **Параметры хранилища** . Обрабатывающий запрос — это запрос, возвращающий набор строк, которые содержат изменения, внесенные в ассоциированную с объектом служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] таблицу за период, прошедший со времени последнего опроса этой таблицы, с целью добавочного обновления кэша многомерного OLAP (MOLAP) для данного объекта. Для опроса ассоциированной с объектом таблицы и для выявления внесенных в таблицу изменений службы Analysis Services используют другой запрос, именуемый опрашивающим запросом. Обрабатывающие запросы обработки не требуются при полном обновлении кэша MOLAP для объекта.  
