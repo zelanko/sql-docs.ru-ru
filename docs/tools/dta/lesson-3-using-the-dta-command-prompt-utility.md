@@ -4,27 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fa260e1a20f13736b9df767508e4cf8a1b94de5
-ms.sourcegitcommit: 95093f8b4f3d02f8d55d415f03a241102a641cb3
+ms.openlocfilehash: 4580df95cb5450836bcb2cc171c491724cf71c38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39654239"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642413"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Занятие 3. Использование программы командной строки dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

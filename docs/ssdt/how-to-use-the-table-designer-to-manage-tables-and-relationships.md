@@ -6,24 +6,21 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 199f12a6318b9a283a62176289a2c6501444255e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652880"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Как использовать конструктор таблиц для управления таблицами и связями
 Конструктор таблиц наряду с редактором Transact\-SQL предоставляет графический пользовательский интерфейс для создания и изменения структуры таблиц, включая программные объекты, связанные с таблицами, для баз данных SQL Server.  Он запускается при создании таблицы для подключенной базы данных или проекта, а также при двойном щелчке таблицы для внесения в нее изменений в обозревателе объектов SQL Server или обозревателе решений.  

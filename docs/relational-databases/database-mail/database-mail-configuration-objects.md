@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: database-mail
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -34,16 +31,15 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a4cdccc289b8348b443be415beed1656f5c3dde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 639f59d1724d3808bba92e70d7ca64e933555266
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640303"
 ---
 # <a name="database-mail-configuration-objects"></a>Объекты конфигурации компонента Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,14 +130,14 @@ ms.locfileid: "32931859"
   
 ### <a name="database-mail-settings"></a>Параметры компонента Database Mail  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Изменяет настройки конфигурации компонента Database Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Отображает настройки конфигурации компонента Database Mail.|  
   
 ### <a name="accounts-and-profiles"></a>Учетные записи и профили  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Добавляет учетную запись почты к профилю компонента Database Mail.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Удаляет учетную запись компонента Database Mail.|  
@@ -156,7 +152,7 @@ ms.locfileid: "32931859"
   
 ### <a name="security"></a>безопасность  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Предоставляет разрешение участнику базы данных для использования профиля компонента Database Mail.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Удаляет разрешение для пользователя базы данных на использование открытого или закрытого профиля компонента Database Mail.|  
@@ -165,7 +161,7 @@ ms.locfileid: "32931859"
   
 ### <a name="system-state"></a>Состояние системы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Запускает внешнюю программу компонента Database Mail и связанную с ней очередь компонента SQL Service Broker.|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Останавливает внешнюю программу компонента Database Mail и связанную с ней очередь компонента SQL Service Broker.|  
