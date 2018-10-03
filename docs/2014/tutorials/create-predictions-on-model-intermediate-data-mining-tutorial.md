@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 006418a07f393fd50334a2ea9c122cdd92353cda
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfbce4b8128d7278349539cedf73a87e498b1bae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198304"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092836"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Создание прогнозов для модели кластеризации последовательностей (учебник по интеллектуальному анализу данных — средний уровень)
   После изучения модели кластеризации последовательностей лучше с ее просмотра в средстве просмотра, можно создать прогнозирующие запросы с помощью построителя прогнозирующих запросов на **модель интеллектуального анализа данных** вкладку в конструкторе интеллектуального анализа данных. Чтобы создать прогноз, сначала необходимо выбрать модель кластеризации последовательностей, а затем входные данные. Входные данные можно выбрать из внешнего источника данных или можно создать одноэлементный запрос и предоставить значения в диалоговом окне.  

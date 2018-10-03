@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - namespaces [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7697f6bf230b3d37b145e56f6827895b44daa5c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65eed443f671f18944ce381a011498e3ca23af4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102894"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Синтаксис запроса XML для XML-данных отчета (SSRS)
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно создавать наборы данных для источников XML-данных. После определения источника данных можно создать запрос для получения набора данных. В зависимости от типа данных XML, на которые указывает источник данных, этот запрос создается путем включения XML `Query` или пути к элементу. XML `Query` начинается с  **\<запроса >** теги и включает пространства имен и XML-элементы, зависящие от источника данных. Путь к элементу не зависит от пространства имен и указывает необходимые узлы и атрибуты узлов в базовых XML-данных при помощи XPath-подобного синтаксиса. Дополнительные сведения о путях к элементу см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](report-data-ssrs.md).  
@@ -92,7 +89,7 @@ ms.locfileid: "37227004"
 |Элемент XML-запроса|Полученные в результате поля набора данных|  
 |-----------------------|-------------------------------------|  
 |\<Query/>|Значение а: http://schemas.microsoft.com/...<br /><br /> Значение B: http://schemas.microsoft.com/...<br /><br /> Значение C: http://schemas.microsoft.com/...|  
-|\<xmldp:Query xmlns:xmldp =»http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery"xmlns:ns =»http://schemas.microsoft.com/...» ><br /><br /> \<xmldp:ElementPath > корневого {}/ns:Element2 / узел\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|Значение D<br /><br /> Значение E<br /><br /> Значение F|  
+|\<xmldp:Query xmlns:xmldp =» http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery"xmlns:ns =» http://schemas.microsoft.com/...» ><br /><br /> \<xmldp:ElementPath > корневого {}/ns:Element2 / узел\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|Значение D<br /><br /> Значение E<br /><br /> Значение F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML-документ: DPNamespace.xml  
  Можно скопировать этот XML-документ и сохранить его по URL-адресу, который конструктор отчетов будет использовать в качестве источника XML-данных, например http://localhost/DPNamespace.xml.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a159751c90db011ef856f57c8611e121a0977d67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ecb94722bc5eed521be2d731bf8d65f9d4c7efd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153855"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092924"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Сохранение отчетов на сервере отчетов (построитель отчетов)
   В построителе отчетов можно сохранить определение отчета на сервере отчетов (также называется публикацией отчета). Если отчет сохранен на сервере отчетов, его могут просматривать другие пользователи. При каждом запуске опубликованного отчета будут получены самые последние данные. Чтобы сохранить статическую копию отчета, готового к просмотру, экспортируйте отчет в другой формат файла и сохраните его или используйте функцию журнала отчета, чтобы сохранить версию отчета, готового к просмотру.  

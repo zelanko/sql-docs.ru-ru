@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed7ffd7d56fb0a25091d0e3719c6eebb2bd9240c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c355c5f85fe68e091bcaf8f45f8dea9856a7ab89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308014"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187370"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Выбор пакетов (мастер обновления пакетов служб SSIS)
   Страница **Выбор пакетов** используется для выбора пакетов, подлежащих обновлению. Здесь перечислены пакеты, сохраненные в то же расположение, которое было указано на странице мастера **Выбор исходного расположения** .  

@@ -1,31 +1,28 @@
 ---
-title: Пример набора записей для изучения данных | Документы Microsoft
+title: Пример набора записей для изучения данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a6bb3eb784c3979dd136f237c5d153547d30027
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bfae67a14fb312f1b396cfc60f69e8cbe8babdf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272493"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811442"
 ---
-# <a name="sample-recordset-for-examining-data"></a>Образец набора записей для анализа данных
-Во-первых давайте взглянем на **записей** объектом, возвращаемым при помощи следующего запроса SQL, выполняется на основе образцов данных Northwind, базовый в Microsoft SQL Server.  
+# <a name="sample-recordset-for-examining-data"></a>Пример набора записей для проверки данных
+Во-первых давайте взглянем на **записей** как возвращаются с помощью следующий запрос SQL, выполняется на основе демонстрационных данных "Борей", в Microsoft SQL Server.  
   
 ```  
 SELECT ProductID,ProductName,UnitPrice   
@@ -33,16 +30,16 @@ FROM Products
 WHERE CategoryID = 7    
 ```  
   
- Итоговые **записей** объект содержит все создает в базе данных, показанные в следующей таблице.  
+ Полученный **записей** объект содержит то дает результат в базе данных, показано в следующей таблице.  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
-|7|Боб родственным органических высохла Груши|30.0000|  
+|7|Uncle Bob органических высохла Груши|30.0000|  
 |14|Диаграмме|23.2500|  
-|28|Квашеная капуста Rssle|45.6000|  
+|28|Квашеной Rssle|45.6000|  
 |51|Сушеные яблоки|53.0000|  
 |74|Longlife диаграмме|10.0000|  
   
- Если вы заинтересованы в получении эти результаты самостоятельно, попробуйте использовать в следующем примере JScript.  
+ Если вы заинтересованы в получении этих результатов, самостоятельно, попробуйте в следующем примере JScript:  
   
--   [Пример JScript для возвращения набора записей](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)
+-   [Пример JScript, возвращающего набор записей](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)
