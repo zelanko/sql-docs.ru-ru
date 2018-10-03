@@ -4,19 +4,16 @@ ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f1baf15d658308157cfc22e3bd7950f5e080008
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 74d29eb991036979b37d3a527f7b323fb5ee1021
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277416"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596388"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Учебник. Отчет-карта (построитель отчетов)
 Этот учебник по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] позволяет изучить функции карты, которые можно использовать для отображения данных отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы в географическом контексте. 

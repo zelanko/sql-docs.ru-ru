@@ -1,13 +1,11 @@
 ---
-title: RecordCreateOptionsEnum | Документы Microsoft
+title: RecordCreateOptionsEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb2c6a46518a64989bd59fc5106dde52e93b6dd5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8574da628c4bc1af800635ed9228e074817adae9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679952"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
-Указывает существующую **запись** должен быть открыт или новый **запись** для [запись](../../../ado/reference/ado-api/record-object-ado.md) объекта [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) метод. Значения могут быть объединены с помощью оператора.  
+Указывает ли существующий **записи** должен быть открыт или новый **записи** для [записи](../../../ado/reference/ado-api/record-object-ado.md) объект [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) метод. Значения могут объединяться с помощью оператора.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adCreateCollection**|0x2000|Создает новый **запись** на узел, указанный в *источника* параметра вместо открытия существующего **записи**. Если источник указывает на существующий узел, то возникает ошибка времени выполнения, если не **adCreateCollection** вместе с **adOpenIfExists** или **adCreateOverwrite**.|  
-|**adCreateNonCollection**|0|Создает новый **запись** типа [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  
-|**adCreateOverwrite**|0x4000000|Изменяет флаги создания **adCreateCollection**, **adCreateNonCollection**, и **adCreateStructDoc**. При или используется это значение и одно из значений флага для создания, если исходный URL-адрес указывает на существующий узел или **запись**, а затем существующих **записи** является перезаписаны, а один на его месте создается новый. Это значение не может использоваться вместе с **adOpenIfExists**.|  
-|**adCreateStructDoc**|0x80000000|Создает новый **запись** типа [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), вместо открытия существующего **записи**.|  
-|**adFailIfNotExists**|-1|По умолчанию. Приводит к ошибке времени выполнения, если *источника* указывает на несуществующий узла.|  
-|**adOpenIfExists**|0x2000000|Изменяет флаги создания **adCreateCollection**, **adCreateNonCollection**, и **adCreateStructDoc**. Когда или используется это значение и одно из значений флага для создания, если исходный URL-адрес указывает на существующий узел или **запись** объекта, то поставщик должен открыть существующий **записи** вместо создания нового одно. Это значение не может использоваться вместе с **adCreateOverwrite**.|  
+|**adCreateCollection**|0x2000|Создает новый **записи** на узел, указанный в *источника* параметра вместо использования открытии существующего **записи**. Если источник указывает на существующий узел, то возникает ошибка времени выполнения, если не **adCreateCollection** объединяется с **adOpenIfExists** или **adCreateOverwrite**.|  
+|**adCreateNonCollection**|0|Создает новый **записи** типа [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  
+|**adCreateOverwrite**|0x4000000|Изменяет флаги создания **adCreateCollection**, **adCreateNonCollection**, и **adCreateStructDoc**. При или использовать с это значение и одно из значений флаг создания, в том случае, если URL-адрес источника указывает на существующий узел или **записи**, то существующий **записи** является перезаписан, а новый, он будет создан на его месте. Это значение не может быть использовано вместе с **adOpenIfExists**.|  
+|**adCreateStructDoc**|0x80000000|Создает новый **записи** типа [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), вместо открытия существующего **записи**.|  
+|**adFailIfNotExists**|-1|По умолчанию. Приводит к ошибке времени выполнения, если *источника* указывает на несуществующий узел.|  
+|**adOpenIfExists**|0x2000000|Изменяет флаги создания **adCreateCollection**, **adCreateNonCollection**, и **adCreateStructDoc**. Когда или использовать с это значение и одно из значений флаг создания, в том случае, если URL-адрес источника указывает на существующий узел или **записи** объекта, то поставщик должен открыть существующий **записи** вместо создания нового одно. Это значение не может быть использовано вместе с **adCreateOverwrite**.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
- Эти константы не имеют эквивалентов ADO/WFC.  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
+ Эти константы не имеют эквивалентов ADO и WFC.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Метод Open (объект Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)

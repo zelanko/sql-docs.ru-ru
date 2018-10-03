@@ -1,32 +1,29 @@
 ---
-title: Пример метода (Visual Basic) удаления процедуры | Документы Microsoft
+title: Процедуры удаления пример метода (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADOX], Visual Basic example
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3ff286753b12fa5e648d5d43bf8bb4c360a441a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d75b8b66157ee46b423800a430d4cef30d28359a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286693"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678442"
 ---
-# <a name="procedures-delete-method-example-vb"></a>Процедуры удаления пример метода (Visual Basic)
-Следующий код демонстрирует удаление процедуры с помощью [удаление](../../../ado/reference/adox-api/delete-method-adox-collections.md) метод [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md) коллекции.  
+# <a name="procedures-delete-method-example-vb"></a>Пример метода Delete коллекции Procedures (Visual Basic)
+Следующий код демонстрирует удаление процедуры с помощью [удалить](../../../ado/reference/adox-api/delete-method-adox-collections.md) метод [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md) коллекции.  
   
 ```  
 ' BeginDeleteProcedureVB  
@@ -60,7 +57,7 @@ End Sub
   
 ## <a name="see-also"></a>См. также  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Удаление метода (ADOX коллекций)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
- [Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Удаление метода (коллекции ADOX)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
+ [Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, scheduling
 - idle time [SQL Server]
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2c8c8340bf5501b1bdf33137be16a03044775d6e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: db84b62fa9d725210e04241ba0ebbad87c52ab4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775547"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640152"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Создание и присоединение расписаний к заданиям
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,14 +47,11 @@ ms.locfileid: "42775547"
   
 -   При каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   каждый раз, когда использование ЦП компьютера будет достигать уровня, который определен как уровень простоя;
+-   каждый раз, когда использование ЦП компьютера будет достигать уровня, который определен как уровень простоя;  
   
+-   однажды, в указанные дату и время;  
   
--   однажды, в указанные дату и время;
-  
-  
--   согласно повторяющемуся расписанию;
-  
+-   согласно повторяющемуся расписанию;  
   
 В качестве альтернативы расписаниям заданий можно также создать предупреждение, отвечающее на событие выполнением задания.  
   

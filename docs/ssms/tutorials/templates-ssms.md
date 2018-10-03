@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
-ms.suite: sql
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -20,12 +19,12 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 539906b1a09838e43e34be96e4ee32daec19fab7
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 4d3f2de58bdbfb4f476710bb9bb629dcac3db940
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670042"
 ---
 # <a name="tutorial-using-templates-in-sql-server-management-studio"></a>Руководство. Использование шаблонов в SQL Server Management Studio
 Это руководство знакомит вас с готовыми шаблонами Transact-SQL (T-SQL), доступными в среде SQL Server Management Studio (SSMS). Вы узнаете, как выполнять следующие задачи:
@@ -37,7 +36,7 @@ ms.locfileid: "34455228"
 > * Создание шаблона
    
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 Для работы с этим руководством требуется среда SQL Server Management Studio и доступ к SQL Server. 
 
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -95,7 +94,7 @@ ms.locfileid: "34455228"
 
 1. Откройте обозреватель шаблонов.
 2. Щелкните правой кнопкой мыши узел **Шаблоны SQL Server** и выберите пункты **Создать** > **Папка**.
-3. Назовите папку **Настраиваемые шаблоны**:
+3. Назовите папку **Пользовательские шаблоны**.
 
     ![Создание папки для настраиваемых шаблонов](media/templates-ssms/creatingcustomtemplate.png)
 

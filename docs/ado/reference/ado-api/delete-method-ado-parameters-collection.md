@@ -1,13 +1,11 @@
 ---
-title: Удаление метода (коллекция параметров ADO) | Документы Microsoft
+title: Удаление метода (коллекция Parameters ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68beeda88e205e4e96d6b5e4d4e853e360fb61a2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8eb7d5d58e0f6afe31304b6fce13da2d8c48e54e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277583"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696923"
 ---
-# <a name="delete-method-ado-parameters-collection"></a>Удаление метода (коллекция параметров ADO)
+# <a name="delete-method-ado-parameters-collection"></a>Метод Delete (коллекция Parameters ADO)
 Удаляет объект из [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,15 +36,15 @@ Parameters.Delete Index
   
 #### <a name="parameters"></a>Параметры  
  *Index*  
- Объект **строка** значение, содержащее имя объекта, удалить или порядковый номер объекта (индекса) в коллекции.  
+ Объект **строка** значение, содержащее имя объекта, удалить или порядковый номер объекта (индекс) в коллекции.  
   
 ## <a name="remarks"></a>Примечания  
- С помощью **удалить** метод с коллекцией позволяет удалить один из объектов в коллекции. Этот метод доступен только для **параметры** коллекцию [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта. Необходимо использовать [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта [имя](../../../ado/reference/ado-api/name-property-ado.md) свойства или индекса коллекции при вызове **удалить** метод — переменной объекта не является допустимым аргументом.  
+ С помощью **удалить** метод коллекции позволяет удалить один из объектов в коллекции. Этот метод доступен только на **параметры** коллекцию [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта. Необходимо использовать [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта [имя](../../../ado/reference/ado-api/name-property-ado.md) свойство или его индекс коллекции, при вызове **удалить** метод — переменной объекта не является допустимым аргументом.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
 ## <a name="see-also"></a>См. также  
- [Метод Delete (ADO поля коллекции)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Удаление метода (набора записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Метод Delete (коллекция Fields ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Удаление метода (объект Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Метод DeleteRecord (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

@@ -1,13 +1,11 @@
 ---
-title: IsolationLevel и пример свойства режима (VC ++) | Документы Microsoft
+title: Примеры IsolationLevel и Mode свойства (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8da159d640ea08adf64c89f195ac0c5603fc3e5e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688562"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel и пример свойства режима (VC ++)
-В этом примере используется [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства, чтобы открыть монопольное подключение и [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойства, чтобы открыть транзакцию, которая ведется изолированно от других транзакций.  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>Примеры IsolationLevel и Mode свойства (Visual C++)
+В этом примере используется [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства, чтобы открыть монопольное подключение и [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойства, чтобы открыть транзакцию, которая выполняется отдельно от других транзакций.  
   
 ## <a name="example"></a>Пример  
   
@@ -229,23 +226,23 @@ void PrintComError(_com_error &e) {
   
  **Монопольный режим подключения**  
 **Транзакция является изолированной**  
-**Руководство по занят Executive его базы данных - бизнеса**  
-**Кулинарии с компьютерами: Surreptitious бухгалтерском балансе - бизнеса**  
+**Руководство занят Executive его базы данных - бизнеса**  
+**Приготовления с компьютерами: Surreptitious бухгалтерском балансе - бизнеса**  
 **Можно борьбы с нагрузкой компьютера! -бизнеса**  
-**Прямые поговорим о компьютерах - бизнеса**  
-**Силиконовая Долина рассматривает Gastronomic - mod_cook**  
-**Микроволновой прекрасном - mod_cook**  
-**Учитывает особенностей кулинарии компьютера - UNDECIDED**  
-**Но это понятного имени пользователя? -popular_comp**  
-**Секреты Силиконовая Долина - popular_comp**  
-**NET тоном - popular_comp**  
-**: Компьютер Phobic Phobic не отдельных пользователей поведение варианты и - Self_help**  
-**Является Anger злоумышленником? -self_help**  
-**Срок, не опасаясь - self_help**  
-**Длительного Deprivation данных: Четыре практические примеры - self_help**  
-**Этому безопасности: Это новый алгоритм - self_help**  
-**Onions, Ликс и чесночный: кулинарии секреты морская - trad_cook**  
-**50 лет на машины Palace Buckingham - trad_cook**  
+**Рассказывают о компьютерах - бизнеса**  
+**Кремниевая Долина Gastronomic рассматривает - mod_cook**  
+**Микроволновой изысканной - mod_cook**  
+**Психологии кулинарных компьютера - РАССЫЛКУ**  
+**Но это понятное для пользователя? -popular_comp**  
+**Секреты Силиконовой долине - popular_comp**  
+**NET этикет - popular_comp**  
+**Phobic компьютера и лиц, не боятся: Изменений поведения - self_help**  
+**Является злоумышленником гнев? -self_help**  
+**Жизнь, не опасаясь - self_help**  
+**Длительного Deprivation данных: Четыре примеры внедрения - self_help**  
+**Эмоциональную безопасности: Новый алгоритм - self_help**  
+**Луковиц Ликс и чесночный: кулинарные секреты морская - trad_cook**  
+**50 лет в машины Palace Buckingham - trad_cook**  
 **Суши, любой пользователь? -trad_cook**   
 ## <a name="see-also"></a>См. также  
  [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   

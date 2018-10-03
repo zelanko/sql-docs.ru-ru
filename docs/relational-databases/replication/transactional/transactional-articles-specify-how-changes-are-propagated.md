@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7cf50bad1e75b5729bc946f6887e02654b69d8d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683052"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Определение способа распространения изменений для статей транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "38005977"
   
 -   **sp_MSdel_\<** *имя_таблицы* **>**, обрабатывающая операции удаления.  
   
- Используемое в процедуре **\<***имя_таблицы***>** зависит от того, как статья была добавлена в публикацию и содержит ли база данных подписки таблицу другого владельца с таким же именем.  
+ Используемое в процедуре **\<**_имя_таблицы_**>** зависит от того, как статья была добавлена в публикацию и содержит ли база данных подписки таблицу другого владельца с таким же именем.  
   
  Любая из этих процедур может заменяться пользовательской процедурой, указываемой при добавлении статьи в публикацию. Пользовательские процедуры применимы, если приложению требуется пользовательская логика, такая как вставка данных в проверочную таблицу при обновлении строки в подписчике. Дополнительные сведения об указываемых пользовательских хранимых процедурах см. в справочных разделах, перечисленных выше.  
   

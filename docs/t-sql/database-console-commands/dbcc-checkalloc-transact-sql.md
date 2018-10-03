@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKALLOC_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: 76
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 5532f6870e19e830a4d8925fbfca68862493fa6a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e772a5afba4129d90ae7ab26fb051db7fd8113bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262644"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597783"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,7 +114,7 @@ DBCC CHECKALLOC
 ## <a name="understanding-dbcc-error-messages"></a>Основные сведения о сообщениях об ошибках DBCC  
 После завершения команды DBCC CHECKALLOC в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет записано сообщение. При успешном выполнении команды DBCC сообщается об успешном завершении и количестве времени, затраченном на выполнение команды. Если выполнение команды DBCC прерывается до завершения проверки по причине ошибки, сообщение указывает на прерывание команды и приводит значение состояния и количество времени, затраченного на выполнение команды. В следующей таблице перечислены и описаны значения состояний, которые могут быть включены в сообщение.
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |---|---|  
 |0|Возникла ошибка с номером 8930. Это указывает на повреждение метаданных, вызвавшее прекращение выполнения команды DBCC.|  
 |1|Возникла ошибка с номером 8967. Внутренняя ошибка DBCC.|  
@@ -137,7 +134,7 @@ DBCC CHECKALLOC
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице описаны данные, возвращаемые инструкцией DBCC CHECKALLOC.
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |---|---|  
 |FirstIAM|Только для внутреннего применения.|  
 |Root|Только для внутреннего применения.|  
@@ -147,7 +144,7 @@ DBCC CHECKALLOC
   
 Инструкция DBCC CHECKALLOC также формирует сводный отчет о размещении для каждого индекса и секции в каждом файле. В этой сводке описано распределение данных.
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |---|---|  
 |Reserved pages|Страницы, выделенные для индекса и неиспользованные страницы в выделенных экстентах.|  
 |Used pages|Страницы, выделенные и используемые индексом.|  
