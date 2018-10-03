@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e0a6c5fe31a244e60e57a14453a29f1392fdcb73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e5a129fbd9a6dc9fbafd6b06fe5088d162ac9ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330524"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210854"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Обзор монитора зеркального отображения баз данных
   При наличии разрешения возможно использование монитора зеркального отображения баз данных для эффективного контроля любого набора зеркальных баз данных на экземпляре сервера. Процедура контроля позволяет проверить выполнение и правильность передачи данных во время сеанса зеркального отображения базы данных. Монитор зеркального отображения баз данных также полезен для диагностики причины уменьшения потока данных.  

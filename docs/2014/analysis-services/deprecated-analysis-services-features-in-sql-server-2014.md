@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, backward compatibility
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Analysis Services, backward compatibility
 - deprecated features [Analysis Services]
 ms.assetid: 2c96ecfe-a170-41d0-bee3-74503f880197
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e49169f4fd0264302feb35a7315fc527999c568
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 620e74b3854b5cc590ffb84e2b8b70b33d0bfcd3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259590"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067714"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Устаревшие функции служб Analysis Services в SQL Server 2014
   В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , которые по-прежнему доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  

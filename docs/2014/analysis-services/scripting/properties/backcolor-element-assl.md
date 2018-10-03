@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - BackColor Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - BackColor element
 ms.assetid: 9024d131-74cc-4815-833a-f8cae57b7453
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed491d6307e6e5776843c3f5e490d9369235143b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 781328cb0104423c76251698b1b778578d377615
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274120"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211614"
 ---
 # <a name="backcolor-element-assl"></a>Элемент BackColor (ASSL)
   Описывает связанные с цветом характеристики отображения родительского элемента.  
@@ -62,7 +59,7 @@ ms.locfileid: "37274120"
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Примечания  
- `BackColor` Содержит выражением языка многомерных выражений (MDX) и применяется к `CalculationProperty` элементов при помощи [CalculationType](calculationtype-element-assl.md) из *член* или * Ячейки*.  
+ `BackColor` Содержит выражением языка многомерных выражений (MDX) и применяется к `CalculationProperty` элементов при помощи [CalculationType](calculationtype-element-assl.md) из *член* или  *Ячейки*.  
   
  Элемент, соответствующий родителю параметра `BackColor` в объекты управления Analysis AMO объектной модели это <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   

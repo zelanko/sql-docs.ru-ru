@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0f084ebb6298ce141d39db444d24a241f878210
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095554"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
   Службы Reporting Services в собственном режиме поддерживают модель масштабного развертывания, которая позволяет запускать несколько экземпляров сервера отчетов, совместно использующих одну базу данных сервера отчетов. Масштабное развертывание позволяет увеличить масштабируемость сервера отчетов, чтобы обслуживать одновременно больше пользователей и повысить нагрузочную способность сервера отчетов. Масштабное развертывание также может быть использовано для выделения отдельных серверов для обработки интерактивных или запланированных отчетов.  

@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - retrieving data
 - XmlReader object
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: caa8ef058839fb3c97a9e3dfdf6022dd91bc2053
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267570"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165694"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Получение данных с помощью объекта XmlReader
   `XmlReader` Класса часть `System.Xml` пространство имен для библиотеки классов Microsoft .NET Framework аналогичен <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> класс, в который `XmlReader` класс также предоставляет быстрый некэшируемый однопроходный доступ к данным. Если нет необходимости создавать аналитическое представление данных в памяти с помощью объекта <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, то для получения XML-данных (особенно больших объемов) хорошо подходит объект `XmlReader`. Так как `XmlReader` выполняет потоковую передачу данных, `XmlReader` нет необходимости получать и кэшировать все данные перед передачей их вызывающему объекту, как если бы в том случае, если <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> объекта были использованы для преобразования ответа XML для аналитики в аналитические объекта представление модели.  

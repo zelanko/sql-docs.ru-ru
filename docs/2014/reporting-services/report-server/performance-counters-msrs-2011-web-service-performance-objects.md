@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 99e19d3cf5ead97dca19e982b6d9255b296c8d93
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df43f04c94819ee5e409a42774d025950908d7c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150125"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128347"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>Счетчики производительности для объектов производительности веб-службы MSRS 2014 и службы Windows MSRS 2014 (собственный режим)
   В данном разделе описаны счетчики производительности для объектов производительности `MSRS 2014 Web Service` и `MSRS 2014 Windows Service`  
@@ -102,10 +99,10 @@ ms.locfileid: "37150125"
 |`Requests/Sec`|Общее число успешных запросов, обрабатываемых службой сервера отчетов в секунду.|  
 |`Snapshot Updates/Sec`|Общее число обновлений моментальных снимков состояния выполнения отчета в секунду.|  
 |`Total App Domain Recycles`|Общее количество операций очистки домена приложений с момента запуска службы Windows сервера отчетов.|  
-|**Всего сбросов кэша**|Общее количество обновлений кэша сервера отчетов с момента запуска службы. Этот счетчик обнуляется при очистке домена приложений. См. в разделе `Cache Flushes/Sec`.|  
-|`Total Cache Hits`|Общее количество запросов для отчетов, обработанных напрямую из кэша с момента запуска службы Windows сервера отчетов. Этот счетчик обнуляется при очистке домена приложений. См. в разделе `Cache Hits/Sec`.|  
-|`Total Cache Hits (Semantic Models)`|Общее количество запросов для моделей, обработанных напрямую из кэша с момента запуска службы Windows сервера отчетов. Этот счетчик обнуляется при очистке домена приложений. См. в разделе `Cache Hits/Sec`.|  
-|`Total Cache Misses`|Общее количество раз, когда отчет не может быть возвращен из кэша с момента запуска службы Windows сервера отчетов. Этот счетчик обнуляется при очистке домена приложений. См. в разделе `Cache Misses/Sec`.|  
+|**Всего сбросов кэша**|Общее количество обновлений кэша сервера отчетов с момента запуска службы. Этот счетчик обнуляется при очистке домена приложений. См. раздел `Cache Flushes/Sec`.|  
+|`Total Cache Hits`|Общее количество запросов для отчетов, обработанных напрямую из кэша с момента запуска службы Windows сервера отчетов. Этот счетчик обнуляется при очистке домена приложений. См. раздел `Cache Hits/Sec`.|  
+|`Total Cache Hits (Semantic Models)`|Общее количество запросов для моделей, обработанных напрямую из кэша с момента запуска службы Windows сервера отчетов. Этот счетчик обнуляется при очистке домена приложений. См. раздел `Cache Hits/Sec`.|  
+|`Total Cache Misses`|Общее количество раз, когда отчет не может быть возвращен из кэша с момента запуска службы Windows сервера отчетов. Этот счетчик обнуляется при очистке домена приложений. См. раздел `Cache Misses/Sec`.|  
 |`Total Cache Misses (Semantic Models)`|Общее количество раз, когда модель не может быть возвращена из кэша с момента запуска службы Windows сервера отчетов. Этот счетчик обнуляется при очистке домена приложений.|  
 |`Total Deliveries`|Общее количество отчетов для всех модулей доставки, доставленных обработчиком планирования и доставки. Этот счетчик обнуляется при очистке домена приложений.|  
 |`Total Events`|Общее количество событий с момента запуска службы Windows сервера отчетов. Этот счетчик обнуляется при очистке домена приложений.|  

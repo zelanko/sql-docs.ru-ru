@@ -1,36 +1,33 @@
 ---
-title: Класс DateTimeOffset | Документы Microsoft
+title: Класс DateTimeOffset | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 733b01f29fd159fb81f04274a96104fca1df6c9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 007ec645c6a460919498af1a75518dc3ba391170
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850860"
 ---
 # <a name="datetimeoffset-class"></a>Класс DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Этот тип представляет объект типа Microsoft.SQL.DateTimeOffset и является типом Java, которое соответствует [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetimeoffset** тип данных.  
+  Этот тип представляет объект типа Microsoft.SQL.DateTimeOffset и является типом Java, соответствующий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetimeoffset** тип данных.  
   
  **Пакет:** microsoft.sql  
   
  **Расширяет:** java.lang.Object  
   
- **Реализует:** java.lang.Comparable\<DateTimeOffset >, java.io.Serializable  
+ **Реализует:** java.lang.Comparable\<DateTimeOffset>, java.io.Serializable  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,11 +36,11 @@ ms.locfileid: "32829969"
 public final class DateTimeOffset  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Дополнительные сведения о типах данных см. в разделе [основные сведения о типах данных драйвера JDBC](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по API для драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   
+## <a name="see-also"></a>См. также:  
+ [Справка по API драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   
  [Элементы DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   

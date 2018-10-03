@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b69066bd09f74fddd0fc7151eae216b74444e8f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc1fd3f1b73d8b738f1ad8e38bc2be19e36b6fd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068794"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Вкладка «Профили кластеров кластеризации последовательностей» (средство просмотра моделей интеллектуального анализа данных)
   На вкладке **Профили кластера** в **средстве просмотра кластеризации последовательностей (Майкрософт)** содержатся представления последовательностей с цветовой кодировкой, включенных в каждый кластер.  

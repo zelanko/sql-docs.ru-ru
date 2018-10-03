@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f4c3aae27950cdaa6ff2244abdc2de501c0b1f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12e5afd378f09a0fa7d624c6842e907211bc4212
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332484"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194734"
 ---
 # <a name="currency-type-and-conversion-function"></a>Тип денежной единицы и функция конвертации
   В этом примере определяется пользовательский тип данных Currency на языке C#. Определяемый пользователем тип данных включает в себя количество и культуру, что помогает выбрать правильный способ подготовки к показу суммы в виде значения валюты в представлении конкретной культурной среды. В этом примере также реализуется функция конвертации валюты, возвращающая экземпляр пользовательского типа данных Currency. Если база данных AdventureWorks содержит коэффициент перевода из долларов США в валюту, связанную с заданной культурой, функция перевода возвращает определяемый пользователем тип данных Currency с коэффициентом перевода и культурой, соответствующей запрошенной. В противном случае определяемый пользователем тип данных Currency возвращается с исходной суммой, которая должна быть выражена в долларах США, и культурой `en-us`. В этом примере также показано, как регистрировать и отменять регистрацию методов и сборок среды CLR при помощи Transact-SQL.  
@@ -31,7 +28,7 @@ ms.locfileid: "37332484"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
   

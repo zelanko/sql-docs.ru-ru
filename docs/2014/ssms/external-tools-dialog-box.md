@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding external tools
 - external tools [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], external tools
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 928f7490202eafeb7b57b747cf6bb4a2142bce5f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: cc4371de7ec5cda5ecf40aa86755ba936b6d04cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817760"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221474"
 ---
 # <a name="external-tools-dialog-box"></a>Диалоговое окно «Внешние средства»
   Используйте диалоговое окно **Внешние инструменты** для добавления внешних инструментов, например SQLCMD или приложения "Блокнот", в меню **Сервис**. Добавление внешних инструментов позволяет запускать другие приложения во время работы в среде [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . При запуске средств можно указать аргументы и рабочий каталог. Кроме того, результаты работы некоторых средств могут отображаться в окне **Вывод** . Диалоговое окно **Внешние инструменты** доступно в меню **Сервис** .  

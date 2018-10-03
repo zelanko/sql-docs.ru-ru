@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.drillthrough.f1
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 331ab6da3e2e244f3a0413d80006ceeb907704f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066966"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Диалоговое окно «Детализация» (средство просмотра моделей интеллектуального анализа данных)
   При просмотре модели интеллектуального анализа данных с помощью вкладки **Средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных можно раскрывать более подробные сведения о данных вариантов, предоставляемые моделью с включенной детализацией. Более того, если для базовой структуры интеллектуального анализа данных включена детализация, также можно просматривать столбцы в структуре интеллектуального анализа данных, даже если эти столбцы не включены в модель интеллектуального анализа данных. В списке столбцов столбцы структуры имеют префикс в виде метки "Structure.".  

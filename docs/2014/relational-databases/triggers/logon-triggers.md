@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - logon triggers
@@ -17,12 +15,12 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b42fdfa556a2e7a26a04dd85fd7740ca23d36967
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075996"
 ---
 # <a name="logon-triggers"></a>Триггеры входа
   Триггеры входа вызывают срабатывание хранимых процедур в ответ на событие LOGON. Это событие вызывается при установке пользовательского сеанса с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Триггеры входа срабатывают после завершения этапа проверки подлинности при входе, но перед тем, как пользовательский сеанс реально устанавливается. Следовательно, все сообщения, которые возникают внутри триггера и обычно достигают пользователя, такие как сообщения об ошибках и сообщения от инструкции PRINT, перенаправляются в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если проверка подлинности завершается сбоем, триггеры входа не срабатывают.  
@@ -54,7 +52,7 @@ ms.locfileid: "37427203"
 ## <a name="disabling-a-logon-trigger"></a>Отключение триггера входа  
  Триггер входа может эффективно запрещать подключения к службам [!INCLUDE[ssDE](../../../includes/ssde-md.md)] для всех пользователей, в том числе членов предопределенной роли сервера `sysadmin`. Если триггер входа запрещает соединения, члены предопределенной роли сервера `sysadmin` могут подключаться с помощью выделенного административного соединения или путем вызова [!INCLUDE[ssDE](../../../includes/ssde-md.md)] в режиме минимальной конфигурации (-f). Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Задача|Раздел|  
 |----------|-----------|  

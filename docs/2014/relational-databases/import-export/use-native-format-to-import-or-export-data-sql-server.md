@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f71b4d7955c874fcff2efdd69ed14c12745dea3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2dee0f6a337cab7713862e662e06bb94a0b34a5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124304"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
   Собственный формат данных рекомендуется использовать при массовой передаче данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через файл данных, который не содержит символов в расширенной кодировке или символов в двухбайтовой кодировке (DBCS).  
@@ -65,7 +62,7 @@ ms.locfileid: "37300414"
     > [!IMPORTANT]  
     >  По умолчанию при использовании собственного режима программа **bcp** перед копированием в файл данных преобразует символы из формата [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в символы OEM. Программа **bcp** преобразует символы из файла данных в символы ANSI перед их массовым импортом в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Во время подобных преобразований расширенные символьные данные могут быть потеряны. Для расширенных наборов символов необходимо либо использовать собственный формат в Юникоде, либо задать кодовую страницу.  
   
--   `sql_variant` данные  
+-   `sql_variant` Данные  
   
      Если `sql_variant` данные сохраняются как SQLVARIANT в файле данных собственного формата, то все характеристики данных сохраняются. Метаданные, в которых записан тип данных каждой величины, записываются вместе со значениями данных. Эти метаданные используются для повторного создания значений данных с одного типа данных в место назначения `sql_variant` столбца.  
   

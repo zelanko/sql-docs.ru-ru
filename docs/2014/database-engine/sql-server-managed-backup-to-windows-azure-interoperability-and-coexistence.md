@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
-caps.latest.revision: 15
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2b536a5a49bef46641874348fee1f41c1504a16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c825ca99e120dce81cb4a18dc65413c1f5d03c4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310344"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184244"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server управляемое резервное копирование в Windows Azure: взаимодействие и совместная работа
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Управляемое резервное копирование SQL Server в Microsoft Azure: взаимодействие и сосуществование
   В этом разделе описываются вопросы взаимодействия и совместной работы [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] с некоторыми функциями в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции включают следующие: группы доступности AlwaysOn, зеркальное отображение базы данных, планы обслуживания резервных копий, доставка журналов, Нерегламентированное резервное копирование, отсоединение базы данных и Drop Database.  
   
 ### <a name="alwayson-availability-groups"></a>Группы доступности AlwaysOn  

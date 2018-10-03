@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123710"
 ---
 # <a name="osql-utility"></a>Программа osql
   Программа **osql** позволяет вводить инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] , системные процедуры и файлы скриптов. Для связи с сервером эта программа использует ODBC.  
@@ -140,7 +137,7 @@ C:\>osql
  Указывает признак конца команды. По умолчанию команды заканчиваются и отправляются в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью ввода GO в отдельной строке. При сбросе признака конца команды не используйте зарезервированные слова [!INCLUDE[tsql](../includes/tsql-md.md)] или символы, которые имеют специальное значение для операционной системы независимо от того, указана ли перед ними обратная косая черта.  
   
  **-q "** *запрос* **"**  
- Выполняет запрос при запуске программы **osql** , но не закрывает программу **osql** по завершении запроса. (Обратите внимание, что инструкция запроса не должна содержать GO.) При выполнении запроса из пакетного файла используйте синтаксис %переменные или %переменные среды%. Например:  
+ Выполняет запрос при запуске программы **osql** , но не закрывает программу **osql** по завершении запроса. (Обратите внимание, что инструкция запроса не должна содержать GO.) При выполнении запроса из пакетного файла используйте синтаксис %переменные или %переменные среды%. Пример:  
   
 ```  
 SET table=sys.objects  
@@ -272,13 +269,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- Например:  
+ Пример:  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- В пакетный файл также можно включить параметр EXIT. Например:  
+ В пакетный файл также можно включить параметр EXIT. Пример:  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -306,7 +303,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   RAISERROR с состоянием 127  
   
 > [!NOTE]  
->  Если в скрипте **osql** используется RAISERROR и при этом возникает состояние 127, программа **osql** завершает выполнение и возвращает клиенту идентификатор сообщения. Например:  
+>  Если в скрипте **osql** используется RAISERROR и при этом возникает состояние 127, программа **osql** завершает выполнение и возвращает клиенту идентификатор сообщения. Пример:  
   
 ```  
 RAISERROR(50001, 10, 127)  

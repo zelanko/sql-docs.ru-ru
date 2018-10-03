@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adcea3ce2134ddfe33a9a11ba06cce028c8fad51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210184"
 ---
 # <a name="udt-utilities"></a>Программы определяемых пользователем типов
   Образец программ определяемых пользователем типов содержит набор служебных функций. В их число входят функции для предоставления метаданных сборки в Transact-SQL, образцы потоковых функций, возвращающих типы в сборке в виде таблицы, и функции, возвращающие поля, методы и свойства в определяемом пользователем типе данных. При этом, в частности, демонстрируются возвращающие потоковые функции с табличным значением, отражение API-интерфейсов .NET Framework и вызов из Transact-SQL возвращающих табличные значения функций.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 - breaking changes [SQL Server]
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
-caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c20cb1efa3cc6048e9c3b2284e76852ace41c66b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396591"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227094"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Критические изменения в функциях компонента ядра СУБД в SQL Server 2014
   В этой статье описаны критические изменения в компоненте [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] и предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При обновлении могут возникнуть следующие проблемы. Дополнительные сведения см. в разделе [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -46,7 +43,7 @@ ms.locfileid: "40396591"
 |ALTER TABLE|В инструкции ALTER TABLE разрешается использовать только имена таблиц, составленные из двух частей (схема.объект). Укажите имя таблицы, теперь с помощью следующих форматов завершается ошибкой во время компиляции вызовет ошибку 117:<br /><br /> «сервер.база_данных.схема.таблица»<br /><br /> «.база_данных.схема.таблица»<br /><br /> «..схема.таблица»<br /><br /> В предыдущих версиях при задании формата «сервер.база_данных.схема.таблица» возникала ошибка 4902. Формат «.база_данных.схема.таблица» или «..схема.таблица» обрабатывался успешно. Чтобы устранить эту проблему, используйте четырехкомпонентный префикс.|  
 |Просмотр метаданных|Запросы к представлению с помощью предложения FOR BROWSE или SET NO_BROWSETABLE ON теперь возвращают метаданные представления, а не метаданные базового объекта. Это поведение теперь такое же, как и у других методов просмотра метаданных.|  
 |SOUNDEX|При уровне совместимости базы данных 110 функция SOUNDEX реализует новые правила, при применении которых значения, вычисляемые функцией, могут отличаться от тех значений, которые были вычислены при другом уровне совместимости. После обновления до уровня совместимости 110, возможно, придется перестроить индексы, кучи или ограничения CHECK, в которых используется функция SOUNDEX. Дополнительные сведения см. в статье [SOUNDEX (Transact-SQL)](/sql/t-sql/functions/soundex-transact-sql)
- , и делает это по-другому.|  
+ .|  
 |Сообщение о количестве строк для инструкций DML, завершившихся ошибкой|В [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] будет постоянно отправлять клиентам токен TDS DONE со значением «RowCount: 0» при неуспешном завершении инструкции DML. В предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] клиенту отправляется неверное значение -1, когда инструкция DML, завершившаяся ошибкой, содержится в блоке TRY-CATCH и либо автопараметризуется компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)], либо блок TRY-CATCH находится на разных уровнях с инструкцией, завершившейся ошибкой. Например, если блок TRY-CATCH вызывает хранимую процедуру и инструкция DML в процедуре завершается ошибкой, клиент получит ошибочное значение -1.<br /><br /> Приложения, работа которых зависит от этого неверного поведения, будут завершены с ошибками.|  
 |SERVERPROPERTY («Edition»)|Установленный выпуск экземпляра [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Используйте значения этого свойства для определения возможностей и ограничений, таких как максимальное количество процессоров, которые поддерживаются установленным продуктом.<br /><br /> Исходя из установленного выпуска Enterprise edition, может возвращаться «Enterprise Edition» или "Enterprise Edition: лицензирование по числу ядер". Выпуски Enterprise Edition различаются по максимальной вычислительной мощности на один экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения об ограничениях вычислительной мощности в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], см. в разделе [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '` *Пароль* `' HASHED` параметр нельзя использовать с хэшами, созданными [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 или более ранней версии.|  

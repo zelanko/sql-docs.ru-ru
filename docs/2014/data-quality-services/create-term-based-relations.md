@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9678f42ee401a2d1f223220e82fb0c024559f5d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 524c0b4b875d8fc63cbd508c04032d7b50453c3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277430"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092844"
 ---
 # <a name="create-term-based-relations"></a>Создание связей на основе термина
   В этом разделе описано создание связей на основе термина для домена в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Связь на основе термина (TBR) позволяет исправить термин, являющийся частью значения в домене. Это позволяет считать идентичными синонимами несколько значений, идентичных по написанию во всем, кроме отдельных частей. Например, вы можете задать связь на основе термина, которая изменяет термин «Inc.» на «Incorporated». Термин «Inc.» будет заменяться при каждом его появлении в домене. Экземпляры «Contoso, Inc.» будут заменяться на «Contoso, Incorporated», и эти два значения станут рассматриваться как точные синонимы.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning databases [SQL Server]
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed2001ff159681f78a9287be8e1931ee5d432948
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70f3a447b4398bbd1141a357ea878966d5a443ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130620"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>Запуск помощника по настройке ядра СУБД
   Для начала работы откройте графический интерфейс пользователя (GUI) помощника по настройке ядра СУБД. При первом использовании помощника по настройке ядра СУБД для инициализации этого приложения его должен запустить член, имеющий предопределенную роль сервера **sysadmin** . После инициализации помощника по настройке ядра СУБД его могут использовать члены предопределенной роли базы данных **db_owner** для настройки тех баз данных, которыми они владеют. Дополнительные сведения об инициализации помощника по настройке ядра СУБД см. в разделе [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md).  

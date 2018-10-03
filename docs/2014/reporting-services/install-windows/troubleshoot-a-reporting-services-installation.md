@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 447cab185ce02b83b25af160421391ed73bb7cf6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 757ca354179094554beac92486209553e5440866
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248344"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224744"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Устранение неполадок при установке служб Reporting Services
   Если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не удалось установить из-за ошибок, возникших в процессе установки, воспользуйтесь инструкциями, приведенными в этом разделе, чтобы выяснить причины, которые, скорее всего, привели к их возникновению.  
@@ -203,7 +200,7 @@ ms.locfileid: "37248344"
   
 2.  Откройте окно командной строки и введите следующую команду:  
   
-    -   **Запустите \< ** *каталог .NET 2.0 Framework* **> \InstallUtil.exe \< ** *каталог Bin сервера отчетов* **> \ReportingServicesLibrary.dll**  
+    -   **Запустите \<**  *каталог .NET 2.0 Framework* **> \InstallUtil.exe \<**  *каталог Bin сервера отчетов* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  Замените \< *каталог .NET 2.0 Framework*> в .NET Framework 2.0 физический путь к файлам, а также замените \< *каталог Bin сервера отчетов*> физического пути к исполняемым файлам сервера отчетов.  

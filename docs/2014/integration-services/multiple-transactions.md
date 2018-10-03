@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], multiple
 - multiple transactions
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
-caps.latest.revision: 31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa4e3015365166fc827170f021292a65d5d52dc7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bba1ebefb6d56a0ab1bdc1e4473f0c166a673d23
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219514"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228374"
 ---
 # <a name="multiple-transactions"></a>Множественные транзакции
   В одном пакете служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может содержаться несколько самостоятельных транзакций. Каждый раз, когда контейнер в середине иерархии вложенных контейнеров не поддерживает транзакции, контейнеры выше и ниже по иерархии начинают отдельные транзакции, если настроены для поддержки транзакций. Транзакции фиксируются или откатываются, начиная с самой глубокой задачи в иерархии вложенных контейнеров пакета. Однако после фиксации вложенной транзакции она не откатывается, если внешняя транзакция прервана.  
@@ -42,7 +39,7 @@ ms.locfileid: "37219514"
   
  ![Реализация множественных транзакций](media/mw-dts-trans2.gif "Реализация множественных транзакций")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Настройка пакета для использования транзакций](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

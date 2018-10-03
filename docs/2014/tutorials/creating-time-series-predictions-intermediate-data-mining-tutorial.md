@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e2a9fa7f42e547940e1b4576f63cc3067e01da0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119874"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Создание прогнозов временных рядов (учебник по интеллектуальному анализу данных — средний уровень)
   В ходе выполнения предыдущей задачи данного занятия была создана модель временных рядов и изучены результаты. По умолчанию службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] всегда создают набор из пяти (5) прогнозов для модели временных рядов и отображают прогнозируемые значения в виде части диаграммы прогнозирования. Однако можно также создавать прогнозы путем построения прогнозирующих запросов расширений интеллектуального анализа данных (DMX).  

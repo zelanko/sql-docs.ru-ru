@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3d67e256b6dca357db45cd831b2f9eab3ff93dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280430"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103458"
 ---
 # <a name="foreach-loop-container"></a>Контейнер «цикл по каждому элементу»
   Контейнер «цикл по каждому элементу» определяет повторяющийся поток управления в пакете. Реализация цикла схожа с циклической структурой **Foreach** в языках программирования. Организация цикла в пакете происходит с помощью перечислителя Foreach.  Контейнер «цикл по каждому элементу» повторяет операции потока управления для каждого члена заданного перечислителя.  
@@ -89,7 +86,7 @@ ms.locfileid: "37280430"
   
  Пакет необходимо настроить на запуск только одного исполняемого объекта в каждый момент времени. Это позволит избежать негативного влияния неопределенности временных рамок действий, присущей параллельному выполнению задач в цикле. Например, если пакет может одновременно запускать несколько задач, то контейнер «цикл по каждому элементу», который перечисляет файлы в папке, получает имена файлов и затем использует для вставки имен файлов в таблицу задачу «Выполнение SQL», может вызывать конфликт операций записи, если два экземпляра задачи «Выполнение SQL» предпримут попытку записи в одно и то же время. Дополнительные сведения см. в разделе [Использование выражений свойств в пакетах](../expressions/use-property-expressions-in-packages.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о задании этих свойств в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] см. в следующих разделах:  
