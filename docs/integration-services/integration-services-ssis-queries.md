@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.querybuilder.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e3603e4eb3f446518562eec82cf33d02d0ff1fa
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d275ad5ef272dc3bf6db8c5ce0079bcb1a8fea9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411666"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689522"
 ---
 # <a name="integration-services-ssis-queries"></a>Запросы в службах Integration Services (SSIS)
   Задача «Выполнение SQL», источник OLE DB, назначение «OLE DB» и преобразование «Уточняющий запрос» могут использовать SQL-запросы. В задаче «Выполнение SQL» инструкции SQL могут создавать, обновлять и удалять объекты базы данных и данные, запускать хранимые процедуры, выполнять инструкции SELECT. В источнике OLE DB и преобразовании «Уточняющий запрос» обычно содержатся SQL инструкции SELECT или EXEC. Последние наиболее часто выполняются хранимыми процедурами, возвращающими результирующие наборы.  

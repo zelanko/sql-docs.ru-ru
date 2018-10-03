@@ -4,17 +4,16 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f2520cb5d17f5d1d7637ccc53aa69d254306938
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 38a5cddeb42bfca9296f45d7735ceb969e354a0d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690812"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>Печать отчетов — службы Reporting Services (SSRS)
   После сохранения отчета на сервере отчетов его можно просмотреть и распечатать с веб-портала или из любого приложения, используемого для просмотра экспортированных отчетов. Перед сохранением отчета его можно напечатать во время просмотра.  
