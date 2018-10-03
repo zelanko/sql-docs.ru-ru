@@ -1,13 +1,11 @@
 ---
-title: Коды ошибок ODBC (драйвер ODBC для Visual FoxPro) | Документы Microsoft
+title: Коды ошибок ODBC (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], error codes
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error codes
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9ba3a447912b61b38fc8742cf9ac876c01f4197
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af6fb682e6179f99096a86d93e3f02c7b59cb91f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605112"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>Коды ошибок ODBC (драйвер ODBC для Visual FoxPro)
-В следующей таблице перечислены коды ошибок Visual FoxPro, сопоставленных значениям ODBC SQLSTATE код ошибки. Сопоставленные значения SQLSTATE берутся из [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) и [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Другие значения SQLSTATE из других API-Интерфейс ODBC не сопоставлены, так как **SQLExecDirect** и **SQLPrepare** являются только функции, предоставляющие доступ к подсистеме Visual FoxPro.  
+Ниже перечислены коды ошибок Visual FoxPro, сопоставленных значениям ODBC SQLSTATE кода ошибки. Сопоставленные значения SQLSTATE берутся из [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) и [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Другие значения SQLSTATE из других API-Интерфейс ODBC не сопоставлены, так как **SQLExecDirect** и **SQLPrepare** приведены только функции, которые обращаются к подсистеме Visual FoxPro.  
   
- Дополнительные сведения о кодах ошибок ODBC см. в разделе [коды ошибок ODBC приложение A:](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)в *справочнике программиста ODBC*.  
+ Дополнительные сведения о кодах ошибок ODBC см. в разделе [коды ошибок ODBC приложение A:](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)в *Справочник по программированию ODBC*.  
   
 |SQLSTATE|Код ошибки Visual FoxPro|  
 |--------------|------------------------------|  

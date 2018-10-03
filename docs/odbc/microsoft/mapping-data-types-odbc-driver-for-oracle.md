@@ -1,35 +1,32 @@
 ---
-title: Сопоставление типов данных (драйвер ODBC для Oracle) | Документы Microsoft
+title: Сопоставление типов данных (драйвер ODBC для Oracle) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping data types [ODBC]
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92e8df65faf6be2cbe7d63d00e922ac1c4ed3af2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecdd7d7d4b597c4cae218e18b40b0f78e27a6bd5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775812"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>Сопоставление типов данных (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
 >  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемого корпорацией Oracle.  
   
- Сервер Oracle поддерживает набор типов данных. Драйвер ODBC для Oracle сопоставляет эти типы данных в соответствующие типы данных ODBC SQL. В следующей таблице перечислены типы данных Oracle 7.3 Server и соответствующие им типы данных ODBC SQL.  
+ Сервер Oracle поддерживает набор типов данных. Драйвер ODBC для Oracle сопоставляет эти типы данных в соответствующие типы данных ODBC SQL. Ниже перечислены типы данных Oracle 7.3 Server и соответствующие им типы данных ODBC SQL.  
   
  Драйвер ODBC для Oracle поддерживает Oracle 7.3 и некоторые типы данных Oracle8. Дополнительные сведения о поддерживаемых типах данных Oracle8 см. в разделе [поддерживаемые типы данных](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md).  
   
@@ -46,4 +43,4 @@ ms.locfileid: "32902809"
 |VARCHAR2|SQL_VARCHAR|  
   
 > [!NOTE]  
->  Дополнительные сведения о допустимый размер столбца VARCHAR см. в разделе [размер столбца VARCHAR](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) в данном руководстве.
+>  Дополнительные сведения о допустимый размер столбца VARCHAR, см. в разделе [размер столбца VARCHAR](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) в данном руководстве.

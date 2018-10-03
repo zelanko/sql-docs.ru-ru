@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_get_column_ordinal (Transact-SQL) | Документы Microsoft
+title: sys.fn_cdc_get_column_ordinal (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_column_ordinal
 - fn_cdc_get_column_ordinal_TSQL
@@ -23,20 +18,20 @@ helpviewer_keywords:
 - fn_cdc_get_column_ordinal
 - sys.fn_cdc_get_column_ordinal
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 70ca20e98ba1330482fd19265b7f54f07d9711e4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b82aac8f856c1e057f389ac0af7d06dfee549fa5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624212"
 ---
 # <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает порядковый номер указанного столбца в виде он отображается в [изменить таблицу](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) связанные с указанным экземпляром отслеживания.  
+  Возвращает порядковый номер указанного столбца в виде он отображается в [изменить таблицу](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) связанный с указанным экземпляром отслеживания.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +52,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **int**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта функция используется для определения порядкового номера отслеживаемого столбца в маске обновления системы отслеживания измененных данных. Основном она используется в сочетании с функцией [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) для извлечения сведений из маски обновления при запросе данных изменений.  
   
 ## <a name="permissions"></a>Разрешения  

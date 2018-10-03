@@ -1,34 +1,31 @@
 ---
-title: Свойство ExecuteOptions (RDS) | Документы Microsoft
+title: Свойство ExecuteOptions (служба удаленных рабочих СТОЛОВ) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e054a4ea0ad6a485f0b1d1dedfd53cdf9b07d944
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e4e72ee8c8e33cac0bf48ef744777fa0cd9f819
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851702"
 ---
-# <a name="executeoptions-property-rds"></a>Свойство ExecuteOptions (RDS)
-Указывает, включен ли асинхронное выполнение.  
+# <a name="executeoptions-property-rds"></a>Свойство ExecuteOptions (служба удаленных рабочих столов)
+Указывает, включена ли асинхронное выполнение.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает одно из следующих значений.  
@@ -39,20 +36,20 @@ ms.locfileid: "35288163"
 |**adcExecAsync**|По умолчанию. Выполняет следующего обновления **записей** асинхронно.|  
   
 > [!NOTE]
->  Каждый исполняемый файл, который использует эти константы должен предоставить их объявления. Можно вырезать и вставить объявления констант, которые из файла Adcvbs.inc, расположенный в папке установки по умолчанию для библиотеки служб удаленных рабочих СТОЛОВ.  
+>  Каждый исполняемый файл, который использует эти константы необходимо предоставить объявления для них. Можно вырезать и вставить объявления констант из файла Adcvbs.inc, расположенный в папке установки по умолчанию для библиотеки служб удаленных рабочих СТОЛОВ.  
   
 ## <a name="remarks"></a>Примечания  
- Если **ExecuteOptions** задано значение **adcExecAsync**, то это асинхронно выполняет следующий **обновления** вызывать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **записей**.  
+ Если **ExecuteOptions** присваивается **adcExecAsync**, то это асинхронно выполняет следующий **обновить** вызывать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **записей**.  
   
- Если попытаться вызвать [Сброс](../../../ado/reference/rds-api/reset-method-rds.md), [обновление](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), или [записей](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) тогда как другая асинхронная операция, которая может изменить [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **записей** выполняется, возникает ошибка.  
+ Если вы попробуете вызвать [Сброс](../../../ado/reference/rds-api/reset-method-rds.md), [обновить](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), или [записей](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) тогда как другая асинхронная операция, которая может изменить [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **записей** выполняется, возникает ошибка.  
   
- При возникновении ошибки во время асинхронной операции, **RDS. DataControl** объекта [состояние готовности](../../../ado/reference/rds-api/readystate-property-rds.md) значение изменяется с **adcReadyStateLoaded** для **adcReadyStateComplete**и  **Набор записей** значение свойства остается *ничего не*.  
+ При возникновении ошибки во время асинхронной операции, **RDS. DataControl** объекта [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) значение изменяется с **adcReadyStateLoaded** для **adcReadyStateComplete**и  **Набор записей** значение свойства остается *ничего не*.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>См. также  
- [ExecuteOptions и пример свойства FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [ExecuteOptions и FetchOptions примеры свойств (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Метод Cancel (служба удаленных рабочих столов)](../../../ado/reference/rds-api/cancel-method-rds.md)
 
 

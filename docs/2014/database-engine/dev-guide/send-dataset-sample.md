@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03552b94c8a50bea83d1d5e69f589379baf81697
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c736cbf5a5c6fd98f3635224c21c785468ce932d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105704"
 ---
 # <a name="send-dataset-sample"></a>Образец отправки DataSet
   Образец Send `DataSet` показывает, как с помощью серверной хранимой процедуры, основанной на среде CLR, возвратить клиенту в виде результирующего набора элемент `DataSet` на основе ADO.NET. Данный способ используется, например, когда хранимая процедура заполняет элемент `DataSet` результатами запроса, а затем манипулирует данными, содержащимися в `DataSet`. Также подобный подход используется при создании и заполнении объекта `DataSet` при помощи хранимых процедур. Образец состоит из двух классов: `DataSetUtilities` и `TestSendDataSet`. Метод `SendDataSet`, принадлежащий к классу `DataSetUtilities`, представляет собой наиболее общий способ передачи содержимого экземпляра `DataSet` клиенту. Метод `DoTest` , определенный в классе `TestSendDataSet` , проверяет работу метода `SendDataSet` . Для этого создается экземпляр `DataSet` , который заполняется данными, поступающими из хранимой процедуры `uspGetTwoBOMTestData` Transact-SQL. Процедура `uspGetTwoBOMTestData` дважды запускает процедуру Transact-SQL `uspGetBillOfMaterials` , чтобы выполнить рекурсивный запрос счетов за материалы по двум видам продуктов, указанным в качестве параметров хранимой процедуры `usp_GetTwoBOMTestData` . Обычно после заполнения набора данных данные изменяются до вызова метода `SendDataSet` для доставки их клиенту в виде результирующего набора. В этом образце для простоты данные передаются без обработки.  

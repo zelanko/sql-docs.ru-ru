@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.general.f1
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea57f5e98aec1e95264908cc080d229d8be573f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62d20c36271bd6dd1bfa591edf606c3e295d1adb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284650"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138644"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>Диалоговое окно «Свойства окна просмотра карты», вкладка «Общие»
   Перейдите на вкладку **Общие** диалогового окна **Свойства окна просмотра карты** , чтобы изменить параметры системы координат, проекции и границ.  
   
 ## <a name="options"></a>Параметры  
- **Система координат**  
+ **система координат**  
  Укажите тип координат, в которых заданы данные карты.  
   
 -   **Планарные** Выберите этот параметр, если данные карты заданы в координатах X и Y (например, в планах построек).  

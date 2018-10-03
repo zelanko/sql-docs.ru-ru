@@ -1,13 +1,11 @@
 ---
-title: CopyRecord CopyTo и пример SaveToFile методы (Visual Basic) | Документы Microsoft
+title: Примеры CopyRecord, CopyTo и SaveToFile по методы (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - SaveToFile method [ADO], Visual Basic example
 - CopyTo method [ADO], Visual Basic example
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64a1367298c3d5c78e95112802732aa10ef75141
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 213a9aaa3556700bbbe0f88200796a524c65f5e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601682"
 ---
-# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord CopyTo и пример SaveToFile методы (Visual Basic)
-В этом примере демонстрируется создание копии файла с помощью [поток](../../../ado/reference/ado-api/stream-object-ado.md) или [записи](../../../ado/reference/ado-api/record-object-ado.md) объектов. Одной копии веб-папку для публикации в Интернете. Включить других свойств и методов, показанных [тип потока](../../../ado/reference/ado-api/type-property-ado-stream.md), **откройте**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), и [откройте запись](../../../ado/reference/ado-api/open-method-ado-record.md).  
+# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>Примеры CopyRecord, CopyTo и SaveToFile по методы (Visual Basic)
+В этом примере демонстрируется создание копии файла с помощью [Stream](../../../ado/reference/ado-api/stream-object-ado.md) или [записи](../../../ado/reference/ado-api/record-object-ado.md) объектов. Одной копии в веб-папку для публикации в Интернете. Другие свойства и методы, представленные включают [тип Stream](../../../ado/reference/ado-api/type-property-ado-stream.md), **откройте**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), и [откройте запись](../../../ado/reference/ado-api/open-method-ado-record.md).  
   
 ```  
 'BeginCopyRecordVB  
@@ -130,11 +127,11 @@ End Sub
   
 ## <a name="see-also"></a>См. также  
  [Метод CopyRecord (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
- [CopyTo-метод (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
- [Loadfromfile-метод (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
- [Метод Open (ADO запись)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Метод CopyTo (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
+ [Метод LoadFromFile (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
+ [Метод Open (объект Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Метод Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Метод SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)   
- [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Свойство Type (объект Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

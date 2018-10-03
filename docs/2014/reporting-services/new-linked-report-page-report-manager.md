@@ -4,24 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63c244c74ac6039867834b7c289fd02de2e03b17
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: baca8a9c339ff55ad25f390ac73a2957fdd26447
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083626"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119374"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Страница «Создание связанного отчета» (диспетчер отчетов)
   Используйте страницу «Создание связанного отчета» для формирования нового связанного отчета. Связанный отчет — это отчет с собственными параметрами и свойствами, но ссылающийся на определение другого отчета. Связанные отчеты полезны, когда имеется базовый отчет, который нужно изменять для конкретных групп пользователей. Например, региональный отчет, который возвращает разные данные в зависимости от регионального кода, заданного в виде параметра. Связанный отчет, как правило, создается из параметризованного отчета, когда нужно изменить, а затем сохранить разные значения параметров для каждого экземпляра отчета. Но связанный отчет можно создавать на основе любого доступного отчета.  

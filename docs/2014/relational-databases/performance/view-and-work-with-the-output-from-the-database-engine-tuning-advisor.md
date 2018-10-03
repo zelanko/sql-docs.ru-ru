@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdb4e44e946ce4f46dc20d344693342162d81731
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167105"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116900"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Просмотр и работа с выходными данными помощника по настройке ядра СУБД
   Когда помощник по настройке ядра СУБД настраивает базы данных, он создает сводки, рекомендации, отчеты и журналы настройки. Выходные данные журналов настройки можно использовать, чтобы устранять неполадки в сеансах помощника по настройке ядра СУБД. Сводки, рекомендации и отчеты помогут решить, следует ли реализовать рекомендации по настройке либо продолжать ее до тех пор, пока не будет достигнуто повышение производительности выполнения запросов, необходимое для установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Информация об использовании помощника по настройке базы создания рабочих нагрузок и настройки базы данных см. в разделе [Запуск и использование помощника по настройке ядра СУБД](database-engine-tuning-advisor.md).  

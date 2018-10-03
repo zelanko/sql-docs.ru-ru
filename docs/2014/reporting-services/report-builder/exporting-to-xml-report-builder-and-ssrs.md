@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 11bb46bc593a95811c56a5489fd5489ca72ca917
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116404"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Экспорт в XML (построитель отчетов и службы SSRS)
   Модуль подготовки XML-отчета возвращает отчет в XML-формате. Схема для XML-документа, используемого в отчете, создается специально для этого отчета и содержит только данные. Данные макета не обрабатываются модулем подготовки XML-отчета, и разбивка на страницы не сохраняется. XML-документ, сформированный данным модулем, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению.  
@@ -84,7 +81,7 @@ ms.locfileid: "37223274"
   
  Определения пространств имен XML и ссылочные атрибуты схемы также включаются в элементы отчета. Имена переменных выводятся полужирным шрифтом:  
   
- \<**Отчет** xmlns =»**SchemaName**"xmlns: xsi =»http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**=»**SchemaNameReportURL**&amp;rc % 3aSchema = true» Name = «ReportName» >  
+ \<**Отчет** xmlns =»**SchemaName**"xmlns: xsi =» http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**=»**SchemaNameReportURL**&amp;rc % 3aSchema = true» Name = «ReportName» >  
   
  Переменные могут принимать следующие значения.  
   
@@ -113,10 +110,10 @@ ms.locfileid: "37223274"
 ### <a name="custom-report-items"></a>Пользовательские элементы отчета  
  CustomReportItems (CRI) не видимы для модуля подготовки отчетов. Если в отчете существует пользовательский элемент, модуль подготовки отчетов отобразит его как обычный элемент отчета.  
   
-### <a name="images"></a>Изображения  
+### <a name="images"></a>Изображений  
  Изображения не подготавливаются к просмотру.  
   
-### <a name="lines"></a>Линии  
+### <a name="lines"></a>Прямых линий  
  Линии не подготавливаются к просмотру.  
   
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  

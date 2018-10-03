@@ -1,13 +1,11 @@
 ---
-title: Свойство DeleteRule (ADOX) | Документы Microsoft
+title: Свойство DeleteRule (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,25 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRule property [ADOX]
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd8b687c742aea02cc43af49e06351d313bb86aa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a5aefd37b70df88ada887e173dc1cc1f7d8ec4d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285943"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713752"
 ---
 # <a name="deleterule-property-adox"></a>Свойство DeleteRule (ADOX)
-Указывает действия, выполняемого при удалении первичного ключа.  
+Указывает выполнить действие, при удалении первичного ключа.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Задает и возвращает **длинные** значение, которое может быть одним из [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) константы. Значение по умолчанию — **adRINone**.  
+ Задает и возвращает **Long** значение, которое может принимать одно из [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) константы. Значение по умолчанию — **adRINone**.  
   
 ## <a name="remarks"></a>Примечания  
- Это свойство доступно только для чтения на [ключ](../../../ado/reference/adox-api/key-object-adox.md) объектов уже добавлен в коллекцию.  
+ Это свойство доступно только для чтения на [ключ](../../../ado/reference/adox-api/key-object-adox.md) объектов, уже добавлен в коллекцию.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96287b68f0d6610beab336bdb3ad3477e5d6ef66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178331"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097574"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Параметры запроса профиля шаблона столбцов (задача «Профилирование данных»)
   Для установки параметров режима **Запрос профиля шаблона столбца** , выделенного в панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль шаблона столбцов описывает набор регулярных выражений, которые покрывают указанный процент значений в строковом столбце. Этот профиль может помочь выявить проблемы в данных, например недопустимые строки, а также предложить регулярные выражения, которые можно использовать в будущем для проверки новых данных. Так, профиль шаблона столбца почтовых индексов США может дать регулярные выражения \d{5}-\d{4}, \d{5} и \d{9}. Если имеются другие регулярные выражения, то вероятно, что данные содержат недопустимые или представленные в неверном формате значения.  

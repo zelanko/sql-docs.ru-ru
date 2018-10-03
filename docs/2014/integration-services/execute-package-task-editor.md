@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.parameter.F1
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91e6903528380735fde050decace5903e0a55c9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 468823b10b4b97fb2a4fe7fcd0a83f28af6fc5b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271720"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119044"
 ---
 # <a name="execute-package-task-editor"></a>редактор задачи «Выполнение пакета»
   Для настройки задачи «Выполнение пакета» используйте редактор задачи «Выполнение пакета». Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
@@ -94,7 +91,7 @@ ms.locfileid: "37271720"
  **Соединение**  
  Выберите диспетчер подключений OLE DB в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также: ** [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md), [Настройка диспетчера подключений OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **См. также:**  [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md), [Настройка диспетчера подключений OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Введите имя дочернего пакета или нажмите кнопку с многоточием (...) и определите местоположение пакета.  

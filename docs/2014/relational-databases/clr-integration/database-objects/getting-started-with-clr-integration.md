@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - Hello World example [CLR integration]
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
-caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12eb63552fea685ce9d1e453e99e785045839ac5
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349816"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089154"
 ---
 # <a name="getting-started-with-clr-integration"></a>Приступая к работе с интеграцией со средой CLR
   В этом разделе представлен обзор пространств имен и библиотеки, необходимые для компиляции объектов базы данных с помощью [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] интеграции с .NET Framework среда CLR (CLR). В этом разделе также показано, как написать, скомпилировать и выполнить простую хранимую процедуру CLR на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
@@ -99,7 +96,7 @@ End Class
 C:\Windows\Microsoft.NET\Framework\(version)  
 ```  
   
- Версия содержит номер версии установленной платформы .NET Framework. Например:  
+ Версия содержит номер версии установленной платформы .NET Framework. Пример:  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\v2.0.31113  

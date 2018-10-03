@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.permissions.f1
@@ -18,12 +16,12 @@ ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0fff329718cd3cc54a186928f78fd20dffe84a92
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123774"
 ---
 # <a name="permissions-or-securables-page"></a>Страница «Разрешения» или «Защищаемые объекты»
   Страница **Разрешения** или **Защищаемые объекты** используется для просмотра или установки разрешений для защищаемых объектов. Эта страница может быть открыта из нескольких мест. Содержимое страницы может немного измениться в зависимости от того, как открыта страница и ее содержимого. Верхняя сетка страницы может быть заполнена при открытии страницы или может быть пустой. Нажмите кнопку **Поиск**для добавления элементов в верхнюю сетку. Выберите элемент в верхней сетке, затем установите нужные разрешения на вкладке **Явное** . Чтобы увидеть суммарные разрешения, используйте вкладку **Действующие** .  

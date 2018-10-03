@@ -1,13 +1,11 @@
 ---
-title: Атрибуты и примере имя свойства (Visual Basic) | Документы Microsoft
+title: Примеры Attributes и Name свойства (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48d96c2afe1018b64933fb96ba8c36d08a93d4e1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb69a3f9da2ed86411c2a6506cf2ea7a8defcc7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275973"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735152"
 ---
-# <a name="attributes-and-name-properties-example-vb"></a>Атрибуты и примере имя свойства (Visual Basic)
-В этом примере отображается значение [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md) свойство [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [поле](../../../ado/reference/ado-api/field-object.md), и [свойство](../../../ado/reference/ado-api/property-object-ado.md) объектов. Она использует [имя](../../../ado/reference/ado-api/name-property-ado.md) свойство для отображения имени каждого **поле** и **свойство** объекта.  
+# <a name="attributes-and-name-properties-example-vb"></a>Примеры свойств Attributes и Name (Visual Basic)
+В этом примере отображается значение [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md) свойство для [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [поле](../../../ado/reference/ado-api/field-object.md), и [свойство](../../../ado/reference/ado-api/property-object-ado.md) объектов. Она использует [имя](../../../ado/reference/ado-api/name-property-ado.md) свойство для отображения имени каждого **поле** и **свойство** объекта.  
   
 ```  
 ' BeginAttributesVB  
@@ -131,8 +128,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойства атрибутов (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство Name (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

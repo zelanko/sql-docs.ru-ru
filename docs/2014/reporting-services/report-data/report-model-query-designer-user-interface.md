@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.smqlquerydesigner.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 231d9357d613d647599a15cbf0e7ed08f7cf25cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77b3d858696c5dc4d2ed6422eb414f6b650a0487
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110611"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов моделей отчетов
   Конструктор отчетов содержит два конструктора запросов, которые помогают уточнить, какие именно данные из источника данных «Модель сервера отчетов» необходимо использовать в отчете. Используйте графический конструктор запросов для просмотра и выбора сущностей модели и полей сущности. Используйте текстовый редактор запросов, чтобы работать напрямую со спецификацией на языке определения семантических моделей (SMDL) в XML-формате.  

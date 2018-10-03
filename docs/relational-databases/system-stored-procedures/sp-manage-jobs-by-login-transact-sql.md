@@ -1,14 +1,11 @@
 ---
-title: sp_manage_jobs_by_login (Transact-SQL) | Документы Microsoft
+title: sp_manage_jobs_by_login (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_manage_jobs_by_login
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_manage_jobs_by_login
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59f79ac7f0dfa72be2f63d0c3e711969f92ea93d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dc6538cbc62be98414b180d44725d987e660ff99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251090"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742442"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +43,23 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@action=** ] **"***действия***"**  
- Действие, предпринимаемое для указанного имени входа. *Действие* — **varchar(10)**, не имеет значения по умолчанию. Когда *действия*— **удаление**, **sp_manage_jobs_by_login** удаляет все задания, принадлежащие *current_owner_login_name*. Когда *действия* — **ПЕРЕНАЗНАЧИТЬ**, все задания назначаются *new_owner_login_name*.  
+ [  **@action=** ] **"***действие***"**  
+ Действие, предпринимаемое для указанного имени входа. *Действие* — **varchar(10)**, не имеет значения по умолчанию. Когда *действие*— **удалить**, **sp_manage_jobs_by_login** удаляет все задания, принадлежащие *current_owner_login_name*. Когда *действие* — **ПЕРЕНАЗНАЧИТЬ**, все задания назначаются *new_owner_login_name*.  
   
  [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
  Имя входа текущего владельца задания. *current_owner_login_name* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
- Имя входа нового владельца задания. Используйте этот параметр, только если *действия* — **ПЕРЕНАЗНАЧИТЬ**. *new_owner_login_name* — **sysname**, значение по умолчанию NULL.  
+ Имя входа нового владельца задания. Используйте этот параметр только в том случае, если *действие* — **ПЕРЕНАЗНАЧИТЬ**. *new_owner_login_name* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения этой хранимой процедуры пользователь должен обладать **sysadmin** предопределенной роли сервера.  
+ Чтобы выполнить эту хранимую процедуру, пользователям необходимо предоставить **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере производится передача всех заданий от пользователя `danw` пользователю `françoisa`.  

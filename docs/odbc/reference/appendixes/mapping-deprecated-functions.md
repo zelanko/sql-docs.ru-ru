@@ -1,13 +1,11 @@
 ---
-title: Сопоставление устаревания функций. | Документы Microsoft
+title: Сопоставление нерекомендуемых функций | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b61a53eed35919f3ecd0422b376e029ee7ab232
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818376"
 ---
-# <a name="mapping-deprecated-functions"></a>Сопоставление устаревания функций.
-В этом разделе описывается, как устаревшие функции ODBC 3 для сопоставления *.x* диспетчера драйверов для обеспечения обратной совместимости ODBC 3 *.x* драйверы, которые используются с ODBC 2. *x* приложений. Диспетчер драйверов выполняет это сопоставление, независимо от версии приложения. Так как каждый из ODBC 2. *x* функции в следующем списке сопоставляется с соответствующей ODBC 3 *.x* работать при вызове в ODBC 3 *.x* драйвера ODBC 3 *.x*драйвер не должен реализовывать ODBC 2. *x* функции.  
+# <a name="mapping-deprecated-functions"></a>Сопоставление нерекомендуемых функций
+В этом разделе описывается, как устаревшие функции сопоставляются по ODBC 3 *.x* диспетчера драйверов для обеспечения обратной совместимости ODBC 3 *.x* драйверы, которые используются с ODBC 2. *x* приложений. Диспетчер драйверов выполняет это сопоставление, независимо от версии приложения. Так как каждый из ODBC 2. *x* функции в следующем списке сопоставляется с соответствующей ODBC 3 *.x* функции при вызове в ODBC 3 *.x* драйвера ODBC 3 *.x*драйвер должен реализовывать ODBC 2. *x* функции.  
   
- Сопоставление в списке активируется, когда драйвер ODBC 3 *.x* драйвер и драйвер не поддерживает функции, который сопоставляется.  
+ Сопоставление в списке активируется в том случае, когда драйвер ODBC 3 *.x* драйвер и драйвер не поддерживает функцию, с которым выполняется сопоставление.  
   
  В следующей таблице перечислены все повторяющиеся функциональность, которая была введена в ODBC 3 *.x*.  
   
@@ -57,7 +54,7 @@ ms.locfileid: "32914109"
   
  [1] несмотря на то что эта функция не существует в ODBC 2 *.x*, он находится в стандартах Open Group и ISO.  
   
- [2] это функцию ODBC 1.0.  
+ [2] это функция ODBC 1.0.  
   
  Этот раздел содержит следующие подразделы.  
   

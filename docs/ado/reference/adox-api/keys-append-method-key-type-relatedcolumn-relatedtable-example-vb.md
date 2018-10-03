@@ -1,13 +1,11 @@
 ---
-title: Создание новой связи по внешнему ключу между таблицами пример (Visual Basic) | Документы Microsoft
+title: Создание новой связи по внешнему ключу между таблицами пример (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - UpdateRule property [ADOX], Visual Basic example
 - RelatedColumn property [ADOX], Visual Basic example
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d62296909a1d55a908d9ee22c06deea3cd36379c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b0fa2c7b7b7b2ad58042f46f8a1cffb0a3706f26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602043"
 ---
-# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Ключи добавить метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule-пример свойства (Visual Basic)
-Следующий код демонстрирует создание нового внешнего ключа между двумя существующими с именем **клиентов** и **заказов**.  
+# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)
+Следующий код демонстрирует создание нового внешнего ключа между двумя существующими таблицами с именем **клиентов** и **заказы**.  
   
 ```  
 ' BeginCreateKeyVB  
@@ -77,17 +74,17 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Append-метод (ADOX столбцы)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append-метод (ADOX ключи)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Коллекция столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Объект ключа (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
- [Коллекция ключей (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
+ [Append-метод (коллекция Columns ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append-метод (коллекция Keys ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
+ [Коллекция Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Свойство RelatedColumn (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
  [Свойство RelatedTable (ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
- [Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Коллекция таблиц (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
+ [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Свойство Type (ключ) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Свойство UpdateRule (ADOX)](../../../ado/reference/adox-api/updaterule-property-adox.md)

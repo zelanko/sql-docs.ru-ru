@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords:
 - Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1db1837c339960c0d320170fd25eb8a05b499a35
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9c136f2eb27f4c999d71c398b14b67405cee108
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128324"
 ---
 # <a name="article-properties---ltarticlegt"></a>Свойства статьи — &lt;Статья&gt;
   Диалоговое окно **Свойства статьи** доступно из мастера создания публикаций и диалогового окна **Свойства публикации** . Оно позволяет просматривать и устанавливать свойства для всех типов статей. Некоторые свойства могут быть установлены только при создании публикации, а другие могут устанавливаться только в случае, если у публикации нет активных подписок. Свойства, которые не могут быть установлены, отображаются как доступные только для чтения.  

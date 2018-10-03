@@ -1,32 +1,29 @@
 ---
-title: Пример свойства SortOrder (VB) | Документы Microsoft
+title: Пример свойства SortOrder (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22dc816e9f4343d2873f169837d028babbfa111c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770932"
 ---
 # <a name="sortorder-property-example-vb"></a>Пример свойства SortOrder (Visual Basic)
-В этом примере демонстрируется [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md) , добавленную [столбцы](../../../ado/reference/adox-api/columns-collection-adox.md) коллекцию [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код добавляет возрастания индекса в столбце страны в **сотрудников** таблицы, затем отображает записи. Затем код добавляет убывания индекса в столбце страны в **сотрудников** таблицы и отображает записи еще раз. Показано различие между сортировкой по возрастанию и убыванию индексов.  
+В этом примере показано [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) , добавленную в [столбцы](../../../ado/reference/adox-api/columns-collection-adox.md) коллекцию [индекс](../../../ado/reference/adox-api/index-object-adox.md). Код добавляет по возрастанию индекса столбцу страны в **сотрудников** таблицы, затем отображает записи. Затем код добавляет убывания индекса столбцу страны в **сотрудников** таблицы и отображает записи еще раз. Отображается разница между сортировкой по возрастанию и убыванию индексов.  
   
 ```  
 ' BeginSortOrderVB  
@@ -141,7 +138,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Коллекция столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Объект индекса (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Объект INDEX (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Свойство SortOrder (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)

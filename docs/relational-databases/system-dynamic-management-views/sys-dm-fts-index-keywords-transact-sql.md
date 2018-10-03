@@ -1,12 +1,10 @@
 ---
-title: sys.dm_fts_index_keywords (Transact-SQL) | Документы Microsoft
+title: sys.dm_fts_index_keywords (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_index_keywords
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fffcfdc4a7db8fafbe58b0abd914ce611edf3732
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 86a4aa126ef72425aa2e3c284a3762517d31222d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790032"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "34464350"
  **sys.dm_fts_index_keywords** является функцией динамического управления.  
   
 > [!NOTE]  
->  Чтобы просмотреть сведения о заполнении полнотекстового индекса более низкого уровня, используйте [sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) функции динамического управления на уровне документа.  
+>  Чтобы просмотреть данные полнотекстового индекса более низкого уровня, используйте [sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) функции динамического управления на уровне документа.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,12 +57,12 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Ключевое слово**|**nvarchar(4000)**|Шестнадцатеричное представление ключевого слова, которое хранится в полнотекстовом индексе.<br /><br /> Примечание: OxFF представляет собой специальный символ, который указывает конец файла или набора данных.|  
-|**display_term**|**nvarchar(4000)**|Ключевое слово в понятном формате. Этот формат является производным от шестнадцатеричного формата.<br /><br /> Примечание: **display_term** для OxFF — «Конец файла.»|  
+|**display_term**|**nvarchar(4000)**|Ключевое слово в понятном формате. Этот формат является производным от шестнадцатеричного формата.<br /><br /> Примечание: **display_term** значение для OxFF — «Конец файла.»|  
 |**column_id**|**int**|Идентификатор столбца, содержащий данное ключевое слово, индексированное полнотекстовым индексом.|  
 |**document_count**|**int**|Число документов или строк, содержащих текущий термин.|  
   
 ## <a name="remarks"></a>Примечания  
- Сведения, возвращаемые функцией **sys.dm_fts_index_keywords** полезны для выяснения следующего, среди прочего:  
+ Сведения, возвращаемые функцией **sys.dm_fts_index_keywords** полезно для выяснения следующего, помимо прочего:  
   
 -   является ли ключевое слово частью полнотекстового индекса;  
   
@@ -78,7 +75,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
     -   Как правило, наиболее часто встречающиеся ключевые слова пригодны для объявления в качестве стоп-слов.  
   
 > [!NOTE]  
->  **Document_count** возвращенных **sys.dm_fts_index_keywords** может быть менее точным для определенного документа, чем число, возвращаемое функцией **sys.dm_fts_index_keywords_by_document** или **CONTAINS** запроса. Согласно проведенной оценке, эта возможная неточность не превышает 1%. Неточность может возникнуть из-за **document_id** могут быть подсчитаны дважды, если более чем одной строке фрагмента индекса или появляется более одного раза в той же строке. Чтобы получить более точный подсчет для определенного документа, используйте **sys.dm_fts_index_keywords_by_document** или **CONTAINS** запроса.  
+>  **Document_count** возвращаемые **sys.dm_fts_index_keywords** может быть менее точным для определенного документа, чем число, возвращаемое функцией **sys.dm_fts_index_keywords_by_document** или **CONTAINS** запроса. Согласно проведенной оценке, эта возможная неточность не превышает 1%. Неточность может возникнуть, так как **document_id** могут быть подсчитаны дважды в том случае, когда он продолжает по более чем одной строке фрагмента индекса или при более одного раза появляется в той же строке. Чтобы получить более точное количество для определенного документа, используйте **sys.dm_fts_index_keywords_by_document** или **CONTAINS** запроса.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
@@ -95,7 +92,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Компонент Full-Text Search и семантический поиск динамические административные представления и функции &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Компонент Full-Text Search](../../relational-databases/search/full-text-search.md)   
+ [Компонент Full-text Search](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords_by_document (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
   

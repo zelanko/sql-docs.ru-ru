@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], vs. URL access
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], vs. SOAP
 - Web service [Reporting Services], application integration
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
-caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7d8d60cd6b91e93dbf0fcd71e8cc995a405af88b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f14a643842bb3cb8029cbd4ac1c0e53c9b0ab334
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280540"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081700"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Выбор между доступом по URL-адресу и протоколом SOAP
   Интеграция служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения может оказаться сложной задачей. При этом проблема состоит не в сложности модели программирования или интерфейсов API, а в наличии множества способов для интеграции. Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с самого начала разрабатывались в качестве платформы разработки и поэтому построены с учетом гибких возможностей программирования. Такая гибкость обуславливает необходимость принятия важных решений для интеграции функций служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] по управлению отчетами и перемещению по отчетам в существующие бизнес-приложения.  

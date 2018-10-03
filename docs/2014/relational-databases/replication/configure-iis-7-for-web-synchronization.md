@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b4766702bb0e9dd82c5e74bc1018894ab90b63a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7da91677755f2d7e808165bdc8361864e15ac2f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158285"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131754"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Настройка сервера IIS 7 для веб-синхронизации
   В этой статье описывается процесс настройки вручную служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) версии 7 и более поздней, которые будут использоваться при веб-синхронизации для репликации слиянием. 

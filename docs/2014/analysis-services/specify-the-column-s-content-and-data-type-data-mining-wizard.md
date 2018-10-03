@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycontentdatatype.f1
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4ee726afd23b410d5d145a548a1f810fe758711
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316964"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118984"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Укажите столбец&#39;s содержимого и типа данных (мастер интеллектуального анализа данных)
   Используйте страницу **Определение содержимого и типа данных столбцов** , чтобы изменить типы данных и типы содержимого столбцов, уже установленные мастером. Мастер использует типы данных исходных столбцов и возможности выбранного алгоритма, чтобы определить данные по умолчанию и типы содержимого для каждого столбца.  
@@ -38,7 +35,7 @@ ms.locfileid: "37316964"
  **Тип данных**  
  Типы данных, назначенные для каждого столбца. Щелкните внутри ячейки, чтобы изменить тип данных. Дополнительные сведения о типах данных см. в разделе [Типы данных (интеллектуальный анализ данных)](data-mining/data-types-data-mining.md).  
   
- **Обнаружение**  
+ **обнаружение**  
  Нажмите, чтобы автоматически определить непрерывные и дискретные типы содержимого для числового столбца. Эта возможность не применяется к структурам интеллектуального анализа данных, основанным на источниках данных OLAP. Для структур интеллектуального анализа данных OLAP мастер автоматически выявляет типы содержимого и выбирает тип, совместимый с выбранным алгоритмом.  
   
 ## <a name="see-also"></a>См. также  

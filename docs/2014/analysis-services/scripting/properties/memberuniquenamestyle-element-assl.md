@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MemberUniqueNameStyle Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2448f2f45f76610e9d7298c855086cc74ab0611e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 204f29e7bfb90894fded974b78cfd136aa39eaeb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133464"
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>Элемент MemberUniqueNameStyle (ASSL)
   Определяет, как уникальные имена создаются для элементов иерархий, содержащихся в [CubeDimension](../data-type/dimension-data-type-assl.md) элемент.  
@@ -49,7 +46,7 @@ ms.locfileid: "37226364"
 |Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
-|Значение по умолчанию|*Собственный*|  
+|Значение по умолчанию|*собственный*|  
 |Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
@@ -64,7 +61,7 @@ ms.locfileid: "37226364"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*Собственный*|Экземпляр автоматически определяет уникальные имена элементов.|  
+|*собственный*|Экземпляр автоматически определяет уникальные имена элементов.|  
 |*NamePath*|Экземпляр формирует составное имя, содержащее каждый уровень и заголовок элемента.|  
   
 ## <a name="remarks"></a>Примечания  

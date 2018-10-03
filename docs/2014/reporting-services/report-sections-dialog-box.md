@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
-caps.latest.revision: 8
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4bbe031bd7cc918f39d1c3c965cdb9e82ab612a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d665b824e48e5400ab341909180302c0101fc357
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328925"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095254"
 ---
 # <a name="report-sections-dialog-box"></a>Диалоговое окно «Разделы отчета»
   При открытии отчета конструктор отчетов проверяет, что отчет содержит только один язык определения отчетов (RDL)  **\<разделе >** элемент. Открытие отчета с несколькими элементами **\<Section>** не поддерживается.  

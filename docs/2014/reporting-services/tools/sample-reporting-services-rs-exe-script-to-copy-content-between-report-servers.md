@@ -4,24 +4,19 @@ ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 51008a07a327a9601de1bd52795e19eee44af016
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5fb51019ffa016e76f4801d35578ffca0b2b6a11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290300"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116824"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Образец скрипта программы rs.exe служб Reporting Services для переноса содержимого между серверами отчетов
   Этот раздел содержит описание и сам скрипт для [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS, который копирует элементы и параметры содержимого с одного сервера отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на другой с помощью программы **RS.exe** . Программа RS.exe установлена с помощью [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] как в собственном режиме, так и в режиме SharePoint. Скрипт копирует элементы служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], например отчеты и подписки, с одного сервера на другой. Скрипт поддерживает как режим интеграции с SharePoint, так и собственный режим сервера отчетов.  
@@ -111,7 +106,7 @@ ms.locfileid: "37290300"
 |параметры обработки|Да|Да||  
 |параметры обновления кэша|Да|Да|Зависимые параметры переносятся в составе элемента каталога. Далее приводится пример скрипта, который переносит отчет (RDL-файл), и связанные параметры, например параметры обновления кэша.<br /><br /> Параметры миграции для отчета TitleOnly.rdl: найдено 0 элементов.<br /><br /> Миграция подписок для отчета TitleOnly.rdl: найден 1 элемент.<br /><br /> Миграция подписки: сохранить в \\\server\public\savedreports как TitleOnly … УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> Миграция параметров журнала для отчета TitleOnly.rdl… УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> Миграция параметров обработки для отчета TitleOnly.rdl… Найдено 0 элементов.<br /><br /> Миграция параметров обновления кэша для отчета TitleOnly.rdl… УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> Миграция планов обновления кэша для отчета TitleOnly.rdl: найден 1 элемент.<br /><br /> Миграция плана обновления кэша titleonly_refresh735amM2F… УСПЕШНОЕ ЗАВЕРШЕНИЕ|  
 |Планы обновления кэша|Да|Да||  
-|Изображения|Да|Да||  
+|Изображений|Да|Да||  
 |Элементы отчета|Да|Да||  
   
 ##  <a name="bkmk_required_permissions"></a> Необходимые разрешения  

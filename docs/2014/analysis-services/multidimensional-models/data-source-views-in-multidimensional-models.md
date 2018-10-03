@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services]
@@ -18,23 +16,22 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e11f6d77229b81bd2ccb3fb6eebad16da7731ce8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c9f4a8c8c968bcd7a633b943ea8c42b08662a50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271870"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126114"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Представления источников данных в многомерных моделях
   Представление источников данных представляет собой абстракцию реляционного источника данных, который становится основой кубов и измерений, создаваемых в многомерном проекте. Представление источника данных позволяет управлять структурами данных, используемыми в проекте, и независимо работать с базовыми источниками данных (например, можно переименовать или объединить столбцы без непосредственного изменения исходного источника данных).  
   
  Вы можете построить несколько представлений источников данных в проекте или в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для одного или нескольких источников данных и сконструировать каждый из них для удовлетворения требований другого решения.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Определение данных представление источника &#40;служб Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
   
  [Добавление или удаление таблиц или представлений данных представление источника &#40;служб Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  

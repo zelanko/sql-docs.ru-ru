@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a6e8e45ea1ba74aeef1f063ad03154a9574bc9e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 955dcff3399f6936fb5b1f8042dae4658a55a11f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269810"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048974"
 ---
 # <a name="query-options-execution-general-page"></a>Выполнение параметров запроса (страница «Общие»)
   Используйте эту страницу, чтобы задать параметры для запросов [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для доступа к этому диалоговому окну щелкните правой кнопкой мыши тело окна "Редактор запросов", а затем щелкните **Параметры запроса**.  
@@ -39,7 +36,7 @@ ms.locfileid: "37269810"
  **Разделитель пакетов**  
  Введите слово, которое будет использоваться для разделения инструкций Transact-SQL на пакеты. Значение по умолчанию — GO.  
   
- **По умолчанию откройте новые запросы в режиме SQLCMD**  
+ **По умолчанию открывать новые запросы в режиме SQLCMD**  
  При установке этого флажка новые запросы будут открываться в режиме SQLCMD. Этот флажок становится видимым только в случае, если диалоговое окно открыто из меню **Средства** .  
   
  При выборе этого параметра следует учитывать следующие ограничения.  
@@ -50,7 +47,7 @@ ms.locfileid: "37269810"
   
 -   Поскольку редактор запросов не может ответить на подсказки и приглашения операционной системы, будьте внимательны и не запускайте интерактивные инструкции.  
   
- **Восстановить значения по умолчанию**  
+ **Сброс до значений по умолчанию**  
  Позволяет вернуть исходные значения по умолчанию для всех параметров на данной странице.  
   
   

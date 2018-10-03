@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 105
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 963104ee755daba6514403ddd7f5dca76507cf5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070593"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр SQL_ATTR_CONNECTION_TIMEOUT не учитывается.  
@@ -94,13 +91,13 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
  Если используется пул соединений, SQL_COPT_SS_ANSI_NPW следует устанавливать в строке подключения, а не с SQLSetConnectAttr. После установки соединения любая попытка изменить этот атрибут при использовании пула соединений завершится ошибкой без сообщений.  
   
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- Объявляет тип рабочей нагрузки приложения при соединении с сервером. Возможные значения: `Readonly` и `ReadWrite`. Например:  
+ Объявляет тип рабочей нагрузки приложения при соединении с сервером. Возможные значения: `Readonly` и `ReadWrite`. Пример:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- Значение по умолчанию — `ReadWrite`. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержки собственным клиентом [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] групп доступности, см. в разделе [SQL Server собственный клиент поддерживает высокую доступность, аварийное восстановление](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Значение по умолчанию — `ReadWrite`. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержки собственным клиентом [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] групп доступности, см. в разделе [SQL Server собственный клиент поддерживает высокую доступность, аварийное восстановление](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqlcoptssattachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
  SQL_COPT_SS_ATTACHDBFILENAME указывает имя первичного файла для присоединяемой базы данных. Эта база данных присоединяется и становится для соединения базой данных по умолчанию. Для использования SQL_COPT_SS_ATTACHDBFILENAME необходимо указать имя базы данных в качестве значения атрибута соединения SQL_ATTR_CURRENT_CATALOG или в базе данных = параметр [SQLDriverConnect](sqldriverconnect.md). Если база данных уже присоединена, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не будет повторно присоединять ее.  
@@ -170,7 +167,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  После установления соединения, приложение может запросить этот атрибут с помощью [SQLGetConnectAttr](sqlgetconnectattr.md) определить удостоверение партнера по обеспечению отработки отказа. Если сервер-источник не имеет партнера по обеспечению отработки отказа, то это свойство вернет пустую строку. Это позволяет приложению кэшировать последний определенный резервный сервер, но при этом необходимо учитывать, что данные обновляются только при первоначальной установке соединения или его восстановлении (при наличии пула), поэтому они могут устареть, если соединение поддерживается длительное время.  
   
- Дополнительные сведения см. в разделе [Using Database Mirroring](../native-client/features/using-database-mirroring.md).  
+ Дополнительные сведения см. в статье [Зеркальное отображение базы данных](../native-client/features/using-database-mirroring.md).  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY задает принудительное использование проверки подлинности Windows для проверки доступа по имени входа сервера. Если используется проверка подлинности Windows, драйвер пропускает идентификатор значения пользователя и пароля предоставляется как часть **SQLConnect**, [SQLDriverConnect](sqldriverconnect.md), или [SQLBrowseConnect](sqlbrowseconnect.md)обработки.  
@@ -191,7 +188,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  Дополнительные сведения о режиме MARS см. в разделе [использование множественных активных результирующих наборов &#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md).  
   
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- Если приложение соединяется с группой высокого уровня доступности [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] в разных подсетях, это свойство соединения конфигурирует собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для поддержки более быстрого поиска активного (в настоящее время) сервера и соединения с ним. Например:  
+ Если приложение соединяется с группой высокого уровня доступности [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] в разных подсетях, это свойство соединения конфигурирует собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для поддержки более быстрого поиска активного (в настоящее время) сервера и соединения с ним. Пример:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a3c83dfc8e7282ea67c3aff783ad4ec50826865
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41bdf706a4834ffb2f4e5d5df1b5b7633a20d603
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100514"
 ---
 # <a name="sqllocaldb-utility"></a>Программа SqlLocalDB
   Используйте `SqlLocalDB` служебная программа для создания экземпляра [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. `SqlLocalDB` Служебной программы (SqlLocalDB.exe) — это средство простой командной строки, чтобы предоставить пользователям и разработчикам для создания и управления экземпляром [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. Сведения об использовании **LocalDB**, см. в разделе [SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
@@ -48,7 +45,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>Аргументы  
  [ **create** | **c** ] *\<имя-экземпляра>* *\<версия-экземпляра>* [**-s** ]  
- Создает новый экземпляр [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB` использует версию [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] двоичные файлы, заданные * \<версия экземпляра >* аргумент. Номер версии задается в числовом формате и содержит хотя бы один знак после разделителя. Дополнительные номера версии (пакеты обновления) являются необязательными. Например, следующие два номера версии будут допустимыми: 11.0 и 11.0.1186. Указываемая версия должна быть установлена на компьютере. Если не указан, по умолчанию номер версии к версии `SqlLocalDB` служебной программы. В случае добавления параметра **-s** запускается новый экземпляр **LocalDB**.  
+ Создает новый экземпляр [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB` использует версию [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] двоичные файлы, заданные  *\<версия экземпляра >* аргумент. Номер версии задается в числовом формате и содержит хотя бы один знак после разделителя. Дополнительные номера версии (пакеты обновления) являются необязательными. Например, следующие два номера версии будут допустимыми: 11.0 и 11.0.1186. Указываемая версия должна быть установлена на компьютере. Если не указан, по умолчанию номер версии к версии `SqlLocalDB` служебной программы. В случае добавления параметра **-s** запускается новый экземпляр **LocalDB**.  
   
  [ **share** | **h** ]  
  Делает указанный частный экземпляр **LocalDB** общим, используя указанное общее имя. Если идентификатор безопасности пользователя или имя учетной записи не указаны, используется значение по умолчанию — имя текущего пользователя.  

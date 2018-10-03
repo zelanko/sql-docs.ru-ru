@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b0badf00027259bb2203828e075a8d009deb8d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 183719983a6ea95ab545888d009d5226fe24b7dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149835"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106504"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Режим DirectQuery (табличные службы SSAS)
   Службы Analysis Services позволяют получать данные и создавать отчеты из табличной модели путем получения данных и агрегатов напрямую из системы реляционных баз данных, используя *режим DirectQuery*. В этом разделе объясняются отличия между стандартными табличными моделями, которые находятся только в памяти, и табличными моделями, которые могут отправлять запросы к реляционному источнику данных, а также способы создания и развертывания модели для использования в режиме DirectQuery.  

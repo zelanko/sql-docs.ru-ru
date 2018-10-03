@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 935957ce0934e6b57bd7abd27bcf74fd14ee8cd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204510"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113244"
 ---
 # <a name="lesson-5-create-relationships"></a>Занятие 5. Создание связей
   На этом занятии будут проверены связи, автоматически созданные во время импорта данных, и добавлены новые связи между различными таблицами. Связь — это соединение между двумя таблицами, которое определяет, каким образом должны соотноситься данные этих таблиц. Например, таблица «Продукт» и таблица «Подкатегория продуктов» содержат связь на основе того факта, что каждый продукт принадлежит подкатегории. Дополнительные сведения см. в разделе [Связи (табличные службы SSAS)](tabular-models/relationships-ssas-tabular.md).  

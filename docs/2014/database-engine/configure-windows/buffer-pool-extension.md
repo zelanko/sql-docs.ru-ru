@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e143cbf9540aab467bd57a5c4f923df81d658fb0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21e055290abaf9edd4fffaa6b2179af70915086e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328422"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063304"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
   Расширение буферного пула, появившееся в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], обеспечивает сквозную интеграцию твердотельных накопителей (SSD) в качестве расширения ОЗУ (NvRAM) для буферного пула компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и позволяет значительно повысить пропускную способность ввода-вывода. Расширение буферного пула доступно не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -96,7 +93,7 @@ ms.locfileid: "37328422"
 |sqlserver.buffer_pool_extension_pages_evicted|Возникает, когда страница извлекается из файла расширения буферного пула.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|  
 |sqlserver.buffer_pool_eviction_thresholds_recalculated|Возникает при вычислении порогового значения вытеснения.|warm_threshold<br /><br /> cold_threshold<br /><br /> pages_bypassed_eviction<br /><br /> eviction_bypass_reason<br /><br /> eviction_bypass_reason_description|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |||  
 |-|-|  

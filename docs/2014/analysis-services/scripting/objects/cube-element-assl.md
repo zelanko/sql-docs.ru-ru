@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Cube Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cube element
 ms.assetid: 2d801066-6cca-4a99-bbd8-56a38d762108
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eab8cc56de346540491664a60c644ef868b02a25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87604405c6bd089e4b4a9f22309fa6a5d009b8ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165265"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101500"
 ---
 # <a name="cube-element-assl"></a>Элемент Cube (ASSL)
   Определяет обычный, виртуальный или связанный куб в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [базы данных](database-element-assl.md) элемент.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e9f4fb795823b1ce428a43d62f3512ebe9f103ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc294086c960306e5a9ee62d677ecfaeafc3bcba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120375"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>Контрольный список развертывания: Службы Reporting Services, Power View и PowerPivot для SharePoint
   Используйте следующий контрольный список для установки этих компонентов бизнес-Аналитики в той же фермы SharePoint: PowerPivot для SharePoint, построитель отчетов и [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Хотя в этом списке рекомендуется определенный порядок установки, на практике эти компоненты можно устанавливать практически в любом порядке. Контрольный список предполагает наличие следующих установленных продуктов:  

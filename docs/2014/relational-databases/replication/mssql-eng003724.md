@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG003724 error
 ms.assetid: 10cb119d-92df-4124-b85d-cd2f2666c99c
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec8993766740639ac6f5c14dd4eca3b0c1943247
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62c5300561cf70462402692d03f53f2de860781a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131184"
 ---
 # <a name="mssqleng003724"></a>MSSQL_ENG003724
     
@@ -40,7 +37,7 @@ ms.locfileid: "37329494"
  При репликации объектов в базе данных они помечаются как реплицированные в системной таблице **sysarticles** (для моментального снимка и публикаций транзакций) или **sysmergearticles** (для публикаций слиянием). При попытке удалить реплицированный объект возникает данная ошибка.  
   
 ## <a name="user-action"></a>Действие пользователя  
- Убедитесь в том, что объект базы данных не подвергался репликации, прежде чем предпримете попытку удалить его. Например:  
+ Убедитесь в том, что объект базы данных не подвергался репликации, прежде чем предпримете попытку удалить его. Пример:  
   
 -   Если данная ошибка появляется в базе данных публикации, удалите статью из публикации, прежде чем удалить объект. Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   

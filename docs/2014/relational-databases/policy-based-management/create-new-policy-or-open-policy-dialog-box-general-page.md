@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.newgroup.f1
 - sql12.swb.dmf.policy.f1
 - sql12.swb.dmf.policy.filter.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 63b45a7bc65b800fb51038fccc44750612ba9aa0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3c59c37adfb1d01c183411a2a331b2cdbc231301
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812690"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130114"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Общие»
   С помощью этого диалогового окна можно создать новую или изменить существующую политику управления на основе политик. Используя области **Применить к** и **Ограничение сервера** в качестве фильтра можно ограничить действие политик определенным подмножеством всех возможных целей. Условия, которые будут использованы в качестве фильтров целей, должны быть определены для физического аспекта и не должны содержать функций и оператор LIKE. Когда система вычисляет набор объектов для политики, системные объекты исключаются из него по умолчанию.  Например, если набор объектов для политики относится ко всем таблицам, политика будет неприменима к системным таблицам. Если пользователям требуется оценить политику, используя системные объекты, их можно явно добавить в набор объектов. Однако несмотря на то, что все политики поддерживаются режимом оценки **проверка по расписанию** , в режиме **проверка при внесении изменений** по соображениям производительности поддерживаются не все политики с обязательными наборами объектов. Дополнительные сведения см. в разделе [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  

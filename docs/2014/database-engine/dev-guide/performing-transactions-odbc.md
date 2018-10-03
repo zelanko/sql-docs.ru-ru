@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, transactions
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: f431191a-5762-4f0b-85bb-ac99aff29724
-caps.latest.revision: 33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96a683f761ffa4a4848942e03788a711c2fd6cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 751b7e704bbd1388a1320f8047c8ec8d9f7b6b06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102294"
 ---
 # <a name="performing-transactions-odbc"></a>Выполнение транзакций (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают функции управления транзакциями ODBC API. [!INCLUDE[msCoName](../../includes/msconame-md.md)] обеспечивает полную поддержку локальных транзакций на отдельном сервере. Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует эти функции для поддержки функций ODBC API, которые управляют транзакциями.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77045c8ec5b542f8a01829adaa8074724a693092
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159675"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125950"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Диалоговое окно «Вставка функции» (SSAS)
   Диалоговое окно **Вставка функции** используется для выбора из списка тех функций, которые можно применять при построении формул. Для доступа к этому диалоговому окну из конструктора моделей нажмите кнопку функции (**fx**) в строке формул над каждой таблицей. Дополнительные сведения о выборе функций для применения в формулах см. в разделах «Введение в DAX» и «Построение формулы».  
@@ -48,7 +45,7 @@ ms.locfileid: "37159675"
   
  Статистические  
   
- Текст  
+ Текста  
   
 ## <a name="measures-and-formulas"></a>Меры и формулы  
  Диалоговое окно **Вставка функции** доступно только при построении формулы. Вычисления можно создавать либо в вычисляемых столбцах, либо в сводных таблицах и сводных диаграммах. Формулы, создаваемые явно для применения в сводной таблице, также называются *мерами*. Дополнительные сведения см. в разделах [Создание вычисляемого столбца (табличные службы SSAS)](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) и [Создание мер и управление ими (табличные службы SSAS)](tabular-models/measures-ssas-tabular.md).  

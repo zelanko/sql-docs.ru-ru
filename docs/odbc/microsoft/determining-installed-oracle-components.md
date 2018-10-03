@@ -1,35 +1,32 @@
 ---
-title: Определить установленные компоненты Oracle | Документы Microsoft
+title: Определение установленных компонентов Oracle | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], determining installed components
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f4c2c85def4d413e9a3cca87e83b6f3b5e23780
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7de783ae116a61aaa4c8801ca132127352020161
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899359"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849721"
 ---
-# <a name="determining-installed-oracle-components"></a>Определить установленные компоненты Oracle
+# <a name="determining-installed-oracle-components"></a>Определение установленных компонентов Oracle
 > [!IMPORTANT]  
 >  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемого корпорацией Oracle.  
   
- Чтобы определить Oracle компоненты, установленные на компьютере (и их версий), перейдите в каталог \Orainst в каталоге Oracle home. Откройте один из следующих текстовых файлов: Nt.rgs, Win95.rgs или Win98.rgs.  
+ Чтобы определить компоненты Oracle, установленные в системе (и их версий), перейдите в каталог \Orainst Oracle в домашнем каталоге. Откройте один из следующих текстовых файлов: Nt.rgs, Win95.rgs или Win98.rgs.  
   
- Формат файла — следующего вида:  
+ Формат файла — аналогичен следующему:  
   
 ```  
 0 ntinstall     all    "orainst"  "3.3.1.0.0C"  "Oracle Installer"  
@@ -41,4 +38,4 @@ ms.locfileid: "32899359"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- Файлы .rgs также включать сведения об установке и описание каждого компонента.
+ Файлы .rgs также включать сведения об установке и описания каждого компонента.

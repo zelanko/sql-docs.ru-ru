@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e41b4df0064343cadf6a7da042c243191c0561d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dbe4a733479e23e8630e3bbc043ba5dcbf30c1bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172965"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091494"
 ---
 # <a name="package-management-ssis-service"></a>Управление пакетами (службы SSIS)
   Управление пакетов требует выполнения следующих задач.  
@@ -81,7 +78,7 @@ ms.locfileid: "37172965"
   
  Дополнительные сведения см. в статье [dtutil Utility](../dtutil-utility.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Импорт и экспорт пакетов &#40;службы SSIS&#41;](../import-and-export-packages-ssis-service.md)  
   

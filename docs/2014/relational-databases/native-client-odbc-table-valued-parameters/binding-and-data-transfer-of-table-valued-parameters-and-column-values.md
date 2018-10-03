@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e16e44a7e695754742f58729600c42d0a5e5b84
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4ff7549e5a892f6048d6f737382f489dd0bf2ab2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131624"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Привязка и передача данных возвращающих табличное значение параметров и значений столбцов
   Возвращающие табличное значение параметры, как и другие параметры, нуждаются в привязке до их передачи на сервер. Приложение привязывает возвращающие табличные значения параметры так же, оно привязывает другие параметры: с помощью SQLBindParameter или эквивалентные вызовы для SQLSetDescField и SQLSetDescRec. Типом данных на сервере для параметра, возвращающего табличное значение, является SQL_SS_TABLE. Тип C может иметь значение SQL_C_DEFAULT или SQL_C_BINARY.  

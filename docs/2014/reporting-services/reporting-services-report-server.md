@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - report servers [Reporting Services], about report server
@@ -26,16 +22,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], report server
 - storage [Reporting Services]
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 9cb9c580dbd044034923718dd59e4ed27caebab2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40394915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108494"
 ---
 # <a name="reporting-services-report-server"></a>Сервер отчетов служб Reporting Services
   В этом разделе приведен обзор сервера отчетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — центрального компонента установки [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Он состоит из пары модулей обработки, к которым прилагается коллекция модулей специального назначения, обеспечивающих выполнение операций проверки подлинности, обработки данных, подготовки отчетов и доставки. Сервер отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] может работать в одном из двух режимов развертывания: в собственном режиме или в режиме интеграции с SharePoint. В разделе [Сравнение функций режима интеграции с SharePoint и собственного режима](#bkmk_featuresupport) можно найти сравнительную таблицу функций.  

@@ -1,27 +1,23 @@
 ---
-title: SqlErrorLogFile, класс | Документы Microsoft
+title: SqlErrorLogFile, класс | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
-caps.latest.revision: 12
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d2b4bf2b5d86f8c52a70bb06d25242992650d3e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aa44b5fd1e15b640df4df579350e99b7dff71ce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614222"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile, класс
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +44,12 @@ class SQLErrorLogFile
 |||  
 |-|-|  
 |ArchiveNumber|Тип данных: **uint32**<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Номер архива для файла журнала.|  
-|InstanceName|Тип данных: **строка**<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: ключ<br /><br /> <br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
+|InstanceName|Тип данных: **строка**<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: Key<br /><br /> <br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
 |Дата изменения|Тип данных: **даты и времени**<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Дата последнего изменения файла журнала.|  
 |LogFileSize|Тип данных: **uint32**<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Размер файла журнала в байтах.|  
-|Название|Тип данных: **строка**<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: ключ<br /><br /> <br /><br /> Имя файла журнала.|  
+|Имя|Тип данных: **строка**<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: Key<br /><br /> <br /><br /> Имя файла журнала.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 |||  
 |-|-|  
@@ -62,7 +58,7 @@ class SQLErrorLogFile
 |Пространство имен|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Пример  
- В этом примере извлекаются данных обо всех файлах журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы запустить пример, замените \< *имя_экземпляра*> с именем экземпляра, например, «экземпляр1».  
+ В этом примере извлекаются данных обо всех файлах журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы запустить пример, замените \< *имя_экземпляра*> с именем экземпляра, например, «Instance1».  
   
 ```  
 on error resume next  
@@ -82,25 +78,25 @@ Next
 ```  
   
 ## <a name="comments"></a>Комментарии  
- Когда *InstanceName* указан в инструкции WQL, запрос вернет информацию для экземпляра по умолчанию. Например, следующая инструкция WQL вернет информацию обо всех файлах журнала в текущем экземпляре (MSSQLSERVER).  
+ Когда *InstanceName* указан в инструкции WQL, запрос вернет сведения для экземпляра по умолчанию. Например, следующая инструкция WQL вернет информацию обо всех файлах журнала в текущем экземпляре (MSSQLSERVER).  
   
 ```  
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
 ## <a name="security"></a>безопасность  
- Для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файла журнала посредством инструментария WMI, необходимо иметь следующие разрешения на локальных и удаленных компьютеров:  
+ Для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файла журнала посредством инструментария WMI, необходимо иметь следующие разрешения как на локальных и удаленных компьютерах:  
   
 -   Доступ на чтение к **Root\Microsoft\SqlServer\ComputerManagement10** пространство имен WMI. По умолчанию доступ для чтения задается для всех с помощью разрешения «Включить учетную запись».  
   
     > [!NOTE]  
-    >  Сведения о проверке разрешений WMI см. в разделе «Безопасность» раздела [Просмотр автономных файлов журнала](../../relational-databases/logs/view-offline-log-files.md).  
+    >  Сведения о том, как проверка разрешений WMI см. в разделе "Безопасность" раздела [Просмотр автономных файлов журнала](../../relational-databases/logs/view-offline-log-files.md).  
   
--   Разрешение для чтения на папку, содержащую журналы ошибок. По умолчанию ошибки журналы находятся по следующему пути (где \< *диска >* представляет диск, на котором установлена [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и \< *InstanceName*> — Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Разрешение для чтения на папку, содержащую журналы ошибок. По умолчанию ошибки журналы находятся по следующему пути (где \< *диска >* представляет диск, на котором установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и \< *InstanceName*> — Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
      **\<Диск >: \Program Files\Microsoft SQL Server\MSSQL11** **.\< Имя_экземпляра > \MSSQL\Log**  
   
- При соединении с использованием брандмауэра убедитесь, что в брандмауэре задано исключение для WMI на удаленных целевых компьютерах. Дополнительные сведения см. в разделе [подключение к WMI, начиная с Windows Vista удаленно](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ При соединении с использованием брандмауэра убедитесь, что в брандмауэре задано исключение для WMI на удаленных целевых компьютерах. Дополнительные сведения см. в разделе [подключение к WMI Remotely Starting with Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>См. также  
  [SqlErrorLogEvent, класс](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   

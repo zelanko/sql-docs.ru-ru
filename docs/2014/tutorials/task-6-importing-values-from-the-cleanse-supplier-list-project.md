@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 240ae9701aa48f393c77dd27aafcd350bdd89d51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0eff880132e33cd8d73e7a1faa6dc6649b2caa2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137644"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Задача 6. Импорт значений из проекта очистки списка поставщиков
   В этой задаче вы импортируете наборы знаний служб DQS, полученные в процессе очистки. Дополнительные сведения см. в разделе [Импорт значений проекта очистки в домен](http://msdn.microsoft.com/library/hh479581.aspx) . Вы также экспортируете базу знаний в файл служб DQS перед публикацией обновленной базы знаний **Поставщики** .  

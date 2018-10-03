@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b6b76ce027321eb681a2cd6872c1b24050c569f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34270698b6035f7646d9482a82746c4ccff09d78
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132416"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок пакетов после их завершения и развертывания.  
@@ -113,7 +110,7 @@ ms.locfileid: "37329914"
 ## <a name="troubleshoot-errors-without-a-description"></a>Устранение неполадок, когда ошибка выдается без описания  
  Если ошибка служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выдается без описания, это описание можно найти в [Справочнике по сообщениям об ошибках служб Integration Services](../integration-services-error-and-message-reference.md), выполнив поиск по номеру ошибки. Этот список сейчас не включает сведения об устранении неполадок.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Настройка вывода ошибок в компоненте потока данных](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>См. также  
