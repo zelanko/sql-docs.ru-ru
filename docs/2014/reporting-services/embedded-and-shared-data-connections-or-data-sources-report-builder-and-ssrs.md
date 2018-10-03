@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-caps.latest.revision: 28
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f83f7b150fb709e4b6716f8a49d802949a62e9dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1862d4d8a1437f223e688b0b2b95ad5b5768e6a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282640"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224446"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)
   Отчеты используют подключения к данным для получения данных об отчете при выполнении запросов или при обработке отчета. Подключение можно выбрать из списка встроенных типов подключений: к реляционной базе данных, к многомерной базе данных, веб-службе или некоторым другим источникам данных. При описании подключений к данным используются следующие термины.  

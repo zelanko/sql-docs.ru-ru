@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 94a17b12d3d9c5ce30db7a57e76c3053008ff281
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a551b7be49ebcb38221973657658000c38d369a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223944"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Тип соединения Hyperion Essbase (службы SSRS)
   Чтобы включить данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], позволяющего извлекать многомерные данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  

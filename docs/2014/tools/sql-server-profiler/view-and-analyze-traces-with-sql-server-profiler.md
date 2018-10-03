@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f6d3051af96c963c65496f1e10dabd8ae035d0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e6739f427642151bec0fd193c26d40a16af51e94
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213434"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Просмотр и анализ трассировок с помощью приложения SQL Server Profiler
   Просмотр данных событий, перехваченных при трассировке с помощью программы [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает данные с учетом определенных свойств трассировки. Одним способом анализа данных сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является их копирование в другую программу, например в сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в помощник по настройке ядра СУБД [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] Если столбец данных **Текст** включен в трассировку, помощник по настройке может использовать файл трассировки, который содержит пакет инструкций SQL и события удаленного вызова процедуры (RPC). Для обеспечения того, чтобы при использовании помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] Д были захвачены правильные события и столбцы, используйте стандартный шаблон настройки, который поставляется с приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

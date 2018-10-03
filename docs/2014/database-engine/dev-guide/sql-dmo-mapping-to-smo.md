@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
-caps.latest.revision: 36
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54c66973a1cc0ca7f024a696902f694b45778a9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31c9372674ab439c3435515c13f1d76518771328
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182821"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219274"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>Сопоставление SQL-DMO с SMO
   Объекты SQL-DMO больше не включается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], приложения SQL-DMO должны быть преобразованы для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO). Объектная модель SMO напоминает объектную модель SQL-DMO, поэтому большинство объектов SQL-DMO сопоставляются с одноименными объектами SMO. Однако некоторые объекты SQL-DMO при переходе на SMO изменены или удалены. В следующей таблице приведены рекомендованные действия по преобразованию SQL-DMO объектов, которые не переводятся на объекты SMO непосредственно.  

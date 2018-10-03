@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Query Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query element
 ms.assetid: 5a4544e4-012f-4a47-942c-23596400ea16
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02feb5cb14e6b6acdc6100070495d0c84b89e483
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68da02ef99a5668c7ee0a3a57a06aca90ae68a25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224404"
 ---
 # <a name="query-element-xmla"></a>Элемент Query (XML для аналитики)
   Содержит запрос в [запросы](queries-element-xmla.md) коллекции, используемой с [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) команды во время оптимизации с учетом использования.  

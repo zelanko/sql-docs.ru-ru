@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
-caps.latest.revision: 68
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 838d3fa3190e592c0b46529ea45b7e1a7b91c8be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69aea0ec22ec03f05f05f10998e955d7f19bffd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236654"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216164"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   Одноранговая репликация поддерживает масштабируемые и отказоустойчивые решения, сохраняя копии данных на нескольких экземплярах сервера, которые также называются *узлами*. Одноранговая репликация, основанная на репликации транзакций, распространяет согласованные на уровне транзакций изменения почти в реальном времени. Это позволяет приложениям, для которых требуется масштабируемость операций чтения, распределять клиентские операции чтения на несколько узлов. Поскольку данные сохраняются на узлах почти в режиме реального времени, одноранговая репликация обеспечивает избыточность данных, что повышает доступность данных.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DISCOVER_ENUMERATORS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DISCOVER_ENUMERATORS rowset
 ms.assetid: ddc7b13c-3135-4419-8166-eddd459167da
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 328d37a9d010388c0cb8d0e7e9d251601e35f949
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b6a41d91bb5d7f5d44c362733ccbb038f707024
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218970"
 ---
 # <a name="discoverenumerators-rowset"></a>Набор строк DISCOVER_ENUMERATORS
   Возвращает список имен, типов данных и значений перечисления, поддерживаемых [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика для конкретного источника данных. Поставщик XMLA публикует все распознаваемые им константы перечисления.  
@@ -41,11 +38,11 @@ ms.locfileid: "37302714"
 |Имя столбца|Индикатор типа|Длина|Описание|  
 |-----------------|--------------------|------------|-----------------|  
 |`EnumName`|`DBTYPE_WSTR`||Имя перечислителя, который содержит набор значений.|  
-|`EnumDescription`|`DBTYPE_WSTR`||Локализованное описание перечислителя. Уведомляет службу панели инструментов, что выбранное средство было использовано.|  
+|`EnumDescription`|`DBTYPE_WSTR`||Локализованное описание перечислителя. Может быть `NULL`.|  
 |`EnumType`|`DBTYPE_WSTR`||Тип данных значений перечислителя.|  
 |`ElementName`|`DBTYPE_WSTR`||Имя одного из элементов Value в наборе перечислителей.<br /><br /> Пример: `TDP`|  
-|`ElementDescription`|`DBTYPE_WSTR`||(Необязательно) Локализованное описание элемента. Уведомляет службу панели инструментов, что выбранное средство было использовано.|  
-|`ElementValue`|`DBTYPE_WSTR`||Значение элемента. Уведомляет службу панели инструментов, что выбранное средство было использовано.<br /><br /> Пример: `01`|  
+|`ElementDescription`|`DBTYPE_WSTR`||(Необязательно) Локализованное описание элемента. Может быть `NULL`.|  
+|`ElementValue`|`DBTYPE_WSTR`||Значение элемента. Может быть `NULL`.<br /><br /> Пример: `01`|  
   
  Этот набор строк схемы не отсортирован.  
   

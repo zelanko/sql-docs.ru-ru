@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0412dad97550d5a9aaf601488559ef7c91e1880a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78674b36b395aa50677e17fa4344690c988f5715
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207064"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215134"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Занятие 6: Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Урок 6. Перенос базы данных с исходного локального компьютера на целевой компьютер в Microsoft Azure
   Для этого занятия предполагается, что у вас уже есть другой экземпляр SQL Server, который может находиться на другом локальном компьютере или на виртуальной машине Windows Azure. Сведения о том, как создать виртуальную машину SQL Server в Windows Azure, см. в разделе [подготовки виртуальной машины с SQL Server в Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). После провизионирования виртуальной машины SQL Server в Windows Azure необходимо подключиться к экземпляру SQL Server на этой виртуальной машине с помощью среды SQL Server Management Studio, работающей на другом компьютере.  
   
  Для этого занятия также предполагается, что вы уже выполнили следующие шаги.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.subscriptionssummary.merge.f1
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5bd3f71bc9c10fb98d0ac7e6084cc7b56f82b1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9901e15502a50ecc35894152c1bb78deaab2b805
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177791"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214954"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication-sql-server-2005-and-later"></a>Сведения об издателе, список просмотра подписок (публикация слиянием, SQL Server 2005 и более поздние версии)
   Вкладка **Список наблюдения за подписками** доступна для распространителей под управлением [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Она предназначается для отображения сведений о подписках на все публикации, доступные на выбранном издателе. Список подписок можно фильтровать для просмотра ошибок, предупреждений и подписок с низкой производительностью. Эта вкладка предоставляет администратору единое расположение для контроля за активностью всех репликаций на издателе. Монитор репликации отображает все подписки, требующие внимания администратора, на основе выбранного типа репликации и в соответствии с параметром, выбранным в раскрывающемся списке **Показать** . Элементы отображаются на этой вкладке в соответствии с текущим состоянием и производительностью, поэтому подписки отображаются на этой странице только в случае, если они в настоящее время соответствуют параметру в списке **Показать** .  

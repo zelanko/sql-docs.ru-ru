@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aeb25af5c5c1c9fb5a61d52468ad3762ca29dcf5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a4f516999a9c876421c89eb82b163c08e975fe2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281870"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215624"
 ---
 # <a name="locktimeout-event-class"></a>Класс событий Lock:Timeout
   Класс событий Lock:Timeout указывает на то, что запрос на захват некоторого ресурса, например страницы, превысил время ожидания, поскольку данный ресурс был захвачен в блокирующем режиме другой транзакцией. Время ожидания определяется системной функцией @@LOCK_TIMEOUT и может быть задано инструкцией SET LOCK_TIMEOUT.  

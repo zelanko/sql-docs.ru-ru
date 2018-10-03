@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0dcebe1fa634678fa754b74be04d1dd5e1bcac5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c4491baada6f3a378a1704608c4dd8427c526ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229854"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
   Преобразование «Уточняющий запрос» выполняет уточняющие запросы, объединяя данные во входных столбцах со столбцами в ссылочном наборе данных. Уточняющие запросы используются для доступа к дополнительной информации в связанной таблице, основанной на значениях в общих столбцах.  
@@ -89,7 +86,7 @@ ms.locfileid: "37298814"
   
  Сохранение кэша в файл имеет следующие преимущества.  
   
--   ***Совместное использование файла кэша несколькими пакетами. Дополнительные сведения см в разделе *** [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
+-   ***Совместное использование файла кэша несколькими пакетами. Дополнительные сведения см в разделе***  [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
   
 -   Развертывание кэш-файла с пакетом. ***Затем эти данные можно использовать на нескольких компьютерах.*** Дополнительные сведения см. в разделе [Создание или развертывание кэша для преобразования "Уточняющий запрос"](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -120,7 +117,7 @@ ms.locfileid: "37298814"
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] различается способ сравнения строк. Если преобразование «Уточняющий запрос» было настроено для загрузки эталонного набора данных в кэш до своего запуска, службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] проводят сравнение уточняющего запроса в кэше. В противном случае операция уточняющего запроса использует параметризованную инструкцию SQL, а [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] производит сравнение уточняющего запроса. Это означает, что преобразование «Уточняющий запрос» может возвращать различное количество результатов поиска из одной и той же таблицы подстановки в зависимости от типа кэша.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами. Дополнительные сведения см. в следующих разделах.  
   
 -   [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  

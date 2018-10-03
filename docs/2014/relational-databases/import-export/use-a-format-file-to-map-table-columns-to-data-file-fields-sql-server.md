@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping columns to fields during import [SQL Server]
 - format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3f793f6073dda2bc881cbd5dc0c58f847933b87
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a35a70da1dac3d6dd2ff5e37f696654960883810
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229024"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)
   Файл данных может содержать поля, выстроенные в порядке, отличном от порядка соответствующих столбцов в таблице. В этом подразделе описывается изменение файлов форматирования в формате XML и в формате, отличном от XML для импорта файла данных, поля которого выстроены в ином порядке, нежели столбцы таблицы. Измененный файл форматирования сопоставляет поля данных соответствующим столбцам таблицы.  

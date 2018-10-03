@@ -1,20 +1,21 @@
 ---
 title: Руководство по создания, обучения и оценки моделей на основе секций в R (SQL Server служб машинного обучения) | Документация Майкрософт
+description: Узнайте, как модели, обучения и использования секционированных данных, которая динамически создается при использовании возможности моделирования на основе раздела машинного обучения SQL Server.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51fd17b10ed2fde9d8412c6c47f868458edf7d5c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715465"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232568"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Руководство По созданию моделей на основе секций на R в SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "46715465"
 В этом руководстве сведения моделирования на основе раздела с помощью классической образец данных такси Нью-ЙОРКА и R-скрипт. Столбец секционирования является метод оплаты.
 
 > [!div class="checklist"]
-> * Раздел, на основе столбца payment_type. Значения в этот сегмент данных в столбце, одну секцию для всех типов оплаты.
+> * Разделы основаны на типах оплаты (5).
 > * Создайте и обучения моделей в каждой секции и хранить объекты в базе данных.
 > * Прогнозирования вероятности совет результаты по каждой секции модели, используя демонстрационные данные, зарезервированные для этой цели.
 
@@ -37,21 +38,17 @@ ms.locfileid: "46715465"
  
 Для работы с этим учебником необходимо иметь следующее:
 
-+ SQL Server 2019 экземпляр ядра СУБД, с помощью служб машинного обучения и службы R
-+ образец данных
-+ Это средство для выполнения запроса T-SQL, например SQL Server Management Studio
++ Недостаточно системных ресурсов. Используется большой набор данных и операций обучения требуется много ресурсов. По возможности используйте системой, имеющей по крайней мере 8 ГБ ОЗУ. В качестве альтернативы можно использовать небольшие наборы данных, чтобы обойти ограничения ресурсов. Инструкции для уменьшения набора данных приведены в коде. 
 
-### <a name="system-resources"></a>Системные ресурсы
++ Это средство для T-SQL "выполнение запроса", такие как [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Используется большой набор данных и операций обучения требуется много ресурсов. По возможности используйте системой, имеющей по крайней мере 8 ГБ ОЗУ. В качестве альтернативы можно использовать небольшие наборы данных, чтобы обойти ограничения ресурсов. Инструкции для уменьшения набора данных приведены в коде. 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), которую можно [Загрузите и восстановите](sqldev-download-the-sample-data.md) на ваш локальный экземпляр ядра СУБД. Размер файла составляет около 90 МБ.
 
-### <a name="sql-server-database-engine-with-machine-learning-services"></a>Ядро СУБД SQL Server со службами машинного обучения
++ SQL Server 2019 предварительной версии экземпляр ядра СУБД, с помощью интеграции R и служб машинного обучения.
 
-SQL Server 2019 CTP-версии 2.0 или более поздней версии, со службами машинного обучения установлен и настроен, является обязательным. Вы можете проверить версию сервера в среде Management Studio, выполнив `SELECT @@Version` как запрос T-SQL. Выходные данные должны быть «Microsoft SQL Server (CTP 2.0) - 2019 15.0.x».
+Проверьте версию, выполнив **`SELECT @@Version`** как запрос T-SQL в средстве запросов. Выходные данные должны быть «Microsoft SQL Server (CTP 2.0) - 2019 15.0.x».
 
-### <a name="r-packages"></a>Пакеты R
-
-В этом учебнике используется R установлен со службами машинного обучения. Можно проверить установленный экземпляр R, возвращая неверный формат список всех пакетов R, установленные с помощью вашего экземпляра компонента database engine.
+Проверьте доступность пакетов R, возвращая неверный формат список всех пакетов R, установленные с помощью вашего экземпляра компонента database engine:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -64,18 +61,6 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
-
-### <a name="tools-for-query-execution"></a>Средства для выполнения запроса
-
-Вы можете [загрузить и установить SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), или использовать любое средство, которое подключается к реляционной базе данных и запускает сценарий T-SQL. Убедитесь, что можно соединиться с экземпляром компонента database engine, имеющий служб машинного обучения.
-
-### <a name="sample-data"></a>образец данных
-
-Источником данных является [такси Нью-ЙОРКА и Лимузинов комиссии](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) общедоступного набора данных. 
-
-+ Скачайте [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) файла резервной копии базы данных и восстановить ее на экземпляре компонента database engine.
-
-Имя файла базы данных должен быть **NYCTaxi_sample** Если вы хотите запустить следующие скрипты без изменений.
 
 ## <a name="connect-to-the-database"></a>Соединиться с базой данных
 

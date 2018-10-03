@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, parameters
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - ODBC applications, parameters
 - bound parameter markers [SQL Server Native Client]
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f117cf02f863eb2c5d3dae602ce4503e71b885e1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 071ef09e796f5b44076c4b6d00b780f2822e7168
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227914"
 ---
 # <a name="binding-parameters"></a>Привязка параметров
   Каждый маркер параметра в инструкции SQL должен быть сопоставлен переменной в приложении (привязан к ней), прежде чем можно выполнить инструкцию. Это делается путем вызова [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) функции. **SQLBindParameter** описывает переменную программы (адрес, тип данных C и т. д.) к драйверу. Она также определяет маркер параметра, указывая его порядковое значение, а затем описывая характеристики представляемого им объекта SQL (тип данных SQL, точность и т. д.).  

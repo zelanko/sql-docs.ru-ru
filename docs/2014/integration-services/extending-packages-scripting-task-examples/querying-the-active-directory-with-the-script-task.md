@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03a12904a08c964a122f0658ccb53a4f5f0bd4ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a22b2648d450bb5c50439aca02b65c39de65ea2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226801"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Запрос Active Directory в задаче «Скрипт»
   Часто задачей корпоративных приложений обработки данных, например, пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], является обработка данных различным образом, в зависимости от категории, названия должности, иных характеристик сотрудников, сведения о которых хранятся в службе каталогов Active Directory. Active Directory — служба каталогов [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, обеспечивающая централизованное хранение метаданных не только о пользователях, но и об используемых ими корпоративных ресурсах, например компьютерах и принтерах. Пространство имен `System.DirectoryServices` платформы Microsoft .NET Framework предоставляет классы для работы со службой каталогов Active Directory, с помощью которых можно управлять рабочим процессом по обработке данных в зависимости от типа данных.  
@@ -48,7 +45,7 @@ ms.locfileid: "37245194"
   
 4.  В проекте скрипта добавьте ссылку на пространство имен `System.DirectoryServices`.  
   
-5.  , и делает это по-другому. Используйте инструкцию `Imports`, чтобы импортировать пространство имен `DirectoryServices`.  
+5.  . Используйте инструкцию `Imports`, чтобы импортировать пространство имен `DirectoryServices`.  
   
 > [!NOTE]  
 >  Для успешного выполнения этого скрипта необходимо, чтобы в сети организации использовалась служба каталогов Active Directory и в ней хранились сведения, используемые в этом примере.  
@@ -115,6 +112,6 @@ public void Main()
   
 -   Техническая статья [Обработка данных Active Directory в службах SSIS](http://go.microsoft.com/fwlink/?LinkId=199588) на сайте social.technet.microsoft.com  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services  **<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
   

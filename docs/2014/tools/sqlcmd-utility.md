@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 115
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04edfd00a4f298e944837153e5e71f3c832a17f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303445"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229974"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
   `sqlcmd` Служебная программа позволяет вводить [!INCLUDE[tsql](../includes/tsql-md.md)] инструкций, системные процедуры и файлы скриптов в командной строке в **редактора запросов** в режиме SQLCMD, в файл скрипта Windows или шаг задания операционной системы (Cmd.exe) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Задание агента. Эта программа использует технологию ODBC для выполнения пакетов [!INCLUDE[tsql](../includes/tsql-md.md)].  
@@ -569,7 +566,7 @@ ms.locfileid: "37303445"
   
  `:EXIT(query)`  
   
- Например:  
+ Пример:  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -595,7 +592,7 @@ ms.locfileid: "37303445"
   
  Выполняет пакет, включая запрос, возвращает результаты запроса и завершает работу.  
   
- Если в скрипте `sqlcmd` используется параметр RAISERROR, и при этом возникает состояние 127, программа `sqlcmd` завершает выполнение и возвращает клиенту идентификатор сообщения. Например:  
+ Если в скрипте `sqlcmd` используется параметр RAISERROR, и при этом возникает состояние 127, программа `sqlcmd` завершает выполнение и возвращает клиенту идентификатор сообщения. Пример:  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -656,7 +653,7 @@ ms.locfileid: "37303445"
  `:connect $(myservername) $(myusername)`  
   
  [**:**] **!!**  \< *команды*>  
- Исполнение команд операционной системы. Чтобы выполнить команду операционной системы, начните строку с двух восклицательных знаков (**!!**) и далее укажите команду операционной системы. Например:  
+ Исполнение команд операционной системы. Чтобы выполнить команду операционной системы, начните строку с двух восклицательных знаков (**!!**) и далее укажите команду операционной системы. Пример:  
   
  `:!! Dir`  
   

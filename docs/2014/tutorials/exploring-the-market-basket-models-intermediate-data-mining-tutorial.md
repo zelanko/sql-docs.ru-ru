@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c81bba0a055f812afddb56eac604111796f464d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179141"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211944"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Изучение модели «Потребительская корзина» (учебник по интеллектуальному анализу данных — средний уровень)
   Теперь, когда вы создавали `Association` модели, ее можно просмотреть с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] просмотра взаимосвязей в **просмотра моделей интеллектуального анализа** конструкторе интеллектуального анализа данных. В данном учебнике рассказано, как использовать средство просмотра для изучения взаимосвязей между элементами. С помощью средства просмотра можно визуально определить, какие продукты имеют тенденцию появляться вместе, а также получить общее представление о появляющихся закономерностях.  

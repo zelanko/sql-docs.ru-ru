@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - server alias
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - aliases [SQL Server], deleting
 - aliases [SQL Server], creating
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ad94dc1af7f5725e0f32f5a3d6789122f1ca129c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3927bc1b414a30bb86148fa6c00c3e0bcb2316a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312284"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213154"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client-sql-server-configuration-manager"></a>Создание или удаление псевдонима сервера для использования клиентом (диспетчер конфигурации SQL Server)
   В этом разделе описано, как создать и удалить псевдоним сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. Псевдоним является альтернативным именем, которое можно использовать для создания соединения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Псевдонимы могут использоваться с любым клиентским приложением. После создания псевдонима сервера клиент может соединяться с несколькими серверами по разным сетевым протоколам, не указывая протокол и сведения о соединении для каждого из них. Кроме того, можно также держать постоянно включенными несколько сетевых протоколов, даже если некоторые из них используются время от времени. Если сервер настроен на прослушивание порта или именованного канала, отличных от используемых по умолчанию, и служба браузера SQL Server отключена, то можно создать псевдоним, который будет определять другой номер порта или именованный канал.  

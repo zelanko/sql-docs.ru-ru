@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8825385596c14121d0e6e13a7ecdbccbafb26a52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15e4e4a90232f4db1b83b3a09d45589e6fcdeb8d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224904"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226884"
 ---
 # <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>Что&#39;возможности построителя отчетов для SQL Server 2014
   В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] появилось несколько функций служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -42,7 +39,7 @@ ms.locfileid: "37224904"
   
 -   Сжатие данных в формате ZIP обеспечивает меньший размер файлов.  
   
- Дополнительные сведения см. в разделе [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ##  <a name="WordRenderer"></a> Модуль подготовки отчетов Word для Microsoft Word 2007 – 2010 и Microsoft Word 2003  
  Модуль подготовки отчетов Word для служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], который впервые появился в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], подготавливает к просмотру отчет как документ Word, совместимый с [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2007–2010, а также [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2003 с установленным пакетом совместимости [!INCLUDE[msCoName](../includes/msconame-md.md)] Office для Word, Excel и PowerPoint. Это формат Office Open XML, а также соответствующие файлы имеют расширение DOCX.  

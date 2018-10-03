@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a6e2b34352e3fbb84a3f801919537b5936322ae7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96585ac5a5f248cd1a127c766e5925bdc66d0b71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215824"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Создание синхронного преобразования с помощью компонента скрипта
   Компонент преобразования используется в потоке данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для изменения и анализа данных, передаваемых из источника в назначение. Преобразование с синхронными выходами обрабатывает каждую входную строку, проходящую через компонент. Преобразование с асинхронными выходами ожидает, пока не получит все входные строки, чтобы завершить обработку. В этом разделе рассматривается синхронное преобразование. Сведения об асинхронных преобразованиях см. в разделе [Создание асинхронного преобразования с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Дополнительные сведения о различиях между синхронными и асинхронными компонентами см. в разделе [Основные сведения о синхронных и асинхронных преобразованиях](../understanding-synchronous-and-asynchronous-transformations.md).  

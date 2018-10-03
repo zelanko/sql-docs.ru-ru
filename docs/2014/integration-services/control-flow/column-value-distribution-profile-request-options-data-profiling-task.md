@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df5fd8b0d0583bcc9626032db226efa860c95f8d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a28070a2229e016bbc03b90d559252bd8851ac78
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215144"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Параметры запроса профиля распределения значений в столбцах (задача «Профилирование данных»)
   Для установки параметров **запроса профиля распределения значений столбцов** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль распределения значений столбцов описывает все различные значения в выделенном столбце и указывает выраженную в процентах долю строк таблицы, представляемых каждым значением. Этот профиль может также указывать значения, превышающие указанную процентную долю строк в таблице. Этот профиль поможет выявить проблемы в данных, например неверное число уникальных значений в столбце. Например, при профилировании столбца штатов США можно обнаружить более 50 различных значений.  

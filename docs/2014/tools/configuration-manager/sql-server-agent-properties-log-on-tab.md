@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d69d6f159e0e1597fdc6b59c0ba4aadf80b3748
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f97c403349593498bb0fd222c3da3c6fe13da8ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227466"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Свойства агента SQL Server (вкладка «Вход в систему»)
   Используйте вкладку **Вход** диалогового окна **Свойства агента SQL Server** , чтобы указать учетную запись, используемую службой « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент», а также выполнить запуск или остановку службы. Изменение пароля учетной записи вступает в силу немедленно, без перезапуска службы.  

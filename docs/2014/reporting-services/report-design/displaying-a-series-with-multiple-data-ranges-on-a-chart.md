@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 647aef9c4cc3f06e9482d507791ff4c4fcc23a38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 153a7dfafea308c57dd933de633a016871e32e6e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251296"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221134"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>Отображение на диаграмме ряда с несколькими диапазонами данных (построитель отчетов и службы SSRS)
   Диаграмма использует минимальное и максимальное значения ряда для вычисления масштаба оси диаграммы. Если ряд, выводимый на диаграмме, содержит несколько диапазонов данных, точки данных могут перекрываться, и на диаграмме будут отчетливо видны лишь некоторые из них. Допустим, в отчете содержатся данные о ежедневных продажах за 30 дней.  

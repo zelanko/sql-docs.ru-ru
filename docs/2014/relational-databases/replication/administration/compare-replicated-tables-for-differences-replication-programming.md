@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tablediff utility
 - comparing replicated tables
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d7c9f726c85c7b1334eaedd8c7c331872497e28b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3748c28fe790000dc01b73fddea01e00e9ef1b54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216064"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>сравнить реплицируемые таблицы на предмет различий (программирование репликации)
   Проверка статей используется для определения того, совпадают ли опубликованные данные в статьях таблицы на издателе с данными  на подписчике. В результате могут быть выявлены расхождения. Дополнительные сведения см. в статье [Проверка реплицированных данных](../validate-replicated-data.md). Однако проверка дает только сведения о том, есть расхождение или нет. Никаких подробностей о расхождении данных в исходной таблице и целевой таблице не сообщается. Программа командной строки **tablediff** возвращает подробные сведения о расхождениях в двух таблицах и даже может создать скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] для приведения подписки в соответствие с данными на издателе.  

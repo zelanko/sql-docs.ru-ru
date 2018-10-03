@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
-caps.latest.revision: 5
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 765dbc5fc274146cfc6cd660acb2278c8e46b4ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5ba084d6912d7f60b124b28ea8635aa37d8259f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222294"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Сохранение отчетов на компьютере (построитель отчетов)
   В построителе отчетов можно сохранить определения отчетов на компьютере. Однако если сохранить их на компьютере, то другие пользователи не смогут просматривать эти отчеты, а отчеты, которые ссылаются на общие источники данных или элементы которых (изображения, вложенные отчеты и т. п.) хранятся вне компьютера, могут не запустится. Рекомендуется сохранять отчеты на сервере отчетов или сайте SharePoint.  

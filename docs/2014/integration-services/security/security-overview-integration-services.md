@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef095dd196b4deacf7fcd6ade6d2d50d3756d6f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ee84e7cd1e8d652283eb758af7396257fecf7b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167135"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228584"
 ---
 # <a name="security-overview-integration-services"></a>Общие сведения о безопасности (службы Integration Services)
   Безопасность служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] обеспечивается несколькими уровнями защиты, которые составляют насыщенную и гибкую среду безопасности. Эти уровни безопасности включают в себя использование цифровых подписей, свойств уровня пакетов, ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и разрешений операционной системы. Большинство этих функций безопасности относятся к категории управления доступом и удостоверениями.  
@@ -95,7 +92,7 @@ ms.locfileid: "37167135"
   
  Дополнительные сведения см. в разделе [Доступ к службам Integration Services](../access-to-the-integration-services-service.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  В следующем списке приведены ссылки на разделы, в которых описывается выполнение определенных задач в отношении безопасности.  
   
 -   [Создание пользовательской роли](../create-a-user-defined-role.md)  

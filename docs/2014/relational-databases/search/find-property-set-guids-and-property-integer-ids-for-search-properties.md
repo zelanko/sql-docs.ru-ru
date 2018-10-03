@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd3deed243e921ea7c15065b127f455d30cad0a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 387cb0f529858efc858004c9c0d2a382f52cf048
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222644"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска
   В этом разделе описывается получение значений, которые необходимы для добавления свойства в список свойств поиска и включения свойства для полнотекстового поиска. К таким значениям относится идентификатор GUID набора свойств и целочисленный идентификатор свойства документа.  

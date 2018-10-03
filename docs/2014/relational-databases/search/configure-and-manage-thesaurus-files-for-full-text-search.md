@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: 82
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19ca1d323f2b0e53e458aa808f791936b823eef7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164265"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220344"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Настройка и управление файлами тезауруса для полнотекстового поиска
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстовые запросы могут выполнять поиск синонимов для заданных пользователем терминов с помощью тезауруса. *Тезаурус* в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет набор синонимов для указанного языка. Системные администраторы могут определить две формы синонимов: расширяющие наборы и заменяющие наборы. Подготовив тезаурус, ориентированный на пользовательские полнотекстовые данные, можно эффективно расширить область полнотекстовых запросов к этим данным. Сопоставление с тезаурусом выполняется для всех запросов [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) и [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) и для любых запросов [CONTAINS](/sql/t-sql/queries/contains-transact-sql) и [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) , которые указывают предложение FORMSOF THESAURUS.  
