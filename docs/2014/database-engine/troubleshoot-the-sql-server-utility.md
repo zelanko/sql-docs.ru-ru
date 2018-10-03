@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
-caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d059ac17d901ca7eec0bf451ba7babaecce607a8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 34d6c6eb60d48edad7d00a4baf890814dab8a016
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815750"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186204"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Устранение неполадок служебной программы SQL Server
   При устранении неполадок служебной программы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может понадобиться устранить причину ошибок при регистрации экземпляра SQL Server в пункте управления программой, устранить неполадки, связанные с ошибками при сборе данных и вызывающие отображение серых значков в представлении списка управляемых экземпляров в пункте управления программой, устранить «узкие места» производительности или разрешить проблемы, связанные с исправностью ресурсов. Дополнительные сведения об устранении неполадок с работоспособностью ресурсов определяется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, см. в разделе [Устранение неполадок исправности ресурсов SQL Server &#40;служебной программы SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  

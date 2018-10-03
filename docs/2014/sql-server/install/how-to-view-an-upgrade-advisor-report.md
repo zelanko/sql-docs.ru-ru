@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -16,18 +14,17 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, reports
 - reports [Upgrade Advisor], viewing
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
-caps.latest.revision: 32
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df6d91d700182c7d3828d9e35ac61cfaa0b3959d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303584"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201934"
 ---
-# <a name="how-to-view-an-upgrade-advisor-report"></a>Практическое: просмотра отчетов помощника по обновлению
+# <a name="how-to-view-an-upgrade-advisor-report"></a>Просмотр отчета помощника по обновлению
   Помощник по обновлению создает отчеты по каждому компоненту, выбранному для анализа. В этом разделе рассказывается о том, как просмотреть отчет помощника по обновлению с начальной страницы помощника по обновлению.  
   
 > [!IMPORTANT]  

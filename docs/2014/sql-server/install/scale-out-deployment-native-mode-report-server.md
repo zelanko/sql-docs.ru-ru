@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151805"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099944"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Масштабное развертывание (сервер отчетов в собственном режиме)
   Используйте **конфигурации с масштабным развертыванием** странице в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager Чтобы просмотреть состояние инициализации для масштабного развертывания или включить сервер отчетов для масштабного развертывания. Термин *масштабное развертывание* означает два или более экземпляра сервера отчетов, совместно использующих общую базу данных сервера отчетов.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85abe1acb2fa12208ebf83541bd030646c67ddbc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1489cf9a0950a172c847f5abb6b666dd68b589c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155415"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191394"
 ---
 # <a name="modeling-flags-data-mining"></a>Флаги моделирования (интеллектуальный анализ данных)
   Флаги моделирования можно использовать в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы включить в алгоритм интеллектуального анализа данных дополнительные сведения о данных, которые определены в таблице вариантов. Алгоритм может использовать эти сведения для создания более точной модели интеллектуального анализа данных.  
@@ -103,7 +100,7 @@ WHERE MODEL_NAME = '<model name>'
   
  Можно применить параметр FORCE_REGRESSOR для обеспечения того, чтобы в алгоритме использовался конкретный регрессор. Этот параметр может применяться с алгоритмом дерева принятия решений и алгоритмом линейной регрессии.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Следующие ссылки помогут узнать больше об использовании флагов модели.  
   
 |Задача|Раздел|  

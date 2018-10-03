@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e9a7ddcf-2b01-485f-bbb5-62638b303bc6
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7a957701f1965d33eb19a16ac608f8797ddb1f7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b04a515fee16e686efc6816d2f68a281f318fa1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241780"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200494"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Занятие 5: Проверка моделей (учебник интеллектуального анализа данных)
   После того как модель была обработана с использованием проверочного набора сценария прямой почтовой рассылки, модели необходимо проверить по проверочному набору. Проверка — это важный шаг в процессе интеллектуального анализа данных. Очень важно выяснить, насколько хорошо модели интеллектуального анализа данных прямой почтовой рассылки работают с реальными данными, прежде чем выполнять их развертывание в рабочей среде.  

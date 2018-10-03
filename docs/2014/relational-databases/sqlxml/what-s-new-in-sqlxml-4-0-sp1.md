@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client, SQLXML
 - side-by-side installations [SQLXML]
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab3336a913a5b2a34c45800858af1b0b371f0746
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 52ac84652bf5f1141ab40b2bcf1b3091a3dcf7de
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258230"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204124"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Что&#39;возможности в SQLXML 4.0 с пакетом обновления 1
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 с пакетом обновления 1 (SP1) содержит различные обновления и улучшения. В этом разделе содержится описание всех обновлений и предоставляются ссылки на более подробные сведения (если они доступны). SQLXML 4.0 с пакетом обновления 1 (SP1) предоставляет улучшения для поддержки новых типов данных, появившихся в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В этом разделе рассматриваются следующие вопросы.  
@@ -149,7 +146,7 @@ ms.locfileid: "37258230"
   
      Раздел представлен таким образом, что можно оставить пробельные символы в данных. Если добавить этот раздел реестра и установить его значение равным 0, пробельные символы (возврат каретки, переноса строки и табуляция) в XML-документе возвращаются закодированными для значений атрибутов. Для значений элементов возвращается закодированным только символ возврата каретки.  
   
-     Например:  
+     Пример:  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

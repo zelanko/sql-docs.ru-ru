@@ -1,14 +1,11 @@
 ---
-title: Core.sp_update_data_source (Transact-SQL) | Документы Microsoft
+title: Core.sp_update_data_source (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3156ef5a6d4d1af2298222b660e6483eb109cddd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8bdbab374f7f6fa182ea344f442b23e2dec2a15b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766473"
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,17 +47,17 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_set_uid =] '*аргумент collection_set_uid*"  
- Имеет значение GUID для набора элементов сбора. *Аргумент collection_set_uid* — **uniqueidentifier**, и не имеет значения по умолчанию. Чтобы получить идентификатор GUID, запросите представление dbo.syscollector_collection_sets в базе данных msdb.  
+ [ @collection_set_uid =] '*collection_set_uid*"  
+ Имеет значение GUID для набора элементов сбора. *Аргумент collection_set_uid* — **uniqueidentifier**, не имеет значения по умолчанию. Чтобы получить идентификатор GUID, запросите представление dbo.syscollector_collection_sets в базе данных msdb.  
   
  [ @machine_name =] '*имя_компьютера*"  
  Имя сервера, на котором находится набор элементов сбора. *имя_компьютера* — **sysname** без значения по умолчанию.  
   
- [ @named_instance =] '*именованный_экземпляр*"  
- Имя экземпляра набора элементов сбора. *именованный_экземпляр* — **sysname**, и не имеет значения по умолчанию.  
+ [ @named_instance =] '*named_instance*"  
+ Имя экземпляра набора элементов сбора. *named_instance* — **sysname**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
->  *именованный_экземпляр* должно быть имя полного имени экземпляра, состоящее из имени компьютера и имя экземпляра в виде *computername*\\*instancename*.  
+>  *named_instance* должно быть полным именем экземпляра, который состоит из имени компьютера и имя экземпляра в виде *computername*\\*instancename*.  
   
  [ @days_until_expiration =] *days_until_expiration*  
  Количество дней, остающихся до окончания срока хранения данных в моментальном снимке. *days_until_expiration* — **smallint**.  
@@ -72,7 +68,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Каждый раз, когда пакет передачи начинает загружать данные в хранилище данных управления, исполняемый компонент сборщика данных вызывает функцию core.sp_update_data_source. Таблица core.source_info_internal обновляется, если со времени последней передачи данных произошло одно из следующих изменений.  
   
 -   Был добавлен новый набор элементов сбора.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TableID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - TableID element
 ms.assetid: 45fe7e23-b274-4bc2-be63-1a5bb6680f51
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3010d64a5898b16322afca819f54cbcc32f0b867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7fd2304c4f442102ff8d654bec3be19e34bdd944
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190864"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201584"
 ---
 # <a name="tableid-element-assl"></a>Элемент TableID (ASSL)
   Содержит идентификатор (ID) таблицы (из [DataSourceView](../objects/datasourceview-element-assl.md) элемент) связанных с родительским элементом.  

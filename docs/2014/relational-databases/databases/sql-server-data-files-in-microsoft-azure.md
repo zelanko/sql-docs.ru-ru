@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aac25e3bdab6ab5f52be0d5a443075ecbe05eb0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45e874ab6ed6f73ab5f0c27081daf200971603d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206194"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Файлы данных SQL Server в Windows Azure
   Файлы данных SQL Server в Windows Azure включают встроенную поддержку файлов баз данных SQL Server, которые хранятся в виде больших двоичных объектов Windows Azure. Компонент позволяет создать базу данных в SQL Server, выполняемом локально или на виртуальной машине в Windows Azure, с назначенным местом хранения для данных в хранилище данных большого двоичного объекта Windows Azure. Это усовершенствование значительно упрощает перемещение баз данных между компьютерами с помощью операций отсоединения и присоединения. Кроме того, этот компонент предоставляет альтернативное расположение для хранения файлов резервных копий баз данных, позволяя выполнять восстановление из хранилища Windows Azure и в него. Поэтому он обеспечивает возможность реализации нескольких гибридных решений, предоставляя ряд преимуществ для виртуализации данных, перемещения данных, безопасности и доступности, а также достижения снижения затрат и обслуживания для высокого уровня доступности и эластичного масштабирования.  

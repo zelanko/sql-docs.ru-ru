@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql12.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 337a90ea5068e405a97e44856be467ea478e5759
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189190"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)
   В этом разделе описано, как настроить свойство уровня совместимости по умолчанию, свойства базы данных развертывания и рабочей области, для которых можно указать предопределенные значения во всех новых проектах табличных моделей, создаваемых в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. После создания нового проекта эти свойства в конкретной модели по-прежнему можно изменить в зависимости от определенных требований.  

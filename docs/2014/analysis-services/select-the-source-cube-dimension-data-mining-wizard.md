@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
 ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 613847dca4d6113a8acfc8079ebc1e7a97ef3311
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f61dea4488e67c8b8c7ebd30920df2ef1774acd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192486"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087925"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Выбор измерения исходного куба (мастер интеллектуального анализа данных)
   Используйте страницу **Выбор измерения исходного куба** для выбора измерения из куба, содержащего параметры, которые нужно проанализировать. Например, если пользователь строит модель, которая анализирует поведение клиентов в процессе покупки на основе демографических данных, можно выбрать измерение «Клиент», которое обычно содержит уникальную запись для каждого клиента и различные атрибуты, представляющие демографические данные, например пол, место жительства или доход. В ходе работы мастера можно будет добавить таблицу, связанную с данной таблицей вариантов, например: можно добавить вложенную таблицу, в которой будет показано, какие товары клиент уже купил.  

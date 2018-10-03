@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8fb91e2ed29300f3d85b9376b725c95694c2da1d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e236f2ccd1478fc98d712e89b1d6d0a781a8ac2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211354"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Первоначальная конфигурация (PowerPivot для SharePoint)
   В этом разделе описаны действия, которые следует выполнить для настройки первоначальной установки PowerPivot для SharePoint. Наиболее простым способом настройки первоначальной установки является применение средства настройки служб PowerPivot. Он выполняет все описанные далее действия по настройке автоматически.  

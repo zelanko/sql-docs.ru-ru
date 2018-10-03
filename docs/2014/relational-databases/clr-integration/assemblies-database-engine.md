@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 157f43f4646c6c935da7884a0fdae93c9676e6fe
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208434"
 ---
 # <a name="assemblies-database-engine"></a>Сборки (компонент Database Engine)
   В этом разделе содержатся сведения, которые помогут понять, сконструировать и применить сборки.  
@@ -39,7 +36,7 @@ ms.locfileid: "37354966"
   
 -   Определяемые пользователем агрегатные функции. Дополнительные сведения см. в разделе [создание определяемых пользователем статистических выражений](../user-defined-functions/create-user-defined-aggregates.md).  
   
--   Определяемые пользователем типы. Дополнительные сведения см. в разделе [Using User-Defined типы](../native-client/features/using-user-defined-types.md).  
+-   Определяемые пользователем типы. Дополнительные сведения см. в статье [Использование пользовательских типов](../native-client/features/using-user-defined-types.md).  
   
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сборки выполняют следующие функции.  
   

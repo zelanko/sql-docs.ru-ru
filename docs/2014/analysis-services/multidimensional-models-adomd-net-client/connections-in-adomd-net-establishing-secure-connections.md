@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d97079ca400d92502cf3ff217137eb6f32d1920d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b77fefaad8ac573e526412f1c81be3969743a3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180861"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178214"
 ---
 # <a name="establishing-secure-connections-in-adomdnet"></a>Установка безопасных соединений в ADOMD.NET
   При использовании соединения в ADOMD.NET метод безопасности для этого соединения выбирается в зависимости от значения свойства `ProtectionLevel` строки подключения, которая используется при вызове метода <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  

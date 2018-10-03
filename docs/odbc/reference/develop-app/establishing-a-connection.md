@@ -1,13 +1,11 @@
 ---
-title: Подключения | Документы Microsoft
+title: Подключения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,22 +18,21 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d433869c3ae7cff9921210c25fce6757f36180b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606384"
 ---
-# <a name="establishing-a-connection"></a>Подключения
-После выделения памяти для среды и дескрипторов соединения, а также установки любых атрибутов соединения, приложение сможет подключиться к источнику данных или драйверу. Есть три различные функции, приложение может использовать для этого: **SQLConnect** (основной интерфейс уровень соответствия), **SQLDriverConnect** (Core) и **SQLBrowseConnect**(Уровень 1). Каждая из трех предназначен для использования в другом сценарии. Перед подключением, приложение может определить, какой из этих функций поддерживается с **ConnectFunctions** ключевое слово, возвращенных **SQLDrivers**.  
+# <a name="establishing-a-connection"></a>Установление подключения
+После выделения среды и дескрипторов соединения и установки любых атрибутов соединения, приложение сможет подключиться к источнику данных или драйверу. Существуют три различные функции, приложение может использовать для этого: **SQLConnect** (Core уровень соответствия интерфейса), **SQLDriverConnect** (ядро), и **SQLBrowseConnect**(Уровень 1). Каждая из трех предназначен для использования в другом сценарии. Перед подключением, приложение может определить, какие из этих функций поддерживается с **ConnectFunctions** ключевое слово, возвращенный **SQLDrivers**.  
   
 > [!NOTE]  
->  Некоторые драйверы ограничить число активных подключений, которые они поддерживают. Приложение вызывает **SQLGetInfo** SQL_MAX_DRIVER_CONNECTIONS возможность определить, сколько активных подключений поддерживает конкретного драйвера.  
+>  Некоторые драйверы Ограничьте число активных подключений, которые они поддерживают. Приложение вызывает **SQLGetInfo** SQL_MAX_DRIVER_CONNECTIONS возможность определить, сколько активных подключений поддерживает драйвер.  
   
  Этот раздел содержит следующие подразделы.  
   

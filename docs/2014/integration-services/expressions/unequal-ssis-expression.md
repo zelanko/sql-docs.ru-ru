@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbf78899779f87837ec6df2db46549563454d398
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92d3f38973671a29f5de28f2337afb33ede6f337
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259050"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052994"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (не равно) (выражение служб SSIS)
   Осуществляет сравнение для определения того, выполняется ли условие неравенства двух выражений с совместимыми типами данных. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  

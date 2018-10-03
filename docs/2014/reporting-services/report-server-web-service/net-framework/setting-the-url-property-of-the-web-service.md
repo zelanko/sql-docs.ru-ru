@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Url property
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6e59e0804ae2100ee3ced29725d20ec5e89b4d15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c43dccbe5ee989a747110b9ffd0f6376532679df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284560"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211154"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Задание свойства Url для веб-службы
-  В приложениях [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] можно в любое время изменить базовый URL-адрес веб-службы сервера отчетов, для использования которой приложение настроено в настоящее время. Для этого необходимо просто задать свойство **Url** объекта службы. Например:  
+  В приложениях [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] можно в любое время изменить базовый URL-адрес веб-службы сервера отчетов, для использования которой приложение настроено в настоящее время. Для этого необходимо просто задать свойство **Url** объекта службы. Пример:  
   
 ```vb  
 Dim rs As New ReportingService2010()  

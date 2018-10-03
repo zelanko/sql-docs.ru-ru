@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b9293aeb938a5898ab80f94f4b3879e381b4848
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9d6407d98bccb62f54443a8a8d1f5b61a093c7c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182664"
 ---
 # <a name="feature-review"></a>Обзор компонента
   Страница «Обзор компонента» содержит список (доступный только для чтения) компонентов, которые подготовлены для настройки и будут готовы к работе по окончании шага завершения создания образа. Список компонентов выбирается на шаге подготовки изображений и не подлежит изменению на шаге завершения создания образа. Помимо отображенных компонентов, подготовленный экземпляр также включает браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , модуль записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

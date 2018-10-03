@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - DiscretizationMethod property
 - EQUAL_AREAS method
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138f416d6dc7e1408bd65d10da0a8538906da3b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195564"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Создание структуры и модели нейронной сети (учебник по интеллектуальному анализу данных — средний уровень)
   Чтобы создать модель интеллектуального анализа данных, сначала необходимо воспользоваться мастером интеллектуального анализа данных, чтобы создать новую структуру интеллектуального анализа, основанную на новом представлении источника данных. В этой задаче будет использовать мастер для создания структуры интеллектуального анализа данных и в то же время создания связанных с ней модели на основе [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритма нейронной сети.  
@@ -100,15 +97,15 @@ ms.locfileid: "37304754"
     |AutomaticResponses|Непрерывный|Long|  
     |AverageTimePerIssue|Непрерывный|Long|  
     |Вызовы|Непрерывный|Long|  
-    |DayOfWeek|Discrete|Текст|  
+    |DayOfWeek|Discrete|Текста|  
     |FactCallCenterID|Key|Long|  
     |IssuesRaised|Непрерывный|Long|  
     |LevelOneOperators|Непрерывный|Long|  
     |LevelTwoOperators|Непрерывный|Long|  
     |Orders|Непрерывный|Long|  
     |ServiceGrade|Непрерывный|Double|  
-    |Shift|Discrete|Текст|  
-    |WageType|Discrete|Текст|  
+    |Shift|Discrete|Текста|  
+    |WageType|Discrete|Текста|  
   
 13. На **Create set тестирования** странице, очистите текстовое поле для параметра **процент проверочных данных**. Нажмите кнопку **Далее**.  
   

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f32acde4b49b8b4b91c087fb66e41d4c2cf276ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157025"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182504"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Использование некластеризованных индексов columnstore
   Описывает основные задачи при использовании некластеризованного индекса columnstore в таблице [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -40,7 +38,7 @@ ms.locfileid: "37157025"
 ##  <a name="change"></a> Изменение данных в некластеризованном индексе Columnstore  
  После создания некластеризованного индекса columnstore в таблице нельзя непосредственно изменять данные в этой таблице. Запрос с инструкциями INSERT, UPDATE, DELETE или MERGE завершится сбоем и вернет сообщение об ошибке. Для добавления или изменения данных в таблице можно воспользоваться одним из следующих способов.  
   
--   Отключите индекс columnstore. Затем можно обновлять данные в таблице. Если отключить индекс columnstore, то можно перестроить его после окончания обновления данных. Например:  
+-   Отключите индекс columnstore. Затем можно обновлять данные в таблице. Если отключить индекс columnstore, то можно перестроить его после окончания обновления данных. Пример:  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
@@ -48,7 +46,7 @@ ms.locfileid: "37157025"
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
     ```  
   
--   Удалите индекс columnstore, обновить таблицу и затем заново создайте индекс columnstore с CREATE COLUMNSTORE INDEX. Например:  
+-   Удалите индекс columnstore, обновить таблицу и затем заново создайте индекс columnstore с CREATE COLUMNSTORE INDEX. Пример:  
   
     ```  
     DROP INDEX mycolumnstoreindex ON mytable  

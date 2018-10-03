@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205864"
 ---
 # <a name="bcp-utility"></a>Программа bcp
   **Bcp** программа массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
@@ -147,7 +144,7 @@ ms.locfileid: "39310301"
 |RAW|Преобразование из одной кодовой страницы в другую не выполняется. Этот параметр обеспечивает высокую производительность, так как преобразование не выполняется.|  
 |*code_page*|Определенный номер кодовой страницы, например 850.<br /><br /> **\*\* Важные \* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не поддерживает кодовую страницу 65001 (кодировка UTF-8).|  
   
- `-d` *Database_name*  
+ `-d` *database_name*  
  Указывает базу данных, с которой надо соединиться. По умолчанию программа bcp.exe соединяется с пользовательской базой данных по умолчанию. Если `-d` *имя_базы_данных* и трехкомпонентным именем (*database_name.schema.table*, переданное в качестве первого параметра в bcp.exe) указано, произойдет ошибка, так как нельзя указать два раза имя базы данных. Если *имя_базы_данных* начинается с дефиса (-) или косой черты (/), не добавляйте пробел между `-d` и имя базы данных.  
   
  **-e** *err_file*  

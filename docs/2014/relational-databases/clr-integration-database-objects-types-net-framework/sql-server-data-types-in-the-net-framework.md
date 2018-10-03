@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - System.Data library
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - building database objects [CLR integration], data types
 - mapping data types [CLR integration]
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a3f476b727527e1c2616106451409c98870f9810
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355006"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205294"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Типы данных SQL Server в платформе .NET Framework
   Библиотека `SqlTypes` представляет собой часть библиотеки базового класса платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Она предоставляет типы данных с той же семантикой и той же точностью, как те, что доступны в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Данный раздел предоставляет сведения о новой семантике для программистов, работающих на платформе .NET Framework, и описывает типы, реализованные в пространстве имен `System.Data.SqlTypes`, включенном в библиотеку `System.Data`.  

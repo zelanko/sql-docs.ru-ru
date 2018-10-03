@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192994"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206134"
 ---
 # <a name="search-page-report-manager"></a>Страница «Поиск» (диспетчер отчетов)
   На странице «Результаты поиска» можно просмотреть результаты операции поиска, заданной в отчете, моделях отчетов, связанном отчете, общем источнике данных, папке или ресурсе. Результаты поиска приводятся в списке в алфавитном порядке. Их можно сортировать по типу, имени или описанию.  

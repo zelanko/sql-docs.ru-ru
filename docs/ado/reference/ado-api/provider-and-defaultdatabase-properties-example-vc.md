@@ -1,13 +1,11 @@
 ---
-title: Поставщик и пример использования свойств DefaultDatabase (VC ++) | Документы Microsoft
+title: Provider и Defaultdatabase свойства (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - provider property [ADO], VC++ example
 - DefaultDatabase property [ADO], VC++ example
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6efcd2a571902cedaf065982490e2d593bd22ab6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1cae1cc5e15bd945a28e5c36008faeade43b54b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280863"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709232"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vc"></a>Поставщик и пример использования свойств DefaultDatabase (VC ++)
-В этом примере демонстрируется [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойства, открыв три [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекты с помощью разных поставщиков. Она также использует [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) свойство, чтобы задать базу данных по умолчанию для поставщика Microsoft ODBC.  
+# <a name="provider-and-defaultdatabase-properties-example-vc"></a>Примеры свойств Provider и DefaultDatabase (Visual C++)
+В этом примере показано [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство, открыв три [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов с помощью разных поставщиков. Он также использует [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) свойство, чтобы задать базу данных по умолчанию для поставщика Microsoft ODBC.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -138,6 +135,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Свойство Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

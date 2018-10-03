@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 497e3ce3b374a40c26238758cab7b03cb9835c77
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8e454e12f3e3c9f4c341406596771276f120a83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165705"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197694"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Учебники по интеллектуальному анализу данных (службы Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] позволяет легко создавать решения для интеллектуального анализа данных. Средства служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] помогают проектировать, создавать и управлять моделями интеллектуального анализа данных, которые используют реляционные данные или данные куба. Можно управлять доступом клиентов к моделям интеллектуального анализа данных и создавать прогнозирующие запросы от многочисленных клиентов.  

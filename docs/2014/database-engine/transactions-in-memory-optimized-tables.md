@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3712e3b2e602bd403f4c1d312603577a4045a95a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393300"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195624"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Транзакции в таблицах, оптимизированных для памяти
   Управление версиями строк в дисковых таблицах (с использованием уровня изоляции моментальных снимков или параметра READ_COMMITTED_SNAPSHOT) предоставляет форму управления оптимистичным параллелизмом. Модули чтения и записи не блокируют друг друга. При использовании оптимизированных для памяти таблиц модули записи не блокируют модули записи. При управлении версиями строк в дисковых таблицах одна транзакция блокирует строку и попытки обновления строки параллельными транзакциями блокируются. При использовании оптимизированных для памяти таблиц блокировки не применяются. Вместо этого, если две транзакции пытаются обновить одну строку, возникает конфликт «запись-запись» (ошибка 41302).  

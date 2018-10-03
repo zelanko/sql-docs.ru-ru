@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 23cb6106-8799-4157-ba5e-408b4fbd8fbb
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9246e554097ebd46e13eb9eeee218a3b319b0928
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44af3840dc6e54a461bedc19db45de12204e8c94
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189171"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191054"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Использование измерений», конструктор кубов) (службы Analysis Services — многомерные данные)
   **Панель инструментов** на вкладке **Использование измерений** конструктора кубов предназначена для выполнения наиболее часто встречающихся действий, например добавления измерения куба или обработки куба.  

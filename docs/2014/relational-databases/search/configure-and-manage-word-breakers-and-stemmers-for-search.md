@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: 88
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 754e9097026fdf1e7a9be5bba6b6115db674a143
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0804fedde52ad335197c142b897afab8743f45b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199450"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Настройка и управление средством разбиения на слова и парадигматические модули для поиска
   Средства разбиения по словам и парадигматические модули выполняют лингвистический анализ данных, проходящих полнотекстовое индексирование. Лингвистический анализ предусматривает поиск границ слов (разделение слов) и спряжение глаголов (выделение основы). Средства разбиения по словам и парадигматические модули являются уникальными для своих языков. У разных языков правила лингвистического анализа различаются. Для данного языка *средство разбиения по словам* определяет слова по границам слов согласно лексическим правилам языка. Каждое слово (называемое также *токеном*) вставляется в полнотекстовый индекс с использованием сжатого представления для уменьшения его размера. *Парадигматический модуль* создает словоформы определенного слова на основании правил этого языка (например, "выполняется", "выполнялся" и "выполняющийся" являются различными формами слова "выполняться").  

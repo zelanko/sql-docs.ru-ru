@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 86
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5556c3e3392dd52fdd27acacd6c3320b7d9fbff0
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40393464"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176076"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>настроить сервер IIS для веб-синхронизации
   Описанные в данном разделе процедуры составляют второй этап настройки веб-синхронизации при репликации слиянием. Эти процедуры выполняют после включения веб-синхронизации для публикации. Обзор этого процесса настройки см. в разделе [Настроить веб-синхронизацию](configure-web-synchronization.md). После завершения выполнения процедур, описанных в этом разделе, перейдите к третьему этапу — настройке подписки для использования веб-синхронизации. Этот этап описывается в следующих разделах:  
@@ -34,7 +31,7 @@ ms.locfileid: "40393464"
   
 -   RMO: [Как настроить подписку для использования веб-синхронизации (программирование объектов RMO)](http://msdn.microsoft.com/library/ms345207.aspx).  
   
- Веб-синхронизация использует сервер служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS для синхронизации подписок по запросу на публикации слиянием. Поддерживаются службы IIS версий 5.0, 6.0 и 7.0. Мастер настройки веб-синхронизации не поддерживается в версии служб IIS 7.0.  
+ Веб-синхронизация использует сервер служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS для синхронизации подписок по запросу на публикации слиянием. Поддерживаются службы IIS версий 5.0, 6.0 и 7.0. Мастер настройки веб-синхронизации не поддерживается в версии служб IIS 7.0.  
   
 > [!IMPORTANT]  
 >  Убедитесь в том, что приложение использует только [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] или более позднюю версию, а более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на IIS-сервере не установлены. Более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] могут вызывать ошибки. В частности: "Недопустимый формат сообщения во время веб-синхронизации. Убедитесь в том, что компоненты репликации на веб-сервере настроены правильно».  
@@ -161,7 +158,7 @@ ms.locfileid: "40393464"
   
     2.  Введите путь виртуального каталога в поле **Путь** . Например, если вы ввели `websync1` в **псевдоним** введите `C:\Inetpub\wwwroot\websync1` в **путь** поле. Нажмите кнопку **Далее**.  
   
-    3.  В обоих диалоговых окнах нажмите кнопку **Да**. Это означает, что нужно создать новую папку и скопировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL. , и делает это по-другому.  
+    3.  В обоих диалоговых окнах нажмите кнопку **Да**. Это означает, что нужно создать новую папку и скопировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL. .  
   
 7.  На странице **Доступ с проверкой подлинности** выполните следующие действия:  
   

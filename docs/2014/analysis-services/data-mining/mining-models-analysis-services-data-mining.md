@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ea9bf0ccedda65e75928aa4cca94e65e3901d4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 903c12bd13660af2cde0333e783d5dc22cc4a76a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207704"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   *Модель интеллектуального анализа данных* создается путем применения алгоритма к данным. Но это больше, чем алгоритм или контейнер метаданных: это набор данных, статистик и шаблонов, которые можно применять к новым данным для формирования прогнозов и вывода взаимосвязей.  
@@ -136,7 +133,7 @@ ms.locfileid: "37228384"
 |Использование пользовательских средств просмотра интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Средства просмотра моделей интеллектуального анализа данных](data-mining-model-viewers.md)|  
 |Примеры различных типов запросов, которые могут выполняться к моделям интеллектуального анализа данных.|[Запросы интеллектуального анализа данных](data-mining-queries.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  По следующим ссылкам можно получить более конкретную информацию о работе с моделями интеллектуального анализа данных.  
   
 |Задача|Ссылка|  

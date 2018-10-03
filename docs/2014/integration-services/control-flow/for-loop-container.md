@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15e2239a7285e4d460e4fa5a85add8445f797ede
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1d04762b61376d2e9ede00467d89f62c55634d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227854"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203735"
 ---
 # <a name="for-loop-container"></a>Контейнер «цикл по элементам»
   Контейнер «цикл по элементам» определяет повторяющийся поток управления в пакете. Управление циклом аналогично структуре цикла **For** в языках программирования. В ходе каждого повтора цикла контейнер цикла For, вычисляет выражение и повторяет рабочий процесс, пока выражение не примет значение `False`.  
@@ -61,7 +58,7 @@ ms.locfileid: "37227854"
   
  Дополнительные сведения о задании этих свойств программными средствами см. в документации по классу **T:Microsoft.SqlServer.Dts.Runtime.ForLoop** в руководстве для разработчиков.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Сведения о настройке контейнера «цикл по элементам» см. в следующих разделах.  
   
 -   [Настройка контейнера "цикл по элементам"](for-loop-container.md)  
