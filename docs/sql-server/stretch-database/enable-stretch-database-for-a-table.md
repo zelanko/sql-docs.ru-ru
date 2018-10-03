@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae970c69dbc12619f340e1a766198afc250b4e1e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2101d73b7e76cbc842277980b22c239dc826233c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824222"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,8 +36,7 @@ ms.locfileid: "38039972"
  >   [!NOTE]
  > Если позднее вы решите отключить Stretch Database, помните, что ее отключение для таблицы или базы данных не ведет к удалению удаленного объекта. Если вы хотите удалить удаленную таблицу или базу данных, это нужно сделать с помощью портала управления Azure. Пока удаленные объекты не будут удалены вручную, их хранение будет сопровождаться затратами в Azure.
  
-##  <a name="EnableWizardTable">
-            </a> Настройка Stretch Database для таблицы в с помощью мастера  
+##  <a name="EnableWizardTable"></a> Настройка Stretch Database для таблицы в с помощью мастера  
  **Запуск мастера**  
  1.  В среде SQL Server Management Studio в обозревателе объектов выберите таблицу, для которой нужно включить перенос.  
   
@@ -66,8 +62,7 @@ ms.locfileid: "38039972"
  **Результаты**  
  Просмотрите результаты операции.  
   
-##  <a name="EnableTSQLTable">
-            </a> Настройка Stretch Database для таблицы с помощью Transact-SQL  
+##  <a name="EnableTSQLTable"></a> Настройка Stretch Database для таблицы с помощью Transact-SQL  
  Вы можете настроить Stretch Database для существующей таблицы либо создать новую таблицу, для которой уже настроена Stretch Database. Обе операции можно выполнить с помощью Transact-SQL.  
   
 ### <a name="options"></a>Параметры  

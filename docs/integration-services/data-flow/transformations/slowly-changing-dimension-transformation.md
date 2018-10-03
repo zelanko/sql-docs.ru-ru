@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.slowlychangingdimtrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a8d50ca3c1b998bd564b4cdad967db3e28e3986
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: fcf04dc0eb2209afcd9dfc180d59e6452e5b52d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820072"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>преобразование «Медленно изменяющееся измерение»
   Преобразование «Медленно изменяющееся измерение» согласует обновление и вставку записей в таблицы измерения хранилища данных. Например, это преобразование можно использовать для настройки выходов преобразования, которые вставляют и обновляют записи в таблице DimProduct базы данных [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] данными из таблицы Production.Products OLTP-базы данных.  
@@ -106,7 +103,7 @@ ms.locfileid: "35329688"
   
 -   Мастер загрузки измерений проводит пользователей через последовательность шагов настройки преобразования «Медленно изменяющееся измерение» и создает поток данных для выходов преобразования. Чтобы изменить настройки медленно изменяющихся измерений, запустите мастер загрузки измерений повторно. Дополнительные сведения см. в разделе [Настройка выходов при помощи мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>См. также  
