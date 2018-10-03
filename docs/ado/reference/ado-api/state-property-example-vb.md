@@ -1,32 +1,29 @@
 ---
-title: Состояние примера свойства (Visual Basic) | Документы Microsoft
+title: Состояние пример свойства (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - State property [ADO], Visual Basic example
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f3f7126a9da116dd34ef2c0e99559eeb7dc122e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a834754a83339a989484ea6c0c0b94e313699023
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281923"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753737"
 ---
-# <a name="state-property-example-vb"></a>Пример свойство State (Visual Basic)
-В этом примере используется [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство для отображения сообщения во время открытия асинхронное подключение и выполнении асинхронных команд.  
+# <a name="state-property-example-vb"></a>Пример свойства State (Visual Basic)
+В этом примере используется [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство для отображения сообщения во время открытия асинхронных подключений и выполняются асинхронные команды.  
   
 ```  
 'BeginStateVB  
@@ -112,5 +109,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

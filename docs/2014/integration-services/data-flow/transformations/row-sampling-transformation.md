@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rowsamplingtrans.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - packages [Integration Services], samples
 - datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07a8e8aefd414c04b1a7d6d3f0c3d6a5dcd51747
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3979599737f436f7f2e34439af79f66d870adcff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199704"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052444"
 ---
 # <a name="row-sampling-transformation"></a>преобразование «Выборка строк»
   Преобразование «Выборка строк» используется для получения случайно выбранного подмножества входного набора данных. Можно указать точный размер получаемого образца и задать начальное значение для генератора случайных чисел.  
@@ -59,7 +56,7 @@ ms.locfileid: "37199704"
   
 -   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md)  
   
   

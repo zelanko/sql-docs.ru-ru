@@ -1,37 +1,34 @@
 ---
-title: С помощью Прокручиваемые курсоры | Документы Microsoft
+title: Использование прокручиваемых курсоров | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35416c2d6e7b082141755660f0fda1011ad5c606
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cac190a634185a5bed77a7ff38423782044c83ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915189"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778502"
 ---
-# <a name="using-scrollable-cursors"></a>С помощью Прокручиваемые курсоры
-С помощью Прокручиваемый курсор требуются следующие три действия:  
+# <a name="using-scrollable-cursors"></a>Использование прокручиваемых курсоров
+Использования прокручиваемого курсора состоит из этих трех шагов:  
   
-1.  Определите возможности курсора.  
+1.  Определение возможностей курсора.  
   
-2.  Установите курсор.  
+2.  Настройка курсора.  
   
-3.  Выполнить прокрутку и выборку строк.  
+3.  Прокрутку и выборку строк.  
   
  Этот раздел содержит следующие подразделы.  
   

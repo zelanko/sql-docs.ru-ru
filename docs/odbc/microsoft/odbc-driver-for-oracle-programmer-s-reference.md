@@ -1,27 +1,24 @@
 ---
-title: Драйвер ODBC для Oracle программист&#39;ссылка s | Документы Microsoft
+title: Драйвер ODBC для Oracle программист&#39;Справочник | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f68964557d5878b4575a1a6a9592514b3abe8cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b3373566d002d75856c13b725150f9202aef5dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900943"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751142"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Драйвер ODBC для Oracle программист&#39;ссылка s
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Драйвер ODBC для Oracle программист&#39;Справочник
 > [!IMPORTANT]  
 >  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемого корпорацией Oracle.  
   
@@ -49,7 +46,7 @@ ms.locfileid: "32900943"
   
 -   [Драйвер ODBC для сообщений об ошибках Oracle](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
--   [Уровни согласованности ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
+-   [Уровни соответствия ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
 -   [API-функции](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
   

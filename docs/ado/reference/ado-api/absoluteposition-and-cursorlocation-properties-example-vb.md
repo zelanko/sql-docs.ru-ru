@@ -1,13 +1,11 @@
 ---
-title: AbsolutePosition и CursorLocation-пример свойства (Visual Basic) | Документы Microsoft
+title: Примеры AbsolutePosition и CursorLocation свойства (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - AbsolutePosition property [ADO], Visual Basic example
 - CursorLocation property [ADO], Visual Basic example
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 030bee4e180a9f419cedc81eaa31e7f15deb1ee1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a22afb8e59d692ae4fae010adc819cd930b8ab46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274873"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770848"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition и CursorLocation-пример свойства (Visual Basic)
-В этом примере показано, как [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойства можно отслеживать ход выполнения цикла, который перечисляет все записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство, чтобы включить **AbsolutePosition** свойство, задав курсор для клиентского курсора.  
+# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Примеры AbsolutePosition и CursorLocation свойства (Visual Basic)
+В этом примере показано, как [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойство можно отслеживать ход выполнения цикла, который перечисляет все записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство, чтобы включить **примеры AbsolutePosition** свойства, установив курсор для клиентского курсора.  
   
 ```  
 'BeginAbsolutePositionVB  

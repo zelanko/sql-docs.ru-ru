@@ -1,31 +1,28 @@
 ---
-title: Сопоставление SQLGetStmtOption | Документы Microsoft
+title: Сопоставление SQLGetStmtOption | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
 ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02eaacbe3503b5d93677633aa0e98326b14e304f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2423d41b1e9c549b7202a68fb2a0e085e0a6e11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907389"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786608"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>Сопоставление SQLGetStmtOption
-Если приложение вызывает **SQLGetStmtOption** ODBC 3 *.x* драйвер, который не поддерживает это вызов метода  
+Если приложение вызывает **SQLGetStmtOption** ODBC 3 *.x* драйвер, который не поддерживает это, вызов  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
@@ -33,28 +30,28 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
   
  приведет к следующим образом:  
   
--   Если *fOption* указывает параметр инструкции, определенных для ODBC, который возвращает строку, диспетчер драйверов вызывает  
+-   Если *fOption* указывает параметр инструкции, определенных для ODBC, который возвращает строку, вызовы диспетчера драйверов  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
--   Если *fOption* указывает параметр инструкции, определенных для ODBC, который возвращает значение 32-разрядное целое число, диспетчер драйверов вызывает  
+-   Если *fOption* указывает параметр инструкции, определенных для ODBC, который возвращает значение 32-разрядное целое число, вызовы диспетчера драйверов  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, 0, NULL)  
     ```  
   
--   Если *fOption* указывает параметр инструкции, определяемым драйвером, диспетчер драйверов вызывает  
+-   Если *fOption* указывает параметр инструкции, определяемым драйвером, вызовы диспетчера драйверов  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- В предыдущем трех случаях *StatementHandle* аргументу присвоено значение в *hstmt*, *атрибута* аргументу присвоено значение в *fOption* и *ValuePtr* аргумент имеет значение совпадает со значением *pvParam*.  
+ В указанных выше трех случаях *StatementHandle* аргумент присвоено значение в *hstmt*, *атрибут* аргумент присвоено значение в *fOption* и *ValuePtr* аргумент имеет значение совпадает со значением *pvParam*.  
   
- Для параметров соединения строкой, определяемой ODBC задает диспетчер драйверов *BufferLength* аргумента в вызове **SQLGetConnectAttr** в стандартных максимальную длину (SQL_MAX_OPTION_STRING_LENGTH); параметра соединения нестроковые *BufferLength* имеет значение 0.  
+ Для параметров соединения ODBC, определяемое, устанавливает диспетчер драйверов *BufferLength* аргумента в вызове **SQLGetConnectAttr** предопределенные максимальной длины (SQL_MAX_OPTION_STRING_LENGTH); параметра подключения нестроковые *BufferLength* имеет значение 0.  
   
- Параметр инструкции SQL_GET_BOOKMARK рекомендуется к использованию в ODBC 3 *.x*. Для ODBC 3 *.x* драйвер для работы с ODBC 2. *x* приложений, использующих SQL_GET_BOOKMARK, он должен поддерживать SQL_GET_BOOKMARK. Для ODBC 3 *.x* драйвер для работы с ODBC 2. *x* приложений, он должен поддерживать значение SQL_USE_BOOKMARKS SQL_UB_ON и должны предоставлять закладки фиксированной длины. Если ODBC 3 *.x* драйвер поддерживает только закладки переменной длины, но закладки не фиксированной длины, она должна вернуть SQLSTATE HYC00 (дополнительная возможность не реализована) Если ODBC 2. *x* приложения пытается установить SQL_USE_BOOKMARKS для SQL_UB_ON.  
+ Параметр инструкции SQL_GET_BOOKMARK был объявлен устаревшим в ODBC 3 *.x*. Для ODBC 3 *.x* драйвера для работы с ODBC 2. *x* приложений, использующих SQL_GET_BOOKMARK, он должен поддерживать SQL_GET_BOOKMARK. Для ODBC 3 *.x* драйвера для работы с ODBC 2. *x* приложений, он должен поддерживать значение SQL_USE_BOOKMARKS SQL_UB_ON и должны предоставлять закладки фиксированной длины. Если ODBC 3 *.x* драйвер поддерживает только закладки переменной длины, но не закладки фиксированной длины, оно должно возвращать SQLSTATE HYC00 (дополнительная возможность не реализована) Если ODBC 2. *x* приложение пытается присвоить SQL_USE_BOOKMARKS SQL_UB_ON.  
   
- Для ODBC 3 *.x* драйвера, диспетчер драйверов больше не проверяет, является ли *параметр* — между SQL_STMT_OPT_MIN и SQL_STMT_OPT_MAX или больше, чем SQL_CONNECT_OPT_DRVR_START. Драйвер должен установите этот флажок.
+ Для ODBC 3 *.x* драйвера, диспетчер драйверов не проверяет ли *параметр* символах SQL_STMT_OPT_MIN и SQL_STMT_OPT_MAX — или больше, чем SQL_CONNECT_OPT_DRVR_START. Драйвер необходимо проверить это.

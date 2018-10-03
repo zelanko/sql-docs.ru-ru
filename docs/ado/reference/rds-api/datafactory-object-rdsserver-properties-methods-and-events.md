@@ -1,31 +1,28 @@
 ---
-title: Свойства объекта DataFactory (RDSServer), методы и события | Документы Microsoft
+title: Объект DataFactory (RDSServer) свойства, методы и события | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory object [ADO], members
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75cc13fab6e2edf38cf037a343538b7993ff7c76
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bd7ace04edd03fbadbe21115bfaf5e999324a155
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288153"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675562"
 ---
-# <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Свойства объекта DataFactory (RDSServer), методы и события
+# <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Свойства, методы и события объекта DataFactory (RDSServer)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="properties"></a>Свойства  
  Нет.  
@@ -34,14 +31,14 @@ ms.locfileid: "35288153"
   
 |||  
 |-|-|  
-|[Метод ConvertToString (служба удаленных рабочих столов)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Преобразует строку MIME64 набор записей.|  
+|[Метод ConvertToString (служба удаленных рабочих столов)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Преобразует набор записей в MIME64 строку.|  
 |[Метод CreateRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Создает и возвращает пустой набор записей.|  
-|[Метод Execute (служба удаленных рабочих столов)](../../../ado/reference/rds-api/execute-method-rds.md)|Выполнить запрос и создать набор строк дополнительных данных (для использования с ADO 2.5 или более поздней версии).|  
-|[Метод Execute21 (служба удаленных рабочих столов)](../../../ado/reference/rds-api/execute21-method-rds.md)|Выполнить запрос и создать набор строк дополнительных данных (для использования с ADO 2.1).|  
-|[Метод Query (служба удаленных рабочих столов)](../../../ado/reference/rds-api/query-method-rds.md)|Выполнить запрос и создать набор строк дополнительных данных.|  
-|[Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Имея набор записей с ожидающими изменениями, этот метод отправляет их в базу данных, указанных в строке подключения.|  
-|[Метод Synchronize (служба удаленных рабочих столов)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Синхронизировать заданного набора записей с базой данных, указанной в строке подключения (для использования с ADO 2.5 или более поздней версии).|  
-|[Метод Synchronize21 (служба удаленных рабочих столов)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Синхронизировать заданного набора записей с базой данных, указанной в строке подключения (для использования с ADO 2.1).|  
+|[Метод Execute (служба удаленных рабочих столов)](../../../ado/reference/rds-api/execute-method-rds.md)|Выполнить запрос и создать набор строк данных (для использования с ADO 2.5 или более поздней версии).|  
+|[Метод Execute21 (служба удаленных рабочих столов)](../../../ado/reference/rds-api/execute21-method-rds.md)|Выполнить запрос и создать набор строк данных (для использования с ADO 2.1).|  
+|[Метод Query (служба удаленных рабочих столов)](../../../ado/reference/rds-api/query-method-rds.md)|Выполнить запрос и создать набор строк данных.|  
+|[Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Имея набор записей с ожидающими изменениями, этот метод передает их в базу данных в строке подключения.|  
+|[Метод Synchronize (служба удаленных рабочих столов)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Синхронизировать наборе записей с помощью базы данных, указанной в строке подключения (для использования с ADO 2.5 или более поздней версии).|  
+|[Метод Synchronize21 (служба удаленных рабочих столов)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Синхронизировать наборе записей с помощью базы данных, указанной в строке подключения (для использования с ADO 2.1).|  
   
 ## <a name="events"></a>События  
  Нет.  

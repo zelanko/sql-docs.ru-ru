@@ -1,13 +1,11 @@
 ---
-title: Установка и настройка по ODBC | Документы Microsoft
+title: Установка и настройка программного обеспечения ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - configuring ODBC [ODBC]
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - ODBC [ODBC], configuring
 - installing ODBC [ODBC]
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 587216d637b0112998db2a93b056a5d7b51017b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50e1d85076c2d056d8abdec9668457ca2a29d2fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720182"
 ---
-# <a name="installing-and-configuring-the-odbc-software"></a>Установка и настройка по ODBC
+# <a name="installing-and-configuring-the-odbc-software"></a>Установка и настройка программного обеспечения ODBC
 > [!NOTE]  
->  Начиная с Windows XP и Windows Server 2003, ODBC включается в операционной системе Windows. ODBC следует устанавливать только явно на более ранних версиях Windows.  
+>  Начиная с Windows XP и Windows Server 2003, ODBC включена в операционную систему Windows. ODBC следует только явным образом установить в более ранних версиях Windows.  
   
  Этот раздел содержит следующие подразделы.  
   

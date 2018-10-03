@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSAsynchStatus::GetStatus (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9b12653f05171514c3a311edd42b2a3af9f58da
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d17a75b7bd6021e908200b7a4be5bc800ec81283
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050244"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>Функция ISSAsynchStatus::GetStatus (OLE DB)
   Возвращает состояние операции асинхронного выполнения.  
@@ -110,7 +107,7 @@ HRESULT GetStatus(
  Произошла ошибка, зависящая от поставщика.  
   
 ## <a name="remarks"></a>Примечания  
- **ISSAsynchStatus::GetStatus** поведение аналогично поведению метода **IDBAsynchStatus::GetStatus** метода, за исключением случаев, если объект источника инициализации данных прервана, возвращается E_UNEXPECTED, а чем DB_E_CANCELED (хотя [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) возвратит DB_E_CANCELED). Происходит это потому, что после прерывания объект источника данных не остается в обычном состоянии зомби. Делается этого для того, чтобы можно было попытаться выполнить последующие операции инициализации.  
+ Метод **ISSAsynchStatus::GetStatus** ведет себя точно так, как ожидает метод **IDBAsynchStatus::GetStatus**: если инициализация объекта источника данных прервана, возвращается E_UNEXPECTED, а не DB_E_CANCELED (хотя метод [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) возвратит DB_E_CANCELED). Происходит это потому, что после прерывания объект источника данных не остается в обычном состоянии зомби. Делается этого для того, чтобы можно было попытаться выполнить последующие операции инициализации.  
   
  Если набор строк инициализируется или заполняется асинхронно, он должен поддерживать этот метод.  
   

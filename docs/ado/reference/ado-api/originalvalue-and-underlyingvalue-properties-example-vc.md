@@ -1,13 +1,11 @@
 ---
-title: OriginalValue и пример свойства UnderlyingValue (VC ++) | Документы Microsoft
+title: Примеры OriginalValue и Underlyingvalue свойства (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fa7e2dbf687c9d07bad1e9052b7fd2eeede1e4f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623732"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue и пример свойства UnderlyingValue (VC ++)
-В этом примере демонстрируется [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) свойства путем отображения сообщения, если запись основного данных был изменен в течение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) пакетное обновление.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Примеры OriginalValue и Underlyingvalue свойства (Visual C++)
+В этом примере показано [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) свойства, отображая сообщение, если запись основного данных был изменен в течение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) пакетное обновление.  
   
 ## <a name="example"></a>Пример  
   
@@ -199,31 +196,31 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Данные изменились!**  
-**Идентификатор Title: PS1372**  
+**Идентификатор, название: PS1372**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
 **Данные изменились!**  
-**Идентификатор Title: PS2091**  
+**Идентификатор, название: PS2091**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
 **Данные изменились!**  
-**Идентификатор Title: PS2106**  
+**Идентификатор, название: PS2106**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
 **Данные изменились!**  
-**Идентификатор Title: PS3333**  
+**Идентификатор, название: PS3333**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
 **Данные изменились!**  
-**Идентификатор Title: PS7777**  
+**Идентификатор, название: PS7777**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**    
 ## <a name="see-also"></a>См. также  
  [Свойство OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

@@ -1,14 +1,11 @@
 ---
-title: syscollector_config_store (Transact-SQL) | Документы Microsoft
+title: syscollector_config_store (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_config_store_TSQL
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1016cc3a02bb4279db9c8b5f5afe03de36712ec5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f535bf0ce2bf455fea72db4ebcdf9879749441cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681412"
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для представления или членства в предопределенных ролях базы данных dc_operator, dc_proxy или dc_admin.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Список доступных свойств фиксирован, а их значения могут быть изменены только с помощью соответствующей хранимой процедуры. В этой таблице описываются свойства, которые доступны через данное представление.  
   
 |Имя свойства|Описание|  

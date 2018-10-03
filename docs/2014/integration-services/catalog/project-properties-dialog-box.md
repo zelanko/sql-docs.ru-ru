@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isprojectprop.general.f1
 - sql12.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7411d1e809aad6ae777faed73a3bc8c5c63b91d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d657e1339f454045a4a1e536610a58cd27e94c8d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236984"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054234"
 ---
 # <a name="project-properties-dialog-box"></a>Диалоговое окно свойств проекта
   Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] представляет собой единицу развертывания. Каждый проект может содержать пакеты, параметры и ссылки на среду. Проект является защищаемым объектом и может определять разрешения для участников базы данных. При повторном развертывании проекта предыдущая версия проекта может быть сохранена в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

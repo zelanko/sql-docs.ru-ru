@@ -1,27 +1,24 @@
 ---
-title: Свойства объекта набора записей, методы и события | Документы Microsoft
+title: Свойства объекта набора записей, методы и события | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d00e286b1386d51e0bc854d48a14bc2f64555eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691322"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Свойства объекта набора записей, методы и события
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -29,15 +26,15 @@ ms.locfileid: "35281183"
   
  [Свойство AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
   
- [Свойство ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)  
+ [Пример свойства ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)  
   
  [Свойство ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
  [BOF, EOF свойства](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
   
- [Свойство закладка](../../../ado/reference/ado-api/bookmark-property-ado.md)  
+ [Свойство Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)  
   
- [Свойство CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)  
+ [Пример свойства CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)  
   
  [Свойство CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
   
@@ -45,7 +42,7 @@ ms.locfileid: "35281183"
   
  [Свойство DataMember](../../../ado/reference/ado-api/datamember-property.md)  
   
- [Свойства источника данных](../../../ado/reference/ado-api/datasource-property-ado.md)  
+ [Свойство DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)  
   
  [Свойство EditMode](../../../ado/reference/ado-api/editmode-property.md)  
   
@@ -57,15 +54,15 @@ ms.locfileid: "35281183"
   
  [Свойство LockType](../../../ado/reference/ado-api/locktype-property-ado.md)  
   
- [Свойство MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
+ [Пример свойства MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
   
  [Свойство MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
  [Свойство PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)  
   
- [Свойства PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)  
+ [Свойство PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)  
   
- [Коллекция свойств](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Свойства коллекции](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [Свойство RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)  
   
@@ -73,14 +70,14 @@ ms.locfileid: "35281183"
   
  [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
   
- [State, свойство](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Свойство State](../../../ado/reference/ado-api/state-property-ado.md)  
   
  [Свойство Status (объект Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
   
  [Свойство StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)  
   
 ## <a name="methods"></a>Методы  
- [AddNew-метод](../../../ado/reference/ado-api/addnew-method-ado.md)  
+ [Метод AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)  
   
  [Cancel-метод](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
@@ -90,7 +87,7 @@ ms.locfileid: "35281183"
   
  [Метод Clone](../../../ado/reference/ado-api/clone-method-ado.md)  
   
- [Close-метод](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Метод Close](../../../ado/reference/ado-api/close-method-ado.md)  
   
  [Метод CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
@@ -104,7 +101,7 @@ ms.locfileid: "35281183"
   
  [Move-метод](../../../ado/reference/ado-api/move-method-ado.md)  
   
- [MoveFirst, MoveLast, MoveNext и MovePrevious методов](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+ [Примеры MoveFirst, MoveLast, MoveNext и MovePrevious методы](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
  [Метод NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
@@ -131,13 +128,13 @@ ms.locfileid: "35281183"
   
  [Событие FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
   
- [WillChangeField и FieldChangeComplete события](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+ [События WillChangeField и Fieldchangecomplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
   
- [WillChangeRecord и RecordChangeComplete события](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+ [События WillChangeRecord и Recordchangecomplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
   
- [WillChangeRecordset и RecordsetChangeComplete события](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+ [События WillChangeRecordset и Recordsetchangecomplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
   
- [WillMove и MoveComplete события](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+ [События WillMove и Movecomplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
 ## <a name="see-also"></a>См. также  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

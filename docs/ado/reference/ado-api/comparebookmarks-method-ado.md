@@ -1,13 +1,11 @@
 ---
-title: Метод CompareBookmarks (ADO) | Документы Microsoft
+title: Метод CompareBookmarks (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,19 +15,18 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 592a1e06580aca5990bf5ec6b7d28a6a1ecc5abc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276803"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649752"
 ---
 # <a name="comparebookmarks-method-ado"></a>Метод CompareBookmarks (ADO)
-Сравнивает две закладки и возвращает сведения об их относительных значениях.  
+Сравнивает два закладки и возвращает сведения об их относительных значениях.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,30 +36,30 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает [CompareEnum](../../../ado/reference/ado-api/compareenum.md) значение, указывающее позицию строки относительный две записи, представленный закладок.  
+ Возвращает [CompareEnum](../../../ado/reference/ado-api/compareenum.md) значение, указывающее положение строки относительный две записи, представленной закладок.  
   
 #### <a name="parameters"></a>Параметры  
  *Закладке Bookmark1*  
- Закладка первой строки.  
+ Закладка, первой строки.  
   
- *Закладка Bookmark2*  
+ *Bookmark2*  
  Закладка, второй строки.  
   
 ## <a name="remarks"></a>Примечания  
- Закладки необходимо применить к тому же [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или **записей** объекта и его [клон](../../../ado/reference/ado-api/clone-method-ado.md). Не удается сравнить надежно закладки из различных **записей** объектов, даже если они были созданы из одного источника или команды. И не может сравнить закладок для **записей** объект, базовый поставщик не поддерживает сравнение.  
+ Закладки необходимо применить к тому же [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или **записей** объекта и его [клона](../../../ado/reference/ado-api/clone-method-ado.md). Невозможно сравнить надежно закладок из разных **записей** объектов, даже если они были созданы из одного источника или команды. И не может сравнить закладок для **записей** объект, базовый поставщик не поддерживает сравнение.  
   
- Закладка уникально идентифицирует строки в **записей** объекта. Используйте [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойство текущей строки, чтобы получить его закладки.  
+ Закладка, уникально определяющий строку в **записей** объекта. Используйте [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойство текущей строки, чтобы получить ее закладки.  
   
- Так как тип данных закладки является специфичным для каждого поставщика, ADO предоставляет его как **Variant**. Например, закладки SQL Server являются типом DBTYPE_R8 (**двойные**). ADO будет представлять этот тип как **Variant** с подтипом **двойные**.  
+ Так как тип данных закладки является специфичным для каждого поставщика, ADO предоставляет его как **Variant**. Например, SQL Server закладки относятся к типу DBTYPE_R8 (**двойные**). ADO предоставит этот тип как **Variant** с подтипом **двойные**.  
   
- При сравнении закладки, ADO, выполняется приведение любого типа. Значения, просто передаются поставщику которых происходит сравнение. Если передаваемый закладки **CompareBookmarks** метод сохраняются в переменных различных типов, оно может создавать следующие ошибки несоответствия типов: «аргументы имеют неправильный тип, выходят за пределы допустимого диапазона или конфликтующих друг с другом.»  
+ При сравнении закладки, ADO не пытайтесь любого типа приведения. Значения просто передает поставщику где происходит сравнение. Если передается закладки **CompareBookmarks** метод хранятся в переменных различающихся типов, он может сформировать следующие ошибка несоответствия типов: «аргументы имеют неправильный тип, выходят за пределы допустимого диапазона или участвующих в конфликте друг с другом.»  
   
- Закладка, которая не является допустимым или неправильно сформирован приведет к ошибке.  
+ Закладка, которая не является допустимым или неправильно приведет к ошибке.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  
  [Пример метода CompareBookmarks (Visual Basic)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
- [Пример метода CompareBookmarks (VC ++)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
+ [Пример метода CompareBookmarks (Visual C++)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Свойство Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)

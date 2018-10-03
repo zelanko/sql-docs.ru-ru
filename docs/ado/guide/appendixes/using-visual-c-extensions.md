@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 805abefbd6f934781b86060e98c73ab6ee8fd3c0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 20b39cc744b65bb3d386f54680f641757f8d7484
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982806"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824032"
 ---
 # <a name="visual-c-extensions"></a>Расширения Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>Интерфейс IADORecordBinding
@@ -119,7 +116,7 @@ Update(CADORecordBinding *binding)
 |*Класс*|Класс, в котором определены операции привязки и переменных C/C++.|
 |*Ordinal*|Порядковый номер, считая с 1, из **записей** полю, соответствующему переменной C/C++.|
 |*Тип данных*|Эквивалентный тип данных ADO переменной C/C++ (см. в разделе [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) список допустимых типов данных типы). Значение **записей** поля будут преобразовываться в этот тип данных, при необходимости.|
-|*Буфер*|Имя переменной C/C++ где **записей** поля будут сохранены.|
+|*буфер*|Имя переменной C/C++ где **записей** поля будут сохранены.|
 |*Размер*|Максимальный размер в байтах *буфера*. Если *буфера* будет содержать строку переменной длины, пространство для завершающего нуля.|
 |*Состояние*|Имя переменной, указывающие ли содержимое *буфера* являются допустимыми и был ли преобразование поля для *DataType* прошла успешно.<br /><br /> Два самых важных значения для этой переменной **adFldOK**, что означает преобразование прошло успешно, и **adFldNull**, который означает, что значение поля будет РАЗНОВИДНОСТЬЮ VT_NULL и не просто пустой.<br /><br /> Возможные значения для *состояние* , перечислены в следующей таблице, «Состояние значения».|
 |*Изменение*|Логический флаг; значение TRUE указывает, может обновлять соответствующие ADO **записей** поле значение, содержащееся в *буфера*.<br /><br /> Задает значение типа Boolean *изменить* параметр в значение TRUE, чтобы позволить ADO для обновления связанному полю и FALSE, если вы хотите проверить это поле, но не изменять его.|

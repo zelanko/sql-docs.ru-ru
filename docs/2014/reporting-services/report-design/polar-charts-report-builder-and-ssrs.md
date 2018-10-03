@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: d59ad6ad8059e7261054470c310d8fd82dbd88d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86308d04c45dfdb2bb135d1dc4d8a1da8bb957ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208490"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056345"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>Полярные диаграммы (построитель отчетов и службы SSRS)
   На полярной диаграмме ряд отображается как набор точек, сгруппированных по категориям на площади круга. Значения представлены расстоянием точки от центра круга. Чем дальше точка от центра, тем больше ее значение. Метки категорий отображаются на периметре диаграммы. Дополнительные сведения о добавлении данных в полярные диаграммы см. в разделе [диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md).  

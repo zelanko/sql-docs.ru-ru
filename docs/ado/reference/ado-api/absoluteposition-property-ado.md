@@ -1,13 +1,11 @@
 ---
-title: Свойство AbsolutePosition (ADO) | Документы Microsoft
+title: Свойство AbsolutePosition (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,44 +13,43 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 615bbf4f771d6d3b12edfec3184ef0ee091fbe08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4444c54df6e3629e7f69e3fe0d54625f66c3e703
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813162"
 ---
 # <a name="absoluteposition-property-ado"></a>Свойство AbsolutePosition (ADO)
 Указывает порядковый номер [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта текущей записи.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- 32-разрядный код задает или возвращает **длинные** значение от 1 до числа записей в **записей** объекта ([RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)), или возвращает одно из [ PositionEnum](../../../ado/reference/ado-api/positionenum.md) значения.  
+ 32-разрядного кода, задает или возвращает **Long** значение от 1 до количество записей в **записей** объекта ([RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)), или возвращает одно из [ PositionEnum](../../../ado/reference/ado-api/positionenum.md) значения.  
   
- Для 64-разрядного кода используйте тип данных, который обеспечивает хранение 64-разрядное значение. Например, можно использовать долго или другой значение, представляющее длину 64-разрядной, например DBORDINAL. Не используйте **PositionEnum** значения, так как они ограничены длиной 32 бит.  
+ Для 64-разрядного кода используйте тип данных, который предоставляет для хранения 64-разрядное значение. К примеру, можно использовать долго или другое значение, которое является 64-разрядных длину, например DBORDINAL. Не используйте **PositionEnum** значения, так как они ограничены длиной в 32-разрядной.  
   
 ## <a name="remarks"></a>Примечания  
- Чтобы задать **AbsolutePosition** свойства, ADO требуется реализовать, поставщик OLE DB, который вы используете [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) интерфейса.  
+ Чтобы задать **примеры AbsolutePosition** требует ADO свойство, что при использовании поставщика OLE DB реализовать [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) интерфейс.  
   
- Доступ к **AbsolutePosition** свойство **записей** , был открыт с помощью последовательным или динамический курсор вызывает ошибку **adErrFeatureNotAvailable**. Для других типов курсоров правильное положение будут возвращены при условии, что поставщик OLE DB поддерживает **IRowsetScroll:IRowsetLocate** интерфейса. Если поставщик не поддерживает **IRowsetScroll** интерфейс, является свойство **adPosUnknown**. См. в документации для поставщика определить, поддерживает ли он **IRowsetScroll**.  
+ Доступ к **примеры AbsolutePosition** свойство **записей** , был открыт с помощью последовательного или динамический курсор вызывает ошибку **adErrFeatureNotAvailable**. Для других типов курсоров правильной позиции будет возвращаться до тех пор, пока поставщик OLE DB поддерживает **IRowsetScroll:IRowsetLocate** интерфейс. Если поставщик не поддерживает **IRowsetScroll** интерфейс, свойство имеет значение **adPosUnknown**. См. в документации вашего поставщика, чтобы определить, поддерживает ли он **IRowsetScroll**.  
   
- Используйте **AbsolutePosition** на основе свойства, чтобы перейти к записи по его порядковому номеру в **записей** объекта, или чтобы определить порядковый номер текущей записи. Поставщик должен поддерживать соответствующие функциональные возможности для этого свойства доступно.  
+ Используйте **примеры AbsolutePosition** значение, чтобы перейти к записи в зависимости от его порядковый номер в **записей** объекта, или чтобы определить порядковый номер текущей записи. Поставщик должен поддерживать соответствующие функциональные возможности для этого свойства доступен.  
   
- Как [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) свойства **AbsolutePosition** начинается с 1 и имеет значение 1, если текущая запись является первой записью в **записей**. Вы можете получить общее число записей в **записей** объекта из [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) свойство.  
+ Как и [примеры AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) свойство, **примеры AbsolutePosition** отсчитывается от 1, и равняется 1 при первой записи в текущей записи **записей**. Можно получить общее число записей в **записей** объекта из [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) свойство.  
   
- При задании **AbsolutePosition** свойство, даже если это записи в текущий кэш ADO перезагружает кэша с новой группой записей, начиная с указанной записи. [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) свойство определяет размер этой группы.  
+ При задании **примеры AbsolutePosition** свойство, даже если это запись в текущем кэше ADO перезагружает кэша с новой группой записей, начиная с записи, вы указали. [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) свойство определяет размер этой группы.  
   
 > [!NOTE]
->  Не следует использовать **AbsolutePosition** свойство в качестве символов-заместителей номер записи. Позиция изменения определенной записи, при удалении предыдущей записи. Нет никакой гарантии, что данная запись будет иметь такой же **AbsolutePosition** Если **записей** опросить или повторном открытии объекта. Закладки, будут по-прежнему рекомендуемый способ сохранения и возврат к заданной позиции и являются единственным способом размещения различных типов **записей** объектов.  
+>  Не следует использовать **примеры AbsolutePosition** свойство как число записей суррогат. Определенной записи перемещается при удалении предыдущей записи. Нет также никакой гарантий, что определенной записи будет иметь тот же **примеры AbsolutePosition** Если **записей** опросить или повторном открытии объекта. Закладки, по-прежнему являются рекомендуемым способом сохранения и возврат к заданной позиции и являются единственным способом размещения во всех типах **записей** объектов.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  
- [AbsolutePosition и CursorLocation-пример свойства (Visual Basic)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
- [AbsolutePosition и пример свойства CursorLocation (VC ++)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
+ [Примеры AbsolutePosition и CursorLocation свойства (Visual Basic)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
+ [Примеры AbsolutePosition и CursorLocation свойства (Visual C++)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
  [Свойство AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)

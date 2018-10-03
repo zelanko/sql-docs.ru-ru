@@ -1,32 +1,29 @@
 ---
-title: Подготовить пример свойства (Visual Basic) | Документы Microsoft
+title: Подготовлен пример свойства (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Prepared property [ADO], Visual Basic example
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66efabdcbd3475a873dea67aa8540f9c36a560a7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2339cb94af5140bab96fe78add90b163e84ced60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813033"
 ---
-# <a name="prepared-property-example-vb"></a>Пример подготовленного свойства (Visual Basic)
-В этом примере демонстрируется [Готово](../../../ado/reference/ado-api/prepared-property-ado.md) свойства, открыв два [команда](../../../ado/reference/ado-api/command-object-ado.md) объектов — подготовлены и не подготовлен.  
+# <a name="prepared-property-example-vb"></a>Пример свойства Prepared (Visual Basic)
+В этом примере показано [подготовленных](../../../ado/reference/ado-api/prepared-property-ado.md) свойство, открыв два [команда](../../../ado/reference/ado-api/command-object-ado.md) объектов — подготовлен и не подготовлена.  
   
 ```  
 'BeginPreparedVB  
@@ -119,5 +116,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Свойство Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

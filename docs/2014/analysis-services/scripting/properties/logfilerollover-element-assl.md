@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LogFileRollover Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - LogFileRollover element
 ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ed8df0217baeb5f760273ad6998e2344f4fbb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c9c07dd08cacfbc273f2b0e691b178d4953ce42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054854"
 ---
 # <a name="logfilerollover-element-assl"></a>Элемент LogFileRollover (ASSL)
   Указывает ли ведение журнала [трассировки](../objects/trace-element-assl.md) выходные данные должны переносятся в новый файл, или когда файл журнала максимального размера, указанного в [LogFileSize](logfilesize-element-assl.md) достижения.  

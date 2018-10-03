@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_objects (Transact-SQL) | Документы Microsoft
+title: sys.dm_xe_objects (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_objects
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34ce63f29a798db910115fae7db2e0c732dafdc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: df8b9dae2c8c427444da4a9e19a1754f792dcef4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467210"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601372"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>Динамическое административное представление sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ ms.locfileid: "34467210"
 
  |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|имя|**nvarchar(60)**|Имя объекта. имя является уникальным в рамках пакета для конкретного типа объектов. Не допускает значение NULL.|  
+|name|**nvarchar(60)**|Имя объекта. имя является уникальным в пределах пакета для конкретного типа объектов. Не допускает значение NULL.|  
 |object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> действие<br /><br /> target;<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> Тип<br /><br /> Не допускает значение NULL.|  
 |package_guid|**uniqueidentifier**|Идентификатор GUID пакета, который представляет это действие. Обеспечивает связь «многие к одному» со столбцом sys.dm_xe_packages.package_id. Не допускает значение NULL.|  
 |description|**nvarchar(256)**|Описание действия. Описание задается автором пакета. Не допускает значение NULL.|  

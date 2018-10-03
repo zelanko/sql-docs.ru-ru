@@ -1,36 +1,33 @@
 ---
-title: SQLBindCol (драйвер ODBC для Visual FoxPro) | Документы Microsoft
+title: SQLBindCol (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindCol function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 139baf7eaac55aeb92c70fed7ec61645907d335d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8bf2f1b58a40118d64673a7464a242e6821e4c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902959"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685742"
 ---
 # <a name="sqlbindcol-visual-foxpro-odbc-driver"></a>SQLBindCol (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения по Visual FoxPro ODBC драйвера. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Поддержка: полный  
   
- Соответствия ODBC API: Уровень Core  
+ Соответствия API ODBC: Уровень Core  
   
- Назначает дисковое пространство для столбца результирующего и указывает тип результата. Когда [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) или [SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md) — вызывается, драйвер помещает данные для всех связанных столбцов назначенного расположения. В разделе [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) для сопоставления типов данных ODBC и Visual FoxPro.  
+ Назначает дискового пространства для столбца результатов и указывает тип результата. Когда [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) или [SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md) — вызывается, драйвер помещает данные для всех привязанных столбцов назначенных расположений. См. в разделе [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) для сопоставления типов данных ODBC и Visual FoxPro.  
   
- Дополнительные сведения см. в разделе [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md) в *справочнике программиста ODBC*.
+ Дополнительные сведения см. в разделе [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md) в *Справочник по программированию ODBC*.

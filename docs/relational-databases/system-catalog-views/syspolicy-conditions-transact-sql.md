@@ -1,14 +1,11 @@
 ---
-title: syspolicy_conditions (Transact-SQL) | Документы Microsoft
+title: syspolicy_conditions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_conditions
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09d52d9a4c4d5005a51057a40c29524301d3fdd4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c0f9efbedc1f380bca66c198accae17b70cb4da2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220805"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823112"
 ---
 # <a name="syspolicyconditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +33,7 @@ ms.locfileid: "33220805"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|Идентификатор условия. Каждое условие представляет собой коллекцию, состоящую из одного или нескольких выражений условий.|  
-|имя|**sysname**|Имя условия.|  
+|name|**sysname**|Имя условия.|  
 |date_created|**datetime**|Дата и время создания условия.|  
 |description|**nvarchar(max)**|Описание условия. Столбец описания является необязательным и может принимать значение NULL.|  
 |created_by|**sysname**|Имя пользователя, создавшего условие.|  
@@ -48,8 +44,8 @@ ms.locfileid: "33220805"
 |Выражение|**nvarchar(max)**|Выражение для состояний аспекта.|  
 |obj_name|**sysname**|Имя объекта, присвоенного @Name, если выражение условия содержит переменную.|  
   
-## <a name="remarks"></a>Замечания  
- При устранении неполадок управления на основе политик, запрос к представлению syspolicy_conditions, чтобы определить, кто создал или изменил условие последнего.  
+## <a name="remarks"></a>Примечания  
+ При устранении неполадок управления на основе политик, запрос к представлению syspolicy_conditions, чтобы определить, кто создал или последнего изменения условия.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли PolicyAdministratorRole базы данных msdb.  

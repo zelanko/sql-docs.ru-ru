@@ -1,32 +1,26 @@
 ---
-title: Устранение неполадок (DB2ToSQL) | Документы Microsoft
+title: Устранение неполадок (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e7e905e94be98c1a6f3dc6069170c5d51cab01f6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ff0ef803274b23a54e3964ae2822dc351a3ce784
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700252"
 ---
 # <a name="troubleshooting-db2tosql"></a>Устранение неполадок (DB2ToSQL)
-Довольно часто для запуска в выполнении консоли скрипты или команды, посередине проблемы миграции.  
+Нередко сталкиваются Мидуэй проблемы миграции, выполнение консоли скрипты или команды.  
   
-Могут быть исправлены ошибки может быть связана с:  
+Могут быть исправлены ошибки могут относиться к:  
   
 1.  Компонент  
   
@@ -40,5 +34,5 @@ ms.locfileid: "34775520"
   
 6.  Изменение параметров проекта  
   
-Проблемы можно устранить с помощью пользовательского интерфейса SSMA, открыв файл проекта, созданные с помощью консоли.  
+Проблемы могут быть устранены с помощью пользовательского интерфейса SSMA, открыв файл проекта, созданных с помощью консоли.  
   

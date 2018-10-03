@@ -1,32 +1,29 @@
 ---
-title: Пример метода (Visual Basic) обновление представления | Документы Microsoft
+title: Пример метода (Visual Basic) Refresh коллекции Views | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADOX]
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e85e27ad969b46e08ec980227b5fa939ee894907
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 123d7abe3248868295e8433d75d9e2a935cdc58d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830642"
 ---
-# <a name="views-refresh-method-example-vb"></a>Представления обновить пример метода (Visual Basic)
-В следующем коде показано, как обновить [представления](../../../ado/reference/adox-api/views-collection-adox.md) коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Это необходимо, прежде чем [представление](../../../ado/reference/adox-api/view-object-adox.md) объектов из **каталога** доступны.  
+# <a name="views-refresh-method-example-vb"></a>Пример метода Refresh коллекции Views (Visual Basic)
+Ниже показано, как обновить [представления](../../../ado/reference/adox-api/views-collection-adox.md) коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Это необходимо перед [представление](../../../ado/reference/adox-api/view-object-adox.md) объектов из **каталога** возможен.  
   
 ```  
 ' BeginViewsRefreshVB  
@@ -60,5 +57,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Обновить метод (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
+ [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

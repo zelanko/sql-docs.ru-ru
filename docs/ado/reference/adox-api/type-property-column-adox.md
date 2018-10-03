@@ -1,13 +1,11 @@
 ---
-title: Type-свойство (столбец) (ADOX) | Документы Microsoft
+title: Введите свойства (столбец) (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,25 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d826a41564313816fe0c23b00d10eaa2e83efddb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8a7fc9e5982280cc1c26a0179e9de8adc30e06d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757392"
 ---
-# <a name="type-property-column-adox"></a>Свойство Type (столбец) (ADOX)
+# <a name="type-property-column-adox"></a>Свойство Type (Column) (ADOX)
 Указывает тип данных столбца.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **длинные** значение, которое может быть одним из [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) константы. Значение по умолчанию — **adVarWChar**.  
+ Возвращает или задает **Long** значение, которое может принимать одно из [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) константы. Значение по умолчанию — **adVarWChar**.  
   
 ## <a name="remarks"></a>Примечания  
- Это свойство является чтение и запись, пока не [столбца](../../../ado/reference/adox-api/column-object-adox.md) объект добавляется в коллекцию или к другому объекту, после чего она доступна только для чтения.  
+ Это свойство доступно для чтения/записи, до [столбец](../../../ado/reference/adox-api/column-object-adox.md) объект добавляется в коллекцию или к другому объекту, после чего она доступна только для чтения.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  

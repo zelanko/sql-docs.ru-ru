@@ -1,13 +1,11 @@
 ---
-title: Индексы коллекции (ADOX) | Документы Microsoft
+title: Индексирует коллекцию (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,39 +14,38 @@ f1_keywords:
 helpviewer_keywords:
 - Indexes collection [ADOX]
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7bddbeacadb3bac0b2f408502e6aacb30184dfe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e1ef6a456a6a1903364c996e87c54cebee1fedb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286083"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756662"
 ---
-# <a name="indexes-collection-adox"></a>Коллекция индексов (ADOX)
+# <a name="indexes-collection-adox"></a>Коллекция Indexes (ADOX)
 Содержит все [индекс](../../../ado/reference/adox-api/index-object-adox.md) объекты таблицы.  
   
 ## <a name="remarks"></a>Примечания  
- [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) метод **индексы** является уникальным для ADOX. Возможные действия:  
+ [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) метод **индексы** является уникальным для ADOX. Можно выполнить следующие действия:   
   
--   Добавить новый индекс в коллекции, в котором **Append** метод.  
+-   Добавить новый индекс в коллекцию с **Append** метод.  
   
- Остальные свойства и методы являются стандартными коллекциям ADO. Возможные действия:  
+ Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:   
   
--   Индекс в коллекции, доступ к [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
+-   Доступ к индекса в коллекции с [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
   
 -   Возвращает число индексов, содержащихся в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  
   
 -   Удалить индекс из коллекции с [удалить](../../../ado/reference/adox-api/delete-method-adox-collections.md) метод.  
   
--   Обновление объектов в коллекции в соответствии с текущей схемы базы данных с [обновление](../../../ado/reference/ado-api/refresh-method-ado.md) метод.  
+-   Обновление объектов в коллекции в соответствии с текущей схемы базы данных с помощью [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод.  
   
- Этот раздел содержит следующий раздел.  
+ Этот раздел содержит следующие подразделы.  
   
 -   [Свойства, методы и события коллекции Indexes](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>См. также  
- [Индексы Append пример метода (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [Пример метода (Visual Basic) Append](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

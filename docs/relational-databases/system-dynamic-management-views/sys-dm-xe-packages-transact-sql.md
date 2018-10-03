@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_packages (Transact-SQL) | Документы Microsoft
+title: sys.dm_xe_packages (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_packages_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9901245681412017736e26c79b000e7f5c845365
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738865"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +35,9 @@ ms.locfileid: "34467180"
  
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|имя|**nvarchar(60)**|Имя пакета. Это описание берется из самого пакета. Не допускает значение NULL.|  
+|name|**nvarchar(60)**|Имя пакета. Это описание берется из самого пакета. Не допускает значение NULL.|  
 |guid|**uniqueidentifier**|Идентификатор GUID пакета. Не допускает значение NULL.|  
-|description|**nvarchar(256)**|Описание пакета. descriptionis задать автором пакета и не допускает значения NULL.|  
+|description|**nvarchar(256)**|Описание пакета. descriptionis задайте автором пакета и не допускает значения NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности этого пакета. Допускает значение NULL.|  
 |capabilities_desc|**nvarchar(256)**|Список всех возможностей, допустимых для этого пакета. Допускает значение NULL.|  
 |module_guid|**uniqueidentifier**|Идентификатор GUID модуля, содержащегося в пакете. Не допускает значение NULL.|  
@@ -61,7 +58,7 @@ ms.locfileid: "34467180"
 |От|Чтобы|Связь|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|Многие к одному|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

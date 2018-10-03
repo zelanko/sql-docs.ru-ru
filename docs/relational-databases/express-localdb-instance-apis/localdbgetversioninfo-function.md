@@ -1,15 +1,12 @@
 ---
-title: Функция Localdbgetversionsinfo | Документы Microsoft
+title: Функция Localdbgetversionsinfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetVersionInfo
@@ -17,15 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
-caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8be469a7f4a9f1b316b881ea884f7fbabc955dfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3b4d8e565aa1494e4e68a0243eb470bd7efe90b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661802"
 ---
 # <a name="localdbgetversioninfo-function"></a>Функция LocalDBGetVersionsInfo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,9 +87,9 @@ HRESULT LocalDBGetVersionInfo(
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
 ## <a name="details"></a>Сведения  
- Обоснование появлением **структуры** аргумент размера (*lpVersionInfoSize*) — научить API для возврата разных версий **LocalDBVersionInfostruct**, эффективно Включение прямой и обратной совместимости.  
+ Обоснование появлением **структуры** аргумент размера (*lpVersionInfoSize*) является возможность API мог возвращать различные версии структуры **LocalDBVersionInfostruct**, что включение прямой и обратной совместимости.  
   
- Если **структуры** аргумент размера (*lpVersionInfoSize*) соответствует размеру известной версии **LocalDBVersionInfostruct**, соответствующей версии  **Структура** возвращается. В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
+ Если **структуры** аргумент размера (*lpVersionInfoSize*) соответствует размеру известной версии **LocalDBVersionInfostruct**, эту версию  **Структура** возвращается. В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
   
  Типичным примером **LocalDBGetVersionInfo** использование API выглядит следующим образом:  
   
@@ -102,7 +99,7 @@ LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));
   
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md)  
   
 ## <a name="see-also"></a>См. также  

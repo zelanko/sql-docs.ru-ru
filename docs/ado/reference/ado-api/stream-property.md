@@ -1,13 +1,11 @@
 ---
-title: Поток свойства | Документы Microsoft
+title: Свойство Stream | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - Stream property
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9318e52eac9301cdcf2d3cf02bbc88ad917b4669
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ddeaadb1f25c3ea50e59c20d48f14e31831f2639
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822023"
 ---
-# <a name="stream-property"></a>Свойства потока
-Возвращает или задает поставщика OLE DB **поток** объекта из/в **ADOStreamConstruction** объекта.  
+# <a name="stream-property"></a>Свойство Stream
+Возвращает или задает поставщика OLE DB **Stream** объектов или из **ADOStreamConstruction** объекта.  
   
  Read/write.  
   
@@ -44,13 +41,13 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>Параметры  
  *ppStream*  
- Указатель на OLE DB **поток** объекта.  
+ Указатель на OLE DB **Stream** объекта.  
   
  *pStream*  
- OLE DB **поток** объекта.  
+ OLE DB **Stream** объекта.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Этот метод свойство возвращает стандартные значения HRESULT. Сюда входят S_OK и E_FAIL.  
+ Этот метод свойство возвращает стандартные значения HRESULT. Это включает в себя значение S_OK и значение E_FAIL.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Интерфейс ADOStreamConstruction](../../../ado/reference/ado-api/adostreamconstruction-interface.md)

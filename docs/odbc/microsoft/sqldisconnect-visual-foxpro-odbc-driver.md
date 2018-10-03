@@ -1,36 +1,33 @@
 ---
-title: SQLDisconnect (драйвер ODBC для Visual FoxPro) | Документы Microsoft
+title: SQLDisconnect (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLDisconnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 78ae1695-b53e-48ff-be49-ecff1f599e61
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c59f31a892adbfff37d92418b33d783790c841c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d587ef50798aa0ba836c0b4a691bdb32a280465a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901839"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828052"
 ---
 # <a name="sqldisconnect-visual-foxpro-odbc-driver"></a>SQLDisconnect (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения по Visual FoxPro ODBC драйвера. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Поддержка: полный  
   
- Соответствия ODBC API: Уровень Core  
+ Соответствия API ODBC: Уровень Core  
   
  Закрывает соединение.  
   
- Дополнительные сведения см. в разделе [SQLDisconnect](../../odbc/reference/syntax/sqldisconnect-function.md) в *справочнике программиста ODBC*.
+ Дополнительные сведения см. в разделе [SQLDisconnect](../../odbc/reference/syntax/sqldisconnect-function.md) в *Справочник по программированию ODBC*.

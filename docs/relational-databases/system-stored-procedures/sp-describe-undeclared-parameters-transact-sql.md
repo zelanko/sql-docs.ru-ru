@@ -1,14 +1,11 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/15/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -18,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b6b17565a12cde0148982f82cf4b84bd1fd8db1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099868"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679642"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Возвращает результирующий набор, содержащий метаданные о необъявленных параметрах в [!INCLUDE[tsql](../../includes/tsql-md.md)] пакетной службы. Учитывается каждый параметр, который используется в  **\@tsql** пакетной службы, но не объявлены в  **\@params**. Возвращается результирующий набор, содержащий одну строку для каждого такого параметра со сведениями о предполагаемом типе параметра. Процедура возвращает пустой результирующий набор, если  **\@tsql** входном пакете содержит другие параметры, кроме объявленных в  **\@params**.  
   
@@ -47,11 +43,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **\@tsql =** ] **"***Transact SQL_batch***"**  
- Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact SQL_batch* может быть **nvarchar (***n***)** или **nvarchar(max)**.  
+ [  **\@tsql =** ] **"**_Transact-SQL\_пакета_**"**  
+ Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact SQL_batch* может быть **nvarchar (**_n_**)** или **nvarchar(max)**.  
   
- [  **\@params =** ] **N "***параметры***"**  
- \@params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] работы пакетной службы, точно так же в хранимой процедуре sp_executesql. *Параметры* может быть **nvarchar (***n***)** или **nvarchar(max)**.  
+ [  **\@params =** ] **N "**_параметры_**"**  
+ \@params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] работы пакетной службы, точно так же в хранимой процедуре sp_executesql. *Параметры* может быть **nvarchar (**_n_**)** или **nvarchar(max)**.  
   
  Строка, содержащая определения всех параметров, внедренных в *Transact SQL_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. n — заполнитель, указывающий дополнительные определения параметра. Если выполнение инструкции Transact-SQL или пакета в инструкции не содержит параметров, \@params не является обязательным. Этот аргумент по умолчанию принимает значение NULL.  
   
@@ -106,7 +102,7 @@ sp_describe_undeclared_parameters
   
 -   Если входные данные [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет объявляет локальную переменную с тем же именем, как параметр, объявленный в \@params.  
   
--   Если оператор ссылается на временные таблицы.  
+- Если оператор ссылается на временные таблицы.
   
  Если \@tsql не имеет параметров, не объявленных в \@params, процедура возвращает пустой результирующий набор.  
   

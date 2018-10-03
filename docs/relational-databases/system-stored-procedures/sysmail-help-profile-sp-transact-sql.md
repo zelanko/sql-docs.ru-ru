@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_profile_sp (Transact-SQL) | Документы Microsoft
+title: sysmail_help_profile_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profile_sp_TSQL
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profile_sp
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa2e8bb227da4fdb3305c96de0be04cd4a877ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3b953f619ab422eba81a925375d9ae8b0cd60e82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836462"
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,13 +59,13 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |**name**|**sysname**|Имя профиля.|  
 |**Описание**|**nvarchar(256)**|Описание профиля.|  
   
-## <a name="remarks"></a>Замечания  
- Если указано имя профиля или его идентификатор профиля, **sysmail_help_profile_sp** возвращает сведения об этом профиле. В противном случае **sysmail_help_profile_sp** возвращает сведения о каждом профиле в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра.  
+## <a name="remarks"></a>Примечания  
+ Если указано имя профиля или идентификатор профиля, **sysmail_help_profile_sp** возвращает сведения об этом профиле. В противном случае **sysmail_help_profile_sp** возвращает сведения о каждом профиле в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра.  
   
- Хранимая процедура **sysmail_help_profile_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру следует выполнять с трехкомпонентным именем, если текущая база данных не является **msdb**.  
+ Хранимая процедура **sysmail_help_profile_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру необходимо выполнять с трехкомпонентным именем, если текущая база данных не **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию членам выполнение **sysadmin** предопределенной роли сервера.  
+ Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
  **А. Список всех профилей**  

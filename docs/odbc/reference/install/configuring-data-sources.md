@@ -1,35 +1,32 @@
 ---
-title: Настройка источников данных | Документы Microsoft
+title: Настройка источников данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], configuring
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c194752c76ca96ad5c8119ed9fa1919cd9f3ea14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914709"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595672"
 ---
 # <a name="configuring-data-sources"></a>Настройка источников данных
-Сведения об источниках данных хранится в системном реестре. Пользователи изменять сведения об источнике данных через программу администрирования. Это может быть администратора ODBC устройства ODBC панели управления и администрирования программы, написанной разработчиком приложения или драйвера.  
+Сведения об источниках данных хранится в системном реестре. Пользователи изменять к источнику данных через программу администрирования. Это может быть администратор ODBC, устройство ODBC панели управления или администрирования программу, написанную разработчиком приложения или драйвера.  
   
- Можно использовать команды PowerShell для изменения источников данных. Дополнительные сведения об этих командах PowerShell см. в разделе [команд PowerShell компоненты доступа к данных Windows](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ Можно использовать команды PowerShell для изменения источников данных. Дополнительные сведения об этих командах PowerShell см. в разделе [Windows данные доступа компоненты PowerShell команды](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
 > [!NOTE]  
->  Этот раздел относится только к Microsoft Windows® платформы. Как источники данных настроены на других платформах зависит от платформы.  
+>  В этом разделе относится только к Microsoft Windows® платформы. Настройки источников данных на других платформах зависит от платформы.  
   
  Этот раздел содержит следующие подразделы:  
   

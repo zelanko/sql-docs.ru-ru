@@ -1,32 +1,29 @@
 ---
-title: Пример свойства ActiveCommand (JScript) | Документы Microsoft
+title: Пример свойства ActiveCommand (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - ActiveCommand property [ADO], JScript example
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4272cda6ce23406661c216944a155b2de6d61349
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e9f7dfa941d02ac86f31f8d5d93fa55be6130ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617232"
 ---
 # <a name="activecommand-property-example-jscript"></a>Пример свойства ActiveCommand (JScript)
-В этом примере демонстрируется [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) свойство. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ActiveCommandJS.asp**.  
+В этом примере показано [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) свойство. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ActiveCommandJS.asp**.  
   
 ```  
 <!-- BeginActiveCommandJS -->  
@@ -130,6 +127,6 @@ if (strName.length > 0)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойство ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Пример свойства ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,32 +1,29 @@
 ---
-title: Промежуточные ВЫЧИСЛИТЕЛЬНЫЕ предложения фигуры | Документы Microsoft
+title: Предложения COMPUTE для промежуточных фигуры | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - COMPUTE clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b576c0ac9da230cd945623679e72727895ec4fc7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2b51bdbb489c3ddb1c00663dc70d05841dd6fb36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632122"
 ---
-# <a name="intervening-shape-compute-clauses"></a>Промежуточные ВЫЧИСЛИТЕЛЬНЫЕ предложения фигуры
-Он допустим для внедрения одного или нескольких предложений COMPUTE между родительским и дочерним в команде параметризованные фигуры, как показано в следующем примере:  
+# <a name="intervening-shape-compute-clauses"></a>Предложения COMPUTE для промежуточного формирования данных
+Он является допустимым для внедрения одного или нескольких предложений COMPUTE между родительским и дочерним в команде параметризованные фигуры, как показано в следующем примере:  
   
 ```  
 SHAPE {select au_lname, state from authors} APPEND   
@@ -41,5 +38,5 @@ RELATE state TO PARAMETER 0)
   
 ## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
- [Грамматика формальных фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Грамматика формального формирования данных](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

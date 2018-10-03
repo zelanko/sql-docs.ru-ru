@@ -1,34 +1,31 @@
 ---
-title: Reset-метод (RDS) | Документы Microsoft
+title: Reset-метод (RDS) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Reset method [ADO]
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8528794ecf2d52ec62225085c4de03d250ebf16
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 10a2b6814e219072408b644910d93a08e2f7f120
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288563"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728312"
 ---
-# <a name="reset-method-rds"></a>Метод Reset (RDS)
-Выполняет сортировки или фильтрации на стороне клиента **записей** на основе указанного свойств сортировки и фильтрации.  
+# <a name="reset-method-rds"></a>Метод Reset (служба удаленных рабочих столов)
+Выполняет сортировки или фильтрации на стороне клиента **записей** на основе указанного Сортировка и фильтрация свойств.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,14 +39,14 @@ DataControl.Reset(value)
  Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
  *value*  
- Необязательный параметр. Объект **логическое** значение, равное **True** (по умолчанию), если нужно выполнить фильтрацию в текущем наборе строк «фильтрация». **False** указывает, что отфильтровать на первоначальный набор строк, удаляя все предыдущие параметры фильтра.  
+ Необязательный параметр. Объект **логическое** значение, являющееся **True** (по умолчанию), если нужно выполнить фильтрацию в текущем наборе строк «фильтрованный». **False** указывает, что отфильтровать в исходном наборе строк, удаляя все предыдущие параметры фильтра.  
   
 ## <a name="remarks"></a>Примечания  
- [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), и [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)свойства предоставляют сортировки и фильтрации функциональность на стороне клиента кэша. Функциональные возможности сортировки упорядочивает записи по значения из одного столбца. Функцию фильтра отображает подмножество записей на основе критерия поиска, при полной [записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. **Сброс** метод будет выполнять критерии и заменить текущую **записей** с обновляемым **записей**.  
+ [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), и [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)свойства предоставляют функций на стороне клиента кэша сортировки и фильтрации. Функция сортировки упорядочивает записей по значения одного столбца. Функция фильтрации отображается лишь часть записи на основе критерия поиска, при полной [записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. **Сброс** метод будет выполнять критерии и замените текущую **записей** с обновляемый **записей**.  
   
- При внесении изменений в исходных данных, которые не были отправлены, **Сброс** метод завершится с ошибкой. Во-первых, используйте [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) метод, чтобы сохранить изменения в чтение и запись **записей**и затем использовать **Сброс** метод сортировки и фильтрации записей.  
+ Если происходят изменения в исходные данные, не были переданы, **Сброс** метод завершится с ошибкой. Во-первых, используйте [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) метод для сохранения любых изменений в доступный для чтения/записи **записей**и затем использовать **Сброс** метод сортировать или фильтровать записи.  
   
- Если вы хотите выполнить более одного фильтра для набора строк, можно использовать необязательный *логическое* аргумент с **Сброс** метод. Следующий пример показывает, как это сделать:  
+ Если вы хотите выполнить более одного фильтра для набора строк, можно использовать необязательный *логическое* аргумент с **Сброс** метод. В следующем примере показано, как это сделать:  
   
 ```  
 ADC.SQL = "Select au_lname from authors"  
@@ -78,7 +75,7 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>См. также  
- [FilterColumn, FilterCriterion, FilterValue, SortColumn, направления сортировки, свойства и пример метода сброса (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [FilterColumn, FilterCriterion, FilterValue, SortColumn, SortDirection свойства и пример метода Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

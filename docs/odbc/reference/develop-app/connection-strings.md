@@ -1,13 +1,11 @@
 ---
-title: Строки подключения | Документы Microsoft
+title: Строки подключения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,22 +18,21 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5b88b1056d8b645614a7f17fd6edf81eb804f16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7e52ec70e53608f1af48b4abcd2dd1edb4fc454
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909279"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754622"
 ---
 # <a name="connection-strings"></a>Строки соединения
-Строка подключения содержит сведения, которые используются для установления подключения. Полная строка подключения содержит все сведения, необходимые для установления соединения. Строка подключения — это последовательность пар "ключевое слово значение", разделенных точкой с запятой. (Полный синтаксис строки соединения см. в разделе [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) описание функции.) Строка подключения используется:  
+Строка подключения содержит сведения, используемые для установления соединения. Полная строка подключения содержит все сведения, необходимые для установления соединения. Строка подключения представляет собой ряд пар "ключевое слово/значение", разделенных точкой с запятой. (Полный синтаксис строки подключения, см. в разделе [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) описание функции.) Строка подключения используется:  
   
 -   **SQLDriverConnect**, который завершает строку подключения, взаимодействие с пользователем.  
   
--   **SQLBrowseConnect**, которой завершается строка подключения итеративного с источником данных.  
+-   **SQLBrowseConnect**, который завершает строку подключения, который взаимодействует с источником данных.  
   
- **SQLConnect** не использует строку подключения; с помощью **SQLConnect** является аналогом подключение с помощью строки подключения с ровно три пары ключ значение (имя источника данных, и при необходимости, пользователь идентификатор и пароль) .
+ **SQLConnect** не использует строку подключения, с помощью **SQLConnect** является аналогом подключение с использованием строки подключения с ровно три пары "ключевое слово/значение" (имя источника данных и, при необходимости пользователь идентификатор и пароль) .

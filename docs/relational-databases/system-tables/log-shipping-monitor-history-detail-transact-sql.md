@@ -1,14 +1,11 @@
 ---
-title: log_shipping_monitor_history_detail (Transact-SQL) | Документы Microsoft
+title: log_shipping_monitor_history_detail (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_history_detail_TSQL
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_history_detail system table
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b57136a4f8378c25892fa32c29956d89f7da9868
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f8968661442adabe4c04608ca5a5bb5362341c4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804112"
 ---
 # <a name="logshippingmonitorhistorydetail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +43,13 @@ ms.lasthandoff: 05/04/2018
 |**log_time_utc**|**datetime**|Дата и время создания записи по Гринвичу.|  
 |**message**|**nvarchar(max)**|Текст сообщения.|  
   
-## <a name="remarks"></a>Замечания  
- Эта таблица содержит подробное описание агентов доставки журналов. Чтобы идентифицировать сеанс агента, используйте столбцы **agent_id**, **agent_type**, и **session_id**. Чтобы просмотреть подробные данные журнала для сеанса агента, отсортируйте их по **log_time**.  
+## <a name="remarks"></a>Примечания  
+ Эта таблица содержит подробное описание агентов доставки журналов. Чтобы идентифицировать сеанс агента, используйте столбцы **agent_id**, **agent_type**, и **session_id**. Чтобы просмотреть подробные данные журнала для сеанса работы агента, сортировку **log_time**.  
   
- Помимо хранения на удаленном сервере мониторинга, хранятся сведения, связанные с сервера-источника на сервере-источнике в его **log_shipping_monitor_history_detail** таблицы и сведения, относящиеся к получателю сервер также хранится на сервере-получателе в его **log_shipping_monitor_history_detail** таблицы.  
+ Помимо хранения на удаленном сервере мониторинга, сведения, относящиеся к серверу-источнику хранится на сервере-источнике в его **log_shipping_monitor_history_detail** таблицы, а также сведения, относящиеся к базу данных-получатель сервер также хранится на сервере-получателе в его **log_shipping_monitor_history_detail** таблицы.  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_cleanup_log_shipping_history (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   

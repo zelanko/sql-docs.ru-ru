@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_set_warehouse_database_name (Transact-SQL) | Документы Microsoft
+title: sp_syscollector_set_warehouse_database_name (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_database_name
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_set_warehouse_database_name
 - data collector [SQL Server], stored procedures
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 878bf44ab404f5567f0e5933fe6f0173826b1972
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6f2bae4087d929ec7f13caff28bd19afabfa6aae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770212"
 ---
 # <a name="spsyscollectorsetwarehousedatabasename-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +47,10 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Необходимо отключить сборщик данных перед изменением конфигурации на уровне сборщика данных. Если включен сборщик данных, эта процедура завершится с ошибкой.  
   
- Чтобы просмотреть имя текущей базы данных, запросите [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) системного представления.  
+ Чтобы просмотреть имя текущей базы данных, запросите [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) системное представление.  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой процедуры требуется членство в предопределенной роли базы данных dc_admin (с разрешением EXECUTE).  

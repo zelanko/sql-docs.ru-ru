@@ -1,37 +1,34 @@
 ---
-title: SQLSetConnectOption (драйвер доступа) | Документы Microsoft
+title: SQLSetConnectOption (драйвер для Access) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], Access Driver
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 952bfe683dabbcedeb771c0e7f1787f7a0e6f7bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18950d49afdab8517b95c59df8841c33b5d3d086
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905019"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706882"
 ---
-# <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (драйвер доступа)
+# <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (драйвер для Access)
 > [!NOTE]  
->  В этом разделе сведения драйвера доступа. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе сведения конкретного драйвера доступа. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |fOption|Комментарий|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption можно присвоить значение SQL_MODE_READ_ONLY или SQL_MODE_READ_WRITE. Тем не менее драйвер не запрещает обновление, если SQL_ACCESS_MODE равно SQL_MODE_READ_ONLY.|  
-|SQL_AUTOCOMMIT|Когда используется драйвер Microsoft Access, параметр SQL_AUTOCOMMIT может быть присвоено SQL_AUTOCOMMIT_ON или SQL_AUTOCOMMIT_OFF, так как драйвер Microsoft Access поддерживает транзакции [1].|  
+|SQL_ACCESS_MODE|Можно задать SQL_ACCESS_MODE fOption SQL_MODE_READ_ONLY или SQL_MODE_READ_WRITE. Тем не менее драйвер не запрещает обновление, если задано значение SQL_ACCESS_MODE SQL_MODE_READ_ONLY.|  
+|SQL_AUTOCOMMIT|Когда используется драйвером Microsoft Access, параметр SQL_AUTOCOMMIT может задаваться к SQL_AUTOCOMMIT_OFF, либо параметром SQL_AUTOCOMMIT_ON, поскольку драйвером Microsoft Access поддерживает транзакции [1].|  
 |SQL_CURRENT_QUALIFIER|Поддерживается.|  
 |SQL_LOGIN_TIMEOUT|Не поддерживается.|  
 |SQL_OPT_TRACE|Поддерживается.|  
@@ -42,4 +39,4 @@ ms.locfileid: "32905019"
 |SQL_TRANSLATION_OPTION|Не поддерживается.|  
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION всегда является SQL_TXN_READ_COMMITTED.|  
   
- [1] атомарные транзакции не поддерживается драйвером Microsoft Access. При фиксации транзакции с помощью драйвера Microsoft Access, конечное задержки существует между времени, транзакция завершается и значения записываются на диск. Эта задержка определяется задержки, встроенные в ядро Microsoft Jet. Время ожидания страницы не будет меньше, чем минимальное значение, даже если параметр PageTimeout имеет значение ниже этого значения. Как следствие, нет никакой гарантии, что зафиксированные данные стабильна, так как во время задержки могут быть внесены изменения.
+ [1] атомарные транзакции не поддерживается драйвером Microsoft Access. Существует при фиксации транзакции с помощью драйвера Microsoft Access, конечное задержка между временем, транзакция фиксируется и времени, значения записываются на диск. Эта задержка определяется задержка, встроенные в ядро Microsoft Jet. Время ожидания страницы не будет меньше, чем минимальное значение, даже если параметр PageTimeout имеет значение ниже этого значения. Таким образом, нет никакой гарантии, что зафиксированные данные стабильна, так как во время задержки могут вноситься изменения.

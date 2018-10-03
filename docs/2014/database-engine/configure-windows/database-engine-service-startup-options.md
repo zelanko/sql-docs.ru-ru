@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - startup options [SQL Server]
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 373f9493ac9effd62bb0c7178fca09289f70b4bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b76df2fc563c8170e176bb69d8d6a1e9e3209c98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062004"
 ---
 # <a name="database-engine-service-startup-options"></a>Параметры запуска службы Database Engine
   Параметры запуска задают определенное расположение файлов, необходимых для запуска, а также некоторые условия для сервера. Большинству пользователей не нужно задавать параметры запуска за исключением случаев, когда устраняются проблемы служб [!INCLUDE[ssDE](../../includes/ssde-md.md)] , либо если возникла неожиданная проблема и необходимо использовать параметр запуска по указанию поддержки пользователей служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -73,7 +70,7 @@ ms.locfileid: "37219834"
 ## <a name="compatibility-support"></a>Поддержка совместимости  
  Параметр **-h**  не поддерживается в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот параметр использовался в более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Дополнительные сведения см. в разделе [Discontinued SQL Server Features in SQL Server 2014](../../getting-started/discontinued-sql-server-features-in-sql-server-2014.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Настройка параметра конфигураци и сервера scan for startup procs](configure-the-scan-for-startup-procs-server-configuration-option.md)  
   
  [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](start-stop-pause-resume-restart-sql-server-services.md)  

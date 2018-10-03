@@ -1,13 +1,11 @@
 ---
-title: Type-свойство (ADO) | Документы Microsoft
+title: Введите свойство (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO]
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33bf90a2ac3101cbf582449f2b5495f110a37a62
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02c5b9193b89c131095ccfec6ef185d5ff39f4d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820792"
 ---
 # <a name="type-property-ado"></a>Свойство Type (ADO)
-Тип рабочей тип или данные [параметр](../../../ado/reference/ado-api/parameter-object.md), [поле](../../../ado/reference/ado-api/field-object.md), или [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекта.  
+Тип рабочей типа или данных [параметр](../../../ado/reference/ado-api/parameter-object.md), [поле](../../../ado/reference/ado-api/field-object.md), или [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекта.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение.  
   
 ## <a name="remarks"></a>Примечания  
- Для **параметр** объектов, **тип** свойство доступно для чтения/записи. Для новых **поле** объектов, добавленных в [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [запись](../../../ado/reference/ado-api/record-object-ado.md), **тип** доступен для чтения и записи только после [ Значение](../../../ado/reference/ado-api/value-property-ado.md) свойство **поле** был указан и поставщик данных успешно добавлен новый **поле** путем вызова [обновить](../../../ado/reference/ado-api/update-method.md)метод **поля** коллекции.  
+ Для **параметр** объектов, **тип** свойство доступно для чтения/записи. Для новых **поле** объекты, добавленные [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md), **тип** доступно для чтения и записи только после [ Значение](../../../ado/reference/ado-api/value-property-ado.md) свойство для **поле** была определена и успешно добавил новый поставщик данных **поле** путем вызова [обновить](../../../ado/reference/ado-api/update-method.md)метод **поля** коллекции.  
   
  Для всех остальных объектов **тип** свойство доступно только для чтения.  
   
@@ -45,7 +42,7 @@ ms.locfileid: "35282573"
 |[Объект Field](../../../ado/reference/ado-api/field-object.md)|[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Пример свойства типа (поле) (Visual Basic)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
- [Пример типа свойства (свойство) (VC ++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
+ [Пример свойства Type (объект Field) (Visual Basic)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
+ [Пример свойства Type (свойство) (Visual C++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [Свойство RecordType (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Свойство Type (объект Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

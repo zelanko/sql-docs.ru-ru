@@ -1,34 +1,31 @@
 ---
-title: Введите пример свойства (свойство) (Visual Basic) | Документы Microsoft
+title: Введите пример свойства (Property) (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Type property [property] [ADO], Visual Basic example
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12928988a338ca26a220b3418637cdd237c452f0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 487f32fa2ec374d08589766b75ce97a1b35e2aac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282613"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779292"
 ---
-# <a name="type-property-example-property-vb"></a>Пример типа свойства (свойство) (Visual Basic)
-В этом примере демонстрируется [тип](../../../ado/reference/ado-api/type-property-ado.md) свойства. Это модель программы для перечисления с именами и типами коллекции, например [свойства](../../../ado/reference/ado-api/properties-collection-ado.md), [поля](../../../ado/reference/ado-api/fields-collection-ado.md)и т. д.  
+# <a name="type-property-example-property-vb"></a>Пример свойства Type (объект Property) (Visual Basic)
+В этом примере показано [тип](../../../ado/reference/ado-api/type-property-ado.md) свойства. Это модель служебной программы для получения списка имен и типов коллекции, например [свойства](../../../ado/reference/ado-api/properties-collection-ado.md), [поля](../../../ado/reference/ado-api/fields-collection-ado.md)и т. д.  
   
- Нам не нужно открывать [записей](../../../ado/reference/ado-api/recordset-object-ado.md) для доступа к его **свойства** коллекции; они появляются при **записей** экземпляра объекта. Однако задание [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойства **adUseClient** добавляет несколько динамических свойств для **записей** объекта **свойства** коллекции, делая в примере более интересным. Для иллюстрации, мы явно использовать [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство для доступа к каждой [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекта.  
+ Нам не нужно открыть [записей](../../../ado/reference/ado-api/recordset-object-ado.md) для доступа к его **свойства** коллекции; они появляются при **записей** создается экземпляр объекта. Однако можно присвоить [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойства **adUseClient** добавляются несколько динамических свойств для **записей** объекта **свойства** коллекции, делая в примере немного интереснее. Для иллюстрации мы явно использовать [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство для доступа к каждой [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекта.  
   
 ```  
 'BeginTypePropertyVB  
@@ -152,5 +149,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойства объекта (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

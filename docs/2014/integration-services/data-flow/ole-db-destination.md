@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eee342244a6a057a98d5ab6252c6ab970b515118
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39f15609f326699c77688cfef599eed9c01adab6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058134"
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
   Назначение «OLE DB» загружает данные в различные OLE DB-совместимые базы данных при помощи таблицы базы данных или представления, или команды SQL. Например, источник OLE DB может загрузить данные в таблицы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access и базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -57,7 +54,7 @@ ms.locfileid: "37243094"
 > [!NOTE]  
 >  В зависимости от типа назначения может потребоваться изменить инструкцию CREATE TABLE, которую формирует диалоговое окно **Редактор назначения "OLE DB"** . Например, некоторые целевые объекты не поддерживают типы данных, которые использует инструкция CREATE TABLE.  
   
- Это назначение использует диспетчер соединений OLE DB для подключения к источнику данных, и диспетчер соединений определяет используемый поставщик OLE DB. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
+ Это назначение использует диспетчер соединений OLE DB для подключения к источнику данных, и диспетчер соединений определяет используемый поставщик OLE DB. Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](../connection-manager/ole-db-connection-manager.md).  
   
  Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] также содержит объект источника данных, из которого можно создать диспетчер соединений OLE DB, чтобы источники данных и представления источников данных стали доступными для целевой OLE DB.  
   

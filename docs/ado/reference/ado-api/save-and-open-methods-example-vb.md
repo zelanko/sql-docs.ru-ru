@@ -1,13 +1,11 @@
 ---
-title: Сохранение и открытие примере методы (Visual Basic) | Документы Microsoft
+title: Сохранение и открытие примеры методов (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6541e8d8da07f956557d80d2f66144e56f216a24
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281393"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828852"
 ---
-# <a name="save-and-open-methods-example-vb"></a>Сохранение и открытие примере методы (Visual Basic)
-В следующих трех примерах как [Сохранить](../../../ado/reference/ado-api/save-method.md) и [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) методы, которые могут использоваться совместно.  
+# <a name="save-and-open-methods-example-vb"></a>Примеры методов Save и Open (Visual Basic)
+Этих трех примерах показано, как [Сохранить](../../../ado/reference/ado-api/save-method.md) и [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) методы, которые могут использоваться совместно.  
   
- Предположим, что происходит на командировки и нужно взять таблицы из базы данных. Перед тем как перейти, осуществляется доступ к данным как [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и сохраните его в форме пересылать. При поступлении в пункт назначения, можно получить доступ к **записей** как локальные, отключен **записей**. Внести изменения в **записей**, а затем сохраните его. Наконец при возврате Главная соединиться с базой данных и дополнить изменения, внесенные в дороге.  
+ Предполагается, что будет в командировки и хотите взять с собой таблицы из базы данных. Перед тем как перейти, доступе к данным как [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и сохраните его в виде переносимые. При поступлении в пункт назначения, можно получить доступ к **записей** как локальный, отключен **записей**. При внесении изменений в **записей**, а затем сохраните его. Наконец когда вы возвращаетесь домой, попытку соединения с базой данных и применить его изменения, внесенные в дороге.  
   
- Во-первых, доступ и сохраните ***авторы*** таблицы.  
+ Во-первых, доступ к и сохранить ***авторы*** таблицы.  
   
 ```  
 'BeginSaveVB  
@@ -88,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- На этом этапе вы попали на месте назначения. Вы получите доступ к ***авторов*** таблицы как локальные, отключен **записей**. Необходимо иметь **MSPersist** поставщика на компьютере, который используется для доступа к сохраненному файлу a:\Pubs.xml.  
+ На этом этапе вы попасть в пункт назначения. Вы будете обращаться к ***авторов*** таблицы как локальный, отключен **записей**. Необходимо иметь **MSPersist** поставщика на компьютере, используемом для доступа к сохраненному файлу a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  
@@ -101,7 +98,7 @@ Attribute VB_Name = "Save"
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Дополнительные сведения о сохраняемости набора записей](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Метод Save](../../../ado/reference/ado-api/save-method.md)

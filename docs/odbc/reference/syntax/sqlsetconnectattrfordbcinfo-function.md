@@ -1,34 +1,31 @@
 ---
-title: Функция SQLSetConnectAttrForDbcInfo | Документы Microsoft
+title: Функция SQLSetConnectAttrForDbcInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectAttrForDbcInfo function [ODBC]
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c6d7bab7f8c2003c8a48017e7465e200622badf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 798f986adfeda95ef091161458d94c2ccc33b2e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818483"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>Функция SQLSetConnectAttrForDbcInfo
-**Соответствия**  
- Появился в версии: Полное соответствие стандартам 3,81 ODBC: ODBC  
+**Соответствие стандартам**  
+ Версия была введена: ODBC 3,81 соответствие стандартам: ODBC  
   
  **Сводка**  
- **SQLSetConnectAttrForDbcInfo** совпадает со значением **SQLSetConnectAttr**, но он задает атрибут на маркер сведения подключения вместо на дескриптор соединения.  
+ **SQLSetConnectAttrForDbcInfo** совпадает со значением **SQLSetConnectAttr**, но он задает атрибут в маркере сведения соединения вместо на дескриптор соединения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,41 +39,41 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
 ## <a name="arguments"></a>Аргументы  
  *hDbcInfoToken*  
- [Вход] Дескриптор токена.  
+ [Вход] Дескриптор маркера.  
   
- *Атрибут*  
- [Вход] Атрибут. Список доступных атрибутов является драйвера и аналогичны [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
+ *Attribute*  
+ [Вход] Атрибут. Список допустимых атрибутов — это драйвер и так же, как [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
  *ValuePtr*  
- [Вход] Указатель на значение должны быть связаны с *атрибут*. В зависимости от значения *атрибута*, *ValuePtr* будет значение 32-разрядное целое число без знака или будет указывать строку, завершающуюся значением null. Обратите внимание, что если *атрибута* аргумент представляет собой значение драйвера, значение в *ValuePtr* может быть целое число со знаком.  
+ [Вход] Указатель на значение, которым будет связана *атрибут*. В зависимости от значения *атрибут*, *ValuePtr* будет представлять собой значение 32-разрядного целого числа без знака или указывает на строку символов с завершающим нулем. Обратите внимание, что если *атрибут* аргумент представляет собой значение конкретного драйвера, значение в *ValuePtr* может быть целое число со знаком.  
   
- *stringLength*  
- [Вход] Если *атрибута* является атрибутом, определенных для ODBC и *ValuePtr* указывает на строку символов или двоичных буфера, данный аргумент должен иметь длину **ValuePtr*. Для символьных строковых данных этот аргумент должен содержать число байтов в строку.  
+ *StringLength*  
+ [Вход] Если *атрибут* является атрибутом, определенных для ODBC и *ValuePtr* указывает на строку символов или двоичный буфер, данный аргумент должен иметь длину **ValuePtr*. Для строки символьных данных этот аргумент должен содержать число байтов в строке.  
   
- Если *атрибута* является атрибутом, определенных для ODBC и *ValuePtr* является целым числом, *StringLength* учитывается.  
+ Если *атрибут* является атрибутом, определенных для ODBC и *ValuePtr* должно быть целым числом, *StringLength* учитывается.  
   
- Если *атрибута* является атрибутом, определяемым драйвером, приложение сможет определить природу атрибут диспетчера драйверов, задав *StringLength* аргумент. *StringLength* может иметь следующие значения:  
+ Если *атрибут* является атрибутом, определяемым драйвером, приложение указывает характер атрибут для диспетчера драйверов, задав *StringLength* аргумент. *StringLength* может иметь следующие значения:  
   
--   Если *ValuePtr* является указателем на строку символов, затем *StringLength* длина строки или SQL_NTS.  
+-   Если *ValuePtr* — это указатель на строку символов, затем *StringLength* длина строки или SQL_NTS.  
   
--   Если *ValuePtr* — это указатель на двоичные буфер, то приложение помещает результат SQL_LEN_BINARY_ATTR (*длина*) макрос в *StringLength*. В этом случае отрицательное значение в *StringLength*.  
+-   Если *ValuePtr* является указателем в двоичный буфер, а затем приложение размещает результат SQL_LEN_BINARY_ATTR (*длина*) в макрос *StringLength*. Это размещает отрицательное значение в *StringLength*.  
   
--   Если *ValuePtr* — это указатель на значение, отличное от строки символов или двоичная строка затем *StringLength* должно иметь значение SQL_IS_POINTER.  
+-   Если *ValuePtr* — это указатель на значение, отличное от строку символов или двоичная строка, затем *StringLength* должно иметь значение SQL_IS_POINTER.  
   
--   Если *ValuePtr* содержит значение фиксированной длины, то *StringLength* — SQL_IS_INTEGER или SQL_IS_UINTEGER, соответствующим образом.  
+-   Если *ValuePtr* содержит значение фиксированной длины, то *StringLength* является SQL_IS_INTEGER или SQL_IS_UINTEGER, соответствующим образом.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- То же, что [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), за исключением того, что будет использоваться диспетчер драйверов **HandleType** из SQL_HANDLE_DBC_INFO_TOKEN и **обработки** из *hDbcInfoToken* .  
+ Совпадение с кодом [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), за исключением того, что будет использоваться диспетчер драйверов **HandleType** из SQL_HANDLE_DBC_INFO_TOKEN и **обрабатывать** из *hDbcInfoToken* .  
   
-## <a name="remarks"></a>Замечания  
- **SQLSetConnectAttrForDbcInfo** совпадает со значением **SQLSetConnectAttr**, но задает атрибут на маркер сведения соединения вместо на дескриптор соединения. Например если **SQLSetConnectAttr** не распознает атрибут **SQLSetConnectAttrForDbcInfo** также вернет значение SQL_ERROR для этого атрибута.  
+## <a name="remarks"></a>Примечания  
+ **SQLSetConnectAttrForDbcInfo** совпадает со значением **SQLSetConnectAttr**, но он задает атрибут в маркере сведения соединения вместо на дескриптор соединения. Например если **SQLSetConnectAttr** не распознает атрибут, **SQLSetConnectAttrForDbcInfo** также вернет значение SQL_ERROR для этого атрибута.  
   
- Каждый раз, когда драйвер возвращает значение SQL_ERROR или SQL_INVALID_HANDLE, драйвер должен игнорировать этот атрибут для вычисления код пула. Кроме того, диспетчер драйверов будет получать диагностические данные из *hDbcInfoToken*и возвращают значение SQL_SUCCESS_WITH_INFO к приложению в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). Таким образом приложение может получить сведения о том, почему некоторые атрибуты нельзя устанавливать.  
+ Каждый раз, когда драйвер возвращает значение SQL_ERROR или SQL_INVALID_HANDLE, драйвер должен игнорировать этот атрибут для вычисления идентификатор пула. Кроме того, диспетчер драйверов будет получить диагностическую информацию от *hDbcInfoToken*и возвращают значение SQL_SUCCESS_WITH_INFO для приложения в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). Таким образом приложение может получать сведения о почему некоторые атрибуты нельзя устанавливать.  
   
- Приложения не должны напрямую вызывать эту функцию. Драйвер ODBC, который поддерживает пулы соединений с учетом драйвера необходимо реализовать эту функцию.  
+ Приложения не эту функцию следует вызывать напрямую. Драйвер ODBC, который поддерживает пулы соединений с учетом драйвера необходимо реализовать эту функцию.  
   
  Включить sqlspi.h для разработки драйвера ODBC.  
   

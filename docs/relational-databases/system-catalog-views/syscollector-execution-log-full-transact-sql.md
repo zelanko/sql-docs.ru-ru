@@ -1,14 +1,11 @@
 ---
-title: syscollector_execution_log_full (Transact-SQL) | Документы Microsoft
+title: syscollector_execution_log_full (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_full
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ab52100b8c6de54b531de6c8b8e965848301d60
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 99ce8003b70ad41be225a7678c97ed44d9f6c7dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755872"
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|Определяет выполнение каждого набора элементов сбора. Используется для соединения этого представления с другими подробными журналами. Допускает значение NULL.|  
 |parent_log_id|**bigint**|Определяет родительский пакет или набор элементов сбора. Не допускает значение NULL. Идентификаторы соединяются в связь типа «родитель-потомок», что позволяет определить, какой пакет был запущен тем или иным набором сбора. Это представление группирует записи журнала по связям типа «родители-потомки» и делает отступ перед именами пакетов, чтобы была ясно видна цепочка вызовов.|  
-|имя|**nvarchar(4000)**|Имя набора элементов сбора или пакета, который представляет эта запись журнала. Допускает значение NULL.|  
+|name|**nvarchar(4000)**|Имя набора элементов сбора или пакета, который представляет эта запись журнала. Допускает значение NULL.|  
 |status|**smallint**|Указывает текущее состояние набора элементов сбора или пакета. Допускает значение NULL.<br /><br /> Возможны следующие значения.<br /><br /> 0 = запущен<br /><br /> 1 = завершен<br /><br /> 2 = ошибка|  
 |runtime_execution_mode|**smallint**|Указывает на род деятельности набора элементов сбора: сбор данных или их отправка. Допускает значение NULL.|  
 |start_time|**datetime**|Время, когда был задан набор элементов сбора или запущен пакет. Допускает значение NULL.|  

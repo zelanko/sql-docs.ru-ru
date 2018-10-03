@@ -1,34 +1,31 @@
 ---
-title: Пример диагностики на основе файла драйвера | Документы Microsoft
+title: Пример диагностики драйверов на основе файлов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - file-based driver diagnostic [ODBC]
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d58072bebac57eca8976064b85a25999475a9586
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: decb09098cee4b9ab6473e3c622b9917a89e9b09
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809322"
 ---
-# <a name="file-based-driver-diagnostic-example"></a>Пример диагностики на основе файла драйвера
-Драйвер файловой действует и как драйвер ODBC, так и в качестве источника данных. Таким образом создается ошибок и предупреждений в качестве компонента из соединений ODBC и в качестве источника данных. Поскольку это компонент, который взаимодействует с диспетчером драйверов, он форматирует и возвращает аргументы для **SQLGetDiagRec**.  
+# <a name="file-based-driver-diagnostic-example"></a>Пример диагностики драйверов на основе файлов
+Драйверов на основе файла действует как в качестве драйвера ODBC, так и в качестве источника данных. Таким образом создается ошибок и предупреждений, так как компонент в подключение ODBC и в качестве источника данных. Так как это компонент, который взаимодействует с диспетчером драйверов, он форматирует и возвращает аргументы для **SQLGetDiagRec**.  
   
- Например, если драйвер Microsoft® dBASE не удалось выделить достаточный объем памяти, могут возвращать следующие значения из **SQLGetDiagRec**:  
+ Например, если драйвер для dBASE Microsoft® не удалось выделить достаточный объем памяти, могут возвращать следующие значения из **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "HY001"  
@@ -36,7 +33,7 @@ Native Error:      42052
 Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver]Unable to allocate sufficient memory."  
 ```  
   
- Так как эта ошибка не была связана с источником данных, драйвер добавлен только префиксы диагностическое сообщение для поставщика ([Microsoft]) и драйвер ([ODBC драйвера dBASE]).  
+ Так как эта ошибка не была связана с источником данных, драйвер добавлен только префиксы диагностическое сообщение для поставщика ([Microsoft]) и драйвер ([ODBC драйвер для dBASE]).  
   
  Если драйвер не удалось найти файл Employee.dbf, он может возвращать следующие значения из **SQLGetDiagRec**:  
   
@@ -46,4 +43,4 @@ Native Error:      -1305
 Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver][dBASE]No such table or object"  
 ```  
   
- Поскольку эта ошибка была связана с источником данных, драйвер добавляются в формат файла источника данных ([dBASE]) как префикс диагностическое сообщение. Драйвер также использовался компонента, сопряженный с источником данных, он добавлен префиксов для поставщика ([Microsoft]) и драйвер ([ODBC драйвера dBASE]).
+ Так как эта ошибка была связана с источником данных, драйвер добавлено формат файла источника данных ([dBASE]) в качестве префикса для диагностическое сообщение. Драйвер также использовался компонент, сопряженный с источником данных, она добавлена префиксы для поставщика ([Microsoft]) и драйвер ([ODBC драйвер для dBASE]).

@@ -1,13 +1,11 @@
 ---
-title: Метод ChangePassword (ADOX) | Документы Microsoft
+title: Метод ChangePassword (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - ChangePassword method [ADOX]
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 224dd233d774781e5d902a952848587a543baee4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 96268fac4b81230fcb63db6b48ef4ef794abb9c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788712"
 ---
 # <a name="changepassword-method-adox"></a>Метод ChangePassword (ADOX)
 Изменяет пароль для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) учетной записи.  
@@ -38,16 +35,16 @@ User.ChangePassword OldPassword, NewPassword
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Старый_пароль*  
- Объект **строка** значение, указывающее существующий пароль пользователя. Если у пользователя нет в настоящее время пароль, следует использовать пустую строку ("») для *Старый_пароль*.  
+ *OldPassword*  
+ Объект **строка** значение, указывающее существующий пароль пользователя. Если у пользователя нет в настоящее время пароль, использовать пустую строку ("») для *OldPassword*.  
   
- *newPassword*  
+ *Задает новый пароль*  
  Объект **строка** значение, указывающее новый пароль.  
   
 ## <a name="remarks"></a>Примечания  
- По соображениям безопасности помимо новый пароль необходимо указать старый пароль.  
+ По соображениям безопасности необходимо указать старый пароль в дополнение к новый пароль.  
   
- Если поставщик не поддерживает администрирование свойств доверенное лицо, произойдет ошибка.  
+ Если поставщик не поддерживает администрирование свойства доверенное лицо, произойдет ошибка.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
-caps.latest.revision: 5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac69187ec760c8ca9af0e7346a2f8b4c88fd5af3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0afa2d8770589ed82890cf5b54e99916f9eb1d00
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049595"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>Применение фиксированного плана запроса к структуре плана
   Можно применить фиксированный план запроса к руководству плана типов OBJECT или SQL. Структуры планов, применяющие фиксированные планы запроса, удобно использовать в тех случаях, когда известно, что есть план выполнения, который работает с большей производительностью, чем выбранный оптимизатором для конкретного запроса.  

@@ -1,13 +1,11 @@
 ---
-title: BOF EOF и пример свойства закладки (VB) | Документы Microsoft
+title: BOF, EOF и Bookmark Example свойства (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 439bba8dd4eae06a388060c905cbff45539f8b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698222"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF EOF и пример свойства закладки (Visual Basic)
-В этом примере используется [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) свойства для отображения сообщения, если пользователь пытается перейти на первую или последнюю запись [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойство, чтобы позволить пользователю флаг записи в **записей** и вернуться к нему позднее.  
+# <a name="bof-eof-and-bookmark-properties-example-vb"></a>Примеры свойств BOF, EOF и Bookmark (Visual Basic)
+В этом примере используется [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) свойства для отображения сообщения в том случае, если пользователь пытается перейти на первой или последней записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойства позволяют пометить отдельные записи в **записей** и вернуться к нему позже.  
   
 ```  
 'BeginBOFVB  
@@ -133,13 +130,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- В этом примере используется **закладки** и [фильтра](../../../ado/reference/ado-api/filter-property.md) свойства для создания ограниченное представление **записей**. Доступны только записи ссылается массив закладок.  
+ В этом примере используется **закладки** и [фильтра](../../../ado/reference/ado-api/filter-property.md) свойства для создания ограниченное представление **записей**. Доступны только записи, ссылается на массив закладки.  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [BOF, свойства EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Свойство закладка (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
+ [BOF, EOF свойства (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [Свойство Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

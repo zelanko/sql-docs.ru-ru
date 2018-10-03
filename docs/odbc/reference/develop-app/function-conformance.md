@@ -1,13 +1,11 @@
 ---
-title: Функция соответствия | Документы Microsoft
+title: Функция соответствия | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], function
@@ -15,45 +13,44 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 182b53071f5d7d4c3486a84f789954e12772e0bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740082"
 ---
-# <a name="function-conformance"></a>Функция соответствия
+# <a name="function-conformance"></a>Соответствие функции
 Следующая таблица указывает уровень соответствия каждой функции ODBC, в которой это является правильно определенным.  
   
-|Функция|Уровень соответствия|  
+|Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|Основные сведения|  
 |**SQLBindCol**|Основные сведения|  
-|**SQLBindParameter**|Основные [1]|  
+|**SQLBindParameter**|Core [1]|  
 |**SQLBrowseConnect**|уровне 1|  
 |**SQLBulkOperations**|уровне 1|  
-|**SQLCancel**|Основные [1]|  
+|**SQLCancel**|Core [1]|  
 |**SQLCloseCursor**|Основные сведения|  
-|**SQLColAttribute**|Основные [1]|  
+|**SQLColAttribute**|Core [1]|  
 |**SQLColumnPrivileges**|Уровень 2|  
 |**SQLColumns**|Основные сведения|  
 |**SQLConnect**|Основные сведения|  
 |**SQLCopyDesc**|Основные сведения|  
 |**SQLDataSources**|Основные сведения|  
-|**SQLDescribeCol**|Основные [1]|  
+|**SQLDescribeCol**|Core [1]|  
 |**SQLDescribeParam**|Уровень 2|  
 |**SQLDisconnect**|Основные сведения|  
 |**SQLDriverConnect**|Основные сведения|  
 |**SQLDrivers**|Основные сведения|  
-|**SQLEndTran**|Основные [1]|  
+|**SQLEndTran**|Core [1]|  
 |**SQLExecDirect**|Основные сведения|  
 |**SQLExecute**|Основные сведения|  
 |**SQLFetch**|Основные сведения|  
-|**SQLFetchScroll**|Основные [1]|  
+|**SQLFetchScroll**|Core [1]|  
 |**SQLForeignKeys**|Уровень 2|  
 |**SQLFreeHandle**|Основные сведения|  
 |**SQLFreeStmt**|Основные сведения|  
@@ -82,16 +79,16 @@ ms.locfileid: "32914259"
 |**SQLRowCount**|Основные сведения|  
 |**SQLSetConnectAttr**|Core [2]|  
 |**SQLSetCursorName**|Основные сведения|  
-|**SQLSetDescField**|Основные [1]|  
+|**SQLSetDescField**|Core [1]|  
 |**SQLSetDescRec**|Основные сведения|  
 |**SQLSetEnvAttr**|Core [2]|  
 |**SQLSetPos**|Уровень 1 [1]|  
 |**SQLSetStmtAttr**|Core [2]|  
-|**SQLSpecialColumns**|Основные [1]|  
+|**SQLSpecialColumns**|Core [1]|  
 |**SQLStatistics**|Основные сведения|  
 |**SQLTablePrivileges**|Уровень 2|  
 |**SQLTables**|Основные сведения|  
   
- [1] важных функций этой функции доступны только на более высоких уровнях совместимости.  
+ [1] несколько важных функций этой функции доступны только на более высоких уровнях совместимости.  
   
- [2] Задание определенные атрибуты нестандартные значения зависит от уровня совместимости. Дополнительные сведения см. следующий раздел, [соответствия атрибута](../../../odbc/reference/develop-app/attribute-conformance.md).
+ [2] задания определенных атрибутов нестандартные значения зависит от уровня совместимости. Дополнительные сведения см. следующий раздел, [соответствие атрибутов](../../../odbc/reference/develop-app/attribute-conformance.md).

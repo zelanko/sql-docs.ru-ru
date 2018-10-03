@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - upgrading mirrored database systems
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6f654292e1d756cd655766851e0bc056e41ce3f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296924"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053014"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Установка пакета обновления на систему с минимальным временем простоя для зеркально отображаемых баз данных
   В этом разделе описывается, как добиться минимального времени простоя зеркальных баз данных при установке пакетов обновления и исправлений. Этот процесс подразумевает последовательное обновление экземпляров [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], участвующих в зеркальном отображении базы данных. Этой форме обновления, который известен как *последовательным обновлением*, время простоя сокращается до одной отработки отказа. Обратите внимание на то, что режим высокой производительности в сеансах на зеркальный сервер географически удален от основного сервера, последовательное обновление может оказаться неподходящим.  

@@ -1,13 +1,11 @@
 ---
-title: Функция трансляции SQLDriverToDataSource | Документы Microsoft
+title: Функция SQLDriverToDataSource | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLDriverToDataSource
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDriverToDataSource function [ODBC]
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab95f803636e66a1c093782d678a460bdca9ce6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 99f861c5428773cee26891684ffcfd769804bc9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918489"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792682"
 ---
-# <a name="sqldrivertodatasource-function"></a>Функция трансляции SQLDriverToDataSource
-**Трансляции SQLDriverToDataSource** поддерживает переводы для драйверов ODBC. Эта функция не вызывается приложений с поддержкой ODBC; приложения запрашивают трансляции с помощью **SQLSetConnectAttr**. Драйвера, связанного с *ConnectionHandle* указано в **SQLSetConnectAttr** вызывает указанную библиотеку DLL для выполнения преобразования всех данных, поступающих от драйвера к источнику данных. Перевод DLL по умолчанию можно указать в файле инициализации ODBC.  
+# <a name="sqldrivertodatasource-function"></a>Функция SQLDriverToDataSource
+**SQLDriverToDataSource** поддерживает переводов для драйверов ODBC. Эта функция не вызывается приложений с поддержкой ODBC; приложения запрашивают трансляции с помощью **SQLSetConnectAttr**. Драйвера, связанного с *ConnectionHandle* указано в **SQLSetConnectAttr** вызывает указанную библиотеку DLL для выполнения преобразования всех данных, поступающих от драйвера к источнику данных. Перевод DLL по умолчанию можно указать в файле инициализации ODBC.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,7 +52,7 @@ BOOL SQLDriverToDataSource(
  [Вход] Значение параметра.  
   
  *fSqlType*  
- [Вход] Тип данных ODBC SQL. Этот аргумент сообщает драйверу о том, как преобразовать *rgbValueIn* в виде допустимого источника данных. Список допустимых типов данных SQL см. в разделе [типов данных SQL](../../../odbc/reference/appendixes/sql-data-types.md).  
+ [Вход] Тип данных ODBC SQL. Этот аргумент сообщает драйверу о том, как преобразовать *rgbValueIn* в форму, допустимые источником данных. Список допустимых типов данных SQL, см. в разделе [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md).  
   
  *rgbValueIn*  
  [Вход] Преобразуемое значение.  
@@ -75,41 +72,41 @@ BOOL SQLDriverToDataSource(
  *pcbValueOut*  
  [Выход] Общее число байтов (за исключением байтов конечное значение null) для возврата в *rgbValueOut*.  
   
- Для символьных или двоичных данных, если это больше или равно *cbValueOutMax*, данные в *rgbValueOut* усекается до *cbValueOutMax* байт.  
+ Для символьных или двоичных данных, если это больше, чем или равно *cbValueOutMax*, данные в *rgbValueOut* усекается до *cbValueOutMax* байт.  
   
- Для всех других типов данных, значение *cbValueOutMax* игнорируется и перевод DLL предполагает, что размер *rgbValueOut* — это размер типа данных C по умолчанию типа данных SQL, указанного с *fSqlType*.  
+ Для всех других типов данных, значение *cbValueOutMax* игнорируется и библиотеки DLL перевода предполагает, что размер *rgbValueOut* — это размер типа данных C по умолчанию тип данных SQL, указанный с помощью *fSqlType*.  
   
- *PcbValueOut* аргумент может быть пустой указатель.  
+ *PcbValueOut* аргументом может быть пустым указателем.  
   
  *szErrorMsg*  
- [Выход] Указатель хранилища для сообщение об ошибке. Это пустая строка, если произошел сбой преобразования.  
+ [Выход] Указатель на хранилище для сообщения об ошибке. Это пустая строка, если не удалось выполнить преобразование.  
   
  *cbErrorMsgMax*  
  [Вход] Длина *szErrorMsg*.  
   
  *pcbErrorMsg*  
- [Выход] Указатель на общее количество байтов (за исключением байтов конечное значение null) для возврата в *szErrorMsg*. Если это больше или равно *cbErrorMsg*, данные в *szErrorMsg* усекается до *cbErrorMsgMax* конечное значение null знак «минус». *PcbErrorMsg* аргумент может быть пустой указатель.  
+ [Выход] Указатель на общее число байтов (за исключением байтов конечное значение null) для возврата в *szErrorMsg*. Если это больше, чем или равно *cbErrorMsg*, данные в *szErrorMsg* усекается до *cbErrorMsgMax* минус знак завершения null. *PcbErrorMsg* аргументом может быть пустым указателем.  
   
 ## <a name="returns"></a>Возвращает  
- Значение TRUE, если преобразование успешно выполнен, FALSE, если произошел сбой преобразования.  
+ Значение TRUE, если преобразование выполнено успешно, FALSE Если преобразование завершилось неудачей.  
   
 ## <a name="comments"></a>Комментарии  
- Драйвер вызывает **трансляции SQLDriverToDataSource** для преобразования всех данных (инструкции SQL, параметров и т. д.) передача с помощью драйвера с источником данных. Преобразование библиотеки DLL не может переводить некоторые данные, в зависимости от типа данных и назначение сдвига DLL. Например библиотеки DLL, которая преобразует символьные данные из одной кодовой страницы в другую не учитывает все числовые и двоичные данные.  
+ Драйвер вызывает **SQLDriverToDataSource** для преобразования всех данных (инструкций SQL, параметров и т. д.) передачи от драйвера к источнику данных. Преобразование библиотеки DLL не может преобразовать некоторые данные, в зависимости от типа данных и назначение библиотеки DLL перевода. Например библиотеку DLL, которая преобразует символьные данные из одной кодовой страницы в другую не учитывает все числовые и двоичные данные.  
   
- Значение *fOption* присвоено значение *vParam* задаются путем вызова **SQLSetConnectAttr** с атрибутом SQL_ATTR_TRANSLATE_OPTION. Это 32-разрядное значение, которое имеет особое значение для заданного перевода DLL. Например он может укажите определенных перевод кодировки.  
+ Значение *fOption* присваивается значение *vParam* , задаются путем вызова **SQLSetConnectAttr** с атрибутом SQL_ATTR_TRANSLATE_OPTION. Это 32-разрядное значение, которое имеет особое значение для определенной записи преобразования DLL. Например может указать набор определенным символом перевода.  
   
- Если для того же буфера *rgbValueIn* и *rgbValueOut*, выполняется преобразование данных в буфере на месте.  
+ Если указан этот же буфер для *rgbValueIn* и *rgbValueOut*, преобразование данных в буфере будет выполняться на месте.  
   
- Несмотря на то что *cbValueIn*, *cbValueOutMax*, и *pcbValueOut* относятся к типу SDWORD, **трансляции SQLDriverToDataSource** не обязательно поддерживает огромное указатели.  
+ Несмотря на то что *cbValueIn*, *cbValueOutMax*, и *pcbValueOut* относятся к типу SDWORD, **SQLDriverToDataSource** не обязательно поддерживает огромное указатели.  
   
- Если **трансляции SQLDriverToDataSource** возвращает FALSE, усечение данных может произойти во время преобразования. Если *pcbValueOut* (число байтов, доступных для возврата в выходном буфере) больше, чем *cbValueOutMax* (длина выходного буфера), а затем произошло усечение. Драйвер необходимо определить, было ли усечение. Если усечение не проводилась, **трансляции SQLDriverToDataSource** вернул значение FALSE из-за другой ошибки. В любом случае будет возвращено сообщение об ошибке в *szErrorMsg*.  
+ Если **SQLDriverToDataSource** возвращает FALSE, усечение данных может произойти во время преобразования. Если *pcbValueOut* (количество байтов, доступных для возврата в выходном буфере) больше, чем *cbValueOutMax* (длина выходного буфера), а затем произошло усечение. Драйвер необходимо определить, было ли усечение приемлемо. Если усечение не было, **SQLDriverToDataSource** возвращается значение FALSE из-за другой ошибки. В любом случае возвращается сообщение об ошибке в *szErrorMsg*.  
   
- Дополнительные сведения о преобразовании данных см. в разделе [DLL перевода](../../../odbc/reference/develop-app/translation-dlls.md).  
+ Дополнительные сведения о преобразовании данных см. в разделе [библиотеки DLL преобразования](../../../odbc/reference/develop-app/translation-dlls.md).  
   
 ## <a name="related-functions"></a>Связанные функции  
   
 |Сведения о|См.|  
 |---------------------------|---------|  
-|Преобразования данных возвращаются из источника данных|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|  
-|Возврат значения атрибута соединения|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Преобразование данных, возвращенные из источника данных|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|  
+|Возвращает значение атрибута соединения|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Присвоение атрибуту соединения|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

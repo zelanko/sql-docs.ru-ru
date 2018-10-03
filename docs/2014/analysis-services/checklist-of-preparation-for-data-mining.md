@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bed960058bdc9120089d89a32a3ede0bf2f3160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd702443b8f1addf43217499b639044d359647bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057574"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Контрольный список для подготовки к интеллектуальному анализу данных
   Хотя надстройки интеллектуального анализа данных упрощают создание и эксперименты с моделями, когда требуется получить повторяемые результаты, на основании которых можно действовать, необходимо выделить достаточный срок для формулировки базовых требований бизнеса и получения и подготовки данных. В этом разделе представлен контрольный список, который поможет вам спланировать исследование, а также приводится описание распространенных проблем.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 85b549f35c9b6ac2feb41c41fb482f3eead61ccb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23cc199958a43fc9056a7a5dc1b83f691ae15523
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182801"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063742"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>Устранение неполадок пакетов с помощью отчетов
   В текущем выпуске служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] доступны стандартные отчеты, упрощающие наблюдение за пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развернутых в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а также устранение неполадок с пакетами. Два из этих отчетов о пакетах позволяют просматривать состояние выполнения пакетов и выявлять причины ошибок выполнения.  
@@ -38,7 +35,7 @@ ms.locfileid: "37182801"
   
 -   **Отчет "Активность — все выполнения"** . В этом отчете дается сводка по всем выполнениям служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере. В сводке показываются данные о каждом выполнении: состояние, время начала и время окончания. Каждая запись сводки содержит ссылки на дополнительные сведения о выполнении, включая сообщения, которые создаются во время выполнения, и данные о производительности. Как и в отчете «Панель мониторинга служб Integration Services», здесь вы можете применить фильтр к таблице, чтобы сократить объем информации.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Просмотр отчетов для сервера служб Integration Services](../view-reports-for-the-integration-services-server.md)  
   
 ## <a name="related-content"></a>См. также  

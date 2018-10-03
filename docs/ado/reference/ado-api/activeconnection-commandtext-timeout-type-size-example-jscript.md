@@ -1,13 +1,11 @@
 ---
-title: Хранимые процедуры свойства примере (JScript) | Документы Microsoft
+title: Хранимые процедуры свойства пример (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -18,18 +16,17 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c22bf12eb688212fb8541f32080442dcdcb9d4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 204b39f91e12970d3e853f21926e9dc34de0a0f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758862"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление-пример свойства (JScript)
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление примеры свойств (JScript)
 В этом примере используется [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [размер](../../../ado/reference/ado-api/size-property-ado-parameter.md), и [направление](../../../ado/reference/ado-api/direction-property.md) свойства для выполнения хранимой процедуры. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ActiveConnectionJS.asp**.  
   
 ```  
@@ -177,14 +174,14 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойство ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Свойства CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
+ [Пример свойства ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Свойство CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Свойство CommandTimeout (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
  [Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство Direction](../../../ado/reference/ado-api/direction-property.md)   
  [Объект параметра](../../../ado/reference/ado-api/parameter-object.md)   
- [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Size (объект Parameter ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

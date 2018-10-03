@@ -1,28 +1,25 @@
 ---
-title: Состояние только для чтения (драйвера текстового файла) | Документы Microsoft
+title: Состояние только для чтения (драйвер для текстовых файлов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - read-only status for text driver [ODBC]
 - text file driver [ODBC], read-only status
 ms.assetid: 859580bb-4e69-4517-a4f1-460649dd06ca
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fb1a2637b4c1750bbcf56d3261015dbd4140902
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0d5e53ac34c6c8224ca312929a7a7556e2507f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898989"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814112"
 ---
-# <a name="read-only-status-text-file-driver"></a>Состояние только для чтения (драйвера текстового файла)
-При использовании драйвера текстового источника данных, таблицы доступны только для чтения. Тем не менее приложения могут выполнять операции вставки для таблицы текст.
+# <a name="read-only-status-text-file-driver"></a>Состояние только для чтения (драйвер для текстовых файлов)
+При использовании драйвера текстового источника данных, таблицы доступны только для чтения. Тем не менее приложения могут выполнять операции вставки для таблицы текста.

@@ -1,15 +1,12 @@
 ---
-title: Свойство InstanceName (класс ServerNetworkProtocolIPAddress) | Документы Microsoft
+title: Свойство InstanceName (класс ServerNetworkProtocolIPAddress) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - InstanceName Property (ServerNetworkProtocolIPAddress Class)
@@ -19,15 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 53423998a571e32e9d2d16cafaf444c78fbf6c11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 982749a30b1a26e8e9b26ee14522a3265dbde6c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707742"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>Свойство InstanceName (класс ServerNetworkProtocolIPAddress)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +38,15 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объект*  
+ *object*  
  Объект класса [ServerNetworkProtocolIPAdress](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) .  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, указывающее имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка сетевых протоколов сервера и сетевых библиотек](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

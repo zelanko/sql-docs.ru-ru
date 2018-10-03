@@ -1,12 +1,10 @@
 ---
-title: sys.dm_db_persisted_sku_features (Transact-SQL) | Документы Microsoft
+title: sys.dm_db_persisted_sku_features (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_persisted_sku_features_TSQL
@@ -19,21 +17,20 @@ helpviewer_keywords:
 - editions [SQL Server], feature restrictions
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25333b8fc57764d2d99a5630d83907e00913d15f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: f35bb06301fb7d4f53a415e055371db989942586
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642422"
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Некоторые функции компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] изменяют способ, с помощью которого [!INCLUDE[ssDE](../../includes/ssde-md.md)] хранит информацию в файлах базы данных. Эти функции зависят от конкретных выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. База данных, содержащая данные функции, не может быть перемещена в выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который их не поддерживает. Используйте динамическое административное представление sys.dm_db_persisted_sku_features Чтобы вывести список зависящих от выпуска функций, включенных в текущей базе данных.
+  Некоторые функции компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] изменяют способ, с помощью которого [!INCLUDE[ssDE](../../includes/ssde-md.md)] хранит информацию в файлах базы данных. Эти функции зависят от конкретных выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. База данных, содержащая данные функции, не может быть перемещена в выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который их не поддерживает. Используйте динамическое административное представление sys.dm_db_persisted_sku_features Чтобы получить список зависящих от выпуска функций, включенных в текущей базе данных.
   
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
   
@@ -46,11 +43,11 @@ ms.locfileid: "34464860"
  Необходимо разрешение VIEW DATABASE STATE на базу данных.  
   
 ## <a name="remarks"></a>Примечания  
- Если в базе данных используются функции, которым может ограничиваться определенную версию, представление не возвращает строк.  
+ Если нет функций, которые может быть ограничен с помощью определенной версии используются в базе данных, представление не возвращает строк.  
   
- представление sys.dm_db_persisted_sku_features может содержать следующие функции изменения базы данных, как только к определенным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпуски:  
+ представление sys.dm_db_persisted_sku_features может содержать следующие функции изменения баз данных, как только к определенным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпуски:  
   
--   **ChangeCapture**: означает, что базы данных включено отслеживание изменений в данных. Чтобы удалить измененных данных, используйте [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) хранимой процедуры. Дополнительные сведения см. в статье [О системе отслеживания измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
+-   **ChangeCapture**: Указывает, что базы данных имеет включить сбор данных изменений. Чтобы удалить измененных данных, используйте [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) хранимой процедуры. Дополнительные сведения см. в статье [О системе отслеживания измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
 -   **ColumnStoreIndex**: Указывает, что хотя бы одна таблица имеет индекс columnstore. Чтобы включить базу данных для перемещения в выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который не поддерживает эту функцию, используйте [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) или [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) инструкцию, чтобы удалить индекс columnstore. Дополнительные сведения см. в разделе [индексы Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
@@ -58,7 +55,7 @@ ms.locfileid: "34464860"
   
 -   **Сжатие**: Указывает, что по крайней мере одну таблицу или индекс используют сжатие данных или формат хранения vardecimal. Чтобы включить базу данных для перемещения в выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который не поддерживает эту функцию, используйте [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) или [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) инструкцию, чтобы отключить сжатие данных. Чтобы удалить формат хранения vardecimal, используйте инструкцию sp_tableoption. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
--   **MultipleFSContainers**: Указывает, что база данных использует несколько контейнеров файлового ПОТОКА. Базы данных есть файловая группа FILESTREAM с несколькими контейнерами (файлы). Дополнительные сведения см. в разделе [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md).  
+-   **MultipleFSContainers**: Указывает, что база данных использует несколько контейнеров файлового ПОТОКА. База данных имеет файловую группу FILESTREAM с несколькими контейнерами (файлы). Дополнительные сведения см. в разделе [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md).  
   
 -   **InMemoryOLTP**: Указывает, что база данных использует In-Memory OLTP. База данных имеет файловую группу MEMORY_OPTIMIZED_DATA. Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
@@ -69,7 +66,7 @@ ms.locfileid: "34464860"
 -   **TransparentDataEncryption.** Указывает, что база данных зашифрована с помощью прозрачного шифрования данных. Чтобы удалить прозрачное шифрование данных, используйте инструкцию ALTER DATABASE. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1, эти функции доступны в нескольких [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпусков, не ограниченной Enterprise или Developer Edition только.
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1, эти функции доступны в нескольких [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпуски и не ограничен Enterprise или Developer Edition только.
 
  Чтобы определить, используются ли в базе данных функции, ограниченные конкретными выпусками, выполните следующую инструкцию:  
   

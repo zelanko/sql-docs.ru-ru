@@ -1,32 +1,29 @@
 ---
-title: Пример свойства ActiveConnection (VC ++) каталога | Документы Microsoft
+title: Пример свойства ActiveConnection (Visual C++) Catalog | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveConnection property [ADOX], VC++ example
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c501e7dd74c204c9f126c7dbc8abbb31d71637b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 30f7f4f4165b608070fafa5464e64c9c238651c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285373"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696793"
 ---
-# <a name="catalog-activeconnection-property-example-vc"></a>Пример свойства ActiveConnection каталога (VC ++)
-Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства на допустимое, откройте подключение» открывает» каталог. Из открытых каталога доступ к схеме объектов, содержащихся в каталоге.  
+# <a name="catalog-activeconnection-property-example-vc"></a>Пример свойства ActiveConnection объекта Catalog (Visual C++)
+Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) присвоено допустимое соединение, откройте «открывает» каталог. Из открытых каталога можно получить доступ к схеме объектов, содержащихся в каталоге.  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  

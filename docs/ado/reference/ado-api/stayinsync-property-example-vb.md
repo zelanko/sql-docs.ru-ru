@@ -1,34 +1,31 @@
 ---
-title: Пример свойства StayInSync (VB) | Документы Microsoft
+title: Пример свойства StayInSync (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3c5ec82ff3481ab8e6adf11a41f61aa149fe604
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4ff9e4c7f1903a187869f15573893d9f7d0c2fe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851694"
 ---
 # <a name="stayinsync-property-example-vb"></a>Пример свойства StayInSync (Visual Basic)
 В этом примере показано, как [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) свойство облегчает доступ к строкам в иерархической [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Внешний цикл отображает имя и фамилия каждого автора, состояние и идентификатор. Добавленный **записей** для каждой строки, извлекается из [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции и автоматически назначено **rstTitleAuthor** по **StayInSync**  свойство всякий раз, когда родительский **записей** перемещается на новую строку. Внутренний цикл отображаются четыре поля из каждой строки в добавленных записей.  
+ Внешний цикл отображает имя и фамилия каждого автора, состояние и идентификатор. Добавленная коллекция **записей** для каждой строки извлекается из [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции и автоматически назначаться **rstTitleAuthor** по **StayInSync**  свойство всякий раз, когда родительский **записей** перемещается на новую строку. Внутренний цикл отображаются четыре поля из каждой строки в добавленных записей.  
   
 ```  
 'BeginStayInSyncVB  
@@ -95,5 +92,5 @@ End Sub
   
 ## <a name="see-also"></a>См. также  
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)

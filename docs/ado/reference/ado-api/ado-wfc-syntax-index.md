@@ -1,32 +1,29 @@
 ---
-title: ADO - индекс синтаксис WFC | Документы Microsoft
+title: ADO — индекс синтаксиса WFC | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
 - ADO/WFC syntax index [ADO]
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 355a32f2e37aca0202c803cde7c527a47bfe1905
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275643"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811432"
 ---
-# <a name="ado---wfc-syntax-index"></a>ADO - WFC синтаксис индекса
-Справочник по языку ADO используется Microsoft Visual Basic язык программирования для демонстрации синтаксиса метода или свойства ADO. Этот индекс лучше перекрестной ссылки на разделы Справочник по языку ADO, исходя из ADO ввода для Windows Foundation Classes (ADO и WFC). В случае возникновения различия в синтаксисе, используйте сигнатур функций в этот индекс, в отличие от синтаксиса вхождений в раздел справочника по языку.  
+# <a name="ado---wfc-syntax-index"></a>ADO — индекс синтаксиса WFC
+Справочник по языку ADO использует Microsoft Visual Basic язык программирования для иллюстрации синтаксиса методов и свойств ADO. Этот индекс является перекрестной ссылки на Справочник по языку ADO статей в зависимости от ADO ввода для Windows Foundation Classes (ADO и WFC). При возникновении отличий в синтаксисе, используйте сигнатур функций в этот индекс, в отличие от синтаксиса вхождения в раздел справочника по языку.  
   
  Синтаксис метода и свойства указаны для следующих элементов:  
   
@@ -36,9 +33,9 @@ ms.locfileid: "35275643"
   
 -   [Объект команды](../../../ado/reference/ado-api/command-ado-wfc-syntax.md)  
   
--   [Объект подключения](../../../ado/reference/ado-api/connection-ado-wfc-syntax.md)  
+-   [Объект соединения](../../../ado/reference/ado-api/connection-ado-wfc-syntax.md)  
   
--   [Объект Error](../../../ado/reference/ado-api/error-ado-wfc-syntax.md)  
+-   [Объект ошибки](../../../ado/reference/ado-api/error-ado-wfc-syntax.md)  
   
 -   [Объект field](../../../ado/reference/ado-api/field-ado-wfc-syntax.md)  
   
@@ -46,7 +43,7 @@ ms.locfileid: "35275643"
   
 -   [Объект набора записей](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
   
-## <a name="remote-data-service"></a>Удаленный канал передачи данных  
+## <a name="remote-data-service"></a>Служба удаленных данных  
   
 -   [Пространство данных](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
   

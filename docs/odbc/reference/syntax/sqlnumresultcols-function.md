@@ -1,13 +1,11 @@
 ---
-title: SQLNumResultCols, функция | Документы Microsoft
+title: SQLNumResultCols, функция | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLNumResultCols
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLNumResultCols function [ODBC]
 ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cee8f6041fbd0718da6e6710df0fb89c45200c99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7eb460efdd7915eb1f376ec3b640896b6fdd186e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825318"
 ---
 # <a name="sqlnumresultcols-function"></a>SQLNumResultCols, функция
-**Соответствия**  
- Появился в версии: Полное соответствие стандартам 1.0 ODBC: ISO-92  
+**Соответствие стандартам**  
+ Версия была введена: ODBC 1.0 соответствует стандартам: ISO-92  
   
  **Сводка**  
- **SQLNumResultCols** возвращает число столбцов в результирующем наборе.  
+ **SQLNumResultCols** возвращает количество столбцов в результирующем наборе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,37 +48,37 @@ SQLRETURN SQLNumResultCols(
  [Вход] Дескриптор инструкции.  
   
  *ColumnCountPtr*  
- [Выход] Указатель на буфер, в который возвращается число столбцов в результирующем набора. Этот счетчик не включает столбца привязанного закладки.  
+ [Выход] Указатель на буфер, в которую будет возвращено число столбцов в результирующий набор. Это число не включает столбец привязанного закладки.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLNumResultCols** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из Значение SQL_HANDLE_STMT и *обработки* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLNumResultCols** и описание каждого из них в контексте этой функции; нотации «(DM)» предшествует описания SQLSTATE, возвращаемых диспетчером драйверов. Код возврата, связанные с каждым из значений SQLSTATE — это SQL_ERROR, если не указано иное.  
+ Когда **SQLNumResultCols** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из Значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLNumResultCols** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
   
 |SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
-|01000|Общее предупреждение|Информационное сообщение, относящиеся к драйверу. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
-|08S01|Сбой связи|Сбой в канале связи между драйвером и источника данных, к которому был подключен драйвер перед обработкой функции было завершено.|  
-|HY000|Общая ошибка|Произошла ошибка, для которой было нет определенных SQLSTATE и для которого был определен SQLSTATE не зависит от реализации. Сообщение об ошибке, возвращенные **SQLGetDiagRec** в  *\*MessageText* буфера описывает ошибку и его причины.|  
-|HY001|Ошибка выделения памяти|Драйверу не удалось выделить память, необходимую для поддержки выполнения или завершения функции.|  
-|HY008|Операция отменена|Асинхронная обработка была включена для *StatementHandle*. Функция был вызван, и до выполнения, **SQLCancel** или **SQLCancelHandle** был вызван для *StatementHandle*; функция затем вызывается снова для *StatementHandle*.<br /><br /> Функция был вызван, и до выполнения, **SQLCancel** или **SQLCancelHandle** был вызван для *StatementHandle* из другого потока в многопоточные приложения.|  
-|HY010|Ошибка последовательности функций|(DM) был вызван асинхронно выполняемой функции для дескриптора соединения, с которым связан *StatementHandle*. Выполняется при этом асинхронной функция **SQLNumResultsCols** была вызвана функция.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, или **SQLMoreResults** был вызван для *StatementHandle* и возвращается SQL_PARAM_DATA_ ЭТОТ ПАРАМЕТР ДОСТУПЕН. До получения данных для всех параметров потоковой вызове этой функции.<br /><br /> (DM), функция был вызван до вызова метода **SQLPrepare** или **SQLExecDirect** для *StatementHandle*.<br /><br /> (DM) был вызван асинхронно выполняемой функции (не данный файл) для *StatementHandle* и все еще выполняется, при вызове этой функции.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, или **SQLSetPos** был вызван для  *StatementHandle* и возвращается значение SQL_NEED_DATA. Эта функция был вызван перед отправкой данных для всех параметров с данными времени выполнения или столбцов.<br /><br /> В разделе [SQLPrepare, функция](../../../odbc/reference/syntax/sqlprepare-function.md) сведения о при освободить дескриптор инструкции.|  
-|HY013|Ошибка управления памятью|Не удалось обработать вызов функции, поскольку базовые объекты памяти будет недоступен, возможно из-за нехватки памяти.|  
-|HY117|Соединение будет приостановлена из-за неизвестной транзакции состояния. Только отключиться и разрешены функции, доступные только для чтения.|(DM) Дополнительные сведения о состоянии приостановки см. в разделе [функция SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Время ожидания соединения истекло|Время ожидания соединения истекло раньше, чем ответил на запрос источника данных. Время ожидания задается с помощью **SQLSetConnectAttr**, sql_attr_connection_timeout не учитывается.|  
+|01000|Общее предупреждение|Специфические для драйвера информационное сообщение. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
+|08S01|Отказ канала связи|Сбой в канале связи между драйвером и источника данных, к которому был подключен драйвер перед обработкой функции было завершено.|  
+|HY000|Общая ошибка|Произошла ошибка, для которой было нет конкретных SQLSTATE и SQLSTATE не зависящие от реализации, который был определен. Сообщение об ошибке, возвращенные **SQLGetDiagRec** в  *\*MessageText* буфера описывает ошибку и его причины.|  
+|HY001|Ошибка выделения памяти|Драйвер не удалось выделить память, необходимую для поддержки выполнения или завершения функции.|  
+|HY008|Операция отменена|Асинхронная обработка была включена для *StatementHandle*. Функция была вызвана, и до его завершения выполнения, **SQLCancel** или **SQLCancelHandle** был вызван для *StatementHandle*; функция затем был вызван снова на *StatementHandle*.<br /><br /> Функция была вызвана, и до его завершения выполнения, **SQLCancel** или **SQLCancelHandle** был вызван для *StatementHandle* из другого потока в многопоточные приложения.|  
+|HY010|Ошибка последовательности функций|(DM) был вызван асинхронно выполняемой функции для дескриптора соединения, связанный с *StatementHandle*. Если по-прежнему выполнении асинхронной функции **SQLNumResultsCols** была вызвана функция.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, или **SQLMoreResults** был вызван для *StatementHandle* и возвращается SQL_PARAM_DATA_ ДОСТУПНО. Прежде чем данные были получены для всех параметров потоковой вызове этой функции.<br /><br /> (DM), что функция была вызвана до вызова метода **SQLPrepare** или **SQLExecDirect** для *StatementHandle*.<br /><br /> (DM) асинхронно выполняемой функции (не такой) был вызван для *StatementHandle* и еще выполнялась при вызове этой функции.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, или **SQLSetPos** был вызван для  *StatementHandle* и возвращается значение SQL_NEED_DATA. Эта функция был вызван перед отправкой данных для всех параметров данных времени выполнения или столбцов.<br /><br /> См. в разделе [функция SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md) сведения о при освободить дескриптор инструкции.|  
+|HY013|Ошибка управления памятью|Не удалось обработать вызов функции, так как базовые объекты памяти оказываются недоступны, возможно из-за нехватки памяти.|  
+|HY117|Подключение будет приостановлена из-за состояние транзакции неизвестно. Только отключиться и разрешены функции, доступные только для чтения.|(DM) Дополнительные сведения о состоянии приостановки, см. в разделе [функция SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Время ожидания подключения истекло|Время ожидания подключения истекло раньше, чем ответил на запрос источника данных. Период времени ожидания задается с помощью **SQLSetConnectAttr**, sql_attr_connection_timeout не учитывается.|  
 |IM001|Драйвер не поддерживает эту функцию|Драйвер (DM), связанные с *StatementHandle* не поддерживает функцию.|  
-|IM017|В режиме асинхронное уведомление отключена опроса|При использовании модели уведомление опроса отключен.|  
-|IM018|**SQLCompleteAsync** не был вызван для завершения предыдущей асинхронной операции на этот дескриптор.|Если предыдущего вызова функции с дескриптором возвращает SQL_STILL_EXECUTING и уведомлений в режиме **SQLCompleteAsync** должен вызываться для этого после обработки и выполнения операции с дескриптором.|  
+|IM017|Опрос недоступен в режиме асинхронное уведомление|Каждый раз, когда используется модель уведомлений, отключен опроса.|  
+|IM018|**SQLCompleteAsync** не был вызван для завершения предыдущей асинхронной операции на этот дескриптор.|Если предыдущий вызов функции в дескриптор возвращает SQL_STILL_EXECUTING, и если включен режим уведомлений, **SQLCompleteAsync** должен вызываться с дескриптором постобработки и завершить операцию.|  
   
- **SQLNumResultCols** может возвращать любой SQLSTATE, которые могут быть возвращены с **SQLPrepare** или **SQLExecute** при вызове после **SQLPrepare** и перед  **SQLExecute**в зависимости от того, когда источник данных принимает инструкции SQL, связанные с инструкцией.  
+ **SQLNumResultCols** может возвращать любой SQLSTATE, которые могут быть возвращены с **SQLPrepare** или **SQLExecute** при вызове после **SQLPrepare** и перед  **SQLExecute**зависимости от того, если источник данных принимает инструкции SQL, связанные с инструкцией.  
   
 ## <a name="comments"></a>Комментарии  
- **SQLNumResultCols** может быть вызван успешно только в том случае, когда инструкция находится в состоянии подготовленного, выполненного или позиционированные.  
+ **SQLNumResultCols** может вызываться успешно, только в том случае, когда инструкция находится в состоянии подготовленного, выполненного или расположено.  
   
- Если инструкция, связанные с *StatementHandle* столбцы, не возвращаются **SQLNumResultCols** задает **ColumnCountPtr* значение 0.  
+ Если инструкция, связанные с *StatementHandle* не возвращает столбцы, **SQLNumResultCols** задает **ColumnCountPtr* 0.  
   
- Число столбцов, возвращаемых методом **SQLNumResultCols** то же значение, что и поле SQL_DESC_COUNT IRD.  
+ Число столбцов, возвращаемых методом **SQLNumResultCols** то же значение, что поле SQL_DESC_COUNT IRD.  
   
  Дополнительные сведения см. в разделе [был результирующий набор создан?](../../../odbc/reference/develop-app/was-a-result-set-created.md) и [способ — использовать метаданные?](../../../odbc/reference/develop-app/how-is-metadata-used.md).  
   
@@ -89,18 +86,18 @@ SQLRETURN SQLNumResultCols(
   
 |Сведения о|См.|  
 |---------------------------|---------|  
-|Привязка к столбцу в результирующем наборе буфера|[Функция SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Отмена обработки инструкции|[Функция SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Привязка к столбцу в результирующем наборе буфер|[Функция SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Отмена обработка инструкций|[Функция SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Возврат сведений о столбце в результирующий набор|[Функция SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)|  
 |Возврат сведений о столбце в результирующий набор|[Функция SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
 |Выполнение инструкции SQL|[Функция SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Выполнения подготовленной инструкции SQL|[Функция SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|Выборка блока данных или прокрутке результирующего набора|[Функция SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Выполнении подготовленной инструкции SQL|[Функция SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Блока данных или прокрутке результирующего набора|[Функция SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Выборка одной строки или блока данных в направлении только вперед|[Функция SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Извлечение всех или части столбца данных|[Функция SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|Получение всех или части столбца данных|[Функция SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |Подготовка инструкции SQL для выполнения|[Функция SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
-|Параметр прокрутки параметры курсора|[Функция SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|Настройка параметров прокручивание курсора|[Функция SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

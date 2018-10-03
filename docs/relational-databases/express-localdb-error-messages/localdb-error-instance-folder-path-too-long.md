@@ -1,24 +1,21 @@
 ---
-title: LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG | Документы Microsoft
+title: LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28c3c7f214ef3eff27f04c24cee8b809c063587f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 6d4053fd7633d642c0cc139826ca8e30ed3fa3fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777792"
 ---
 # <a name="localdberrorinstancefolderpathtoolong"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.locfileid: "34326255"
 |Идентификатор события|260|  
 |Источник события|Среда выполнения локальной базы данных SQL Server 12.0|  
 |Компонент|API среды выполнения локальной базы данных|  
-|Текст сообщения|Длина полного пути к папке экземпляра локальной базы данных превышает MAX_PATH. Экземпляр должен храниться в папке: %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server локального DB\Instances\\< имя экземпляра\>.|  
+|Текст сообщения|Длина полного пути к папке экземпляра локальной базы данных превышает MAX_PATH. Экземпляр должен храниться в папке: %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server локальный DB\Instances\\< имя экземпляра\>.|  
   
 ## <a name="explanation"></a>Объяснение  
  Длина пути к месту хранения экземпляра больше MAX_PATH.  

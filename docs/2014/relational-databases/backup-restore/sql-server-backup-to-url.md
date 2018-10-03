@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8f91a410e5c1c6e16a6fc3e1da26f89893ac261b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395977"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065124"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
   В данном разделе представлены основные понятия, требования и компоненты, необходимые для использования службы хранилища больших двоичных объектов Windows Azure в качестве места назначения резервного копирования. Функции резервного копирования и восстановления аналогичны при использовании DISK и TAPE, но имеют некоторые отличия. В данном разделе описаны различия и все важные исключения, а также приведено несколько примеров кода.  

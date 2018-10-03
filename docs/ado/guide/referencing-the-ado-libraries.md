@@ -1,10 +1,8 @@
 ---
-title: Ссылающееся на библиотеки ADO | Документы Microsoft
+title: Ссылки на библиотеки ADO | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,19 +12,18 @@ helpviewer_keywords:
 - referencing libraries [ADO]
 - ADO, libraries
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4966f9446f87ea25cc5fdab5e658fd5a30c80fb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e22b5fa8d21ca693f0ea332714f2f594f8bd997c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273623"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614462"
 ---
-# <a name="referencing-the-ado-libraries"></a>Ссылающееся на библиотеки ADO
-Последнюю версию ADO упаковывается в виде *msado15.dll*. Последние версии ADO MD и ADOX упаковываются в виде *msadom.dll* и *msadox.dll*соответственно. Эти библиотеки устанавливаются по умолчанию в *$installDir*, где *$installDir* означает путь к каталогу, в котором установлена библиотека ADO на вашем компьютере. Чтобы использовать ADO библиотеки в приложении, вы должны явно ссылаться на их в проекте приложения.  
+# <a name="referencing-the-ado-libraries"></a>Ссылки на библиотеки ADO
+Последнюю версию ADO входит в состав *msado15.dll*. Последние версии многомерные Объекты ADO и ADOX упаковываются в виде *msadom.dll* и *msadox.dll*, соответственно. Эти библиотеки устанавливаются по умолчанию в *$installDir*, где *$installDir* — это путь к каталогу, в котором в библиотеке ADO установленной на компьютере. Чтобы использовать библиотеки ADO в приложении, вы должны ссылаться на них явным образом в проекте приложения.  
   
  Ниже приведены шаги, которые можно предпринять для ссылки на библиотеки ADO.  
   

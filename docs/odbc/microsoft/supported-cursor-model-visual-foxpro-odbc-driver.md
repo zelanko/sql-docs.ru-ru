@@ -1,13 +1,11 @@
 ---
-title: Поддерживается модель курсора (драйвер ODBC для Visual FoxPro) | Документы Microsoft
+title: Поддерживается модель курсоров (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], cursors
@@ -17,31 +15,31 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f12ee1bae3ae4b10b546801bf35ebbf370e1eaba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 875348a501c292e55b267ece769f16dd6bc9dbdd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792668"
 ---
-# <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Модель поддерживаемых курсоров (драйвер ODBC для Visual FoxPro)
-Драйвер ODBC для Visual FoxPro поддерживает как *блок* (*строк*) и *статических* курсоров. Статические курсоры поддерживаются для любой драйвер, который соответствует на соответствие требованиям ODBC уровня 1. Драйвер не поддерживает динамические, управляемые набором ключей или смешанных (управляемые набором ключей и динамические) курсоров.  
+# <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Поддерживаемая модель курсоров (драйвер ODBC для Visual FoxPro)
+Драйвер ODBC для Visual FoxPro поддерживает как *блок* (*набора строк*) и *статический* курсоров. Статические курсоры поддерживаются для любой драйвер, который соответствует ODBC 1 уровень соответствия. Драйвер не поддерживает динамические, управляемые набором ключей или смешанная (keyset и dynamic) курсоров.  
   
  Приложение может вызвать [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) с параметром SQL_CURSOR_TYPE SQL_CURSOR_FORWARD_ONLY (блочного курсора) или SQL_CURSOR_STATIC (статического курсора).  
   
 > [!NOTE]  
->  При вызове метода **SQLSetStmtOption** SQL_CURSOR_TYPE параметр, отличный от SQL_CURSOR_FORWARD_ONLY или SQL_CURSOR_STATIC, функция возвращает значение SQL_SUCCESS_WITH_INFO с SQLSTATE 01S02 (значение параметра изменено). Драйвер устанавливает для всех режимов неподдерживаемый курсора SQL_CURSOR_STATIC.  
+>  При вызове метода **SQLSetStmtOption** SQL_CURSOR_TYPE параметр, отличный от SQL_CURSOR_FORWARD_ONLY или SQL_CURSOR_STATIC, функция возвращает значение SQL_SUCCESS_WITH_INFO с SQLSTATE 01S02 (значение параметра изменено). Драйвер устанавливает все режимы неподдерживаемый курсора SQL_CURSOR_STATIC.  
   
- Дополнительные сведения о типах курсоров и о **SQLSetStmtOption**, в разделе [справочнике программиста ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+ Дополнительные сведения о типах курсоров и около **SQLSetStmtOption**, см. в разделе [Справочник по программированию ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 ## <a name="block-cursor"></a>блочный курсор  
- Прокрутка вперед, только для чтения результирующего набора, возвращаемого клиенту, который отвечает за поддержание хранения данных.  
+ Прокрутка вперед, только для чтения результирующего набора, возвращаемого клиенту, кто отвечает за обслуживание хранилища данных.  
   
 ## <a name="static-cursor"></a>статический курсор  
- Моментальный снимок, определенным в запросе набора данных. Статические курсоры не отражают изменений в реальном времени базовых данных другими пользователями. Буфер памяти курсора поддерживается всеми библиотеку курсоров ODBC позволяет прямой и обратной прокрутки.  
+ Моментальный снимок набор данных, определенным в запросе. Статические курсоры не отражают в режиме реального времени изменения базовых данных другими пользователями. Буфер памяти курсора поддерживается библиотекой курсоров ODBC, который позволяет прокрутку вперед и назад.  
   
 ## <a name="rowset"></a>набор строк  
  Блоки данных, хранящихся в курсоре, представляющий строки, полученные из источника данных.

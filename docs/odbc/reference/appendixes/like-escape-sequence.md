@@ -1,48 +1,45 @@
 ---
-title: Escape-последовательности, НАПРИМЕР | Документы Microsoft
+title: Escape-последовательность LIKE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC escape sequences [ODBC], LIKE
 - LIKE escape sequence [ODBC]
 - escape sequences [ODBC], LIKE
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37733aadb069cd161427fc8f186647cfba030b6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906509"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626622"
 ---
-# <a name="like-escape-sequence"></a>КАК Escape-последовательность
-ODBC использует escape-последовательности для предложения LIKE. Ниже приведен синтаксис escape-последовательности:  
+# <a name="like-escape-sequence"></a>Escape-последовательность LIKE
+ODBC использует escape-последовательности для предложения LIKE. Синтаксис escape-последовательность выглядит следующим образом:  
   
 ```  
 {'escape-character'}  
 ```  
   
-## <a name="remarks"></a>Замечания  
- В форме БЭКУСА-Наура используется следующий синтаксис:  
+## <a name="remarks"></a>Примечания  
+ В форме Бэкуса-Наура синтаксис выглядит следующим образом:  
   
- *ODBC как escape* :: =  
+ *Like-escape-последовательность ODBC* :: =  
   
- *ODBC-esc инициатор* escape "*escape символ*" *ODBC esc признака конца.*  
+ *ODBC-esc инициатор* escape "*escape-символ*" *ODBC esc признак конца.*  
   
- *escape символ* :: = *символ*  
+ *escape-символ* :: = *символ*  
   
  *ODBC-esc инициатор* :: = {}  
   
- *ODBC esc признак конца* :: =}  
+ *ODBC-esc-признак конца* :: =}  
   
- Чтобы определить, поддерживает ли драйвер LIKE управляющие последовательности, приложение может вызвать **SQLGetInfo** с типом SQL_LIKE_ESCAPE_CLAUSE сведения.
+ Чтобы определить, поддерживает ли драйвер LIKE escape последовательности, приложение может вызвать **SQLGetInfo** с типом SQL_LIKE_ESCAPE_CLAUSE сведения.
