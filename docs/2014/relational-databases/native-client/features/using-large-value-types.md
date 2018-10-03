@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large value data types
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1f76fef29f1e90e1759c039bafaccad23a61bba
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136194"
 ---
 # <a name="using-large-value-types"></a>Использование типов больших значений
   До выхода [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] работа с типами данных больших значений требовала особой обработки. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] представленные **max** описатель для **varchar**, **nvarchar** и **varbinary** типы данных, чтобы разрешить хранение значений размером до 2 ^ 31 -1 байты. Столбцы таблицы и [!INCLUDE[tsql](../../../includes/tsql-md.md)] указать переменные **varchar(max)**, **nvarchar(max)** или **varbinary(max)** типов данных.  

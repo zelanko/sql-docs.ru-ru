@@ -1,32 +1,29 @@
 ---
-title: Справочник по API функции установщика DLL | Документы Microsoft
+title: Функция справочника по API библиотеки DLL установщика | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installer DLL [ODBC]
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37828082300c387ac6a421171ca6fefaa0a2cad1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14a89c859e98a069106b79c9289187a64c310fa9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916919"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820382"
 ---
-# <a name="installer-dll-api-reference-function"></a>Справочник по API функции установщика DLL
-В этом разделе описывается синтаксис функций в установщик API библиотеки DLL. Установщик DLL API состоит из 20 функций. Три из этих функций **SQLGetTranslator**, **SQLRemoveDSNFromIni**, и **SQLWriteDSNToIni**, вызываются только программой установки библиотеки DLL. Другие функции вызываются программ установки и администрирования.  
+# <a name="installer-dll-api-reference-function"></a>Функция справочника по API библиотеки DLL установщика
+В этом разделе описывается синтаксис функций в установщик API библиотеки DLL. Установщик API библиотеки DLL состоит из 20 функций. Три из этих функций **SQLGetTranslator**, **SQLRemoveDSNFromIni**, и **SQLWriteDSNToIni**, вызываются только программой установки библиотек DLL. Другие функции вызываются программ установки и администрирования.  
   
- Каждая функция помечается используемая версия ODBC, в которой он был представлен.  
+ Каждая функция помечается используемая версия ODBC, в которую было включено.  
   
  Этот раздел содержит следующие подразделы.  
   

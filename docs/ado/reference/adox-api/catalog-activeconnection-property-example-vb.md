@@ -1,32 +1,29 @@
 ---
-title: Пример свойства ActiveConnection (Visual Basic) в каталог | Документы Microsoft
+title: Пример свойства ActiveConnection (VB) Catalog | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ActiveConnection property [ADOX], Visual Basic example
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 078d5bad66b0f50f0baae63b0c0aeab8313207c7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ef3dfb97299616bcf0dbb22fca87dceb201f0643
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285233"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770992"
 ---
-# <a name="catalog-activeconnection-property-example-vb"></a>Пример свойства ActiveConnection каталога (Visual Basic)
-Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства на допустимое, откройте подключение» открывает» каталог. Из открытых каталога доступ к схеме объектов, содержащихся в каталоге.  
+# <a name="catalog-activeconnection-property-example-vb"></a>Пример свойства ActiveConnection объекта Catalog (Visual Basic)
+Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) присвоено допустимое соединение, откройте «открывает» каталог. Из открытых каталога можно получить доступ к схеме объектов, содержащихся в каталоге.  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -63,7 +60,7 @@ End Sub
 ' EndOpenConnectionVB  
 ```  
   
- Установка **ActiveConnection** свойства допустимой строки соединения также» открывает» каталог.  
+ Установка **ActiveConnection** значение допустимой строки соединения также «открывает» каталога.  
   
 ```  
 Attribute VB_Name = "Catalog"  
@@ -71,7 +68,7 @@ Attribute VB_Name = "Catalog"
   
 ## <a name="see-also"></a>См. также  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Коллекция таблиц (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
+ [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

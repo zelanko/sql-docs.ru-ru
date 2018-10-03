@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5936ef813b8533d72c8ebdd3d801f1ccfb6d3a7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56308532b157828746db911e60240638826b988f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188821"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217392"
 ---
 # <a name="querying-a-tabular-model"></a>Отправка запроса для табличной модели
   Как разработчик запросов к табличной модели означает, что для получения данных из табличной базы данных. для достижения этой цели можно двумя способами: использовать запросы к таблицам в DAX или многомерных Выражений и извлечения данных, так как он содержались в кубе. Однако, в зависимости от базового режима табличной модели может существовать ограничение на использование только табличных запросов DAX. В режиме DirectQuery можно использовать только табличные запросы DAX.  

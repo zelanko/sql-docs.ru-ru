@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-caps.latest.revision: 49
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5ed555d0b81e74babd60b16c1ba8df4685d6b37
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 40f47820be28dccb90b158a7b71c886306d7961d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169864"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Создание группы доступности (Transact-SQL)
   В данном разделе описывается использование [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания и настройки группы доступности на основе экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , на которых включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - schemas [SQL Server replication], replicating changes
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c84487775fb5eb3839910fd800489927edcc77f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172735"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203034"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений в схемы баз данных публикации
   Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. Когда вы вносите любое из следующих изменений схемы в соответствующий опубликованный объект в издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], это изменение распространяется по умолчанию на всех подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -109,7 +106,7 @@ ms.locfileid: "37172735"
   
 -   Удаляемый столбец не может использоваться в предложениях фильтра любой статьи любой публикации в базе данных.  
   
--   При удалении столбца из опубликованной статьи имейте в виду возможное влияние на базу данных ограничений, индексов и свойств столбца. Например:  
+-   При удалении столбца из опубликованной статьи имейте в виду возможное влияние на базу данных ограничений, индексов и свойств столбца. Пример:  
   
     -   Нельзя удалить столбцы, используемые первичным ключом, из статей в публикациях транзакций, потому что они используются репликацией.  
   

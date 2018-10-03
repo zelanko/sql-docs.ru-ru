@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a31a3dfcd3b252e33af8e8748fbe31606318a0b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a955d01840995c269f94de4d83a038c0b26cc725
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153445"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142994"
 ---
 # <a name="defining-and-browsing-translations"></a>Определение и просмотр переводов
   Перевод — это представление на некотором языке названий следующих объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]: Объекты включают в себя группы мер, меры, измерения, атрибуты, иерархии, ключевые показатели эффективности, действия и вычисляемые элементы. Переводы обеспечивают серверную поддержку клиентских приложений, которые поддерживают несколько языков. Такой клиент передает идентификатор локали экземпляру служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], который на его основе подбирает набор переводов, которые будут использоваться при выдаче метаданных для объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Если объект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не содержит перевода для указанного языка или не содержит перевода для конкретного объекта, метаданные будут возвращены клиенту на языке по умолчанию. Например, если пользователь из Франции обращается к кубу с рабочей станции, работающей с французскими настройками локали, ему будут доступны заголовки и значения свойств элементов на французском языке при условии наличия перевода для французского языка. Однако если к тому же кубу обращается пользователь из Германии с рабочей станции, работающий с немецкими настройками локали, то ему будут доступны заголовки и значения свойств элементов на немецком языке. Дополнительные сведения см. в разделе [переводы измерений](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Переводы куба](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [переводы &#40;служб Analysis Services&#41;](translations-analysis-services.md).  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d8cdb39e6070e1a7876859d3a620cb852345dbb0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 07a8a8f04257e68b5294bb7ee0b0757ffc048fbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205264"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207567"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Монитор активности заданий (настройки фильтра)
   Эта страница используется для уменьшения числа строк, видимых в мониторе активности заданий. Введите критерии в одно или несколько из доступных полей для отображения только строк, удовлетворяющих заданным условиям. Для некоторых полей, например **Состояние** или **Тип блокировки** , имеется ограниченное количество возможных значений, представленных в раскрывающемся списке. Другие, например **Приложение** , позволяют вводить не только любое значение, но и любое их количество в виде списка, разделенного запятыми. Значки панели инструментов позволяют сортировать доступные поля по категориям или в алфавитном порядке. Щелкните каждый из критериев для просмотра краткого его описания.  

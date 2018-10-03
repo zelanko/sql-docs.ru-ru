@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 437cbd485f07a5d6ee8b367e209b18b09507a88b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316984"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178475"
 ---
 # <a name="tabular-model-data-access"></a>Доступ к данным табличной модели
   К табличным шаблонам базы данных в службах Analysis Services можно получить доступ с помощью большинства тех же клиентов, интерфейсов и языков, которые используются для извлечения данных или метаданных из многомерной модели. Дополнительные сведения см. в разделе [Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -41,7 +38,7 @@ ms.locfileid: "37316984"
   
  Запросы, отправляемые клиентом [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] к модели, выдаются в виде инструкций DAX, которые можно отслеживать, установив трассировку для модели.  Клиент также выдает запрос серверу на первоначальное определение схемы, которое представляется согласно языку определения концептуальной схемы (CSDL). Дополнительные сведения см. в разделе [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
-### <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  С помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно управлять экземплярами, в которых размещаются табличные модели, а также запрашивать из них метаданные и данные. Можно обрабатывать модели или объекты в модели, создавать секции и управлять ими, а также устанавливать параметры безопасности для управления доступом к данным. Дополнительные сведения см. в следующих разделах:  
   
 -   [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

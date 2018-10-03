@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - media sets [SQL Server], about media sets
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b787ab534cc5c38413a7415e8333911590e7647f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13466b4d9d5cc497830906f144e95f044442e318
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197314"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)
   В настоящем разделе приведена основная терминология, касающаяся носителей резервных копий для резервного копирования и восстановления в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он предназначен для читателей, впервые знакомящихся с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом разделе приведено описание формата, используемого в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для носителей резервных копий, соответствия между носителями резервных копий и устройствами резервного копирования, организации резервных копий на носителях резервных копий, а также даны некоторые соображения, касающиеся наборов носителей и семейств носителей. Кроме того, в этом разделе описаны шаги инициализации или форматирования носителей резервных копий перед их использованием впервые или использованием для замены старого набора носителей новым набором носителей, а также показано, как перезаписать старые резервные наборы в наборе носителей и как добавить новые резервные наборы к набору носителей.  

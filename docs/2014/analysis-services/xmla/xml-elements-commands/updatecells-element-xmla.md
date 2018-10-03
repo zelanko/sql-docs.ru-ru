@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - UpdateCells Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateCells command
 ms.assetid: 18336a35-8a46-4532-9ee7-71828b2982af
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05b3b1dae8f409f367a88b696accb77484304b4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0bc6c13b156e7cf9483f9acdf58c67cb866a043d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219984"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155880"
 ---
 # <a name="updatecells-element-xmla"></a>Элемент UpdateCells (XML для аналитики)
   Обновляет ячейки в кубе, доступном для записи.  

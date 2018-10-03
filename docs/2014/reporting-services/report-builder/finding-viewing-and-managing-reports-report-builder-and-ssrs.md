@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d23f3e344bdc6ea66e134e5444d29129bd5f0dab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf6098bdb439e1b8bb78f7d875e3d2b5517f4945
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181721"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218284"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)
   В построителе отчетов можно просматривать папки на сервере отчетов или на сайте SharePoint для поиска отчетов, общих источников данных, моделей и других связанных элементов отчета, а также просматривать конкретный компьютер для поиска локальных отчетов. Чтобы было проще находить отчеты, построитель отчетов поддерживает список недавно использованных серверов и сайтов и предоставляет прямой доступ к папкам «Рабочий стол», «Мои документы» и «Мой компьютер» в файловой системе компьютера.  

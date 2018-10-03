@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167155"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152993"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Параметры (запроса выполнения SQL Server — "Общие")
   Используйте эту страницу, чтобы задать параметры для запросов служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для изменения параметров текущего запроса выберите пункт **Параметры запроса** в меню **Запрос** или щелкните правой кнопкой мыши в окне запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **Параметры запроса**.  
@@ -39,7 +36,7 @@ ms.locfileid: "37167155"
  **Разделитель пакетов**  
  Введите слово, которое будет использоваться для разделения инструкций языка [!INCLUDE[tsql](../includes/tsql-md.md)] на пакеты. Значение по умолчанию — GO.  
   
- **По умолчанию откройте новые запросы в режиме SQLCMD**  
+ **По умолчанию открывать новые запросы в режиме SQLCMD**  
  При установке этого флажка новые запросы будут открываться в режиме SQLCMD. Дополнительные сведения о режиме SQLCMD см. в разделе [Изменение скриптов SQLCMD при помощи редактора запросов](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  При выборе этого параметра следует учитывать следующие ограничения.  
@@ -50,7 +47,7 @@ ms.locfileid: "37167155"
   
 -   Поскольку редактор запросов не может ответить на подсказки и приглашения операционной системы, будьте внимательны и не запускайте интерактивные инструкции.  
   
- **Восстановить значения по умолчанию**  
+ **Сброс до значений по умолчанию**  
  Выберите этот пункт для сброса всех значений этой страницы и установки значений по умолчанию.  
   
 ## <a name="see-also"></a>См. также  

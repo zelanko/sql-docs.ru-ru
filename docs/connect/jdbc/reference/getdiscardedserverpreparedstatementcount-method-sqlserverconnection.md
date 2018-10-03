@@ -1,13 +1,11 @@
 ---
-title: getDiscardedServerPreparedStatementCount метод (SQLServerConnection) | Документы Microsoft
+title: Метод getDiscardedServerPreparedStatementCount (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getDiscardedServerPreparedStatementCount
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9e5364a5569f555713eae94ddb46fb7439fed3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f71d28a725c35658128f01d3fa2d21b0f7960ed0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749618"
 ---
-# <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>getDiscardedServerPreparedStatementCount метод (SQLServerConnection)
+# <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>Метод getDiscardedServerPreparedStatementCount (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Возвращает количество ожидающих подготовленной инструкции аннулирующие действия.
+ Возвращает количество текущих ожидающих подготовленной инструкции unprepare действия.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,15 +36,15 @@ public int getDiscardedServerPreparedStatementCount()
 ```  
 
 ## <a name="return-value"></a>Возвращаемое значение
- **Int** , содержащее номер необработанный подготовленной инструкции аннулирующие действия.
+ **Int** , содержащий число текущих ожидающих подготовленной инструкции unprepare действия.
 
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Замечания  
- Этот метод доступен из драйвера JDBC версии 6.4 и далее.
+## <a name="remarks"></a>Remarks  
+ Этот метод, доступные в версии драйвера JDBC 6.4 и далее.
  
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Класс SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

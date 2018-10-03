@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3cce413fa5a5c47afa5ea9a97b142a75d23472
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 955cb236d3b89d5fe682770150b7ab723865ff0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306524"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171764"
 ---
 # <a name="granting-process-database-permissions"></a>Предоставление разрешений на обработку базы данных
   После установки экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] все члены роли администратора сервера [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в этом экземпляре получают разрешения уровня сервера для выполнения любых задач в пределах этого экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. По умолчанию другие пользователи не имеют разрешения на администрирование или просмотр объектов данного экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

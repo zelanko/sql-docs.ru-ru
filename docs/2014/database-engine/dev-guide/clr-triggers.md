@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - SqlTriggerContext class
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
-caps.latest.revision: 67
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2827d98dda93a59b3e599f1db07ebb3fadd234d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226704"
 ---
 # <a name="clr-triggers"></a>Триггеры CLR
   Благодаря тому что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интегрирован со средой [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR, для создания триггеров CLR можно использовать любой язык [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В настоящем разделе рассматриваются сведения, касающиеся реализации триггеров в условиях интеграции со средой CLR. Полное описание триггеров, см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -79,7 +76,7 @@ ms.locfileid: "37160995"
 ### <a name="using-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted  
  В инструкциях триггеров DML используются два вида специальных таблиц: **вставлены** таблицы и **удалены** таблицы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Указанные временные таблицы можно использовать для проверки эффективности определенных операций модификации данных и для задания условий выполнения некоторых действий триггера DML; однако изменять данные в этих таблицах напрямую нельзя.  
   
- Триггеры CLR можно получить доступ к **вставлены** и **удалены** таблиц с помощью внутрипроцессного поставщика среды CLR. Это осуществляется путем получения объекта `SqlCommand` из объекта SqlContext. Например:  
+ Триггеры CLR можно получить доступ к **вставлены** и **удалены** таблиц с помощью внутрипроцессного поставщика среды CLR. Это осуществляется путем получения объекта `SqlCommand` из объекта SqlContext. Пример:  
   
  C#  
   

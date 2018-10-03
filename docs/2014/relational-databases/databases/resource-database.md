@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system objects [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mssqlsystemresource.mdf file
 - Resource database [SQL Server]
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
-caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d88dd26f9e83978c7e2906543b31a108742e713
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9110f0a6d86bb4c64426d2340a6d3e9454f62e97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266740"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092424"
 ---
 # <a name="resource-database"></a>База данных Resource
   База данных Resource — это доступная только для чтения база данных, которая содержит все системные объекты, включенные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Системные объекты физически хранятся в базе данных Resource, но логически отображаются в схеме sys любой базы данных. База данных Resource не содержит пользовательских данных или метаданных.  

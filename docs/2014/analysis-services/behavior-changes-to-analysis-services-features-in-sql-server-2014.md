@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87ec5b84d5d74bae3be3c05dfcafd3a609780f82
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5731d04494b9b9b73910ca1e06b021a46e78f50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289880"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099724"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Изменение работы функций служб Analysis Services в SQL Server 2014
   В этом разделе описаны изменения в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для интеллектуального анализа многомерный, табличный и [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] развертываний. Изменения в работе касаются того, как функциональные возможности работают или взаимодействуют в текущей версии в сравнении с предыдущими версиями SQL Server.  

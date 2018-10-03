@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
-caps.latest.revision: 14
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288460"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138754"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Диалоговое окно «Свойства источника данных» — «Общие» (построитель отчетов)
   Перейдите на вкладку **Общие** диалогового окна **Свойства источника данных** , чтобы выбрать общий источник данных с сервера отчетов либо создать или изменить сведения о соединении для источника данных, внедренного в отчет.  

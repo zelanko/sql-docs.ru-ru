@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Filter Element (Binding)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Filter element
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca1fe43bfe98061065cda1da5b1ff64772a4751d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0fe300ea7c88924fd463968cae680ded50ebb610
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291310"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209954"
 ---
 # <a name="filter-element-binding-assl"></a>Элемент Filter (Binding) (ASSL)
   Содержит многомерное выражение, фильтрующее содержание родительского элемента.  

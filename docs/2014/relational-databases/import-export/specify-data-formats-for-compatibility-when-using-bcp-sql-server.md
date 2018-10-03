@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], compatibility
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], compatibility
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42266e1f4ab136045c16d1e0f41d6ae802c3f1c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b05f01a5c8100f4c06d8cc6b294bdb49e5baed71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214775"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Указание форматов данных для совместимости с помощью программы bcp (SQL Server)
   В этом разделе описываются атрибуты формата данных, запросы для конкретных полей и хранение данных по полям в файле формата-xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` команды. Понимать эти возможности может быть полезно, если производится массовый экспорт данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для массового импорта например, в другую программу базы данных. Стандартные форматы данных в исходной таблице (native, character или Unicode) могут быть несовместимы с форматом данных, ожидаемым другой программой. Если несовместимость существует, когда вы экспортируете данные, необходимо описать формат данных.  

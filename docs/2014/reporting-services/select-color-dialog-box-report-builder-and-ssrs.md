@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184664"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Диалоговое окно «Выбор цвета» (построитель отчетов и службы SSRS)
   Используйте диалоговое окно **Выбор цвета** , чтобы указать параметры цвета для фона одной или нескольких ячеек в области данных или текстовом поле либо для всей диаграммы.  
@@ -66,7 +63,7 @@ ms.locfileid: "37185783"
  **Синий**  
  Десятичное значение для синего компонента цвета RGB. Введите или задайте с помощью счетчика значение в диапазоне от 0 до 255.  
   
- **Альфа-канала**  
+ **альфа-канала**  
  Десятичное значение для компонента цвета, определяющего коэффициент альфа или прозрачность. Если применение этого значения разрешено, можно использовать переключатель в виде ползунка для настройки требуемой степени прозрачности.  
   
  **Оттенок**  

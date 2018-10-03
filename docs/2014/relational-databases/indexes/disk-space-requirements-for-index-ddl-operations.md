@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c072db7fc8fc282c53ff177a63bdfa0e1f208105
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248544"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209674"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
   Наличие свободного места на диске имеет особое значение при создании, перестроении или удалении индексов. Недостаток места на диске может понизить производительность и даже вызвать ошибку операции с индексом. В этом разделе приведены общие сведения о том, как определить объем места на диске, необходимый для DDL-операций индекса.  
@@ -80,7 +77,7 @@ ms.locfileid: "37248544"
   
  Для действий с индексами в оперативном режиме применяется управление версиями строк, позволяющее изолировать действия с индексами от воздействия изменений, внесенных другими транзакциями. Это исключает необходимость запрашивать общую блокировку уже считанных записей. Для одновременных операций обновления и удаления, выполняемых пользователями во время операций с индексами в сети, требуется место в базе данных **tempdb**для сохранения записей версий. Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](perform-index-operations-online.md) .  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Index Disk Space Example](index-disk-space-example.md)  
   
  [Место на диске журнала транзакций для операций обработки индекса](transaction-log-disk-space-for-index-operations.md)  

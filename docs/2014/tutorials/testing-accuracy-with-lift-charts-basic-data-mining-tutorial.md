@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 864f255556063ea5011e3d3954294edcbdd9cb5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329006"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222244"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Проверка точности при помощи диаграмм точности прогнозов (учебник интеллектуального анализа данных — начальный уровень)
   На **диаграмма точности интеллектуального анализа** вкладки конструктора интеллектуального анализа данных, можно вычислить, насколько хорошо каждой из моделей прогнозов и сравнить результаты каждой модели непосредственно с результатами других моделей. Этот метод сравнения называется *диаграмма точности прогнозов*. Обычно точность прогнозирования модели интеллектуального анализа данных определяется либо точностью предсказания, либо точностью классификации. В данном учебнике используются только диаграммы точности прогнозов.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185322"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155864"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Определение типа измерения (мастер измерений)
   Для определения типа измерения и добавления атрибутов специальных типов, связанных с выбранным типом измерений к измерению, используется страница **Определение типа измерения** .  
@@ -56,7 +53,7 @@ ms.locfileid: "37185322"
 > [!NOTE]  
 >  Параметры в данном разделе становятся доступными, только если выбранный **Тип измерения** имеет связанные с ним специальные атрибуты. Не все типы измерений имеют связанные с ними специальные типы атрибутов.  
   
- **Включить**  
+ **включить**  
  Выберите для включения типа атрибутов в измерение.  
   
  **Тип атрибута**  

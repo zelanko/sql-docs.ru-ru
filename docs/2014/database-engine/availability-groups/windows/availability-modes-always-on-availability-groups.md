@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273750"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129044"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Режимы доступности (группы доступности AlwaysOn)
   В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] *режим доступности* — это свойство реплики, которое определяет, способна ли данная реплика доступности работать в режиме синхронной фиксации. Для каждой реплики доступности режим доступности необходимо настроить на режим синхронной или асинхронной фиксации.  Если первичная реплика настроена на *режим асинхронной фиксации*, она не ждет, что какая-либо вторичная реплика зафиксирует входящие записи журнала транзакций на диск (для *фиксации журнала*). Если данная вторичная реплика доступности настроена на режим асинхронной фиксации, первичная реплика не ждет, что эта вторичная реплика зафиксирует журнал. Если и первичная, и вторичная реплика настроены на использование *режима синхронной фиксации*, то первичная реплика ожидает от вторичной реплики подтверждения фиксации журнала (за исключением случая, если вторичная реплика окажется неспособной проверить связь с первичной репликой в течение *времени ожидания сеанса*первичной реплики).  

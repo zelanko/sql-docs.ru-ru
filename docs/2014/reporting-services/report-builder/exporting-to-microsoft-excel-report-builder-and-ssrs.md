@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 24
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 360d49814a2d4a80194242e2c0e14c8e469dcf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152105"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096154"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Excel подготавливает отчет в собственном формате [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007–2010. Благодаря модулю для подготовки отчетов, ширина столбцов в Excel более аккуратно отражает ширину столбцов в отчете.  

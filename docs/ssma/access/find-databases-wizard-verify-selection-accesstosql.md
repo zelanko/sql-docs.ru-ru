@@ -1,38 +1,32 @@
 ---
-title: Найти мастера баз данных (проверьте выбор) (AccessToSQL) | Документы Microsoft
+title: Мастер поиска баз данных (проверка выбора) (AccessToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b68d96abdb7ed64cfa12fc51b70386729212cb6a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 247ab6ac1888cf99ba75de1da33f69e230df11b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756205"
 ---
-# <a name="find-databases-wizard-verify-selection-accesstosql"></a>Найти мастера баз данных (проверьте выбор) (AccessToSQL)
-Странице проверьте выбор найти мастера баз данных список файлов, добавляемых SSMA. Если список файлов неверна, нажмите кнопку **обратно** для изменения списка. В противном случае нажмите кнопку **Готово** Добавление файлов.  
+# <a name="find-databases-wizard-verify-selection-accesstosql"></a>Мастер поиска баз данных (проверка выбора) (AccessToSQL)
+На странице проверьте выбор мастер поиска баз данных список файлов, добавляемых к SSMA. Если список файлов, не выполнено, нажмите кнопку **обратно** для изменения списка. В противном случае нажмите **Готово** для добавления файлов.  
   
-Чтобы открыть мастер найти баз данных на **файл** меню, нажмите кнопку **найти баз данных**.  
+Чтобы открыть мастер поиска баз данных, в **файл** меню, щелкните **найти баз данных**.  
   
 ## <a name="options"></a>Параметры  
 **Имя файла**  
-Отображает имя файла базы данных Access, чтобы добавить SSMA.  
+Имя файла базы данных Access, добавляемый SSMA.  
   
 **Путь к файлу**  
 Показывает путь к файлу базы данных.  

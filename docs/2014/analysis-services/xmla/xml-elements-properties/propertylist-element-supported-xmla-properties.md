@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - XML for Analysis, properties
 - XMLA, properties
 ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04e2b96df0cc549acadd50d80356a62bf327b7c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d7898c0f7263bf5355934ec072511bfd8483028
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243964"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215924"
 ---
 # <a name="supported-xmla-properties-xmla"></a>Поддерживаемые свойства XML для аналитики (XMLA)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживают свойства, перечисленные в следующей таблице. Используйте перечисленные свойства в [свойства](properties-element-xmla.md) элемент [Discover](../xml-elements-methods-discover.md) и [Execute](../xml-elements-methods-execute.md) методы.  
@@ -225,7 +222,7 @@ ms.locfileid: "37243964"
 |-----------|-----------------|  
 |*Табличные*|Возвращает результирующий набор с помощью [набора строк](../xml-data-types/rowset-data-type-xmla.md) тип данных.|  
 |*Многомерные*|Возвращает набор строк, используя [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) тип данных.|  
-|*Собственный*|Формат не задан явно. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] возвращают соответствующий команде формат. Фактический результирующий тип определяется пространством имен результата.|  
+|*собственный*|Формат не задан явно. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] возвращают соответствующий команде формат. Фактический результирующий тип определяется пространством имен результата.|  
   
 |Имя|Элемент|  
 |----------|-------------|  
@@ -285,7 +282,7 @@ ms.locfileid: "37243964"
 |-----------|-----------------|  
 |*По умолчанию*|Используется значение, сформированное экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |*Ошибка*|Формируется ошибка.|  
-|*Игнорировать*|Отсутствующие элементы никогда не обрабатываются.|  
+|*игнорировать*|Отсутствующие элементы никогда не обрабатываются.|  
   
 |Имя|Элемент|  
 |----------|-------------|  
@@ -305,7 +302,7 @@ ms.locfileid: "37243964"
 |----------|-----------|-----------------|  
 |DBPROPVAL_MSMD_SAFETY_OPTIONS_DEFAULT|*0*|Данное значение обрабатывается как свойство DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE.<br /><br /> В соединениях с локальным кубом данное значение зависит от использования свойства строки подключения CREATECUBE. Если свойство строки подключения CREATECUBE используется, данное значение совпадает со значением свойства DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL. В противном случае оно совпадает со значением свойства DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE.|  
 |DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL|*1*|Данное значение включает все библиотеки определяемых пользователем функций, не выполняя их проверку на безопасность для инициализации и использования в сценариях. В соединениях с локальными кубами данное значение позволяет использовать хранимые процедуры и ключевое слово PASSTHROUGH в инструкциях INSERT INTO.<br /><br /> **Этот вариант не рекомендуется**.|  
-|DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE|*2*|Данное значение обеспечивает проверку всех классов для определенной библиотеки определяемых пользователем функций на их безопасность для инициализации и использования в сценариях. В соединениях с локальными кубами данное значение предотвращает использование ключевого слова PASSTHROUGH в инструкциях INSERT INTO и хранимых процедур, свойству PermissionSet которых не присвоено значение Safe.<br /><br /> Это значение также удаляет действия в [MDSCHEMA_ACTIONS](../../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md) набора строк схемы, имеют в столбце action_type которых содержатся значения HTML-кода или КОМАНДЫ, или иметь значение URL-адрес в столбце ACTION_TYPE и значение в столбце CONTENT, который не поддерживает начинаться с «http://» или «https://».|  
+|DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE|*2*|Данное значение обеспечивает проверку всех классов для определенной библиотеки определяемых пользователем функций на их безопасность для инициализации и использования в сценариях. В соединениях с локальными кубами данное значение предотвращает использование ключевого слова PASSTHROUGH в инструкциях INSERT INTO и хранимых процедур, свойству PermissionSet которых не присвоено значение Safe.<br /><br /> Это значение также удаляет действия в [MDSCHEMA_ACTIONS](../../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md) набора строк схемы, имеют в столбце action_type которых содержатся значения HTML-кода или КОМАНДЫ, или иметь значение URL-адрес в столбце ACTION_TYPE и значение в столбце CONTENT, который не поддерживает начинаться с « http://» или « https://».|  
 |DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_NONE|*3*|Данное значение запрещает использование определяемых пользователем функций во время сеанса. В соединениях с локальными кубами данное значение запрещает использовать хранимые процедуры и ключевое слово PASSTHROUGH в инструкциях INSERT INTO.<br /><br /> Кроме того, это значение удаляет все действия в наборе строк схемы MDSCHEMA_ACTIONS.|  
   
 |Имя|Элемент|  

@@ -1,14 +1,11 @@
 ---
-title: semantickeyphrasetable (Transact-SQL) | Документы Microsoft
+title: semantickeyphrasetable (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semantickeyphrasetable
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98d837abe05cf99051230e24fd0d418e1263aa4f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b033342e8e6e7d3fb55d51d03705b2168d72209f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785332"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ SEMANTICKEYPHRASETABLE
 |**Оценка**|**REAL**|Относительное значение для этой ключевой фразы относительно всех других ключевых фраз того же документа в индексируемом столбце.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где более высокие значения соответствуют большему весу, а 1.0 — показатель идеального совпадения.|  
   
 ## <a name="general-remarks"></a>Общие замечания  
- Дополнительные сведения см. в разделе [поиск ключевых фраз в документах с использованием семантического поиска](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  
+ Дополнительные сведения см. в разделе [поиск ключевых фраз в документах с помощью семантического поиска](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  
   
 ## <a name="metadata"></a>Метаданные  
  Чтобы получить сведения об извлечении семантической ключевой фразы и о заполнении, запросите следующие динамические административные представления:  
@@ -95,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>Примеры  
   
-###  <a name="HowToTopPhrases"></a>Пример 1: Поиск ключевых фраз в определенном документе  
+###  <a name="HowToTopPhrases"></a> Пример 1: Поиск наиболее важных ключевых фраз в определенном документе  
  В следующем примере извлекаются 10 первых ключевых фраз из документа, указанного в переменной @DocumentId в столбце Document таблицы Production.Document в тестовой базе данных AdventureWorks. Переменная @DocumentId представляет значение из ключевого столбца полнотекстового индекса. Функция **SEMANTICKEYPHRASETABLE** эффективно извлекает эти результаты поиском по индексу, а не путем просмотра таблицы. В этом примере предполагается, что в столбце настроено семантическое и полнотекстовое индексирование.  
   
 ```sql  
@@ -110,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a>Пример 2: Поиск наиболее важных документов, содержащих определенную ключевую фразу  
+###  <a name="HowToTopDocuments"></a> Пример 2: Поиск наиболее важных документов, содержащих определенную ключевую фразу  
  В следующем примере извлекаются 25 первых документов, содержащих ключевую фразу «Bracket» в столбце «Document» таблицы Production.Document образца базы данных AdventureWorks. В этом примере предполагается, что в столбце настроено семантическое и полнотекстовое индексирование.  
   
 ```sql  
