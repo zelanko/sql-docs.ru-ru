@@ -1,36 +1,33 @@
 ---
-title: SQLExtendedFetch (библиотека курсоров) | Документы Microsoft
+title: SQLExtendedFetch (библиотека курсоров) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLExtendedFetch function [ODBC], Cursor Library
 ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7b84c5dd3c39d31b94cfb12e6b116dd44963a0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 600d90c14ae8b08a4860f3cff49c1615a9587063
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798222"
 ---
 # <a name="sqlextendedfetch-cursor-library"></a>SQLExtendedFetch (библиотека курсоров)
 > [!IMPORTANT]  
->  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этой возможности в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Корпорация Майкрософт рекомендует использовать функциональность курсора драйвера.  
+>  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Корпорация Майкрософт рекомендует использовать функциональные возможности драйвера курсора.  
   
- В этом разделе рассматриваются вопросы применения **SQLExtendedFetch** функции в библиотеку курсоров. Общие сведения о **SQLExtendedFetch**, в разделе [SQLExtendedFetch функция](../../../odbc/reference/syntax/sqlextendedfetch-function.md).  
+ В этом разделе рассматривается использование **SQLExtendedFetch** функции в библиотеку курсоров. Общие сведения о **SQLExtendedFetch**, см. в разделе [функция SQLExtendedFetch](../../../odbc/reference/syntax/sqlextendedfetch-function.md).  
   
- Библиотека курсоров реализует **SQLExtendedFetch** многократно вызывая **SQLFetch** в драйвере.  
+ Библиотека курсоров реализует **SQLExtendedFetch** , повторно вызывая **SQLFetch** в драйвере.  
   
- Библиотека курсоров поддерживает вызов метода **SQLExtendedFetch** с *FetchOrientation* из SQL_FETCH_BOOKMARK.  
+ Библиотека курсоров поддерживает вызов метода **SQLExtendedFetch** с *FetchOrientation* sql_fetch_bookmark аргумента.  
   
- При использовании библиотеки курсоров вызовы **SQLExtendedFetch** невозможно комбинировать с вызовами либо **SQLFetchScroll** или **SQLFetch**.
+ При использовании библиотеки курсоров вызовы **SQLExtendedFetch** нельзя комбинировать с вызовами либо **SQLFetchScroll** или **SQLFetch**.

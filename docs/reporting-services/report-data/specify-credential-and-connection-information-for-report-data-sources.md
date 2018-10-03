@@ -4,7 +4,6 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -27,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a1f446235811eaf6bf1f01890fedf67f9e800a3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ec6c893548c8353be0ae79f98f47880fe9e3a85b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276433"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756412"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Задание учетных данных и сведениях о соединении для источников данных отчета
   Сервер отчетов использует учетные данные для подключения к внешним источникам данных, предоставляющих содержимое для отчетов или сведения о получателе для подписок, управляемых данными. Можно задать учетные данные, использующие проверку подлинности Windows, проверку подлинности базы данных, нестандартную проверку подлинности, или учетные данные, не использующие проверку подлинности. При отправке по сети запроса на соединение сервер отчетов олицетворяет или учетную запись пользователя, или учетную запись автоматического выполнения. Дополнительные сведения о контексте безопасности, в котором выполняется запрос соединения, см. в подразделе [Настройка источника данных и сетевые подключения](#DataSourceConfigurationConnections) далее в этом разделе.  

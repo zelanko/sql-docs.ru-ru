@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Документы Microsoft
+title: sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_instance_name_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8a41db8df8316720f1a88b090de51e39a5d4d5e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0b8d88e1098d9bfddb690685804d29b44730da4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258788"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827502"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,15 +44,15 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*имя_экземпляра*"  
  Имя экземпляра. *имя_экземпляра* — **sysname** и значения по умолчанию на локальном экземпляре, если значение равно NULL.  
   
-> **Примечание:***имя_экземпляра* должно быть имя полного имени экземпляра, состоящее из имени компьютера и имя экземпляра в виде *computerName* \\ *instanceName*.  
+> **Примечание:***имя_экземпляра* должно быть полным именем экземпляра, который состоит из имени компьютера и имя экземпляра в виде *computerName* \\ *instanceName*.    
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Необходимо отключить сборщик данных перед изменением конфигурации на уровне сборщика данных. Если включен сборщик данных, эта процедура завершится с ошибкой.  
   
- Чтобы просмотреть имя текущего экземпляра, запросите [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) системного представления.  
+ Чтобы просмотреть имя текущего экземпляра, запросите [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) системное представление.  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой процедуры требуется членство в предопределенной роли базы данных dc_admin (с разрешением EXECUTE).  

@@ -1,55 +1,49 @@
 ---
-title: Legal Notice (SSMA for Access) | Microsoft Docs
+title: Юридическая информация (SSMA для Access) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - copyright
 - disclaimer
 - legal notice
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
-caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3cc5fce6ed718365b2887ec284d4bbd57b6db9bd
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 71f9bdfc859a2da095f90f784dfd300e896af945
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774150"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782112"
 ---
-# <a name="legal-notice-ssma-for-access"></a>Legal Notice (SSMA for Access)
-This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  
+# <a name="legal-notice-ssma-for-access"></a>Юридическая информация (SSMA для Access)
+Настоящий документ, в том числе содержащиеся в нем образцы приложений, предоставляется исключительно в ознакомительных целях без каких-либо явных или подразумеваемых гарантий. Данные, содержащиеся в этой документации, включая URL-адреса, а также ссылки на другие веб-сайты, могут меняться без предварительного уведомления. Всю ответственность за использование документации, а также за результаты ее использования несет исключительно пользователь.  
   
-The primary purpose of a sample contained within this documentation is to illustrate a concept, or a reasonable use of a particular statement or clause. Most samples do not include all of the code that may normally be found in a full production system, as some of the usual data validation and error handling is removed to focus the sample on a particular concept or statement. Technical support is not available for these samples or for any included source code.  
+Главное назначение образца, содержащегося в документации, — иллюстрация основных понятий или обоснование использования определенной инструкции или предложения. В большинство образцов не входит весь код, который содержался бы в полноценной промышленной системе. Некоторые обычные операции проверки данных и обработки ошибок удалены из образцов намеренно, чтобы обратить внимание на конкретные концепции или инструкции, используемые в образцах. Техническая поддержка для таких образцов, равно как и для любого исходного кода, не предоставляется.  
   
-Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, person, place, or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this documentation may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.  
+За исключением специально отмеченных случаев, описанные здесь компании, организации, товары, имена доменов, адреса электронной почты, люди, места и события являются вымышленными; любые совпадения с какими-либо реальными компаниями, организациями, товарами, именами доменов, адресами электронной почты, лицами, местами и событиями являются случайными. Ответственность за соблюдение всех авторских прав и прав на интеллектуальную собственность целиком и полностью несет пользователь. В рамках, предусмотренных законами об авторских правах, никакая часть настоящего документа не может быть воспроизведена, сохранена или введена в систему хранения и извлечения данных, либо передана в любой форме или любым способом (электронным, механическим, методом фотокопирования, записи или иным способом) для любых целей без письменного разрешения корпорации Майкрософт.  
   
-Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this documentation. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this documentation does not give you any license to these patents, trademarks, copyrights, or other intellectual property.  
+Корпорация Майкрософт может являться правообладателем патентов, заявок на получение патентов, товарных знаков и прочих объектов авторского права, которые могут иметь отношение к содержанию данной документации. Предоставление данной документации не означает передачи какой-либо лицензии на использование данных патентов, товарных знаков и объектов авторского права, за исключением использования, явно оговоренного в лицензионном соглашении корпорации Майкрософт.  
   
-© 2016 Microsoft Corporation. All rights reserved.  
+© Корпорация Майкрософт (Microsoft Corporation), 2016. Все права защищены.  
   
-Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System, and WinFX are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries/regions.  
+Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System, и WinFX являются охраняемыми товарными знаками корпорации Майкрософт в США и других странах и регионах.  
   
-SAP NetWeaver is the registered trademark of SAP AG in Germany and in several other countries/regions.  
+SAP NetWeaver является охраняемым товарным знаком SAP AG в Германии и в некоторых других странах и регионах.  
   
-All other trademarks are property of their respective owners.  
+Все прочие охраняемые товарные знаки являются собственностью их владельцев.  
   
-## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Documentation Policy for SQL Server Support and Upgrade  
-Content that appears in SQL Server documentation is published only after it has been tested sufficiently. Product documentation – SQL Server Books Online, readme files, known issues documents, and Knowledge Base articles – contains content regarding SQL Server features and functionality that is robust enough to be safe for general use by all customers. This policy applies to all SQL Server documentation, including readme files for releases and services packs; a readme file is considered an extension of Books Online.  
+## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Политика документирования поддержки и обновления SQL Server  
+Содержимое, отображаемое в документации на SQL Server, публикуется только после выполнения достаточного объема проверок. Документация по продукту (электронная документация на SQL Server, файлы сведений, документы об обнаруженных проблемах и статьи базы знаний) содержит сведения о компонентах и функциональных возможностях SQL Server, достаточно надежные для общего использования всеми клиентами. Эта политика относится ко всей документации на SQL Server, включая файлы сведений для выпусков и пакетов обновления. Файл сведений следует рассматривать как дополнение электронной документации на SQL Server.  
   
-In some cases, a particular feature is not something that customers should use directly and, therefore, it is not documented. Unless a feature is also discussed in SQL Server documentation published by Microsoft, content from third-party books or Web sites is not supported by Microsoft customer support, and should not be used in production databases or applications.  
+В некоторых случаях определенная функция может быть не предназначена для непосредственного использования клиентами и поэтому не описана в документации. Если только функция не описана также в документации на SQL Server, опубликованной Майкрософт, содержимое сторонних книг или веб-сайтов не поддерживается службой поддержки клиентов Майкрософт и не должно использоваться в рабочих базах данных или приложениях.  
   
-Customers must not use undocumented APIs, including but not limited to: stored procedures, extended stored procedures, functions, views, tables, columns, properties, or metadata. Microsoft customer support will not support databases or applications that leverage or use undocumented entry points.  
+Клиенты не должны использовать недокументированные API, в том числе хранимые процедуры, расширенные хранимые процедуры, функции, представления, таблицы, столбцы, свойства или метаданные. Служба поддержки клиентов Майкрософт не будет поддерживать базы данных или приложения, которые прямо или косвенно используют недокументированные точки входа.  
   
-Server and database upgrades to future versions of SQL Server are not guaranteed for applications and databases that leverage and use undocumented entry points. Use of SQL Server features and functionality must be limited to those that are included in Microsoft SQL Server documentation. If a feature is not documented in Microsoft SQL Server documentation, it is not a supported part of SQL Server.  
+Наличие и работоспособность обновлений сервера и баз данных до следующих версий SQL Server для приложений и баз данных, в которых используются недокументированные точки входа, также не гарантируются. Использование компонентов и функций SQL Server должно ограничиваться только теми, которые были включены в документацию на Microsoft SQL Server. Если компонент или функция не описаны в документации на Microsoft SQL Server, они не входят в поддерживаемую часть SQL Server.  
   

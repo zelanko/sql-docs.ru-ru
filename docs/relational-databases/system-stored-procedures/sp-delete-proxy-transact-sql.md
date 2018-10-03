@@ -1,14 +1,11 @@
 ---
-title: sp_delete_proxy (Transact-SQL) | Документы Microsoft
+title: sp_delete_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_proxy
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_delete_proxy
 - DROP PROXY statement
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e6f13ead19c72b65623dad1e6f2390162d2f900
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1db08d96a36112d686ab34db0b7989e910a01960
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844062"
 ---
 # <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,15 +51,15 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Либо **@proxy_name** или **@proxy_id** должен быть указан. Если указаны оба аргумента, они должны ссылаться на одну и ту же учетную запись-посредник, в противном случае хранимая процедура завершается ошибкой.  
   
  Если шаг задания ссылается на указанную учетную запись-посредник, хранимая процедура завершается с ошибкой.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_delete_proxy**.  
+ По умолчанию только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_delete_proxy**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере производится удаление учетной записи-посредника `Catalog application proxy`.  

@@ -1,35 +1,32 @@
 ---
-title: SQLGetInfo (библиотека курсоров) | Документы Microsoft
+title: SQLGetInfo (библиотека курсоров) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Cursor Library
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8a3cfcc70ddb26403b73895d71cafc923b8a655
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 443f8e36e4b9f537f33774a97b6d2fa0659e620d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910389"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715902"
 ---
 # <a name="sqlgetinfo-cursor-library"></a>SQLGetInfo (библиотека курсоров)
 > [!IMPORTANT]  
->  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этой возможности в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Корпорация Майкрософт рекомендует использовать функциональность курсора драйвера.  
+>  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Корпорация Майкрософт рекомендует использовать функциональные возможности драйвера курсора.  
   
- В этом разделе рассматриваются вопросы применения **SQLGetInfo** функции в библиотеку курсоров. Общие сведения о **SQLGetInfo**, в разделе [SQLGetInfo, функция](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
+ В этом разделе рассматривается использование **SQLGetInfo** функции в библиотеку курсоров. Общие сведения о **SQLGetInfo**, см. в разделе [SQLGetInfo, функция](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
   
- Библиотека курсоров возвращает значения для следующих значений *свойство* (&#124; представляет побитовое или); для всех остальных значений *свойство*, он вызывает **SQLGetInfo** в драйвере.  
+ Библиотека курсоров возвращает значения для следующих значений *InfoType* (&#124; представляет операцию побитового или); для всех остальных значений *InfoType*, он вызывает **SQLGetInfo** в драйвере.  
   
 |*Свойство*|Возвращаемое значение|  
 |----------------|--------------------|  
@@ -39,7 +36,7 @@ ms.locfileid: "32910389"
 |SQL_FETCH_DIRECTION [1]|SQL_FD_FETCH_ABSOLUTE &AMP;#124; SQL_FD_FETCH_FIRST &AMP;#124; SQL_FD_FETCH_LAST &AMP;#124; SQL_FD_FETCH_NEXT &AMP;#124; SQL_FD_FETCH_PRIOR &AMP;#124; SQL_FD_FETCH_RELATIVE &AMP;#124; SQL_FD_FETCH_BOOKMARK|  
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT &AMP;#124; SQL_CA1_ABSOLUTE &AMP;#124; SQL_CA1_RELATIVE &AMP;#124; SQL_CA1_LOCK_NO_CHANGE &AMP;#124; SQL_CA1_POS_POSITION &AMP;#124; SQL_CA1_POSITIONED_DELETE &AMP;#124; SQL_CA1_POSITIONED_UPDATE &AMP;#124; SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|SQL_CA2_READ_ONLY_CONCUR &AMP;#124; SQL_CA2_OPT_VALUES_CONCURRENCY &AMP;#124; SQL_CA2_SENSITIVITY_UPDATES|  
-|SQL_GETDATA_EXTENSIONS|SQL_GD_BLOCK &#124; любые значения, возвращенные с помощью драйвера **Примечание:** при получении данных с **SQLFetchScroll**, **SQLGetData** поддерживает функции, указанные битовой маски SQL_GD_ANY_COLUMN и SQL_GD_BOUND.|  
+|SQL_GETDATA_EXTENSIONS|SQL_GD_BLOCK &#124; любые значения, возвращаемые драйвером **Примечание:** при получении данных с помощью **SQLFetchScroll**, **SQLGetData** поддерживает функции, указанные с помощью битовой маски SQL_GD_ANY_COLUMN и SQL_GD_BOUND.|  
 |SQL_KEYSET_DRIVEN_CURSOR_ATTRIBUTES1|0|  
 |SQL_KEYSET_DRIVEN_CURSOR_ATTRIBUTES2|0|  
 |SQL_LOCK_TYPES [1]|SQL_LCK_NO_CHANGE|  
@@ -55,4 +52,4 @@ ms.locfileid: "32910389"
  [1] используется только при использовании библиотеки курсоров с помощью драйвера ODBC 2.x.  
   
 > [!IMPORTANT]  
->  Библиотека курсоров реализует такое же поведение курсора после фиксации или отката в качестве источника данных транзакций. То есть, фиксация или откат транзакции, либо путем вызова **SQLEndTran** или с помощью атрибута соединения SQL_ATTR_AUTOCOMMIT, могут привести к источнику данных для удаления планов доступа и закрытие курсоров для всех инструкций для подключения. Дополнительные сведения см. в разделе типы информации SQL_CURSOR_COMMIT_BEHAVIOR и SQL_CURSOR_ROLLBACK_BEHAVIOR в [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).
+>  Библиотека курсоров реализует такое же поведение курсора после фиксации или отката в качестве источника данных транзакций. То есть фиксация или откат транзакции, либо путем вызова **SQLEndTran** или с помощью атрибута соединения SQL_ATTR_AUTOCOMMIT может привести к источнику данных для удаления доступа планы и закрытия курсора для всех инструкций для подключения. Дополнительные сведения см. в разделе SQL_CURSOR_COMMIT_BEHAVIOR и SQL_CURSOR_ROLLBACK_BEHAVIOR типы сведений в [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).

@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6f7af332b2dcf1d0da2d81f15218f60ea6c746d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 76d019a5171b64c06e346b02d1c92d610b0fe13c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274564"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835642"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Форматирование элементов отчета (построитель отчетов и службы SSRS)
   Форматирование элементов отчета делает отчет более привлекательным и упрощает его восприятие. В режиме конструктора отчетов можно форматировать текстовые поля и отдельные элементы в их составе, изображения, выражения и данные.  

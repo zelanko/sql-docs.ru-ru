@@ -1,36 +1,33 @@
 ---
-title: Клонирование пример метода (VBScript) | Документы Microsoft
+title: Клонируйте пример метода (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83bc13a4f86c888a819b2c7dc39ea971f4ffcda7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276393"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783672"
 ---
-# <a name="clone-method-example-vbscript"></a>Пример метода клона (VBScript)
-В этом примере используется [клон](../../../ado/reference/ado-api/clone-method-ado.md) метод для создания копии [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и затем пользователю указатель записи каждой копии независимо друг от друга.  
+# <a name="clone-method-example-vbscript"></a>Пример метода Clone (VBScript)
+В этом примере используется [клона](../../../ado/reference/ado-api/clone-method-ado.md) метод для создания копии [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и затем позволяет пользователям указатель записи каждой копии независимо друг от друга.  
   
- Используйте следующий пример в активную страницу сервера (ASP). В этом примере используется **Northwind** базы данных, поставляемых с Microsoft Access. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как CloneVBS.asp. Результат можно просмотреть в любом браузере клиента.  
+ Используйте следующий пример в Active Server Page (ASP). В этом примере используется **Northwind** базы данных, в состав Microsoft Access. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как CloneVBS.asp. Результат можно просмотреть в любом браузере клиента.  
   
- Для использования в примере, измените строку `RsCustomerList.Source = "Customers"` для `RsCustomerList.Source = "Products"` для подсчета таблицы большего размера.  
+ Чтобы использовать в примере, измените строку `RsCustomerList.Source = "Customers"` для `RsCustomerList.Source = "Products"` для подсчета таблицы большего размера.  
   
 ```  
 <!-- BeginCloneVBS -->  

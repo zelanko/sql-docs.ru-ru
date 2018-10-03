@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, methods
 - Web service [Reporting Services], methods
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9177fa55532cb7c464679f43bab5ae63d5254c96
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 47c2312ab472714263509e2d5201bce07d1c1df3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270336"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765032"
 ---
 # <a name="supplying-web-service-method-arguments"></a>Передача аргументов методу веб-службы
   Метод веб-службы сервера отчетов отправляет запрос в службу по заданному URL-адресу с помощью протокола SOAP по протоколу HTTP. Служба получает запрос, обрабатывает его, а затем возвращает ответное сообщение. Такие запросы и ответы на них имеют форму XML-документов.  

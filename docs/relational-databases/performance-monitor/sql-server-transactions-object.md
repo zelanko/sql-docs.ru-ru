@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f28b5a581bf784f67ffdd1d90e84fb12a33c51c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3a3087a98bfd56a68313003103e92cab7eb64d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952532"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766163"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, объект Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "32952532"
   
  В этой таблице перечислены счетчики **SQLServer:Transactions** .  
   
-|Счетчики Transactions в SQL Server|Description|  
+|Счетчики Transactions в SQL Server|Описание|  
 |--------------------------------------|-----------------|  
 |**Свободное пространство в базе данных tempdb (КБ)**|Объем (в КБ) свободного пространства в базе данных **tempdb**. Должно быть достаточно свободного места для того, чтобы вместить и хранилище версий уровня изоляции моментальных снимков, и все новые временные объекты, создаваемые в данном экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Наиболее продолжительное время выполнения транзакции**|Время (в секундах) с момента запуска транзакции, которая оставалась активной дольше любой другой текущей транзакции. Этот счетчик показывает только действия, произошедшие при базе данных на уровне изоляции зафиксированной операции чтения с моментальным снимком. Он не регистрирует других действий, если база данных находится в другом уровне изоляции.|  

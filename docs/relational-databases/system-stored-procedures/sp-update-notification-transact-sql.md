@@ -1,14 +1,11 @@
 ---
-title: sp_update_notification (Transact-SQL) | Документы Microsoft
+title: sp_update_notification (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc08790ad08ce6bb4e94e61a8c3bdfc58615edf9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817554"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +50,12 @@ sp_update_notification
  [  **@operator_name =**] **"***оператор***"**  
  Оператор, которому будут отправляться уведомления о предупреждении. *оператор* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@notification_method =**] *уведомления*  
- Метод уведомления оператора. *уведомление*— **tinyint**, без значения по умолчанию и может иметь одно или несколько из следующих значений.  
+ [  **@notification_method =**] *уведомлений*  
+ Метод уведомления оператора. *уведомление*— **tinyint**, по умолчанию и может иметь одно или несколько из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**1**|электронная почта;
-|  
+|**1**|электронная почта|  
 |**2**|Пейджер|  
 |**4**|**команда net send.**|  
 |**7**|Все методы|  
@@ -67,16 +63,16 @@ sp_update_notification
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_update_notification** должна запускаться из **msdb** базы данных.  
   
  Можно обновлять уведомление для оператора, не имеющего необходимых адресных данных, используя указанный *notification_method*. Если при отправке сообщения по электронной почте или пейджеру происходит ошибка, она заносится в журнал ошибок агента Microsoft SQL Server.  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения этой хранимой процедуры пользователь должен обладать **sysadmin** предопределенной роли сервера.  
+ Чтобы выполнить эту хранимую процедуру, пользователям необходимо предоставить **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере изменяется метод уведомления для уведомлений, отправляемых `François Ajenstat`предупреждения `Test Alert`.  
+ В следующем примере изменяется метод уведомления для уведомлений, отправляемых `François Ajenstat`оповещения `Test Alert`.  
   
 ```  
 USE msdb ;  

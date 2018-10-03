@@ -5,9 +5,7 @@ ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: 71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 159436df1286717f2698b463a2645b6b4a58430d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 966c4fc90b73aea4dbc2c304a047238469b79c5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791748"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Восстановление базы данных в новое место (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -162,7 +159,7 @@ ms.locfileid: "32922841"
      MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
      Показывает, что файл данных или журнала, указанный параметром *логическое_имя_файла_в_резервной_копии* , следует восстановить из копии в месте, указанном параметром *имя_файла_в_операционной_системе*. Укажите инструкцию MOVE для каждого логического файла, который надо восстановить из резервного набора данных в новом месте.  
   
-    |Параметр|Description|  
+    |Параметр|Описание|  
     |------------|-----------------|  
     |*логическое_имя_файла_в_резервной_копии*|Указывает логическое имя файла данных или журнала в резервном наборе данных. Логическое имя файла данных или журнала в резервном наборе данных соответствует его логическому имени в базе данных на момент создания резервного набора данных.<br /><br /> <br /><br /> Примечание. Получить список логических файлов из резервного набора данных можно с помощью команды [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
     |*имя_файла_в_операционной_системе*|Задает новое место для файла, указанного параметром *логическое_имя_файла_в_резервной_копии*. Файл будет восстановлен в этом месте.<br /><br /> Параметр *имя_файла_в_операционной_системе* может также указать новое имя для восстановленного файла. Это необходимо, если создается копия существующей базы данных на том же экземпляре сервера.|  

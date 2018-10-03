@@ -1,13 +1,11 @@
 ---
-title: Подключение закрывается метод пример свойство типа таблицы (VC ++) | Документы Microsoft
+title: Подключение закрывается, таблица примеры метода свойства Type (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Type property [ADOX], VC++ example
 - Close method [ADOX], VC++ example
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cc1899b0d8772d27f3c505787469913a9e24150
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 133e0c86db9216d4959d8ee81fdc48f62c64d4fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837872"
 ---
-# <a name="connection-close-method-table-type-property-example-vc"></a>Подключение метода закрытия, пример свойство типа таблицы (VC ++)
-Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства **ничего** «закрыть» каталога. Связанные коллекции будет пустым. Все объекты, которые были созданы из объектов схемы в каталоге будут изолированы. Все свойства на те объекты, которые были кэшированы по-прежнему доступен, но при чтении свойств, требующих вызов поставщика завершится ошибкой.  
+# <a name="connection-close-method-table-type-property-example-vc"></a>Примеры метода Close для объекта Connection и свойства Type для объекта Table (Visual C++)
+Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства **Nothing** «закрывать» каталога. Связанные коллекции будет пустым. Любые объекты, которые были созданы из объектов схемы в каталоге, окажутся потерянными. Свойства на те объекты, которые были кэшированы по-прежнему будут доступны, но попытка чтения свойства, которые требуют вызова к поставщику завершится сбоем.  
   
 ```  
 // BeginCloseConnectionCpp.cpp  

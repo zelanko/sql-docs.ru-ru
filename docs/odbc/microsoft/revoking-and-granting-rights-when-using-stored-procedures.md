@@ -1,39 +1,36 @@
 ---
-title: Отмена и предоставление прав, при использовании хранимых процедур | Документы Microsoft
+title: Отзыв и предоставление прав при использовании хранимых процедур | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 24070039-03ab-4623-a681-6308802eb399
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ed3fa04ffbb67f0c6ddeba677a411c9c99c4768
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e881201e4653a168faff2fa438be19c1ca37e9b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904139"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792232"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>Отзыв и предоставление прав при использовании хранимых процедур
 > [!IMPORTANT]  
 >  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемого корпорацией Oracle.  
   
- Драйвер ODBC для Oracle возвращает следующее сообщение об ошибке при предоставляются права пользователя и затем отозван на таблицу, доступ с помощью хранимой процедуры:  
+ Драйвер Microsoft ODBC для Oracle возвращает следующее сообщение об ошибке при предоставляются права пользователя и затем отменены для таблицы, получить доступ с помощью хранимой процедуры:  
   
- ЗНАЧЕНИЕ SQL_ERROR = 1  
+ = ЗНАЧЕНИЕ SQL_ERROR-1.  
   
  szErrorMsg = «[Microsoft] [драйвер ODBC для Oracle] неверное число параметров»  
   
  szErrorMsg = «[Microsoft] [драйвер ODBC для Oracle] синтаксическая ошибка или нарушение доступа»  
   
- Вызов функции Oracle OCI Odessp() завершается ошибкой в этом сценарии, но необходимо для реализации параметров по умолчанию. После изменения базовой таблицы разрешения хранимая процедура перекомпилируется перед повторным запуском.
+ Вызов функции Oracle OCI Odessp() происходит сбой в этом сценарии, но необходимы для реализации параметров по умолчанию. После изменения основных разрешений таблицы, хранимой процедуры должны быть перекомпилированы перед повторным запуском.

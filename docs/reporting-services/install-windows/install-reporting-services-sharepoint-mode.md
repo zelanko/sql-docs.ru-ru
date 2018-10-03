@@ -3,7 +3,6 @@ title: Установка служб Reporting Services 2016 в режиме и
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba362c52e772350c31b5e7aa26a66fd0032dc08f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 61c01587e77430344c41c21a7b25c27bc62b8faf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819513"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>Установка служб Reporting Services 2016 в режиме интеграции с SharePoint
 

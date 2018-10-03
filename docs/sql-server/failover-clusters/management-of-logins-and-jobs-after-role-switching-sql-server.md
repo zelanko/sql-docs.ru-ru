@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 94f3340c0184142baefb5bde981e71a74e56b6a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e61e2c864cf0ac03a22d0ef7772c0ce8f83ecba3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802602"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Управление именами входа и заданиями после переключения ролей (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +39,7 @@ ms.locfileid: "33032609"
   
  Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог Database Engine).  
   
-## <a name="jobs"></a>Задания
-  
+## <a name="jobs"></a>Задания  
  Некоторые задания, например задания резервного копирования, следует рассмотреть особо. Обычно после переключения ролей владельцу базы данных или системному администратору приходится создавать повторно задания для новой базы данных-источника или основной базы данных.  
   
  Если бывший экземпляр сервера-источника или основного сервера доступен, то требуется также удалить исходные задания на этом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обратите внимание, что задания в текущей зеркальной базе данных завершатся ошибкой, поскольку она находится в состоянии RESTORING и недоступна.  

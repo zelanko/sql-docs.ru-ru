@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.connectionmanager.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e9a42da365556c0936fdfe59d9c24851dafbedb
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 695e91fbc8ee3a99b4c203e208400069fb07dead
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333548"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820342"
 ---
 # <a name="integration-services-ssis-connections"></a>Соединения в службах Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют соединения для выполнения различных задач и реализации функций служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -170,8 +167,8 @@ ms.locfileid: "35333548"
   
     |Диспетчер соединений|Параметры|  
     |------------------------|-------------|  
-    |[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[настройка диспетчера соединений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
+    |[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|[Настройка диспетчера подключений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[Настройка диспетчера подключений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Диспетчер подключений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Редактор диспетчера подключений Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
     |[Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)|[Редактор диспетчера подключений файлов](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
@@ -181,8 +178,8 @@ ms.locfileid: "35333548"
     |[Диспетчер FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager.md)|[Редактор диспетчера FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Диспетчер HTTP-подключений](../../integration-services/connection-manager/http-connection-manager.md)|[Редактор диспетчера HTTP-сеансов (страница "Сервер")](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[Диспетчер подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Редактор диспетчера подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Справочник по пользовательскому интерфейсу диспетчера соединений ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Справочник по пользовательскому интерфейсу диспетчера подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Настройка диспетчера подключений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Диспетчер подключений управляющих объектов SQL Server](../../integration-services/connection-manager/smo-connection-manager.md)|[Редактор диспетчера подключений SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[Диспетчер SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager.md)|[Редактор диспетчера SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Диспетчер подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Редактор диспетчера подключений SQL Server Compact Edition (страница "Соединение")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Редактор диспетчера подключений SQL Server Compact Edition (страница "Все")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
@@ -206,8 +203,8 @@ ms.locfileid: "35333548"
   
     |Диспетчер соединений|Параметры|  
     |------------------------|-------------|  
-    |[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[настройка диспетчера соединений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
+    |[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|[Настройка диспетчера подключений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[Настройка диспетчера подключений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Диспетчер подключений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Редактор диспетчера подключений Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
     |[Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)|[Редактор диспетчера подключений файлов](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
@@ -217,8 +214,8 @@ ms.locfileid: "35333548"
     |[Диспетчер FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager.md)|[Редактор диспетчера FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Диспетчер HTTP-подключений](../../integration-services/connection-manager/http-connection-manager.md)|[Редактор диспетчера HTTP-сеансов (страница "Сервер")](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[Диспетчер подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Редактор диспетчера подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Справочник по пользовательскому интерфейсу диспетчера соединений ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Справочник по пользовательскому интерфейсу диспетчера подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Настройка диспетчера подключений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Диспетчер подключений управляющих объектов SQL Server](../../integration-services/connection-manager/smo-connection-manager.md)|[Редактор диспетчера подключений SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[Диспетчер SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager.md)|[Редактор диспетчера SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Диспетчер подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Редактор диспетчера подключений SQL Server Compact Edition (страница "Соединение")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Редактор диспетчера подключений SQL Server Compact Edition (страница "Все")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
@@ -315,8 +312,8 @@ ms.locfileid: "35333548"
   
     |Диспетчер соединений|Параметры|  
     |------------------------|-------------|  
-    |[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[настройка диспетчера соединений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
+    |[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|[Настройка диспетчера подключений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[Настройка диспетчера подключений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Диспетчер подключений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Редактор диспетчера подключений Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
     |[Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)|[Редактор диспетчера подключений файлов](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
@@ -326,8 +323,8 @@ ms.locfileid: "35333548"
     |[Диспетчер FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager.md)|[Редактор диспетчера FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Диспетчер HTTP-подключений](../../integration-services/connection-manager/http-connection-manager.md)|[Редактор диспетчера HTTP-сеансов (страница "Сервер")](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[Диспетчер подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Редактор диспетчера подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Справочник по пользовательскому интерфейсу диспетчера соединений ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Справочник по пользовательскому интерфейсу диспетчера подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Настройка диспетчера подключений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Диспетчер подключений управляющих объектов SQL Server](../../integration-services/connection-manager/smo-connection-manager.md)|[Редактор диспетчера подключений SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[Диспетчер SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager.md)|[Редактор диспетчера SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Диспетчер подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Редактор диспетчера подключений SQL Server Compact Edition (страница "Соединение")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Редактор диспетчера подключений SQL Server Compact Edition (страница "Все")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  

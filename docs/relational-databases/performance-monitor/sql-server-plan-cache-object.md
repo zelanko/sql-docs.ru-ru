@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Plan Cache object
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e46cebc6bfb2443f78d15a54b3ec59da5169d59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bddbfdd03a8209a80b78ad8a1faac9dcda983592
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773242"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, объект Plan Cache
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951069"
   
  В приведенной ниже таблице описываются счетчики **SQLServer:Plan Cache**.  
   
-|Счетчики объекта Plan Cache|Description|  
+|Счетчики объекта Plan Cache|Описание|  
 |------------------------------------|-----------------|  
 |**Коэффициент попадания в кэш**|Соотношение между числом попаданий в кэш и числом уточняющих запросов.|  
 |**Базовый коэффициент попаданий в кэш**|Только для внутреннего применения.| 
@@ -42,7 +38,7 @@ ms.locfileid: "32951069"
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Экземпляр объекта Plan Cache|Description|  
+|Экземпляр объекта Plan Cache|Описание|  
 |-------------------------|-----------------|  
 |**_Total**|Сведения обо всех типах экземпляров кэша.|  
 |**Sql Plans**|Планы запросов, формируемые нерегламентированным запросом [!INCLUDE[tsql](../../includes/tsql-md.md)] , включая автоматически параметризованные запросы, либо инструкциями языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , использующими процедуры **sp_prepare** или **sp_cursorprepare**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] кэширует планы нерегламентированных инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для повторного использования при последующем выполнении идентичных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Запросы, параметризованные пользователем (даже в случае, если они не были подготовлены явно) также отображаются в виде подготовленных планов SQL.|  
