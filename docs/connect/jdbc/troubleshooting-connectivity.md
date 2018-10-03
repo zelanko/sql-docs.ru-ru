@@ -1,53 +1,50 @@
 ---
-title: Устранение неполадок с подключением | Документы Microsoft
+title: Устранение неполадок подключения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f7f46aa17ca8fba97c4c17d6efdfee8358448a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7ae5f65538c0303a92fdb86f71d75a556ad3f458
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840892"
 ---
 # <a name="troubleshooting-connectivity"></a>Устранение неполадок подключения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Необходим TCP/IP установлена и запущена для взаимодействия с вашей [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. Можно использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager установленные протоколы сетевой библиотеки.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] для обмена данными с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходим установленный протокол TCP/IP. Просмотреть установленные протоколы сетевой библиотеки можно с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Попытка подключить к базе данных может завершиться с ошибкой по многим причинам. Можно выполнить следующие действия.  
   
--   Протокол TCP/IP не включен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], или сервер или номер порта указан неверно. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с TCP/IP прослушивает указанный порт на указанном сервере. При этом может быть вызвано исключение, схожее с «Не удалось войти в систему. Не удалось соединиться с узлом по протоколу TCP/IP". Это указывает на одну из следующих причин:  
+-   Протокол TCP/IP не включен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо указан неправильный сервер или номер порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с включенным протоколом TCP/IP прослушивает заданный порт на указанном сервере. При этом может быть вызвано исключение, схожее с «Не удалось войти в систему. Не удалось соединиться с узлом по протоколу TCP/IP". Это указывает на одну из следующих причин:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] установлен, но не был установлен сетевой протокол для TCP/IP [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Network Utility для [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], или [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager для [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] и более поздних версий.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен, но сетевой протокол TCP/IP не установлен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility для [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий.  
   
-    -   TCP/IP установлен в качестве [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] протокола, но он не прослушивает порт, указанный в URL-АДРЕСЕ соединения JDBC. По умолчанию используется порт 1433, но [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] можно настроить при установке продукта прослушивание любого порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] прослушивает порт 1433. Кроме того, если порт был изменен, убедитесь, что порт, указанный в URL-адресе для соединения с JDBC, совпадает с измененным портом. Дополнительные сведения о URL-адреса подключения JDBC см. в разделе [построения URL-АДРЕСЕ соединения](../../connect/jdbc/building-the-connection-url.md).  
+    -   TCP/IP установлен в качестве протокола [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не прослушивается порт, указанный в URL-адресе для подключения к JDBC. Порт 1433 задан по умолчанию, но при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно настроить прослушивание любого порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает порт 1433. Кроме того, если порт был изменен, убедитесь, что порт, указанный в URL-адресе для соединения с JDBC, совпадает с измененным портом. Дополнительные сведения о URL-адрес соединения JDBC, см. в разделе [построения URL-АДРЕСЕ соединения](../../connect/jdbc/building-the-connection-url.md).  
   
-    -   Адрес компьютера, указанное в соединении JDBC URL-адрес не ссылается на сервер где [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] будет установлена и запущена.  
+    -   Адрес компьютера, указанный в URL-адресе для подключения к JDBC, не содержит ссылки на сервер, где установлен и запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Протоколу TCP/IP между клиентом и сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] нарушено взаимодействие. Проверьте подключение TCP/IP к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , с помощью программы telnet. Например, в командной строке введите `telnet 192.168.0.0 1433` где 192.168.0.0 — это адрес компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , который он прослушивает порт 1433. Если появится сообщение о том, «Подключение Telnet невозможно», TCP/IP не прослушивает этот порт для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] подключений. Используйте [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Network Utility для [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], или [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager для [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] и более поздней версии, чтобы убедиться, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] настроен на использование TCP/IP по порту 1433.  
+    -   Нарушено взаимодействие по протоколу TCP/IP между клиентом и сервером, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Проверьте подключение TCP/IP к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью программы telnet. Например, введите в командной строке `telnet 192.168.0.0 1433`, где 192.168.0.0 — это адрес компьютера, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а 1433 — это прослушиваемый порт. Если появится сообщение "Подключение telnet невозможно", значит TCP/IP не прослушивает подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этом порте. Используйте программу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility для [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий, чтобы настроить в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использование TCP/IP по порту 1433.  
   
     -   Используемый сервером порт закрыт брандмауэром. Это может быть порт, используемый сервером, или (необязательно) порт, связанный с именованным экземпляром сервера.  
   
--   Указано неверное имя базы данных. Убедитесь, что осуществляется вход в существующий [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.  
+-   Указано неверное имя базы данных. Убедитесь, что такая база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] действительно существует.  
   
 -   Неправильное имя пользователя или пароль. Проверьте вводимые данные.  
   
--   При использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] проверки подлинности, драйвер JDBC требует, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] проверки подлинности, который не используется по умолчанию. Убедитесь, что этот параметр включен, при установке или настройке вашего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver требует, чтобы на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была установлена проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отличная от проверки по умолчанию. Убедитесь, что этот параметр включен при установке или настройке вашего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Диагностика проблем с драйвером JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
+## <a name="see-also"></a>См. также:  
+ [Диагностика проблем с JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
