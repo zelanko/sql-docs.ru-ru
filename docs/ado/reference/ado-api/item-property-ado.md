@@ -1,13 +1,11 @@
 ---
-title: Свойство (ADO) элемента | Документы Microsoft
+title: Свойство (ADO) элемента | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -45,19 +43,18 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 776a74422941118e2091c9240d14edbf8c1f0fec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279253"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655658"
 ---
 # <a name="item-property-ado"></a>Свойство Item (ADO)
-Указывает конкретный элемент коллекции по имени или порядковый номер.  
+Указывает определенный элемент коллекции по имени или порядковый номер.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -70,12 +67,12 @@ Set object = collection.Item ( Index )
   
 ## <a name="parameters"></a>Параметры  
  *Index*  
- Объект **Variant** выражение, результатом которого является имя или порядковый номер объекта в коллекции.  
+ Объект **Variant** выражение, возвращающее имя или порядковый номер объекта в коллекции.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте **элемент** свойство для возврата объекта в коллекции. Если **элемент** не удается найти объект в коллекции, соответствующий *индекс* аргументов, возникает ошибка. Кроме того некоторые коллекции не поддерживают именованные объекты; для таких коллекций необходимо использовать порядковый номер ссылки.  
+ Используйте **элемент** свойства для возврата определенного объекта в коллекции. Если **элемент** не удается найти объект в коллекции, соответствующий *индекс* аргумент, возникает ошибка. Кроме того некоторые коллекции не поддерживают именованные объекты; для таких коллекций необходимо использовать порядковый номер ссылки.  
   
- **Элемент** свойство является свойством по умолчанию для всех коллекций; таким образом, являются взаимозаменяемыми следующие формы синтаксиса:  
+ **Элемент** свойство является свойством по умолчанию для всех коллекций; таким образом, следующие формы синтаксиса являются взаимозаменяемыми:  
   
 ```  
 collection.Item (Index)  
@@ -95,5 +92,5 @@ collection (Index)
 |[Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>См. также  
- [Пример свойства элементов (Visual Basic)](../../../ado/reference/ado-api/item-property-example-vb.md)   
+ [Пример свойства Item (Visual Basic)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Пример свойства Item (Visual C++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

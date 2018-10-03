@@ -1,13 +1,11 @@
 ---
-title: ParameterDirectionEnum | Документы Microsoft
+title: ParameterDirectionEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - ParameterDirectionEnum enumeration [ADO]
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f66aebdd140d1ce3fe505dfd40fd5f412de7cd9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280579"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726882"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-Указывает, является ли [параметр](../../../ado/reference/ado-api/parameter-object.md) представляет входным параметром, выходным параметром, и входным и выходной параметр или возвращаемое значение хранимой процедуры.  
+Указывает ли [параметр](../../../ado/reference/ado-api/parameter-object.md) представляет входного параметра, выходного параметра, как входные, так и выходной параметр или возвращаемое значение из хранимой процедуры.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|По умолчанию. Указывает, что параметр представляет входного параметра.|  
-|**adParamInputOutput**|3|Указывает, что параметр представляет входных и выходных параметров.|  
-|**adParamOutput**|2|Указывает, что параметр представляет выходной параметр.|  
+|**adParamInput**|1|По умолчанию. Указывает, что данная строка представляет входной параметр.|  
+|**adParamInputOutput**|3|Указывает, что данная строка представляет входных и выходных параметров.|  
+|**adParamOutput**|2|Указывает, что данная строка представляет выходной параметр.|  
 |**adParamReturnValue**|4|Указывает, что параметр представляет возвращаемое значение.|  
-|**adParamUnknown**|0|Указывает, что направление параметров неизвестен.|  
+|**adParamUnknown**|0|Указывает, что направление параметра неизвестно.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
  Пакет: **com.ms.wfc.data**  
   
 |Константа|  

@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritydetailstable (Transact-SQL) | Документы Microsoft
+title: semanticsimilaritydetailstable (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritydetailstable
@@ -18,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31e23931b0b4b22df06cde0981209c28aecef373
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c7b6bdccdb0c9d84b7ad814c0342a6fe267522d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718062"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает таблицу из нуля, одной или многих строк с ключевыми фразами, общими для двух документов (исходного документа и сопоставленного документа), содержимое которых семантически сходно.  
   
- Эту функцию набора строк можно ссылаться в предложении FROM инструкции SELECT 
+ Эта функция набора строк можно ссылаться в предложении FROM инструкции SELECT 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -82,7 +78,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 |**Оценка**|**REAL**|Относительное значение для этой ключевой фразы относительно всех других ключевых фраз, которые обуславливают подобие двух документов между собой.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где более высокие значения соответствуют большему весу, а 1.0 — показатель идеального совпадения.|  
   
 ## <a name="general-remarks"></a>Общие замечания  
- Дополнительные сведения см. в разделе [поиск похожих и связанных документов с использованием семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+ Дополнительные сведения см. в разделе [поиск похожих и связанных документов с помощью семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="metadata"></a>Метаданные  
  Чтобы получить сведения и состояние извлечения и заполнения данных о семантическом подобии, выполните запрос к следующим динамическим административным представлениям:  
@@ -97,7 +93,7 @@ SEMANTICSIMILARITYDETAILSTABLE
  Требуется разрешение SELECT на базовую таблицу, в которой были созданы индекс полнотекстового поиска и семантический индекс.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере извлекается 5 ключевых фраз, имеющих высший показатель подобия среди указанных кандидатов в **HumanResources.JobCandidate** таблицы образца базы данных AdventureWorks2012. @CandidateId И @MatchedID представляют значения из ключевого столбца полнотекстового индекса.  
+ В следующем примере извлекается 5 ключевых фраз, имеющих высший показатель подобия среди указанных кандидатов в **HumanResources.JobCandidate** таблицу образца базы данных AdventureWorks2012. @CandidateId И @MatchedID представляют значения из ключевого столбца полнотекстового индекса.  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

@@ -1,36 +1,33 @@
 ---
-title: Пример метода SubmitChanges (VBScript) | Документы Microsoft
+title: Пример метода SubmitChanges (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SubmitChanges method [ADO], VBScript example
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a9f1d1455d0cfa393e40640ad188976d45532a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 521b6945c993aa699c09dc2dfc398ac07d4bde31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32807007"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707612"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>Пример метода SubmitChanges (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  В следующем фрагменте кода показано, как использовать [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) метод с [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
- Чтобы протестировать этот пример, вырежьте и вставьте этот код в обычном документа ASP и назовите его **SubmitChangesCtrlVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ Чтобы протестировать этот пример, вырезать и вставить этот код в обычном документ ASP и назовите его **SubmitChangesCtrlVBS.asp**. Сценарий ASP будет идентификации сервера.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  
@@ -121,7 +118,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

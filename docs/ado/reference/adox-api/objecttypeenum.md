@@ -1,13 +1,11 @@
 ---
-title: ObjectTypeEnum | Документы Microsoft
+title: ObjectTypeEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectTypeEnum enumeration [ADOX]
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c9cb6239cee3bd6416e587dc77d55e287da68e4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ed7273b2fd24690956fa5c5ffe317ad9c00c40ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751794"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
-Указывает тип объекта базы данных, для которого требуется задать разрешения или его владельца.  
+Указывает тип объекта базы данных, для которого требуется задать разрешения или владельцы.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adPermObjColumn**|2|Объект является столбцом.|  
-|**adPermObjDatabase**|3|Объект является базой данных.|  
+|**adPermObjColumn**|2|Объект представляет собой столбец.|  
+|**adPermObjDatabase**|3|Объект — это база данных.|  
 |**adPermObjProcedure**|4|Объект не является процедурой.|  
-|**adPermObjProviderSpecific**|-1|Объект является типом, определяемым поставщиком. Если произойдет ошибка *ObjectType* параметр **adPermObjProviderSpecific** и *ObjectTypeId* не задано.|  
+|**adPermObjProviderSpecific**|-1|Объект является типом, определенной поставщиком. Если произойдет ошибка *ObjectType* параметр **adPermObjProviderSpecific** и *ObjectTypeId* не задано.|  
 |**adPermObjTable**|1|Объект является таблицей.|  
 |**adPermObjView**|5|Объект является представлением.|  
   

@@ -1,13 +1,11 @@
 ---
-title: Уровень объекта (ADO MD) | Документы Microsoft
+title: Уровень объекта (многомерные Объекты ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,60 +13,59 @@ f1_keywords:
 helpviewer_keywords:
 - Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35263c640b1446397776a4365349afdd522d78f4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734562"
 ---
-# <a name="level-object-ado-md"></a>Объект уровня (ADO MD)
+# <a name="level-object-ado-md"></a>Объект Level (многомерные объекты ADO)
 Содержит набор элементов, каждый из которых имеет один и тот же ранг в иерархии.  
   
 ## <a name="remarks"></a>Примечания  
- С коллекциями и свойствами **уровень** объекта, можно сделать следующее:  
+ С помощью коллекций и свойств **уровень** объекта, можно сделать следующее:  
   
 -   Определить **уровень** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) свойства.  
   
--   Возвращает строку, используемую при отображении **уровень** с [заголовок](../../../ado/reference/ado-md-api/caption-property-ado-md.md) свойство.  
+-   Возвращает строку, используемый при отображении **уровень** с [заголовок](../../../ado/reference/ado-md-api/caption-property-ado-md.md) свойство.  
   
--   Возвращает осмысленное строку, описывающую **уровень** с [описание](../../../ado/reference/ado-md-api/description-property-ado-md.md) свойство.  
+-   Возвращать осмысленные строку, описывающую **уровень** с [описание](../../../ado/reference/ado-md-api/description-property-ado-md.md) свойство.  
   
 -   Вернуть [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объекты, составляющие **уровень** с [члены](../../../ado/reference/ado-md-api/members-collection-ado-md.md) коллекции.  
   
--   Возвращает количество уровней от корня **уровень** с [глубина](../../../ado/reference/ado-md-api/depth-property-ado-md.md) свойство.  
+-   Возвращает количество уровней из корня **уровень** с [глубина](../../../ado/reference/ado-md-api/depth-property-ado-md.md) свойство.  
   
 -   Используйте стандартные ADO [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции для получения дополнительных сведений о **уровень** объекта.  
   
- **Свойства** коллекция содержит указанный поставщик свойства. В следующей таблице перечислены свойства, которые могут быть доступны. Фактическое свойство списка могут различаться в зависимости от реализации поставщика. См. в документации для поставщика более полный список доступных свойств.  
+ **Свойства** коллекция содержит свойства, предоставляемые поставщиком. Ниже перечислены свойства, которые могут быть доступны. В списке свойств фактическое может различаться в зависимости от реализации поставщика. См. в документации поставщика более полный список доступных свойств.  
   
 |Имя|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, к которому принадлежит этот куб.|  
 |CubeName|Имя куба.|  
 |Описание|Понятное описание уровня.|  
-|DimensionUniqueName|Однозначная имя [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
-|HierarchyUniqueName|Однозначная имя иерархии.|  
+|DimensionUniqueName|Имя однозначно [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
+|HierarchyUniqueName|Однозначный имя иерархии.|  
 |LevelCaption|Метка или заголовок, связанный с уровнем.|  
 |LevelCardinality|Число элементов уровня.|  
 |LevelGUID|Идентификатор GUID уровня.|  
 |LevelName|Имя уровня.|  
-|LevelNumber|Расстояние между уровнем и корневого элемента иерархии.|  
+|LevelNumber|Расстояние между уровнем и корень иерархии.|  
 |LevelType|Тип уровня.|  
-|LevelUniqueName|Однозначная имя уровня.|  
+|LevelUniqueName|Однозначный имя уровня.|  
 |SchemaName|Имя схемы, которой принадлежит этот куб.|  
   
- Этот раздел содержит следующий раздел.  
+ Этот раздел содержит следующие подразделы.  
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/level-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>См. также  
- [Пример CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Объект иерархии (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
- [Коллекция уровней (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
- [Члены коллекции (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
+ [Пример объекта CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
+ [Объект Hierarchy (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
+ [Коллекция Levels (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
+ [Коллекция Members (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

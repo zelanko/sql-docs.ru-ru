@@ -1,14 +1,11 @@
 ---
-title: sys.hash_indexes (Transact-SQL) | Документы Microsoft
+title: sys.hash_indexes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.hash_indexes_TSQL
@@ -20,27 +17,27 @@ dev_langs:
 helpviewer_keywords:
 - sys.hash_indexes catalog view
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f1bc362fd85dd2aa60ee4924200744dd9f492590
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 59d98fe6c7def4073bf0f2cd7cb631c143a766b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729622"
 ---
 # <a name="syshashindexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отображает текущие хэш-индексы и свойства хэш-индекса. Хэш-индексы поддерживаются только в [In-Memory OLTP &#40;оптимизация в памяти&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
- Представление sys.hash_indexes содержит те же столбцы, что представление sys.indexes, а дополнительный столбец с именем **bucket_count**. Дополнительные сведения о других столбцов в представлении sys.hash_indexes см. в разделе [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+ Представление sys.hash_indexes содержит те же столбцы, что представление sys.indexes, а также дополнительный столбец с именем **bucket_count**. Дополнительные сведения о других столбцов в представлении sys.hash_indexes см. в разделе [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Унаследованные столбцы >**||Наследует столбцы из [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
-|**bucket_count**|**int**|Число контейнеров хэша для хэш-индексов.<br /><br /> Дополнительные сведения о значении bucket_count, включая рекомендации для установки значения, в разделе [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).|  
+|**\<наследуемые столбцы >**||Наследует столбцы из [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
+|**bucket_count**|**int**|Число контейнеров хэша для хэш-индексов.<br /><br /> Дополнительные сведения о значении bucket_count, включая рекомендации для установки значения, см. в разделе [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

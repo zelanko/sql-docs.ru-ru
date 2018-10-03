@@ -1,14 +1,11 @@
 ---
-title: sys.fn_translate_permissions (Transact-SQL) | Документы Microsoft
+title: sys.fn_translate_permissions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_translate_permissions
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56fe5c1054bdf41af5708981e6377ae7175e4210
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b098dafc5764db96bdf3dc9e604f3e69a687ab94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700502"
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +53,14 @@ sys.fn_translate_permissions ( level , perms )
 ## <a name="returns"></a>Возвращает  
  **table**  
   
-## <a name="remarks"></a>Замечания  
- Значение, возвращаемое в **разрешений** столбца трассировки SQL, является целочисленным представлением битовой маски, используемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для вычисления эффективных разрешений. Каждый из 25 вида защищаемых объектов имеет собственный набор разрешений с соответствующими числовыми значениями. **sys.fn_translate_permissions** преобразует эту битовую маску в таблицу имен разрешений.  
+## <a name="remarks"></a>Примечания  
+ Значение, возвращаемое в **разрешения** столбца трассировки SQL является целочисленным представлением битовой маски, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для вычисления эффективных разрешений. Каждый из 25 вида защищаемых объектов имеет собственный набор разрешений с соответствующими числовыми значениями. **sys.fn_translate_permissions** преобразует эту битовую маску в таблицу имен разрешений.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="example"></a>Пример  
- В следующем запросе используется `sys.fn_builtin_permissions` для отображения разрешения, относящиеся к сертификатам и затем использует `sys.fn_translate_permissions` для возврата результатов битовую маску разрешений.  
+ В следующем запросе используется `sys.fn_builtin_permissions` для отображения разрешений, которые применяются к сертификатам, а затем использует `sys.fn_translate_permissions` для возврата результатов битовую маска permissions.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  
@@ -74,7 +70,7 @@ SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [sys.server_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   

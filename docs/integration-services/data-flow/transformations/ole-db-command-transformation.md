@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.oledbcommandtrans.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd5b9c18c1c160688cb42c49677fc440ca1c566e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329538"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799882"
 ---
 # <a name="ole-db-command-transformation"></a>преобразование «Команда OLE DB»
   Преобразование «Команда OLE DB» выполняет инструкцию SQL для каждой строки потока данных. Например, можно выполнить инструкцию SQL, с помощью которой создаются, обновляются или удаляются строки в таблице базы данных.  
@@ -50,7 +47,7 @@ ms.locfileid: "35329538"
 ## <a name="logging"></a>Ведение журнала  
  В журнал можно записывать вызовы, сделанные преобразованием «Команда OLE DB» к внешним источникам данных. Эта возможность протоколирования может быть использована для устранения неполадок соединений и выполнения команд для внешних источников данных, которые выполняются преобразованием «Команда OLE DB». Для протоколирования вызовов, которые преобразование «Команда OLE DB» совершает к внешним поставщикам данных, необходимо разрешить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Преобразование можно настроить с помощью конструктора служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или объектной модели. Сведения о настройке этого преобразования программными средствами см. в руководстве разработчика.  
   
 ## <a name="configure-the-ole-db-command-transformation"></a>настроить преобразование «Команда OLE DB»
@@ -68,7 +65,7 @@ ms.locfileid: "35329538"
   
 5.  Щелкните правой кнопкой мыши компонент и выберите редактировать или показать **Расширенный редактор**.  
   
-6.  На вкладке **Диспетчеры соединений** выберите диспетчер соединений OLE DB в списке **Диспетчер соединений** . Дополнительные сведения см. в статье [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
+6.  На вкладке **Диспетчеры соединений** выберите диспетчер соединений OLE DB в списке **Диспетчер соединений** . Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 7.  Перейдите на вкладку **Свойства компонентов** и нажмите кнопку с многоточием **(…)** в окне **SqlCommand** .  
   

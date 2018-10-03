@@ -1,13 +1,11 @@
 ---
-title: Сохранение и открытие примере методы (VC ++) | Документы Microsoft
+title: Сохранение и открытие примеры методов (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 870ae7f5776b601b312d799b643c09bd589dc26b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735992"
 ---
-# <a name="save-and-open-methods-example-vc"></a>Сохранение и открытие примере методы (VC ++)
-В следующих трех примерах как [Сохранить](../../../ado/reference/ado-api/save-method.md) и **откройте** методы, которые могут использоваться совместно.  
+# <a name="save-and-open-methods-example-vc"></a>Сохранение и открытие примеры методов (Visual C++)
+Этих трех примерах показано, как [Сохранить](../../../ado/reference/ado-api/save-method.md) и **откройте** методы, которые могут использоваться совместно.  
   
- Предположим, перейдя в командировки и требуется использовать вдоль таблицы из базы данных. Перед тем как перейти, осуществляется доступ к данным как [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и сохраните его в форме пересылать. При поступлении в пункт назначения, можно получить доступ к **записей** как локальные, отключен **записей**. Внести изменения в **записей**, сохраните его повторно. Наконец при возврате Главная соединиться с базой данных и дополнить изменения, внесенные в дороге.  
+ Предположим, вы последовательно выполняются командировки и хотите взять с собой таблицы из базы данных. Перед тем как перейти, доступе к данным как [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и сохраните его в виде переносимые. При поступлении в пункт назначения, можно получить доступ к **записей** как локальный, отключен **записей**. При внесении изменений в **записей**, сохраните его повторно. Наконец когда вы возвращаетесь домой, попытку соединения с базой данных и применить его изменения, внесенные в дороге.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -265,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Save](../../../ado/reference/ado-api/save-method.md)

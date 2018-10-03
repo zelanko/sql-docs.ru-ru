@@ -1,13 +1,11 @@
 ---
-title: Создание нового внешнего ключа примере (VC ++) | Документы Microsoft
+title: Создание нового внешнего ключа пример (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - Keys Append method [ADOX], VC++ example
 - RelatedColumn property [ADOX], VC++ example
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30b5590d1abecfb36869179aa1212dafa4d59527
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5e90a0bfa98a17a4b9330997cb3f59ef57778403
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286513"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726372"
 ---
-# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Ключи добавить метод, тип ключа, RelatedColumn, RelatedTable и пример использования свойств UpdateRule (VC ++)
-Следующий код демонстрирует создание нового внешнего ключа. Предполагается, что существуют две таблицы (Customers и Orders).  
+# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual C++)
+Следующий код демонстрирует создание нового внешнего ключа. Предполагается, что существует две таблицы (Customers и Orders).  
   
 ```  
 // BeginCreateKeyCpp.cpp  

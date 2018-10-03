@@ -1,46 +1,43 @@
 ---
-title: SQLDriverConnect (драйвер Paradox) | Документы Microsoft
+title: SQLDriverConnect (драйвер для Paradox) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLDriverConnect function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLDriverConnect
 ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5437dca7911b2931378a51b8ba16538286858b65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bae4a842729c8d302731ebf5fec22abb817f4c75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654762"
 ---
-# <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (драйвер Paradox)
+# <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (драйвер для Paradox)
 > [!NOTE]  
->  В этом разделе сведения драйвера Paradox. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Здесь приведены сведения об особенностях драйвер для Paradox. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLDriverConnect** позволяет подключаться к драйверу, без создания источника данных (DSN).  
+ **SQLDriverConnect** позволяет подключиться к драйверу без создания источника данных (DSN).  
   
  В строке подключения для всех драйверов поддерживаются следующие ключевые слова: **DSN**, **DBQ**, и **FIL**.  
   
- **PWD** также поддерживается ключевое слово. Ключевое слово PWD не должно содержать специальные символы (см. SQL_SPECIAL_CHARACTERS в **SQLGetInfo** возвращаемые значения).  
+ **PWD** ключевое слово также поддерживается. Ключевое слово PWD не должен содержать специальные символы (см. в разделе SQL_SPECIAL_CHARACTERS в **SQLGetInfo** возвращаемые значения).  
   
- После открытия пользователем защищенный паролем файл другим пользователям не разрешено открывать тот же файл.  
+ После открытия защищенного паролем файла пользователем, другим пользователям не разрешено открывать тот же файл.  
   
- В следующей таблице показаны минимальное ключевых слов, необходимые для подключения к драйверу и приведен пример пар ключ значение, используемых с **SQLDriverConnect**. Полный список значений DRIVERID см. в разделе [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).  
+ В следующей таблице показаны минимальные необходимые для подключения к драйверу ключевые слова и пример пар "ключевое слово значение", используемый с **SQLDriverConnect**. Полный список значений DRIVERID, см. в разделе [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).  
   
 > [!NOTE]  
->  Если для драйвера Paradox DBQ или его значения не указано, драйвер подключается к текущему каталогу.  
+>  Если драйвера для Paradox DBQ или его значения не указан, драйвер будет использоваться текущий каталог.  
   
 |Драйвер|Необходимые ключевые слова|Пример|  
 |------------|-----------------------|-------------|  
-|Paradox|Драйвер DriverID|Driver = {драйвера Paradox (*.db)}; DBQ = c:\temp; DriverID = 26|
+|Для Paradox|Драйвер, DriverID|Driver = {драйвер для Paradox Microsoft (*.db)}; DBQ = c:\temp; DriverID = 26|

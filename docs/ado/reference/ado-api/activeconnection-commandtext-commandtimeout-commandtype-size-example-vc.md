@@ -1,13 +1,11 @@
 ---
-title: Хранимые процедуры свойства примере (VC ++) | Документы Microsoft
+title: Хранимые процедуры свойства пример (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -18,18 +16,17 @@ helpviewer_keywords:
 - Direction property [ADO], VC++ example
 - ActiveConnection property [ADO], VC++ example
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf77abe1607ab456740b79b6be59f58b6fcbda58
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5d45fb7f918cef8dab18422fa30267a757f7bd1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274943"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741562"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection CommandText, CommandTimeout, CommandType, размер и направление примере свойства (VC ++)
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление пример свойства (Visual C++)
 В этом примере используется [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [размер](../../../ado/reference/ado-api/size-property-ado-parameter.md), и [направление](../../../ado/reference/ado-api/direction-property.md) свойства для выполнения хранимой процедуры.  
   
 ## <a name="example"></a>Пример  
@@ -216,7 +213,7 @@ Authors With  25  Percent Royalty
   
 ## <a name="see-also"></a>См. также  
  [Свойство ActiveConnection (ADO)](../../../ado/reference/ado-api/activeconnection-property-ado.md)   
- [Свойства CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
+ [Свойство CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Свойство CommandTimeout (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
  [Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [Свойство Direction](../../../ado/reference/ado-api/direction-property.md)   

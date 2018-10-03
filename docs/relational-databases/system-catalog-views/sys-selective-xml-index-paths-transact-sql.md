@@ -1,14 +1,11 @@
 ---
-title: sys.selective_xml_index_paths (Transact-SQL) | Документы Microsoft
+title: sys.selective_xml_index_paths (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xml_schema_attributes_TSQL
@@ -20,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_attributes catalog view
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0078ffca12182f0478f67b05d03dd14eb64b3ef8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 123258c5eceebe14a8b920b7917941cd83dc7b42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675352"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,17 +55,17 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**path_type_desc**|**sysname**|На основе **path_type** значение «XQUERY» или «SQL».|  
 |**xml_component_id**|**int**|Уникальный идентификатор компонента схемы XML в базе данных.|  
 |**xquery_type_description**|**nvarchar(4000)**|Имя указанного типа xsd.|  
-|**is_xquery_type_inferred**|**бит**|1 = тип является выведенным.|  
+|**is_xquery_type_inferred**|**bit**|1 = тип является выведенным.|  
 |**xquery_max_length**|**smallint**|Максимальная длина (типа xsd в символах).|  
-|**is_xquery_max_length_inferred**|**бит**|1 = максимальная длина является выведенной.|  
-|**is_node**|**бит**|0 = указание node() отсутствует.<br /><br /> 1 = применено указание оптимизации node().|  
+|**is_xquery_max_length_inferred**|**bit**|1 = максимальная длина является выведенной.|  
+|**is_node**|**bit**|0 = указание node() отсутствует.<br /><br /> 1 = применено указание оптимизации node().|  
 |**system_type_id**|**tinyint**|Идентификатор системного типа столбца.|  
 |**user_type_id**|**tinyint**|Идентификатор столбца пользовательского типа.|  
 |**max_length**|**smallint**|Максимальная длина типа (в байтах).<br /><br /> -1 = типом данных столбца является varchar(max), nvarchar(max), varbinary(max) или xml.|  
-|**precision**|**tinyint**|Максимальная точность типа, если это цифровой тип. В противном случае 0.|  
-|**масштаб**|**tinyint**|Максимальный масштаб типа, если это цифровой тип. В противном случае флагу присваивается значение 0.|  
+|**Точность**|**tinyint**|Максимальная точность типа, если это цифровой тип. В противном случае 0.|  
+|**Масштаб**|**tinyint**|Максимальный масштаб типа, если это цифровой тип. В противном случае флагу присваивается значение 0.|  
 |**collation_name**|**sysname**|Имя параметров сортировки типа, если это символьный тип. В противном случае — значение NULL.|  
-|**is_singleton**|**бит**|0 = указание SINGLETON отсутствует.<br /><br /> 1 = применено указание оптимизации SINGLETON.|  
+|**is_singleton**|**bit**|0 = указание SINGLETON отсутствует.<br /><br /> 1 = применено указание оптимизации SINGLETON.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

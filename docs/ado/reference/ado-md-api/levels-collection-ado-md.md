@@ -1,13 +1,11 @@
 ---
-title: Уровни сбора (ADO MD) | Документы Microsoft
+title: Уровни сбора (многомерные Объекты ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,34 +14,33 @@ f1_keywords:
 helpviewer_keywords:
 - Levels collection [ADO MD]
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cf86fc546dfa1bb6af1e121b2f539a5785643ce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: de15d97098c61ae73ddade761ddad716947715f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284053"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659672"
 ---
-# <a name="levels-collection-ado-md"></a>Коллекция уровней (ADO MD)
+# <a name="levels-collection-ado-md"></a>Коллекция Levels (многомерные объекты ADO)
 Содержит [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекты, составляющие иерархии.  
   
 ## <a name="remarks"></a>Примечания  
- **Уровни** — это обычная коллекция ADO. С помощью свойства и методы коллекции, можно выполнить следующее:  
+ **Уровни** является стандартной коллекции ADO. С помощью свойства и методы коллекции, сделайте следующее:  
   
 -   Получить число объектов в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  
   
--   Вернуть объект из коллекции с заданным по умолчанию [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
+-   Вернуть объект из коллекции со значением по умолчанию [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
   
--   Обновление объектов в коллекции из поставщика с [обновление](../../../ado/reference/ado-api/refresh-method-ado.md) метод.  
+-   Обновление объектов в коллекции от поставщика с [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод.  
   
- Этот раздел содержит следующий раздел.  
+ Этот раздел содержит следующие подразделы.  
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/levels-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>См. также  
  [Пример каталога (Visual Basic)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Объект иерархии (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
+ [Объект Hierarchy (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Объект Level (многомерные объекты ADO)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

@@ -1,13 +1,11 @@
 ---
-title: Драйверы Microsoft ODBC для настольных баз данных | Документы Microsoft
+title: Драйверы Microsoft ODBC для настольных баз данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
@@ -17,36 +15,35 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4411abb0d9eccf3a209f873d80360de92317ae48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631672"
 ---
-# <a name="microsoft-odbc-desktop-database-drivers"></a>Драйверы Microsoft ODBC для настольных баз данных
-ODBC — это API, использует язык SQL (Structured Query) в качестве языка базы данных access. Можно получить доступ к разнообразных систем управления базами данных (СУБД) с тем же кодом источника ODBC, которые непосредственно встроены в исходном коде приложения. Драйверы базы данных Microsoft ODBC рабочий стол пользователя приложения с поддержкой ODBC можно открыть запрос и обновления с помощью системной базы данных через интерфейс ODBC.  
+# <a name="microsoft-odbc-desktop-database-drivers"></a>Драйверы ODBC Майкрософт для баз данных на настольном компьютере
+ODBC — это API, который использует Structured Query Language (SQL) в качестве языка доступа к базе данных. С помощью того же исходного кода ODBC, которая включена в исходный код приложения доступны самых разнообразных систем управления базами данных (СУБД). Microsoft ODBC Desktop драйверы для баз данных пользователь приложения с поддержкой ODBC можно открыть, запроса и обновить базу данных рабочего стола через интерфейс ODBC.  
   
- Microsoft ODBC системной базы данных являются Microsoft Jet основе набор драйверов ODBC. В то время как Microsoft ODBC системной базы данных Drivers 2.0 включает 16-разрядных и 32-разрядные драйверы, 3.0 и более поздние версии включают только 32-разрядные драйверы, которые работают в Windows 95 и более поздних версиях Windows NT Workstation или Server версии 4.0, Windows 2000 Professional или Windows 2000 Сервер. Эти драйверы обеспечивают доступ к следующие типы источников данных:  
+ Драйверы для баз данных Microsoft ODBC Desktop представляют собой Microsoft Jet базе набор драйверов ODBC. В то время как Microsoft ODBC Desktop Database Drivers 2.0 входят 16-разрядных и 32-разрядные драйверы, версии 3.0 и более поздние версии включают в себя только 32-битные драйверы, которые работают в Windows 95 и более поздних версиях Windows NT Workstation или версии 4.0, Windows 2000 Professional или Windows 2000 Server Сервер. Эти драйверы обеспечивают доступ к следующие типы источников данных:  
   
 -   Microsoft Access  
   
 -   Microsoft Excel  
   
--   Paradox  
+-   Для Paradox  
   
--   dBASE  
+-   для dBASE  
   
--   Текст  
+-   Текста  
   
- В разделе [драйвера ODBC для Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) подробную документацию о драйвере ODBC для Microsoft Visual FoxPro®.  
+ См. в разделе [драйвер ODBC для Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) подробную документацию о драйвер ODBC для Microsoft Visual FoxPro®.  
   
 > [!NOTE]  
->  Доступ к другим источникам данных, например Lotus 1-2-3, Microsoft Exchange и HTML, обеспечивается устанавливаемые драйверы ISAM (IISAM). Дополнительные сведения об этих драйверов см. в разделе «Доступ к внешние данные» в *Microsoft Jet базы данных подсистемы Справочник программиста*. База данных драйверы ODBC Desktop 4.0 не поддерживают форматы данных Btrieve и EMS.  
+>  Доступ к другим источникам данных, например Lotus 1-2-3, Microsoft Exchange и HTML, обеспечивается устанавливаемые драйверы ISAM (IISAM). Дополнительные сведения об этих драйверов см. в разделе «Доступ внешних данных» в *Microsoft Jet Database Engine Справочник по программированию*. База данных драйверы ODBC Desktop 4.0 не поддерживают форматы данных Btrieve и EMS.  
   
  Этот раздел содержит следующие подразделы.  
   

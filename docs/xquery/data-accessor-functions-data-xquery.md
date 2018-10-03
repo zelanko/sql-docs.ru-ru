@@ -1,36 +1,30 @@
 ---
-title: Функция Data (XQuery) | Документы Microsoft
+title: Функция Data (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:data function
 - data function [XQuery]
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 74f8e5b5df2b8a6a95766576bdf5a1c8d83a4027
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 949286cef32dd3c6c9e55e1ad34504afffc20989
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078081"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734053"
 ---
-# <a name="data-accessor-functions---data-xquery"></a>Функции доступа к данным - данных (XQuery)
+# <a name="data-accessor-functions---data-xquery"></a>Функции метода доступа к данным — data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает типизированное значение для каждого элемента, указанного *$arg*.  
@@ -46,7 +40,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  Последовательность элементов, типизированные значения которых будут возвращены.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Следующее применимо к типизированным значениям:  
   
 -   Типизированное значение атомного значения является атомным значением.  
@@ -69,13 +63,13 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
  Следующие характеристики относятся к типизированным узлам элемента:  
   
--   Если элемент имеет простой тип содержимого **data()** возвращает типизированное значение элемента.  
+-   Если элемент имеет простой тип содержимого, **data()** возвращает типизированное значение элемента.  
   
 -   Если узел относится к сложному типу, включая xs: anyType, **data()** возвращает статическую ошибку.  
   
- Хотя использование **data()** зачастую не является обязательным, как показано в следующих примерах, определение **data()** явно повышает удобочитаемость запроса. Дополнительные сведения см. в разделе [основы языка XQuery](../xquery/xquery-basics.md).  
+ Несмотря на то, что с помощью **data()** функция зачастую не является обязательным, как показано в следующих примерах, определение **data()** функция явно повышает удобочитаемость запроса. Дополнительные сведения см. в разделе [основы языка XQuery](../xquery/xquery-basics.md).  
   
- Нельзя указать **data()** для конструируемого XML, как показано ниже:  
+ Нельзя указать **data()** для конструируемого XML, как показано в следующем:  
   
 ```  
 declare @x xml  
@@ -84,10 +78,10 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных **xml** столбцов типа в базе данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных **xml** -столбец базы данных AdventureWorks.  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Использование функции data() XQuery для извлечения типизированного значения узла  
- Следующий запрос иллюстрирует использование **data()** функция используется для получения значения атрибута, элемента и текстовый узел:  
+ Следующий запрос иллюстрирует как **data()** функция используется для получения значения атрибута, элемента и текстовый узел:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -112,7 +106,7 @@ WHERE ProductModelID = 19
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- Как уже упоминалось, **data()** при создании атрибутов функция необязателен. Если вы не укажете **data()** функция, она неявно подразумевается. Этот запрос формирует те же результаты, что и предыдущий запрос:  
+ Как уже упоминалось, **data()** при создании атрибутов функция необязательна. Если вы не укажете **data()** функция, она неявно подразумевается. Этот запрос формирует те же результаты, что и предыдущий запрос:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -131,9 +125,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Следующие примеры иллюстрируют экземпляры, в которых **data()** функции не требуется.  
+ Следующие примеры иллюстрируют экземпляры, в которых **data()** функции является обязательным.  
   
- В следующем запросе **$pd / P1: Specifications / Material** возвращает <`Material`> элемент. Кроме того **данных ($pd/P1: Specifications/Material)** Возвращает символьные данные, типизированные как xdt: untypedAtomic, так как <`Material`> является нетипизированным. Если входные данные не типизированы, результат **data()** типизируется как **xdt: untypedAtomic**.  
+ В следующем запросе **$pd / P1: Specifications / Material** возвращает <`Material`> элемента. Кроме того **данных ($pd/P1: Specifications/Material)** Возвращает символьные данные, типизированные как xdt: untypedAtomic, так как <`Material`> является нетипизированным. Если входные данные не типизированы, результат **data()** типизируется как **xdt: untypedAtomic**.  
   
 ```  
 SELECT CatalogDescription.query('  

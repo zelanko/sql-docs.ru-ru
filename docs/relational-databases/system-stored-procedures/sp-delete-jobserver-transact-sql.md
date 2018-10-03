@@ -1,14 +1,11 @@
 ---
-title: sp_delete_jobserver (Transact-SQL) | Документы Microsoft
+title: sp_delete_jobserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobserver
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7b311f4de82a416fc61a0464077aa5aaa03de99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 886f63ad94921451ca7136064f2148b46eeaba17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246195"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729729"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +42,13 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 ## <a name="arguments"></a>Аргументы  
  [  **@job_id=** ] *job_id*  
- Идентификационный номер задания, из которого удаляется указанный целевой сервер. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+ Идентификационный номер задания, из которого удаляется указанный целевой сервер. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name=** ] **"***job_name***"**  
- Имя задания, из которого удаляется указанный целевой сервер. *job_name* — **sysname**, значение по умолчанию NULL.  
+ [  **@job_name=** ] **"***имя_задания***"**  
+ Имя задания, из которого удаляется указанный целевой сервер. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *job_id* или *job_name* должно быть указано; невозможно указать одновременно.  
+>  Либо *job_id* или *имя_задания* должен быть указан, нельзя указать одновременно.  
   
  [ **@server_name=** ] **'***server***'**  
  Имя целевого сервера, с которого следует удалить указанное задание. *сервер* — **nvarchar(30)**, не имеет значения по умолчанию. *сервер* может быть **(LOCAL)** или имя удаленного целевого сервера.  
@@ -61,13 +57,13 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения этой хранимой процедуры пользователи должны быть членами **sysadmin** предопределенной роли сервера.  
+ Чтобы выполнить эту хранимую процедуру, пользователи должны быть членами **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере удаляется сервер `SEATTLE2` из обработки `Weekly Sales Backups`задания.  
+ В следующем примере удаляется сервер `SEATTLE2` обработки `Weekly Sales Backups`задания.  
   
 > [!NOTE]  
 >  В этом примере предполагается, что ранее было создано задание `Weekly Sales Backups`.  

@@ -1,13 +1,11 @@
 ---
-title: Поля соответствия дескриптора | Документы Microsoft
+title: Соответствие поля дескриптора | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptor field conformance levels [ODBC]
@@ -15,25 +13,24 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b01b9da55da1fd3decb46e69dc073781427ccfab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911849"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642312"
 ---
-# <a name="descriptor-field-conformance"></a>Дескриптор поля соответствия
-Следующая таблица указывает уровень соответствия для каждого ODBC поле заголовка дескриптора, где это является правильно определенным.  
+# <a name="descriptor-field-conformance"></a>Соответствие поля дескриптора
+Следующая таблица указывает уровень соответствия каждого ODBC поле заголовка дескриптора, где это является правильно определенным.  
   
-|Функция|Уровень соответствия|  
+|Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|Основные сведения|  
 |SQL_DESC_ARRAY_SIZE|Основные сведения|  
-|SQL_DESC_ARRAY_STATUS_PTR|Основные файлы (для APD прав на интеллектуальную собственность и IRD); Уровень 1 (для Отменить)|  
+|SQL_DESC_ARRAY_STATUS_PTR|Основные файлы (для APD Сетевом и IRD); Уровень 1 (Отменить)|  
 |SQL_DESC_BIND_OFFSET_PTR|Основные сведения|  
 |SQL_DESC_BIND_TYPE|Основные сведения|  
 |SQL_DESC_COUNT|Основные сведения|  
@@ -41,7 +38,7 @@ ms.locfileid: "32911849"
   
  Следующая таблица указывает уровень соответствия каждого ODBC дескриптор записи поля, где это является правильно определенным.  
   
-|Функция|Уровень соответствия|  
+|Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|Уровень 2|  
 |SQL_DESC_BASE_COLUMN_NAME|Основные сведения|  
@@ -50,8 +47,8 @@ ms.locfileid: "32911849"
 |SQL_DESC_CATALOG_NAME|Уровень 2|  
 |SQL_DESC_CONCISE_TYPE|Основные сведения|  
 |SQL_DESC_DATA_PTR|Основные сведения|  
-|КОД SQL_DESC_DATETIME_INTERVAL_|Основные [1]|  
-|ТОЧНОСТЬ SQL_DESC_DATETIME_INTERVAL_|Основные [1]|  
+|КОД SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
+|ТОЧНОСТЬ SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
 |SQL_DESC_DISPLAY_SIZE|Основные сведения|  
 |SQL_DESC_FIXED_PREC_SCALE|Основные сведения|  
 |SQL_DESC_INDICATOR_PTR|Основные сведения|  
@@ -64,7 +61,7 @@ ms.locfileid: "32911849"
 |SQL_DESC_NULLABLE|Основные сведения|  
 |SQL_DESC_OCTET_LENGTH|Основные сведения|  
 |SQL_DESC_OCTET_LENGTH_PTR|Основные сведения|  
-|SQL_DESC_PARAMETER_TYPE|Основной или уровне 2 [2]|  
+|SQL_DESC_PARAMETER_TYPE|Core/уровень 2 [2]|  
 |SQL_DESC_PRECISION|Основные сведения|  
 |SQL_DESC_ROWVER|уровне 1|  
 |SQL_DESC_SCALE|Основные сведения|  
@@ -77,6 +74,6 @@ ms.locfileid: "32911849"
 |SQL_DESC_UNSIGNED|Основные сведения|  
 |SQL_DESC_UPDATABLE|Основные сведения|  
   
- [1] требуется поддержка этих полях записи только в том случае, если драйвер поддерживает применимые типы данных.  
+ [1] поддержка эти поля записи является обязательным только в том случае, если драйвер поддерживает применимые типы данных.  
   
- [2] на уровне ядра соответствие драйвер должен поддерживать SQL_PARAM_INPUT. Для соответствия интерфейс уровня 2 драйвер должен также поддерживать SQL_PARAM_INPUT_OUTPUT и SQL_PARAM_OUTPUT.
+ [2] для соответствия требованиям уровня ядра драйвер должен поддерживать SQL_PARAM_INPUT. Соответствие интерфейса уровня 2 драйвер должен также поддерживать SQL_PARAM_INPUT_OUTPUT и SQL_PARAM_OUTPUT.

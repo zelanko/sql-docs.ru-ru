@@ -1,13 +1,11 @@
 ---
-title: Записи реестра для источников данных | Документы Microsoft
+title: Записи реестра для источников данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC]
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - data sources [ODBC], configuring
 - registry entries for data sources [ODBC]
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d052b4d64e858837a51a907fc77548bac231c35d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5f5f865c0b50ea75548bb3a409caef8acf64b51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916389"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692922"
 ---
 # <a name="registry-entries-for-data-sources"></a>Записи реестра для источников данных
 > [!NOTE]  
->  Начиная с Windows XP и Windows Server 2003, ODBC включается в операционной системе Windows. ODBC следует устанавливать только явно на более ранних версиях Windows.  
+>  Начиная с Windows XP и Windows Server 2003, ODBC включена в операционную систему Windows. ODBC следует только явным образом установить в более ранних версиях Windows.  
   
- Установщик DLL сохраняет сведения о каждом источнике данных. В Microsoft Windows NT, Windows 2000 и Microsoft Windows 95/98 эти сведения хранятся в подразделах в одном из следующих двух разделов в реестре:  
+ Библиотека DLL установщика сохраняет сведения в реестре о каждом источнике данных. В Microsoft Windows NT или Windows 2000 и Microsoft Windows 95/98 эти сведения хранятся в подразделах в одном из следующих двух разделов в реестре:  
   
  HKEY_LOCAL_MACHINE  
   
@@ -49,7 +46,7 @@ ms.locfileid: "32916389"
   
  ODBC.ini  
   
- Ключ используется зависит от источника данных *системного источника данных,* доступный для всех пользователей или *источника данных* доступного только для текущего пользователя. Системные источники данных хранятся в дереве HKEY_LOCAL_MACHINE, и пользовательские источники данных хранятся в дереве HKEY_CURRENT_USER. Во всех прочих отношениях идентичны системные источники данных и источники данных пользователя.  
+ Какой ключ используется зависит от того, является ли источник данных *системный источник данных,* доступного для всех пользователей или *источника данных,* доступного только для текущего пользователя. Системные источники данных хранятся в дереве HKEY_LOCAL_MACHINE и пользовательских источников данных хранятся в дереве HKEY_CURRENT_USER. Во всех прочих отношениях идентичны системные источники данных и пользовательских источников данных.  
   
  Этот раздел содержит следующие подразделы.  
   

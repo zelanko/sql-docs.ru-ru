@@ -1,13 +1,11 @@
 ---
-title: 'Коллекции (Visual C++ синтаксис индекс с #import) | Документы Microsoft'
+title: 'Коллекции (индекс синтаксиса Visual C++ с #import) | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3378f8e44d8d667933fe41a7164ba4c56acc20ce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276533"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662662"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>Коллекции (Visual C++ синтаксис индекс с #import)
-Полезно знать, что коллекции наследуют некоторые общие методы и свойства.  
+# <a name="collections-visual-c-syntax-index-with-import"></a>Коллекции (индекс синтаксиса Visual C++ с #import)
+Это полезно знать, что коллекции наследуют некоторые распространенные методы и свойства.  
   
- Наследовать все коллекции **число** свойство и **обновление** добавить метод и все коллекции **элемент** свойство. **Ошибки** добавляет в коллекцию **снимите** метод. **Параметры** наследует коллекции **Append** и **удалить** методы, пока **поля** коллекции добавляет **Append**, **удаление**, и **обновление** методы.  
+ Наследовать все коллекции **число** свойство и **обновить** добавьте метод и все коллекции **элемент** свойство. **Ошибки** добавляет коллекцию **Очистить** метод. **Параметры** наследует коллекции **Append** и **удалить** методов, хотя **поля** коллекции добавляет **Append**, **удалить**, и **обновления** методы.  
   
 ## <a name="properties-collection"></a>Коллекция Properties  
   
@@ -101,7 +98,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Коллекция ошибок (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Коллекция параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

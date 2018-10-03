@@ -1,31 +1,28 @@
 ---
-title: Параметр (ADO - синтаксис WFC) | Документы Microsoft
+title: Параметр (ADO — синтаксис WFC) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb5ee000ca00031f35f27ec23dec3e284656f56a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280593"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720712"
 ---
-# <a name="parameter-ado---wfc-syntax"></a>Параметр (ADO - WFC синтаксис)
-## <a name="package-commswfcdata"></a>пакет com.ms.wfc.data  
+# <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO — синтаксис WFC)
+## <a name="package-commswfcdata"></a>com.ms.wfc.data пакета  
   
 ### <a name="constructor"></a>Конструктор  
   
@@ -68,14 +65,14 @@ public void setValue(Object v)
 public AdoProperties getProperties()  
 ```  
   
-## <a name="parameter-accessor-methods"></a>Параметр метода доступа  
- [Значение](../../../ado/reference/ado-api/value-property-ado.md) свойство [параметр](../../../ado/reference/ado-api/parameter-object.md) объект возвращает или задает содержимое этого объекта. Содержимое представляется как значение типа VARIANT, тип объекта, который может быть присвоено значение и любой из нескольких типов данных.  
+## <a name="parameter-accessor-methods"></a>Параметр методов доступа  
+ [Значение](../../../ado/reference/ado-api/value-property-ado.md) свойство [параметр](../../../ado/reference/ado-api/parameter-object.md) объект получает или задает содержимое этого объекта. Содержимое представляется как значение типа VARIANT, тип объекта, который может быть присвоено значение и любой из нескольких типов данных.  
   
- Реализует ADO/WFC **значение** свойство с **getValue** метод, возвращающий объект VARIANT; и **setValue** метод, который принимает в качестве аргумента типа VARIANT. Варианты высокоэффективные на некоторых языках, таких как Microsoft Visual Basic.  
+ Реализует ADO и WFC **значение** свойство с **getValue** метод, который возвращает объект типа VARIANT; и **setValue** метод, который принимает в качестве аргумента типа VARIANT. Варианты высокой эффективны в некоторых языках, таких как Microsoft Visual Basic.  
   
- В дополнение к **значение** предоставляет свойство, ADO и WFC *доступа* методы, использующие типы данных Java для получения и установки содержимого **параметр** объектов. Большинство из этих методов имеют имена вида **получить *** DataType* или **задать *** DataType*.  
+ В дополнение к **значение** предоставляет свойство, ADO и WFC *доступа* методы, которые используют типы данных Java для получения и задания содержание **параметр** объектов. Большинство этих методов имеют имена вида **получить *** DataType* или **задать *** DataType*.  
   
- Есть одно исключение внимания: отсутствует не **getNull** свойства; вместо этого используется **isNull** свойство, которое возвращает значение типа Boolean, указывающее, является ли поле значение null.  
+ Есть одно исключение заслуживающие внимания: существует не **getNull** свойства; вместо этого используется **isNull** свойство, которое возвращает логическое значение, указывающее, является ли поле значение null.  
   
 ```  
 public boolean getBoolean()  

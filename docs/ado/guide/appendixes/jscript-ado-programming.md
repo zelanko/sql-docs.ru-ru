@@ -1,13 +1,11 @@
 ---
-title: Программирование ADO JScript | Документы Microsoft
+title: Программирование ADO JScript | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,28 +13,27 @@ helpviewer_keywords:
 - JScript programming in ADO
 - ADO, JScript programming
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ddf5486305d0d0e19de266e12a35987899846e6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 63559af64241be111ed99c9996b63c1978b3d649
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270314"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655632"
 ---
-# <a name="jscript-ado-programming"></a>Программирование ADO JScript
+# <a name="jscript-ado-programming"></a>Программирование объектов ADO с использованием JScript
 ## <a name="creating-an-ado-project"></a>Создание проекта ADO  
- Microsoft JScript не поддерживает библиотеки типов, поэтому вам не нужно ссылки ADO в своем проекте. Следовательно не связанные функции, такие как завершение командной строки поддерживаются. Кроме того по умолчанию ADO перечисляемые константы не определены в языке JScript.  
+ Microsoft JScript не поддерживает библиотеки типов, вам не нужен для ссылки ADO в проекте. Следовательно не связанные функции, такие как завершение командной строки, поддерживаются. Кроме того по умолчанию ADO перечисления константы не определены в JScript.  
   
- Тем не менее ADO предоставляет с двумя включить файлы, содержащие следующие определения, используемые в JScript:  
+ Тем не менее ADO предоставляет с двумя включить файлы, содержащие следующие определения для использования с JScript:  
   
--   Для использования серверных скриптов Adojavas.inc, которая устанавливается в папках библиотеки ADO.  
+-   Для использования сценариев на стороне сервера Adojavas.inc, который устанавливается в папках библиотеки ADO.  
   
--   Для использования клиентского скрипта Adcjavas.inc, которая устанавливается в папках библиотеки ADO.  
+-   Для использования сценариев на стороне клиента Adcjavas.inc установленный в папках библиотеки ADO.  
   
- Можно либо скопировать и вставить определения констант из этих файлов в ASP-страниц или, при выполнении скриптов на стороне сервера, скопируйте файл Adojavas.inc в папку на веб-сайте и ссылается на его со страницы ASP следующим образом:  
+ Можно скопировать и вставить определения констант из этих файлов в ASP-страниц или, при выполнении сценариев на стороне сервера, скопируйте файл Adojavas.inc в папку на веб-сайт и ссылается на нее из страницы ASP со следующим образом:  
   
 ```  
 <!--#include File="adojavas.inc"-->  
@@ -51,7 +48,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>Пример JScript  
- Ниже приведен общий пример программирования на стороне сервера JScript в открывшемся файле активные страницы сервера (ASP) **записей** объекта:  
+ Ниже приведен общий пример программирования на стороне сервера JScript в файле Active Server Page (ASP), который открывает **записей** объекта:  
   
 ```  
 <%  @LANGUAGE="JScript" %>  

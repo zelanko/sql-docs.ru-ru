@@ -1,36 +1,33 @@
 ---
-title: Пример метода AddNew (VBScript) | Документы Microsoft
+title: Пример метода AddNew (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - AddNew method [ADO], VBScript
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a67a9dd7ba9e280da6b361d7473ae8c6f6d2cac
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e5d6db633a5c718ea38d2b8959fa54305ec02883
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275253"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701622"
 ---
 # <a name="addnew-method-example-vbscript"></a>Пример метода AddNew (VBScript)
 В этом примере используется [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) метод, чтобы создать новую запись с указанным именем.  
   
- Используйте следующий пример в активную страницу сервера (ASP). Используйте **найти** для нахождения файла Adovbs.inc и поместите его в каталог, который планируется использовать. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AddNewVBS.asp**. Результат можно просмотреть в любом браузере клиента.  
+ Используйте следующий пример в Active Server Page (ASP). Используйте **найти** найдите файл Adovbs.inc и поместите его в каталог, который вы планируете использовать. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AddNewVBS.asp**. Результат можно просмотреть в любом браузере клиента.  
   
- Для использования в примере, добавьте новую запись в формате HTML. Нажмите кнопку **добавить новые**. В разделе [удалить пример метода](../../../ado/reference/ado-api/delete-method-example-vbscript.md) можно удалять ненужные записи.  
+ Чтобы использовать в примере, добавьте новую запись в формате HTML. Нажмите кнопку **добавить новый**. См. в разделе [удалить пример метода](../../../ado/reference/ado-api/delete-method-example-vbscript.md) для удаления нежелательных записей.  
   
 ```  
 <!-- BeginAddNewVBS -->  

@@ -1,10 +1,8 @@
 ---
-title: ADO введение | Документы Microsoft
+title: Введение в модель ADO | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,21 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b2b3e0a8f9249abd76ccaf69bdd9f2311bcff2e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4c56a328d7b3495b57d34f127a2d12947f0ecfd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271413"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723842"
 ---
-# <a name="ado-overview-and-benefits"></a>Общие сведения о ADO и преимущества
-Объекты данных ActiveX (ADO) — это высокого уровня, простой в использовании интерфейс для OLE DB. OLE DB является более низкого уровня, высокопроизводительный интерфейс для различных хранилищ данных. ADO и OLE DB можно работать с реляционных (табличных) и нереляционных (иерархическое или потока) данных.
+# <a name="ado-overview-and-benefits"></a>Обзор ADO и преимущества
+ActiveX Data Objects (ADO) — это простой в использовании, высокоуровневый интерфейс для OLE DB. OLE DB — это интерфейс низкого уровня, высокой производительности, для различных хранилищ данных. ADO и OLE DB можно работать с реляционных (табличных) и нереляционных (иерархические или потока) данных.
 
- ADO предоставляет уровень абстракции между приложением клиента или среднего уровня и низкоуровневые интерфейсы OLE DB. ADO использует небольшой набор объектов автоматизации можно предоставить простой и эффективный интерфейс OLE DB. Этот интерфейс позволяет ADO хорошо подходит для разработчиков в выше уровня языка, например Visual Basic и VBScript, которым требуется доступ к данным без необходимости изучать особенностей COM и OLE DB.
+ ADO предоставляет уровень абстракции между приложением клиента или среднего уровня и низкоуровневых интерфейсов OLE DB. ADO использует небольшое количество объектов автоматизации и предоставляет простой и эффективный интерфейс для OLE DB. Этот интерфейс позволяет ADO хорошим выбором для разработчиков в выше уровня языки, такие как Visual Basic и VBScript, которые хотят получить доступ к данным без необходимости изучения особенностей COM и OLE DB.
 
  Этот раздел содержит следующие подразделы.
 

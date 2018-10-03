@@ -1,30 +1,24 @@
 ---
-title: Создание файлов подключения сервера (DB2ToSQL) | Документы Microsoft
+title: Создание файлов подключения к серверу (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2502461d8f2f27a217cf03bcdbabb2d0aaf1d4f6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0a946e45efb35b3df9aaa111c2c2e3c372f6ee53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774580"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744992"
 ---
-# <a name="creating-the-server-connection-files-db2tosql"></a>Создание файлов подключения сервера (DB2ToSQL)
-Сведения о сервере можно указать в разделе серверы файла скрипта или в файле подключения отдельный сервер. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, считается определение сервера в файле скрипта.  
+# <a name="creating-the-server-connection-files-db2tosql"></a>Создание файлов подключения к серверу (DB2ToSQL)
+В разделе "серверы" файла скрипта или в файле подключения отдельный сервер можно указать сведения о сервере. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, тогда считается определение сервера в файле скрипта.  
   
 **Пример: 1**  
   
@@ -81,7 +75,7 @@ ms.locfileid: "34774580"
 ```  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [выполнение консоли SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+Следующий шаг в работе консоли — [выполнение команд консоли SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="see-also"></a>См. также  
 [Выполнение команд консоли SSMA](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

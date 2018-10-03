@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13bf1f6c3cee8868acf735397f5a2b57e8f30d4c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7ba10b27fc9f28879c1c13ec48e1689a22623dfc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278206"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785402"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Создание общего расписания (среда Management Studio)
   Используйте эту страницу для создания общего расписания для выполнения опубликованных отчетов и подписок. Общие расписания могут использоваться вместо расписаний отчетов или подписок. Двумя основными особенностями, которые отличают общие расписания от расписаний, относящихся к конкретным элементам, являются централизация данных расписания и возможность приостанавливать и возобновлять запланированные операции.  

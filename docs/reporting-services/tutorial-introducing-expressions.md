@@ -4,19 +4,16 @@ ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 64fbdea1fd5f80453daeb4541b16cb63292cbf4c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0bed1d8109d49b7c6f2ba57734f2daa1a5eb056d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800578"
 ---
 # <a name="tutorial-introducing-expressions"></a>Учебник. Общие сведения о выражениях
 В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] вы научитесь использовать выражения со стандартными функциями и операторами для создания эффективных и гибких отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. 

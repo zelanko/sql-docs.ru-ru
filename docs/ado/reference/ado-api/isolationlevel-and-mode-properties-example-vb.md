@@ -1,13 +1,11 @@
 ---
-title: IsolationLevel и пример свойства режима (Visual Basic) | Документы Microsoft
+title: Примеры IsolationLevel и Mode свойства (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab8d199301be727faa3013100ba17bd340ed4661
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0b17fc32998a00d011bfcf305c3ebcdf4d79a76b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279203"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631322"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel и пример свойства режима (Visual Basic)
-В этом примере используется [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства, чтобы открыть монопольное подключение и [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойства, чтобы открыть транзакцию, которая ведется изолированно от других транзакций.  
+# <a name="isolationlevel-and-mode-properties-example-vb"></a>Примеры IsolationLevel и Mode свойства (Visual Basic)
+В этом примере используется [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства, чтобы открыть монопольное подключение и [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойства, чтобы открыть транзакцию, которая выполняется отдельно от других транзакций.  
   
 ```  
 'BeginIsolationLevelVB  
@@ -120,6 +117,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Свойство Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

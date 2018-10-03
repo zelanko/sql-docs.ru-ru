@@ -1,35 +1,32 @@
 ---
-title: Пример объекта DataControl (VBScript) | Документы Microsoft
+title: Пример объекта DataControl (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - DataControl object [ADO], VBScript example
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13fb982f47f9990cf34be9445c6acbb139704ec8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 50263e587f3b8a3ce37e0169e23c02121051d990
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287543"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749332"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>Пример объекта DataControl (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Следующий код показывает, как задать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) параметров на этапе разработки времени и привязывать их к элементу управления данными. Скопируйте и вставьте следующий код между \<Body > и \</Body > тегов в обычный HTML документа и назовите его **DataControlDesignVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ Ниже показано, как задать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) параметров на этапе разработки, времени и привязывать их к работы с данными элемента управления. Вырежьте и вставьте следующий код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **DataControlDesignVBS.asp**. Сценарий ASP будет идентификации сервера.  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -96,7 +93,7 @@ BODY {
 <!-- EndDataControlDesignVBS -->  
 ```  
   
- В следующем примере показано, как задать необходимые параметры **RDS. DataControl** во время выполнения. Чтобы протестировать этот пример, вырежьте и вставьте следующий код между \<Body > и \</Body > тегов в обычный HTML документа и назовите его **DataControlRuntimeVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ Приведенный ниже показано, как задать необходимые параметры **RDS. DataControl** во время выполнения. Чтобы протестировать этот пример, вырезать и вставить этот код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **DataControlRuntimeVBS.asp**. Сценарий ASP будет идентификации сервера.  
   
 ```  
 <!-- BeginDataControlRuntimeVBS -->  

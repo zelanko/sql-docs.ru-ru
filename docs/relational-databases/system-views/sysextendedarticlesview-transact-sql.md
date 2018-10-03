@@ -1,18 +1,13 @@
 ---
-title: sysextendedarticlesview (Transact-SQL) | Документы Microsoft
+title: sysextendedarticlesview (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sysextendedarticlesview_TSQL
 - sysextendedarticlesview
@@ -21,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sysextendedarticlesview view
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7600ee20683846aa5a2defb676d10daea0038d7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe6c88ac0dc8b131323282478a2330525d0fcf9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648192"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +44,12 @@ ms.lasthandoff: 05/03/2018
 |**name**|**nvarchar(128)**|Имя, ассоциированное со статьей, уникальное внутри публикации.|  
 |**objID**|**int**|Идентификатор объекта опубликованной таблицы.|  
 |**pubid**|**int**|Идентификатор публикации, к которой принадлежит статья.|  
-|**pre_creation_cmd**|**tinyint**|Команда, выполняемая перед инструкциями DROP TABLE, DELETE TABLE или TRUNCATE:<br /><br /> **0** = none.<br /><br /> **1** = DROP.<br /><br /> **2** = УДАЛЕНИЕ.<br /><br /> **3** = TRUNCATE.|  
-|**status**|**int**|Битовая маска параметров и состояния статьи, которая может быть результатом операции логического ИЛИ, проведенной над одним или несколькими из этих значений:<br /><br /> **1** = статья активна.<br /><br /> **8** = включить имя столбца в инструкции INSERT.<br /><br /> **16** = использовать параметризованные инструкции.<br /><br /> **24** = оба включить имя столбца в операторы INSERT и использовать параметризованные инструкции.<br /><br /> Например, для активной статьи, в которой используются параметризованные инструкции, значение данного столбца должно быть равно 17. Значение 0 указывает, что статья неактивна и никакие дополнительные свойства не определены.|  
+|**pre_creation_cmd**|**tinyint**|Команда, выполняемая перед инструкциями DROP TABLE, DELETE TABLE или TRUNCATE:<br /><br /> **0** = none.<br /><br /> **1** = DROP.<br /><br /> **2** = DELETE.<br /><br /> **3** = TRUNCATE.|  
+|**status**|**int**|Битовая маска параметров и состояния статьи, которая может быть результатом операции логического ИЛИ, проведенной над одним или несколькими из этих значений:<br /><br /> **1** = статья активна.<br /><br /> **8** = включить имя столбца в инструкции INSERT.<br /><br /> **16** = использовать параметризованные инструкции.<br /><br /> **24** = включить имя столбца в инструкции INSERT и использовать параметризованные инструкции.<br /><br /> Например, для активной статьи, в которой используются параметризованные инструкции, значение данного столбца должно быть равно 17. Значение 0 указывает, что статья неактивна и никакие дополнительные свойства не определены.|  
 |**sync_objid**|**int**|Идентификатор таблицы или представления, которое является определением статьи.|  
 |**type**|**tinyint**|Тип статьи:<br /><br /> **1** = статья на основе журнала.<br /><br /> **3** = на основе журнала статья с фильтрацией вручную.<br /><br /> **5** = на основе журнала статья с представлением вручную.<br /><br /> **7** = на основе журнала статья с фильтрацией вручную и представлением вручную.|  
 |**upd_cmd**|**nvarchar(255)**|Команда, которая должна быть выполнена после инструкции UPDATE; в ином случае она строится на основе журнала.|  
-|**schema_option**|**binary**|Указывает, какие свойства опубликованного объекта вносятся в сценарий моментального снимка. Список поддерживаемых параметров схемы см. в разделе [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
+|**schema_option**|**binary**|Указывает, какие свойства опубликованного объекта вносятся в сценарий моментального снимка. Список поддерживаемых параметров схемы, см. в разделе [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**nvarchar(128)**|Владелец таблицы в целевой базе данных.|  
 |**ins_scripting_proc**|**int**|Идентификатор объекта пользовательской хранимой процедуры или скрипта, выполняемых при репликации инструкции INSERT.|  
 |**del_scripting_proc**|**int**|Идентификатор объекта пользовательской хранимой процедуры или скрипта, выполняемых при репликации инструкции DELETE.|  

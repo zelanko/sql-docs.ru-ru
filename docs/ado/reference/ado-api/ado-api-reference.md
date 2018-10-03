@@ -1,32 +1,29 @@
 ---
-title: Справочник по API ADO | Документы Microsoft
+title: Справочник по API ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2270fec7766396ea846726fc8098e06bbef81809
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707412"
 ---
 # <a name="ado-api-reference"></a>Справочник по API ADO
-В этом разделе документации по ADO разделы для каждого ADO объекта, коллекции, свойств динамических свойств, методов, событий и перечисления. Кроме того он содержит список индексов ADO синтаксис для использования с Microsoft Visual C++ и классов Windows Foundation (WFC).  
+В этом разделе документации по объектам ADO разделы для каждого ADO объекта, коллекции, свойство, динамического свойства, метода, событий и перечисления. Кроме того он содержит список индексы синтаксиса ADO для использования с Microsoft Visual C++ и классов Windows Foundation (WFC).  
   
- Дополнительные сведения для определенного раздела в индекс поиска или изучите следующие разделы:  
+ Дополнительные сведения для заданного раздела в индекс поиска или в следующих статьях:  
   
 -   [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)  
   
@@ -49,8 +46,8 @@ ms.locfileid: "35275313"
 -   [Примеры кода ADO](../../../ado/reference/ado-api/ado-code-examples.md)  
   
 ## <a name="see-also"></a>См. также  
- [Приложение г. Примеры ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+ [Приложении d примеры ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Приложение в. Программирование с использованием ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
- [Поставщики приложение A:](../../../ado/guide/appendixes/appendix-a-providers.md)   
+ [Приложение c. Программирование с использованием ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
+ [Приложение а. поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [Журнал объектов ADO](../../../ado/guide/ado-history.md)

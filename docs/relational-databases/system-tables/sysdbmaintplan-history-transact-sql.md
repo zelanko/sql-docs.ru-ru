@@ -1,14 +1,11 @@
 ---
-title: sysdbmaintplan_history (Transact-SQL) | Документы Microsoft
+title: sysdbmaintplan_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdbmaintplan_history_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysdbmaintplan_history system table
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70afaf6e607f5c8455747a42429f815a6616a8a5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a51e2ea16ab7cc34ade122284a7162707c4d8f7d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732672"
 ---
 # <a name="sysdbmaintplanhistory-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +41,11 @@ ms.locfileid: "33260317"
 |**database_name**|**sysname**|Имя базы данных, связанной с планом обслуживания базы данных.|  
 |**server_name**|**sysname**|Имя системы.|  
 |**Действие**|**nvarchar(128)**|Операции, выполненные планом обслуживания базы данных (например, «Резервное копирование журнала транзакций» и т. д.).|  
-|**succeeded**|**бит**|**0** = успешное завершение **1** = неуспешное завершение|  
+|**succeeded**|**bit**|**0** = успешное завершение **1** = неуспешное завершение|  
 |**end_time**|**datetime**|Время завершения операции.|  
 |**duration**|**int**|Период времени, требуемый для завершения операции плана обслуживания базы данных.|  
 |**start_time**|**datetime**|Время начала операции.|  
 |**error_number**|**int**|Номер ошибки при сбое.|  
-|**message**|**nvarchar(512)**|Сообщения, создаваемые **sqlmaint**.|  
+|**message**|**nvarchar(512)**|Сообщение, созданное **sqlmaint**.|  
   
   

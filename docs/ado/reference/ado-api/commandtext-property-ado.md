@@ -1,13 +1,11 @@
 ---
-title: Свойства CommandText (ADO) | Документы Microsoft
+title: Свойство CommandText (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,40 +13,39 @@ f1_keywords:
 helpviewer_keywords:
 - CommandText property [ADO]
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c333cd961ea8b4b3f37f78c682ebe65c7ac9001
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9593b45e8b336fe777b8e240061e82c23543c1d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276863"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691182"
 ---
-# <a name="commandtext-property-ado"></a>Свойства CommandText (ADO)
-Показывает, что текст команды должна быть выдан для поставщика.  
+# <a name="commandtext-property-ado"></a>Свойство CommandText (ADO)
+Указывает текст команды для выполнен по отношению к поставщику.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **строка** значение, содержащее команды поставщика, например инструкцию SQL, имя таблицы, относительный URL-адрес или вызов хранимой процедуры. Значение по умолчанию — пустая строка (»»).  
+ Возвращает или задает **строка** значение, содержащее команды поставщика, например инструкцию SQL, имя таблицы, относительный URL-адрес или вызов хранимой процедуры. Значение по умолчанию является пустой строкой (»»).  
   
 ## <a name="remarks"></a>Примечания  
- Используйте **CommandText** свойство задает или возвращает текст команды, представленного [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта. Обычно это будет инструкция SQL, но также может быть любого типа инструкции команды распознаются поставщиком, например вызов хранимой процедуры. Инструкции SQL должен иметь определенный, диалект или версию, поддерживаемую обработчиком запросов поставщика.  
+ Используйте **CommandText** свойство задает или возвращает текст команды, представленный [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта. Обычно это будет инструкция SQL, но также может быть любой другой тип инструкция команды, распознаваемым поставщиком, такие как вызов хранимой процедуры. Оператор SQL должен быть определенный, диалект или версию, поддерживаемую обработчиком запросов поставщика.  
   
- Если [Готово](../../../ado/reference/ado-api/prepared-property-ado.md) свойство **команда** , присваивается значение **True** и **команда** объект привязан к открытое соединение при установке **CommandText** свойство ADO подготавливает запроса (то есть скомпилированную форму запроса, хранимых поставщиком) при вызове [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) или [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md)методы.  
+ Если [подготовленных](../../../ado/reference/ado-api/prepared-property-ado.md) свойство **команда** имеет значение **True** и **команда** объект привязан к открытое соединение при установке **CommandText** свойства ADO подготавливает запроса (то есть скомпилированную форму запроса, который хранится у поставщика) при вызове [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) или [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md)методы.  
   
- В зависимости от [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) могут изменять параметр свойства ADO **CommandText** свойство. Можно прочитать **CommandText** свойство в любое время, чтобы увидеть действительный текст команды ADO, будет использоваться во время выполнения.  
+ В зависимости от [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) может изменить задание, свойство ADO **CommandText** свойство. Можно прочитать **CommandText** свойство в любое время, чтобы просмотреть действительный текст команды ADO, будет использоваться во время выполнения.  
   
- Используйте **CommandText** свойство задание или возврат указать относительный URL-адрес ресурса, например файла или каталога. Ресурс является относительно расположения, явно указано, абсолютный URL-адрес, или неявно открытого [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
+ Используйте **CommandText** свойство задание или возврат указать относительный URL-адрес ресурса, например файла или каталога. Ресурс является относительно расположения, явно указан абсолютный URL-адрес или неявно открытую [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
   
 > [!NOTE]
->  URL-адреса, с помощью схемы http автоматически вызывает [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URL-адреса, с использованием схемы http, автоматически вызывает метод [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  
- [ActiveConnection CommandText, CommandTimeout, CommandType, размер и направление-пример свойства (Visual Basic)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection CommandText, CommandTimeout, CommandType, размер и направление примере свойства (VC ++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление свойства пример (Visual Basic)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление пример свойства (Visual C++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [Requery-метод](../../../ado/reference/ado-api/requery-method.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление-пример свойства (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление примеры свойств (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)

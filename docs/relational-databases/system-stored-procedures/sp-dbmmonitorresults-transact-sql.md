@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitorresults (Transact-SQL) | Документы Microsoft
+title: sp_dbmmonitorresults (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16061dc41994cd032a9e6124d38abf3acb2e6be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702752"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,10 +74,10 @@ sp_dbmmonitorresults database_name
   
  0 = состояние базы данных не обновлено. Результаты вычислены с помощью последних двух строк, возраст которых зависит от того, когда была обновлена таблица состояния.  
   
- 1 = обновляет состояние базы данных, вызвав **sp_dbmmonitorupdate** перед вычислением результатов. Тем не менее, если таблица состояния была обновлена в предыдущие 15 секунд или пользователь не является членом **sysadmin** предопределенной роли сервера **sp_dbmmonitorresults** выполняется без обновления состояния.  
+ 1 = обновляет состояние для базы данных, вызвав **sp_dbmmonitorupdate** перед вычислением результатов. Тем не менее, если таблица состояния была обновлена в предыдущие 15 секунд или пользователь не является членом **sysadmin** предопределенной роли сервера, **sp_dbmmonitorresults** выполняется без обновления состояния.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает запрашиваемое количество строк журнала состояния для указанной базы данных. Каждая строка содержит следующие сведения:  
@@ -103,14 +100,14 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|Приблизительное системное время основного сервера, с которым синхронизирована зеркальная база данных. Это значение имеет смысл только на экземпляре основного сервера.|  
 |**local_time**|**datetime**|Значение системного времени на локальном экземпляре сервера, когда эта строка была обновлена.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_dbmmonitorresults** может выполняться только в контексте **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **sysadmin** предопределенной роли сервера или в **dbm_monitor** предопределенной роли базы данных в **msdb** базы данных. **Dbm_monitor** роль дает возможность ее членам просмотреть состояние зеркального отображения базы данных, но не обновления, но не Просмотр и настройка событий зеркального отображения базы данных.  
+ Требуется членство в **sysadmin** предопределенной роли сервера или в **dbm_monitor** предопределенной роли базы данных в **msdb** базы данных. **Dbm_monitor** роль позволяет ее членам просмотреть состояние, зеркального отображения базы данных, но не обновить его, но не Просмотр и настройка событий зеркального отображения базы данных.  
   
 > [!NOTE]  
->  При первой **sp_dbmmonitorupdate** выполняется, он создает **dbm_monitor** предопределенной роли базы данных в **msdb** базы данных. Члены **sysadmin** предопределенной роли сервера может добавить любого пользователя в **dbm_monitor** предопределенной роли базы данных.  
+>  При первой **sp_dbmmonitorupdate** выполняется, он создает **dbm_monitor** предопределенной роли базы данных в **msdb** базы данных. Членами **sysadmin** предопределенной роли сервера может добавить любого пользователя **dbm_monitor** предопределенной роли базы данных.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает строки, записанные в течение последних двух часов, без обновления состояния базы данных.  
@@ -121,7 +118,7 @@ EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [Наблюдение за зеркальным отображением базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   

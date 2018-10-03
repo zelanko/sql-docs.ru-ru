@@ -1,14 +1,11 @@
 ---
-title: FileTableRootPath (Transact-SQL) | Документы Microsoft
+title: FileTableRootPath (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 637653dc75154f00c14cb248703aec3645f313bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c74a17d9a3781948727f0eb28f4729967728e033
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230514"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732932"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +39,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
   
 ## <a name="arguments"></a>Аргументы  
  *FileTable_name*  
- Имя таблицы FileTable. *FileTable_name* относится к типу **nvarchar**. Этот параметр является необязательным. Значением по умолчанию является текущая база данных. Указание *schema_name* также является необязательным. Вы можете передать значение NULL для *FileTable_name* использовать значение параметра по умолчанию  
+ Имя таблицы FileTable. *FileTable_name* имеет тип **nvarchar**. Этот параметр является необязательным. Значением по умолчанию является текущая база данных. Указание *schema_name* также является необязательным. Вы можете передать значение NULL для *FileTable_name* использовать значение параметра по умолчанию  
   
  *@option*  
  Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *@option* Может принимать одно из следующих значений:  
@@ -95,7 +91,7 @@ WHERE Name = N’document.docx’;
 -   **db_datareader** или выше разрешение, чтобы получить корневой путь для текущей базы данных.  
   
 ## <a name="examples"></a>Примеры  
- В следующих примерах демонстрируется вызов **FileTableRootPath** функции.  
+ Следующие примеры показывают, как вызывать **FileTableRootPath** функции.  
   
 ```  
 USE MyDocumentDatabase;  

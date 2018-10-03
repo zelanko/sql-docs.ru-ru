@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70f4c9c14b2c79a6b97370ebf71298540399a93e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d33b9fc81957a84c222c486199e9f806ff6eb3a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280284"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799302"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Встроенные коллекции — ссылки на коллекцию параметров (построитель отчетов)
   Параметры отчета являются одной из встроенных коллекций, на которые можно ссылаться из выражения. Включая в выражение параметры, можно настраивать внешний вид и данные отчета в соответствии с выбором пользователя. Выражения могут использоваться в любом свойстве элемента отчета или текстового поля, имеющего параметр (*Fx*) или \<**Expression**>. Кроме того, выражения применяются для дополнительного управления содержимым отчета и его внешним видом. Дополнительные сведения см. в разделе [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  

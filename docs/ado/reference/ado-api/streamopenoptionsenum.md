@@ -1,13 +1,11 @@
 ---
-title: StreamOpenOptionsEnum | Документы Microsoft
+title: StreamOpenOptionsEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - StreamOpenOptionsEnum enumeration [ADO]
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5aca6380229e55ed29c99ea51592e1e618ce0058
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a1e7e685e9d3f23d4d1c3317e24f63d7bdac23db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282623"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730282"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
-Задает параметры для открытия [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта. Значения могут быть объединены с операцией или.  
+Указывает параметры для открытия [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объекта. Значения могут объединяться с помощью операции или.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adOpenStreamAsync**|1|Открывает **поток** объекта в асинхронном режиме.|  
-|**adOpenStreamFromRecord**|4|Определяет содержимое *источника* параметр должен быть уже открытого [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта. Поведение по умолчанию — обрабатывать *источника* как URL-адрес, указывающий на узел в структуре дерева. Открытие потока по умолчанию, связанные с этим узлом.|  
-|**adOpenStreamUnspecified**|-1|По умолчанию. Указывает открывающей **поток** объекта с параметрами по умолчанию.|  
+|**adOpenStreamAsync**|1|Открывает **Stream** объекта в асинхронном режиме.|  
+|**adOpenStreamFromRecord**|4|Определяет содержимое *источника* параметр будет уже открытого [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта. Поведение по умолчанию — обрабатывать *источника* как URL-адрес, указывающий непосредственно к узлу в виде древовидной структуры. Открытие потока по умолчанию, связанные с этим узлом.|  
+|**adOpenStreamUnspecified**|-1|По умолчанию. Указывает, открывающий **Stream** объекта с параметрами по умолчанию.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
- Эти константы не имеют эквивалентов ADO/WFC.  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
+ Эти константы не имеют эквивалентов ADO и WFC.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Метод Open (объект Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)

@@ -1,33 +1,30 @@
 ---
-title: Файлы компонентов ODBC | Документы Microsoft
+title: Файлы компонентов ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], component files
 - desktop database drivers [ODBC], component files
 - ODBC desktop database drivers [ODBC], component files
 ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d512e5632be100fe2d4d6f9dd6249488dff0137
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bff71bc42e77a1f5a0f55875b7fdddb13a3e3964
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671371"
 ---
 # <a name="odbc-component-files"></a>Файлы компонентов ODBC
 Каждый компонент базы данных драйверы ODBC Desktop 4.0 необходимы файлы драйвера ODBC.  
   
- Некоторые файлы, необходимые более чем в одном компоненте. Эти файлы должны распространяться, если требуется повторно распространить все драйверы ODBC системной базы данных с коммерческих приложений.  
+ Некоторые файлы необходимы более чем в одном компоненте. Эти файлы должны распространяться, если вы планируете распространять любые драйверы ODBC Desktop базы данных с коммерческими приложениями.  
   
- Эти файлы устанавливаются в каталог \Windows\System для Windows 95 или более поздней версии или в папке \Windows\System32 для Windows NT 3.51 или более поздней версии и Windows 2000. Если ODBC файлы были установлены в другом каталоге, убедитесь, использовать более новые файлы в \Windows\System (или System32) каталог.
+ Эти файлы устанавливаются в каталог \Windows\System для Windows 95 или более поздней версии или в каталог \Windows\System32 для Windows NT 3.51 или более поздней версии и Windows 2000. Если ODBC файлы были ранее установлены в другом каталоге, убедитесь, что используется новая каталог файлов в \Windows\System (или System32).
