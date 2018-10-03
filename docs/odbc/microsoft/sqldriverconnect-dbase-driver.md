@@ -1,44 +1,41 @@
 ---
-title: SQLDriverConnect (драйвера dBASE) | Документы Microsoft
+title: SQLDriverConnect (драйвер для dBASE) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DBase driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], dBASE Driver
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35f26a0e81c27bf773145410b9f0ab8bbbb2c5a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e4eeaa7ba710814bfeb8c5b4f5aa0dbd2d30ef7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690884"
 ---
-# <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (драйвера dBASE)
+# <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (драйвер для dBASE)
 > [!NOTE]  
->  В этом разделе сведения dBASE специфические для драйвера. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе сведения для dBASE специфические для драйвера. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLDriverConnect** позволяет подключаться к драйверу, без создания источника данных (DSN).  
+ **SQLDriverConnect** позволяет подключиться к драйверу без создания источника данных (DSN).  
   
  В строке подключения для всех драйверов поддерживаются следующие ключевые слова: **DSN**, **DBQ**, и **FIL**.  
   
- При использовании драйвера Paradox после открытия пользователем файл защищен паролем, другим пользователям не разрешено открывать тот же файл.  
+ Если используется драйвер для Paradox, после открытия защищенного паролем файла пользователем, другим пользователям не разрешено открывать тот же файл.  
   
- В следующей таблице показаны минимальное ключевых слов, необходимые для подключения к драйверу и приведен пример пар ключ значение, используемых с **SQLDriverConnect**. Полный список значений DRIVERID см. в разделе [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).  
+ В следующей таблице показаны минимальные необходимые для подключения к драйверу ключевые слова и пример пар "ключевое слово значение", используемый с **SQLDriverConnect**. Полный список значений DRIVERID, см. в разделе [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).  
   
 > [!NOTE]  
->  Если для dBASEdriver DBQ или его значения не указано, драйвер подключается к текущему каталогу.  
+>  Если для dBASEdriver DBQ или его значения не указан, драйвер подключится к текущему каталогу.  
   
 |Драйвер|Необходимые ключевые слова|Примеры|  
 |------------|-----------------------|--------------|  
-|dBASE|Драйвер DriverID|Driver = {Microsoft dBASE драйвера (*.dbf)}; DBQ = c:\temp; DriverID = 277|
+|для dBASE|Драйвер, DriverID|Driver = {Microsoft драйвер для dBASE (*.dbf)}; DBQ = c:\temp; DriverID = 277|

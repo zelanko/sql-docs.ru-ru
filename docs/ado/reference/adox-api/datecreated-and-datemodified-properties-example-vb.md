@@ -1,13 +1,11 @@
 ---
-title: DateCreated и DateModified-пример свойства (Visual Basic) | Документы Microsoft
+title: DateCreated и DateModified свойства (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - DateCreated property [ADOX], Visual Basic example
 - DateModified property [ADOX], Visual Basic example
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cbaf7c7384a015bb98213ad25fc2125de808e08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 59a54320cd3b1a90e832b474d5308086f018cc38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639302"
 ---
-# <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated и DateModified-пример свойства (Visual Basic)
-В этом примере демонстрируется [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) свойства путем добавления нового [столбца](../../../ado/reference/adox-api/column-object-adox.md) к существующему [таблицы](../../../ado/reference/adox-api/table-object-adox.md) и с помощью Создание нового **таблицы**. Процедура DateOutput является обязательным для выполнения этого примера.  
+# <a name="datecreated-and-datemodified-properties-example-vb"></a>Примеры свойств DateCreated и DateModified (Visual Basic)
+В этом примере показано [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) свойства, добавив новое [столбец](../../../ado/reference/adox-api/column-object-adox.md) к существующему [таблицы](../../../ado/reference/adox-api/table-object-adox.md) и по Создание нового **таблицы**. Процедура DateOutput является обязательным для выполнения этого примера.  
   
 ```  
 ' BeginDateCreatedVB  
@@ -101,7 +98,7 @@ End Sub
 ## <a name="see-also"></a>См. также  
  [Свойство DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [Свойство DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Коллекция процедур (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Объект представления (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3ecbd561f724664b6492e5b72421acc5a13fa57b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 157d883bf9b648704452783ccee730cd5a399d88
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267036"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731472"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Добавление фильтра (построитель отчетов и службы SSRS)
   Добавьте фильтр к набору данных, области данных или группе, если нужно включить или исключить определенные значения из вычислений или отображения. Фильтры применяются во время выполнения вначале для набора данных, затем для области данных и группы в нисходящем порядке для иерархий групп. В таблице, матрице и списке фильтры для групп строк, групп столбцов и смежных групп применяются независимо друг от друга. В диаграмме фильтры для групп категорий и групп рядов применяются независимо друг от друга.  

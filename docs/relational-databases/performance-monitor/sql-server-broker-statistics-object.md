@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Broker Statistics
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a3d221c9f2d3b7e9e1c91d9b11d21afc537856c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6244e3f3ab3d04c24fa54ab7769a0fc707825e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954026"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732502"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, объект Broker Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Объект производительности SQLServer:Broker Statistics содержит счетчики производительности, сообщающие основные сведения о компоненте [!INCLUDE[ssSB](../../includes/sssb-md.md)] для экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. В следующей таблице перечислены счетчики этого объекта.  
   
-|Счетчики объекта Broker Statistics|Description|  
+|Счетчики объекта Broker Statistics|Описание|  
 |-------------------------------------------|-----------------|  
 |**Всего ошибок активации**|Количество раз, когда хранимая процедура активации компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] завершалась с ошибкой.|  
 |**Откатов транзакций брокера**|Количество откатов транзакций, которые содержали инструкции DML, относящихся к компоненту [!INCLUDE[ssSB](../../includes/sssb-md.md)], таких как SEND и RECEIVE.|  
