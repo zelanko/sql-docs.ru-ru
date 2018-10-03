@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, adding and removing Publishers
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7f8cbded499127107802136d2d2e4503cef24ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 217069061ea8169c3580e53de1d77462a85e29cd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324224"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136014"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Добавление и удаление издателей в мониторе репликации
   Сервер, с которого запускается монитор репликации, автоматически добавляется в монитор, если это издатель. Дополнительные издатели могут быть добавлены в диалоговом окне **Добавление издателя** . После добавления издателя он отображается в группе на левой панели монитора. Группа **Мои издатели** включена в состав по умолчанию, но можно создать новые группы для управления одной или несколькими топологиями репликации. Сведения о запуске монитора репликации см. в [этой статье](start-the-replication-monitor.md).  

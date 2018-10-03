@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1afd478583520bddb2f0990b282e3f96c851feb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269840"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147322"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Занятие 4: Изучение моделей целевой рассылки (учебник интеллектуального анализа данных)
   После обработки моделей в проекте, можно исследовать их для поиска интересующих трендов. Так как шаблоны могут быть сложными и трудно, просто взглянув на номера, SQL Server Data Mining предоставляет некоторые визуальные средства, которые помогают исследовать данные и пониманию правил и связей, которые алгоритмы обнаруживают в данных. Точность тестов может использоваться для проверки набора данных или определить, какая модель работает лучше, перед его развертыванием.  

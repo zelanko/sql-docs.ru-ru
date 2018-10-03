@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa14730ce105b17e3eb016effd2c409fc4a37851
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b9aad137958510f623308ef83f5d18c74d02164
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268610"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148934"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Подписка [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] представляет собой конфигурацию, создающую отчет в определенное время или в ответ на конкретное событие. Отчет выводится в указанном формате файла. Например, каждую среду отчет MonthlySales.rdl можно сохранять в виде документа Microsoft Word на общем файловом ресурсе. С помощью подписок можно планировать и автоматизировать создание отчетов, в которых будет использоваться заданный набор значений параметров.  

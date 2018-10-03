@@ -1,33 +1,30 @@
 ---
-title: 'Шаг 6: Изменения будут отправлены на сервер (учебник служб удаленных рабочих СТОЛОВ) | Документы Microsoft'
+title: 'Шаг 6: Изменения отправляются на сервер (учебник по RDS) | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], changes sent to server
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd14dcfa918afc5bc252822ceacccfe10ddd7302
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2d79fb88ba9371d1767561c7190818c135fd0a03
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680272"
 ---
-# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Шаг 6: Изменения будут отправлены на сервер (учебник служб удаленных рабочих СТОЛОВ)
-Если **записей** редактирования объекта, любые изменения (строк, которые будут добавлены, изменены или удалены) могут отправляться на сервер.  
+# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Шаг 6. Изменения отправлены на сервер (учебник по RDS)
+Если **записей** редактирования объекта, любые изменения (то есть строк, которые добавлены, изменены или удалены) могут отправляться на сервер.  
   
 > [!NOTE]
->  Поведения служб удаленных рабочих СТОЛОВ по умолчанию могут вызываться неявно с объектами ADO и поставщик OLE DB удаленного взаимодействия. Запросы могут возвращать **записей**s и редактировать их **записей**s можно обновить источник данных. Этот учебник без вызова служб удаленных рабочих СТОЛОВ с объектами ADO, но он будет выглядеть случае:  
+>  По умолчанию служб удаленных рабочих СТОЛОВ могут вызываться неявно с объектами ADO и поставщик Microsoft OLE DB удаленного взаимодействия. Запросы могут возвращать **записей**s и измененный **записей**s может обновить источник данных. Этот учебник не вызывает RDS с объектами ADO, но это, как она будет выглядеть при как:  
   
 ```  
 Dim rs as New ADODB.Recordset  
@@ -38,7 +35,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **Часть** Предположим, что для этого случая, который использовался только [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) и что **записей** объекта теперь связан с **RDS. DataControl**. [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) метод обновляет любые изменения в источнике данных **записей** объекта, если [сервера](../../../ado/reference/rds-api/server-property-rds.md) и [подключение](../../../ado/reference/rds-api/connect-property-rds.md) свойства задаются по-прежнему.  
+ **Часть** Предположим, что для этого случая, который вы использовали только [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) и что **записей** объекта теперь связан с **RDS. DataControl**. [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) метод обновляет источник данных изменений, вносимых в **записей** Если [Server](../../../ado/reference/rds-api/server-property-rds.md) и [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойства по-прежнему устанавливаются.  
   
 ```  
 Sub RDSTutorial6A()  
@@ -56,7 +53,7 @@ DC.
 ...  
 ```  
   
- **Часть Б** также может обновить сервер с [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) объекта, указание соединения и **записей** объекта.  
+ **Часть Б** в качестве альтернативы Вы можете обновить сервер с [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) объекта, указание соединения и **записей** объекта.  
   
 ```  
 Sub RDSTutorial6B()  
@@ -73,12 +70,12 @@ blnStatus = DF."DSN=Pubs", RS
 End Sub  
 ```  
   
- **Это конец учебника.**  
+ **Это происходит в конце этого руководства.**  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>См. также  
- [Поставщик Microsoft OLE DB удаленного взаимодействия (поставщик службы ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
- [Учебник служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [Поставщик Microsoft OLE DB удаленного взаимодействия (поставщик услуг ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+ [Учебник по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

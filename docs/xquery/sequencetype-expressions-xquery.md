@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e2be9250c77c23e00a302d57f0148507f0db41bb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2248d0f0d342b39a5d8ec816b4faf9ab097bf30d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600673"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Выражения SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +34,7 @@ ms.locfileid: "38041632"
  Имена атомарных типов также может использоваться в **приведенное** выражения XQuery. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **экземпляр** и **приведенное** XQuery над типами последовательности поддерживаются частично.  
   
 ## <a name="instance-of-operator"></a>Оператор instance of  
- **Экземпляр** оператор может использоваться для определения типа динамический или в среде выполнения, значения указанного выражения. Например:  
+ **Экземпляр** оператор может использоваться для определения типа динамический или в среде выполнения, значения указанного выражения. Пример:  
   
 ```  
   
@@ -333,7 +327,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 -   Для **processing-instruction()** и **document-node()** типов последовательностей, разрешены только формы без аргументов. Например, форма `processing-instruction()` поддерживается, но форма `processing-instruction('abc')` недопустима.  
   
 ## <a name="cast-as-operator"></a>Оператор cast as  
- **Приведенное** выражение может использоваться для преобразования значения в определенный тип данных. Например:  
+ **Приведенное** выражение может использоваться для преобразования значения в определенный тип данных. Пример:  
   
 ```  
   

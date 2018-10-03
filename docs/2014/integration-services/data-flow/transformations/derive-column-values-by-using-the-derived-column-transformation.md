@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2f2ab9752c9b9761e83c9f9207af36454cd52f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 07ac40b76f19fd8da7fcb4de6425365fe471471d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054321"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Получение значений столбцов с помощью преобразования «Производный столбец»
   Чтобы добавить и настроить преобразование «Производный столбец», пакет уже должен содержать по крайней мере одну задачу потока данных и один источник.  

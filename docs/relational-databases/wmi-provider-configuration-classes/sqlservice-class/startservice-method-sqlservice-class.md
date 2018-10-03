@@ -1,15 +1,12 @@
 ---
-title: Метод StartService (класс SqlService) | Документы Microsoft
+title: Метод StartService (класс SqlService) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - StartService Method (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartService method
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0b102090d48a773c38776afb73a62f0431b9f076
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbc7f0d3c35a33999c3180b988d31e22d83c8915
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011921"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833662"
 ---
 # <a name="startservice-method-sqlservice-class"></a>Метод StartService (класс SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.StartService()
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объект*  
+ *object*  
  Объект [класса SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , представляющий службу.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
@@ -123,9 +119,9 @@ object.StartService()
  24  
  Служба уже приостановлена. Служба в данный момент приостановлена в системе.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

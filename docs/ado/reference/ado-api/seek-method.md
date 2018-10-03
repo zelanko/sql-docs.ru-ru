@@ -1,13 +1,11 @@
 ---
-title: Способа | Документы Microsoft
+title: Метод Seek | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcac398a9c45a43fd59dd29c7a41aeeb9545214c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 89b82d6efe87cec6643d68837447ed64a6f69059
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281623"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612432"
 ---
-# <a name="seek-method"></a>Метод поиска
-Выполняет поиск индекса [записей](../../../ado/reference/ado-api/recordset-object-ado.md) быстро найти строку, соответствующем заданным значениям и изменяет текущую позицию строки для этой строки.  
+# <a name="seek-method"></a>Метод Seek
+Выполняет поиск индекса [записей](../../../ado/reference/ado-api/recordset-object-ado.md) можно быстро найти строку, соответствующем заданным значениям и изменяется текущая позиция строки для этой строки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,22 +39,22 @@ recordset.Seek KeyValues, SeekOption
  Массив **Variant** значения. Индекс состоит из одного или нескольких столбцов, и массив содержит значение для сравнения каждого соответствующего столбца.  
   
  *SeekOption*  
- Объект [SeekEnum](../../../ado/reference/ado-api/seekenum.md) значение, которое указывает тип сравнения между столбцами индекса и соответствующие *KeyValues*.  
+ Объект [SeekEnum](../../../ado/reference/ado-api/seekenum.md) значение, которое указывает тип сравнения между столбцами индекса и соответствующий *KeyValues*.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте **Seek** в сочетании с [индекс](../../../ado/reference/ado-api/index-property.md) свойства, если базовый поставщик поддерживает индексы на **записей** объекта. Используйте [поддерживает](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** метод, чтобы определить, поддерживает ли базовый поставщик **Seek**и **Supports(adIndex)** метод, чтобы определить, поддерживает ли поставщик индексов. (Например, [поставщик OLE DB для Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) поддерживает **Seek** и **индекс**.)  
+ Используйте **Seek** в сочетании с [индекс](../../../ado/reference/ado-api/index-property.md) свойства, если базовый поставщик поддерживает индексы на **записей** объекта. Используйте [поддерживает](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** метод, чтобы определить, поддерживает ли базовый поставщик **Seek**и **Supports(adIndex)** метод, чтобы определить, поддерживает ли поставщик индексов. (Например, [поставщик OLE DB для Jet (Майкрософт)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) поддерживает **Seek** и **индекс**.)  
   
- Если **Seek** может не найти нужную строку ошибки не возникает и строка располагается в конце **записей**. Задать **индекс** свойства в нужный индекс перед выполнением этого метода.  
+ Если **Seek** может не найти нужную строку, ошибка не происходит, а эта строка находится в конце **записей**. Задайте **индекс** свойства для заданного индекса до выполнения этого метода.  
   
- Этот метод поддерживается только для серверных курсоров. Поиск не поддерживается, если **записей** объекта [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) значение свойства **adUseClient**.  
+ Этот метод поддерживается только с курсорами на стороне сервера. Поиск не поддерживается, если **записей** объекта [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство имеет значение **adUseClient**.  
   
- Этот метод можно использовать, когда **набора записей** объект был открыт с [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) значение **adCmdTableDirect**.  
+ Этот метод может быть только используется, когда **записей** объект был открыт с [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) значение **adCmdTableDirect**.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  
- [Поиск метода и пример свойства индекса (Visual Basic)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
- [Поиск метода и пример свойства индекса (VC ++)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
- [Find-метод (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+ [Примеры метода Seek и свойства Index (Visual Basic)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
+ [Примеры метода Seek и свойства Index (Visual C++)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
+ [Метод Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Свойство Index](../../../ado/reference/ado-api/index-property.md)

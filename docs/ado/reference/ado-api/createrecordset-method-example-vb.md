@@ -1,34 +1,31 @@
 ---
-title: Пример метода CreateRecordset (VB) | Документы Microsoft
+title: Пример метода CreateRecordset (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CreateRecordset method [RDS], Visual Basic example
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ecaf020aaef33580142c7f6dde3fb6eba57b7cb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a924314c4de47a62e835708478e093a72f3b3c57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277273"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830112"
 ---
 # <a name="createrecordset-method-example-vb"></a>Пример метода CreateRecordset (Visual Basic)
-Можно создать [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и укажите сведения о столбце. Затем можно вставить данные в **записей** объект; базового буферы строк операции вставки.  
+Можно создать [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и укажите сведения о столбце. Затем можно вставить данные в **записей** объекта; в базовые буферы набора строк операции вставки.  
   
- В следующем примере кода показано, как определить **записей** с помощью [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) объекта. Можно также сделать это с помощью [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
+ В следующем примере кода показано, как определить **записей** с помощью [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) объекта. Вы также можно сделать с помощью [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
 ```  
 'BeginRsDefineShapeVB  

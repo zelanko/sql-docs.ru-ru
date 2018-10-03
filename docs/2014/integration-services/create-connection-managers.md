@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-caps.latest.revision: 54
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f09d663dd371c037c3f2b44b42b202c18377b7cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 807241aec9544c8a6366b8d12c0aaddb4b0d228a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074471"
 ---
 # <a name="create-connection-managers"></a>Создание диспетчеров соединений
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают набор диспетчеров соединений для соответствия нуждам задач, подключающихся к разным серверам и источникам данных. Диспетчеры соединений используются компонентами потока данных, которые извлекают и загружают данные в разные типы хранилищ данных, и поставщиками журналов, которые записывают журналы на сервер, в таблицу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или в файл. Например, пакет с задачей «Отправка почты» использует тип диспетчера соединений SMTP, чтобы подключиться к SMTP-серверу. Пакет с заданием «Выполнение SQL» может использовать диспетчер соединений OLE DB, чтобы подключиться к базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Соединения в службах Integration Services (SSIS)](connection-manager/integration-services-ssis-connections.md).  

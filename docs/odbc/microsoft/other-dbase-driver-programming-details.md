@@ -1,33 +1,30 @@
 ---
-title: Другие сведения о программировании драйвера dBASE | Документы Microsoft
+title: Другие сведения о программировании драйверов для dBASE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
 - desktop database drivers [ODBC], DBasedriver
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ec8380a562c4afa65df69527bb159cd2b42bc48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1791fa0569012ca9c3cb66068a45104f95b35717
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857252"
 ---
-# <a name="other-dbase-driver-programming-details"></a>Сведения о программировании других dBASE драйвере
+# <a name="other-dbase-driver-programming-details"></a>Другие сведения о программировании драйверов для dBASE
 > [!NOTE]  
->  В этом разделе рассматривается dBASE драйвера функции ODBC и другие сведения программирования. Общие сведения о функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе описаны dBASE специфические для драйвера функции ODBC и другие сведения о программировании. Общие сведения о функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  В этом разделе рассматриваются следующие вопросы.  
   
@@ -51,4 +48,4 @@ ms.locfileid: "32900609"
   
 -   [SQLTransact (драйвер для dBASE)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
--   [Индексы dBASE (драйвера dBASE)](../../odbc/microsoft/dbase-indexes.md)
+-   [Индексы dBASE (драйвер для dBASE)](../../odbc/microsoft/dbase-indexes.md)

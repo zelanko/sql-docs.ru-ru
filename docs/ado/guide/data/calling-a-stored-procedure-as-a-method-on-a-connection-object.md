@@ -1,34 +1,31 @@
 ---
-title: Вызов хранимой процедуры в качестве метода объекта соединения | Документы Microsoft
+title: Вызов хранимой процедуры в качестве метода объекта Connection | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2445ce0a213f4e36ec775cf804ee69b43c2f9dc8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270403"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758822"
 ---
-# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Вызов хранимой процедуры в качестве метода объекта подключения
-Можно вызвать хранимую процедуру, как если бы оно метода машинного кода при открытии связанного **подключения** объекта. Это похоже на вызов именованную команду для **подключения** объекта.  
+# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Вызов хранимой процедуры в качестве метода объекта Connection
+Можно вызвать хранимую процедуру, как если бы он был при открытии связанного собственного метода **подключения** объекта. Это похоже на вызов именованную команду для **подключения** объекта.  
   
- В следующем примере кода Visual Basic вызывает хранимую процедуру в базе данных Northwind, вызывается CustOrdersOrders, который указан здесь еще раз для удобства.  
+ В следующем примере кода Visual Basic вызывает хранимую процедуру в базе данных Northwind, вызывается CustOrdersOrders, который приведен здесь еще раз для вашего удобства.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -38,7 +35,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- В следующем примере кода демонстрируется вызов хранимой процедуры, как если бы оно собственного метода на открытый связанный **подключения** объекта.  
+ В следующем примере кода показано, как вызвать хранимую процедуру, как если бы он был при открытии связанного собственного метода **подключения** объекта.  
   
 ```  
 Const DS = "MySQLServer"  

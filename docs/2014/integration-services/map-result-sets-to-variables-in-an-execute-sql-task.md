@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cdd76b3f0b1665fa6336e82536ca474c0b5e1fab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277380"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069664"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Сопоставление результирующих наборов с переменными в задаче "Выполнение SQL"
   В этом разделе описывается создание сопоставления между результирующими наборами и переменной в задаче «Выполнение SQL». Сопоставление между результирующим набором и переменной делает результирующий набор доступным для других элементов пакета. Например, скрипт в задаче «Скрипт» может считать переменную, а потом использовать значения из результирующего набора, или источник XML может использовать результирующий набор, сохраненный в переменной. Если результирующий набор создан родительским пакетом, его можно сделать доступным дочернему пакету, вызываемому задачей «Выполнение пакета», сопоставив результирующий набор с переменной в родительском пакете, а затем для хранения значения родительской переменной создав конфигурацию переменных родительского пакета в дочернем пакете.  
@@ -39,7 +36,7 @@ ms.locfileid: "37277380"
 3.  Перейдите на вкладку **Поток управления** .  
   
 4.  Если пакет не включает задачу «Выполнение SQL», добавьте его к потоку управления пакета. Дополнительные сведения см. в разделе [Добавление или удаление задачи или контейнера в поток управления](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  , и делает это по-другому.  
+  .  
   
 5.  Дважды щелкните задачу «Выполнение SQL».  
   

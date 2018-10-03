@@ -1,13 +1,11 @@
 ---
-title: ConnectPromptEnum | Документы Microsoft
+title: ConnectPromptEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62b1bb38789dcfb2fd15b80501315d9c1be38a66
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9434c4cc81e8a94e87a3afceedc1b40d5ece2c29
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696903"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
-Указывает, следует ли отображать диалоговое окно для запроса отсутствуют параметры при открытии соединения с источником данных.  
+Указывает, следует ли отображать диалоговое окно запрашивать отсутствуют параметры, при открытии соединения с источником данных.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Запросы всегда.|  
 |**adPromptComplete**|2|Запрос, если требуются дополнительные сведения.|  
-|**adPromptCompleteRequired**|3|Запрашивает, если Дополнительные сведения не требуются, но необязательные параметры не допускаются.|  
+|**adPromptCompleteRequired**|3|Запрашивает, если больше данных, но необязательные параметры не допускаются.|  
 |**adPromptNever**|4|Никогда не запрашивает.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
  Пакет: **com.ms.wfc.data**  
   
 |Константа|  

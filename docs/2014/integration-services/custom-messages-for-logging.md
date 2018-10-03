@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SSIS packages, logs
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3929d8c861723c2204214ba66e73ea9268c19cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28e4b5a405279b1aaede6fc9db96cf9024a59b96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148054"
 ---
 # <a name="custom-messages-for-logging"></a>Пользовательские сообщения для ведения журнала
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляет широкий набор пользовательских событий, предполагающих добавление записей журнала для пакетов и многих задач. Записывая стандартные события или определенные пользователем сообщения с целью последующего анализа, можно сохранить подробные сведения о процессе выполнения, результатах и проблемах. Например, можно записать, когда начинается и заканчивается массовая вставка, чтобы идентифицировать проблемы с производительностью при выполнении пакета.  
@@ -172,7 +169,7 @@ ms.locfileid: "37221844"
   
 |Запись журнала|Описание|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Сообщает о результатах выполнения операции ведения журнала в скрипте. Запись в журнал записывается для каждого вызова `Log` метод `Dts` объекта. Эта запись формируется в момент запуска кода. Дополнительные сведения см. в статье [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Сообщает о результатах выполнения операции ведения журнала в скрипте. Запись в журнал записывается для каждого вызова `Log` метод `Dts` объекта. Эта запись формируется в момент запуска кода. Дополнительные сведения см. в разделе [ведения журналов в задаче «скрипт»](extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ###  <a name="SendMail"></a> Задача «Отправка почты»  
  В следующей таблице перечислены пользовательские записи в журнале для задачи «Отправка почты».  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f22b60c7558ab9ce95bdeb9e989617ad49f1ea60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fae80bd45cceb4c6de416fd0f3c1b6f4a0cbadd2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153535"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134154"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Флаги»)
   Если на сервер установлен сертификат, используйте вкладку **Флаги** диалогового окна **Протоколы для свойств MSSQLSERVER** , чтобы просмотреть или задать параметры шифрования протокола и скрытия экземпляра. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо перезапустить **ForceEncryption** .  

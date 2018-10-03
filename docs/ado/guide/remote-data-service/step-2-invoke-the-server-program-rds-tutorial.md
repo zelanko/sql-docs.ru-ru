@@ -1,39 +1,36 @@
 ---
-title: 'Шаг 2: Вызвать программу Server (учебник служб удаленных рабочих СТОЛОВ) | Документы Microsoft'
+title: 'Шаг 2: Вызовите программу сервера (учебник по RDS) | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], invoking server program
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b736bb5e6cdb7f35d9cdcc5f39f060cbcf1b64b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0a2e7b62276234dcf11067395ff2512a8e93af96
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274593"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800512"
 ---
-# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Шаг 2: Вызвать программу Server (служб удаленных рабочих СТОЛОВ учебник)
-При вызове метода на клиенте *прокси-сервера*, самой программы на сервере выполняется метод. На этом шаге будет выполнить запрос на сервере.  
+# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Шаг 2. Вызовите программу сервера (учебник по RDS)
+При вызове метода на клиенте *прокси-сервера*, самой программы на сервере выполняется метод. На этом шаге будет выполняться запрос на сервере.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- **Часть** Если вы не использовали [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) в этом учебнике будет использовать наиболее удобным способом для выполнения этого шага [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта. **RDS. DataControl** объединяет предыдущий шаг создания прокси-сервера, с помощью этого этапа, выполняющего запрос.  
+ **Часть** Если вы не использовали [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) в этом руководстве будет использовать наиболее удобным способом для выполнения этого шага [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта. **RDS. DataControl** объединяет на предыдущем шаге создания прокси-сервер, на этом этапе, выполняющего запрос.  
   
- Задать **RDS. DataControl** объекта [сервера](../../../ado/reference/rds-api/server-property-rds.md) свойство для идентификации, где должен создаваться серверной программы; [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойство, чтобы указать строку соединения для доступа к источнику данных; и [SQL](../../../ado/reference/rds-api/sql-property.md) свойство, чтобы указать текст команды запроса. Затем выдать [обновление](../../../ado/reference/rds-api/refresh-method-rds.md) метод, чтобы вызвать программу сервера для подключения к источнику данных, получения строк, указанных в запросе и возвращают **записей** объект клиенту.  
+ Задайте **RDS. DataControl** объект [Server](../../../ado/reference/rds-api/server-property-rds.md) свойство, чтобы определить, где должен создаваться программу сервера; [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойство, чтобы указать строку соединения для доступа к источнику данных; и [SQL](../../../ado/reference/rds-api/sql-property.md) свойство, чтобы указать текст команды запроса. Затем выполните [обновить](../../../ado/reference/rds-api/refresh-method-rds.md) метод, чтобы вызвать программу сервера для подключения к источнику данных, получения строк, указанных в запросе и возвращают **записей** объект клиенту.  
   
- Этот учебник не использует **RDS. DataControl**, но он будет выглядеть случае:  
+ Этом руководстве используется **RDS. DataControl**, но это, как она будет выглядеть при как:  
   
 ```  
 Sub RDSTutorial2A()  
@@ -45,7 +42,7 @@ Sub RDSTutorial2A()
 ...  
 ```  
   
- Ни учебника вызывают служб удаленных рабочих СТОЛОВ с объектами ADO, но он будет выглядеть случае:  
+ Ни руководства вызывают RDS с объектами ADO, но это, как она будет выглядеть при как:  
   
 ```  
 Dim rs as New ADODB.Recordset  
@@ -53,9 +50,9 @@ rs.Open "SELECT * FROM Authors","Provider=MS Remote;Data Source=Pubs;" & _
         "Remote Server=http://yourServer;Remote Provider=SQLOLEDB;"  
 ```  
   
- **Часть Б** общий метод выполнения этого этапа заключается в вызове **RDSServer.DataFactory** объекта [запроса](../../../ado/reference/rds-api/query-method-rds.md) метод. Этот метод принимает строку подключения, которая используется для подключения к источнику данных, и текст команды, который используется для указания удаляемых строк, возвращаемых из источника данных.  
+ **Часть Б** общий метод выполнения этого этапа заключается в вызове **RDSServer.DataFactory** объект [запроса](../../../ado/reference/rds-api/query-method-rds.md) метод. Этот метод принимает строку подключения, которая используется для подключения к источнику данных, и текст команды, который используется для указания строк, возвращаемых из источника данных.  
   
- В этом учебнике используется **DataFactory** объекта **запроса** метод:  
+ В этом руководстве используется **DataFactory** объект **запроса** метод:  
   
 ```  
 Sub RDSTutorial2B()  
@@ -68,5 +65,5 @@ Sub RDSTutorial2B()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Шаг 3: Сервер получает набор записей (учебник служб удаленных рабочих СТОЛОВ)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
+ [Шаг 3: Сервер получает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

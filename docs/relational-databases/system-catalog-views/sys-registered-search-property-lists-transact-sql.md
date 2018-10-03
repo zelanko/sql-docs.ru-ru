@@ -1,14 +1,11 @@
 ---
-title: sys.registered_search_property_lists (Transact-SQL) | Документы Microsoft
+title: sys.registered_search_property_lists (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - registered_search_property_lists_TSQL
@@ -22,15 +19,15 @@ helpviewer_keywords:
 - sys.registered_search_property_lists catalog view
 - search property lists [SQL Server], viewing
 ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0e404aa67e5e0cc386ab06db4d93cd1d988d86c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 36761417e5be68ef9da7c28464562ada75af088d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617792"
 ---
 # <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 |**modify_date**|**datetime**|Дата последнего изменения списка свойств с помощью инструкции ALTER.|  
 |**principal_id**|**int**|Владелец списка свойств.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="permissions"></a>Разрешения  

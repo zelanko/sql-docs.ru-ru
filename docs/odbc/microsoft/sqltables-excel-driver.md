@@ -1,35 +1,32 @@
 ---
-title: SQLTables (драйвер Excel) | Документы Microsoft
+title: SQLTables (драйвер для Excel) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLTables
 - SQLTables function [ODBC], Excel Driver
 ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2921d9e047e03cae092e5c0e7d2fcd4e4f8f24c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23ce67350b7fa7d0a88f3d51e618ce9bb9f9ebcf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796222"
 ---
-# <a name="sqltables-excel-driver"></a>SQLTables (драйвер Excel)
+# <a name="sqltables-excel-driver"></a>SQLTables (драйвер для Excel)
 > [!NOTE]  
->  В этом разделе сведения драйвера Excel. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе сведения конкретного драйвера Excel. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Аргумент|Комментарии|  
 |--------------|--------------|  
-|*szTableOwner*|Единственным допустимым аргументом для *szTableOwner* имеет значение NULL, так как ни один из драйверов не поддерживает имена владельцев. С *szTableOwner* значение NULL, возвращаются все таблицы. В столбце TABLE_OWNER возвращается значение NULL.|  
-|*szTableQualifier*|Microsoft Excel 3.0 или 4.0 драйвера вместе, при вызове метода **SQLTables** со значением для *szTableQualifier* , но имя существующей таблицы, драйвер создает таблицу с таким именем.<br /><br /> В столбце TABLE_QUALIFIER **SQLTables** возвращает путь к каталогу.|  
-|*SzTableType*|Для Microsoft Excel 3.0 или 4.0 «TABLE» является поддерживается только тип таблицы.<br /><br /> Для более поздних версий файлов Microsoft Excel «SYSTEM TABLE» возвращается для имена листов (таблицы с «$» со стороны) и «TABLE» возвращается для таблиц в листах.|
+|*szTableOwner*|Единственным допустимым аргументом для *szTableOwner* имеет значение NULL, так как ни один из драйверов не поддерживает имена владельцев. С помощью *szTableOwner* присваивается значение NULL, возвращаются все таблицы. В столбце TABLE_OWNER возвращается значение NULL.|  
+|*szTableQualifier*|Если Microsoft Excel 3.0 или 4.0 драйвера используется, при вызове метода **SQLTables** со значением для *szTableQualifier* это не имя существующей таблицы, драйвер создаст таблицу с таким именем.<br /><br /> В столбце TABLE_QUALIFIER **SQLTables** возвращает путь к каталогу.|  
+|*SzTableType*|Для Microsoft Excel 3.0 или 4.0 «TABLE» является единственным типом таблицы поддерживается.<br /><br /> Для более поздних версий файлов Microsoft Excel «SYSTEM TABLE» возвращается для названия листов (таблицы с помощью со стороны «$») и «TABLE» возвращается для таблиц в листы.|

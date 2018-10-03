@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.datasources.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - connection strings [Analysis Services]
 - data sources [Analysis Services], security
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbe08e5e23b8c40ddeba9efa99c151314d499916
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243724"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126264"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Предоставление разрешений объекту источника данных (службы Analysis Services
   Обычно, большинству пользователей службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] нет необходимости в доступе к источникам данных, которые обуславливают проект службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . обычно пользователи лишь запрашивают данные в рамках базы данных службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Однако в контексте интеллектуального анализа данных, например выполнения прогнозов, основанных на модели интеллектуального анализа данных, пользователю необходимо соединить обучающие данные, полученные моделью интеллектуального анализа данных, с данными, предоставленными пользователем. Для подключения источника данных, содержащего предоставленные пользователем данные, пользователь использует запрос расширений интеллектуального анализа данных, в котором содержится либо предложение [OPENQUERY (DMX)](/sql/dmx/source-data-query-openquery), либо предложение [OPENROWSET (DMX)](/sql/dmx/source-data-query-openrowset).  

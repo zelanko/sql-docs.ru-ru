@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ecca7d87492645502e122497cc66eb54f083097
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267590"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118974"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Просмотр журнала обновления данных (PowerPivot для SharePoint)
   В журнале обновления данных регистрируются все действия обновления данных PowerPivot в книге Excel. Операции обновления данных выполняются на экземпляре сервера служб Analysis Services на ферме SharePoint по заданному пользователем расписанию. По умолчанию журнал обновления данных хранится в течение одного года. Однако администратор фермы может задать другую политику сохранения для журнала использования и событий, которая будет определять срок хранения записей обновления данных.  

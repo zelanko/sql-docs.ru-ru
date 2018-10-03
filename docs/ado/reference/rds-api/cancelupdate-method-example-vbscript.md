@@ -1,35 +1,32 @@
 ---
-title: Пример метода CancelUpdate (VBScript) | Документы Microsoft
+title: Пример метода CancelUpdate (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CancelUpdate method [ADO], VBScript example
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000a63882a7f4ec64e0fa0c9cb4e6d88d3264df1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f20c372fbd98f0b14660e8c419e382a8a5c26c46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287353"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803012"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>Пример метода CancelUpdate (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Чтобы протестировать этот пример, вырежьте и вставьте следующий код между \<Body > и \</Body > тегов в обычный HTML документа и назовите его **CancelUpdateVBS.asp**. Сценарий ASP найдет сервера в Интернете. Необходимо будет изменить имя сервера, чтобы отразить собственную программу установки. Просто измените значение в строке соединения с MyServer к имени экземпляра SQL Server.  
+ Чтобы протестировать этот пример, вырезать и вставить этот код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **CancelUpdateVBS.asp**. Сценарий ASP будет идентифицировать сервера в Интернете. Необходимо изменить имя сервера в соответствии с вашей собственной программы установки. Просто измените значение в строке соединения с MyServer имя экземпляра SQL Server.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

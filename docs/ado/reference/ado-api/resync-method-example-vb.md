@@ -1,32 +1,29 @@
 ---
-title: Повторная синхронизация пример метода (Visual Basic) | Документы Microsoft
+title: Пример метода (Visual Basic) Resync | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Resync method [ADO], Visual Basic example
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 735692ba4b769c65b20daed2c12761447ec46389
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0ddcc484c389025a8c4a22ef43d0a46c4f53cdba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281403"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630812"
 ---
-# <a name="resync-method-example-vb"></a>Повторная синхронизация пример метода (Visual Basic)
-В этом примере показано использование [Resync](../../../ado/reference/ado-api/resync-method.md) метод для обновления данных в статических записей.  
+# <a name="resync-method-example-vb"></a>Пример метода Resync (Visual Basic)
+В этом примере показано использование [Resync](../../../ado/reference/ado-api/resync-method.md) метод, чтобы обновить данные в наборе статических записей.  
   
 ```  
 'BeginResyncVB  
@@ -108,5 +105,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Resync](../../../ado/reference/ado-api/resync-method.md)

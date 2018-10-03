@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e9339227-6c2e-4c4b-8be2-8c1960bc4a8d
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c18097b6851bc23522882227158b5aad390570e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e91853bba6b33ed57cc0152e266994d4e0ef528
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189571"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092917"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Создание структуры модели интеллектуального анализа данных кластеризации последовательностей (учебник по интеллектуальному анализу данных — средний уровень)
   Первым шагом создания последовательности, модели кластеризации интеллектуального анализа данных является использование мастера интеллектуального анализа данных для создания новой структуры интеллектуального анализа данных и модели интеллектуального анализа данных на основе [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм кластеризации последовательностей.  
@@ -75,12 +72,12 @@ ms.locfileid: "37189571"
   
     |Таблицы и столбцы|Тип содержимого|Тип данных|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Текст|  
-    |OrderNumber|Key|Текст|  
-    |Region|Discrete|Текст|  
+    |IncomeGroup|Discrete|Текста|  
+    |OrderNumber|Key|Текста|  
+    |Region|Discrete|Текста|  
     |vAssocSeqLineItems|||  
     |Line Number|Ключевая последовательность|Long|  
-    |Модель|Discrete|Текст|  
+    |Модель|Discrete|Текста|  
   
 9. На **создание проверочного набора** странице **процент проверочных данных** 20, а затем нажмите кнопку **Далее**.  
   

@@ -4,35 +4,29 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Getting started, MySQL metadata explorer
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a6ab8bdc69707374eaff1600db78abbca3ea41be
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679672"
 ---
-# <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Начало работы с SSMA для MySQL (MySQLToSQL)
+# <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Начало работы с SSMA для MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) для MySQL позволяет быстро преобразование схем баз данных MySQL в схемы SQL Server или базе данных SQL Azure, отправьте полученный схем в SQL Server или базе данных SQL Azure и переноса данных из MySQL в SQL Server или базе данных SQL Azure.  
   
 В этом разделе представлен процесс установки, а затем ознакомиться с пользовательским интерфейсом SSMA.  
   
-## <a name="installing-ssma"></a>Установка SSMA  
+## <a name="installing-ssma"></a>Установка SSMA  
 Чтобы использовать SSMA, сначала необходимо установить SSMA клиентскую программу на компьютере с доступом к базе данных MySQL источника и целевой экземпляр SQL Server или базе данных SQL Azure. Затем установите MySQL поставщиков (драйвер ODBC для MySQL 5.1 (доверенные)) на компьютере, на котором выполняется клиентская программа SSMA. Инструкции по установке см. в разделе [Установка SSMA для MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
   
 Для запуска SSMA, нажмите кнопку **запустить**, пункты **все программы**, пункты **SQL Server Migration Assistant для MySQL**, а затем нажмите кнопку **переход на SQL Server Assistant для MySQL**.  

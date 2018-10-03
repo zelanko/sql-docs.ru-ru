@@ -1,13 +1,11 @@
 ---
-title: Метод stat | Документы Microsoft
+title: Метод stat | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b900386c1890d54ec61d3bfd2328f3d173c9300
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 127aab5e00247ce5550f25e2a281e190472b0186
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282023"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828232"
 ---
-# <a name="stat-method"></a>Stat-метод
-Извлекает сведения о [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
+# <a name="stat-method"></a>Метод Stat
+Извлекает сведения о [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,14 +34,14 @@ Long stream.Stat(StatStg, StatFlag)
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект **длинные** значение, указывающее состояние операции.  
+ Объект **Long** значение, указывающее состояние операции.  
   
 #### <a name="parameters"></a>Параметры  
  *StatStg*  
- Структура STATSTG, будут заполнены сведения о потоке. Реализация **Stat** метод, используемый для объекта ADO потока не заполнять все поля структуры.  
+ Структура STATSTG, будут заполнены сведения о потоке. Реализация **Stat** метод, используемый в объекте ADO Stream не заполните все поля структуры.  
   
  *StatFlag*  
- Указывает, что этот метод не возвращает некоторые члены в структуре STATSTG, тем самым экономя операции выделения памяти. Значения берутся из перечисления STATFLAG. Перечисление STATFLAG имеет два значения  
+ Указывает, что этот метод не возвращает некоторые члены в структуре STATSTG, что экономит операция выделения памяти. Значения берутся из перечисления STATFLAG. Перечисление STATFLAG имеет два значения  
   
 |Константа|Значение|  
 |--------------|-----------|  
@@ -52,13 +49,13 @@ Long stream.Stat(StatStg, StatFlag)
 |STATFLAG_NONAME|1|  
   
 ## <a name="remarks"></a>Примечания  
- Версия Stat метода, реализованного в объекте ADO Stream заполняет структуры STATSTG следующие поля:  
+ В следующих полях структуры STATSTG заполняет версию Stat метод, реализованный в объекте ADO Stream:  
   
  *pwcsName*  
- Строка, содержащая имя потока, если он доступен и значение StatFlag STATFLAG_NONAME не указан.  
+ Строка, содержащая имя потока, если он доступен и STATFLAG_NONAME StatFlag значение не указано.  
   
  *cbSize*  
- Указывает размер в байтах потока или массива байтов.  
+ Указывает размер в байтах для потока или массива байтов.  
   
  *mtime*  
  Указывает время последнего изменения для этого хранилища, потока или массива байтов.  
@@ -67,9 +64,9 @@ Long stream.Stat(StatStg, StatFlag)
  Указывает время создания для этого хранилища, потока или массива байтов.  
   
  *atime*  
- Указывает время последнего доступа для этого хранилища, потока или массива байтов.  
+ Указывает время последнего обращения для данного хранилища, потока или массива байтов.  
   
- Если в параметре StatFlag STATFLAG_NONAME, имя потока не возвращается.  
+ Если STATFLAG_NONAME указан в параметре StatFlag, имя потока не возвращается.  
   
  Если STATFLAG_NONAME не указан в параметре StatFlag отсутствует имя для текущего потока, это значение будет E_NOTIMPL.  
   

@@ -1,36 +1,33 @@
 ---
-title: SQLStatistics (драйвер ODBC для Visual FoxPro) | Документы Microsoft
+title: SQLStatistics (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLStatistics function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef04b707f67c39f07947b87e677b61e83432b05f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd96e1bbd35835382557baffda4fc3accb206672
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848952"
 ---
 # <a name="sqlstatistics-visual-foxpro-odbc-driver"></a>SQLStatistics (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения по Visual FoxPro ODBC драйвера. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Поддержка: полный  
   
- Соответствия ODBC API: 1 уровень  
+ Соответствия API ODBC: 1 уровень  
   
- Извлекает список сведений о одной таблицы и индексы или имена тегов, связанных с таблицей. Драйвер возвращает данные в виде результирующего набора.  
+ Извлекает список статистику о одной таблицы и индексы или имена тегов, связанные с таблицей. Драйвер возвращает данные в виде результирующего набора.  
   
- Дополнительные сведения см. в разделе [SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md) в *справочнике программиста ODBC*.
+ Дополнительные сведения см. в разделе [SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md) в *Справочник по программированию ODBC*.

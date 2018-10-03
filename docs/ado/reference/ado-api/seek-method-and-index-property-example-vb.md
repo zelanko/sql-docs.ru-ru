@@ -1,13 +1,11 @@
 ---
-title: Поиск метода и пример свойства индекса (VB) | Документы Microsoft
+title: Примеры метода Seek и свойства Index (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f9b13fa707cd1b44621b3c3dd74b7649f25b5f7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8f53fb3258e7eebc54aa0adfad60ff81e83e41bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661472"
 ---
-# <a name="seek-method-and-index-property-example-vb"></a>Поиск метода и пример свойства индекса (Visual Basic)
-В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [Seek](../../../ado/reference/ado-api/seek-method.md) метод и [индекс](../../../ado/reference/ado-api/index-property.md) свойства в сочетании с заданной ***идентификатор сотрудника***, чтобы найти Имя сотрудника в ***сотрудников*** Nwind.mdb базы данных.  
+# <a name="seek-method-and-index-property-example-vb"></a>Примеры метода Seek и свойства Index (Visual Basic)
+В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [Seek](../../../ado/reference/ado-api/seek-method.md) метод и [индекс](../../../ado/reference/ado-api/index-property.md) свойство в сочетании с заданной ***идентификатор сотрудника***, чтобы найти Имя сотрудника в ***сотрудников*** таблицы в базе данных Nwind.mdb.  
   
 ```  
 'BeginSeekVB  
@@ -121,5 +118,5 @@ End Sub
   
 ## <a name="see-also"></a>См. также  
  [Свойство Index](../../../ado/reference/ado-api/index-property.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Seek](../../../ado/reference/ado-api/seek-method.md)

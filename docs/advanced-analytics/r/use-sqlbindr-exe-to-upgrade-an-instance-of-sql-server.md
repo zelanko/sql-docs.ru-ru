@@ -3,29 +3,35 @@ title: Обновление компонентов R и Python в экземпл
 description: Обновите R и Python в SQL Server 2016 служб или служб SQL Server 2017 машинного обучения с с помощью sqlbindr.exe для привязки к Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/19/2018
+ms.date: 09/30/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563750"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078894"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Обновление компонентов машинного обучения (R и Python) в экземплярах SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Интеграция R и Python в SQL Server содержит пакеты с открытым исходным кодом и корпорации Майкрософт. В разделе Стандартная обслуживания SQL Server, пакеты R и Python обновляются в соответствии со цикла выпуска SQL Server, с помощью исправления для существующих пакетов в текущей версии. 
+Интеграция R и Python в SQL Server содержит пакеты с открытым исходным кодом и корпорации Майкрософт. В разделе Стандартная обслуживания SQL Server, пакеты обновляются в соответствии со цикла выпуска SQL Server, с помощью исправления для существующих пакетов в текущей версии, но без обновления основного номера версии. 
 
-Большинство специалистов по анализу данных, привыкшему работать с более новые пакеты, как только они станут доступны. Для служб SQL Server 2017 машинного обучения (в базе данных) и SQL Server 2016 R Services (в базе данных), можно получить более новые версии R и Python, изменив *привязки* обслуживания SQL Server для [Microsoft Сервер машинного обучения](https://docs.microsoft.com/machine-learning-server/index) и [политику поддержки современного жизненного цикла](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+Тем не менее многие специалисты по анализу данных привыкли работать с более новые пакеты, как только они станут доступны. Для служб SQL Server 2017 машинного обучения (в базе данных) и SQL Server 2016 R Services (в базе данных), вы можете получить [более новых версиях R и Python](#version-map) по *привязки* для **Microsoft Сервер машинного обучения**. 
 
-Привязки не приводит к изменению основные принципы установки: интеграции R и Python по-прежнему является частью экземпляр ядра СУБД, лицензирования, не изменяется (не дополнительные затраты, связанные с привязкой), а также политики поддержки SQL Server по-прежнему содержат для базы данных модуль. Но повторная привязка приводит к изменению как обслуживаются пакетов R и Python. В оставшейся части этой статьи объясняется механизм привязки и принципах ее работы для каждой версии SQL Server.
+## <a name="what-is-binding"></a>Что такое привязывание?
+
+Привязки — это процесс установки, которое меняет местами содержимое папок R_SERVICES и PYTHON_SERVICES с новой исполняемые файлы, библиотеки и средства из [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+
+Вместе с обновленные компоненты поставляется коммутатора в модели обслуживания. Вместо [жизненного цикла продукта SQL Server](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017), с помощью [накопительные пакеты обновления SQL Server](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions), обновления службы теперь соответствуют [сроки предоставления поддержки для Microsoft R Server & компьютере Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) на [современного жизненного цикла](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+
+За исключением версии компонентов и обновления службы, привязки не изменяет основные принципы установки: интеграции R и Python по-прежнему является частью экземпляр ядра СУБД, лицензирования, не изменяется (не дополнительные затраты, связанные с привязкой) и SQL Политики поддержки сервера по-прежнему содержать для компонента database engine. В оставшейся части этой статьи объясняется механизм привязки и принципах ее работы для каждой версии SQL Server.
 
 > [!NOTE]
-> Привязка применима ко только экземпляры (в базе данных). Привязка не относится к установке (изолированная версия).
+> Привязка применяется к экземплярам (в базе данных), которые привязаны к экземплярам SQL Server. Привязка не относится к установке (изолированная версия).
 
 **Рекомендации по SQL Server 2017 привязки**
 
@@ -33,7 +39,9 @@ ms.locfileid: "45563750"
 
 **Рекомендации по SQL Server 2016 привязки**
 
-Для клиентов, SQL Server 2016 R Services, привязка предоставляет обновленные пакеты R, новые пакеты не является частью исходной установки ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)), и [обученная моделей](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models), каждый из которых может быть дополнительно обновляется в каждый новый выпуск основной и дополнительный сервер машинного обучения Майкрософт. Привязки не предоставляет поддержку Python, который является компонентом SQL Server 2017. 
+Для клиентов, SQL Server 2016 R Services, привязка предоставляет обновленные пакеты R, новые пакеты не является частью исходной установки ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)), и [обученная моделей](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models), каждый из которых может быть дополнительно в каждый новый основной и дополнительный выпуск обновить [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). Привязки не предоставляет поддержку Python, который является компонентом SQL Server 2017. 
+
+<a name="version-map"></a>
 
 ## <a name="version-map"></a>Сопоставление версий
 
@@ -67,16 +75,16 @@ Anaconda 4.2 по Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
  [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [предварительно обученных моделей](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
 
-## <a name="how-component-upgrade-works"></a>Как работает обновление компонента
+## <a name="how-component-upgrade-works"></a>Как работает обновление компонента 
 
-Обновление компонента происходит при вы *привязать* экземпляр SQL Server 2016 R Services (или экземпляра службы машинного обучения SQL Server 2017) [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). Этот процесс, по сути, перезаписывает содержимое в C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES установлены программой установки SQL Server, с содержимым C:\Program Files\Microsoft\ML Server\R_SERVER. 
+R и Python библиотек и исполняемых файлов будут обновлены при привязке к Machine Learning Server существующую установку R и Python. Выполняется привязка [установщика Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) при запуске программы установки на существующий экземпляр SQL Server database engine, 2016 или 2017, наличие интеграции R или Python. Программа установки обнаруживает существующие функции и предложит выполнить повторную привязку к Machine Learning Server. 
 
-Microsoft Machine Learning Server — это продукт на локальный сервер разделения из SQL Server, но с тем же интерпретаторов и пакетов. Привязка переключений out механизм обновления службы SQL Server, чтобы вы могли использовать пакетов R и Python в состав Microsoft Machine Learning Server, которые часто являются более новыми, чем установленные в SQL Server. Переключение политики поддержки является привлекательным вариантом для групп обработки и анализа данных, которым требуется новое поколение R и модули Python для своих решений. 
+Во время привязки, содержимое C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES и \PYTHON_SERVICES перезаписывается новые исполняемые файлы и библиотеки C:\Program Files\Microsoft\ML Server\R_SERVER и \PYTHON_SERVER.
 
-Выполняется привязка [MLS установщика](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install). Программа установки обновляет определенных пакетов R и Python, но не заменяет экземпляр в базе данных SQL Server с использованием отдельной установки отключенного сервера.
+В то же время модель обслуживания также зеркально из механизмов обновления SQL Server, более частые цикла выпуска основной и дополнительный сервер машинного обучения Майкрософт. Переключение политики поддержки является привлекательным вариантом для групп обработки и анализа данных, которым требуется новое поколение R и модули Python для своих решений. 
 
 + Без привязки, пакетов R и Python установлены исправления для исправления ошибок, при установке пакета обновления SQL Server или накопительный пакет обновления (CU). 
-+ С помощью привязки, более новые версии пакетов могут применяться к экземпляру, независимо от расписания накопительное обновление выпуска, в разделе [политика современного жизненного цикла](https://support.microsoft.com/help/30881/modern-lifecycle-policy) и версиях сервера машинного обучения Майкрософт. Политика современного жизненного цикла поддержки предлагает более частые обновления поверх существования короче, один год. После привязки, будет продолжать использовать установщик MLS для будущих обновлений R и Python, как только они становятся доступными для сервера машинного обучения Майкрософт.
++ С помощью привязки, более новые версии пакетов могут применяться к экземпляру, независимо от расписания накопительное обновление выпуска, в разделе [политика современного жизненного цикла](https://support.microsoft.com/help/30881/modern-lifecycle-policy) и версиях сервера машинного обучения Майкрософт. Политика современного жизненного цикла поддержки предлагает более частые обновления поверх существования короче, один год. После привязки, будет продолжать использовать установщик MLS для будущих обновлений R и Python, как только они станут доступны на сайтах загрузки корпорации Microsoft.
 
 Привязка применяется только для функций R и Python. А именно пакеты с открытым исходным кодом для функций R и Python (Microsoft R Open, Anaconda) и частные пакеты RevoScaleR, revoscalepy и т. д. Привязка не изменяет модель поддержки для экземпляра компонента database engine и не меняется версия SQL Server.
 

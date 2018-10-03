@@ -1,29 +1,26 @@
 ---
-title: Пример метода ConvertToString (VB) | Документы Microsoft
+title: Пример метода ConvertToString (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ConvertToString method [ADO], Visual Basic example
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e80f819867b2be126977002d6a54322fc9630370
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d156e733f59a66997a8ba0ec5dfe763bfadcc655
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277123"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613142"
 ---
 # <a name="converttostring-method-example-vb"></a>Пример метода ConvertToString (Visual Basic)
 ```  
@@ -103,5 +100,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Метод ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
+ [Пример метода ConvertToString (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

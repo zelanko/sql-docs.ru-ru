@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 800c8ce788f4152f1f429b54032efa193972c10f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d89e24fee07bbfc3a54a1920eeab7c4872e69afe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097431"
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>Добавление итога в группу или область данных табликса (построитель отчетов и службы SSRS)
   Можно добавлять итоги к области данных табликса или ко всей области данных. По умолчанию итогом считается сумма данных с числовыми значениями, отличными от NULL, в группе или в области данных, вычисленная после применения фильтров. Чтобы добавить итоги к группе, выберите пункт **Добавить итоги** в контекстном меню для группы на панели «Группирование». Для добавления итогов в отдельную ячейку области тела табликса нужно в контекстном меню для этой ячейки выбрать пункт **Добавить итог** . Команда **Добавить итог** чувствительна к контексту и доступна только для числовых полей. В зависимости от выбранной ячейки табликса можно добавить итог для одной ячейки, выбрав эту ячейку в области тела табликса, или для всей группы, выбрав ячейку в области группы строк либо в области группы столбцов табликса. Дополнительные сведения об областях табликса см. в разделе [область данных Табликса &#40;построитель отчетов и службы SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  

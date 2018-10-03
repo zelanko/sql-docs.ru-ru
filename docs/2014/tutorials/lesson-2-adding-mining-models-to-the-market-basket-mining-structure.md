@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d758ef319c61d7868c2114372f353a374c38230
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 376f93db5b4dbac672846226229858c8ee84f19d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107484"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Занятие 2: Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа данных потребительской корзины
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Урок 2. Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа данных "Потребительская корзина"
   На этом занятии будет добавлено две модели интеллектуального анализа данных к структуре интеллектуального анализа Market Basket, созданный в [занятии 1: Создание структуры интеллектуального анализа данных Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). С помощью этих моделей интеллектуального анализа данных можно будет создавать прогнозы.  
   
  Для прогнозирования типов товара, которые клиент стремится заказать одновременно, необходимо создать две модели интеллектуального анализа данных с помощью [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) и два разных значения *MINIMUM_PROBABILTY* параметра.  

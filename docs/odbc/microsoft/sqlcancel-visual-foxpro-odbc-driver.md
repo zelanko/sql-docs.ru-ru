@@ -1,36 +1,33 @@
 ---
-title: SQLCancel (драйвер ODBC для Visual FoxPro) | Документы Microsoft
+title: SQLCancel (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLCancel function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 4f7baa1d-37ef-4051-ae13-7dc38033af16
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c8d2d30169fcdffc54a4f133b44105e4620fe2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd930376a07be90680dba0faa7d0267978c44e6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642822"
 ---
 # <a name="sqlcancel-visual-foxpro-odbc-driver"></a>SQLCancel (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения по Visual FoxPro ODBC драйвера. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Поддержка: полный  
   
- Соответствия ODBC API: Уровень Core  
+ Соответствия API ODBC: Уровень Core  
   
- Отменяет обработку на дескрипторе инструкции *hstmt*.  
+ Отменяет обработку на дескриптор инструкции *hstmt*.  
   
- Дополнительные сведения см. в разделе [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) в *справочнике программиста ODBC*.
+ Дополнительные сведения см. в разделе [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) в *Справочник по программированию ODBC*.

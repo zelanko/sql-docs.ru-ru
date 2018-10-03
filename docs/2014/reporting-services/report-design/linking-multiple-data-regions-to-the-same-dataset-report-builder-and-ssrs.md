@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c17a66cff53551f9bb4aa6687b8529c45e7f42e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9dd0749b2a00de1cca540e0616f5aade2e243c32
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301764"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053624"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)
   В отчет можно добавить несколько областей данных, чтобы предоставить несколько представлений для одного и того же набора данных в отчете. Например, можно отобразить данные в виде таблицы и также отобразить их наглядно в виде диаграммы. Для этого необходимо использовать одинаковые выражения и области для соответствующих выражений фильтра, сортировки и групп.  

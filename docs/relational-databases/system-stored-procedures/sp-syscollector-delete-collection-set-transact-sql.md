@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_delete_collection_set (Transact-SQL) | Документы Microsoft
+title: sp_syscollector_delete_collection_set (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collection_set_TSQL
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collecton_set
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09bab6af1ad8e1116d3215ecf202055301efbe8c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1636a081aee571297aa4c9e3cbe09cd30c8feca5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651832"
 ---
 # <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +42,19 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_set_id =] *collection_set_id, чтобы выделить*  
- Уникальный идентификатор набора элементов сбора. *collection_set_id, чтобы выделить* — **int** и должен иметь значение, если *имя* имеет значение NULL.  
+ [ @collection_set_id =] *collection_set_id*  
+ Уникальный идентификатор набора элементов сбора. *collection_set_id* — **int** и должен иметь значение, если *имя* имеет значение NULL.  
   
  [ @name =] '*имя*"  
- Имя набора элементов сбора. *имя* — **sysname** и должен иметь значение, если *collection_set_id, чтобы выделить* имеет значение NULL.  
+ Имя набора элементов сбора. *имя* — **sysname** и должен иметь значение, если *collection_set_id* имеет значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Функция sp_syscollector_delete_collection_set должна выполняться в контексте системной базы данных msdb.  
   
- Либо *collection_set_id, чтобы выделить* или *имя* должен иметь значение, и не может иметь значение NULL. Чтобы получить эти значения, выполните запрос системного представления syscollector_collection_set.  
+ Либо *collection_set_id* или *имя* должен иметь значение, не может быть NULL. Чтобы получить эти значения, выполните запрос системного представления syscollector_collection_set.  
   
  Удалять определяемые системой наборы элементов сбора невозможно.  
   
@@ -65,7 +62,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
  Для выполнения этой процедуры требуется членство в предопределенной роли базы данных dc_admin (с разрешением EXECUTE).  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере удаляется определяемого пользователем набора сбора с указанием *collection_set_id, чтобы выделить*.  
+ В следующем примере удаляется определяемого пользователем набора сбора с указанием *collection_set_id*.  
   
 ```  
 USE msdb;  

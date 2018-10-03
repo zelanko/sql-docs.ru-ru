@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccc292cda8b3263c7e1457a52e4426dc9d24460d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2045476886e136f5956f8805308f95c2e905bea4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263240"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052744"
 ---
 # <a name="change-data-capture-ssis"></a>Система отслеживания измененных данных (SSIS)
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]система отслеживания измененных данных предоставляет эффективное решение для проблемы проведения добавочных загрузок из исходных таблиц в киоски и хранилища данных.  
@@ -103,7 +100,7 @@ ms.locfileid: "37263240"
   
 -   [Файл Readme. Образец пакета для отслеживания измененных данных с момента последнего запроса](http://go.microsoft.com/fwlink/?LinkId=133508)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Задание интервала для информации об изменениях данных](specify-an-interval-of-change-data.md)  
   

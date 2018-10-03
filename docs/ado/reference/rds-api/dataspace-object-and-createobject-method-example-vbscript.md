@@ -1,13 +1,11 @@
 ---
-title: Пространство данных объект и метод CreateObject примере (VBScript) | Документы Microsoft
+title: Объекта DataSpace и метода CreateObject (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - DataSpace object [RDS], VBScript example
 - CreateObject method [ADO], VBScript example
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fd9d098362f45d4ff2d0e7a3bc24d67130a0be9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 196641267bfedaff0de657d842b75a38c7cac75a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287643"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753362"
 ---
-# <a name="dataspace-object-and-createobject-method-example-vbscript"></a>Пространство данных объект и метод CreateObject примере (VBScript)
+# <a name="dataspace-object-and-createobject-method-example-vbscript"></a>Примеры объекта DataSpace и метода CreateObject (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как использовать [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) метод [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) с бизнес-объекта по умолчанию, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Чтобы протестировать этот пример, вырежьте и вставьте следующий код между \<Body > и \</Body > тегов в обычный HTML документа и назовите его **DataSpaceVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ В следующем примере показано, как использовать [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) метод [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) с бизнес-объекта по умолчанию, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Чтобы протестировать этот пример, вырезать и вставить этот код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **DataSpaceVBS.asp**. Сценарий ASP будет идентификации сервера.  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -134,12 +131,12 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
 <!-- EndDataSpaceVBS -->  
 ```  
   
- В следующем примере показано, как использовать **CreateObject** метод для создания экземпляра пользовательский бизнес-объект, VbBusObj.VbBusObjCls. Она также использует Active Server Pages, сценарии, чтобы определить имя веб-сервера.  
+ В следующем примере показано, как использовать **CreateObject** метод для создания экземпляра пользовательского бизнес-объект, VbBusObj.VbBusObjCls. Он также использует Active Server Pages, сценарии, чтобы определить имя веб-сервера.  
   
- Чтобы просмотреть полный пример, откройте селектор образца приложения. В **клиентский уровень** выберите **VBScript в Internet Explorer**. В **среднего уровня** выберите **настраиваемый Visual Basic бизнес-объекта**.  
+ Чтобы просмотреть полный пример, откройте пример приложения селектора. В **клиентский уровень** столбец, выберите **VBScript в Internet Explorer**. В **среднего уровня** столбец, выберите **Custom Visual Basic бизнес-объект**.  
   
 > [!NOTE]
->  При подключении к поставщик источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = yes** или **Integrated Security = SSPI** вместо идентификатора пользователя и пароля сведения в строке подключения.  
+>  Если вы подключаетесь к поставщик источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = yes** или **Integrated Security = SSPI** вместо идентификатора пользователя и пароля сведения в строке подключения.  
   
 ```  
 Sub Window_OnLoad()  
@@ -151,7 +148,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Метод CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
+ [Метод CreateObject (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [Объект DataSpace (служба удаленных рабочих столов)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 
 

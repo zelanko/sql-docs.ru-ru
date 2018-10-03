@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b615640efe6529808652a10413d66d0fb2159e36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f34ff1942ff742a5040d7fa16fedf31f6d806768
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267630"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126854"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   Имя участника-службы (SPN) однозначно идентифицирует экземпляр службы в домене Active Directory, если протокол Kerberos используется для взаимной проверки подлинности идентификаторов клиента и службы. Имя участника-службы сопоставляется с учетной записью входа, от имени которой выполняется экземпляр службы.  

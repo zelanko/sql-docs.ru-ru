@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - launching Upgrade Advisor
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, launching
 - Upgrade Advisor [SQL Server], launching
 ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c853e40a0559dcecd550327ba750ba9cdc2c2e9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5523f40b556e654ee6ef71041c648b757a2d766a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236264"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066518"
 ---
-# <a name="how-to-launch-upgrade-advisor"></a>Практическое: запустить помощник по обновлению
+# <a name="how-to-launch-upgrade-advisor"></a>Запуск помощника по обновлению
   Помощник по обновлению содержит центральную консоль, предназначенную для запуска мастера анализа помощника по обновлению и средства просмотра отчетов помощника по обновлению. В этом разделе описана процедура запуска помощника по обновлению.  
   
 ### <a name="to-launch-upgrade-advisor"></a>Запуск помощника по обновлению  

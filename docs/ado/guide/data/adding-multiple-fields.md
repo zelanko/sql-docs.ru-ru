@@ -1,13 +1,11 @@
 ---
-title: Добавление нескольких полей | Документы Microsoft
+title: Добавление нескольких полей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - editing data [ADO], adding multiple fields
 - editing data [ADO], AddNew method
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23d13c750b3140090fa66efaec8aa57e2afe77db
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fb62318b9f8eb03fbd3c9732dc8ad0caa9127d17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742602"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Добавление нескольких полей и значений
-В некоторых случаях может быть более эффективно передавать массив полей и их соответствующие значения для **AddNew** метод, а не параметр **значение** несколько раз для каждого нового поля. Если *списка полей* является массивом, *значения* также должен быть массивом с тем же число членов; в противном случае возникает ошибка. Порядок полей имен должен соответствовать порядку значений полей в каждом массиве. Приведенный ниже код передает массив полей и массив значений для **AddNew** метод.
+В некоторых случаях может оказаться более эффективной, передаваемые в массив полей и их соответствующие значения для **AddNew** метод, а не параметр **значение** несколько раз для каждого нового поля. Если *"списокполей"* является массивом, *значения* также должен быть массивом с тем же число членов; в противном случае возникает ошибка. Порядок имен полей должен соответствовать порядку значений полей в каждом массиве. Следующий код передает массив полей и массив значений для **AddNew** метод.
 
 ```
 'BeginAddNew2

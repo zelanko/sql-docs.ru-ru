@@ -5,10 +5,7 @@ ms.date: 10/18/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - dm_geo_replication_links_TSQL
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5e59dcd6550c006b5a1e0f3e3be6440669e05021
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b37ca384c2d3402a3b9ec01a4b9d6ccbfb7d402
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997746"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610114"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "37997746"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Идентификатор текущей базы данных в представлении sys.databases.|  
 |start_date|**datetimeoffset**|Время в формате UTC в региональном центре данных базы данных SQL при репликации базы данных была начата|  
-|modify_date|**datetimeoffset**|Время в формате UTC в региональном центре данных базы данных SQL после завершения георепликации базы данных. Новая база данных синхронизируется с базы данных-источника на этот момент времени. , и делает это по-другому.|  
+|modify_date|**datetimeoffset**|Время в формате UTC в региональном центре данных базы данных SQL после завершения георепликации базы данных. Новая база данных синхронизируется с базы данных-источника на этот момент времени. .|  
 |link_guid|**uniqueidentifier**|Уникальный идентификатор связи георепликации.|  
 |partner_server|**sysname**|Имя логического сервера, содержащего геореплицированную базу данных.|  
 |partner_database|**sysname**|Имя геореплицированную базу данных на связанном сервере логических.|  

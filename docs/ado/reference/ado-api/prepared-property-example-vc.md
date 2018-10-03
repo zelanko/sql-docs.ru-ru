@@ -1,32 +1,29 @@
 ---
-title: Подготовить пример свойства (VC ++) | Документы Microsoft
+title: Подготовлен пример свойства (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4aeb945af1a75c28e4849f4736064fdb50d63d8f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cb7e726b506ab913d99d3024a4dc6f64a71bf543
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280773"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846492"
 ---
-# <a name="prepared-property-example-vc"></a>Пример свойства подготовленный (VC ++)
-В этом примере демонстрируется [Готово](../../../ado/reference/ado-api/prepared-property-ado.md) свойства, открыв два [команда](../../../ado/reference/ado-api/command-object-ado.md) объектов — подготовлены и не подготовлен.  
+# <a name="prepared-property-example-vc"></a>Пример свойства Prepared (Visual C++)
+В этом примере показано [подготовленных](../../../ado/reference/ado-api/prepared-property-ado.md) свойство, открыв два [команда](../../../ado/reference/ado-api/command-object-ado.md) объектов — подготовлен и не подготовлена.  
   
 ## <a name="example"></a>Пример  
   
@@ -145,8 +142,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Результаты производительности:**  
-**Не подготовлены: 0.016 секунд**  
-**Подготавливается: 0.016 секунд**   
+**Не готов: 0.016 секунд**  
+**Подготовка: 0.016 секунд**   
 ## <a name="see-also"></a>См. также  
- [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Свойство Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

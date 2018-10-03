@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f26d6b4622d11ae9a620d5cbdb03eed737de1645
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049587"
 ---
 # <a name="event-notifications"></a>Уведомления о событиях
   Уведомления о событии отправляют данные о событиях в службу [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Уведомления о событиях выполняются в ответ на множество инструкций языка определения данных (DDL) [!INCLUDE[tsql](../../includes/tsql-md.md)] и на события трассировки SQL; уведомления отправляют сведения об этих событиях службе компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  

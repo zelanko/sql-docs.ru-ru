@@ -1,14 +1,11 @@
 ---
-title: fn_syscollector_get_execution_stats (Transact-SQL) | Документы Microsoft
+title: fn_syscollector_get_execution_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_stats
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_stats function
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a80d59325234108f16a75c081f94d4102c44154
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811214"
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ fn_syscollector_get_execution_stats ( log_id )
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|Среднее количество строк, введенных задачами потока данных пакета.<br /><br /> Примечание: Задачи потока данных — [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] компонент, который обрабатывает данные. Эти данные имеют реляционный формат, поэтому у данной задачи входной набор данных состоит из строк. Это строки, обрабатываемые задачей. После преобразования данных они выводятся в виде результирующего набора, состоящего из строк. Задача потока данных преобразует данные и выводит результирующий набор, состоящий из строк. Эти выходные данные — строки, вышедшие из задачи.|  
+|avg_row_count_in|**int**|Среднее количество строк, введенных задачами потока данных пакета.<br /><br /> Примечание: Задачу потока данных — [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] компонент, который обрабатывает данные. Эти данные имеют реляционный формат, поэтому у данной задачи входной набор данных состоит из строк. Это строки, обрабатываемые задачей. После преобразования данных они выводятся в виде результирующего набора, состоящего из строк. Задача потока данных преобразует данные и выводит результирующий набор, состоящий из строк. Эти выходные данные — строки, вышедшие из задачи.|  
 |min_row_count_in|**int**|Минимальное количество строк, введенных задачами потока данных пакета.|  
 |max_row_count_in|**int**|Максимальное количество строк, введенных задачами потока данных пакета.|  
 |avg_row_count_out|**int**|Среднее количество строк, выведенных задачами потока данных пакета.|  

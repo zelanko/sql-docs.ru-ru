@@ -1,31 +1,28 @@
 ---
-title: Указание свойств соединения | Документы Microsoft
+title: Указание свойств подключения | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection properties [ADO]
 - connections [ADO]
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c198eb4c8118328d68b40deed4ab0e57ff561f9c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 885d201736adb3cd16efbea4f3907cd0aa324128
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622762"
 ---
-# <a name="specifying-connection-properties"></a>Указание свойств соединения
-Можно указать объем информации, определяемое [строка подключения](../../../ado/guide/data/creating-a-connection-string.md) путем задания свойств **подключения** объекта до открытия соединения. Например, может получить тот же эффект, описанная в строке подключения [Создание строки подключения](../../../ado/guide/data/creating-a-connection-string.md) , используя следующий код.  
+# <a name="specifying-connection-properties"></a>Указание свойств подключения
+Можно указать большое количество информации, определяемое [строку подключения](../../../ado/guide/data/creating-a-connection-string.md) путем задания свойств **подключения** объекта до открытия соединения. Например, вы сможете достигнуть тот же эффект, рассматривался в строке подключения [Создание строки подключения](../../../ado/guide/data/creating-a-connection-string.md) , используя следующий код.  
   
 ```  
 With objConn  
@@ -37,7 +34,7 @@ With objConn
 End With  
 ```  
   
- DefaultDatabase имеет значение только после открытия подключения.  
+ DefaultDatabase имеет значение только в том случае, после открытия соединения.  
   
 > [!NOTE]
->  В ADO не должны использовать пароль, содержащий точку с запятой («;»), если пароль заключено в одинарные кавычки.
+>  В ADO не должны использовать пароль, содержащий точку с запятой («;»), если пароль заключен в одинарные кавычки.

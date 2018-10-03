@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a494ca4f59abb618c9cbfbffd36bc57e481a71e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144234"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Ключи шифрования (службы Reporting Services в собственном режиме)
   Используйте страницу «Ключи шифрования», чтобы управлять симметричным ключом, используемым для шифрования и дешифрования данных на сервере отчетов. Управление ключами шифрования является важной частью настройки сервера отчетов. Симметричный ключ создается и применяется автоматически при создании базы данных сервера отчетов. Создайте резервную копию симметричного ключа, чтобы можно было выполнять обычные операции по обслуживанию. Для выполнения следующих задач обслуживания потребуется действительная копия симметричного ключа:  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a918816d8fd90624b625ed6107bbdc5e86b2cc08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0846c7bdb0728d79dc3538eb5a46797e1b77e3db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250464"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095984"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Службы Integration Services (SSIS) в кластере
   Кластеризация служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не рекомендуется, так как службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не являются кластеризованными, не ориентируются на использование кластеров и не поддерживают отработку отказа между узлами кластера. Следовательно, в кластерной среде службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] должны быть установлены и запущены в качестве изолированной службы на каждом узле кластера.  
@@ -39,7 +36,7 @@ ms.locfileid: "37250464"
   
 -   Если существует несколько групп ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые включают службу [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в кластер, то при отработке отказа могут возникнуть непредвиденные результаты. Рассмотрим следующий сценарий. Группа1, в которую входят служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняется на узле А. Группа2, в которую также входят служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняется на узле Б. Происходит переход Группы2 на узел А. Попытка запуска другого экземпляра службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на узле А завершается с ошибкой, поскольку допускается существование только одного экземпляра службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Завершится ли с ошибкой служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при попытке перехода на узел А, зависит от конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в Группе2. Если служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] была настроена для влияния на другие службы в группе ресурсов, то служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при попытке перехода завершится с ошибкой, потому что служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] завершилась с ошибкой. Если служба была настроена не влиять на другие службы в группе ресурсов, то служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сможет совершить переход на узел А. Если служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в Группе2 не была настроена не затрагивать другие службы в группе ресурсов, то завершение с ошибкой переходящей службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может вызвать завершение с ошибкой переходящей службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Пошаговые инструкции по настройке службы Integration Services в кластере см. в разделе [Настройка служб Integration Services на работу в качестве ресурса кластера](../configure-the-integration-services-service-as-a-cluster-resource.md).  
   
   

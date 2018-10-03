@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - quorum [SQL Server], database mirroring
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - full quorum [SQL Server]
 - high-availability mode [SQL Server]
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2088dee445275316eb439508e80230316508d6bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3dd9b33de1ca429afbae8a8fe6ccdc7a41583a44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067554"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Кворум. Как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных)
   Когда для сеанса зеркального отображения базы данных назначен следящий сервер, обязательно наличие *кворума* . Кворум — это связь, возникающая, когда два или несколько экземпляров сервера в сеансе зеркального отображения подключаются друг к другу. Обычно кворум включает три соединенных друг с другом экземпляра сервера. Если указан следящий сервер, то кворум необходим, чтобы сделать базу данных доступной. Кворум, рассчитанный на режим высокого уровня безопасности с автоматической отработкой отказа, гарантирует, что в любой момент времени база данных принадлежит только одному участнику.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining algorithms
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data mining models
 - data mining structures
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9817f7e8906d9e75f7c2b5d55db679d77e7cc47e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273890"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113294"
 ---
 # <a name="choosing-a-model"></a>Выбор модели
   **Алгоритм интеллектуального анализа данных:** *Алгоритм* интеллектуального анализа данных представляет собой механизм, создающий закономерности на основе данных. Алгоритм определяет метод подсчета данных, методы вычисления связей и методы хранения закономерностей. Выбор алгоритма отчасти зависит от типа данных, которые необходимо проанализировать. Например, некоторые алгоритмы могут работать только с непрерывными числовыми значениями, тогда как другие могут работать наилучшим образом с ограниченным количеством уникальных значений.  

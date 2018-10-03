@@ -1,38 +1,33 @@
 ---
-title: Функция CONTAINS (XQuery) | Документы Microsoft
+title: Функция CONTAINS (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - contains function (XQuery)
 - fn:contains function
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fceddcf918a99667e8c92fadc7aeddca59bb21a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 595d5fb7d98d85120fca3b96eedc5a83694dc1a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753922"
 ---
-# <a name="functions-on-string-values---contains"></a>Строковые функции — содержит
+# <a name="functions-on-string-values---contains"></a>Функции со строковыми значениями — contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает значение типа xs: Boolean, указывающее, является ли значение *$arg1* содержит строковое значение, определяемое *$arg2*.  
+  Возвращает значение типа xs: Boolean, указывающее, ли значение *$arg1* содержит строковое значение, определяемое *$arg2*.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,19 +43,19 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg2*  
  Подстрока для поиска.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если значение *$arg2* является строкой нулевой длины, функция возвращает **True**. Если значение *$arg1* является строкой нулевой длины и значение *$arg2* не является строкой нулевой длины, функция возвращает **False**.  
   
- Если значение *$arg1* или *$arg2* представляет собой пустую последовательность, аргумент интерпретируется как строка нулевой длины.  
+ Если значение *$arg1* или *$arg2* представляет пустую последовательность, аргумент рассматривается как строка нулевой длины.  
   
  Функция contains() использует параметры сортировки кодовых точек Юникода языка XQuery по умолчанию для сравнения строк.  
   
- Искомой подстроки, указанной для *$arg2* должно быть меньше или равно 4 000 символов. Если указано значение больше, чем 4 000 символов, возникнет динамическое условие ошибки и функция contains() возвращает пустую последовательность вместо логического значения **True** или **False**. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не вызывает динамические ошибки в выражениях XQuery.  
+ Подстроки, указанной для *$arg2* должно быть меньше или равно 4 000 символов. Если значение, указанное значение аргумента превышает 4000 символов, возникнет динамическое условие ошибки и функция contains() возвращает пустую последовательность вместо логического значения из **True** или **False**. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не вызывает динамические ошибки в выражениях XQuery.  
   
- Для получения сравнения без учета регистра, [верхнего регистра](../xquery/functions-on-string-values-upper-case.md) или можно использовать функции в нижнем регистре.  
+ Для получения сравнения без учета регистра, [заглавных](../xquery/functions-on-string-values-upper-case.md) или строчные функции могут использоваться.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
- Поведение суррогатных пар в функциях XQuery зависит от уровня совместимости базы данных и, в некоторых случаях, от URI-кода пространства имен по умолчанию для функций. Дополнительные сведения см. в подразделе «XQuery функции учитывают суррогаты» раздела [критические изменения в функциях ядра СУБД в SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). См. также [уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) и [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Поведение суррогатных пар в функциях XQuery зависит от уровня совместимости базы данных и, в некоторых случаях, от URI-кода пространства имен по умолчанию для функций. Дополнительные сведения см. в подразделе «XQuery функций учитывают суррогаты» раздела [критические изменения в функциях ядра СУБД в SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Также см. в разделе [уровень совместимости ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) и [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа xml в базе данных AdventureWorks.  

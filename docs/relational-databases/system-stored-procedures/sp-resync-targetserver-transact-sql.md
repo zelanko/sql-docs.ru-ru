@@ -1,14 +1,11 @@
 ---
-title: sp_resync_targetserver (Transact-SQL) | Документы Microsoft
+title: sp_resync_targetserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_resync_targetserver
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_resync_targetserver
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d91ef10c7f1e98c4ad65d014f90fc42b0317ec5
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 14702941897ebfec4b8646f8015a659f370e31ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33252463"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856982"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ sp_resync_targetserver
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Возвращает результат **sp_post_msx_operation** действия.  
+ Сообщает результат **sp_post_msx_operation** действия.  
   
 ## <a name="remarks"></a>Примечания  
  **sp_resync_targetserver** удаляет текущий набор инструкций для целевого сервера и публикует новый набор для целевого сервера для загрузки. Новый набор состоит из инструкции для удаления всех многосерверных заданий, за которой следуют вставки, по одной для каждого текущего задания для целевого сервера.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.profitcostdialog.f1
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44e18791656240d2f6253d325d2151e49f5b890f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48deee5b5928ff812a67f26a780ea765b05d5097
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187281"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114192"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Диалоговое окно «Настройки диаграммы роста прибыли» (представление диаграммы точности интеллектуального анализа данных)
   Используйте диалоговое окно **Настройки диаграммы роста прибыли** для настройки параметров формирования диаграммы роста прибыли. Дополнительные сведения о диаграммах роста прибыли см. в разделе [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](data-mining/lift-chart-analysis-services-data-mining.md).  

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Command line options, help option
 - Command line options, log file option
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: beddb03c2d5806f9a3e3114346808d54379a9d74
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5f47721b1c7d370ce614cd24e800eef0fef03dbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395373"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737592"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Параметры командной строки в консоли SSMA (MySQLToSQL)
 Майкрософт предоставляет надежные параметры командной строки для выполнения и SSMA действия управления. В последующих разделах подробно описано же.  

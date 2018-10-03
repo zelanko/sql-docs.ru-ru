@@ -1,14 +1,11 @@
 ---
-title: log_shipping_monitor_error_detail (Transact-SQL) | Документы Microsoft
+title: log_shipping_monitor_error_detail (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_error_detail_TSQL
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7c41916a3ce32eacc974debb2a82e6c24a2c41a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5e0228072bee91f96e816a1d0f369f85fa486728
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770333"
 ---
 # <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,15 +45,15 @@ ms.lasthandoff: 05/04/2018
 |**источник**|**nvarchar**|Источник сообщения об ошибке или событии.|  
 |**help_url**|**nvarchar**|URL-адрес, по которому в случае доступности могут быть найдены дополнительные сведения о данной ошибке.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта таблица содержит подробные сведения об ошибках для агентов доставки журнала. Каждая ошибка регистрируется как последовательность исключений. Может быть несколько ошибок (последовательности) для каждого сеанса агента.  
   
- Помимо хранения на удаленном сервере мониторинга, хранятся сведения, связанные с сервера-источника на сервере-источнике в его **log_shipping_monitor_error_detail** таблицы и сведения, связанные с сервером-получателем также хранится на сервере-получателе в его **log_shipping_monitor_error_detail** таблицы.  
+ Помимо хранения на удаленном сервере мониторинга, сведения, относящиеся к серверу-источнику хранится на сервере-источнике в его **log_shipping_monitor_error_detail** таблицы и сведения, связанные с сервером-получателем также хранится на сервере-получателе в его **log_shipping_monitor_error_detail** таблицы.  
   
- Чтобы идентифицировать сеанс агента, используйте столбцы **agent_id**, **agent_type**, и **session_id**. Сортировать по **log_time** информацию об ошибках в том порядке, в котором они были зарегистрированы.  
+ Чтобы идентифицировать сеанс агента, используйте столбцы **agent_id**, **agent_type**, и **session_id**. Сортировать по **log_time** информацию об ошибках, в том порядке, в котором они были зарегистрированы.  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_monitor_history_detail &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
  [sp_cleanup_log_shipping_history (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   

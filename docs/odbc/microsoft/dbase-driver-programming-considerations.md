@@ -1,13 +1,11 @@
 ---
-title: Вопросы программирования драйвера dBASE | Документы Microsoft
+title: Замечания по программированию драйверов для dBASE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - DBase driver [ODBC]
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc3286390488bee0ff6c2ac3d00670b364493769
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa9303f5108ef97f077764122481565df1937a4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618812"
 ---
-# <a name="dbase-driver-programming-considerations"></a>Рекомендации по программированию драйвера dBASE
+# <a name="dbase-driver-programming-considerations"></a>Замечания по программированию драйверов для dBASE
 Этот раздел содержит следующие подразделы.  
   
 -   [Программная настройка параметров драйвера для dBASE](../../odbc/microsoft/setting-options-programmatically-for-the-dbase-driver.md)  
@@ -38,4 +35,4 @@ ms.locfileid: "32898449"
 -   [Другие сведения о программировании драйверов для dBASE](../../odbc/microsoft/other-dbase-driver-programming-details.md)  
   
 > [!NOTE]  
->  Доступ к файлы dBASE ISAM через драйверы ODBC системной базы данных требует установки компонента Borland database engine.
+>  Доступ к dBASE ISAM файлов через драйверы для баз данных ODBC Desktop требует установки компонента Borland database engine.

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36584cce341bdbe0e13b917cbe1bcc47469d0deb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328584"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114454"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Определение свойств родительского атрибута в иерархии «родители-потомки»
   Иерархия типа «родители-потомки» представляет собой иерархию в измерении, которая основана на двух столбцах таблицы. Вместе эти столбцы определяют иерархическую связь между элементами измерения. Первый столбец, называемый *ключевым столбцом элемента*, идентифицирует каждый элемент измерения. Второй столбец, называемый *родительским столбцом*, идентифицирует родителя для каждого из элементов измерения. Свойство **NamingTemplate** родительского атрибута определяет имя каждого уровня в иерархии типа "родители-потомки", а свойство **MembersWithData** — будут ли отображаться данные для родительских элементов.  

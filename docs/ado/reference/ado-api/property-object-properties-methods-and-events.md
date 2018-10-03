@@ -1,35 +1,32 @@
 ---
-title: Свойства объекта свойства, методы и события | Документы Microsoft
+title: Объект свойства, методы и события | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Property object [ADO], members
 ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abf83d2b2099a88c006891bb04ea5913abd12c4d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f23c35833c121214c9d51d89f3ba8c2165b346c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280749"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839822"
 ---
-# <a name="property-object-properties-methods-and-events"></a>Свойства объекта свойства, методы и события
+# <a name="property-object-properties-methods-and-events"></a>Объект свойства, методы и события
 ## <a name="properties"></a>Свойства  
  [Атрибуты свойства](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
- [Имя свойства](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Свойство Name](../../../ado/reference/ado-api/name-property-ado.md)  
   
- [Свойство типа](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Свойство Type](../../../ado/reference/ado-api/type-property-ado.md)  
   
  [Значение свойства](../../../ado/reference/ado-api/value-property-ado.md)  
   

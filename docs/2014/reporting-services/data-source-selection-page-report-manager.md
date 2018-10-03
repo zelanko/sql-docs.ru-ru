@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 528e30c885150e3d9fc422449987ba211e77161b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db1e01a18d755076585c64ee3518492c8f5de561
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256483"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091144"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Страница «Выбор источника данных» (диспетчер отчетов)
   Страница «Выбор источника данных» позволяет выбрать существующий совместно используемый элемент источника данных для использования в отчете или модели отчета. Эту страницу можно также использовать для выбора другого источника данных. Чтобы просмотреть тип источника данных или строку соединения, необходимо переместиться к общему источнику данных и открыть страницы «Свойства».  

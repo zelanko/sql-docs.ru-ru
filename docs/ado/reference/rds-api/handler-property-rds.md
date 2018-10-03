@@ -1,36 +1,33 @@
 ---
-title: Свойство обработчика (RDS) | Документы Microsoft
+title: Свойство Handler (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab8e1c2fdfe518a7ab1f331e6961ed6b84b1b33e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038cb740cd2d8e2457f83f829c85f4d6598b9f97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288360"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824082"
 ---
-# <a name="handler-property-rds"></a>Свойство обработчика (RDS)
-Указывает имя программы настройки на стороне сервера (обработчик), которая расширяет функциональность [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)и любые параметры, используемые *обработчик*.  
+# <a name="handler-property-rds"></a>Свойство Handler (служба удаленных рабочих столов)
+Указывает имя программы Настройка на сервере (обработчик), который расширяет функциональность [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)и любые параметры, используемые объектом *обработчик*.  
   
- **Область применения:** [DataControl объекта (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **Область применения:** [объекта DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,22 +41,22 @@ DataControl.Handler = String
  Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
  *Строковые значения*  
- Объект **строка** значение, содержащее имя обработчика и все параметры всех разделяемых точкой с запятой (например, `"handlerName,parm1,parm2,...,parm` *N*`"`).  
+ Объект **строка** значение, содержащее имя обработчика и все параметры всех разделенных запятыми (например, `"handlerName,parm1,parm2,...,parm` *N*`"`).  
   
 ## <a name="remarks"></a>Примечания  
- Это свойство поддерживает [настройки](../../../ado/guide/remote-data-service/datafactory-customization.md), функциональные возможности этого требует параметр [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойства **adUseClient**.  
+ Это свойство поддерживает [настройки](../../../ado/guide/remote-data-service/datafactory-customization.md), функции, которым требуется параметр [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойства **adUseClient**.  
   
- Имя обработчика и его параметрах, если таковые имеются, разделяются запятыми («,»). Приведет к непредсказуемому поведению, если точка с запятой («;») отображается в любом месте в пределах *строка*. Можно написать собственный обработчик, предоставляемых он поддерживает **IDataFactoryHandler** интерфейса.  
+ Имя обработчика и его параметрах, если таковые имеются, разделяются запятыми («",»"). Приведет к непредсказуемому поведению, если точки с запятой («;») находится в любом положении в *строка*. Можно написать собственный обработчик, если он поддерживает **IDataFactoryHandler** интерфейс.  
   
- Обработчик по умолчанию называется **MSDFMAP. Обработчик**, и его параметр по умолчанию с именем файла настроек **MSDFMAP. INI**. Это свойство можно используйте для вызова альтернативные настройки файлы, созданные администратором сервера.  
+ Имя обработчика по умолчанию — **MSDFMAP. Обработчик**, и его параметр по умолчанию является файл настройки с именем **MSDFMAP. INI**. Это свойство используется для вызова альтернативный настройки файлы, созданные администратором сервера.  
   
- Вместо него следует использовать параметр **обработчик** будет указать обработчик и параметры в свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства; т. е» **обработчик = *** handlerName параметр1, параметр2...;* ".  
+ Альтернатива параметра **обработчик** будет указать обработчик и параметры в свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство; т. е «**обработчик = *** handlerName, parameter1, параметр2...;* ".  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>См. также  
- [Пример свойства обработчика (Visual Basic)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
+ [Пример свойства Handler (Visual Basic)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
  [Настройка DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
 

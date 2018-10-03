@@ -1,33 +1,30 @@
 ---
-title: Настройка служб удаленных рабочих СТОЛОВ | Документы Microsoft
+title: Настройка RDS | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7275d87bc314223231392bd67f9752e29a4c41be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 547588d79d52f81d6f12c8b733829f7e38a6da70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273790"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630682"
 ---
-# <a name="configuring-rds"></a>Настройка служб удаленных рабочих СТОЛОВ
+# <a name="configuring-rds"></a>Настройка RDS
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Для эффективной реализации служб удаленных рабочих СТОЛОВ, убедитесь, что вы знакомы с различных конфигураций, имеющихся для вас. Этот раздел содержит важные сведения о безопасности и масштабируемости в реализации RDS. В следующих разделах сведения о настройке компьютеров для использования RDS.  
+ Чтобы эффективно реализовать служб удаленных рабочих СТОЛОВ, убедитесь, что вы знакомы с различные конфигурации, доступные для вас. Этот раздел содержит важные сведения о безопасности и масштабируемости в реализации RDS. В следующих разделах сведения о настройке компьютера для использования RDS.  
   
 -   [Предоставление прав гостя для компьютера веб-сервера](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   
@@ -48,7 +45,7 @@ ms.locfileid: "35273790"
 -   [Настройка безопасного или неограниченного режимов в DataFactory](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
 ## <a name="see-also"></a>См. также  
- [С помощью связанных технологий с помощью служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
+ [Использование связанных технологий в RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [Настройка DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Устранение неполадок с RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
 

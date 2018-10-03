@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204034"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091264"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Репликация, отслеживание изменений, изменение данных и группы доступности AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Репликация, отслеживание измененных данных (CDC) и отслеживание изменений (CT) поддерживаются в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] помогает обеспечивать высокий уровень доступности и дополнительные возможности восстановления баз данных.  
@@ -188,7 +185,7 @@ ms.locfileid: "37204034"
 ##  <a name="Prereqs"></a> Условия, ограничения и вопросы использования репликации  
  В этом разделе описаны вопросы развертывания репликации при помощи [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], в том числе предварительные условия, ограничения и рекомендации.  
   
-### <a name="prerequisites"></a>предварительные требования  
+### <a name="prerequisites"></a>Предварительные требования  
   
 -   При использовании репликации транзакций и базы данных публикации в группе доступности издатель и распространитель должны иметь версию не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Подписчик может использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]более низкого уровня.  
   

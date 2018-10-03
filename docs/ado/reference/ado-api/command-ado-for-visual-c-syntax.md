@@ -1,13 +1,11 @@
 ---
-title: Команда (ADO для синтаксиса Visual C++) | Документы Microsoft
+title: Команда (синтаксис ADO для Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - Command collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01c460c5d7829d67242259a0c8d3c45e1dc66270
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1c97a8495b1877c8c72dcacba25943c04934abca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851102"
 ---
-# <a name="command-ado-for-visual-c-syntax"></a>Команда (ADO для синтаксиса Visual C++)
+# <a name="command-ado-for-visual-c-syntax"></a>Command (синтаксис ADO для Visual C++)
 ## <a name="methods"></a>Методы  
   
 ```  

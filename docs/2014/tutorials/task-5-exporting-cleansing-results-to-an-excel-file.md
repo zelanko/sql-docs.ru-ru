@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cc3e51ee8b07ad017e6bf33150ec83e30ec4ff8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d2d52304ff9a8dae16e74d9d5aa7324adb2aac4f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155535"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138174"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Задача 5. Экспорт результатов очистки в файл Excel.
   В этой задаче вы экспортируете результаты операции очистки в файл Excel. См. в разделе [этап экспорта](http://msdn.microsoft.com/library/hh213061.aspx#Export) Дополнительные сведения.  

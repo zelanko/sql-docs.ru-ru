@@ -1,14 +1,11 @@
 ---
-title: sys.fn_get_sql (Transact-SQL) | Документы Microsoft
+title: sys.fn_get_sql (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -24,15 +21,15 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5051b76490bc27a5e16aedf16be2bdff2dab8c95
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: db1c1d36bb3cb831a2f744a77529939894fff27a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842062"
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>Аргументы  
  *SqlHandle*  
- Значение дескриптора. *SqlHandle* — **varbinary(64)** без значения по умолчанию.  
+ Значение дескриптора. *SqlHandle* — **varbinary(64)** не имеет значения по умолчанию.  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
@@ -64,19 +61,19 @@ sys.fn_get_sql ( SqlHandle )
 |dbid|**smallint**|Идентификатор базы данных. Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.|  
 |objectid|**int**|Идентификатор объекта базы данных. Имеет значение NULL для нерегламентированных инструкций SQL.|  
 |number|**smallint**|Указывает на номер группы, если процедуры сгруппированы.<br /><br /> 0 = записи не являются процедурами.<br /><br /> NULL = нерегламентированные инструкции SQL.|  
-|encrypted|**бит**|Указывает, зашифрован ли объект.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована|  
+|encrypted|**bit**|Указывает, зашифрован ли объект.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована|  
 |text|**text**|Текст инструкции SQL. Имеет значение NULL для зашифрованных объектов.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Допустимый дескриптор SQL можно получить из столбца sql_handle [sys.dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) динамическое административное представление.  
   
  Если передается дескриптор, больше не существует в кэше, функция fn_get_sq**l** возвращает пустой результирующий набор. Если передается недопустимый дескриптор, выполнение пакета прекращается и возвращается сообщение об ошибке.  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] При кэшировании некоторые [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, такие как инструкции массового копирования и инструкции со строковыми литералами, размер которых превышает 8 КБ. Дескрипторы этих инструкций не могут быть извлечены при помощи функции fn_get_sql.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Не может кэшировать некоторые [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, такие как инструкции массового копирования и инструкции со строковыми литералами, размер которых превышает 8 КБ. Дескрипторы этих инструкций не могут быть извлечены при помощи функции fn_get_sql.  
   
- **Текст** столбца результирующего набора фильтруется по тексту, который может содержать пароли. Дополнительные сведения о безопасности, связанным хранимых процедур, которые не контролируются, см. [фильтра трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
+ **Текст** столбца результирующего набора фильтруется по тексту, который может содержать пароли. Дополнительные сведения о связанных с безопасностью хранимых процедур, которые не контролируются, см. в разделе [фильтра трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
   
- Функция fn_get_sql возвращает сведения об ошибке [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) команды. Ниже приведены случаи, когда функцию fn_get_sql использовать можно, а команду DBCC INPUTBUFFER — нельзя:  
+ Функция fn_get_sql возвращает сведения, аналогичную [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) команды. Ниже приведены случаи, когда функцию fn_get_sql использовать можно, а команду DBCC INPUTBUFFER — нельзя:  
   
 -   если событие содержит более чем 255 символов;  
   
@@ -98,7 +95,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
+ [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
  [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   

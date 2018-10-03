@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - Sql11.ssms.XeWizard.Summary.f1
 - Sql11.ssms.XeWizard.SelectEvents.f1
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc5a2f60cfeff0289bb0a16476fb2506c3beda6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc69e3683656c5705e7e82df27b80a8a41cb81a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067884"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>создать сеанс расширенных событий с помощью пользовательского интерфейса нового сеанса (обозреватель объектов)
   Для повышения удобства выбора и отслеживания событий на сервере в расширенных событиях предусмотрен мастер создания сеансов, который помогает создавать сеансы расширенных событий. Мастер создания сеанса предоставляет доступ к большинству функций для обработки расширенных событий. В диалоговом окне [Создание сеанса](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) также можно задать сеанс расширенных событий, в ходе которого будет выполняться сбор, отображение и анализ данных. Диалоговое окно «Создание сеанса» включает все функции расширенных событий.  

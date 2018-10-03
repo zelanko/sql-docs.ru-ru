@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 45
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c0537173f3b3750c56ef7e4ef2b582df162f54df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a13deff4d15d38286c943ce080faf6bf7ce1ca55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288670"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111244"
 ---
 # <a name="extensible-key-management-ekm"></a>Расширенное управление ключами (Extensible Key Management)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] наряду с *расширенным управлением ключами* (EKM) предусматривает возможность шифрования данных с применением поставщика *Microsoft Cryptographic API* (MSCAPI) для шифрования и создания ключа. Ключи шифрования для шифрования данных и ключей создаются в контейнерах временных ключей и перед сохранением в базе данных должны быть экспортированы из поставщика. Благодаря этому подходу управление ключами, содержащее иерархию ключей шифрования и резервирование ключей, может быть обработано [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -135,7 +132,7 @@ DECRYPTION BY EKM_AKey1
 >   
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не поддерживает модули подписания и асимметричные ключи, сформированные из поставщика расширенного управления ключами.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Включенный параметр конфигурации сервера поставщика расширенного управления ключами](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [Включение прозрачного шифрования данных с использованием расширенного управления ключами](enable-tde-on-sql-server-using-ekm.md)  

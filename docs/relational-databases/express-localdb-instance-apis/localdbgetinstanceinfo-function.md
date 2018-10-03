@@ -1,15 +1,12 @@
 ---
-title: Функция LocalDBGetInstanceInfo | Документы Microsoft
+title: Функция LocalDBGetInstanceInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetInstanceInfo
@@ -17,21 +14,21 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5bb8e123f084b20fb16e3fd4e0e52bd482a2760b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 239dfd78fd2f1ce4721953c53efeb47cb29da4cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740339"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Функция LocalDBGetInstanceInfo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Возвращает сведения об указанном экземпляре среды выполнения экземпляра SQL Server Express LocalDB, в частности существует ли этот экземпляр, версия используемой им LocalDB, запущен ли экземпляр и т. п.  
   
- Сведения, возвращаемые в **структуры** с именем **LocalDBInstanceInfo**, который имеет следующее определение.  
+ Сведения возвращаются в **структуры** с именем **LocalDBInstanceInfo**, который имеет следующее определение.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -132,9 +129,9 @@ HRESULT LocalDBGetInstanceInfo(
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
 ## <a name="details"></a>Сведения  
- Обоснование появлением **структуры** аргумент размера (*lpInstanceInfoSize*) — научить API для возврата разных версий **LocalDBInstanceInfostruct**, эффективно Включение прямой и обратной совместимости.  
+ Обоснование появлением **структуры** аргумент размера (*lpInstanceInfoSize*) является возможность API мог возвращать различные версии структуры **LocalDBInstanceInfostruct**, что включение прямой и обратной совместимости.  
   
- Если **структуры** аргумент размера (*lpInstanceInfoSize*) соответствует размеру известной версии **LocalDBInstanceInfostruct**, соответствующей версии  **Структура** возвращается. В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
+ Если **структуры** аргумент размера (*lpInstanceInfoSize*) соответствует размеру известной версии **LocalDBInstanceInfostruct**, эту версию  **Структура** возвращается. В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
   
  Типичным примером **LocalDBGetInstanceInfo** использование API выглядит следующим образом:  
   

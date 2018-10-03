@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 111
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e565c0750db83191273c66978ae1b1816d1c1d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d21a944b037affb71700bf49cf665331acb60e1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149174"
 ---
 # <a name="dtutil-utility"></a>dtutil, программа
   **Dtutil** служебная программа p1ompt команда используется для управления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] пакетов. Программа может копировать, перемещать, удалять пакет или проверять его существование. Эти действия могут выполняться с любым из пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] , который хранится в любом из трех мест: база данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и файловая система. Если программа имеет доступ к пакету, хранимому в **msdb**, в командной строке может быть необходимо ввести имя пользователя и пароль. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в командной строке необходимо ввести и имя пользователя, и пароль. Если имя пользователя отсутствует, **dtutil** попытается войти на сервер [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используя проверку подлинности Windows. Тип хранилища пакета определяется параметрами `/SQL`, `/FILE` и `/DTS`.  

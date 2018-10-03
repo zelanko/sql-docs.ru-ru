@@ -1,31 +1,28 @@
 ---
-title: Метод AddNew пример (Visual Basic) | Документы Microsoft
+title: Пример метода AddNew (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - AddNew method [ADO], Visual Basic example
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f78f0c331b9355a3c19c0c168ece1be0148e45b3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7ce53a2ef95631ee27f7691cb9193424980b2956
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714072"
 ---
-# <a name="addnew-method-example-vb"></a>Метод AddNew пример (Visual Basic)
+# <a name="addnew-method-example-vb"></a>Пример метода AddNew (Visual Basic)
 В этом примере используется [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) метод, чтобы создать новую запись с указанным именем.  
   
 ```  

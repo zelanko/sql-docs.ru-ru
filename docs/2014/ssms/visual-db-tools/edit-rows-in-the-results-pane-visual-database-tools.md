@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.pane.results
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66e00780b3b4a8f6cb600956b45e76c8989171fb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0c837864701814ce0a1a9a45735cd8524bda1a90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121874"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>изменить строки на панели результатов (визуальные инструменты для баз данных)
   В большинстве случаев данные на [панели результатов](visual-database-tools.md)можно изменять. Сведения об изменении данных см. в разделах [Правила обновления результатов (визуальные инструменты для баз данных)](rules-for-updating-results-visual-database-tools.md) и [Работа с данными на панели результатов (визуальные инструменты для баз данных)](work-with-data-in-the-results-pane-visual-database-tools.md)можно изменять.  

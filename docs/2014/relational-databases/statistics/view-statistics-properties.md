@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.statistics.details.f1
@@ -17,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 597ab8195b46b7e8badb6bd2b48744493152d988
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 92641d34920b0ef7ea7a9e7ad929e6976d644ffe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064200"
 ---
 # <a name="view-statistics-properties"></a>Просмотр свойств статистики
   Статистику оптимизации текущего запроса для таблицы или индексированного представления можно просмотреть в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Объекты статистики включают заголовок, содержащий метаданные о статистике, гистограмму, содержащую распределение значений в первом ключевом столбце объекта статистики, и вектор плотностей для измерения корреляции с охватом нескольких столбцов. Дополнительные сведения о гистограммах и векторах плотностей см. в статье [DBCC SHOW_STATISTICS (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)  
