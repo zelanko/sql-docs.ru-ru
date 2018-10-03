@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64c32d1497a0bc54f6d3d72779ca65f1b5fa05d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c908154b21c1adca88b959d0a1d1243a0465ea02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951959"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609962"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, объект User Settable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +33,13 @@ ms.locfileid: "32951959"
   
  В этой таблице приводится описание объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
   
-|SQL Server, счетчики User Settable|Description|  
+|SQL Server, счетчики User Settable|Описание|  
 |---------------------------------------|-----------------|  
 |**Запрос**|Объект **User Settable** содержит счетчик запроса. Пользователи настраивают **User counters** в рамках объекта запроса.|  
   
  В данной таблице приводится описание **экземпляров** счетчика **Query** .  
   
-|Экземпляры счетчиков запросов|Description|  
+|Экземпляры счетчиков запросов|Описание|  
 |-----------------------------|-----------------|  
 |**User counter 1**|Определяется хранимой процедурой **sp_user_counter1**.|  
 |**User counter 2**|Определяется хранимой процедурой **sp_user_counter2**.|  

@@ -1,30 +1,27 @@
 ---
-title: Интерфейс ISQLServerPreparedStatement | Документы Microsoft
+title: Интерфейс ISQLServerPreparedStatement | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ec1e10bc98fe8e1f61c15d97777e1c85a27031e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 98d1e33b3775e6aaafa3951cb38de286694f203c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615152"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>Интерфейс ISQLServerPreparedStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Представляет базовую реализацию функциональности подготовленной инструкции JDBC. Этот интерфейс добавлен в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] версии 3.0 драйвера JDBC.  
+  Представляет базовую реализацию функциональности подготовленной инструкции JDBC. Этот интерфейс добавлен в версии 3.0 драйвера JDBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  **Пакет:** com.microsoft.sqlserver.jdbc  
   
@@ -37,16 +34,16 @@ ms.locfileid: "32839049"
 public interface ISQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот интерфейс реализуется [класс SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
   
- Этот интерфейс предоставляет следующие [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-определенных методов:  
+ Этот интерфейс обеспечивает доступ к следующим методам, определяемым [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  
   
 |Метод|Дополнительные сведения см. в разделе|  
 |------------|-------------------------------|  
 |public void setDateTimeOffset(int, microsoft.sql.DateTimeOffset)|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по API для драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+## <a name="see-also"></a>См. также:  
+ [Справка по API драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   
