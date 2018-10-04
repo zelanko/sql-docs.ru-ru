@@ -1,14 +1,11 @@
 ---
-title: Доступ к поставщику WMI для управления конфигурацией с помощью WQL | Документы Microsoft
+title: Доступ к поставщику WMI для управления конфигурацией с использованием WQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - query language [WMI]
@@ -16,15 +13,15 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cece73ebb5402fe2f725fedbcdf7cdc833d08265
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e05bbb4a9d41f88c4c2981aff9a3565bbc14bb92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692832"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>производить доступ к поставщику WMI для управления конфигурацией с использованием WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +31,13 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="querying-services-using-wbemtest"></a>Запрос служб с помощью WBEMtest  
   
-1.  Из **запустить** меню, нажмите кнопку **запуска**, а затем введите **WBEMtest**.  
+1.  Из **запустить** меню, щелкните **запуска**, а затем введите **WBEMtest**.  
   
 2.  Откроется диалоговое окно приложения WBEMtest.exe. Нажмите кнопку **Соединить**.  
   
 3.  В первом текстовом поле введите пространство имен поставщика WMI для управления компьютером: root\Microsoft\SqlServer\ComputerManagement11. Нажмите кнопку **Соединить**.  
   
-4.  Нажмите кнопку **запроса**. Введите запрос, который возвращает текущее служб, запущенных на локальном компьютере: **ВЫБЕРИТЕ \* из SqlService.** Нажмите кнопку **Применить**.  
+4.  Нажмите кнопку **запроса**. Введите запрос, возвращающий текущей службы, запущенные на локальном компьютере: **ВЫБЕРИТЕ \* из SqlService.** Нажмите кнопку **Применить**.  
   
 5.  Уточните запрос, добавив **ГДЕ ServiceName = «MSSQLSERVER»**.  
   

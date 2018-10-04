@@ -1,13 +1,11 @@
 ---
-title: Flush-метод (ADO) | Документы Microsoft
+title: Метод Flush (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Flush method [ADO]
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 931d8a2546c9a4d5c41d6b2348a7db5d9ad312ef
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 66deae3833a738075259928855881f87b64ef0dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278773"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636072"
 ---
-# <a name="flush-method-ado"></a>Flush-метод (ADO)
-Заставляет содержимое [поток](../../../ado/reference/ado-api/stream-object-ado.md) оставшиеся в буфере ADO для базового объекта, с которым **поток** связан.  
+# <a name="flush-method-ado"></a>Метод Flush (ADO)
+Заставляет содержимое [Stream](../../../ado/reference/ado-api/stream-object-ado.md) остающихся в буфере ADO к базовому объекту с помощью которого **Stream** связан.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,9 +35,9 @@ Stream.Flush
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Этот метод можно использовать для отправки содержимого буфера потока к базовому объекту: например, узел или файл, представленный URL-адрес, который является источником **поток** объекта. Этот метод должен вызываться, если вы хотите убедиться, что все изменения, внесенные в содержимое **поток** были записаны. Однако при использовании ADO необязательно обычно для вызова **Flush**, как ADO постоянно записывает свой буфер, насколько возможно в фоновом режиме. Изменения содержимого **поток** производится автоматически, не кэшируются до **Flush** вызывается.  
+ Этот метод можно использовать для отправки содержимого буфера потока к базовому объекту: например, узел или файл, представленный URL-адрес, который является источником **Stream** объекта. Этот метод должен быть вызван, если вы хотите убедиться, что все изменения, внесенные в содержимое **Stream** были записаны. Тем не менее, с помощью ADO необязательно обычно для вызова **Flush**, как ADO постоянно очищает его буфер, насколько это возможно в фоновом режиме. Изменения в содержимое **Stream** , производятся автоматически не кэшируются до **Flush** вызывается.  
   
- Закрытие **поток** с [закрыть](../../../ado/reference/ado-api/close-method-ado.md) метод сбрасывает содержимое **поток** автоматически; существует это не требуется явно вызывать **Flush**непосредственно перед **закрыть**.  
+ Закрытие **Stream** с [закрыть](../../../ado/reference/ado-api/close-method-ado.md) метод сбрасывает содержимое **Stream** автоматически; существует это не нужно явно вызывать **Flush**непосредственно перед **закрыть**.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

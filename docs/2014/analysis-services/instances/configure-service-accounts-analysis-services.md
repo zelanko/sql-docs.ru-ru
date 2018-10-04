@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], logon accounts
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12c58fcc3e844e820dbea02e93b52854dc25f05f
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: a8e20d46bb3efbf64d5c8c176c451652e1c870a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077344"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Настройка учетных записей служб (службы Analysis Services)
   Подготовка учетной записи для большого спектра продуктов описана в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), который содержит полные сведения об учетной записи службы для всех служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включая службу [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Обратитесь к ней для изучения допустимых типов учетных записей, привилегий Windows, назначенных при установке, разрешений файловой системы, разрешений регистра и другой информации.  

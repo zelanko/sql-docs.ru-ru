@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ba88d7a078889de09af4bd33e484ae69519721c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5980f2f1213b0f74422cdac773e4dfa9c806fd5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056444"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Гистограммы (построитель отчетов и службы SSRS)
   Гистограмма отображает ряды в виде набора вертикальных прямоугольников, сгруппированных по категориям. Гистограммы удобны для показа изменения данных за период времени и для наглядного сравнения элементов. Простая гистограмма очень похожа на линейчатую диаграмму, которая отображает ряды в виде наборов горизонтальных прямоугольников, и гистограмму диапазонов, которая показывает ряды как наборы вертикальных прямоугольников с различными начальными и конечными точками. Дополнительные сведения см. в разделе [линейчатые диаграммы &#40;построитель отчетов и службы SSRS&#41; ](charts-report-builder-and-ssrs.md) и [диаграммы диапазонов &#40;построитель отчетов и службы SSRS&#41;](range-charts-report-builder-and-ssrs.md).  

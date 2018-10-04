@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b64202ccd2b5f420eceeb0287407656dde1cefe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051346"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Создание представления источников данных (учебник по интеллектуальному анализу данных — начальный уровень)
   Представление источника данных основано на источнике данных, и в нем определяется подмножество данных, которые затем можно использовать в структурах интеллектуального анализа данных. Представление источника данных также можно использовать для добавления столбцов, создания вычисляемых столбцов и статистических выражений и добавления именованных представлений. Используя представления источников данных, можно выбирать данные, которые относятся к конкретному проекту, устанавливать связи между таблицами и менять структуру данных без изменения исходного источника данных. Дополнительные сведения см. в разделе [Представления источников данных в многомерных моделях](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  

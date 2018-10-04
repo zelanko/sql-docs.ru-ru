@@ -1,28 +1,25 @@
 ---
-title: Номер версии | Документы Microsoft
+title: Номер версии | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - version number supported [ODBC]
 - interoperability [ODBC], version number supported
 ms.assetid: 6eccacdf-b837-4b66-bd48-ba31771acecb
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05629fd8d944ed62325a3af5a18d8431c49e1aa2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03678023990fc15d03c73501f331ecc302f6b892
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696202"
 ---
 # <a name="version-number"></a>Номер версии
-Существует несколько версий ODBC, каждый с разными функциями. Приложение определяет, какая версия ODBC Driver Manager и драйвер поддерживает путем вызова **SQLGetInfo** параметры SQL_ODBC_VER и SQL_DRIVER_ODBC_VER.
+Существует несколько версий ODBC, каждый из которых различных функций. Приложение определяет, поддерживаемый ODBC версии диспетчера драйверов и конкретный драйвер, вызвав **SQLGetInfo** параметры SQL_ODBC_VER и SQL_DRIVER_ODBC_VER.

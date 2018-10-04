@@ -1,13 +1,11 @@
 ---
-title: Свойство PrimaryKey (ADOX) | Документы Microsoft
+title: Свойство PrimaryKey (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - PrimaryKey property [ADOX]
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4a13f413e4f18b84133757082879ac4eff7ec58
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f1205c87f1251543521deddd7d1118b602ac7e05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286753"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723512"
 ---
 # <a name="primarykey-property-adox"></a>Свойство PrimaryKey (ADOX)
-Указывает, представляет ли индекс первичного ключа в таблице.  
+Указывает, представляет ли индекс первичного ключа для таблицы.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **логическое** значение.  
@@ -39,11 +36,11 @@ ms.locfileid: "35286753"
 ## <a name="remarks"></a>Примечания  
  Значение по умолчанию равно **False**.  
   
- Это свойство доступно только для чтения на [индекс](../../../ado/reference/adox-api/index-object-adox.md) объектов уже добавлен в коллекцию.  
+ Это свойство доступно только для чтения на [индекс](../../../ado/reference/adox-api/index-object-adox.md) объектов, уже добавлен в коллекцию.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
 ## <a name="see-also"></a>См. также  
- [PrimaryKey и пример уникальные свойства (Visual Basic)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
+ [PrimaryKey и уникальные свойства (Visual Basic)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

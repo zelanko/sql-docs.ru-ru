@@ -1,14 +1,11 @@
 ---
-title: sp_update_category (Transact-SQL) | Документы Microsoft
+title: sp_update_category (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f07e44e12193e506146e299bd57f84b02c802856
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 22cb6ac1283c0ad8e7b423d73f6ec768c90af11c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255750"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670522"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ sp_update_category
   
 ## <a name="arguments"></a>Аргументы  
  [  **@class =**] **"***класс***"**  
- Класс обновляемой категории. *Класс*— **varchar(8)**, без значения по умолчанию и может принимать одно из следующих значений.  
+ Класс обновляемой категории. *Класс*— **varchar(8)**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -65,11 +61,11 @@ sp_update_category
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_update_category** должна запускаться из **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения этой хранимой процедуры пользователь должен обладать **sysadmin** предопределенной роли сервера.  
+ Чтобы выполнить эту хранимую процедуру, пользователям необходимо предоставить **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
  В ходе выполнения следующего примера имя категории заданий изменяется с `AdminJobs` на `Administrative Jobs`.  

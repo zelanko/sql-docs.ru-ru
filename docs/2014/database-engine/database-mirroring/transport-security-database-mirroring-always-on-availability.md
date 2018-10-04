@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - transport security
 - database mirroring [SQL Server], security
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d3f2a6d5dfcba21cea89802a29eec7a56a58936c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291410"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075864"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)
   Защита транспорта подразумевает проверку подлинности и (необязательно) шифрование сообщений, которыми обмениваются базы данных. Для зеркального отображения базы данных и [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]проверка подлинности и шифрование настраиваются в конечной точке зеркального отображения базы данных. Базовые сведения о конечных точках зеркального отображения базы данных см. в разделе [Конечная точка зеркального отображения базы данных (SQL Server)](the-database-mirroring-endpoint-sql-server.md).  

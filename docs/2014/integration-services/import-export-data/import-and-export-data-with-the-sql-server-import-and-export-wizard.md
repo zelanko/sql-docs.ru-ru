@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - sources [Integration Services], copying data
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-caps.latest.revision: 87
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89d81ed6f880404771eb242cd0edf309be94f765
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf8b2906e3e4915abeb76782743394e536bd62d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053210"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>мастер импорта и экспорта SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Мастер импорта и экспорта обеспечивает простейший метод для создания [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакет, который копирует данные из источника в место назначения.  

@@ -1,13 +1,11 @@
 ---
-title: Время и функции даты (драйвер ODBC для Visual FoxPro) | Документы Microsoft
+title: Функции даты (драйвер ODBC для Visual FoxPro) и времени | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
@@ -17,33 +15,32 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f795e12cb2a88bfa1b7e17371745a841a3e6f854
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908709"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644332"
 ---
-# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Время и функции даты (драйвер ODBC для Visual FoxPro)
-В следующей таблице перечислены ODBC функций даты и времени поддерживаются драйвером Visual FoxPro ODBC; Если Visual FoxPro грамматики для той же функции отличается от синтаксиса ODBC, отображается Visual FoxPro эквивалент.  
+# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Функции даты и времени (драйвер ODBC для Visual FoxPro)
+В следующей таблице перечислены ODBC функций даты и времени поддерживаются драйвером Visual FoxPro ODBC; Если Visual FoxPro грамматики для той же функции отличается от синтаксиса ODBC, Visual FoxPro эквивалентное отображаются.  
   
 |Грамматика ODBC|Грамматика Visual FoxPro|  
 |------------------|---------------------------|  
 |ФУНКЦИЯ CURDATE *)*|ДАТА *)*|  
-|CURTIME *)*|ВРЕМЯ *)*|  
-|DAYNAME *(выражение_даты)*|CDOW *(выражение_даты)*|  
-|DAYOFMONTH (*выражение_даты)*|ДЕНЬ *)*|  
+|ФУНКЦИЯ CURTIME *)*|ВРЕМЯ *)*|  
+|Функция DAYNAME *(выражение_даты)*|CDOW *(выражение_даты)*|  
+|DAYOFMONTH (*выражения «выражение_даты»)*|ДЕНЬ *)*|  
 |ЧАС *(выражение_времени)*||  
 |МИНУТЫ *(выражение_времени)*||  
 |МЕСЯЦ *(выражение_времени)*||  
-|Функция MONTHNAME *(выражение_даты)*|CMONTH *(выражение_даты)*|  
+|MONTHNAME *(выражение_даты)*|CMONTH *(выражение_даты)*|  
 |ТЕПЕРЬ *)*|DATETIME *)*|  
 |ВТОРОЙ *(выражение_времени)*|СЕК *(выражение_времени)*|  
-|НЕДЕЛИ *(выражение_даты)*||  
+|НЕДЕЛЯ *(выражение_даты)*||  
 |ГОД *(выражение_даты)*||  
   
  Не поддерживаются следующие функции даты и времени:  
@@ -57,21 +54,21 @@ ms.locfileid: "32908709"
  TIMESTAMPDIFF *(интервал, timestamp_exp1, timestamp_exp2)*  
   
 ## <a name="odbc-escape-sequences"></a>Escape-последовательности ODBC  
- Драйвер также поддерживает escape-последовательность ODBC для данных date и timestamp. Синтаксис предложения escape выглядит следующим образом:  
+ Драйвер также поддерживает escape-последовательность ODBC для данных date и timestamp. Синтаксис escape-предложении выглядит следующим образом:  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)—  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- В этом синтаксисе **d** указывает, что *значение* является датой в *гггг мм дд* формат и **служб терминалов** указывает, что *значение*  представляет собой метку времени в *гггг мм дд чч*[.*f...*] формата. Сокращенный синтаксис для данных date и timestamp выглядит следующим образом:  
+ В этом синтаксисе **d** указывает, что *значение* является датой в *гггг мм дд* формат и **служб терминалов** указывает, что *значение*  представляет собой метку времени в *гггг мм дд чч: мм:*[.*f...*] формат. Сокращенный синтаксис для данных date и timestamp выглядит следующим образом:  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- Например каждая из следующих инструкций обновляет эту таблицу ALLTYPES с помощью сокращенный синтаксис date и timestamp в поддерживаемых команде SQL UPDATE:  
+ Например каждый из следующих инструкций обновляет ALLTYPES таблицу с помощью сокращенный синтаксис date и timestamp в поддерживаемых команду SQL UPDATE:  
   
 ```  
 UPDATE alltypes  
@@ -83,5 +80,5 @@ UPDATE alltypes
    WHERE KEY=111  
 ```  
   
-## <a name="remarks"></a>Замечания  
- Дополнительные сведения об escape-последовательностях см. в разделе [Escape-последовательности ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) в *справочнике программиста ODBC*.
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения об escape-последовательностях см. в разделе [escape-последовательности в ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) в *Справочник по программированию ODBC*.

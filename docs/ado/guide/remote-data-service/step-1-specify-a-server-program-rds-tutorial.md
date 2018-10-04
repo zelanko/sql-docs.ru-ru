@@ -1,32 +1,29 @@
 ---
-title: 'Шаг 1: Укажите программу Server (учебник служб удаленных рабочих СТОЛОВ) | Документы Microsoft'
+title: 'Шаг 1: Укажите программу сервера (учебник по RDS) | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], specifying server program
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68468c97d870f103260c8a5ee1b7914c2ecc378a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8dd842dd689b8aa15203f0918c44b7047831bb93
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274563"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732272"
 ---
-# <a name="step-1-specify-a-server-program-rds-tutorial"></a>Шаг 1: Укажите программу Server (служб удаленных рабочих СТОЛОВ учебник)
-В общем случае использовать [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) объекта [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) метод, чтобы указать программу по умолчанию сервера [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), или собственную программу на другой сервер (бизнес-объекта). Программа server создается на сервере и ссылку на программу сервера или *прокси-сервера*, возвращается.  
+# <a name="step-1-specify-a-server-program-rds-tutorial"></a>Шаг 1. Укажите программу сервера (учебник по RDS)
+В общем случае использовать [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) объект [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) метод, чтобы задать программу сервера по умолчанию [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), или собственную программу пользовательский сервер (бизнес-объекта). Программа server создается на сервере и ссылку на программу сервера или *прокси-сервера*, возвращается.  
   
- В этом учебнике используется серверной программы по умолчанию:  
+ В этом руководстве используется серверной программы по умолчанию:  
   
 ```  
 Sub RDSTutorial1()  
@@ -37,8 +34,8 @@ Sub RDSTutorial1()
 ```  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>См. также  
- [Шаг 2: Вызвать программу Server (служб удаленных рабочих СТОЛОВ учебник)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)   
+ [Шаг 2: Вызовите программу сервера (учебник по RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

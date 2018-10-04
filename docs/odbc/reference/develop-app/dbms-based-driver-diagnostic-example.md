@@ -1,34 +1,31 @@
 ---
-title: Пример диагностики на основе СУБД драйвера | Документы Microsoft
+title: Пример диагностики драйверов на основе СУБД | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DBMS-based driver diagnostic [ODBC]
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d2f26421a71edad627dcc4d89c854dbafa78766
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0485ecf720cb84580c17c77b31fc6816de2e679a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910849"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622272"
 ---
-# <a name="dbms-based-driver-diagnostic-example"></a>Пример диагностики драйверов на основе DBMS
-Драйвер на основе СУБД отправляет запросы к СУБД и возвращает сведения в приложение через диспетчер драйверов. Поскольку драйвер — это компонент, который взаимодействует с диспетчером драйверов, он форматирует и возвращает аргументы для **SQLGetDiagRec**.  
+# <a name="dbms-based-driver-diagnostic-example"></a>Пример диагностики драйверов на основе СУБД
+Драйверов на основе СУБД отправляет запросы к СУБД и возвращает сведения в приложение через диспетчер драйверов. Так как драйвер является компонентом, который взаимодействует с диспетчером драйверов, он форматирует и возвращает аргументы для **SQLGetDiagRec**.  
   
- Например, если с помощью SQL-служб, драйвер Microsoft для Oracle Rdb обнаружил недопустимое имя курсора может возвращать следующие значения из **SQLGetDiagRec**:  
+ Например, если используется SQL и служб, драйвер Майкрософт для Oracle Rdb обнаружил недопустимое имя курсора, могут возвращать следующие значения из **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "34000"  
@@ -36,9 +33,9 @@ Native Error:      0
 Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver]Invalid cursor name: EMPLOYEE_CURSOR."  
 ```  
   
- Из-за ошибки в драйвере, он добавляется префиксы диагностическое сообщение для поставщика ([Microsoft]) и драйвер ([Rdb драйвер ODBC]).  
+ Из-за ошибки в драйвере, она добавляется префиксы диагностическое сообщение для поставщика ([Microsoft]) и драйвер ([драйвер ODBC для Rdb]).  
   
- СУБД не удалось найти таблицу СОТРУДНИКОВ, драйвер может форматировать и возвращать следующие значения из **SQLGetDiagRec**:  
+ Если СУБД не удалось найти таблицу СОТРУДНИКОВ, драйвер может форматировать и вернуть следующие значения из **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "42S02"  
@@ -47,4 +44,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
                   "is not defined in schema."  
 ```  
   
- Из-за ошибки в источнике данных, драйвер добавлен префикс для идентификатор источника данных ([Rdb]) диагностическое сообщение. Так как драйвер компонента, сопряженный с источником данных, он добавляется префиксы для поставщика ([Microsoft]) и идентификатор ([Rdb драйвер ODBC]) диагностическое сообщение.
+ Из-за ошибки в источнике данных, драйвер добавлен префикс для идентификатор источника данных ([Rdb]) для диагностическое сообщение. Так как драйвер не компонент, сопряженный с источником данных, она добавляется префиксы для поставщика ([Microsoft]) и идентификатор ([драйвер ODBC для Rdb]) диагностическое сообщение.

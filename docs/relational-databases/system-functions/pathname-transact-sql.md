@@ -1,14 +1,11 @@
 ---
-title: PathName (Transact-SQL) | Документы Microsoft
+title: PathName (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
@@ -18,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80fc13baa2d538e054ed88607cd4b45c6477cb6e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852022"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает путь в виде большого двоичного объекта (BLOB) FILESTREAM. OpenSqlFilestream API использует этот путь возвращает дескриптор, приложение может использовать для работы с данными большого двоичного ОБЪЕКТА с помощью API-интерфейсов Win32. Функция PathName доступна только для чтения.  
+  Возвращает путь в виде большого двоичного объекта (BLOB) FILESTREAM. OpenSqlFilestream API использует этот путь, чтобы вернуть дескриптор, который приложение может использовать для работы с данными больших двоичных ОБЪЕКТОВ с помощью API-интерфейсов Win32. Функция PathName доступна только для чтения.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,23 +43,23 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *column_name*  
  Имя столбца **varbinary(max)** столбец FILESTREAM. *column_name* должно быть именем столбца. Он не может быть выражением или результатом инструкции CAST или CONVERT.  
   
- PathName для столбца, в любой другой тип данных или для **varbinary(max)** columnthat не вызывают ошибку компиляции запроса будет атрибут хранилища FILESTREAM.  
+ PathName для столбца, в любой другой тип данных или для **varbinary(max)** columnthat не поддерживает FILESTREAM хранилища атрибутов, возникнет ошибка компиляции запроса.  
   
  *@option*  
  Целое число [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющий способ форматирования серверных компонентов пути. *@option* может принимать одно из следующих значений. Значение по умолчанию равно 0.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|0|Пример возвращает имя сервера, преобразовать в BIOS форматирование. `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|0|Пример возвращает имя сервера, преобразованное в BIOS формат: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Возвращает имя сервера без преобразования, например: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|Возвращает полный путь сервера, например: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
- Битовое значение, определяет, как следует возвращать имя сервера в группе доступности Always On.  
+ Значение бита, определяет, как имя сервера должно возвращаться в группе доступности Always On.  
   
- Если базы данных не принадлежит к группе доступности Always On, значение этого аргумента игнорируется. В пути всегда используется имя компьютера.  
+ Когда базы данных не принадлежит к группе доступности Always On, то значение этого аргумента игнорируется. В пути всегда используется имя компьютера.  
   
- Если база данных принадлежит доступности Always On группы, затем значение *use_replica_computer_name* приведет к следующим последствиям на выходе **PathName** функции:  
+ При доступности Always On база данных принадлежит группе, затем значение *use_replica_computer_name* следующим образом влияет на выходные данные **PathName** функции:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -76,7 +73,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение является полным логическим путем или путем NETBIOS объекта BLOB. PathName не возвращает IP-адрес. Возвращается значение NULL, если объект FILESTREAM BLOB не создан.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Столбец ROWGUID должен быть виден любому запросу, который вызывает функцию PathName.  
   
  Объект FILESTREAM BLOB можно создать только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -152,7 +149,7 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Большой двоичный объект &#40;BLOB-объект& #41;Данные&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Доступ к данным FILESTREAM с OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

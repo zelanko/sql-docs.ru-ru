@@ -1,13 +1,11 @@
 ---
-title: XactAttributeEnum | Документы Microsoft
+title: XactAttributeEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - XactAttributeEnum enumeration [ADO]
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c99e449171b347290f832950f265c6579ba6a630
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2098830a06f8e5c2ddc38b12f0c035ec513433ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283213"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678422"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
-Задает атрибуты транзакции [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
+Указывает атрибуты транзакции [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adXactAbortRetaining**|262144|Выполняет сохранение прерываний с помощью вызова [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) для автоматически запускает новую транзакцию. Не все поставщики поддерживают этот режим.|  
-|**adXactCommitRetaining**|131072|Выполняет сохранение фиксируется путем вызова [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) автоматический запуск новой транзакции. Не все поставщики поддерживают этот режим.|  
+|**adXactAbortRetaining**|262144|Выполняет сохранение прерываний путем вызова [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) автоматически запустить новую транзакцию. Не все поставщики поддерживают такое поведение.|  
+|**adXactCommitRetaining**|131072|Выполняет сохранение фиксации путем вызова [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) автоматически запустить новую транзакцию. Не все поставщики поддерживают такое поведение.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
  Пакет: **com.ms.wfc.data**  
   
 |Константа|  

@@ -1,13 +1,11 @@
 ---
-title: Значение свойства (ADO MD) | Документы Microsoft
+title: Значение свойства (многомерные Объекты ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,22 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO MD]
 ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d3345a837c26e50ee516898015d5179d3cb6c6e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fe3426b6e4ef8f2174cf12ba4db8883e4a5a83a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284513"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784212"
 ---
-# <a name="value-property-ado-md"></a>Значение свойства (ADO MD)
-Указывает значение текущей [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  
+# <a name="value-property-ado-md"></a>Свойство Value (многомерные объекты ADO)
+Указывает значение текущего [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает **Variant** и доступно только для чтения.  
+ Возвращает **Variant** и доступен только для чтения.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Cell (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  

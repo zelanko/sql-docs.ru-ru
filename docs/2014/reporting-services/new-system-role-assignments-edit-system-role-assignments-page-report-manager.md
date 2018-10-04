@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6b580fc8ab1a2558d8c356372d6ccbd4f40ebb95
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26a2ca4499787fce12508e55bb5197b6f0c6f527
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053994"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Страница "Создание назначения системной роли": "Изменение назначения системных ролей" (диспетчер отчетов)
   Используйте страницу «Создание назначений системной роли» или «Изменение назначений системной роли», чтобы определить параметры безопасности сервера отчетов. Все параметры безопасности определяются через назначение ролей, которое позволяет сопоставить отдельных пользователей и группы с задачами, которые те могут выполнять. Список задач представлен в виде определения роли, которое выбирается при назначении ролей.  

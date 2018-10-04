@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - backing up databases [SQL Server], copying databases
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
-caps.latest.revision: 59
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b51404c994bd4a5029bc9e2d592db020747492fb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164895"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057194"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Копирование баз данных путем создания и восстановления резервных копий
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно создать новую базу данных, восстановив резервную копию пользовательской базы данных, созданной в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии. Однако резервные копии баз данных **master**, **model** и **msdb** , созданных в более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , восстановить на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]невозможно. Кроме того, резервные копии, созданные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , невозможно восстановить в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -66,7 +63,7 @@ ms.locfileid: "37164895"
  Чтобы избежать ошибок и непредвиденных последствий перед операцией восстановления, можно использовать [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) таблицы журнала, чтобы найти файлы базы данных и журнала в резервной копии, которые планируется восстановить.  
   
 ## <a name="moving-the-database-files"></a>Перемещение файлов баз данных  
- Если файлы резервной копии базы данных нельзя восстановить на целевом компьютере по причинам, перечисленным выше, необходимо переместить файлы в новое место назначения, где они могут быть восстановлены. Например:  
+ Если файлы резервной копии базы данных нельзя восстановить на целевом компьютере по причинам, перечисленным выше, необходимо переместить файлы в новое место назначения, где они могут быть восстановлены. Пример:  
   
 -   Нужно восстановить базу данных из резервных копий, созданных в месте расположения по умолчанию для предыдущей версии.  
   

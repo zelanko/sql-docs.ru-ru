@@ -1,32 +1,29 @@
 ---
-title: Пример метода OpenSchema (VB) | Документы Microsoft
+title: Пример метода OpenSchema (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - OpenSchema method [ADO], Visual Basic example
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2ebcb40cc91f93c7810223304e0dde2ed45a21a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b8889cf8cf24ddc9befd356af98d8c982eb562ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279953"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778992"
 ---
 # <a name="openschema-method-example-vb"></a>Пример метода OpenSchema (Visual Basic)
-В этом примере используется [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) метод, чтобы отобразить имя и тип каждой таблицы в ***Pubs*** базы данных.  
+В этом примере используется [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) метод, чтобы отобразить имя и тип для всех таблиц в ***Pubs*** базы данных.  
   
 ```  
 'BeginOpenSchemaVB  
@@ -82,7 +79,7 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- В этом примере указывается ограничение запроса TABLE_TYPE в **OpenSchema** метод ***критерии*** аргумент. В результате только сведения о схеме для представления указанного в ***Pubs*** возвращаются базы данных. В примере затем отображаются имена и типы для каждой таблицы.  
+ В этом примере указывается ограничение запроса TABLE_TYPE в **OpenSchema** метод ***критерии*** аргумент. В результате только сведения о схеме для представления указанного в ***Pubs*** возвращаются базы данных. Затем выполняется отображение соответствующие имена и типы из каждой таблицы.  
   
 ```  
 Attribute VB_Name = "OpenSchema"  

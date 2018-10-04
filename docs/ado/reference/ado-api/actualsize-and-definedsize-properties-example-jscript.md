@@ -1,13 +1,11 @@
 ---
-title: ActualSize и пример свойства DefinedSize (JScript) | Документы Microsoft
+title: Примеры ActualSize и Definedsize свойства (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ActualSize property [ADO], JScript example
 - DefinedSize property [ADO], JScript example
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c04e9179c1d040581a8447ea8309e59ef3e4754
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d16ef9737201956d80c5ad70f3e9281bf7fb6edc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275053"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772882"
 ---
-# <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize и пример свойства DefinedSize (JScript)
-В этом примере используется [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) свойства для отображения определенный размер и фактический размер поля. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ActualSizeJS.asp**.  
+# <a name="actualsize-and-definedsize-properties-example-jscript"></a>Примеры свойств ActualSize и DefinedSize (JScript)
+В этом примере используется [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) свойства для отображения определенного размера, а фактический размер поля. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ActualSizeJS.asp**.  
   
 ```  
 <!-- BeginActualSizeJS -->  

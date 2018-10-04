@@ -6,26 +6,23 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 - service providers [ADO]
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 085e0caa494baf624468ccb4f4c4bd99020c588b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e4ae286264f4f896fe1b8a36d9c400367bd818dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662432"
 ---
-# <a name="service-providers-and-components"></a>Поставщики служб и компонентов
+# <a name="service-providers-and-components"></a>Поставщики служб и компоненты
 Поставщики услуг — это компоненты, которые расширяют функциональные возможности поставщиков данных, реализовав расширенные интерфейсы, которые изначально не поддерживаются хранилищем данных.  
   
  Предоставляет универсальный доступ к данным *архитектура компонентов* , позволяющий компонентов отдельных, специализированного для реализации отдельных наборов функций базы данных или «службы», поверх меньшими возможностями хранилищ. Таким образом вместо того, чтобы принудительно каждого хранилища данных, чтобы предоставить собственную реализацию расширенных функциональных возможностей или принудительное универсальных приложений для внутренней реализации функциональности базы данных, компоненты службы обеспечивают общую реализацию, которая может любое приложение Используйте при доступе к любому хранилищу данных. Тот факт, что некоторые функции в собственном коде реализуется по хранилищу данных, а часть — через общие компоненты является прозрачным для приложения.  

@@ -1,14 +1,11 @@
 ---
-title: sp_delete_database_backuphistory (Transact-SQL) | Документы Microsoft
+title: sp_delete_database_backuphistory (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_database_backuphistory
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_database_backuphistory
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64eda53e73aa4765ba1f846f8151c2cad1c05227
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5393a2c9808584cfcc52088ad32f63c8a4ec2562
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731482"
 ---
 # <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +47,9 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_delete_database_backuphistory** должна запускаться из **msdb** базы данных.  
   
  Эта хранимая процедура влияет на следующие таблицы:  

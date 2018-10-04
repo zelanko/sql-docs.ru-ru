@@ -1,12 +1,10 @@
 ---
-title: sys.dm_filestream_non_transacted_handles (Transact-SQL) | Документы Microsoft
+title: sys.dm_filestream_non_transacted_handles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_filestream_non_transacted_handles_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_non_transacted_handles dynamic management view
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c3c45d13a678359a0c753f4b7b92ed021478403
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 7fcd30c5935b2d99d98c4bce2d9895498c509154
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781472"
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,21 +35,21 @@ ms.locfileid: "34464780"
   
  Дополнительные сведения см. в статье [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-|**Столбец**|**Тип**|**Description**|  
+|**Столбец**|**Тип**|**Описание**|  
 |----------------|--------------|---------------------|  
-|database_id|int|Идентификатор базы данных, связанной с дескриптором.|  
-|object_id|int|Идентификатор объекта таблицы FileTable, с которой связан дескриптор.|  
-|handle_id|int|Уникальный идентификатор контекста дескриптора. Используемые [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) хранимой процедуры для уничтожения определенного дескриптора.|  
-|file_object_type|int|Тип дескриптора. Он указывает уровень иерархии, для которого был открыт дескриптор, такой как база данных или элемент.|  
+|database_id|ssNoversion|Идентификатор базы данных, связанной с дескриптором.|  
+|object_id|ssNoversion|Идентификатор объекта таблицы FileTable, с которой связан дескриптор.|  
+|handle_id|ssNoversion|Уникальный идентификатор контекста дескриптора. Используемые [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) хранимой процедуры для уничтожения определенного дескриптора.|  
+|file_object_type|ssNoversion|Тип дескриптора. Он указывает уровень иерархии, для которого был открыт дескриптор, такой как база данных или элемент.|  
 |file_object_type_desc|nvarchar(120)|«UNDEFINED»,<br />«SERVER_ROOT»,<br />«DATABASE_ROOT»,<br />«TABLE_ROOT»,<br />«TABLE_ITEM»|  
 |correlation_process_id|varbinary(8)|Содержит уникальный идентификатор для процесса, отправившего запрос.|  
 |correlation_thread_id|varbinary(8)|Содержит уникальный идентификатор для потока, отправившего запрос.|  
 |file_context|varbinary(8)|Указатель на файловый объект, используемый данным дескриптором.|  
-|state|int|Текущее состояние дескриптора. Может быть активным, закрытым или уничтоженным.|  
+|state|ssNoversion|Текущее состояние дескриптора. Может быть активным, закрытым или уничтоженным.|  
 |state_desc|nvarchar(120)|«ACTIVE»,<br />«CLOSED»,<br />«KILLED»|  
-|current_workitem_type|int|Состояние, в котором этот дескриптор обрабатывается в данный момент.|  
+|current_workitem_type|ssNoversion|Состояние, в котором этот дескриптор обрабатывается в данный момент.|  
 |current_workitem_type_desc|nvarchar(120)|«NoSetWorkItemType»,<br />«FFtPreCreateWorkitem»,<br />«FFtGetPhysicalFileNameWorkitem»,<br />«FFtPostCreateWorkitem»,<br />«FFtPreCleanupWorkitem»,<br />«FFtPostCleanupWorkitem»,<br />«FFtPreCloseWorkitem»,<br />«FFtQueryDirectoryWorkItem»,<br />«FFtQueryInfoWorkItem»,<br />«FFtQueryVolumeInfoWorkItem»,<br />«FFtSetInfoWorkitem»,<br />«FFtWriteCompletionWorkitem»|  
-|fcb_id|bigint|Идентификатор блока управления файлами FileTable.|  
+|fcb_id|BIGINT|Идентификатор блока управления файлами FileTable.|  
 |item_id|varbinary(892)|Идентификатор элемента для файла или каталога. Может быть NULL для корневых дескрипторов сервера.|  
 |is_directory|bit|Представляет ли собой каталог.|  
 |item_name|nvarchar(512)|Имя элемента.|  
@@ -60,11 +57,11 @@ ms.locfileid: "34464780"
 |database_directory_name|nvarchar(512)|Часть opened_file_name, которая представляет имя каталога базы данных.|  
 |table_directory_name|nvarchar(512)|Часть opened_file_name, которая представляет имя каталога таблицы.|  
 |remaining_file_name|nvarchar(512)|Часть opened_file_name, которая представляет остальную часть имени каталога.|  
-|open_time|datetime|Время открытия дескриптора.|  
-|flags|int|ShareFlagsUpdatedToFcb = 0x1,<br />DeleteOnClose = 0x2,<br />NewFile = 0x4,<br />PostCreateDoneForNewFile = 0x8,<br />StreamFileOverwritten = 0x10,<br />RequestCancelled = 0x20,<br />NewFileCreationRolledBack = 0x40|  
-|login_id|int|Идентификатор участника, открывшего дескриптор.|  
+|open_time|DATETIME|Время открытия дескриптора.|  
+|flags|ssNoversion|ShareFlagsUpdatedToFcb = 0x1,<br />DeleteOnClose = 0x2,<br />NewFile = 0x4,<br />PostCreateDoneForNewFile = 0x8,<br />StreamFileOverwritten = 0x10,<br />RequestCancelled = 0x20,<br />NewFileCreationRolledBack = 0x40|  
+|login_id|ssNoversion|Идентификатор участника, открывшего дескриптор.|  
 |login_name|nvarchar(512)|Имя участника, открывшего дескриптор.|  
-|login_sid|varbinary(85)|Идентификатор безопасности участника, открывшего дескриптор.|  
+|login_sid|значение типа varbinary(85)|Идентификатор безопасности участника, открывшего дескриптор.|  
 |read_access|bit|Открыто для чтения.|  
 |write_access|bit|Открыто для записи.|  
 |delete_access|bit|Открыто для удаления.|  

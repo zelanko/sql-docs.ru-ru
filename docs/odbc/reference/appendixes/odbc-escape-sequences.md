@@ -1,28 +1,25 @@
 ---
-title: Escape-последовательности ODBC | Документы Microsoft
+title: Escape-последовательности ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a5f06ba64901e666fba94409bf43aef52903cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b809aff14e75f41089f01345607f63f8c2dd9166
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758972"
 ---
 # <a name="odbc-escape-sequences"></a>Escape-последовательности ODBC
-В ODBC используются следующие escape-последовательности. Грамматика в этом разделе использует некоторые элементы, определенные в [элементов, используемых в инструкциях SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
+В ODBC используются следующие escape-последовательности. Грамматики в этом разделе использует некоторые элементы, определенные в [элементы используются в инструкциях SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
   
  Этот раздел содержит следующие подразделы.  
   

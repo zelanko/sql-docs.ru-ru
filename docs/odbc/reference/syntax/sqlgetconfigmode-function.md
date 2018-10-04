@@ -1,13 +1,11 @@
 ---
-title: Функция SQLGetConfigMode | Документы Microsoft
+title: Функция SQLGetConfigMode | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLGetConfigMode
@@ -19,22 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetConfigMode function [ODBC]
 ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 397f4ef5a2efd8e663544f5e21171c2184db1b30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1148ab38f7d389c3fe78a09a646a9cbdec0bb723
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755792"
 ---
 # <a name="sqlgetconfigmode-function"></a>Функция SQLGetConfigMode
-**Соответствия**  
- Появился в версии: ODBC 3.0  
+**Соответствие стандартам**  
+ Версия была введена: ODBC 3.0  
   
  **Сводка**  
- **SQLGetConfigMode** извлекает режим конфигурации, указывающей место записи Odbc.ini со списком значений источника данных сведений о системе.  
+ **SQLGetConfigMode** извлекает режим конфигурации, указывающее, где операция Odbc.ini, список значений имени DSN в сведениях о системе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +44,7 @@ BOOL SQLGetConfigMode(
   
 ## <a name="arguments"></a>Аргументы  
  *pwConfigMode*  
- [Выход] Указатель на буфер, содержащий режим конфигурации. (В разделе «Комментарии».) Значение в  *\*pwConfigMode* может быть:  
+ [Выход] Указатель на буфер, содержащий режим конфигурации. (См. в разделе «Комментарии».) Значение в  *\*pwConfigMode* может быть:  
   
  ODBC_USER_DSN  
   
@@ -55,22 +53,22 @@ BOOL SQLGetConfigMode(
  ODBC_BOTH_DSN  
   
 ## <a name="returns"></a>Возвращает  
- Функция возвращает значение TRUE, если он прошел успешно, FALSE в случае неудачи.  
+ Функция возвращает значение TRUE при успешном выполнении, FALSE в случае неудачи.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLGetConfigMode** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
+ Когда **SQLGetConfigMode** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_OUT_OF_MEM|Недостаточно памяти|Программе установки не удалось выполнить функцию из-за нехватки памяти.|  
+|ODBC_ERROR_OUT_OF_MEM|Недостаточно памяти|Программа установки не удалось выполнить функцию из-за нехватки памяти.|  
   
 ## <a name="comments"></a>Комментарии  
- Эта функция используется для определения, где операция Odbc.ini со списком значений источника данных — сведения о системе. Если  *\*pwConfigMode* ODBC_USER_DSN, имя источника данных является пользовательское имя DSN и функция считывает из записи Odbc.ini в HKEY_CURRENT_USER. Если это ODBC_SYSTEM_DSN источника данных является системный DSN и функция считывает из записи Odbc.ini в HKEY_LOCAL_MACHINE. Если это ODBC_BOTH_DSN, предпринимается попытка HKEY_CURRENT_USER и используется в случае неудачи HKEY_LOCAL_MACHINE.  
+ Эта функция используется для определения, где операция Odbc.ini, список значений имени DSN в сведениях о системе. Если  *\*pwConfigMode* ODBC_USER_DSN, имя источника данных — это пользовательское имя DSN и функция считывает из файла Odbc.ini записи в HKEY_CURRENT_USER. Если это ODBC_SYSTEM_DSN, имя источника данных является системный DSN и функция считывает из записи Odbc.ini в HKEY_LOCAL_MACHINE. Если это ODBC_BOTH_DSN следующая HKEY_CURRENT_USER и в случае неудачи HKEY_LOCAL_MACHINE используется.  
   
- По умолчанию **SQLGetConfigMode** возвращает ODBC_BOTH_DSN. При создании DSN пользователя или системный DSN с помощью вызова **SQLConfigDataSource**, функция задает режим конфигурации ODBC_USER_DSN или ODBC_SYSTEM_DSN, чтобы различать пользователей и системных источников данных при изменении имени DSN. Перед возвратом, **SQLConfigDataSource** восстанавливает режим конфигурации ODBC_BOTH_DSN.  
+ По умолчанию **SQLGetConfigMode** возвращает ODBC_BOTH_DSN. При создании имени DSN пользователя или системный DSN с помощью вызова **SQLConfigDataSource**, функция задает режим конфигурации ODBC_USER_DSN или ODBC_SYSTEM_DSN для различения пользователей и системных имен DSN при изменении имени DSN. До возвращения, **SQLConfigDataSource** ODBC_BOTH_DSN восстанавливает режим конфигурации.  
   
 ## <a name="related-functions"></a>Связанные функции  
   
 |Сведения о|См.|  
 |---------------------------|---------|  
-|Установка режима конфигурации|[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|
+|Настройка режима конфигурации|[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|

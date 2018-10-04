@@ -1,37 +1,34 @@
 ---
-title: Включение Visual Studio Analyzer | Документы Microsoft
+title: Включение анализатора Visual Studio | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], enabling
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db5e7540f76384ec38a290a00b9a3c51db9a9a84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a640d2432e6a079174644646fed5106fbc040c2b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633642"
 ---
-# <a name="enabling-visual-studio-analyzer"></a>Включение Visual Studio Analyzer
+# <a name="enabling-visual-studio-analyzer"></a>Включение анализатора Visual Studio
 > [!IMPORTANT]  
->  Поддержка Visual Studio Analyzer был удален начиная с Windows 8 (Visual Studio Analyzer была включена только в предыдущих версиях Visual Studio.). Альтернативные способы устранения неполадок механизм используйте предложение трассировки.  
+>  Поддержка Visual Studio Analyzer была удалена, начиная с Windows 8 (Visual Studio Analyzer была включена только в более ранних версиях Visual Studio.). Устранение неполадок механизм альтернативные способы используйте трассировка встроенных средств диагностики.  
   
- Microsoft Visual Studio Analyzer является средством анализа приложений, обеспечивает подробный обзор производительности приложения для всех уровней и систем. Этот раздел посвящен взаимодействие между компонентами. Visual Studio Analyzer могут запускаться и останавливаться от администратора ODBC: вкладка трассировок.  
+ Microsoft Visual Studio Analyzer является средством анализ приложения, должна обеспечивать общий обзор производительности приложения во всех уровней и систем. Этот раздел посвящен взаимодействие между компонентами. Visual Studio Analyzer может запускаться и останавливаться из администратор ODBC: вкладка трассировок.  
   
- Чтобы просмотреть любое из событий, создаваемых ODBC, выполните следующие действия.  
+ Чтобы просматривать любые события, ODBC, выполните следующие действия:  
   
-1.  Доступ администратора источников данных ODBC.  
+1.  Доступ администратора источника данных ODBC.  
   
 2.  Нажмите кнопку **трассировки** вкладки.  
   
@@ -39,8 +36,8 @@ ms.locfileid: "32909929"
   
 4.  Нажмите кнопку **ОК**.  
   
- Visual Studio Analyzer события формирования продолжается, пока **остановки анализатор Visual Studio** выбран.  
+ Visual Studio Analyzer событий — это продолжается до **Остановить анализатор Visual Studio** выбран.  
   
- Этот раздел содержит следующий раздел.  
+ Этот раздел содержит следующие подразделы.  
   
 -   [События, создаваемые диспетчером драйверов ODBC](../../../odbc/reference/develop-app/events-generated-by-the-odbc-driver-manager.md)

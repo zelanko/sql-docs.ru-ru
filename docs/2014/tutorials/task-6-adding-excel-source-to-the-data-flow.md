@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cc4fd733c4a2d791c9b1332825cc91068554b36
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f51d2f6f48263e764d73eb9fcd8ee0dcd27b26da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071764"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Задача 6. Добавление источника Excel в поток данных
   В этой задаче источник Excel будет добавлен в поток данных, что позволит считывать данные поставщиков из исходного файла Excel. Источник Excel извлекает данные из листов или диапазонов в книгах Microsoft Excel. Дополнительные сведения см. в разделе [Источник Excel](../integration-services/data-flow/excel-source.md) .  

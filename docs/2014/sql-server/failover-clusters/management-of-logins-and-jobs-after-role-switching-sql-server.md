@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d489ef9df3d6b1d54e34ccfc3ec1a9d190f816b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0def160bcbff26bb41d6041a244e7be6b25461b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251396"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071084"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Управление именами входа и заданиями после переключения ролей (SQL Server)
   При развертывании решения по обеспечению высокой доступности или аварийного восстановления для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] важно воспроизвести значимые данные, хранящиеся в этой базе данных, в базе данных **master** или **msdb** . Обычно к таким данным относятся задания базы данных-источника или основной базы данных, а также имена входа пользователей или процессов, которым требуется подключаться к базе данных. Эти данные следует скопировать на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где размещена база данных-получатель или зеркальная база данных. После переключения ролей рекомендуется по возможности программно воспроизвести эти данные в новой базе данных-источнике или основной базе данных.  
@@ -40,8 +37,7 @@ ms.locfileid: "37251396"
   
  Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог Database Engine).  
   
-## <a name="jobs"></a>Задания
-  
+## <a name="jobs"></a>Задания  
  Некоторые задания, например задания резервного копирования, следует рассмотреть особо. Обычно после переключения ролей владельцу базы данных или системному администратору приходится создавать повторно задания для новой базы данных-источника или основной базы данных.  
   
  Если бывший экземпляр сервера-источника или основного сервера доступен, то требуется также удалить исходные задания на этом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обратите внимание, что задания в текущей зеркальной базе данных завершатся ошибкой, поскольку она находится в состоянии RESTORING и недоступна.  

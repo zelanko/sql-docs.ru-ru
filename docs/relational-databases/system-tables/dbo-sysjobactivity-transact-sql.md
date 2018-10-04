@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobactivity (Transact-SQL) | Документы Microsoft
+title: dbo.sysjobactivity (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobactivity_TSQL
@@ -20,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1d9e79856ac767d231993165b0c6d565d791464
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 77b434a20f408aa79e8d75b03ea9bce0a9f2e6b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690772"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 05/04/2018
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|Идентификатор сеанса, хранящиеся в **syssessions** в таблицу **msdb** базы данных.|  
+|**session_id**|**int**|Идентификатор сеанса, хранящихся в **syssessions** в таблицу **msdb** базы данных.|  
 |**job_id**|**uniqueidentifier**|Идентификатор задания.|  
 |**run_requested_date**|**datetime**|Дата и время последнего запроса на выполнение задания.|  
 |**run_requested_source**|**sysname(nvarchar(128))**|Источник запроса на выполнение задания.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  

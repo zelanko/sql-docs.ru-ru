@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33fb01fb1383edd45200f6d803960ff72c981a1b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 205471b262ae041858db72c5db8d9c603eb716b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255786"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072034"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Диалоговое окно «Свойства окна просмотра карты», вкладка «Центрирование и масштабирование»
   Вкладка **Центрирование и масштабирование** диалогового окна **Свойства окна просмотра карты** позволяет задать центральную точку и масштаб карты. После указания источника данных и границ карты, включаемой в отчет, можно указать центр представления и масштаб карты для дальнейшего управления ее внешним видом. Изменение параметров зависит от способа, используемого для указания значений центральной точки и масштаба. Нажмите кнопку **Выражение** (*fx*), чтобы изменить выражение, задающее значение параметра.  

@@ -1,51 +1,48 @@
 ---
-title: Сценарий сохраняемости XML записей | Документы Microsoft
+title: Сценарий сохраняемости набора записей XML | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c16d37a0ded8b8a4a24666a426e123505eeff8f0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 252df4b5133861b6ff9892600bfe1c53206fefec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273413"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789222"
 ---
-# <a name="xml-recordset-persistence-scenario"></a>Сценарий сохраняемости XML набора записей
-В этом сценарии вы создадите приложение Active Server Pages (ASP), сохраняет содержимое объекта набора записей непосредственно в объекте отклика ASP.  
+# <a name="xml-recordset-persistence-scenario"></a>Сценарий сохраняемости набора записей XML
+В этом сценарии вы создадите приложение Active Server Pages (ASP), сохраняет содержимое объекта Recordset непосредственно в объекте отклика ASP.  
   
 > [!NOTE]
 >  Данный сценарий требует, что сервер Internet Information Server 5.0 (IIS) или более поздней версии.  
   
- Возвращаемый набор записей отображается в обозревателе Internet Explorer с помощью [DataControl объекта (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
+ Возвращенное подмножество записей отображается в Internet Explorer с помощью [объекта DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
   
- Следующие шаги, необходимые для создания этого сценария:  
+ Чтобы создать этот сценарий необходимы следующие действия:  
   
 -   Настройка приложения  
   
--   Получение данных  
+-   Получить данные  
   
 -   Отправка данных  
   
 -   Получение и отображение данных  
   
 ## <a name="step-1-set-up-the-application"></a>Шаг 1: Настройка приложения  
- Создание виртуального каталога IIS, с именем «XMLPersist» и разрешения на выполнение сценариев. Создайте два новых текстовых файлов в папке, на которую виртуального каталога указывает, один именованный» XMLResponse.asp,» другие именованные «Default.htm».  
+ Создайте виртуальный каталог IIS, с именем «XMLPersist» и внести в скрипт разрешения. Создайте два новых текстовых файлов в папке, на который виртуального каталога указывает, один именованный «XMLResponse.asp,» другие именованные «Default.htm».  
   
 ## <a name="step-2-get-the-data"></a>Шаг 2: Получение данных  
- На этом шаге вы напишете код для открытия набора записей ADO и подготовка для отправки клиенту. Откройте файл XMLResponse.asp в текстовом редакторе, таком как Блокнот и вставьте следующий код.  
+ На этом шаге вы напишете код, чтобы открыть набор записей ADO и Подготовка к отправить его клиенту. Откройте файл XMLResponse.asp в текстовом редакторе, таком как Блокнот и вставьте следующий код.  
   
 ```  
 <%@ language="VBScript" %>  
@@ -69,12 +66,12 @@ ms.locfileid: "35273413"
   adoRec.Open strSQL, adoCon, adOpenStatic, adLockOptimistic, adCmdText  
 ```  
   
- Не забудьте изменить значение `Data Source` параметр в `strCon` к имени компьютера с Microsoft SQL Server.  
+ Не забудьте изменить значение `Data Source` параметр в `strCon` имя компьютера с Microsoft SQL Server.  
   
- Файл остается открытой и перейдите к следующему шагу.  
+ Оставьте файл открытым и переходите к следующему шагу.  
   
 ## <a name="step-3-send-the-data"></a>Шаг 3: Отправка данных  
- Теперь, когда у вас есть набор записей, необходимо отправить его клиенту путем его сохранения в XML-ФАЙЛЕ объект ответа ASP. Добавьте следующий код в нижнюю часть XMLResponse.asp.  
+ Теперь, когда у вас есть набор записей, его необходимо отправить клиенту, сохранив его в формате XML в объект ответа ASP. Добавьте следующий код в нижнюю часть XMLResponse.asp.  
   
 ```  
   Response.ContentType = "text/xml"  
@@ -88,12 +85,12 @@ ms.locfileid: "35273413"
 %>  
 ```  
   
- Обратите внимание, что объект ASP ответа указан в качестве цели для набора записей [метод Save](../../../ado/reference/ado-api/save-method.md). Метод Save пункт назначения может быть любой объект, который поддерживает интерфейс IStream, таких как ADO [поток Objects (ADO)](../../../ado/reference/ado-api/stream-object-ado.md), или имя файла, который включает в себя полный путь, к которому должен быть сохранен набор записей.  
+ Обратите внимание на то, что объект ответа ASP указан в качестве места назначения для набора записей [метода Save](../../../ado/reference/ado-api/save-method.md). Цель-метод Save может быть любой объект, который поддерживает интерфейс IStream, таких как ADO [объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md), или имя файла, которое включает в себя полный путь, к которому он должен быть сохранен.  
   
- Сохраните и закройте XMLResponse.asp перед переходом к следующему шагу. Также скопируйте файл adovbs.inc из папки установки библиотеки по умолчанию ADO в ту же папку, где был сохранен файл XMLResponse.asp.  
+ Сохраните и закройте XMLResponse.asp перед переходом к следующему шагу. Также скопируйте файл adovbs.inc из папки установки по умолчанию ADO библиотеки в ту же папку, где был сохранен файл XMLResponse.asp.  
   
 ## <a name="step-4-receive-and-display-the-data"></a>Шаг 4: Получение и отображение данных  
- На этом шаге вы создадите в HTML-файл с встроенный [DataControl объекта (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) объект, указывающий на файл XMLResponse.asp, чтобы получить набор записей. Откройте файл default.htm в текстовом редакторе, таком как Блокнот и добавьте следующий код. Замените на имя вашего сервера «sqlserver» в URL-АДРЕСЕ.  
+ На этом шаге вы создадите файл HTML с помощью встроенного [объекта DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) объект, который указывает на файл XMLResponse.asp для получения набора записей. Откройте файл default.htm в текстовом редакторе, таком как Блокнот и добавьте следующий код. Замените на имя вашего сервера «sqlserver» в URL-адрес.  
   
 ```  
 <HTML>  
@@ -117,5 +114,5 @@ ms.locfileid: "35273413"
  Закройте файл default.htm и сохраните его в ту же папку, где был сохранен XMLResponse.asp. С помощью Internet Explorer 4.0 или более поздней версии, откройте URL-адрес http://*sqlserver*/XMLPersist/default.htm и просмотрите результаты. Данные отображаются в связанной таблицы DHTML. Теперь откройте URL-адрес http:// *sqlserver* /XMLPersist/XMLResponse.asp и просмотрите результаты. Отображается XML-код.  
   
 ## <a name="see-also"></a>См. также  
- [Save-метод](../../../ado/reference/ado-api/save-method.md)   
+ [Метод Save](../../../ado/reference/ado-api/save-method.md)   
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

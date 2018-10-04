@@ -1,55 +1,52 @@
 ---
-title: Настройки файла UserList раздел | Документы Microsoft
+title: Настройка файла раздела UserList | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcf8649af2695fa354659f13e891521eb14f39cb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 70d22fd83574d2d99724fb507c8b0916b07d7373
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273833"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667592"
 ---
-# <a name="customization-file-userlist-section"></a>Раздел UserList настройки файла
+# <a name="customization-file-userlist-section"></a>Настройка раздела UserList файла
 **Userlist** раздел относится к **подключения** раздел с тот же раздел *идентификатор* параметра.  
   
- Этот раздел может содержать *запись доступа пользователя*, который определяет доступа для указанного пользователя и переопределений *по умолчанию* *доступ к записи* в соответствующем **подключения** раздела.  
+ Этот раздел может содержать *доступом пользователя*, который указывает доступа права для указанного пользователя и переопределяет *по умолчанию* *доступ к записи* в соответствующем **подключения** раздел.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Синтаксис  
- Доступ пользователя в записи имеет следующую форму:  
+ Запись доступа пользователя имеет вид:  
   
- *Имя пользователя* **=**   
+ *имя пользователя* **=**   
  ***accessRights***  
   
 |Часть|Описание|  
 |----------|-----------------|  
-|*userName*|*Имя пользователя* пользователя, при использовании этого подключения. Допустимые имена пользователей, установленных с IIS **Service Manager** диалогового окна.|  
-|***accessRights***|Одно из следующих прав:<br /><br /> -   **NoAccess** — пользователь не может получить доступ к источнику данных.<br />-   **Только для чтения** — пользователь может просматривать источника данных.<br />-   **ReadWrite** — пользователь может считывать или запись в источнике данных.|  
+|*userName*|*Имя пользователя* лица, применение этого подключения. Допустимые имена пользователей, устанавливаются со службами IIS **Service Manager** диалоговое окно.|  
+|***accessRights***|Один из следующих прав доступа:<br /><br /> -   **NoAccess** — пользователь не может получить доступ к источнику данных.<br />-   **Только для чтения** — пользователь может просматривать источника данных.<br />-   **ReadWrite** — пользователя можно считывать или записывать в источник данных.|  
   
 ## <a name="see-also"></a>См. также  
- [Файл настроек присоединения раздела](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Раздел журналы настройки файла](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Раздел SQL настройки файла](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Настройка раздела подключения файла](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Настройка раздела журналов файла](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [Настройка раздела SQL файла](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [Настройка DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Основные сведения о настройке файла](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [Необходимые параметры клиентов](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Общие сведения о файле настройки](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Запись собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

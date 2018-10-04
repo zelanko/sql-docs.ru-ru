@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/14/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.MEMBERSHIP.F1
@@ -17,12 +15,12 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 79b362d7f9f4d0ba59b1d47d7f8e241b5d43a394
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 45138bfb48a675b4e99fe7050cbddd25119c2cbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061794"
 ---
 # <a name="join-a-role"></a>присоединение к роли
   В этом разделе описывается назначение ролей для имен входа и пользователей базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Для эффективного управления разрешениями в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используются роли. Назначайте разрешения ролям, а затем добавляйте и удаляйте пользователей и имена входа в роли. Благодаря ролям нет необходимости задавать разрешения для каждого пользователя в отдельности.  

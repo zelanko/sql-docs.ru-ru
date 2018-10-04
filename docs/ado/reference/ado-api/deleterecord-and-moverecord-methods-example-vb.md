@@ -1,13 +1,11 @@
 ---
-title: Макрокоманду УдалитьЗапись и пример MoveRecord методы (Visual Basic) | Документы Microsoft
+title: Примеры DeleteRecord и Moverecord методы (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bc593b8184d73085e01d637863075a960e34ae8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 78dba1568180e7e49ebe1c5cc7e6ee2ed61f9497
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811902"
 ---
-# <a name="deleterecord-and-moverecord-methods-example-vb"></a>Макрокоманду УдалитьЗапись и пример MoveRecord методы (Visual Basic)
-В этом примере показано, как копирование, перемещение, изменение и удаление содержимого текстового файла, опубликованных в веб-папку. Другие свойства и методы, используемые включают [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [источника](../../../ado/reference/ado-api/source-property-ado-record.md), и [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  
+# <a name="deleterecord-and-moverecord-methods-example-vb"></a>Примеры DeleteRecord и Moverecord методы (Visual Basic)
+В этом примере показано, как скопировать, переместить, изменить и удалить содержимое в текстовый файл, опубликованных в веб-папку. Другие свойства и методы, используемые включают [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [источника](../../../ado/reference/ado-api/source-property-ado-record.md), и [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  
   
 ```  
 'BeginDeleteRecordVB  
@@ -153,8 +150,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Метод макрокоманду УдалитьЗапись (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
- [Flush-метод (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
+ [Метод DeleteRecord (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
+ [Метод Flush (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [Метод GetChildren (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [Метод MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [Свойство ParentURL (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   

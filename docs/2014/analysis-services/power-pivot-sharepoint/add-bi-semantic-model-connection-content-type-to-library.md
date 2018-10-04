@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 145505ed-50bc-4528-912b-2a5cd2566011
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15537b159f34df3e69c3b415a8a00845ff2fe79f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c7be80b40c80edf3811f996e8037cbdbc9fa4d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284110"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052974"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>Добавление типа содержимого соединения семантической модели бизнес-аналитики в библиотеку (PowerPivot для SharePoint)
   Соединение с семантической моделью бизнес-аналитики создается в SharePoint и позволяет обеспечить перенаправление к данным семантической модели бизнес-аналитики в книге PowerPivot или в табличном шаблоне базы данных служб Analysis Services, работающей на сетевом сервере. Прежде чем приступать к созданию соединения с семантической моделью бизнес-аналитики в SharePoint, необходимо расширить библиотеку документов для создания BISM-файла. Этот шаг должен выполняться только один раз для каждой библиотеки, однако его придется повторить для всех библиотек, из которых требуется создать файл BISM. Рекомендуется создать централизованную библиотеку для хранения файлов BISM, чтобы разрешениями можно было управлять в одном месте.  

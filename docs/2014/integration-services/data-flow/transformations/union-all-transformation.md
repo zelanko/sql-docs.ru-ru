@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unionalltrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2de7c1d89f528598efe52b48f0291f0125ac384b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67c20bbe5841f7db1a0260550643279ae16a05f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166765"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070574"
 ---
 # <a name="union-all-transformation"></a>преобразование «Объединить все»
   Преобразование «Объединить все» объединяет несколько входов в один выход. Например, выходы из пяти различных источников неструктурированных файлов можно сделать входами для преобразования «Объединить все» и объединить в один выход.  
@@ -53,7 +50,7 @@ ms.locfileid: "37166765"
   
 -   [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Объединение данных с помощью преобразования "Объединить все"](union-all-transformation.md)  
   
   

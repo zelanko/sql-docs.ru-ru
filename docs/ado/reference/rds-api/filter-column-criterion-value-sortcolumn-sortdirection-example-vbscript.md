@@ -1,13 +1,11 @@
 ---
-title: Набор RDS. DataControl сервера и выполнить привязку к таблице HTML (VBScript) | Документы Microsoft
+title: Задайте RDS. Сервер DataControl и выполнить привязку к таблице HTML (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,22 +17,21 @@ helpviewer_keywords:
 - SortColumn property [RDS], VBScript example
 - FilterValue property [ADO], VBScript example
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 465cb7deef84e3b5e853df3ee4d14359babc4221
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c0cea18d6895363e1a264258c88d733fc3c5ab35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288395"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661122"
 ---
-# <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn, FilterCriterion, FilterValue, SortColumn, направления сортировки, свойства и пример метода сброса (VBScript)
+# <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn, FilterCriterion, FilterValue, SortColumn, SortDirection свойства и пример метода Reset (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Следующий код показывает, как задать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **сервера** параметр в designtime и привязки его к данными HTML таблицы с использованием источника данных. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **FilterColumnVBS.asp**.  
+ Ниже показано, как задать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** параметр designtime и привязки его для работы с данными HTML таблицу, с помощью источника данных. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как **FilterColumnVBS.asp**.  
   
 ```  
 <!-- BeginFilterColumnVBS -->  
@@ -208,12 +205,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Свойство FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [Свойство FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
- [Свойство FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [Метод Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)   
- [Свойство SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
+ [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Свойство FilterColumn (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
+ [Свойство FilterCriterion (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
+ [Свойство FilterValue (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
+ [Метод Reset (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/reset-method-rds.md)   
+ [Свойство SortColumn (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [Свойство SortDirection (служба удаленных рабочих столов)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 
 

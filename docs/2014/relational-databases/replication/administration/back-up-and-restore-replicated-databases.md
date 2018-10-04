@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication]
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - restoring [SQL Server replication]
 - administering replication, backing up
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec33d7601d8f68096152e6ef5e9cac35715f53bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea5fc487bdac09fab4003076d42cce59a06e27a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264670"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076873"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Создание резервных копий реплицируемых баз данных и восстановление из них
   Реплицированные базы данных требуют особого внимания к резервному копированию и восстановлению данных. В данном разделе содержится вводные сведения и ссылки на дополнительные сведения о стратегиях резервного копирования и восстановления для различных типов репликации.  

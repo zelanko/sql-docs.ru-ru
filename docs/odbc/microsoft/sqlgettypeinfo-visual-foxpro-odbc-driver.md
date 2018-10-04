@@ -1,35 +1,32 @@
 ---
-title: SQLGetTypeInfo (драйвер ODBC для Visual FoxPro) | Документы Microsoft
+title: SQLGetTypeInfo (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bbf3983ccdeb2c320f4776d608b73e362f0a479
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733062"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения по Visual FoxPro ODBC драйвера. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Поддержка: полный  
   
- Соответствия ODBC API: 1 уровень  
+ Соответствия API ODBC: 1 уровень  
   
  Возвращает сведения о типах данных, поддерживаемых источником данных. Драйвер возвращает сведения в результирующем наборе SQL. В следующей таблице перечислены типы данных ODBC и соответствующие типы данных Visual FoxPro.  
   
@@ -45,10 +42,10 @@ ms.locfileid: "32904309"
 |SQL_INTEGER|Целочисленный|  
 |SQL_LONGVARBINARY|MEMO (двоичный)|  
 |SQL_LONGVARCHAR|MEMO|  
-|SQL_NUMERIC|Число с плавающей запятой числовые *, денежных единиц|  
+|SQL_NUMERIC|Числовые *, валюты, в число с плавающей запятой|  
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Целочисленный|  
-|SQL_TIME|Не поддерживается. Нет не Visual FoxPro *время* типа.|  
+|SQL_TIME|Не поддерживается. Имеется не Visual FoxPro *время* типа.|  
 |SQL_TIMESTAMP|DateTime|  
 |SQL_TINYINT|Целочисленный|  
 |SQL_VARBINARY|MEMO (двоичный) *, общие|  
@@ -56,4 +53,4 @@ ms.locfileid: "32904309"
   
  * Тип по умолчанию  
   
- Дополнительные сведения о типах данных Visual FoxPro см. в разделе [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Дополнительные сведения об этой функции см. в разделе [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) в *справочнике программиста ODBC*.
+ Дополнительные сведения о типах данных Visual FoxPro, см. в разделе [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Дополнительные сведения об этой функции см. в разделе [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) в *Справочник по программированию ODBC*.

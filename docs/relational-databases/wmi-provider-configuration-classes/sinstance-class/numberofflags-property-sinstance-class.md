@@ -1,15 +1,12 @@
 ---
-title: Свойство NumberOfFlags (класс SInstance) | Документы Microsoft
+title: Свойство NumberOfFlags (класс SInstance) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - NumberOfFlags Property (SInstance Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - NumberOfFlags property
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8b180c2cbcdf465d7c75c47d0a5029b08528639c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: beb8007d311435ebb4849ebe9ec9f641723fb68c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009071"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698132"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>Свойство NumberOfFlags (класс SInstance)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +38,15 @@ object.NumberOfFlags [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объект*  
- [Класс SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) , представляющий экземпляр сервера.  
+ *object*  
+ [Класс SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) объект, представляющий экземпляр сервера.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Объект **uint32** значение, указывающее число флагов для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка сетевых протоколов сервера и сетевых библиотек](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

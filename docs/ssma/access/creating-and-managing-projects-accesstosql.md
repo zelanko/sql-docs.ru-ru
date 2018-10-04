@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - creating projects
 - new projects
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - saving metadata
 - saving projects
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
-caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 860f8e569cd87aaf034718456c8157cf91f57941
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d016498e0b46ce17cfd705264c6996c56302be32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394128"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641572"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Создание проектов и управление ими (AccessToSQL)
 Для переноса баз данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, необходимо сначала создать проект SSMA. Проект — это файл, который содержит метаданные базы данных Access, которые вы хотите перейти на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, метаданные о целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, который будет получать перенесенные объекты и данные, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения о подключении и параметры проекта.  

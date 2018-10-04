@@ -1,15 +1,12 @@
 ---
-title: Функция LocalDBCreateInstance | Документы Microsoft
+title: Функция LocalDBCreateInstance | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBCreateInstance
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ad7fb0b3df6cbaef9f5bd236347a9aa129d317d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 717dc71d20951d5bed3868b74dcbefad11ee874d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938089"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669682"
 ---
 # <a name="localdbcreateinstance-function"></a>Функция LocalDBCreateInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +99,7 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Если существует полностью функциональный экземпляр LocalDB с указанным именем и его версия равна или выше запрошенной, возвращается результат S_OK.  
   
  В случае, если существующий экземпляр поврежден, последующие вызовы метода API **LocalDBCreateInstance** завершатся с ошибкой. Поврежденный экземпляр необходимо исправить вручную или явно удалить, чтобы его можно было использовать снова.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.statistics.propertis.f1
@@ -20,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2798479058b3fd12cc34ddedd9352027b6c1821
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 50600dcb20df520dc462ed64fcd11333a53d3a66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066844"
 ---
 # <a name="create-statistics"></a>Создание статистики
   Создать статистику по оптимизации запроса для одного или нескольких столбцов таблицы или индексированного представления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для большинства запросов оптимизатор уже создает необходимую статистику для формирования высококачественного плана запроса, но в некоторых случаях нужно создавать дополнительные статистические данные.  
@@ -118,7 +116,7 @@ ms.locfileid: "37408403"
      На странице **Фильтр** в диалоговом окне **Создание статистики по таблице***имя_таблицы* отображается указанное ниже свойство.  
   
      **Критерий фильтра**  
-     Определяет столбцы данных, которые будут включены в статистику фильтрации. Например `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Определяет столбцы данных, которые будут включены в статистику фильтрации. Например `Production.ProductSubcategoryID IN ( 1,2,3 )`   
   
 5.  В диалоговом окне **Создание статистики по таблице***имя_таблицы* на странице **Общее** нажмите кнопку **Добавить**.  
   

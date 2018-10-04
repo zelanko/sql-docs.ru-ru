@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - troubleshooting [Reporting Services], errors
 - events [Reporting Services]
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0a09771deaff3f6996250840920675159209daf4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c3a0dc2db7de79eb7fac8a54fa437ee66f1d365
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067814"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Справочник по ошибкам и событиям (службы Reporting Services)
   Этот раздел содержит сведения об ошибках и событиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Файлы журналов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также содержат сведения об ошибках. Дополнительные сведения о типах файлов журналов, доступных и способах просмотра журналов см. в разделе [файлы журнала служб Reporting Services и источники](../report-server/reporting-services-log-files-and-sources.md).  

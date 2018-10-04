@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6393e9d52bbe026adcda7db0c451e64a364ecbc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74e98548349d073cf5f008c6015ce55ac3768acb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211854"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067211"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Очистка кэша служб Analysis Services
   Службы Analysis Services кэшируют данные для повышения производительности запросов. В этом разделе приводятся рекомендации по использованию команды XMLA ClearCache для очистки кэшей, созданных в ответ на запрос многомерных выражений. Эффекты выполнения команды ClearCache различаются в зависимости от используемой модели (табличной или многомерной).  

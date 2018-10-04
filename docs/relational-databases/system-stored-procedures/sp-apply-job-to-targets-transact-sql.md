@@ -1,14 +1,11 @@
 ---
-title: sp_apply_job_to_targets (Transact-SQL) | Документы Microsoft
+title: sp_apply_job_to_targets (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7ec6285f807dd51b0a67ad55ab2e53634584e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 192747d920f92681617d0dc19cc562e52e9c310e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238155"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641728"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +44,13 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Аргументы  
  [  **@job_id =**] *job_id*  
- Идентификационный номер задания, которое следует применить к указанным целевым серверам и группам целевых серверов. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+ Идентификационный номер задания, которое следует применить к указанным целевым серверам и группам целевых серверов. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name =**] **"***job_name***"**  
- Имя указания, которое следует применить к связанным целевым серверам и группам целевых серверов. *job_name* — **sysname**, значение по умолчанию NULL.  
+ [  **@job_name =**] **"***имя_задания***"**  
+ Имя указания, которое следует применить к связанным целевым серверам и группам целевых серверов. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
+>  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
  [  **@target_server_groups =**] **"***target_server_groups***"**  
  Список групп целевых серверов с разделителями-запятыми, к которым следует применить указанное задание. *target_server_groups* — **nvarchar(2048)**, значение по умолчанию NULL.  
@@ -68,8 +64,8 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- **sp_apply_job_to_targets** предоставляет простой способ применения (или удаления) задания к нескольким целевым серверам и является альтернативой вызову **sp_add_jobserver** (или **sp_delete_jobserver**) один раз для каждого целевого сервера требуется.  
+## <a name="remarks"></a>Примечания  
+ **sp_apply_job_to_targets** предоставляет простой способ для применения (или удаления) задания к нескольким целевым серверам и является альтернативой вызову **sp_add_jobserver** (или **sp_delete_jobserver**) один раз для каждого целевого сервера требуется.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнить эту процедуру.  

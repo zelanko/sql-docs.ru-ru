@@ -1,14 +1,11 @@
 ---
-title: использованные (Transact-SQL) | Документы Microsoft
+title: использованные (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_catalog_components_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b0fcb1d151d9e201998eb4ee2725239fc239e33
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54c22d025ae809d035fe75a0b8fe89160bdfb84f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720372"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +46,17 @@ sp_help_fulltext_catalog_components
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**имя полнотекстового каталога**|**int**|Имя полнотекстового каталога.|  
+|**Имя полнотекстового каталога**|**int**|Имя полнотекстового каталога.|  
 |**Идентификатор полнотекстового каталога**|**sysname**|Идентификатор полнотекстового каталога.|  
-|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> Фильтр<br /><br /> Обработчик протокола<br /><br /> Средство разбиения по словам|  
+|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> Filter<br /><br /> Обработчик протокола<br /><br /> Средство разбиения по словам|  
 |**componentname**|**sysname**|Имя компонента.|  
-|**Идентификатор CLSID**|**uniqueidentifier**|Идентификатор класса компонента.|  
+|**CLSID**|**uniqueidentifier**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом **serveradmin** предопределенной роли сервера.|  
 |**version**|**nvarchar(30)**|Версия компонента.|  
 |**Изготовитель**|**sysname**|Имя производителя компонента.|  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public** .  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="see-also"></a>См. также  
  [Компонент Full-Text Search и семантический поиск хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   

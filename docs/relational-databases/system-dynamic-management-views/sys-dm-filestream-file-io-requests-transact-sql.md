@@ -1,12 +1,10 @@
 ---
-title: sys.dm_filestream_file_io_requests (Transact-SQL) | Документы Microsoft
+title: sys.dm_filestream_file_io_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_filestream_file_io_requests
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b754b3e0c2e732f7d043564013ac0e8cde3d8cd
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e5c89e1d4ee1ec4b3590f6b9e0a738561cd61e1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740934"
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +40,15 @@ ms.locfileid: "34464880"
 |**request_id**|**int**|Показывает уникальный идентификатор, назначенный драйвером этому запросу. Не допускает значение NULL.|  
 |**irp_id**|**int**|Показывает уникальный идентификатор IRP. Это удобно для определения всех запросов ввода-вывода, связанных с заданным IRP. Не допускает значение NULL.|  
 |**handle_id**|**int**|Показывает идентификатор дескриптора пространства имен. Этот идентификатор зависит от NSO и уникален в пределах экземпляра. Не допускает значение NULL.|  
-|**client_thread_id**|**varbinary(8)**|Показывает идентификатор потока клиентского приложения, в котором создан запрос.<br /><br /> **\*\* Предупреждение \* \***  это имеет смысл только в том случае, если клиентское приложение выполняется на том же компьютере, что и SQL Server. Когда клиентское приложение работает удаленно, **client_thread_id** показывает идентификатор потока системного процесса, который работает от имени удаленного клиента.<br /><br /> Допускает значение NULL.|  
+|**client_thread_id**|**varbinary(8)**|Показывает идентификатор потока клиентского приложения, в котором создан запрос.<br /><br /> **\*\* Предупреждение \* \***  это имеет смысл только в том случае, если клиентское приложение выполняется на одном компьютере с SQL Server. Когда клиентское приложение работает удаленно, **client_thread_id** показывает идентификатор потока системного процесса, который работает от имени удаленного клиента.<br /><br /> Допускает значение NULL.|  
 |**client_process_id**|**varbinary(8)**|Показывает идентификатор процесса клиентского приложения, если оно работает на одном компьютере с SQL Server. Для удаленного клиента здесь показывается идентификатор системного процесса, который работает от имени клиентского приложения. Допускает значение NULL.|  
 |**handle_context_address**|**varbinary(8)**|Показывает адрес внутренней структуры NSO, связанной с дескриптором клиента. Допускает значение NULL.|  
-|**filestream_transaction_id**|**varbinary(128)**|Показывает идентификатор транзакции, связанной с заданным дескриптором, и все запросы, связанные с этим дескриптором. Это значение, возвращаемое **get_filestream_transaction_context** функции. Допускает значение NULL.|  
+|**filestream_transaction_id**|**varbinary(128)**|Показывает идентификатор транзакции, связанной с заданным дескриптором, и все запросы, связанные с этим дескриптором. Это значение, возвращенное **get_filestream_transaction_context** функции. Допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
 ## <a name="see-also"></a>См. также  
- [FileStream и динамические административные представления FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+ [FileStream и FileTable динамические административные представления &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

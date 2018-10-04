@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_stop_collection_set (Transact-SQL) | Документы Microsoft
+title: sp_syscollector_stop_collection_set (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_stop_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1464a9dfac11cf6b84a3895b94881d4825f9758c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dd5c396db88a8377a46bd965b664bc2a667d51de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258828"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784972"
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +44,11 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_set_id =] *collection_set_id, чтобы выделить*  
- Уникальный локальный идентификатор набора элементов сбора. *collection_set_id, чтобы выделить* — **int** со значением по умолчанию NULL. *collection_set_id, чтобы выделить* должно иметь значение, если *имя* имеет значение NULL.  
+ [ @collection_set_id =] *collection_set_id*  
+ Уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int** со значением по умолчанию NULL. *collection_set_id* должен иметь значение, если *имя* имеет значение NULL.  
   
  [ @name =] '*имя*"  
- Имя набора элементов сбора. *имя* — **sysname** со значением по умолчанию NULL. *имя* должно иметь значение, если *collection_set_id, чтобы выделить* имеет значение NULL.  
+ Имя набора элементов сбора. *имя* — **sysname** со значением по умолчанию NULL. *имя* должен иметь значение, если *collection_set_id* имеет значение NULL.  
   
  [ @stop_collection_job = ] *stop_collection_job*  
  Указывает, что задание сбора для набора элементов сбора должно быть остановлено, если оно выполняется. *stop_collection_job* — **бит** значение по умолчанию 1.  
@@ -62,7 +58,7 @@ sp_syscollector_stop_collection_set
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Функция sp_syscollector_create_collection_set должна выполняться в контексте системной базы данных msdb.  
   
 ## <a name="permissions"></a>Разрешения  

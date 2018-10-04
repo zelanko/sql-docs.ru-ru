@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_create_collection_item (Transact-SQL) | Документы Microsoft
+title: sp_syscollector_create_collection_item (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 818294f3fdeebc19a26a8689403205f57d9c8e03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719822"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +47,11 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_set_id =] *collection_set_id, чтобы выделить*  
- Уникальный локальный идентификатор набора элементов сбора. *collection_set_id, чтобы выделить* — **int**.  
+ [ @collection_set_id =] *collection_set_id*  
+ Уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int**.  
   
  [ @collector_type_uid =] '*аргумент collector_type_uid*"  
- Идентификатор GUID, определяющий тип сборщика, используйте для этого элемента *аргумент collector_type_uid* — **uniqueidentifier** без значения по умолчанию... Чтобы получить список типов сборщиков, выполните запрос системного представления syscollector_collector_types.  
+ Идентификатор GUID, идентифицирующий тип сборщика, используемый для этого элемента *аргумент collector_type_uid* — **uniqueidentifier** без значения по умолчанию... Чтобы получить список типов сборщиков, выполните запрос системного представления syscollector_collector_types.  
   
  [ @name =] '*имя*"  
  Имя элемента сбора. *имя* — **sysname** и не может быть пустой строкой или NULL.  
@@ -65,18 +61,18 @@ sp_syscollector_create_collection_item
  [ @frequency =] *частота*  
  Используется для указания времени (в секундах), определяющего, насколько часто этот элемент сбора собирает данные. *частота* — **int**, значение по умолчанию 5. Минимальное значение, которое можно указать, составляет 5 секунд.  
   
- Если набор сбора настроен на режим без кэширования, частота не учитывается, поскольку этот режим предусматривает выполнение сбора данных и передачу по расписанию, указанному для набора сбора. Чтобы определить режим сбора набора элементов сбора, выполните запрос [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) системного представления.  
+ Если набор сбора настроен на режим без кэширования, частота не учитывается, поскольку этот режим предусматривает выполнение сбора данных и передачу по расписанию, указанному для набора сбора. Чтобы просмотреть режим сбора набора элементов сбора, запросите [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) системное представление.  
   
  [ @parameters =] '*параметры*"  
- Входные параметры для типа сборщика. *Параметры* — **xml** значение по умолчанию NULL. *Параметры* схема должна совпадать со схемой параметров типа сборщика.  
+ Входные параметры для типа сборщика. *Параметры* — **xml** значение по умолчанию NULL. *Параметры* схемы должны совпадать со схемой параметров типа сборщика.  
   
  [ @collection_item_id =] *collection_item_id*  
- Уникальный идентификатор, определяющий элемент элементов набора. *collection_item_id* — **int** и есть выходные данные.  
+ Уникальный идентификатор, определяющий элемент элементов набора. *collection_item_id* — **int** и у выходные данные.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Функция sp_syscollector_create_collection_item должна выполняться в контексте системной базы данных msdb.  
   
  Набор сбора, в который добавляется элемент сбора, необходимо остановить перед созданием элемента сбора. Добавлять элементы сбора в системные наборы сбора невозможно.  
@@ -126,7 +122,7 @@ EXEC sp_syscollector_create_collection_item
  [sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
  [sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
  [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
- [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
+ [функция sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
  [syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

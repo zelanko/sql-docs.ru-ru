@@ -1,42 +1,39 @@
 ---
-title: Пример свойства версию (Visual Basic) | Документы Microsoft
+title: Пример свойства Version (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Version property [ADO], Visual Basic example
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 686168abddee50063db7f1150120302dea76c08e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f256597bca47a6453dbefa21c528cf57fd245bdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645682"
 ---
-# <a name="version-property-example-vb"></a>Пример свойства версию (Visual Basic)
-В этом примере используется [версии](../../../ado/reference/ado-api/version-property-ado.md) свойство [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта для отображения текущей версии ADO. Он также использует несколько динамических свойств для отображения:  
+# <a name="version-property-example-vb"></a>Пример свойства Version (Visual Basic)
+В этом примере используется [версии](../../../ado/reference/ado-api/version-property-ado.md) свойство [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объект для отображения текущей версии ADO. Он также использует несколько динамических свойств для отображения:  
   
--   Текущее имя СУБД и номер версии.  
+-   Текущее имя СУБД и версия.  
   
 -   Версия OLE DB.  
   
--   Имя поставщика и версии.  
+-   Имя поставщика и версия.  
   
 -   Версия ODBC.  
   
--   Имя драйвера ODBC и версии.  
+-   Имя драйвера ODBC и версия.  
   
 ```  
 'BeginVersionVB  
@@ -82,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

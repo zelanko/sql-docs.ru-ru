@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_set_cache_directory (Transact-SQL) | Документы Microsoft
+title: sp_syscollector_set_cache_directory (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_cache_directory_TSQL
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fec21ffdac0ee58f6927935942fedadda563f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 825291445c0d31df8230793c3a5d6a1b7f272082
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726772"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +42,12 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
   
 ## <a name="arguments"></a>Аргументы  
  [  **@cache_directory =** ] **"***cache_directory***"**  
- Каталог файловой системы, в котором временно хранятся собранные данные. *cache_directory* — **nvarchar(255)**, значение по умолчанию NULL. Если значение данного параметра не указано, для хранения временной информации используется папка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию.  
+ Каталог файловой системы, в котором временно хранятся собранные данные. *cache_directory* — **nvarchar(255)**, со значением по умолчанию NULL. Если значение данного параметра не указано, для хранения временной информации используется папка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Необходимо отключить сборщик данных перед изменением конфигурации каталога кэша. Если включен сборщик данных, эта хранимая процедура завершится с ошибкой. Дополнительные сведения см. в разделе [включить или отключить сбор данных](../../relational-databases/data-collection/enable-or-disable-data-collection.md), и [Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md).  
   
  Во время выполнения sp_syscollector_set_cache_directory существование указанного каталога не требуется, однако до создания этого каталога данные не могут быть успешно кэшированы и переданы. Рекомендуется создать каталог до выполнения этой хранимой процедуры.  

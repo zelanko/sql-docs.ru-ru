@@ -1,15 +1,12 @@
 ---
-title: Метод SetServiceAccount (класс SqlService) | Документы Microsoft
+title: Метод SetServiceAccount (класс SqlService) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetServiceAccount Method (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetServiceAccount method
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f44268f2c9d94a6336b516f1c259c1791767f3b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27985e94766a76efa755d05e81bce3ccb59ed6c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010561"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664337"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Метод SetServiceAccount (класс SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объект*  
+ *object*  
  Объект [класса SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , представляющий службу.  
   
 #### <a name="parameters"></a>Параметры  
@@ -51,9 +47,9 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
   
 -   если учетная запись принадлежит встроенному домену, можно указать \ИмяПользователя;  
   
--   Если задано значение NULL, служба будет войти в систему как **LocalSystem** учетной записи.  
+-   Если задано значение NULL, служба входит в систему как **LocalSystem** учетной записи.  
   
- Для драйверов системного уровня ядра или *StartName* содержит имя объекта драйвера \FileSystem\Rdr или \Driver\Xns, которое система ввода-вывода использует для загрузки драйвера устройства. Если задано значение NULL, драйвер выполняется с именем объекта «значение по умолчанию», созданным системой ввода-вывода на основе имени службы, например DWDOM\Admin.  
+ Для ядра или драйверов системного уровня *StartName* содержит имя объекта драйвера \FileSystem\Rdr или \Driver\Xns, которое система ввода-вывода использует для загрузки драйвера устройства. Если задано значение NULL, драйвер выполняется с именем объекта «значение по умолчанию», созданным системой ввода-вывода на основе имени службы, например DWDOM\Admin.  
   
  *ServiceStartPassword*  
  Строковое значение, указывающее пароль для имени учетной записи в *StartName* параметра. Если пароль не меняется, указывается значение NULL. Если служба не имеет пароля, указывается пустая строка.  
@@ -61,9 +57,9 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

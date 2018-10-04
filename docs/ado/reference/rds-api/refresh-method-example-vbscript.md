@@ -1,35 +1,32 @@
 ---
-title: Обновить пример метода (VBScript) | Документы Microsoft
+title: Пример метода (VBScript) Refresh | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADO], VBScript example
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17bb8489dd1671806a512ed635c0143d7ba9f4b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fcb4ccd685a5f28377972db03d32496017bda8cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288533"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731228"
 ---
-# <a name="refresh-method-example-vbscript"></a>Обновить пример метода (VBScript)
+# <a name="refresh-method-example-vbscript"></a>Пример метода Refresh (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как задать необходимые параметры [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) во время выполнения. Способ [записей](../../../ado/reference/ado-api/recordset-object-ado.md) получаются с помощью [обновление](../../../ado/reference/ado-api/refresh-method-ado.md) метод определяется параметрами [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) и [FetchOptions ](../../../ado/reference/rds-api/fetchoptions-property-rds.md) свойства. Чтобы протестировать этот пример, вырезать и вставьте следующий код в обычном документ ASP и назовите его **RefreshVBS.asp**. Используйте **найти** для нахождения файла Adovbs.inc и поместите его в каталог, который планируется использовать. Сценарий ASP будет идентификации сервера.  
+ Приведенный ниже показано, как задать необходимые параметры [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) во время выполнения. Способ [записей](../../../ado/reference/ado-api/recordset-object-ado.md) извлекается с использованием [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод определяется параметрами [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) и [FetchOptions ](../../../ado/reference/rds-api/fetchoptions-property-rds.md) свойства. Чтобы протестировать этот пример, вырезать и вставить следующий код в обычном документ ASP и назовите его **RefreshVBS.asp**. Используйте **найти** найдите файл Adovbs.inc и поместите его в каталог, который вы планируете использовать. Сценарий ASP будет идентификации сервера.  
   
 ```  
 <!-- BeginRefreshVBS -->  
@@ -179,10 +176,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Свойство ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
- [Свойство FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Свойство ExecuteOptions (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
+ [Свойство FetchOptions (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
 
 

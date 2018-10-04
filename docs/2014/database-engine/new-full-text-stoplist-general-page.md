@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplist.general.f1
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2304b2b9a8711210117ffbb2a84abbf167694e71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066354"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Создание списка полнотекстовых стоп-слов (страница «Общие»)
   Используется для создания полнотекстового списка стоп-слов. *Список стоп-слов* — это набор часто употребляемых слов, называемых *стоп-словами*, которые не включаются в полнотекстовый индекс для таблиц, использующих такой список. Дополнительные сведения см. в разделе [Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими](../relational-databases/search/full-text-search.md).  
@@ -50,7 +47,7 @@ ms.locfileid: "37221974"
  **Создать из существующего полнотекстового списка стоп-слов**  
  Новый список стоп-слов создается путем копирования существующего.  
   
- **Базы данных-источника**  
+ **базы данных-источника**  
  Указывает имя базы данных, которой принадлежит существующий список стоп-слов. По умолчанию выбрана текущая база данных. При необходимости можно выбрать из списка другую базу данных.  
   
  **Источник списка стоп-слов**  

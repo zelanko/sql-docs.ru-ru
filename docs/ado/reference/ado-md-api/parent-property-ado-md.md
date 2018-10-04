@@ -1,13 +1,11 @@
 ---
-title: Родительского свойства (ADO MD) | Документы Microsoft
+title: Родительского свойства (многомерные Объекты ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Parent property [ADO MD]
 ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d07d330aaa7497679524caab2a8a9543d64370be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3cb0b93ba1be2570ecd474ed1244bec16575180d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284656"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724352"
 ---
-# <a name="parent-property-ado-md"></a>Родительское свойство (ADO MD)
+# <a name="parent-property-ado-md"></a>Свойство Parent (многомерные объекты ADO)
 Указывает элемент, который является родительским для текущего [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) в иерархии.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объекта и доступно только для чтения.  
+ Возвращает [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объекта и доступен только для чтения.  
   
 ## <a name="remarks"></a>Примечания  
- Элемент, который находится на верхнем уровне иерархии (корневой) не имеет родителя. Это свойство поддерживается только в **член** объектов, принадлежащих [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта. Произошла ошибка при обращении к этому свойству из **член** объектов, принадлежащих [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) объекта.  
+ Элемент, который находится на верхнем уровне иерархии (корень) не имеет родителя. Это свойство поддерживается только в **член** объекты, принадлежащие [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта. Произошла ошибка при ссылке на это свойство из **член** объекты, принадлежащие [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) объекта.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  

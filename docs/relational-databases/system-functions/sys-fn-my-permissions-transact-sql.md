@@ -1,14 +1,11 @@
 ---
-title: sys.fn_my_permissions (Transact-SQL) | Документы Microsoft
+title: sys.fn_my_permissions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_my_permissions_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b837943f16a7c8882b4e35aef3f769a3d731cd38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239814"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659252"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +44,10 @@ fn_my_permissions ( securable , 'securable_class' )
   
 ## <a name="arguments"></a>Аргументы  
  *securable*  
- Имя защищаемого объекта. Если защищаемым объектом является сам сервер или база данных, то этому аргументу должно быть присвоено значение NULL. Аргумент *securable* является скалярным выражением типа **sysname**. *защищаемый объект* может быть составным именем.  
+ Имя защищаемого объекта. Если защищаемым объектом является сам сервер или база данных, то этому аргументу должно быть присвоено значение NULL. Аргумент *securable* является скалярным выражением типа **sysname**. *защищаемый объект* может быть многочастным именем.  
   
  "*securable_class*"  
- Имя класса защищаемых объектов, для которого перечислены разрешения. *securable_class* — **sysname**. *securable_class* должен быть одним из следующих: РОЛИ приложения, сборки, АСИММЕТРИЧНЫЙ ключ, СЕРТИФИКАТ, КОНТРАКТА, базы данных, конечной ТОЧКИ, FULLTEXT CATALOG, имени входа, ТИПАМ сообщений, ОБЪЕКТА, REMOTE SERVICE BINDING, РОЛИ, МАРШРУТА, СХЕМЫ, сервера и службы , СИММЕТРИЧНЫЙ КЛЮЧ, ТИП, ПОЛЬЗОВАТЕЛЬ, КОЛЛЕКЦИИ СХЕМ XML.  
+ Имя класса защищаемых объектов, для которого перечислены разрешения. *securable_class* — **sysname**. *securable_class* должно быть одно из следующих: РОЛИ приложения, сборки, АСИММЕТРИЧНЫЙ ключ, СЕРТИФИКАТ, КОНТРАКТ, базы данных, конечной ТОЧКИ, FULLTEXT CATALOG, входа, тип сообщения, объект, REMOTE SERVICE BINDING, РОЛИ, МАРШРУТА, СХЕМЫ, сервера, службы , СИММЕТРИЧНЫЙ КЛЮЧ, ТИП, ПОЛЬЗОВАТЕЛЬ, КОЛЛЕКЦИИ СХЕМ XML.  
   
 ## <a name="columns-returned"></a>Возвращаемые столбцы  
  В следующей таблице перечислены столбцы, **fn_my_permissions** возвращает. Каждая возвращаемая строка описывает разрешение относительно защищаемого объекта в текущем контексте безопасности. Возвращает NULL в случае неудачного завершения запроса.  
@@ -62,7 +58,7 @@ fn_my_permissions ( securable , 'securable_class' )
 |subentity_name|**sysname**|Имя столбца, если у защищаемого объекта есть столбцы, в противном случае — NULL.|  
 |permission_name|**nvarchar**|Имя разрешения.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта функция возвращает список действующих разрешений вызывающего участника в отношении указанного защищаемого объекта. Действующим разрешением будет одно из следующих:  
   
 -   Действующее разрешение, предоставленное непосредственно участнику.  
@@ -75,7 +71,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  Оценка разрешений всегда выполняется в контексте безопасности участника. Для определения того, имеют ли какие-либо другие участники действующее разрешение, вызывающая сторона должна иметь разрешение IMPERSONATE в отношении такого участника.  
   
- Для объектов на уровне схем допустимы одно-, двух- и трехкомпонентные непустые имена. Для сущностей уровня базы данных допустимо имя одной части, с значение null означает «*текущей базы данных*». Для самого сервера значение NULL является обязательным и означает текущий сервер. **fn_my_permissions** не может проверить разрешения на связанном сервере.  
+ Для объектов на уровне схем допустимы одно-, двух- и трехкомпонентные непустые имена. Для сущностей уровня базы данных, принимается однокомпонентного имени, с помощью значение null означает «*текущей базы данных*«. Для самого сервера значение NULL является обязательным и означает текущий сервер. **fn_my_permissions** не может проверить разрешения на связанном сервере.  
   
  Приведенный ниже запрос возвращает список встроенных классов защищаемых объектов:  
   
@@ -85,7 +81,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- Если указано в качестве значения по умолчанию *защищаемый объект* или *securable_class*, значение будет интерпретироваться как значение NULL.  
+ Если указано значение по умолчанию для параметра *защищаемый объект* или *securable_class*, значение будет интерпретировано как NULL.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -166,7 +162,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Функции безопасности (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
- [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
+ [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   

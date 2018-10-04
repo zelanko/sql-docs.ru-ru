@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_principalprofile_sp (Transact-SQL) | Документы Microsoft
+title: sysmail_delete_principalprofile_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_principalprofile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_principalprofile_sp
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f1f7fc964f5be9e045614f7a49c7f5fec194537
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c292ba89a3b79dc19ca038672cf5cc587a55ed4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257158"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673182"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +42,10 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
   
 ## <a name="arguments"></a>Аргументы  
  [ **@principal_id** =] *principal_id*  
- Идентификатор пользователя базы данных или роли в **msdb** базы данных для удаления взаимосвязи. *principal_id* — **int**, значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника **'public'**. Либо *principal_id* или *principal_name* должен быть указан.  
+ Идентификатор пользователя базы данных или роли в **msdb** базы данных для удаляемой взаимосвязи. *principal_id* — **int**, значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника- **'public'**. Либо *principal_id* или *principal_name* должен быть указан.  
   
  [ **@principal_name** =] **"***principal_name***"**  
- Имя пользователя базы данных или роли в **msdb** базы данных для удаления взаимосвязи. *principal_name* — **sysname**, значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника **'public'**. Либо *principal_id* или *principal_name* должен быть указан.  
+ Имя пользователя базы данных или роли в **msdb** базы данных для удаляемой взаимосвязи. *principal_name* — **sysname**, значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника- **'public'**. Либо *principal_id* или *principal_name* должен быть указан.  
   
  [ **@profile_id** =] *profile_id*  
  Идентификатор профиля для удаляемой взаимосвязи. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
@@ -60,15 +56,15 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- Чтобы сделать открытый профиль частным, укажите **'public'** для имени субъекта или **0** идентификатор участника.  
+## <a name="remarks"></a>Примечания  
+ Чтобы сделать открытый профиль частным, укажите **'public'** имя участника или **0** идентификатор участника.  
   
- Будьте осторожны, удаляя разрешения для частного профиля пользователя по умолчанию или открытого профиля по умолчанию. Если профиль по умолчанию не доступен, **sp_send_dbmail** необходимо указать имя профиля в качестве аргумента. Таким образом, удаление профиля по умолчанию может стать причиной **sp_send_dbmail** сбой. Дополнительные сведения см. в разделе [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
+ Будьте осторожны, удаляя разрешения для частного профиля пользователя по умолчанию или открытого профиля по умолчанию. При наличии нет профиля по умолчанию **sp_send_dbmail** необходимо указать имя профиля в качестве аргумента. Таким образом, удаление профиля по умолчанию может привести к вызовы **sp_send_dbmail** переход на другой. Дополнительные сведения см. в разделе [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
   
- Хранимая процедура **sysmail_delete_principalprofile_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру следует выполнять с трехкомпонентным именем, если текущая база данных не является **msdb**.  
+ Хранимая процедура **sysmail_delete_principalprofile_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру необходимо выполнять с трехкомпонентным именем, если текущая база данных не **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию членам выполнение **sysadmin** предопределенной роли сервера.  
+ Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере показано удаление ассоциации между профилем **AdventureWorks Administrator** и имя входа **ApplicationUser** в **msdb** базы данных.  

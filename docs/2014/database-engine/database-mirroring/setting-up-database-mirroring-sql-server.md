@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
-caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1aea3a970763cc47c48176cb0fdd5f14a005258b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065994"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Настройка зеркального отображения базы данных (SQL Server)
   В этом разделе содержится описание предварительных условий, рекомендаций и шагов настройки зеркального отображения базы данных. Базовые сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md).  

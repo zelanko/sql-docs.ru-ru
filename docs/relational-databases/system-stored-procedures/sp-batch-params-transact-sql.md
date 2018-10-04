@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_batch_params
@@ -21,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac3b42956cacbd10718ca716e7b00b67e0afb949
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 00efe39e8ab60df83ddd267269461f6a6ff61ee0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594633"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**МАСШТАБ**|**smallint**|Число цифр справа от десятичной запятой. Значение NULL.|  
 |**ОСНОВАНИЕ СИСТЕМЫ СЧИСЛЕНИЯ**|**smallint**|Основание системы счисления для числовых типов. Значение NULL.|  
 |**ДОПУСКАЮЩИЙ ЗНАЧЕНИЕ NULL**|**smallint**|Определяет допустимость значений NULL:<br /><br /> 1 = тип данных параметра может быть создан со значением NULL.<br /><br /> 0 = значения NULL недопустимы.<br /><br /> Значение NULL.|  
-|**SQL_DATA_TYPE**|**smallint**|Значение системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как оно показано в поле TYPE дескриптора. Этот столбец совпадает со значением **DATA_TYPE** столбца, за исключением **datetime** и ISO **интервал** типов данных. Этот столбец всегда возвращает значение. Значение NULL.|  
+|**SQL_DATA_TYPE**|**smallint**|Значение системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как оно показано в поле TYPE дескриптора. Этот столбец содержит то же значение, что и столбец **DATA_TYPE**, за исключением типов данных **datetime** и ISO **interval**. Этот столбец всегда возвращает значение. Значение NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime** или ISO **интервал** Доп. Если значение **SQL_DATA_TYPE** равно SQL_DATETIME или SQL_INTERVAL. Для типов данных, отличных от **datetime** и ISO **интервал**, этот столбец равен NULL. Значение NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Максимальная длина в байтах **символ** или **двоичных** параметр типа данных. Для всех других типов данных этот столбец возвращает значение NULL. Это значение всегда равно NULL.|  
 |**ORDINAL_POSITION**|**int**|Положение по порядку параметра в пакете. Если имя параметра повторяется несколько раз, то этот столбец содержит порядковый номер первого вхождения. Первый параметр имеет порядковый номер 1. Этот столбец всегда возвращает значение.|  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.hideunhidecolumnsdb.f1
 ms.assetid: 5407aee5-6a07-4559-a2ba-2ca00a242f02
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3277c722652e67036d0c0bfe2a904797f327a4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f16095d7473d098745f16943a60f50c104c94cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214054"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055144"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>Скрытие или закрепление столбцов (табличные службы SSAS)
   Если в конструкторе моделей некоторые столбцы не нужно отображать в таблице, то их можно временно скрыть. Скрытый столбец освобождает пространство на экране, позволяя добавлять новые столбцы или работать только с необходимыми столбцами данных. Скрыть или отобразить столбцы можно через меню **Столбец** в конструкторе моделей или через меню заголовка столбца, которое вызывается нажатием правой кнопкой мыши. Чтобы область модели оставалась видимой при переходе в другую область при прокрутке, можно закрепить определенные столбцы в одной области.  

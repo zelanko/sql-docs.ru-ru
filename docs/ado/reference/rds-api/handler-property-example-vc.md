@@ -1,37 +1,34 @@
 ---
-title: Пример свойства обработчика (VC ++) | Документы Microsoft
+title: Пример свойства Handler (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Handler property [ADO], VC++ example
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75d23be448bc8e56e701756f159dba34382784b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9c944535ead264b8ab65b59aa969d0fddf29f10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288375"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696533"
 ---
-# <a name="handler-property-example-vc"></a>Пример свойства обработчика (VC ++)
+# <a name="handler-property-example-vc"></a>Пример свойства Handler (Visual C++)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере демонстрируется [DataControl служб удаленных рабочих СТОЛОВ](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта [обработчик](../../../ado/reference/rds-api/handler-property-rds.md) свойство. (См. [настройки DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) для получения дополнительных сведений.)  
+ В этом примере показано [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объект [обработчик](../../../ado/reference/rds-api/handler-property-rds.md) свойство. (См. в разделе [Настройка DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) подробнее.)  
   
- Предположим, в следующих подразделах файл параметров Msdfmap.ini, расположенной на сервере.  
+ Предположим, в следующих разделах статьи файл параметров Msdfmap.ini, расположенную на сервере:  
   
 ```  
 [connect AuthorDataBase]  
@@ -41,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Код выглядит следующим образом. Команды, назначенные [SQL](../../../ado/reference/rds-api/sql-property.md) свойство будет соответствовать ***AuthorById*** идентификатор и получать строки для автора Майкл лири. Несмотря на то что [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойства в коде указывает источник данных "Борей", этот источник данных будет перезаписана Msdfmap.ini *подключения* раздела. **DataControl** объекта [записей](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) присваивается на несвязанный [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта исключительно в качестве удобства при написании кода.  
+ Код выглядит следующим образом. Команды, назначенные [SQL](../../../ado/reference/rds-api/sql-property.md) свойство будет соответствовать ***AuthorById*** идентификатор и будет извлекать строку для автор Майкл O'Leary. Несмотря на то что [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойства в коде указывает источник данных "Борей", этот источник данных будет перезаписана Msdfmap.ini *подключения* раздел. **DataControl** объект [записей](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) свойству назначается для отключенного [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект исключительно для удобства написания кода.  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -133,7 +130,7 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Свойство Handler (служба удаленных рабочих столов)](../../../ado/reference/rds-api/handler-property-rds.md)
 
 

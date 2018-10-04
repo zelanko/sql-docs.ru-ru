@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e70d5088b4b17eb037317b9eccf6afba53e5b5f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052495"
 ---
 # <a name="viewing-tuning-recommendations"></a>Просмотр рекомендаций по настройке
   В этой задаче используется сеанс настройки, который был создан в разделе [Tuning a Workload](lesson-1-1-tuning-a-workload.md). После завершения настройки базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] с использованием скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] с именем MyScript.sql помощник по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] отобразит результаты настройки на вкладке **Рекомендации** . В следующей задаче рассматривается назначение вкладки **Рекомендации** графического пользовательского интерфейса по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и работа с предоставляемыми сведениями о результатах сеанса настройки.  

@@ -1,31 +1,28 @@
 ---
-title: Подключение (ADO - синтаксис WFC) | Документы Microsoft
+title: Подключение (ADO — синтаксис WFC) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb4fb9792fc59c6206328b23f97b9b2f3257228b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2f50c116060f5ef842cf359b958f9e6cedb5c716
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276855"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633652"
 ---
-# <a name="connection-ado---wfc-syntax"></a>Подключение (ADO - WFC синтаксис)
-## <a name="package-commswfcdata"></a>пакет com.ms.wfc.data  
+# <a name="connection-ado---wfc-syntax"></a>Connection (ADO — синтаксис WFC)
+## <a name="package-commswfcdata"></a>com.ms.wfc.data пакета  
   
 ### <a name="constructor"></a>Конструктор  
   
@@ -48,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **ExecuteUpdate** специальных вариантов метод, который вызывает базовый ADO **выполнение** метод определенных параметров. **ExecuteUpdate** метод не поддерживает возврат **записей** объекта, поэтому **выполнение** метода *параметры* параметр изменить с помощью **AdoEnums.ExecuteOptions.NORECORDS**. После **выполнение** метод завершения его обновленной *RecordsAffected* параметра передается обратно **executeUpdate** метод, который затем возвращается в виде **int**.  
+ **ExecuteUpdate** метод — это специальный метод вариантов, который вызывает базовый ADO **выполнение** метод с помощью определенных параметров. **ExecuteUpdate** метод не поддерживает возврат **записей** объекта, поэтому **выполнение** метода *параметры* параметр было изменено с добавлением **AdoEnums.ExecuteOptions.NORECORDS**. После **выполнение** метод завершения, его обновленную *RecordsAffected* параметр передается обратно в **executeUpdate** метод, который возвращается как Наконец**int**.  
   
 ```  
 public void open()   
@@ -90,7 +87,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>События  
- Дополнительные сведения о событиях ADO/WFC см. в разделе [ADO экземпляр события в языке](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+ Дополнительные сведения о событиях ADO и WFC см. в разделе [создание экземпляра события ADO языком](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  

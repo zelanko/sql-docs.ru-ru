@@ -1,13 +1,11 @@
 ---
-title: EventReasonEnum | Документы Microsoft
+title: EventReasonEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,39 +13,38 @@ f1_keywords:
 helpviewer_keywords:
 - EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b173fb6838b082b0600714f3756858dcc1615ba2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 743e36e379760cb2c148c5484bb7b49b08d1d27e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278443"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644648"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
-Указывает причину, вызвавшего событие.  
+Указывает причину, по которой вызвало появление события.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|Операция добавления новой записи.|  
 |**adRsnClose**|9|Операция закрытия **записей**.|  
-|**adRsnDelete**|2|Удалить операцию записи.|  
+|**adRsnDelete**|2|Операция удаления записи.|  
 |**adRsnFirstChange**|11|Операция выполнена первое изменение с записью.|  
 |**adRsnMove**|10|Операция перемещен указатель записи в **записей**.|  
 |**adRsnMoveFirst**|12|Операция перемещен указатель записи первой записи в **записей**.|  
-|**adRsnMoveLast**|15|Операция перемещен указатель записи в последней записи в **записей**.|  
-|**adRsnMoveNext**|13|Операция перемещен указатель записи следующей записи в **записей**.|  
+|**adRsnMoveLast**|15|Операция перемещен указатель записи последней записи в **записей**.|  
+|**adRsnMoveNext**|13|Операция перемещен указатель записи к следующей записи в **записей**.|  
 |**adRsnMovePrevious**|14|Операция перемещен указатель записи к предыдущей записи в **записей**.|  
 |**adRsnRequery**|7|Операция опросить [записей](../../../ado/reference/ado-api/recordset-object-ado.md).|  
 |**adRsnResynch**|8|Операция повторной синхронизации **записей** с базой данных.|  
-|**adRsnUndoAddNew**|5|Операция добавления новой записи в обратном направлении.|  
-|**adRsnUndoDelete**|6|Операция удаления записи в обратном направлении.|  
-|**adRsnUndoUpdate**|4|Операция обновления записи в обратном направлении.|  
+|**adRsnUndoAddNew**|5|Операция добавления новой записи в обратном порядке.|  
+|**adRsnUndoDelete**|6|Операция удаления записи в обратном порядке.|  
+|**adRsnUndoUpdate**|4|Операция обновления записи в обратном порядке.|  
 |**adRsnUpdate**|3|Операция обновления существующей записи.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
  Пакет: **com.ms.wfc.data**  
   
 |Константа|  

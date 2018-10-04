@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving registered server or server group
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 347909a9152299c3df702330abe779d84b8d98ec
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: cf2338492b9e7d1dcfe4fe2b53202dc4721ffc61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813030"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070444"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>Перемещение зарегистрированного сервера или зарегистрированной группы серверов (среда SQL Server Management Studio)
   В этом разделе описывает организация серверов в компоненте «Зарегистрированные серверы» путем перемещения зарегистрированного сервера или групп серверов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Группа серверов может содержать зарегистрированные серверы или вложенные группы серверов. Как серверы, так и группы серверов можно перемещать из одной группы в другую.  
